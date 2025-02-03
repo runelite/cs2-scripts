@@ -13,43 +13,43 @@ if (%varcint41 = 1337 | %varbit542 = 1 & getwindowmode ! ^windowmode_fixed | $en
 }
 if_sethide($boolean0, interface_162:34);
 if (%varbit6374 = 1 & getwindowmode ! ^windowmode_fixed) {
-	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:56);
-	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:557);
+	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:57);
+	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:558);
 } else {
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:56);
-	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:557);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:57);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:558);
 }
 if (~script7616 = 1 & $enum1 = enum_1745) {
-	if_setsize(calc(519 - 58), 0, ^setsize_abs, ^setsize_minus, interface_162:35);
+	if_setsize(calc(519 - 58), 0, ^setsize_abs, ^setsize_minus, interface_162:36);
 } else {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:35);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:36);
 }
-cc_deleteall(interface_162:35);
-cc_deleteall(interface_162:54);
+cc_deleteall(interface_162:36);
+cc_deleteall(interface_162:55);
 def_int $int2 = 0;
 if (clientclock < %varcint223 & ~toplevel_getcomponents ! enum_1129) {
 	$int2 = 1;
-	if_setontimer("toplevel_chatbox_resetbackground_soon(%varcint223)", interface_162:35);
+	if_setontimer("toplevel_chatbox_resetbackground_soon(%varcint223)", interface_162:36);
 } else {
-	if_setontimer(null, interface_162:35);
+	if_setontimer(null, interface_162:36);
 }
 if (~toplevel_chatbox_maketransparent = 0) {
-	if_setnoclickthrough(true, interface_162:35);
+	if_setnoclickthrough(true, interface_162:36);
 	if ($int2 = 0) {
-		cc_create(interface_162:35, ^iftype_graphic, 0);
+		cc_create(interface_162:36, ^iftype_graphic, 0);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic(chat_background);
 		cc_settiling(false);
 		cc_settrans(0);
-		cc_create(interface_162:54, ^iftype_rectangle, 0);
+		cc_create(interface_162:55, ^iftype_rectangle, 0);
 		cc_setsize(0, 1, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_setcolour(0x807660);
 		cc_setfill(true);
 	}
 	~scrollbar_vertical_repaint(
-		0 = interface_162:557, 
+		0 = interface_162:558, 
 		1 = "scrollbar_dragger_v2,3", 
 		2 = "scrollbar_dragger_v2,0", 
 		3 = "scrollbar_dragger_v2,1", 
@@ -68,27 +68,27 @@ if (~toplevel_chatbox_maketransparent = 0) {
 	return;
 }
 if (%varbit2570 = 1) {
-	if_setnoclickthrough(true, interface_162:35);
+	if_setnoclickthrough(true, interface_162:36);
 } else {
-	if_setnoclickthrough(false, interface_162:35);
-	if_setnoscrollthrough(true, interface_162:35);
+	if_setnoclickthrough(false, interface_162:36);
+	if_setnoscrollthrough(true, interface_162:36);
 }
 def_int $int3 = 20;
 def_int $int4 = 193;
 def_int $int5 = 253;
-def_int $height6 = if_getheight(interface_162:35);
+def_int $height6 = if_getheight(interface_162:36);
 def_int $int7 = calc($height6 / $int3);
 def_int $int8 = calc($height6 - $int7 * $int3);
 def_int $int9 = 200;
 def_int $int10 = 253;
-def_int $width11 = if_getwidth(interface_162:54);
+def_int $width11 = if_getwidth(interface_162:55);
 def_int $int12 = calc($width11 / $int3);
 def_int $int13 = calc($width11 - $int12 * $int3);
 def_int $int14 = 0;
 if ($int2 = 0) {
 	if (~on_mobile = false) {
 		while ($int14 < $int3) {
-			cc_create(interface_162:35, ^iftype_rectangle, $int14);
+			cc_create(interface_162:36, ^iftype_rectangle, $int14);
 			if ($int14 = calc($int3 - 1)) {
 				cc_setsize(0, calc($int7 + $int8), ^setsize_minus, ^setsize_abs);
 			} else {
@@ -98,8 +98,8 @@ if ($int2 = 0) {
 			cc_setcolour(^black);
 			cc_setfill(true);
 			cc_settrans(interpolate($int5, $int4, 0, $int3, $int14));
-			cc_create(interface_162:54, ^iftype_rectangle, calc($int14 * 2));
-			.cc_create(interface_162:54, ^iftype_rectangle, calc($int14 * 2 + 1));
+			cc_create(interface_162:55, ^iftype_rectangle, calc($int14 * 2));
+			.cc_create(interface_162:55, ^iftype_rectangle, calc($int14 * 2 + 1));
 			cc_setsize($int12, 1, ^setsize_abs, ^setsize_abs);
 			.cc_setsize($int12, 1, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int12 * $int14), 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -113,16 +113,16 @@ if ($int2 = 0) {
 			$int14 = calc($int14 + 1);
 		}
 	} else {
-		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:35);
-		if_setsize(58, 0, ^setsize_minus, ^setsize_minus, interface_162:35);
-		cc_create(interface_162:35, ^iftype_rectangle, 0);
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:36);
+		if_setsize(58, 0, ^setsize_minus, ^setsize_minus, interface_162:36);
+		cc_create(interface_162:36, ^iftype_rectangle, 0);
 		cc_setsize(0, 16384, ^setsize_minus, ^setsize_proportion);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_setcolour(^black);
 		cc_setfill(true);
 		cc_settrans(225);
-		cc_create(interface_162:54, ^iftype_rectangle, 0);
-		.cc_create(interface_162:54, ^iftype_rectangle, 1);
+		cc_create(interface_162:55, ^iftype_rectangle, 0);
+		.cc_create(interface_162:55, ^iftype_rectangle, 1);
 		cc_setsize(16384, 1, ^setsize_proportion, ^setsize_abs);
 		.cc_setsize(16384, 1, ^setsize_proportion, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -142,7 +142,7 @@ if (~on_mobile = true) {
 	$trans16 = 130;
 }
 ~scrollbar_vertical_repaint(
-	0 = interface_162:557, 
+	0 = interface_162:558, 
 	1 = "scrollbar_trans_dragger,3", 
 	2 = "scrollbar_trans_dragger,0", 
 	3 = "scrollbar_trans_dragger,1", 

@@ -1,0 +1,9 @@
+// 2802
+[clientscript,script2802](int $clock0, int $int1, int $int2, int $int3, int $int4)
+if (clientclock < $clock0) {
+	return;
+}
+%varcint1241, %varcint1242, %varcint1243, %varcint1244 = $int1, $int2, $int3, $int4;
+def_component $component5 = interface_621:87;
+if_callonresize($component5);
+%varcint1246 = 1;

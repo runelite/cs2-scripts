@@ -1,0 +1,32 @@
+// 7800
+[proc,script7800]()(struct, int, struct, int)
+def_int $int0 = %var2943;
+def_int $int1 = ~script7801;
+if ($int0 >= $int1) {
+	return(struct_1742, $int1, null, -1);
+}
+if ($int0 >= 1200) {
+	return(struct_1741, 1200, struct_1742, $int1);
+}
+if ($int0 >= 1100) {
+	return(struct_1740, 1100, struct_1741, 1200);
+}
+if ($int0 >= 1000) {
+	return(struct_1719, 1000, struct_1740, 1100);
+}
+if ($int0 >= 900) {
+	return(struct_1718, 900, struct_1719, 1000);
+}
+if ($int0 >= 700) {
+	return(struct_1717, 700, struct_1718, 900);
+}
+if ($int0 >= 500) {
+	return(struct_1716, 500, struct_1717, 700);
+}
+if ($int0 >= 300) {
+	return(struct_1715, 300, struct_1716, 500);
+}
+if ($int0 >= 100) {
+	return(struct_1714, 100, struct_1715, 300);
+}
+return(null, -1, struct_1714, 100);

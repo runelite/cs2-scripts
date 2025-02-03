@@ -246,6 +246,9 @@ $int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 	11 = $int3, 
 	12 = 1
 );
+if (cc_find($component1, calc($int3 - 1)) = ^true) {
+	cc_setop(2, "Collection Overview");
+}
 $int7 = 24;
 def_string $string1 = "Time Played:";
 if (~league_world = 1) {

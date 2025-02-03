@@ -6,7 +6,7 @@ if (%varcint1112 = clientclock) {
 	return;
 }
 %varcint1112 = clientclock;
-def_int $width1 = if_getwidth(interface_162:56);
+def_int $width1 = if_getwidth(interface_162:57);
 def_string $string0 = removetags(chat_playername);
 def_int $int2 = 0;
 if (%varcint41 = 3) {
@@ -100,7 +100,7 @@ if ((%varcint41 = 0 | %varcint41 = 2) & string_length(chat_getmessagefilter) > 0
 		0 = "<$string4>Public chat filtering:</col> <lt><lowercase(escape(chat_getmessagefilter))><gt>", 
 		1 = $int8, 
 		2 = $component9, 
-		3 = interface_162:56, 
+		3 = interface_162:57, 
 		4 = $width1, 
 		5 = 3, 
 		6 = 14, 
@@ -144,6 +144,7 @@ if (activeclansettings_find_affined(^clantype_clan) = true & activeclanchannel_f
 def_string $string23 = "";
 def_int $int21 = 0;
 def_string $string24 = "";
+def_int $int22 = -1;
 while ($mesuid10 ! -1 & $component9 ! null) {
 	$chattype11, $int12, $string18, $string19, $string20, $int15, $string23, $int21 = chat_gethistory_byuid($mesuid10);
 	if (~panetest($chattype11, $string18, $int15, $string20) = 1 & ~filtertest($chattype11, $string18, ~affixtimestamp($string23, $string20, "null"), $string20, $int12, $int2, $string0, $int15) = 1) {
@@ -154,7 +155,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string4><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -170,7 +171,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string6><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -186,7 +187,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string5><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -201,7 +202,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<$string9><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -216,7 +217,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<$string5><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -236,7 +237,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string5><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -251,7 +252,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<$string10><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -266,7 +267,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -282,7 +283,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string7><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -298,7 +299,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -314,7 +315,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -336,7 +337,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						5 = "<$string12><$string20></col>", 
 						6 = $int8, 
 						7 = $component9, 
-						8 = interface_162:56, 
+						8 = interface_162:57, 
 						9 = $width1, 
 						10 = 3, 
 						11 = 14, 
@@ -360,7 +361,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 								5 = "<$string8><$string20></col>", 
 								6 = $int8, 
 								7 = $component9, 
-								8 = interface_162:56, 
+								8 = interface_162:57, 
 								9 = $width1, 
 								10 = 3, 
 								11 = 14, 
@@ -380,7 +381,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 								5 = "<$string8><$string20></col>", 
 								6 = $int8, 
 								7 = $component9, 
-								8 = interface_162:56, 
+								8 = interface_162:57, 
 								9 = $width1, 
 								10 = 3, 
 								11 = 14, 
@@ -402,7 +403,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							5 = "<$string8><$string20></col>", 
 							6 = $int8, 
 							7 = $component9, 
-							8 = interface_162:56, 
+							8 = interface_162:57, 
 							9 = $width1, 
 							10 = 3, 
 							11 = 14, 
@@ -423,7 +424,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						5 = "<$string8><$string20></col>", 
 						6 = $int8, 
 						7 = $component9, 
-						8 = interface_162:56, 
+						8 = interface_162:57, 
 						9 = $width1, 
 						10 = 3, 
 						11 = 14, 
@@ -449,7 +450,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 								5 = "<$string11><$string20></col>", 
 								6 = $int8, 
 								7 = $component9, 
-								8 = interface_162:56, 
+								8 = interface_162:57, 
 								9 = $width1, 
 								10 = 3, 
 								11 = 14, 
@@ -469,7 +470,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 								5 = "<$string11><$string20></col>", 
 								6 = $int8, 
 								7 = $component9, 
-								8 = interface_162:56, 
+								8 = interface_162:57, 
 								9 = $width1, 
 								10 = 3, 
 								11 = 14, 
@@ -491,7 +492,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							5 = "<$string11><$string20></col>", 
 							6 = $int8, 
 							7 = $component9, 
-							8 = interface_162:56, 
+							8 = interface_162:57, 
 							9 = $width1, 
 							10 = 3, 
 							11 = 14, 
@@ -512,7 +513,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						5 = "<$string11><$string20></col>", 
 						6 = $int8, 
 						7 = $component9, 
-						8 = interface_162:56, 
+						8 = interface_162:57, 
 						9 = $width1, 
 						10 = 3, 
 						11 = 14, 
@@ -526,6 +527,9 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 			case ^chattype_clanmessage :
 				if (~gim_notification_message($string20) = 1) {
 					$string18, $string20 = ~script632($string20);
+					if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
+						$string24, $string20 = ~script632($string20);
+					}
 					$string20 = ~script3302($string20, "</col>", append("</col>", $string14));
 					if (activeclansettings_find_affined(^clantype_gim) = true) {
 						$int7 = ~script203(
@@ -533,7 +537,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							1 = "<$string14><$string20></col>", 
 							2 = $int8, 
 							3 = $component9, 
-							4 = interface_162:56, 
+							4 = interface_162:57, 
 							5 = $width1, 
 							6 = 3, 
 							7 = 14, 
@@ -549,7 +553,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							1 = "<$string14><$string20></col>", 
 							2 = $int8, 
 							3 = $component9, 
-							4 = interface_162:56, 
+							4 = interface_162:57, 
 							5 = $width1, 
 							6 = 3, 
 							7 = 14, 
@@ -568,7 +572,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							1 = $string20, 
 							2 = $int8, 
 							3 = $component9, 
-							4 = interface_162:56, 
+							4 = interface_162:57, 
 							5 = $width1, 
 							6 = 3, 
 							7 = 14, 
@@ -584,7 +588,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							1 = $string20, 
 							2 = $int8, 
 							3 = $component9, 
-							4 = interface_162:56, 
+							4 = interface_162:57, 
 							5 = $width1, 
 							6 = 3, 
 							7 = 14, 
@@ -597,6 +601,9 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					}
 				} else {
 					$string20 = ~script3302($string20, "</col>", append("</col>", $string13));
+					if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
+						$string24, $string20 = ~script632($string20);
+					}
 					if (activeclanchannel_find_affined(^clantype_clan) = true) {
 						$int7 = ~script4483(
 							0 = ~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), 
@@ -607,7 +614,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							5 = "<$string13><$string20></col>", 
 							6 = $int8, 
 							7 = $component9, 
-							8 = interface_162:56, 
+							8 = interface_162:57, 
 							9 = $width1, 
 							10 = 3, 
 							11 = 14, 
@@ -627,7 +634,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 							5 = "<$string13><$string20></col>", 
 							6 = $int8, 
 							7 = $component9, 
-							8 = interface_162:56, 
+							8 = interface_162:57, 
 							9 = $width1, 
 							10 = 3, 
 							11 = 14, 
@@ -650,7 +657,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						5 = $string20, 
 						6 = $int8, 
 						7 = $component9, 
-						8 = interface_162:56, 
+						8 = interface_162:57, 
 						9 = $width1, 
 						10 = 3, 
 						11 = 14, 
@@ -670,7 +677,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						5 = $string20, 
 						6 = $int8, 
 						7 = $component9, 
-						8 = interface_162:56, 
+						8 = interface_162:57, 
 						9 = $width1, 
 						10 = 3, 
 						11 = 14, 
@@ -688,7 +695,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					1 = "<$string17><$string20></col>", 
 					2 = $int8, 
 					3 = $component9, 
-					4 = interface_162:56, 
+					4 = interface_162:57, 
 					5 = $width1, 
 					6 = 3, 
 					7 = 14, 
@@ -704,7 +711,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						0 = "jk :P", 
 						1 = $int8, 
 						2 = $component9, 
-						3 = interface_162:56, 
+						3 = interface_162:57, 
 						4 = $width1, 
 						5 = 3, 
 						6 = 14, 
@@ -719,7 +726,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						0 = ~affixtimestamp($string23, $string20, "null"), 
 						1 = $int8, 
 						2 = $component9, 
-						3 = interface_162:56, 
+						3 = interface_162:57, 
 						4 = $width1, 
 						5 = 3, 
 						6 = 14, 
@@ -735,7 +742,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					0 = ~affixtimestamp($string23, "<$string15><$string20></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -753,7 +760,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						1 = "<$string16><$string20></col>", 
 						2 = $int8, 
 						3 = $component9, 
-						4 = interface_162:56, 
+						4 = interface_162:57, 
 						5 = $width1, 
 						6 = 3, 
 						7 = 14, 
@@ -768,7 +775,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						0 = ~affixtimestamp($string23, "<$string16><$string20></col>", "null"), 
 						1 = $int8, 
 						2 = $component9, 
-						3 = interface_162:56, 
+						3 = interface_162:57, 
 						4 = $width1, 
 						5 = 3, 
 						6 = 14, 
@@ -787,7 +794,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						1 = "<$string4><$string20></col>", 
 						2 = $int8, 
 						3 = $component9, 
-						4 = interface_162:56, 
+						4 = interface_162:57, 
 						5 = $width1, 
 						6 = 3, 
 						7 = 14, 
@@ -802,7 +809,7 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						0 = ~affixtimestamp($string23, "<$string4><$string20></col>", "null"), 
 						1 = $int8, 
 						2 = $component9, 
-						3 = interface_162:56, 
+						3 = interface_162:57, 
 						4 = $width1, 
 						5 = 3, 
 						6 = 14, 
@@ -813,12 +820,32 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 						11 = $boolean4
 					);
 				}
+			case ^chattype_gamemessage :
+				if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
+					$string24, $string20 = ~script632($string20);
+				} else {
+					$string24 = "";
+				}
+				$int7 = ~script199(
+					0 = ~affixtimestamp($string23, $string20, "null"), 
+					1 = $int8, 
+					2 = $component9, 
+					3 = interface_162:57, 
+					4 = $width1, 
+					5 = 3, 
+					6 = 14, 
+					7 = $int6, 
+					8 = ^setpos_abs_top, 
+					9 = 103, 
+					10 = $colour3, 
+					11 = $boolean4
+				);
 			case default :
 				$int7 = ~script199(
 					0 = ~affixtimestamp($string23, $string20, "null"), 
 					1 = $int8, 
 					2 = $component9, 
-					3 = interface_162:56, 
+					3 = interface_162:57, 
 					4 = $width1, 
 					5 = 3, 
 					6 = 14, 
@@ -868,6 +895,22 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 					if_setonmouseover(null, $component9);
 					if_setonmouseleave(null, $component9);
+				} else if (string_length($string24) ! 0) {
+					$int22 = string_indexof_string($string24, "CA_ID:", 0);
+					if ($int22 ! -1) {
+						$string24 = substring($string24, string_length("CA_ID:"), string_length($string24));
+						$int22 = ~string_to_int($string24);
+						if_setop(4, "View", $component9);
+						if_setopbase("<col=ffffff>Task</col>", $component9);
+						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonmouseover(null, $component9);
+						if_setonmouseleave(null, $component9);
+						if_setop(5, "Open", $component9);
+						if_setopbase("<col=ffffff>Task</col>", $component9);
+						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonmouseover(null, $component9);
+						if_setonmouseleave(null, $component9);
+					}
 				} else {
 					if_setonop(null, $component9);
 					if_setonmouseover(null, $component9);
@@ -950,6 +993,24 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 					if_setop(6, "Add friend", $component9);
 					if_setop(7, "Add ignore", $component9);
 				}
+			case ^chattype_clanmessage :
+				if (string_length($string24) ! 0) {
+					$int22 = string_indexof_string($string24, "CA_ID:", 0);
+					if ($int22 ! -1) {
+						$string24 = substring($string24, string_length("CA_ID:"), string_length($string24));
+						$int22 = ~string_to_int($string24);
+						if_setop(4, "View", $component9);
+						if_setopbase("<col=ffffff>Task</col>", $component9);
+						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonmouseover(null, $component9);
+						if_setonmouseleave(null, $component9);
+						if_setop(5, "Open", $component9);
+						if_setopbase("<col=ffffff>Task</col>", $component9);
+						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonmouseover(null, $component9);
+						if_setonmouseleave(null, $component9);
+					}
+				}
 			case default :
 				if_setonop(null, $component9);
 				if_setonmouseover(null, $component9);
@@ -961,26 +1022,26 @@ while ($mesuid10 ! -1 & $component9 ! null) {
 	}
 	$mesuid10 = chat_getprevuid($mesuid10);
 }
-def_int $int22 = $int8;
+def_int $int23 = $int8;
 while ($component9 ! null) {
 	if_clearops($component9);
 	if_setonop(null, $component9);
 	if_setonmouseover(null, $component9);
 	if_setonmouseleave(null, $component9);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component9);
-	if (cc_find(interface_162:56, calc($int8 * 4)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 1)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 2)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 3)) = ^true) {
 		cc_sethide(true);
 	}
 	$int8 = calc($int8 + 1);
@@ -988,29 +1049,29 @@ while ($component9 ! null) {
 }
 $int6 = calc($int6 - 2);
 $int6 = calc(0 - $int6);
-def_int $int23 = if_getheight(interface_162:56);
-if ($int6 > $int23) {
-	$int23 = $int6;
+def_int $int24 = if_getheight(interface_162:57);
+if ($int6 > $int24) {
+	$int24 = $int6;
 }
-$int8 = $int22;
+$int8 = $int23;
 while ($int8 > 0) {
 	$int8 = calc($int8 - 1);
 	$component9 = enum(int, component, enum_579, $int8);
-	$int6 = calc(if_gety($component9) + $int23 - 2);
+	$int6 = calc(if_gety($component9) + $int24 - 2);
 	if_setposition(if_getx($component9), $int6, ^setpos_abs_left, ^setpos_abs_top, $component9);
-	if (cc_find(interface_162:56, calc($int8 * 4)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 1)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 2)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(interface_162:56, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(interface_162:57, calc($int8 * 4 + 3)) = ^true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }
-if_setscrollsize(0, $int23, interface_162:56);
-~scrollbar_resize(interface_162:557, interface_162:56, calc(%varcint7 + ($int23 - %varcint8)));
-%varcint7, %varcint8 = if_getscrolly(interface_162:56), $int23;
+if_setscrollsize(0, $int24, interface_162:57);
+~scrollbar_resize(interface_162:558, interface_162:57, calc(%varcint7 + ($int24 - %varcint8)));
+%varcint7, %varcint8 = if_getscrolly(interface_162:57), $int24;

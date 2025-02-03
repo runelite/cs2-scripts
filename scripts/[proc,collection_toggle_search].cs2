@@ -1,15 +1,15 @@
 // 4085
 [proc,collection_toggle_search](boolean $boolean0)
 def_component $component1 = interface_621:2;
-def_component $component2 = interface_621:70;
-def_component $component3 = interface_621:83;
+def_component $component2 = interface_621:71;
+def_component $component3 = interface_621:75;
 if (if_gethide($component2) = false | $boolean0 = true) {
 	if_sethide(true, $component2);
 	if_sethide(true, $component3);
 	if_sethide(false, $component1);
 	~chatdefault_restoreinput;
-	%varbit9638 = 0;
-	%varbit9639 = 0;
+	%varbit16073 = 0;
+	%varbit16074 = 0;
 	%varbit17310 = 0;
 	%varbit17311 = 0;
 	if (~on_mobile = true) {
@@ -22,6 +22,6 @@ if (if_gethide($component2) = false | $boolean0 = true) {
 	if_sethide(false, $component3);
 	~collection_search_button(0);
 	%varcstring417 = "";
-	~collection_searchbar_set_text(interface_621:73);
-	~collection_searchbar_op(interface_621:75, interface_621:82);
+	~collection_searchbar_set_text(interface_621:79);
+	~collection_searchbar_op(interface_621:81, interface_621:76);
 }
