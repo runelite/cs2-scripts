@@ -1,0 +1,19 @@
+// 5235
+[clientscript,wornitems_deadman_sigils_init](component $widget_387:29_0)
+cc_deleteall($widget_387:29_0);
+if (~deadman_world ! 3 | ~private_event_world ! 0) {
+	if_clearops($widget_387:29_0);
+	return;
+}
+if_setop(1, "Sigils", $widget_387:29_0);
+cc_create($widget_387:29_0, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_create($widget_387:29_0, ^iftype_graphic, 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+~wornitems_deadman_sigils_drawbutton;
+if_setonvartransmit("wornitems_deadman_sigils_drawbutton($widget_387:29_0, cc_getid){var3165}", $widget_387:29_0);

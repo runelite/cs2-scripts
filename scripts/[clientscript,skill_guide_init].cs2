@@ -1,0 +1,41 @@
+// 654
+[clientscript,skill_guide_init](component $widget_214:1_0, component $widget_214:7_1, component $widget_214:8_2, component $widget_214:10_3, component $widget_214:29_4, component $widget_214:11_5, component $widget_214:5_6, component $widget_214:4_7, component $widget_214:6_8, component $widget_214:12_9, component $widget_214:0_10)
+~skill_guide_build(
+	0 = $widget_214:7_1, 
+	1 = $widget_214:8_2, 
+	2 = $widget_214:10_3, 
+	3 = $widget_214:29_4, 
+	4 = $widget_214:11_5, 
+	5 = $widget_214:5_6, 
+	6 = $widget_214:4_7, 
+	7 = $widget_214:6_8, 
+	8 = $widget_214:12_9, 
+	9 = $widget_214:0_10
+);
+def_enum $enum11 = ~toplevel_getcomponents;
+def_component $component12 = enum(component, component, $enum11, interface_161:16);
+if (~on_mobile = true) {
+	if_setontimer("script3833($widget_214:0_10, $widget_214:1_0, 0)", $widget_214:0_10);
+} else {
+	if (%varcint1170 = 0 & %varcint1171 = 0 & %varcint1168 = 0 & %varcint1169 = 0) {
+		%varcint1168 = if_getwidth($component12);
+		%varcint1169 = if_getheight($component12);
+		%varcint1170 = if_getx($component12);
+		%varcint1171 = if_gety($component12);
+	}
+	if_setontimer("script6110($widget_214:0_10, -1)", $widget_214:0_10);
+	if_setonresize("skill_guide_rebuild", $widget_214:0_10);
+}
+if_setonvartransmit("skill_guide_build(
+	0 = $widget_214:7_1, 
+	1 = $widget_214:8_2, 
+	2 = $widget_214:10_3, 
+	3 = $widget_214:29_4, 
+	4 = $widget_214:11_5, 
+	5 = $widget_214:5_6, 
+	6 = $widget_214:4_7, 
+	7 = $widget_214:6_8, 
+	8 = $widget_214:12_9, 
+	9 = $widget_214:0_10
+){var965}", $widget_214:1_0);
+~script1911(-1, -1, $widget_214:0_10, $widget_214:1_0);

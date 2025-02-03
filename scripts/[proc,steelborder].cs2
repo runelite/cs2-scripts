@@ -1,0 +1,234 @@
+// 228
+[proc,steelborder](component $component0, string $text0, int $flags1)(int)
+def_graphic $graphic2 = b12_full;
+def_int $y3 = calc(35 - 21);
+def_int $int4 = 0;
+if (testbit($flags1, 4) = ^true) {
+	switch_int (%varcint988) {
+		case 1 :
+			$graphic2 = verdana_13pt_bold;
+			$y3 = calc(37 - 21);
+			$int4 = 1;
+		case 2 :
+			$graphic2 = verdana_13pt_bold;
+			$y3 = calc(37 - 21);
+			$int4 = 1;
+		case 3 :
+			$graphic2 = verdana_15pt_regular;
+			$y3 = calc(39 - 21);
+			$int4 = 2;
+	}
+}
+cc_deleteall($component0);
+~create_graphic(
+	0 = $component0, 
+	1 = 0, 
+	2 = tradebacking, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 2, 
+	8 = 2, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus
+);
+if (testbit($flags1, 3) = ^true) {
+	cc_settrans(120);
+} else {
+	cc_settrans(0);
+}
+cc_create($component0, ^iftype_text, 1);
+cc_setposition(0, calc(6 + $int4), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(12, 24, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont($graphic2);
+cc_settext($text0);
+def_int $comsubid5 = cc_getid;
+~create_graphic(
+	0 = $component0, 
+	1 = 2, 
+	2 = "steelborder,0", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 25, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 3, 
+	2 = "steelborder,1", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 25, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 4, 
+	2 = "steelborder,2", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_bottom, 
+	7 = 25, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 5, 
+	2 = "steelborder,3", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_bottom, 
+	7 = 25, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 6, 
+	2 = "miscgraphics,2", 
+	3 = -15, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_centre, 
+	7 = 36, 
+	8 = 60, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_minus
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 7, 
+	2 = "steelborder2,1", 
+	3 = -15, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_centre, 
+	7 = 36, 
+	8 = 60, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_minus
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 8, 
+	2 = "steelborder2,0", 
+	3 = 0, 
+	4 = -15, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_top, 
+	7 = 50, 
+	8 = 36, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 9, 
+	2 = "miscgraphics,3", 
+	3 = 0, 
+	4 = -15, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_bottom, 
+	7 = 50, 
+	8 = 36, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs
+);
+if (testbit($flags1, 2) = ^false) {
+	~create_graphic(
+		0 = $component0, 
+		1 = 10, 
+		2 = "steelborder_divider,0", 
+		3 = 0, 
+		4 = $y3, 
+		5 = ^setpos_abs_centre, 
+		6 = ^setpos_abs_top, 
+		7 = 10, 
+		8 = 26, 
+		9 = ^setsize_minus, 
+		10 = ^setsize_abs
+	);
+} else {
+	~create_graphic(
+		0 = $component0, 
+		1 = 10, 
+		2 = null, 
+		3 = 0, 
+		4 = 0, 
+		5 = ^setpos_abs_left, 
+		6 = ^setpos_abs_top, 
+		7 = 0, 
+		8 = 0, 
+		9 = ^setsize_abs, 
+		10 = ^setsize_abs
+	);
+}
+def_graphic $graphic6 = "close_buttons,0";
+def_graphic $graphic7 = "close_buttons,1";
+def_int $x8 = calc(3 + $int4);
+def_int $y9 = calc(6 + $int4);
+def_int $width10 = 26;
+def_int $height11 = 23;
+if (~on_mobile = true) {
+	$graphic6 = "steelborder_close_button,0";
+	$graphic7 = "steelborder_close_button,0";
+	$x8 = 1;
+	$y9 = 1;
+	$width10 = 33;
+	$height11 = 33;
+}
+def_int $comsubid12 = 11;
+if (testbit($flags1, 0) = ^false) {
+	~create_graphic(
+		0 = $component0, 
+		1 = $comsubid12, 
+		2 = $graphic6, 
+		3 = $x8, 
+		4 = $y9, 
+		5 = ^setpos_abs_right, 
+		6 = ^setpos_abs_top, 
+		7 = $width10, 
+		8 = $height11, 
+		9 = ^setsize_abs, 
+		10 = ^setsize_abs
+	);
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
+	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic7, null)");
+	cc_setop(1, "Close");
+	cc_setonop("closebutton_click");
+	cc_setonkey("closebutton_key(event_keycode)");
+	$comsubid12 = 12;
+}
+if (testbit($flags1, 1) = ^true) {
+	~create_graphic(
+		0 = $component0, 
+		1 = $comsubid12, 
+		2 = map_resize, 
+		3 = 0, 
+		4 = 0, 
+		5 = ^setpos_abs_right, 
+		6 = ^setpos_abs_bottom, 
+		7 = 8, 
+		8 = 8, 
+		9 = ^setsize_abs, 
+		10 = ^setsize_abs
+	);
+}
+return($comsubid5);

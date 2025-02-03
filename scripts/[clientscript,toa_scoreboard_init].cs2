@@ -1,0 +1,10 @@
+// 6771
+[clientscript,toa_scoreboard_init](component $widget_775:0_0, component $widget_775:9_1, component $widget_775:10_2, component $widget_775:11_3, component $widget_775:85_4, component $widget_775:86_5, component $widget_775:87_6)
+if_setonvartransmit("toa_scoreboard_tab_update($widget_775:85_4, $widget_775:86_5, $widget_775:87_6){var3585}", $widget_775:0_0);
+if_setonop("toa_scoreboard_tab_select($widget_775:85_4, $widget_775:86_5, $widget_775:87_6, 0)", $widget_775:86_5);
+if_setonop("toa_scoreboard_tab_select($widget_775:85_4, $widget_775:86_5, $widget_775:87_6, 1)", $widget_775:85_4);
+if_setonop("toa_scoreboard_tab_select($widget_775:85_4, $widget_775:86_5, $widget_775:87_6, 2)", $widget_775:87_6);
+~toa_scoreboard_tab_update($widget_775:85_4, $widget_775:86_5, $widget_775:87_6);
+if_setscrollsize(0, if_getheight($widget_775:11_3), $widget_775:10_2);
+if_setscrollpos(0, 0, $widget_775:10_2);
+~scrollbar_vertical($widget_775:9_1, $widget_775:10_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

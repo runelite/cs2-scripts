@@ -1,0 +1,36 @@
+// 5242
+[proc,script5242](int $int0)(int)
+if (~is_group_iron = 1) {
+	switch_int ($int0) {
+		case 4 :
+			switch_int (%varbit13049) {
+				case 2 :
+					return(enum_getoutputcount(enum_4086));
+				case 3 :
+					return(enum_getoutputcount(enum_4089));
+				case 4 :
+					return(enum_getoutputcount(enum_4092));
+			}
+		case 5 :
+			switch_int (%varbit13049) {
+				case 2 :
+					return(enum_getoutputcount(enum_4087));
+				case 3 :
+					return(enum_getoutputcount(enum_4090));
+				case 4 :
+					return(enum_getoutputcount(enum_4093));
+			}
+		case 6 :
+			switch_int (%varbit13049) {
+				case 2 :
+					return(enum_getoutputcount(enum_4088));
+				case 3 :
+					return(enum_getoutputcount(enum_4091));
+				case 4 :
+					return(enum_getoutputcount(enum_4094));
+				case 5 :
+					return(enum_getoutputcount(enum_861));
+			}
+	}
+}
+return(0);

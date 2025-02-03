@@ -1,0 +1,54 @@
+// 3657
+[clientscript,trailblazer_areas_init](component $widget_512:6_0, component $widget_512:7_1, component $widget_512:11_2, component $widget_512:5_3, component $widget_512:44_4, component $widget_512:46_5, component $widget_512:47_6, component $widget_512:48_7, component $widget_512:49_8, component $widget_512:50_9, component $widget_512:51_10, component $widget_512:52_11, component $widget_512:53_12, component $widget_512:54_13, component $widget_512:55_14, component $widget_512:92_15, component $widget_512:94_16, component $widget_512:95_17, component $widget_512:96_18, component $widget_512:97_19, component $widget_512:98_20, component $widget_512:99_21, component $widget_512:100_22, component $widget_512:101_23, component $widget_512:102_24, component $widget_512:103_25, component $widget_512:41_26, component $widget_512:42_27, component $widget_512:43_28, component $widget_512:78_29, component $widget_512:82_30, component $widget_512:83_31, component $widget_512:89_32, component $widget_512:40_33, component $widget_512:36_34, component $widget_512:8_35, component $widget_512:2_36)
+def_struct $struct37 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct37 = null) {
+	return;
+}
+~leagues_close_button($widget_512:5_3, true, 0);
+def_int $comsubid38 = ~steelborder(interface_512:3, "League Areas", 1);
+def_component $component39 = interface_512:0;
+if_setontimer("script6110($component39, -1)", $component39);
+if_setonresize("league_areas_draw_interface(
+	0 = $widget_512:6_0, 
+	1 = $widget_512:7_1, 
+	2 = $widget_512:11_2, 
+	3 = $widget_512:5_3, 
+	4 = $comsubid38, 
+	5 = $widget_512:44_4, 
+	6 = $widget_512:46_5, 
+	7 = $widget_512:47_6, 
+	8 = $widget_512:48_7, 
+	9 = $widget_512:49_8, 
+	10 = $widget_512:50_9, 
+	11 = $widget_512:51_10, 
+	12 = $widget_512:52_11, 
+	13 = $widget_512:53_12, 
+	14 = $widget_512:54_13, 
+	15 = $widget_512:55_14, 
+	16 = $widget_512:92_15, 
+	17 = $widget_512:94_16, 
+	18 = $widget_512:95_17, 
+	19 = $widget_512:96_18, 
+	20 = $widget_512:97_19, 
+	21 = $widget_512:98_20, 
+	22 = $widget_512:99_21, 
+	23 = $widget_512:100_22, 
+	24 = $widget_512:101_23, 
+	25 = $widget_512:102_24, 
+	26 = $widget_512:103_25, 
+	27 = $widget_512:41_26, 
+	28 = $widget_512:42_27, 
+	29 = $widget_512:43_28, 
+	30 = $widget_512:78_29, 
+	31 = $widget_512:82_30, 
+	32 = $widget_512:83_31, 
+	33 = $widget_512:89_32, 
+	34 = $widget_512:40_33, 
+	35 = $widget_512:36_34, 
+	36 = $widget_512:8_35, 
+	37 = $widget_512:2_36
+)", $component39);
+if (~in_league_tutorial = 0) {
+	~leagues_menu_button($widget_512:6_0, 0, $widget_512:7_1, $widget_512:11_2);
+}
+~league_create_dropdown($widget_512:6_0, $widget_512:7_1, $widget_512:11_2, 0, 3);

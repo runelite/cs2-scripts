@@ -1,0 +1,20 @@
+// 2452
+[proc,league_side_panel_rank](component $component0, int $colour1)
+def_component $component2 = interface_656:15;
+def_component $component3 = interface_656:14;
+def_component $component4 = interface_656:10;
+def_component $component5 = interface_656:11;
+if_setcolour($colour1, $component3);
+if_setop(1, "Show <col=ff9040>Ranks</col>", $component4);
+if_setgraphic(enum(int, graphic, enum_5199, ~league_current_rank), $component2);
+if_setonvartransmit("script2453($component2){var2614}", $component4);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script7702(true, $component3, $colour1)", $component4);
+	if_setonmouseleave("script7702(false, $component3, $colour1)", $component4);
+}
+def_string $string0 = "Open the rank interface";
+if (~on_mobile = false) {
+	if_setonmouserepeat("tooltip_mouserepeat($component4, 0, $component0, $string0, 25, 190)", $component5);
+	if_setonmouseleave("deltooltip($component0)", $component5);
+}
+def_int $int6 = ~script3953($component5, $int6, 24, if_getwidth($component5), 0, 0, 0);

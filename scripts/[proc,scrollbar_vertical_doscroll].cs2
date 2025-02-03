@@ -1,0 +1,68 @@
+// 37
+[proc,scrollbar_vertical_doscroll](component $component0, component $component1, int $int2, boolean $boolean3)
+def_int $int4 = ~max(calc(if_getscrollheight($component1) - if_getheight($component1)), 1);
+$int2 = ~max(~min($int2, $int4), 0);
+if_setscrollpos(if_getscrollx($component1), $int2, $component1);
+switch_component ($component1) {
+	case interface_162:56 :
+		%varcint7 = if_getscrolly($component1);
+	case interface_399:6 :
+		%varcint10 = if_getscrolly($component1);
+	case interface_779:9 :
+		%varcint972 = if_getscrolly($component1);
+	case interface_239:4 :
+		%varcint75 = if_getscrolly($component1);
+	case interface_429:11 :
+		%varcint9 = if_getscrolly($component1);
+	case interface_12:13 :
+		%varcint51 = if_getscrolly($component1);
+	case interface_381:7 :
+		%varcint0 = if_getscrolly($component1);
+	case interface_69:17 :
+		%varcint69 = if_getscrolly($component1);
+	case interface_675:4, interface_458:3 :
+		%varcint58 = if_getscrolly($component1);
+	case interface_345:11, interface_400:10, interface_690:10, interface_706:12, interface_767:19, interface_700:20, interface_695:11, interface_731:12, interface_744:12, interface_821:19, interface_861:11, interface_890:4 :
+		%varcint63 = if_getscrolly($component1);
+	case interface_706:8 :
+		%varcint49 = if_getscrolly($component1);
+	case interface_744:8 :
+		%varcint49 = if_getscrolly($component1);
+	case interface_92:4 :
+		%varcint203 = if_getscrolly($component1);
+	case interface_875:19 :
+		%varcint67 = if_getscrolly($component1);
+	case interface_179:5 :
+		%varcint77 = if_getscrolly($component1);
+	case interface_75:3 :
+		%varcint80 = if_getscrolly($component1);
+	case interface_129:13 :
+		%varcint138 = if_getscrolly($component1);
+	case interface_499:15, interface_507:11, interface_500:10, interface_767:6, interface_700:5, interface_699:11, interface_695:6, interface_724:10 :
+		%varcint179 = if_getscrolly($component1);
+	case interface_595:19 :
+		%varcint182 = if_getscrolly($component1);
+	case interface_631:11 :
+		%varcint376 = if_getscrolly($component1);
+	case interface_52:20 :
+		%varcint378 = if_getscrolly($component1);
+	case interface_716:10 :
+		%varcint529 = if_getscrolly($component1);
+	case interface_772:16 :
+		%varcint1082 = if_getscrolly($component1);
+	case interface_774:52 :
+		%varcint1083 = if_getscrolly($component1);
+	case interface_774:56 :
+		%varcint1084 = if_getscrolly($component1);
+	case interface_516:7 :
+		%varcint1153 = if_getscrolly($component1);
+	case interface_657:16 :
+		%varcint1179 = if_getscrolly($component1);
+	case interface_403:17 :
+		%varcint1187 = if_getscrolly($component1);
+	case interface_819:33 :
+		%varcint1199 = if_getscrolly($component1);
+}
+if ($boolean3 = true) {
+	~scrollbar_vertical_setdragger($component0, $component1);
+}

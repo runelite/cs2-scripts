@@ -1,0 +1,94 @@
+// 3637
+[clientscript,script3637](component $widget_2:0_0, component $widget_2:2_1, component $widget_2:3_2, component $widget_2:6_3, component $widget_2:7_4, component $widget_2:8_5, component $widget_2:9_6)
+def_int $count7 = enum_getoutputcount(enum_3319);
+def_int $int8 = calc((if_getwidth($widget_2:2_1) - 8 * 36) / 7 + 36);
+def_namedobj $namedobj9 = null;
+def_int $num10 = 0;
+def_int $int11 = -1;
+cc_deleteall($widget_2:2_1);
+def_int $count12 = 0;
+while ($count12 < $count7) {
+	cc_create($widget_2:2_1, ^iftype_graphic, $count12);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	$int11 = calc($count12 / 8 * $int8);
+	cc_setposition(calc($count12 % 8 * $int8), $int11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$namedobj9 = enum(int, namedobj, enum_3319, $count12);
+	if ($namedobj9 ! null) {
+		cc_sethide(false);
+		$num10 = ~max(1, enum(obj, int, enum_3320, $namedobj9));
+		cc_setobject($namedobj9, $num10);
+		if ($num10 > 1) {
+			cc_setopbase("<col=ff9040><oc_name($namedobj9)> set</col>");
+		} else {
+			cc_setopbase("<col=ff9040><oc_name($namedobj9)></col>");
+		}
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 125, 0)");
+	} else {
+		cc_sethide(true);
+	}
+	$count12 = calc($count12 + 1);
+}
+if ($int11 ! -1) {
+	$int11 = calc($int11 + 32);
+}
+if_setscrollpos(0, 0, $widget_2:2_1);
+if ($int11 > if_getheight($widget_2:2_1)) {
+	if_setscrollsize(0, $int11, $widget_2:2_1);
+	if_sethide(false, $widget_2:3_2);
+	~scrollbar_vertical($widget_2:3_2, $widget_2:2_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else {
+	if_setscrollsize(0, 0, $widget_2:2_1);
+	if_sethide(true, $widget_2:3_2);
+}
+if_setop(1, "Value", $widget_2:6_3);
+if_setonop("script3638(
+	0 = event_op, 
+	1 = event_com, 
+	2 = 0, 
+	3 = $count7, 
+	4 = $widget_2:2_1, 
+	5 = $widget_2:6_3, 
+	6 = $widget_2:7_4, 
+	7 = $widget_2:8_5, 
+	8 = $widget_2:9_6
+)", $widget_2:6_3);
+if_setop(1, "1", $widget_2:7_4);
+if_setonop("script3638(
+	0 = event_op, 
+	1 = event_com, 
+	2 = 1, 
+	3 = $count7, 
+	4 = $widget_2:2_1, 
+	5 = $widget_2:6_3, 
+	6 = $widget_2:7_4, 
+	7 = $widget_2:8_5, 
+	8 = $widget_2:9_6
+)", $widget_2:7_4);
+if_setop(1, "5", $widget_2:8_5);
+if_setonop("script3638(
+	0 = event_op, 
+	1 = event_com, 
+	2 = 2, 
+	3 = $count7, 
+	4 = $widget_2:2_1, 
+	5 = $widget_2:6_3, 
+	6 = $widget_2:7_4, 
+	7 = $widget_2:8_5, 
+	8 = $widget_2:9_6
+)", $widget_2:8_5);
+if_setop(1, "X", $widget_2:9_6);
+if_setonop("script3638(
+	0 = event_op, 
+	1 = event_com, 
+	2 = 3, 
+	3 = $count7, 
+	4 = $widget_2:2_1, 
+	5 = $widget_2:6_3, 
+	6 = $widget_2:7_4, 
+	7 = $widget_2:8_5, 
+	8 = $widget_2:9_6
+)", $widget_2:9_6);
+~script3640($count7, $widget_2:2_1, $widget_2:6_3, $widget_2:7_4, $widget_2:8_5, $widget_2:9_6);
+if_setonvartransmit("script3639($count7, $widget_2:2_1, $widget_2:6_3, $widget_2:7_4, $widget_2:8_5, $widget_2:9_6){var1022}", $widget_2:0_0);

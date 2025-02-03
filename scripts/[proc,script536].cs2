@@ -1,0 +1,154 @@
+// 536
+[proc,script536](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component1);
+def_int $int6 = 0;
+def_int $int7 = 16;
+def_int $int8 = calc(if_getwidth($component1) / 2);
+$int6 = ~script537(
+	0 = attack, 
+	1 = $int7, 
+	2 = 0, 
+	3 = $int8, 
+	4 = 0, 
+	5 = 1, 
+	6 = 2, 
+	7 = 3, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int6 = ~script537(
+	0 = strength, 
+	1 = $int7, 
+	2 = $int8, 
+	3 = $int8, 
+	4 = 4, 
+	5 = 5, 
+	6 = 6, 
+	7 = 7, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int7 = calc($int7 + 32 + 10);
+$int6 = ~script537(
+	0 = defence, 
+	1 = $int7, 
+	2 = 0, 
+	3 = $int8, 
+	4 = 8, 
+	5 = 9, 
+	6 = 10, 
+	7 = 11, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int6 = ~script537(
+	0 = ranged, 
+	1 = $int7, 
+	2 = $int8, 
+	3 = $int8, 
+	4 = 12, 
+	5 = 13, 
+	6 = 14, 
+	7 = 15, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int7 = calc($int7 + 32 + 10);
+$int6 = ~script537(
+	0 = magic, 
+	1 = $int7, 
+	2 = 0, 
+	3 = $int8, 
+	4 = 16, 
+	5 = 17, 
+	6 = 18, 
+	7 = 19, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int6 = ~script537(
+	0 = hitpoints, 
+	1 = $int7, 
+	2 = $int8, 
+	3 = $int8, 
+	4 = 20, 
+	5 = 21, 
+	6 = 22, 
+	7 = 23, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int7 = calc($int7 + 32 + 10);
+$int6 = ~script537(
+	0 = prayer, 
+	1 = $int7, 
+	2 = 0, 
+	3 = $int8, 
+	4 = 24, 
+	5 = 25, 
+	6 = 26, 
+	7 = 27, 
+	8 = $component1, 
+	9 = $component2, 
+	10 = $component3, 
+	11 = $int6, 
+	12 = $int0, 
+	13 = $component4, 
+	14 = $component5
+);
+$int7 = calc($int7 + 32);
+~soul_wars_rewards_drawconfirm(
+	0 = $int0, 
+	1 = -1, 
+	2 = $component1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = enum_3537, 
+	6 = 0, 
+	7 = $component4, 
+	8 = $component5
+);
+if_setonvartransmit("script532(-1, $component1, $component2, $component3, $component4, $component5){var2876}", $component1);
+if_setonvartransmit(null, $component4);
+if_setonvartransmit(null, $component5);
+if_setonvartransmit("soul_wars_rewards_drawconfirm(
+	0 = $int0, 
+	1 = -1, 
+	2 = $component1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = enum_3537, 
+	6 = 0, 
+	7 = $component4, 
+	8 = $component5
+){var2971}", $component2);

@@ -1,0 +1,55 @@
+// 7074
+[proc,script7074](component $widget_516:15_0, component $widget_516:22_1)
+def_int $int2 = 0;
+def_int $int3 = -1;
+def_component $layer4 = if_getlayer($widget_516:22_1);
+switch_int (%varbit4130) {
+	case 0, 1 :
+		~create_graphic(
+			0 = $widget_516:15_0, 
+			1 = $int2, 
+			2 = tradebacking_dark, 
+			3 = 0, 
+			4 = 0, 
+			5 = ^setpos_abs_centre, 
+			6 = ^setpos_abs_top, 
+			7 = 0, 
+			8 = 0, 
+			9 = ^setsize_minus, 
+			10 = ^setsize_minus
+		);
+		$int2 = calc($int2 + 1);
+		$int2 = ~thinbox($widget_516:15_0, $int2);
+		cc_create($widget_516:15_0, ^iftype_model, $int2);
+		cc_setplayerhead_self;
+		cc_setmodelanim(seq_10057);
+		cc_setmodelangle(0, 0, 0, %varcint1150, 0, 1000);
+		cc_setsize(5, 5, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setontimer("makeover_spin(event_com, event_comsubid)");
+		cc_setop(1, "Toggle");
+		cc_setopbase("<col=ff9040>Spin");
+		cc_setonop("script7076");
+		if_sethide(true, $layer4);
+	case default :
+		if_sethide(false, $layer4);
+		~create_graphic(
+			0 = $widget_516:15_0, 
+			1 = $int2, 
+			2 = tradebacking_dark, 
+			3 = 0, 
+			4 = 0, 
+			5 = ^setpos_abs_centre, 
+			6 = ^setpos_abs_top, 
+			7 = 0, 
+			8 = 0, 
+			9 = ^setsize_minus, 
+			10 = ^setsize_minus
+		);
+		$int2 = calc($int2 + 1);
+		cc_setop(1, "Toggle");
+		cc_setopbase("<col=ff9040>Zoom");
+		cc_setonop("script5163($widget_516:22_1, $widget_516:15_0, $int2)");
+		$int2 = ~thinbox($widget_516:15_0, $int2);
+		~script5164($widget_516:22_1, $widget_516:15_0, $int2);
+}

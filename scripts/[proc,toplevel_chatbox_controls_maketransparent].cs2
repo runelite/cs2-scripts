@@ -1,0 +1,12 @@
+// 2373
+[proc,toplevel_chatbox_controls_maketransparent]()(int)
+if (~on_mobile = true) {
+	return(1);
+}
+if (~toplevel_chatbox_permittransparent = 0) {
+	return(0);
+}
+if (%varbit4608 = 0) {
+	return(0);
+}
+return(1);

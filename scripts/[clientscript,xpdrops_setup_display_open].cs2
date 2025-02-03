@@ -1,0 +1,346 @@
+// 1030
+[clientscript,xpdrops_setup_display_open](component $component0, component $component1, component $widget_137:1_2, component $widget_137:47_3, component $widget_137:49_4, component $widget_137:60_5, component $widget_137:61_6, component $widget_137:6_7, component $widget_137:51_8, component $widget_137:7_9, component $widget_137:52_10, component $widget_137:9_11, component $widget_137:53_12, component $widget_137:10_13, component $widget_137:54_14, component $widget_137:11_15, component $widget_137:55_16, component $widget_137:12_17, component $widget_137:56_18, component $widget_137:13_19, component $widget_137:57_20, component $widget_137:8_21, component $widget_137:58_22, component $widget_137:14_23, component $widget_137:59_24)
+sound_synth(interface_select1, 1, 0);
+if_sethide(true, $widget_137:61_6);
+~deltooltip_action($widget_137:61_6);
+~xpdrops_setup_display_hoverdisable($component0);
+if_sethide(false, $widget_137:47_3);
+def_int $int25 = if_getx($component0);
+def_int $int26 = if_gety($component0);
+def_component $layer27 = if_getlayer($component0);
+while ($layer27 ! $widget_137:1_2) {
+	$int25, $int26 = calc($int25 + if_getx($layer27) - if_getscrollx($layer27)), calc($int26 + if_gety($layer27) - if_getscrolly($layer27));
+	$layer27 = if_getlayer($layer27);
+}
+$int26 = calc($int26 + if_getheight($component0) - 1);
+if_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top, $widget_137:49_4);
+def_int $int28 = 15;
+if (~on_mobile = true) {
+	$int28 = scale(8, 5, $int28);
+}
+.cc_create($component1, ^iftype_rectangle, 0);
+.cc_setsize(0, calc($int28 + 2), ^setsize_minus, ^setsize_abs);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(200);
+.cc_sethide(true);
+def_int $int29 = 0;
+if ($component1 = $widget_137:51_8) {
+	if_sethide(false, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1164, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:52_10) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(false, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1165, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:53_12) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(false, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1166, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:54_14) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(false, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1032(
+		0 = $component1, 
+		1 = $widget_137:47_3, 
+		2 = $widget_137:61_6, 
+		3 = $widget_137:6_7, 
+		4 = $widget_137:51_8, 
+		5 = $widget_137:7_9, 
+		6 = $widget_137:52_10, 
+		7 = $widget_137:9_11, 
+		8 = $widget_137:53_12, 
+		9 = $widget_137:10_13, 
+		10 = $widget_137:54_14, 
+		11 = $widget_137:11_15, 
+		12 = $widget_137:55_16, 
+		13 = $widget_137:12_17, 
+		14 = $widget_137:56_18, 
+		15 = $widget_137:13_19, 
+		16 = $widget_137:57_20, 
+		17 = $widget_137:8_21, 
+		18 = $widget_137:58_22, 
+		19 = $widget_137:14_23, 
+		20 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:55_16) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(false, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1032(
+		0 = $component1, 
+		1 = $widget_137:47_3, 
+		2 = $widget_137:61_6, 
+		3 = $widget_137:6_7, 
+		4 = $widget_137:51_8, 
+		5 = $widget_137:7_9, 
+		6 = $widget_137:52_10, 
+		7 = $widget_137:9_11, 
+		8 = $widget_137:53_12, 
+		9 = $widget_137:10_13, 
+		10 = $widget_137:54_14, 
+		11 = $widget_137:11_15, 
+		12 = $widget_137:55_16, 
+		13 = $widget_137:12_17, 
+		14 = $widget_137:56_18, 
+		15 = $widget_137:13_19, 
+		16 = $widget_137:57_20, 
+		17 = $widget_137:8_21, 
+		18 = $widget_137:58_22, 
+		19 = $widget_137:14_23, 
+		20 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:56_18) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(false, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1168, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:57_20) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(false, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1170, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:58_22) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(false, $widget_137:58_22);
+	if_sethide(true, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1140, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+} else if ($component1 = $widget_137:59_24) {
+	if_sethide(true, $widget_137:51_8);
+	if_sethide(true, $widget_137:52_10);
+	if_sethide(true, $widget_137:53_12);
+	if_sethide(true, $widget_137:54_14);
+	if_sethide(true, $widget_137:55_16);
+	if_sethide(true, $widget_137:56_18);
+	if_sethide(true, $widget_137:57_20);
+	if_sethide(true, $widget_137:58_22);
+	if_sethide(false, $widget_137:59_24);
+	$int29 = ~script1031(
+		0 = $component1, 
+		1 = enum_1625, 
+		2 = $widget_137:47_3, 
+		3 = $widget_137:61_6, 
+		4 = $widget_137:6_7, 
+		5 = $widget_137:51_8, 
+		6 = $widget_137:7_9, 
+		7 = $widget_137:52_10, 
+		8 = $widget_137:9_11, 
+		9 = $widget_137:53_12, 
+		10 = $widget_137:10_13, 
+		11 = $widget_137:54_14, 
+		12 = $widget_137:11_15, 
+		13 = $widget_137:55_16, 
+		14 = $widget_137:12_17, 
+		15 = $widget_137:56_18, 
+		16 = $widget_137:13_19, 
+		17 = $widget_137:57_20, 
+		18 = $widget_137:8_21, 
+		19 = $widget_137:58_22, 
+		20 = $widget_137:14_23, 
+		21 = $widget_137:59_24
+	);
+}
+def_int $int30 = calc($int29 * $int28 + 2);
+def_int $height31 = calc($int30 + 4);
+def_int $height32 = calc(if_getheight($widget_137:1_2) - $int26);
+if ($height31 > $height32) {
+	if_setsize(if_getwidth($component0), $height32, ^setsize_abs, ^setsize_abs, $widget_137:49_4);
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, $int30, $component1);
+} else {
+	if_setsize(if_getwidth($component0), $height31, ^setsize_abs, ^setsize_abs, $widget_137:49_4);
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, 0, $component1);
+}
+cc_deleteall($widget_137:60_5);
+~scrollbar_vertical($widget_137:60_5, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

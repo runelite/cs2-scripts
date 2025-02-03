@@ -1,0 +1,8 @@
+// 970
+[clientscript,logout_op](int $opindex0, int $flags1, int $world2)
+if ($opindex0 = 1) {
+	logout;
+}
+if (testbit($flags1, $opindex0) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+}

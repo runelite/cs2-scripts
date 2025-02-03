@@ -1,0 +1,25 @@
+// 5008
+[proc,script5008](component $widget_874:15_0, component $widget_874:16_1, component $widget_874:17_2, component $widget_874:18_3, component $widget_874:19_4, component $widget_874:20_5)
+cc_deleteall($widget_874:15_0);
+if_sethide(true, $widget_874:16_1);
+if_sethide(true, $widget_874:17_2);
+def_string $string0 = "";
+def_int $int6 = db_listall_with_count(dbtable_64);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_dbrow $dbrow9 = null;
+while ($int7 < $int6) {
+	$dbrow9 = db_findbyindex($int7);
+	if ($dbrow9 ! null) {
+		$int8 = ~script5009($widget_874:15_0, $dbrow9, $int8, $widget_874:16_1, $widget_874:17_2, $widget_874:18_3, $widget_874:19_4, $widget_874:20_5);
+	}
+	$int7 = calc($int7 + 1);
+}
+$int7 = 0;
+while ($int7 < $int6) {
+	$dbrow9 = db_findbyindex($int7);
+	if ($dbrow9 ! null) {
+		$int8 = ~script5010($widget_874:15_0, $dbrow9, $int8);
+	}
+	$int7 = calc($int7 + 1);
+}

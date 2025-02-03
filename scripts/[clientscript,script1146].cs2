@@ -1,0 +1,78 @@
+// 1146
+[clientscript,script1146](component $widget_861:1_0, component $widget_861:3_1, component $widget_861:5_2, component $widget_861:6_3, component $widget_861:7_4, component $widget_861:8_5, component $widget_861:9_6, component $widget_861:10_7, component $widget_861:11_8, component $widget_861:27_9)
+%varcint179, %varcint178, %varcint63 = 0, 0, 0;
+~ge_offers_bigbutton($widget_861:3_1, "View Your Bonds", 0);
+def_int $width10 = if_getwidth($widget_861:5_2);
+cc_deleteall($widget_861:5_2);
+def_int $int11 = 0;
+def_int $int12 = 0;
+$int11, $int12 = ~script1147("<col=ffffff>Old School Bonds</col> can be redeemed for <col=ffffff>membership</col> or other packages.<br>You can buy them from the <col=ffffff>store</col>...", $widget_861:5_2, $width10, $int11, $int12);
+~stonebutton_init("Buy Bonds", $widget_861:6_3, b12_full, 1);
+if_setonop("opsound(event_op, 2)", $widget_861:6_3);
+if_setposition(0, $int12, ^setpos_abs_centre, ^setpos_abs_top, $widget_861:6_3);
+$int12 = calc($int12 + if_getheight($widget_861:6_3) + 5);
+$int11, $int12 = ~script1147("... or trade them with other players, such as via the <col=ffffff>Grand Exchange</col>.<br><br>View your existing bonds in your <col=ffffff>bond pouch</col>:", $widget_861:5_2, $width10, $int11, $int12);
+~stonebutton_init("View Your Bonds", $widget_861:7_4, b12_full, 1);
+if_setonop("opsound(event_op, 2)", $widget_861:7_4);
+if_setposition(0, $int12, ^setpos_abs_centre, ^setpos_abs_top, $widget_861:7_4);
+$int12 = calc($int12 + if_getheight($widget_861:7_4) + 5);
+$int11, $int12 = ~script1147("You can also buy <col=ffffff>membership</col> directly from the <col=ffffff>store</col>:", $widget_861:5_2, $width10, $int11, $int12);
+~stonebutton_init("Buy Membership", $widget_861:8_5, b12_full, 1);
+if_setonop("opsound(event_op, 2)", $widget_861:8_5);
+if_setposition(0, $int12, ^setpos_abs_centre, ^setpos_abs_top, $widget_861:8_5);
+$int12 = calc($int12 + if_getheight($widget_861:8_5));
+cc_deleteall($widget_861:9_6);
+$int11 = 0;
+cc_create($widget_861:9_6, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_light);
+cc_settiling(true);
+$int11 = ~thinbox($widget_861:9_6, $int11);
+cc_create($widget_861:9_6, ^iftype_graphic, $int11);
+def_int $comsubid13 = $int11;
+$int11 = calc($int11 + 1);
+.cc_create($widget_861:9_6, ^iftype_graphic, $int11);
+def_int $comsubid14 = $int11;
+$int11 = calc($int11 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(calc(4 + 36 - 6), 4, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setgraphicshadow(0x333333);
+.cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+.cc_setoutline(1);
+def_int $width15 = calc(if_getwidth(if_getlayer($widget_861:9_6)) - $width10 - (4 + 36 + 36 + 1 + 4 - 6));
+cc_create($widget_861:9_6, ^iftype_text, $int11);
+cc_setposition(4, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize($width15, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+def_int $int16 = ~script1277(
+	0 = $widget_861:9_6, 
+	1 = $comsubid13, 
+	2 = $comsubid14, 
+	3 = $int11, 
+	4 = $width10, 
+	5 = $width15, 
+	6 = $widget_861:10_7, 
+	7 = $widget_861:11_8, 
+	8 = $widget_861:27_9
+);
+if_setonvartransmit("script1276(
+	0 = event_com, 
+	1 = $comsubid13, 
+	2 = $comsubid14, 
+	3 = $int11, 
+	4 = $width10, 
+	5 = $width15, 
+	6 = $widget_861:10_7, 
+	7 = $widget_861:11_8, 
+	8 = $widget_861:27_9
+){var261, var262}", $widget_861:9_6);
+def_component $layer17 = if_getlayer($widget_861:1_0);
+~script1148($int12, $int16, if_getheight($layer17), $layer17, $widget_861:1_0, $widget_861:9_6, $widget_861:11_8, $widget_861:27_9);

@@ -1,0 +1,100 @@
+// 993
+[clientscript,xpdrops_init](component $widget_122:0_0, component $widget_122:1_1, component $widget_122:3_2, component $widget_122:2_3, component $widget_122:4_4, component $widget_122:9_5, component $widget_122:10_6, component $widget_122:11_7, component $widget_122:16_8, component $widget_122:17_9, component $widget_122:25_10)
+~script2511($widget_122:1_1, $widget_122:3_2, $widget_122:4_4);
+%varcint70, %varcint71 = 0, 0;
+%varcint953, %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959 = -1, -1, -1, -1, -1, -1, -1;
+%varcint960, %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966 = -1, -1, -1, -1, -1, -1, -1;
+if (%varcint76 <= 0) {
+	%varcint76 = clientclock;
+}
+def_int $int11 = 0;
+def_component $component12 = enum(int, component, enum_1163, $int11);
+while ($component12 ! null) {
+	cc_deleteall($component12);
+	cc_create($component12, ^iftype_text, 0);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+	cc_settext("");
+	cc_sethide(true);
+	if_sethide(true, $component12);
+	$int11 = calc($int11 + 1);
+	$component12 = enum(int, component, enum_1163, $int11);
+}
+~xpdrops_redraw($widget_122:0_0, $widget_122:4_4, $widget_122:3_2, $widget_122:10_6, $widget_122:11_7, $widget_122:17_9, $widget_122:25_10);
+~xpdrops_setbar($widget_122:4_4, $widget_122:9_5, $widget_122:10_6, $widget_122:11_7, $widget_122:16_8, $widget_122:17_9, $widget_122:25_10);
+if_setonvartransmit("xpdrops_vartransmit(
+	0 = $widget_122:0_0, 
+	1 = $widget_122:4_4, 
+	2 = $widget_122:3_2, 
+	3 = $widget_122:9_5, 
+	4 = $widget_122:10_6, 
+	5 = $widget_122:11_7, 
+	6 = $widget_122:16_8, 
+	7 = $widget_122:17_9, 
+	8 = $widget_122:25_10
+){
+	0 = var1227, 
+	1 = var1228, 
+	2 = var1229, 
+	3 = var1230, 
+	4 = var1231, 
+	5 = var1232, 
+	6 = var1233, 
+	7 = var1234, 
+	8 = var1235, 
+	9 = var1236, 
+	10 = var1237, 
+	11 = var1238, 
+	12 = var1239, 
+	13 = var1240, 
+	14 = var1241, 
+	15 = var1242, 
+	16 = var1243, 
+	17 = var1244, 
+	18 = var1245, 
+	19 = var1246, 
+	20 = var1247, 
+	21 = var1248, 
+	22 = var1249, 
+	23 = var1250, 
+	24 = var1251, 
+	25 = var1252, 
+	26 = var1253, 
+	27 = var1254, 
+	28 = var1255, 
+	29 = var1256, 
+	30 = var1257, 
+	31 = var1258, 
+	32 = var1259, 
+	33 = var1260, 
+	34 = var1261, 
+	35 = var1262, 
+	36 = var1263, 
+	37 = var1264, 
+	38 = var1265, 
+	39 = var1266, 
+	40 = var1267, 
+	41 = var1268, 
+	42 = var1269, 
+	43 = var1270, 
+	44 = var1271, 
+	45 = var1272, 
+	46 = var1273, 
+	47 = var1274, 
+	48 = var1275
+}", $widget_122:0_0);
+~xpdrops_setstatlistener(
+	0 = $widget_122:0_0, 
+	1 = $widget_122:2_3, 
+	2 = $widget_122:4_4, 
+	3 = $widget_122:9_5, 
+	4 = $widget_122:10_6, 
+	5 = $widget_122:11_7, 
+	6 = $widget_122:16_8, 
+	7 = $widget_122:17_9, 
+	8 = $widget_122:25_10, 
+	9 = $int11
+);
+if_setonvartransmit("xpdrops_setposition($widget_122:4_4, $widget_122:3_2){var1227, var3074, var1054}", $widget_122:4_4);
+if_setonsubchange("xpdrops_setposition($widget_122:4_4, $widget_122:3_2)", $widget_122:4_4);
+~xpdrops_showpanel($widget_122:0_0, $widget_122:4_4, $widget_122:17_9, $widget_122:25_10);

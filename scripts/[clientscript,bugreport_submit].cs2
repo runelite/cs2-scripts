@@ -1,0 +1,16 @@
+// 1103
+[clientscript,bugreport_submit]
+if (string_length(%varcstring372) > 0) {
+	sound_synth(interface_select1, 1, 0);
+	if (%varbit4931 < 10 & string_length(%varcstring372) >= 15) {
+		bug_report(0, ~bugreport_parse(%varcstring372, 0), ~bugreport_parse(%varcstring373, 0));
+	}
+	if (~on_mobile = true) {
+		~keyboard_hide;
+	}
+	if_close;
+	mes("Your bug report has been submitted. Thank you.");
+	return;
+}
+sound_synth(pillory_wrong, 1, 0);
+mes("Please describe the bug.");

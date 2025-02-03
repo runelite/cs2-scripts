@@ -1,0 +1,11 @@
+// 2522
+[clientscript,decant_itembutton_key](component $component0, char $keychar1, int $key2, string $string0, obj $obj3, string $string1)
+if (~keypress_permit(interface_582, null) = 1) {
+	if ($key2 = ^key_escape & %varbit4681 = 1) {
+		if_close;
+		return;
+	} else if ($keychar1 ! null & string_length($string0) > 0 & string_indexof_char($string0, $keychar1) ! -1) {
+		~decant_mouseover($component0, true, $obj3, $string1, $string0);
+		if_resume_pausebutton($component0);
+	}
+}

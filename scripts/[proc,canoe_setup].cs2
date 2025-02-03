@@ -1,0 +1,30 @@
+// 3095
+[proc,canoe_setup](component $widget_416:20_0, component $widget_416:21_1, component $widget_416:18_2, component $widget_416:19_3, component $widget_416:12_4, component $widget_416:17_5, component $widget_416:11_6, component $widget_416:22_7)
+if (stat(woodcutting) < 12) {
+	if_close;
+	mes("You must have at least level 12 woodcutting to start making canoes.");
+	return;
+}
+cc_deleteall($widget_416:20_0);
+cc_deleteall($widget_416:18_2);
+cc_deleteall($widget_416:12_4);
+cc_deleteall($widget_416:11_6);
+~canoe_name("A Log.", $widget_416:20_0, "Log canoe");
+if (stat(woodcutting) < 27) {
+	if_setmodel(model_12104, $widget_416:19_3);
+} else {
+	if_setmodel(model_12103, $widget_416:19_3);
+	~canoe_name("A Dugout.", $widget_416:18_2, "Dugout canoe");
+}
+if (stat(woodcutting) < 42) {
+	if_setmodel(model_12102, $widget_416:17_5);
+} else {
+	if_setmodel(model_12101, $widget_416:17_5);
+	~canoe_name("A Stable Dugout", $widget_416:12_4, "Stable dugout canoe");
+}
+if (stat(woodcutting) < 57) {
+	if_setmodel(model_12113, $widget_416:22_7);
+} else {
+	if_setmodel(model_12112, $widget_416:22_7);
+	~canoe_name("A Waka.", $widget_416:11_6, "Waka canoe");
+}

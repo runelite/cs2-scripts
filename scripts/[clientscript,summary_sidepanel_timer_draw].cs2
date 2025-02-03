@@ -1,0 +1,7 @@
+// 5221
+[clientscript,summary_sidepanel_timer_draw](component $widget_712:2_0, component $widget_712:3_1, int $clock2)
+if (clientclock < calc($clock2 + 10)) {
+	return;
+}
+if_setontimer(null, $widget_712:2_0);
+~summary_sidepanel_draw($widget_712:2_0, $widget_712:3_1);

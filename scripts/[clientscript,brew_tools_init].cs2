@@ -1,0 +1,15 @@
+// 3811
+[clientscript,brew_tools_init](component $widget_417:0_0, component $widget_417:3_1, component $widget_417:4_2, component $widget_417:7_3, component $widget_417:8_4, component $widget_417:11_5, component $widget_417:12_6, component $widget_417:14_7, component $widget_417:15_8, component $widget_417:17_9, component $widget_417:18_10, component $widget_417:21_11, component $widget_417:22_12, component $widget_417:24_13, component $widget_417:25_14, component $widget_417:27_15, component $widget_417:28_16, component $widget_417:30_17, component $widget_417:31_18, component $widget_417:33_19, component $widget_417:34_20, component $widget_417:6_21, component $widget_417:10_22, component $widget_417:20_23)
+def_int $colour24 = if_getcolour($widget_417:6_21);
+~brew_tools_setupbutton("Bamboo pipe", $widget_417:3_1, $widget_417:4_2, $colour24, 0);
+~brew_tools_setupbutton("Bridge section", $widget_417:7_3, $widget_417:8_4, $colour24, 0);
+~brew_tools_setupbutton("Bucket", $widget_417:11_5, $widget_417:12_6, $colour24, 1);
+~brew_tools_setupbutton("Axe", $widget_417:14_7, $widget_417:15_8, $colour24, 0);
+~brew_tools_setupbutton("Lumber patch", $widget_417:17_9, $widget_417:18_10, $colour24, 0);
+~brew_tools_setupbutton("Torch", $widget_417:21_11, $widget_417:22_12, $colour24, 0);
+~brew_tools_setupbutton("Bowl", $widget_417:24_13, $widget_417:25_14, $colour24, 1);
+~brew_tools_setupbutton("Tinderbox", $widget_417:27_15, $widget_417:28_16, $colour24, 0);
+~brew_tools_setupbutton("Meat", $widget_417:30_17, $widget_417:31_18, $colour24, 1);
+~brew_tools_setupbutton("Knife", $widget_417:33_19, $widget_417:34_20, $colour24, 0);
+~brew_tools_supplies($widget_417:6_21, $widget_417:10_22, $widget_417:20_23);
+if_setoninvtransmit("brew_tools_supplies($widget_417:6_21, $widget_417:10_22, $widget_417:20_23){worn, inv_448, inv_452}", $widget_417:0_0);

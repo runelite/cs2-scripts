@@ -1,0 +1,29 @@
+// 3188
+[clientscript,league_relics_init](component $widget_655:15_0, component $widget_655:10_1, component $widget_655:17_2, component $widget_655:19_3, component $widget_655:18_4, component $widget_655:21_5, component $widget_655:22_6, component $widget_655:14_7, component $widget_655:23_8, component $widget_655:27_9, component $widget_655:12_10, component $widget_655:24_11, component $widget_655:5_12, component $widget_655:6_13, component $widget_655:11_14, component $widget_655:7_15, component $widget_655:52_16, component $widget_655:4_17)
+~leagues_close_button($widget_655:4_17, false, 0);
+def_int $comsubid18 = ~steelborder(interface_655:2, "Relics", 1);
+def_component $component19 = interface_655:0;
+if_setontimer("script6110($component19, -1)", $component19);
+if_setonresize("league_relics_draw_selections(
+	0 = $widget_655:15_0, 
+	1 = $widget_655:10_1, 
+	2 = $widget_655:17_2, 
+	3 = $widget_655:19_3, 
+	4 = $widget_655:18_4, 
+	5 = $widget_655:21_5, 
+	6 = $widget_655:22_6, 
+	7 = $widget_655:14_7, 
+	8 = $widget_655:23_8, 
+	9 = $widget_655:27_9, 
+	10 = $widget_655:12_10, 
+	11 = $widget_655:24_11, 
+	12 = $widget_655:5_12, 
+	13 = $widget_655:6_13, 
+	14 = $widget_655:11_14, 
+	15 = $comsubid18, 
+	16 = 0, 
+	17 = $widget_655:7_15, 
+	18 = $widget_655:52_16
+)", $component19);
+~steelborder(interface_655:31, "", 1);
+~script7751(interface_655:58, interface_655:29, interface_655:28);

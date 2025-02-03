@@ -1,0 +1,46 @@
+// 1023
+[clientscript,script1023](int $opindex0, int $int1, stat $stat2, component $widget_137:4_3, component $widget_137:15_4, component $widget_137:17_5, component $widget_137:18_6, component $widget_137:19_7, component $widget_137:21_8, component $widget_137:25_9, component $widget_137:33_10, component $widget_137:22_11, component $widget_137:26_12, component $widget_137:34_13, component $widget_137:30_14, component $widget_137:38_15, component $widget_137:42_16, component $widget_137:29_17, component $widget_137:37_18, component $widget_137:41_19, component $widget_137:31_20, component $widget_137:39_21, component $widget_137:43_22, component $widget_137:45_23, component $widget_137:46_24)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+def_int $int25 = 0;
+def_int $int26 = 0;
+if ($int1 = -1) {
+	%varbit4703 = 0;
+} else {
+	%varbit4703 = calc($int1 + 1);
+	$int25, $int26 = ~xpdrops_data_get($stat2);
+	if ($int26 = -1) {
+		%varbit4704 = 1;
+	} else if ($int26 > $int25) {
+		%varbit4704 = 2;
+	} else {
+		%varbit4704 = 0;
+	}
+	%var261, %var262 = $int25, $int26;
+}
+~script1026(
+	0 = $widget_137:4_3, 
+	1 = $widget_137:15_4, 
+	2 = $widget_137:17_5, 
+	3 = $widget_137:18_6, 
+	4 = $widget_137:19_7, 
+	5 = $widget_137:21_8, 
+	6 = $widget_137:25_9, 
+	7 = $widget_137:33_10, 
+	8 = $widget_137:22_11, 
+	9 = $widget_137:26_12, 
+	10 = $widget_137:34_13, 
+	11 = $widget_137:30_14, 
+	12 = $widget_137:38_15, 
+	13 = $widget_137:42_16, 
+	14 = $widget_137:29_17, 
+	15 = $widget_137:37_18, 
+	16 = $widget_137:41_19, 
+	17 = $widget_137:31_20, 
+	18 = $widget_137:39_21, 
+	19 = $widget_137:43_22, 
+	20 = $widget_137:45_23, 
+	21 = $widget_137:46_24
+);

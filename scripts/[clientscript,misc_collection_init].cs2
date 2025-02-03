@@ -1,0 +1,8 @@
+// 492
+[clientscript,misc_collection_init](component $widget_616:0_0, component $widget_616:3_1, component $widget_616:4_2)
+~scrollbar_vertical($widget_616:4_2, $widget_616:3_1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+def_int $size3 = inv_size(inv_390);
+def_int $int4 = calc(if_getwidth($widget_616:3_1) / 9 - 36);
+def_int $int5 = calc($int4 / 2);
+~misc_collection_draw($size3, $int4, $int5, $widget_616:3_1, $widget_616:4_2);
+if_setoninvtransmit("misc_collection_draw($size3, $int4, $int5, $widget_616:3_1, $widget_616:4_2){inv_390}", $widget_616:0_0);

@@ -1,0 +1,20 @@
+// 705
+[clientscript,bank_depositbox_drag](component $component0, component $component1, int $comsubid2, int $dropsubid3)
+def_int $size4 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size4) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $size4) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $comsubid2);
+if ($obj5 = null) {
+	return;
+}
+def_obj $obj6 = inv_getobj(inv, $dropsubid3);
+if (cc_find($component0, $dropsubid3) = ^true) {
+	~bank_depositbox_drawslot($component0, $component1, $obj5, inv_getnum(inv, $comsubid2), $comsubid2, ~script7796($dropsubid3));
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	~bank_depositbox_drawslot($component0, $component1, $obj6, inv_getnum(inv, $dropsubid3), $dropsubid3, ~script7796($comsubid2));
+}

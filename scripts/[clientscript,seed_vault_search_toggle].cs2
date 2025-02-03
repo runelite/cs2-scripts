@@ -1,0 +1,11 @@
+// 2865
+[clientscript,seed_vault_search_toggle](component $widget_631:15_0, component $widget_631:16_1, component $widget_631:13_2, component $widget_631:14_3, component $widget_631:11_4, component $widget_631:10_5, component $widget_631:12_6, component $widget_631:24_7)
+%varbit8171 = 0;
+if (~seed_vault_searching = 1) {
+	~meslayer_close(true, true, true);
+	~seed_vault_search_setbutton($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6, $widget_631:24_7);
+	~seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6);
+	return;
+}
+~meslayer_mode11;
+~seed_vault_search_setbutton($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6, $widget_631:24_7);

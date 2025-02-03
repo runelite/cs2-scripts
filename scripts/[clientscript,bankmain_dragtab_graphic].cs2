@@ -1,0 +1,14 @@
+// 512
+[clientscript,bankmain_dragtab_graphic](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $flags4, int $trans5)
+if ($drop2 ! $drop0) {
+	return;
+}
+def_int $index6 = calc($comsubid1 - (9 + 1));
+def_int $index7 = calc($dropsubid3 - (9 + 1));
+if ($index6 = 0 | $index7 = 0 | testbit($flags4, $index6) = ^false | testbit($flags4, $index7) = ^false) {
+	return;
+}
+if (cc_find($drop0, $comsubid1) = ^true) {
+	cc_settrans(200);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans5, calc(clientclock + 10))");
+}

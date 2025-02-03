@@ -1,0 +1,49 @@
+// 5375
+[proc,script5375](stat $stat0)
+def_int $comsubid1 = ~xptracker_get_id($stat0);
+def_int $int2 = ~xptracker_get_startxp($stat0);
+def_int $int3 = ~xptracker_get_lastxp($stat0);
+def_string $string0 = ~script5377(calc($int3 - $int2));
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_string $string1 = "Goal: ";
+$int4, $int5 = ~xpdrops_data_get($stat0);
+switch_int (~script5534($stat0)) {
+	case 0 :
+		$string1 = "Lvl: ";
+		$int5 = enum(int, int, enum_256, calc(~script5536($stat0) + 1));
+	case 3 :
+		$int5 = 200000000;
+	case 1 :
+		$int4, $int5 = ~xpdrops_data_get($stat0);
+	case 2 :
+		$int5 = 0;
+}
+def_int $int6 = ~script5380($stat0, $int5);
+def_string $string2 = "  Acts>";
+if ($int6 >= 0) {
+	$string2 = "  Kills>";
+} else if ($int6 = -1) {
+	$string2 = "  Acts>";
+} else {
+	$string2 = "  Kills>";
+}
+def_string $text3 = append(append("  XP Gained: <br>", $string2), $string1);
+if (cc_find(interface_729:14, $comsubid1) = ^true) {
+	cc_settext($text3);
+}
+def_int $int7 = ~script5379($stat0, $int5);
+def_string $string4 = "Done!";
+if ($int6 >= 0) {
+	$string4 = ~script5377($int6);
+} else if ($int6 = -2) {
+	$string4 = "";
+} else if ($int7 >= 0) {
+	$string4 = ~script5377($int7);
+} else {
+	$string4 = "";
+}
+def_string $text5 = append(append($string0, "<br>"), $string4);
+if (cc_find(interface_729:15, $comsubid1) = ^true) {
+	cc_settext($text5);
+}

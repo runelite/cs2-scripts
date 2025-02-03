@@ -1,0 +1,44 @@
+// 218
+[proc,menu_createentry](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4, boolean $boolean5)(int, int)
+def_int $int6 = calc(paraheight($string0, $width2, p12_full) * 14 + 2);
+if (~on_mobile = true) {
+	$int6 = scale(4, 3, $int6);
+}
+cc_create($component0, ^iftype_text, $int3);
+.cc_create($component1, ^iftype_rectangle, $int3);
+cc_setposition(0, $height4, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_setcolour(0x322805);
+cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0x524825)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x322805)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settext($string0);
+def_string $string1 = "";
+def_string $string2 = "";
+$int3 = calc($int3 + 1);
+if ($boolean5 = true & $int3 < 36) {
+	if ($int3 < 10) {
+		$string1 = tostring($int3);
+	} else {
+		$string1 = enum(int, string, enum_1401, calc($int3 - 9));
+		$string2 = enum(int, string, enum_1402, calc($int3 - 9));
+	}
+	$string0 = append("<col=735a28><$string1></col>: ", $string0);
+	.cc_setonkey("chatbox_keyinput_listener(
+		0 = event_keycode, 
+		1 = event_keychar, 
+		2 = $component0, 
+		3 = cc_getid, 
+		4 = null, 
+		5 = null, 
+		6 = $string1, 
+		7 = $string2, 
+		8 = 3287045, 
+		9 = 0
+	)");
+}
+cc_settext($string0);
+return($int3, calc($height4 + $int6));

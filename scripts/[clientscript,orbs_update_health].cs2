@@ -1,0 +1,86 @@
+// 446
+[clientscript,orbs_update_health](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component7);
+	if_setonstattransmit("orbs_update_health(
+		0 = null, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9
+	){hitpoints}", $component0);
+	if_setonvartransmit("orbs_update_health(
+		0 = null, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9
+	){var102, var456, var2648, var2898, var1377}", $component0);
+	if_setonsubchange("orbs_update_health(
+		0 = null, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9
+	)", $component0);
+}
+def_int $int10 = stat_base(hitpoints);
+if (%varbit5314 = 1) {
+	$int10 = 99;
+}
+~orbs_update($component1, $component2, stat(hitpoints), $int10);
+if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
+	if_settrans(100, $component3);
+} else {
+	if_settrans(0, $component3);
+}
+if (%varbit10151 > 0) {
+	if_setgraphic("orb_filler,12", $component4);
+} else if (%var456 > 0) {
+	if_setgraphic("orb_filler,3", $component4);
+} else if (%var102 >= 1000000) {
+	if_setgraphic("orb_filler,8", $component4);
+} else if (%var102 > 0) {
+	if_setgraphic("orb_filler,2", $component4);
+} else {
+	if_setgraphic("orb_filler,1", $component4);
+}
+if (%var102 > 0) {
+	if (%var102 >= 1000000) {
+		if_setgraphic("orb_filler,8", $component6);
+	} else {
+		if_setgraphic("orb_filler,2", $component6);
+	}
+	if_sethide(false, $component5);
+} else {
+	if_sethide(true, $component5);
+}
+def_graphic $graphic11 = ~graphic_device("orb_frame,1", graphic_5792);
+if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3) = true) {
+	if_setonmouserepeat("graphic_swapper($component7, $graphic11)", $component8);
+	$graphic11 = ~graphic_device("orb_frame,0", graphic_5791);
+	if_setonmouseleave("graphic_swapper($component7, $graphic11)", $component8);
+	if_setgraphic($graphic11, $component7);
+	if_sethide(false, $component8);
+} else {
+	if_setgraphic(~graphic_device("orb_frame,0", graphic_5791), $component7);
+	if_setonmouserepeat(null, $component8);
+	if_setonmouseleave(null, $component8);
+	if_sethide(true, $component8);
+}
+if_setgraphic("orb_icon,0", $component9);

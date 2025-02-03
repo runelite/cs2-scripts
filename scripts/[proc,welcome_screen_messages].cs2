@@ -1,0 +1,19 @@
+// 2214
+[proc,welcome_screen_messages](component $widget_378:67_0, component $widget_378:71_1, component $widget_378:69_2)
+if (%var1781 = 1) {
+	if_settext("You have<br><col=00ff00>1</col> unread<br>message in<br>your inbox.", $widget_378:71_1);
+} else if (%var1781 > 0) {
+	if_settext("You have<br><col=00ff00><~tostring_spacer(%var1781, ",")></col> unread<br>messages in<br>your inbox.", $widget_378:71_1);
+} else {
+	if_settext("You have<br>0 unread<br>messages in<br>your inbox.", $widget_378:71_1);
+}
+if (~on_mobile = false) {
+	if_setonmouserepeat("comp_sethide(false, $widget_378:69_2)", $widget_378:67_0);
+	if_setonmouseleave("comp_sethide(true, $widget_378:69_2)", $widget_378:67_0);
+}
+if (~on_ios = 0) {
+	if_setop(1, "View Inbox", $widget_378:67_0);
+} else {
+	if_setop(1, "", $widget_378:67_0);
+}
+if_sethide(true, $widget_378:69_2);

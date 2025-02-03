@@ -1,0 +1,128 @@
+// 2045
+[proc,beige_stone_button_out](component $component0, int $int1)(int)
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = tradebacking_beige, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 2, 
+	8 = 2, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,8", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,9", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,10", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_bottom, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,11", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_bottom, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,12", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_centre, 
+	7 = 9, 
+	8 = 18, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_minus
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,13", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_top, 
+	7 = 18, 
+	8 = 9, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,14", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_centre, 
+	7 = 9, 
+	8 = 18, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_minus
+);
+$int1 = calc($int1 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = "v2_stone_button_out,15", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_bottom, 
+	7 = 18, 
+	8 = 9, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs
+);
+return(calc($int1 + 1));

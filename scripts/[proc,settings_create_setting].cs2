@@ -1,0 +1,244 @@
+// 3841
+[proc,settings_create_setting](struct $struct0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, int $int19, int $int20, int $int21, int $int22, string $string0, component $component23, int $int24, int $int25)(int, int, int, int, int, int, int, int)
+def_int $int26 = struct_param($struct0, param_1078);
+def_int $int27 = ~settings_check_block($struct0);
+if ($int27 = 0 & struct_param($struct0, param_1229) = true & ~settings_custom_check(struct_param($struct0, param_1077)) = 0) {
+	$int27 = 1;
+}
+def_int $int28 = calc($int24 + 1);
+def_enum $enum29 = struct_param($struct1, param_745);
+def_int $int30 = enum_getoutputcount($enum29);
+def_struct $struct31 = null;
+if ($int26 = 5) {
+	$int25 = 0;
+	$int27 = 1;
+	while ($int28 < $int30) {
+		$struct31 = enum(int, struct, $enum29, $int28);
+		if (struct_param($struct31, param_1078) = 5) {
+			$int28 = $int30;
+		} else if (~settings_check_block($struct31) = 0) {
+			$int27 = 0;
+			$int28 = $int30;
+		} else {
+			$int28 = calc($int28 + 1);
+		}
+	}
+}
+def_int $int32 = struct_param($struct0, param_1090);
+if ($int22 = 0 & $int32 > 0 & ~settings_seemore_check($int32) = 0) {
+	$int27 = 1;
+}
+if ($int26 = 7 & $int22 = 1) {
+	$int27 = 1;
+}
+def_int $int33 = 0;
+def_boolean $boolean34 = ~on_mobile;
+if ($int22 = 1) {
+	if ($int25 = 1) {
+		$int33 = 1;
+	} else if (string_indexof_string(lowercase(struct_param($struct0, param_1088)), lowercase($string0), 0) ! -1) {
+		$int33 = 1;
+		if ($int26 = 5) {
+			$int25 = 1;
+		}
+	} else if (string_indexof_string(lowercase(struct_param($struct1, param_744)), lowercase($string0), 0) ! -1) {
+		$int33 = 1;
+	} else if ($boolean34 = false) {
+		if (string_indexof_string(lowercase(struct_param($struct0, param_1086)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+			if ($int26 = 5) {
+				$int25 = 1;
+			}
+		} else if (string_indexof_string(lowercase(struct_param($struct0, param_1096)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+		}
+	} else if ($boolean34 = true) {
+		if (string_length(struct_param($struct0, param_1087)) <= 0 & string_indexof_string(lowercase(struct_param($struct0, param_1086)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+			if ($int26 = 5) {
+				$int25 = 1;
+			}
+		} else if (string_indexof_string(lowercase(struct_param($struct0, param_1087)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+			if ($int26 = 5) {
+				$int25 = 1;
+			}
+		} else if (string_length(struct_param($struct0, param_1097)) <= 0 & string_indexof_string(lowercase(struct_param($struct0, param_1096)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+		} else if (string_indexof_string(lowercase(struct_param($struct0, param_1097)), lowercase($string0), 0) ! -1) {
+			$int33 = 1;
+		}
+	}
+	if ($int33 = 0) {
+		$int27 = 1;
+	}
+}
+$int28 = 0;
+$int30 = 0;
+if ($int27 = 1) {
+	cc_create($component8, ^iftype_rectangle, $int3);
+	cc_sethide(true);
+	$int3 = calc($int3 + 1);
+	if ($int26 = 1 & struct_param($struct0, param_1105) = true) {
+		$int30 = struct_param($struct0, param_1101);
+		while ($int28 < $int30) {
+			cc_create($component17, ^iftype_rectangle, $int4);
+			$int4 = calc($int4 + 1);
+			$int28 = calc($int28 + 1);
+		}
+	}
+	return($int5, $int6, $int2, $int3, $int4, $int20, $int21, $int25);
+}
+if ($int26 ! 3 & $int26 ! 6) {
+	$int20 = ^max_32bit_int;
+	if ($int21 > 0) {
+		$int5 = $int21;
+		$int21 = 0;
+	}
+}
+switch_int ($int26) {
+	case 5 :
+		if ($int3 > 0) {
+			$int5 = calc($int5 + 10);
+		}
+		$int5, $int2, $int3 = ~header_create($struct0, $component9, $component8, $int5, $int2, $int3, $int7);
+	case 0 :
+		$int5, $int6, $int2, $int3 = ~settings_create_toggle(
+			0 = $int5, 
+			1 = $int6, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component23
+		);
+	case 2 :
+		$int5, $int6, $int2, $int3 = ~settings_create_drop_down(
+			0 = $int5, 
+			1 = $int6, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component12, 
+			9 = $component13, 
+			10 = $component14, 
+			11 = $component15, 
+			12 = $component11, 
+			13 = $component16, 
+			14 = $component23
+		);
+	case 4 :
+		$int5, $int6, $int2, $int3 = ~settings_create_input_setting(
+			0 = $int5, 
+			1 = $int6, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component23
+		);
+	case 1 :
+		$int5, $int6, $int2, $int3, $int4 = ~settings_create_slider(
+			0 = $int5, 
+			1 = $int6, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int7, 
+			6 = $struct0, 
+			7 = $component8, 
+			8 = $component9, 
+			9 = $component17, 
+			10 = $component18, 
+			11 = $component23
+		);
+	case 3 :
+		$int5, $int2, $int3, $int20, $int21 = ~settings_create_keybind_entry(
+			0 = $int20, 
+			1 = $int5, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component12, 
+			9 = $component13, 
+			10 = $component14, 
+			11 = $component15, 
+			12 = $component11, 
+			13 = $component16, 
+			14 = $int21
+		);
+	case 6 :
+		$int5, $int2, $int3, $int20, $int21 = ~settings_create_button(
+			0 = $int20, 
+			1 = $int5, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $int21
+		);
+	case 7 :
+		$int5, $int2, $int3 = ~settings_seemore(
+			0 = $struct0, 
+			1 = $int7, 
+			2 = $int3, 
+			3 = $int2, 
+			4 = $int5, 
+			5 = $int19, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component10, 
+			9 = $component11, 
+			10 = $component12, 
+			11 = $component13, 
+			12 = $component14, 
+			13 = $component15, 
+			14 = $component16, 
+			15 = $component17, 
+			16 = $component18, 
+			17 = $component23
+		);
+	case 8 :
+		$int5, $int2, $int3 = ~text_create($struct0, $component9, $component8, $int5, $int2, $int3, $int7);
+	case 9 :
+		$int5, $int6, $int2, $int3 = ~settings_create_colour_input(
+			0 = $int5, 
+			1 = $int6, 
+			2 = $int2, 
+			3 = $int3, 
+			4 = $int7, 
+			5 = $struct0, 
+			6 = $component8, 
+			7 = $component9, 
+			8 = $component23
+		);
+	case 10 :
+		$int5, $int6, $int2, $int3 = ~script7092(
+			0 = $struct0, 
+			1 = $component9, 
+			2 = $component8, 
+			3 = $component23, 
+			4 = $int5, 
+			5 = $int6, 
+			6 = $int2, 
+			7 = $int3, 
+			8 = $int7
+		);
+	case default :
+		cc_create($component8, ^iftype_rectangle, $int3);
+		cc_sethide(true);
+		$int3 = calc($int3 + 1);
+}
+return($int5, $int6, $int2, $int3, $int4, $int20, $int21, $int25);

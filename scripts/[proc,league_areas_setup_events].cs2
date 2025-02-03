@@ -1,0 +1,41 @@
+// 3660
+[proc,league_areas_setup_events](int $int0, component $component1, component $component2, component $widget_512:41_3, component $widget_512:42_4, component $widget_512:43_5, component $widget_512:78_6, component $widget_512:82_7, component $widget_512:83_8, component $widget_512:89_9, component $widget_512:40_10)
+def_string $string0 = ~script5484($int0);
+if_setop(1, "View", $component1);
+if_setopbase("<col=ff981f><$string0></col>", $component1);
+if_setonop("league_areas_onclick(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $widget_512:41_3, 
+	4 = $widget_512:42_4, 
+	5 = $widget_512:43_5, 
+	6 = $widget_512:78_6, 
+	7 = $widget_512:82_7, 
+	8 = $widget_512:83_8, 
+	9 = $widget_512:89_9, 
+	10 = $widget_512:40_10
+)", $component1);
+if (~on_mobile = false) {
+	if_setonmouserepeat("league_areas_mouseover($int0, $component1, $component2)", $component1);
+	if_setonmouseleave("league_areas_mouseleave($int0, $component1, $component2)", $component1);
+}
+if_setop(1, "View", $component2);
+if_setopbase("<col=ff981f><$string0></col>", $component2);
+if_setonop("league_areas_onclick(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $widget_512:41_3, 
+	4 = $widget_512:42_4, 
+	5 = $widget_512:43_5, 
+	6 = $widget_512:78_6, 
+	7 = $widget_512:82_7, 
+	8 = $widget_512:83_8, 
+	9 = $widget_512:89_9, 
+	10 = $widget_512:40_10
+)", $component2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("league_areas_mouseover($int0, $component1, $component2)", $component2);
+	if_setonmouseleave("league_areas_mouseleave($int0, $component1, $component2)", $component2);
+}

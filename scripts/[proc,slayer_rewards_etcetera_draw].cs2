@@ -1,0 +1,66 @@
+// 1092
+[proc,slayer_rewards_etcetera_draw](component $widget_426:20_0, component $widget_426:11_1, component $widget_426:2_2, component $widget_426:4_3, component $widget_426:8_4, component $widget_426:5_5)
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = enum(int, int, enum_273, $int8);
+def_int $int10 = 0;
+if (~league_relic_active(struct_1129) = 1) {
+	$int10 = 1;
+}
+while ($int9 ! -1 & $int9 <= 56) {
+	if (($int9 < 32 & testbit(%var1076, $int9) = ^false | $int9 >= 32 & testbit(%var1344, calc($int9 % 32)) = ^false) & ~script3689(%varbit10032, $int9) = 0) {
+		$int6, $int7 = calc($int6 + 1), calc($int7 + enum(int, int, enum_836, $int9));
+	}
+	$int8 = calc($int8 + 1);
+	$int9 = enum(int, int, enum_273, $int8);
+}
+if ($int10 = 1) {
+	$int7 = 0;
+}
+cc_deleteall($widget_426:20_0);
+def_int $int11 = ~options_button_off($widget_426:20_0, 0);
+cc_create($widget_426:20_0, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string0 = "Nothing more to extend";
+def_string $string1 = "";
+if ($int6 > 0 & $int7 > 0) {
+	if ($int6 > 1) {
+		$int7 = interpolate(0, 95, 0, 100, $int7);
+		if ($int7 < 2) {
+			$int7 = 2;
+		}
+		$string0 = "Extend remaining <tostring($int6)> tasks: <~tostring_spacer($int7, ",")> points";
+	} else {
+		$string0 = "Extend remaining task: <~tostring_spacer($int7, ",")> points";
+	}
+	cc_setcolour(0xff981f);
+	cc_settext($string0);
+	if_setonmouserepeat("options_button_on(event_com, 0)", $widget_426:20_0);
+	if_setonmouseleave("options_button_off(event_com, 0)", $widget_426:20_0);
+	if_setop(1, "Extend", $widget_426:20_0);
+	if_setonop("slayer_rewards_unlock_confirm(
+		0 = null, 
+		1 = calc(56 + 9), 
+		2 = $string1, 
+		3 = $widget_426:11_1, 
+		4 = $widget_426:2_2, 
+		5 = $widget_426:4_3, 
+		6 = $widget_426:8_4, 
+		7 = $widget_426:5_5, 
+		8 = $int7
+	)", $widget_426:20_0);
+} else {
+	cc_setcolour(0x7f4c0f);
+	cc_settext($string0);
+	if_setonmouserepeat(null, $widget_426:20_0);
+	if_setonmouseleave(null, $widget_426:20_0);
+	if_clearops($widget_426:20_0);
+	if_setonop(null, $widget_426:20_0);
+}
+if_setsize(calc(parawidth($string0, if_getwidth(if_getlayer($widget_426:20_0)), p11_full) + 20), if_getheight($widget_426:20_0), ^setsize_abs, ^setsize_abs, $widget_426:20_0);

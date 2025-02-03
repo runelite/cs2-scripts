@@ -1,0 +1,10 @@
+// 291
+[clientscript,bankmain_itemnote_op](int $opindex0, component $component1, component $component2, int $int3)
+if ($opindex0 ! 1) {
+	return;
+}
+if (%varbit3958 ! $int3) {
+	%varbit3958 = $int3;
+	sound_synth(interface_select1, 1, 0);
+}
+~bankmain_itemnote($component1, $component2);

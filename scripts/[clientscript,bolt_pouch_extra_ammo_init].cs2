@@ -1,0 +1,12 @@
+// 4037
+[clientscript,bolt_pouch_extra_ammo_init](component $widget_387:30_0, component $widget_387:14_1)
+if_sethide(true, $widget_387:30_0);
+if_sethide(true, $widget_387:14_1);
+if_setop(1, "", $widget_387:30_0);
+if (~deadman_world ! 0 | map_members = false) {
+	return;
+}
+if_sethide(false, $widget_387:30_0);
+~bolt_pouch_extra_ammo_draw($widget_387:30_0, $widget_387:14_1);
+if_setoninvtransmit("bolt_pouch_extra_ammo_draw($widget_387:30_0, $widget_387:14_1){inv, worn}", $widget_387:30_0);
+if_setonvartransmit("bolt_pouch_extra_ammo_draw($widget_387:30_0, $widget_387:14_1){var1598, var1599, var834, var835}", $widget_387:30_0);

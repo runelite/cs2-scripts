@@ -1,0 +1,19 @@
+// 4548
+[clientscript,fishing_spot_indicator_vartransmit](entityoverlay $entityoverlay0, struct $struct1, int $int2, int $int3, int $int4, npc_uid $npc_uid5, int $int6, loc $loc7, coord $coord8)
+if ($int2 = %varbit12349 & $int3 = %varbit12350 & $int4 = %varbit12351) {
+	return;
+}
+~fishing_spot_indicator_create($entityoverlay0, $struct1, $npc_uid5, $int6, $loc7, $coord8);
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
+	cc_setonvartransmit("fishing_spot_indicator_vartransmit(
+		0 = $entityoverlay0, 
+		1 = $struct1, 
+		2 = %varbit12349, 
+		3 = %varbit12350, 
+		4 = %varbit12351, 
+		5 = $npc_uid5, 
+		6 = $int6, 
+		7 = $loc7, 
+		8 = $coord8
+	){var2856, var3074}");
+}

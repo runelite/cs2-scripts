@@ -1,0 +1,20 @@
+// 43
+[clientscript,zoom_mouse_toggle](component $component0, component $component1, int $int2, component $component3)
+~settings_side_op_sound;
+%varcint2 = 0;
+def_string $string0 = "<~text_device("Click", "Tap")> here to enable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+if ($int2 = 1) {
+	%varbit6357 = calc(1 - %varbit6357);
+	if (%varbit6357 = 0) {
+		if_sethide(true, $component1);
+		if_setop(1, "Disable", $component0);
+		$string0 = "<~text_device("Click", "Tap")> here to disable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+	} else {
+		if_setop(1, "Enable", $component0);
+		if_sethide(false, $component1);
+	}
+	if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component3, $string0, 25, 190)", $component0);
+	if_setonmouseleave("deltooltip($component3)", $component0);
+} else if ($int2 = 2) {
+	~camera_do_zoom(512, 512);
+}

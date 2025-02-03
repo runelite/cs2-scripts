@@ -1,0 +1,12 @@
+// 6463
+[proc,script6463]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varbit14179 = 0) {
+	%varbit14179 = 1;
+	minimap_seticonviszoom(3);
+} else {
+	%varbit14179 = 0;
+	minimap_seticonviszoom(2);
+}

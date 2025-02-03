@@ -1,0 +1,44 @@
+// 4282
+[clientscript,clan_banned_search_refresh](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, int $int7, int $int8, component $component9, int $int10)
+if (%varcint5 ! 18) {
+	~clan_banned_draw(
+		0 = $component0, 
+		1 = $component1, 
+		2 = $int2, 
+		3 = $component4, 
+		4 = $component5, 
+		5 = $component6, 
+		6 = $int7, 
+		7 = $int8, 
+		8 = $component9, 
+		9 = $int10
+	);
+	~clan_banned_search_setbutton(
+		0 = $component0, 
+		1 = $component1, 
+		2 = $int2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $int7, 
+		8 = $int8, 
+		9 = $component9, 
+		10 = $int10
+	);
+	return;
+}
+if (calc(clientclock % 40) = 0) {
+	~clan_banned_draw(
+		0 = $component0, 
+		1 = $component1, 
+		2 = $int2, 
+		3 = $component4, 
+		4 = $component5, 
+		5 = $component6, 
+		6 = $int7, 
+		7 = $int8, 
+		8 = $component9, 
+		9 = $int10
+	);
+}

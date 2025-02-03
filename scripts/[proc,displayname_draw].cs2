@@ -1,0 +1,27 @@
+// 634
+[proc,displayname_draw](component $widget_589:15_0, component $widget_589:18_1, component $widget_589:19_2)
+if (%varbit5605 = 1) {
+	~displayname_statusstatic($widget_589:15_0);
+	~displayname_button_init($widget_589:18_1, "Look up name");
+	~displayname_disablebutton($widget_589:19_2, "---");
+} else if (%varbit5605 = 2) {
+	if_setontimer("displayname_statusflash($widget_589:15_0)", $widget_589:15_0);
+	~displayname_disablebutton($widget_589:18_1, "Look up name");
+	~displayname_disablebutton($widget_589:19_2, "---");
+} else if (%varbit5605 = 4) {
+	~displayname_statusstatic($widget_589:15_0);
+	~displayname_button_init($widget_589:18_1, "Another name");
+	if (%varbit5606 = 1 & %varbit5607 = 0) {
+		~displayname_button_init($widget_589:19_2, "<col=0dc10d>Confirm</col>");
+	} else {
+		~displayname_disablebutton($widget_589:19_2, "---");
+	}
+} else if (%varbit5605 = 5) {
+	if_setontimer("displayname_statusflash($widget_589:15_0)", $widget_589:15_0);
+	~displayname_disablebutton($widget_589:18_1, "Another name");
+	~displayname_disablebutton($widget_589:19_2, "---");
+} else {
+	if_setontimer("displayname_statusflash($widget_589:15_0)", $widget_589:15_0);
+	~displayname_disablebutton($widget_589:18_1, "Look up name");
+	~displayname_disablebutton($widget_589:19_2, "---");
+}

@@ -1,0 +1,488 @@
+// 3178
+[proc,side_journal_additional](component $widget_629:0_0, component $widget_629:1_1, component $widget_629:10_2, component $widget_629:18_3, component $widget_629:2_4, component $widget_629:26_5, component $widget_629:34_6, component $widget_629:9_7, component $widget_629:4_8, component $widget_629:6_9, component $widget_629:8_10, component $widget_629:17_11, component $widget_629:12_12, component $widget_629:14_13, component $widget_629:16_14, component $widget_629:25_15, component $widget_629:20_16, component $widget_629:22_17, component $widget_629:24_18, component $widget_629:33_19, component $widget_629:28_20, component $widget_629:30_21, component $widget_629:32_22, component $widget_629:42_23, component $widget_629:37_24, component $widget_629:39_25, component $widget_629:41_26, component $widget_629:43_27, component $widget_629:3_28, component $widget_629:5_29, component $widget_629:7_30, component $widget_629:11_31, component $widget_629:13_32, component $widget_629:15_33, component $widget_629:19_34, component $widget_629:21_35, component $widget_629:23_36, component $widget_629:27_37, component $widget_629:29_38, component $widget_629:31_39, component $widget_629:36_40, component $widget_629:38_41, component $widget_629:40_42, component $widget_629:35_43)
+def_int $width44 = 34;
+if (~script6790 = 1) {
+	if_clearops($widget_629:26_5);
+	if_sethide(true, $widget_629:26_5);
+	if (%varbit8168 = 3) {
+		%varbit8168 = 1;
+	}
+	~side_journal_switchtab(
+		0 = $widget_629:1_1, 
+		1 = $widget_629:9_7, 
+		2 = $widget_629:4_8, 
+		3 = $widget_629:6_9, 
+		4 = $widget_629:8_10, 
+		5 = $widget_629:17_11, 
+		6 = $widget_629:12_12, 
+		7 = $widget_629:14_13, 
+		8 = $widget_629:16_14, 
+		9 = $widget_629:25_15, 
+		10 = $widget_629:20_16, 
+		11 = $widget_629:22_17, 
+		12 = $widget_629:24_18, 
+		13 = $widget_629:33_19, 
+		14 = $widget_629:28_20, 
+		15 = $widget_629:30_21, 
+		16 = $widget_629:32_22, 
+		17 = $widget_629:42_23, 
+		18 = $widget_629:37_24, 
+		19 = $widget_629:39_25, 
+		20 = $widget_629:41_26, 
+		21 = $widget_629:3_28, 
+		22 = $widget_629:5_29, 
+		23 = $widget_629:7_30, 
+		24 = $widget_629:11_31, 
+		25 = $widget_629:13_32, 
+		26 = $widget_629:15_33, 
+		27 = $widget_629:19_34, 
+		28 = $widget_629:21_35, 
+		29 = $widget_629:23_36, 
+		30 = $widget_629:27_37, 
+		31 = $widget_629:29_38, 
+		32 = $widget_629:31_39, 
+		33 = $widget_629:36_40, 
+		34 = $widget_629:38_41, 
+		35 = $widget_629:40_42, 
+		36 = $widget_629:35_43
+	);
+	if_setop(1, "Fresh Start Worlds", $widget_629:34_6);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+		if_setonmouseleave("script2804($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+	}
+	if_setonop("side_journal_switchtab_onop(
+		0 = event_op, 
+		1 = 4, 
+		2 = $widget_629:1_1, 
+		3 = $widget_629:9_7, 
+		4 = $widget_629:4_8, 
+		5 = $widget_629:6_9, 
+		6 = $widget_629:8_10, 
+		7 = $widget_629:17_11, 
+		8 = $widget_629:12_12, 
+		9 = $widget_629:14_13, 
+		10 = $widget_629:16_14, 
+		11 = $widget_629:25_15, 
+		12 = $widget_629:20_16, 
+		13 = $widget_629:22_17, 
+		14 = $widget_629:24_18, 
+		15 = $widget_629:33_19, 
+		16 = $widget_629:28_20, 
+		17 = $widget_629:30_21, 
+		18 = $widget_629:32_22, 
+		19 = $widget_629:42_23, 
+		20 = $widget_629:37_24, 
+		21 = $widget_629:39_25, 
+		22 = $widget_629:41_26, 
+		23 = $widget_629:3_28, 
+		24 = $widget_629:5_29, 
+		25 = $widget_629:7_30, 
+		26 = $widget_629:11_31, 
+		27 = $widget_629:13_32, 
+		28 = $widget_629:15_33, 
+		29 = $widget_629:19_34, 
+		30 = $widget_629:21_35, 
+		31 = $widget_629:23_36, 
+		32 = $widget_629:27_37, 
+		33 = $widget_629:29_38, 
+		34 = $widget_629:31_39, 
+		35 = $widget_629:36_40, 
+		36 = $widget_629:38_41, 
+		37 = $widget_629:40_42, 
+		38 = $widget_629:35_43
+	)", $widget_629:34_6);
+	if_sethide(false, $widget_629:34_6);
+	$width44 = 44;
+	if_setposition(-69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:2_4);
+	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:10_2);
+	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:18_3);
+	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:34_6);
+} else if (~league_world = 1 & %varbit10037 >= 3) {
+	if_clearops($widget_629:26_5);
+	if_sethide(true, $widget_629:26_5);
+	if (%varbit8168 = 3) {
+		%varbit8168 = 1;
+	}
+	~side_journal_switchtab(
+		0 = $widget_629:1_1, 
+		1 = $widget_629:9_7, 
+		2 = $widget_629:4_8, 
+		3 = $widget_629:6_9, 
+		4 = $widget_629:8_10, 
+		5 = $widget_629:17_11, 
+		6 = $widget_629:12_12, 
+		7 = $widget_629:14_13, 
+		8 = $widget_629:16_14, 
+		9 = $widget_629:25_15, 
+		10 = $widget_629:20_16, 
+		11 = $widget_629:22_17, 
+		12 = $widget_629:24_18, 
+		13 = $widget_629:33_19, 
+		14 = $widget_629:28_20, 
+		15 = $widget_629:30_21, 
+		16 = $widget_629:32_22, 
+		17 = $widget_629:42_23, 
+		18 = $widget_629:37_24, 
+		19 = $widget_629:39_25, 
+		20 = $widget_629:41_26, 
+		21 = $widget_629:3_28, 
+		22 = $widget_629:5_29, 
+		23 = $widget_629:7_30, 
+		24 = $widget_629:11_31, 
+		25 = $widget_629:13_32, 
+		26 = $widget_629:15_33, 
+		27 = $widget_629:19_34, 
+		28 = $widget_629:21_35, 
+		29 = $widget_629:23_36, 
+		30 = $widget_629:27_37, 
+		31 = $widget_629:29_38, 
+		32 = $widget_629:31_39, 
+		33 = $widget_629:36_40, 
+		34 = $widget_629:38_41, 
+		35 = $widget_629:40_42, 
+		36 = $widget_629:35_43
+	);
+	if_setop(1, "Leagues", $widget_629:34_6);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+		if_setonmouseleave("script2804($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+	}
+	if_setonop("side_journal_switchtab_onop(
+		0 = event_op, 
+		1 = 4, 
+		2 = $widget_629:1_1, 
+		3 = $widget_629:9_7, 
+		4 = $widget_629:4_8, 
+		5 = $widget_629:6_9, 
+		6 = $widget_629:8_10, 
+		7 = $widget_629:17_11, 
+		8 = $widget_629:12_12, 
+		9 = $widget_629:14_13, 
+		10 = $widget_629:16_14, 
+		11 = $widget_629:25_15, 
+		12 = $widget_629:20_16, 
+		13 = $widget_629:22_17, 
+		14 = $widget_629:24_18, 
+		15 = $widget_629:33_19, 
+		16 = $widget_629:28_20, 
+		17 = $widget_629:30_21, 
+		18 = $widget_629:32_22, 
+		19 = $widget_629:42_23, 
+		20 = $widget_629:37_24, 
+		21 = $widget_629:39_25, 
+		22 = $widget_629:41_26, 
+		23 = $widget_629:3_28, 
+		24 = $widget_629:5_29, 
+		25 = $widget_629:7_30, 
+		26 = $widget_629:11_31, 
+		27 = $widget_629:13_32, 
+		28 = $widget_629:15_33, 
+		29 = $widget_629:19_34, 
+		30 = $widget_629:21_35, 
+		31 = $widget_629:23_36, 
+		32 = $widget_629:27_37, 
+		33 = $widget_629:29_38, 
+		34 = $widget_629:31_39, 
+		35 = $widget_629:36_40, 
+		36 = $widget_629:38_41, 
+		37 = $widget_629:40_42, 
+		38 = $widget_629:35_43
+	)", $widget_629:34_6);
+	if_sethide(false, $widget_629:34_6);
+	$width44 = 44;
+	if_setposition(-69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:2_4);
+	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:10_2);
+	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:18_3);
+	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:34_6);
+} else if (~deadman_world = 3) {
+	if_clearops($widget_629:26_5);
+	if_sethide(true, $widget_629:26_5);
+	if (%varbit8168 = 3) {
+		%varbit8168 = 1;
+	}
+	~side_journal_switchtab(
+		0 = $widget_629:1_1, 
+		1 = $widget_629:9_7, 
+		2 = $widget_629:4_8, 
+		3 = $widget_629:6_9, 
+		4 = $widget_629:8_10, 
+		5 = $widget_629:17_11, 
+		6 = $widget_629:12_12, 
+		7 = $widget_629:14_13, 
+		8 = $widget_629:16_14, 
+		9 = $widget_629:25_15, 
+		10 = $widget_629:20_16, 
+		11 = $widget_629:22_17, 
+		12 = $widget_629:24_18, 
+		13 = $widget_629:33_19, 
+		14 = $widget_629:28_20, 
+		15 = $widget_629:30_21, 
+		16 = $widget_629:32_22, 
+		17 = $widget_629:42_23, 
+		18 = $widget_629:37_24, 
+		19 = $widget_629:39_25, 
+		20 = $widget_629:41_26, 
+		21 = $widget_629:3_28, 
+		22 = $widget_629:5_29, 
+		23 = $widget_629:7_30, 
+		24 = $widget_629:11_31, 
+		25 = $widget_629:13_32, 
+		26 = $widget_629:15_33, 
+		27 = $widget_629:19_34, 
+		28 = $widget_629:21_35, 
+		29 = $widget_629:23_36, 
+		30 = $widget_629:27_37, 
+		31 = $widget_629:29_38, 
+		32 = $widget_629:31_39, 
+		33 = $widget_629:36_40, 
+		34 = $widget_629:38_41, 
+		35 = $widget_629:40_42, 
+		36 = $widget_629:35_43
+	);
+	if_setop(1, "Deadman", $widget_629:34_6);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+		if_setonmouseleave("script2804($widget_629:37_24, $widget_629:39_25, $widget_629:41_26, $widget_629:36_40, $widget_629:38_41, $widget_629:40_42, 4)", $widget_629:34_6);
+	}
+	if_setonop("side_journal_switchtab_onop(
+		0 = event_op, 
+		1 = 4, 
+		2 = $widget_629:1_1, 
+		3 = $widget_629:9_7, 
+		4 = $widget_629:4_8, 
+		5 = $widget_629:6_9, 
+		6 = $widget_629:8_10, 
+		7 = $widget_629:17_11, 
+		8 = $widget_629:12_12, 
+		9 = $widget_629:14_13, 
+		10 = $widget_629:16_14, 
+		11 = $widget_629:25_15, 
+		12 = $widget_629:20_16, 
+		13 = $widget_629:22_17, 
+		14 = $widget_629:24_18, 
+		15 = $widget_629:33_19, 
+		16 = $widget_629:28_20, 
+		17 = $widget_629:30_21, 
+		18 = $widget_629:32_22, 
+		19 = $widget_629:42_23, 
+		20 = $widget_629:37_24, 
+		21 = $widget_629:39_25, 
+		22 = $widget_629:41_26, 
+		23 = $widget_629:3_28, 
+		24 = $widget_629:5_29, 
+		25 = $widget_629:7_30, 
+		26 = $widget_629:11_31, 
+		27 = $widget_629:13_32, 
+		28 = $widget_629:15_33, 
+		29 = $widget_629:19_34, 
+		30 = $widget_629:21_35, 
+		31 = $widget_629:23_36, 
+		32 = $widget_629:27_37, 
+		33 = $widget_629:29_38, 
+		34 = $widget_629:31_39, 
+		35 = $widget_629:36_40, 
+		36 = $widget_629:38_41, 
+		37 = $widget_629:40_42, 
+		38 = $widget_629:35_43
+	)", $widget_629:34_6);
+	if_sethide(false, $widget_629:34_6);
+	$width44 = 44;
+	if_setposition(-69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:2_4);
+	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:10_2);
+	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:18_3);
+	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:34_6);
+} else if (%varbit9340 = 1 & ~league_world = 0) {
+	if_clearops($widget_629:34_6);
+	if_sethide(true, $widget_629:34_6);
+	if (%varbit8168 = 4) {
+		%varbit8168 = 1;
+	}
+	~side_journal_switchtab(
+		0 = $widget_629:1_1, 
+		1 = $widget_629:9_7, 
+		2 = $widget_629:4_8, 
+		3 = $widget_629:6_9, 
+		4 = $widget_629:8_10, 
+		5 = $widget_629:17_11, 
+		6 = $widget_629:12_12, 
+		7 = $widget_629:14_13, 
+		8 = $widget_629:16_14, 
+		9 = $widget_629:25_15, 
+		10 = $widget_629:20_16, 
+		11 = $widget_629:22_17, 
+		12 = $widget_629:24_18, 
+		13 = $widget_629:33_19, 
+		14 = $widget_629:28_20, 
+		15 = $widget_629:30_21, 
+		16 = $widget_629:32_22, 
+		17 = $widget_629:42_23, 
+		18 = $widget_629:37_24, 
+		19 = $widget_629:39_25, 
+		20 = $widget_629:41_26, 
+		21 = $widget_629:3_28, 
+		22 = $widget_629:5_29, 
+		23 = $widget_629:7_30, 
+		24 = $widget_629:11_31, 
+		25 = $widget_629:13_32, 
+		26 = $widget_629:15_33, 
+		27 = $widget_629:19_34, 
+		28 = $widget_629:21_35, 
+		29 = $widget_629:23_36, 
+		30 = $widget_629:27_37, 
+		31 = $widget_629:29_38, 
+		32 = $widget_629:31_39, 
+		33 = $widget_629:36_40, 
+		34 = $widget_629:38_41, 
+		35 = $widget_629:40_42, 
+		36 = $widget_629:35_43
+	);
+	if_setop(1, "Adventure Paths", $widget_629:26_5);
+	if_setop(2, "Disable Adventure Paths", $widget_629:26_5);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($widget_629:28_20, $widget_629:30_21, $widget_629:32_22, $widget_629:27_37, $widget_629:29_38, $widget_629:31_39, 3)", $widget_629:26_5);
+		if_setonmouseleave("script2804($widget_629:28_20, $widget_629:30_21, $widget_629:32_22, $widget_629:27_37, $widget_629:29_38, $widget_629:31_39, 3)", $widget_629:26_5);
+	}
+	if_setonop("side_journal_switchtab_onop(
+		0 = event_op, 
+		1 = 3, 
+		2 = $widget_629:1_1, 
+		3 = $widget_629:9_7, 
+		4 = $widget_629:4_8, 
+		5 = $widget_629:6_9, 
+		6 = $widget_629:8_10, 
+		7 = $widget_629:17_11, 
+		8 = $widget_629:12_12, 
+		9 = $widget_629:14_13, 
+		10 = $widget_629:16_14, 
+		11 = $widget_629:25_15, 
+		12 = $widget_629:20_16, 
+		13 = $widget_629:22_17, 
+		14 = $widget_629:24_18, 
+		15 = $widget_629:33_19, 
+		16 = $widget_629:28_20, 
+		17 = $widget_629:30_21, 
+		18 = $widget_629:32_22, 
+		19 = $widget_629:42_23, 
+		20 = $widget_629:37_24, 
+		21 = $widget_629:39_25, 
+		22 = $widget_629:41_26, 
+		23 = $widget_629:3_28, 
+		24 = $widget_629:5_29, 
+		25 = $widget_629:7_30, 
+		26 = $widget_629:11_31, 
+		27 = $widget_629:13_32, 
+		28 = $widget_629:15_33, 
+		29 = $widget_629:19_34, 
+		30 = $widget_629:21_35, 
+		31 = $widget_629:23_36, 
+		32 = $widget_629:27_37, 
+		33 = $widget_629:29_38, 
+		34 = $widget_629:31_39, 
+		35 = $widget_629:36_40, 
+		36 = $widget_629:38_41, 
+		37 = $widget_629:40_42, 
+		38 = $widget_629:35_43
+	)", $widget_629:26_5);
+	if_sethide(false, $widget_629:26_5);
+	$width44 = 44;
+	if_setposition(-69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:2_4);
+	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:10_2);
+	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:18_3);
+	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:26_5);
+} else {
+	if_clearops($widget_629:26_5);
+	if_sethide(true, $widget_629:26_5);
+	if_clearops($widget_629:34_6);
+	if_sethide(true, $widget_629:34_6);
+	if (%varbit8168 = 3 | %varbit8168 = 4) {
+		%varbit8168 = 0;
+	}
+	~side_journal_switchtab(
+		0 = $widget_629:1_1, 
+		1 = $widget_629:9_7, 
+		2 = $widget_629:4_8, 
+		3 = $widget_629:6_9, 
+		4 = $widget_629:8_10, 
+		5 = $widget_629:17_11, 
+		6 = $widget_629:12_12, 
+		7 = $widget_629:14_13, 
+		8 = $widget_629:16_14, 
+		9 = $widget_629:25_15, 
+		10 = $widget_629:20_16, 
+		11 = $widget_629:22_17, 
+		12 = $widget_629:24_18, 
+		13 = $widget_629:33_19, 
+		14 = $widget_629:28_20, 
+		15 = $widget_629:30_21, 
+		16 = $widget_629:32_22, 
+		17 = $widget_629:42_23, 
+		18 = $widget_629:37_24, 
+		19 = $widget_629:39_25, 
+		20 = $widget_629:41_26, 
+		21 = $widget_629:3_28, 
+		22 = $widget_629:5_29, 
+		23 = $widget_629:7_30, 
+		24 = $widget_629:11_31, 
+		25 = $widget_629:13_32, 
+		26 = $widget_629:15_33, 
+		27 = $widget_629:19_34, 
+		28 = $widget_629:21_35, 
+		29 = $widget_629:23_36, 
+		30 = $widget_629:27_37, 
+		31 = $widget_629:29_38, 
+		32 = $widget_629:31_39, 
+		33 = $widget_629:36_40, 
+		34 = $widget_629:38_41, 
+		35 = $widget_629:40_42, 
+		36 = $widget_629:35_43
+	);
+	$width44 = 58;
+	if_setposition(-62, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:2_4);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:10_2);
+	if_setposition(62, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_629:18_3);
+}
+if_setsize($width44, 0, ^setsize_abs, ^setsize_minus, $widget_629:10_2);
+if_setsize($width44, 0, ^setsize_abs, ^setsize_minus, $widget_629:18_3);
+if_setsize($width44, 0, ^setsize_abs, ^setsize_minus, $widget_629:2_4);
+if_setsize($width44, 0, ^setsize_abs, ^setsize_minus, $widget_629:26_5);
+if_setsize($width44, 0, ^setsize_abs, ^setsize_minus, $widget_629:34_6);
+~side_journal_switchtab(
+	0 = $widget_629:1_1, 
+	1 = $widget_629:9_7, 
+	2 = $widget_629:4_8, 
+	3 = $widget_629:6_9, 
+	4 = $widget_629:8_10, 
+	5 = $widget_629:17_11, 
+	6 = $widget_629:12_12, 
+	7 = $widget_629:14_13, 
+	8 = $widget_629:16_14, 
+	9 = $widget_629:25_15, 
+	10 = $widget_629:20_16, 
+	11 = $widget_629:22_17, 
+	12 = $widget_629:24_18, 
+	13 = $widget_629:33_19, 
+	14 = $widget_629:28_20, 
+	15 = $widget_629:30_21, 
+	16 = $widget_629:32_22, 
+	17 = $widget_629:42_23, 
+	18 = $widget_629:37_24, 
+	19 = $widget_629:39_25, 
+	20 = $widget_629:41_26, 
+	21 = $widget_629:3_28, 
+	22 = $widget_629:5_29, 
+	23 = $widget_629:7_30, 
+	24 = $widget_629:11_31, 
+	25 = $widget_629:13_32, 
+	26 = $widget_629:15_33, 
+	27 = $widget_629:19_34, 
+	28 = $widget_629:21_35, 
+	29 = $widget_629:23_36, 
+	30 = $widget_629:27_37, 
+	31 = $widget_629:29_38, 
+	32 = $widget_629:31_39, 
+	33 = $widget_629:36_40, 
+	34 = $widget_629:38_41, 
+	35 = $widget_629:40_42, 
+	36 = $widget_629:35_43
+);

@@ -1,0 +1,49 @@
+// 4249
+[clientscript,clan_members_search_toggle](int $opindex0, component $widget_693:1_1, component $widget_693:2_2, int $comsubid3, component $widget_693:22_4, component $widget_693:9_5, component $widget_693:14_6, component $widget_693:10_7, component $widget_693:7_8, component $widget_693:11_9, component $widget_693:8_10, component $widget_693:13_11)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (~clan_members_searching = 1) {
+	~meslayer_close(true, true, true);
+	~clan_members_search_setbutton(
+		0 = $widget_693:1_1, 
+		1 = $widget_693:2_2, 
+		2 = $comsubid3, 
+		3 = $widget_693:22_4, 
+		4 = $widget_693:9_5, 
+		5 = $widget_693:14_6, 
+		6 = $widget_693:10_7, 
+		7 = $widget_693:7_8, 
+		8 = $widget_693:11_9, 
+		9 = $widget_693:8_10, 
+		10 = $widget_693:13_11
+	);
+	~clan_members_draw(
+		0 = $widget_693:1_1, 
+		1 = $widget_693:2_2, 
+		2 = $comsubid3, 
+		3 = $widget_693:9_5, 
+		4 = $widget_693:14_6, 
+		5 = $widget_693:10_7, 
+		6 = $widget_693:7_8, 
+		7 = $widget_693:11_9, 
+		8 = $widget_693:8_10, 
+		9 = $widget_693:13_11
+	);
+	return;
+}
+~meslayer_mode18;
+~clan_members_search_setbutton(
+	0 = $widget_693:1_1, 
+	1 = $widget_693:2_2, 
+	2 = $comsubid3, 
+	3 = $widget_693:22_4, 
+	4 = $widget_693:9_5, 
+	5 = $widget_693:14_6, 
+	6 = $widget_693:10_7, 
+	7 = $widget_693:7_8, 
+	8 = $widget_693:11_9, 
+	9 = $widget_693:8_10, 
+	10 = $widget_693:13_11
+);

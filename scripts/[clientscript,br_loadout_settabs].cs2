@@ -1,0 +1,24 @@
+// 6509
+[clientscript,br_loadout_settabs](component $component0, string $string0, component $component1, component $component2, string $string1, component $component3, component $component4, string $string2, component $component5, component $component6)
+sound_synth(interface_select1, 1, 0);
+if_sethide(false, $component0);
+if ($component0 ! $component2) {
+	if_sethide(true, $component2);
+}
+if ($component0 ! $component4) {
+	if_sethide(true, $component4);
+}
+if ($component0 ! $component6) {
+	if_sethide(true, $component6);
+}
+~br_loadout_settabs(
+	0 = $string0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $string1, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $string2, 
+	7 = $component5, 
+	8 = $component6
+);

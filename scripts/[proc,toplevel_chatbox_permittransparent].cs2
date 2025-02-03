@@ -1,0 +1,15 @@
+// 922
+[proc,toplevel_chatbox_permittransparent]()(int)
+if (getwindowmode = ^windowmode_fixed) {
+	return(0);
+}
+if (if_hassub(interface_162:565) = true | if_hassub(interface_162:564) = true) {
+	return(0);
+}
+if (if_gethide(interface_162:37) = false) {
+	return(0);
+}
+if (testbit(%varcint1189, 0) = ^true) {
+	return(0);
+}
+return(1);

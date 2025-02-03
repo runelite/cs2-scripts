@@ -1,0 +1,69 @@
+// 3873
+[clientscript,searchbar_op](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+~settings_op_sound(true);
+if (%varbit9638 = 1) {
+	return;
+}
+~chatdefault_stopinput;
+%varbit9638 = 1;
+%varbit9639 = 1;
+if (~on_mobile = true) {
+	~keyboard_show(0, 50);
+}
+~searchbar_setup_op(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = 1, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15
+);
+~settings_populate_settings(
+	0 = 0, 
+	1 = 0, 
+	2 = 0, 
+	3 = 1, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = 4, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15
+);
+~settings_create_tabs(
+	0 = $component0, 
+	1 = $component1, 
+	2 = 4, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $component6, 
+	6 = $component7, 
+	7 = $component8, 
+	8 = $component9, 
+	9 = $component10, 
+	10 = $component11, 
+	11 = $component12, 
+	12 = $component13, 
+	13 = $component14, 
+	14 = $component2, 
+	15 = $component3, 
+	16 = $component15
+);

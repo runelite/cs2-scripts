@@ -1,0 +1,44 @@
+// 5504
+[proc,gim_settings_draw](component $widget_730:2_0, int $comsubid1, component $widget_730:4_2, int $comsubid3, component $widget_730:6_4, component $widget_730:15_5, component $widget_730:16_6, component $widget_730:17_7, component $widget_730:18_8, component $widget_730:19_9, component $widget_730:20_10)
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
+	if (cc_find($widget_730:4_2, $comsubid3) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($widget_730:2_0, $comsubid1) = ^true) {
+		cc_settext(activeclansettings_getclanname);
+	}
+	if_sethide(false, $widget_730:6_4);
+	if_sethide(false, $widget_730:15_5);
+	~gim_icon_draw;
+	if (%varbit12165 = 1) {
+		~stonebutton_init("<col=0dc10d>Hiscores</col>", $widget_730:16_6, p12_full, 0);
+		~stonebutton_init("<col=9f9f9f>Group Storage</col>", $widget_730:17_7, p12_full, 0);
+		~stonebutton_init("<col=9f9f9f>Options</col>", $widget_730:18_8, p12_full, 0);
+		~stonebutton_init("<col=9f9f9f>Raffle</col>", $widget_730:19_9, p12_full, 0);
+		~stonebutton_init("<col=9f9f9f>Leave Group</col>", $widget_730:20_10, p12_full, 0);
+	} else {
+		~stonebutton_init("<col=0dc10d>Hiscores</col>", $widget_730:16_6, p12_full, 0);
+		~stonebutton_init("<col=0dc10d>Group Storage</col>", $widget_730:17_7, p12_full, 0);
+		~stonebutton_init("<col=0dc10d>Options</col>", $widget_730:18_8, p12_full, 0);
+		~stonebutton_init("<col=0dc10d>Raffle</col>", $widget_730:19_9, p12_full, 0);
+		if (%varbit13126 = 1) {
+			~stonebutton_init("<col=ff0000>Cancel Leave</col>", $widget_730:20_10, p12_full, 0);
+		} else {
+			~stonebutton_init("<col=ff0000>Leave Group</col>", $widget_730:20_10, p12_full, 0);
+		}
+		if_setonvartransmit("script5505($widget_730:20_10){var3171}", $widget_730:20_10);
+	}
+	return;
+}
+if (cc_find($widget_730:4_2, $comsubid3) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($widget_730:2_0, $comsubid1) = ^true) {
+	cc_settext(~script5507);
+}
+if_sethide(true, $widget_730:6_4);
+if_sethide(true, $widget_730:15_5);
+cc_deleteall($widget_730:16_6);
+cc_deleteall($widget_730:18_8);
+cc_deleteall($widget_730:19_9);
+cc_deleteall($widget_730:20_10);

@@ -1,0 +1,9 @@
+// 4584
+[proc,settings_regen_indicator]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varbit4084 = 1) {
+	return;
+}
+%varbit12346 = calc(1 - %varbit12346);

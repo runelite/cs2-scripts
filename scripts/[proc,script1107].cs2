@@ -1,0 +1,24 @@
+// 1107
+[proc,script1107](int $int0, int $int1, component $widget_676:8_2, int $int3, component $widget_676:5_4, int $int5)
+if ($int0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	if_sethide(true, interface_676:22);
+	cc_deleteall(interface_676:22);
+	if_sethide(true, $widget_676:5_4);
+	~league_setup_display_hoveroff($widget_676:8_2, $int5);
+	if ($int1 ! -1) {
+		~script858(
+			0 = interface_676:1, 
+			1 = 44302345, 
+			2 = interface_676:10, 
+			3 = interface_676:11, 
+			4 = interface_676:16, 
+			5 = interface_676:17, 
+			6 = interface_676:18, 
+			7 = interface_676:12, 
+			8 = interface_676:7, 
+			9 = $int1
+		);
+		~script1109($widget_676:8_2, $int1);
+	}
+}

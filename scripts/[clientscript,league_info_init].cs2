@@ -1,0 +1,23 @@
+// 3217
+[clientscript,league_info_init](component $widget_654:4_0, component $widget_654:5_1, component $widget_654:6_2, component $widget_654:7_3, component $widget_654:9_4, component $widget_654:11_5, component $widget_654:10_6, component $widget_654:12_7, component $widget_654:16_8, component $widget_654:17_9, component $widget_654:8_10, component $widget_654:15_11)
+~leagues_close_button($widget_654:15_11, false, 0);
+def_string $text0 = "League Info";
+def_int $comsubid12 = ~steelborder(interface_654:2, $text0, 1);
+def_component $component13 = interface_654:0;
+if_setontimer("script6110($component13, -1)", $component13);
+if_setonresize("league_info_draw_interface(
+	0 = $widget_654:4_0, 
+	1 = $widget_654:5_1, 
+	2 = $widget_654:6_2, 
+	3 = $widget_654:7_3, 
+	4 = $widget_654:9_4, 
+	5 = $widget_654:11_5, 
+	6 = $widget_654:10_6, 
+	7 = $widget_654:12_7, 
+	8 = $widget_654:16_8, 
+	9 = $widget_654:17_9, 
+	10 = $widget_654:8_10, 
+	11 = 0, 
+	12 = 0, 
+	13 = $comsubid12
+)", $component13);

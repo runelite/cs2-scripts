@@ -1,0 +1,162 @@
+// 3462
+[clientscript,gravestone_generic_init](component $widget_672:0_0, component $widget_672:2_1, component $widget_672:3_2, component $widget_672:1_3, component $widget_672:19_4, component $widget_672:4_5, component $widget_672:6_6, component $widget_672:7_7, component $widget_672:8_8, component $widget_672:9_9, component $widget_672:10_10, component $widget_672:12_11, component $widget_672:13_12, component $widget_672:14_13, component $widget_672:15_14, component $widget_672:16_15, int $widget_672:17_16, component $widget_672:18_17)
+def_int $int18 = ~steelborder($widget_672:2_1, ~gravestone_generic_title, 3);
+if (cc_find($widget_672:2_1, $int18) = ^true) {
+	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comsubid){inv_525}");
+}
+def_int $int19 = 0;
+if (~on_mobile = true) {
+	$int19 = calc(165 - (20 + 30));
+}
+~script4215($widget_672:3_2, "Close");
+if_setonop("opsound(event_op, 2)", $widget_672:3_2);
+if_setopkey(1, ^key_escape, 0, $widget_672:3_2);
+if_setop(1, "Take-All", $widget_672:8_8);
+~gravestone_generic_resetbutton($widget_672:8_8, $widget_672:9_9);
+~gravestone_generic_resetbutton($widget_672:15_14, $widget_672:16_15);
+~scrollbar_vertical($widget_672:7_7, $widget_672:6_6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($widget_672:14_13, $widget_672:13_12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall($widget_672:6_6);
+cc_deleteall($widget_672:13_12);
+$int18 = 0;
+while ($int18 < 120) {
+	cc_create($widget_672:6_6, ^iftype_graphic, $int18);
+	.cc_create($widget_672:13_12, ^iftype_graphic, $int18);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	.cc_sethide(true);
+	cc_setoutline(1);
+	.cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	.cc_setgraphicshadow(0x333333);
+	cc_setop(1, "Take");
+	.cc_setop(1, "Take");
+	cc_setop(10, "Examine");
+	.cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	.cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$int18 = calc($int18 + 1);
+}
+def_int $int20 = calc(120 * 2);
+while ($int18 < $int20) {
+	cc_create($widget_672:13_12, ^iftype_text, $int18);
+	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int18 = calc($int18 + 1);
+}
+if_settext(~gravestone_generic_parsefee(-1), $widget_672:12_11);
+if_settext(~gravestone_generic_parsecoffer(-1), $widget_672:18_17);
+if_setontimer("gravestone_generic_resynchdata(-1, $widget_672:12_11, -1, $widget_672:18_17, $widget_672:15_14, $widget_672:16_15)", $widget_672:18_17);
+cc_deleteall($widget_672:0_0);
+$int18 = 0;
+while ($int18 < 8) {
+	cc_create($widget_672:0_0, ^iftype_graphic, $int18);
+	cc_sethide(false);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setdraggable($widget_672:0_0, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int18 = calc($int18 + 1);
+}
+cc_deleteall($widget_672:19_4);
+$int18 = 0;
+while ($int18 < 4) {
+	cc_create($widget_672:19_4, ^iftype_rectangle, $int18);
+	cc_sethide(false);
+	cc_setsize(calc($int18 * 2), calc($int18 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + $int18 * 10));
+	$int18 = calc($int18 + 1);
+}
+def_int $int21 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
+def_int $int22 = calc(14 + ~max(calc(32 + 4), 42) + 2);
+def_int $int23 = 109;
+def_int $int24 = calc(40 + $int22 + $int23 + 10);
+if (%varcint395 < $int21) {
+	%varcint395 = scale(2, 3, 512);
+}
+if (%varcint396 < $int24) {
+	%varcint396 = scale(8, 9, 334);
+}
+if (%varcint397 < 0) {
+	%varcint397 = calc((if_getwidth($widget_672:0_0) - %varcint395) / 2);
+}
+if (%varcint398 < $int19) {
+	%varcint398 = ~max($int19, calc((if_getheight($widget_672:0_0) - %varcint396) / 2));
+}
+~gravestone_generic_window_set(
+	0 = $widget_672:0_0, 
+	1 = $widget_672:1_3, 
+	2 = $widget_672:19_4, 
+	3 = $int19, 
+	4 = $int21, 
+	5 = $int24, 
+	6 = $widget_672:4_5, 
+	7 = $int22, 
+	8 = $widget_672:10_10, 
+	9 = $int23, 
+	10 = $widget_672:6_6, 
+	11 = $widget_672:7_7, 
+	12 = $widget_672:13_12, 
+	13 = $widget_672:14_13
+);
+if_setoninvtransmit("gravestone_generic_window_set(
+	0 = $widget_672:0_0, 
+	1 = $widget_672:1_3, 
+	2 = $widget_672:19_4, 
+	3 = $int19, 
+	4 = $int21, 
+	5 = $int24, 
+	6 = $widget_672:4_5, 
+	7 = $int22, 
+	8 = $widget_672:10_10, 
+	9 = $int23, 
+	10 = $widget_672:6_6, 
+	11 = $widget_672:7_7, 
+	12 = $widget_672:13_12, 
+	13 = $widget_672:14_13
+){inv_525}", $widget_672:0_0);
+if_setonvartransmit("gravestone_generic_window_set(
+	0 = $widget_672:0_0, 
+	1 = $widget_672:1_3, 
+	2 = $widget_672:19_4, 
+	3 = $int19, 
+	4 = $int21, 
+	5 = $int24, 
+	6 = $widget_672:4_5, 
+	7 = $int22, 
+	8 = $widget_672:10_10, 
+	9 = $int23, 
+	10 = $widget_672:6_6, 
+	11 = $widget_672:7_7, 
+	12 = $widget_672:13_12, 
+	13 = $widget_672:14_13
+){var1574, var499}", $widget_672:0_0);
+~gravestone_generic_size_handler(
+	0 = $widget_672:0_0, 
+	1 = $widget_672:1_3, 
+	2 = $widget_672:19_4, 
+	3 = $int19, 
+	4 = $int21, 
+	5 = $int24, 
+	6 = $widget_672:4_5, 
+	7 = $int22, 
+	8 = $widget_672:10_10, 
+	9 = $int23, 
+	10 = $widget_672:6_6, 
+	11 = $widget_672:7_7, 
+	12 = $widget_672:13_12, 
+	13 = $widget_672:14_13, 
+	14 = ^min_32bit_int, 
+	15 = ^min_32bit_int
+);

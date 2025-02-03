@@ -1,0 +1,101 @@
+// 7269
+[proc,worldswitcher_loaded](component $component0, component $widget_69:3_1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $widget_69:26_18)
+def_graphic $graphic19 = p12_full;
+def_fontmetrics $fontmetrics20 = p12_full;
+if ($widget_69:3_1 ! null) {
+	~worldswitcher_settitle($widget_69:3_1);
+	if_setonvartransmit("worldswitcher_settitle($widget_69:3_1){var3014}", $widget_69:3_1);
+	if_setonsubchange("worldswitcher_settitle($widget_69:3_1)", $widget_69:3_1);
+	$graphic19, $fontmetrics20 = p11_full, p11_full;
+}
+if_sethide(false, $component2);
+~worldswitcher_draw(
+	0 = $component0, 
+	1 = $component2, 
+	2 = $component3, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $int6, 
+	6 = $int7, 
+	7 = $int8, 
+	8 = $graphic19, 
+	9 = $fontmetrics20, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15, 
+	17 = $component16, 
+	18 = $component17, 
+	19 = $widget_69:26_18
+);
+if_setonvartransmit("worldswitcher_draw(
+	0 = $component0, 
+	1 = $component2, 
+	2 = $component3, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $int6, 
+	6 = $int7, 
+	7 = $int8, 
+	8 = $graphic19, 
+	9 = $fontmetrics20, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15, 
+	17 = $component16, 
+	18 = $component17, 
+	19 = $widget_69:26_18
+){var477, var735, var1575}", $component0);
+if_setonstattransmit("worldswitcher_draw(
+	0 = $component0, 
+	1 = $component2, 
+	2 = $component3, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $int6, 
+	6 = $int7, 
+	7 = $int8, 
+	8 = $graphic19, 
+	9 = $fontmetrics20, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15, 
+	17 = $component16, 
+	18 = $component17, 
+	19 = $widget_69:26_18
+)", $component0);
+if_setontimer("script7272(
+	0 = ~worldswitcher_search_get, 
+	1 = %varcint5, 
+	2 = $component0, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $int6, 
+	8 = $int7, 
+	9 = $int8, 
+	10 = $graphic19, 
+	11 = $fontmetrics20, 
+	12 = $component9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $widget_69:26_18
+)", $component0);

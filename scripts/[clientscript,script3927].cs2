@@ -1,0 +1,31 @@
+// 3927
+[clientscript,script3927](component $widget_116:127_0, component $widget_116:43_1)
+cc_deleteall($widget_116:127_0);
+if (~on_enhanced_any = 1) {
+	if_sethide(true, $widget_116:127_0);
+	return;
+}
+def_int $int2 = 17;
+def_int $int3 = 17;
+def_int $width4 = calc(if_getwidth($widget_116:127_0) - $int2 - 2);
+cc_create($widget_116:127_0, ^iftype_text, 0);
+cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 10);
+cc_settext("Music unlock message");
+cc_create($widget_116:127_0, ^iftype_graphic, 1);
+cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc(if_getheight($widget_116:127_0) / 2 - $int3 / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
+if (%varbit10078 = 0) {
+	cc_setgraphic("options_radio_buttons,6");
+} else {
+	cc_setgraphic("options_radio_buttons,5");
+}
+if_setonop("script3930($widget_116:127_0, %varbit10078, $widget_116:43_1)", $widget_116:127_0);
+if_setonvartransmit("script3931($widget_116:127_0, $widget_116:43_1){var19}", $widget_116:127_0);
+if_setonmouseleave("script3929($widget_116:127_0, $widget_116:43_1)", $widget_116:127_0);
+if_setonmouserepeat("script3928($widget_116:127_0, $widget_116:43_1)", $widget_116:127_0);
+%varcint2 = 0;

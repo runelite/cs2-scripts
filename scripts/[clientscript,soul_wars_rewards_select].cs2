@@ -1,0 +1,32 @@
+// 845
+[clientscript,soul_wars_rewards_select](int $int0, int $int1, component $component2, component $component3, component $component4, int $int5, int $opindex6, component $component7, component $component8)
+if ($opindex6 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+def_int $y9 = 0;
+if ($int5 = 1 | $int5 = 2) {
+	$y9 = if_getscrolly($component2);
+} else {
+	switch_int (calc($int0 % 4)) {
+		case 0 :
+			%var2971 = 1;
+		case 1 :
+			%var2971 = 10;
+		case 2 :
+			%var2971 = 100;
+		case 3 :
+			%var2971 = 0;
+	}
+}
+~soul_wars_rewards_select(
+	0 = $int0, 
+	1 = $int1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $int5, 
+	6 = $y9, 
+	7 = $component7, 
+	8 = $component8
+);

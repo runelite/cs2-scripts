@@ -1,0 +1,23 @@
+// 3018
+[clientscript,adventurepath_side_init](component $widget_644:7_0, component $widget_644:0_1, component $widget_644:12_2, component $widget_644:16_3, component $widget_644:17_4, component $widget_644:9_5, component $widget_644:11_6, component $widget_644:13_7, component $widget_644:1_8, component $widget_644:5_9, component $widget_644:4_10, component $widget_644:3_11, component $widget_644:6_12, component $widget_644:14_13, component $widget_644:15_14)
+cc_deleteall($widget_644:12_2);
+cc_deleteall($widget_644:16_3);
+cc_deleteall($widget_644:17_4);
+cc_deleteall($widget_644:11_6);
+cc_deleteall($widget_644:9_5);
+cc_deleteall($widget_644:13_7);
+cc_deleteall($widget_644:14_13);
+cc_deleteall($widget_644:15_14);
+if (%varbit9327 = 1) {
+	if_sethide(true, $widget_644:7_0);
+	if_sethide(false, $widget_644:1_8);
+} else {
+	if_sethide(false, $widget_644:7_0);
+	if_sethide(true, $widget_644:1_8);
+}
+~adventurepath_side_info($widget_644:16_3, $widget_644:17_4, $widget_644:9_5, $widget_644:11_6, $widget_644:13_7, $widget_644:6_12, $widget_644:14_13, $widget_644:15_14);
+if_setonvartransmit("adventurepath_side_info_transmit($widget_644:16_3, $widget_644:17_4, $widget_644:9_5, $widget_644:11_6, $widget_644:13_7, $widget_644:6_12, $widget_644:14_13, $widget_644:15_14){var2359, var2358}", $widget_644:0_1);
+if_setonstattransmit("adventurepath_side_info_transmit($widget_644:16_3, $widget_644:17_4, $widget_644:9_5, $widget_644:11_6, $widget_644:13_7, $widget_644:6_12, $widget_644:14_13, $widget_644:15_14){attack, strength, defence, magic, ranged, mining, woodcutting, fishing}", $widget_644:0_1);
+if_setonvartransmit("adventurepath_side_layer($widget_644:7_0, $widget_644:1_8){var2370}", $widget_644:7_0);
+~adventurepath_side_settings($widget_644:12_2, $widget_644:7_0, $widget_644:1_8);
+~adventurepath_side_settings_content($widget_644:7_0, $widget_644:1_8, $widget_644:5_9, $widget_644:4_10, $widget_644:3_11, $widget_644:6_12, 1);

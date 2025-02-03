@@ -1,0 +1,8 @@
+// 347
+[clientscript,pattern_cards_confirm_reset](int $clock0, component $component1)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $component1);
+~stonebutton_init("Confirm", $component1, p12_full, 0);
+if_setonop("pattern_cards_confirm_op(event_op, event_com)", $component1);

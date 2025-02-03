@@ -1,0 +1,56 @@
+// 155
+[clientscript,interface_inv_dragcomplete_swap_big](inv $inv0, int $comsubid1, int $dropsubid2, component $component3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
+if ($dropsubid2 = -1) {
+	~interface_inv_draw_slot_big(
+		0 = $inv0, 
+		1 = $comsubid1, 
+		2 = $component3, 
+		3 = $comsubid1, 
+		4 = $int4, 
+		5 = $component5, 
+		6 = $string0, 
+		7 = $string1, 
+		8 = $string2, 
+		9 = $string3, 
+		10 = $string4, 
+		11 = $string5, 
+		12 = $string6, 
+		13 = $string7, 
+		14 = $string8
+	);
+	return;
+}
+~interface_inv_draw_slot_big(
+	0 = $inv0, 
+	1 = $comsubid1, 
+	2 = $component3, 
+	3 = $dropsubid2, 
+	4 = $int4, 
+	5 = $component5, 
+	6 = $string0, 
+	7 = $string1, 
+	8 = $string2, 
+	9 = $string3, 
+	10 = $string4, 
+	11 = $string5, 
+	12 = $string6, 
+	13 = $string7, 
+	14 = $string8
+);
+~interface_inv_draw_slot_big(
+	0 = $inv0, 
+	1 = $dropsubid2, 
+	2 = $component3, 
+	3 = $comsubid1, 
+	4 = $int4, 
+	5 = $component5, 
+	6 = $string0, 
+	7 = $string1, 
+	8 = $string2, 
+	9 = $string3, 
+	10 = $string4, 
+	11 = $string5, 
+	12 = $string6, 
+	13 = $string7, 
+	14 = $string8
+);

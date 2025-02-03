@@ -1,0 +1,35 @@
+// 806
+[proc,ge_offers_switchpanel](component $widget_465:2_0, int $comsubid1, component $widget_465:4_2, component $widget_465:5_3, component $widget_465:15_4, component $widget_465:25_5, component $widget_465:32_6)
+~deltooltip_action($widget_465:32_6);
+def_int $int7 = calc(%varbit4439 - 1);
+def_inv $inv8 = enum(int, inv, enum_150, $int7);
+if ($inv8 = null) {
+	if_sethide(true, $widget_465:4_2);
+	if_sethide(false, $widget_465:5_3);
+	if_sethide(true, $widget_465:15_4);
+	if_sethide(true, $widget_465:25_5);
+	if (cc_find($widget_465:2_0, $comsubid1) = ^true) {
+		cc_settext("Grand Exchange");
+	}
+	return;
+}
+if_sethide(false, $widget_465:4_2);
+if_settrans(0, $widget_465:4_2);
+def_obj $obj9 = null;
+def_int $int10 = 0;
+$obj9, $int10 = ~script5733($int7);
+if (stockmarket_isofferempty($int7) = true & $obj9 = null) {
+	if_sethide(true, $widget_465:5_3);
+	if_sethide(true, $widget_465:15_4);
+	if_sethide(false, $widget_465:25_5);
+	if (cc_find($widget_465:2_0, $comsubid1) = ^true) {
+		cc_settext("Grand Exchange: Set up offer");
+	}
+	return;
+}
+if_sethide(true, $widget_465:5_3);
+if_sethide(false, $widget_465:15_4);
+if_sethide(true, $widget_465:25_5);
+if (cc_find($widget_465:2_0, $comsubid1) = ^true) {
+	cc_settext("Grand Exchange: Offer status");
+}

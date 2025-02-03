@@ -1,0 +1,253 @@
+// 3276
+[proc,bankmain_viewbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21)
+if ($component0 = $component16) {
+	if_sethide(true, $component14);
+	if_sethide(true, $component15);
+	if_sethide(false, $component16);
+	if_sethide(false, $component2);
+	if_sethide(true, $component3);
+	if_setonkey(null, $component15);
+	cc_deleteall($component2);
+	cc_create($component2, ^iftype_graphic, 0);
+	.cc_create($component2, ^iftype_graphic, 1);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics3,1");
+	.cc_setgraphic("banktab_icons,2");
+	.cc_settiling(true);
+	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component2);
+	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component2);
+	if_setop(1, "Hide menu", $component2);
+	if_setonop("bankmain_viewbuttons(
+		0 = $component14, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21
+	)", $component2);
+	if (~bankmain_searching = 1) {
+		~meslayer_close(true, true, true);
+	}
+	if_settext("Bank settings menu", $component7);
+	%varcint386 = false;
+} else if ($component0 = $component15) {
+	if_sethide(true, $component14);
+	if_sethide(false, $component15);
+	if_sethide(true, $component16);
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+	cc_deleteall($component3);
+	cc_create($component3, ^iftype_graphic, 0);
+	.cc_create($component3, ^iftype_graphic, 1);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics3,1");
+	.cc_setgraphic("banktab_icons,3");
+	.cc_settiling(true);
+	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component3);
+	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
+	if_setop(1, "Hide worn items", $component3);
+	if_setonop("bankmain_viewbuttons(
+		0 = $component14, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21
+	)", $component3);
+	if_setonkey("script3326(
+		0 = event_keycode, 
+		1 = event_keychar, 
+		2 = $component14, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component10, 
+		13 = $component11, 
+		14 = $component12, 
+		15 = $component13, 
+		16 = $component14, 
+		17 = $component15, 
+		18 = $component16, 
+		19 = $component17, 
+		20 = $component18, 
+		21 = $component19, 
+		22 = $component20, 
+		23 = $component21
+	)", $component3);
+	if (~bankmain_searching = 1) {
+		~meslayer_close(true, true, true);
+	}
+	if_settext("Equip your character...", $component7);
+	%varcint386 = true;
+} else {
+	if_sethide(false, $component14);
+	if_sethide(true, $component15);
+	if_sethide(true, $component16);
+	if_sethide(false, $component2);
+	if_sethide(false, $component3);
+	cc_deleteall($component2);
+	cc_create($component2, ^iftype_graphic, 0);
+	.cc_create($component2, ^iftype_graphic, 1);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics3,0");
+	.cc_setgraphic("banktab_icons,2");
+	.cc_settiling(true);
+	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component2);
+	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component2);
+	if_setop(1, "Show menu", $component2);
+	if_setonop("bankmain_viewbuttons(
+		0 = $component16, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21
+	)", $component2);
+	cc_deleteall($component3);
+	cc_create($component3, ^iftype_graphic, 0);
+	.cc_create($component3, ^iftype_graphic, 1);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics3,0");
+	.cc_setgraphic("banktab_icons,3");
+	.cc_settiling(true);
+	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component3);
+	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
+	if_setop(1, "Show worn items", $component3);
+	if_setonop("bankmain_viewbuttons(
+		0 = $component15, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21
+	)", $component3);
+	if_setonkey("script3326(
+		0 = event_keycode, 
+		1 = event_keychar, 
+		2 = $component15, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component10, 
+		13 = $component11, 
+		14 = $component12, 
+		15 = $component13, 
+		16 = $component14, 
+		17 = $component15, 
+		18 = $component16, 
+		19 = $component17, 
+		20 = $component18, 
+		21 = $component19, 
+		22 = $component20, 
+		23 = $component21
+	)", $component3);
+	~bankmain_build(
+		0 = $component1, 
+		1 = $component2, 
+		2 = $component4, 
+		3 = $component5, 
+		4 = $component6, 
+		5 = $component7, 
+		6 = $component8, 
+		7 = $component9, 
+		8 = $component10, 
+		9 = $component11, 
+		10 = $component12, 
+		11 = $component13, 
+		12 = $component17, 
+		13 = $component18, 
+		14 = $component19, 
+		15 = $component20, 
+		16 = $component21
+	);
+	%varcint386 = false;
+}
+~deltooltip_action($component13);

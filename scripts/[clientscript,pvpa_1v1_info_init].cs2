@@ -1,0 +1,86 @@
+// 6345
+[clientscript,pvpa_1v1_info_init](component $widget_770:0_0, component $widget_770:1_1, component $widget_770:2_2, component $widget_770:3_3, component $widget_770:4_4, component $widget_770:78_5, component $widget_770:7_6, component $widget_770:8_7, component $widget_770:6_8, component $widget_770:72_9, component $widget_770:73_10)
+def_int $int11 = 0;
+if (~on_mobile = true) {
+	$int11 = calc(165 - (20 + 30));
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $widget_770:1_1);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $widget_770:1_1);
+	if_setonvartransmit(null, $widget_770:0_0);
+} else {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_770:1_1);
+	~pvpa_1v1_info_dodger($widget_770:1_1);
+	if_setonvartransmit("pvpa_1v1_info_dodger($widget_770:1_1){var3464, var1055, var1227}", $widget_770:0_0);
+}
+~steelborder($widget_770:3_3, "1v1 Tournament", 11);
+if_setnoclickthrough(true, $widget_770:3_3);
+~script4215($widget_770:4_4, "Close");
+if_setonop("opsound(event_op, 2)", $widget_770:4_4);
+if_setopkey(1, ^key_escape, 0, $widget_770:4_4);
+~scrollbar_vertical($widget_770:72_9, $widget_770:6_8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_horizontal(
+	0 = $widget_770:73_10, 
+	1 = $widget_770:6_8, 
+	2 = graphic_4538, 
+	3 = graphic_4537, 
+	4 = graphic_4536, 
+	5 = graphic_4535, 
+	6 = "scrollbar_v2,2", 
+	7 = "scrollbar_v2,3", 
+	8 = 0
+);
+cc_deleteall($widget_770:1_1);
+def_int $int12 = 0;
+while ($int12 < 8) {
+	cc_create($widget_770:1_1, ^iftype_graphic, $int12);
+	cc_sethide(false);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+	cc_setdraggable($widget_770:1_1, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int12 = calc($int12 + 1);
+}
+cc_deleteall($widget_770:78_5);
+$int12 = 0;
+while ($int12 < 4) {
+	cc_create($widget_770:78_5, ^iftype_rectangle, $int12);
+	cc_sethide(false);
+	cc_setsize(calc($int12 * 2), calc($int12 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + $int12 * 10));
+	$int12 = calc($int12 + 1);
+}
+def_int $int13 = scale(5, 7, 512);
+def_int $int14 = scale(4, 7, 334);
+if (%varcint207 < $int13) {
+	%varcint207 = scale(2, 3, 512);
+}
+if (%varcint208 < $int14) {
+	%varcint208 = scale(8, 9, 334);
+}
+if (%varcint209 < 0) {
+	%varcint209 = calc((if_getwidth($widget_770:1_1) - %varcint207) / 2);
+}
+if (%varcint210 < $int11) {
+	%varcint210 = ~max($int11, calc((if_getheight($widget_770:1_1) - %varcint208) / 2));
+}
+~pvpa_1v1_info_sizehandler(
+	0 = $widget_770:1_1, 
+	1 = $widget_770:2_2, 
+	2 = $widget_770:78_5, 
+	3 = $int11, 
+	4 = $int13, 
+	5 = $int14, 
+	6 = $widget_770:7_6, 
+	7 = $widget_770:8_7, 
+	8 = $widget_770:6_8, 
+	9 = $widget_770:72_9, 
+	10 = $widget_770:73_10, 
+	11 = ^min_32bit_int, 
+	12 = ^min_32bit_int, 
+	13 = -1
+);

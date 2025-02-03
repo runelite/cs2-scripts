@@ -1,0 +1,91 @@
+// 6615
+[clientscript,toa_partydetails_init](component $widget_774:0_0, component $widget_774:1_1, component $widget_774:16_2, component $widget_774:17_3, component $widget_774:19_4, component $widget_774:32_5, component $widget_774:33_6, component $widget_774:35_7, component $widget_774:48_8, component $widget_774:49_9, component $widget_774:52_10, int $widget_774:75_11, component $widget_774:51_12, component $widget_774:53_13, component $widget_774:56_14, component $widget_774:55_15, component $widget_774:4_16, component $widget_774:62_17, component $widget_774:64_18, component $widget_774:72_19, component $widget_774:63_20, component $widget_774:69_21, component $widget_774:70_22, component $widget_774:71_23, component $widget_774:83_24, component $widget_774:84_25, component $widget_774:6_26, component $widget_774:7_27, component $widget_774:8_28, component $widget_774:9_29)
+%varcint178 = 0;
+%varcint1087 = 0;
+cc_deleteall($widget_774:32_5);
+cc_deleteall($widget_774:48_8);
+if_sethide(true, $widget_774:19_4);
+if_sethide(true, $widget_774:35_7);
+if_sethide(true, $widget_774:17_3);
+if_sethide(true, $widget_774:33_6);
+if_sethide(true, $widget_774:49_9);
+if_sethide(true, $widget_774:53_13);
+cc_deleteall($widget_774:16_2);
+cc_create($widget_774:16_2, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x7f7f7f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+cc_deleteall($widget_774:1_1);
+if_sethide(true, $widget_774:4_16);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:4_16));
+cc_sethide(true);
+if_sethide(true, $widget_774:62_17);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:62_17));
+cc_sethide(true);
+if_sethide(true, $widget_774:64_18);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:64_18));
+cc_sethide(true);
+if_sethide(true, $widget_774:72_19);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:72_19));
+cc_sethide(true);
+if_sethide(true, $widget_774:63_20);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:63_20));
+cc_sethide(true);
+if_sethide(true, $widget_774:69_21);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:69_21));
+cc_sethide(true);
+if_sethide(true, $widget_774:70_22);
+if_sethide(true, $widget_774:71_23);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:83_24));
+cc_sethide(true);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:84_25));
+cc_sethide(true);
+if_sethide(true, $widget_774:6_26);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:6_26));
+cc_sethide(true);
+if_sethide(true, $widget_774:7_27);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:7_27));
+cc_sethide(true);
+if_sethide(true, $widget_774:8_28);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:8_28));
+cc_sethide(true);
+if_sethide(true, $widget_774:9_29);
+cc_create($widget_774:1_1, ^iftype_rectangle, enum(component, int, enum_4792, $widget_774:9_29));
+cc_sethide(true);
+if_setscrollsize(0, 0, $widget_774:52_10);
+if_setscrollpos(0, 0, $widget_774:52_10);
+~scrollbar_vertical($widget_774:51_12, $widget_774:52_10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, 0, $widget_774:56_14);
+if_setscrollpos(0, 0, $widget_774:56_14);
+~scrollbar_vertical($widget_774:55_15, $widget_774:56_14, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int30 = enum_getoutputcount(enum_4792);
+def_int $int31 = 24;
+while ($int31 > 0) {
+	cc_create($widget_774:1_1, ^iftype_rectangle, $int30);
+	cc_sethide(true);
+	$int31, $int30 = calc($int31 - 1), calc($int30 + 1);
+}
+$int31 = 8;
+while ($int31 > 0) {
+	cc_create($widget_774:1_1, ^iftype_rectangle, $int30);
+	cc_sethide(true);
+	$int31, $int30 = calc($int31 - 1), calc($int30 + 1);
+}
+$int31 = 8;
+while ($int31 > 0) {
+	cc_create($widget_774:1_1, ^iftype_rectangle, $int30);
+	cc_sethide(true);
+	$int31, $int30 = calc($int31 - 1), calc($int30 + 1);
+}
+$int31 = enum_getoutputcount(enum_4664);
+while ($int31 > 0) {
+	cc_create($widget_774:1_1, ^iftype_rectangle, $int30);
+	cc_sethide(true);
+	$int31, $int30 = calc($int31 - 1), calc($int30 + 1);
+}
+if_setontimer(null, $widget_774:0_0);
+~toa_partydetails_setsize(interface_774:2, ^max_32bit_int, $widget_774:52_10, $widget_774:51_12, $widget_774:56_14, $widget_774:55_15);

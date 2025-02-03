@@ -1,0 +1,9 @@
+// 211
+[clientscript,poh_options_buildmode](component $widget_370:5_0, component $widget_370:6_1)
+if (%varbit2176 = 1) {
+	if_setgraphic("options_radio_buttons,2", $widget_370:5_0);
+	if_setgraphic("options_radio_buttons,0", $widget_370:6_1);
+} else {
+	if_setgraphic("options_radio_buttons,0", $widget_370:5_0);
+	if_setgraphic("options_radio_buttons,2", $widget_370:6_1);
+}

@@ -1,0 +1,10 @@
+// 1350
+[clientscript,questlist_init](component $widget_399:2_0, component $widget_399:4_1, component $widget_399:6_2, component $widget_399:5_3, component $widget_399:10_4, component $widget_399:9_5, component $widget_399:7_6, component $widget_399:11_7)
+~questlist_qp($widget_399:10_4);
+if_setonvartransmit("questlist_qp($widget_399:10_4){var101, var904, var3368, var3369, var3766}", $widget_399:10_4);
+~questlist_completed($widget_399:9_5);
+if_setonvartransmit("questlist_completed($widget_399:9_5){var904, var2920, var3365}", $widget_399:9_5);
+cc_deleteall($widget_399:2_0);
+~steelbox($widget_399:2_0, 0, false);
+~questlist_draw($widget_399:2_0, $widget_399:4_1, $widget_399:6_2, $widget_399:5_3, $widget_399:7_6, false);
+~questlist_settings_button_init($widget_399:11_7);

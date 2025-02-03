@@ -1,0 +1,26 @@
+// 1567
+[proc,raids_partylist_entry_init](int $int0, component $component1, int $int2, string $string0, component $component3)
+def_int $int4 = 16777215;
+def_int $int5 = 230;
+if (calc($int0 % 2) = 0) {
+	$int4, $int5 = 16777215, 245;
+}
+cc_setcolour($int4);
+cc_settrans($int5);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script1015(event_com, cc_getid, ^white, 210)", $component1);
+	if_setonmouseleave("script1015(event_com, cc_getid, $int4, $int5)", $component1);
+}
+if_setonop("raids_partylist_op(
+	0 = event_op, 
+	1 = event_com, 
+	2 = cc_getid, 
+	3 = $int4, 
+	4 = $int5, 
+	5 = 16777215, 
+	6 = 210, 
+	7 = $int2, 
+	8 = $string0, 
+	9 = $component3
+)", $component1);
+if_setontimer(null, $component1);

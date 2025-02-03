@@ -1,0 +1,38 @@
+// 4723
+[proc,spec_regen_timer](int $int0, int $int1)
+if (~on_enhanced_any = 0) {
+	return;
+}
+def_component $component2 = interface_160:40;
+if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
+	$component2 = interface_895:37;
+} else if (~on_mobile = true & %varbit6254 = 0) {
+	$component2 = interface_897:36;
+} else if (~on_mobile = true & %varbit6254 = 1) {
+	$component2 = interface_898:37;
+}
+cc_deleteall($component2);
+if_setonvartransmit("spec_regen_vartransmit($component2, %varbit12346, %var300){var2856, var300}", $component2);
+if (%varbit4084 = 1) {
+	return;
+}
+if (%varbit12346 = 1) {
+	return;
+}
+if (%var300 >= 1000) {
+	return;
+}
+$int0 = calc($int0 * 30);
+if ($int0 = 0) {
+	$int1 = 0;
+} else if ($int1 >= $int0) {
+	$int1 = calc($int1 % $int0);
+}
+cc_create($component2, ^iftype_arc, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x03cffd);
+cc_setfill(false);
+cc_setlinewid(2);
+cc_setarc(0, 0);
+if_setontimer("spec_regen_arc($component2, 0, $int1, $int0)", $component2);

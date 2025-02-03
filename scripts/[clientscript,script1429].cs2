@@ -1,0 +1,10 @@
+// 1429
+[clientscript,script1429](int $opindex0, component $widget_12:62_1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($widget_12:62_1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	%varbit5364 = calc(1 - %varbit5364);
+	~script1431($widget_12:62_1);
+}

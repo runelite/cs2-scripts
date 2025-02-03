@@ -1,0 +1,39 @@
+// 2616
+[proc,magic_spellbook_initialisespells](enum $enum0, component $widget_218:3_1, component $widget_218:193_2, component $widget_218:202_3, component $widget_218:1_4, component $widget_218:199_5, component $widget_218:200_6, component $widget_218:201_7, component $widget_218:2_8, component $widget_218:195_9, component $widget_218:198_10, string $string0, string $string1, boolean $boolean11)
+def_component $component12 = null;
+def_int $int13 = 0;
+def_obj $obj14 = enum(int, obj, $enum0, $int13);
+while ($obj14 ! null) {
+	if (~league_world = 1) {
+		$obj14 = ~script3159($obj14);
+	}
+	$component12 = oc_param($obj14, spell_button);
+	if ($obj14 = back_24610) {
+		if_setopbase("", $component12);
+	} else {
+		if_setopbase("<col=00ff00><oc_param($obj14, spell_name)></col>", $component12);
+	}
+	if (if_gettargetmask($component12) ! 0) {
+		if_setontargetenter("magic_spellbook_targetmode(true, event_com, $obj14)", $component12);
+		if_setontargetleave("magic_spellbook_targetmode(false, event_com, $obj14)", $component12);
+	} else {
+		if_setonop("script4902(
+			0 = $obj14, 
+			1 = $widget_218:3_1, 
+			2 = $widget_218:193_2, 
+			3 = $widget_218:202_3, 
+			4 = $widget_218:1_4, 
+			5 = $widget_218:199_5, 
+			6 = $widget_218:200_6, 
+			7 = $widget_218:201_7, 
+			8 = $widget_218:2_8, 
+			9 = $widget_218:195_9, 
+			10 = $widget_218:198_10, 
+			11 = $string0, 
+			12 = $string1, 
+			13 = $boolean11
+		)", $component12);
+	}
+	$int13 = calc($int13 + 1);
+	$obj14 = enum(int, obj, $enum0, $int13);
+}

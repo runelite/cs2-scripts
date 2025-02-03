@@ -1,0 +1,8 @@
+// 1589
+[clientscript,raids_storage_shared_init](component $widget_550:0_0, component $widget_550:6_1, component $widget_550:7_2, component $widget_550:8_3, component $widget_550:2_4, component $widget_550:5_5)
+~raids_storage_drawbutton("Private", $widget_550:5_5, p11_full);
+~raids_storage_shared_warning($widget_550:6_1);
+if_setonvartransmit("raids_storage_shared_warning($widget_550:6_1){var499}", $widget_550:6_1);
+~scrollbar_vertical($widget_550:8_3, $widget_550:7_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~raids_storage_shared_items($widget_550:7_2, $widget_550:8_3, $widget_550:2_4);
+if_setoninvtransmit("raids_storage_shared_items($widget_550:7_2, $widget_550:8_3, $widget_550:2_4){inv_582}", $widget_550:0_0);

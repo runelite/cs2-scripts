@@ -1,0 +1,33 @@
+// 1435
+[clientscript,cws_init](component $widget_475:1_0, component $widget_475:11_1, component $widget_475:12_2, component $widget_475:13_3, string $op0, string $op1)
+def_int $int4 = %varbit14801;
+cc_deleteall($widget_475:1_0);
+cc_create($widget_475:1_0, ^iftype_rectangle, 0);
+.cc_create($widget_475:1_0, ^iftype_rectangle, 1);
+cc_sethide(true);
+.cc_sethide(true);
+~cws_init_button($widget_475:11_1, $op0);
+if_setonop("script1437($widget_475:1_0, 1)", $widget_475:11_1);
+~cws_init_button($widget_475:12_2, $op1);
+if_setonop("script1437($widget_475:1_0, 0)", $widget_475:12_2);
+cc_deleteall($widget_475:13_3);
+cc_create($widget_475:13_3, ^iftype_rectangle, 0);
+def_int $comsubid5 = cc_getid;
+cc_sethide(true);
+def_string $string2 = "Don't ask me this again";
+cc_create($widget_475:13_3, ^iftype_graphic, 1);
+cc_setsize(19, 19, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+.cc_create($widget_475:13_3, ^iftype_text, 2);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+.cc_settext($string2);
+if_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)", $widget_475:13_3);
+if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $widget_475:13_3);
+if_setsize(calc(parawidth($string2, if_getwidth($widget_475:1_0), p12_full) + 26), if_getheight($widget_475:13_3), ^setsize_abs, ^setsize_abs, $widget_475:13_3);
+~cws_set_toggle($widget_475:13_3, $int4, $comsubid5, ~cws_cc_getvar($int4));
+if_setonvartransmit("cws_set_toggle($widget_475:13_3, cc_getid, $int4, $comsubid5){var1045, var1046, var1047, var2768}", $widget_475:13_3);

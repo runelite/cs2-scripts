@@ -1,0 +1,282 @@
+// 4943
+[proc,script4943](int $int0, int $flags1)
+def_component $component2 = interface_865:38;
+cc_deleteall($component2);
+def_int $int3 = 0;
+def_string $string0 = ~script4159(~script1776(%var4136), 1);
+def_int $int4 = ~script1776(%var4137);
+def_string $text1 = ~script4159($int4, 1);
+def_string $text2 = tostring(%var4132);
+if (%var4132 = ^max_32bit_int) {
+	$text2 = "Lots!";
+}
+def_int $int5 = calc(100 * $int0);
+if ($int0 = 12) {
+	$int5 = calc($int5 + 1000);
+}
+def_int $int6 = 0;
+def_int $int7 = %var4136;
+if ($int7 > 0 & $int7 < 500) {
+	$int6 = calc((500 - $int7) * $int0);
+}
+def_int $int8 = 0;
+def_int $count9 = 0;
+def_int $count10 = enum_getoutputcount(enum_5312);
+def_struct $struct11 = null;
+def_int $int12 = 1;
+while ($count9 < $count10) {
+	$struct11 = enum(int, struct, enum_5312, $count9);
+	if ($struct11 ! null & ~script4978($struct11, $flags1) = 1) {
+		if (struct_param($struct11, param_1901) = true) {
+			$int12 = ~script4980($struct11);
+		} else {
+			$int12 = 1;
+		}
+		$int8 = calc($int8 + $int12 * struct_param($struct11, param_1903));
+	}
+	$count9 = calc($count9 + 1);
+}
+def_int $int13 = 0;
+if (%var4134 <= 0) {
+	$int13 = calc($int0 * 100);
+}
+def_string $text3 = "Wave complete: ";
+~create_text(
+	0 = $component2, 
+	1 = 0, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_right, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = " <col=0dc10d>+<tostring($int5)></col>";
+~create_text(
+	0 = $component2, 
+	1 = 1, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_left, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = "Speed bonus: ";
+~create_text(
+	0 = $component2, 
+	1 = 2, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 22, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_right, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = " <col=0dc10d>+<tostring($int6)></col> (<$string0>)";
+~create_text(
+	0 = $component2, 
+	1 = 3, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 22, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_left, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = "Modifier choice: ";
+~create_text(
+	0 = $component2, 
+	1 = 4, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 44, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_right, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = " <col=0dc10d>+<tostring($int8)></col>";
+~create_text(
+	0 = $component2, 
+	1 = 5, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 44, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_left, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = "Damage taken: ";
+~create_text(
+	0 = $component2, 
+	1 = 6, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 66, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_right, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = " <col=0dc10d>+<tostring($int13)></col> (<tostring(%var4134)>)";
+~create_text(
+	0 = $component2, 
+	1 = 7, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 66, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_left, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = "Total Glory";
+~create_text(
+	0 = $component2, 
+	1 = 8, 
+	2 = b12_full, 
+	3 = 0, 
+	4 = 95, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = "Total time";
+~create_text(
+	0 = $component2, 
+	1 = 9, 
+	2 = b12_full, 
+	3 = 0, 
+	4 = 95, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = $text2;
+~create_text(
+	0 = $component2, 
+	1 = 10, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 115, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+$text3 = $text1;
+~create_text(
+	0 = $component2, 
+	1 = 11, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 115, 
+	5 = ^setpos_abs_right, 
+	6 = ^setpos_abs_top, 
+	7 = 8192, 
+	8 = 20, 
+	9 = ^setsize_proportion, 
+	10 = ^setsize_abs, 
+	11 = $text3, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);

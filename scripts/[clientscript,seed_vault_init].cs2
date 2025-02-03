@@ -1,0 +1,12 @@
+// 2818
+[clientscript,seed_vault_init](component $widget_631:15_0, component $widget_631:16_1, component $widget_631:13_2, component $widget_631:14_3, component $widget_631:11_4, component $widget_631:10_5, component $widget_631:12_6, component $widget_631:24_7)
+def_int $int8 = %varcint376;
+if (~seed_vault_searching = 1) {
+	~meslayer_close(true, true, true);
+}
+~scrollbar_vertical($widget_631:10_5, $widget_631:11_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6);
+if_setonop("seed_vault_search_toggle($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6, $widget_631:24_7)", $widget_631:24_7);
+if_setoninvtransmit("seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6){inv_626}", $widget_631:11_4);
+if_setonvartransmit("seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6){var2195, var2196, var2197}", $widget_631:11_4);
+%varcint376 = $int8;

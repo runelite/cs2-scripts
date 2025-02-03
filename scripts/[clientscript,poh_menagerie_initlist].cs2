@@ -1,0 +1,7 @@
+// 639
+[clientscript,poh_menagerie_initlist](component $widget_211:7_0, component $widget_211:8_1)
+cc_deleteall($widget_211:8_1);
+~scrollbar_vertical($widget_211:8_1, $widget_211:7_0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~poh_menagerie_drawlist($widget_211:7_0, $widget_211:8_1, 0);
+if_setoninvtransmit("poh_menagerie_drawlist($widget_211:7_0, $widget_211:8_1){inv_517}", $widget_211:7_0);
+if_setonvartransmit("poh_menagerie_drawlist($widget_211:7_0, $widget_211:8_1){var864, var1416, var783}", $widget_211:7_0);

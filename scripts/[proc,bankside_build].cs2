@@ -1,0 +1,97 @@
+// 296
+[proc,bankside_build](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if_setontimer("script3277(
+	0 = %varcint386, 
+	1 = $component0, 
+	2 = $component1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8
+)", $component0);
+cc_deleteall($component2);
+def_int $int9 = calc((42 - 36) * 3 - 2);
+def_int $int10 = calc((36 - 32) * 2);
+def_obj $obj11 = null;
+def_int $int12 = 0;
+if (%varcint386 = true) {
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+	$int12 = inv_size(inv);
+	while ($int12 > 0) {
+		$int12 = calc($int12 - 1);
+		if (cc_find($component3, $int12) = ^true) {
+			cc_clearops;
+			cc_setposition(calc($int9 + $int12 % 4 * 42), calc($int10 + $int12 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+			~bankside_worn_drawitem(inv_getobj(inv, $int12), inv_getnum(inv, $int12), $int12);
+			cc_setontimer(null);
+		}
+	}
+	return;
+}
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_sethide(true, $component3);
+def_int $int13 = 0;
+$int12 = inv_size(inv_516);
+while ($int12 > 0 & $int13 = 0) {
+	$int12 = calc($int12 - 1);
+	if (inv_getobj(inv_516, $int12) ! null) {
+		$int13 = 1;
+	}
+}
+def_int $int14 = 0;
+def_int $int15 = ~script7794(93);
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+$int12 = inv_size(inv);
+while ($int12 > 0) {
+	$int12 = calc($int12 - 1);
+	if (cc_find($component1, $int12) = ^true) {
+		$obj11 = inv_getobj(inv, $int12);
+		$int18 = ~script7796($int12);
+		~bankside_drawitem(
+			0 = $obj11, 
+			1 = inv_getnum(inv, $int12), 
+			2 = $int12, 
+			3 = $component1, 
+			4 = $component2, 
+			5 = $int13, 
+			6 = $component0, 
+			7 = $component4, 
+			8 = $component5, 
+			9 = $component6, 
+			10 = $component7, 
+			11 = $component8, 
+			12 = $int18
+		);
+		$int16, $int17 = calc($int9 + $int12 % 4 * 42), calc($int10 + $int12 / 4 * 36);
+		cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		if ($int15 = 1) {
+			$int14 = ~script7783($component2, $int16, $int17, $int18, $int14);
+		}
+		switch_obj ($obj11) {
+			case looting_bag_11941, looting_bag_22586 :
+				if ($int13 = 1) {
+					.cc_create($component2, ^iftype_graphic, $int14);
+					$int14 = calc($int14 + 1);
+					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+					.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
+					.cc_setgraphic("prayerglow,0");
+					.cc_settrans(180);
+				}
+			case extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+				.cc_create($component2, ^iftype_graphic, $int14);
+				$int14 = calc($int14 + 1);
+				.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+				.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
+				.cc_setgraphic("prayerglow,0");
+				.cc_settrans(180);
+		}
+	}
+}

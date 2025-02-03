@@ -1,0 +1,14 @@
+// 142
+[clientscript,trade_confirm_init](component $widget_334:4_0, component $widget_334:28_1, component $widget_334:29_2, component $widget_334:27_3, component $widget_334:31_4)
+def_int $width5 = if_getwidth($widget_334:27_3);
+def_int $width6 = calc($width5 * 2);
+def_int $int7 = calc($width5 / 2);
+if_setsize($width6, if_getheight($widget_334:28_1), ^setsize_abs, ^setsize_abs, $widget_334:28_1);
+if_setsize($width6, if_getheight($widget_334:29_2), ^setsize_abs, ^setsize_abs, $widget_334:29_2);
+def_int $x8 = if_getx($widget_334:27_3);
+if_setposition(calc($x8 - $int7), if_gety($widget_334:29_2), ^setpos_abs_left, ^setpos_abs_top, $widget_334:29_2);
+if_setposition(calc($x8 - ($width5 + 6) - $int7), if_gety($widget_334:28_1), ^setpos_abs_left, ^setpos_abs_top, $widget_334:28_1);
+def_int $size9 = inv_size(inv_90);
+~trade_confirm_redraw($size9, $width5, $int7, $widget_334:28_1, $widget_334:29_2, $widget_334:27_3, $widget_334:31_4);
+if_setoninvtransmit("trade_confirm_redraw($size9, $width5, $int7, $widget_334:28_1, $widget_334:29_2, $widget_334:27_3, $widget_334:31_4){inv_90}", $widget_334:4_0);
+if_setonvartransmit("trade_confirm_redraw($size9, $width5, $int7, $widget_334:28_1, $widget_334:29_2, $widget_334:27_3, $widget_334:31_4){var1042}", $widget_334:4_0);

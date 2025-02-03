@@ -1,0 +1,54 @@
+// 132
+[clientscript,barrows_overlay_init](component $widget_24:0_0, component $widget_24:1_1, component $widget_24:2_2, component $widget_24:3_3, component $widget_24:6_4, component $widget_24:7_5, component $widget_24:8_6, component $widget_24:9_7, component $widget_24:10_8, component $widget_24:11_9, component $widget_24:5_10, component $widget_24:4_11)
+~script4729($widget_24:1_1, $widget_24:2_2, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
+~barrows_overlay_reward($widget_24:5_10);
+if_setonvartransmit("barrows_overlay_reward($widget_24:5_10){var453, var1697}", $widget_24:0_0);
+cc_deleteall($widget_24:4_11);
+def_int $width12 = ~barrows_overlay_createbrother("Ahrim", 0, $widget_24:4_11);
+def_int $width13 = ~barrows_overlay_createbrother("Dharok", 1, $widget_24:4_11);
+if ($width13 > $width12) {
+	$width12 = $width13;
+}
+$width13 = ~barrows_overlay_createbrother("Guthan", 2, $widget_24:4_11);
+if ($width13 > $width12) {
+	$width12 = $width13;
+}
+$width13 = ~barrows_overlay_createbrother("Karil", 3, $widget_24:4_11);
+if ($width13 > $width12) {
+	$width12 = $width13;
+}
+$width13 = ~barrows_overlay_createbrother("Torag", 4, $widget_24:4_11);
+if ($width13 > $width12) {
+	$width12 = $width13;
+}
+$width13 = ~barrows_overlay_createbrother("Verac", 5, $widget_24:4_11);
+if ($width13 > $width12) {
+	$width12 = $width13;
+}
+if_setsize(calc($width12 + 20), 102, ^setsize_abs, ^setsize_abs, $widget_24:4_11);
+~barrows_overlay_size(
+	0 = $widget_24:0_0, 
+	1 = $widget_24:3_3, 
+	2 = $widget_24:6_4, 
+	3 = $widget_24:7_5, 
+	4 = $widget_24:8_6, 
+	5 = $widget_24:9_7, 
+	6 = $widget_24:10_8, 
+	7 = $widget_24:11_9, 
+	8 = $widget_24:5_10, 
+	9 = $widget_24:4_11, 
+	10 = ^min_32bit_int
+);
+if_setonsubchange("barrows_overlay_size(
+	0 = $widget_24:0_0, 
+	1 = $widget_24:3_3, 
+	2 = $widget_24:6_4, 
+	3 = $widget_24:7_5, 
+	4 = $widget_24:8_6, 
+	5 = $widget_24:9_7, 
+	6 = $widget_24:10_8, 
+	7 = $widget_24:11_9, 
+	8 = $widget_24:5_10, 
+	9 = $widget_24:4_11, 
+	10 = ^min_32bit_int
+)", $widget_24:0_0);

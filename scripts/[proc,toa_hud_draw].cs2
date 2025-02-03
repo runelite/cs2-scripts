@@ -1,0 +1,70 @@
+// 6579
+[proc,toa_hud_draw](component $widget_481:3_0, component $widget_481:4_1, component $widget_481:43_2, component $widget_481:47_3, component $widget_481:41_4, component $widget_481:42_5, component $widget_481:44_6, component $widget_481:45_7, component $widget_481:49_8, component $widget_481:51_9, component $widget_481:53_10, component $widget_481:55_11, component $widget_481:6_12, component $widget_481:9_13, component $widget_481:10_14, component $widget_481:13_15, component $widget_481:14_16, component $widget_481:17_17, component $widget_481:18_18, component $widget_481:21_19, component $widget_481:22_20, component $widget_481:25_21, component $widget_481:26_22, component $widget_481:29_23, component $widget_481:30_24, component $widget_481:33_25, component $widget_481:34_26, component $widget_481:37_27, component $widget_481:38_28, component $widget_481:5_29)
+def_int $int30 = 0;
+$int30 = calc($int30 + ~toa_hud_statusrefresh(0, %varbit14346, %varbit14362, %varcstring1099, $widget_481:6_12, $widget_481:9_13, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(1, %varbit14347, %varbit14363, %varcstring1100, $widget_481:10_14, $widget_481:13_15, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(2, %varbit14348, %varbit14364, %varcstring1101, $widget_481:14_16, $widget_481:17_17, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(3, %varbit14349, %varbit14365, %varcstring1102, $widget_481:18_18, $widget_481:21_19, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(4, %varbit14350, %varbit14366, %varcstring1103, $widget_481:22_20, $widget_481:25_21, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(5, %varbit14351, %varbit14367, %varcstring1104, $widget_481:26_22, $widget_481:29_23, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(6, %varbit14352, %varbit14368, %varcstring1105, $widget_481:30_24, $widget_481:33_25, $widget_481:38_28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(7, %varbit14353, %varbit14369, %varcstring1106, $widget_481:34_26, $widget_481:37_27, $widget_481:38_28));
+if (%varbit14355 = 1) {
+	if_sethide(true, $widget_481:4_1);
+	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $widget_481:4_1);
+} else {
+	if_sethide(false, $widget_481:4_1);
+	$int30 = ~max(calc(($int30 * 10 / 2 + 5) / 10), 1);
+	if_setsize(69, calc($int30 * 34 + ($int30 - 1)), ^setsize_abs, ^setsize_abs, $widget_481:4_1);
+}
+if (%varbit14380 >= 300) {
+	if_setgraphic(graphic_4662, $widget_481:41_4);
+} else if (%varbit14380 >= 150) {
+	if_setgraphic(graphic_4661, $widget_481:41_4);
+} else {
+	if_setgraphic(graphic_4660, $widget_481:41_4);
+}
+if_settext("Level: <tostring(%varbit14380)>", $widget_481:42_5);
+def_int $int31 = 0;
+switch_int (%varbit14381) {
+	case 0 :
+		if_sethide(true, $widget_481:43_2);
+		if_sethide(false, $widget_481:47_3);
+		if_settext(tostring(%varbit14377), $widget_481:49_8);
+		if_settext(tostring(%varbit14378), $widget_481:51_9);
+		if_settext(tostring(%varbit14379), $widget_481:53_10);
+		if_settext(tostring(%varbit14376), $widget_481:55_11);
+		$int31 = 1;
+	case 1 :
+		if_sethide(false, $widget_481:43_2);
+		if_sethide(true, $widget_481:47_3);
+		if_setgraphic(graphic_4635, $widget_481:44_6);
+		if_settext(tostring(%varbit14377), $widget_481:45_7);
+	case 2 :
+		if_sethide(false, $widget_481:43_2);
+		if_sethide(true, $widget_481:47_3);
+		if_setgraphic(graphic_4636, $widget_481:44_6);
+		if_settext(tostring(%varbit14378), $widget_481:45_7);
+	case 3 :
+		if_sethide(false, $widget_481:43_2);
+		if_sethide(true, $widget_481:47_3);
+		if_setgraphic(graphic_4637, $widget_481:44_6);
+		if_settext(tostring(%varbit14379), $widget_481:45_7);
+	case 4 :
+		if_sethide(false, $widget_481:43_2);
+		if_sethide(true, $widget_481:47_3);
+		if_setgraphic(graphic_4638, $widget_481:44_6);
+		if_settext(tostring(%varbit14376), $widget_481:45_7);
+	case 5, 6 :
+		if_sethide(true, $widget_481:43_2);
+		if_sethide(true, $widget_481:47_3);
+}
+if (%varbit14381 = 5 | %varbit14381 = 6) {
+	if_setsize(120, 43, ^setsize_abs, ^setsize_abs, $widget_481:5_29);
+} else if ($int31 = 0) {
+	if_setsize(120, 70, ^setsize_abs, ^setsize_abs, $widget_481:5_29);
+} else {
+	if_setsize(120, 95, ^setsize_abs, ^setsize_abs, $widget_481:5_29);
+}
+if_setposition(if_getx($widget_481:4_1), calc(3 + if_getheight($widget_481:5_29)), ^setpos_abs_left, ^setpos_abs_top, $widget_481:4_1);
+if_setsize(calc(~max(if_getwidth($widget_481:4_1), if_getwidth($widget_481:5_29)) + 2), calc(if_getheight($widget_481:4_1) + if_getheight($widget_481:5_29) + 6), ^setsize_abs, ^setsize_abs, $widget_481:3_0);

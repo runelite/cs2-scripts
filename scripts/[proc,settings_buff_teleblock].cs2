@@ -1,0 +1,7 @@
+// 4595
+[proc,settings_buff_teleblock]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit12355 = calc(1 - %varbit12355);
+~buff_bar_layout_redraw;

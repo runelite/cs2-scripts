@@ -1,0 +1,24 @@
+// 1422
+[clientscript,blast_furnace_hud_init](component $widget_474:0_0, component $widget_474:1_1, component $widget_474:2_2)
+~script4729($widget_474:1_1, $widget_474:2_2, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
+if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $widget_474:2_2);
+def_string $string0 = "Coffer";
+if_setsize(calc(parawidth($string0, 512, p12_full) + 10), 58, ^setsize_abs, ^setsize_abs, $widget_474:2_2);
+cc_deleteall($widget_474:2_2);
+def_int $int3 = ~thinbox($widget_474:2_2, 0);
+cc_create($widget_474:2_2, ^iftype_text, $int3);
+.cc_create($widget_474:2_2, ^iftype_graphic, calc($int3 + 1));
+cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settext($string0);
+.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+.cc_setgraphicshadow(0x333333);
+.cc_setoutline(1);
+~blast_furnace_hud_update($widget_474:2_2);
+if_setonsubchange("blast_furnace_hud_update($widget_474:2_2, .cc_getid)", $widget_474:0_0);
+if_setonvartransmit("blast_furnace_hud_update($widget_474:2_2, .cc_getid){var795}", $widget_474:0_0);

@@ -1,0 +1,12 @@
+// 6336
+[clientscript,pvpa_reward_shop_init](component $widget_769:0_0, component $widget_769:6_1, component $widget_769:3_2, component $widget_769:4_3, component $widget_769:7_4, component $widget_769:8_5)
+~pvpa_reward_shop_showpoints($widget_769:6_1);
+if_setonvartransmit("pvpa_reward_shop_showpoints($widget_769:6_1){var261, var1141}", $widget_769:6_1);
+def_int $height6 = ~pvpa_reward_shop_draw(-1, $widget_769:0_0, $widget_769:3_2, $widget_769:7_4, $widget_769:8_5);
+if_setscrollpos(0, 0, $widget_769:3_2);
+if ($height6 >= if_getheight($widget_769:3_2)) {
+	if_setscrollsize(0, $height6, $widget_769:3_2);
+} else {
+	if_setscrollsize(0, 0, $widget_769:3_2);
+}
+~scrollbar_vertical($widget_769:4_3, $widget_769:3_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

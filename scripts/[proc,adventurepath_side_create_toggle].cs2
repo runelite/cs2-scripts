@@ -1,0 +1,174 @@
+// 3035
+[proc,adventurepath_side_create_toggle](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6, string $text0, int $int7, int $int8)(int, int)
+def_int $int9 = $int0;
+def_int $int10 = 5;
+if ($int10 < 5) {
+	$int3 = calc($int3 + 16);
+}
+def_int $x11 = calc($int3 - 9 + $int5);
+def_int $y12 = calc($int4 - 9 + $int6);
+def_int $width13 = calc($int3 - 18);
+def_int $height14 = calc($int4 - 18);
+~create_graphic(
+	0 = $component2, 
+	1 = $int0, 
+	2 = tradebacking, 
+	3 = $int5, 
+	4 = $int6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $int3, 
+	8 = $int4, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 1), 
+	2 = "v2_stone_button,0", 
+	3 = $int5, 
+	4 = $int6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 2), 
+	2 = "v2_stone_button,1", 
+	3 = $x11, 
+	4 = $int6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 3), 
+	2 = "v2_stone_button,2", 
+	3 = $int5, 
+	4 = $y12, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 4), 
+	2 = "v2_stone_button,3", 
+	3 = $x11, 
+	4 = $y12, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 5), 
+	2 = "v2_stone_button,4", 
+	3 = $int5, 
+	4 = calc(9 + $int6), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = $height14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 6), 
+	2 = "v2_stone_button,5", 
+	3 = calc($int5 + 9), 
+	4 = $int6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $width13, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 7), 
+	2 = "v2_stone_button,6", 
+	3 = $x11, 
+	4 = calc(9 + $int6), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 9, 
+	8 = $height14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+~create_graphic(
+	0 = $component2, 
+	1 = calc($int0 + 8), 
+	2 = "v2_stone_button,7", 
+	3 = calc($int5 + 9), 
+	4 = $y12, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $width13, 
+	8 = 9, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_create($component2, ^iftype_text, calc($int0 + 9));
+if ($int10 > 4) {
+	cc_setsize(calc($int3 - 46), $int4, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setsize(calc($int3 - 39), $int4, ^setsize_abs, ^setsize_abs);
+}
+cc_setposition(calc(3 + $int5), $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($text0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+$int0 = calc($int0 + 10);
+cc_create($component2, ^iftype_graphic, $int0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+if ($int10 > 4) {
+	cc_setposition(calc($int3 - 46), calc($int6 + ($int4 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int3 - 29), calc($int6 + ($int4 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
+}
+if ($int7 = 1) {
+	cc_setgraphic("options_radio_buttons,1");
+} else {
+	cc_setgraphic("options_radio_buttons,2");
+}
+if ($int8 = 1) {
+	cc_sethide(true);
+} else {
+	cc_sethide(false);
+}
+cc_create($component2, ^iftype_rectangle, calc($int0 + 1));
+if ($int10 > 4) {
+	cc_setsize(calc($int3 + 17), $int4, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+}
+cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_settrans(255);
+cc_setop(1, "Toggle setting");
+if (~on_mobile = false) {
+	cc_setonmouseover("v2_stone_button_in_filled_free($component2, calc($int0 - 10), 0xff981f)");
+} else {
+	cc_setonmouseover("v2_stone_button_in_filled_free($component2, calc($int0 - 10), ^white)");
+}
+cc_setonmouseleave("v2_stone_button_filled_free($component2, calc($int0 - 10), 0xff981f)");
+return(calc($int0 + 2), calc($int1 + 1));

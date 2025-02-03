@@ -1,0 +1,21 @@
+// 1720
+[proc,worldmap_toggles_set](component $widget_595:21_0, int $index1, component $widget_595:9_2, component $widget_595:13_3, component $widget_595:41_4)
+if (testbit(%varbit5640, $index1) = ^true) {
+	.cc_setop(1, "Enable");
+	cc_sethide(false);
+} else {
+	.cc_setop(1, "Disable");
+	cc_sethide(true);
+}
+def_boolean $boolean5 = true;
+switch_int ($index1) {
+	case 0, 1, 4 :
+		~worldmap_overlay_clear($widget_595:9_2, $widget_595:13_3);
+	case 2 :
+		if (testbit(%varbit5640, 2) = ^true) {
+			$boolean5 = false;
+		}
+		worldmap_disableelementcategory(category_1129, $boolean5);
+	case 3 :
+		~deltooltip_action($widget_595:41_4);
+}

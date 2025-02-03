@@ -1,0 +1,12 @@
+// 400
+[clientscript,fairyrings_confirm_expire](component $component0, int $clock1)
+if (clientclock < $clock1) {
+	return;
+}
+if_sethide(false, interface_398:19);
+if_sethide(false, interface_398:20);
+if_sethide(false, interface_398:21);
+if_sethide(false, interface_398:22);
+if_sethide(false, interface_398:23);
+if_sethide(false, interface_398:24);
+if_setontimer(null, $component0);

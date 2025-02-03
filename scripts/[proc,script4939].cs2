@@ -1,0 +1,63 @@
+// 4939
+[proc,script4939]
+def_component $component0 = interface_865:25;
+cc_deleteall($component0);
+def_int $int1 = 0;
+def_int $int2 = calc((if_getwidth($component0) - 6) / 3);
+$int1 = ~script5293(
+	0 = $component0, 
+	1 = $int1, 
+	2 = 0, 
+	3 = $int2, 
+	4 = 3, 
+	5 = 0x726451, 
+	6 = "Modifiers", 
+	7 = p12_full, 
+	8 = 0xff981f, 
+	9 = 0, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(0, %varcint1196)
+);
+cc_setonclick("script4947(0)");
+$int1 = ~script5293(
+	0 = $component0, 
+	1 = $int1, 
+	2 = 1, 
+	3 = $int2, 
+	4 = 3, 
+	5 = 0x726451, 
+	6 = "Loot", 
+	7 = p12_full, 
+	8 = 0xff981f, 
+	9 = 0, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(1, %varcint1196)
+);
+cc_setonclick("script4947(1)");
+$int1 = ~script5293(
+	0 = $component0, 
+	1 = $int1, 
+	2 = 2, 
+	3 = $int2, 
+	4 = 3, 
+	5 = 0x726451, 
+	6 = "Summary", 
+	7 = p12_full, 
+	8 = 0xff981f, 
+	9 = 0, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(2, %varcint1196)
+);
+cc_setonclick("script4947(2)");

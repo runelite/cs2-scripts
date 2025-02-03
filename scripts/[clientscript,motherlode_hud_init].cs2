@@ -1,0 +1,9 @@
+// 1633
+[clientscript,motherlode_hud_init](component $widget_382:0_0, component $widget_382:1_1, component $widget_382:3_2, component $widget_382:5_3, component $widget_382:6_4)
+~script4729($widget_382:1_1, $widget_382:3_2, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_382:3_2);
+cc_deleteall($widget_382:3_2);
+def_int $int5 = ~thinstonebox($widget_382:3_2, 0);
+~motherlode_hud_update($widget_382:5_3, $widget_382:6_4);
+if_setonvartransmit("motherlode_hud_update($widget_382:5_3, $widget_382:6_4){var1429, var375}", $widget_382:0_0);
+if_setonsubchange("motherlode_hud_update($widget_382:5_3, $widget_382:6_4)", $widget_382:0_0);

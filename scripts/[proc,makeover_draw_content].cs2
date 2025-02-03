@@ -1,0 +1,9 @@
+// 7070
+[proc,makeover_draw_content](component $widget_516:3_0, component $widget_516:7_1, component $widget_516:15_2, component $widget_516:22_3, component $widget_516:24_4, component $widget_516:26_5, component $widget_516:27_6, component $widget_516:28_7, component $widget_516:5_8, component $widget_516:6_9, enum $enum10, enum $enum11, enum $enum12, boolean $boolean13)
+~makeover_draw_items($widget_516:7_1, $widget_516:6_9, $enum12, $boolean13);
+~makeover_draw_scrollbar($widget_516:7_1, $widget_516:5_8, $enum12, $boolean13);
+~script7074($widget_516:15_2, $widget_516:22_3);
+def_int $int14 = ~makeover_draw_colours($widget_516:24_4, $enum10, $enum11);
+if_setposition(if_getx($widget_516:26_5), calc($int14 - 4), ^setpos_abs_left, ^setpos_abs_centre, $widget_516:26_5);
+~makeover_draw_select_button($widget_516:27_6, "Apply", 0);
+~makeover_draw_select_button($widget_516:28_7, "Confirm", 0);

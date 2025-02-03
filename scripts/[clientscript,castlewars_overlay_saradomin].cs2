@@ -1,0 +1,48 @@
+// 887
+[clientscript,castlewars_overlay_saradomin](component $widget_58:5_0, component $widget_58:7_1, component $widget_58:9_2, component $widget_58:11_3, component $widget_58:13_4, component $widget_58:21_5, component $widget_58:23_6, component $widget_58:26_7, component $widget_58:25_8, component $widget_58:16_9)
+if (%varbit136 > 0) {
+	if_settext("Health <tostring(%varbit136)>%", $widget_58:5_0);
+} else {
+	if_settext("<col=ff0000>Health <tostring(%varbit136)>%</col>", $widget_58:5_0);
+}
+if (%varbit137 = 1) {
+	if_settext("<col=ff0000>Unlocked</col>", $widget_58:7_1);
+} else {
+	if_settext("Locked", $widget_58:7_1);
+}
+if (%varbit138 = 1) {
+	if_settext("<col=ff0000>Cleared</col>", $widget_58:9_2);
+} else {
+	if_settext("Collapsed", $widget_58:9_2);
+}
+if (%varbit139 = 1) {
+	if_settext("<col=ff0000>Cleared</col>", $widget_58:11_3);
+} else {
+	if_settext("Collapsed", $widget_58:11_3);
+}
+if (%varbit140 = 1) {
+	if_settext("<col=ff0000>Destroyed</col>", $widget_58:13_4);
+} else {
+	if_settext("Operational", $widget_58:13_4);
+}
+if (%varbit143 = 0) {
+	if_settext("Safe", $widget_58:21_5);
+} else if (%varbit143 = 1) {
+	if_settext("<col=ff0000>Taken</col>", $widget_58:21_5);
+} else if (%varbit143 = 2) {
+	if_settext("<col=ffff00>Dropped</col>", $widget_58:21_5);
+} else {
+	if_settext("", $widget_58:21_5);
+}
+if (%varbit153 = 0) {
+	if_settext("Safe", $widget_58:23_6);
+} else if (%varbit153 = 1) {
+	if_settext("<col=ff0000>Taken</col>", $widget_58:23_6);
+} else if (%varbit153 = 2) {
+	if_settext("<col=ffff00>Dropped</col>", $widget_58:23_6);
+} else {
+	if_settext("", $widget_58:23_6);
+}
+if_settext("<tostring(%varbit145)> = Saradomin", $widget_58:26_7);
+if_settext("Zamorak = <tostring(%varbit155)>", $widget_58:25_8);
+if_settext("<tostring(%var380)> Min", $widget_58:16_9);

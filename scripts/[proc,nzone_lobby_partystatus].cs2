@@ -1,0 +1,184 @@
+// 267
+[proc,nzone_lobby_partystatus](boolean $boolean0, component $component1)
+def_boolean $boolean2 = false;
+if ($boolean0 = false & %var1065 = -1) {
+	$boolean2 = true;
+	if_setontimer(null, $component1);
+} else {
+	if_setontimer("nzone_lobby_partynames(event_com)", $component1);
+}
+cc_create($component1, ^iftype_rectangle, 0);
+cc_sethide($boolean2);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(125, 96, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x7f460f);
+cc_setfill(true);
+cc_settrans(50);
+cc_create($component1, ^iftype_rectangle, 1);
+cc_sethide($boolean2);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(125, 96, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x7f460f);
+cc_setfill(false);
+~create_graphic(
+	0 = $component1, 
+	1 = 2, 
+	2 = tradebacking_light, 
+	3 = 4, 
+	4 = 4, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 17, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(100);
+cc_create($component1, ^iftype_text, 3);
+cc_sethide($boolean2);
+cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 17, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Rumble Party");
+~create_graphic(
+	0 = $component1, 
+	1 = 4, 
+	2 = tradebacking_dark, 
+	3 = 4, 
+	4 = 22, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(150);
+~create_graphic(
+	0 = $component1, 
+	1 = 5, 
+	2 = tradebacking, 
+	3 = 4, 
+	4 = 37, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($boolean0 = true) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
+}
+~create_graphic(
+	0 = $component1, 
+	1 = 6, 
+	2 = tradebacking, 
+	3 = 4, 
+	4 = 52, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($boolean0 = true) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
+}
+~create_graphic(
+	0 = $component1, 
+	1 = 7, 
+	2 = tradebacking, 
+	3 = 4, 
+	4 = 67, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($boolean0 = true) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
+}
+~create_graphic(
+	0 = $component1, 
+	1 = 8, 
+	2 = tradebacking, 
+	3 = 4, 
+	4 = 82, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 121, 
+	8 = 14, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($boolean0 = true) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 150, null)");
+}
+cc_create($component1, ^iftype_text, 9);
+cc_sethide($boolean2);
+cc_setposition(4, 22, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 10);
+cc_sethide($boolean2);
+cc_setposition(4, 37, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 11);
+cc_sethide($boolean2);
+cc_setposition(4, 52, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 12);
+cc_sethide($boolean2);
+cc_setposition(4, 67, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 13);
+cc_sethide($boolean2);
+cc_setposition(4, 82, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($boolean2 = false) {
+	~nzone_lobby_partynames($component1);
+}

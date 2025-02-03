@@ -1,0 +1,24 @@
+// 2133
+[proc,script2133](component $component0, string $string0, graphic $graphic1, string $string1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component0);
+def_int $comsubid6 = ~options_button_off($component0, 0);
+.cc_create($component0, ^iftype_graphic, $comsubid6);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+.cc_setgraphic($graphic1);
+.cc_settrans(0);
+if_setonmouserepeat("cc_settrans($component0, .cc_getid, 100, null)", $component0);
+if_setonmouseleave("cc_settrans($component0, .cc_getid, 0, null)", $component0);
+if_setop(1, $string0, $component0);
+if_setonop("script2134(
+	0 = event_op, 
+	1 = $component0, 
+	2 = $string0, 
+	3 = $graphic1, 
+	4 = $string1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $component5
+)", $component0);
+if_setontimer(null, $component0);

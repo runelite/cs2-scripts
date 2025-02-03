@@ -1,0 +1,382 @@
+// 3204
+[proc,league_tasks_draw_list](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18)
+def_int $y19 = %varcint1179;
+if ($y19 = -1) {
+	$y19 = if_getscrolly($component1);
+}
+if_setonresize("league_tasks_draw_list(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $component17, 
+	18 = $component18
+)", interface_657:0);
+if_setonvartransmit("league_tasks_transmit(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $component17, 
+	18 = $component18
+){var2614}", interface_657:0);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+cc_deleteall($component9);
+cc_deleteall($component12);
+cc_deleteall($component13);
+def_int $width20 = if_getwidth(interface_657:1);
+def_int $height21 = if_getheight(interface_657:1);
+def_int $width22 = if_getwidth(interface_657:0);
+def_int $int23 = ~script1912;
+def_int $int24 = calc(if_getheight(interface_657:0) - $int23);
+def_int $int25 = 0;
+def_boolean $boolean26 = ~on_mobile;
+if ($boolean26 = true | getwindowmode = ^windowmode_fixed | %varcint1181 = 0) {
+	$int25 = 1;
+}
+def_int $int27 = 512;
+def_int $int28 = 334;
+def_int $int29 = 0;
+def_int $int30 = 0;
+if_sethide(false, interface_657:1);
+if_sethide(true, interface_657:41);
+if ($int25 = 0) {
+	$int27 = max(350, min(%varcint1175, $width22));
+	$int28 = max(300, min(%varcint1176, $int24));
+	$int29 = max(0, min(%varcint1177, calc($width22 - $int27)));
+	$int30 = max($int23, min(%varcint1178, calc($int23 + $int24 - $int28)));
+}
+if ($boolean26 = false) {
+	if_setposition($int29, $int30, ^setpos_abs_left, ^setpos_abs_top, interface_657:1);
+	if_setsize($int27, $int28, ^setsize_abs, ^setsize_abs, interface_657:1);
+}
+~script1785(interface_657:5);
+if ($int25 = 0) {
+	if (cc_find(interface_657:0, 0) = ^true) {
+		cc_setsize(calc($int27 - 6 * 2), calc(if_gety(interface_657:5) - 2 * 6), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + 6), calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 1) = ^true) {
+		cc_setsize(calc($int27 - 6 * 2), 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + 6), calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 2) = ^true) {
+		cc_setsize(6, calc($int28 - 6 * 2), ^setsize_abs, ^setsize_abs);
+		cc_setposition($int29, calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 3) = ^true) {
+		cc_setsize(6, calc($int28 - 6 * 2), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + $int27 - 6), calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 4) = ^true) {
+		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int29, $int30, ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 5) = ^true) {
+		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + $int27 - 6), $int30, ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 6) = ^true) {
+		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int29, calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 7) = ^true) {
+		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + $int27 - 6), calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+	if (cc_find(interface_657:0, 8) = ^true) {
+		cc_setsize(calc($int27 - 28 - 6 * 2), 6, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int29 + 28 + 6), $int30, ^setpos_abs_left, ^setpos_abs_top);
+		~script2438($int23);
+	}
+}
+def_int $int31 = 0;
+def_struct $struct32 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct32 = null) {
+	return;
+}
+def_int $int33 = struct_param($struct32, param_1027);
+def_enum $enum34 = struct_param($struct32, param_868);
+def_int $count35 = enum_getoutputcount($enum34);
+~league_points_progress_bar($component15, $component16, 0, 0);
+~searchbar_create($component17, $component18);
+~script2441(
+	0 = $component1, 
+	1 = $component2, 
+	2 = $component3, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $component6, 
+	6 = $component7, 
+	7 = $component8, 
+	8 = $component9, 
+	9 = $component10, 
+	10 = $component11, 
+	11 = $component12, 
+	12 = $component13, 
+	13 = $component14, 
+	14 = $component15, 
+	15 = $component16, 
+	16 = $component17, 
+	17 = $component18, 
+	18 = $int33, 
+	19 = 0
+);
+if (~in_league_tutorial = 0) {
+	~leagues_menu_button($component12, $int31, $component13, $component14);
+}
+~league_create_dropdown($component12, $component13, $component14, $int31, 1);
+if ($int25 = 1) {
+	~steelborder(interface_657:2, "League Tasks <col=ffffff><tostring($int31)>/<tostring($count35)></col>", 1);
+} else {
+	~steelborder(interface_657:2, "League Tasks <col=ffffff><tostring($int31)>/<tostring($count35)></col>", 3);
+}
+if (cc_find(interface_657:2, 1) = ^true) {
+	cc_setcolour($int33);
+}
+def_int $int36 = 0;
+def_int $int37 = 0;
+def_struct $struct38 = null;
+def_int $height39 = 0;
+def_int $int40 = -1;
+def_int $int41 = -1;
+def_string $string0 = "null";
+def_string $string1 = "null";
+def_int $int42 = -1;
+def_int $int43 = -1;
+def_int $int44 = -1;
+def_int $int45 = -1;
+def_int $int46 = 0;
+def_string $string2 = %varcstring1180;
+def_int $length47 = string_length(~script7124($string2));
+def_int $int48 = 1;
+if (%varbit10033 = 0 & %varbit11689 = 0 & %varbit11692 = 0 & $length47 <= 1) {
+	$int48 = 0;
+}
+def_int $int49 = 1;
+while ($int36 < $count35) {
+	$struct38 = enum(int, struct, $enum34, $int36);
+	$int40 = ~league_task_is_completed($struct38);
+	$int41 = struct_param($struct38, param_2044);
+	$string0 = struct_param($struct38, league_task_name);
+	$string1 = struct_param($struct38, league_task_description);
+	$int42 = enum(int, int, enum_2671, $int41);
+	$int43 = struct_param($struct38, league_task_category);
+	$int44 = struct_param($struct38, league_task_area);
+	if ($int48 = 1) {
+		$int49 = ~league_task_display(
+			0 = $int41, 
+			1 = $int40, 
+			2 = $int43, 
+			3 = $int44, 
+			4 = struct_param($struct38, league_task_skill), 
+			5 = $string0, 
+			6 = $string1, 
+			7 = $string2, 
+			8 = $length47
+		);
+	} else if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int40) {
+		$int49 = 0;
+	} else {
+		$int49 = 1;
+	}
+	if ($int49 = 1) {
+		cc_create($component2, ^iftype_rectangle, $int31);
+		cc_setposition(0, $height39, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		if ($int36 = $int0) {
+			$int45 = paraheight("Description: <$string1>.", calc(if_getwidth($component2) - 10), p11_full);
+			cc_setsize(0, calc(40 + (10 * $int45 + 25)), ^setsize_minus, ^setsize_abs);
+			cc_settrans(210);
+			if ($boolean26 = false) {
+				cc_setonmouserepeat("league_task_hover(event_comsubid, $component2, $component8, 210, "open_buttons_small,3")");
+				if (calc($int31 % 2) = 1) {
+					cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component8, 230, "open_buttons_small,2")");
+				} else {
+					cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component8, 245, "open_buttons_small,2")");
+				}
+			}
+			cc_setop(1, "Collapse");
+			cc_setonop("script7700(
+				0 = -1, 
+				1 = $component1, 
+				2 = $component2, 
+				3 = $component3, 
+				4 = $component4, 
+				5 = $component5, 
+				6 = $component6, 
+				7 = $component7, 
+				8 = $component8, 
+				9 = $component9, 
+				10 = $component10, 
+				11 = $component11, 
+				12 = $component12, 
+				13 = $component13, 
+				14 = $component14, 
+				15 = $component15, 
+				16 = $component16, 
+				17 = $component17, 
+				18 = $component18
+			)");
+			cc_setopbase("<col=ff981f><$string0></col>");
+			cc_create($component5, ^iftype_text, 0);
+			cc_settext("Type: <col=ffffff><enum(int, string, enum_3411, $int43)></col>");
+			cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
+			cc_setposition(5, calc($height39 + 40), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_setcolour($int33);
+			cc_create($component6, ^iftype_text, 0);
+			cc_settext("Area: <col=ffffff><enum(int, string, enum_3412, $int44)></col>");
+			cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
+			cc_setposition(104, calc($height39 + 40), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_setcolour($int33);
+			cc_create($component7, ^iftype_text, 0);
+			cc_settext("Description: <col=ffffff><$string1>.</col>");
+			cc_setsize(10, calc(10 * $int45), ^setsize_minus, ^setsize_abs);
+			cc_setposition(5, calc($height39 + 59), ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p11_full);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextshadow(true);
+			cc_setcolour($int33);
+			cc_create($component8, ^iftype_graphic, $int31);
+			cc_setgraphic("open_buttons_small,2");
+		} else {
+			cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+			if ($boolean26 = false) {
+				cc_setonmouserepeat("league_task_hover(event_comsubid, $component2, $component8, 210, "open_buttons_small,1")");
+				if (calc($int31 % 2) = 1) {
+					cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component8, 230, "open_buttons_small,0")");
+				} else {
+					cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component8, 245, "open_buttons_small,0")");
+				}
+			}
+			if (calc($int31 % 2) = 1) {
+				cc_settrans(230);
+			} else {
+				cc_settrans(245);
+			}
+			cc_setop(1, "Expand");
+			cc_setonop("script7700(
+				0 = $int36, 
+				1 = $component1, 
+				2 = $component2, 
+				3 = $component3, 
+				4 = $component4, 
+				5 = $component5, 
+				6 = $component6, 
+				7 = $component7, 
+				8 = $component8, 
+				9 = $component9, 
+				10 = $component10, 
+				11 = $component11, 
+				12 = $component12, 
+				13 = $component13, 
+				14 = $component14, 
+				15 = $component15, 
+				16 = $component16, 
+				17 = $component17, 
+				18 = $component18
+			)");
+			cc_setopbase("<col=ff981f><$string0></col>");
+			cc_create($component8, ^iftype_graphic, $int31);
+			cc_setgraphic("open_buttons_small,0");
+		}
+		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+		cc_setposition(5, calc($height39 + 11), ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($component9, ^iftype_graphic, $int31);
+		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+		cc_setposition(28, calc($height39 + 11), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(enum(int, graphic, enum_2674, $int41));
+		cc_create($component3, ^iftype_text, $int31);
+		cc_settext($string0);
+		cc_setsize(51, 16, ^setsize_minus, ^setsize_abs);
+		cc_setposition(51, calc($height39 + 4), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		if ($int40 = 1) {
+			cc_setcolour($int33);
+			$int46 = calc($int46 + 1);
+		} else {
+			cc_setcolour(0x9f9f9f);
+		}
+		cc_create($component4, ^iftype_text, $int31);
+		cc_settext("Reward: <col=ffffff><tostring($int42)> League Points</col>");
+		cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
+		cc_setposition(51, calc($height39 + 22), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setcolour($int33);
+		if ($int36 = $int0) {
+			$height39 = calc($height39 + $int45 * 10 + 65);
+		} else {
+			$height39 = calc($height39 + 40);
+		}
+		$int31 = calc($int31 + 1);
+	}
+	$int36 = calc($int36 + 1);
+}
+if ($height39 > if_getheight($component1)) {
+	if_setscrollsize(0, $height39, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setscrollpos(0, $y19, $component1);
+cc_deleteall($component11);
+~scrollbar_vertical($component11, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component11, $component1, $y19);
+if ($int31 = 0 & %varbit17310 = 0) {
+	if_sethide(false, $component10);
+} else {
+	if_sethide(true, $component10);
+}
+if (cc_find(interface_657:2, 1) = ^true) {
+	cc_settext("League Tasks <col=ffffff><tostring($int46)>/<tostring($int31)></col>");
+}

@@ -1,0 +1,10 @@
+// 4762
+[shiftoptile,script4762]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (highlight_tile_get(tile_coord, 6, 1) = true) {
+	highlight_tile_off(tile_coord, 6, 1);
+} else {
+	highlight_tile_on(tile_coord, 6, 1);
+}

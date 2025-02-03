@@ -1,0 +1,40 @@
+// 1464
+[proc,lumbridge_alchemy_vartransmit](component $widget_483:1_0, component $widget_483:2_1, component $widget_483:3_2, component $widget_483:7_3, component $widget_483:8_4, int $size5)
+if_settrans(0, $widget_483:1_0);
+if_settrans(0, $widget_483:2_1);
+def_string $op0 = "Low-Alchemy";
+if (%varbit5398 = 1) {
+	$op0 = "High-Alchemy";
+	if_settext("High Alchemy", $widget_483:3_2);
+	if_setgraphic("magicoff,10", $widget_483:1_0);
+	if_setonmouserepeat("settrans(event_com, 120)", $widget_483:1_0);
+	if_setonmouseleave("settrans(event_com, 0)", $widget_483:1_0);
+	if_setonop("opsound(event_op, 2)", $widget_483:1_0);
+	if_setgraphic("magicon,26", $widget_483:2_1);
+	if_setonmouserepeat(null, $widget_483:2_1);
+	if_setonmouseleave(null, $widget_483:2_1);
+	if_setonop(null, $widget_483:2_1);
+} else {
+	if_settext("Low Alchemy", $widget_483:3_2);
+	if_setgraphic("magicon,10", $widget_483:1_0);
+	if_setonmouserepeat(null, $widget_483:1_0);
+	if_setonmouseleave(null, $widget_483:1_0);
+	if_setonop(null, $widget_483:1_0);
+	if_setgraphic("magicoff,26", $widget_483:2_1);
+	if_setonmouserepeat("settrans(event_com, 120)", $widget_483:2_1);
+	if_setonmouseleave("settrans(event_com, 0)", $widget_483:2_1);
+	if_setonop("opsound(event_op, 2)", $widget_483:2_1);
+}
+if_settext("Charges: <tostring(calc(30 - %varbit4554))>", $widget_483:8_4);
+if (%varbit4554 < 30) {
+	if_setcolour(0xff981f, $widget_483:8_4);
+} else {
+	if_setcolour(^red, $widget_483:8_4);
+}
+def_int $int6 = $size5;
+while ($int6 > 0) {
+	$int6 = calc($int6 - 1);
+	if (cc_find($widget_483:7_3, $int6) = ^true) {
+		cc_setop(1, $op0);
+	}
+}

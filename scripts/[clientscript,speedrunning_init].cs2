@@ -1,0 +1,62 @@
+// 5886
+[clientscript,speedrunning_init](component $widget_779:5_0, component $widget_779:7_1, component $widget_779:9_2, component $widget_779:8_3, component $widget_779:10_4, component $widget_779:25_5, component $widget_779:26_6, component $widget_779:14_7, component $widget_779:15_8, component $widget_779:20_9, component $widget_779:13_10, component $widget_779:17_11, component $widget_779:18_12, component $widget_779:19_13, component $widget_779:39_14, component $widget_779:40_15, component $widget_779:41_16, component $widget_779:42_17, component $widget_779:43_18, component $widget_779:36_19, component $widget_779:45_20, component $widget_779:37_21, component $widget_779:47_22, component $widget_779:78_23, component $widget_779:86_24, component $widget_779:83_25, component $widget_779:84_26, component $widget_779:85_27, component $widget_779:48_28, component $widget_779:77_29, component $widget_779:62_30, component $widget_779:64_31, component $widget_779:66_32, component $widget_779:68_33, component $widget_779:70_34, component $widget_779:72_35, component $widget_779:74_36, component $widget_779:76_37)
+~questlist_draw($widget_779:5_0, $widget_779:7_1, $widget_779:9_2, $widget_779:8_3, $widget_779:10_4, true);
+if (%var3373 ! null) {
+	if (~script6807(%var3373) = 1) {
+		if_settext("<~get_quest_name(%var3373)> (Beta)", $widget_779:20_9);
+	} else {
+		if_settext(~get_quest_name(%var3373), $widget_779:20_9);
+	}
+}
+~speedrunning_stats_update(
+	0 = $widget_779:13_10, 
+	1 = $widget_779:39_14, 
+	2 = $widget_779:40_15, 
+	3 = $widget_779:41_16, 
+	4 = $widget_779:42_17, 
+	5 = $widget_779:43_18, 
+	6 = $widget_779:62_30, 
+	7 = $widget_779:64_31, 
+	8 = $widget_779:66_32, 
+	9 = $widget_779:68_33, 
+	10 = $widget_779:70_34, 
+	11 = $widget_779:72_35, 
+	12 = $widget_779:74_36, 
+	13 = $widget_779:76_37
+);
+if_setonvartransmit("speedrunning_stats_update(
+	0 = $widget_779:13_10, 
+	1 = $widget_779:39_14, 
+	2 = $widget_779:40_15, 
+	3 = $widget_779:41_16, 
+	4 = $widget_779:42_17, 
+	5 = $widget_779:43_18, 
+	6 = $widget_779:62_30, 
+	7 = $widget_779:64_31, 
+	8 = $widget_779:66_32, 
+	9 = $widget_779:68_33, 
+	10 = $widget_779:70_34, 
+	11 = $widget_779:72_35, 
+	12 = $widget_779:74_36, 
+	13 = $widget_779:76_37
+){var3365, var3366, var3367, var3368, var3369, var3766}", $widget_779:13_10);
+~script5909($widget_779:36_19, $widget_779:45_20, $widget_779:37_21, $widget_779:47_22, $widget_779:19_13);
+if_sethide(true, $widget_779:78_23);
+if_sethide(true, $widget_779:48_28);
+def_string $string0 = ~script5913;
+if_settext($string0, $widget_779:85_27);
+def_int $int38 = paraheight($string0, if_getwidth($widget_779:85_27), p12_full);
+$int38 = calc($int38 * 14 + 9);
+if_setsize(12, $int38, ^setsize_minus, ^setsize_abs, $widget_779:85_27);
+if_setscrollsize(0, if_getheight($widget_779:19_13), $widget_779:18_12);
+if_setscrollpos(0, 0, $widget_779:18_12);
+~scrollbar_vertical($widget_779:17_11, $widget_779:18_12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, $int38, $widget_779:84_26);
+if_setscrollpos(0, 0, $widget_779:84_26);
+~scrollbar_vertical($widget_779:83_25, $widget_779:84_26, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script5896($widget_779:25_5, "Set Up Speedrun", "Abandon Speedrun");
+~speedrunning_button_init($widget_779:26_6, "Quest Journal");
+~script5897($widget_779:14_7, "Info", $widget_779:78_23);
+~script5897($widget_779:15_8, "Stats", $widget_779:48_28);
+~script5905($widget_779:86_24, $widget_779:78_23);
+~script5905($widget_779:77_29, $widget_779:48_28);

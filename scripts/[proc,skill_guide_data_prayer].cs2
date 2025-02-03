@@ -1,0 +1,141 @@
+// 2499
+[proc,skill_guide_data_prayer](int $int0, int $int1)(int, namedobj, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, obj_3258, "While any of your prayers are active, your prayer points will drain. Once you have run out of prayer points, you will no longer be able to use prayers.<br>Visit an altar to recharge your prayer points.");
+			case 1 :
+				return(oc_param(thick_skin_20803, param_1753), thick_skin_20803, "Thick Skin");
+			case 2 :
+				return(oc_param(burst_of_strength_20804, param_1753), burst_of_strength_20804, "Burst of Strength");
+			case 3 :
+				return(oc_param(clarity_of_thought_20805, param_1753), clarity_of_thought_20805, "Clarity of Thought");
+			case 4 :
+				return(oc_param(sharp_eye_20821, param_1753), sharp_eye_20821, "Sharp Eye");
+			case 5 :
+				return(oc_param(mystic_will_20822, param_1753), mystic_will_20822, "Mystic Will");
+			case 6 :
+				return(oc_param(rock_skin_20806, param_1753), rock_skin_20806, "Rock Skin");
+			case 7 :
+				return(oc_param(superhuman_strength_20807, param_1753), superhuman_strength_20807, "Superhuman Strength");
+			case 8 :
+				return(oc_param(improved_reflexes_20808, param_1753), improved_reflexes_20808, "Improved Reflexes");
+			case 9 :
+				return(oc_param(rapid_restore_20809, param_1753), rapid_restore_20809, "Rapid Restore");
+			case 10 :
+				return(oc_param(rapid_heal_20810, param_1753), rapid_heal_20810, "Rapid Heal");
+			case 11 :
+				return(oc_param(protect_item_20811, param_1753), protect_item_20811, "Protect Item");
+			case 12 :
+				return(oc_param(hawk_eye_20823, param_1753), hawk_eye_20823, "Hawk Eye");
+			case 13 :
+				return(oc_param(mystic_lore_20824, param_1753), mystic_lore_20824, "Mystic Lore");
+			case 14 :
+				return(oc_param(steel_skin_20812, param_1753), steel_skin_20812, "Steel Skin");
+			case 15 :
+				return(oc_param(ultimate_strength_20813, param_1753), ultimate_strength_20813, "Ultimate Strength");
+			case 16 :
+				return(oc_param(incredible_reflexes_20814, param_1753), incredible_reflexes_20814, "Incredible Reflexes");
+			case 17 :
+				return(oc_param(protect_from_magic_20815, param_1753), protect_from_magic_20815, "Protect from Magic");
+			case 18 :
+				return(oc_param(protect_from_missiles_20816, param_1753), protect_from_missiles_20816, "Protect from Missiles");
+			case 19 :
+				return(oc_param(protect_from_melee_20817, param_1753), protect_from_melee_20817, "Protect from Melee");
+			case 20 :
+				return(oc_param(eagle_eye_20825, param_1753), eagle_eye_20825, "Eagle Eye");
+			case 21 :
+				return(oc_param(mystic_might_20826, param_1753), mystic_might_20826, "Mystic Might");
+			case 22 :
+				return(oc_param(retribution_20818, param_1753), retribution_20818, "Members: Retribution");
+			case 23 :
+				return(oc_param(redemption_20819, param_1753), redemption_20819, "Members: Redemption");
+			case 24 :
+				return(oc_param(smite_20820, param_1753), smite_20820, "Members: Smite");
+			case 25 :
+				return(oc_param(preserve_20831, param_1753), preserve_20831, "Members: Preserve");
+			case 26 :
+				return(oc_param(chivalry_20828, param_1753), chivalry_20828, "Members: Chivalry<br> (with 65 Defence, after King's Ransom)");
+			case 27 :
+				return(oc_param(piety_20829, param_1753), piety_20829, "Members: Piety<br> (with 70 Defence, after King's Ransom)");
+			case 28 :
+				return(oc_param(rigour_20827, param_1753), rigour_20827, "Members: Rigour<br> (with 70 Defence, from Chambers of Xeric)");
+			case 29 :
+				return(oc_param(augury_20830, param_1753), augury_20830, "Members: Augury<br> (with 70 Defence, from Chambers of Xeric)");
+			case default :
+				return(-1, null, "");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(10, initiate_sallet_5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
+			case 1 :
+				return(20, proselyte_sallet_9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
+			case 2 :
+				return(20, saradomin_robe_top_10458, "Vestment robe top");
+			case 3 :
+				return(20, saradomin_robe_legs_10464, "Vestment robe legs");
+			case 4 :
+				return(22, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats)");
+			case 5 :
+				return(31, holy_wraps_19997, "Holy wraps");
+			case 6 :
+				return(31, holy_sandals_12598, "Holy sandals");
+			case 7 :
+				return(40, saradomin_cloak_10446, "Vestment cloak");
+			case 8 :
+				return(40, saradomin_mitre_10452, "Vestment mitre");
+			case 9 :
+				return(40, ectoplasmator_25340, "Ectoplasmator");
+			case 10 :
+				return(50, unblessed_symbol_1716, "Use completed prayer books<br>to bless holy and unholy symbols.");
+			case 11 :
+				return(50, bologas_blessing_20747, "Use Bologa's grape blessings.");
+			case 12 :
+				return(55, spirit_shield_12829, "Spirit Shield<br>(with 45 Defence)");
+			case 13 :
+				return(60, saradomin_stole_10470, "Vestment stole");
+			case 14 :
+				return(60, saradomin_crozier_10440, "Crozier");
+			case 15 :
+				return(60, blessed_spirit_shield_12831, "Blessed spirit shield<br>(with 70 Defence)");
+			case 16 :
+				return(60, devout_boots_22954, "Devout boots");
+			case 17 :
+				return(60, sunfire_fanatic_cuirass_28936, "Sunfire Fanatic armour<br>(with <tostring(40)> Defence)");
+			case 18 :
+				return(65, 3rd_age_druidic_robe_top_23336, "3rd age Druidic robes");
+			case 19 :
+				return(65, 3rd_age_druidic_staff_23342, "3rd Age Druidic staff<br>(with 65 attack)");
+			case 20 :
+				return(70, arcane_spirit_shield_12825, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
+			case 21 :
+				return(70, soul_cape_25346, "Soul cape");
+			case 22 :
+				return(70, dragonbone_necklace_22111, "Dragonbone necklace");
+			case 23 :
+				return(70, bonecrusher_necklace_22986, "Bonecrusher necklace");
+			case 24 :
+				return(75, elysian_spirit_shield_12817, "Elysian spirit shield<br>(with 75 Defence)");
+			case 25 :
+				return(80, elidinis_ward_25985, "Elidinis' Ward<br>(with 80 Magic and 80 Defence)");
+			case default :
+				return(-1, null, "");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(30, jug_of_blessed_sunfire_wine_29384, "Ralos' Rise sacrifices");
+			case 1 :
+				return(54, hallowed_token_24719, "Hallowed Sepulchre - Portal sacrifice");
+			case 2 :
+				return(70, superior_dragon_bones_22124, "Use superior dragon bones");
+			case 3 :
+				return(90, elidinis_ward_f_27251, "Fortify Elidinis' Ward (with 90 Smithing)");
+			case default :
+				return(-1, null, "");
+		}
+	case default :
+		return(-1, null, "");
+}

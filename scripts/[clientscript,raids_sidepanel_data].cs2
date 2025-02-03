@@ -1,0 +1,5 @@
+// 1539
+[clientscript,raids_sidepanel_data](component $widget_500:12_0, int $comsubid1, int $comsubid2, component $widget_500:14_3)
+if (cc_find($widget_500:12_0, $comsubid1) = ^true & .cc_find($widget_500:12_0, $comsubid2) = ^true) {
+	~raids_sidepanel_data($widget_500:12_0, $widget_500:14_3);
+}

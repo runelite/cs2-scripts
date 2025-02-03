@@ -1,0 +1,25 @@
+// 2800
+[proc,side_journal_switchtab](component $widget_629:1_0, component $widget_629:9_1, component $widget_629:4_2, component $widget_629:6_3, component $widget_629:8_4, component $widget_629:17_5, component $widget_629:12_6, component $widget_629:14_7, component $widget_629:16_8, component $widget_629:25_9, component $widget_629:20_10, component $widget_629:22_11, component $widget_629:24_12, component $widget_629:33_13, component $widget_629:28_14, component $widget_629:30_15, component $widget_629:32_16, component $widget_629:42_17, component $widget_629:37_18, component $widget_629:39_19, component $widget_629:41_20, component $widget_629:3_21, component $widget_629:5_22, component $widget_629:7_23, component $widget_629:11_24, component $widget_629:13_25, component $widget_629:15_26, component $widget_629:19_27, component $widget_629:21_28, component $widget_629:23_29, component $widget_629:27_30, component $widget_629:29_31, component $widget_629:31_32, component $widget_629:36_33, component $widget_629:38_34, component $widget_629:40_35, component $widget_629:35_36)
+~script2596($widget_629:4_2, $widget_629:6_3, $widget_629:8_4, $widget_629:3_21, $widget_629:5_22, $widget_629:7_23);
+~script2596($widget_629:12_6, $widget_629:14_7, $widget_629:16_8, $widget_629:11_24, $widget_629:13_25, $widget_629:15_26);
+~script2596($widget_629:20_10, $widget_629:22_11, $widget_629:24_12, $widget_629:19_27, $widget_629:21_28, $widget_629:23_29);
+if (%varbit9340 ! 0) {
+	~script2596($widget_629:28_14, $widget_629:30_15, $widget_629:32_16, $widget_629:27_30, $widget_629:29_31, $widget_629:31_32);
+}
+if (~deadman_world = 3) {
+	~script2596($widget_629:37_18, $widget_629:39_19, $widget_629:41_20, $widget_629:36_33, $widget_629:38_34, $widget_629:40_35);
+} else if (~league_world = 1 & %varbit10037 >= 3) {
+	~script2596($widget_629:37_18, $widget_629:39_19, $widget_629:41_20, $widget_629:36_33, $widget_629:38_34, $widget_629:40_35);
+}
+switch_int (%varbit8168) {
+	case 0 :
+		~script2595($widget_629:4_2, $widget_629:6_3, $widget_629:8_4, $widget_629:3_21, $widget_629:5_22, $widget_629:7_23, $widget_629:1_0, $widget_629:35_36);
+	case 1 :
+		~script2595($widget_629:12_6, $widget_629:14_7, $widget_629:16_8, $widget_629:11_24, $widget_629:13_25, $widget_629:15_26, $widget_629:1_0, $widget_629:35_36);
+	case 2 :
+		~script2595($widget_629:20_10, $widget_629:22_11, $widget_629:24_12, $widget_629:19_27, $widget_629:21_28, $widget_629:23_29, $widget_629:1_0, $widget_629:35_36);
+	case 3 :
+		~script2595($widget_629:28_14, $widget_629:30_15, $widget_629:32_16, $widget_629:27_30, $widget_629:29_31, $widget_629:31_32, $widget_629:1_0, $widget_629:35_36);
+	case 4 :
+		~script2595($widget_629:37_18, $widget_629:39_19, $widget_629:41_20, $widget_629:36_33, $widget_629:38_34, $widget_629:40_35, $widget_629:1_0, $widget_629:35_36);
+}

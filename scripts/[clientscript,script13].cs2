@@ -1,0 +1,12 @@
+// 13
+[clientscript,script13](component $widget_90:52_0)
+if (~target_world = 0) {
+	if_settext("", $widget_90:52_0);
+	if_setontimer(null, $widget_90:52_0);
+	return;
+}
+def_int $int1 = calc(200 - %varbit14890);
+$int1 = interpolate(0, 60, 0, 100, $int1);
+def_int $clock2 = clientclock;
+if_setontimer("script14($widget_90:52_0, $int1, $clock2)", $widget_90:52_0);
+~script15($widget_90:52_0, $int1, $clock2);

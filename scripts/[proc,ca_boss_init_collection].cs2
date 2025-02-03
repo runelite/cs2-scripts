@@ -1,0 +1,18 @@
+// 4840
+[proc,ca_boss_init_collection](component $widget_713:13_0, component $widget_713:14_1, string $string0)
+if_setop(1, "Collection-log", $widget_713:13_0);
+if_setopbase("<col=ff9040><$string0></col>", $widget_713:13_0);
+if_setonop("opsound(event_op, 2)", $widget_713:13_0);
+~dynamic_stone_button_filled(
+	0 = $widget_713:13_0, 
+	1 = $widget_713:14_1, 
+	2 = "", 
+	3 = if_getx($widget_713:13_0), 
+	4 = if_gety($widget_713:13_0), 
+	5 = if_getwidth($widget_713:13_0), 
+	6 = if_getheight($widget_713:13_0), 
+	7 = 0, 
+	8 = 0, 
+	9 = 1, 
+	10 = 0
+);

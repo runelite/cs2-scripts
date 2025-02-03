@@ -1,0 +1,7 @@
+// 2859
+[clientscript,clock_fake_update](component $component0)
+if (clientclock < %varcint375 | calc(clientclock % 50) ! 0) {
+	return;
+}
+%varbit8354 = calc(%varbit8354 + 1);
+~clock_set($component0);

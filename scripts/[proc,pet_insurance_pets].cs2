@@ -1,0 +1,130 @@
+// 6137
+[proc,pet_insurance_pets](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13)
+def_int $int14 = calc(bitcount($int2) + bitcount($int3));
+def_int $int15 = calc(bitcount($int4) + bitcount($int5));
+if ($int14 = 0) {
+	if_settext("You haven't found any pets yet", interface_148:6);
+	return;
+}
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $height16 = if_getheight($component0);
+def_int $width17 = 233;
+def_int $int18 = 30;
+def_int $int19 = 0;
+def_int $height20 = 0;
+def_int $int21 = 0;
+def_int $x22 = 0;
+def_int $y23 = 0;
+def_int $int24 = 0;
+cc_create($component0, ^iftype_rectangle, $int21);
+$int21 = calc($int21 + 1);
+cc_setposition($x22, $y23, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(233, $int18, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(215);
+cc_create($component0, ^iftype_text, $int21);
+$int21 = calc($int21 + 1);
+cc_setposition($x22, $y23, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xff981f);
+cc_setsize($width17, $int18, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Reclaimable Pets");
+$height20 = $int18;
+.cc_create($component0, ^iftype_rectangle, $int21);
+.cc_setsize(233, $int18, ^setsize_abs, ^setsize_abs);
+.cc_setfill(true);
+.cc_setcolour(^black);
+.cc_settrans(215);
+$int21 = calc($int21 + 1);
+cc_create($component0, ^iftype_text, $int21);
+cc_settextfont(b12_full);
+cc_setcolour(0xff981f);
+cc_setsize($width17, $int18, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Insured Pets");
+$int21 = calc($int21 + 1);
+cc_create($component0, ^iftype_text, $int21);
+$int21 = calc($int21 + 1);
+cc_create($component0, ^iftype_text, $int21);
+$int21 = calc($int21 + 1);
+if (calc($int14 - $int15) <= 0) {
+	cc_setposition($x22, $height20, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p12_full);
+	cc_setcolour(0x9f9f9f);
+	cc_setsize($width17, $int18, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("You have no reclaimable pets");
+	$height20 = calc($height20 + $int18);
+} else {
+	cc_sethide(true);
+	$int21, $height20, $int19 = ~pet_insurance_draw_pets(
+		0 = 1, 
+		1 = $component0, 
+		2 = $int21, 
+		3 = $height20, 
+		4 = $int19, 
+		5 = $int2, 
+		6 = $int3, 
+		7 = $int4, 
+		8 = $int5, 
+		9 = $int6, 
+		10 = $int7, 
+		11 = $int8, 
+		12 = $int9, 
+		13 = $int10, 
+		14 = $int11, 
+		15 = $int12, 
+		16 = $int13
+	);
+}
+$y23 = $height20;
+.cc_setposition($x22, $y23, ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find($component0, calc(.cc_getid + 1)) = ^true) {
+	cc_setposition(0, $y23, ^setpos_abs_left, ^setpos_abs_top);
+}
+$height20 = calc($height20 + $int18);
+if ($int15 <= 0) {
+	if (cc_find($component0, calc(.cc_getid + 2)) = ^true) {
+		cc_setposition($x22, $height20, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_setcolour(0x9f9f9f);
+		cc_setsize($width17, $int18, ^setsize_abs, ^setsize_abs);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settext("You have no other pets");
+		$height20 = calc($height20 + $int18);
+	}
+} else {
+	$int21, $height20, $int19 = ~pet_insurance_draw_pets(
+		0 = 0, 
+		1 = $component0, 
+		2 = $int21, 
+		3 = $height20, 
+		4 = $int19, 
+		5 = $int2, 
+		6 = $int3, 
+		7 = $int4, 
+		8 = $int5, 
+		9 = $int6, 
+		10 = $int7, 
+		11 = $int8, 
+		12 = $int9, 
+		13 = $int10, 
+		14 = $int11, 
+		15 = $int12, 
+		16 = $int13
+	);
+}
+if_setscrollpos(0, 0, $component0);
+if ($height20 > $height16) {
+	if_setscrollsize(0, $height20, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

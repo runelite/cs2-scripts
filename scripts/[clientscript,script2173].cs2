@@ -1,0 +1,18 @@
+// 2173
+[clientscript,script2173](int $opindex0, int $int1, component $widget_905:0_2, component $widget_905:10_3, component $widget_905:11_4, component $widget_905:12_5, component $widget_905:13_6, component $widget_905:14_7)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~script2454($widget_905:10_3, $widget_905:11_4, $widget_905:12_5, $widget_905:13_6, $widget_905:14_7, $int1, 0);
+if_clearops($widget_905:10_3);
+if_clearops($widget_905:11_4);
+if_clearops($widget_905:12_5);
+if_clearops($widget_905:13_6);
+if_clearops($widget_905:14_7);
+if_setonop(null, $widget_905:10_3);
+if_setonop(null, $widget_905:11_4);
+if_setonop(null, $widget_905:12_5);
+if_setonop(null, $widget_905:13_6);
+if_setonop(null, $widget_905:14_7);
+if_setontimer("script3192(event_com, calc(clientclock + 10))", $widget_905:0_2);

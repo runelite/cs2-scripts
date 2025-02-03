@@ -1,0 +1,109 @@
+// 843
+[proc,soul_wars_rewards_drawitem](int $int0, enum $enum1, enum $enum2, int $y3, int $int4, int $int5, int $int6, component $component7, component $component8, component $component9, int $int10, int $int11, component $component12, component $component13)(int)
+.cc_create($component7, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+.cc_setsize($int5, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int4, $y3, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+.cc_setop(1, "Select");
+if ($enum1 = enum_3553) {
+	.cc_setop(5, "Examine");
+} else {
+	.cc_setop(5, "");
+}
+def_namedobj $namedobj14 = enum(int, namedobj, $enum1, $int0);
+def_int $num15 = enum(obj, int, enum_3652, $namedobj14);
+if ($num15 <= 1) {
+	$num15 = -1;
+}
+if ($enum1 = enum_3544) {
+	$namedobj14 = enum(obj, namedobj, enum_3542, $namedobj14);
+}
+if ($namedobj14 = null) {
+	$namedobj14 = obj_6512;
+}
+.cc_setopbase("<col=ff9040><oc_name($namedobj14)></col>");
+cc_create($component7, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int4 + (40 - 36) / 2), $y3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject($namedobj14, $num15);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+def_int $width16 = calc($int5 - 40);
+$int4 = calc($int4 + 40);
+cc_create($component7, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize($width16, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, $y3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(true);
+def_int $colour17 = 0xff981f;
+def_int $colour18 = 0xfffc00;
+def_int $int19 = enum(int, int, $enum2, $int0);
+if ($enum1 = enum_3544 & ~script6931(3) = 1) {
+	$int19 = calc($int19 / 2);
+}
+def_string $mes0 = "";
+def_string $string1 = ",";
+if (%var2876 < $int19) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You need <~tostring_spacer($int19, $string1)> <~script853($int19)> to claim that reward.";
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component7, $component8, $component9, $int6, event_op, $component12, $component13)");
+	$colour17, $colour18 = 0x9f9f9f, 0x9f9f9f;
+} else if (string_length(~script854($namedobj14)) > 0) {
+	$mes0 = ~script854($namedobj14);
+	cc_setcolour(0x9f9f9f);
+	.cc_setonop("soul_wars_rewards_refuse($mes0, $component7, $component8, $component9, $int6, event_op, $component12, $component13)");
+	$colour17, $colour18 = 0x9f9f9f, 0x9f9f9f;
+} else {
+	if ($int11 = $int0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0x00df00);
+	}
+	.cc_setonop("soul_wars_rewards_select(
+		0 = $int0, 
+		1 = -1, 
+		2 = $component7, 
+		3 = $component8, 
+		4 = $component9, 
+		5 = $int6, 
+		6 = event_op, 
+		7 = $component12, 
+		8 = $component13
+	)");
+}
+def_string $string2 = oc_name($namedobj14);
+if (parawidth($string2, 512, p12_full) > $width16) {
+	cc_settextfont(p11_full);
+} else {
+	cc_settextfont(p12_full);
+}
+cc_settext($string2);
+cc_create($component7, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize($width16, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, $y3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+if ($int19 > 0) {
+	cc_settext("<tostring($int19)> <~script853($int19)>");
+} else {
+	cc_settext("Free");
+}
+if ($int11 = $int0) {
+	cc_setcolour(^white);
+	.cc_setonmouserepeat(null);
+	.cc_setonmouseleave(null);
+} else {
+	cc_setcolour($colour17);
+	if (%var2876 >= $int19 | string_length(~script854($namedobj14)) > 0 & ~on_mobile = false) {
+		.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour18)");
+		.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour17)");
+	}
+}
+return($int10);

@@ -1,0 +1,41 @@
+// 3861
+[clientscript,settings_slider_op](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, int $comsubid12, string $string0, boolean $boolean13)
+if (~settings_op_checker($struct0) = false) {
+	return;
+}
+~settings_set_slider($int1, $int2);
+if (cc_find($component5, $comsubid6) = ^true) {
+	if ($int2 = 0) {
+		cc_setposition($int8, $y7, ^setpos_abs_left, ^setpos_abs_top);
+	} else if ($int2 = calc($int3 - 1)) {
+		cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_setposition(calc($int8 + scale(calc($int2 * 2), calc(($int3 - 1) * 2), calc($int4 - 16))), $y7, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}
+def_string $string1 = "";
+if (cc_find($component10, $comsubid12) = ^true) {
+	if (struct_param($struct0, param_1158) = true) {
+		$string1 = ~script2364($int1);
+	}
+	cc_settext(append($string0, $string1));
+}
+if ($boolean13 = false & cc_find($component10, $comsubid11) = ^true) {
+	cc_setontimer("settings_slider_synch(
+		0 = 0, 
+		1 = $struct0, 
+		2 = $int1, 
+		3 = $int2, 
+		4 = $int3, 
+		5 = $int4, 
+		6 = $component5, 
+		7 = $comsubid6, 
+		8 = $y7, 
+		9 = $int8, 
+		10 = $int9, 
+		11 = $component10, 
+		12 = $comsubid11, 
+		13 = $comsubid12, 
+		14 = $string0
+	)");
+}

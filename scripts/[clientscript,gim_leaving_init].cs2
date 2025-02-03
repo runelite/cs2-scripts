@@ -1,0 +1,24 @@
+// 5249
+[clientscript,gim_leaving_init](component $widget_722:1_0, int $widget_722:0_1, component $widget_722:10_2, component $widget_722:18_3, component $widget_722:8_4, component $widget_722:5_5, component $widget_722:6_6, component $widget_722:7_7, component $widget_722:14_8, component $widget_722:13_9, component $widget_722:15_10)
+~steelborder($widget_722:1_0, "Choose your Gamemode", 0);
+cc_deleteall($widget_722:15_10);
+~scrollbar_vertical($widget_722:15_10, $widget_722:14_8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~gim_leave_text($widget_722:13_9, 0);
+~gim_buttons_init($widget_722:10_2, $widget_722:18_3, $widget_722:8_4, 0);
+if_setonop("gim_buttons_click($widget_722:13_9, $widget_722:10_2, $widget_722:18_3, $widget_722:8_4, 1)", $widget_722:10_2);
+if_setop(1, "Select", $widget_722:10_2);
+def_int $width11 = 0;
+if (%varbit1777 = 6) {
+	if_sethide(true, $widget_722:6_6);
+	$width11 = calc(if_getwidth($widget_722:1_0) / 2);
+	if_setsize($width11, 0, ^setsize_abs, ^setsize_minus, $widget_722:5_5);
+	if_setsize($width11, 0, ^setsize_abs, ^setsize_minus, $widget_722:7_7);
+	if_setgraphic("iron_icons,5", interface_722:11);
+	if_setsize(64, 64, ^setsize_abs, ^setsize_abs, interface_722:11);
+} else {
+	if_sethide(false, $widget_722:6_6);
+	if_setonop("gim_buttons_click($widget_722:13_9, $widget_722:10_2, $widget_722:18_3, $widget_722:8_4, 2)", $widget_722:18_3);
+	if_setop(1, "Select", $widget_722:18_3);
+}
+if_setonop("gim_buttons_click($widget_722:13_9, $widget_722:10_2, $widget_722:18_3, $widget_722:8_4, 3)", $widget_722:8_4);
+if_setop(1, "Select", $widget_722:8_4);

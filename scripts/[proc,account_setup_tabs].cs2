@@ -1,0 +1,17 @@
+// 3205
+[proc,account_setup_tabs]
+if_setop(1, "Account", interface_109:2);
+if_setop(1, "Community", interface_109:10);
+if_setop(1, "Useful Links", interface_109:18);
+if_setonop("account_switch_tab(0)", interface_109:2);
+if_setonop("account_switch_tab(1)", interface_109:10);
+if_setonop("account_switch_tab(2)", interface_109:18);
+if (~on_mobile = true) {
+	return;
+}
+if_setonmouserepeat("account_tab_highlight(interface_109:4, interface_109:6, interface_109:8, interface_109:3, interface_109:5, interface_109:7, 0)", interface_109:2);
+if_setonmouserepeat("account_tab_highlight(interface_109:12, interface_109:14, interface_109:16, interface_109:11, interface_109:13, interface_109:15, 1)", interface_109:10);
+if_setonmouserepeat("account_tab_highlight(interface_109:21, interface_109:23, interface_109:25, interface_109:20, interface_109:22, interface_109:24, 2)", interface_109:18);
+if_setonmouseleave("account_tab_highlight_reset(interface_109:4, interface_109:6, interface_109:8, interface_109:3, interface_109:5, interface_109:7, 0)", interface_109:2);
+if_setonmouseleave("account_tab_highlight_reset(interface_109:12, interface_109:14, interface_109:16, interface_109:11, interface_109:13, interface_109:15, 1)", interface_109:10);
+if_setonmouseleave("account_tab_highlight_reset(interface_109:21, interface_109:23, interface_109:25, interface_109:20, interface_109:22, interface_109:24, 2)", interface_109:18);

@@ -1,0 +1,30 @@
+// 1985
+[clientscript,gravestone_retrieval_init](component $widget_602:0_0, component $widget_602:1_1, component $widget_602:3_2, component $widget_602:4_3, component $widget_602:6_4, component $widget_602:7_5, component $widget_602:8_6, component $widget_602:9_7, component $widget_602:10_8, component $widget_602:11_9)
+def_int $comsubid10 = ~steelborder($widget_602:1_1, "", 0);
+~gravestone_retrieval_unlockstatus($widget_602:1_1, $comsubid10, $widget_602:6_4, $widget_602:7_5, $widget_602:10_8, $widget_602:11_9);
+if_setonvartransmit("gravestone_retrieval_unlockstatus($widget_602:1_1, $comsubid10, $widget_602:6_4, $widget_602:7_5, $widget_602:10_8, $widget_602:11_9){var261, var262}", $widget_602:0_0);
+if_setgraphic("miscgraphics,0", $widget_602:8_6);
+if_setop(1, "Discard-All", $widget_602:8_6);
+if_setontimer(null, $widget_602:8_6);
+if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $widget_602:9_7, null, null)", $widget_602:8_6);
+if_setonmouseleave("gravestone_retrieval_buttonhover(false, $widget_602:9_7, null, null)", $widget_602:8_6);
+if_setonop("gravestone_retrieval_buttonop(event_op, $widget_602:8_6, $widget_602:9_7, null, null)", $widget_602:8_6);
+def_int $int11 = calc(36 + 10);
+def_int $int12 = calc(32 + 8);
+cc_deleteall($widget_602:3_2);
+def_int $int13 = 0;
+while ($int13 < 120) {
+	cc_create($widget_602:3_2, ^iftype_graphic, $int13);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(1 + $int13 % 8 * $int11), calc(3 + $int13 / 8 * $int12), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setop(2, "Take-All");
+	cc_setop(9, "Value");
+	cc_setop(10, "Examine");
+	cc_sethide(true);
+	$int13 = calc($int13 + 1);
+}
+~scrollbar_vertical($widget_602:4_3, $widget_602:3_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~gravestone_retrieval_items($widget_602:3_2, $widget_602:4_3);
+if_setoninvtransmit("gravestone_retrieval_items($widget_602:3_2, $widget_602:4_3){inv_525}", $widget_602:0_0);

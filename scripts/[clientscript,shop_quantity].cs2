@@ -1,0 +1,6 @@
+// 2229
+[clientscript,shop_quantity](component $widget_300:5_0, component $widget_300:8_1, component $widget_300:10_2, component $widget_300:12_3, component $widget_300:14_4, component $widget_300:2_5)
+if (~on_mobile = false) {
+	if_sethide(true, $widget_300:2_5);
+}
+~shop_quantity($widget_300:5_0, $widget_300:8_1, $widget_300:10_2, $widget_300:12_3, $widget_300:14_4, $widget_300:2_5);

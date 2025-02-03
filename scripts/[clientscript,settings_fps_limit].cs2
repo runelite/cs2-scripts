@@ -1,0 +1,21 @@
+// 4566
+[clientscript,settings_fps_limit](component $widget_116:28_0, component $widget_116:40_1, component $widget_116:34_2, component $widget_116:36_3, component $widget_116:42_4, component $widget_116:43_5, component $widget_116:0_6)
+if (~on_mobile = true) {
+	if_setposition(0, 77, ^setpos_abs_centre, ^setpos_abs_top, $widget_116:28_0);
+} else if (~on_enhanced_desktop = 1) {
+	if_setposition(0, 118, ^setpos_abs_centre, ^setpos_abs_top, $widget_116:28_0);
+} else {
+	if_sethide(true, $widget_116:28_0);
+	return;
+}
+~settings_side_dropdown_create(
+	0 = $widget_116:28_0, 
+	1 = $widget_116:40_1, 
+	2 = $widget_116:34_2, 
+	3 = $widget_116:36_3, 
+	4 = $widget_116:42_4, 
+	5 = $widget_116:43_5, 
+	6 = $widget_116:0_6, 
+	7 = "Limit Framerate", 
+	8 = limit_framerate_3008
+);

@@ -1,0 +1,14 @@
+// 1718
+[clientscript,worldmap_toggles_op](int $opindex0, component $widget_595:21_1, int $index2, int $comsubid3, component $widget_595:9_4, component $widget_595:13_5, component $widget_595:41_6)
+if ($opindex0 ! 1 | $index2 < 0 | $index2 > 4) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (cc_find($widget_595:21_1, $comsubid3) = ^true & .cc_find($widget_595:21_1, $index2) = ^true) {
+	if (testbit(%varbit5640, $index2) = ^true) {
+		%varbit5640 = clearbit(%varbit5640, $index2);
+	} else {
+		%varbit5640 = setbit(%varbit5640, $index2);
+	}
+	~worldmap_toggles_set($widget_595:21_1, $index2, $widget_595:9_4, $widget_595:13_5, $widget_595:41_6);
+}

@@ -1,0 +1,30 @@
+// 3238
+[proc,questlist_hide_quest](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4)(int)
+if (db_getfield($dbrow0, quest:type, 0) = 1 & ~questlist_hide_miniquests = 1) {
+	return(1);
+}
+if (db_getfield($dbrow0, quest:type, 0) = 0 & %varbit13774 = 1) {
+	return(1);
+}
+if ($int4 = 1 & %varbit13890 = 1) {
+	return(1);
+}
+if (~quest_is_subquest($dbrow0) = 1) {
+	return(1);
+}
+if ($int1 = 0 & %varbit13775 = 1) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13776 = 1) {
+	return(1);
+}
+if ($int1 = 2 & %varbit13777 = 1) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13778 = 2 & $int2 = 0) {
+	return(1);
+}
+if ($int1 = 1 & %varbit13779 = 2 & $int3 = 0) {
+	return(1);
+}
+return(0);

@@ -1,0 +1,65 @@
+// 3836
+[clientscript,settings_tab_transmit](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
+if ($int3 = %varbit9656 & %varbit9638 = 0) {
+	return;
+}
+if (%varbit9638 = 1 & %varbit9638 = $int2) {
+	return;
+}
+~searchbar_setup_op(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component15, 
+	3 = $component16, 
+	4 = 0, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component17
+);
+~settings_create_tabs(
+	0 = $component0, 
+	1 = $component1, 
+	2 = %varbit9656, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $component6, 
+	6 = $component7, 
+	7 = $component8, 
+	8 = $component9, 
+	9 = $component10, 
+	10 = $component11, 
+	11 = $component12, 
+	12 = $component13, 
+	13 = $component14, 
+	14 = $component15, 
+	15 = $component16, 
+	16 = $component17
+);
+~settings_populate_settings(
+	0 = 0, 
+	1 = 0, 
+	2 = 0, 
+	3 = 1, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = %varbit9656, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component17
+);

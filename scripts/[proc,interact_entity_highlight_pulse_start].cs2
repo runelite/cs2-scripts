@@ -1,0 +1,20 @@
+// 5961
+[proc,interact_entity_highlight_pulse_start](entityoverlay $entityoverlay0)
+if (~on_enhanced_mobile = 0) {
+	return;
+}
+~entity_highlight_setup(4, 2, 128, ~script758);
+def_int $clock1 = clientclock;
+if (if_find_entityoverlay($entityoverlay0) = ^true) {
+	cc_setontimer("interact_entity_highlight_pulse(
+		0 = $clock1, 
+		1 = $entityoverlay0, 
+		2 = %varcint973, 
+		3 = %varcint974, 
+		4 = %varcint975, 
+		5 = %varcint976, 
+		6 = %varcint977, 
+		7 = %varcint978, 
+		8 = %varcstring979
+	)");
+}

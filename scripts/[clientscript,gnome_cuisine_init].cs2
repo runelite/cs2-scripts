@@ -1,0 +1,19 @@
+// 3779
+[clientscript,gnome_cuisine_init](component $widget_49:1_0, component $widget_49:9_1, component $widget_49:3_2, component $widget_49:4_3, component $widget_49:8_4, component $widget_49:6_5)
+cc_deleteall($widget_49:9_1);
+def_enum $enum6 = ~gnome_cuisine_enum;
+~steelborder($widget_49:1_0, ~gnome_cuisine_title, 0);
+if_setonmouseover("gnome_cuisine_confirmation_in($widget_49:9_1)", $widget_49:9_1);
+if_setonmouseleave("gnome_cuisine_confirmation_out($widget_49:9_1)", $widget_49:9_1);
+if_setonvartransmit("gnome_cuisine_update_if($widget_49:3_2, $widget_49:4_3, $widget_49:8_4, $widget_49:6_5, $enum6){var675, var841}", $widget_49:6_5);
+if_setoninvtransmit("gnome_cuisine_update_if($widget_49:3_2, $widget_49:4_3, $widget_49:8_4, $widget_49:6_5, $enum6){inv}", $widget_49:6_5);
+def_int $comsubid7 = ~v2_stone_button_filled($widget_49:9_1);
+cc_create($widget_49:9_1, ^iftype_text, $comsubid7);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Create");
+~gnome_show_cuisine($widget_49:3_2, $widget_49:4_3, $widget_49:8_4, $widget_49:6_5, $enum6);

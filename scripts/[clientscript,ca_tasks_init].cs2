@@ -1,0 +1,24 @@
+// 4816
+[clientscript,ca_tasks_init](component $widget_715:1_0, component $widget_715:2_1, component $widget_715:8_2, component $widget_715:9_3, component $widget_715:10_4, component $widget_715:11_5, component $widget_715:12_6, component $widget_715:13_7, component $widget_715:14_8, component $widget_715:15_9, component $widget_715:16_10, component $widget_715:7_11, component $widget_715:23_12, component $widget_715:25_13, component $widget_715:24_14)
+~script4767($widget_715:23_12, $widget_715:25_13, $widget_715:24_14, 1);
+def_int $comsubid15 = ~steelborder($widget_715:2_1, "Combat Achievements - Tasks", 0);
+if_setscrollpos(0, 0, $widget_715:8_2);
+cc_deleteall($widget_715:7_11);
+~scrollbar_vertical($widget_715:7_11, $widget_715:8_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setontimer("ca_tasks_draw_list_timer(
+	0 = -1, 
+	1 = $widget_715:1_0, 
+	2 = $widget_715:2_1, 
+	3 = $widget_715:8_2, 
+	4 = $widget_715:9_3, 
+	5 = $widget_715:10_4, 
+	6 = $widget_715:11_5, 
+	7 = $widget_715:12_6, 
+	8 = $widget_715:13_7, 
+	9 = $widget_715:14_8, 
+	10 = $widget_715:15_9, 
+	11 = $widget_715:16_10, 
+	12 = $widget_715:7_11, 
+	13 = $comsubid15, 
+	14 = clientclock
+)", $widget_715:1_0);

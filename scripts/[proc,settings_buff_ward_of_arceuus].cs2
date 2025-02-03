@@ -1,0 +1,7 @@
+// 1348
+[proc,settings_buff_ward_of_arceuus]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit12409 = calc(1 - %varbit12409);
+~buff_bar_layout_redraw;

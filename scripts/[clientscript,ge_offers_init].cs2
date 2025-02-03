@@ -1,0 +1,41 @@
+// 803
+[clientscript,ge_offers_init](component $widget_465:0_0, component $widget_465:2_1, component $widget_465:3_2, component $widget_465:4_3, component $widget_465:5_4, component $widget_465:6_5, component $widget_465:15_6, component $widget_465:17_7, component $widget_465:23_8, component $widget_465:24_9, component $widget_465:25_10, component $widget_465:27_11, component $widget_465:29_12, component $widget_465:32_13)
+def_int $comsubid14 = ~steelborder($widget_465:2_1, "", 0);
+~ge_offers_index_inittop($widget_465:6_5);
+def_int $int15 = 0;
+def_component $component16 = enum(int, component, enum_245, $int15);
+while ($component16 ! null) {
+	~ge_offers_index_initslot(
+		0 = $widget_465:2_1, 
+		1 = $comsubid14, 
+		2 = $widget_465:4_3, 
+		3 = $widget_465:5_4, 
+		4 = $widget_465:15_6, 
+		5 = $widget_465:25_10, 
+		6 = $component16, 
+		7 = $int15, 
+		8 = $widget_465:32_13
+	);
+	$int15 = calc($int15 + 1);
+	$component16 = enum(int, component, enum_245, $int15);
+}
+~ge_offers_setup_init($widget_465:25_10, $widget_465:27_11, $widget_465:29_12);
+~script819($widget_465:15_6, $widget_465:17_7, $widget_465:23_8);
+if_setonvartransmit("ge_offers_reinit($widget_465:25_10, $widget_465:27_11, $widget_465:29_12, $widget_465:15_6, $widget_465:17_7, $widget_465:23_8){var499}", $widget_465:2_1);
+~script816($widget_465:24_9);
+~ge_offers_switchpanel($widget_465:2_1, $comsubid14, $widget_465:4_3, $widget_465:5_4, $widget_465:15_6, $widget_465:25_10, $widget_465:32_13);
+if_setonvartransmit("ge_offers_switchpanel($widget_465:2_1, $comsubid14, $widget_465:4_3, $widget_465:5_4, $widget_465:15_6, $widget_465:25_10, $widget_465:32_13){var375}", $widget_465:0_0);
+if_setonstocktransmit("ge_offers_switchpanel($widget_465:2_1, $comsubid14, $widget_465:4_3, $widget_465:5_4, $widget_465:15_6, $widget_465:25_10, $widget_465:32_13)", $widget_465:0_0);
+if_setonop("script805(
+	0 = event_op, 
+	1 = -1, 
+	2 = -1, 
+	3 = $widget_465:2_1, 
+	4 = $comsubid14, 
+	5 = $widget_465:4_3, 
+	6 = $widget_465:5_4, 
+	7 = $widget_465:15_6, 
+	8 = $widget_465:25_10, 
+	9 = $widget_465:32_13
+)", $widget_465:4_3);
+~ge_offers_bigbutton($widget_465:3_2, "History", 0);

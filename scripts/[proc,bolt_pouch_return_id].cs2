@@ -1,0 +1,16 @@
+// 4048
+[proc,bolt_pouch_return_id](component $component0)(int)
+switch_component ($component0) {
+	case interface_433:20 :
+		return(0);
+	case interface_433:6 :
+		return(1);
+	case interface_433:9 :
+		return(2);
+	case interface_433:12 :
+		return(3);
+	case interface_433:16 :
+		return(4);
+	case default :
+		return(-1);
+}

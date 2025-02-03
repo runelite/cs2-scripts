@@ -1,0 +1,6 @@
+// 1579
+[clientscript,raids_rewards_init](component $widget_539:0_0, component $widget_539:5_1)
+def_int $size2 = inv_size(inv_581);
+~raids_rewards_build($widget_539:5_1, $size2);
+if_setoninvtransmit("raids_rewards_build($widget_539:5_1, $size2){inv_581}", $widget_539:0_0);
+if_setonvartransmit("raids_rewards_build($widget_539:5_1, $size2){var1432}", $widget_539:0_0);

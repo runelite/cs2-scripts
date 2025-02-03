@@ -1,0 +1,8 @@
+// 1102
+[clientscript,bugreport_continue](component $widget_156:3_0, component $widget_156:11_1)
+sound_synth(interface_select1, 1, 0);
+if_sethide(true, $widget_156:3_0);
+if_sethide(false, $widget_156:11_1);
+if (~on_mobile = true) {
+	~keyboard_show_string(0, 500, %varcstring372);
+}

@@ -1,0 +1,25 @@
+// 3290
+[proc,league_reward_shop_showpoints](component $widget_658:1_0, component $widget_658:12_1, component $widget_658:6_2, component $widget_658:9_3, component $widget_658:10_4, component $widget_658:8_5, component $widget_658:13_6, component $widget_658:14_7, component $widget_658:5_8, component $widget_658:20_9, component $widget_658:21_10, component $widget_658:22_11, component $widget_658:23_12, component $widget_658:11_13)
+def_string $string0 = ",";
+if_settext("League Points: <col=ffffff><~tostring_spacer(%var2613, $string0)>", $widget_658:12_1);
+if_settextfont(p12_full, $widget_658:12_1);
+if_settextshadow(true, $widget_658:12_1);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 0, $widget_658:12_1);
+~league_rewards_draw(
+	0 = -1, 
+	1 = $widget_658:1_0, 
+	2 = $widget_658:12_1, 
+	3 = $widget_658:6_2, 
+	4 = $widget_658:9_3, 
+	5 = $widget_658:10_4, 
+	6 = $widget_658:8_5, 
+	7 = $widget_658:13_6, 
+	8 = $widget_658:14_7, 
+	9 = $widget_658:5_8, 
+	10 = $widget_658:20_9, 
+	11 = $widget_658:21_10, 
+	12 = $widget_658:22_11, 
+	13 = $widget_658:23_12, 
+	14 = $widget_658:11_13, 
+	15 = if_getscrolly($widget_658:8_5)
+);

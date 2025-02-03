@@ -1,0 +1,60 @@
+// 2888
+[proc,hp_hud_fade_in](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
+def_int $int15 = $int14;
+if (%var1683 ! null & nc_param(%var1683, param_945) = 1 | %varbit12401 = 0) {
+	$int14 = 0;
+} else if (%varcint394 = 2) {
+	$int14 = if_gettrans($component2);
+} else if ($int14 ! if_gettrans($component2)) {
+	return;
+}
+~hp_hud_update(
+	0 = $component0, 
+	1 = $component9, 
+	2 = $component6, 
+	3 = $component7, 
+	4 = $component8, 
+	5 = $component1, 
+	6 = $component4, 
+	7 = $component10, 
+	8 = $component11, 
+	9 = $component12, 
+	10 = $component13, 
+	11 = true
+);
+$int14 = ~max(0, calc($int14 - 3));
+%varcint394 = 1;
+if_settrans($int14, $component2);
+if_settrans($int14, $component3);
+if_settrans($int14, $component5);
+if_settrans($int14, $component6);
+if_settrans($int14, $component7);
+if_settrans($int14, $component8);
+if_settrans($int14, $component10);
+if_settrans($int14, $component11);
+if_settrans($int14, $component12);
+if_settrans($int14, $component13);
+if_settrans($int14, $component4);
+if_settrans($int14, $component9);
+if ($int14 <= 0) {
+	if_setontimer(null, $component2);
+	%varcint394 = 0;
+	return;
+}
+if_setontimer("hp_hud_fade_in(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $int14
+)", $component2);

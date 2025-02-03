@@ -1,0 +1,329 @@
+// 505
+[proc,bankmain_finishbuilding](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, int $int13, component $component14, component $component15, component $component16, component $component17, component $component18)
+if ($int12 > 0) {
+	$int12 = calc($int12 + 8);
+}
+def_int $int19 = 0;
+if ($int12 > if_getheight($component2)) {
+	if_setscrollsize(0, $int12, $component2);
+	if (%varcint51 > 0) {
+		$int19 = %varcint51;
+	}
+	~scrollbar_resize($component3, $component2, $int19);
+} else {
+	if_setscrollsize(0, 0, $component2);
+	~scrollbar_resize($component3, $component2, 0);
+}
+if_settext(tostring($int13), $component6);
+cc_deleteall($component8);
+def_int $int20 = calc((if_getwidth($component8) - 40 * (9 + 1)) / 2);
+def_int $int21 = 0;
+while ($int21 <= 9) {
+	cc_create($component8, ^iftype_graphic, $int21);
+	cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int21 * 40 + $int20), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settiling(false);
+	$int21 = calc($int21 + 1);
+}
+def_int $flags22 = 0;
+if (%varbit4171 > 0) {
+	$flags22 = setbit($flags22, 1);
+}
+if (%varbit4172 > 0) {
+	$flags22 = setbit($flags22, 2);
+}
+if (%varbit4173 > 0) {
+	$flags22 = setbit($flags22, 3);
+}
+if (%varbit4174 > 0) {
+	$flags22 = setbit($flags22, 4);
+}
+if (%varbit4175 > 0) {
+	$flags22 = setbit($flags22, 5);
+}
+if (%varbit4176 > 0) {
+	$flags22 = setbit($flags22, 6);
+}
+if (%varbit4177 > 0) {
+	$flags22 = setbit($flags22, 7);
+}
+if (%varbit4178 > 0) {
+	$flags22 = setbit($flags22, 8);
+}
+if (%varbit4179 > 0) {
+	$flags22 = setbit($flags22, 9);
+}
+def_int $int23 = calc((40 - 36) / 2);
+def_int $y24 = calc((40 - 32) / 2);
+~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 0, 
+	13 = -1, 
+	14 = -1, 
+	15 = 0, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+def_int $int25 = 0;
+def_int $int26 = 0;
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 1, 
+	13 = %varbit4171, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 2, 
+	13 = %varbit4172, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 3, 
+	13 = %varbit4173, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 4, 
+	13 = %varbit4174, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 5, 
+	13 = %varbit4175, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 6, 
+	13 = %varbit4176, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 7, 
+	13 = %varbit4177, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 8, 
+	13 = %varbit4178, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);
+$int25, $int26 = ~bankmain_tabicon(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $component7, 
+	8 = $component8, 
+	9 = $component9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = 9, 
+	13 = %varbit4179, 
+	14 = $int25, 
+	15 = $int26, 
+	16 = $int20, 
+	17 = $int23, 
+	18 = $y24, 
+	19 = $flags22, 
+	20 = $component14, 
+	21 = $component15, 
+	22 = $component16, 
+	23 = $component17, 
+	24 = $component18
+);

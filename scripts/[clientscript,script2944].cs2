@@ -1,0 +1,73 @@
+// 2944
+[clientscript,script2944](int $int0, component $widget_642:3_1, component $widget_642:34_2, component $widget_642:35_3, component $widget_642:5_4, component $widget_642:7_5, component $widget_642:27_6, component $widget_642:28_7, component $widget_642:30_8, component $widget_642:31_9, component $widget_642:29_10, component $widget_642:32_11, component $widget_642:21_12, component $widget_642:23_13, component $widget_642:24_14, component $widget_642:25_15, component $widget_642:0_16, component $widget_642:1_17, component $widget_642:4_18, component $widget_642:33_19, component $widget_642:8_20, component $widget_642:11_21, component $widget_642:13_22, component $widget_642:16_23, component $widget_642:17_24, component $widget_642:19_25, component $widget_642:12_26, component $widget_642:26_27)
+cc_deleteall($widget_642:35_3);
+def_int $int28 = ~adventurepath_init(
+	0 = $widget_642:3_1, 
+	1 = $widget_642:34_2, 
+	2 = $widget_642:35_3, 
+	3 = $widget_642:5_4, 
+	4 = $widget_642:7_5, 
+	5 = $widget_642:27_6, 
+	6 = $widget_642:28_7, 
+	7 = $widget_642:30_8, 
+	8 = $widget_642:31_9, 
+	9 = $widget_642:29_10, 
+	10 = $widget_642:32_11, 
+	11 = $widget_642:21_12, 
+	12 = $widget_642:23_13, 
+	13 = $widget_642:24_14, 
+	14 = $widget_642:25_15, 
+	15 = $widget_642:0_16, 
+	16 = $widget_642:1_17, 
+	17 = $widget_642:4_18, 
+	18 = $widget_642:33_19, 
+	19 = $widget_642:8_20, 
+	20 = $widget_642:11_21, 
+	21 = $widget_642:13_22, 
+	22 = $widget_642:16_23, 
+	23 = $widget_642:17_24, 
+	24 = $widget_642:19_25, 
+	25 = $widget_642:12_26, 
+	26 = $widget_642:26_27
+);
+if ($int28 ! $int0) {
+	if ($int28 > if_getheight($widget_642:35_3)) {
+		if_setscrollsize(0, $int28, $widget_642:35_3);
+		if_setscrollpos(0, ~min(if_getscrolly($widget_642:35_3), calc($int28 - if_getheight($widget_642:35_3))), $widget_642:35_3);
+	} else {
+		if_setscrollsize(0, 0, $widget_642:35_3);
+		if_setscrollpos(0, 0, $widget_642:35_3);
+	}
+	~scrollbar_vertical($widget_642:34_2, $widget_642:35_3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	$int0 = $int28;
+}
+if_setonvartransmit("script2944(
+	0 = $int0, 
+	1 = $widget_642:3_1, 
+	2 = $widget_642:34_2, 
+	3 = $widget_642:35_3, 
+	4 = $widget_642:5_4, 
+	5 = $widget_642:7_5, 
+	6 = $widget_642:27_6, 
+	7 = $widget_642:28_7, 
+	8 = $widget_642:30_8, 
+	9 = $widget_642:31_9, 
+	10 = $widget_642:29_10, 
+	11 = $widget_642:32_11, 
+	12 = $widget_642:21_12, 
+	13 = $widget_642:23_13, 
+	14 = $widget_642:24_14, 
+	15 = $widget_642:25_15, 
+	16 = $widget_642:0_16, 
+	17 = $widget_642:1_17, 
+	18 = $widget_642:4_18, 
+	19 = $widget_642:33_19, 
+	20 = $widget_642:8_20, 
+	21 = $widget_642:11_21, 
+	22 = $widget_642:13_22, 
+	23 = $widget_642:16_23, 
+	24 = $widget_642:17_24, 
+	25 = $widget_642:19_25, 
+	26 = $widget_642:12_26, 
+	27 = $widget_642:26_27
+){var2360, var2357}", $widget_642:35_3);

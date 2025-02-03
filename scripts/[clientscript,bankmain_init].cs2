@@ -1,0 +1,232 @@
+// 274
+[clientscript,bankmain_init](component $widget_12:1_0, component $widget_12:2_1, component $widget_12:123_2, component $widget_12:124_3, component $widget_12:10_4, component $widget_12:78_5, component $widget_12:54_6, component $widget_12:13_7, component $widget_12:14_8, component $widget_12:17_9, component $widget_12:19_10, component $widget_12:21_11, component $widget_12:40_12, component $widget_12:24_13, component $widget_12:26_14, component $widget_12:42_15, component $widget_12:3_16, component $widget_12:5_17, component $widget_12:11_18, component $widget_12:49_19, component $widget_12:50_20, component $widget_12:128_21, component $widget_12:30_22, component $widget_12:32_23, component $widget_12:34_24, component $widget_12:36_25, component $widget_12:38_26, component $widget_12:28_27, component $widget_12:44_28, component $widget_12:45_29, component $widget_12:46_30, component $widget_12:47_31, component $widget_12:4_32, component $widget_12:8_33)
+~steelborder($widget_12:2_1, "", 0);
+def_int $int34 = %varcint51;
+if (~bankmain_searching = 1) {
+	~meslayer_close(true, true, true);
+} else if (%varcint5 <= 0) {
+	%varcstring359 = "";
+}
+~bankmain_search_setbutton(
+	0 = $widget_12:1_0, 
+	1 = $widget_12:123_2, 
+	2 = $widget_12:13_7, 
+	3 = $widget_12:14_8, 
+	4 = $widget_12:17_9, 
+	5 = $widget_12:3_16, 
+	6 = $widget_12:5_17, 
+	7 = $widget_12:42_15, 
+	8 = $widget_12:11_18, 
+	9 = $widget_12:49_19, 
+	10 = $widget_12:50_20, 
+	11 = $widget_12:128_21, 
+	12 = $widget_12:44_28, 
+	13 = $widget_12:45_29, 
+	14 = $widget_12:46_30, 
+	15 = $widget_12:47_31, 
+	16 = $widget_12:4_32
+);
+if_setonop("bankmain_search_toggle(
+	0 = event_op, 
+	1 = $widget_12:1_0, 
+	2 = $widget_12:123_2, 
+	3 = $widget_12:13_7, 
+	4 = $widget_12:14_8, 
+	5 = $widget_12:17_9, 
+	6 = $widget_12:3_16, 
+	7 = $widget_12:5_17, 
+	8 = $widget_12:42_15, 
+	9 = $widget_12:11_18, 
+	10 = $widget_12:49_19, 
+	11 = $widget_12:50_20, 
+	12 = $widget_12:128_21, 
+	13 = $widget_12:44_28, 
+	14 = $widget_12:45_29, 
+	15 = $widget_12:46_30, 
+	16 = $widget_12:47_31, 
+	17 = $widget_12:4_32
+)", $widget_12:42_15);
+cc_deleteall($widget_12:14_8);
+~scrollbar_vertical($widget_12:14_8, $widget_12:13_7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~bankmain_swapinsert($widget_12:19_10, $widget_12:21_11);
+if_setonvartransmit("bankmain_swapinsert($widget_12:19_10, $widget_12:21_11){var304}", $widget_12:19_10);
+~bankmain_toggleplaceholders($widget_12:40_12);
+if_setonvartransmit("bankmain_toggleplaceholders($widget_12:40_12){var1052}", $widget_12:40_12);
+~bankmain_itemnote($widget_12:24_13, $widget_12:26_14);
+if_setonvartransmit("bankmain_itemnote($widget_12:24_13, $widget_12:26_14){var115}", $widget_12:24_13);
+~bankmain_quantity_buttons($widget_12:30_22, $widget_12:32_23, $widget_12:34_24, $widget_12:36_25, $widget_12:38_26);
+if_setonvartransmit("bankmain_quantity_buttons($widget_12:30_22, $widget_12:32_23, $widget_12:34_24, $widget_12:36_25, $widget_12:38_26){var1666, var304}", $widget_12:28_27);
+cc_deleteall($widget_12:13_7);
+def_int $int35 = 0;
+def_int $int36 = 0;
+while ($int36 < 1220) {
+	cc_create($widget_12:13_7, ^iftype_graphic, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int36 = calc($int36 + 1);
+}
+def_int $width37 = calc(if_getwidth($widget_12:13_7) - 51 - 35);
+$int36 = 1;
+while ($int36 <= 9) {
+	cc_create($widget_12:13_7, ^iftype_graphic, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize($width37, 2, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic(tradebacking_dark);
+	cc_settiling(true);
+	$int36 = calc($int36 + 1);
+}
+$int36 = 1;
+while ($int36 <= 9) {
+	cc_create($widget_12:13_7, ^iftype_text, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize($width37, 15, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settextfont(p11_full);
+	cc_setcolour(0xe4d8a2);
+	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xe4d8a2)");
+	cc_settextshadow(true);
+	cc_settext("Tab <tostring($int36)>");
+	cc_setop(1, "View tab");
+	cc_setopbase("<col=ff9040><tostring($int36)></col>");
+	cc_setonop("bankmain_switchtab(
+		0 = $widget_12:1_0, 
+		1 = $widget_12:123_2, 
+		2 = $widget_12:13_7, 
+		3 = $widget_12:14_8, 
+		4 = $widget_12:17_9, 
+		5 = $widget_12:3_16, 
+		6 = $widget_12:5_17, 
+		7 = $widget_12:42_15, 
+		8 = $widget_12:11_18, 
+		9 = $widget_12:49_19, 
+		10 = $widget_12:50_20, 
+		11 = $widget_12:128_21, 
+		12 = event_op, 
+		13 = $int36, 
+		14 = $widget_12:44_28, 
+		15 = $widget_12:45_29, 
+		16 = $widget_12:46_30, 
+		17 = $widget_12:47_31, 
+		18 = $widget_12:4_32
+	)");
+	$int36 = calc($int36 + 1);
+}
+$int36 = 0;
+while ($int36 <= 9) {
+	cc_create($widget_12:13_7, ^iftype_rectangle, $int35);
+	$int35 = calc($int35 + 1);
+	cc_setsize(0, 32, ^setsize_abs, ^setsize_abs);
+	cc_setfill(true);
+	cc_settrans(255);
+	$int36 = calc($int36 + 1);
+}
+~bankmain_viewbuttons(
+	0 = $widget_12:10_4, 
+	1 = $widget_12:1_0, 
+	2 = $widget_12:123_2, 
+	3 = $widget_12:124_3, 
+	4 = $widget_12:13_7, 
+	5 = $widget_12:14_8, 
+	6 = $widget_12:17_9, 
+	7 = $widget_12:3_16, 
+	8 = $widget_12:5_17, 
+	9 = $widget_12:42_15, 
+	10 = $widget_12:11_18, 
+	11 = $widget_12:49_19, 
+	12 = $widget_12:50_20, 
+	13 = $widget_12:128_21, 
+	14 = $widget_12:10_4, 
+	15 = $widget_12:78_5, 
+	16 = $widget_12:54_6, 
+	17 = $widget_12:44_28, 
+	18 = $widget_12:45_29, 
+	19 = $widget_12:46_30, 
+	20 = $widget_12:47_31, 
+	21 = $widget_12:4_32
+);
+if_setoninvtransmit("bankmain_build(
+	0 = $widget_12:1_0, 
+	1 = $widget_12:123_2, 
+	2 = $widget_12:13_7, 
+	3 = $widget_12:14_8, 
+	4 = $widget_12:17_9, 
+	5 = $widget_12:3_16, 
+	6 = $widget_12:5_17, 
+	7 = $widget_12:42_15, 
+	8 = $widget_12:11_18, 
+	9 = $widget_12:49_19, 
+	10 = $widget_12:50_20, 
+	11 = $widget_12:128_21, 
+	12 = $widget_12:44_28, 
+	13 = $widget_12:45_29, 
+	14 = $widget_12:46_30, 
+	15 = $widget_12:47_31, 
+	16 = $widget_12:4_32
+){bank}", $widget_12:13_7);
+if_setonvartransmit("bankmain_build(
+	0 = $widget_12:1_0, 
+	1 = $widget_12:123_2, 
+	2 = $widget_12:13_7, 
+	3 = $widget_12:14_8, 
+	4 = $widget_12:17_9, 
+	5 = $widget_12:3_16, 
+	6 = $widget_12:5_17, 
+	7 = $widget_12:42_15, 
+	8 = $widget_12:11_18, 
+	9 = $widget_12:49_19, 
+	10 = $widget_12:50_20, 
+	11 = $widget_12:128_21, 
+	12 = $widget_12:44_28, 
+	13 = $widget_12:45_29, 
+	14 = $widget_12:46_30, 
+	15 = $widget_12:47_31, 
+	16 = $widget_12:4_32
+){var304, var115, var867, var1052, var1053, var1666, var1141}", $widget_12:13_7);
+%varcint51 = $int34;
+def_component $layer38 = if_getlayer($widget_12:1_0);
+if ($layer38 ! null) {
+	~bankmain_size_check($widget_12:1_0, $layer38, ^min_32bit_int, ^min_32bit_int, $widget_12:14_8, $widget_12:13_7);
+}
+cc_deleteall($widget_12:49_19);
+cc_create($widget_12:49_19, ^iftype_model, 0);
+.cc_create($widget_12:49_19, ^iftype_model, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setmodel(melting_pot_9037);
+.cc_setmodel(smoke_9056);
+cc_setmodelangle(15, 300, 141, 220, 0, 3500);
+.cc_setmodelangle(15, 300, 141, 220, 0, 3500);
+.cc_setmodelanim(smoke_2439);
+.cc_sethide(true);
+if_setonmouserepeat("script1312(true, $widget_12:49_19, $widget_12:128_21)", $widget_12:49_19);
+if_setonmouseleave("script1312(false, $widget_12:49_19, $widget_12:128_21)", $widget_12:49_19);
+~script5300($widget_12:8_33);
+if_setonvartransmit("script5299(event_com){var499}", $widget_12:8_33);
+if_setonop("bankmain_switchtab(
+	0 = $widget_12:1_0, 
+	1 = $widget_12:123_2, 
+	2 = $widget_12:13_7, 
+	3 = $widget_12:14_8, 
+	4 = $widget_12:17_9, 
+	5 = $widget_12:3_16, 
+	6 = $widget_12:5_17, 
+	7 = $widget_12:42_15, 
+	8 = $widget_12:11_18, 
+	9 = $widget_12:49_19, 
+	10 = $widget_12:50_20, 
+	11 = $widget_12:128_21, 
+	12 = event_op, 
+	13 = 15, 
+	14 = $widget_12:44_28, 
+	15 = $widget_12:45_29, 
+	16 = $widget_12:46_30, 
+	17 = $widget_12:47_31, 
+	18 = $widget_12:4_32
+)", interface_12:48);

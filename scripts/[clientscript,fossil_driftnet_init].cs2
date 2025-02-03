@@ -1,0 +1,9 @@
+// 2132
+[clientscript,fossil_driftnet_init](int $widget_607:1_0, component $widget_607:9_1, component $widget_607:11_2, component $widget_607:6_3, component $widget_607:7_4, component $widget_607:8_5, component $widget_607:14_6, component $widget_607:12_7, component $widget_607:13_8)
+if_sethide(true, $widget_607:9_1);
+~script2136($widget_607:14_6, "Cancel", $widget_607:9_1);
+~script2136($widget_607:12_7, "Discard all", $widget_607:9_1);
+~script2136($widget_607:13_8, "Bank all", $widget_607:9_1);
+~script2133($widget_607:6_3, "Discard all", "bankbuttons,6", "Are you sure you want to <col=ff0000>destroy</col><br>everything you've caught?", $widget_607:9_1, $widget_607:11_2, $widget_607:12_7, $widget_607:13_8);
+~script2133($widget_607:7_4, "Bank all", "bankbuttons,5", "Pay <tostring(5)> numulites to <col=ffffff>bank</col><br>everything you've caught?", $widget_607:9_1, $widget_607:11_2, $widget_607:13_8, $widget_607:12_7);
+~script2133($widget_607:8_5, "Take all", "bankbuttons,0", "", null, null, null, null);

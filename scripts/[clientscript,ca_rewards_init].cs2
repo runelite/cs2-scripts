@@ -1,0 +1,17 @@
+// 4811
+[clientscript,ca_rewards_init](component $widget_714:1_0, component $widget_714:3_1, component $widget_714:17_2, component $widget_714:18_3, component $widget_714:6_4, component $widget_714:7_5, component $widget_714:12_6, component $widget_714:13_7, component $widget_714:10_8, component $widget_714:14_9, component $widget_714:16_10, component $widget_714:15_11)
+~script4767($widget_714:14_9, $widget_714:16_10, $widget_714:15_11, 2);
+~steelborder($widget_714:3_1, "Combat Achievements - Rewards", 0);
+cc_deleteall($widget_714:10_8);
+~scrollbar_vertical($widget_714:10_8, $widget_714:6_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~ca_rewards_tiers_init(
+	0 = $widget_714:1_0, 
+	1 = $widget_714:17_2, 
+	2 = $widget_714:18_3, 
+	3 = $widget_714:6_4, 
+	4 = $widget_714:7_5, 
+	5 = $widget_714:12_6, 
+	6 = $widget_714:13_7, 
+	7 = $widget_714:10_8, 
+	8 = enum(int, struct, enum_3980, 0)
+);

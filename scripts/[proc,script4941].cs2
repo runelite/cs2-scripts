@@ -1,0 +1,86 @@
+// 4941
+[proc,script4941](int $int0, int $int1)
+def_component $component2 = null;
+def_struct $struct3 = enum(int, struct, enum_5312, $int1);
+switch_int ($int0) {
+	case 0 :
+		$component2 = interface_865:27;
+	case 1 :
+		$component2 = interface_865:28;
+	case 2 :
+		$component2 = interface_865:29;
+}
+cc_deleteall($component2);
+def_string $string0 = struct_param($struct3, param_1896);
+def_string $text1 = ~script4920($struct3);
+def_boolean $boolean4 = struct_param($struct3, param_1901);
+def_int $int5 = 0;
+if ($boolean4 = true) {
+	$int5 = ~script4980($struct3);
+}
+if ($int5 = 1) {
+	$string0 = append($string0, " (II)");
+} else if ($int5 = 2) {
+	$string0 = append($string0, " (III)");
+}
+def_enum $enum6 = enum(int, enum, enum_5364, calc($int5 + 1));
+def_graphic $graphic7 = enum(int, graphic, $enum6, struct_param($struct3, param_1914));
+def_graphic $graphic8 = enum(int, graphic, enum_5363, calc($int5 + 1));
+def_string $text2 = "+<tostring(struct_param($struct3, param_1903))> Glory per wave";
+~create_text(
+	0 = $component2, 
+	1 = 0, 
+	2 = b12_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_top, 
+	7 = 0, 
+	8 = 20, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs, 
+	11 = $string0, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 13
+);
+~create_text(
+	0 = $component2, 
+	1 = 1, 
+	2 = p12_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 0, 
+	8 = 60, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs, 
+	11 = $text1, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+~create_text(
+	0 = $component2, 
+	1 = 2, 
+	2 = p11_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_bottom, 
+	7 = 0, 
+	8 = 20, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs, 
+	11 = $text2, 
+	12 = true, 
+	13 = 0x0dc10d, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_bottom, 
+	16 = 0
+);

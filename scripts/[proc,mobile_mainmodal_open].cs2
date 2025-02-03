@@ -1,0 +1,22 @@
+// 2527
+[proc,mobile_mainmodal_open]
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 ! enum_1745) {
+	return;
+}
+def_component $component1 = enum(component, component, $enum0, interface_161:16);
+def_int $height2 = if_getheight($component1);
+def_int $width3 = if_getwidth($component1);
+def_int $height4 = if_getheight(if_getlayer($component1));
+def_int $width5 = if_getwidth(if_getlayer($component1));
+def_int $int6 = 0;
+def_int $height7 = calc($height4 - 166 + 26);
+if ($height2 >= $height7) {
+	$int6 = 1;
+}
+if (calc($width3 + 204 - 3) >= $width5) {
+	~toplevel_sidebutton_switch(-1, $enum0, 0);
+} else if ((%varcint41 = 1337 | %varcint1220 = 1) & if_hassub(interface_162:564) = false & %varbit6538 = 1) {
+	~toplevel_sidebutton_switch(-1, $enum0, 0);
+}
+~script2526;

@@ -1,0 +1,87 @@
+// 901
+[clientscript,toplevel_init](component $component0, enum $enum1)
+if_setonsubchange("toplevel_subchange(event_com, $enum1)", $component0);
+if_setonresize("toplevel_resize(event_com, $enum1)", $component0);
+if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){
+	0 = var1021, 
+	1 = var1055, 
+	2 = var1054, 
+	3 = var1734, 
+	4 = var1431, 
+	5 = var1227, 
+	6 = var439, 
+	7 = var2972, 
+	8 = var1141, 
+	9 = var1795, 
+	10 = var1697, 
+	11 = var168, 
+	12 = var169, 
+	13 = var872, 
+	14 = var167, 
+	15 = var3154, 
+	16 = var3698, 
+	17 = var3109, 
+	18 = var3782, 
+	19 = var3796
+}", $component0);
+def_int $int2 = 0;
+def_component $component3 = enum(int, component, enum_1138, $int2);
+while ($component3 ! null) {
+	$component3 = enum(component, component, $enum1, $component3);
+	if ($component3 ! null) {
+		if_setop(1, enum(int, string, enum_1141, $int2), $component3);
+		if_setonop("toplevel_sidebutton_op(event_op, $enum1, $int2)", $component3);
+		if ($enum1 = enum_1745) {
+			if_setnoclickthrough(true, $component3);
+		}
+	}
+	$int2 = calc($int2 + 1);
+	$component3 = enum(int, component, enum_1138, $int2);
+}
+if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
+	%varcint171 = 3;
+}
+%varcint172, %varcint173 = null, -1;
+$component3 = enum(component, component, $enum1, interface_161:31);
+~script7560($component3, $enum1);
+~script1044;
+if ($enum1 = enum_139) {
+	setshowmouseovertext(false);
+	setshowmousecross(false);
+	setshowloadingmessages(false);
+	setclickgraphic(cross, null);
+	_3131(false);
+} else if ($enum1 = enum_1745) {
+	setshowmouseovertext(true);
+	setshowmousecross(true);
+	setshowloadingmessages(true);
+	~script5965;
+	_3131(true);
+	~script4729(interface_601:7, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(interface_601:19, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(interface_601:16, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script868(interface_601:38);
+	~script957(interface_601:39);
+	~script7608;
+	~script7612;
+	if (if_getheight(interface_601:20) < 503) {
+		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, interface_601:50);
+	}
+} else {
+	setshowmouseovertext(true);
+	setshowmousecross(true);
+	setshowloadingmessages(true);
+	setclickgraphic(cross, null);
+	_3131(false);
+}
+~account_update_display;
+~notification_init(enum(component, component, $enum1, interface_161:13));
+~gravestone_hud_init(enum(component, component, $enum1, interface_161:21));
+def_component $component4 = enum(component, component, $enum1, interface_161:11);
+def_component $component5 = enum(component, component, $enum1, interface_161:12);
+if ($component4 ! null & $component5 ! null) {
+	~helper_init($component4, $component5);
+}
+~toplevel_redraw($component0, $enum1);
+~toplevel_subchange($component0, $enum1);
+~toplevel_sidebutton_switch(%varcint171, $enum1, 0);

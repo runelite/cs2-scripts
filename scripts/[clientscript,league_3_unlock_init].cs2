@@ -1,0 +1,8 @@
+// 5806
+[clientscript,league_3_unlock_init](component $widget_733:22_0, component $widget_733:24_1, component $widget_733:23_2, component $widget_733:21_3, component $widget_733:9_4, int $widget_733:18_5, int $widget_733:20_6, int $widget_733:19_7, int $widget_733:10_8, int $widget_733:11_9)
+~leagues_close_button($widget_733:21_3, false, 0);
+def_string $text0 = "League Unlocks";
+def_int $comsubid10 = ~steelborder(interface_733:2, $text0, 1);
+if_sethide(true, interface_733:40);
+if_sethide(true, interface_733:25);
+~league_3_unlocks_draw_interface($widget_733:22_0, $widget_733:24_1, $widget_733:23_2, $widget_733:9_4, $comsubid10);

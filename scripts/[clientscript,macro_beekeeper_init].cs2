@@ -1,0 +1,53 @@
+// 3056
+[clientscript,macro_beekeeper_init](component $widget_420:0_0, component $widget_420:10_1, component $widget_420:11_2, component $widget_420:12_3, component $widget_420:13_4, component $widget_420:15_5, component $widget_420:17_6, component $widget_420:19_7, component $widget_420:21_8, component $widget_420:22_9, component $widget_420:23_10, component $widget_420:25_11)
+if (~on_mobile = false) {
+	if_setonmouseover("macro_beekeeper_confirmbutton(true, $widget_420:23_10, $widget_420:25_11)", $widget_420:22_9);
+	if_setonmouseleave("macro_beekeeper_confirmbutton(false, $widget_420:23_10, $widget_420:25_11)", $widget_420:22_9);
+}
+%varcint404 = random(2048);
+%varcint407 = random(2048);
+%varcint410 = random(2048);
+%varcint413 = random(2048);
+%varcint403 = calc(25 - randominc(50));
+%varcint405 = calc(25 - randominc(50));
+%varcint406 = calc(25 - randominc(50));
+%varcint408 = calc(25 - randominc(50));
+%varcint409 = calc(25 - randominc(50));
+%varcint411 = calc(25 - randominc(50));
+%varcint412 = calc(25 - randominc(50));
+%varcint414 = calc(25 - randominc(50));
+~macro_beekeeper_update(
+	0 = 1, 
+	1 = $widget_420:0_0, 
+	2 = $widget_420:10_1, 
+	3 = $widget_420:11_2, 
+	4 = $widget_420:12_3, 
+	5 = $widget_420:13_4, 
+	6 = $widget_420:15_5, 
+	7 = $widget_420:17_6, 
+	8 = $widget_420:19_7, 
+	9 = $widget_420:21_8
+);
+if_setonvartransmit("macro_beekeeper_transmit(
+	0 = $widget_420:0_0, 
+	1 = $widget_420:10_1, 
+	2 = $widget_420:11_2, 
+	3 = $widget_420:12_3, 
+	4 = $widget_420:13_4, 
+	5 = $widget_420:15_5, 
+	6 = $widget_420:17_6, 
+	7 = $widget_420:19_7, 
+	8 = $widget_420:21_8
+){var805}", $widget_420:0_0);
+if_setontimer("macro_beekeeper_timer(
+	0 = 0, 
+	1 = $widget_420:0_0, 
+	2 = $widget_420:10_1, 
+	3 = $widget_420:11_2, 
+	4 = $widget_420:12_3, 
+	5 = $widget_420:13_4, 
+	6 = $widget_420:15_5, 
+	7 = $widget_420:17_6, 
+	8 = $widget_420:19_7, 
+	9 = $widget_420:21_8
+)", $widget_420:0_0);

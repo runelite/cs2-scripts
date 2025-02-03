@@ -1,0 +1,9 @@
+// 3058
+[clientscript,macro_beekeeper_confirmbutton](boolean $boolean0, component $widget_420:23_1, component $widget_420:25_2)
+if ($boolean0 = true) {
+	if_sethide(false, $widget_420:25_2);
+	if_setcolour(^white, $widget_420:23_1);
+} else {
+	if_sethide(true, $widget_420:25_2);
+	if_setcolour(0xffffc8, $widget_420:23_1);
+}

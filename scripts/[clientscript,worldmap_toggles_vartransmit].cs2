@@ -1,0 +1,5 @@
+// 1719
+[clientscript,worldmap_toggles_vartransmit](component $widget_595:21_0, int $index1, int $comsubid2, component $widget_595:9_3, component $widget_595:13_4, component $widget_595:41_5)
+if (cc_find($widget_595:21_0, $comsubid2) = ^true & .cc_find($widget_595:21_0, $index1) = ^true) {
+	~worldmap_toggles_set($widget_595:21_0, $index1, $widget_595:9_3, $widget_595:13_4, $widget_595:41_5);
+}

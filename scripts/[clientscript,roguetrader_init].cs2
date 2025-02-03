@@ -1,0 +1,23 @@
+// 4162
+[clientscript,roguetrader_init](component $widget_292:9_0, component $widget_292:14_1, component $widget_292:10_2, component $widget_292:12_3, component $widget_292:8_4, component $widget_292:11_5, component $widget_292:7_6, component $widget_292:13_7)
+def_int $int8 = %varbit12163;
+def_int $int9 = %varbit12161;
+~roguetrader_game_size($widget_292:7_6, $widget_292:11_5, $int8);
+~roguetrader_draw_frames($widget_292:10_2, $widget_292:12_3, $widget_292:8_4, $int8);
+~roguetrader_draw_runes($int8, $widget_292:9_0);
+~roguetrader_draw_game($int8, $int9, $widget_292:14_1, $widget_292:13_7);
+if_setonvartransmit("roguetrader_selectrune_transmit($int8, $widget_292:9_0){var540}", $widget_292:9_0);
+if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $widget_292:14_1, $widget_292:13_7){
+	0 = var261, 
+	1 = var262, 
+	2 = var263, 
+	3 = var264, 
+	4 = var265, 
+	5 = var266, 
+	6 = var2980, 
+	7 = var2981, 
+	8 = var2982, 
+	9 = var2983, 
+	10 = var2984, 
+	11 = var540
+}", $widget_292:14_1);

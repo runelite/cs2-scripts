@@ -1,0 +1,116 @@
+// 2945
+[proc,adventurepath_init](component $widget_642:3_0, component $widget_642:34_1, component $widget_642:35_2, component $widget_642:5_3, component $widget_642:7_4, component $widget_642:27_5, component $widget_642:28_6, component $widget_642:30_7, component $widget_642:31_8, component $widget_642:29_9, component $widget_642:32_10, component $widget_642:21_11, component $widget_642:23_12, component $widget_642:24_13, component $widget_642:25_14, component $widget_642:0_15, component $widget_642:1_16, component $widget_642:4_17, component $widget_642:33_18, component $widget_642:8_19, component $widget_642:11_20, component $widget_642:13_21, component $widget_642:16_22, component $widget_642:17_23, component $widget_642:19_24, component $widget_642:12_25, component $widget_642:26_26)(int)
+def_struct $struct27 = null;
+def_int $int28 = 0;
+def_int $width29 = if_getwidth($widget_642:35_2);
+def_int $int30 = 286;
+def_int $int31 = calc($width29 / 2 - 5 * 2);
+def_int $int32 = 0;
+def_int $int33 = 0;
+def_int $count34 = 0;
+def_int $int35 = 2047;
+while ($count34 < enum_getoutputcount(enum_2618)) {
+	$struct27 = enum(int, struct, enum_2618, $count34);
+	if ($struct27 = null) {
+		if_close;
+		mes("Adventure Paths are not avaliable at this current time.");
+		return(0);
+	}
+	$int35 = struct_param($struct27, param_829);
+	if (~script3512($int35) = 1) {
+		$int28 = ~adventurepath_draw_path(
+			0 = $widget_642:3_0, 
+			1 = $widget_642:35_2, 
+			2 = $int28, 
+			3 = $struct27, 
+			4 = $width29, 
+			5 = $int30, 
+			6 = $int31, 
+			7 = $int32, 
+			8 = $int33, 
+			9 = $widget_642:5_3, 
+			10 = $widget_642:7_4, 
+			11 = $widget_642:27_5, 
+			12 = $widget_642:28_6, 
+			13 = $widget_642:30_7, 
+			14 = $widget_642:31_8, 
+			15 = $widget_642:29_9, 
+			16 = $widget_642:32_10, 
+			17 = $widget_642:21_11, 
+			18 = $widget_642:23_12, 
+			19 = $widget_642:24_13, 
+			20 = $widget_642:25_14, 
+			21 = $count34, 
+			22 = $widget_642:33_18, 
+			23 = $widget_642:4_17, 
+			24 = $widget_642:8_19, 
+			25 = $widget_642:11_20, 
+			26 = $widget_642:13_21, 
+			27 = $widget_642:16_22, 
+			28 = $widget_642:17_23, 
+			29 = $widget_642:19_24, 
+			30 = $widget_642:12_25, 
+			31 = $widget_642:26_26
+		);
+		$int32 = calc($int32 + 1);
+		if ($int32 >= 2) {
+			$int32 = 0;
+			$int33 = calc($int33 + 1);
+		}
+	}
+	$count34 = calc($count34 + 1);
+}
+if ($int32 = 0) {
+	$int33 = calc($int33 - 1);
+}
+$int30 = calc($int30 / 2 * ($int33 + 1));
+if_setonvartransmit("adventurepath_set_info_transmit(
+	0 = $widget_642:30_7, 
+	1 = $widget_642:31_8, 
+	2 = $widget_642:29_9, 
+	3 = $widget_642:32_10, 
+	4 = $widget_642:21_11, 
+	5 = $widget_642:23_12, 
+	6 = $widget_642:5_3, 
+	7 = $widget_642:3_0, 
+	8 = $widget_642:7_4, 
+	9 = $widget_642:24_13, 
+	10 = $widget_642:25_14, 
+	11 = $widget_642:33_18, 
+	12 = $widget_642:4_17, 
+	13 = $widget_642:8_19, 
+	14 = $widget_642:11_20, 
+	15 = $widget_642:13_21, 
+	16 = $widget_642:16_22, 
+	17 = $widget_642:17_23, 
+	18 = $widget_642:19_24, 
+	19 = $widget_642:12_25, 
+	20 = $widget_642:26_26
+){var2358, var2357}", $widget_642:1_16);
+if_setonvartransmit("adventurepath_task_init_transmit(
+	0 = $widget_642:3_0, 
+	1 = $widget_642:35_2, 
+	2 = $widget_642:5_3, 
+	3 = $widget_642:7_4, 
+	4 = $widget_642:27_5, 
+	5 = $widget_642:28_6, 
+	6 = $widget_642:30_7, 
+	7 = $widget_642:31_8, 
+	8 = $widget_642:29_9, 
+	9 = $widget_642:32_10, 
+	10 = $widget_642:21_11, 
+	11 = $widget_642:23_12, 
+	12 = $widget_642:24_13, 
+	13 = $widget_642:25_14, 
+	14 = $widget_642:33_18, 
+	15 = $widget_642:4_17, 
+	16 = $widget_642:8_19, 
+	17 = $widget_642:11_20, 
+	18 = $widget_642:13_21, 
+	19 = $widget_642:16_22, 
+	20 = $widget_642:17_23, 
+	21 = $widget_642:19_24, 
+	22 = $widget_642:12_25, 
+	23 = $widget_642:26_26
+){var2358, var2357}", $widget_642:0_15);
+return($int30);

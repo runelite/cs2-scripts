@@ -1,0 +1,22 @@
+// 1099
+[proc,bugreport_parse](string $string0, int $int0)(string)
+$string0 = escape($string0);
+def_int $length1 = string_length($string0);
+def_int $int2 = 0;
+if ($length1 > 0 & compare(substring($string0, calc($length1 - 1), $length1), "|") = 0) {
+	$int2 = 1;
+}
+def_string $string1 = "";
+def_string $string2 = "";
+while (string_length($string0) > 0) {
+	$string2, $string0 = ~script632($string0);
+	if (string_length($string1) > 0) {
+		$string1 = append($string1, append("<br>", $string2));
+	} else {
+		$string1 = $string2;
+	}
+}
+if ($int2 = 1 & $int0 = 1) {
+	return(append($string1, "<br>"));
+}
+return($string1);

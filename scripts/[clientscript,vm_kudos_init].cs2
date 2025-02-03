@@ -1,0 +1,18 @@
+// 2077
+[clientscript,vm_kudos_init](component $widget_532:1_0, component $widget_532:2_1)
+~script4729($widget_532:1_0, $widget_532:2_1, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+cc_deleteall($widget_532:2_1);
+cc_create($widget_532:2_1, ^iftype_text, 0);
+.cc_create($widget_532:2_1, ^iftype_text, 1);
+cc_settextfont(b12_full);
+.cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_setcolour(0xff981f);
+.cc_setcolour(0xff981f);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+~vm_kudos_update;
+if_setonvartransmit("vm_kudos_update($widget_532:2_1, cc_getid, .cc_getid){var1010}", $widget_532:2_1);

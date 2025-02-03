@@ -1,0 +1,51 @@
+// 2520
+[proc,settings_custom_dependency](struct $struct0)(boolean)
+def_int $int1 = struct_param($struct0, param_1077);
+switch_int ($int1) {
+	case 87, 89, 92, 94, 97, 99, 101, 103, 105, 107, 196 :
+		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+			return(false);
+		}
+		return(true);
+	case 193, 198 :
+		if (~is_group_iron = 0) {
+			return(false);
+		}
+		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+			return(false);
+		}
+		return(true);
+	case 194, 199 :
+		if (~is_group_iron = 0) {
+			return(false);
+		}
+		if (getwindowmode = ^windowmode_fixed | %varbit4608 = 0) {
+			return(false);
+		}
+		return(true);
+	case 206 :
+		if (~deadman_world ! 0) {
+			return(false);
+		}
+	case 191, 320 :
+		if (~on_enhanced_mobile = 1 & %varbit13981 = 1) {
+			return(true);
+		}
+		if (~on_enhanced_desktop = 1 & %varbit13982 = 0) {
+			return(true);
+		}
+		return(false);
+	case 296 :
+		if (%varbit4470 = 0) {
+			return(false);
+		}
+	case 380 :
+		if (%var77 ! 2 & %var76 < 6) {
+			return(false);
+		}
+	case 381 :
+		if (%varbit9610 < 3) {
+			return(false);
+		}
+}
+return(true);

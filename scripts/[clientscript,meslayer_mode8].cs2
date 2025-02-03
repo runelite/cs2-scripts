@@ -1,0 +1,17 @@
+// 109
+[clientscript,meslayer_mode8](string $text0)
+~meslayer_open(8);
+if_settext($text0, interface_162:41);
+~script222("");
+def_string $string1 = "";
+if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string1)", interface_162:42);
+if_setondialogabort("meslayer_ondialogabort", interface_162:42);
+~meslayer_initlastnames;
+if (string_length(%varcstring361) > 0) {
+	~meslayer_dynamicbutton;
+	cc_settext("<col=000000>Last name:</col> <%varcstring361>");
+	cc_setonclick("meslayer_lastname_click(8, %varcstring361)");
+}
+if (~on_mobile = true) {
+	~keyboard_show(0, 12);
+}

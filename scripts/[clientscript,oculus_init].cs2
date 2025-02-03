@@ -1,0 +1,23 @@
+// 114
+[clientscript,oculus_init](component $widget_16:0_0, component $widget_16:4_1, component $widget_16:3_2, component $widget_16:8_3, component $widget_16:21_4, component $widget_16:32_5)
+if (%varcint204 > 15 | %varcint204 < 3) {
+	%varcint204 = 9;
+}
+_3129(%varcint204, 2);
+if_setonscrollwheel("camera_zoom(event_mousey)", $widget_16:0_0);
+if_setnoclickthrough(true, $widget_16:0_0);
+renderself(false);
+~steelborder($widget_16:4_1, "Camera Controls", 1);
+cc_deleteall($widget_16:0_0);
+cc_create($widget_16:0_0, ^iftype_text, 0);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+cc_settext("");
+~script1655(%varcint214, $widget_16:0_0, $widget_16:3_2, $widget_16:8_3, $widget_16:21_4, $widget_16:32_5);
+cc_create($widget_16:0_0, ^iftype_text, 1);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+cc_settext("");
+cc_setonkey("oculus_controls(event_keycode)");

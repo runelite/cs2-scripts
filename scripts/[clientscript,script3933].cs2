@@ -1,0 +1,66 @@
+// 3933
+[clientscript,script3933](component $widget_116:99_0, component $widget_116:110_1, component $widget_116:111_2, component $widget_116:43_3, component $widget_116:98_4)
+cc_deleteall($widget_116:110_1);
+if (~on_enhanced_any = 0) {
+	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top, $widget_116:98_4);
+} else {
+	if_setposition(0, 42, ^setpos_abs_centre, ^setpos_abs_top, $widget_116:98_4);
+	if_setonvartransmit("script7100($widget_116:111_2){var3796}", $widget_116:110_1);
+	~script7101($widget_116:111_2);
+}
+def_int $int5 = struct_param(music_volume_2753, param_1101);
+def_int $int6 = 0;
+def_int $width7 = if_getwidth($widget_116:110_1);
+def_graphic $graphic8 = "options_icons,1";
+def_int $int9 = ~settings_get_slider(30);
+~settings_set_slider(30, $int9);
+def_string $string0 = "Mute Music";
+def_string $string1 = "Unmute Music";
+~settings_create_icon(
+	0 = $int9, 
+	1 = 30, 
+	2 = $widget_116:111_2, 
+	3 = $widget_116:110_1, 
+	4 = $int5, 
+	5 = $graphic8, 
+	6 = $widget_116:99_0, 
+	7 = $string0, 
+	8 = $string1, 
+	9 = $widget_116:43_3
+);
+if_setonvartransmit("script3939(
+	0 = 30, 
+	1 = $widget_116:111_2, 
+	2 = $widget_116:110_1, 
+	3 = $int5, 
+	4 = $graphic8, 
+	5 = $widget_116:99_0, 
+	6 = $string0, 
+	7 = $string1, 
+	8 = $widget_116:43_3
+){var168}", $widget_116:111_2);
+if_setnoclickthrough(true, $widget_116:111_2);
+if_setonclick("opsound(0, 0)", $widget_116:111_2);
+while ($int6 <= $int5) {
+	cc_create($widget_116:110_1, ^iftype_rectangle, $int6);
+	cc_setop(1, "Adjust Music Volume");
+	cc_setposition(scale($int6, $int5, $width7), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(scale(calc(1 + $int6), $int5, $width7) - scale($int6, $int5, $width7)), 0, ^setsize_abs, ^setsize_minus);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	cc_settrans(255);
+	cc_setonop("script3940(
+		0 = 30, 
+		1 = $int6, 
+		2 = $widget_116:111_2, 
+		3 = $widget_116:110_1, 
+		4 = $int5, 
+		5 = $graphic8, 
+		6 = $widget_116:99_0, 
+		7 = $string0, 
+		8 = $string1, 
+		9 = $widget_116:43_3
+	)");
+	$int6 = calc($int6 + 1);
+}
+~script3941($int9, $widget_116:111_2, $widget_116:110_1, $int5);

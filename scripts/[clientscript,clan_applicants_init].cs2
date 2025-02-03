@@ -1,0 +1,50 @@
+// 4374
+[clientscript,clan_applicants_init](component $widget_699:1_0, component $widget_699:3_1, component $widget_699:4_2, component $widget_699:5_3, component $widget_699:6_4, component $widget_699:11_5, component $widget_699:32_6, component $widget_699:33_7, component $widget_699:34_8, component $widget_699:39_9, component $widget_699:40_10)
+def_int $int11 = 0;
+while ($int11 < 20) {
+	if_sethide(true, enum(int, component, enum_3805, $int11));
+	$int11 = calc($int11 + 1);
+}
+if_setscrollsize(0, 0, $widget_699:11_5);
+if_setscrollpos(0, 0, $widget_699:11_5);
+~scrollbar_vertical($widget_699:32_6, $widget_699:11_5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+%varcint43 = 0;
+cc_deleteall($widget_699:11_5);
+cc_create($widget_699:11_5, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x808080);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+if_sethide(true, $widget_699:33_7);
+if_sethide(true, $widget_699:34_8);
+if_sethide(true, $widget_699:39_9);
+if_sethide(true, $widget_699:40_10);
+if_sethide(true, $widget_699:4_2);
+if_sethide(true, $widget_699:5_3);
+if_sethide(true, $widget_699:6_4);
+cc_deleteall($widget_699:1_0);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:33_7));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:34_8));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:39_9));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:40_10));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:4_2));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:5_3));
+cc_sethide(true);
+cc_create($widget_699:1_0, ^iftype_rectangle, enum(component, int, enum_3806, $widget_699:6_4));
+cc_sethide(true);
+~script1558($widget_699:33_7, "<col=ff0000>Back</col>", $widget_699:1_0, enum_3806, -1);
+~script1558($widget_699:34_8, "<col=0dc10d>Refresh</col>", $widget_699:1_0, enum_3806, -1);
+def_int $int12 = ~script4384($widget_699:4_2, $widget_699:1_0, $widget_699:4_2, $widget_699:5_3, $widget_699:6_4);
+def_int $int13 = ~script4384($widget_699:5_3, $widget_699:1_0, $widget_699:4_2, $widget_699:5_3, $widget_699:6_4);
+def_int $int14 = ~script4384($widget_699:6_4, $widget_699:1_0, $widget_699:4_2, $widget_699:5_3, $widget_699:6_4);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_699:4_2);
+if_setposition(calc($int12 + (if_getwidth($widget_699:3_1) - ($int12 + $int13 + $int14)) / 2), 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_699:5_3);
+if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, $widget_699:6_4);

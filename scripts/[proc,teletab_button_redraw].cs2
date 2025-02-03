@@ -1,0 +1,63 @@
+// 3591
+[proc,teletab_button_redraw](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29)
+def_enum $enum30 = %var4074;
+if ($enum30 = null) {
+	return;
+}
+def_namedobj $namedobj31 = enum(int, namedobj, $enum30, calc($int1 - 1));
+def_string $text0 = enum(obj, string, enum_5272, $namedobj31);
+if ($namedobj31 = null) {
+	if_sethide(true, $component2);
+	return;
+}
+if_sethide(false, $component2);
+def_obj $obj32 = oc_param($namedobj31, param_608);
+if ($obj32 = null) {
+	return;
+}
+def_boolean $boolean33 = false;
+if (stat(magic) >= oc_param($obj32, spell_levelreq) & ~magic_spellbook_hasrunes($obj32, inv_getobj(worn, 3), inv_getobj(worn, 5)) = 1) {
+	$boolean33 = true;
+}
+if (%varbit10600 = $int1) {
+	~teletab_button_draw(true, $enum30, $text0, $int1, $component2, $boolean33);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setonop("opsound(event_op, 2)", $component2);
+} else {
+	~teletab_button_draw(false, $enum30, $text0, $int1, $component2, $boolean33);
+	if_setonmouserepeat("teletab_button_draw(true, $enum30, $text0, $int1, $component2, $boolean33)", $component2);
+	if_setonmouseleave("teletab_button_draw(false, $enum30, $text0, $int1, $component2, $boolean33)", $component2);
+	if_setonop("teletab_button_op(
+		0 = $component0, 
+		1 = event_op, 
+		2 = $int1, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23, 
+		24 = $component24, 
+		25 = $component25, 
+		26 = $component26, 
+		27 = $component27, 
+		28 = $component28, 
+		29 = $component29
+	)", $component2);
+}

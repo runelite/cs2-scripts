@@ -1,0 +1,59 @@
+// 1130
+[clientscript,league_trophies_update](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4)
+def_enum $enum5 = enum_2778;
+def_struct $struct6 = enum(int, struct, enum_2670, ~league_current_league);
+if (~league_world = 1 & struct_param($struct6, param_2041) ! null) {
+	$enum5 = struct_param($struct6, param_2041);
+}
+def_int $int7 = 0;
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+while ($int9 <= enum_getoutputcount($enum5)) {
+	if (cc_find(interface_447:3, $int9) = ^true) {
+		if ($int9 < 32) {
+			if (testbit($flags0, $int9) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
+			}
+		} else if ($int9 < 64) {
+			if (testbit($flags1, calc($int9 - 32)) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
+			}
+		} else if ($int9 < 96) {
+			if (testbit($flags2, calc($int9 - 64)) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
+			}
+		} else if ($int9 < 128) {
+			if (testbit($flags3, calc($int9 - 96)) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
+			}
+		} else if ($int9 < 160) {
+			if (testbit($flags4, calc($int9 - 128)) = ^true) {
+				$int7 = 1;
+			} else {
+				$int7 = 0;
+			}
+		} else {
+			$int7 = 0;
+		}
+		cc_clearops;
+		$namedobj8 = enum(int, namedobj, enum_2778, $int9);
+		if ($namedobj8 = null | ~script1129($namedobj8) = 0) {
+			cc_sethide(true);
+		} else if ($int7 = 1) {
+			cc_setop(1, "Take");
+			cc_settrans(0);
+		} else {
+			cc_setop(1, "Store");
+			cc_settrans(180);
+		}
+	}
+	$int9 = calc($int9 + 1);
+}

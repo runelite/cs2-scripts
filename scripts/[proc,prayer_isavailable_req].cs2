@@ -1,0 +1,83 @@
+// 4561
+[proc,prayer_isavailable_req](obj $obj0, boolean $boolean1, int $int2, boolean $boolean3, int $int4, int $int5, int $int6)(int)
+switch_obj ($obj0) {
+	case chivalry_20828 :
+		if (%varbit10949 = 1 & %var5 = 10) {
+			return(1);
+		} else if ($boolean1 = false | $int2 < 65 | $boolean3 = false) {
+			return(0);
+		}
+	case piety_20829 :
+		if ($boolean1 = false | $int2 < 70 | $boolean3 = false) {
+			return(0);
+		}
+	case retribution_20818, redemption_20819, smite_20820 :
+		if ($boolean1 = false) {
+			return(0);
+		}
+	case rigour_20827 :
+		if (%varbit10949 = 1 & $int4 = 1) {
+			return(1);
+		} else if ($boolean1 = false | $int2 < 70 | $int4 = 0) {
+			return(0);
+		}
+	case augury_20830 :
+		if (%varbit10949 = 1 & $int5 = 1) {
+			return(1);
+		} else if ($boolean1 = false | $int2 < 70 | $int5 = 0) {
+			return(0);
+		}
+	case preserve_20831 :
+		if ($boolean1 = false | %varbit5453 = 0 | $int6 = 1) {
+			return(0);
+		}
+	case decimate_25970 :
+		if ($boolean1 = false | %varbit14852 = 0) {
+			return(0);
+		}
+	case annihilate_25969 :
+		if ($boolean1 = false | %varbit14853 = 0) {
+			return(0);
+		}
+	case vaporise_25989 :
+		if ($boolean1 = false | %varbit14854 = 0) {
+			return(0);
+		}
+	case fumus_vow_26981 :
+		if ($boolean1 = false | %varbit14855 = 0) {
+			return(0);
+		}
+	case cruors_vow_25978 :
+		if ($boolean1 = false | %varbit14858 = 0) {
+			return(0);
+		}
+	case umbras_vow_25977 :
+		if ($boolean1 = false | %varbit14859 = 0) {
+			return(0);
+		}
+	case glacies_vow_25954 :
+		if ($boolean1 = false | %varbit14860 = 0) {
+			return(0);
+		}
+	case intensify_25951 :
+		if ($boolean1 = false | %varbit14977 = 0) {
+			return(0);
+		}
+	case rebuke_25948 :
+		if ($boolean1 = false | %varbit14856 = 0) {
+			return(0);
+		}
+	case vindication_25945 :
+		if ($boolean1 = false | %varbit14861 = 0) {
+			return(0);
+		}
+	case rapid_heal_20810, rapid_restore_20809 :
+		if ($int6 = 1) {
+			return(0);
+		}
+	case protect_item_20811 :
+		if (~high_risk_world = 1 | ~deadman_world ! 0 | $int6 = 1) {
+			return(0);
+		}
+}
+return(1);

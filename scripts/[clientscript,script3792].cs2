@@ -1,0 +1,26 @@
+// 3792
+[clientscript,script3792](component $widget_189:4_0, component $widget_189:5_1, component $widget_189:10_2, component $widget_189:11_3, component $widget_189:12_4, component $widget_189:32_5)
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2511 / 10)), $widget_189:4_0);
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2511 % 10)), $widget_189:5_1);
+if_setobject_nonum(%var850, 1, $widget_189:32_5);
+if (%varbit2540 = 0) {
+	if_setmodel(model_17219, $widget_189:11_3);
+	if_setmodel(null, $widget_189:10_2);
+	if_setmodel(null, $widget_189:12_4);
+	return;
+}
+if (%varbit2540 > %varbit2511) {
+	if_setmodel(model_17219, $widget_189:11_3);
+	if_setmodel(model_17221, $widget_189:10_2);
+	if_setmodel(model_17217, $widget_189:12_4);
+	return;
+}
+if (%varbit2540 < %varbit2511) {
+	if_setmodel(model_17219, $widget_189:11_3);
+	if_setmodel(model_17220, $widget_189:10_2);
+	if_setmodel(model_17218, $widget_189:12_4);
+	return;
+}
+if_setmodel(model_17216, $widget_189:11_3);
+if_setmodel(null, $widget_189:10_2);
+if_setmodel(null, $widget_189:12_4);

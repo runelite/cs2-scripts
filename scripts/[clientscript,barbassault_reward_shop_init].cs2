@@ -1,0 +1,12 @@
+// 1364
+[clientscript,barbassault_reward_shop_init](component $widget_491:0_0, component $widget_491:2_1, component $widget_491:3_2, component $widget_491:4_3, component $widget_491:8_4)
+~steelborder($widget_491:0_0, "Barbarian Assault Reward Shop", 0);
+~script1367($widget_491:2_1, $widget_491:3_2);
+~script1366;
+if_setonvartransmit("script1365($widget_491:2_1, $widget_491:3_2){var946, var947, var948, var949, var466, var261, var262, var263}", $widget_491:2_1);
+if_setoninvtransmit("script1365($widget_491:2_1, $widget_491:3_2){inv}", $widget_491:2_1);
+if_setonmouseover("text_colour_swapper(event_com, ^white)", $widget_491:8_4);
+if_setonmouseleave("text_colour_swapper(event_com, 0x333300)", $widget_491:8_4);
+if_setop(1, "Accept", $widget_491:8_4);
+if_setonop("text_colour_swapper(event_com, 0x333300)", $widget_491:8_4);
+~scrollbar_vertical($widget_491:4_3, $widget_491:2_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

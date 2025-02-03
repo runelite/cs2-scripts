@@ -1,0 +1,6 @@
+// 3340
+[clientscript,adventurepath_side_settings_mouseleave](component $widget_644:12_0, int $comsubid1)
+if (cc_find($widget_644:12_0, $comsubid1) = ^true) {
+	cc_settrans(0);
+}
+~v2_stone_button_change_out($widget_644:12_0, 0);

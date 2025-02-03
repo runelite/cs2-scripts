@@ -1,0 +1,17 @@
+// 7680
+[proc,script7680](component $component0, int $int1, int $x2, int $y3, enum $enum4)(int)
+~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = null, 
+	3 = $x2, 
+	4 = $y3, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_setontimer("script7681($component0, $int1, ~script7775(100, 400), $enum4, 0)");
+return(calc($int1 + 1));

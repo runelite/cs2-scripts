@@ -1,0 +1,14 @@
+// 127
+[clientscript,ignore_init](component $widget_432:0_0, component $widget_432:1_1, component $widget_432:3_2, component $widget_432:5_3, component $widget_432:7_4, component $widget_432:8_5, component $widget_432:9_6, component $widget_432:10_7, component $widget_432:11_8, component $widget_432:16_9)
+~ignore_appearance($widget_432:1_1);
+if_settext("Ignore List - World <tostring(map_world)>", $widget_432:3_2);
+cc_deleteall($widget_432:10_7);
+~scrollbar_vertical($widget_432:10_7, $widget_432:9_6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+switch_int (%varcint184) {
+	case 0, 1, 2, 3 :
+	case default :
+		%varcint184 = 0;
+}
+~ignore_update($widget_432:5_3, $widget_432:7_4, $widget_432:8_5, $widget_432:9_6, $widget_432:10_7, $widget_432:11_8, $widget_432:16_9);
+if_setonfriendtransmit("ignore_update($widget_432:5_3, $widget_432:7_4, $widget_432:8_5, $widget_432:9_6, $widget_432:10_7, $widget_432:11_8, $widget_432:16_9)", $widget_432:0_0);
+if_setonvartransmit("ignore_update($widget_432:5_3, $widget_432:7_4, $widget_432:8_5, $widget_432:9_6, $widget_432:10_7, $widget_432:11_8, $widget_432:16_9){var1737}", $widget_432:0_0);

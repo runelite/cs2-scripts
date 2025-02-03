@@ -1,0 +1,602 @@
+// 773
+[proc,ge_offers_setup_init](component $widget_465:25_0, component $widget_465:27_1, component $widget_465:29_2)
+def_boolean $boolean3 = ~script5305;
+def_int $width4 = if_getwidth($widget_465:25_0);
+def_int $int5 = 3;
+def_int $int6 = calc($width4 - ($int5 + $int5));
+def_int $int7 = 212;
+def_int $int8 = calc($int6 - $int7);
+def_int $int9 = calc($int6 / 2);
+def_int $int10 = calc($int6 / 4);
+def_int $int11 = 119;
+def_int $int12 = 136;
+if ($boolean3 = true) {
+	$int11, $int12 = calc($int11 + 13), calc($int12 + 13);
+}
+def_graphic $graphic13 = "ge_icons,4";
+def_graphic $graphic14 = "ge_icons,5";
+cc_deleteall($widget_465:25_0);
+def_int $int15 = 0;
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid16 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 55), 31, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(graphic_1121);
+cc_setop(1, "Choose item");
+cc_setonop("opsound(event_op, 2)");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid17 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 5), $int11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("ge_smallicons,4");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+	cc_setop(1, "-1");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid18 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + $int7 - 25), $int11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("ge_smallicons,5");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+	cc_setop(1, "+1");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid19 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 7), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic13);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+	cc_setop(1, "+1");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid20 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 7 + 41), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic13);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+	cc_setop(1, "+10");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid21 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 7 + 82), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic13);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+	cc_setop(1, "+100");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid22 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 7 + 123), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic13);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid23 = $int15;
+$int15 = calc($int15 + 1);
+if ($boolean3 = true) {
+	cc_sethide(true);
+} else {
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + 7 + 164), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic13);
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+	cc_setop(1, "Enter quantity");
+}
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid24 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 5), $int11, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 5), $int11, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic("ge_smallicons,4");
+cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+cc_setop(1, "-1");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid25 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int6 - ($int7 / 2 + 20 + 5)), $int11, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int6 - 25), $int11, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic("ge_smallicons,5");
+cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+cc_setop(1, "+1");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid26 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7 + 41), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7 + 41), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(1, "-5%");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid27 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7 + 82), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7 + 82), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(1, "Guide price");
+cc_setonop("opsound(event_op, 2)");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid28 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7 + 123), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7 + 123), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(1, "Enter price");
+cc_setonop("opsound(event_op, 2)");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid29 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7 + 164), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7 + 164), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(1, "+5%");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid30 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(2, "Customise");
+if (%varbit4284 > 0) {
+	cc_setop(1, "-<~script5130>");
+} else {
+	cc_setop(1, "");
+}
+cc_setonvartransmit("script5131($widget_465:25_0, $comsubid30, true, "-"){var3750}");
+cc_setonop("script5154(event_op, false)");
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid31 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+if ($boolean3 = true) {
+	cc_setposition(calc($int5 + $int7 / 2 + 7 + 205), $int12, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int5 + $int7 + 7 + 205), $int12, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic($graphic13);
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
+cc_setop(2, "Customise");
+if (%varbit4284 > 0) {
+	cc_setop(1, "+<~script5130>");
+} else {
+	cc_setop(1, "");
+}
+cc_setonvartransmit("script5131($widget_465:25_0, $comsubid31, true, "+"){var3750}");
+cc_setonop("script5154(event_op, true)");
+def_int $comsubid32 = 0;
+def_int $comsubid33 = 0;
+def_int $comsubid34 = 0;
+def_int $comsubid35 = 0;
+def_int $comsubid36 = 0;
+def_int $comsubid37 = 0;
+def_int $comsubid38 = 0;
+def_int $comsubid39 = 0;
+
+	0 = $int15, 
+	1 = $comsubid32, 
+	2 = $comsubid33, 
+	3 = $comsubid34, 
+	4 = $comsubid35, 
+	5 = $comsubid36, 
+	6 = $comsubid37, 
+	7 = $comsubid38, 
+	8 = $comsubid39
+ = ~ge_offers_initboxes($boolean3, $int15, $widget_465:25_0, $widget_465:27_1, p11_full);
+cc_create($widget_465:25_0, ^iftype_graphic, $int15);
+def_int $comsubid40 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 55), 31, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("ge_smallicons,1");
+def_int $comsubid41 = -1;
+if ($boolean3 = false) {
+	$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid19, "+1", $int15);
+	$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid20, "+10", $int15);
+	$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid21, "+100", $int15);
+	$comsubid41 = $int15;
+	$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid22, "", $int15);
+	$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid23, "...", $int15);
+}
+$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid26, "-5%", $int15);
+$int15 = ~ge_offers_setup_buttongraphic($widget_465:25_0, $comsubid27, "ge_smallicons,0", $int15);
+$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid28, "...", $int15);
+$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid29, "+5%", $int15);
+$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid30, "-<~script5130>", $int15);
+if (cc_find($widget_465:25_0, calc($int15 - 1)) = ^true) {
+	cc_setonvartransmit("script5131($widget_465:25_0, calc($int15 - 1), false, "-"){var3750}");
+}
+$int15 = ~ge_offers_setup_buttontext($widget_465:25_0, $comsubid31, "+<~script5130>", $int15);
+if (cc_find($widget_465:25_0, calc($int15 - 1)) = ^true) {
+	cc_setonvartransmit("script5131($widget_465:25_0, calc($int15 - 1), false, "+"){var3750}");
+}
+cc_create($widget_465:25_0, ^iftype_text, $int15);
+def_int $comsubid42 = $int15;
+$int15 = calc($int15 + 1);
+cc_setsize(if_getwidth($widget_465:29_2), if_getheight($widget_465:29_2), ^setsize_abs, ^setsize_abs);
+cc_setposition(if_getx($widget_465:29_2), if_gety($widget_465:29_2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~ge_offers_setup_draw(
+	0 = $boolean3, 
+	1 = $widget_465:25_0, 
+	2 = $comsubid16, 
+	3 = $comsubid22, 
+	4 = $comsubid41, 
+	5 = $comsubid32, 
+	6 = $comsubid33, 
+	7 = $comsubid34, 
+	8 = $comsubid35, 
+	9 = $comsubid36, 
+	10 = $comsubid37, 
+	11 = $comsubid38, 
+	12 = $comsubid39, 
+	13 = $comsubid40, 
+	14 = $widget_465:29_2, 
+	15 = $comsubid42, 
+	16 = $comsubid23
+);
+if_setonvartransmit("ge_offers_setup_draw(
+	0 = $boolean3, 
+	1 = $widget_465:25_0, 
+	2 = $comsubid16, 
+	3 = $comsubid22, 
+	4 = $comsubid41, 
+	5 = $comsubid32, 
+	6 = $comsubid33, 
+	7 = $comsubid34, 
+	8 = $comsubid35, 
+	9 = $comsubid36, 
+	10 = $comsubid37, 
+	11 = $comsubid38, 
+	12 = $comsubid39, 
+	13 = $comsubid40, 
+	14 = $widget_465:29_2, 
+	15 = $comsubid42, 
+	16 = $comsubid23
+){var1151, var563, var1043, var375}", $widget_465:25_0);
+if_setoninvtransmit("ge_offers_setup_draw(
+	0 = $boolean3, 
+	1 = $widget_465:25_0, 
+	2 = $comsubid16, 
+	3 = $comsubid22, 
+	4 = $comsubid41, 
+	5 = $comsubid32, 
+	6 = $comsubid33, 
+	7 = $comsubid34, 
+	8 = $comsubid35, 
+	9 = $comsubid36, 
+	10 = $comsubid37, 
+	11 = $comsubid38, 
+	12 = $comsubid39, 
+	13 = $comsubid40, 
+	14 = $widget_465:29_2, 
+	15 = $comsubid42, 
+	16 = $comsubid23
+){inv}", $widget_465:25_0);
+if (cc_find($widget_465:25_0, $comsubid17) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = -1, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid18) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = 1, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid19) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = 1, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid20) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = 10, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid21) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = 100, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid22) = ^true) {
+	cc_setonop("ge_offers_setup_changequantity(
+		0 = $boolean3, 
+		1 = ^max_32bit_int, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid23) = ^true) {
+	cc_setonop("script5156(
+		0 = $boolean3, 
+		1 = ^max_32bit_int, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid24) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice(
+		0 = $boolean3, 
+		1 = -1, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid25) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice(
+		0 = $boolean3, 
+		1 = 1, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid26) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice(
+		0 = $boolean3, 
+		1 = -5, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}
+if (cc_find($widget_465:25_0, $comsubid29) = ^true) {
+	cc_setonop("ge_offers_setup_changeprice(
+		0 = $boolean3, 
+		1 = 5, 
+		2 = event_op, 
+		3 = $widget_465:25_0, 
+		4 = $comsubid16, 
+		5 = $comsubid22, 
+		6 = $comsubid41, 
+		7 = $comsubid32, 
+		8 = $comsubid33, 
+		9 = $comsubid34, 
+		10 = $comsubid35, 
+		11 = $comsubid36, 
+		12 = $comsubid37, 
+		13 = $comsubid38, 
+		14 = $comsubid39, 
+		15 = $comsubid40, 
+		16 = $widget_465:29_2, 
+		17 = $comsubid42, 
+		18 = $comsubid23
+	)");
+}

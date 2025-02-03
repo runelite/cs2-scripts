@@ -1,0 +1,90 @@
+// 4955
+[proc,script4955](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, int $int17, int $int18, int $int19, component $component20, component $component21, component $component22, component $component23)
+if ($int17 > 0) {
+	~steelborder($component1, "Wave <tostring($int17)> Completed!", 0);
+} else {
+	~steelborder($component1, "Colosseum", 0);
+}
+cc_deleteall($component6);
+cc_deleteall($component7);
+if_sethide(true, interface_626:18);
+if_sethide(true, interface_626:7);
+~script3723(interface_626:39, 0, "Summary");
+~script3723(interface_626:40, 0, "Proceed");
+if ($int0 = 0) {
+	~script4956($component4, $component3, $component15, $component16, $int17, $int19);
+	if_sethide(false, interface_626:7);
+	~script3723(interface_626:39, 1, "Summary");
+	if_setonop("script4954(
+		0 = 1, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17, 
+		18 = $int18, 
+		19 = $int19, 
+		20 = false, 
+		21 = $component20, 
+		22 = $component21, 
+		23 = $component22, 
+		24 = $component23
+	)", interface_626:40);
+} else if ($int0 = 1) {
+	~script4958(
+		0 = $component2, 
+		1 = $component5, 
+		2 = $component6, 
+		3 = $component7, 
+		4 = $component8, 
+		5 = $component9, 
+		6 = $component10, 
+		7 = $component11, 
+		8 = $component12, 
+		9 = $component13, 
+		10 = $component14, 
+		11 = $int17, 
+		12 = $int18
+	);
+	if_sethide(false, interface_626:18);
+	~script3723(interface_626:40, 1, "Proceed");
+	if_setonop("script4954(
+		0 = 0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17, 
+		18 = $int18, 
+		19 = $int19, 
+		20 = false, 
+		21 = $component20, 
+		22 = $component21, 
+		23 = $component22, 
+		24 = $component23
+	)", interface_626:39);
+}

@@ -1,0 +1,78 @@
+// 3410
+[proc,highlight_screen](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7, int $setposh8, int $setposv9, int $int10, int $height11, int $width12, boolean $boolean13)
+def_int $height14 = if_getheight($component0);
+def_int $width15 = if_getwidth($component0);
+if ($height14 = $height11 & $width15 = $width12) {
+	return;
+}
+if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+if_settrans($int10, interface_664:3);
+if_settrans($int10, interface_664:6);
+if_settrans($int10, interface_664:5);
+if_settrans($int10, interface_664:4);
+if ($setposv9 = ^setpos_abs_bottom) {
+	if_setsize(0, calc($height14 - ($int7 + $int5)), ^setsize_minus, ^setsize_abs, interface_664:3);
+} else if ($setposv9 = ^setpos_abs_centre) {
+	if_setsize(0, calc($height14 / 2 + ($int7 - $int5 / 2)), ^setsize_minus, ^setsize_abs, interface_664:3);
+} else {
+	if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, interface_664:3);
+}
+if ($setposv9 = ^setpos_abs_bottom) {
+	if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, interface_664:4);
+} else if ($setposv9 = ^setpos_abs_centre) {
+	if_setsize(0, calc($height14 / 2 - ($int7 + $int5 / 2)), ^setsize_minus, ^setsize_abs, interface_664:4);
+} else {
+	if_setsize(0, calc($height14 - ($int7 + $int5)), ^setsize_minus, ^setsize_abs, interface_664:4);
+}
+if ($setposh8 = ^setpos_abs_left) {
+	if_setsize($int6, calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:6);
+} else if ($setposh8 = ^setpos_abs_centre) {
+	if_setsize(calc($width15 / 2 + ($int6 - $int4 / 2)), calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:6);
+} else {
+	if_setsize(calc($width15 - ($int6 + $int4)), calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:6);
+}
+if ($setposv9 = ^setpos_abs_bottom) {
+	if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_bottom, interface_664:6);
+} else if ($setposv9 = ^setpos_abs_centre) {
+	if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_centre, interface_664:6);
+} else {
+	if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, interface_664:6);
+}
+if ($setposh8 = ^setpos_abs_left) {
+	if_setsize(calc($width15 - ($int6 + $int4)), calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:5);
+} else if ($setposh8 = ^setpos_abs_centre) {
+	if_setsize(calc($width15 / 2 - ($int6 + $int4 / 2)), calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:5);
+} else {
+	if_setsize($int6, calc($height14 - $int5), ^setsize_abs, ^setsize_minus, interface_664:5);
+}
+if ($setposv9 = ^setpos_abs_bottom) {
+	if_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_bottom, interface_664:5);
+} else if ($setposv9 = ^setpos_abs_centre) {
+	if_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_centre, interface_664:5);
+} else {
+	if_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top, interface_664:5);
+}
+if_setsize(calc(6 + $int4), calc(6 + $int5), ^setsize_abs, ^setsize_abs, interface_664:7);
+if_setposition(calc($int6 - 3), calc($int7 - 3), $setposh8, $setposv9, interface_664:7);
+if_sethide(false, interface_664:2);
+if ($boolean13 = true) {
+	if_sethide(true, interface_664:7);
+} else {
+	if_sethide(false, interface_664:7);
+}
+if_setontimer("highlight_resize(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $int3, 
+	4 = $int4, 
+	5 = $int5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $setposh8, 
+	9 = $setposv9, 
+	10 = $int10, 
+	11 = $height14, 
+	12 = $width15, 
+	13 = $boolean13
+)", interface_664:1);

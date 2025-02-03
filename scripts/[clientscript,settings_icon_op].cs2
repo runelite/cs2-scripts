@@ -1,0 +1,49 @@
+// 3938
+[clientscript,settings_icon_op](int $int0, component $component1, component $component2, int $int3, graphic $graphic4, component $component5, string $string0, string $string1, component $widget_116:43_6)
+~settings_side_op_sound;
+def_int $int7 = ~settings_get_slider($int0);
+if ($int7 > 0) {
+	switch_int ($int0) {
+		case 319 :
+			if (~on_enhanced_any = 0) {
+				return;
+			}
+			%varbit14817 = calc($int7 * 5);
+		case 30 :
+			%varbit12426 = calc($int7 * 5);
+		case 31 :
+			%varbit12427 = calc($int7 * 5);
+		case 32 :
+			%varbit12428 = calc($int7 * 5);
+	}
+	~settings_set_slider($int0, 0);
+} else {
+	switch_int ($int0) {
+		case 319 :
+			if (~on_enhanced_any = 0) {
+				return;
+			}
+			if (%varbit14817 <= 0) {
+				%varbit14817 = 100;
+			}
+			~settings_set_slider($int0, calc(%varbit14817 / 5));
+		case 30 :
+			if (%varbit12426 <= 0) {
+				%varbit12426 = 20;
+			}
+			~settings_set_slider($int0, calc(%varbit12426 / 5));
+		case 31 :
+			if (%varbit12427 <= 0) {
+				%varbit12427 = 50;
+			}
+			~settings_set_slider($int0, calc(%varbit12427 / 5));
+		case 32 :
+			if (%varbit12428 <= 0) {
+				%varbit12428 = 40;
+			}
+			~settings_set_slider($int0, calc(%varbit12428 / 5));
+	}
+}
+$int7 = ~settings_get_slider($int0);
+~script3941($int7, $component1, $component2, $int3);
+~settings_update_icon($int7, $component5, $string0, $string1, $widget_116:43_6);

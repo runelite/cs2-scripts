@@ -1,0 +1,74 @@
+// 777
+[clientscript,ge_offers_setup_changequantity](boolean $boolean0, int $int1, int $opindex2, component $widget_465:25_3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $widget_465:29_16, int $comsubid17, int $comsubid18)
+if ($opindex2 ! 1 | %var1151 = null) {
+	return;
+}
+def_int $int19 = ^max_32bit_int;
+if (%var1151 = old_school_bond_13190) {
+	%varbit4396 = 1;
+	sound_synth(interface_select1, 1, 0);
+} else if (%varbit4397 = 1) {
+	$int19 = ~ge_offers_checkavailable;
+	if ($int1 >= ^max_32bit_int) {
+		%varbit4396 = $int19;
+		sound_synth(ge_up_amount, 1, 0);
+	} else if ($int1 > 0) {
+		if ($int1 > 1 & %varbit4396 = 1) {
+			$int1 = calc($int1 - 1);
+		}
+		if (calc($int19 - $int1) < %varbit4396) {
+			%varbit4396 = $int19;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int1);
+		}
+		sound_synth(ge_up_amount, 1, 0);
+	} else {
+		if (%varbit4396 <= calc(0 - $int1)) {
+			%varbit4396 = 1;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int1);
+		}
+		sound_synth(ge_down_amount, 1, 0);
+	}
+} else {
+	if ($int1 >= ^max_32bit_int) {
+		$int1 = 1000;
+	}
+	if ($int1 > 0) {
+		if ($int1 > 1 & %varbit4396 = 1) {
+			$int1 = calc($int1 - 1);
+		}
+		if (calc(^max_32bit_int - $int1) < %varbit4396) {
+			%varbit4396 = ^max_32bit_int;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int1);
+		}
+		sound_synth(ge_up_amount, 1, 0);
+	} else {
+		if (%varbit4396 <= calc(0 - $int1)) {
+			%varbit4396 = 1;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int1);
+		}
+		sound_synth(ge_down_amount, 1, 0);
+	}
+}
+~ge_offers_setup_draw(
+	0 = $boolean0, 
+	1 = $widget_465:25_3, 
+	2 = $comsubid4, 
+	3 = $comsubid5, 
+	4 = $comsubid6, 
+	5 = $comsubid7, 
+	6 = $comsubid8, 
+	7 = $comsubid9, 
+	8 = $comsubid10, 
+	9 = $comsubid11, 
+	10 = $comsubid12, 
+	11 = $comsubid13, 
+	12 = $comsubid14, 
+	13 = $comsubid15, 
+	14 = $widget_465:29_16, 
+	15 = $comsubid17, 
+	16 = $comsubid18
+);

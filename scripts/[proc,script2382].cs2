@@ -1,0 +1,24 @@
+// 2382
+[proc,script2382](component $widget_110:12_0, component $widget_110:13_1)
+switch_int (%var75) {
+	case -1 :
+		if_setmodelanim(seq_8173, $widget_110:12_0);
+	case -2 :
+		if_setmodelanim(seq_8174, $widget_110:12_0);
+	case 1 :
+		if_setmodelanim(seq_8175, $widget_110:12_0);
+	case 2 :
+		if_setmodelanim(seq_8176, $widget_110:12_0);
+	case 3 :
+		if_setmodelanim(seq_8177, $widget_110:12_0);
+	case 4 :
+		if_setmodelanim(seq_8178, $widget_110:12_0);
+	case 5 :
+		if_setmodelanim(seq_8179, $widget_110:12_0);
+	case 6 :
+		if_setmodelanim(seq_8180, $widget_110:12_0);
+	case default :
+		if_sethide(false, $widget_110:13_1);
+		return;
+}
+if_sethide(true, $widget_110:13_1);

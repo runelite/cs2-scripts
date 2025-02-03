@@ -1,0 +1,77 @@
+// 321
+[clientscript,slayer_rewards_buy_init](component $widget_426:22_0, component $widget_426:23_1, component $widget_426:24_2, component $widget_426:25_3, component $widget_426:11_4, component $widget_426:2_5, component $widget_426:4_6, component $widget_426:8_7, component $widget_426:5_8)
+cc_deleteall($widget_426:23_1);
+cc_deleteall($widget_426:24_2);
+def_int $width9 = if_getwidth($widget_426:22_0);
+def_int $int10 = calc($width9 / 5);
+def_int $int11 = calc(32 + 35);
+def_int $int12 = calc(($int10 - 36) / 2);
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $height15 = 0;
+def_int $num16 = 0;
+def_int $int17 = 0;
+def_namedobj $namedobj18 = enum(int, namedobj, enum_840, $int17);
+def_int $int19 = 0;
+if (~league_relic_active(struct_1129) = 1) {
+	$int19 = 1;
+}
+while ($namedobj18 ! null) {
+	$int13, $int14 = calc($int17 % 5 * $int10), calc($int17 / 5 * $int11);
+	cc_create($widget_426:23_1, ^iftype_graphic, $int17);
+	.cc_create($widget_426:24_2, ^iftype_text, $int17);
+	cc_setposition(calc($int13 + $int12), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition($int13, calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int10, 15, ^setsize_abs, ^setsize_abs);
+	$height15 = calc($int14 + 32 + 15);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$num16 = enum(obj, int, enum_841, $namedobj18);
+	cc_setobject($namedobj18, $num16);
+	cc_settrans(0);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p12_full);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	if ($int19 = 1 & ($namedobj18 = rune_pouch_12791 | $namedobj18 = looting_bag_11941 | $namedobj18 = herb_sack_13226)) {
+		.cc_settext("Free");
+	} else {
+		.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
+	}
+	switch_namedobj ($namedobj18) {
+		case herb_sack_13226, rune_pouch_12791, looting_bag_11941 :
+			cc_setop(2, "Buy 1");
+		case default :
+			if ($num16 = 1) {
+				cc_setop(2, "Buy 1");
+				cc_setop(3, "Buy 5");
+				cc_setop(4, "Buy 10");
+				if (~kots_world = 0) {
+					cc_setop(5, "Buy 50");
+				}
+			} else {
+				cc_setop(2, "Buy 1 set");
+				cc_setop(3, "Buy 5 sets");
+				cc_setop(4, "Buy 10 sets");
+				if (~kots_world = 0) {
+					cc_setop(5, "Buy 50 sets");
+				}
+			}
+	}
+	cc_setop(1, "Info");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($namedobj18)></col>");
+	cc_setonop("slayer_rewards_buy_op(event_op, event_com, event_comsubid, $widget_426:11_4, $widget_426:2_5, $widget_426:4_6, $widget_426:8_7, $widget_426:5_8)");
+	$int17 = calc($int17 + 1);
+	$namedobj18 = enum(int, namedobj, enum_840, $int17);
+}
+if_setscrollpos(0, 0, $widget_426:22_0);
+if_setsize($width9, $height15, ^setsize_abs, ^setsize_abs, $widget_426:23_1);
+if_setsize($width9, $height15, ^setsize_abs, ^setsize_abs, $widget_426:24_2);
+if ($height15 > if_getheight($widget_426:22_0)) {
+	if_setscrollsize(0, $height15, $widget_426:22_0);
+} else {
+	if_setscrollsize(0, 0, $widget_426:22_0);
+}
+~scrollbar_vertical($widget_426:25_3, $widget_426:22_0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

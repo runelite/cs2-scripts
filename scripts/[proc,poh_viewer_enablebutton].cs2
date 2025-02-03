@@ -1,0 +1,34 @@
+// 1399
+[proc,poh_viewer_enablebutton](component $component0, string $op0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+cc_deleteall($component0);
+def_int $comsubid16 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $comsubid16);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($op0);
+if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid16, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, $comsubid16, 0xff981f)", $component0);
+if_setonop("poh_viewer_opbutton(
+	0 = event_op, 
+	1 = event_com, 
+	2 = $component1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15
+)", $component0);
+if_setop(1, $op0, $component0);

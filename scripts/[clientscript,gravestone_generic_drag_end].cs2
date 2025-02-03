@@ -1,0 +1,22 @@
+// 3467
+[clientscript,gravestone_generic_drag_end](int $clock0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, int $int8, int $int9, int $int10, component $component11, int $int12, component $component13, int $int14, component $component15, component $component16, component $component17, component $component18)
+if (clientclock < $clock0) {
+	return;
+}
+%varcint395, %varcint396, %varcint397, %varcint398 = $int1, $int2, $int3, $int4;
+~gravestone_generic_window_set(
+	0 = $component5, 
+	1 = $component6, 
+	2 = $component7, 
+	3 = $int8, 
+	4 = $int9, 
+	5 = $int10, 
+	6 = $component11, 
+	7 = $int12, 
+	8 = $component13, 
+	9 = $int14, 
+	10 = $component15, 
+	11 = $component16, 
+	12 = $component17, 
+	13 = $component18
+);

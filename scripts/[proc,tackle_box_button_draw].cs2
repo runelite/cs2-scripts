@@ -1,0 +1,40 @@
+// 4059
+[proc,tackle_box_button_draw](component $component0, string $string0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+cc_deleteall($component0);
+if_setop(1, $string0, $component0);
+def_int $comsubid9 = 0;
+if (%varbit11795 = $int1) {
+	$comsubid9 = ~v2_stone_button_in_filled($component0);
+} else {
+	$comsubid9 = ~v2_stone_button_out_filled($component0);
+}
+cc_create($component0, ^iftype_text, $comsubid9);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+if (%varbit11795 = $int1) {
+	cc_setcolour(^white);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonop(null, $component0);
+} else {
+	cc_setcolour(0xff981f);
+	if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid9, ^white)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $comsubid9, 0xff981f)", $component0);
+	if_setonop("tackle_box_button_op(
+		0 = event_op, 
+		1 = $component0, 
+		2 = $string0, 
+		3 = $int1, 
+		4 = $int2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8
+	)", $component0);
+}
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);

@@ -1,0 +1,54 @@
+// 4224
+[proc,clan_members_header_init](component $component0, component $component1, component $widget_693:1_2, component $widget_693:2_3, int $comsubid4, component $widget_693:22_5, component $widget_693:9_6, component $widget_693:14_7, component $widget_693:15_8, component $widget_693:16_9, component $widget_693:18_10, component $widget_693:10_11, component $widget_693:7_12, component $widget_693:11_13, component $widget_693:19_14, component $widget_693:8_15, component $widget_693:13_16, component $widget_693:20_17)
+cc_deleteall($component0);
+def_int $int18 = 0;
+cc_create($component0, ^iftype_graphic, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_light);
+cc_settiling(true);
+cc_setonclick("clan_members_header_open(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $widget_693:1_2, 
+	3 = $widget_693:2_3, 
+	4 = $comsubid4, 
+	5 = $widget_693:22_5, 
+	6 = $widget_693:9_6, 
+	7 = $widget_693:14_7, 
+	8 = $widget_693:15_8, 
+	9 = $widget_693:16_9, 
+	10 = $widget_693:18_10, 
+	11 = $widget_693:10_11, 
+	12 = $widget_693:7_12, 
+	13 = $widget_693:11_13, 
+	14 = $widget_693:19_14, 
+	15 = $widget_693:8_15, 
+	16 = $widget_693:13_16, 
+	17 = $widget_693:20_17
+)");
+cc_create($component0, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component0, ^iftype_graphic, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_create($component0, ^iftype_text, $int18);
+$int18 = calc($int18 + 1);
+cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~xpdrops_setup_display_hoveroff($component0);

@@ -1,0 +1,59 @@
+// 886
+[clientscript,script886](component $widget_676:22_0, component $widget_676:8_1, int $int2, component $widget_676:5_3, component $widget_676:20_4, int $int5)
+sound_synth(interface_select1, 1, 0);
+~league_setup_display_hoverdisable($widget_676:8_1, $int5);
+if_sethide(false, $widget_676:5_3);
+if_setonclick("script1108(1, -1, $widget_676:8_1, $int2, $widget_676:5_3, $int5)", $widget_676:5_3);
+def_int $int6 = if_getx($widget_676:8_1);
+def_int $int7 = if_gety($widget_676:8_1);
+def_component $layer8 = if_getlayer($widget_676:8_1);
+while ($layer8 ! null) {
+	$int6, $int7 = calc($int6 + if_getx($layer8) - if_getscrollx($layer8)), calc($int7 + if_gety($layer8) - if_getscrolly($layer8));
+	$layer8 = if_getlayer($layer8);
+}
+def_int $count9 = enum_getoutputcount(enum_2670);
+def_int $int10 = 14;
+if (~on_mobile = true) {
+	$int10 = 18;
+}
+def_int $int11 = 0;
+if (~on_mobile = true) {
+	$int11 = calc($int7 + $int10);
+} else {
+	$int11 = calc($int7 + $int10 + 5);
+}
+def_int $int12 = calc(2 + $count9 * $int10 + 2);
+if (calc($int11 + $int12 + 2) > if_getheight(if_getlayer($widget_676:20_4))) {
+	$int11 = calc($int7 + if_getheight($widget_676:8_1) - $int12 - 19);
+}
+if_setposition($int6, $int11, ^setpos_abs_left, ^setpos_abs_top, $widget_676:20_4);
+if_setsize(if_getwidth($widget_676:8_1), $int12, ^setsize_abs, ^setsize_abs, $widget_676:20_4);
+cc_deleteall($widget_676:20_4);
+~thinbox($widget_676:20_4, 0);
+if_sethide(false, $widget_676:22_0);
+def_int $int13 = 0;
+.cc_create($widget_676:22_0, ^iftype_rectangle, $int13);
+$int13 = calc($int13 + 1);
+.cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(200);
+.cc_sethide(true);
+def_int $count14 = 1;
+while ($count14 <= $count9) {
+	cc_create($widget_676:22_0, ^iftype_text, $int13);
+	cc_setposition(0, calc(($count14 - 1) * $int10), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+	cc_setcolour($int5);
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setop(1, "Select");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int5)");
+		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int5)");
+	}
+	cc_setonop("script1108(event_op, $count14, $widget_676:8_1, $int2, $widget_676:5_3, $int5)");
+	cc_settext(struct_param(enum(int, struct, enum_2670, $count14), param_858));
+	$count14, $int13 = calc($count14 + 1), calc($int13 + 1);
+}

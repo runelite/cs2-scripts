@@ -1,0 +1,75 @@
+// 3955
+[proc,settings_check_block](struct $struct0)(int)
+def_int $int1 = 0;
+def_boolean $boolean2 = ~on_mobile;
+def_int $int3 = ~on_enhanced_any;
+def_int $int4 = ~on_mac;
+def_int $int5 = ~league_world;
+def_int $int6 = ~speedrunning_world;
+def_int $int7 = ~script403;
+def_int $int8 = ~pvpa_world;
+def_int $int9 = ~deadman_world;
+if ($boolean2 = true & struct_param($struct0, param_739) = true) {
+	$int1 = 1;
+}
+if ($boolean2 = false & $int3 = 0 & struct_param($struct0, param_1271) = true) {
+	$int1 = 1;
+}
+if ($boolean2 = false & struct_param($struct0, param_740) = true) {
+	$int1 = 1;
+}
+if ($int4 = 1 & struct_param($struct0, param_1408) = true) {
+	$int1 = 1;
+}
+if ($int3 = 0 & struct_param($struct0, param_1157) = true) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_741) = true & %varbit1777 ! 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_742) = true & %varbit1777 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1272) = true & $int5 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1996) = true & ~script7658 = false) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1565) = true & $int6 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1608) = true & $int6 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1273) = true & $int3 = 0 & $int5 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1414) = true & ~is_group_iron = 0) {
+	$int1 = 1;
+}
+if (%varbit1777 ! 2 & struct_param($struct0, param_1957) = true) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_619) = true & $int5 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_620) = true & $int9 ! 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1868) = true & $int7 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_622) = true & $int8 = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1820) = true & ~script7043 ! 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_474) = true & %varbit10750 = 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1995) = true & %var281 < 1000 & %var2686 < 1000) {
+	$int1 = 1;
+}
+return($int1);

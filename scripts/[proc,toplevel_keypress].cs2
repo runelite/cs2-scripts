@@ -1,0 +1,46 @@
+// 2068
+[proc,toplevel_keypress](int $key0, enum $enum1, boolean $boolean2)
+if (~keypress_permit(null, null) = 0) {
+	return;
+}
+def_int $int3 = 0;
+def_component $component4 = enum(component, component, $enum1, interface_161:16);
+def_component $component5 = enum(int, component, enum_1137, 3);
+def_component $component6 = enum(component, component, $enum1, interface_161:18);
+$component5 = enum(component, component, $enum1, $component5);
+if ($key0 = ^key_escape) {
+	switch_int (%varcint5) {
+		case 14, 17, 18, 11 :
+			return;
+		case default :
+			if (%varbit4681 = 1) {
+				$int3 = ~script1205;
+				if ($component6 ! null & if_hassub($component6) = true) {
+					return;
+				}
+				if ($component4 ! null & if_hassub($component5) = true & if_hassub($component4) = true) {
+					if_close;
+					return;
+				}
+				$component4 = enum(component, component, $enum1, interface_161:74);
+				if ($component4 ! null & if_hassub($component5) = true & if_hassub($component4) = true) {
+					if_close;
+					return;
+				} else if (if_hassub(interface_162:565) = true) {
+					if_close;
+					return;
+				} else if ($int3 = 1) {
+					return;
+				}
+			}
+	}
+}
+def_int $int7 = ~keybind_get_slot($key0);
+if ($int7 = -1 | $int7 = calc(%varbit3756 - 1)) {
+	return;
+}
+def_component $component8 = enum(int, component, enum_1137, $int7);
+$component8 = enum(component, component, $enum1, $component8);
+if (if_hassub($component8) = true) {
+	~toplevel_sidebutton_op($enum1, $int7, $boolean2, 0);
+}

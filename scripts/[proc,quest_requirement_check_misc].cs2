@@ -1,0 +1,63 @@
+// 5993
+[proc,quest_requirement_check_misc](dbrow $dbrow0)(int)
+switch_dbrow ($dbrow0) {
+	case dbrow_143 :
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_3 :
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_54 :
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_113 :
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_26 :
+		if (%varbit12149 = 2 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_13 :
+		if (%varbit12149 = 1 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_81 :
+		if (%varbit12149 <= 0 & ~quest_is_complete(dbrow_162) = 0) {
+			return(0);
+		}
+	case dbrow_11 :
+		if (%varbit3637 < 100) {
+			return(0);
+		}
+	case dbrow_96 :
+		if (%varbit2870 < 1) {
+			return(0);
+		} else if (%varbit1914 < 50) {
+			return(0);
+		}
+	case dbrow_102 :
+		if (%varbit888 < 1) {
+			return(0);
+		}
+	case dbrow_67 :
+		if (%varbit1895 < 110) {
+			return(0);
+		}
+	case dbrow_90 :
+		if (%var269 < 1000) {
+			return(0);
+		} else if (%var268 < 1000) {
+			return(0);
+		} else if (%var270 < 1000) {
+			return(0);
+		}
+	case dbrow_3467 :
+		if (~script1788 = 0) {
+			return(0);
+		}
+}
+return(1);

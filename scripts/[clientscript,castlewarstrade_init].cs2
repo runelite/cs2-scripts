@@ -1,0 +1,25 @@
+// 443
+[clientscript,castlewarstrade_init](component $widget_83:2_0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_namedobj $namedobj3 = enum(int, namedobj, enum_852, $int2);
+while ($namedobj3 ! null) {
+	cc_create($widget_83:2_0, ^iftype_graphic, $int2);
+	if (map_members = false & oc_members($namedobj3) = ^true) {
+		cc_sethide(true);
+	} else {
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int1 % 8 * 46), calc($int1 / 8 * 50), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = calc($int1 + 1);
+		cc_setobject($namedobj3, 1);
+		cc_setopbase("<col=ff9040><oc_name($namedobj3)>");
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy");
+		cc_setop(10, "Examine");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	}
+	$int2 = calc($int2 + 1);
+	$namedobj3 = enum(int, namedobj, enum_852, $int2);
+}

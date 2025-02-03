@@ -1,0 +1,19 @@
+// 5204
+[proc,script5204]
+if (~on_enhanced_any = 0) {
+	return;
+}
+def_int $int0 = 2;
+def_int $int1 = 50;
+def_int $colour2 = ~settings_get_colour_or_default(177);
+def_int $int3 = 10;
+if (%varbit12978 = 1) {
+	if (%varbit12981 = 1) {
+		$int3 = calc($int3 + 16);
+	}
+	highlight_tile_setup(3, $colour2, $int0, $int1, $int3);
+	highlight_tile_on(coord, 3, 0);
+} else {
+	highlight_tile_clear(3);
+	highlight_tile_setup(3, null, 0, 0, 0);
+}

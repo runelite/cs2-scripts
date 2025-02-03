@@ -1,0 +1,12 @@
+// 220
+[proc,ntk_layout](component $widget_428:2_0, component $widget_428:1_1)
+if (~toplevel_getcomponents = enum_1129) {
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $widget_428:2_0);
+	~script4729($widget_428:1_1, $widget_428:2_0, 36582, ^setpos_abs_right, ^setpos_abs_top, true);
+} else if (~on_mobile = true) {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $widget_428:2_0);
+	~script4729($widget_428:1_1, $widget_428:2_0, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+} else {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_428:2_0);
+	~script4729($widget_428:1_1, $widget_428:2_0, 52968, ^setpos_abs_centre, ^setpos_abs_top, true);
+}

@@ -1,0 +1,3 @@
+// 481
+[clientscript,ntk_timer_autonomous](component $widget_428:7_0, int $int1, int $clock2)
+~ntk_timer_update($widget_428:7_0, calc($int1 + (clientclock - $clock2) / 30));

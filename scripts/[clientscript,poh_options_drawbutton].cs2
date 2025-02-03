@@ -1,0 +1,16 @@
+// 54
+[clientscript,poh_options_drawbutton](component $component0)
+cc_deleteall($component0);
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+def_int $comsubid3 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $comsubid3);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext(if_getop(1, $component0));
+if_setonmouseover("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component0);

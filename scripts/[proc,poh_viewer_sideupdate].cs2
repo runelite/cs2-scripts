@@ -1,0 +1,328 @@
+// 1397
+[proc,poh_viewer_sideupdate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+def_int $int15 = calc(pow(calc(7 + 2), 2) * 3);
+def_int $int16 = $int15;
+if (%varbit5330 > $int15) {
+	while ($int16 > 0) {
+		$int16 = calc($int16 - 1);
+		if (cc_find(interface_422:5, $int16) = ^true) {
+			cc_clearops;
+			cc_setop(1, "Select");
+			cc_setonop("opsound(event_op, 2)");
+			cc_setcolour(0x8f8f8f);
+			cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, ^white)");
+			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x8f8f8f)");
+		}
+	}
+} else if (%varbit5332 = 0 & %varbit5330 = 0) {
+	while ($int16 > 0) {
+		$int16 = calc($int16 - 1);
+		if (cc_find(interface_422:5, $int16) = ^true) {
+			cc_clearops;
+			cc_setop(6, "Add room");
+			cc_setonop("opsound(event_op, 64)");
+			cc_setcolour(0xafafaf);
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+		}
+	}
+} else {
+	while ($int16 > 0) {
+		$int16 = calc($int16 - 1);
+		if (cc_find(interface_422:5, $int16) = ^true) {
+			cc_clearops;
+			cc_setonop(null);
+			cc_setcolour(0xafafaf);
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+		}
+	}
+}
+def_component $component17 = enum(int, component, enum_1424, -1);
+if (%varbit5333 <= 0) {
+	if_settext("---", $component0);
+	if_setgraphic(null, $component1);
+	if_set2dangle(0, $component1);
+	if (cc_find($component17, 0) = ^true) {
+		cc_setgraphic(null);
+		cc_set2dangle(0);
+	}
+	if_settrans(255, $component2);
+	if_settrans(255, $component3);
+	if_settrans(255, $component4);
+	if_settrans(255, $component5);
+	if_settext("Select a room on the map.", $component6);
+	~poh_viewer_disablebutton($component7, "Move", 0);
+	~poh_viewer_disablebutton($component8, "Rotate", 0);
+	~poh_viewer_disablerotate($component9, "miscgraphics3,2");
+	~poh_viewer_disablerotate($component10, "miscgraphics3,3");
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_disablebutton($component12, "Cancel", 0);
+	~poh_viewer_disablebutton($component13, "Done", 0);
+	return;
+}
+def_obj $obj18 = enum(int, obj, enum_250, %varbit5333);
+if_settext(oc_name($obj18), $component0);
+def_graphic $graphic19 = enum(int, graphic, enum_1423, %varbit5333);
+if_setgraphic($graphic19, $component1);
+def_int $angle20 = calc(16384 * (4 - %varbit5331) % 65536);
+if_set2dangle($angle20, $component1);
+if (cc_find($component17, 0) = ^true) {
+	if (%varbit5330 ! 0) {
+		cc_setgraphic($graphic19);
+		cc_set2dangle($angle20);
+	} else {
+		cc_setgraphic(null);
+		cc_set2dangle(0);
+	}
+}
+def_int $trans21 = 255;
+if (testbit(%varbit5335, 0) = ^true) {
+	$trans21 = 150;
+	if (%varbit5331 = 1) {
+		if (testbit(%varbit5334, 3) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 2) {
+		$trans21 = 0;
+	} else if (%varbit5331 = 3) {
+		if (testbit(%varbit5334, 1) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (testbit(%varbit5334, 0) = ^true) {
+		$trans21 = 0;
+	}
+}
+if_settrans($trans21, $component2);
+$trans21 = 255;
+if (testbit(%varbit5335, 2) = ^true) {
+	$trans21 = 150;
+	if (%varbit5331 = 1) {
+		if (testbit(%varbit5334, 1) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 2) {
+		if (testbit(%varbit5334, 0) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 3) {
+		if (testbit(%varbit5334, 3) = ^true) {
+			$trans21 = 0;
+		}
+	} else {
+		$trans21 = 0;
+	}
+}
+if_settrans($trans21, $component3);
+$trans21 = 255;
+if (testbit(%varbit5335, 1) = ^true) {
+	$trans21 = 150;
+	if (%varbit5331 = 1) {
+		if (testbit(%varbit5334, 0) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 2) {
+		if (testbit(%varbit5334, 3) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 3) {
+		$trans21 = 0;
+	} else if (testbit(%varbit5334, 1) = ^true) {
+		$trans21 = 0;
+	}
+}
+if_settrans($trans21, $component4);
+$trans21 = 255;
+if (testbit(%varbit5335, 3) = ^true) {
+	$trans21 = 150;
+	if (%varbit5331 = 1) {
+		$trans21 = 0;
+	} else if (%varbit5331 = 2) {
+		if (testbit(%varbit5334, 1) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (%varbit5331 = 3) {
+		if (testbit(%varbit5334, 0) = ^true) {
+			$trans21 = 0;
+		}
+	} else if (testbit(%varbit5334, 3) = ^true) {
+		$trans21 = 0;
+	}
+}
+if_settrans($trans21, $component5);
+if (%varbit5330 > $int15) {
+	if_settext("Use the map to select a position for the room.", $component6);
+	~poh_viewer_disablebutton($component7, "Move", 1);
+	~poh_viewer_disablebutton($component8, "Rotate", 0);
+	~poh_viewer_disablerotate($component9, "miscgraphics3,2");
+	~poh_viewer_disablerotate($component10, "miscgraphics3,3");
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_enablebutton(
+		0 = $component12, 
+		1 = "Cancel", 
+		2 = $component0, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component10, 
+		13 = $component11, 
+		14 = $component12, 
+		15 = $component13, 
+		16 = $component14
+	);
+	~poh_viewer_disablebutton($component13, "Done", 0);
+	return;
+}
+if (%varbit5332 = 1) {
+	if_settext("Choose an orientation for the room, then select 'Done'.", $component6);
+	~poh_viewer_disablebutton($component7, "Move", 0);
+	~poh_viewer_disablebutton($component8, "Rotate", 1);
+	~poh_viewer_enablerotate(
+		0 = $component9, 
+		1 = "Clockwise", 
+		2 = "miscgraphics3,2", 
+		3 = $component0, 
+		4 = $component1, 
+		5 = $component2, 
+		6 = $component3, 
+		7 = $component4, 
+		8 = $component5, 
+		9 = $component6, 
+		10 = $component7, 
+		11 = $component8, 
+		12 = $component9, 
+		13 = $component10, 
+		14 = $component11, 
+		15 = $component12, 
+		16 = $component13, 
+		17 = $component14
+	);
+	~poh_viewer_enablerotate(
+		0 = $component10, 
+		1 = "Counter-clockwise", 
+		2 = "miscgraphics3,3", 
+		3 = $component0, 
+		4 = $component1, 
+		5 = $component2, 
+		6 = $component3, 
+		7 = $component4, 
+		8 = $component5, 
+		9 = $component6, 
+		10 = $component7, 
+		11 = $component8, 
+		12 = $component9, 
+		13 = $component10, 
+		14 = $component11, 
+		15 = $component12, 
+		16 = $component13, 
+		17 = $component14
+	);
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_enablebutton(
+		0 = $component12, 
+		1 = "Cancel", 
+		2 = $component0, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component10, 
+		13 = $component11, 
+		14 = $component12, 
+		15 = $component13, 
+		16 = $component14
+	);
+	~poh_viewer_enablebutton(
+		0 = $component13, 
+		1 = "Done", 
+		2 = $component0, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component10, 
+		13 = $component11, 
+		14 = $component12, 
+		15 = $component13, 
+		16 = $component14
+	);
+	return;
+}
+if_settext("Use the options to edit the room.", $component6);
+~poh_viewer_enablebutton(
+	0 = $component7, 
+	1 = "Move", 
+	2 = $component0, 
+	3 = $component1, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $component5, 
+	8 = $component6, 
+	9 = $component7, 
+	10 = $component8, 
+	11 = $component9, 
+	12 = $component10, 
+	13 = $component11, 
+	14 = $component12, 
+	15 = $component13, 
+	16 = $component14
+);
+~poh_viewer_enablebutton(
+	0 = $component8, 
+	1 = "Rotate", 
+	2 = $component0, 
+	3 = $component1, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $component5, 
+	8 = $component6, 
+	9 = $component7, 
+	10 = $component8, 
+	11 = $component9, 
+	12 = $component10, 
+	13 = $component11, 
+	14 = $component12, 
+	15 = $component13, 
+	16 = $component14
+);
+~poh_viewer_disablerotate($component9, "miscgraphics3,2");
+~poh_viewer_disablerotate($component10, "miscgraphics3,3");
+~poh_viewer_enablebutton(
+	0 = $component11, 
+	1 = "Delete", 
+	2 = $component0, 
+	3 = $component1, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $component5, 
+	8 = $component6, 
+	9 = $component7, 
+	10 = $component8, 
+	11 = $component9, 
+	12 = $component10, 
+	13 = $component11, 
+	14 = $component12, 
+	15 = $component13, 
+	16 = $component14
+);
+~poh_viewer_disablebutton($component12, "Cancel", 0);
+~poh_viewer_disablebutton($component13, "Done", 0);

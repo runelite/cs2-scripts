@@ -1,0 +1,27 @@
+// 4049
+[clientscript,tackle_box_init](component $widget_683:0_0, component $widget_683:8_1, component $widget_683:9_2, component $widget_683:11_3, component $widget_683:12_4, component $widget_683:4_5, component $widget_683:5_6, component $widget_683:6_7, component $widget_683:7_8)
+~script4064($widget_683:8_1, "bankbuttons,0", 0);
+if_setop(1, "Fill", $widget_683:8_1);
+~script4064($widget_683:9_2, "bankbuttons,4", 0);
+if_setop(1, "Empty", $widget_683:9_2);
+cc_deleteall($widget_683:11_3);
+cc_deleteall($widget_683:12_4);
+cc_deleteall($widget_683:4_5);
+cc_deleteall($widget_683:5_6);
+cc_deleteall($widget_683:6_7);
+cc_deleteall($widget_683:7_8);
+~scrollbar_vertical($widget_683:12_4, $widget_683:11_3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $size9 = inv_size(inv_651);
+def_int $size10 = 0;
+while ($size10 < $size9) {
+	cc_create($widget_683:11_3, ^iftype_graphic, $size10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size10 = calc($size10 + 1);
+}
+~tackle_box_draw($size9, $widget_683:11_3, $widget_683:12_4, $widget_683:4_5, $widget_683:5_6, $widget_683:6_7, $widget_683:7_8);
+if_setoninvtransmit("tackle_box_draw($size9, $widget_683:11_3, $widget_683:12_4, $widget_683:4_5, $widget_683:5_6, $widget_683:6_7, $widget_683:7_8){inv_651}", $widget_683:0_0);
+if_setonvartransmit("tackle_box_draw($size9, $widget_683:11_3, $widget_683:12_4, $widget_683:4_5, $widget_683:5_6, $widget_683:6_7, $widget_683:7_8){var2894}", $widget_683:0_0);

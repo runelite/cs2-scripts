@@ -1,0 +1,12 @@
+// 2281
+[clientscript,script2281](int $opindex0, int $int1, component $widget_182:19_2, component $widget_182:20_3, component $widget_182:21_4, component $widget_182:22_5, component $widget_182:23_6)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (%varbit10911 = $int1) {
+	%varbit10911 = 0;
+} else {
+	%varbit10911 = $int1;
+}
+~script2454($widget_182:19_2, $widget_182:20_3, $widget_182:21_4, $widget_182:22_5, $widget_182:23_6, %varbit10911, 1);

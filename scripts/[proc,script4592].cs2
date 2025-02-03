@@ -1,0 +1,33 @@
+// 4592
+[proc,script4592]()(int)
+def_int $int0 = 8;
+if (stat_base(runecraft) >= 85) {
+	$int0 = 40;
+} else if (stat_base(runecraft) >= 75) {
+	$int0 = 27;
+} else if (stat_base(runecraft) >= 50) {
+	$int0 = 16;
+}
+def_int $int1 = 0;
+if (%varbit13683 >= 1020) {
+	return(0);
+}
+if (%varbit13683 >= 1015) {
+	$int1 = 5;
+} else if (%varbit13683 >= 995) {
+	$int1 = 10;
+} else if (%varbit13683 >= 950) {
+	$int1 = 15;
+} else if (%varbit13683 >= 870) {
+	$int1 = 20;
+} else if (%varbit13683 >= 745) {
+	$int1 = 25;
+} else if (%varbit13683 >= 565) {
+	$int1 = 30;
+} else if (%varbit13683 >= 320) {
+	$int1 = 35;
+} else {
+	$int1 = 40;
+}
+$int0 = scale($int1, 40, $int0);
+return(max($int0, 1));

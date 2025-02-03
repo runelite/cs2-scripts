@@ -1,0 +1,25 @@
+// 6801
+[proc,speedrunning_reward_shop_showpoints](component $widget_780:1_0, component $widget_780:12_1, component $widget_780:6_2, component $widget_780:9_3, component $widget_780:10_4, component $widget_780:8_5, component $widget_780:13_6, component $widget_780:14_7, component $widget_780:5_8, component $widget_780:17_9, component $widget_780:18_10, component $widget_780:19_11, component $widget_780:20_12, component $widget_780:11_13)
+def_string $string0 = ",";
+if_settext("Speedrun Points: <col=ffffff><~tostring_spacer(%var3660, $string0)>", $widget_780:12_1);
+if_settextfont(b12_full, $widget_780:12_1);
+if_settextshadow(true, $widget_780:12_1);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 0, $widget_780:12_1);
+~speedrunning_rewards_draw(
+	0 = -1, 
+	1 = $widget_780:1_0, 
+	2 = $widget_780:12_1, 
+	3 = $widget_780:6_2, 
+	4 = $widget_780:9_3, 
+	5 = $widget_780:10_4, 
+	6 = $widget_780:8_5, 
+	7 = $widget_780:13_6, 
+	8 = $widget_780:14_7, 
+	9 = $widget_780:5_8, 
+	10 = $widget_780:17_9, 
+	11 = $widget_780:18_10, 
+	12 = $widget_780:19_11, 
+	13 = $widget_780:20_12, 
+	14 = $widget_780:11_13, 
+	15 = if_getscrolly($widget_780:8_5)
+);

@@ -1,0 +1,19 @@
+// 3772
+[clientscript,script3772](int $opindex0, int $int1, component $widget_26:13_2, component $widget_26:16_3, component $widget_26:19_4, component $widget_26:14_5, component $widget_26:17_6, component $widget_26:20_7, component $widget_26:15_8, component $widget_26:18_9, component $widget_26:21_10)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(piratechest_turn, 1, 0);
+%varbit9594 = calc((%varbit9594 + $int1) % 4);
+~script3773(
+	0 = $widget_26:13_2, 
+	1 = $widget_26:16_3, 
+	2 = $widget_26:19_4, 
+	3 = $widget_26:14_5, 
+	4 = $widget_26:17_6, 
+	5 = $widget_26:20_7, 
+	6 = $widget_26:15_8, 
+	7 = $widget_26:18_9, 
+	8 = $widget_26:21_10
+);
+%varcint110 = clientclock;

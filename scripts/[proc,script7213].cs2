@@ -1,0 +1,19 @@
+// 7213
+[proc,script7213](component $component0, stringvector $stringvector1)
+cc_deleteall($component0);
+def_int $int2 = ~thinbox($component0, $int2);
+~script7210(
+	0 = $component0, 
+	1 = $int2, 
+	2 = 4, 
+	3 = 4, 
+	4 = ^setsize_minus, 
+	5 = ^setsize_minus, 
+	6 = 0, 
+	7 = 0, 
+	8 = ^setpos_abs_centre, 
+	9 = ^setpos_abs_centre
+);
+cc_settext(~script7212($stringvector1));
+cc_input_setonsubmit("ground_items_confirm");
+cc_input_setonfocuschange("ground_items_focus_changed(event_com, event_comsubid, $stringvector1)");

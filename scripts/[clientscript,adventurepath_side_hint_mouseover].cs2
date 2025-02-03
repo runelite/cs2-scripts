@@ -1,0 +1,9 @@
+// 3337
+[clientscript,adventurepath_side_hint_mouseover](component $widget_644:14_0, int $int1)
+if (cc_find($widget_644:14_0, $int1) = ^true) {
+	cc_setcolour(0xbebebe);
+}
+if (cc_find($widget_644:14_0, calc($int1 - 1)) = ^true) {
+	cc_settrans(80);
+}
+~v2_stone_button_change_in($widget_644:14_0, 0);

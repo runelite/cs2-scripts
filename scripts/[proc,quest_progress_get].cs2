@@ -1,0 +1,402 @@
+// 4024
+[proc,quest_progress_get](dbrow $dbrow0)(int)
+switch_dbrow ($dbrow0) {
+	case dbrow_10 :
+		return(%var130);
+	case dbrow_17 :
+		return(%var29);
+	case dbrow_25 :
+		return(%varbit2561);
+	case dbrow_30 :
+		return(%var31);
+	case dbrow_31 :
+		return(%var176);
+	case dbrow_44 :
+		return(%var32);
+	case dbrow_64 :
+		return(%varbit2378);
+	case dbrow_76 :
+		return(%var160);
+	case dbrow_83 :
+		return(%var122);
+	case dbrow_108 :
+		return(%var71);
+	case dbrow_112 :
+		return(%var273);
+	case dbrow_120 :
+		return(%var107);
+	case dbrow_121 :
+		return(%var144);
+	case dbrow_125 :
+		return(%var63);
+	case dbrow_131 :
+		return(%var179);
+	case dbrow_132 :
+		return(%varbit13716);
+	case dbrow_155 :
+		return(%var178);
+	case dbrow_161 :
+		return(%var67);
+	case dbrow_94 :
+		return(%varbit3468);
+	case dbrow_18 :
+		return(%varbit6071);
+	case dbrow_0 :
+		return(%varbit3185);
+	case dbrow_7 :
+		return(%varbit299);
+	case dbrow_8 :
+		return(%var293);
+	case dbrow_9 :
+		return(%var68);
+	case dbrow_12 :
+		return(%var655);
+	case dbrow_14 :
+		return(%var10);
+	case dbrow_16 :
+		return(%varbit3274);
+	case dbrow_163 :
+		return(%varbit487);
+	case dbrow_19 :
+		return(%varbit13715);
+	case dbrow_22 :
+		return(%varbit2573);
+	case dbrow_24 :
+		return(%varbit2258);
+	case dbrow_23 :
+		return(%var314);
+	case dbrow_27 :
+		return(%varbit358);
+	case dbrow_28 :
+		return(%varbit1465);
+	case dbrow_29 :
+		return(%var131);
+	case dbrow_34 :
+		return(%var80);
+	case dbrow_35 :
+		return(%var0);
+	case dbrow_36 :
+		return(%var335);
+	case dbrow_37 :
+		return(%varbit2780);
+	case dbrow_38 :
+		return(%varbit13718);
+	case dbrow_39 :
+		return(%varbit2639);
+	case dbrow_40 :
+		return(%varbit1560);
+	case dbrow_42 :
+		return(%varbit2866);
+	case dbrow_45 :
+		return(%varbit2497);
+	case dbrow_46 :
+		return(%varbit1803);
+	case dbrow_47 :
+		return(%varbit2326);
+	case dbrow_48 :
+		return(%var148);
+	case dbrow_50 :
+		return(%varbit334);
+	case dbrow_51 :
+		return(%var17);
+	case dbrow_52 :
+		return(%var11);
+	case dbrow_53 :
+		return(%varbit822);
+	case dbrow_57 :
+		return(%var347);
+	case dbrow_158 :
+		return(%var65);
+	case dbrow_58 :
+		return(%varbit961);
+	case dbrow_60 :
+		return(%var180);
+	case dbrow_62 :
+		return(%varbit217);
+	case dbrow_63 :
+		return(%varbit571);
+	case dbrow_65 :
+		return(%varbit346);
+	case dbrow_66 :
+		return(%var150);
+	case dbrow_69 :
+		return(%varbit1527);
+	case dbrow_70 :
+		return(%var382);
+	case dbrow_71 :
+		return(%var223);
+	case dbrow_72 :
+		return(%var188);
+	case dbrow_73 :
+		return(%var5);
+	case dbrow_74 :
+		return(%varbit34);
+	case dbrow_75 :
+		return(%varbit418);
+	case dbrow_77 :
+		return(%varbit1990);
+	case dbrow_79 :
+		return(%var387);
+	case dbrow_80 :
+		return(%var175);
+	case dbrow_85 :
+		return(%var139);
+	case dbrow_86 :
+		return(%var147);
+	case dbrow_87 :
+		return(%varbit532);
+	case dbrow_88 :
+		return(%varbit2448);
+	case dbrow_92 :
+		return(%varbit1383);
+	case dbrow_93 :
+		return(%var14);
+	case dbrow_95 :
+		return(%var365);
+	case dbrow_97 :
+		return(%var30);
+	case dbrow_98 :
+		return(%varbit260);
+	case dbrow_99 :
+		return(%var517);
+	case dbrow_100 :
+		return(%varbit1103);
+	case dbrow_101 :
+		return(%var192);
+	case dbrow_102 :
+		return(%varbit2790);
+	case dbrow_103 :
+		return(%var307);
+	case dbrow_105 :
+		return(%var112);
+	case dbrow_107 :
+		return(%var416);
+	case dbrow_109 :
+		return(%var165);
+	case dbrow_111 :
+		return(%var302);
+	case dbrow_114 :
+		return(%var714);
+	case dbrow_116 :
+		return(%varbit1404);
+	case dbrow_117 :
+		return(%varbit1850);
+	case dbrow_2307 :
+		return(%varbit1850);
+	case dbrow_2316 :
+		return(%varbit1850);
+	case dbrow_2308 :
+		return(%varbit1892);
+	case dbrow_2309 :
+		return(%varbit1867);
+	case dbrow_2310 :
+		return(%varbit1895);
+	case dbrow_2311 :
+		return(%varbit1896);
+	case dbrow_2312 :
+		return(%varbit1878);
+	case dbrow_2313 :
+		return(%varbit1904);
+	case dbrow_2314 :
+		return(%varbit1910);
+	case dbrow_2315 :
+		return(%varbit1914);
+	case dbrow_118 :
+		return(%varbit657);
+	case dbrow_119 :
+		return(%var328);
+	case dbrow_122 :
+		return(%var402);
+	case dbrow_123 :
+		return(%varbit2140);
+	case dbrow_124 :
+		return(%var600);
+	case dbrow_126 :
+		return(%var76);
+	case dbrow_127 :
+		return(%var159);
+	case dbrow_136 :
+		return(%varbit2610);
+	case dbrow_128 :
+		return(%var339);
+	case dbrow_129 :
+		return(%varbit1372);
+	case dbrow_130 :
+		return(%var60);
+	case dbrow_133 :
+		return(%var116);
+	case dbrow_138 :
+		return(%varbit2011);
+	case dbrow_139 :
+		return(%varbit1444);
+	case dbrow_140 :
+		return(%varbit2098);
+	case dbrow_141 :
+		return(%var320);
+	case dbrow_142 :
+		return(%varbit1028);
+	case dbrow_145 :
+		return(%varbit451);
+	case dbrow_146 :
+		return(%var26);
+	case dbrow_147 :
+		return(%var359);
+	case dbrow_148 :
+		return(%var197);
+	case dbrow_160 :
+		return(%var226);
+	case dbrow_150 :
+		return(%var111);
+	case dbrow_151 :
+		return(%var200);
+	case dbrow_152 :
+		return(%var385);
+	case dbrow_153 :
+		return(%var317);
+	case dbrow_154 :
+		return(%var161);
+	case dbrow_156 :
+		return(%varbit1051);
+	case dbrow_157 :
+		return(%var212);
+	case dbrow_15 :
+		return(%varbit3293);
+	case dbrow_56 :
+		return(%varbit3311);
+	case dbrow_149 :
+		return(%varbit3337);
+	case dbrow_67 :
+		return(%var980);
+	case dbrow_159 :
+		return(%varbit3523);
+	case dbrow_106 :
+		return(%varbit3534);
+	case dbrow_1 :
+		return(%varbit3550);
+	case dbrow_33 :
+		return(%varbit3618);
+	case dbrow_68 :
+		return(%varbit2783);
+	case dbrow_82 :
+		return(%varbit3888);
+	case dbrow_96 :
+		return(%varbit5027);
+	case dbrow_13 :
+		return(%varbit5619);
+	case dbrow_115 :
+		return(%var714);
+	case dbrow_11 :
+		return(%varbit5795);
+	case dbrow_113 :
+		return(%varbit6037);
+	case dbrow_26 :
+		return(%varbit6027);
+	case dbrow_32 :
+		return(%varbit6104);
+	case dbrow_143 :
+		return(%varbit6358);
+	case dbrow_144 :
+		return(%varbit6396);
+	case dbrow_91 :
+		return(%varbit6528);
+	case dbrow_54 :
+		return(%varbit7796);
+	case dbrow_3 :
+		return(%varbit7856);
+	case dbrow_20 :
+		return(%varbit13713);
+	case dbrow_41 :
+		return(%varbit13717);
+	case dbrow_43 :
+		return(%var492);
+	case dbrow_5 :
+		return(%varbit5078);
+	case dbrow_4 :
+		return(%varbit13714);
+	case dbrow_59 :
+		return(%varbit3330);
+	case dbrow_78 :
+		return(%varbit8403);
+	case dbrow_135 :
+		return(%varbit1344);
+	case dbrow_89 :
+		return(%var267);
+	case dbrow_84 :
+		return(%varbit3290);
+	case dbrow_49 :
+		return(%varbit5347);
+	case dbrow_90 :
+		return(%varbit6067);
+	case dbrow_21 :
+		return(%varbit10570);
+	case dbrow_162 :
+		return(%varbit8063);
+	case dbrow_137 :
+		return(%varbit9016);
+	case dbrow_55 :
+		return(%varbit9459);
+	case dbrow_134 :
+		return(%varbit7255);
+	case dbrow_110 :
+		return(%varbit10582);
+	case dbrow_61 :
+		return(%varbit693);
+	case dbrow_6 :
+		return(%varbit12063);
+	case dbrow_104 :
+		return(%varbit12276);
+	case dbrow_81 :
+		return(%varbit12296);
+	case dbrow_164 :
+		return(%varbit13175);
+	case dbrow_165 :
+		return(%varbit13599);
+	case dbrow_166 :
+		return(%varbit13619);
+	case dbrow_167 :
+		return(%varbit13738);
+	case dbrow_168 :
+		return(%varbit13841);
+	case dbrow_169 :
+		return(%varbit13902);
+	case dbrow_2306 :
+		return(%varbit13836);
+	case dbrow_180 :
+		return(%varbit14609);
+	case dbrow_2338 :
+		return(%varbit14722);
+	case dbrow_3250 :
+		return(%varbit14973);
+	case dbrow_2343 :
+		return(%varbit14862);
+	case dbrow_3425 :
+		return(%varbit15288);
+	case dbrow_3450 :
+		return(%varbit9632);
+	case dbrow_3451 :
+		return(%varbit9613);
+	case dbrow_3466 :
+		return(%varbit9655);
+	case dbrow_3467 :
+		return(%varbit9653);
+	case dbrow_3512 :
+		return(%varbit9649);
+	case dbrow_3513 :
+		return(%varbit9835);
+	case dbrow_3514 :
+		return(%varbit9819);
+	case dbrow_3515 :
+		return(%varbit9844);
+	case dbrow_3710 :
+		return(%varbit11117);
+	case dbrow_3711 :
+		return(%varbit11210);
+	case dbrow_3712 :
+		return(%varbit11182);
+	case dbrow_3713 :
+		return(%varbit11193);
+	case dbrow_3937 :
+		return(%varbit11479);
+	case default :
+		return(-1);
+}

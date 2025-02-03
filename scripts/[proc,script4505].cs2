@@ -1,0 +1,42 @@
+// 4505
+[proc,script4505](component $component0, component $component1, int $comsubid2, int $comsubid3, struct $struct4, component $component5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9)
+def_int $int10 = -1;
+def_string $string0 = "";
+def_int $length11 = string_length(%varcstring359);
+if ($length11 > 0) {
+	switch_int (%varcint5) {
+		case 23, 24, 25 :
+			~script4506(
+				0 = %varcint5, 
+				1 = %varcstring359, 
+				2 = $component0, 
+				3 = $component1, 
+				4 = $comsubid2, 
+				5 = $comsubid3, 
+				6 = $struct4, 
+				7 = $component5, 
+				8 = $comsubid6, 
+				9 = $comsubid7, 
+				10 = $comsubid8, 
+				11 = $comsubid9
+			);
+		case 22 :
+			~script4507(
+				0 = %varcstring359, 
+				1 = $component0, 
+				2 = $component1, 
+				3 = $comsubid2, 
+				4 = $comsubid3, 
+				5 = $struct4, 
+				6 = $component5, 
+				7 = $comsubid6, 
+				8 = $comsubid7, 
+				9 = $comsubid8, 
+				10 = $comsubid9
+			);
+	}
+	%varbit9639 = 0;
+	%varbit9647 = 1;
+	~meslayer_close(true, true, true);
+	return;
+}

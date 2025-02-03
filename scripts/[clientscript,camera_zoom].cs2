@@ -1,0 +1,14 @@
+// 39
+[clientscript,camera_zoom](int $mousey0)
+def_int $int1 = calc(0 - $mousey0 * 25);
+def_int $int2 = 512;
+def_int $int3 = 512;
+if (%varbit6357 = 0) {
+	if (%varbit4606 ! 0) {
+		return;
+	}
+	$int3, $int2 = viewport_getfov;
+	$int3 = calc($int3 + $int1);
+	$int2 = calc($int2 + $int1);
+	~camera_do_zoom($int3, $int2);
+}

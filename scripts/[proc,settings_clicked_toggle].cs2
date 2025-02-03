@@ -1,0 +1,563 @@
+// 3965
+[proc,settings_clicked_toggle](int $int0)
+%varbit9657 = $int0;
+switch_int ($int0) {
+	case 7 :
+		~settings_toggle_roof;
+	case 33 :
+		~settings_music_unlock_message;
+	case 5 :
+		~settings_hitsplat_tinting;
+	case 279 :
+		~settings_hitsplat_maxhit;
+	case 9 :
+		~settings_wiki_lookup;
+	case 8 :
+		~settings_data_orbs;
+	case 2 :
+		~settings_resizable_transparent_side_panel;
+	case 3 :
+		~script3977;
+	case 4 :
+		~script3978;
+	case 6 :
+		~settings_special_attack_bar_tooltip;
+	case 10 :
+		~settings_boss_health_overlay;
+	case 111 :
+		~settings_standard_health_overlay;
+	case 11 :
+		~settings_resizable_opaque_chatbox;
+	case 13 :
+		~script3982;
+	case 34 :
+		~settings_show_chat_effects;
+	case 35 :
+		~settings_split_private_chat;
+	case 36 :
+		~settings_hide_private_chat;
+	case 37 :
+		~settings_profanity_filter;
+	case 38 :
+		~settings_loot_drop_notification;
+	case 40 :
+		~settings_untradeable_loot_notification;
+	case 41 :
+		~script4017;
+	case 42 :
+		~settings_drop_item_warnings;
+	case 278 :
+		~script6714;
+	case 362 :
+		%varbit15323 = calc(1 - %varbit15323);
+	case 281 :
+		~script6716;
+	case 282 :
+		~script6717;
+	case 283 :
+		~script6718;
+	case 305 :
+		%varbit5697 = calc(1 - %varbit5697);
+	case 306 :
+		%varbit5698 = calc(1 - %varbit5698);
+	case 354 :
+		%varbit15311 = calc(1 - %varbit15311);
+	case 355 :
+		%varbit15312 = calc(1 - %varbit15312);
+	case 356 :
+		%varbit15313 = calc(1 - %varbit15313);
+	case 357 :
+		%varbit15314 = calc(1 - %varbit15314);
+	case 358 :
+		%varbit15315 = calc(1 - %varbit15315);
+	case 359 :
+		%varbit15316 = calc(1 - %varbit15316);
+	case 46 :
+		~script3988;
+	case 313 :
+		%varbit8059 = calc(1 - %varbit8059);
+	case 314 :
+		%varbit8060 = calc(1 - %varbit8060);
+	case 312 :
+		%varbit6580 = calc(1 - %varbit6580);
+	case 372 :
+		%varbit1334 = calc(1 - %varbit1334);
+	case 47 :
+		~settings_store_button_mobile;
+	case 181 :
+		~settings_store_button_desktop;
+	case 49 :
+		~settings_mouse_camera;
+	case 50 :
+		~script3991;
+	case 51 :
+		~script7449;
+	case 413 :
+		~script7450;
+	case 48 :
+		~script3993;
+	case 408 :
+		~script7451;
+	case 414 :
+		~script7452;
+	case 415 :
+		~script7453;
+	case 54 :
+		~script3995;
+	case 57 :
+		~settings_escape_closes_interface;
+	case 59 :
+		~settings_accept_aid;
+	case 60 :
+		~settings_warning_teleport_to_target;
+	case 61 :
+		~settings_warning_dareeyak_teleport;
+	case 62 :
+		~settings_warning_carrallangar_teleport;
+	case 63 :
+		~settings_warning_annakarl_teleport;
+	case 64 :
+		~settings_warning_ghorrock_teleport;
+	case 253 :
+		%varbit13985 = calc(1 - %varbit13985);
+	case 254 :
+		%varbit13986 = calc(1 - %varbit13986);
+	case 255 :
+		%varbit10532 = calc(1 - %varbit10532);
+	case 308 :
+		%varbit14803 = calc(1 - %varbit14803);
+	case 256 :
+		%varbit13988 = calc(1 - %varbit13988);
+	case 309 :
+		%varbit14804 = calc(1 - %varbit14804);
+	case 65 :
+		~script4009;
+	case 67 :
+		~settings_warning_ice_plateau_tablet;
+	case 68 :
+		~settings_warning_cemetery_tablet;
+	case 69 :
+		~settings_warning_crabs_tablet;
+	case 70 :
+		~settings_warning_dareeyak_tablet;
+	case 71 :
+		~settings_warning_carrallangar_tablet;
+	case 72 :
+		~settings_warning_annakarl_tablet;
+	case 73 :
+		~settings_warning_ghorrock_tablet;
+	case 182 :
+		%varbit13039 = calc(1 - %varbit13039);
+	case 183 :
+		%varbit13040 = calc(1 - %varbit13040);
+	case 365 :
+		%varbit9597 = calc(1 - %varbit9597);
+	case 82 :
+		~settings_precise_timing;
+	case 83 :
+		~settings_separate_hours;
+	case 84 :
+		~script4036;
+	case 192 :
+		~settings_gravestone_confirmation;
+	case 112 :
+		~script4760;
+	case 410 :
+		~script7585;
+	case 409 :
+		~script7589;
+	case 114 :
+		~settings_mouseover_tooltips;
+	case 209 :
+		~script5518;
+	case 147 :
+		~settings_mouseover_text;
+	case 115 :
+		~script5999;
+	case 116 :
+		~settings_regen_indicator;
+	case 118 :
+		~settings_helper_cox;
+	case 163 :
+		~settings_helper_agility;
+	case 120 :
+		~script4587;
+	case 121 :
+		~script4588;
+	case 122 :
+		~script4589;
+	case 123 :
+		~settings_attack_style;
+	case 125 :
+		~settings_buff_home_teleport;
+	case 126 :
+		~settings_buff_minigame_teleport;
+	case 124 :
+		~settings_buff_bar;
+	case 127 :
+		~script518;
+	case 418 :
+		~script2518;
+	case 128 :
+		~settings_buff_bar_tooltip;
+	case 129 :
+		~settings_buff_teleblock;
+	case 130 :
+		~settings_buff_charge_spell;
+	case 131 :
+		~settings_buff_godwars_altar;
+	case 132 :
+		~settings_buff_dragonfire_shield_cooldown;
+	case 133 :
+		~settings_buff_imbued_heart_cooldown;
+	case 134 :
+		~settings_buff_vengeance_cooldown;
+	case 135 :
+		~settings_buff_vengeance_active;
+	case 136 :
+		~settings_buff_stamina_duration;
+	case 137 :
+		~settings_buff_prayer_enhance_duration;
+	case 138 :
+		~settings_buff_overload_duration;
+	case 139 :
+		~settings_buff_magic_imbue_duration;
+	case 140 :
+		~settings_buff_sire_stun_duration;
+	case 141 :
+		~settings_buff_freeze_duration;
+	case 142 :
+		~settings_buff_sotd_duration;
+	case 143 :
+		~settings_buff_divine_potion_duration;
+	case 144 :
+		~settings_buff_antifire_duration;
+	case 145 :
+		~settings_buff_antipoison_duration;
+	case 284 :
+		~script6563;
+	case 388 :
+		~script500;
+	case 390 :
+		~script2074;
+	case 208 :
+		~script5519;
+	case 285 :
+		~script6564;
+	case 286 :
+		~script6565;
+	case 287 :
+		~script6566;
+	case 288 :
+		~script6567;
+	case 289 :
+		~script6568;
+	case 290 :
+		~script6569;
+	case 291 :
+		~script6570;
+	case 292 :
+		~script6571;
+	case 293 :
+		~script6572;
+	case 146 :
+		~settings_always_on_top;
+	case 241 :
+		~settings_full_screen;
+	case 148 :
+		~script4612;
+	case 149 :
+		~script4613;
+	case 151 :
+		~script4614;
+	case 152 :
+		~settings_buff_corruption;
+	case 153 :
+		~settings_buff_mark_of_darkness;
+	case 154 :
+		~settings_buff_shadow_veil;
+	case 155 :
+		~settings_buff_death_charge;
+	case 156 :
+		~settings_buff_ward_of_arceuus;
+	case 157 :
+		~settings_buff_resurrection;
+	case 161 :
+		~script2390;
+	case 159 :
+		~script2509;
+	case 170 :
+		~settings_buff_ammo;
+	case 164 :
+		~settings_helper_agility_highlight_obstacles;
+	case 172 :
+		~script5200;
+	case 175 :
+		~script5206;
+	case 178 :
+		~script5212;
+	case 173 :
+		~script5201;
+	case 176 :
+		~script5207;
+	case 179 :
+		~script5213;
+	case 166 :
+		~settings_minimap_lock;
+	case 317 :
+		%varbit6254 = calc(1 - %varbit6254);
+	case 85 :
+		~script5188;
+	case 171 :
+		~script5189;
+	case 184 :
+		~settings_helper_slayer;
+	case 185 :
+		~settings_logout_notifier;
+	case 186 :
+		~settings_buff_poison_damage;
+	case 189 :
+		~settings_bird_nest_notification;
+	case 190 :
+		~mouseover_entity_highlight_toggle_client;
+	case 212 :
+		~interact_entity_highlight_toggle_client;
+	case 191 :
+		~settings_popout_xptracker;
+	case 251 :
+		~script201;
+	case 252 :
+		~script202;
+	case 201 :
+		if (~is_group_iron = 1) {
+			%varbit13122 = calc(1 - %varbit13122);
+		} else {
+			%varbit13122 = 0;
+		}
+	case 202 :
+		if (~is_group_iron = 1) {
+			%varbit13123 = calc(1 - %varbit13123);
+		} else {
+			%varbit13123 = 0;
+		}
+	case 203 :
+		if (~is_group_iron = 1) {
+			%varbit13124 = calc(1 - %varbit13124);
+		} else {
+			%varbit13124 = 0;
+		}
+	case 204 :
+		if (~is_group_iron = 1) {
+			%varbit13125 = calc(1 - %varbit13125);
+		} else {
+			%varbit13125 = 0;
+		}
+	case 210 :
+		~script5520;
+	case 206 :
+		~script5521;
+	case 205 :
+		~script5522;
+	case 213 :
+		~settings_buff_cannon_ammo;
+	case 217 :
+		~script5973;
+	case 218 :
+		~script5974;
+	case 219 :
+		~settings_questlist_completed_toggle;
+	case 220 :
+		~settings_questlist_miniquests_toggle;
+	case 221 :
+		~settings_questlist_quests_toggle;
+	case 223 :
+		~script5978;
+	case 229 :
+		~script6017;
+	case 230 :
+		~script6018;
+	case 231 :
+		~script6019;
+	case 232 :
+		~script6020;
+	case 234 :
+		~script6000;
+	case 235 :
+		~script6001;
+	case 239 :
+		~script2177;
+	case 240 :
+		~script2178;
+	case 257 :
+		~script636;
+	case 242 :
+		~settings_helper_tog;
+	case 243 :
+		~script6447;
+	case 244 :
+		~script6448;
+	case 245 :
+		~settings_helper_herbiboar;
+	case 246 :
+		~settings_buff_cannon_decay;
+	case 247 :
+		~settings_cannon_hud;
+	case 248 :
+		~settings_cannon_low_notification;
+	case 250 :
+		~settings_cannon_no_ammo;
+	case 261 :
+		~settings_npc_indicators;
+	case 260 :
+		~settings_npc_indicators_outline;
+	case 265 :
+		~script6463;
+	case 268 :
+		~settings_blast_furnace_helper;
+	case 269 :
+		~settings_blast_furnace_highlights;
+	case 270 :
+		~settings_cluehelper_overlay;
+	case 277 :
+		~settings_cluehelper_target_highlight;
+	case 271 :
+		~settings_cluehelper;
+	case 272 :
+		~settings_cluehelper_worldmap_marker;
+	case 273 :
+		~script6459;
+	case 274 :
+		~settings_cluehelper_menu_highlight;
+	case 275 :
+		~settings_cluehelper_infobox;
+	case 276 :
+		~script6462;
+	case 294 :
+		~script6928;
+	case 296 :
+		~script99;
+	case 295 :
+		~script6929;
+	case 347 :
+		%varbit4100 = calc(1 - %varbit4100);
+	case 424 :
+		%varbit15958 = calc(1 - %varbit15958);
+	case 370 :
+		%varbit9545 = calc(1 - %varbit9545);
+	case 420 :
+		%varbit624 = calc(1 - %varbit624);
+	case 421 :
+		%varbit2319 = calc(1 - %varbit2319);
+	case 422 :
+		%varbit2320 = calc(1 - %varbit2320);
+	case 423 :
+		%varbit3939 = calc(1 - %varbit3939);
+	case 297 :
+		%varbit14700 = calc(1 - %varbit14700);
+	case 298 :
+		%varbit14701 = calc(1 - %varbit14701);
+	case 302 :
+		~script6911;
+	case 303 :
+		~script6912;
+	case 304 :
+		~script6913;
+	case 307 :
+		~script383;
+	case 311 :
+		~script7027;
+	case 315 :
+		%varbit9452 = calc(1 - %varbit9452);
+	case 316 :
+		%varbit10971 = calc(1 - %varbit10971);
+	case 320 :
+		~settings_popout_loottools;
+	case 321 :
+		~settings_ground_items;
+	case 333 :
+		~script7113;
+	case 366 :
+		~script1214;
+	case 346 :
+		~settings_ground_items_show_price;
+	case 335 :
+		~script7114(calc(1 - %varbit14874));
+	case 337 :
+		~script7115(calc(1 - %varbit14876));
+	case 339 :
+		~settings_ground_items_edit_mode(calc(1 - %varbit14872));
+	case 343 :
+		~script7118;
+	case 344 :
+		~script7119;
+	case 348 :
+		%varbit4137 = calc(1 - %varbit4137);
+	case 360 :
+		%varbit15321 = calc(1 - %varbit15321);
+	case 352 :
+		%varbit6068 = calc(1 - %varbit6068);
+	case 353 :
+		%varbit15310 = calc(1 - %varbit15310);
+	case 386 :
+		if (%varbit1777 = 2) {
+			%varbit10987 = calc(1 - %varbit10987);
+		}
+	case 363 :
+		~script724;
+	case 368 :
+		~script4863;
+	case 369 :
+		~script4899;
+	case 371 :
+		~script4909;
+	case 373 :
+		~script133;
+	case 380 :
+		~script5127;
+	case 381 :
+		~script5128;
+	case 374 :
+		~script5121;
+	case 375 :
+		~script5122;
+	case 376 :
+		~script5123;
+	case 377 :
+		~script5124;
+	case 378 :
+		~script5125;
+	case 379 :
+		~script5126;
+	case 383 :
+		~script5142;
+	case 385 :
+		~script5155;
+	case 391 :
+		~script7458;
+	case 396 :
+		~script7461(0);
+	case 397 :
+		~script7461(1);
+	case 398 :
+		~script7461(2);
+	case 399 :
+		~script7461(3);
+	case 400 :
+		~script7461(4);
+	case 401 :
+		~script7461(5);
+	case 402 :
+		~script7461(6);
+	case 403 :
+		~script7461(7);
+	case 404 :
+		~script7461(8);
+	case 405 :
+		~script7461(9);
+	case 406 :
+		~script7462;
+	case 417 :
+		~script7463;
+	case 419 :
+		~script728;
+}

@@ -1,0 +1,68 @@
+// 281
+[clientscript,bankmain_search_toggle](int $opindex0, component $widget_12:1_1, component $widget_12:123_2, component $widget_12:13_3, component $widget_12:14_4, component $widget_12:17_5, component $widget_12:3_6, component $widget_12:5_7, component $widget_12:42_8, component $widget_12:11_9, component $widget_12:49_10, component $widget_12:50_11, component $widget_12:128_12, component $widget_12:44_13, component $widget_12:45_14, component $widget_12:46_15, component $widget_12:47_16, component $widget_12:4_17)
+if ($opindex0 ! 1) {
+	return;
+}
+%varbit4150 = 0;
+if (~bankmain_searching = 1) {
+	~meslayer_close(true, true, true);
+	~bankmain_search_setbutton(
+		0 = $widget_12:1_1, 
+		1 = $widget_12:123_2, 
+		2 = $widget_12:13_3, 
+		3 = $widget_12:14_4, 
+		4 = $widget_12:17_5, 
+		5 = $widget_12:3_6, 
+		6 = $widget_12:5_7, 
+		7 = $widget_12:42_8, 
+		8 = $widget_12:11_9, 
+		9 = $widget_12:49_10, 
+		10 = $widget_12:50_11, 
+		11 = $widget_12:128_12, 
+		12 = $widget_12:44_13, 
+		13 = $widget_12:45_14, 
+		14 = $widget_12:46_15, 
+		15 = $widget_12:47_16, 
+		16 = $widget_12:4_17
+	);
+	~bankmain_build(
+		0 = $widget_12:1_1, 
+		1 = $widget_12:123_2, 
+		2 = $widget_12:13_3, 
+		3 = $widget_12:14_4, 
+		4 = $widget_12:17_5, 
+		5 = $widget_12:3_6, 
+		6 = $widget_12:5_7, 
+		7 = $widget_12:42_8, 
+		8 = $widget_12:11_9, 
+		9 = $widget_12:49_10, 
+		10 = $widget_12:50_11, 
+		11 = $widget_12:128_12, 
+		12 = $widget_12:44_13, 
+		13 = $widget_12:45_14, 
+		14 = $widget_12:46_15, 
+		15 = $widget_12:47_16, 
+		16 = $widget_12:4_17
+	);
+	return;
+}
+~meslayer_mode11;
+~bankmain_search_setbutton(
+	0 = $widget_12:1_1, 
+	1 = $widget_12:123_2, 
+	2 = $widget_12:13_3, 
+	3 = $widget_12:14_4, 
+	4 = $widget_12:17_5, 
+	5 = $widget_12:3_6, 
+	6 = $widget_12:5_7, 
+	7 = $widget_12:42_8, 
+	8 = $widget_12:11_9, 
+	9 = $widget_12:49_10, 
+	10 = $widget_12:50_11, 
+	11 = $widget_12:128_12, 
+	12 = $widget_12:44_13, 
+	13 = $widget_12:45_14, 
+	14 = $widget_12:46_15, 
+	15 = $widget_12:47_16, 
+	16 = $widget_12:4_17
+);

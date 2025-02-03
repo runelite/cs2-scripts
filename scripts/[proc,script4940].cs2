@@ -1,0 +1,44 @@
+// 4940
+[proc,script4940]
+def_component $component0 = interface_865:26;
+cc_deleteall($component0);
+def_string $text0 = "Select a modifier";
+~create_text(
+	0 = $component0, 
+	1 = 0, 
+	2 = b12_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_top, 
+	7 = 0, 
+	8 = 20, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_abs, 
+	11 = $text0, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 13
+);
+$text0 = "Use the buttons below to select a modifier before continuing to the next wave.<br><br>Alternatively, you may end this run now and claim the loot you've earned so far.";
+~create_text(
+	0 = $component0, 
+	1 = 1, 
+	2 = p11_full, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_bottom, 
+	7 = 0, 
+	8 = 20, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus, 
+	11 = $text0, 
+	12 = true, 
+	13 = 0xff981f, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 11
+);

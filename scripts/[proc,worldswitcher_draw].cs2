@@ -1,0 +1,482 @@
+// 892
+[proc,worldswitcher_draw](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, graphic $graphic8, fontmetrics $fontmetrics9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component10);
+if_setsize(16, $int7, ^setsize_minus, ^setsize_minus, $component1);
+if_setsize(16, $int7, ^setsize_abs, ^setsize_minus, $component2);
+~worldswitcher_sortbutton_draw(
+	0 = $component11, 
+	1 = 2, 
+	2 = 3, 
+	3 = $component0, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int6, 
+	10 = $int7, 
+	11 = $graphic8, 
+	12 = $fontmetrics9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $component18, 
+	22 = $component19
+);
+~worldswitcher_sortbutton_draw(
+	0 = $component12, 
+	1 = 0, 
+	2 = 1, 
+	3 = $component0, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int6, 
+	10 = $int7, 
+	11 = $graphic8, 
+	12 = $fontmetrics9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $component18, 
+	22 = $component19
+);
+~worldswitcher_sortbutton_draw(
+	0 = $component13, 
+	1 = 4, 
+	2 = 5, 
+	3 = $component0, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int6, 
+	10 = $int7, 
+	11 = $graphic8, 
+	12 = $fontmetrics9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $component18, 
+	22 = $component19
+);
+~worldswitcher_sortbutton_draw(
+	0 = $component14, 
+	1 = 8, 
+	2 = 9, 
+	3 = $component0, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int6, 
+	10 = $int7, 
+	11 = $graphic8, 
+	12 = $fontmetrics9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $component18, 
+	22 = $component19
+);
+~worldswitcher_sortbutton_draw(
+	0 = $component15, 
+	1 = 6, 
+	2 = 7, 
+	3 = $component0, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int6, 
+	10 = $int7, 
+	11 = $graphic8, 
+	12 = $fontmetrics9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13, 
+	17 = $component14, 
+	18 = $component15, 
+	19 = $component16, 
+	20 = $component17, 
+	21 = $component18, 
+	22 = $component19
+);
+switch_int (%varbit4596) {
+	case 2 :
+		worldlist_sort(7, false, 0, false);
+	case 3 :
+		worldlist_sort(7, true, 0, false);
+	case 4 :
+		worldlist_sort(2, false, 0, false);
+	case 5 :
+		worldlist_sort(2, true, 0, false);
+	case 8 :
+		worldlist_sort(1, false, 0, false);
+	case 9 :
+		worldlist_sort(1, true, 0, false);
+	case 6 :
+		worldlist_sort(3, false, 0, false);
+	case 7 :
+		worldlist_sort(3, true, 0, false);
+	case 1 :
+		worldlist_sort(0, true, 7, false);
+	case default :
+		worldlist_sort(0, false, 7, false);
+}
+def_int $int20 = 0;
+while ($int20 <= 600) {
+	if (cc_find($component4, $int20) = ^true) {
+		cc_sethide(true);
+	}
+	$int20 = calc($int20 + 1);
+}
+if ($component19 ! null) {
+	~deltooltip_action($component19);
+}
+def_int $width21 = if_getwidth($component11);
+def_int $width22 = if_getwidth($component12);
+def_int $width23 = if_getwidth($component13);
+def_int $width24 = if_getwidth($component14);
+def_int $width25 = if_getwidth($component15);
+def_int $int26 = ~stat_totallevel;
+def_int $int27 = ~stat_f2plevel;
+def_component $layer28 = if_getlayer($component0);
+cc_deleteall($component3);
+$int20 = 0;
+def_int $height29 = 0;
+switch_int (%varbit4596) {
+	case default :
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -1, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+	case 4 :
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -42, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = 0, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -73, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -69, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+	case 5 :
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -69, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -73, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = 0, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+		$int20, $height29 = ~script7273(
+			0 = $component3, 
+			1 = $int20, 
+			2 = $height29, 
+			3 = -42, 
+			4 = $component4, 
+			5 = $int5, 
+			6 = $graphic8, 
+			7 = $fontmetrics9, 
+			8 = $width21, 
+			9 = $width22, 
+			10 = $width23, 
+			11 = $width24, 
+			12 = $width25, 
+			13 = $int26, 
+			14 = $int27, 
+			15 = $layer28, 
+			16 = $component19
+		);
+}
+if ($int20 <= 0) {
+	cc_create($component3, ^iftype_text, $int20);
+	cc_setsize(10, 100, ^setsize_minus, ^setsize_abs);
+	$int20, $height29 = calc($int20 + 1), calc($height29 + 100);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("Please review your filter settings.");
+}
+if ($height29 > if_getheight($component1)) {
+	if_setscrollsize(0, $height29, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component4);
+if_setsize(0, $height29, ^setsize_minus, ^setsize_abs, $component3);
+if ($layer28 ! null) {
+	%varcint63 = ~max(0, %varcint63);
+	~worldswitcher_options_setsize($layer28, $component0, $component2, $component1, $int6, $int7, ~max(180, $height29), if_getheight($layer28));
+} else {
+	%varcint69 = ~max(0, %varcint69);
+	~scrollbar_resize($component2, $component1, %varcint69);
+}
+cc_deleteall($component16);
+cc_deleteall($component17);
+def_int $x30 = calc(if_getwidth($component16) - ($width21 + $width22 + $width23 + $width24));
+def_int $world31 = 0;
+def_int $flags32 = 0;
+def_string $string0 = "";
+def_int $int33 = -1;
+def_int $int34 = 0;
+def_string $string1 = "";
+if (%varbit4597 > 0) {
+	if_sethide(true, $component18);
+	$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4597);
+	if (~script961($world31, $flags32) = 0) {
+		$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
+	}
+	~worldswitcher_entry_draw(
+		0 = $component16, 
+		1 = 0, 
+		2 = 0, 
+		3 = $component16, 
+		4 = -1, 
+		5 = $world31, 
+		6 = $flags32, 
+		7 = $string0, 
+		8 = $int33, 
+		9 = $int34, 
+		10 = $int5, 
+		11 = $graphic8, 
+		12 = $fontmetrics9, 
+		13 = -1, 
+		14 = $width21, 
+		15 = $width22, 
+		16 = $width23, 
+		17 = $width24, 
+		18 = $x30, 
+		19 = $int26, 
+		20 = $int27, 
+		21 = $component19
+	);
+	if (%varbit4598 > 0) {
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
+		if (~script961($world31, $flags32) = 0) {
+			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
+		}
+		~worldswitcher_entry_draw(
+			0 = $component17, 
+			1 = 0, 
+			2 = 0, 
+			3 = $component17, 
+			4 = -1, 
+			5 = $world31, 
+			6 = $flags32, 
+			7 = $string0, 
+			8 = $int33, 
+			9 = $int34, 
+			10 = $int5, 
+			11 = $graphic8, 
+			12 = $fontmetrics9, 
+			13 = -1, 
+			14 = $width21, 
+			15 = $width22, 
+			16 = $width23, 
+			17 = $width24, 
+			18 = $x30, 
+			19 = $int26, 
+			20 = $int27, 
+			21 = $component19
+		);
+	} else {
+		~worldswitcher_wipe_favourite($component17);
+	}
+} else {
+	~worldswitcher_wipe_favourite($component16);
+	if (%varbit4598 > 0) {
+		if_sethide(true, $component18);
+		$world31, $flags32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
+		if (~script961($world31, $flags32) = 0) {
+			$world31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
+		}
+		~worldswitcher_entry_draw(
+			0 = $component17, 
+			1 = 0, 
+			2 = 0, 
+			3 = $component17, 
+			4 = -1, 
+			5 = $world31, 
+			6 = $flags32, 
+			7 = $string0, 
+			8 = $int33, 
+			9 = $int34, 
+			10 = $int5, 
+			11 = $graphic8, 
+			12 = $fontmetrics9, 
+			13 = -1, 
+			14 = $width21, 
+			15 = $width22, 
+			16 = $width23, 
+			17 = $width24, 
+			18 = $x30, 
+			19 = $int26, 
+			20 = $int27, 
+			21 = $component19
+		);
+	} else {
+		if_sethide(false, $component18);
+		~worldswitcher_wipe_favourite($component17);
+	}
+}

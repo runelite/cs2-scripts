@@ -1,0 +1,9 @@
+// 2268
+[clientscript,text_device](component $widget_19:6_0, int $comsubid1, string $text0, string $text1)
+if ($comsubid1 = -1 & if_find($widget_19:6_0) = ^true | cc_find($widget_19:6_0, $comsubid1) = ^true) {
+	if (~on_mobile = true) {
+		cc_settext($text1);
+	} else {
+		cc_settext($text0);
+	}
+}

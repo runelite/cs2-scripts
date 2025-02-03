@@ -1,0 +1,16 @@
+// 7787
+[clientscript,script7787](int $opindex0, component $component1, int $comsubid2, int $size3)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (%varbit5450 = 0) {
+	if (testbit(%varbit5422, $comsubid2) = ^true) {
+		%varbit5422 = clearbit(%varbit5422, $comsubid2);
+	} else {
+		%varbit5422 = setbit(%varbit5422, $comsubid2);
+	}
+}
+if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, calc($comsubid2 + $size3)) = ^true) {
+	~script7786($comsubid2);
+}

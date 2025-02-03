@@ -1,0 +1,135 @@
+// 6078
+[clientscript,script6078](component $widget_12:48_0)
+def_int $int1 = 0;
+if (%varbit11295 = 0) {
+	cc_deleteall($widget_12:48_0);
+	if_setonop(null, $widget_12:48_0);
+	if_setop(1, "", $widget_12:48_0);
+	if_sethide(true, $widget_12:48_0);
+	if (~on_mobile = false) {
+		if_setonmouseleave(null, $widget_12:48_0);
+		if_setonmouserepeat(null, $widget_12:48_0);
+	}
+} else {
+	cc_create($widget_12:48_0, ^iftype_model, $int1);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setmodel(potion_storage_54550);
+	cc_setmodelangle(0, 40, 145, 1950, 0, 1000);
+	$int1 = calc($int1 + 1);
+	if_setop(1, "Potion store", $widget_12:48_0);
+	if_sethide(false, $widget_12:48_0);
+}
+if_setonvartransmit("script6079{
+	0 = var4278, 
+	1 = var4279, 
+	2 = var4280, 
+	3 = var4281, 
+	4 = var4282, 
+	5 = var4283, 
+	6 = var4284, 
+	7 = var4285, 
+	8 = var4287, 
+	9 = var4288, 
+	10 = var4289, 
+	11 = var4290, 
+	12 = var4291, 
+	13 = var4292, 
+	14 = var4293, 
+	15 = var4294, 
+	16 = var4295, 
+	17 = var4296, 
+	18 = var4297, 
+	19 = var4481, 
+	20 = var4298, 
+	21 = var4299, 
+	22 = var4300, 
+	23 = var4301, 
+	24 = var4302, 
+	25 = var4303, 
+	26 = var4304, 
+	27 = var4305, 
+	28 = var4306, 
+	29 = var4307, 
+	30 = var4308, 
+	31 = var4309, 
+	32 = var4310, 
+	33 = var4311, 
+	34 = var4312, 
+	35 = var4313, 
+	36 = var4314, 
+	37 = var4315, 
+	38 = var4316, 
+	39 = var4317, 
+	40 = var4318, 
+	41 = var4319, 
+	42 = var4320, 
+	43 = var4321, 
+	44 = var4322, 
+	45 = var4323, 
+	46 = var4324, 
+	47 = var4325, 
+	48 = var4326, 
+	49 = var4327, 
+	50 = var4328, 
+	51 = var4329, 
+	52 = var4330, 
+	53 = var4331, 
+	54 = var4332, 
+	55 = var4333, 
+	56 = var4334, 
+	57 = var4335, 
+	58 = var4336, 
+	59 = var4337, 
+	60 = var4338, 
+	61 = var4339, 
+	62 = var4340, 
+	63 = var4341, 
+	64 = var4342, 
+	65 = var4343, 
+	66 = var4344, 
+	67 = var4345, 
+	68 = var4346, 
+	69 = var4347, 
+	70 = var4348, 
+	71 = var4349, 
+	72 = var4350, 
+	73 = var4351, 
+	74 = var4352, 
+	75 = var4353, 
+	76 = var4354, 
+	77 = var4355, 
+	78 = var4356, 
+	79 = var4357, 
+	80 = var4358, 
+	81 = var4359, 
+	82 = var4360, 
+	83 = var4361, 
+	84 = var4362, 
+	85 = var4363, 
+	86 = var4364, 
+	87 = var4365, 
+	88 = var4366, 
+	89 = var4367, 
+	90 = var4368, 
+	91 = var4369, 
+	92 = var4370, 
+	93 = var4371, 
+	94 = var4372, 
+	95 = var4373, 
+	96 = var4374, 
+	97 = var4375, 
+	98 = var4376, 
+	99 = var4377, 
+	100 = var4378, 
+	101 = var4379, 
+	102 = var4380, 
+	103 = var4381, 
+	104 = var4483, 
+	105 = var4382, 
+	106 = var4383, 
+	107 = var4384, 
+	108 = var4497, 
+	109 = var4286
+}", interface_12:52);
+~script6080;

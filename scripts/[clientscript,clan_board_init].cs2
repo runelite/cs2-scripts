@@ -1,0 +1,58 @@
+// 4354
+[clientscript,clan_board_init](component $widget_700:1_0, component $widget_700:5_1, component $widget_700:6_2, int $widget_700:16_3, component $widget_700:20_4, component $widget_700:66_5, component $widget_700:68_6, component $widget_700:69_7, component $widget_700:70_8, component $widget_700:12_9)
+def_int $int10 = 0;
+while ($int10 < 45) {
+	if_sethide(true, enum(int, component, enum_3803, $int10));
+	$int10 = calc($int10 + 1);
+}
+if_setsize(500, calc(334 - 10), ^setsize_abs, ^setsize_abs, $widget_700:1_0);
+if_setscrollsize(0, 0, $widget_700:5_1);
+if_setscrollpos(0, 0, $widget_700:5_1);
+if_setscrollsize(0, 0, $widget_700:20_4);
+if_setscrollpos(0, 0, $widget_700:20_4);
+~scrollbar_vertical($widget_700:6_2, $widget_700:5_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($widget_700:66_5, $widget_700:20_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+%varcint43, %varcint49 = 0, 0;
+cc_deleteall($widget_700:20_4);
+cc_create($widget_700:20_4, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x808080);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+if_sethide(true, $widget_700:68_6);
+if_sethide(true, $widget_700:70_8);
+if_sethide(true, $widget_700:12_9);
+cc_deleteall($widget_700:1_0);
+cc_create($widget_700:1_0, ^iftype_rectangle, enum(component, int, enum_3804, $widget_700:68_6));
+cc_sethide(true);
+cc_create($widget_700:1_0, ^iftype_rectangle, enum(component, int, enum_3804, $widget_700:69_7));
+cc_sethide(true);
+cc_create($widget_700:1_0, ^iftype_rectangle, enum(component, int, enum_3804, $widget_700:70_8));
+cc_sethide(true);
+cc_create($widget_700:1_0, ^iftype_rectangle, enum(component, int, enum_3804, $widget_700:12_9));
+cc_sethide(true);
+def_string $string0 = "List your clan";
+def_string $string1 = "<col=ff0000>De-list</col>";
+def_int $int11 = calc(20 + ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full)));
+if_setsize($int11, 10, ^setsize_abs, ^setsize_minus, $widget_700:68_6);
+~script4356($widget_700:1_0, $widget_700:68_6, enum_3804, $string0, $string1);
+if_setonvartransmit("script4355(event_com, $widget_700:68_6, enum_3804, $string0, $string1){var261}", $widget_700:1_0);
+$string0 = "Applicants";
+def_int $int12 = calc(20 + parawidth($string0, 512, p12_full));
+if_setsize($int12, 10, ^setsize_abs, ^setsize_minus, $widget_700:69_7);
+~script1558($widget_700:69_7, $string0, $widget_700:1_0, enum_3804, -1);
+$string0 = "<col=0dc10d>Refresh</col>";
+def_int $int13 = calc(20 + parawidth($string0, 512, p12_full));
+if_setsize($int13, 10, ^setsize_abs, ^setsize_minus, $widget_700:70_8);
+~script1558($widget_700:70_8, $string0, $widget_700:1_0, enum_3804, -1);
+def_int $int14 = calc((if_getwidth(if_getlayer($widget_700:68_6)) - 4 - ($int11 + $int12 + $int13)) / 4);
+def_int $int15 = calc(2 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_700:68_6);
+$int15 = calc($int15 + $int11 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_700:69_7);
+$int15 = calc($int15 + $int12 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_700:70_8);
+~script1558($widget_700:12_9, "<col=0dc10d>Reset</col>", $widget_700:1_0, enum_3804, -1);

@@ -1,0 +1,47 @@
+// 1540
+[proc,raids_sidepanel_data](component $widget_500:12_0, component $widget_500:14_1)
+def_string $string0 = "Party size: <col=ffffff><tostring(%varbit5424)></col>  Combat level: <col=ffffff><tostring(%varbit12285)></col>";
+if (%varbit9540 > %varbit5424) {
+	$string0 = append($string0, "<br>Scaled party size: <col=ffffff><tostring(%varbit9540)></col>");
+}
+cc_settext($string0);
+if (%varbit5425 = 0) {
+	if (%varbit5423 = 1) {
+		.cc_settext("");
+	} else {
+		.cc_settext("Waiting for your leader to begin the raid...");
+	}
+} else if (%varbit5425 = 1) {
+	.cc_settext("Your party is exploring the upper level...");
+} else if (%varbit5425 = 2) {
+	if (%varbit6385 = 1) {
+		.cc_settext("Your party has reached the middle level...");
+	} else {
+		.cc_settext("Your party has reached the lower level...");
+	}
+} else if (%varbit5425 = 3) {
+	.cc_settext("Your party has reached the lower level...");
+} else if (%varbit5425 = 4) {
+	.cc_settext("Your party has reached the bottom...");
+} else {
+	.cc_settext("Get out! Get out!<br>GET OUT!");
+}
+def_string $string1 = "Start raid";
+if (%varbit5423 = 1 & %varbit5425 = 0) {
+	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($widget_500:14_1), ^setsize_abs, ^setsize_abs, $widget_500:14_1);
+	if_sethide(false, $widget_500:14_1);
+	~raids_sidepanel_drawbutton(false, $string1, $widget_500:14_1);
+	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string1, $widget_500:14_1)", $widget_500:14_1);
+	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string1, $widget_500:14_1)", $widget_500:14_1);
+	if_setonop("raids_sidepanel_opbutton(event_op, $string1, $widget_500:14_1)", $widget_500:14_1);
+	if_setontimer(null, $widget_500:14_1);
+	if_setop(1, $string1, $widget_500:14_1);
+} else {
+	if_sethide(true, $widget_500:14_1);
+	cc_deleteall($widget_500:14_1);
+	if_clearops($widget_500:14_1);
+	if_setonmouserepeat(null, $widget_500:14_1);
+	if_setonmouseleave(null, $widget_500:14_1);
+	if_setonop(null, $widget_500:14_1);
+	if_setontimer(null, $widget_500:14_1);
+}

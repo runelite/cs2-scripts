@@ -1,0 +1,29 @@
+// 197
+[clientscript,agilityarena_rewards_init](component $widget_107:0_0, component $widget_107:3_1, component $widget_107:5_2, component $widget_107:7_3, component $widget_107:9_4, component $widget_107:11_5, component $widget_107:13_6, component $widget_107:15_7, component $widget_107:17_8, component $widget_107:19_9, component $widget_107:21_10, component $widget_107:23_11, component $widget_107:24_12, component $widget_107:25_13, component $widget_107:26_14, component $widget_107:27_15, component $widget_107:28_16, component $widget_107:29_17, component $widget_107:30_18)
+~agilityarena_rewards_initbutton($widget_107:3_1, "Experience", 1, null);
+~agilityarena_rewards_initbutton($widget_107:5_2, "Experience", 10, null);
+~agilityarena_rewards_initbutton($widget_107:7_3, "Experience", 25, null);
+~agilityarena_rewards_initbutton($widget_107:9_4, "Experience", 100, null);
+~agilityarena_rewards_initbutton($widget_107:11_5, "Experience", 1000, null);
+~agilityarena_rewards_initbutton($widget_107:13_6, oc_name(toadflax_2998), 3, null);
+~agilityarena_rewards_initbutton($widget_107:15_7, oc_name(snapdragon_3000), 10, null);
+~agilityarena_rewards_initbutton($widget_107:19_9, oc_name(pirates_hook_2997), 800, null);
+if_sethide(true, $widget_107:21_10);
+cc_deleteall($widget_107:21_10);
+~thinstonebox($widget_107:21_10, 0);
+~agilityarena_rewards_gracefulbutton_init($widget_107:23_11, graceful_hood_21061, graceful_hood_11850, "Hood", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:24_12, graceful_top_21067, graceful_top_11854, "Top", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:25_13, graceful_legs_21070, graceful_legs_11856, "Legs", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:26_14, graceful_cape_21064, graceful_cape_11852, "Cape", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:27_15, graceful_gloves_21073, graceful_gloves_11858, "Gloves", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:28_16, graceful_boots_21076, graceful_boots_11860, "Boots", 45);
+~agilityarena_rewards_gracefulbutton_init($widget_107:29_17, null, null, "Whole set", 250);
+def_string $string0 = "Dismiss";
+if_setsize(calc(50 + parawidth($string0, 512, p12_full)), if_getheight($widget_107:30_18), ^setsize_abs, ^setsize_abs, $widget_107:30_18);
+~agilityarena_rewards_gracefulcancel($widget_107:30_18, $string0, false);
+if_setonmouserepeat("agilityarena_rewards_gracefulcancel($widget_107:30_18, $string0, true)", $widget_107:30_18);
+if_setonmouseleave("agilityarena_rewards_gracefulcancel($widget_107:30_18, $string0, false)", $widget_107:30_18);
+if_setop(1, $string0, $widget_107:30_18);
+if_setonop("agilityarena_rewards_hidelayer(true, $widget_107:21_10)", $widget_107:30_18);
+~agilityarena_rewards_setgracefulbutton($widget_107:17_8, $widget_107:21_10);
+if_setonvartransmit("agilityarena_rewards_setgracefulbutton($widget_107:17_8, $widget_107:21_10){var309}", $widget_107:0_0);

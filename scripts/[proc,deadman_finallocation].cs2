@@ -1,0 +1,15 @@
+// 2084
+[proc,deadman_finallocation](component $component0)
+def_string $text0 = "North of Falador";
+if (~private_event_world = 4) {
+	$text0 = "Falador Castle Courtyard";
+} else if (~private_event_world = 1) {
+	$text0 = "Fountain of Rune";
+} else if (%varbit1497 = 2) {
+	$text0 = "Demonic Ruins (Annakarl)";
+}
+if (~wildwars_world = 1) {
+	if_settext("The Graveyard of Shadows", $component0);
+} else {
+	if_settext($text0, $component0);
+}

@@ -1,0 +1,7 @@
+// 1349
+[proc,settings_buff_resurrection]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit12410 = calc(1 - %varbit12410);
+~buff_bar_layout_redraw;

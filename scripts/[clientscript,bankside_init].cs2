@@ -1,0 +1,119 @@
+// 294
+[clientscript,bankside_init](component $widget_15:0_0, component $widget_15:1_1, component $widget_15:2_2, component $widget_15:3_3, component $widget_15:4_4, component $widget_15:5_5, component $widget_15:11_6, component $widget_15:8_7, component $widget_15:12_8, component $widget_15:18_9, component $widget_15:15_10, component $widget_15:19_11, component $widget_15:36_12, component $widget_15:22_13, component $widget_15:41_14, component $widget_15:45_15)
+%varcint1201 = null;
+cc_deleteall($widget_15:3_3);
+cc_deleteall($widget_15:4_4);
+def_int $size16 = 0;
+def_int $size17 = inv_size(inv);
+while ($size16 < $size17) {
+	cc_create($widget_15:3_3, ^iftype_graphic, $size16);
+	.cc_create($widget_15:4_4, ^iftype_graphic, $size16);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	.cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	.cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	.cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	.cc_setdragdeadtime(5);
+	cc_sethide(false);
+	.cc_sethide(false);
+	$size16 = calc($size16 + 1);
+}
+~bankside_build(
+	0 = $widget_15:1_1, 
+	1 = $widget_15:3_3, 
+	2 = $widget_15:2_2, 
+	3 = $widget_15:4_4, 
+	4 = $widget_15:5_5, 
+	5 = $widget_15:12_8, 
+	6 = $widget_15:19_11, 
+	7 = $widget_15:36_12, 
+	8 = $widget_15:41_14
+);
+if_setoninvtransmit("bankside_build(
+	0 = $widget_15:1_1, 
+	1 = $widget_15:3_3, 
+	2 = $widget_15:2_2, 
+	3 = $widget_15:4_4, 
+	4 = $widget_15:5_5, 
+	5 = $widget_15:12_8, 
+	6 = $widget_15:19_11, 
+	7 = $widget_15:36_12, 
+	8 = $widget_15:41_14
+){inv, inv_516, inv_646}", $widget_15:1_1);
+if_setonvartransmit("bankside_build(
+	0 = $widget_15:1_1, 
+	1 = $widget_15:3_3, 
+	2 = $widget_15:2_2, 
+	3 = $widget_15:4_4, 
+	4 = $widget_15:5_5, 
+	5 = $widget_15:12_8, 
+	6 = $widget_15:19_11, 
+	7 = $widget_15:36_12, 
+	8 = $widget_15:41_14
+){var304, var1666, var1141, var261, var262, var263, var4611}", $widget_15:1_1);
+~bankside_bag_draw($widget_15:11_6, inv_516);
+if_setoninvtransmit("bankside_bag_draw($widget_15:11_6, inv_516){inv_516}", $widget_15:5_5);
+if_setonvartransmit("bankside_bag_draw($widget_15:11_6, inv_516){var304, var1666}", $widget_15:5_5);
+~bankside_bag_draw($widget_15:18_9, inv_646);
+if_setoninvtransmit("bankside_bag_draw($widget_15:18_9, inv_646){inv_646}", $widget_15:12_8);
+if_setonvartransmit("bankside_bag_draw($widget_15:18_9, inv_646){var304, var1666}", $widget_15:12_8);
+~bankside_switchview($widget_15:1_1, $widget_15:5_5, $widget_15:12_8, $widget_15:19_11, $widget_15:36_12, $widget_15:41_14);
+if_setonvartransmit("bankside_switchview(
+	0 = -1, 
+	1 = null, 
+	2 = $widget_15:1_1, 
+	3 = $widget_15:5_5, 
+	4 = $widget_15:12_8, 
+	5 = $widget_15:19_11, 
+	6 = $widget_15:36_12, 
+	7 = $widget_15:41_14, 
+	8 = -1
+){var115, var4385}", $widget_15:0_0);
+if_setonop("bankside_switchview(
+	0 = event_op, 
+	1 = null, 
+	2 = $widget_15:1_1, 
+	3 = $widget_15:5_5, 
+	4 = $widget_15:12_8, 
+	5 = $widget_15:19_11, 
+	6 = $widget_15:36_12, 
+	7 = $widget_15:41_14, 
+	8 = 0
+)", $widget_15:8_7);
+if_setonop("bankside_switchview(
+	0 = event_op, 
+	1 = null, 
+	2 = $widget_15:1_1, 
+	3 = $widget_15:5_5, 
+	4 = $widget_15:12_8, 
+	5 = $widget_15:19_11, 
+	6 = $widget_15:36_12, 
+	7 = $widget_15:41_14, 
+	8 = 0
+)", $widget_15:15_10);
+if_setonop("bankside_switchview(
+	0 = event_op, 
+	1 = null, 
+	2 = $widget_15:1_1, 
+	3 = $widget_15:5_5, 
+	4 = $widget_15:12_8, 
+	5 = $widget_15:19_11, 
+	6 = $widget_15:36_12, 
+	7 = $widget_15:41_14, 
+	8 = 0
+)", $widget_15:22_13);
+if_setonop("bankside_switchview(
+	0 = event_op, 
+	1 = null, 
+	2 = $widget_15:1_1, 
+	3 = $widget_15:5_5, 
+	4 = $widget_15:12_8, 
+	5 = $widget_15:19_11, 
+	6 = $widget_15:36_12, 
+	7 = $widget_15:41_14, 
+	8 = 0
+)", $widget_15:45_15);

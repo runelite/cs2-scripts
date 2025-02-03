@@ -1,0 +1,55 @@
+// 668
+[clientscript,rune_pouch_pouchreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3)
+def_int $int4 = 0;
+def_int $num5 = 0;
+if ($comsubid2 = 0) {
+	$int4, $num5 = %varbit29, %varbit1624;
+} else if ($comsubid2 = 1) {
+	$int4, $num5 = %varbit1622, %varbit1625;
+} else if ($comsubid2 = 2) {
+	$int4, $num5 = %varbit1623, %varbit1626;
+} else if ($comsubid2 = 3) {
+	$int4, $num5 = %varbit14285, %varbit14286;
+} else if ($comsubid2 = 4) {
+	$int4, $num5 = %varbit15373, %varbit15375;
+} else if ($comsubid2 = 5) {
+	$int4, $num5 = %varbit15374, %varbit15376;
+} else {
+	return;
+}
+if ($int4 = 0) {
+	return;
+}
+if ($drop1 ! $drop0) {
+	if (cc_find($drop0, $comsubid2) = ^true) {
+		cc_settrans(255);
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 30))");
+	}
+	return;
+}
+if ($comsubid2 = $dropsubid3) {
+	return;
+}
+def_int $int6 = 0;
+def_int $num7 = 0;
+if ($dropsubid3 = 0) {
+	$int6, $num7 = %varbit29, %varbit1624;
+} else if ($dropsubid3 = 1) {
+	$int6, $num7 = %varbit1622, %varbit1625;
+} else if ($dropsubid3 = 2) {
+	$int6, $num7 = %varbit1623, %varbit1626;
+} else if ($dropsubid3 = 3) {
+	$int6, $num7 = %varbit14285, %varbit14286;
+} else if ($dropsubid3 = 4) {
+	$int6, $num7 = %varbit15373, %varbit15375;
+} else if ($dropsubid3 = 5) {
+	$int6, $num7 = %varbit15374, %varbit15376;
+} else {
+	return;
+}
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~rune_pouch_drawpouch_slot(enum(int, namedobj, enum_982, $int6), $num7);
+}
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~rune_pouch_drawpouch_slot(enum(int, namedobj, enum_982, $int4), $num5);
+}

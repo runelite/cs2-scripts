@@ -1,0 +1,7 @@
+// 5334
+[proc,settings_logout_notifier]
+if (~on_enhanced_any = 0) {
+	return;
+}
+idletimer_reset;
+%varbit13083 = calc(1 - %varbit13083);

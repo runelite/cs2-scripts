@@ -1,0 +1,8 @@
+// 2534
+[clientscript,ii_scroll_init](component $widget_157:1_0, component $widget_157:2_1)
+def_int $setposv2 = ^setpos_abs_top;
+if (~on_mobile = true) {
+	$setposv2 = ^setpos_abs_bottom;
+}
+if_setposition(0, 0, ^setpos_abs_right, $setposv2, $widget_157:2_1);
+~script4729($widget_157:1_0, $widget_157:2_1, setbit(0, 1), ^setpos_abs_right, $setposv2, false);

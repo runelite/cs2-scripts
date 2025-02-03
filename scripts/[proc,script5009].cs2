@@ -1,0 +1,72 @@
+// 5009
+[proc,script5009](component $widget_874:15_0, dbrow $dbrow1, int $int2, component $widget_874:16_3, component $widget_874:17_4, component $widget_874:18_5, component $widget_874:19_6, component $widget_874:20_7)(int)
+def_coord $coord8 = db_getfield($dbrow1, dbtable_64:2, 0);
+if ($coord8 = null) {
+	return($int2);
+}
+def_model $model9 = db_getfield($dbrow1, dbtable_64:3, 0);
+def_boolean $boolean10 = false;
+if (~script5015($dbrow1) = true) {
+	$boolean10 = true;
+}
+def_boolean $boolean11 = false;
+if (~coord_distance(coord, $coord8) <= 10) {
+	$boolean11 = true;
+}
+def_int $int12 = db_getfield($dbrow1, dbtable_64:4, 0);
+def_int $int13 = db_getfield($dbrow1, dbtable_64:5, 0);
+cc_create($widget_874:15_0, ^iftype_model, $int2);
+cc_setsize(46, 46, ^setsize_abs, ^setsize_abs);
+cc_setmodel($model9);
+cc_setmodelangle(0, 0, 513, 0, 0, 600);
+cc_setposition($int12, $int13, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setnoclickthrough(true);
+cc_setmodelorthog(true);
+cc_setop(1, db_getfield($dbrow1, dbtable_64:1, 0));
+cc_setonmouserepeat("script5011(
+	0 = event_com, 
+	1 = event_comsubid, 
+	2 = $int12, 
+	3 = $int13, 
+	4 = $boolean10, 
+	5 = $widget_874:17_4, 
+	6 = $widget_874:18_5, 
+	7 = $widget_874:19_6, 
+	8 = $widget_874:20_7, 
+	9 = $model9, 
+	10 = $boolean11
+)");
+if (~on_mobile = false) {
+	cc_setonmouseover("sound_synth(synth_8021, 1, 0)");
+}
+cc_setonmouseleave("script5012(
+	0 = event_com, 
+	1 = event_comsubid, 
+	2 = $int12, 
+	3 = $int13, 
+	4 = $boolean10, 
+	5 = $widget_874:17_4, 
+	6 = $widget_874:18_5, 
+	7 = $widget_874:19_6, 
+	8 = $widget_874:20_7, 
+	9 = $model9, 
+	10 = $boolean11
+)");
+cc_setonop("script5013(
+	0 = event_com, 
+	1 = event_comsubid, 
+	2 = $int12, 
+	3 = $int13, 
+	4 = $boolean10, 
+	5 = $widget_874:17_4, 
+	6 = $widget_874:18_5, 
+	7 = $widget_874:19_6, 
+	8 = $widget_874:20_7, 
+	9 = $model9, 
+	10 = $boolean11
+)");
+if ($boolean11 = true) {
+	if_setposition(calc(46 + $int12), calc(33 + $int13), ^setpos_abs_left, ^setpos_abs_bottom, $widget_874:16_3);
+	if_sethide(false, $widget_874:16_3);
+}
+return(calc($int2 + 1));

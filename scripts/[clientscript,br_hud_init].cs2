@@ -1,0 +1,6 @@
+// 1347
+[clientscript,br_hud_init](component $widget_328:3_0, component $widget_328:4_1, component $widget_328:7_2)
+~script4729($widget_328:3_0, $widget_328:4_1, setbit(setbit(36582, 12), 13), ^setpos_abs_right, ^setpos_abs_top, false);
+~script4729($widget_328:7_2, $widget_328:7_2, setbit(setbit(36578, 12), 13), ^setpos_abs_right, ^setpos_abs_bottom, false);
+~br_hud_writetimer($widget_328:7_2);
+if_setonvartransmit("br_hud_writetimer($widget_328:7_2){var1377}", $widget_328:7_2);

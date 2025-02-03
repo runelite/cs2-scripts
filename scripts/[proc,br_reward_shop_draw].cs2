@@ -1,0 +1,898 @@
+// 3087
+[proc,br_reward_shop_draw](int $int0, component $component1, component $component2, component $component3, component $component4)(int)
+if_setonvartransmit("br_reward_shop_draw($int0, $component1, $component2, $component3, $component4){var261, var262, var1141}", $component1);
+if_setoninvtransmit("br_reward_shop_draw($int0, $component1, $component2, $component3, $component4){inv_422}", $component1);
+cc_deleteall($component2);
+def_int $int5 = 0;
+def_int $int6 = 3;
+def_int $int7 = calc(if_getwidth($component2) / 2);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 0, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 1, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 2, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 16, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 9, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 3, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 17, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 24, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 25, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 26, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 28, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 23, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 27, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 29, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 33, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 32, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 30, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 31, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 34, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 35, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 36, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 37, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 18, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 19, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 20, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 58, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 47, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 21, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 48, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 49, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 50, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 51, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 52, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 53, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 54, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 55, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 56, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 57, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 59, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 60, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 62, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 22, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 63, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 61, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 10, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 13, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 11, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 14, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 12, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 15, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 4, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 5, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 6, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 7, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 8, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 5);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 38, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 39, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 40, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 41, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 42, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 43, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 44, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 45, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 46, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 5);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 64, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 65, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 66, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int5 = ~br_reward_shop_itemdraw(
+	0 = 67, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = $component1, 
+	5 = $component2, 
+	6 = $component3, 
+	7 = $component4, 
+	8 = $int5, 
+	9 = $int0
+);
+$int6 = calc($int6 + 32 + 5);
+def_string $text0 = "";
+cc_deleteall($component3);
+$int5 = 0;
+if ($int0 ! -1) {
+	$text0 = enum(int, string, enum_2634, $int0);
+	~pest_rewards_confirmdraw(false, $text0, $component4);
+	while ($int5 < $int0) {
+		cc_create($component3, ^iftype_rectangle, $int5);
+		cc_sethide(true);
+		$int5 = calc($int5 + 1);
+	}
+	cc_create($component3, ^iftype_rectangle, $int5);
+	cc_sethide(false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setop(1, "Confirm");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component4)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component4)");
+	cc_setonop("br_reward_shop_confirmop(event_op, $component1, $component2, $component3, $component4)");
+} else {
+	$int5 = ~v2_stone_button_in_filled($component4);
+	cc_create($component4, ^iftype_text, $int5);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x7f7f7f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_settext("Confirm");
+}
+return($int6);

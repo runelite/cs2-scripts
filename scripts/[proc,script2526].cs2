@@ -1,0 +1,57 @@
+// 2526
+[proc,script2526]()(int)
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 ! enum_1745) {
+	return(0);
+}
+%varcint222 = clientclock;
+def_component $component1 = enum(component, component, $enum0, interface_161:16);
+def_int $int2 = ~script2519;
+def_int $int3 = 0;
+def_int $height4 = if_getheight($component1);
+def_int $width5 = if_getwidth($component1);
+def_int $height6 = if_getheight(if_getlayer($component1));
+def_int $width7 = if_getwidth(if_getlayer($component1));
+def_int $int8 = calc($width7 - 204 + 3);
+def_int $int9 = calc($int8 / 2 - $width5 / 2);
+def_int $height10 = calc($height6 - 166 + 26);
+def_int $int11 = calc($width7 - 181 + 40);
+def_int $int12 = calc($int11 / 2 - $width5 / 2);
+if ($height4 >= $height10) {
+	$int3 = 1;
+}
+def_int $int13 = calc(($height6 - $height4) / 2);
+def_int $int14 = ~script2519;
+def_int $int15 = 0;
+if ($int14 = 2) {
+	$int15 = 20;
+} else if ($int14 = 3) {
+	$int15 = 204;
+} else if ($int14 = 4) {
+	$int15 = calc(204 + 20);
+}
+if ((%varcint41 = 1337 | %varcint1220 = 1) & if_hassub(interface_162:564) = false & %varbit6538 = 1) {
+	$int12 = calc(($int11 - 18) / 2 - $width5 / 2);
+	if_setposition(~max(0, $int12), 30, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return(3);
+}
+if (calc($width5 + $int15 * 2 + 10) <= $width7 & $int3 = 0) {
+	if_setposition(0, ~min(64, $int13), ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+	return(0);
+}
+if ($int14 > 1) {
+	$int8 = calc($width7 - $int15 + 3);
+	$int9 = calc($int8 / 2 - $width5 / 2);
+	if ($int3 = 1 & calc($int12 + $width5 + $int15 + 4) <= $width7) {
+		if_setposition(~max(0, $int12), ~min(64, $int13), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+	} else {
+		if_setposition(~max(0, $int9), ~min(64, $int13), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+	}
+	return(2);
+}
+if ($int3 = 0) {
+	if_setposition(0, ~min(64, $int13), ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+} else {
+	if_setposition(~max(0, $int12), ~min(64, $int13), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+}
+return(0);

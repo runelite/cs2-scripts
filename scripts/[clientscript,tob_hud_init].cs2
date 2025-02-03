@@ -1,0 +1,134 @@
+// 2087
+[clientscript,tob_hud_init](component $widget_28:0_0, component $widget_28:2_1, component $widget_28:3_2, component $widget_28:4_3, component $widget_28:6_4, component $widget_28:8_5, component $widget_28:5_6, component $widget_28:11_7, component $widget_28:9_8, component $widget_28:36_9, component $widget_28:37_10, component $widget_28:7_11, component $widget_28:16_12, component $widget_28:19_13, component $widget_28:20_14, component $widget_28:23_15, component $widget_28:24_16, component $widget_28:27_17, component $widget_28:28_18, component $widget_28:31_19, component $widget_28:32_20, component $widget_28:35_21, component $widget_28:13_22, component $widget_28:38_23)
+~script4729($widget_28:2_1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($widget_28:4_3, $widget_28:5_6, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($widget_28:6_4, $widget_28:7_11, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($widget_28:8_5, $widget_28:9_8, setbit(clearbit(clearbit(52968, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, false);
+cc_deleteall($widget_28:36_9);
+cc_create($widget_28:36_9, ^iftype_rectangle, 0);
+.cc_create($widget_28:36_9, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setfill(true);
+.cc_setfill(true);
+~tob_hud_status_init($widget_28:16_12, $widget_28:19_13);
+~tob_hud_status_init($widget_28:20_14, $widget_28:23_15);
+~tob_hud_status_init($widget_28:24_16, $widget_28:27_17);
+~tob_hud_status_init($widget_28:28_18, $widget_28:31_19);
+~tob_hud_status_init($widget_28:32_20, $widget_28:35_21);
+~tob_hud_draw(
+	0 = $widget_28:0_0, 
+	1 = $widget_28:3_2, 
+	2 = $widget_28:5_6, 
+	3 = $widget_28:11_7, 
+	4 = $widget_28:9_8, 
+	5 = $widget_28:36_9, 
+	6 = $widget_28:37_10, 
+	7 = $widget_28:7_11, 
+	8 = $widget_28:16_12, 
+	9 = $widget_28:19_13, 
+	10 = $widget_28:20_14, 
+	11 = $widget_28:23_15, 
+	12 = $widget_28:24_16, 
+	13 = $widget_28:27_17, 
+	14 = $widget_28:28_18, 
+	15 = $widget_28:31_19, 
+	16 = $widget_28:32_20, 
+	17 = $widget_28:35_21, 
+	18 = $widget_28:13_22, 
+	19 = $widget_28:38_23
+);
+if_setonvartransmit("tob_hud_draw(
+	0 = true, 
+	1 = $widget_28:0_0, 
+	2 = $widget_28:3_2, 
+	3 = $widget_28:5_6, 
+	4 = $widget_28:11_7, 
+	5 = $widget_28:9_8, 
+	6 = $widget_28:36_9, 
+	7 = $widget_28:37_10, 
+	8 = $widget_28:7_11, 
+	9 = $widget_28:16_12, 
+	10 = $widget_28:19_13, 
+	11 = $widget_28:20_14, 
+	12 = $widget_28:23_15, 
+	13 = $widget_28:24_16, 
+	14 = $widget_28:27_17, 
+	15 = $widget_28:28_18, 
+	16 = $widget_28:31_19, 
+	17 = $widget_28:32_20, 
+	18 = $widget_28:35_21, 
+	19 = $widget_28:13_22, 
+	20 = $widget_28:38_23
+){var1745, var1737, var1227, var1055}", $widget_28:0_0);
+if_setonresize("tob_hud_draw(
+	0 = true, 
+	1 = $widget_28:0_0, 
+	2 = $widget_28:3_2, 
+	3 = $widget_28:5_6, 
+	4 = $widget_28:11_7, 
+	5 = $widget_28:9_8, 
+	6 = $widget_28:36_9, 
+	7 = $widget_28:37_10, 
+	8 = $widget_28:7_11, 
+	9 = $widget_28:16_12, 
+	10 = $widget_28:19_13, 
+	11 = $widget_28:20_14, 
+	12 = $widget_28:23_15, 
+	13 = $widget_28:24_16, 
+	14 = $widget_28:27_17, 
+	15 = $widget_28:28_18, 
+	16 = $widget_28:31_19, 
+	17 = $widget_28:32_20, 
+	18 = $widget_28:35_21, 
+	19 = $widget_28:13_22, 
+	20 = $widget_28:38_23
+)", $widget_28:0_0);
+if_setonsubchange("tob_hud_draw(
+	0 = true, 
+	1 = $widget_28:0_0, 
+	2 = $widget_28:3_2, 
+	3 = $widget_28:5_6, 
+	4 = $widget_28:11_7, 
+	5 = $widget_28:9_8, 
+	6 = $widget_28:36_9, 
+	7 = $widget_28:37_10, 
+	8 = $widget_28:7_11, 
+	9 = $widget_28:16_12, 
+	10 = $widget_28:19_13, 
+	11 = $widget_28:20_14, 
+	12 = $widget_28:23_15, 
+	13 = $widget_28:24_16, 
+	14 = $widget_28:27_17, 
+	15 = $widget_28:28_18, 
+	16 = $widget_28:31_19, 
+	17 = $widget_28:32_20, 
+	18 = $widget_28:35_21, 
+	19 = $widget_28:13_22, 
+	20 = $widget_28:38_23
+)", $widget_28:0_0);
+if_setontimer("tob_hud_draw(
+	0 = false, 
+	1 = $widget_28:0_0, 
+	2 = $widget_28:3_2, 
+	3 = $widget_28:5_6, 
+	4 = $widget_28:11_7, 
+	5 = $widget_28:9_8, 
+	6 = $widget_28:36_9, 
+	7 = $widget_28:37_10, 
+	8 = $widget_28:7_11, 
+	9 = $widget_28:16_12, 
+	10 = $widget_28:19_13, 
+	11 = $widget_28:20_14, 
+	12 = $widget_28:23_15, 
+	13 = $widget_28:24_16, 
+	14 = $widget_28:27_17, 
+	15 = $widget_28:28_18, 
+	16 = $widget_28:31_19, 
+	17 = $widget_28:32_20, 
+	18 = $widget_28:35_21, 
+	19 = $widget_28:13_22, 
+	20 = $widget_28:38_23
+)", $widget_28:0_0);

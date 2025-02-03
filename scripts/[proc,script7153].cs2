@@ -1,0 +1,54 @@
+// 7153
+[proc,script7153](dbrow $dbrow0, inv $inv1)
+def_component $component2 = interface_819:7;
+def_component $component3 = interface_819:8;
+def_component $component4 = interface_819:9;
+def_component $component5 = interface_819:35;
+def_component $component6 = interface_819:36;
+def_component $component7 = interface_819:37;
+def_graphic $graphic8 = graphic_4735;
+if (%var3871 = 1) {
+	$graphic8 = graphic_4737;
+}
+~create_graphic(
+	0 = $component2, 
+	1 = 0, 
+	2 = $graphic8, 
+	3 = 2, 
+	4 = 2, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 16, 
+	8 = 16, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+if_setonclick("script7155($dbrow0, $inv1)", $component2);
+~create_graphic(
+	0 = $component3, 
+	1 = 0, 
+	2 = "menu_buttons,2", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 21, 
+	8 = 21, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+def_graphic $graphic9 = null;
+if (~on_mobile = false) {
+	$graphic9 = "menu_buttons,3";
+	if_setonmouseover("cc_graphic_swapper(event_com, 0, $graphic9, null)", $component3);
+	$graphic9 = "menu_buttons,2";
+	if_setonmouseleave("cc_graphic_swapper(event_com, 0, $graphic9, null)", $component3);
+}
+if_setonop("omnishop_main_help($dbrow0, $inv1, event_op)", $component3);
+def_enum $enum10 = db_getfield($dbrow0, dbtable_39:3, 0);
+if ($enum10 ! null) {
+	~script5771($component4, $enum10, %var3872, 0xff981f);
+	if_setonop("script7156($component5, $component6, $component7, $component4, $enum10, 0xff981f)", $component4);
+} else {
+	~script5771($component4, enum_4988, 0, 0x9f9f9f);
+}

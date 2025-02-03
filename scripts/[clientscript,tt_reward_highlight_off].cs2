@@ -1,0 +1,8 @@
+// 22
+[clientscript,tt_reward_highlight_off](int $comsubid0, component $widget_274:6_1, component $widget_274:5_2)
+if (cc_find($widget_274:6_1, $comsubid0) = ^true) {
+	cc_settrans(0);
+	if (.cc_find($widget_274:5_2, $comsubid0) = ^true) {
+		.cc_setcolour(0xff981f);
+	}
+}

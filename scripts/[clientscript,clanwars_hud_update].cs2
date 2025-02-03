@@ -1,0 +1,6 @@
+// 594
+[clientscript,clanwars_hud_update](component $widget_88:0_0, component $widget_88:2_1, int $int2, component $widget_88:4_3, int $comsubid4)
+~clanwars_hud_info_update($widget_88:0_0, $widget_88:2_1, $int2);
+if (cc_find($widget_88:4_3, $comsubid4) = ^true) {
+	~clanwars_hud_countdown_update($widget_88:0_0, $widget_88:4_3);
+}

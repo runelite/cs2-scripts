@@ -1,0 +1,62 @@
+// 2004
+[proc,storage_main_create_quantitybutton](enum $enum0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, string $string0, boolean $boolean7, int $int8)
+cc_deleteall($component6);
+def_int $int9 = 0;
+if_setonvartransmit("storage_main_create_quantitybutton(
+	0 = $enum0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = $string0, 
+	8 = false, 
+	9 = $int8
+){var675, var2894, var867}", $component6);
+if_setop(1, "Default quantity: <col=ff9040><$string0></col>", $component6);
+if (~get_selected_quantity($enum0) = $int8) {
+	$int9 = ~options_button_on($component6, $int9);
+	if_setonmouserepeat(null, $component6);
+	if_setonmouseleave(null, $component6);
+	if_setonop("opsound(event_op, 2)", $component6);
+} else {
+	$int9 = ~options_button_off($component6, $int9);
+	if_setonmouserepeat("storage_main_create_quantitybutton(
+		0 = $enum0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $string0, 
+		8 = true, 
+		9 = $int8
+	)", $component6);
+	if_setonmouseleave("storage_main_create_quantitybutton(
+		0 = $enum0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $string0, 
+		8 = false, 
+		9 = $int8
+	)", $component6);
+	if_setonop("script2005($enum0, $component1, $component2, $component3, $component4, $component5, event_op, $int8)", $component6);
+}
+cc_create($component6, ^iftype_text, $int9);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+if ($boolean7 = false) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(^white);
+}
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);

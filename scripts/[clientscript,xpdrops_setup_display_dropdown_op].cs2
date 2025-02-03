@@ -1,0 +1,52 @@
+// 1036
+[clientscript,xpdrops_setup_display_dropdown_op](int $opindex0, component $component1, int $int2, int $int3, component $widget_137:47_4, component $widget_137:61_5, component $widget_137:6_6, component $widget_137:51_7, component $widget_137:7_8, component $widget_137:52_9, component $widget_137:9_10, component $widget_137:53_11, component $widget_137:10_12, component $widget_137:54_13, component $widget_137:11_14, component $widget_137:55_15, component $widget_137:12_16, component $widget_137:56_17, component $widget_137:13_18, component $widget_137:57_19, component $widget_137:8_20, component $widget_137:58_21, component $widget_137:14_22, component $widget_137:59_23)
+if ($opindex0 ! 1) {
+	return;
+}
+$int2 = calc($int2 - 1);
+if ($int2 < 0 | $int2 >= $int3) {
+	return;
+}
+if ($component1 = $widget_137:51_7) {
+	%varbit4692 = $int2;
+} else if ($component1 = $widget_137:52_9) {
+	%varbit4693 = $int2;
+} else if ($component1 = $widget_137:53_11) {
+	%varbit4694 = $int2;
+} else if ($component1 = $widget_137:54_13) {
+	%varbit4697 = $int2;
+} else if ($component1 = $widget_137:55_15) {
+	%varbit4698 = $int2;
+} else if ($component1 = $widget_137:56_17) {
+	%varbit4695 = $int2;
+} else if ($component1 = $widget_137:57_19) {
+	%varbit4696 = $int2;
+} else if ($component1 = $widget_137:58_21) {
+	%varbit4722 = $int2;
+} else if ($component1 = $widget_137:59_23) {
+	%varbit8120 = $int2;
+}
+~xpdrops_setup_display_update(
+	0 = $widget_137:6_6, 
+	1 = $widget_137:7_8, 
+	2 = $widget_137:9_10, 
+	3 = $widget_137:10_12, 
+	4 = $widget_137:11_14, 
+	5 = $widget_137:12_16, 
+	6 = $widget_137:13_18, 
+	7 = $widget_137:8_20, 
+	8 = $widget_137:14_22
+);
+~xpdrops_setup_display_dropdown_close(
+	0 = $widget_137:47_4, 
+	1 = $widget_137:61_5, 
+	2 = $widget_137:6_6, 
+	3 = $widget_137:7_8, 
+	4 = $widget_137:9_10, 
+	5 = $widget_137:10_12, 
+	6 = $widget_137:11_14, 
+	7 = $widget_137:12_16, 
+	8 = $widget_137:13_18, 
+	9 = $widget_137:8_20, 
+	10 = $widget_137:14_22
+);

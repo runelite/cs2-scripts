@@ -1,0 +1,126 @@
+// 925
+[clientscript,chatbox_init]
+%varcint980 = clientclock;
+~chatdefault_setonkey(1);
+if_setonvartransmit("script924{
+	0 = var1054, 
+	1 = var1055, 
+	2 = var1021, 
+	3 = var499, 
+	4 = var1737, 
+	5 = var2992, 
+	6 = var2993, 
+	7 = var2994, 
+	8 = var2995, 
+	9 = var2996, 
+	10 = var2997, 
+	11 = var2998, 
+	12 = var2999, 
+	13 = var3060, 
+	14 = var3191, 
+	15 = var3192, 
+	16 = var3193, 
+	17 = var3000, 
+	18 = var3001, 
+	19 = var3002, 
+	20 = var3003, 
+	21 = var3004, 
+	22 = var3005, 
+	23 = var3006, 
+	24 = var3007, 
+	25 = var3061, 
+	26 = var3194, 
+	27 = var3195, 
+	28 = var3196, 
+	29 = var3008, 
+	30 = var3009
+}", interface_162:0);
+if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(interface_162:565), if_hassub(interface_162:564), ~toplevel_getcomponents)", interface_162:0);
+if_setonchattransmit("chat_onchattransmit", interface_162:0);
+if_setonfriendtransmit("chat_onchattransmit", interface_162:0);
+if_setonclantransmit("rebuildchatbox", interface_162:0);
+if_setonclansettingstransmit("rebuildchatbox", interface_162:0);
+if_setonmisctransmit("script664(true)", interface_162:0);
+%varcstring335, %varcint42 = "", -1;
+if (%varcint41 >= 0 & %varcint41 <= 6 | %varcint41 = 1337) {
+	%varcint41 = %varcint41;
+} else {
+	%varcint41 = 0;
+}
+%varcint3, %varcint4 = -1, 0;
+
+	0 = %varcstring336, 
+	1 = %varcstring337, 
+	2 = %varcstring338, 
+	3 = %varcstring339, 
+	4 = %varcstring340, 
+	5 = %varcstring341, 
+	6 = %varcstring342, 
+	7 = %varcstring343, 
+	8 = %varcstring344, 
+	9 = %varcstring345, 
+	10 = %varcstring346, 
+	11 = %varcstring347, 
+	12 = %varcstring348, 
+	13 = %varcstring349, 
+	14 = %varcstring350, 
+	15 = %varcstring351, 
+	16 = %varcstring352, 
+	17 = %varcstring353, 
+	18 = %varcstring354, 
+	19 = %varcstring355
+ = 
+	0 = "", 
+	1 = "", 
+	2 = "", 
+	3 = "", 
+	4 = "", 
+	5 = "", 
+	6 = "", 
+	7 = "", 
+	8 = "", 
+	9 = "", 
+	10 = "", 
+	11 = "", 
+	12 = "", 
+	13 = "", 
+	14 = "", 
+	15 = "", 
+	16 = "", 
+	17 = "", 
+	18 = "", 
+	19 = ""
+;
+%varcstring356, %varcstring357 = "", "";
+%varcint55 = ^min_32bit_int;
+%varcstring358, %varcint62 = "", 0;
+def_int $int0 = 0;
+def_component $component1 = enum(int, component, enum_579, $int0);
+while ($component1 ! null) {
+	cc_create(interface_162:56, ^iftype_text, calc($int0 * 4));
+	.cc_create(interface_162:56, ^iftype_text, calc($int0 * 4 + 1));
+	cc_setcolour(^black);
+	.cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	.cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 14);
+	.cc_settextalign(^settextalign_left, ^settextalign_top, 14);
+	cc_sethide(true);
+	.cc_sethide(true);
+	cc_create(interface_162:56, ^iftype_text, calc($int0 * 4 + 2));
+	.cc_create(interface_162:56, ^iftype_graphic, calc($int0 * 4 + 3));
+	cc_setcolour(^black);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 14);
+	cc_sethide(true);
+	.cc_sethide(true);
+	$int0 = calc($int0 + 1);
+	$component1 = enum(int, component, enum_579, $int0);
+}
+if_setscrollpos(0, 0, interface_162:56);
+~scrollbar_vertical(interface_162:557, interface_162:56, null, null, null, null, null, null);
+~toplevel_chatbox_background;
+chat_setmessagefilter("");
+~script223;
+~redraw_chat_buttons;
+~rebuildchatbox(~script553);

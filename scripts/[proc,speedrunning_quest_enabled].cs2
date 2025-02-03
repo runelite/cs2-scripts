@@ -1,0 +1,17 @@
+// 5894
+[proc,speedrunning_quest_enabled](dbrow $dbrow0)(int)
+def_dbrow $dbrow1 = ~script4865($dbrow0);
+if ($dbrow1 = null | db_getrowtable($dbrow1) ! dbtable_61) {
+	return(0);
+}
+switch_int (db_getfield($dbrow1, dbtable_61:1, 0)) {
+	case 1 :
+		return(1);
+	case 3 :
+		return(1);
+	case 2 :
+		if (~script6806 = 1) {
+			return(1);
+		}
+}
+return(0);

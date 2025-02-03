@@ -1,0 +1,54 @@
+// 699
+[clientscript,emote_init](component $widget_216:0_0, component $widget_216:2_1, component $widget_216:1_2, component $widget_216:4_3, component $widget_216:5_4)
+cc_deleteall($widget_216:2_1);
+cc_deleteall($widget_216:4_3);
+def_int $int5 = 0;
+def_int $height6 = 0;
+def_int $int7 = 0;
+def_int $int8 = calc(if_getwidth($widget_216:2_1) / 4);
+while ($int7 <= 53) {
+	cc_create($widget_216:2_1, ^iftype_rectangle, $int7);
+	if (enum(int, graphic, enum_1001, $int7) ! null) {
+		cc_sethide(false);
+		cc_setcolour(^black);
+		cc_settrans(255);
+		cc_setsize($int8, 48, ^setsize_abs, ^setsize_abs);
+		$height6 = calc($int5 / 4 * 49 + 6);
+		cc_setposition(calc($int5 % 4 * $int8), $height6, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $widget_216:5_4, ~emote_get_name($int7), 25, 120)");
+		cc_setonmouseleave("deltooltip($widget_216:5_4)");
+		$int5 = calc($int5 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int7 = calc($int7 + 1);
+}
+$int7 = 0;
+$height6 = 0;
+$int5 = 0;
+while ($int7 <= 53) {
+	cc_create($widget_216:2_1, ^iftype_graphic, calc(53 + $int7 + 1));
+	if (enum(int, graphic, enum_1001, $int7) ! null) {
+		cc_sethide(false);
+		cc_setsize(48, 48, ^setsize_abs, ^setsize_abs);
+		$height6 = calc($int5 / 4 * 49 + 6);
+		cc_setposition(calc($int5 % 4 * $int8), $height6, ^setpos_abs_left, ^setpos_abs_top);
+		$int5 = calc($int5 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($int5 > 0) {
+	$height6 = calc($height6 + 48);
+}
+if_setscrollpos(0, 0, $widget_216:1_2);
+if ($height6 > if_getheight($widget_216:1_2)) {
+	if_setscrollsize(0, $height6, $widget_216:1_2);
+} else {
+	if_setscrollsize(0, 0, $widget_216:1_2);
+}
+~scrollbar_vertical($widget_216:4_3, $widget_216:1_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~emote_update($widget_216:2_1, $widget_216:5_4);
+if_setonvartransmit("emote_update($widget_216:2_1, $widget_216:5_4){var313, var802, var465, var101, var904, var1336, var2886, var4130}", $widget_216:0_0);
+if_setonstattransmit("emote_update($widget_216:2_1, $widget_216:5_4)", $widget_216:0_0);

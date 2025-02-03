@@ -1,0 +1,18 @@
+// 4071
+[clientscript,tempoross_hud_init](component $widget_437:4_0, component $widget_437:2_1)
+if_sethide(true, interface_437:3);
+~script4729($widget_437:4_0, $widget_437:2_1, 65256, ^setpos_abs_left, ^setpos_abs_top, true);
+if_sethide(true, interface_437:7);
+if_sethide(true, interface_437:9);
+if_sethide(true, interface_437:8);
+if_sethide(true, interface_437:13);
+if_sethide(true, interface_437:22);
+if_sethide(true, interface_437:18);
+if_sethide(true, interface_437:17);
+if_sethide(true, interface_437:20);
+if_setsize(scale(50, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:28);
+if_setsize(scale(100, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:38);
+if_setsize(scale(0, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:48);
+if_settext("Energy: 50%", interface_437:35);
+if_settext("Essence: 100%", interface_437:45);
+if_settext("Storm Intensity: 0%", interface_437:55);

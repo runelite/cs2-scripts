@@ -1,0 +1,13 @@
+// 1112
+[clientscript,farming_view_init](component $widget_179:3_0, component $widget_179:5_1, component $widget_179:300_2)
+cc_deleteall($widget_179:3_0);
+~farming_view_createtab(0, "Allotments", $widget_179:3_0);
+~farming_view_createtab(1, "Herbs", $widget_179:3_0);
+~farming_view_createtab(2, "Hops", $widget_179:3_0);
+~farming_view_createtab(3, "Bushes", $widget_179:3_0);
+~farming_view_createtab(4, "Trees", $widget_179:3_0);
+~farming_view_createtab(5, "Special", $widget_179:3_0);
+if_setsize(calc((5 + 1) * 72), if_getheight($widget_179:3_0), ^setsize_abs, ^setsize_abs, $widget_179:3_0);
+~farming_view_updatetabs($widget_179:3_0, $widget_179:5_1, $widget_179:300_2);
+if_setonvartransmit("farming_view_updatetabs($widget_179:3_0, $widget_179:5_1, $widget_179:300_2){var19}", $widget_179:3_0);
+~scrollbar_vertical($widget_179:300_2, $widget_179:5_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,116 @@
+// 6374
+[proc,cr_quests_ui_create_requirement](string $string0, int $int0, int $int1, string $string1, int $int2, graphic $graphic3, int $int4, int $int5, int $int6, boolean $boolean7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, component $component14)(int, int, int, int, int, int)
+def_int $int15 = $int8;
+def_int $int16 = $int12;
+if ($int9 = 1) {
+	$int15 = calc($int15 + 1);
+	$int16 = 0;
+	$int9 = 0;
+}
+if ($int15 >= 0 & $boolean7 = false) {
+	return($int11, $int12, $int8, $int13, $int0, calc($int1 + 1));
+}
+if ($int0 = 1 & ~string_isnullorempty($string0) = 0) {
+	$int11, $int16, $int15, $int13 = ~script6409(
+		0 = $string0, 
+		1 = 0xff981f, 
+		2 = $int15, 
+		3 = 0, 
+		4 = $boolean7, 
+		5 = $int11, 
+		6 = $int16, 
+		7 = $int13, 
+		8 = $int10, 
+		9 = $component14
+	);
+}
+$int0 = 0;
+def_int $int17 = 1;
+def_int $int18 = 1;
+def_int $int19 = 4;
+def_int $width20 = 0;
+def_fontmetrics $fontmetrics21 = null;
+def_int $int22 = 0;
+if ($int15 < 0) {
+	$width20 = ~cr_ui_list_entry_description_width($component14);
+	$fontmetrics21 = p11_full;
+	$int22 = 12;
+} else {
+	$width20 = ~cr_ui_list_entry_details_width(1, $component14);
+	$fontmetrics21 = p11_full;
+	$int22 = 12;
+}
+def_string $string2 = ~script3739(^yellow, "col");
+def_string $string3 = $string1;
+def_string $string4 = "null";
+if ($int2 > 0) {
+	$string4 = "<$string2>(+<tostring($int2)>)</col>";
+} else {
+	$int18 = 0;
+}
+def_int $width23 = parawidth($string3, $width20, $fontmetrics21);
+def_int $width24 = parawidth($string4, $width20, $fontmetrics21);
+def_int $int25 = calc($int4 + $int17 + $width23 + $int18 + $width24);
+if ($int6 = 0 & calc($int16 + $int25) > $width20) {
+	$int9 = 1;
+	return(~cr_quests_ui_create_requirement(
+		0 = $string0, 
+		1 = $int0, 
+		2 = $int1, 
+		3 = $string1, 
+		4 = $int2, 
+		5 = $graphic3, 
+		6 = $int4, 
+		7 = $int5, 
+		8 = $int6, 
+		9 = $boolean7, 
+		10 = $int15, 
+		11 = $int9, 
+		12 = $int10, 
+		13 = $int11, 
+		14 = $int12, 
+		15 = $int13, 
+		16 = $component14
+	));
+}
+if ($graphic3 ! null) {
+	cc_create($component14, ^iftype_graphic, $int11);
+	$int11 = calc($int11 + 1);
+	cc_setgraphic($graphic3);
+	if ($int15 < 0) {
+		$int16, $int13 = ~script6404($int4, $int5, $int17, $int16, $int10);
+	} else {
+		$int16, $int13 = ~script6407($int15, 1, $int4, $int5, $int17, $int16, $int10);
+	}
+}
+def_int $int26 = $int18;
+if ($int2 = -1) {
+	$int26 = $int19;
+}
+$int11, $int16, $int15, $int13 = ~script6409(
+	0 = $string3, 
+	1 = ^white, 
+	2 = $int15, 
+	3 = $int26, 
+	4 = $boolean7, 
+	5 = $int11, 
+	6 = $int16, 
+	7 = $int13, 
+	8 = $int10, 
+	9 = $component14
+);
+if ($int2 ! -1) {
+	$int11, $int16, $int15, $int13 = ~script6409(
+		0 = $string4, 
+		1 = ^white, 
+		2 = $int15, 
+		3 = $int19, 
+		4 = $boolean7, 
+		5 = $int11, 
+		6 = $int16, 
+		7 = $int13, 
+		8 = $int10, 
+		9 = $component14
+	);
+}
+return($int11, $int16, $int15, $int13, $int0, $int1);

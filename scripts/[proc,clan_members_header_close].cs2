@@ -1,0 +1,8 @@
+// 4228
+[proc,clan_members_header_close](component $widget_693:15_0, component $widget_693:7_1, component $widget_693:8_2)
+if (if_gethide($widget_693:15_0) = false) {
+	sound_synth(interface_select1, 1, 0);
+}
+if_sethide(true, $widget_693:15_0);
+~xpdrops_setup_display_hoveroff($widget_693:7_1);
+~xpdrops_setup_display_hoveroff($widget_693:8_2);

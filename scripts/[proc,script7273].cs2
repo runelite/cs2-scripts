@@ -1,0 +1,117 @@
+// 7273
+[proc,script7273](component $component0, int $int1, int $int2, int $int3, component $component4, int $int5, graphic $graphic6, fontmetrics $fontmetrics7, int $width8, int $width9, int $width10, int $width11, int $width12, int $int13, int $int14, component $layer15, component $component16)(int, int)
+def_int $world17 = 0;
+def_int $flags18 = 0;
+def_string $string0 = "";
+def_int $int19 = -1;
+def_int $int20 = 0;
+def_string $string1 = "";
+def_int $int21 = -1;
+if ($layer15 ! null) {
+	$int21 = 0;
+}
+$world17, $flags18, $string0, $int19, $int20, $string1 = ~worldswitcher_list_start;
+while ($world17 > 0) {
+	switch_int ($int3) {
+		case -1 :
+			if (~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
+				$int1 = ~worldswitcher_entry_draw(
+					0 = $component0, 
+					1 = $int1, 
+					2 = $int2, 
+					3 = $component4, 
+					4 = $world17, 
+					5 = $world17, 
+					6 = $flags18, 
+					7 = $string0, 
+					8 = $int19, 
+					9 = $int20, 
+					10 = $int5, 
+					11 = $graphic6, 
+					12 = $fontmetrics7, 
+					13 = $int21, 
+					14 = $width8, 
+					15 = $width9, 
+					16 = $width10, 
+					17 = $width11, 
+					18 = $width12, 
+					19 = $int13, 
+					20 = $int14, 
+					21 = $component16
+				);
+				$int2 = calc($int2 + $int5);
+				if ($layer15 ! null) {
+					$int21 = calc(1 - $int21);
+				}
+			}
+		case default :
+			if ($int3 = $int19 & ~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
+				$int1 = ~worldswitcher_entry_draw(
+					0 = $component0, 
+					1 = $int1, 
+					2 = $int2, 
+					3 = $component4, 
+					4 = $world17, 
+					5 = $world17, 
+					6 = $flags18, 
+					7 = $string0, 
+					8 = $int19, 
+					9 = $int20, 
+					10 = $int5, 
+					11 = $graphic6, 
+					12 = $fontmetrics7, 
+					13 = $int21, 
+					14 = $width8, 
+					15 = $width9, 
+					16 = $width10, 
+					17 = $width11, 
+					18 = $width12, 
+					19 = $int13, 
+					20 = $int14, 
+					21 = $component16
+				);
+				$int2 = calc($int2 + $int5);
+				if ($layer15 ! null) {
+					$int21 = calc(1 - $int21);
+				}
+			}
+		case -69 :
+			switch_int ($int19) {
+				case 0, -73, -42 :
+					$int1 = $int1;
+				case default :
+					if (~script961($world17, $flags18) = 1 & ~worldswitcher_filterlink($world17, $flags18, $string0, $int19) = 1) {
+						$int1 = ~worldswitcher_entry_draw(
+							0 = $component0, 
+							1 = $int1, 
+							2 = $int2, 
+							3 = $component4, 
+							4 = $world17, 
+							5 = $world17, 
+							6 = $flags18, 
+							7 = $string0, 
+							8 = $int19, 
+							9 = $int20, 
+							10 = $int5, 
+							11 = $graphic6, 
+							12 = $fontmetrics7, 
+							13 = $int21, 
+							14 = $width8, 
+							15 = $width9, 
+							16 = $width10, 
+							17 = $width11, 
+							18 = $width12, 
+							19 = $int13, 
+							20 = $int14, 
+							21 = $component16
+						);
+						$int2 = calc($int2 + $int5);
+						if ($layer15 ! null) {
+							$int21 = calc(1 - $int21);
+						}
+					}
+			}
+	}
+	$world17, $flags18, $string0, $int19, $int20, $string1 = ~worldswitcher_list_next;
+}
+return($int1, $int2);

@@ -1,0 +1,9 @@
+// 6248
+[clientscript,pvpa_hud_init](int $widget_761:0_0, component $widget_761:1_1, component $widget_761:2_2, component $widget_761:3_3, component $widget_761:4_4)
+~script4729($widget_761:1_1, $widget_761:2_2, 65256, ^setpos_abs_centre, ^setpos_abs_top, true);
+~script4729($widget_761:3_3, $widget_761:4_4, setbit(65256, 2), ^setpos_abs_right, ^setpos_abs_top, true);
+~pvpa_hud_drawtimer($widget_761:2_2);
+if_setonvartransmit("pvpa_hud_drawtimer(event_com){var3464}", $widget_761:2_2);
+~pvpa_hud_drawinfo($widget_761:4_4);
+if_setonsubchange("pvpa_hud_drawinfo(event_com)", $widget_761:4_4);
+if_setonvartransmit("pvpa_hud_drawinfo(event_com){var3464}", $widget_761:4_4);

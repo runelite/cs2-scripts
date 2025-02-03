@@ -1,0 +1,112 @@
+// 129
+[proc,ignore_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~ignore_sortbutton_draw(
+	0 = $component1, 
+	1 = 2, 
+	2 = 3, 
+	3 = "Sort by name", 
+	4 = $component0, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $component5, 
+	10 = $component6
+);
+~ignore_sortbutton_draw(
+	0 = $component2, 
+	1 = 0, 
+	2 = 1, 
+	3 = "Legacy sort", 
+	4 = $component0, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $component5, 
+	10 = $component6
+);
+cc_deleteall($component3);
+def_int $count7 = 0;
+def_int $int8 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $height9 = 0;
+def_int $int10 = 15;
+def_boolean $boolean11 = null;
+def_int $count12 = ignore_count;
+if ($count12 < 0) {
+	if (%varbit8119 = 1) {
+		if_settext("Loading ignore list<br>Please wait...", $component5);
+	} else {
+		if_settext("You must set a name<br>before using this.", $component5);
+	}
+	if_sethide(true, $component0);
+} else if ($count12 = 0) {
+	if_settext("You may ignore users by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them to your ignore list.", $component5);
+	if_sethide(true, $component0);
+} else {
+	$boolean11 = ~on_mobile;
+	if ($boolean11 = true) {
+		$int10 = scale(8, 5, $int10);
+	}
+	if_settext("", $component5);
+	if_sethide(false, $component0);
+	_3640;
+	switch_int (%varcint184) {
+		case 1 :
+			_3641(false);
+		case 2 :
+			_3642(true);
+		case 3 :
+			_3642(false);
+	}
+	_3643;
+	while ($count7 < $count12) {
+		$string0, $string1 = ignore_getname($count7);
+		cc_create($component3, ^iftype_text, $int8);
+		$int8 = calc($int8 + 1);
+		cc_settext($string0);
+		cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height9, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setopbase("<col=ff9040><$string0></col>");
+		cc_setop(1, "Delete");
+		.cc_create($component3, ^iftype_graphic, $int8);
+		$int8 = calc($int8 + 1);
+		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(calc(parawidth($string0, 190, p12_full) + 3), calc($height9 + ($int10 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setgraphic(friends_changed_name);
+		.cc_setgraphicshadow(0x333333);
+		if (string_length($string1) > 0) {
+			if ($boolean11 = true) {
+				cc_setop(10, "Reveal previous name");
+				cc_setonop("ignore_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
+			} else {
+				$string1 = "Previous name:<br><$string1>";
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component6, $string1, 25, 190)");
+				cc_setonmouseleave("deltooltip($component6)");
+				cc_setonop("ignore_op(event_op, event_opbase, null, -1, -1, "null", "null")");
+			}
+			.cc_sethide(false);
+		} else {
+			cc_setonmouseover("deltooltip($component6)");
+			.cc_sethide(true);
+			cc_setonop("ignore_op(event_op, event_opbase, null, -1, -1, "null", "null")");
+		}
+		$count7, $height9 = calc($count7 + 1), calc($height9 + $int10);
+	}
+	if ($count12 >= 1) {
+		$height9 = calc($height9 + 5);
+	}
+}
+if ($height9 > if_getheight($component3)) {
+	if_setscrollsize(0, $height9, $component3);
+	~scrollbar_resize($component4, $component3, if_getscrolly($component3));
+} else {
+	if_setscrollsize(0, 0, $component3);
+	~scrollbar_resize($component4, $component3, 0);
+}

@@ -1,0 +1,19 @@
+// 2930
+[clientscript,skillmain_setquantity](int $opindex0, int $int1, component $component2, int $int3, int $int4, obj $obj5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%var2224 = ~min(28, $int1);
+~skillmain_setup(
+	0 = $component2, 
+	1 = $int3, 
+	2 = $int4, 
+	3 = $obj5, 
+	4 = $component6, 
+	5 = $component7, 
+	6 = $component8, 
+	7 = $component9, 
+	8 = $component10, 
+	9 = $component11
+);

@@ -1,0 +1,7 @@
+// 1725
+[clientscript,worldmap_zoom_scroll](int $mousey0, component $widget_595:27_1, component $widget_595:28_2)
+if ($mousey0 > 0) {
+	~worldmap_zoom_adjust(false, $widget_595:27_1, $widget_595:28_2);
+} else if ($mousey0 < 0) {
+	~worldmap_zoom_adjust(true, $widget_595:27_1, $widget_595:28_2);
+}

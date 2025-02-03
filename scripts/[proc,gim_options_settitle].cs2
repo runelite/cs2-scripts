@@ -1,0 +1,9 @@
+// 5340
+[proc,gim_options_settitle](component $widget_744:2_0, int $comsubid1)
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
+	if (cc_find($widget_744:2_0, $comsubid1) = ^true) {
+		cc_settext("<activeclansettings_getclanname>: Options");
+	}
+} else if (cc_find($widget_744:2_0, $comsubid1) = ^true) {
+	cc_settext(~script4287);
+}

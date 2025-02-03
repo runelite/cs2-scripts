@@ -1,0 +1,31 @@
+// 3767
+[clientscript,script3767](component $widget_26:0_0, component $widget_26:13_1, component $widget_26:16_2, component $widget_26:19_3, component $widget_26:14_4, component $widget_26:17_5, component $widget_26:20_6, component $widget_26:15_7, component $widget_26:18_8, component $widget_26:21_9)
+def_int $clock10 = calc(%varcint110 + 50);
+if (clientclock <= $clock10) {
+	if_setontimer(null, $widget_26:0_0);
+	~script3773(
+		0 = $widget_26:13_1, 
+		1 = $widget_26:16_2, 
+		2 = $widget_26:19_3, 
+		3 = $widget_26:14_4, 
+		4 = $widget_26:17_5, 
+		5 = $widget_26:20_6, 
+		6 = $widget_26:15_7, 
+		7 = $widget_26:18_8, 
+		8 = $widget_26:21_9
+	);
+} else {
+	if_setontimer("script3768(
+		0 = $clock10, 
+		1 = $widget_26:0_0, 
+		2 = $widget_26:13_1, 
+		3 = $widget_26:16_2, 
+		4 = $widget_26:19_3, 
+		5 = $widget_26:14_4, 
+		6 = $widget_26:17_5, 
+		7 = $widget_26:20_6, 
+		8 = $widget_26:15_7, 
+		9 = $widget_26:18_8, 
+		10 = $widget_26:21_9
+	)", $widget_26:0_0);
+}

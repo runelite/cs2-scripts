@@ -1,0 +1,24 @@
+// 4226
+[clientscript,clan_members_header_op](int $opindex0, int $count1, component $component2, component $widget_693:1_3, component $widget_693:2_4, int $comsubid5, component $widget_693:22_6, component $widget_693:9_7, component $widget_693:14_8, component $widget_693:15_9, component $widget_693:16_10, component $widget_693:18_11, component $widget_693:10_12, component $widget_693:7_13, component $widget_693:11_14, component $widget_693:8_15, component $widget_693:13_16)
+def_int $count17 = enum_getoutputcount(enum_3793);
+if ($opindex0 ! 1 | $count1 < 0 | $count1 >= $count17) {
+	return;
+}
+if ($component2 = $widget_693:7_13) {
+	%varbit12177 = $count1;
+} else if ($component2 = $widget_693:8_15) {
+	%varbit12178 = ~modulo(calc($count1 - 1), $count17);
+}
+~clan_members_draw(
+	0 = $widget_693:1_3, 
+	1 = $widget_693:2_4, 
+	2 = $comsubid5, 
+	3 = $widget_693:9_7, 
+	4 = $widget_693:14_8, 
+	5 = $widget_693:10_12, 
+	6 = $widget_693:7_13, 
+	7 = $widget_693:11_14, 
+	8 = $widget_693:8_15, 
+	9 = $widget_693:13_16
+);
+~clan_members_header_close($widget_693:15_9, $widget_693:7_13, $widget_693:8_15);

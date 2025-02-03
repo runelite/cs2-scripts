@@ -1,0 +1,150 @@
+// 5909
+[proc,script5909](component $widget_779:36_0, component $widget_779:45_1, component $widget_779:37_2, component $widget_779:47_3, component $widget_779:19_4)
+if (%var3373 = null) {
+	if_sethide(true, $widget_779:36_0);
+	if_sethide(true, $widget_779:37_2);
+	if_setsize(0, 377, ^setsize_minus, ^setsize_abs, $widget_779:19_4);
+	return;
+}
+def_dbrow $dbrow5 = ~script4865(%var3373);
+if ($dbrow5 = null | db_getrowtable($dbrow5) ! dbtable_61) {
+	if_sethide(true, $widget_779:36_0);
+	if_sethide(true, $widget_779:37_2);
+	if_setsize(0, 377, ^setsize_minus, ^setsize_abs, $widget_779:19_4);
+	return;
+}
+if_sethide(false, $widget_779:36_0);
+if_sethide(false, $widget_779:37_2);
+def_int $int6 = 0;
+def_int $int7 = 0;
+cc_create($widget_779:45_1, ^iftype_text, $int7);
+cc_setsize(6, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext("Unlocks");
+cc_settextshadow(true);
+$int6 = 23;
+$int7 = calc($int7 + 1);
+def_int $int8 = -1;
+def_int $int9 = calc(if_getwidth($widget_779:45_1) - 2);
+def_int $int10 = 0;
+def_dbrow $dbrow11 = null;
+def_int $int12 = db_getfieldcount(%var3373, quest:questreq);
+def_int $int13 = 0;
+while ($int13 < $int12) {
+	$int10 = 1;
+	$dbrow11 = db_getfield(%var3373, quest:questreq, $int13);
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, db_getfield($dbrow11, quest:displayname, 0));
+	$int13 = calc($int13 + 1);
+}
+$int12 = db_getfieldcount($dbrow5, dbtable_61:4);
+$int13 = 0;
+while ($int13 < $int12) {
+	$int10 = 1;
+	$dbrow11 = db_getfield($dbrow5, dbtable_61:4, $int13);
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, db_getfield($dbrow11, quest:displayname, 0));
+	$int13 = calc($int13 + 1);
+}
+def_int $int14 = ~max(db_getfield(%var3373, quest:comlevelreq, 0), db_getfield(%var3373, quest:comlevelrec, 0));
+def_int $int15 = ~minmax(3, 99, calc(scale(4, 5, $int14) + 15));
+if (db_getfield($dbrow5, dbtable_61:6, 0) > 1) {
+	$int15 = db_getfield($dbrow5, dbtable_61:6, 0);
+}
+def_int $int16 = calc($int15 % 5);
+if ($int14 > 3 | db_getfield($dbrow5, dbtable_61:6, 0) > 1) {
+	if ($int16 < 3) {
+		$int15 = calc($int15 - $int16);
+	} else {
+		$int15 = calc($int15 + (5 - $int16));
+	}
+	$int15 = ~minmax(1, 99, $int15);
+} else {
+	$int15 = 1;
+}
+def_stat $stat17 = null;
+def_int $int18 = 1;
+def_int $int19 = db_getfieldcount(%var3373, quest:statreq);
+$int13 = 0;
+while ($int13 < $int19) {
+	$stat17, $int18 = db_getfield(%var3373, quest:statreq, $int13);
+	$stat17, $int18 = ~script5911(%var3373, $dbrow5, $stat17, $int18, $int15);
+	if ($stat17 ! null & $int18 > 1) {
+		$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
+	}
+	$int13 = calc($int13 + 1);
+}
+$int19 = db_getfieldcount(%var3373, quest:statrec);
+$int13 = 0;
+while ($int13 < $int19) {
+	$stat17, $int18 = db_getfield(%var3373, quest:statrec, $int13);
+	$stat17, $int18 = ~script5994(%var3373, $dbrow5, $stat17, $int18, $int15);
+	if ($stat17 ! null & $int18 > 1) {
+		$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
+	}
+	$int13 = calc($int13 + 1);
+}
+$int19 = db_getfieldcount($dbrow5, dbtable_61:5);
+$int13 = 0;
+while ($int13 < $int19) {
+	$stat17, $int18 = db_getfield($dbrow5, dbtable_61:5, $int13);
+	$stat17, $int18 = ~script6809(%var3373, $dbrow5, $stat17, $int18, $int15);
+	if ($stat17 ! null & $int18 > 1) {
+		$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
+	}
+	$int13 = calc($int13 + 1);
+}
+if ($int15 > 1) {
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "Level <tostring($int15)> in all combat stats");
+}
+if (db_getfield($dbrow5, dbtable_61:7, 0) > 0) {
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "<enum(int, string, enum_252, db_getfield($dbrow5, dbtable_61:7, 0))> Player Owned House");
+}
+$int7, $int6 = ~speedrunning_misc_unlocks(%var3373, $widget_779:45_1, $int7, $int6);
+if ($int10 = 1) {
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "Any requirements for the other quests unlocked");
+}
+if ($int6 = 23) {
+	$int7, $int6 = ~script5912($widget_779:45_1, $int7, $int6, "None");
+}
+$int6 = calc($int6 + 3);
+def_int $int20 = $int6;
+$int6 = 0;
+$int7 = 0;
+cc_create($widget_779:47_3, ^iftype_text, $int7);
+cc_setsize(6, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext("Items");
+cc_settextshadow(true);
+$int6 = 23;
+$int7 = calc($int7 + 1);
+$int7, $int6 = ~script5910($widget_779:47_3, $dbrow5, worn, $int7, $int6);
+$int7, $int6 = ~script5910($widget_779:47_3, $dbrow5, inv, $int7, $int6);
+if ($int6 = 23) {
+	$int7, $int6 = ~script5912($widget_779:47_3, $int7, $int6, "None");
+}
+if (~script6808($dbrow5, bank) > 0) {
+	$int6 = calc($int6 + 3);
+	cc_create($widget_779:47_3, ^iftype_text, $int7);
+	cc_setsize(6, 20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int6, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settextfont(b12_full);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settext("Items (bank)");
+	cc_settextshadow(true);
+	$int6 = calc($int6 + 22);
+	$int7 = calc($int7 + 1);
+	$int7, $int6 = ~script5910($widget_779:47_3, $dbrow5, bank, $int7, $int6);
+}
+$int6 = calc($int6 + 3);
+if ($int6 > $int20) {
+	$int20 = $int6;
+}
+if_setsize(if_getwidth($widget_779:36_0), $int20, ^setsize_abs, ^setsize_abs, $widget_779:36_0);
+if_setsize(if_getwidth($widget_779:37_2), $int20, ^setsize_abs, ^setsize_abs, $widget_779:37_2);
+if_setsize(if_getwidth($widget_779:19_4), calc(377 + $int20 + 7), ^setsize_abs, ^setsize_abs, $widget_779:19_4);

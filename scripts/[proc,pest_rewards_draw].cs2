@@ -1,0 +1,310 @@
+// 2776
+[proc,pest_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4)(int)
+if_setonvartransmit("pest_rewards_draw($int0, $component1, $component2, $component3, $component4){var261}", $component1);
+if_setonstattransmit("pest_rewards_draw($int0, $component1, $component2, $component3, $component4){
+	0 = attack, 
+	1 = strength, 
+	2 = defence, 
+	3 = ranged, 
+	4 = magic, 
+	5 = hitpoints, 
+	6 = prayer, 
+	7 = herblore, 
+	8 = mining, 
+	9 = farming
+}", $component1);
+cc_deleteall($component2);
+def_int $int5 = 0;
+def_int $int6 = 3;
+def_int $int7 = calc(if_getwidth($component2) / 2);
+$int5 = ~pest_rewards_statdraw(
+	0 = attack, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 0, 
+	5 = 1, 
+	6 = 2, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int5 = ~pest_rewards_statdraw(
+	0 = strength, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 3, 
+	5 = 4, 
+	6 = 5, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_statdraw(
+	0 = defence, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 6, 
+	5 = 7, 
+	6 = 8, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int5 = ~pest_rewards_statdraw(
+	0 = ranged, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 9, 
+	5 = 10, 
+	6 = 11, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_statdraw(
+	0 = magic, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 12, 
+	5 = 13, 
+	6 = 14, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int5 = ~pest_rewards_statdraw(
+	0 = hitpoints, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 15, 
+	5 = 16, 
+	6 = 17, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_statdraw(
+	0 = prayer, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 18, 
+	5 = 19, 
+	6 = 20, 
+	7 = $component1, 
+	8 = $component2, 
+	9 = $component3, 
+	10 = $component4, 
+	11 = $int5, 
+	12 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~pest_rewards_itemdraw(
+	0 = rogues_purse_1534, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 21, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int5 = ~pest_rewards_itemdraw(
+	0 = dummy_copper_ore_980, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 22, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_itemdraw(
+	0 = banana_tree_seed_5_5235, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 23, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32);
+$int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_knight_mace_8841, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 24, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_knight_top_8839, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 25, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_knight_robe_8840, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 26, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_knight_gloves_8842, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 27, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_mage_helm_11663, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 28, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_ranger_helm_11664, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 29, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32 + 3);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_melee_helm_11665, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int7, 
+	4 = 30, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int5 = ~pest_rewards_itemdraw(
+	0 = void_seal_8_11666, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = $int7, 
+	4 = 31, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = $component3, 
+	8 = $component4, 
+	9 = $int5, 
+	10 = $int0
+);
+$int6 = calc($int6 + 32 + 5);
+def_string $text0 = "";
+cc_deleteall($component3);
+$int5 = 0;
+if ($int0 ! -1) {
+	$text0 = enum(int, string, enum_2285, $int0);
+	~pest_rewards_confirmdraw(false, $text0, $component4);
+	while ($int5 < $int0) {
+		cc_create($component3, ^iftype_rectangle, $int5);
+		cc_sethide(true);
+		$int5 = calc($int5 + 1);
+	}
+	cc_create($component3, ^iftype_rectangle, $int5);
+	cc_sethide(false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setop(1, "Confirm");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component4)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component4)");
+	cc_setonop("pest_rewards_confirmop(event_op, $component1, $component2, $component3, $component4)");
+} else {
+	$int5 = ~v2_stone_button_in_filled($component4);
+	cc_create($component4, ^iftype_text, $int5);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x7f7f7f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_settext("Confirm");
+}
+return($int6);

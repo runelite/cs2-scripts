@@ -1,0 +1,70 @@
+// 6909
+[proc,script6909](int $int0, component $component1, int $int2, int $int3, string $string0)
+def_string $text1 = "Fresh Start Worlds";
+if ($int2 = 2) {
+	$text1 = "Old School Main";
+}
+def_int $int4 = 105;
+switch_int ($int3) {
+	case 1 :
+		$text1 = "I've changed my mind";
+		$int4 = -105;
+	case 2 :
+		$text1 = "Close More Info";
+}
+def_int $int5 = 0;
+def_int $width6 = if_getwidth($component1);
+def_int $height7 = if_getheight($component1);
+def_int $x8 = calc(if_getwidth(interface_788:4) / 2 - $width6 / 2 - $int4);
+def_int $y9 = calc(if_getheight(interface_788:4) / 2 + 25);
+if ($int3 ! 2) {
+	if_setposition($x8, $y9, ^setpos_abs_left, ^setpos_abs_top, $component1);
+}
+def_int $colour10 = 0xff981f;
+def_int $colour11 = ^white;
+def_int $colour12 = 0x0dc10d;
+if ($int3 = 1 | $int3 = 2) {
+	$colour12 = 0xef1020;
+}
+.cc_create($component1, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(255);
+$int5 = ~script5288($component1, $int5, 0, 0, $width6, $height7, struct_3714, $colour10);
+cc_create($component1, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(verdana_13pt_regular);
+cc_setcolour($colour10);
+cc_setsize($width6, $height7, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+switch_int ($int3) {
+	case 0 :
+		cc_settext("Confirm");
+	case 1 :
+		cc_settext("Cancel");
+	case 2 :
+		cc_settext("Back");
+}
+cc_create($component1, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setposition(0, 23, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(verdana_13pt_bold);
+cc_setcolour($colour11);
+cc_setsize($width6, $height7, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_settext($text1);
+.cc_setonmouserepeat("script6938($component1, .cc_getid, $colour12)");
+.cc_setonmouseleave("script6939($component1, .cc_getid, $colour10, $colour11)");
+if ($int3 = 1 | $int3 = 2) {
+	.cc_setop(1, "Back");
+	.cc_setonop("script6936($string0)");
+} else {
+	.cc_setop(1, "Confirm <col=ff981f><$text1></col>");
+	.cc_setonop("script6937($int2, $string0)");
+}

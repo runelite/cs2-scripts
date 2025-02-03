@@ -1,0 +1,60 @@
+// 298
+[clientscript,bankside_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+def_int $size11 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size11) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $size11) {
+	return;
+}
+if ($drop0 ! $drop1) {
+	return;
+}
+def_obj $obj12 = inv_getobj(inv, $comsubid2);
+if ($obj12 = null) {
+	return;
+}
+def_obj $obj13 = inv_getobj(inv, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~bankside_drawitem(
+		0 = $obj12, 
+		1 = inv_getnum(inv, $comsubid2), 
+		2 = $comsubid2, 
+		3 = $drop0, 
+		4 = $component4, 
+		5 = 0, 
+		6 = $component5, 
+		7 = $component6, 
+		8 = $component7, 
+		9 = $component8, 
+		10 = $component9, 
+		11 = $component10, 
+		12 = ~script7796($dropsubid3)
+	);
+}
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~bankside_drawitem(
+		0 = $obj13, 
+		1 = inv_getnum(inv, $dropsubid3), 
+		2 = $dropsubid3, 
+		3 = $drop0, 
+		4 = $component4, 
+		5 = 0, 
+		6 = $component5, 
+		7 = $component6, 
+		8 = $component7, 
+		9 = $component8, 
+		10 = $component9, 
+		11 = $component10, 
+		12 = ~script7796($comsubid2)
+	);
+}
+switch_obj ($obj12) {
+	case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+		cc_deleteall($component4);
+	case default :
+		switch_obj ($obj13) {
+			case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+				cc_deleteall($component4);
+		}
+}

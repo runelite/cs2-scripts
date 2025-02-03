@@ -1,0 +1,7 @@
+// 1337
+[clientscript,light_puzzle_button_reset](component $component0, int $clock1)
+if (clientclock < $clock1) {
+	return;
+}
+if_setontimer(null, $component0);
+~v2_stone_button_filled($component0);

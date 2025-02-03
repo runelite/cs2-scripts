@@ -1,0 +1,33 @@
+// 3914
+[proc,settings_side_tab_highlight_reset](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+if (%varbit9683 = $int6) {
+	if (%varbit4609 = 0) {
+		if_setgraphic(graphic_6325, $component0);
+		if_setgraphic(graphic_6326, $component1);
+		if_setgraphic(graphic_6325, $component2);
+		if_sethide(true, $component3);
+		if_sethide(true, $component4);
+		if_sethide(true, $component5);
+	} else {
+		if_setgraphic("tabs_tall,0", $component0);
+		if_setgraphic("tabs_tall,1", $component1);
+		if_setgraphic("tabs_tall,0", $component2);
+	}
+} else if (%varbit4609 = 0) {
+	if_setgraphic(graphic_6327, $component0);
+	if_setgraphic(graphic_6328, $component1);
+	if_setgraphic(graphic_6327, $component2);
+	if_sethide(false, $component3);
+	if_sethide(false, $component4);
+	if_sethide(false, $component5);
+	if_setgraphic(graphic_6329, $component3);
+	if_setgraphic(graphic_6330, $component4);
+	if_setgraphic(graphic_6329, $component5);
+	if_settrans(200, $component3);
+	if_settrans(200, $component4);
+	if_settrans(200, $component5);
+} else {
+	if_setgraphic("tabs_tall,2", $component0);
+	if_setgraphic("tabs_tall,3", $component1);
+	if_setgraphic("tabs_tall,2", $component2);
+}

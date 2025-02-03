@@ -1,0 +1,5 @@
+// 2291
+[clientscript,raids_challenge_move_highlight](component $widget_21:1_0, int $comsubid1, int $y2)
+if (cc_find($widget_21:1_0, $comsubid1) = ^true) {
+	cc_setposition(0, $y2, ^setpos_abs_left, ^setpos_abs_top);
+}

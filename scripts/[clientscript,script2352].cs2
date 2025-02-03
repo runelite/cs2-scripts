@@ -1,0 +1,78 @@
+// 2352
+[clientscript,script2352]
+def_boolean $boolean0 = false;
+if (%var281 = 1000 | %var2686 = 1000) {
+	~steam_set_unlocked(0, 0);
+}
+if (%varbit11843 = 1) {
+	~steam_set_unlocked(1, 0);
+}
+if (%var1116 > 0 | %var1111 > 0 | %var1112 > 0 | %var1354 > 0 | %var1533 > 0 | %var1534 > 0 | %var2201 > 0) {
+	~steam_set_unlocked(2, 0);
+}
+if (%varbit11844 = 1) {
+	~steam_set_unlocked(3, 0);
+}
+if (%varbit11845 = 1) {
+	~steam_set_unlocked(4, 0);
+}
+if (%var178 >= 3) {
+	~steam_set_unlocked(5, 0);
+}
+if (%varbit2561 >= 3) {
+	~steam_set_unlocked(6, 0);
+}
+if (%varbit11846 = 1) {
+	~steam_set_unlocked(7, 0);
+}
+if (%varbit11847 = 1) {
+	~steam_set_unlocked(8, 0);
+}
+if (%varbit11848 = 1) {
+	~steam_set_unlocked(9, 0);
+}
+if (%varbit11849 = 1) {
+	~steam_set_unlocked(11, 0);
+}
+if (%varbit11850 = 1) {
+	~steam_set_unlocked(12, 0);
+}
+if (%varbit11851 = 1) {
+	~steam_set_unlocked(13, 0);
+}
+if (%varbit11852 = 1) {
+	~steam_set_unlocked(15, 0);
+}
+if (%varbit11853 = 1) {
+	~steam_set_unlocked(16, 0);
+}
+if (%var29 >= 2) {
+	~steam_set_unlocked(17, 0);
+}
+def_int $int1 = 0;
+if (%varbit11854 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11855 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11856 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11857 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11858 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11859 = 1) {
+	$int1 = calc($int1 + 1);
+}
+if (%varbit11860 = 1) {
+	$int1 = calc($int1 + 1);
+}
+~steam_set_stat_progress(18, $int1, 0);
+if (%var176 >= 10) {
+	~steam_set_unlocked(19, 0);
+}
+$boolean0 = steam_storestats;

@@ -1,0 +1,23 @@
+// 7607
+[proc,script7607](component $component0, int $comsubid1, component $component2, string $string0, int $int3, int $int4)
+def_int $int5 = 0;
+if (~on_enhanced_any = 1) {
+	if ($int3 > $int4) {
+		$int5 = $int4;
+		$int4 = $int3;
+		$int3 = $int5;
+	}
+	~mouseover_tooltip_setup(
+		0 = $string0, 
+		1 = "", 
+		2 = mouse_getx, 
+		3 = mouse_gety, 
+		4 = $component2, 
+		5 = $component0, 
+		6 = $comsubid1, 
+		7 = $int3, 
+		8 = $int4, 
+		9 = 1
+	);
+	return;
+}

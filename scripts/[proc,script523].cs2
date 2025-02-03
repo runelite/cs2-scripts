@@ -1,0 +1,12 @@
+// 523
+[proc,script523](component $component0)
+def_component $component1 = interface_12:137;
+def_component $component2 = interface_12:138;
+def_component $component3 = interface_12:139;
+def_enum $enum4 = enum_5586;
+if (%varbit4171 > 0 | %varbit4172 > 0 | %varbit4173 > 0 | %varbit4174 > 0 | %varbit4175 > 0 | %varbit4176 > 0 | %varbit4177 > 0 | %varbit4178 > 0 | %varbit4179 > 0) {
+	$enum4 = enum_5585;
+}
+cc_deleteall($component0);
+~script5771($component0, $enum4, %varbit4170, 0xff981f);
+if_setonop("script2076($component1, $component2, $component3, $component0, $enum4, 0xff981f)", $component0);

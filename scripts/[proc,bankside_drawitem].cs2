@@ -1,0 +1,128 @@
+// 297
+[proc,bankside_drawitem](obj $obj0, int $num1, int $index2, component $component3, component $component4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12)
+cc_clearops;
+def_string $string0 = "";
+if ($obj0 ! null) {
+	cc_settrans(0);
+	cc_setobject($obj0, $num1);
+	switch_obj ($obj0) {
+		case looting_bag_11941, looting_bag_22586 :
+			if ($int5 = 1) {
+				cc_setop(1, "View");
+				cc_setonop("bankside_switchview(
+					0 = event_op, 
+					1 = $obj0, 
+					2 = $component6, 
+					3 = $component7, 
+					4 = $component8, 
+					5 = $component9, 
+					6 = $component10, 
+					7 = $component11, 
+					8 = 1
+				)");
+			} else {
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+			}
+		case extradimensional_bag_25106, extradimensional_bag_25108 :
+			cc_setop(1, "View");
+			cc_setonop("bankside_switchview(
+				0 = event_op, 
+				1 = $obj0, 
+				2 = $component6, 
+				3 = $component7, 
+				4 = $component8, 
+				5 = $component9, 
+				6 = $component10, 
+				7 = $component11, 
+				8 = 2
+			)");
+		case rune_pouch_12791, rune_pouch_l_24416 :
+			cc_setop(1, "Configure");
+			cc_setonop("bankside_switchview(
+				0 = event_op, 
+				1 = $obj0, 
+				2 = $component6, 
+				3 = $component7, 
+				4 = $component8, 
+				5 = $component9, 
+				6 = $component10, 
+				7 = $component11, 
+				8 = 3
+			)");
+		case divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+			cc_setop(1, "Configure");
+			cc_setonop("bankside_switchview(
+				0 = event_op, 
+				1 = $obj0, 
+				2 = $component6, 
+				3 = $component7, 
+				4 = $component8, 
+				5 = $component9, 
+				6 = $component10, 
+				7 = $component11, 
+				8 = 4
+			)");
+		case default :
+			if (~script7349($obj0) = 1) {
+				cc_setop(1, "Configure");
+				cc_setonop("bankside_switchview(
+					0 = event_op, 
+					1 = $obj0, 
+					2 = $component6, 
+					3 = $component7, 
+					4 = $component8, 
+					5 = $component9, 
+					6 = $component10, 
+					7 = $component11, 
+					8 = 5
+				)");
+			} else {
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+			}
+	}
+	cc_setop(2, "Deposit-<~script2579>");
+	if (%varbit6590 ! 0) {
+		cc_setop(3, "Deposit-1");
+	}
+	cc_setop(4, "Deposit-5");
+	cc_setop(5, "Deposit-10");
+	if (%varbit3960 > 0) {
+		cc_setop(6, "Deposit-<tostring(%varbit3960)>");
+	}
+	cc_setop(7, "Deposit-X");
+	cc_setop(8, "Deposit-All");
+	cc_setop(9, ~bankside_extraop($obj0, $index2));
+	if (~script7795 = 1) {
+		if ($int12 = 1) {
+			cc_setop(10, "Unlock-slot");
+		} else {
+			cc_setop(10, "Lock-slot");
+		}
+	} else {
+		cc_setop(10, "Examine");
+	}
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setondragcomplete("bankside_reorder(
+		0 = event_com, 
+		1 = event_com2, 
+		2 = event_comsubid, 
+		3 = event_comsubid2, 
+		4 = $component4, 
+		5 = $component6, 
+		6 = $component7, 
+		7 = $component8, 
+		8 = $component9, 
+		9 = $component10, 
+		10 = $component11
+	)");
+} else {
+	if ($int12 = 1 & ~script7795 = 1) {
+		cc_setop(10, "Unlock-slot");
+		cc_setopbase("<col=ff9040>Slot</col>");
+	}
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setonop(null);
+	cc_setondragcomplete(null);
+}
+cc_setontimer(null);

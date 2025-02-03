@@ -1,0 +1,52 @@
+// 1592
+[proc,raids_storage_shared_items](component $widget_550:7_0, component $widget_550:8_1, component $widget_550:2_2)
+def_int $int3 = 0;
+def_int $num4 = 0;
+def_int $height5 = 0;
+cc_deleteall($widget_550:7_0);
+def_int $int6 = 0;
+def_obj $obj7 = enum(int, obj, enum_1666, $int6);
+while ($obj7 ! null) {
+	cc_create($widget_550:7_0, ^iftype_graphic, $int6);
+	$num4 = invother_total(inv_582, $obj7);
+	if ($num4 > 0) {
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		$height5 = calc($int3 / 10 * (32 + 8));
+		cc_setposition(calc(2 + $int3 % 10 * (36 + 8)), $height5, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_settrans(0);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject($obj7, $num4);
+		cc_setop(1, "Withdraw");
+		cc_setop(2, "Withdraw-5");
+		cc_setop(3, "Withdraw-10");
+		cc_setop(4, "Withdraw-All");
+		cc_setop(5, "Withdraw-X");
+		cc_setop(10, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+		cc_setonop("raids_storage_items_op(event_op, event_com, event_comsubid)");
+		$int3 = calc($int3 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int6 = calc($int6 + 1);
+	$obj7 = enum(int, obj, enum_1666, $int6);
+}
+def_int $int8 = 0;
+$height5 = calc($height5 + 32);
+if ($height5 > if_getheight($widget_550:7_0)) {
+	$int8 = if_getscrolly($widget_550:7_0);
+	if_setscrollsize(0, $height5, $widget_550:7_0);
+} else {
+	if_setscrollsize(0, 0, $widget_550:7_0);
+}
+~scrollbar_resize($widget_550:8_1, $widget_550:7_0, $int8);
+$int3 = 0;
+$int6 = inv_size(inv_582);
+while ($int6 > 0) {
+	$int6 = calc($int6 - 1);
+	if (invother_getnum(inv_582, $int6) > 0) {
+		$int3 = calc($int3 + 1);
+	}
+}
+if_settext(tostring($int3), $widget_550:2_2);

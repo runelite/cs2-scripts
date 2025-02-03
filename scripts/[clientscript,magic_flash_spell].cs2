@@ -1,0 +1,14 @@
+// 2081
+[clientscript,magic_flash_spell](int $int0, obj $obj1)
+if (%varbit4070 ! $int0) {
+	return;
+}
+def_component $component2 = oc_param($obj1, spell_button);
+if ($component2 = null) {
+	return;
+}
+if_setontimer("magic_flash($component2, 1, 0)", interface_218:3);
+if (%varcint393 ! null) {
+	~magic_stop_flash(%varcint393);
+}
+%varcint393 = $obj1;

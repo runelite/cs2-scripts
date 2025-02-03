@@ -1,0 +1,85 @@
+// 3537
+[proc,poh_costumes_drawalternates](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, namedobj $namedobj6, boolean $boolean7, component $component8, int $int9)(int, int, int, int)
+def_boolean $boolean10 = enum(obj, boolean, enum_3305, $namedobj6);
+def_int $int11 = 0;
+def_namedobj $namedobj12 = null;
+def_int $num13 = 0;
+def_int $int14 = 0;
+def_enum $enum15 = enum(obj, enum, enum_3304, $namedobj6);
+if ($enum15 ! null) {
+	$int11 = enum_getoutputcount($enum15);
+	while ($int11 > 0) {
+		$int11 = calc($int11 - 1);
+		$namedobj12 = enum(int, namedobj, $enum15, $int11);
+		if ($namedobj12 ! null) {
+			$num13 = invother_total(inv_637, $namedobj12);
+			if ($num13 > 0) {
+				$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem(
+					0 = $int0, 
+					1 = $int1, 
+					2 = $int2, 
+					3 = $int3, 
+					4 = $int4, 
+					5 = $int5, 
+					6 = $namedobj12, 
+					7 = $num13, 
+					8 = $boolean7, 
+					9 = $component8, 
+					10 = $int9
+				), 1;
+				if ($boolean10 = true) {
+					return($int0, $int1, $int2, $int14);
+				}
+			} else if ($boolean10 = false) {
+				$int2 = ~poh_costumes_hideitem($int2, $component8, $int9);
+			}
+		}
+	}
+} else {
+	$namedobj12 = enum(obj, namedobj, enum_3303, $namedobj6);
+	if ($namedobj12 ! null) {
+		$num13 = invother_total(inv_637, $namedobj12);
+		if ($num13 > 0) {
+			$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem(
+				0 = $int0, 
+				1 = $int1, 
+				2 = $int2, 
+				3 = $int3, 
+				4 = $int4, 
+				5 = $int5, 
+				6 = $namedobj12, 
+				7 = $num13, 
+				8 = $boolean7, 
+				9 = $component8, 
+				10 = $int9
+			), 1;
+			if ($boolean10 = true) {
+				return($int0, $int1, $int2, $int14);
+			}
+		} else if ($boolean10 = false) {
+			$int2 = ~poh_costumes_hideitem($int2, $component8, $int9);
+		}
+	}
+}
+$num13 = invother_total(inv_637, $namedobj6);
+if ($int14 = 0 | $num13 > 0) {
+	$int0, $int1, $int2 = ~poh_costumes_drawitem(
+		0 = $int0, 
+		1 = $int1, 
+		2 = $int2, 
+		3 = $int3, 
+		4 = $int4, 
+		5 = $int5, 
+		6 = $namedobj6, 
+		7 = $num13, 
+		8 = $boolean7, 
+		9 = $component8, 
+		10 = $int9
+	);
+	if ($num13 > 0) {
+		$int14 = 1;
+	}
+} else {
+	$int2 = ~poh_costumes_hideitem($int2, $component8, $int9);
+}
+return($int0, $int1, $int2, $int14);

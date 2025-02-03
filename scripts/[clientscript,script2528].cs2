@@ -1,0 +1,12 @@
+// 2528
+[clientscript,script2528](component $widget_166:2_0, component $widget_166:3_1, component $widget_166:1_2)
+if_setmodeltransparent(true, $widget_166:3_1);
+if_setmodelangle(0, 0, 480, 512, 0, 113, $widget_166:2_0);
+if_setmodelangle(0, 0, 480, 512, 0, 113, $widget_166:3_1);
+if (~on_mobile = true) {
+	if_sethide(true, $widget_166:3_1);
+	if_sethide(false, $widget_166:1_2);
+} else {
+	if_sethide(true, $widget_166:1_2);
+	if_sethide(false, $widget_166:3_1);
+}

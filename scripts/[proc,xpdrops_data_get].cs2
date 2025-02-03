@@ -1,0 +1,54 @@
+// 1002
+[proc,xpdrops_data_get](stat $stat0)(int, int)
+switch_stat ($stat0) {
+	case attack :
+		return(%var1229, %var1253);
+	case strength :
+		return(%var1230, %var1254);
+	case ranged :
+		return(%var1231, %var1255);
+	case magic :
+		return(%var1232, %var1256);
+	case defence :
+		return(%var1233, %var1257);
+	case hitpoints :
+		return(%var1234, %var1258);
+	case prayer :
+		return(%var1235, %var1259);
+	case agility :
+		return(%var1236, %var1260);
+	case herblore :
+		return(%var1237, %var1261);
+	case thieving :
+		return(%var1238, %var1262);
+	case crafting :
+		return(%var1239, %var1263);
+	case runecraft :
+		return(%var1240, %var1264);
+	case mining :
+		return(%var1241, %var1265);
+	case smithing :
+		return(%var1242, %var1266);
+	case fishing :
+		return(%var1243, %var1267);
+	case cooking :
+		return(%var1244, %var1268);
+	case firemaking :
+		return(%var1245, %var1269);
+	case woodcutting :
+		return(%var1246, %var1270);
+	case fletching :
+		return(%var1247, %var1271);
+	case slayer :
+		return(%var1248, %var1272);
+	case farming :
+		return(%var1249, %var1273);
+	case construction :
+		return(%var1250, %var1274);
+	case hunter :
+		return(%var1251, %var1275);
+	case null :
+		return(%var1228, %var1252);
+	case default :
+		return(0, 0);
+}

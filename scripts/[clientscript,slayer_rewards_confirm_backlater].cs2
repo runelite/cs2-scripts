@@ -1,0 +1,10 @@
+// 320
+[clientscript,slayer_rewards_confirm_backlater](int $clock0, component $widget_426:11_1, component $widget_426:2_2, component $widget_426:8_3, component $widget_426:5_4)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $widget_426:8_3);
+cc_deleteall($widget_426:8_3);
+if_setonop(null, $widget_426:5_4);
+if_sethide(false, $widget_426:11_1);
+if_sethide(true, $widget_426:2_2);

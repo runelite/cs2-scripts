@@ -1,0 +1,37 @@
+// 709
+[clientscript,build_achievement_list](component $widget_259:2_0, component $widget_259:4_1, int $widget_259:1_2)
+cc_deleteall($widget_259:2_0);
+cc_deleteall($widget_259:4_1);
+def_int $intarray0(12);
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int3 < 12) {
+	cc_create($widget_259:2_0, ^iftype_rectangle, $int4);
+	$int4 = calc($int4 + 1);
+	cc_setop(1, "Open <col=ff9040><enum(int, string, enum_595, $int3)> Journal</col>");
+	cc_setop(2, "Wiki <col=ff9040><enum(int, string, enum_595, $int3)> Journal</col>");
+	cc_setfill(false);
+	cc_setcolour(0xff9933);
+	cc_settrans(150);
+	cc_setsize(16, 27, ^setsize_minus, ^setsize_abs);
+	$intarray0($int3) = $int3;
+	$int3 = calc($int3 + 1);
+}
+~quicksort_intenum(intarray0, 0, calc(12 - 1), enum_595);
+def_int $height5 = 8;
+$int3 = 0;
+while ($int3 < 12) {
+	if (cc_find($widget_259:2_0, $intarray0($int3)) = ^true) {
+		cc_setposition(0, $height5, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	$int4 = ~setup_diary_entry($widget_259:2_0, $intarray0($int3), $int4, $height5);
+	$int3, $height5 = calc($int3 + 1), calc($height5 + 28);
+}
+$height5 = calc($height5 + 8);
+if_setscrollpos(0, 0, $widget_259:2_0);
+if ($height5 > if_getheight($widget_259:2_0)) {
+	if_setscrollsize(0, $height5, $widget_259:2_0);
+} else {
+	if_setscrollsize(0, 0, $widget_259:2_0);
+}
+~scrollbar_vertical($widget_259:4_1, $widget_259:2_0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,37 @@
+// 149
+[clientscript,interface_inv_init](component $component0, inv $inv1, int $int2, int $int3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4)
+def_string $string5 = "";
+~interface_inv_update_big(
+	0 = $component0, 
+	1 = $inv1, 
+	2 = $int2, 
+	3 = $int3, 
+	4 = $int4, 
+	5 = $component5, 
+	6 = $string0, 
+	7 = $string1, 
+	8 = $string2, 
+	9 = $string3, 
+	10 = $string4, 
+	11 = $string5, 
+	12 = $string5, 
+	13 = $string5, 
+	14 = $string5
+);
+if_setoninvtransmit("interface_inv_update_big(
+	0 = $component0, 
+	1 = $inv1, 
+	2 = $int2, 
+	3 = $int3, 
+	4 = $int4, 
+	5 = $component5, 
+	6 = $string0, 
+	7 = $string1, 
+	8 = $string2, 
+	9 = $string3, 
+	10 = $string4, 
+	11 = $string5, 
+	12 = $string5, 
+	13 = $string5, 
+	14 = $string5
+){$inv1}", $component0);

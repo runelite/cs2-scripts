@@ -1,0 +1,21 @@
+// 7728
+[proc,script7728](component $component0, int $int1, int $int2, int $int3, int $x4, int $y5)(int)
+$int1 = ~script7773(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ~script2280($int2, $int3), 
+	3 = $x4, 
+	4 = $y5, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 30, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+if ($int3 = 0) {
+	cc_settrans(200);
+} else {
+	~script7739(~script7704($int2, $int3));
+}
+return($int1);

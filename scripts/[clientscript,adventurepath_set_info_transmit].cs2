@@ -1,0 +1,44 @@
+// 2954
+[clientscript,adventurepath_set_info_transmit](component $widget_642:30_0, component $widget_642:31_1, component $widget_642:29_2, component $widget_642:32_3, component $widget_642:21_4, component $widget_642:23_5, component $widget_642:5_6, component $widget_642:3_7, component $widget_642:7_8, component $widget_642:24_9, component $widget_642:25_10, component $widget_642:33_11, component $widget_642:4_12, component $widget_642:8_13, component $widget_642:11_14, component $widget_642:13_15, component $widget_642:16_16, component $widget_642:17_17, component $widget_642:19_18, component $widget_642:12_19, component $widget_642:26_20)
+if (%var2358 = 0) {
+	return;
+}
+def_enum $enum21 = enum(int, enum, enum_2620, %var2357);
+if ($enum21 = null) {
+	return;
+}
+def_int $count22 = 0;
+def_struct $struct23 = null;
+def_int $int24 = struct_param($struct23, param_806);
+while ($count22 < enum_getoutputcount($enum21)) {
+	$struct23 = enum(int, struct, $enum21, $count22);
+	if ($struct23 ! null & $int24 = %var2358) {
+		~adventurepath_set_info(
+			0 = $int24, 
+			1 = $widget_642:30_0, 
+			2 = $widget_642:31_1, 
+			3 = $widget_642:29_2, 
+			4 = $widget_642:32_3, 
+			5 = $struct23, 
+			6 = $widget_642:21_4, 
+			7 = $widget_642:23_5, 
+			8 = $widget_642:5_6, 
+			9 = $widget_642:3_7, 
+			10 = $widget_642:7_8, 
+			11 = $widget_642:24_9, 
+			12 = $widget_642:25_10, 
+			13 = $widget_642:33_11, 
+			14 = $widget_642:4_12, 
+			15 = $widget_642:8_13, 
+			16 = $widget_642:11_14, 
+			17 = $widget_642:13_15, 
+			18 = $widget_642:16_16, 
+			19 = $widget_642:17_17, 
+			20 = $widget_642:19_18, 
+			21 = $widget_642:12_19, 
+			22 = $widget_642:26_20
+		);
+		return;
+	}
+	$count22 = calc($count22 + 1);
+}

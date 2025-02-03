@@ -1,0 +1,18 @@
+// 41
+[proc,deltooltip_action](component $component0)
+cc_deleteall($component0);
+%varcint2 = 0;
+if (~on_enhanced_any = 1) {
+	~mouseover_tooltip_setup(
+		0 = "", 
+		1 = "", 
+		2 = -1, 
+		3 = -1, 
+		4 = $component0, 
+		5 = null, 
+		6 = -1, 
+		7 = 0, 
+		8 = 0, 
+		9 = 1
+	);
+}

@@ -1,0 +1,25 @@
+// 686
+[clientscript,bankpin_otherbutton](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
+sound_synth(PIN_cancel, 1, 0);
+resume_countdialog(tostring($int0));
+~bankpin_keypad_set(
+	0 = -1, 
+	1 = -1, 
+	2 = $component1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14, 
+	16 = $component15, 
+	17 = $component16, 
+	18 = $component17
+);

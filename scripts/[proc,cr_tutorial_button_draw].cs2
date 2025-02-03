@@ -1,0 +1,21 @@
+// 6417
+[proc,cr_tutorial_button_draw](component $widget_108:5_0, string $string0)
+if_sethide(false, $widget_108:5_0);
+def_int $comsubid1 = ~v2_stone_button_filled($widget_108:5_0);
+cc_create($widget_108:5_0, ^iftype_text, $comsubid1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+if (string_length($string0) > 0) {
+	cc_settext($string0);
+	if_setop(1, "Close", $widget_108:5_0);
+	if_setonop("closebutton_click_sound", $widget_108:5_0);
+	if_setonkey("closebutton_key(event_keycode)", $widget_108:5_0);
+}
+if (~on_mobile = false) {
+	if_setonmouseleave("cr_tutorial_button_hover($widget_108:5_0, 0, $string0)", $widget_108:5_0);
+	if_setonmouserepeat("cr_tutorial_button_hover($widget_108:5_0, 1, $string0)", $widget_108:5_0);
+}

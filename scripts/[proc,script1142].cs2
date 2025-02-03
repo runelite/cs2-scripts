@@ -1,0 +1,237 @@
+// 1142
+[proc,script1142](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, int $int9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, int $int17)
+def_int $total18 = inv_total(inv, old_school_bond_untradeable_13192);
+def_int $total19 = inv_total(inv, coins_995);
+if (cc_find($component5, $int6) = ^true) {
+	cc_setobject_alwaysnum(old_school_bond_untradeable_13192, $total18);
+}
+if (cc_find($component5, $int7) = ^true) {
+	cc_setobject_alwaysnum(coins_995, $total19);
+}
+def_int $int20 = 0;
+if (%var263 > 0) {
+	$int20 = calc($total19 / %var263);
+}
+def_int $int21 = min($total18, $int20);
+$int0 = max(0, min($int0, $int21));
+if (cc_find($component5, $int8) = ^true) {
+	cc_settext(tostring($int0));
+}
+if_setonop("script4208($int0, $component1, $component2, $component3, $component4)", $component16);
+if_setonvartransmit("script1141(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $int8, 
+	9 = $int9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $int17
+){var263}", $component5);
+if_setoninvtransmit("script1141(
+	0 = $int0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $int8, 
+	9 = $int9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $int17
+){inv}", $component5);
+if ($int0 > 0) {
+	if (cc_find($component5, $int9) = ^true) {
+		cc_settext("<~tostring_spacer(calc($int0 * %var263), ",")> coins");
+	}
+	if_sethide(false, $component16);
+	if_setposition($int17, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component15);
+	if_setposition($int17, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component16);
+} else {
+	if (cc_find($component5, $int9) = ^true) {
+		cc_settext("<col=9f9f9f>---</col>");
+	}
+	if_sethide(true, $component16);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component15);
+}
+def_string $mes0 = "";
+def_int $int22 = 1;
+if ($int0 ! 5) {
+	$int22 = max(0, calc($int0 - 5));
+}
+if_setonop("script1140(
+	0 = $int22, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $int8, 
+	9 = $int9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $int17
+)", $component10);
+$int22 = max(0, calc($int0 - 1));
+if_setonop("script1140(
+	0 = $int22, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $int8, 
+	9 = $int9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $int17
+)", $component11);
+$int22 = calc($int0 + 1);
+if (%var263 <= 0) {
+	if_setonop("script1140(
+		0 = $int0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $int6, 
+		7 = $int7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17
+	)", $component12);
+	if_setonop("script1140(
+		0 = $int0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $int6, 
+		7 = $int7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17
+	)", $component13);
+} else if ($int22 > $total18) {
+	$mes0 = "You don't have any more untradeable bonds in your inventory.";
+	if_setonop("script1143($mes0)", $component12);
+	if_setonop("script1143($mes0)", $component13);
+} else if ($int22 > $int20) {
+	$mes0 = "You don't have enough coins in your inventory.";
+	if_setonop("script1143($mes0)", $component12);
+	if_setonop("script1143($mes0)", $component13);
+} else {
+	if_setonop("script1140(
+		0 = $int22, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $int6, 
+		7 = $int7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17
+	)", $component12);
+	$int22 = 5;
+	if ($int0 ! 1) {
+		$int22 = calc($int0 + 5);
+	}
+	$int22 = min($int22, $int21);
+	if_setonop("script1140(
+		0 = $int22, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $int6, 
+		7 = $int7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17
+	)", $component13);
+}
+if_setonop("script1140(
+	0 = $int21, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $int6, 
+	7 = $int7, 
+	8 = $int8, 
+	9 = $int9, 
+	10 = $component10, 
+	11 = $component11, 
+	12 = $component12, 
+	13 = $component13, 
+	14 = $component14, 
+	15 = $component15, 
+	16 = $component16, 
+	17 = $int17
+)", $component14);

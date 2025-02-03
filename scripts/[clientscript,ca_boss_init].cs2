@@ -1,0 +1,18 @@
+// 4835
+[clientscript,ca_boss_init](component $widget_713:2_0, component $widget_713:3_1, component $widget_713:5_2, component $widget_713:6_3, component $widget_713:9_4, component $widget_713:10_5, component $widget_713:13_6, component $widget_713:14_7, component $widget_713:21_8, component $widget_713:22_9, component $widget_713:23_10, component $widget_713:25_11, component $widget_713:27_12, component $widget_713:26_13)
+~script4767($widget_713:25_11, $widget_713:27_12, $widget_713:26_13, -1);
+def_struct $struct14 = enum(int, struct, enum_3987, %varbit12862);
+def_string $string0 = struct_param($struct14, param_1313);
+def_int $int15 = 0;
+if ($struct14 ! null) {
+	~steelborder($widget_713:2_0, "Combat Achievements - <$string0>", 0);
+} else {
+	~steelborder($widget_713:2_0, "Combat Achievements - Boss", 0);
+}
+~ca_boss_set_name($widget_713:3_1, $string0);
+~ca_boss_init_wiki($widget_713:5_2, $widget_713:6_3, $struct14, $string0);
+~ca_boss_init_map($widget_713:9_4, $widget_713:10_5, $string0);
+~ca_boss_init_collection($widget_713:13_6, $widget_713:14_7, $string0);
+~ca_boss_init_image($widget_713:21_8, $struct14);
+$int15 = ~ca_boss_init_stats($widget_713:22_9, $struct14);
+~ca_boss_init_buttons($widget_713:22_9, $widget_713:23_10, $int15, $struct14);

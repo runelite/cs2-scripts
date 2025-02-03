@@ -1,0 +1,8 @@
+// 1497
+[proc,agilityarena_rewards_setgracefulbutton](component $widget_107:17_0, component $widget_107:21_1)
+if (%varbit5967 = 1) {
+	~agilityarena_rewards_initbutton($widget_107:17_0, "Graceful recolour", 45, $widget_107:21_1);
+} else {
+	~agilityarena_rewards_initbutton($widget_107:17_0, "Graceful recolour", 250, null);
+	if_sethide(true, $widget_107:21_1);
+}

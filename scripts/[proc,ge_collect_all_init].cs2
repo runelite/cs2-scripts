@@ -1,0 +1,45 @@
+// 141
+[proc,ge_collect_all_init](component $component0, string $text0, string $op1)
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settiling(false);
+.cc_create($component0, ^iftype_text, 1);
+.cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_settextfont(p11_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext($text0);
+if_setop(1, $op1, $component0);
+~ge_collect_all_draw($component0);
+if_setoninvtransmit("ge_collect_all_draw($component0, cc_getid, .cc_getid){inv_518, inv_519, inv_520, inv_521, inv_522, inv_523, inv_539, inv_540}", $component0);
+if_setonvartransmit("ge_collect_all_draw($component0, cc_getid, .cc_getid){
+	0 = var3204, 
+	1 = var3205, 
+	2 = var3206, 
+	3 = var3207, 
+	4 = var3208, 
+	5 = var3209, 
+	6 = var3210, 
+	7 = var3211, 
+	8 = var3212, 
+	9 = var3213, 
+	10 = var3214, 
+	11 = var3215, 
+	12 = var3216, 
+	13 = var3217, 
+	14 = var3218, 
+	15 = var3219, 
+	16 = var3200, 
+	17 = var3201, 
+	18 = var297, 
+	19 = var915, 
+	20 = var914, 
+	21 = var295, 
+	22 = var3202, 
+	23 = var3203
+}", $component0);

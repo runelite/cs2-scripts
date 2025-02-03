@@ -1,0 +1,23 @@
+// 1327
+[clientscript,ii_tracker_build](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, string $string0, string $string1)
+cc_deleteall($component0);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component7);
+~ii_tracker_build_split($string0, $component0, $component1, $component2, $component3);
+~ii_tracker_build_split($string1, $component4, $component5, $component6, $component7);
+~ii_tracker_tab_select(
+	0 = interface_180:13, 
+	1 = interface_180:13, 
+	2 = interface_180:14, 
+	3 = interface_180:15, 
+	4 = interface_180:16, 
+	5 = interface_180:18, 
+	6 = interface_180:19, 
+	7 = interface_180:20, 
+	8 = interface_180:21, 
+	9 = interface_180:4, 
+	10 = interface_180:3, 
+	11 = interface_180:8, 
+	12 = interface_180:7
+);

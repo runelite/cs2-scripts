@@ -1,0 +1,8 @@
+// 588
+[clientscript,clanwars_setup_corner_op](int $opindex0, component $widget_91:30_1, int $comsubid2, component $widget_91:31_3)
+if ($opindex0 ! 1 | %varbit4285 = 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%varbit4285 = 1;
+~clanwars_setup_corner_update($widget_91:30_1, $comsubid2, $widget_91:31_3, -1);

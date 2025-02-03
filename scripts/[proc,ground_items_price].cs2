@@ -1,0 +1,20 @@
+// 7236
+[proc,ground_items_price](obj $obj0)(int, int)
+if ($obj0 = coins_995) {
+	return(1, 1);
+}
+$obj0 = oc_uncert($obj0);
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 1;
+if (%varbit14870 = 0 & oc_stockmarket($obj0) = true) {
+	$int2, $int1 = oc_stockmarketvalue($obj0);
+	if ($int2 = 2) {
+		return(max($int1, 0), 1);
+	}
+	$int3 = 0;
+}
+if (oc_param($obj0, no_alchemy) = 0) {
+	$int1 = ~script7127(oc_cost($obj0));
+}
+return($int1, $int3);

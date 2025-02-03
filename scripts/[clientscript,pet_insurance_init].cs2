@@ -1,0 +1,28 @@
+// 6126
+[clientscript,pet_insurance_init](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11)
+if_settext("Reclaim your lost pets", interface_148:16);
+if_settext("for 1 reclaim token", interface_148:17);
+if_settext("View your other pets", interface_148:19);
+if_settext("and their locations", interface_148:20);
+~pet_insurance_pot_value_draw(interface_148:30);
+~pet_insurance_pot_button(0, interface_148:27, interface_148:28);
+~pet_insurance_confirm_button(0, interface_148:37, interface_148:38);
+~pet_insurance_pets(
+	0 = interface_148:11, 
+	1 = interface_148:12, 
+	2 = $int0, 
+	3 = $int1, 
+	4 = $int2, 
+	5 = $int3, 
+	6 = $int4, 
+	7 = $int5, 
+	8 = $int6, 
+	9 = $int7, 
+	10 = $int8, 
+	11 = $int9, 
+	12 = $int10, 
+	13 = $int11
+);
+if_setonvartransmit("script6127(interface_148:30){var3444}", interface_148:30);
+if_setonvartransmit("script6130(0, interface_148:28){var3444}", interface_148:28);
+if_setonvartransmit("script6133(0, interface_148:38){var3444}", interface_148:38);

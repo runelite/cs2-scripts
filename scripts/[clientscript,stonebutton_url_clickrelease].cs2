@@ -1,0 +1,7 @@
+// 1088
+[clientscript,stonebutton_url_clickrelease](int $clock0, component $component1, string $string0, string $string1)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $component1);
+~stonebutton_url_draw(false, true, $component1, $string0, $string1);

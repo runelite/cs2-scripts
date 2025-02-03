@@ -1,0 +1,30 @@
+// 876
+[clientscript,script876](int $int0, int $int1, string $string0, string $string1)
+~script4618;
+~script6061;
+renderself(true);
+def_boolean $boolean2 = ~on_mobile;
+if ($boolean2 = true) {
+	~script5965;
+}
+if (~on_enhanced_any = 0) {
+	return;
+}
+~highlighting_channel_setup;
+~fishing_spot_indicator_tile_setup;
+~script4687($int0);
+~synch_always_on_top(%varbit12372);
+~helper_agility_highlight_setup;
+minimap_lock(~int_to_bool(calc(1 - %varbit12983)));
+~xptracker_login($int1, $string0, $string1);
+chat_settimestamps(%varbit12384);
+~rebuildchatbox(~script553);
+~script6465;
+_7462(5, 3);
+~loottracker_login;
+~script7468;
+~script7431;
+~script7581;
+~script7578;
+~script7541;
+~script7587;

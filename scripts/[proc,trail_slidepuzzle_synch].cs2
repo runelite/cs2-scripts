@@ -1,0 +1,56 @@
+// 690
+[proc,trail_slidepuzzle_synch](component $widget_306:4_0, int $int1, int $int2, int $int3, int $int4, component $widget_306:2_5, component $widget_306:3_6, component $widget_306:1_7)
+def_inv $inv8 = inv_140;
+if (%var261 = 8) {
+	$inv8 = inv_222;
+} else if (%var261 = 7) {
+	$inv8 = inv_221;
+}
+def_enum $enum9 = null;
+def_enum $enum10 = null;
+$enum9, $enum10 = enum(int, enum, enum_1864, %var261), enum(int, enum, enum_1865, %var261);
+if (%var261 = 7 | %var261 = 8) {
+	if_sethide(true, $widget_306:2_5);
+	if_sethide(false, $widget_306:3_6);
+} else {
+	if_sethide(false, $widget_306:2_5);
+	if_sethide(true, $widget_306:3_6);
+}
+switch_int (%var261) {
+	case 9 :
+		if_setcolour(0x492e04, $widget_306:1_7);
+	case default :
+		if_setcolour(0x371c00, $widget_306:1_7);
+}
+def_obj $obj11 = null;
+def_int $int12 = 0;
+while ($int12 < $int1) {
+	if ($enum9 ! null & $enum10 ! null) {
+		$obj11 = inv_getobj($inv8, $int12);
+		~trail_slidepuzzle_setint($int12, enum(obj, int, $enum10, $obj11));
+		if (cc_find($widget_306:4_0, $int12) = ^true) {
+			if (%var261 = 8) {
+				cc_clearops;
+				cc_setonop(null);
+			} else {
+				cc_setop(1, "Move");
+				cc_setonop("trail_slidepuzzle_op(event_op, event_com, event_comsubid, $int1, $int2, $int3, $int4)");
+			}
+		}
+		if ($int12 < $int2 & cc_find($widget_306:4_0, calc($int1 + $int12)) = ^true) {
+			$obj11 = enum(int, namedobj, $enum9, $int12);
+			if ($obj11 ! null) {
+				cc_setmodel(oc_param($obj11, param_186));
+			} else {
+				cc_setmodel(null);
+			}
+		}
+	} else {
+		~trail_slidepuzzle_setint($int12, -1);
+		if ($int12 < $int2 & cc_find($widget_306:4_0, calc($int1 + $int12)) = ^true) {
+			cc_setmodel(null);
+		}
+	}
+	$int12 = calc($int12 + 1);
+}
+~trail_slidepuzzle_position($widget_306:4_0, $int1, $int2, $int3, $int4);

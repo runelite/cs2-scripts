@@ -1,0 +1,129 @@
+// 1032
+[proc,script1032](component $component0, component $widget_137:47_1, component $widget_137:61_2, component $widget_137:6_3, component $widget_137:51_4, component $widget_137:7_5, component $widget_137:52_6, component $widget_137:9_7, component $widget_137:53_8, component $widget_137:10_9, component $widget_137:54_10, component $widget_137:11_11, component $widget_137:55_12, component $widget_137:12_13, component $widget_137:56_14, component $widget_137:13_15, component $widget_137:57_16, component $widget_137:8_17, component $widget_137:58_18, component $widget_137:14_19, component $widget_137:59_20)(int)
+def_int $intarray0(calc(23 + 1));
+def_int $int21 = calc(23 + 3);
+def_int $int22 = calc(31 + 1);
+def_int $int23 = 0;
+while ($int23 <= 23) {
+	$intarray0($int23) = $int23;
+	cc_create($component0, ^iftype_text, calc($int23 + 1));
+	~script1033(
+		0 = $component0, 
+		1 = $int22, 
+		2 = 0xff981f, 
+		3 = $widget_137:47_1, 
+		4 = $widget_137:61_2, 
+		5 = $widget_137:6_3, 
+		6 = $widget_137:51_4, 
+		7 = $widget_137:7_5, 
+		8 = $widget_137:52_6, 
+		9 = $widget_137:9_7, 
+		10 = $widget_137:53_8, 
+		11 = $widget_137:10_9, 
+		12 = $widget_137:54_10, 
+		13 = $widget_137:11_11, 
+		14 = $widget_137:55_12, 
+		15 = $widget_137:12_13, 
+		16 = $widget_137:56_14, 
+		17 = $widget_137:13_15, 
+		18 = $widget_137:57_16, 
+		19 = $widget_137:8_17, 
+		20 = $widget_137:58_18, 
+		21 = $widget_137:14_19, 
+		22 = $widget_137:59_20
+	);
+	$int23 = calc($int23 + 1);
+}
+while ($int23 < 30) {
+	cc_create($component0, ^iftype_text, calc($int23 + 1));
+	cc_sethide(true);
+	$int23 = calc($int23 + 1);
+}
+cc_create($component0, ^iftype_text, calc($int23 + 1));
+~script1033(
+	0 = $component0, 
+	1 = $int22, 
+	2 = 0xff981f, 
+	3 = $widget_137:47_1, 
+	4 = $widget_137:61_2, 
+	5 = $widget_137:6_3, 
+	6 = $widget_137:51_4, 
+	7 = $widget_137:7_5, 
+	8 = $widget_137:52_6, 
+	9 = $widget_137:9_7, 
+	10 = $widget_137:53_8, 
+	11 = $widget_137:10_9, 
+	12 = $widget_137:54_10, 
+	13 = $widget_137:11_11, 
+	14 = $widget_137:55_12, 
+	15 = $widget_137:12_13, 
+	16 = $widget_137:56_14, 
+	17 = $widget_137:13_15, 
+	18 = $widget_137:57_16, 
+	19 = $widget_137:8_17, 
+	20 = $widget_137:58_18, 
+	21 = $widget_137:14_19, 
+	22 = $widget_137:59_20
+);
+$int23 = calc($int23 + 1);
+cc_create($component0, ^iftype_text, calc($int23 + 1));
+~script1033(
+	0 = $component0, 
+	1 = $int22, 
+	2 = 0xff981f, 
+	3 = $widget_137:47_1, 
+	4 = $widget_137:61_2, 
+	5 = $widget_137:6_3, 
+	6 = $widget_137:51_4, 
+	7 = $widget_137:7_5, 
+	8 = $widget_137:52_6, 
+	9 = $widget_137:9_7, 
+	10 = $widget_137:53_8, 
+	11 = $widget_137:10_9, 
+	12 = $widget_137:54_10, 
+	13 = $widget_137:11_11, 
+	14 = $widget_137:55_12, 
+	15 = $widget_137:12_13, 
+	16 = $widget_137:56_14, 
+	17 = $widget_137:13_15, 
+	18 = $widget_137:57_16, 
+	19 = $widget_137:8_17, 
+	20 = $widget_137:58_18, 
+	21 = $widget_137:14_19, 
+	22 = $widget_137:59_20
+);
+~quicksort_intenum(intarray0, 1, 23, enum_108);
+def_int $int24 = 15;
+if (~on_mobile = true) {
+	$int24 = scale(8, 5, $int24);
+}
+$int23 = 0;
+if (cc_find($component0, calc($intarray0($int23) + 1)) = ^true) {
+	cc_setposition(0, calc($int23 * $int24), ^setpos_abs_centre, ^setpos_abs_top);
+	if ($component0 = $widget_137:54_10) {
+		cc_settext("Total XP");
+	} else {
+		cc_settext("Off");
+	}
+}
+$int23 = calc($int23 + 1);
+if (cc_find($component0, calc(31 + 1)) = ^true) {
+	cc_setposition(0, calc(1 * $int24), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext("Most recent");
+}
+while ($int23 <= 23) {
+	if (cc_find($component0, calc($intarray0($int23) + 1)) = ^true) {
+		cc_setposition(0, calc(($int23 + 1) * $int24), ^setpos_abs_centre, ^setpos_abs_top);
+		cc_settext(enum(int, string, enum_108, $intarray0($int23)));
+	}
+	$int23 = calc($int23 + 1);
+}
+if (cc_find($component0, calc(30 + 1)) = ^true) {
+	cc_setposition(0, calc(($int21 - 1) * $int24), ^setpos_abs_centre, ^setpos_abs_top);
+	if ($component0 = $widget_137:55_12) {
+		cc_settext("Total XP goal");
+	} else {
+		cc_settext("Off");
+	}
+}
+return($int21);

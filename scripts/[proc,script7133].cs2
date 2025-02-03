@@ -1,0 +1,155 @@
+// 7133
+[proc,script7133]
+def_component $component0 = null;
+def_component $component1 = null;
+def_int $int2 = 42598457;
+def_int $int3 = 42598480;
+def_component $component4 = interface_650:32;
+if_setsize(22, 4, ^setsize_minus, ^setsize_minus, $component4);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_string $string0 = "null";
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_obj $obj17 = null;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_boolean $boolean25 = false;
+def_int $int26 = 2;
+def_int $int27 = 0;
+def_int $comsubid28 = 0;
+def_int $comsubid29 = 0;
+def_int $comsubid30 = 0;
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $int33 = calc((if_getwidth($component4) - 212) / 4);
+def_string $string1 = "null";
+~script7169;
+~script7188;
+~script7185;
+~script7182(-1);
+switch_int (%varbit9607) {
+	case 0 :
+		$int7 = 10;
+		$int9 = 0;
+		$int10 = 1;
+	case 1 :
+		$int7 = 10;
+		$int9 = 2;
+		$int10 = 3;
+	case default :
+		return;
+}
+while ($int8 < $int7) {
+	$component0 = ~script4031($int9, $int8);
+	$component1 = ~script4031($int10, $int8);
+	$string0 = if_gettext($component0);
+	$int11 = if_getscrollwidth($component0);
+	$int12 = if_getscrollheight($component0);
+	$int15 = if_getcolour($component0);
+	$int13 = if_getgradientcolour($component0);
+	$int14 = 0;
+	$int16 = 0;
+	$int23 = 0;
+	$int31 = 0;
+	$int32 = 0;
+	$int27 = 0;
+	$boolean25 = stringvector_contains(stringvector_1, $string0, true, false);
+	if (($boolean25 = false | %varbit14880 = 1) & $int11 ! 0) {
+		$int27, $int26, $comsubid28, $comsubid29, $comsubid30 = ~script2907(
+			0 = $component1, 
+			1 = $int8, 
+			2 = $string0, 
+			3 = $int12, 
+			4 = $boolean25, 
+			5 = $int13, 
+			6 = $int23, 
+			7 = $int27, 
+			8 = $int26
+		);
+		while ($int16 < $int15) {
+			if (cc_find($component0, $int16) = ^true) {
+				$obj17, $int18, $int19, $int21, $int20, $int22, $int24 = ~script7173($component0, $int16);
+				if ($int24 = 0 | %varbit14880 = 1) {
+					if ($int13 = 1) {
+						$int27, $int26, $int31, $int32, $int23 = ~script3042(
+							0 = $component4, 
+							1 = $component1, 
+							2 = $int8, 
+							3 = $int16, 
+							4 = $obj17, 
+							5 = $int18, 
+							6 = $int19, 
+							7 = $int21, 
+							8 = $int20, 
+							9 = $int22, 
+							10 = $int24, 
+							11 = $int27, 
+							12 = $int26, 
+							13 = $int31, 
+							14 = $int32, 
+							15 = $int23
+						);
+					}
+					if (%varbit14881 = 0) {
+						if ($int22 >= 0) {
+							$int14 = ~script1226($int14, $int22);
+						} else {
+							$int14 = ^max_32bit_int;
+						}
+					} else if ($int20 >= 0) {
+						$int14 = ~script1226($int14, $int20);
+					} else {
+						$int14 = ^max_32bit_int;
+					}
+				}
+			}
+			$int16 = calc($int16 + 1);
+		}
+		if ($int31 ! 0) {
+			$int23 = calc($int23 + 2);
+			if ($int32 ! 0) {
+				$int23 = calc($int23 + 36);
+			}
+		}
+		if ($int13 = 1 & $int23 = 0) {
+			$int23, $int26 = ~script3043($component1, $comsubid30, $int26);
+		}
+		if ($int23 > 0) {
+			if (cc_find($component1, $comsubid28) = ^true) {
+				cc_setsize(0, calc($int23 + 8), ^setsize_minus, ^setsize_abs);
+			}
+			if (cc_find($component1, $comsubid29) = ^true) {
+				cc_setsize(2, calc($int23 + 8), ^setsize_minus, ^setsize_abs);
+			}
+			$int23 = calc($int23 + 7);
+		}
+		$int26 = calc($int26 + 33 + $int23 + 2);
+		if (cc_find($component1, 4) = ^true) {
+			cc_settext("<~magic_spacer_tostring_extended($int14, ".", 1)> gp");
+		}
+		if (%varbit9607 = 0) {
+			$int5 = ~script1226($int5, $int12);
+		} else {
+			$int5 = ~script1226($int5, 1);
+		}
+		$int6 = ~script1226($int6, $int14);
+	}
+	$int8 = calc($int8 + 1);
+}
+$int26 = calc($int26 + 42);
+~script3044($int5, $int6);
+~script7135($int26);

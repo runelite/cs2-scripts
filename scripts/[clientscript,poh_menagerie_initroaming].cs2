@@ -1,0 +1,20 @@
+// 643
+[clientscript,poh_menagerie_initroaming](component $widget_211:9_0)
+def_int $width1 = if_getwidth($widget_211:9_0);
+def_int $y2 = calc(if_getheight($widget_211:9_0) - 17);
+cc_deleteall($widget_211:9_0);
+cc_create($widget_211:9_0, ^iftype_graphic, 0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $y2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_create($widget_211:9_0, ^iftype_text, 1);
+.cc_setsize(calc($width1 - 22), 17, ^setsize_abs, ^setsize_abs);
+.cc_setposition(22, $y2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settext("Allow pets to roam");
+if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $widget_211:9_0);
+if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $widget_211:9_0);
+~poh_menagerie_setroaming($widget_211:9_0);
+if_setonvartransmit("poh_menagerie_setroaming(event_com, cc_getid, 0){var661}", $widget_211:9_0);
+if_setonop("poh_menagerie_toggleroaming(event_op, event_com, cc_getid)", $widget_211:9_0);

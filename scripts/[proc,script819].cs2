@@ -1,0 +1,148 @@
+// 819
+[proc,script819](component $widget_465:15_0, component $widget_465:17_1, component $widget_465:23_2)
+cc_deleteall($widget_465:23_2);
+def_int $int3 = 0;
+def_int $width4 = if_getwidth($widget_465:23_2);
+def_int $height5 = if_getheight($widget_465:23_2);
+def_int $int6 = calc($height5 - 20);
+cc_create($widget_465:23_2, ^iftype_graphic, $int3);
+def_int $comsubid7 = $int3;
+$int3 = calc($int3 + 1);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($width4 - 20), calc(($int6 - 20) / 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setop(1, "Abort offer");
+cc_create($widget_465:23_2, ^iftype_text, $int3);
+def_int $comsubid8 = $int3;
+$int3 = calc($int3 + 1);
+cc_setsize(calc($width4 - 44), calc($int6 + 3), ^setsize_abs, ^setsize_abs);
+cc_setposition(22, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+cc_create($widget_465:23_2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize($width4, 15, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(^black);
+def_int $int9 = calc($width4 - 2);
+$int6 = calc($int6 + 1);
+cc_create($widget_465:23_2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize($int9, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_create($widget_465:23_2, ^iftype_rectangle, $int3);
+def_int $comsubid10 = $int3;
+$int3 = calc($int3 + 1);
+cc_setsize(0, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_create($widget_465:23_2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize($int9, 3, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_create($widget_465:23_2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(3, 10, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, calc($int6 + 3), ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(200);
+def_int $comsubid11 = 0;
+def_int $comsubid12 = 0;
+def_int $int13 = 0;
+def_int $comsubid14 = 0;
+def_int $comsubid15 = 0;
+def_int $comsubid16 = 0;
+def_int $comsubid17 = 0;
+def_int $comsubid18 = 0;
+cc_deleteall($widget_465:15_0);
+
+	0 = $int3, 
+	1 = $comsubid11, 
+	2 = $comsubid12, 
+	3 = $int13, 
+	4 = $comsubid14, 
+	5 = $comsubid15, 
+	6 = $comsubid16, 
+	7 = $comsubid17, 
+	8 = $comsubid18
+ = ~ge_offers_initboxes(~script5305, 0, $widget_465:15_0, $widget_465:17_1, b12_full);
+~script821(
+	0 = $widget_465:15_0, 
+	1 = $comsubid11, 
+	2 = $comsubid12, 
+	3 = $comsubid14, 
+	4 = $comsubid15, 
+	5 = $comsubid16, 
+	6 = $comsubid17, 
+	7 = $comsubid18, 
+	8 = $widget_465:23_2, 
+	9 = $comsubid7, 
+	10 = $comsubid8, 
+	11 = $comsubid10, 
+	12 = $int9
+);
+if_setonstocktransmit("script820(
+	0 = $widget_465:15_0, 
+	1 = $comsubid11, 
+	2 = $comsubid12, 
+	3 = $comsubid14, 
+	4 = $comsubid15, 
+	5 = $comsubid16, 
+	6 = $comsubid17, 
+	7 = $comsubid18, 
+	8 = $widget_465:23_2, 
+	9 = $comsubid7, 
+	10 = $comsubid8, 
+	11 = $comsubid10, 
+	12 = $int9
+)", $widget_465:23_2);
+if_setonvartransmit("script820(
+	0 = $widget_465:15_0, 
+	1 = $comsubid11, 
+	2 = $comsubid12, 
+	3 = $comsubid14, 
+	4 = $comsubid15, 
+	5 = $comsubid16, 
+	6 = $comsubid17, 
+	7 = $comsubid18, 
+	8 = $widget_465:23_2, 
+	9 = $comsubid7, 
+	10 = $comsubid8, 
+	11 = $comsubid10, 
+	12 = $int9
+){
+	0 = var375, 
+	1 = var3204, 
+	2 = var3205, 
+	3 = var3206, 
+	4 = var3207, 
+	5 = var3208, 
+	6 = var3209, 
+	7 = var3210, 
+	8 = var3211, 
+	9 = var3212, 
+	10 = var3213, 
+	11 = var3214, 
+	12 = var3215, 
+	13 = var3216, 
+	14 = var3217, 
+	15 = var3218, 
+	16 = var3219, 
+	17 = var3200, 
+	18 = var3201, 
+	19 = var297, 
+	20 = var915, 
+	21 = var914, 
+	22 = var295, 
+	23 = var3202, 
+	24 = var3203
+}", $widget_465:23_2);

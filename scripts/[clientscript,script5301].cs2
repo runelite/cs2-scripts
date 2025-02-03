@@ -1,0 +1,15 @@
+// 5301
+[clientscript,script5301](component $widget_727:0_0, component $widget_727:3_1, component $widget_727:4_2, component $widget_727:5_3, component $widget_727:6_4, component $widget_727:2_5, component $widget_727:7_6)
+~side_channels_tabinit($widget_727:3_1, 0);
+~side_channels_tabinit($widget_727:4_2, 1);
+~side_channels_tabinit($widget_727:5_3, 2);
+~side_channels_tabinit($widget_727:6_4, 3);
+if (%varbit1777 = 4) {
+	~side_channels_tabinit($widget_727:2_5, 4);
+} else if (%varbit1777 = 6) {
+	~side_channels_tabinit($widget_727:2_5, 6);
+} else {
+	~side_channels_tabinit($widget_727:2_5, 5);
+}
+~script4473($widget_727:3_1, $widget_727:4_2, $widget_727:5_3, $widget_727:6_4, $widget_727:2_5, $widget_727:7_6);
+if_setonvartransmit("script4472($widget_727:3_1, $widget_727:4_2, $widget_727:5_3, $widget_727:6_4, $widget_727:2_5, $widget_727:7_6){var1054, var1055}", $widget_727:0_0);

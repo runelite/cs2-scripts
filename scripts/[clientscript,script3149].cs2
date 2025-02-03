@@ -1,0 +1,13 @@
+// 3149
+[clientscript,script3149](int $clock0, int $int1, component $widget_90:8_2, component $widget_90:9_3, component $widget_90:10_4, int $int5)
+if (clientclock < $clock0) {
+	return;
+}
+~script3150($int1, $widget_90:9_3, $widget_90:10_4, $int5);
+if ($int1 > -2) {
+	if_setontimer("script3149(calc($clock0 + 50), calc($int1 - 1), $widget_90:8_2, $widget_90:9_3, $widget_90:10_4, $int5)", $widget_90:8_2);
+} else {
+	if_sethide(true, $widget_90:10_4);
+	if_sethide(true, $widget_90:9_3);
+	if_setontimer(null, $widget_90:8_2);
+}

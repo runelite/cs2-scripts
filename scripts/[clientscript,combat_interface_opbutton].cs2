@@ -1,0 +1,7 @@
+// 323
+[clientscript,combat_interface_opbutton](graphic $graphic0, graphic $graphic1, graphic $graphic2, graphic $graphic3, int $opindex4, int $int5)
+if ($opindex4 ! 1) {
+	return;
+}
+%var43 = $int5;
+~combat_interface_setbuttons($graphic0, $graphic1, $graphic2, $graphic3);

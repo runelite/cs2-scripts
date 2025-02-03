@@ -1,0 +1,16 @@
+// 2686
+[proc,telenexus_keyinput_matched](component $component0, int $comsubid1, int $key2, string $string0, string $string1, int $int3, int $clock4)
+if ($comsubid1 ! -1 & cc_find($component0, $comsubid1) = ^true) {
+	cc_resume_pausebutton;
+	cc_setonkey("telenexus_keyinput_listener(
+		0 = event_keycode, 
+		1 = event_keychar, 
+		2 = event_com, 
+		3 = event_comsubid, 
+		4 = $key2, 
+		5 = $string0, 
+		6 = $string1, 
+		7 = $int3, 
+		8 = calc(clientclock + 20)
+	)");
+}

@@ -1,0 +1,66 @@
+// 3372
+[clientscript,graphicbox_listener](boolean $boolean0, int $int1, char $char2, int $int3, string $string0, component $component4, int $comsubid5, int $comsubid6, string $text1, component $component7, int $clock8)
+if (clientclock < $clock8) {
+	return;
+}
+if ($boolean0 = false) {
+	if (~keypress_permit(null, overlayinterface_162) = 0) {
+		return;
+	} else if ($int1 ! -1 & $int1 = $int3) {
+		$boolean0 = true;
+	} else if ($char2 ! null & string_indexof_char($string0, $char2) ! -1) {
+		$boolean0 = true;
+	}
+	return;
+}
+$clock8 = calc(clientclock + 50);
+def_string $string2 = "<col=ffffff>Please wait...</col>";
+if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6) = ^true) {
+	if (parawidth($string2, 479, q8_full) > cc_getwidth) {
+		$string2 = "<col=ffffff>...</col>";
+	}
+	cc_settext($string2);
+	cc_setontimer("graphicbox_reset($clock8, $component4, $comsubid5, $text1)");
+	cc_setonop("graphicbox_listener(
+		0 = true, 
+		1 = -1, 
+		2 = null, 
+		3 = $int3, 
+		4 = $string0, 
+		5 = event_com, 
+		6 = $comsubid5, 
+		7 = $comsubid6, 
+		8 = $text1, 
+		9 = $component7, 
+		10 = $clock8
+	)");
+	cc_setonkey("graphicbox_listener(
+		0 = false, 
+		1 = event_keycode, 
+		2 = event_keychar, 
+		3 = $int3, 
+		4 = $string0, 
+		5 = event_com, 
+		6 = $comsubid5, 
+		7 = $comsubid6, 
+		8 = $text1, 
+		9 = $component7, 
+		10 = $clock8
+	)");
+	if ($component7 ! null) {
+		if_setonclick("graphicbox_listener(
+			0 = true, 
+			1 = -1, 
+			2 = null, 
+			3 = $int3, 
+			4 = $string0, 
+			5 = event_com, 
+			6 = $comsubid5, 
+			7 = $comsubid6, 
+			8 = $text1, 
+			9 = $component7, 
+			10 = $clock8
+		)", $component7);
+	}
+	.cc_resume_pausebutton;
+}

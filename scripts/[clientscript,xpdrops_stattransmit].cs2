@@ -1,0 +1,250 @@
+// 1004
+[clientscript,xpdrops_stattransmit](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $xp11, int $xp12, int $xp13, int $xp14, int $xp15, int $xp16, int $xp17, int $xp18, int $xp19, int $xp20, int $xp21, int $xp22, int $xp23, int $xp24, int $xp25, int $xp26, int $xp27, int $xp28, int $xp29, int $xp30, int $xp31, int $xp32, int $xp33)
+if ($boolean0 = true & %varcint953 = -1) {
+	return;
+}
+def_int $length34 = calc(23 + 1);
+def_stat $statarray0($length34);
+def_int $intarray1($length34);
+def_int $int35 = 0;
+def_int $int36 = 0;
+if ($boolean0 = true) {
+	while (%varcint953 ! -1) {
+		if (%varcint960 = -10) {
+			~xpdrops_showpanel($component1, $component3, $component8, $component9);
+		} else {
+			$statarray0($int35) = enum(int, stat, enum_681, %varcint953);
+			$intarray1($int35) = %varcint960;
+			if ($statarray0($int35) ! null & $intarray1($int35) > 0) {
+				$int35 = calc($int35 + 1);
+			}
+		}
+		%varcint953, %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959 = %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959, -1;
+		%varcint960, %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966 = %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966, -1;
+	}
+} else {
+	$int36 = calc(stat_xp(fishing) - $xp25);
+	if ($int36 > 0) {
+		$statarray0($int35) = fishing;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(attack) - $xp11);
+	if ($int36 > 0) {
+		$statarray0($int35) = attack;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(strength) - $xp12);
+	if ($int36 > 0) {
+		$statarray0($int35) = strength;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(ranged) - $xp13);
+	if ($int36 > 0) {
+		$statarray0($int35) = ranged;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(magic) - $xp14);
+	if ($int36 > 0) {
+		$statarray0($int35) = magic;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(defence) - $xp15);
+	if ($int36 > 0) {
+		$statarray0($int35) = defence;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(hitpoints) - $xp16);
+	if ($int36 > 0) {
+		$statarray0($int35) = hitpoints;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(prayer) - $xp17);
+	if ($int36 > 0) {
+		$statarray0($int35) = prayer;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(agility) - $xp18);
+	if ($int36 > 0) {
+		$statarray0($int35) = agility;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(herblore) - $xp19);
+	if ($int36 > 0) {
+		$statarray0($int35) = herblore;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(thieving) - $xp20);
+	if ($int36 > 0) {
+		$statarray0($int35) = thieving;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(crafting) - $xp21);
+	if ($int36 > 0) {
+		$statarray0($int35) = crafting;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(runecraft) - $xp22);
+	if ($int36 > 0) {
+		$statarray0($int35) = runecraft;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(mining) - $xp23);
+	if ($int36 > 0) {
+		$statarray0($int35) = mining;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(smithing) - $xp24);
+	if ($int36 > 0) {
+		$statarray0($int35) = smithing;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(cooking) - $xp26);
+	if ($int36 > 0) {
+		$statarray0($int35) = cooking;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(firemaking) - $xp27);
+	if ($int36 > 0) {
+		$statarray0($int35) = firemaking;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(woodcutting) - $xp28);
+	if ($int36 > 0) {
+		$statarray0($int35) = woodcutting;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(fletching) - $xp29);
+	if ($int36 > 0) {
+		$statarray0($int35) = fletching;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(slayer) - $xp30);
+	if ($int36 > 0) {
+		$statarray0($int35) = slayer;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(farming) - $xp31);
+	if ($int36 > 0) {
+		$statarray0($int35) = farming;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(construction) - $xp32);
+	if ($int36 > 0) {
+		$statarray0($int35) = construction;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+	$int36 = calc(stat_xp(hunter) - $xp33);
+	if ($int36 > 0) {
+		$statarray0($int35) = hunter;
+		$intarray1($int35) = $int36;
+		$int35 = calc($int35 + 1);
+	}
+}
+def_int $int37 = 0;
+def_int $int38 = 0;
+def_fontmetrics $fontmetrics39 = p11_full;
+def_graphic $graphic40 = p11_full;
+def_int $int41 = 16;
+def_int $int42 = 0;
+def_int $int43 = 0;
+def_int $int44 = 0;
+def_int $int45 = 0;
+def_int $int46 = 0;
+def_component $component47 = null;
+def_string $string0 = "";
+if ($int35 > 0 & $xp16 > 0 & ~script6065 = 1) {
+	if (%varbit4693 = 1 & ~on_mobile = false) {
+		$fontmetrics39, $graphic40, $int41 = p12_full, p12_full, 25;
+	} else if (%varbit4693 = 2 & ~on_mobile = false) {
+		$fontmetrics39, $graphic40, $int41 = b12_full, b12_full, 25;
+	}
+	$int42 = if_getheight($component8);
+	if ($int42 < 100) {
+		$int42 = 100;
+	}
+	$int43 = calc($int41 * enum(int, int, enum_1171, %varbit4722) / $int42 + 1);
+	while ($int37 < $int35) {
+		if ($int38 = 0 & $boolean0 = false) {
+			%varcint72 = $statarray0($int37);
+			$int38 = 1;
+		}
+		if (%varcint71 > 0 & %varcint71 > calc(clientclock - $int43)) {
+			$int44 = calc(%varcint71 + $int43);
+		} else {
+			$int44 = clientclock;
+		}
+		if ($int44 < calc(clientclock + $int43 * $int10)) {
+			$component47 = enum(int, component, enum_1163, %varcint70);
+			if_sethide(false, $component47);
+			$int46 = $intarray1($int37);
+			cc_create($component47, ^iftype_graphic, 1);
+			cc_setgraphic(enum(stat, graphic, enum_255, $statarray0($int37)));
+			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_proportion_bottom);
+			cc_sethide(true);
+			$int45 = 1;
+			$int37 = calc($int37 + 1);
+			while (%varbit4696 = 1 & $int37 < $int35 & $int45 < 5 & $int46 < 1000000) {
+				$int46 = calc($int46 + $intarray1($int37));
+				$int45 = calc($int45 + 1);
+				cc_create($component47, ^iftype_graphic, $int45);
+				cc_setgraphic(enum(stat, graphic, enum_255, $statarray0($int37)));
+				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_proportion_bottom);
+				cc_sethide(true);
+				$int37 = calc($int37 + 1);
+			}
+			$string0 = ~tostring_spacer($int46, ",");
+			if ($boolean0 = true) {
+				$string0 = "<img=11> <$string0>";
+			}
+			if (cc_find($component47, 0) = ^true) {
+				cc_settext($string0);
+				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_proportion_bottom);
+				cc_sethide(true);
+				~xpdrops_setdropsize($component47, $int41, $fontmetrics39, $graphic40, $string0);
+			}
+			if_setontimer("xpdrops_dropletmove($component47, $int44)", $component47);
+			%varcint71 = $int44;
+			%varcint70 = calc((%varcint70 + 1) % $int10);
+		} else {
+			$int37 = $int35;
+		}
+	}
+	~xpdrops_showpanel($component1, $component3, $component8, $component9);
+}
+if ($boolean0 = false) {
+	~xpdrops_setbar($component3, $component4, $component5, $component6, $component7, $component8, $component9);
+	~xpdrops_setstatlistener(
+		0 = $component1, 
+		1 = $component2, 
+		2 = $component3, 
+		3 = $component4, 
+		4 = $component5, 
+		5 = $component6, 
+		6 = $component7, 
+		7 = $component8, 
+		8 = $component9, 
+		9 = $int10
+	);
+}

@@ -1,0 +1,12 @@
+// 5896
+[proc,script5896](component $widget_779:25_0, string $string0, string $string1)
+def_int $int1 = db_getfield(%var3373, quest:id, 0);
+if ($int1 <= 0 | $int1 ! %varbit13627) {
+	if (%varbit13627 > 0) {
+		~speedrunning_button_draw($widget_779:25_0, $string0, true, true);
+	} else {
+		~speedrunning_button_init($widget_779:25_0, $string0);
+	}
+	return;
+}
+~speedrunning_button_init($widget_779:25_0, $string1);

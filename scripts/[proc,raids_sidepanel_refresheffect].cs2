@@ -1,0 +1,10 @@
+// 1546
+[proc,raids_sidepanel_refresheffect](int $int0, component $widget_500:0_1, component $widget_500:10_2, component $widget_500:11_3, component $widget_500:2_4, component $widget_500:5_5, component $widget_500:6_6)
+if ($int0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+}
+if_sethide(true, $widget_500:10_2);
+if_sethide(true, $widget_500:11_3);
+if_sethide(true, $widget_500:2_4);
+if_sethide(true, $widget_500:6_6);
+if_sethide(false, $widget_500:5_5);

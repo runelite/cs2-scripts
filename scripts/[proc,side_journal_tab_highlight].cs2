@@ -1,0 +1,23 @@
+// 3176
+[proc,side_journal_tab_highlight](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+if (%varbit8168 = $int6) {
+	return;
+}
+if (%varbit4609 = 0) {
+	if_setgraphic(graphic_6319, $component0);
+	if_setgraphic(graphic_6320, $component1);
+	if_setgraphic(graphic_6319, $component2);
+	if_sethide(false, $component3);
+	if_sethide(false, $component4);
+	if_sethide(false, $component5);
+	if_setgraphic(graphic_6323, $component3);
+	if_setgraphic(graphic_6324, $component4);
+	if_setgraphic(graphic_6323, $component5);
+	if_settrans(200, $component3);
+	if_settrans(200, $component4);
+	if_settrans(200, $component5);
+} else {
+	if_setgraphic("tabs_short,4", $component0);
+	if_setgraphic("tabs_short,5", $component1);
+	if_setgraphic("tabs_short,4", $component2);
+}

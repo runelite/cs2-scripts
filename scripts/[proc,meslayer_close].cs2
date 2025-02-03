@@ -1,0 +1,86 @@
+// 299
+[proc,meslayer_close](boolean $boolean0, boolean $boolean1, boolean $boolean2)
+if_sethide(true, interface_162:37);
+if_sethide(false, interface_162:53);
+~toplevel_chatbox_background;
+def_int $mesuid3 = 0;
+if ($boolean1 = true) {
+	$mesuid3 = ~script553;
+	~rebuildchatbox($mesuid3);
+	~rebuildpmbox($mesuid3);
+	~script223;
+	~chatdefault_setonkey(1);
+	if (~on_mobile = true) {
+		~keyboard_hide;
+	}
+}
+if (~on_mobile = true) {
+	~mobile_chatbox_resize;
+}
+if ($boolean2 = true) {
+	switch_int (%varcint5) {
+		case 7, 19 :
+			resume_countdialog("0");
+		case 8 :
+			resume_namedialog("");
+		case 9, 15, 20, 21, 27 :
+			resume_stringdialog("");
+	}
+}
+%varcint5 = 0;
+if ($boolean0 = true) {
+	%varcstring359 = "";
+}
+if_setposition(0, -8, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:41);
+if_setsize(0, 40, ^setsize_minus, ^setsize_abs, interface_162:41);
+if_setposition(0, 22, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:42);
+if_setsize(0, 20, ^setsize_minus, ^setsize_abs, interface_162:42);
+if_sethide(false, interface_162:41);
+if_sethide(false, interface_162:42);
+if_sethide(true, interface_162:46);
+if_sethide(true, interface_162:52);
+if_setscrollpos(0, 0, interface_162:50);
+cc_deleteall(interface_162:50);
+cc_deleteall(interface_162:51);
+if_setposition(0, -8, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:41);
+if_setsize(0, 40, ^setsize_minus, ^setsize_abs, interface_162:41);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:41);
+if_settextfont(b12_full, interface_162:41);
+if_settextfont(b12_full, interface_162:42);
+if_setcolour(0x000080, interface_162:42);
+if_setonmouseover(null, interface_162:42);
+if_setonmouseleave(null, interface_162:42);
+if_settext("", interface_162:42);
+if_setposition(0, 22, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:42);
+if_setonclick(null, interface_162:37);
+if_setonclick(null, interface_162:42);
+if_setonkey(null, interface_162:42);
+if_sethide(true, interface_162:39);
+if_setonclick(null, interface_162:37);
+if_setontimer(null, interface_162:37);
+cc_deleteall(interface_162:37);
+cc_deleteall(interface_162:43);
+cc_deleteall(interface_162:44);
+cc_deleteall(interface_162:45);
+if_sethide(true, interface_162:43);
+if_sethide(true, interface_162:44);
+if_sethide(true, interface_162:45);
+if_setonmouserepeat(null, interface_162:43);
+if_setonmouserepeat(null, interface_162:44);
+if_setonmouserepeat(null, interface_162:45);
+if_setonmouseleave(null, interface_162:43);
+if_setonmouseleave(null, interface_162:44);
+if_setonmouseleave(null, interface_162:45);
+if_setontimer(null, interface_162:43);
+if_setontimer(null, interface_162:44);
+if_setontimer(null, interface_162:45);
+if_setonclick(null, interface_162:43);
+if_setonclick(null, interface_162:44);
+if_setonclick(null, interface_162:45);
+if (%varcint41 = 1337) {
+	~script2526;
+	%varcint384 = clientclock;
+}
+if (~on_mobile = true) {
+	~mobile_chatbox_resize;
+}

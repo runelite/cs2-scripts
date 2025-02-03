@@ -1,0 +1,7 @@
+// 4594
+[proc,settings_buff_minigame_teleport]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%varbit12354 = calc(1 - %varbit12354);
+~buff_bar_layout_redraw;

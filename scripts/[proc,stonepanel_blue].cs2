@@ -1,0 +1,164 @@
+// 356
+[proc,stonepanel_blue](int $int0, component $component1, int $int2)(int)
+def_int $width3 = if_getwidth($component1);
+def_int $height4 = if_getheight($component1);
+def_int $x5 = calc($width3 - 32);
+def_int $y6 = calc($height4 - 32);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,22", 
+	3 = 16, 
+	4 = -13, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $x5, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,24", 
+	3 = 16, 
+	4 = calc($height4 - 20), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $x5, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,23", 
+	3 = -14, 
+	4 = 16, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = $y6, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,25", 
+	3 = calc($width3 - 20), 
+	4 = 16, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = $y6, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,26", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,27", 
+	3 = $x5, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,28", 
+	3 = 0, 
+	4 = $y6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,29", 
+	3 = $x5, 
+	4 = $y6, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+if ($int0 < 6) {
+	return($int2);
+}
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,30", 
+	3 = 0, 
+	4 = calc($int0 - 20), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $width3, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,31", 
+	3 = 0, 
+	4 = calc($int0 - 18), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = $component1, 
+	1 = $int2, 
+	2 = "v2_borders_slim,32", 
+	3 = $x5, 
+	4 = calc($int0 - 18), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+$int2 = calc($int2 + 1);
+return($int2);

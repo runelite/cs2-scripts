@@ -1,0 +1,18 @@
+// 2970
+[proc,adventurepath_set_task_focus](int $int0, int $int1)
+def_int $int2 = enum(int, int, enum_2837, $int1);
+if ($int0 ! 0) {
+	$int0 = calc($int0 - $int2);
+}
+switch_int ($int1) {
+	case 0 :
+		%varbit9325 = $int0;
+	case 1 :
+		%varbit10158 = $int0;
+	case 2 :
+		%varbit10509 = $int0;
+	case 3 :
+		%varbit10511 = $int0;
+	case 4 :
+		%varbit10513 = $int0;
+}

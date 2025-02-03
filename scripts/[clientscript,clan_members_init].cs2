@@ -1,0 +1,157 @@
+// 4223
+[clientscript,clan_members_init](component $widget_693:1_0, component $widget_693:2_1, component $widget_693:21_2, component $widget_693:22_3, component $widget_693:23_4, component $widget_693:24_5, component $widget_693:9_6, component $widget_693:14_7, component $widget_693:15_8, component $widget_693:16_9, component $widget_693:18_10, component $widget_693:25_11, component $widget_693:10_12, component $widget_693:7_13, component $widget_693:11_14, component $widget_693:19_15, component $widget_693:8_16, component $widget_693:13_17, component $widget_693:20_18)
+~scrollbar_vertical($widget_693:14_7, $widget_693:9_6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~stonebutton_init("<col=ff0000>Back</col>", $widget_693:25_11, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $widget_693:25_11);
+def_int $comsubid19 = ~steelborder($widget_693:2_1, "", 0);
+if_sethide(true, $widget_693:15_8);
+if (~clan_members_searching = 1) {
+	~meslayer_close(true, true, true);
+} else if (%varcint5 <= 0) {
+	%varcstring359 = "";
+}
+~clan_members_header_init(
+	0 = $widget_693:7_13, 
+	1 = $widget_693:19_15, 
+	2 = $widget_693:1_0, 
+	3 = $widget_693:2_1, 
+	4 = $comsubid19, 
+	5 = $widget_693:22_3, 
+	6 = $widget_693:9_6, 
+	7 = $widget_693:14_7, 
+	8 = $widget_693:15_8, 
+	9 = $widget_693:16_9, 
+	10 = $widget_693:18_10, 
+	11 = $widget_693:10_12, 
+	12 = $widget_693:7_13, 
+	13 = $widget_693:11_14, 
+	14 = $widget_693:19_15, 
+	15 = $widget_693:8_16, 
+	16 = $widget_693:13_17, 
+	17 = $widget_693:20_18
+);
+~clan_members_header_init(
+	0 = $widget_693:8_16, 
+	1 = $widget_693:20_18, 
+	2 = $widget_693:1_0, 
+	3 = $widget_693:2_1, 
+	4 = $comsubid19, 
+	5 = $widget_693:22_3, 
+	6 = $widget_693:9_6, 
+	7 = $widget_693:14_7, 
+	8 = $widget_693:15_8, 
+	9 = $widget_693:16_9, 
+	10 = $widget_693:18_10, 
+	11 = $widget_693:10_12, 
+	12 = $widget_693:7_13, 
+	13 = $widget_693:11_14, 
+	14 = $widget_693:19_15, 
+	15 = $widget_693:8_16, 
+	16 = $widget_693:13_17, 
+	17 = $widget_693:20_18
+);
+if_setnoclickthrough(true, $widget_693:15_8);
+if_setonclick("clan_members_header_close($widget_693:15_8, $widget_693:7_13, $widget_693:8_16)", $widget_693:15_8);
+~clan_members_draw(
+	0 = $widget_693:1_0, 
+	1 = $widget_693:2_1, 
+	2 = $comsubid19, 
+	3 = $widget_693:9_6, 
+	4 = $widget_693:14_7, 
+	5 = $widget_693:10_12, 
+	6 = $widget_693:7_13, 
+	7 = $widget_693:11_14, 
+	8 = $widget_693:8_16, 
+	9 = $widget_693:13_17
+);
+if_setonvartransmit("clan_members_draw(
+	0 = $widget_693:1_0, 
+	1 = $widget_693:2_1, 
+	2 = $comsubid19, 
+	3 = $widget_693:9_6, 
+	4 = $widget_693:14_7, 
+	5 = $widget_693:10_12, 
+	6 = $widget_693:7_13, 
+	7 = $widget_693:11_14, 
+	8 = $widget_693:8_16, 
+	9 = $widget_693:13_17
+){var3019, var3021}", $widget_693:1_0);
+if_setonclansettingstransmit("clan_members_draw(
+	0 = $widget_693:1_0, 
+	1 = $widget_693:2_1, 
+	2 = $comsubid19, 
+	3 = $widget_693:9_6, 
+	4 = $widget_693:14_7, 
+	5 = $widget_693:10_12, 
+	6 = $widget_693:7_13, 
+	7 = $widget_693:11_14, 
+	8 = $widget_693:8_16, 
+	9 = $widget_693:13_17
+)", $widget_693:1_0);
+def_int $int20 = 0;
+def_int $int21 = 265;
+while ($int21 > 0) {
+	$int20 = ~max($int20, parawidth(enum(int, string, enum_3797, $int21), 512, b12_full));
+	$int21 = calc($int21 - 1);
+}
+def_int $int22 = calc(2 * (6 + 13 + 6 + $int20 / 2));
+if_setsize($int22, 0, ^setsize_abs, ^setsize_minus, $widget_693:23_4);
+if_setsize($int22, 0, ^setsize_abs, ^setsize_minus, $widget_693:24_5);
+cc_deleteall($widget_693:21_2);
+cc_create($widget_693:21_2, ^iftype_text, 0);
+.cc_create($widget_693:21_2, ^iftype_text, 1);
+cc_setcolour(0xff981f);
+.cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+.cc_settextfont(p12_full);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, $widget_693:24_5);
+def_int $int23 = calc($int22 + 5);
+def_string $string0 = "to:";
+$int20 = parawidth($string0, 512, p12_full);
+cc_setposition($int23, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize($int20, 0, ^setsize_abs, ^setsize_minus);
+cc_settext($string0);
+$int23 = calc($int23 + $int20 + 5);
+if_setposition($int23, 0, ^setpos_abs_right, ^setpos_abs_centre, $widget_693:23_4);
+$int23 = calc($int23 + $int22 + 5);
+$string0 = "Show ranks from:";
+$int20 = parawidth($string0, 512, p12_full);
+.cc_setposition($int23, 0, ^setpos_abs_right, ^setpos_abs_centre);
+.cc_setsize($int20, 0, ^setsize_abs, ^setsize_minus);
+.cc_settext($string0);
+$int23 = calc($int23 + $int20 + 5);
+if_setsize($int23, 0, ^setsize_minus, ^setsize_minus, $widget_693:22_3);
+if_setonop("clan_members_search_toggle(
+	0 = event_op, 
+	1 = $widget_693:1_0, 
+	2 = $widget_693:2_1, 
+	3 = $comsubid19, 
+	4 = $widget_693:22_3, 
+	5 = $widget_693:9_6, 
+	6 = $widget_693:14_7, 
+	7 = $widget_693:10_12, 
+	8 = $widget_693:7_13, 
+	9 = $widget_693:11_14, 
+	10 = $widget_693:8_16, 
+	11 = $widget_693:13_17
+)", $widget_693:22_3);
+if_setop(1, "Search", $widget_693:22_3);
+~clan_members_search_setbutton(
+	0 = $widget_693:1_0, 
+	1 = $widget_693:2_1, 
+	2 = $comsubid19, 
+	3 = $widget_693:22_3, 
+	4 = $widget_693:9_6, 
+	5 = $widget_693:14_7, 
+	6 = $widget_693:10_12, 
+	7 = $widget_693:7_13, 
+	8 = $widget_693:11_14, 
+	9 = $widget_693:8_16, 
+	10 = $widget_693:13_17
+);
+~clan_members_filter_init($widget_693:23_4, "Minimum rank", $widget_693:23_4, $widget_693:24_5);
+~clan_members_filter_init($widget_693:24_5, "Maximum rank", $widget_693:23_4, $widget_693:24_5);

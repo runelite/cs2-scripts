@@ -1,0 +1,15 @@
+// 6384
+[proc,script6384](int $int0, component $component1, component $component2, component $component3)
+cc_setgraphic(tradebacking_light);
+cc_setontimer(null);
+cc_setondrag("cr_ui_drag_preview(
+	0 = event_comsubid, 
+	1 = event_mousex, 
+	2 = event_mousey, 
+	3 = cc_getx, 
+	4 = cc_gety, 
+	5 = $int0, 
+	6 = $component1, 
+	7 = $component2, 
+	8 = $component3
+)");

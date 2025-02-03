@@ -1,0 +1,65 @@
+// 5264
+[clientscript,shared_bank_init](component $widget_724:1_0, component $widget_724:2_1, component $widget_724:4_2, component $widget_724:7_3, component $widget_724:9_4, int $widget_724:12_5, component $widget_724:16_6, component $widget_724:10_7, component $widget_724:11_8, component $widget_724:23_9, component $widget_724:25_10, component $widget_724:29_11, component $widget_724:31_12, component $widget_724:35_13, component $widget_724:37_14, component $widget_724:39_15, component $widget_724:41_16, component $widget_724:43_17, component $widget_724:45_18, component $widget_724:34_19, component $widget_724:3_20, int $widget_724:8_21)
+cc_deleteall($widget_724:1_0);
+cc_deleteall($widget_724:10_7);
+def_int $comsubid22 = ~steelborder($widget_724:2_1, "", 1);
+def_int $int23 = %var261;
+def_int $int24 = %var262;
+def_int $int25 = %var263;
+def_int $int26 = %var264;
+cc_create($widget_724:1_0, ^iftype_text, 0);
+cc_setposition(36, 9, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff891f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+cc_settextshadow(true);
+.cc_create($widget_724:1_0, ^iftype_graphic, 1);
+.cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+.cc_setgraphic("ge_smallicons,0");
+~shared_bank_drawcap($int23, $int24);
+if (~bankmain_searching = 1) {
+	~meslayer_close(true, true, true);
+} else if (%varcint5 <= 0) {
+	%varcstring359 = "";
+}
+~shared_bank_search_setbutton($widget_724:16_6, $widget_724:1_0, $widget_724:10_7, $widget_724:11_8, $int25, $widget_724:2_1, $comsubid22, $widget_724:4_2);
+if_setonop("shared_bank_search_toggle(
+	0 = event_op, 
+	1 = $widget_724:16_6, 
+	2 = $widget_724:1_0, 
+	3 = $widget_724:10_7, 
+	4 = $widget_724:11_8, 
+	5 = $int25, 
+	6 = $widget_724:2_1, 
+	7 = $comsubid22, 
+	8 = $widget_724:4_2
+)", $widget_724:16_6);
+if_settext(~tostring_spacer($int25, ","), $widget_724:7_3);
+def_int $int27 = 0;
+while ($int27 < $int25) {
+	cc_create($widget_724:10_7, ^iftype_graphic, $int27);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int27 = calc($int27 + 1);
+}
+~scrollbar_vertical($widget_724:11_8, $widget_724:10_7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~shared_bank_update($widget_724:1_0, $widget_724:10_7, $widget_724:11_8, $int25, $widget_724:2_1, $comsubid22, $widget_724:4_2);
+if_setoninvtransmit("shared_bank_update($widget_724:1_0, event_com, $widget_724:11_8, $int25, $widget_724:2_1, $comsubid22, $widget_724:4_2){inv_659}", $widget_724:10_7);
+if_setonvartransmit("shared_bank_update($widget_724:1_0, event_com, $widget_724:11_8, $int25, $widget_724:2_1, $comsubid22, $widget_724:4_2){var1666, var304}", $widget_724:10_7);
+~bankmain_swapinsert($widget_724:23_9, $widget_724:25_10);
+if_setonvartransmit("bankmain_swapinsert($widget_724:23_9, $widget_724:25_10){var304}", $widget_724:23_9);
+~bankmain_itemnote($widget_724:29_11, $widget_724:31_12);
+if_setonvartransmit("bankmain_itemnote($widget_724:29_11, $widget_724:31_12){var115}", $widget_724:29_11);
+~bankmain_quantity_buttons($widget_724:37_14, $widget_724:39_15, $widget_724:41_16, $widget_724:43_17, $widget_724:45_18);
+if_setonvartransmit("bankmain_quantity_buttons($widget_724:37_14, $widget_724:39_15, $widget_724:41_16, $widget_724:43_17, $widget_724:45_18){var1666, var304}", $widget_724:35_13);
+~options_bigbutton_init($widget_724:34_19, "Save", b12_full);
+if ($int26 = 1) {
+	~ge_offers_bigbutton($widget_724:9_4, "Back to bank", 0);
+} else {
+	if_clearops($widget_724:9_4);
+}
+~shared_bank_closebutton($widget_724:3_20);
+if_setonvartransmit("shared_bank_closebutton(event_com){var1293, var1224}", $widget_724:3_20);

@@ -1,0 +1,64 @@
+// 112
+[clientscript,meslayer_onkey](int $key0, char $keychar1, string $string0)
+if (~keypress_permit(null, overlayinterface_162) = 0) {
+	return;
+}
+if ($key0 = ^key_return) {
+	if (%varcint56 = 1 & string_length(%varcstring359) <= 0) {
+		switch_int (%varcint5) {
+			case 8 :
+				%varcstring359 = %varcstring361;
+				~script222($string0);
+			case 10 :
+				%varcstring359 = %varcstring362;
+				~script222($string0);
+			case 20 :
+				%varcstring359 = ~script4393;
+				~script222($string0);
+		}
+	}
+	~meslayer_enter;
+	return;
+}
+switch_int (%varcint5) {
+	case 6, 9 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
+	case 11 :
+		if ($key0 = ^key_escape) {
+			~meslayer_close(true, true, true);
+			return;
+		}
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
+	case 7, 16 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 1, $key0, $keychar1);
+	case 19 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 6, $key0, $keychar1);
+	case 12 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 3, $key0, $keychar1);
+		~meslayer_mode12_setprompt;
+	case 18 :
+		if ($key0 = ^key_escape) {
+			~meslayer_close(true, true, true);
+			return;
+		}
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 3, $key0, $keychar1);
+		%varcstring359 = ~string_findandreplace(%varcstring359, " ", " ");
+	case 13 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
+		~meslayer_mode13_setprompt;
+	case 14, 17 :
+		if ($key0 = ^key_escape) {
+			resume_objdialog(null);
+			sound_synth(interface_select1, 1, 0);
+			~meslayer_close(true, true, true);
+			return;
+		}
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 4, $key0, $keychar1);
+	case 20, 21 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 8, $key0, $keychar1);
+	case 27 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 12, $key0, $keychar1);
+	case default :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 2, $key0, $keychar1);
+}
+~script222($string0);

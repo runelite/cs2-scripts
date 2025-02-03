@@ -1,0 +1,5 @@
+// 1438
+[clientscript,cws_set_toggle](component $widget_475:13_0, int $comsubid1, int $int2, int $comsubid3)
+if (cc_find($widget_475:13_0, $comsubid1) = ^true) {
+	~cws_set_toggle($widget_475:13_0, $int2, $comsubid3, ~cws_cc_getvar($int2));
+}

@@ -1,0 +1,92 @@
+// 6094
+[proc,giants_foundry_mould_setup_content]
+def_component $component0 = interface_718:1;
+def_component $component1 = interface_718:2;
+def_component $component2 = interface_718:3;
+~script6109($component0, $component2);
+~steelborder($component1, "Giants' Foundry Mould Setup", 16);
+def_component $component3 = interface_718:12;
+def_component $component4 = interface_718:8;
+cc_deleteall($component3);
+def_int $int5 = 0;
+def_graphic $graphic6 = p12_full;
+def_int $int7 = 38;
+def_int $int8 = 3;
+def_int $int9 = 5;
+switch_int (%varcint988) {
+	case 1 :
+		$graphic6 = verdana_13pt_regular;
+		$int7 = 40;
+		$int9 = 6;
+	case 2 :
+		$graphic6 = verdana_13pt_regular;
+		$int7 = 40;
+		$int9 = 6;
+	case 3 :
+		$graphic6 = verdana_13pt_regular;
+		$int7 = 45;
+		$int8 = 4;
+		$int9 = 7;
+}
+$int5 = ~script5291(
+	0 = $component3, 
+	1 = $int5, 
+	2 = 0, 
+	3 = $int7, 
+	4 = $int8, 
+	5 = 0x726451, 
+	6 = "Forte", 
+	7 = $graphic6, 
+	8 = 0xff981f, 
+	9 = $int9, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(0, %varbit13909)
+);
+cc_setonclick("giants_foundry_mould_setup_tab_select(0)");
+$int5 = ~script5291(
+	0 = $component3, 
+	1 = $int5, 
+	2 = 1, 
+	3 = $int7, 
+	4 = $int8, 
+	5 = 0x726451, 
+	6 = "Blades", 
+	7 = $graphic6, 
+	8 = 0xff981f, 
+	9 = $int9, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(1, %varbit13909)
+);
+cc_setonclick("giants_foundry_mould_setup_tab_select(1)");
+$int5 = ~script5291(
+	0 = $component3, 
+	1 = $int5, 
+	2 = 2, 
+	3 = $int7, 
+	4 = $int8, 
+	5 = 0x726451, 
+	6 = "Tips", 
+	7 = $graphic6, 
+	8 = 0xff981f, 
+	9 = $int9, 
+	10 = null, 
+	11 = 0, 
+	12 = 0, 
+	13 = 0, 
+	14 = 0, 
+	15 = ~is_equal(2, %varbit13909)
+);
+cc_setonclick("giants_foundry_mould_setup_tab_select(2)");
+~giants_foundry_mould_setup_list;
+~giants_foundry_mould_setup_commission;
+~giants_foundry_mould_setup_layout;
+~giants_foundry_mould_setup_buttons;
+~script5288($component4, 0, 0, 0, if_getwidth($component4), if_getheight($component4), struct_3712, 0x726451);

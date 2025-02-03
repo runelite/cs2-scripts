@@ -1,0 +1,141 @@
+// 2262
+[clientscript,magic_spellbook_init](component $widget_218:0_0, component $widget_218:1_1, component $widget_218:3_2, component $widget_218:193_3, component $widget_218:2_4, component $widget_218:195_5, component $widget_218:198_6, component $widget_218:199_7, component $widget_218:200_8, component $widget_218:201_9, component $widget_218:202_10)
+cc_deleteall($widget_218:199_7);
+def_string $string0 = "Info";
+def_string $string1 = "Filters";
+def_int $int11 = 0;
+def_boolean $boolean12 = ~on_mobile;
+if ($boolean12 = true) {
+	cc_deleteall($widget_218:2_4);
+	$int11 = 0;
+	while ($int11 < 4) {
+		cc_create($widget_218:2_4, ^iftype_rectangle, $int11);
+		cc_sethide(false);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(calc($int11 * 2), calc($int11 * 2), ^setsize_minus, ^setsize_minus);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		$int11 = calc($int11 + 1);
+	}
+}
+~script2603(
+	0 = null, 
+	1 = $boolean12, 
+	2 = $widget_218:200_8, 
+	3 = $widget_218:201_9, 
+	4 = $widget_218:3_2, 
+	5 = $widget_218:193_3, 
+	6 = $widget_218:2_4, 
+	7 = $widget_218:195_5, 
+	8 = $widget_218:198_6, 
+	9 = $widget_218:202_10, 
+	10 = $string0, 
+	11 = $string1
+);
+def_int $count13 = 0;
+def_int $count14 = enum_getoutputcount(enum_1981);
+def_int $int15 = 1;
+def_int $int16 = 0;
+def_enum $enum17 = null;
+while ($count13 < $count14) {
+	~magic_spellbook_initialisespells(
+		0 = enum(int, enum, enum_1981, $count13), 
+		1 = $widget_218:3_2, 
+		2 = $widget_218:193_3, 
+		3 = $widget_218:202_10, 
+		4 = $widget_218:1_1, 
+		5 = $widget_218:199_7, 
+		6 = $widget_218:200_8, 
+		7 = $widget_218:201_9, 
+		8 = $widget_218:2_4, 
+		9 = $widget_218:195_5, 
+		10 = $widget_218:198_6, 
+		11 = $string0, 
+		12 = $string1, 
+		13 = $boolean12
+	);
+	$enum17 = enum(int, enum, enum_5280, $count13);
+	$int15 = 1;
+	$int16 = enum_getoutputcount($enum17);
+	while ($int15 <= $int16) {
+		~magic_spellbook_initialisespells(
+			0 = enum(int, enum, $enum17, $int15), 
+			1 = $widget_218:3_2, 
+			2 = $widget_218:193_3, 
+			3 = $widget_218:202_10, 
+			4 = $widget_218:1_1, 
+			5 = $widget_218:199_7, 
+			6 = $widget_218:200_8, 
+			7 = $widget_218:201_9, 
+			8 = $widget_218:2_4, 
+			9 = $widget_218:195_5, 
+			10 = $widget_218:198_6, 
+			11 = $string0, 
+			12 = $string1, 
+			13 = $boolean12
+		);
+		$int15 = calc($int15 + 1);
+	}
+	$count13 = calc($count13 + 1);
+}
+~magic_spellbook_redraw(
+	0 = $widget_218:3_2, 
+	1 = $widget_218:193_3, 
+	2 = $widget_218:202_10, 
+	3 = $widget_218:1_1, 
+	4 = $widget_218:199_7, 
+	5 = $widget_218:200_8, 
+	6 = $widget_218:201_9, 
+	7 = $widget_218:2_4, 
+	8 = $widget_218:195_5, 
+	9 = $widget_218:198_6, 
+	10 = $string0, 
+	11 = $string1, 
+	12 = $boolean12
+);
+~script5743(
+	0 = $widget_218:3_2, 
+	1 = $widget_218:193_3, 
+	2 = $widget_218:202_10, 
+	3 = $widget_218:1_1, 
+	4 = $widget_218:199_7, 
+	5 = $widget_218:200_8, 
+	6 = $widget_218:201_9, 
+	7 = $widget_218:2_4, 
+	8 = $widget_218:195_5, 
+	9 = $widget_218:198_6, 
+	10 = $string0, 
+	11 = $string1, 
+	12 = $boolean12, 
+	13 = $widget_218:0_0
+);
+if_setoninvtransmit("magic_spellbook_redraw(
+	0 = $widget_218:3_2, 
+	1 = $widget_218:193_3, 
+	2 = $widget_218:202_10, 
+	3 = $widget_218:1_1, 
+	4 = $widget_218:199_7, 
+	5 = $widget_218:200_8, 
+	6 = $widget_218:201_9, 
+	7 = $widget_218:2_4, 
+	8 = $widget_218:195_5, 
+	9 = $widget_218:198_6, 
+	10 = $string0, 
+	11 = $string1, 
+	12 = $boolean12
+){inv}", $widget_218:0_0);
+if_setonstattransmit("magic_spellbook_redraw(
+	0 = $widget_218:3_2, 
+	1 = $widget_218:193_3, 
+	2 = $widget_218:202_10, 
+	3 = $widget_218:1_1, 
+	4 = $widget_218:199_7, 
+	5 = $widget_218:200_8, 
+	6 = $widget_218:201_9, 
+	7 = $widget_218:2_4, 
+	8 = $widget_218:195_5, 
+	9 = $widget_218:198_6, 
+	10 = $string0, 
+	11 = $string1, 
+	12 = $boolean12
+){magic, prayer}", $widget_218:0_0);

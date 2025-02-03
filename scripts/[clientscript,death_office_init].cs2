@@ -1,0 +1,31 @@
+// 3490
+[clientscript,death_office_init](component $widget_669:0_0, component $widget_669:1_1, component $widget_669:3_2, component $widget_669:4_3, component $widget_669:6_4, component $widget_669:7_5, component $widget_669:8_6, component $widget_669:9_7, component $widget_669:10_8, component $widget_669:11_9)
+def_int $int10 = ~steelborder($widget_669:1_1, ~death_office_title, 0);
+if (cc_find($widget_669:1_1, $int10) = ^true) {
+	cc_setoninvtransmit("death_office_title(event_com, event_comsubid){inv_636}");
+}
+~scrollbar_vertical($widget_669:4_3, $widget_669:3_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$int10 = 0;
+while ($int10 < 120) {
+	cc_create($widget_669:3_2, ^iftype_graphic, $int10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	cc_setgraphicshadow(0x333333);
+	cc_setop(1, "Select");
+	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$int10 = calc($int10 + 1);
+}
+~death_office_redraw($widget_669:3_2, $widget_669:4_3, $widget_669:6_4, $widget_669:7_5, $widget_669:8_6, $widget_669:9_7, $widget_669:10_8, $widget_669:11_9);
+if_setoninvtransmit("death_office_redraw($widget_669:3_2, $widget_669:4_3, $widget_669:6_4, $widget_669:7_5, $widget_669:8_6, $widget_669:9_7, $widget_669:10_8, $widget_669:11_9){inv_636}", $widget_669:0_0);
+if_setonvartransmit("death_office_redraw($widget_669:3_2, $widget_669:4_3, $widget_669:6_4, $widget_669:7_5, $widget_669:8_6, $widget_669:9_7, $widget_669:10_8, $widget_669:11_9){var261, var262, var263}", $widget_669:0_0);
+if_setop(1, "1", $widget_669:6_4);
+~death_office_resetquantity("1", $widget_669:6_4);
+if_setop(1, "5", $widget_669:7_5);
+~death_office_resetquantity("5", $widget_669:7_5);
+if_setop(1, "X", $widget_669:8_6);
+~death_office_resetquantity("X", $widget_669:8_6);
+if_setop(1, "All", $widget_669:9_7);
+~death_office_resetquantity("All", $widget_669:9_7);
+if_setop(1, "Take-All", $widget_669:10_8);
+~script3501($widget_669:10_8);

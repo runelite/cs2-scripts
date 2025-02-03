@@ -1,0 +1,67 @@
+// 4284
+[clientscript,clan_info_init](component $widget_690:1_0, component $widget_690:2_1, component $widget_690:4_2, component $widget_690:6_3, component $widget_690:18_4, component $widget_690:19_5, component $widget_690:20_6, component $widget_690:21_7, component $widget_690:22_8, component $widget_690:23_9, component $widget_690:24_10, component $widget_690:25_11, component $widget_690:26_12)
+def_int $comsubid13 = ~steelborder($widget_690:2_1, "", 1);
+cc_deleteall($widget_690:4_2);
+cc_create($widget_690:4_2, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+def_int $comsubid14 = cc_getid;
+~clan_info_draw(
+	0 = $widget_690:2_1, 
+	1 = $comsubid13, 
+	2 = $widget_690:4_2, 
+	3 = $comsubid14, 
+	4 = $widget_690:6_3, 
+	5 = $widget_690:18_4, 
+	6 = $widget_690:19_5, 
+	7 = $widget_690:20_6, 
+	8 = $widget_690:21_7, 
+	9 = $widget_690:22_8, 
+	10 = $widget_690:23_9, 
+	11 = $widget_690:25_11, 
+	12 = $widget_690:26_12
+);
+if_setonvartransmit("clan_info_draw(
+	0 = $widget_690:2_1, 
+	1 = $comsubid13, 
+	2 = $widget_690:4_2, 
+	3 = $comsubid14, 
+	4 = $widget_690:6_3, 
+	5 = $widget_690:18_4, 
+	6 = $widget_690:19_5, 
+	7 = $widget_690:20_6, 
+	8 = $widget_690:21_7, 
+	9 = $widget_690:22_8, 
+	10 = $widget_690:23_9, 
+	11 = $widget_690:25_11, 
+	12 = $widget_690:26_12
+){var3019}", $widget_690:1_0);
+if_setonclansettingstransmit("clan_info_draw(
+	0 = $widget_690:2_1, 
+	1 = $comsubid13, 
+	2 = $widget_690:4_2, 
+	3 = $comsubid14, 
+	4 = $widget_690:6_3, 
+	5 = $widget_690:18_4, 
+	6 = $widget_690:19_5, 
+	7 = $widget_690:20_6, 
+	8 = $widget_690:21_7, 
+	9 = $widget_690:22_8, 
+	10 = $widget_690:23_9, 
+	11 = $widget_690:25_11, 
+	12 = $widget_690:26_12
+)", $widget_690:1_0);
+~stonebutton_init("Titles", $widget_690:24_10, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $widget_690:24_10);
+if_setonop("opsound(event_op, 2)", $widget_690:19_5);
+if_setonop("opsound(event_op, 2)", $widget_690:20_6);
+if_setonop("opsound(event_op, 2)", $widget_690:21_7);
+if_setonop("opsound(event_op, 2)", $widget_690:22_8);
+if_setonop("opsound(event_op, 2)", $widget_690:23_9);
+if_setonop("opsound(event_op, 2)", $widget_690:25_11);
+if_setonop("opsound(event_op, 2)", $widget_690:26_12);

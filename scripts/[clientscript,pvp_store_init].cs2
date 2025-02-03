@@ -1,0 +1,103 @@
+// 23
+[clientscript,pvp_store_init](component $component0, component $component1, component $component2, component $component3, component $component4, enum $enum5, boolean $boolean6, boolean $boolean7)
+cc_deleteall($component0);
+cc_deleteall($component3);
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_int $int8 = calc(32 + 10);
+def_int $int9 = -1;
+def_int $count10 = 0;
+def_namedobj $namedobj11 = enum(int, namedobj, $enum5, $count10);
+while ($namedobj11 ! null) {
+	cc_create($component0, ^iftype_graphic, $count10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	$int9 = calc($count10 / 9 * $int8);
+	cc_setposition(calc($count10 % 9 * 50), $int9, ^setpos_abs_left, ^setpos_abs_top);
+	if ($namedobj11 = hunters_honour_12855 & $boolean6 = true) {
+		$namedobj11 = rogues_revenge_12856;
+	}
+	cc_setobject($namedobj11, 1);
+	cc_setopbase("<col=ff9040><oc_name($namedobj11)></col>");
+	cc_setop(1, "Value");
+	cc_setop(2, "Buy-1");
+	cc_setop(3, "Buy-5");
+	cc_setop(4, "Buy-10");
+	cc_setop(5, "Buy-50");
+	cc_setop(10, "Examine");
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$count10 = calc($count10 + 1);
+	$namedobj11 = enum(int, namedobj, $enum5, $count10);
+}
+if ($int9 ! -1) {
+	$int9 = calc($int9 + $int8);
+} else {
+	$int9 = 0;
+}
+if_sethide(true, $component1);
+if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component1);
+def_int $count12 = enum_getoutputcount(enum_2648);
+def_int $intarray0($count12);
+def_int $int13 = 20;
+def_int $int14 = 0;
+$count10 = 0;
+while ($count10 < $count12) {
+	$namedobj11 = enum(int, namedobj, enum_2648, $count10);
+	$intarray0($count10) = oc_param($namedobj11, param_152);
+	cc_create($component1, ^iftype_graphic, $count10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	$int14 = calc($int13 + $count10 / 9 * $int8);
+	cc_setposition(calc($count10 % 9 * 50), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject($namedobj11, 1);
+	cc_setopbase("<col=ff9040><oc_name($namedobj11)></col>");
+	cc_setop(1, "Take");
+	cc_setop(10, "Examine");
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	$count10 = calc($count10 + 1);
+}
+def_int $int15 = $count10;
+cc_create($component1, ^iftype_text, $int15);
+$int15 = calc($int15 + 1);
+cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Prestige rewards:");
+$count10 = 0;
+while ($count10 < $count12) {
+	cc_create($component1, ^iftype_text, $int15);
+	$int15 = calc($int15 + 1);
+	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($count10 % 9 * 50), calc($int13 + ($count10 / 9 + 1) * $int8 - 12), ^setpos_abs_left, ^setpos_abs_top);
+	~script24($intarray0($count10));
+	cc_setonvartransmit("script12(event_com, event_comsubid, $intarray0($count10)){var263}");
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext(~tostring_spacer($intarray0($count10), ","));
+	$count10 = calc($count10 + 1);
+}
+$int14 = calc($int14 + $int8);
+if_setsize(0, $int14, ^setsize_minus, ^setsize_abs, $component1);
+$int9 = calc($int9 + $int14);
+if_sethide(true, $component2);
+if_setscrollpos(0, 0, $component0);
+if ($int9 > if_getheight($component0)) {
+	if_setscrollsize(0, $int9, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component3, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($boolean7 = true) {
+	~scrollbar_resize($component3, $component0, calc($int9 - if_getheight($component0)));
+}
+$int15 = ~steelborder($component4, "Bounty Hunter Shop", 0);
+if (cc_find($component4, $int15) = ^true) {
+	~script3364($enum5);
+	cc_setonvartransmit("script3363($enum5, event_com, event_comsubid){var262}");
+}

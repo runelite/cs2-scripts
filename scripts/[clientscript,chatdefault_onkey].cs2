@@ -1,0 +1,253 @@
+// 73
+[clientscript,chatdefault_onkey](int $key0, char $keychar1)
+if (if_gethide(interface_162:53) = true | if_gethide(interface_162:54) = true) {
+	return;
+}
+if (%varbit8119 = 0 | ~keypress_permit(null, overlayinterface_162) = 0) {
+	return;
+}
+def_int $length2 = string_length(%varcstring335);
+def_int $int3 = 0;
+if (staffmodlevel > 0) {
+	$int3 = 1;
+	if (string_indexof_char("`", $keychar1) ! -1 & $length2 = 0) {
+		return;
+	} else if (string_indexof_char(":", $keychar1) ! -1 & string_indexof_string(%varcstring335, "::", 0) = 0 & $length2 = 2) {
+		return;
+	}
+}
+def_int $int4 = 0;
+def_int $int5 = -1;
+def_int $index6 = 0;
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = -1;
+if ($key0 = ^key_return) {
+	~keyboard_hide;
+	if ($length2 > 0) {
+		if ($int3 = 1) {
+			if (~script4481("give", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("set", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("get", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("tele", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("~", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else {
+				$int7 = string_indexof_string(%varcstring335, "::", 0);
+				if ($int7 > 0) {
+					%varcstring335 = substring(%varcstring335, $int7, $length2);
+					$length2 = string_length(%varcstring335);
+				}
+			}
+		}
+		if (~script7304(%varcstring335) = 1) {
+			%varcstring335 = "";
+		}
+		if (string_indexof_string(%varcstring335, "::", 0) = 0) {
+			$int4 = 1;
+		} else if (%varcint41 = 5) {
+			$int5 = 41;
+		} else if (%varcint41 = 4) {
+			$int5 = 9;
+		} else if (%varcint41 = 6 & ~is_group_iron = 1) {
+			$int5, $int8 = 41, 1;
+		}
+		if (string_indexof_string(%varcstring335, "////", 0) = 0 & ~is_group_iron = 1) {
+			$index6, $int5, $int8 = 4, 41, 1;
+			if (string_indexof_string(%varcstring335, "////@", 0) = 0) {
+				$int9 = 4;
+				$index6 = 5;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 4;
+			}
+		} else if (string_indexof_string(%varcstring335, "///", 0) = 0) {
+			$index6, $int5 = 3, 44;
+			if (string_indexof_string(%varcstring335, "///@", 0) = 0) {
+				$int9 = 3;
+				$index6 = 4;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 3;
+			}
+		} else if (string_indexof_string(%varcstring335, "//", 0) = 0) {
+			$index6, $int5 = 2, 41;
+			if (string_indexof_string(%varcstring335, "//@", 0) = 0) {
+				$int9 = 2;
+				$index6 = 3;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 2;
+			}
+		} else if (string_indexof_string(lowercase(%varcstring335), "/gc ", 0) = 0 | string_indexof_string(lowercase(%varcstring335), "/@gc ", 0) = 0) {
+			$index6, $int5 = 4, 44;
+			if (string_indexof_string(lowercase(%varcstring335), "/@gc ", 0) = 0) {
+				$int9 = 3;
+				$index6 = 5;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 3;
+			}
+		} else if (string_indexof_string(lowercase(%varcstring335), "/c ", 0) = 0 | string_indexof_string(lowercase(%varcstring335), "/@c ", 0) = 0) {
+			$index6, $int5 = 3, 41;
+			if (string_indexof_string(%varcstring335, "/@c ", 0) = 0) {
+				$int9 = 2;
+				$index6 = 4;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 2;
+			}
+		} else if (~is_group_iron = 1 & (string_indexof_string(lowercase(%varcstring335), "/g ", 0) = 0 | string_indexof_string(lowercase(%varcstring335), "/@g ", 0) = 0)) {
+			$index6, $int5, $int8 = 3, 41, 1;
+			if (string_indexof_string(%varcstring335, "/@g ", 0) = 0) {
+				$int9 = 4;
+				$index6 = 4;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 4;
+			}
+		} else if (string_indexof_string(lowercase(%varcstring335), "/f ", 0) = 0 | string_indexof_string(%varcstring335, "/@f ", 0) = 0) {
+			$index6, $int5 = 3, 9;
+			if (string_indexof_string(%varcstring335, "/@f ", 0) = 0) {
+				$int9 = 1;
+				$index6 = 4;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 1;
+			}
+		} else if (string_indexof_string(lowercase(%varcstring335), "/p ", 0) = 0 | string_indexof_string(%varcstring335, "/@p ", 0) = 0) {
+			$index6, $int5 = 3, 2;
+			if (string_indexof_string(%varcstring335, "/@p ", 0) = 0) {
+				$int9 = 0;
+				$index6 = 4;
+			}
+			if (%varbit13120 = 1) {
+				$int9 = 0;
+			}
+		} else if (string_indexof_string(%varcstring335, "/", 0) = 0) {
+			if (string_indexof_string(%varcstring335, "/@p", 0) = 0) {
+				$int9, $int5, $index6 = 0, 2, 3;
+			} else if (string_indexof_string(%varcstring335, "/@f", 0) = 0) {
+				$int9, $int5, $index6 = 1, 9, 3;
+			} else if (string_indexof_string(%varcstring335, "/@c", 0) = 0) {
+				$int9, $int5, $index6 = 2, 41, 3;
+			} else if (string_indexof_string(%varcstring335, "/@gc", 0) = 0) {
+				$int9, $int5, $index6 = 3, 44, 4;
+			} else if (string_indexof_string(%varcstring335, "/@g", 0) = 0) {
+				$int9, $int5, $index6 = 4, 41, 3;
+			} else {
+				$index6, $int5 = 1, 9;
+				if (%varbit13120 = 1) {
+					$int9 = 1;
+				}
+			}
+		}
+		if ($int5 = 44) {
+			if (activeclansettings_find_listened = true & activeclanchannel_find_listened = true) {
+				if (activeclansettings_getallowunaffined = true) {
+					switch_int (%varclansetting33) {
+						case 1001, 1002, 1003, 1004, 1005, 1006 :
+							mes("You are not chatting as a guest in a channel at the moment.");
+						case default :
+							~chat_send(substring(%varcstring335, $index6, $length2), 4, ^clantype_clan, 0, $int9);
+					}
+				} else {
+					mes("Guests are not invited to speak in this clan's channel.");
+				}
+			} else {
+				mes("You are not chatting as a guest in a clan channel at the moment.");
+			}
+		} else if ($int5 = 41) {
+			if ($int8 = 0 & activeclanchannel_find_affined(^clantype_clan) = true) {
+				$int7 = activeclanchannel_getuserslot(removetags(chat_playername));
+				if ($int7 ! -1 & activeclanchannel_getuserrank($int7) >= activeclanchannel_getranktalk) {
+					~chat_send(substring(%varcstring335, $index6, $length2), 3, ^clantype_clan, 0, $int9);
+				} else {
+					mes("You do not have the required rank to talk in the clan's channel.");
+				}
+			} else if ($int8 = 1 & activeclanchannel_find_affined(^clantype_gim) = true) {
+				~chat_send(substring(%varcstring335, $index6, $length2), 3, ^clantype_gim, 0, $int9);
+			} else if ($int8 = 1) {
+				mes("You are not chatting in the channel of your Ironman Group at the moment.");
+			} else {
+				mes("You are not chatting in the channel of your Clan at the moment.");
+			}
+		} else if ($int5 = 9) {
+			if (clan_getchatcount > 0) {
+				if (%varbit4394 = 1) {
+					clan_leavechat;
+				} else {
+					~chat_send(substring(%varcstring335, $index6, $length2), 2, null, 0, $int9);
+				}
+			} else {
+				~chat_send(substring(%varcstring335, $index6, $length2), 0, null, 0, -1);
+			}
+		} else if ($int5 = 2) {
+			~chat_send(substring(%varcstring335, $index6, $length2), 0, null, 0, $int9);
+		} else if ($int4 = 1) {
+			if ($length2 > 2) {
+				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
+					if (gameoption_get(^gameoption_remove_roof) = 1) {
+						~script4583(false);
+						mes("Roofs will only be removed selectively. This setting will not be saved.");
+					} else {
+						~script4583(true);
+						mes("Roofs are now all hidden. This setting will not be saved.");
+					}
+				} else if (string_indexof_string(%varcstring335, "::wiki ", 0) = 0 | compare(%varcstring335, "::wiki") = 0) {
+					~wiki_chat_search(%varcstring335);
+				} else if (string_indexof_string(%varcstring335, "::bank", 0) = 0) {
+					~chat_send("Hey, everyone, I just tried to do something very silly!", 0, null, 0, -1);
+				} else {
+					%varcstring335 = ~inputstring_handlecheat(%varcstring335);
+					$length2 = string_length(%varcstring335);
+					docheat(substring(%varcstring335, 2, $length2));
+				}
+			} else {
+				~chat_send(%varcstring335, 0, null, 0, -1);
+			}
+		} else {
+			~chat_send(%varcstring335, 0, null, 1, $int9);
+		}
+		~chatout_add(%varcstring335);
+		%varcstring335 = "";
+	}
+} else if ($key0 = ^key_page_up) {
+	if ($int3 = 1) {
+		~chatout_scrollup;
+	}
+} else if ($key0 = ^key_page_down) {
+	if ($int3 = 1) {
+		~chatout_scrolldown;
+	}
+} else {
+	if ($key0 = ^key_tab) {
+		if (cc_find(interface_621:82, 1) = ^true) {
+			return;
+		}
+		if (string_length(%varcstring356) > 0) {
+			if (friend_test(%varcstring356) = true) {
+				~meslayer_mode6(%varcstring356);
+				return;
+			}
+			if (%varcint60 > clientclock) {
+				return;
+			}
+			%varcint60 = calc(clientclock + 50);
+			mes("That player was not found on your Friends list.");
+			return;
+		}
+		if (%varcint60 > clientclock) {
+			return;
+		}
+		%varcint60 = calc(clientclock + 50);
+		mes("You haven't received any messages to which you can reply.");
+		return;
+	}
+	%varcstring335 = ~add_to_inputstring(%varcstring335, 0, $key0, $keychar1);
+}
+~script223;

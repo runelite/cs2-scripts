@@ -1,0 +1,24 @@
+// 3961
+[proc,settings_get_slider](int $int0)(int)
+switch_int ($int0) {
+	case 310 :
+		return(calc(minimap_zoom - 2));
+	case 319 :
+		return(calc(%var3796 / 5));
+	case 30 :
+		return(calc(%var168 / 5));
+	case 31 :
+		return(calc(%var169 / 5));
+	case 32 :
+		return(calc(%var872 / 5));
+	case 15 :
+		return(calc(deviceoption_get(^deviceoption_brightness) / 5));
+	case 79 :
+		return(%varbit11864);
+	case 168 :
+		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, deviceoption_get(^deviceoption_draw_distance)));
+	case 393 :
+		return(%varbit11523);
+	case default :
+		return(0);
+}

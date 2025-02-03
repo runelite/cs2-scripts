@@ -1,0 +1,76 @@
+// 3141
+[clientscript,target_system_init](component $widget_90:5_0, component $widget_90:6_1, component $widget_90:7_2, component $widget_90:12_3, component $widget_90:14_4, component $widget_90:15_5, component $widget_90:16_6, component $widget_90:8_7, component $widget_90:9_8, component $widget_90:10_9, component $widget_90:17_10)
+cc_deleteall($widget_90:7_2);
+~thinstonebox($widget_90:7_2, 0);
+def_graphic $graphic11 = "zeah_book,0";
+def_graphic $graphic12 = "zeah_book,1";
+cc_deleteall($widget_90:6_1);
+def_int $comsubid13 = 0;
+if (~on_mobile = true) {
+	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $widget_90:6_1);
+	$comsubid13 = ~v2_stone_button_filled($widget_90:6_1);
+} else {
+	if_setsize(11, 11, ^setsize_abs, ^setsize_abs, $widget_90:6_1);
+	if_setonmouseover("cc_graphic_swapper(event_com, $comsubid13, $graphic12, null)", $widget_90:6_1);
+	if_setonmouseleave("cc_graphic_swapper(event_com, $comsubid13, $graphic11, null)", $widget_90:6_1);
+}
+cc_create($widget_90:6_1, ^iftype_graphic, $comsubid13);
+cc_setgraphic($graphic11);
+cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
+cc_setvflip(false);
+cc_sethflip(true);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if_setop(1, "Expand", $widget_90:6_1);
+if_setonop("target_system_hideop(
+	0 = event_op, 
+	1 = 0, 
+	2 = $widget_90:5_0, 
+	3 = $widget_90:6_1, 
+	4 = $widget_90:7_2, 
+	5 = $widget_90:12_3, 
+	6 = $widget_90:14_4, 
+	7 = $widget_90:15_5, 
+	8 = $widget_90:16_6, 
+	9 = $widget_90:17_10
+)", $widget_90:6_1);
+cc_deleteall($widget_90:17_10);
+$comsubid13 = 0;
+if_setonmouseover("cc_graphic_swapper(event_com, $comsubid13, $graphic12, null)", $widget_90:17_10);
+if_setonmouseleave("cc_graphic_swapper(event_com, $comsubid13, $graphic11, null)", $widget_90:17_10);
+cc_create($widget_90:17_10, ^iftype_graphic, $comsubid13);
+cc_setgraphic($graphic11);
+cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
+cc_setvflip(false);
+cc_sethflip(false);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+if_setop(1, "Minimise", $widget_90:17_10);
+if_setonop("target_system_hideop(
+	0 = event_op, 
+	1 = 1, 
+	2 = $widget_90:5_0, 
+	3 = $widget_90:6_1, 
+	4 = $widget_90:7_2, 
+	5 = $widget_90:12_3, 
+	6 = $widget_90:14_4, 
+	7 = $widget_90:15_5, 
+	8 = $widget_90:16_6, 
+	9 = $widget_90:17_10
+)", $widget_90:17_10);
+if (~on_mobile = true) {
+	if_setop(2, "", $widget_90:17_10);
+	if_setop(3, "", $widget_90:17_10);
+	if_setop(4, "", $widget_90:17_10);
+} else {
+	if_setop(2, "Dock Left", $widget_90:17_10);
+	if_setop(3, "Dock Middle", $widget_90:17_10);
+	if_setop(4, "Dock Right", $widget_90:17_10);
+}
+if_setop(1, "Skip target", $widget_90:16_6);
+def_graphic $graphic14 = "fast_forward,1";
+if_setonmouseover("graphic_swapper(event_com, $graphic14)", $widget_90:16_6);
+$graphic14 = "fast_forward,0";
+if_setonmouseleave("graphic_swapper(event_com, $graphic14)", $widget_90:16_6);
+~target_system_redraw($widget_90:5_0, $widget_90:6_1, $widget_90:7_2, $widget_90:12_3, $widget_90:14_4, $widget_90:15_5, $widget_90:16_6, $widget_90:17_10);
+if_setonvartransmit("target_system_redraw($widget_90:5_0, $widget_90:6_1, $widget_90:7_2, $widget_90:12_3, $widget_90:14_4, $widget_90:15_5, $widget_90:16_6, $widget_90:17_10){var1130, var1795}", $widget_90:5_0);
+~script3148($widget_90:8_7, $widget_90:9_8, $widget_90:10_9);
+if_setonvartransmit("script3147($widget_90:8_7, $widget_90:9_8, $widget_90:10_9){var1542, var3812, var1130}", $widget_90:8_7);

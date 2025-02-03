@@ -1,0 +1,31 @@
+// 2464
+[proc,script2464](component $component0, component $component1, component $component2, int $int3, int $setposh4, int $setposv5, int $int6, boolean $boolean7)
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+if ($int3 = -1) {
+	$int8, $int9 = ~script2457($component2, $component1);
+	$int10 = if_getwidth($component2);
+	$int11 = if_getheight($component2);
+} else if (cc_find($component2, $int3) = ^true) {
+	$int8, $int9 = ~script2458($component1);
+	$int10 = cc_getwidth;
+	$int11 = cc_getheight;
+}
+~highlight_screen(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $int3, 
+	4 = $int10, 
+	5 = $int11, 
+	6 = $int8, 
+	7 = $int9, 
+	8 = $setposh4, 
+	9 = $setposv5, 
+	10 = $int6, 
+	11 = 0, 
+	12 = 0, 
+	13 = $boolean7
+);

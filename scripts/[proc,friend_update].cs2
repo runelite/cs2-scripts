@@ -1,0 +1,230 @@
+// 125
+[proc,friend_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+~friends_sortbutton_draw(
+	0 = $component1, 
+	1 = 2, 
+	2 = 3, 
+	3 = 2, 
+	4 = "Sort by name", 
+	5 = $component0, 
+	6 = $component1, 
+	7 = $component2, 
+	8 = $component3, 
+	9 = $component4, 
+	10 = $component5, 
+	11 = $component6, 
+	12 = $component7, 
+	13 = $component8
+);
+~friends_sortbutton_draw(
+	0 = $component2, 
+	1 = 8, 
+	2 = 9, 
+	3 = 9, 
+	4 = "Sort by last world change", 
+	5 = $component0, 
+	6 = $component1, 
+	7 = $component2, 
+	8 = $component3, 
+	9 = $component4, 
+	10 = $component5, 
+	11 = $component6, 
+	12 = $component7, 
+	13 = $component8
+);
+~friends_sortbutton_draw(
+	0 = $component3, 
+	1 = 4, 
+	2 = 5, 
+	3 = 4, 
+	4 = "Sort by world", 
+	5 = $component0, 
+	6 = $component1, 
+	7 = $component2, 
+	8 = $component3, 
+	9 = $component4, 
+	10 = $component5, 
+	11 = $component6, 
+	12 = $component7, 
+	13 = $component8
+);
+~friends_sortbutton_draw(
+	0 = $component4, 
+	1 = 0, 
+	2 = 1, 
+	3 = 0, 
+	4 = "Legacy sort", 
+	5 = $component0, 
+	6 = $component1, 
+	7 = $component2, 
+	8 = $component3, 
+	9 = $component4, 
+	10 = $component5, 
+	11 = $component6, 
+	12 = $component7, 
+	13 = $component8
+);
+cc_deleteall($component5);
+def_int $count9 = 0;
+def_int $int10 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $world11 = 0;
+def_int $height12 = 0;
+def_int $int13 = 15;
+def_boolean $boolean14 = null;
+def_int $int15 = ~on_enhanced_any;
+def_int $world16 = map_world;
+def_int $count17 = friend_count;
+if ($count17 <= -2) {
+	if (%varbit8119 = 1) {
+		if_settext("Loading friends list<br>Please wait...", $component7);
+	} else {
+		if_settext("You must set a name<br>before using this.", $component7);
+	}
+	if_sethide(true, $component0);
+} else if ($count17 = -1) {
+	if (%varbit8119 = 1) {
+		if_settext("Loading friends list<br>Please wait...", $component7);
+	} else {
+		if_settext("You must set a name<br>before using this.", $component7);
+	}
+	if_sethide(true, $component0);
+} else if ($count17 = 0) {
+	if_settext("You may add friends by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them as a friend.", $component7);
+	if_sethide(true, $component0);
+} else {
+	$boolean14 = ~on_mobile;
+	if ($boolean14 = true) {
+		$int13 = scale(8, 5, $int13);
+	}
+	if_settext("", $component7);
+	if_sethide(false, $component0);
+	_3628;
+	switch_int (%varcint183) {
+		case 1 :
+			_3629(false);
+		case 2 :
+			_3633(true);
+			_3630(true);
+		case 3 :
+			_3633(true);
+			_3630(false);
+		case 8 :
+			_3633(true);
+			_3632(true);
+		case 9 :
+			_3633(true);
+			_3632(false);
+		case 4 :
+			_3633(true);
+			_3636(true);
+			_3631(true);
+			switch_int (%varcint205) {
+				case default :
+					_3630(true);
+				case 3 :
+					_3630(false);
+				case 8 :
+					_3632(true);
+				case 9 :
+					_3632(false);
+			}
+		case 5 :
+			_3633(true);
+			_3636(true);
+			_3631(false);
+			switch_int (%varcint205) {
+				case default :
+					_3630(true);
+				case 3 :
+					_3630(false);
+				case 8 :
+					_3632(true);
+				case 9 :
+					_3632(false);
+			}
+	}
+	_3639;
+	while ($count9 < $count17) {
+		$string0, $string1 = friend_getname($count9);
+		cc_create($component5, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_settext($string0);
+		cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height12, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setopbase("<col=ff9040><$string0></col>");
+		$world11 = friend_getworld($count9);
+		if ($world11 ! 0) {
+			cc_setop(1, "Message");
+			cc_setop(2, "");
+			if ($int15 = 1 & $world16 ! $world11) {
+				cc_setop(4, "Switch world");
+			} else {
+				cc_setop(4, "");
+			}
+		} else {
+			cc_setop(1, "");
+			cc_setop(2, "Message");
+		}
+		cc_setop(3, "Delete");
+		.cc_create($component5, ^iftype_graphic, $int10);
+		$int10 = calc($int10 + 1);
+		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(calc(parawidth($string0, 190, p12_full) + 3), calc($height12 + ($int13 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setgraphic(friends_changed_name);
+		.cc_setgraphicshadow(0x333333);
+		if (string_length($string1) > 0) {
+			if ($boolean14 = true) {
+				cc_setop(10, "Reveal previous name");
+				cc_setonop("friend_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0, $world11)");
+			} else {
+				$string1 = "Previous name:<br><$string1>";
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component8, $string1, 25, 190)");
+				cc_setonmouseleave("deltooltip($component8)");
+				cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null", $world11)");
+			}
+			.cc_sethide(false);
+		} else {
+			cc_setonmouseover("deltooltip($component8)");
+			.cc_sethide(true);
+			cc_setonop("friend_op(event_op, event_opbase, null, -1, -1, "null", "null", $world11)");
+		}
+		cc_create($component5, ^iftype_text, $int10);
+		$int10 = calc($int10 + 1);
+		cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height12, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		if ($world11 = 0) {
+			cc_settext("Offline");
+			cc_setcolour(^red);
+		} else if ($world11 = map_world) {
+			cc_settext("World <tostring($world11)>");
+			cc_setcolour(0x0dc10d);
+		} else {
+			if ($world11 > 5000) {
+				cc_settext("<col=ffff00>Classic <tostring(calc($world11 - 5000))>");
+			} else {
+				cc_settext("<col=ffff00>World <tostring($world11)>");
+			}
+			cc_setcolour(^yellow);
+		}
+		$count9, $height12 = calc($count9 + 1), calc($height12 + $int13);
+	}
+	if ($count17 >= 1) {
+		$height12 = calc($height12 + 5);
+	}
+}
+if ($height12 > if_getheight($component5)) {
+	if_setscrollsize(0, $height12, $component5);
+	~scrollbar_resize($component6, $component5, %varcint9);
+} else {
+	if_setscrollsize(0, 0, $component5);
+	~scrollbar_resize($component6, $component5, 0);
+}

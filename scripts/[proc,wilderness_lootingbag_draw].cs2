@@ -1,0 +1,90 @@
+// 497
+[proc,wilderness_lootingbag_draw](inv $inv0)
+cc_deleteall(interface_81:5);
+def_int $size1 = inv_size($inv0);
+def_int $intarray0($size1);
+$intarray0(0) = %varcint81;
+$intarray0(1) = %varcint82;
+$intarray0(2) = %varcint83;
+$intarray0(3) = %varcint84;
+$intarray0(4) = %varcint85;
+$intarray0(5) = %varcint86;
+$intarray0(6) = %varcint87;
+$intarray0(7) = %varcint88;
+$intarray0(8) = %varcint89;
+$intarray0(9) = %varcint90;
+$intarray0(10) = %varcint91;
+$intarray0(11) = %varcint92;
+$intarray0(12) = %varcint93;
+$intarray0(13) = %varcint94;
+$intarray0(14) = %varcint95;
+$intarray0(15) = %varcint96;
+$intarray0(16) = %varcint97;
+$intarray0(17) = %varcint98;
+$intarray0(18) = %varcint99;
+$intarray0(19) = %varcint100;
+$intarray0(20) = %varcint101;
+$intarray0(21) = %varcint102;
+$intarray0(22) = %varcint104;
+$intarray0(23) = %varcint105;
+$intarray0(24) = %varcint106;
+$intarray0(25) = %varcint107;
+$intarray0(26) = %varcint108;
+$intarray0(27) = %varcint109;
+def_obj $obj2 = null;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_string $string0 = "Invalid item.";
+def_int $size5 = 0;
+while ($size5 < $size1) {
+	cc_create(interface_81:5, ^iftype_graphic, $size5);
+	$obj2 = inv_getobj($inv0, $size5);
+	if ($obj2 ! null) {
+		$int3, $int4 = inv_getnum($inv0, $size5), calc($int4 + 1);
+		cc_sethide(false);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($size5 % 4 * (36 + 8)), calc($size5 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject($obj2, $int3);
+		if ($inv0 = inv) {
+			if ($obj2 = looting_bag_11941 | $obj2 = looting_bag_22586) {
+				cc_settrans(150);
+				cc_setonmouserepeat(null);
+				cc_setonmouseleave(null);
+			} else {
+				cc_settrans(0);
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
+				if ($intarray0($size5) <= -1) {
+					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_81:7, $string0, 25, 512)");
+					cc_setonmouseleave("deltooltip(interface_81:7)");
+				} else {
+					~trade_tooltip($int3, $intarray0($size5), interface_81:7);
+				}
+			}
+			cc_setop(1, "Store-1");
+			cc_setop(2, "Store-5");
+			cc_setop(3, "Store-All");
+			cc_setop(4, "Store-X");
+			cc_setop(9, "Examine");
+		} else {
+			cc_settrans(0);
+			cc_setop(10, "Examine");
+			~trade_tooltip($int3, $intarray0($size5), interface_81:7);
+		}
+		cc_setopbase("<col=ff9040><oc_name($obj2)>");
+	} else {
+		cc_sethide(true);
+	}
+	$size5 = calc($size5 + 1);
+}
+if ($inv0 = inv_516 & $int4 <= 0) {
+	cc_create(interface_81:5, ^iftype_text, $size5);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(if_getwidth(interface_81:5), if_getheight(interface_81:5), ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settext("The bag is empty.");
+}

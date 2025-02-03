@@ -1,0 +1,60 @@
+// 4944
+[proc,script4944](int $flags0, component $component1, component $component2, component $component3)
+cc_deleteall($component3);
+def_int $int4 = 0;
+cc_create($component1, ^iftype_rectangle, $int4);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^black);
+cc_settrans(200);
+cc_setfill(true);
+$int4 = calc($int4 + 1);
+$int4 = ~thinbox($component1, $int4);
+$int4 = 0;
+def_int $int5 = 0;
+def_int $count6 = 0;
+def_int $count7 = enum_getoutputcount(enum_5312);
+def_struct $struct8 = null;
+if ($flags0 = 0) {
+	~create_text(
+		0 = $component3, 
+		1 = 0, 
+		2 = p12_full, 
+		3 = 0, 
+		4 = 0, 
+		5 = ^setpos_abs_right, 
+		6 = ^setpos_abs_top, 
+		7 = 0, 
+		8 = 0, 
+		9 = ^setsize_minus, 
+		10 = ^setsize_minus, 
+		11 = "You have no modifiers yet.", 
+		12 = true, 
+		13 = 0xff981f, 
+		14 = ^settextalign_centre, 
+		15 = ^settextalign_centre, 
+		16 = 0
+	);
+} else {
+	while ($count6 < $count7) {
+		$struct8 = enum(int, struct, enum_5312, $count6);
+		if ($struct8 ! null & ~script4978($struct8, $flags0) = 1) {
+			$int4 = ~script4945($int4, $int5, $struct8, $component3);
+			$int5 = calc($int5 + 1);
+		}
+		$count6 = calc($count6 + 1);
+	}
+}
+if_setscrollsize(max(calc($int5 * 46 + 4), if_getwidth($component3)), if_getheight($component3), $component3);
+~scrollbar_horizontal(
+	0 = $component2, 
+	1 = $component3, 
+	2 = graphic_4538, 
+	3 = graphic_4537, 
+	4 = graphic_4536, 
+	5 = graphic_4535, 
+	6 = "scrollbar_v2,2", 
+	7 = "scrollbar_v2,3", 
+	8 = 0
+);
+~scrollbar_horizontal_rebuild($component2, $component3);
