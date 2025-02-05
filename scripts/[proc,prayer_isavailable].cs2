@@ -7,11 +7,33 @@ def_int $int4 = 0;
 def_boolean $boolean5 = false;
 def_boolean $boolean6 = false;
 def_int $int7 = 0;
-$int1, $int2, $int3, $int4, $boolean5, $boolean6, $int7 = ~prayer_overrides;
+def_int $int8 = 0;
+def_int $int9 = 0;
+
+	0 = $int1, 
+	1 = $int2, 
+	2 = $int3, 
+	3 = $int4, 
+	4 = $boolean5, 
+	5 = $boolean6, 
+	6 = $int7, 
+	7 = $int8, 
+	8 = $int9
+ = ~prayer_overrides;
 if (~script4547($obj0, $int1) = 0) {
 	return(0);
 }
-if (~prayer_isavailable_req($obj0, $boolean6, $int2, $boolean5, $int3, $int4, $int7) = 0) {
+if (~prayer_isavailable_req(
+	0 = $obj0, 
+	1 = $boolean6, 
+	2 = $int2, 
+	3 = $boolean5, 
+	4 = $int3, 
+	5 = $int4, 
+	6 = $int7, 
+	7 = $int8, 
+	8 = $int9
+) = 0) {
 	return(0);
 }
 return(1);

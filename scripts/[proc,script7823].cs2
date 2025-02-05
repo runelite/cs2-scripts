@@ -1,0 +1,22 @@
+// 7823
+[proc,script7823]()(enum)
+if (%varbit14826 = 1) {
+	return(enum_4959);
+}
+if (%varbit14826 = 0) {
+	if (map_members = false | stat_base(prayer) < 62 | %varbit5314 = 1 & ~instance_check(coord) = 1) {
+		return(enum_4956);
+	} else if (%varbit16097 = 0 & %varbit16098 = 0) {
+		return(enum_4956);
+	} else if (%varbit16097 = 1 & %varbit16098 = 0) {
+		return(enum_3341);
+	} else if (%varbit16097 = 0 & %varbit16098 = 1 & stat_base(prayer) >= 63) {
+		return(enum_3342);
+	} else if (%varbit16097 = 1 & %varbit16098 = 1) {
+		if (stat_base(prayer) = 62) {
+			return(enum_3341);
+		}
+		return(enum_3343);
+	}
+}
+return(enum_4956);
