@@ -106,7 +106,7 @@ if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_get
 $mesuid12 = $mesuid0;
 def_int $chattype18 = ^chattype_gamemessage;
 def_int $int19 = ~script4487;
-if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
+if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0) & ~script7831 = 1) {
 	while ($mesuid12 ! -1 & $component10 ! null & calc($int7 - $int4) < 57) {
 		$chattype18, $int13, $string1, $string3, $string0, $int14, $string2, $int15 = chat_gethistory_byuid($mesuid12);
 		if (~pm_filtertest($chattype18, $string1, $int13, $int14) = 1) {

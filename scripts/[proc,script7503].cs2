@@ -47,7 +47,7 @@ while ($count4 < $count2) {
 			case dbrow_3983 :
 				$int12 = $int8;
 		}
-		if (cc_find(interface_894:19, $int1) = ^true) {
+		if (cc_find(interface_894:23, $int1) = ^true) {
 			cc_settext(tostring($int8));
 		}
 		$int18, $int19 = ~script7515($int6);
@@ -56,7 +56,7 @@ while ($count4 < $count2) {
 		} else {
 			$string1 = "Skill: <db_getfield($dbrow3, dbtable_79:0, 0)><br>Rank: <~tostring_spacer($int9, ",")><br>Experience: <~tostring_spacer($int6, ",")><br>Remaining XP: <~tostring_spacer(calc($int19 - $int18), ",")>";
 		}
-		if (cc_find(interface_894:19, $count4) = ^true) {
+		if (cc_find(interface_894:23, $count4) = ^true) {
 			~script7516($string1, 0, 0);
 		}
 		$int1 = calc($int1 + 2);
@@ -66,16 +66,16 @@ while ($count4 < $count2) {
 def_string $text2 = "0";
 def_string $string3 = "0";
 $text2, $string3 = ~script7474($int13, $int14, $int15, $int16, $int17, $int12, $int11);
-if (cc_find(interface_894:19, $int1) = ^true) {
+if (cc_find(interface_894:23, $int1) = ^true) {
 	cc_settext($text2);
 }
-if (cc_find(interface_894:19, $count2) = ^true) {
+if (cc_find(interface_894:23, $count2) = ^true) {
 	~script7516("Combat<br>Exact Combat Level: <$text2>.<$string3>", 0, 0);
 }
 $int1 = calc($int1 + 2);
-if (cc_find(interface_894:19, $int1) = ^true) {
+if (cc_find(interface_894:23, $int1) = ^true) {
 	cc_settext(tostring($int10));
 }
-if (cc_find(interface_894:19, calc($count2 + 1)) = ^true) {
+if (cc_find(interface_894:23, calc($count2 + 1)) = ^true) {
 	~script7516("Skill total", 0, 0);
 }

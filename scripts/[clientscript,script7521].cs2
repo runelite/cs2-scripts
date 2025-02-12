@@ -1,10 +1,10 @@
 // 7521
-[clientscript,script7521](component $widget_894:14_0, component $widget_894:16_1, component $widget_894:13_2, component $widget_894:20_3, component $widget_894:11_4, int $comsubid5, int $comsubid6, int $comsubid7)
-cc_deleteall($widget_894:16_1);
-cc_deleteall($widget_894:13_2);
-cc_deleteall($widget_894:20_3);
-cc_deleteall($widget_894:11_4);
-if_setonop("script7523($widget_894:16_1, $widget_894:13_2, $widget_894:20_3, $widget_894:11_4, $widget_894:14_0, $comsubid5)", $widget_894:13_2);
+[clientscript,script7521](component $widget_894:10_0, component $widget_894:20_1, component $widget_894:14_2, component $widget_894:24_3, component $widget_894:12_4, int $comsubid5, int $comsubid6, int $comsubid7)
+cc_deleteall($widget_894:20_1);
+cc_deleteall($widget_894:14_2);
+cc_deleteall($widget_894:24_3);
+cc_deleteall($widget_894:12_4);
+if_setonop("script7523($widget_894:20_1, $widget_894:14_2, $widget_894:24_3, $widget_894:12_4, $widget_894:10_0, $comsubid5)", $widget_894:14_2);
 def_int $count8 = 0;
 def_int $count9 = enum_getoutputcount(enum_5621);
 def_int $int10 = 0;
@@ -15,18 +15,18 @@ def_int $trans14 = 220;
 def_string $string0 = "";
 def_int $int15 = 0;
 while ($count8 < $count9) {
-	cc_create($widget_894:20_3, ^iftype_rectangle, $int11);
+	cc_create($widget_894:24_3, ^iftype_rectangle, $int11);
 	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);
 	cc_setcolour(^black);
 	cc_settrans($trans14);
 	if (~on_mobile = false) {
-		cc_setonmouseover("cc_settrans($widget_894:20_3, $int11, 240, null)");
-		cc_setonmouseleave("cc_settrans($widget_894:20_3, $int11, $trans14, null)");
+		cc_setonmouseover("cc_settrans($widget_894:24_3, $int11, 240, null)");
+		cc_setonmouseleave("cc_settrans($widget_894:24_3, $int11, $trans14, null)");
 	}
 	$int11 = calc($int11 + 1);
-	cc_create($widget_894:20_3, ^iftype_text, $int11);
+	cc_create($widget_894:24_3, ^iftype_text, $int11);
 	$int10 = enum(int, int, enum_5621, $count8);
 	$string0 = enum(int, string, enum_5622, $int10);
 	$int15 = parawidth($string0, 500, p12_full);
@@ -38,12 +38,12 @@ while ($count8 < $count9) {
 	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
 	cc_setposition(calc(2 + 13 / 2), $int13, ^setpos_abs_centre, ^setpos_abs_top);
 	$int11 = calc($int11 + 1);
-	cc_create($widget_894:20_3, ^iftype_graphic, $int11);
+	cc_create($widget_894:24_3, ^iftype_graphic, $int11);
 	$int11 = calc($int11 + 1);
 	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(0 - 13 / 2 - $int15 / 2 - 2), calc($int13 + 13 / 2), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setgraphic(enum(int, graphic, enum_5623, $int10));
-	cc_create($widget_894:20_3, ^iftype_rectangle, $int11);
+	cc_create($widget_894:24_3, ^iftype_rectangle, $int11);
 	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);
@@ -52,11 +52,11 @@ while ($count8 < $count9) {
 	cc_setop(1, "Select");
 	cc_setonop(null);
 	cc_setonop("script7522(
-		0 = $widget_894:16_1, 
-		1 = $widget_894:13_2, 
-		2 = $widget_894:20_3, 
-		3 = $widget_894:11_4, 
-		4 = $widget_894:14_0, 
+		0 = $widget_894:20_1, 
+		1 = $widget_894:14_2, 
+		2 = $widget_894:24_3, 
+		3 = $widget_894:12_4, 
+		4 = $widget_894:10_0, 
 		5 = $comsubid5, 
 		6 = $comsubid6, 
 		7 = $comsubid7, 
@@ -71,9 +71,9 @@ while ($count8 < $count9) {
 		$trans14 = 220;
 	}
 }
-if_setsize(if_getwidth($widget_894:14_0), calc($int13 + 4), ^setsize_abs, ^setsize_abs, $widget_894:16_1);
-if_setposition(10, calc(if_gety($widget_894:14_0) + if_getheight($widget_894:14_0)), ^setpos_abs_left, ^setpos_abs_top, $widget_894:16_1);
-if_sethide(false, $widget_894:11_4);
-if (cc_find($widget_894:14_0, $comsubid5) = ^true) {
+if_setsize(if_getwidth($widget_894:10_0), calc($int13 + 4), ^setsize_abs, ^setsize_abs, $widget_894:20_1);
+if_setposition(10, calc(if_gety($widget_894:10_0) + if_getheight($widget_894:10_0)), ^setpos_abs_left, ^setpos_abs_top, $widget_894:20_1);
+if_sethide(false, $widget_894:12_4);
+if (cc_find($widget_894:10_0, $comsubid5) = ^true) {
 	cc_setgraphic("scrollbar_v2,0");
 }

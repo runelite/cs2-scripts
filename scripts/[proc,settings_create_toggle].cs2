@@ -71,7 +71,7 @@ $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2);
 cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int18 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
-def_int $int19 = ~settings_get_toggle($int13);
+def_int $int19 = ~script6716($int13);
 if ($boolean16 = true) {
 	$int19 = calc(1 - $int19);
 }

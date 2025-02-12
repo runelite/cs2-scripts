@@ -1,16 +1,15 @@
 // 7585
-[proc,script7585]
+[proc,script7585](int $int0)
 if (~on_enhanced_mobile = 0) {
 	return;
 }
-if (%varcint1214 = 1) {
-	%varcint1214 = 0;
-	mes("Tile highlighting disabled!");
+if ($int0 = 1) {
+	%varbit16112 = 0;
 } else {
-	%varcint1214 = 1;
-	mes("Tile highlighting enabled!");
+	%varbit16112 = 1;
 }
-if (%varcint1214 = 1 & %varcint1215 = 1) {
+if (%varbit16112 = 1 & %varbit16115 = 1) {
 	~script7590(0);
 }
+~script7410;
 ~script7587;

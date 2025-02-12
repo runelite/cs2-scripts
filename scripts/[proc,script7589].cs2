@@ -3,12 +3,9 @@
 if (~on_enhanced_mobile = 0) {
 	return;
 }
-if (%varcint1215 = 1) {
-	%varcint1215 = 0;
-} else {
-	%varcint1215 = 1;
-}
-if (%varcint1215 = 1 & %varcint1214 = 1) {
+%varbit16115 = calc(1 - %varbit16115);
+if (%varbit16115 = 1 & %varbit16112 = 1) {
 	~script7586(0);
 }
+~script7410;
 ~script7591;

@@ -11,7 +11,7 @@ if (string_length($string0) <= 0) {
 	return;
 }
 if (%varbit13090 ! 3) {
-	if (cc_find(interface_728:6, calc(3 - 1)) = ^true) {
+	if (cc_find(interface_728:6, calc(3 - 1)) = ^true | cc_find(interface_728:37, calc(3 * 2 - 2)) = ^true) {
 		%varcstring1233 = $string0;
 		cc_triggerop(1);
 	}

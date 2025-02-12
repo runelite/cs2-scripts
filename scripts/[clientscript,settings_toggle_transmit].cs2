@@ -3,7 +3,7 @@
 def_boolean $boolean6 = ~script3957($struct5);
 def_int $int7 = 0;
 if (cc_find($component0, $int1) = ^true) {
-	$int7 = ~settings_get_toggle($int3);
+	$int7 = ~script6716($int3);
 	if ($boolean2 = true) {
 		$int7 = calc(1 - $int7);
 	}
@@ -35,4 +35,7 @@ if (cc_find($component0, $int1) = ^true) {
 			.cc_setcolour(0x9f9f9f);
 		}
 	}
+}
+if (~on_mobile = true) {
+	~script7827($int3);
 }

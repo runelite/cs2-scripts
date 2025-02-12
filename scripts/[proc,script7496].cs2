@@ -16,17 +16,17 @@ while ($count3 < $count1) {
 		$string1 = db_getfield($dbrow2, dbtable_79:0, 0);
 		$int4 = db_getfield($dbrow2, dbtable_79:1, 0);
 		$text0 = ~tostring_spacer(hiscore_getmembercontributedxp_byname(lowercase($string1)), $string2);
-		if (cc_find(interface_894:17, $int0) = ^true) {
+		if (cc_find(interface_894:21, $int0) = ^true) {
 			cc_settext($text0);
 		}
 		$string3 = $string1;
-		if (cc_find(interface_894:17, $count3) = ^true) {
+		if (cc_find(interface_894:21, $count3) = ^true) {
 			~script7516($string3, 0, 0);
 		}
 		$int0 = calc($int0 + 2);
 	}
 	$count3 = calc($count3 + 1);
 }
-if (cc_find(interface_894:17, $int0) = ^true) {
+if (cc_find(interface_894:21, $int0) = ^true) {
 	cc_settext(~tostring_spacer(hiscore_getgrouptotalxp, $string2));
 }

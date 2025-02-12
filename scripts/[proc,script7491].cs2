@@ -17,17 +17,17 @@ while ($count3 < $count1) {
 		$int4 = db_getfield($dbrow2, dbtable_79:1, 0);
 		$int6 = hiscore_getmemberlevel(lowercase($string0));
 		$int7 = calc($int7 + $int6);
-		if (cc_find(interface_894:15, $int0) = ^true) {
+		if (cc_find(interface_894:19, $int0) = ^true) {
 			cc_settext(tostring($int6));
 		}
 		$string1 = $string0;
-		if (cc_find(interface_894:15, $count3) = ^true) {
+		if (cc_find(interface_894:19, $count3) = ^true) {
 			~script7516($string1, 0, 0);
 		}
 		$int0 = calc($int0 + 2);
 	}
 	$count3 = calc($count3 + 1);
 }
-if (cc_find(interface_894:15, $int0) = ^true) {
+if (cc_find(interface_894:19, $int0) = ^true) {
 	cc_settext(tostring($int7));
 }

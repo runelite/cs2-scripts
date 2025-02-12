@@ -1,5 +1,5 @@
 // 7522
-[clientscript,script7522](component $widget_894:16_0, component $widget_894:13_1, component $widget_894:20_2, component $widget_894:11_3, component $widget_894:14_4, int $comsubid5, int $comsubid6, int $comsubid7, int $int8)
+[clientscript,script7522](component $widget_894:20_0, component $widget_894:14_1, component $widget_894:24_2, component $widget_894:12_3, component $widget_894:10_4, int $comsubid5, int $comsubid6, int $comsubid7, int $int8)
 if (~script7487 = 1 & $int8 ! 7 & $int8 ! 8) {
 	~script7472(interface_894:7);
 	~script7478(interface_894:8);
@@ -12,23 +12,23 @@ if (~script7487 = 1 & $int8 ! 7 & $int8 ! 8) {
 %varcint1227 = ~minmax(0, 9, $int8);
 def_string $string0 = enum(int, string, enum_5622, %varcint1227);
 def_int $width9 = parawidth($string0, 500, p12_full);
-if (cc_find($widget_894:14_4, $comsubid6) = ^true) {
+if (cc_find($widget_894:10_4, $comsubid6) = ^true) {
 	cc_settext($string0);
 	cc_setsize($width9, 20, ^setsize_abs, ^setsize_minus);
 	cc_setposition(calc(-16 + 13 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
 }
-if (cc_find($widget_894:14_4, $comsubid7) = ^true) {
+if (cc_find($widget_894:10_4, $comsubid7) = ^true) {
 	cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
 	cc_setposition(calc(-18 - 13 / 2 - $width9 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
 }
 def_string $string1 = "";
-if (cc_find(interface_894:12, 2) = ^true) {
+if (cc_find(interface_894:13, 2) = ^true) {
 	$string1 = removetags(cc_gettext);
 	if (string_length($string1) > 0) {
 		~script7529($string1, %varcint1227);
 	}
 }
-~script7524($widget_894:16_0, $widget_894:13_1, $widget_894:20_2, $widget_894:11_3, $widget_894:14_4, $comsubid5);
+~script7524($widget_894:20_0, $widget_894:14_1, $widget_894:24_2, $widget_894:12_3, $widget_894:10_4, $comsubid5);
 %varcint1234 = 0;
 if (~script7487 = 1) {
 	~script7490;

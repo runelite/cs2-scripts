@@ -1,7 +1,7 @@
 // 7469
-[clientscript,script7469](component $widget_894:6_0, int $widget_894:5_1, component $widget_894:14_2, component $widget_894:16_3, component $widget_894:13_4, component $widget_894:20_5, component $widget_894:11_6, component $widget_894:12_7, component $widget_894:7_8, component $widget_894:8_9, component $widget_894:9_10)
-~script7520($widget_894:14_2, $widget_894:16_3, $widget_894:13_4, $widget_894:20_5, $widget_894:11_6);
-~script7525($widget_894:12_7);
+[clientscript,script7469](component $widget_894:6_0, int $widget_894:5_1, component $widget_894:10_2, component $widget_894:20_3, component $widget_894:14_4, component $widget_894:24_5, component $widget_894:12_6, component $widget_894:13_7, component $widget_894:7_8, component $widget_894:8_9, component $widget_894:9_10)
+~script7520($widget_894:10_2, $widget_894:20_3, $widget_894:14_4, $widget_894:24_5, $widget_894:12_6);
+~script7525($widget_894:13_7);
 cc_input_setonsubmit("script7527(event_com, event_comsubid)");
 cc_input_setonfocuschange("script7526(event_com, event_comsubid)");
 if (~script7487 = 1) {
@@ -15,6 +15,8 @@ if (~script7487 = 1) {
 }
 ~script7511;
 if_setonresize("script7510", $widget_894:6_0);
-if (string_length(%varcstring1233) > 0) {
+if (hiscore_getstatus = 2) {
+	~script6717;
+} else if (string_length(%varcstring1233) > 0) {
 	if_setontimer("script7470(clientclock, $widget_894:6_0)", $widget_894:6_0);
 }

@@ -1,33 +1,33 @@
 // 7520
-[proc,script7520](component $widget_894:14_0, component $widget_894:16_1, component $widget_894:13_2, component $widget_894:20_3, component $widget_894:11_4)
+[proc,script7520](component $widget_894:10_0, component $widget_894:20_1, component $widget_894:14_2, component $widget_894:24_3, component $widget_894:12_4)
 ~script7539;
-cc_deleteall($widget_894:14_0);
+cc_deleteall($widget_894:10_0);
 def_int $int5 = 0;
-cc_create($widget_894:14_0, ^iftype_graphic, $int5);
+cc_create($widget_894:10_0, ^iftype_graphic, $int5);
 $int5 = calc($int5 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
-cc_create($widget_894:14_0, ^iftype_rectangle, $int5);
+cc_create($widget_894:10_0, ^iftype_rectangle, $int5);
 $int5 = calc($int5 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($widget_894:14_0, ^iftype_rectangle, $int5);
+cc_create($widget_894:10_0, ^iftype_rectangle, $int5);
 $int5 = calc($int5 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($widget_894:14_0, ^iftype_graphic, $int5);
+cc_create($widget_894:10_0, ^iftype_graphic, $int5);
 def_int $comsubid6 = $int5;
 $int5 = calc($int5 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic("scrollbar_v2,1");
-cc_create($widget_894:14_0, ^iftype_text, $int5);
+cc_create($widget_894:10_0, ^iftype_text, $int5);
 def_int $comsubid7 = $int5;
 $int5 = calc($int5 + 1);
 cc_settextfont(p12_full);
@@ -39,21 +39,21 @@ def_int $width8 = parawidth($string0, 500, p12_full);
 cc_settext($string0);
 cc_setsize($width8, 20, ^setsize_abs, ^setsize_minus);
 cc_setposition(calc(-16 + 13 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_create($widget_894:14_0, ^iftype_graphic, $int5);
+cc_create($widget_894:10_0, ^iftype_graphic, $int5);
 def_int $comsubid9 = $int5;
 $int5 = calc($int5 + 1);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(-18 - 13 / 2 - $width8 / 2), 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
-cc_create($widget_894:14_0, ^iftype_rectangle, $int5);
+cc_create($widget_894:10_0, ^iftype_rectangle, $int5);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
 if (~on_enhanced_mobile = 0) {
-	if_setonmouseover("cc_settrans($widget_894:14_0, $int5, 220, null)", $widget_894:14_0);
-	if_setonmouseleave("cc_settrans($widget_894:14_0, $int5, 255, null)", $widget_894:14_0);
+	if_setonmouseover("cc_settrans($widget_894:10_0, $int5, 220, null)", $widget_894:10_0);
+	if_setonmouseleave("cc_settrans($widget_894:10_0, $int5, 255, null)", $widget_894:10_0);
 }
-if_setop(1, "Select <col=ff981f>Hiscores type", $widget_894:14_0);
-if_setonop("script7521($widget_894:14_0, $widget_894:16_1, $widget_894:13_2, $widget_894:20_3, $widget_894:11_4, $comsubid6, $comsubid7, $comsubid9)", $widget_894:14_0);
+if_setop(1, "Select <col=ff981f>Hiscores type", $widget_894:10_0);
+if_setonop("script7521($widget_894:10_0, $widget_894:20_1, $widget_894:14_2, $widget_894:24_3, $widget_894:12_4, $comsubid6, $comsubid7, $comsubid9)", $widget_894:10_0);

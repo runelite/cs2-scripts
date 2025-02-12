@@ -27,7 +27,11 @@ def_int $y18 = 20;
 def_int $setposh19 = ^setpos_abs_left;
 if ($x15 > 0) {
 	if ($enum11 = enum_1745) {
-		$x15, $x16 = 45, 220;
+		if (%varbit6254 = 0) {
+			$x15, $x16 = 150, 250;
+		} else {
+			$x15, $x16 = 130, 130;
+		}
 		$y17, $y18 = 183, 70;
 		$setposh19 = ^setpos_abs_right;
 	} else {
