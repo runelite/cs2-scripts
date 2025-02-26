@@ -1,0 +1,9 @@
+// 7843
+[proc,script7843](namedobj $namedobj0)
+if ($namedobj0 = null) {
+	.cc_settrans(255);
+} else if (inv_total(inv, $namedobj0) > 0) {
+	.cc_settrans(175);
+} else {
+	.cc_settrans(0);
+}

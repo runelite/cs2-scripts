@@ -473,11 +473,11 @@ switch_int ($int0) {
 			case 10 :
 				return(36, oak_trophy_case_25353, "Oak trophy case");
 			case 11 :
-				return(36, mounted_bass_8267, "Mounted bass");
+				return(36, dummy_sheep_bones_1_11599, "Oak mounted fish display");
 			case 12 :
 				return(36, teak_decoration_8103, "Teak wall decoration");
 			case 13 :
-				return(38, minor_head_8087, "Minor Slayer monster head");
+				return(38, minor_head_8087, "Teak mounted head display");
 			case 14 :
 				return(38, small_map_8294, "Small map");
 			case 15 :
@@ -501,11 +501,11 @@ switch_int ($int0) {
 			case 24 :
 				return(56, gilded_decoration_8104, "Gilded mahogany wall decoration");
 			case 25 :
-				return(56, mounted_swordfish_8268, "Mounted swordfish");
+				return(56, dummy_sheep_bones_1_11603, "Teak mounted fish display");
 			case 26 :
 				return(58, medium_map_8295, "Medium map");
 			case 27 :
-				return(58, medium_head_8088, "Medium Slayer monster head");
+				return(58, medium_head_8088, "Mahogany mounted head display");
 			case 28 :
 				return(64, ornate_trophy_pedestal_25352, "Ornate trophy pedestal");
 			case 29 :
@@ -513,7 +513,7 @@ switch_int ($int0) {
 			case 30 :
 				return(65, large_landscape_8094, "Large landscape");
 			case 31 :
-				return(66, mounted_harpoonfish_25563, "Mounted harpoonfish");
+				return(66, dummy_sheep_bones_1_11578, "Mounted Harpoonfish");
 			case 32 :
 				return(66, ornate_banner_stand_25356, "Ornate banner stand");
 			case 33 :
@@ -525,13 +525,13 @@ switch_int ($int0) {
 			case 36 :
 				return(74, mahogany_outfit_stand_25358, "Mahogany outfit stand");
 			case 37 :
-				return(76, mounted_shark_8269, "Mounted shark");
+				return(76, dummy_sheep_bones_1_11601, "Mahogany mounted fish display");
 			case 38 :
 				return(76, square_shield_8106, "Square wall-mounted shield");
 			case 39 :
 				return(78, mahogany_trophy_case_25354, "Mahogany trophy case");
 			case 40 :
-				return(78, major_head_8089, "Major Slayer monster head");
+				return(78, major_head_8089, "Gilded mounted head display");
 			case 41 :
 				return(78, large_map_8296, "Large map");
 			case 42 :
@@ -1051,37 +1051,45 @@ switch_int ($int0) {
 	case 13 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, hammer_2347, "Maximum rooms: <tostring(calc(34 - 10))>");
+				return(1, hammer_2347, "Maximum rooms: <tostring(~script7833(1))>");
 			case 1 :
 				return(1, saw_8794, "Maximum dimensions: 3x3");
 			case 2 :
 				return(15, saw_8794, "Maximum dimensions: 4x4");
 			case 3 :
-				return(30, saw_8794, "Maximum dimensions: 5x5");
+				return(26, hammer_2347, "Maximum rooms: <tostring(~script7833(26))>");
 			case 4 :
-				return(45, saw_8794, "Maximum dimensions: 6x6");
+				return(30, saw_8794, "Maximum dimensions: 5x5");
 			case 5 :
-				return(50, hammer_2347, "Maximum rooms: <tostring(calc(34 - 9))>");
+				return(32, hammer_2347, "Maximum rooms: <tostring(~script7833(32))>");
 			case 6 :
-				return(56, hammer_2347, "Maximum rooms: <tostring(calc(34 - 8))>");
+				return(38, hammer_2347, "Maximum rooms: <tostring(~script7833(38))>");
 			case 7 :
-				return(60, saw_8794, "Maximum dimensions: 7x7");
+				return(44, hammer_2347, "Maximum rooms: <tostring(~script7833(44))>");
 			case 8 :
-				return(62, hammer_2347, "Maximum rooms: <tostring(calc(34 - 7))>");
+				return(45, saw_8794, "Maximum dimensions: 6x6");
 			case 9 :
-				return(68, hammer_2347, "Maximum rooms: <tostring(calc(34 - 6))>");
+				return(50, hammer_2347, "Maximum rooms: <tostring(~script7833(50))>");
 			case 10 :
-				return(74, hammer_2347, "Maximum rooms: <tostring(calc(34 - 5))>");
+				return(56, hammer_2347, "Maximum rooms: <tostring(~script7833(56))>");
 			case 11 :
-				return(80, hammer_2347, "Maximum rooms: <tostring(calc(34 - 4))>");
+				return(60, saw_8794, "Maximum dimensions: 7x7");
 			case 12 :
-				return(86, hammer_2347, "Maximum rooms: <tostring(calc(34 - 3))>");
+				return(62, hammer_2347, "Maximum rooms: <tostring(~script7833(62))>");
 			case 13 :
-				return(92, hammer_2347, "Maximum rooms: <tostring(calc(34 - 2))>");
+				return(68, hammer_2347, "Maximum rooms: <tostring(~script7833(68))>");
 			case 14 :
-				return(96, hammer_2347, "Maximum rooms: <tostring(calc(34 - 1))>");
+				return(74, hammer_2347, "Maximum rooms: <tostring(~script7833(74))>");
 			case 15 :
-				return(99, hammer_2347, "Maximum rooms: <tostring(34)>");
+				return(80, hammer_2347, "Maximum rooms: <tostring(~script7833(80))>");
+			case 16 :
+				return(86, hammer_2347, "Maximum rooms: <tostring(~script7833(86))>");
+			case 17 :
+				return(92, hammer_2347, "Maximum rooms: <tostring(~script7833(92))>");
+			case 18 :
+				return(96, hammer_2347, "Maximum rooms: <tostring(~script7833(96))>");
+			case 19 :
+				return(99, hammer_2347, "Maximum rooms: <tostring(~script7833(99))>");
 			case default :
 				return(-1, null, "");
 		}

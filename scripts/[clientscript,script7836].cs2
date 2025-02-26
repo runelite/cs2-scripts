@@ -1,0 +1,96 @@
+// 7836
+[clientscript,script7836](component $widget_910:1_0, component $widget_910:5_1, component $widget_910:6_2)
+def_boolean $boolean3 = ~on_mobile;
+def_int $int4 = calc((if_getwidth($widget_910:5_1) - 3) / 2);
+def_int $int5 = calc($int4 + 3);
+def_int $int6 = calc(3 + 36 + 4);
+def_int $width7 = calc($int4 - $int6);
+def_int $int8 = calc((38 - 32) / 2);
+def_int $count9 = enum_getoutputcount(enum_5210);
+cc_deleteall($widget_910:5_1);
+def_namedobj $namedobj10 = null;
+def_int $countarray0($count9);
+def_int $count11 = 0;
+while ($count11 < $count9) {
+	cc_create($widget_910:5_1, ^iftype_graphic, $count11);
+	cc_sethide(true);
+	$countarray0($count11) = $count11;
+	$count11 = calc($count11 + 1);
+}
+if ($count9 >= 2) {
+	~script7837(countarray0, 0, calc($count9 - 1));
+}
+$count11 = 0;
+while ($count11 < $count9) {
+	cc_create($widget_910:5_1, ^iftype_text, calc($count9 + 2 * $count11));
+	cc_sethide(true);
+	cc_create($widget_910:5_1, ^iftype_graphic, calc($count9 + 2 * $count11 + 1));
+	cc_sethide(true);
+	$count11 = calc($count11 + 1);
+}
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+while ($int16 < $count9) {
+	$count11 = $countarray0($int16);
+	$namedobj10 = enum(int, namedobj, enum_5210, $count11);
+	if ($namedobj10 ! null & cc_find($widget_910:5_1, $count11) = ^true & .cc_find($widget_910:5_1, calc($count9 + 2 * $count11)) = ^true) {
+		if ($int14 = 1) {
+			$int15 = $int5;
+		} else {
+			$int15 = 0;
+		}
+		cc_sethide(false);
+		cc_setsize($int4, 38, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int15, $int12, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(tradebacking_light);
+		cc_settiling(true);
+		cc_setopbase("<col=ff9040><oc_name($namedobj10)></col>");
+		.cc_sethide(false);
+		.cc_setsize($width7, 38, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(calc($int15 + $int6), $int12, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_settextalign(^settextalign_left, ^settextalign_centre, 13);
+		.cc_settextshadow(true);
+		.cc_settextfont(p12_full);
+		.cc_settext(enum(obj, string, enum_236, $namedobj10));
+		~script7841($boolean3, $widget_910:5_1);
+		if (.cc_find($widget_910:5_1, calc($count9 + 2 * $count11 + 1)) = ^true) {
+			.cc_sethide(false);
+			.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			.cc_setposition(calc($int15 + 3), calc($int12 + $int8), ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setobject_nonum($namedobj10, 1);
+			.cc_setgraphicshadow(0x333333);
+			.cc_setoutline(1);
+			~script7843($namedobj10);
+		}
+		if ($int14 = 1) {
+			if ($int16 < calc($count9 - 1)) {
+				$int12 = calc($int12 + 38 + 3);
+				.cc_create($widget_910:5_1, ^iftype_graphic, calc(3 * $count9 + $int13));
+				.cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+				.cc_setposition(0, calc($int12 - 20), ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setgraphic("v2_borders_slim,8");
+				.cc_settiling(true);
+				$int13 = calc($int13 + 1);
+			} else {
+				$int12 = calc($int12 + 38);
+			}
+			$int14 = 0;
+		} else {
+			if ($int16 >= calc($count9 - 1)) {
+				$int12 = calc($int12 + 38);
+			}
+			$int14 = 1;
+		}
+	}
+	$int16 = calc($int16 + 1);
+}
+if_setonvartransmit("script7840($boolean3, event_com, $count9){var805, var261, var262, var263, var264, var265, var266, var1037}", $widget_910:5_1);
+if_setoninvtransmit("script7842(event_com, $count9){inv}", $widget_910:5_1);
+~scrollbar_vertical($widget_910:6_2, $widget_910:5_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_component $layer17 = if_getlayer($widget_910:1_0);
+if ($layer17 ! null) {
+	~script7838($layer17, $widget_910:1_0, $widget_910:5_1, $widget_910:6_2, $int12, if_getheight($layer17));
+}

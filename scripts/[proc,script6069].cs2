@@ -51,27 +51,27 @@ if ($int10 ! $int2) {
 }
 def_int $int14 = %var261;
 def_int $int15 = %var262;
-def_int $int16 = %var263;
-def_int $int17 = %var264;
-def_int $int18 = %var265;
-def_int $int19 = %var266;
+def_int $flags16 = %var263;
+def_int $flags17 = %var264;
+def_int $flags18 = %var265;
+def_int $flags19 = %var266;
 def_int $int20 = 0;
 if ($struct13 ! null) {
 	if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		$int20 = activeclansettings_getaffinedcount;
-		$string1 = "Total tickets earned: <col=ffffff><tostring(calc($int14 + $int15 + $int16 + $int17 + $int18))></col><br><br>";
+		$string1 = "Total tickets earned: <col=ffffff><tostring(calc($int14 + $int15 + $flags16 + $flags17 + $flags18))></col><br><br>";
 		$string1 = append($string1, "<activeclansettings_getaffineddisplayname(0)> - <col=ffffff><tostring($int14)> tickets</col>");
 		if ($int20 > 1) {
 			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(1)> - <col=ffffff><tostring($int15)> tickets</col>");
 		}
 		if ($int20 > 2) {
-			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(2)> - <col=ffffff><tostring($int16)> tickets</col>");
+			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(2)> - <col=ffffff><tostring($flags16)> tickets</col>");
 		}
 		if ($int20 > 3) {
-			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(3)> - <col=ffffff><tostring($int17)> tickets</col>");
+			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(3)> - <col=ffffff><tostring($flags17)> tickets</col>");
 		}
 		if ($int20 > 4) {
-			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(4)> - <col=ffffff><tostring($int18)> tickets</col>");
+			$string1 = append($string1, "<br><activeclansettings_getaffineddisplayname(4)> - <col=ffffff><tostring($flags18)> tickets</col>");
 		}
 		if_settext($string1, $component9);
 	}

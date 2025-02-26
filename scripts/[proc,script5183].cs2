@@ -14,9 +14,9 @@ cc_deleteall($component8);
 ~scrollbar_vertical($component6, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $flags9 = %var261;
 def_int $flags10 = %var262;
-def_int $int11 = %var263;
-def_int $int12 = %var264;
-def_int $int13 = %var265;
+def_int $flags11 = %var263;
+def_int $flags12 = %var264;
+def_int $flags13 = %var265;
 def_int $count14 = 0;
 def_int $count15 = enum_getoutputcount(enum_4216);
 def_struct $struct16 = null;
@@ -37,20 +37,20 @@ def_int $int29 = calc(if_getwidth($component4) - $int26 - 8);
 def_int $int30 = 0;
 def_int $int31 = calc($int22 + 6);
 def_int $int32 = 0;
-if_settext("Storage Space:<br> <tostring($int11)>/<tostring($int12)>", interface_743:9);
-if ($int11 >= $int12) {
+if_settext("Storage Space:<br> <tostring($flags11)>/<tostring($flags12)>", interface_743:9);
+if ($flags11 >= $flags12) {
 	if_setcolour(0x0dc10d, interface_743:9);
 } else {
 	if_setcolour(0xff981f, interface_743:9);
 }
-if ($int13 <= 0) {
+if ($flags13 <= 0) {
 	if_settext("You are eligible to unlock group storage slots for your group", interface_743:10);
 	if_setcolour(0x0dc10d, interface_743:10);
 } else {
-	if ($int13 = 1) {
+	if ($flags13 = 1) {
 		if_settext("You will be eligible to unlock group storage slots in 1 week<br>", interface_743:10);
 	} else {
-		if_settext("You will be eligible to unlock group storage slots in <tostring($int13)> weeks<br>", interface_743:10);
+		if_settext("You will be eligible to unlock group storage slots in <tostring($flags13)> weeks<br>", interface_743:10);
 	}
 	if_setcolour(^red, interface_743:10);
 }

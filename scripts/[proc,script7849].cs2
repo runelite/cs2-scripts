@@ -1,0 +1,22 @@
+// 7849
+[proc,script7849](component $widget_912:1_0, component $widget_912:4_1, component $widget_912:5_2, component $widget_912:6_3)
+cc_deleteall($widget_912:4_1);
+cc_deleteall($widget_912:5_2);
+cc_deleteall($widget_912:6_3);
+def_int $int4 = 180;
+def_enum $enum5 = null;
+if (%var263 = 2) {
+	$enum5 = enum_5213;
+} else if (%var263 = 4) {
+	$enum5 = enum_5214;
+} else {
+	if_setsize(calc($int4 + 20), if_getheight($widget_912:1_0), ^setsize_abs, ^setsize_abs, $widget_912:1_0);
+	return;
+}
+def_int $int6 = ~script7850(1, $widget_912:4_1, "Basic trophies", $enum5, 0, 45);
+$int4 = max($int4, $int6);
+$int6 = ~script7850(2, $widget_912:5_2, "Superior trophies", $enum5, 45, 70);
+$int4 = max($int4, $int6);
+$int6 = ~script7850(3, $widget_912:6_3, "Superlative trophies", $enum5, 70, ^max_32bit_int);
+$int4 = max($int4, $int6);
+if_setsize(calc($int4 + 20), if_getheight($widget_912:1_0), ^setsize_abs, ^setsize_abs, $widget_912:1_0);
