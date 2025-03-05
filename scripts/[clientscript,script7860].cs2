@@ -1,0 +1,10 @@
+// 7860
+[clientscript,script7860](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	%varbit16125 = calc(1 - %varbit16125);
+	~script7862($component1);
+}
