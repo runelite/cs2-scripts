@@ -1,6 +1,11 @@
 // 7264
 [proc,omnishop_get_obj](dbrow $dbrow0, inv $inv1, int $int2)(obj)
+def_dbrow $dbrow3 = null;
 if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
-	return(db_getfield(db_getfield($dbrow0, dbtable_39:5, $int2), dbtable_40:0, 0));
+	$dbrow3 = db_getfield($dbrow0, dbtable_39:5, $int2);
+	if (~script4202($dbrow3) = 1) {
+		return(db_getfield($dbrow3, dbtable_40:1, 0));
+	}
+	return(db_getfield($dbrow3, dbtable_40:0, 0));
 }
 return(inv_getobj($inv1, $int2));

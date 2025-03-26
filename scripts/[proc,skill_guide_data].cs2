@@ -17,6 +17,16 @@ switch_int ($int0) {
 		if ($int1 = 0) {
 			switch_int ($int2) {
 				case 0 :
+					return(-1, shortbow_841, "Your Ranged level determines how accurate you are with ranged weapons, as well as how much damage they do. A higher Ranged level will result in more hits that do more damage.");
+				case 1 :
+					return(-1, mithril_arrow_888, "Most ranged weapons will need a specific kind of ammunition to go with them; for instance, bows will need arrows and crossbows will need bolts.");
+				case 2 :
+					return(-1, rune_crossbow_9185, "As your Ranged level increases, you will also get access to more powerful weapons and ammunition. Typically, each ranged weapon can only handle ammo up to a certain level; for instance, an oak bow can only fire bronze, iron or steel arrows, but not mithril.");
+			}
+		}
+		if ($int1 = 1) {
+			switch_int ($int2) {
+				case 0 :
 					return(1, shortbow_841, "Standard bows<br> Ammo: Arrows up to iron");
 				case 1 :
 					return(5, oak_shortbow_843, "Oak bows<br> Ammo: Arrows up to steel");
@@ -56,7 +66,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, bronze_knife_864, "Bronze items");
@@ -100,7 +110,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, crossbow_837, "Crossbow<br> Ammo: Bronze crossbow bolts");
@@ -140,7 +150,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, leather_body_1129, "Plain leather items");
@@ -256,7 +266,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 4) {
+		if ($int1 = 5) {
 			if ($int2 = 0) {
 				return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			}
@@ -268,7 +278,7 @@ switch_int ($int0) {
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 5) {
+		if ($int1 = 6) {
 			switch_int ($int2) {
 				case 0 :
 					return(19, agility_climb_6517, "Scale Falador wall<br>(with 11 Agility and 37 Strength)");
@@ -292,7 +302,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 6) {
+		if ($int1 = 7) {
 			return(~skill_guide_salamanders($int2));
 		}
 		return(-1, null, "");
@@ -304,18 +314,20 @@ switch_int ($int0) {
 		if ($int1 = 0) {
 			switch_int ($int2) {
 				case 0 :
-					return(-1, obj_7620, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
+					return(-1, heart_crystal_744, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
 				case 1 :
-					return(-1, obj_7620, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
+					return(-1, lobster_379, "As with any skill, you will restore 1 missing Hitpoint every minute, but the best way of recovering Hitpoints is by eating food.");
 				case 2 :
-					return(-1, obj_7620, "Blue hit splats mean no damage has been dealt.");
+					return(-1, obj_7620, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
 				case 3 :
-					return(-1, obj_7620, "Green hit splats are poison damage.");
+					return(-1, obj_7620, "Blue hit splats mean no damage has been dealt.");
 				case 4 :
-					return(-1, obj_7620, "Teal hit splats are venom damage. (Members)");
+					return(-1, obj_7620, "Green hit splats are poison damage.");
 				case 5 :
-					return(-1, obj_7620, "Orange hit splats are disease damage. (Members)");
+					return(-1, obj_7620, "Teal hit splats are venom damage. (Members)");
 				case 6 :
+					return(-1, obj_7620, "Orange hit splats are disease damage. (Members)");
+				case 7 :
 					return(-1, obj_7620, "Dark purple hit splats are corruption damage. (Members)");
 			}
 		} else if ($int1 = 1) {
@@ -475,6 +487,15 @@ switch_int ($int0) {
 			case 0 :
 				switch_int ($int2) {
 					case 0 :
+						return(-1, attack_potion_3_121, "You must complete the Druidic Ritual quest before you can use Herblore.");
+					case 1 :
+						return(-1, eye_of_newt_221, "Herblore allows you to make potions with herbs and ingredients found across Gielinor.");
+					case 2 :
+						return(-1, grimy_guam_leaf_199, "To make a potion, you first need to clean a grimy herb, then combine it with a vial of water to make an unfinished potion. You can then add the secondary ingredient(s) to complete the potion.");
+				}
+			case 1 :
+				switch_int ($int2) {
+					case 0 :
 						return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore.");
 					case 1 :
 						return(3, eye_of_newt_221, "Attack potion<br>Guam leaf & eye of newt");
@@ -603,48 +624,46 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 1 :
+			case 2 :
 				switch_int ($int2) {
 					case 0 :
-						return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore");
-					case 1 :
 						return(3, guam_leaf_249, "Guam leaf");
-					case 2 :
+					case 1 :
 						return(3, rogues_purse_1534, "Rogue's purse");
-					case 3 :
+					case 2 :
 						return(3, snake_weed_1526, "Snake weed");
-					case 4 :
+					case 3 :
 						return(5, marrentill_251, "Marrentill");
-					case 5 :
+					case 4 :
 						return(11, tarromin_253, "Tarromin");
-					case 6 :
+					case 5 :
 						return(20, harralander_255, "Harralander");
-					case 7 :
+					case 6 :
 						return(25, ranarr_weed_257, "Ranarr weed");
-					case 8 :
+					case 7 :
 						return(30, toadflax_2998, "Toadflax");
-					case 9 :
+					case 8 :
 						return(40, irit_leaf_259, "Irit leaf");
-					case 10 :
+					case 9 :
 						return(48, avantoe_261, "Avantoe");
-					case 11 :
+					case 10 :
 						return(54, kwuarm_263, "Kwuarm");
-					case 12 :
+					case 11 :
 						return(58, huasca_30097, "Huasca");
-					case 13 :
+					case 12 :
 						return(59, snapdragon_3000, "Snapdragon");
-					case 14 :
+					case 13 :
 						return(65, cadantine_265, "Cadantine");
-					case 15 :
+					case 14 :
 						return(67, lantadyme_2481, "Lantadyme");
-					case 16 :
+					case 15 :
 						return(70, dwarf_weed_267, "Dwarf weed");
-					case 17 :
+					case 16 :
 						return(75, torstol_269, "Torstol");
 					case default :
 						return(-1, null, "");
 				}
-			case 2 :
+			case 3 :
 				switch_int ($int2) {
 					case 0 :
 						return(-1, obj_7620, "You must complete barbarian herblore training before you can make these potions.");
@@ -709,7 +728,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 3 :
+			case 4 :
 				switch_int ($int2) {
 					case 0 :
 						return(-1, obj_7620, "Potions may be <$string0>strong</col>, <$string0>standard</col> or <$string0>weak</col>, depending on your Herblore level.");
@@ -752,7 +771,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 4 :
+			case 5 :
 				switch_int ($int2) {
 					case 0 :
 						return(31, herbiboar_21511, "Harvest herbs from the <$string0>Herbiboar</col> on <$string0>Fossil Island</col> (with 80 Hunter).");
@@ -783,14 +802,24 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case default :
-				return(-1, null, "");
 		}
+		return(-1, null, "");
 	case 10 :
 		return(~skill_guide_data_thieving($int1, $int2));
 	case 11 :
 		switch_int ($int1) {
 			case 0 :
+				switch_int ($int2) {
+					case 0 :
+						return(-1, hammer_2347, "Crafting is a wide-ranging skill that allows you to create various pieces of armour, jewellery, equipment and more.");
+					case 1 :
+						return(-1, leather_1741, "To craft armour out of animal hides, you'll typically first need to take the hides to a tanner to get them tanned, then combine them with a needle and thread, which can be acquired from certain crafting shops in the world.");
+					case 2 :
+						return(-1, soft_clay_1761, "To make pottery, you'll need to obtain some soft clay, obtained by adding water to clay. You can then use a pottery wheel to shape the clay into an unfired item, which you can then finish in a pottery oven.");
+					case 3 :
+						return(-1, gold_bar_2357, "To make jewellery, you'll need to first get a crafting mould. You can then take that mould and some gold or silver bars to a furnace to craft your jewellery. At higher crafting levels, you can cut gems and mould them simultaneously to create jewellery which you can enchant!");
+				}
+			case 1 :
 				if ($int2 = 0) {
 					return(21, empty_sack_5418, "Vegetable sack");
 				}
@@ -801,7 +830,7 @@ switch_int ($int0) {
 					return(36, basket_5376, "Fruit basket");
 				}
 				return(-1, null, "");
-			case 1 :
+			case 2 :
 				switch_int ($int2) {
 					case 0 :
 						return(1, leather_gloves_1059, "Leather gloves");
@@ -924,7 +953,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 2 :
+			case 3 :
 				switch_int ($int2) {
 					case 0 :
 						return(1, ball_of_wool_1759, "Wool");
@@ -939,7 +968,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 3 :
+			case 4 :
 				switch_int ($int2) {
 					case 0 :
 						return(1, pot_1931, "Pot");
@@ -956,7 +985,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 4 :
+			case 5 :
 				switch_int ($int2) {
 					case 0 :
 						return(1, beer_glass_1919, "Beer glass");
@@ -979,7 +1008,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 5 :
+			case 6 :
 				if ($int2 = 0) {
 					return(1, opal_1609, "Members: Cut opal");
 				}
@@ -1173,7 +1202,7 @@ switch_int ($int0) {
 					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
 				}
 				return(-1, null, "");
-			case 6 :
+			case 7 :
 				switch_int ($int2) {
 					case 0 :
 						return(18, silver_sickle_2961, "Silver sickle");
@@ -1210,7 +1239,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 7 :
+			case 8 :
 				switch_int ($int2) {
 					case 0 :
 						return(70, celestial_signet_25545, "Celestial signet<br>(with 70 Smithing)");
@@ -1249,7 +1278,7 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case 8 :
+			case 9 :
 				switch_int ($int2) {
 					case 0 :
 						return(5, bird_house_21512, "Craft a birdhouse trap from normal logs");
@@ -1292,11 +1321,22 @@ switch_int ($int0) {
 					case default :
 						return(-1, null, "");
 				}
-			case default :
-				return(-1, null, "");
 		}
+		return(-1, null, "");
 	case 19 :
 		if ($int1 = 0) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, feather_314, "Fletching allows you to create various ranged weapons, as well as ammunition to go with them.");
+				case 1 :
+					return(-1, bow_string_1777, "Making bows requires bowstring, which can be made from flax at a spinning wheel. You can use a knife on some logs to carve an unfinished bow, then add the bowstring to complete the weapon.");
+				case 2 :
+					return(-1, headless_arrow_5_6447, "To create arrows, you'll first need to carve logs into arrow shafts with a knife, then tip the arrow shafts with feathers. Finally, you'll need to add some arrow heads.");
+				case 3 :
+					return(-1, mithril_bolts_unf_3_9400, "To make bolts, you only need to combine unfinished bolts with feathers. You can also chisel gemstones down into bolt tips, with each gemstone being able to top a different bolt.");
+			}
+		}
+		if ($int1 = 1) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, arrow_shaft_5_6443, "15 Arrow shafts (Logs)");
@@ -1348,7 +1388,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(5, shortbow_841, "Shortbows");
@@ -1386,7 +1426,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(9, bronze_bolts_877, "Bronze bolts");
@@ -1446,7 +1486,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(10, bronze_dart_806, "Bronze darts");
@@ -1470,7 +1510,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 4) {
+		if ($int1 = 5) {
 			switch_int ($int2) {
 				case 0 :
 					return(9, wooden_stock_9440, "Bronze/wooden crossbows");
@@ -1494,7 +1534,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 5) {
+		if ($int1 = 6) {
 			switch_int ($int2) {
 				case 0 :
 					return(3, bronze_javelin_825, "Bronze javelins");
@@ -1520,7 +1560,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 6) {
+		if ($int1 = 7) {
 			switch_int ($int2) {
 				case 0 :
 					return(27, oak_shield_22251, "Oak shield");
@@ -1538,7 +1578,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 7) {
+		if ($int1 = 8) {
 			switch_int ($int2) {
 				case 0 :
 					return(40, battlestaff_1391, "Battlestaves");
@@ -1551,6 +1591,18 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 13 :
 		if ($int1 = 0) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, iron_pickaxe_1267, "Mining allows you to get various minerals from the world, for use in other skills; primarily Smithing.");
+				case 1 :
+					return(-1, iron_ore_440, "To mine a rock, simply interact with it while holding a pickaxe you have the level to use and you'll start mining it. Eventually, you'll collect the ore and the rock will deplete. Low level rocks will replenish themselves fairly quickly, but higher level ones will take longer and longer to come back.");
+				case 2 :
+					return(-1, rune_pickaxe_1275, "At higher mining levels, you'll have an increased chance of successfully mining a rock. You'll also be able to use more powerful pickaxes, which decrease the amount of time between mining attempts.");
+				case 3 :
+					return(-1, gold_ore_444, "Note that while most pickaxes have an Attack level requirement to equip them, you're still able to use them from within your inventory if you have the required Mining level.");
+			}
+		}
+		if ($int1 = 1) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, rune_essence_1436, "Rune essence<br>(after Rune Mysteries)");
@@ -1628,7 +1680,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, bronze_pickaxe_1265, "Bronze pickaxe");
@@ -1664,7 +1716,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(30, pay_dirt_12011, "Members: Motherlode Mine");
@@ -1676,7 +1728,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(10, stardust_175_25532, "Size-1 stars");
@@ -1705,6 +1757,16 @@ switch_int ($int0) {
 		if ($int1 = 0) {
 			switch_int ($int2) {
 				case 0 :
+					return(-1, raw_cod_341, "Fishing allows you to gather fish at various points across Gielinor. Typically, these will be indicated by moving bubbles on the surface of the water.");
+				case 1 :
+					return(-1, small_fishing_net_303, "Different fish require different equipment to catch; for instance, you need a fishing net to catch shrimp, but a fishing rod and bait to catch sardines.");
+				case 2 :
+					return(-1, raw_lobster_377, "As your Fishing level increases, you'll gain access to more varieties of fish to catch, as well as having a higher chance of successfully catching fish when you try.");
+			}
+		}
+		if ($int1 = 1) {
+			switch_int ($int2) {
+				case 0 :
 					return(1, raw_shrimps_317, "Shrimp - Small fishing net");
 				case 1 :
 					return(5, raw_karambwanji_3150, "Members: Karambwanji - Small fishing net");
@@ -1726,7 +1788,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(16, raw_mackerel_353, "Members: Mackerel - Big fishing net");
@@ -1746,7 +1808,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(5, raw_sardine_327, "Sardine - Fishing rod & Fishing bait");
@@ -1776,7 +1838,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			if ($int2 = 0) {
 				return(35, raw_tuna_359, "Tuna - Harpoon");
 			}
@@ -1788,7 +1850,7 @@ switch_int ($int0) {
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 4) {
+		if ($int1 = 5) {
 			switch_int ($int2) {
 				case 0 :
 					return(43, bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
@@ -1802,7 +1864,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 5) {
+		if ($int1 = 6) {
 			if ($int2 = 0) {
 				return(40, raw_lobster_377, "Lobster - Lobster pot");
 			}
@@ -1811,7 +1873,7 @@ switch_int ($int0) {
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 6) {
+		if ($int1 = 7) {
 			switch_int ($int2) {
 				case 0 :
 					return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
@@ -1833,7 +1895,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 7) {
+		if ($int1 = 8) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, small_fishing_net_303, "Small fishing net");
@@ -1865,7 +1927,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 8) {
+		if ($int1 = 9) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, raw_pysk_fish_0_20855, "Pysk fish");
@@ -1885,7 +1947,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 9) {
+		if ($int1 = 10) {
 			switch_int ($int2) {
 				case 0 :
 					return(35, harpoonfish_25565, "Members: Fighting Tempoross");
@@ -1904,6 +1966,18 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 16 :
 		if ($int1 = 0) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, cooking_pot_977, "Cooking is a skill that lets you make all kinds of delicious food that will typically restore your Hitpoints, amongst providing other benefits.");
+				case 1 :
+					return(-1, shrimps_315, "At its most basic, Cooking can be done by simply taking raw meats and fish to either a fire or a range. You'll get better results overall if you use a range, though.");
+				case 2 :
+					return(-1, bread_2309, "Some foods will require you to prepare your ingredients before you can cook them. For example, you first need to mix flour and water into a dough before you can bake them into bread.");
+				case 3 :
+					return(-1, lobster_379, "As your Cooking level increases, you'll get access to an increasing list of recipes. You'll also find that you accidentally burn your food less of the time as well.");
+			}
+		}
+		if ($int1 = 1) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, cooked_meat_2142, "Meat");
@@ -2015,7 +2089,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, bread_2309, "Bread");
@@ -2035,7 +2109,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(10, redberry_pie_2325, "Redberry pie");
@@ -2075,7 +2149,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(25, stew_2003, "Stew");
@@ -2099,7 +2173,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 4) {
+		if ($int1 = 5) {
 			switch_int ($int2) {
 				case 0 :
 					return(35, plain_pizza_2289, "Plain pizza");
@@ -2125,7 +2199,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 5) {
+		if ($int1 = 6) {
 			switch_int ($int2) {
 				case 0 :
 					return(40, cake_1891, "Cake");
@@ -2143,7 +2217,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 6) {
+		if ($int1 = 7) {
 			switch_int ($int2) {
 				case 0 :
 					return(35, jug_of_wine_1993, "Wine");
@@ -2163,7 +2237,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 7) {
+		if ($int1 = 8) {
 			switch_int ($int2) {
 				case 0 :
 					return(20, cup_of_tea_4242, "Nettle tea");
@@ -2183,7 +2257,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 8) {
+		if ($int1 = 9) {
 			switch_int ($int2) {
 				case 0 :
 					return(14, cider_5763, "Cider<br>4 Apple mush");
@@ -2209,7 +2283,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 9) {
+		if ($int1 = 10) {
 			switch_int ($int2) {
 				case 0 :
 					return(7, baked_potato_6701, "Baked potato");
@@ -2265,7 +2339,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 10) {
+		if ($int1 = 11) {
 			switch_int ($int2) {
 				case 0 :
 					return(21, pot_of_cream_2130, "Cream");
@@ -2285,7 +2359,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 11) {
+		if ($int1 = 12) {
 			switch_int ($int2) {
 				case 0 :
 					return(6, fruit_blast_2084, "Fruit Blast");
@@ -2331,52 +2405,46 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 12) {
-			switch_int ($int2) {
-				case 0 :
-					return(1, pysk_fish_0_20856, "Pysk fish");
-				case 1 :
-					return(1, guanic_bat_0_20871, "Guanic bat");
-				case 2 :
-					return(15, suphi_fish_1_20858, "Suphi fish");
-				case 3 :
-					return(15, prael_bat_1_20873, "Prael bat");
-				case 4 :
-					return(30, leckish_fish_2_20860, "Leckish fish");
-				case 5 :
-					return(30, giral_bat_2_20875, "Giral bat");
-				case 6 :
-					return(45, brawk_fish_3_20862, "Brawk fish");
-				case 7 :
-					return(45, phluxia_bat_3_20877, "Phluxia bat");
-				case 8 :
-					return(60, mycil_fish_4_20864, "Mycil fish");
-				case 9 :
-					return(60, kryket_bat_4_20879, "Kryket bat");
-				case 10 :
-					return(75, roqed_fish_5_20866, "Roqed fish");
-				case 11 :
-					return(75, murng_bat_5_20881, "Murng bat");
-				case 12 :
-					return(90, kyren_fish_6_20868, "Kyren fish");
-				case 13 :
-					return(90, psykk_bat_6_20883, "Psykk bat");
-				case default :
-					return(-1, null, "");
-			}
-		}
 		if ($int1 = 13) {
 			switch_int ($int2) {
 				case 0 :
-					return(-1, obj_7620, "Ritual Offering are used in the Ancient Offering Ritual in the ruins of Camdozaal (After Below Ice Mountain).");
+					return(1, pysk_fish_0_20856, "Members: Chambers of Xeric - Pysk fish");
 				case 1 :
-					return(7, guppy_25654, "Guppy");
+					return(1, guanic_bat_0_20871, "Members: Chambers of Xeric - Guanic bat");
 				case 2 :
-					return(20, cavefish_25660, "Cavefish");
+					return(7, guppy_25654, "Ritual Offering - Guppy");
 				case 3 :
-					return(33, tetra_25666, "Tetra");
+					return(15, suphi_fish_1_20858, "Members: Chambers of Xeric - Suphi fish");
 				case 4 :
-					return(46, catfish_25672, "Members: Catfish");
+					return(15, prael_bat_1_20873, "Members: Chambers of Xeric - Prael bat");
+				case 5 :
+					return(20, cavefish_25660, "Ritual Offering - Cavefish");
+				case 6 :
+					return(30, leckish_fish_2_20860, "Members: Chambers of Xeric - Leckish fish");
+				case 7 :
+					return(30, giral_bat_2_20875, "Members: Chambers of Xeric - Giral bat");
+				case 8 :
+					return(33, tetra_25666, "Ritual Offering - Tetra");
+				case 9 :
+					return(45, brawk_fish_3_20862, "Members: Chambers of Xeric - Brawk fish");
+				case 10 :
+					return(45, phluxia_bat_3_20877, "Members: Chambers of Xeric - Phluxia bat");
+				case 11 :
+					return(46, catfish_25672, "Members: Ritual Offering - Catfish");
+				case 12 :
+					return(60, mycil_fish_4_20864, "Members: Chambers of Xeric - Mycil fish");
+				case 13 :
+					return(60, kryket_bat_4_20879, "Members: Chambers of Xeric - Kryket bat");
+				case 14 :
+					return(75, roqed_fish_5_20866, "Members: Chambers of Xeric - Roqed fish");
+				case 15 :
+					return(75, murng_bat_5_20881, "Members: MChambers of Xeric - urng bat");
+				case 16 :
+					return(90, kyren_fish_6_20868, "Members: Chambers of Xeric - Kyren fish");
+				case 17 :
+					return(90, psykk_bat_6_20883, "Members: Chambers of Xeric - Psykk bat");
+				case default :
+					return(-1, null, "");
 			}
 		}
 		return(-1, null, "");
@@ -2384,6 +2452,16 @@ switch_int ($int0) {
 		return(~skill_guide_data_firemaking($int1, $int2));
 	case 18 :
 		if ($int1 = 0) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, oak_tree_8175, "Woodcutting allows you to chop down trees to obtain logs. Most trees in the game can be chopped down with an axe.");
+				case 1 :
+					return(-1, logs_1511, "Increasing your Woodcutting level will give you a higher chance of successfully chopping a tree. You'll also gain access to more trees to cut down.");
+				case 2 :
+					return(-1, rune_axe_1359, "In addition to this, higher Woodcutting levels grant access to more powerful axes, which also increase the chance of chopping trees. Note that you can still use an axe in your inventory if you have the Woodcutting level for it, even if you don't have the Attack level to equip it.");
+			}
+		}
+		if ($int1 = 1) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, logs_1511, "Normal trees");
@@ -2425,7 +2503,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, bronze_axe_1351, "Bronze axe");
@@ -2475,7 +2553,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, forestry_kit_28136, "Forestry kit");
@@ -2493,7 +2571,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(12, paddle_7414, "Log canoe");
@@ -2516,6 +2594,16 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 12 :
 		if ($int1 = 0) {
+			switch_int ($int2) {
+				case 0 :
+					return(-1, rune_essence_1436, "Runecrafting is the skill that allows you to convert essences into runes, which you can use to cast spells.");
+				case 1 :
+					return(-1, air_talisman_1438, "To create runes, you'll first need some essence and a talisman of the rune you want to make. You can use the talisman to both locate and access the runic altar, which is where the runes are crafted.");
+				case 2 :
+					return(-1, fire_rune_554, "Higher Runecrafting levels will allow you to craft more kinds of runes. At higher levels, you'll also be able to make multiple runes per essence.");
+			}
+		}
+		if ($int1 = 1) {
 			switch_int ($int2) {
 				case 0 :
 					return(1, air_rune_556, "Air runes");
@@ -2565,7 +2653,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 1) {
+		if ($int1 = 2) {
 			switch_int ($int2) {
 				case 0 :
 					return(-1, obj_7620, "As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
@@ -2645,7 +2733,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 2) {
+		if ($int1 = 3) {
 			switch_int ($int2) {
 				case 0 :
 					return(-1, obj_7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
@@ -2663,7 +2751,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 3) {
+		if ($int1 = 4) {
 			switch_int ($int2) {
 				case 0 :
 					return(42, swampbark_boots_25395, "Swampbark boots and gauntlets");
@@ -2693,7 +2781,7 @@ switch_int ($int0) {
 					return(-1, null, "");
 			}
 		}
-		if ($int1 = 4 & $int2 = 0) {
+		if ($int1 = 5 & $int2 = 0) {
 			return(27, eye_amulet_26903, "Guardians of the Rift<br>(after Temple of the Eye)");
 		}
 		return(-1, null, "");

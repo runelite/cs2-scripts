@@ -10,18 +10,20 @@ switch_int ($int0) {
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return("Bows", 0);
+				return("Ranged", 0);
 			case 1 :
-				return("Thrown", 1);
+				return("Bows", 0);
 			case 2 :
-				return("Crossbows", 0);
+				return("Thrown", 1);
 			case 3 :
-				return("Armour", 0);
+				return("Crossbows", 0);
 			case 4 :
-				return("Miscellaneous", 1);
+				return("Armour", 0);
 			case 5 :
-				return("Shortcuts", 1);
+				return("Miscellaneous", 1);
 			case 6 :
+				return("Shortcuts", 1);
+			case 7 :
 				return("Salamanders", 1);
 			case default :
 				return("", -1);
@@ -46,14 +48,16 @@ switch_int ($int0) {
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
-				return("Potions", 1);
+				return("Herblore", 1);
 			case 1 :
-				return("Herbs", 1);
+				return("Potions", 1);
 			case 2 :
-				return("Barbarian Potions", 1);
+				return("Herbs", 1);
 			case 3 :
-				return("Raids", 1);
+				return("Barbarian Potions", 1);
 			case 4 :
+				return("Raids", 1);
+			case 5 :
 				return("Other", 1);
 			case default :
 				return("", -1);
@@ -63,22 +67,24 @@ switch_int ($int0) {
 	case 11 :
 		switch_int ($int1) {
 			case 0 :
-				return("Weaving", 1);
+				return("Crafting", 1);
 			case 1 :
-				return("Armour", 0);
+				return("Weaving", 1);
 			case 2 :
-				return("Spinning", 0);
+				return("Armour", 0);
 			case 3 :
-				return("Pottery", 0);
+				return("Spinning", 0);
 			case 4 :
-				return("Glass", 1);
+				return("Pottery", 0);
 			case 5 :
-				return("Jewellery", 0);
+				return("Glass", 1);
 			case 6 :
-				return("Weaponry", 1);
+				return("Jewellery", 0);
 			case 7 :
-				return("Crystal", 1);
+				return("Weaponry", 1);
 			case 8 :
+				return("Crystal", 1);
+			case 9 :
 				return("Other", 1);
 			case default :
 				return("", -1);
@@ -86,20 +92,22 @@ switch_int ($int0) {
 	case 19 :
 		switch_int ($int1) {
 			case 0 :
-				return("Arrows", 1);
+				return("Fletching", 1);
 			case 1 :
-				return("Bows", 1);
+				return("Arrows", 1);
 			case 2 :
-				return("Bolts", 1);
+				return("Bows", 1);
 			case 3 :
-				return("Darts", 1);
+				return("Bolts", 1);
 			case 4 :
-				return("Crossbows", 1);
+				return("Darts", 1);
 			case 5 :
-				return("Javelins", 1);
+				return("Crossbows", 1);
 			case 6 :
-				return("Shields", 1);
+				return("Javelins", 1);
 			case 7 :
+				return("Shields", 1);
+			case 8 :
 				return("Other", 1);
 			case default :
 				return("", -1);
@@ -107,12 +115,14 @@ switch_int ($int0) {
 	case 13 :
 		switch_int ($int1) {
 			case 0 :
-				return("Rocks", 0);
+				return("Mining", 0);
 			case 1 :
-				return("Equipment", 0);
+				return("Rocks", 0);
 			case 2 :
-				return("Areas", 0);
+				return("Equipment", 0);
 			case 3 :
+				return("Areas", 0);
+			case 4 :
 				return("Shooting Stars", 0);
 			case default :
 				return("", -1);
@@ -122,24 +132,26 @@ switch_int ($int0) {
 	case 15 :
 		switch_int ($int1) {
 			case 0 :
-				return("Small Net", 0);
+				return("Fishing", 0);
 			case 1 :
-				return("Big Net", 0);
+				return("Small Net", 0);
 			case 2 :
-				return("Rod", 0);
+				return("Big Net", 0);
 			case 3 :
-				return("Harpoon", 0);
+				return("Rod", 0);
 			case 4 :
-				return("Aerial", 1);
+				return("Harpoon", 0);
 			case 5 :
-				return("Cage", 0);
+				return("Aerial", 1);
 			case 6 :
-				return("Barbarian", 1);
+				return("Cage", 0);
 			case 7 :
-				return("Equipment", 0);
+				return("Barbarian", 1);
 			case 8 :
-				return("Raids", 1);
+				return("Equipment", 0);
 			case 9 :
+				return("Raids", 1);
+			case 10 :
 				return("Other", 1);
 			case default :
 				return("", -1);
@@ -147,33 +159,33 @@ switch_int ($int0) {
 	case 16 :
 		switch_int ($int1) {
 			case 0 :
-				return("Meats", 0);
+				return("Cooking", 0);
 			case 1 :
-				return("Bread", 0);
+				return("Meats", 0);
 			case 2 :
-				return("Pies", 0);
+				return("Bread", 0);
 			case 3 :
-				return("Stews", 0);
+				return("Pies", 0);
 			case 4 :
-				return("Pizzas", 0);
+				return("Stews", 0);
 			case 5 :
-				return("Cakes", 0);
+				return("Pizzas", 0);
 			case 6 :
-				return("Wine", 0);
+				return("Cakes", 0);
 			case 7 :
-				return("Hot Drinks", 1);
+				return("Wine", 0);
 			case 8 :
-				return("Brewing", 1);
+				return("Hot Drinks", 1);
 			case 9 :
-				return("Vegetable", 1);
+				return("Brewing", 1);
 			case 10 :
-				return("Dairy", 1);
+				return("Vegetable", 1);
 			case 11 :
-				return("Gnome", 1);
+				return("Dairy", 1);
 			case 12 :
-				return("Raids", 1);
+				return("Gnome", 1);
 			case 13 :
-				return("Offerings", 0);
+				return("Other", 0);
 			case default :
 				return("", -1);
 		}
@@ -182,12 +194,14 @@ switch_int ($int0) {
 	case 18 :
 		switch_int ($int1) {
 			case 0 :
-				return("Trees", 0);
+				return("Woodcutting", 0);
 			case 1 :
-				return("Axes", 0);
+				return("Trees", 0);
 			case 2 :
-				return("Forestry", 0);
+				return("Axes", 0);
 			case 3 :
+				return("Forestry", 0);
+			case 4 :
 				return("Other", 0);
 			case default :
 				return("", -1);
@@ -195,14 +209,16 @@ switch_int ($int0) {
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
-				return("Runes", 0);
+				return("Runecraft", 0);
 			case 1 :
-				return("Multiple Runes", 0);
+				return("Runes", 0);
 			case 2 :
-				return("Rune Pouches", 1);
+				return("Multiple Runes", 0);
 			case 3 :
-				return("Infusing", 1);
+				return("Rune Pouches", 1);
 			case 4 :
+				return("Infusing", 1);
+			case 5 :
 				return("Other", 1);
 			case default :
 				return("", -1);

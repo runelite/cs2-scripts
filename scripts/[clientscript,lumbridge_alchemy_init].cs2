@@ -10,6 +10,7 @@ while ($size7 < $size6) {
 	cc_setoutline(1);
 	cc_setgraphicshadow(0x333333);
 	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	$size7 = calc($size7 + 1);
 }
 ~lumbridge_alchemy_invtransmit($widget_483:7_4, $size6);

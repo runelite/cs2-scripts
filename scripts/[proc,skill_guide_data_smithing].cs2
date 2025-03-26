@@ -4,6 +4,17 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
+				return(-1, obj_5086, "Smithing lets you convert raw ores into useful metals, then use those metals to make your own weapons and armour.");
+			case 1 :
+				return(-1, iron_ore_440, "To smelt ores, simply take the mix of ores you need to any furnace and you'll be able to convert them into bars.");
+			case 2 :
+				return(-1, hammer_2347, "Once you have your bars, grab a hammer and take them to an anvil. Bigger items will need more bars to make.");
+			case 3 :
+				return(-1, rune_platebody_1127, "As you advance your Smithing level, you'll be able to make make more gear out of higher quality metals.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
 				return(1, bronze_bar_2349, "Bronze<br>1 tin ore & 1 copper ore");
 			case 1 :
 				return(8, blurite_bar_9467, "Members: Blurite<br>(after Knight's Sword quest)");
@@ -26,7 +37,7 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
-	case 1 :
+	case 2 :
 		switch_int ($int1) {
 			case 0 :
 				return(1, bronze_dagger_1205, "Bronze daggers<br>1 bar");
@@ -86,17 +97,6 @@ switch_int ($int0) {
 				return(16, bronze_plateskirt_1087, "Bronze plateskirts<br>3 bars");
 			case 28 :
 				return(18, bronze_platebody_1117, "Bronze platebodies<br>5 bars");
-			case default :
-				return(-1, null, "");
-		}
-	case 2 :
-		switch_int ($int1) {
-			case 0 :
-				return(-1, obj_7620, "After completing Knight's Sword, able to make:");
-			case 1 :
-				return(8, blurite_bolts_unf_9376, "Blurite crossbow bolts<br>1 bar makes 10");
-			case 2 :
-				return(13, blurite_limbs_9422, "Blurite crossbow limbs<br>1 bar");
 			case default :
 				return(-1, null, "");
 		}
@@ -516,30 +516,33 @@ switch_int ($int0) {
 	case 10 :
 		switch_int ($int1) {
 			case 0 :
-				return(11, black_felling_axe_28205, "Members: Convert black felling axes");
+				return(8, blurite_bolts_unf_9376, "Members: Blurite crossbow bolts<br>(after The Knight's Sword)");
 			case 1 :
-				return(14, barronite_deposit_25684, "Crush barronite deposits<br>(after Below Ice Mountain)");
+				return(11, black_felling_axe_28205, "Members: Convert black felling axes");
 			case 2 :
-				return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Woodcutting)");
+				return(13, blurite_limbs_9422, "Members: Blurite crossbow limbs<br>(after The Knight's Sword)");
 			case 3 :
-				return(35, bone_mace_28792, "Members: Bone mace");
+				return(14, barronite_deposit_25684, "Crush barronite deposits<br>(after Below Ice Mountain)");
 			case 4 :
-				return(60, dragon_sq_shield_1187, "Members: Dragon square shield");
+				return(35, secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Woodcutting)");
 			case 5 :
-				return(61, dragon_felling_axe_28217, "Members: Convert dragon felling axes");
+				return(35, bone_mace_28792, "Members: Bone mace");
 			case 6 :
-				return(61, 3rd_age_felling_axe_28226, "Members: Convert 3rd age felling axes");
+				return(60, dragon_sq_shield_1187, "Members: Dragon square shield");
 			case 7 :
-				return(66, ancient_wyvern_shield_21633, "Members: Ancient Wyvern shield");
+				return(61, dragon_felling_axe_28217, "Members: Convert dragon felling axes");
 			case 8 :
-				return(70, zombie_axe_28810, "Members: Zombie axes and helmets");
+				return(61, 3rd_age_felling_axe_28226, "Members: Convert 3rd age felling axes");
 			case 9 :
-				return(72, noxious_halberd_29796, "Members: Noxious Halberd");
+				return(66, ancient_wyvern_shield_21633, "Members: Ancient Wyvern shield");
 			case 10 :
+				return(70, zombie_axe_28810, "Members: Zombie axes and helmets");
+			case 11 :
+				return(72, noxious_halberd_29796, "Members: Noxious Halberd");
+			case 12 :
 				return(74, emberlight_29589, "Members: Emberlight");
 			case default :
 				return(-1, null, "");
 		}
-	case default :
-		return(-1, null, "");
 }
+return(-1, null, "");

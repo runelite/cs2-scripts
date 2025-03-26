@@ -2,14 +2,16 @@
 [proc,skill_guide_subsection_strength](int $int0)(string, int)
 switch_int ($int0) {
 	case 0 :
-		return("Weapons", 0);
+		return("Strength", 0);
 	case 1 :
-		return("Armour", 1);
+		return("Weapons", 0);
 	case 2 :
-		return("Shortcuts", 1);
+		return("Armour", 1);
 	case 3 :
-		return("Areas", 1);
+		return("Shortcuts", 1);
 	case 4 :
+		return("Areas", 1);
+	case 5 :
 		return("Barbarian", 1);
 	case default :
 		return("", -1);

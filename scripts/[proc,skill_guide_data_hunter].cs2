@@ -3,6 +3,16 @@
 if ($int0 = 0) {
 	switch_int ($int1) {
 		case 0 :
+			return(-1, footprint_9951, "Hunter lets you track and catch a wide variety of wildlife, granting access to various unique materials in the process.");
+		case 1 :
+			return(-1, bird_snare_10006, "Each animal you can hunt will typically be found in a specfic locale, and will require different gear. Make sure you come prepared!");
+		case 2 :
+			return(-1, chinchompa_9976, "As your Hunter level improves, not only will you be able to hunt a wider variety of creatures, but you'll also be able to maintain more traps simultaneously, and they will successfully trap creatures more often.");
+	}
+}
+if ($int0 = 1) {
+	switch_int ($int1) {
+		case 0 :
 			return(1, kebbit_9953, "Polar kebbits (snow)");
 		case 1 :
 			return(3, kebbit_9954, "Common kebbits (woodland)");
@@ -18,7 +28,7 @@ if ($int0 = 0) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 1) {
+if ($int0 = 2) {
 	switch_int ($int1) {
 		case 0 :
 			return(1, crimson_swift_9965, "Crimson swifts (jungle)");
@@ -34,7 +44,7 @@ if ($int0 = 1) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 2) {
+if ($int0 = 3) {
 	switch_int ($int1) {
 		case 0 :
 			return(15, butterfly_9970, "Ruby harvest butterflies (woodland)");
@@ -64,7 +74,7 @@ if ($int0 = 2) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 3) {
+if ($int0 = 4) {
 	switch_int ($int1) {
 		case 0 :
 			return(17, baby_impling_jar_11238, "Baby implings");
@@ -118,7 +128,7 @@ if ($int0 = 3) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 4) {
+if ($int0 = 5) {
 	switch_int ($int1) {
 		case 0 :
 			return(23, kebbit_9962, "Wild kebbits (woodland)<br>Preferred bait: Raw meat");
@@ -136,7 +146,7 @@ if ($int0 = 4) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 5) {
+if ($int0 = 6) {
 	switch_int ($int1) {
 		case 0 :
 			return(27, ferret_10092, "Ferrets (woodland)");
@@ -152,7 +162,7 @@ if ($int0 = 5) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 6) {
+if ($int0 = 7) {
 	switch_int ($int1) {
 		case 0 :
 			return(29, swamp_lizard_10149, "Swamp lizards (swamp)<br>Preferred bait: Guam tar");
@@ -168,7 +178,7 @@ if ($int0 = 6) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 7) {
+if ($int0 = 8) {
 	switch_int ($int1) {
 		case 0 :
 			return(31, larupia_hat_10045, "Spined larupias (jungle)");
@@ -184,7 +194,7 @@ if ($int0 = 7) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 8) {
+if ($int0 = 9) {
 	switch_int ($int1) {
 		case 0 :
 			return(35, bluegill_22826, "Bluegill<br>(With 43 fishing)");
@@ -204,7 +214,7 @@ if ($int0 = 8) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 9) {
+if ($int0 = 10) {
 	switch_int ($int1) {
 		case 0 :
 			return(1, footprint_9951, "Lay 1 trap at a time");
@@ -242,7 +252,7 @@ if ($int0 = 9) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 10) {
+if ($int0 = 11) {
 	switch_int ($int1) {
 		case 0 :
 			return(1, polar_camo_top_10065, "Polar kebbit fur clothing (snow)");
@@ -266,28 +276,6 @@ if ($int0 = 10) {
 			return(54, gloves_of_silence_10075, "Gloves of silence");
 		case 10 :
 			return(66, spottier_cape_10071, "Spottier capes");
-		case default :
-			return(-1, null, "");
-	}
-}
-if ($int0 = 11) {
-	switch_int ($int1) {
-		case 0 :
-			return(1, raw_guanic_bat_0_20870, "Guanic bat");
-		case 1 :
-			return(15, raw_prael_bat_1_20872, "Prael bat");
-		case 2 :
-			return(30, raw_giral_bat_2_20874, "Giral bat");
-		case 3 :
-			return(45, raw_phluxia_bat_3_20876, "Phluxia bat");
-		case 4 :
-			return(60, raw_kryket_bat_4_20878, "Kryket bat");
-		case 5 :
-			return(75, raw_murng_bat_5_20880, "Murng bat");
-		case 6 :
-			return(90, raw_psykk_bat_6_20882, "Psykk bat");
-		case 7 :
-			return(99, raw_psykk_bat_6_20882, "Barehanded bat-catching");
 		case default :
 			return(-1, null, "");
 	}
@@ -319,27 +307,43 @@ if ($int0 = 12) {
 if ($int0 = 13) {
 	switch_int ($int1) {
 		case 0 :
-			return(15, sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
+			return(1, raw_guanic_bat_0_20870, "Chambers of Xeric - Guanic bat");
 		case 1 :
-			return(20, raw_moss_lizard_29076, "Mossy Lizards traps (Neypotzli)");
+			return(15, sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
 		case 2 :
-			return(27, giant_eagle_9974, "Giant eagles(various)");
+			return(15, raw_prael_bat_1_20872, "Chambers of Xeric - Prael bat");
 		case 3 :
-			return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
+			return(20, raw_moss_lizard_29076, "Mossy Lizards traps (Neypotzli)");
 		case 4 :
-			return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
+			return(27, giant_eagle_9974, "Giant eagles(various)");
 		case 5 :
-			return(46, footprint_9951, "Access to the Hunter Guild & Basic Hunters' Rumours");
+			return(27, rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
 		case 6 :
-			return(50, hunters_sunlight_crossbow_28869, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+			return(30, raw_giral_bat_2_20874, "Chambers of Xeric - Giral bat");
 		case 7 :
-			return(57, footprint_9951, "Adept Hunters' Rumours");
+			return(44, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
 		case 8 :
-			return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+			return(45, raw_phluxia_bat_3_20876, "Chambers of Xeric - Phluxia bat");
 		case 9 :
-			return(72, footprint_9951, "Expert Hunters' Rumours");
+			return(46, footprint_9951, "Access to the Hunter Guild & Basic Hunters' Rumours");
 		case 10 :
+			return(50, hunters_sunlight_crossbow_28869, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+		case 11 :
+			return(57, footprint_9951, "Adept Hunters' Rumours");
+		case 12 :
+			return(60, raw_kryket_bat_4_20878, "Chambers of Xeric - Kryket bat");
+		case 13 :
+			return(71, imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+		case 14 :
+			return(72, footprint_9951, "Expert Hunters' Rumours");
+		case 15 :
+			return(75, raw_murng_bat_5_20880, "Chambers of Xeric - Murng bat");
+		case 16 :
+			return(90, raw_psykk_bat_6_20882, "Chambers of Xeric - Psykk bat");
+		case 17 :
 			return(91, footprint_9951, "Master Hunters' Rumours");
+		case 18 :
+			return(99, raw_psykk_bat_6_20882, "Chambers of Xeric - Barehanded bat-catching");
 		case default :
 			return(-1, null, "");
 	}

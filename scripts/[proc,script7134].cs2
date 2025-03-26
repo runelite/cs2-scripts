@@ -1,0 +1,10 @@
+// 7134
+[proc,script7134](int $int0)(int)
+switch_int ($int0) {
+	case 13226 :
+		if (stat_base(herblore) < 58) {
+			mes("You need at least level 58 Herblore to purchase this.");
+			return(0);
+		}
+}
+return(1);

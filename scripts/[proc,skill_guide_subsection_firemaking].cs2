@@ -2,12 +2,14 @@
 [proc,skill_guide_subsection_firemaking](int $int0)(string, int)
 switch_int ($int0) {
 	case 0 :
-		return("Burning", 0);
+		return("Firemaking", 0);
 	case 1 :
-		return("Barbarian", 1);
+		return("Burning", 0);
 	case 2 :
-		return("Equipment", 1);
+		return("Barbarian", 1);
 	case 3 :
+		return("Equipment", 1);
+	case 4 :
 		return("Miscellaneous", 1);
 	case default :
 		return("", -1);
