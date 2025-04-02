@@ -11,14 +11,13 @@ def_component $component10 = enum(component, component, ~toplevel_getcomponents,
 if (%varbit14161 > 0 & if_hassub($component10) = true) {
 	$obj1 = $obj1;
 } else if (map_members = true) {
-	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
-		$int3, $int4, $int5 = %varbit29, %varbit1622, %varbit1623;
+	if (inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_l_27509) > 0) {
+		$int3, $int4, $int5, $int6 = %varbit29, %varbit1622, %varbit1623, %varbit14285;
 		if ($int9 = 1) {
 			$int7, $int8 = %varbit15373, %varbit15374;
 		}
-	}
-	if (inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_l_27509) > 0) {
-		$int3, $int4, $int5, $int6 = %varbit29, %varbit1622, %varbit1623, %varbit14285;
+	} else if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
+		$int3, $int4, $int5 = %varbit29, %varbit1622, %varbit1623;
 		if ($int9 = 1) {
 			$int7, $int8 = %varbit15373, %varbit15374;
 		}

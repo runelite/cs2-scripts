@@ -1,0 +1,55 @@
+// 7871
+[proc,script7871](component $widget_190:1_0, int $comsubid1, component $widget_190:3_2, int $comsubid3, int $comsubid4, component $widget_190:4_5)
+def_int $int6 = max(0, min(calc(6 - 2), %var261));
+def_int $int7 = $int6;
+if (~league_relic_active(superior_sorcerer_4723) = 1) {
+	$int7 = calc($int7 + 2);
+}
+def_namedobj $namedobj8 = rune_pouch_12791;
+def_namedobj $namedobj9 = rune_pouch_l_24416;
+if ($int6 >= 4) {
+	if (cc_find($widget_190:1_0, $comsubid1) = ^true) {
+		cc_settext("Divine Rune Pouch");
+	}
+	$namedobj8, $namedobj9 = divine_rune_pouch_27281, divine_rune_pouch_l_27509;
+} else if (cc_find($widget_190:1_0, $comsubid1) = ^true) {
+	cc_settext("Rune Pouch");
+}
+def_int $int10 = 3;
+$int10 = calc($int10 + 5 * (6 - $int7));
+def_int $int11 = calc(2 + $int10 + $int7 * 36 + ($int7 - 1) * $int10 + $int10 + 2);
+$int11 = max(150, $int11);
+if_setsize($int11, 0, ^setsize_abs, ^setsize_minus, $widget_190:4_5);
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $x14 = 0;
+if (cc_find($widget_190:3_2, $comsubid3) = ^true & .cc_find($widget_190:3_2, $comsubid4) = ^true) {
+	$int12 = calc((if_getwidth($widget_190:3_2) - $int11) / 2);
+	$int13 = calc(min($int12, if_getheight($widget_190:3_2)) - 6);
+	cc_setsize($int13, $int13, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int13, $int13, ^setsize_abs, ^setsize_abs);
+	$x14 = max(0, calc(($int12 - $int13) / 2));
+	cc_setposition($x14, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	.cc_setposition($x14, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setobject_nonum($namedobj8, 1);
+	.cc_setobject_nonum($namedobj9, 1);
+}
+def_int $int15 = calc($int7 * 36 + ($int7 - 1) * $int10);
+def_int $int16 = calc(($int11 + 1 - $int15) / 2 + 1);
+def_int $int17 = calc(if_getheight($widget_190:4_5) - 22);
+def_int $y18 = calc(($int17 - 32) / 2 + 20);
+$int10 = calc($int10 + 36);
+def_int $int19 = 0;
+def_int $int20 = 1;
+while ($int20 <= 6) {
+	if (cc_find($widget_190:4_5, calc($int20 - 1)) = ^true & .cc_find($widget_190:4_5, calc(6 + $int20 - 1)) = ^true) {
+		if (~script7869($int20) = 1) {
+			cc_setposition(calc($int16 + $int19 * $int10), $y18, ^setpos_abs_left, ^setpos_abs_top);
+			$int19 = calc($int19 + 1);
+		} else {
+			cc_setposition(calc(0 - 36), calc(0 - 32), ^setpos_abs_left, ^setpos_abs_top);
+		}
+		.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int20 = calc($int20 + 1);
+}

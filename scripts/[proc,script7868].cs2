@@ -1,0 +1,10 @@
+// 7868
+[proc,script7868]()(int, int)
+if (map_members = true) {
+	if (inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_l_27509) > 0) {
+		return(4, ~league_relic_active(superior_sorcerer_4723));
+	} else if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
+		return(3, ~league_relic_active(superior_sorcerer_4723));
+	}
+}
+return(0, 0);

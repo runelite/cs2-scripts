@@ -1,5 +1,6 @@
 // 2620
 [proc,magic_spellbook_hasrunes](obj $obj0, obj $obj1, obj $obj2)(int)
+def_int $int3 = ~script7867($obj0);
 switch_obj ($obj0) {
 	case blood_blitz_4644, blood_barrage_4650 :
 		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
@@ -54,24 +55,24 @@ switch_obj ($obj0) {
 			return(1);
 		}
 }
-def_obj $obj3 = oc_param($obj0, magic_runetype_1);
-if ($obj3 ! null & ~magic_runecount($obj3, $obj1, $obj2) < oc_param($obj0, magic_runecount_1)) {
+def_obj $obj4 = oc_param($obj0, magic_runetype_1);
+if ($obj4 ! null & ~magic_runecount($obj4, $obj1, $obj2) < oc_param($obj0, magic_runecount_1) & ($int3 = 0 | $int3 = 1 & enum(obj, int, enum_55, $obj4) = 0)) {
 	return(0);
 }
-$obj3 = oc_param($obj0, magic_runetype_2);
-if ($obj3 ! null & ~magic_runecount($obj3, $obj1, $obj2) < oc_param($obj0, magic_runecount_2)) {
+$obj4 = oc_param($obj0, magic_runetype_2);
+if ($obj4 ! null & ~magic_runecount($obj4, $obj1, $obj2) < oc_param($obj0, magic_runecount_2) & ($int3 = 0 | $int3 = 1 & enum(obj, int, enum_55, $obj4) = 0)) {
 	return(0);
 }
-$obj3 = oc_param($obj0, magic_runetype_3);
-if ($obj3 ! null & ~magic_runecount($obj3, $obj1, $obj2) < oc_param($obj0, magic_runecount_3)) {
+$obj4 = oc_param($obj0, magic_runetype_3);
+if ($obj4 ! null & ~magic_runecount($obj4, $obj1, $obj2) < oc_param($obj0, magic_runecount_3) & ($int3 = 0 | $int3 = 1 & enum(obj, int, enum_55, $obj4) = 0)) {
 	return(0);
 }
-$obj3 = oc_param($obj0, magic_runetype_4);
-if ($obj3 ! null & ~magic_runecount($obj3, $obj1, $obj2) < oc_param($obj0, magic_runecount_4)) {
+$obj4 = oc_param($obj0, magic_runetype_4);
+if ($obj4 ! null & ~magic_runecount($obj4, $obj1, $obj2) < oc_param($obj0, magic_runecount_4) & ($int3 = 0 | $int3 = 1 & enum(obj, int, enum_55, $obj4) = 0)) {
 	return(0);
 }
-def_stat $stat4 = oc_param($obj0, param_1187);
-if ($stat4 ! null & stat($stat4) < oc_param($obj0, param_1188)) {
+def_stat $stat5 = oc_param($obj0, param_1187);
+if ($stat5 ! null & stat($stat5) < oc_param($obj0, param_1188)) {
 	return(0);
 }
 return(1);

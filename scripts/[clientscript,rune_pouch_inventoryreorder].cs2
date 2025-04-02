@@ -1,7 +1,6 @@
 // 672
-[clientscript,rune_pouch_inventoryreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $trans4, int $trans5)
-def_int $size6 = inv_size(inv);
-if ($comsubid2 < 0 | $comsubid2 >= $size6) {
+[clientscript,rune_pouch_inventoryreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $trans4, int $trans5, int $comsubid6)
+if ($comsubid2 < 0 | $comsubid2 >= $comsubid6) {
 	return;
 }
 if ($drop1 ! $drop0) {
@@ -11,7 +10,7 @@ if ($drop1 ! $drop0) {
 	}
 	return;
 }
-if ($comsubid2 = $dropsubid3 | $dropsubid3 < 0 | $dropsubid3 >= $size6) {
+if ($comsubid2 = $dropsubid3 | $dropsubid3 < 0 | $dropsubid3 >= $comsubid6) {
 	return;
 }
 def_obj $obj7 = inv_getobj(inv, $comsubid2);
@@ -20,8 +19,8 @@ if ($obj7 = null) {
 }
 def_obj $obj8 = inv_getobj(inv, $dropsubid3);
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	~rune_pouch_drawinventory_slot($obj7, inv_getnum(inv, $comsubid2));
+	~rune_pouch_drawinventory_slot($obj7, inv_getnum(inv, $comsubid2), $comsubid6);
 }
 if (cc_find($drop0, $comsubid2) = ^true) {
-	~rune_pouch_drawinventory_slot($obj8, inv_getnum(inv, $dropsubid3));
+	~rune_pouch_drawinventory_slot($obj8, inv_getnum(inv, $dropsubid3), $comsubid6);
 }

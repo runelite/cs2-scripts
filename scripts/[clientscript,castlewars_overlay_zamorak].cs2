@@ -1,5 +1,5 @@
 // 888
-[clientscript,castlewars_overlay_zamorak](component $widget_59:5_0, component $widget_59:7_1, component $widget_59:9_2, component $widget_59:11_3, component $widget_59:13_4, component $widget_59:20_5, component $widget_59:22_6, component $widget_59:25_7, component $widget_59:24_8, component $widget_59:26_9)
+[clientscript,castlewars_overlay_zamorak](component $widget_59:5_0, component $widget_59:7_1, component $widget_59:9_2, component $widget_59:11_3, component $widget_59:13_4, component $widget_59:15_5, component $widget_59:22_6, component $widget_59:24_7, component $widget_59:27_8, component $widget_59:26_9, component $widget_59:28_10)
 if (%varbit146 > 0) {
 	if_settext("Health <tostring(%varbit146)>%", $widget_59:5_0);
 } else {
@@ -25,24 +25,25 @@ if (%varbit150 = 1) {
 } else {
 	if_settext("Operational", $widget_59:13_4);
 }
+if_settext("<tostring(%varbit16198)>/10 Inside<br><tostring(%varbit16199)>/7 Outside", $widget_59:15_5);
 if (%varbit143 = 0) {
-	if_settext("Safe", $widget_59:20_5);
-} else if (%varbit143 = 1) {
-	if_settext("<col=ff0000>Taken</col>", $widget_59:20_5);
-} else if (%varbit143 = 2) {
-	if_settext("<col=ffff00>Dropped</col>", $widget_59:20_5);
-} else {
-	if_settext("", $widget_59:20_5);
-}
-if (%varbit153 = 0) {
 	if_settext("Safe", $widget_59:22_6);
-} else if (%varbit153 = 1) {
+} else if (%varbit143 = 1) {
 	if_settext("<col=ff0000>Taken</col>", $widget_59:22_6);
-} else if (%varbit153 = 2) {
+} else if (%varbit143 = 2) {
 	if_settext("<col=ffff00>Dropped</col>", $widget_59:22_6);
 } else {
 	if_settext("", $widget_59:22_6);
 }
-if_settext("<tostring(%varbit145)> = Saradomin", $widget_59:25_7);
-if_settext("Zamorak = <tostring(%varbit155)>", $widget_59:24_8);
-if_settext("<tostring(%var380)> Min", $widget_59:26_9);
+if (%varbit153 = 0) {
+	if_settext("Safe", $widget_59:24_7);
+} else if (%varbit153 = 1) {
+	if_settext("<col=ff0000>Taken</col>", $widget_59:24_7);
+} else if (%varbit153 = 2) {
+	if_settext("<col=ffff00>Dropped</col>", $widget_59:24_7);
+} else {
+	if_settext("", $widget_59:24_7);
+}
+if_settext("<tostring(%varbit145)> = Saradomin", $widget_59:27_8);
+if_settext("Zamorak = <tostring(%varbit155)>", $widget_59:26_9);
+if_settext("<tostring(%var380)> Min", $widget_59:28_10);
