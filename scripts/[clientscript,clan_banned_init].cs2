@@ -1,24 +1,24 @@
 // 4269
-[clientscript,clan_banned_init](component $widget_689:1_0, component $widget_689:2_1, component $widget_689:6_2, component $widget_689:8_3, component $widget_689:9_4, component $widget_689:13_5, component $widget_689:14_6, component $widget_689:12_7, component $widget_689:11_8)
-~scrollbar_vertical($widget_689:8_3, $widget_689:6_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~stonebutton_init("<col=0dc10d>Add</col>", $widget_689:14_6, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_689:14_6);
-~stonebutton_init("<col=ff0000>Back</col>", $widget_689:11_8, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_689:11_8);
-def_int $comsubid9 = ~steelborder($widget_689:2_1, "", 0);
-def_int $width10 = calc(16384 / 3);
+[clientscript,clan_banned_init](component $com_clans_banned_universe0, component $com_clans_banned_frame1, component $com_clans_banned_list_contents2, component $com_clans_banned_list_scrollbar3, component $com_clans_banned_list_blocker4, component $com_clans_banned_search5, component $com_clans_banned_add6, component $com_clans_banned_hint7, component $com_clans_banned_exit8)
+~scrollbar_vertical($com_clans_banned_list_scrollbar3, $com_clans_banned_list_contents2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~stonebutton_init("<col=0dc10d>Add</col>", $com_clans_banned_add6, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_clans_banned_add6);
+~stonebutton_init("<col=ff0000>Back</col>", $com_clans_banned_exit8, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_clans_banned_exit8);
+def_int $int9 = ~steelborder($com_clans_banned_frame1, "", 0);
+def_int $int10 = calc(16384 / 3);
 def_int $int11 = 25;
 if (~on_mobile = true) {
 	$int11 = scale(25, 20, $int11);
 }
-cc_deleteall($widget_689:6_2);
+cc_deleteall($com_clans_banned_list_contents2);
 def_int $int12 = 0;
 def_int $int13 = 0;
 while ($int13 < 500) {
-	cc_create($widget_689:6_2, ^iftype_rectangle, $int12);
+	cc_create($com_clans_banned_list_contents2, ^iftype_rectangle, $int12, false);
 	$int12 = calc($int12 + 1);
 	cc_sethide(true);
-	cc_setsize($width10, $int11, ^setsize_proportion, ^setsize_abs);
+	cc_setsize($int10, $int11, ^setsize_proportion, ^setsize_abs);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_setop(1, "Unban");
@@ -26,17 +26,17 @@ while ($int13 < 500) {
 }
 $int13 = 0;
 while ($int13 < 500) {
-	cc_create($widget_689:6_2, ^iftype_text, $int12);
+	cc_create($com_clans_banned_list_contents2, ^iftype_text, $int12, false);
 	$int12 = calc($int12 + 1);
 	cc_sethide(true);
-	cc_setsize($width10, $int11, ^setsize_proportion, ^setsize_abs);
+	cc_setsize($int10, $int11, ^setsize_proportion, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	$int13 = calc($int13 + 1);
 }
-cc_create($widget_689:6_2, ^iftype_text, $int12);
+cc_create($com_clans_banned_list_contents2, ^iftype_text, $int12, false);
 $int12 = calc($int12 + 1);
 cc_sethide(true);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -44,10 +44,10 @@ cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-if_sethide(true, $widget_689:9_4);
-cc_deleteall($widget_689:9_4);
-cc_create($widget_689:9_4, ^iftype_rectangle, 0);
-.cc_create($widget_689:9_4, ^iftype_text, 1);
+if_sethide(true, $com_clans_banned_list_blocker4);
+cc_deleteall($com_clans_banned_list_blocker4);
+cc_create($com_clans_banned_list_blocker4, ^iftype_rectangle, 0, false);
+.cc_create($com_clans_banned_list_blocker4, ^iftype_text, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setsize(0, calc(16384 / 2), ^setsize_minus, ^setsize_proportion);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -60,9 +60,9 @@ cc_settrans(255);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settext("");
-def_int $comsubid14 = cc_getid;
-def_int $comsubid15 = .cc_getid;
-if_setontimer("clan_banned_blocker($widget_689:9_4, $comsubid14, $comsubid15)", $widget_689:9_4);
+def_int $int14 = cc_getid;
+def_int $int15 = .cc_getid;
+if_setontimer("clan_banned_blocker($com_clans_banned_list_blocker4, $int14, $int15)", $com_clans_banned_list_blocker4);
 if (~clan_members_searching = 1) {
 	~meslayer_close(true, true, true);
 } else if (%varcint5 <= 0) {
@@ -70,65 +70,65 @@ if (~clan_members_searching = 1) {
 }
 if_setonop("clan_banned_search_toggle(
 	0 = event_op, 
-	1 = $widget_689:1_0, 
-	2 = $widget_689:2_1, 
-	3 = $comsubid9, 
-	4 = $widget_689:13_5, 
-	5 = $widget_689:6_2, 
-	6 = $widget_689:8_3, 
-	7 = $widget_689:9_4, 
-	8 = $comsubid14, 
-	9 = $comsubid15, 
-	10 = $widget_689:12_7, 
+	1 = $com_clans_banned_universe0, 
+	2 = $com_clans_banned_frame1, 
+	3 = $int9, 
+	4 = $com_clans_banned_search5, 
+	5 = $com_clans_banned_list_contents2, 
+	6 = $com_clans_banned_list_scrollbar3, 
+	7 = $com_clans_banned_list_blocker4, 
+	8 = $int14, 
+	9 = $int15, 
+	10 = $com_clans_banned_hint7, 
 	11 = $int11
-)", $widget_689:13_5);
-if_setop(1, "Search", $widget_689:13_5);
+)", $com_clans_banned_search5);
+if_setop(1, "Search", $com_clans_banned_search5);
 ~clan_banned_search_setbutton(
-	0 = $widget_689:1_0, 
-	1 = $widget_689:2_1, 
-	2 = $comsubid9, 
-	3 = $widget_689:13_5, 
-	4 = $widget_689:6_2, 
-	5 = $widget_689:8_3, 
-	6 = $widget_689:9_4, 
-	7 = $comsubid14, 
-	8 = $comsubid15, 
-	9 = $widget_689:12_7, 
+	0 = $com_clans_banned_universe0, 
+	1 = $com_clans_banned_frame1, 
+	2 = $int9, 
+	3 = $com_clans_banned_search5, 
+	4 = $com_clans_banned_list_contents2, 
+	5 = $com_clans_banned_list_scrollbar3, 
+	6 = $com_clans_banned_list_blocker4, 
+	7 = $int14, 
+	8 = $int15, 
+	9 = $com_clans_banned_hint7, 
 	10 = $int11
 );
 ~clan_banned_draw(
-	0 = $widget_689:1_0, 
-	1 = $widget_689:2_1, 
-	2 = $comsubid9, 
-	3 = $widget_689:6_2, 
-	4 = $widget_689:8_3, 
-	5 = $widget_689:9_4, 
-	6 = $comsubid14, 
-	7 = $comsubid15, 
-	8 = $widget_689:12_7, 
+	0 = $com_clans_banned_universe0, 
+	1 = $com_clans_banned_frame1, 
+	2 = $int9, 
+	3 = $com_clans_banned_list_contents2, 
+	4 = $com_clans_banned_list_scrollbar3, 
+	5 = $com_clans_banned_list_blocker4, 
+	6 = $int14, 
+	7 = $int15, 
+	8 = $com_clans_banned_hint7, 
 	9 = $int11
 );
 if_setonvartransmit("clan_banned_draw(
-	0 = $widget_689:1_0, 
-	1 = $widget_689:2_1, 
-	2 = $comsubid9, 
-	3 = $widget_689:6_2, 
-	4 = $widget_689:8_3, 
-	5 = $widget_689:9_4, 
-	6 = $comsubid14, 
-	7 = $comsubid15, 
-	8 = $widget_689:12_7, 
+	0 = $com_clans_banned_universe0, 
+	1 = $com_clans_banned_frame1, 
+	2 = $int9, 
+	3 = $com_clans_banned_list_contents2, 
+	4 = $com_clans_banned_list_scrollbar3, 
+	5 = $com_clans_banned_list_blocker4, 
+	6 = $int14, 
+	7 = $int15, 
+	8 = $com_clans_banned_hint7, 
 	9 = $int11
-){var3019, var3026}", $widget_689:1_0);
+){var3019, var3026}", $com_clans_banned_universe0);
 if_setonclansettingstransmit("clan_banned_draw(
-	0 = $widget_689:1_0, 
-	1 = $widget_689:2_1, 
-	2 = $comsubid9, 
-	3 = $widget_689:6_2, 
-	4 = $widget_689:8_3, 
-	5 = $widget_689:9_4, 
-	6 = $comsubid14, 
-	7 = $comsubid15, 
-	8 = $widget_689:12_7, 
+	0 = $com_clans_banned_universe0, 
+	1 = $com_clans_banned_frame1, 
+	2 = $int9, 
+	3 = $com_clans_banned_list_contents2, 
+	4 = $com_clans_banned_list_scrollbar3, 
+	5 = $com_clans_banned_list_blocker4, 
+	6 = $int14, 
+	7 = $int15, 
+	8 = $com_clans_banned_hint7, 
 	9 = $int11
-)", $widget_689:1_0);
+)", $com_clans_banned_universe0);

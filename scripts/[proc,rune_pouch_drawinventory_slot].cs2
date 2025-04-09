@@ -1,40 +1,51 @@
 // 671
-[proc,rune_pouch_drawinventory_slot](obj $obj0, int $num1, int $comsubid2)
+[proc,rune_pouch_drawinventory_slot](obj $obj0, int $int1, int $comsubid2)
 cc_clearops;
 cc_setontimer(null);
 if ($obj0 ! null) {
 	if (enum(obj, int, enum_55, $obj0) ! 0) {
 		cc_settrans(0);
-		cc_setobject($obj0, $num1);
+		cc_setobject($obj0, $int1);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 		switch_int (%varbit16201) {
 			case default :
 				cc_setop(1, "Store-1");
 				cc_setop(3, "Store-5");
-				cc_setop(4, "Store-X");
-				cc_setop(5, "Store-All");
+				if (%varbit16206 > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				}
+				cc_setop(6, "Store-All");
 			case 1 :
 				cc_setop(1, "Store-5");
 				cc_setop(2, "Store-1");
-				cc_setop(4, "Store-X");
-				cc_setop(5, "Store-All");
+				if (%varbit16206 > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				}
+				cc_setop(6, "Store-All");
 			case 3 :
-				cc_setop(1, "Store-X");
+				if (%varbit16206 > 0) {
+					cc_setop(1, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				} else {
+					cc_setop(1, "Store-X");
+				}
 				cc_setop(2, "Store-1");
 				cc_setop(3, "Store-5");
-				cc_setop(5, "Store-All");
+				cc_setop(6, "Store-All");
 			case 2 :
 				cc_setop(1, "Store-All");
 				cc_setop(2, "Store-1");
 				cc_setop(3, "Store-5");
-				cc_setop(4, "Store-X");
+				if (%varbit16206 > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				}
 		}
+		cc_setop(5, "Store-X");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_com2, event_comsubid, event_comsubid2, 200, 0, $comsubid2)");
 	} else {
 		cc_settrans(150);
-		cc_setobject($obj0, $num1);
+		cc_setobject($obj0, $int1);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 		cc_setop(1, "Store");
 		cc_setop(10, "Examine");
@@ -43,7 +54,7 @@ if ($obj0 ! null) {
 	}
 } else {
 	cc_settrans(0);
-	cc_setobject(obj_6512, 1);
+	cc_setobject(blankobject_6512, 1);
 	cc_setonop(null);
 	cc_setondragcomplete(null);
 }

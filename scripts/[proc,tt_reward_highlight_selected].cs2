@@ -1,17 +1,17 @@
 // 7
-[proc,tt_reward_highlight_selected](component $widget_274:6_0, component $widget_274:5_1, component $widget_274:9_2, component $widget_274:8_3, component $widget_274:10_4)
+[proc,tt_reward_highlight_selected](component $com_trek_rewards_icons0, component $com_trek_rewards_text1, component $com_trek_rewards_desc2, component $com_trek_rewards_title3, component $com_trek_rewards_buybutton_container4)
 def_int $comsubid5 = 0;
-if_sethide(true, $widget_274:8_3);
-if_sethide(true, $widget_274:10_4);
-while (cc_find($widget_274:6_0, $comsubid5) = ^true) {
+if_sethide(true, $com_trek_rewards_title3);
+if_sethide(true, $com_trek_rewards_buybutton_container4);
+while (cc_find($com_trek_rewards_icons0, $comsubid5) = ^true) {
 	if ($comsubid5 = %varbit2459) {
 		cc_setoutline(2);
-		if_settext(enum(int, string, enum_1383, %varbit2459), $widget_274:8_3);
-		if_sethide(false, $widget_274:8_3);
-		if_sethide(false, $widget_274:10_4);
+		if_settext(enum(int, string, enum_1383, %varbit2459), $com_trek_rewards_title3);
+		if_sethide(false, $com_trek_rewards_title3);
+		if_sethide(false, $com_trek_rewards_buybutton_container4);
 	} else {
 		cc_setoutline(0);
 	}
-	if_settext(~tt_reward_set_desc, $widget_274:9_2);
+	if_settext(~tt_reward_set_desc, $com_trek_rewards_desc2);
 	$comsubid5 = calc($comsubid5 + 1);
 }

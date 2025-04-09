@@ -1,5 +1,5 @@
 // 7202
-[proc,script7202](int $length0)(string)
+[proc,script7202](int $int0)(string)
 def_string $string0 = "";
 def_int $int1 = stringvector_size(stringvector_2);
 if ($int1 < 1) {
@@ -14,7 +14,7 @@ while ($int2 < $int1) {
 	}
 	$int2 = calc($int2 + 1);
 }
-if ($length0 > 0) {
-	$string0 = ~script7204($string0, $length0);
+if ($int0 > 0) {
+	$string0 = ~script7204($string0, $int0);
 }
 return($string0);

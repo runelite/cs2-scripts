@@ -1,15 +1,15 @@
 // 404
-[clientscript,raids_storage_private_init](component $widget_271:0_0, component $widget_271:6_1, component $widget_271:7_2, component $widget_271:2_3, component $widget_271:9_4, component $widget_271:10_5, component $widget_271:11_6, component $widget_271:5_7)
-~raids_storage_drawbutton("Withdraw all", $widget_271:9_4, p12_full);
+[clientscript,raids_storage_private_init](component $com_raids_storage_private_universe0, component $com_raids_storage_private_items1, component $com_raids_storage_private_scrollbar2, component $com_raids_storage_private_occupiedslots3, component $com_raids_storage_private_withdraw4, component $com_raids_storage_private_bank5, component $com_raids_storage_private_prompt6, component $com_raids_storage_private_shared7)
+~raids_storage_drawbutton("Withdraw all", $com_raids_storage_private_withdraw4, p12_full);
 def_int $comsubid8 = -1;
 if (%varbit5432 = 1) {
-	$comsubid8 = ~raids_storage_drawbutton("Deposit all", $widget_271:10_5, p12_full);
+	$comsubid8 = ~raids_storage_drawbutton("Deposit all", $com_raids_storage_private_bank5, p12_full);
 } else {
-	$comsubid8 = ~raids_storage_drawbutton("Bank all", $widget_271:10_5, p12_full);
+	$comsubid8 = ~raids_storage_drawbutton("Bank all", $com_raids_storage_private_bank5, p12_full);
 }
-~raids_storage_drawbutton("Shared", $widget_271:5_7, p11_full);
-~raids_storage_private_prompt($widget_271:9_4, $widget_271:10_5, $widget_271:11_6, $comsubid8);
-if_setonvartransmit("raids_storage_private_prompt($widget_271:9_4, $widget_271:10_5, $widget_271:11_6, $comsubid8){var1431}", $widget_271:11_6);
-~scrollbar_vertical($widget_271:7_2, $widget_271:6_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~raids_storage_private_items($widget_271:6_1, $widget_271:7_2, $widget_271:2_3);
-if_setoninvtransmit("raids_storage_private_items($widget_271:6_1, $widget_271:7_2, $widget_271:2_3){inv_583}", $widget_271:0_0);
+~raids_storage_drawbutton("Shared", $com_raids_storage_private_shared7, p11_full);
+~raids_storage_private_prompt($com_raids_storage_private_withdraw4, $com_raids_storage_private_bank5, $com_raids_storage_private_prompt6, $comsubid8);
+if_setonvartransmit("raids_storage_private_prompt($com_raids_storage_private_withdraw4, $com_raids_storage_private_bank5, $com_raids_storage_private_prompt6, $comsubid8){var1431}", $com_raids_storage_private_prompt6);
+~scrollbar_vertical($com_raids_storage_private_scrollbar2, $com_raids_storage_private_items1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~raids_storage_private_items($com_raids_storage_private_items1, $com_raids_storage_private_scrollbar2, $com_raids_storage_private_occupiedslots3);
+if_setoninvtransmit("raids_storage_private_items($com_raids_storage_private_items1, $com_raids_storage_private_scrollbar2, $com_raids_storage_private_occupiedslots3){raids_privatestorage}", $com_raids_storage_private_universe0);

@@ -1,5 +1,5 @@
 // 1295
-[clientscript,br_loadout_menudragging](component $component0, int $comsubid1, obj $obj2, string $text0, component $component3, int $comsubid4, int $comsubid5, int $int6, int $mousex7, int $mousey8)
+[clientscript,br_loadout_menudragging](component $component0, int $comsubid1, obj $obj2, string $string0, component $component3, int $comsubid4, int $comsubid5, int $int6, int $mousex7, int $mousey8)
 if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setontimer("script1296(calc(clientclock + 1), $component0, $comsubid1, $component3, $comsubid4, $comsubid5)");
 	if (.cc_find($component3, $comsubid4) = ^true) {
@@ -13,7 +13,7 @@ if (cc_find($component0, $comsubid1) = ^true) {
 	}
 	if (.cc_find($component3, $comsubid5) = ^true) {
 		.cc_setsize(calc(cc_getwidth - (8 + 36)), cc_getheight, ^setsize_abs, ^setsize_abs);
-		.cc_settext($text0);
+		.cc_settext($string0);
 		.cc_setposition(calc($mousex7 + 3 + 36 + 2), $mousey8, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_sethide(false);
 	}

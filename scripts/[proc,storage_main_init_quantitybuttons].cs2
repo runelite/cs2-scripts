@@ -1,14 +1,14 @@
 // 1647
-[proc,storage_main_init_quantitybuttons](enum $enum0, component $widget_661:7_1, component $widget_661:8_2, component $widget_661:9_3, component $component4, component $widget_661:11_5, component $widget_661:10_6)
-cc_deleteall($widget_661:7_1);
+[proc,storage_main_init_quantitybuttons](enum $enum0, component $com_ii_elnock_storage_quantity_selection1, component $com_ii_elnock_storage_quantity_12, component $com_ii_elnock_storage_quantity_53, component $component4, component $com_ii_elnock_storage_quantity_all5, component $com_ii_elnock_storage_quantity_x6)
+cc_deleteall($com_ii_elnock_storage_quantity_selection1);
 def_int $int7 = 0;
-cc_create($widget_661:7_1, ^iftype_graphic, $int7);
+cc_create($com_ii_elnock_storage_quantity_selection1, ^iftype_graphic, $int7, false);
 cc_setgraphic("steelborder2,0");
 cc_settiling(true);
 cc_setposition(0, -10, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 $int7 = calc($int7 + 1);
-cc_create($widget_661:7_1, ^iftype_text, $int7);
+cc_create($com_ii_elnock_storage_quantity_selection1, ^iftype_text, $int7, false);
 cc_setposition(20, 5, ^setpos_proportion_left, ^setpos_abs_centre);
 cc_setsize(140, 36, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0xff981f);
@@ -17,4 +17,4 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Withdrawal / Storage<br>Quantity");
 $int7 = calc($int7 + 1);
-~script1648($enum0, $widget_661:8_2, $widget_661:9_3, $component4, $widget_661:11_5, $widget_661:10_6);
+~script1648($enum0, $com_ii_elnock_storage_quantity_12, $com_ii_elnock_storage_quantity_53, $component4, $com_ii_elnock_storage_quantity_all5, $com_ii_elnock_storage_quantity_x6);

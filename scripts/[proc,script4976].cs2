@@ -1,27 +1,27 @@
 // 4976
-[proc,script4976](component $widget_592:11_0, component $widget_592:6_1, obj $obj2, int $num3)
+[proc,script4976](component $com_dizanas_quiver_ammo_obj0, component $com_dizanas_quiver_ammo_slot1, obj $obj2, int $int3)
 def_string $string0 = "";
 if ($obj2 ! null) {
 	$string0 = oc_name($obj2);
 }
-if ($num3 > 0 & $obj2 ! null) {
-	cc_create($widget_592:11_0, ^iftype_graphic, 0);
+if ($int3 > 0 & $obj2 ! null) {
+	cc_create($com_dizanas_quiver_ammo_obj0, ^iftype_graphic, 0, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setoutline(1);
-	cc_setobject($obj2, $num3);
-	if_setop(1, "Remove <col=ff981f><$string0>", $widget_592:11_0);
-	if_setonop("script4977($widget_592:11_0, 100, 0, false)", $widget_592:11_0);
+	cc_setobject($obj2, $int3);
+	if_setop(1, "Remove <col=ff981f><$string0>", $com_dizanas_quiver_ammo_obj0);
+	if_setonop("script4977($com_dizanas_quiver_ammo_obj0, 100, 0, false)", $com_dizanas_quiver_ammo_obj0);
 } else {
-	cc_create($widget_592:11_0, ^iftype_graphic, 0);
+	cc_create($com_dizanas_quiver_ammo_obj0, ^iftype_graphic, 0, false);
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic(enum(int, graphic, enum_904, 13));
-	if_setop(1, "", $widget_592:11_0);
-	if_setonop(null, $widget_592:11_0);
+	if_setop(1, "", $com_dizanas_quiver_ammo_obj0);
+	if_setonop(null, $com_dizanas_quiver_ammo_obj0);
 }
 return;
-cc_create($widget_592:6_1, ^iftype_text, 0);
+cc_create($com_dizanas_quiver_ammo_slot1, ^iftype_text, 0, false);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);

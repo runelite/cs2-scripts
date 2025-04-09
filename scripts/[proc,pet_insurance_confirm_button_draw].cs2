@@ -29,10 +29,10 @@ if ($int2 = 1 & $int0 = 0) {
 } else {
 	$int5 = ~v2_stone_button_in_filled($component1);
 }
-def_string $text0 = "Confirm";
+def_string $string0 = "Confirm";
 def_string $string1 = "";
 def_string $string2 = "";
-cc_create($component1, ^iftype_text, $int5);
+cc_create($component1, ^iftype_text, $int5, false);
 $int5 = calc($int5 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -46,14 +46,14 @@ if ($int2 = 1) {
 		} else {
 			$string2 = "<tostring(%varbit13979)>mil";
 		}
-		$text0 = "Confirm (<$string2>)";
+		$string0 = "Confirm (<$string2>)";
 		$string1 = "<tostring(%varbit13979)> Reclaims";
 	} else if ($int4 = 1) {
-		$text0 = "Confirm Reclaim";
+		$string0 = "Confirm Reclaim";
 		$string1 = oc_name($namedobj6);
 	}
 	cc_setposition(0, -8, ^setpos_abs_centre, ^setpos_abs_centre);
-	.cc_create($component1, ^iftype_text, $int5);
+	.cc_create($component1, ^iftype_text, $int5, false);
 	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	.cc_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_centre);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -78,4 +78,4 @@ if ($int2 = 1) {
 } else {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 }
-cc_settext($text0);
+cc_settext($string0);

@@ -1,14 +1,14 @@
 // 3253
-[clientscript,magic_training_init](component $widget_197:0_0, component $widget_197:11_1, component $widget_197:9_2, component $widget_197:10_3, component $widget_197:3_4, component $widget_197:2_5)
-cc_deleteall($widget_197:11_1);
-cc_deleteall($widget_197:9_2);
-cc_deleteall($widget_197:10_3);
-cc_deleteall($widget_197:3_4);
-def_int $height6 = ~magic_training_rewards($widget_197:11_1, $widget_197:10_3, $widget_197:9_2);
-if_setscrollsize(0, $height6, $widget_197:11_1);
-~scrollbar_vertical($widget_197:3_4, $widget_197:11_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~magic_training_costs_background($widget_197:10_3);
-~magic_training_confirm($widget_197:9_2, %varbit10059);
-if_setonvartransmit("magic_training_costs_transmit($widget_197:10_3, $widget_197:11_1){var2224, var210, var261, var262, var263, var264}", $widget_197:0_0);
-if_setoninvtransmit("magic_training_costs_transmit($widget_197:10_3, $widget_197:11_1){inv}", $widget_197:2_5);
-if_setonvartransmit("magic_training_confirm_transmit($widget_197:9_2){var2224, var210}", $widget_197:2_5);
+[clientscript,magic_training_init](component $com_magictraining_shop_universe0, component $com_magictraining_shop_rewards1, component $com_magictraining_shop_confirm2, component $com_magictraining_shop_costs3, component $com_magictraining_shop_scrollbar4, component $com_magictraining_shop_content5)
+cc_deleteall($com_magictraining_shop_rewards1);
+cc_deleteall($com_magictraining_shop_confirm2);
+cc_deleteall($com_magictraining_shop_costs3);
+cc_deleteall($com_magictraining_shop_scrollbar4);
+def_int $int6 = ~magic_training_rewards($com_magictraining_shop_rewards1, $com_magictraining_shop_costs3, $com_magictraining_shop_confirm2);
+if_setscrollsize(0, $int6, $com_magictraining_shop_rewards1);
+~scrollbar_vertical($com_magictraining_shop_scrollbar4, $com_magictraining_shop_rewards1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~magic_training_costs_background($com_magictraining_shop_costs3);
+~magic_training_confirm($com_magictraining_shop_confirm2, %varbit10059);
+if_setonvartransmit("magic_training_costs_transmit($com_magictraining_shop_costs3, $com_magictraining_shop_rewards1){var2224, var210, var261, var262, var263, var264}", $com_magictraining_shop_universe0);
+if_setoninvtransmit("magic_training_costs_transmit($com_magictraining_shop_costs3, $com_magictraining_shop_rewards1){inv}", $com_magictraining_shop_content5);
+if_setonvartransmit("magic_training_confirm_transmit($com_magictraining_shop_confirm2){var2224, var210}", $com_magictraining_shop_content5);

@@ -4,23 +4,23 @@ switch_int ($opindex0) {
 	case 1 :
 		if (%varcint1220 = 1) {
 			%varcint1220 = 0;
-			if (cc_find(interface_601:46, 0) = ^true) {
+			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
 				cc_setgraphic(graphic_5774);
 			}
-			if_sethide(false, interface_601:48);
-			if_sethide(false, interface_601:47);
-			if_setsize(58, 118, ^setsize_abs, ^setsize_abs, interface_601:41);
+			if_sethide(false, toplevel_osm:chatting_button);
+			if_sethide(false, toplevel_osm:chat_filter_toggle);
+			if_setsize(58, 118, ^setsize_abs, ^setsize_abs, toplevel_osm:side_left_chat);
 			if (%varcint41 = 0) {
 				~chat_alert_set(0, 0);
 			}
 		} else {
 			%varcint1220 = 1;
-			if (cc_find(interface_601:46, 0) = ^true) {
+			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
 				cc_setgraphic(graphic_5773);
 			}
-			if_sethide(true, interface_601:48);
-			if_sethide(true, interface_601:47);
-			if_setsize(58, 79, ^setsize_abs, ^setsize_abs, interface_601:41);
+			if_sethide(true, toplevel_osm:chatting_button);
+			if_sethide(true, toplevel_osm:chat_filter_toggle);
+			if_setsize(58, 79, ^setsize_abs, ^setsize_abs, toplevel_osm:side_left_chat);
 		}
 		~script113;
 }

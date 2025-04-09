@@ -1,8 +1,8 @@
 // 7094
 [proc,script7094](component $component0, int $int1, struct $struct2, int $int3, component $component4, int $int5)
-def_string $text0 = struct_param($struct2, param_1360);
+def_string $string0 = struct_param($struct2, param_1360);
 if (~script7107($int3) = 1) {
-	$text0 = ~script7108($int3, 30);
+	$string0 = ~script7108($int3, 30);
 }
 def_boolean $boolean6 = ~script3957($struct2);
 def_boolean $boolean7 = ~on_mobile;
@@ -12,7 +12,7 @@ if ($boolean7 = true) {
 }
 if (cc_find($component0, $int1) = ^true) {
 	if (.cc_find($component0, calc($int1 + $int8)) = ^true) {
-		.cc_settext($text0);
+		.cc_settext($string0);
 	}
 	if ($boolean6 = true) {
 		if ($boolean7 = false & .cc_find($component0, calc($int1 + 1)) = ^true) {

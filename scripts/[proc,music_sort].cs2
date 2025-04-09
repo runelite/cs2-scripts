@@ -8,9 +8,9 @@ def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_dbrow $dbrow7 = null;
 def_int $int8 = $int4;
-def_string $string0 = ~script7312(db_findbyindex($int4));
+def_string $string0 = ~script7312(db_find_get($int4));
 while ($int6 < $int2) {
-	$dbrow7 = db_findbyindex($intarray0($int6));
+	$dbrow7 = db_find_get($intarray0($int6));
 	if (compare(~script7312($dbrow7), $string0) <= 0) {
 		$int8 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);

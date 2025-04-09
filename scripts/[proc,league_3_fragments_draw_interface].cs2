@@ -1,23 +1,23 @@
 // 5746
-[proc,league_3_fragments_draw_interface](component $widget_735:37_0, component $widget_735:39_1, component $widget_735:38_2, component $widget_735:7_3, int $comsubid4, int $widget_735:3_5)
+[proc,league_3_fragments_draw_interface](component $com_league_3_fragments_league_btn_menu0, component $com_league_3_fragments_league_menu_frame1, component $com_league_3_fragments_league_menu_overlay2, component $com_league_3_fragments_close_button3, int $comsubid4, int $com_league_3_fragments_dropdown5)
 def_int $int6 = ~league_get_league_colour(3);
-cc_deleteall($widget_735:37_0);
-cc_deleteall($widget_735:39_1);
-cc_deleteall($widget_735:38_2);
+cc_deleteall($com_league_3_fragments_league_btn_menu0);
+cc_deleteall($com_league_3_fragments_league_menu_frame1);
+cc_deleteall($com_league_3_fragments_league_menu_overlay2);
 def_struct $struct7 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct7 = null) {
 	return;
 }
 def_int $int8 = 0;
 if (~in_league_tutorial = 0) {
-	~leagues_menu_button($widget_735:37_0, $int8, $widget_735:39_1, $widget_735:38_2);
+	~leagues_menu_button($com_league_3_fragments_league_btn_menu0, $int8, $com_league_3_fragments_league_menu_frame1, $com_league_3_fragments_league_menu_overlay2);
 }
 $int8 = 0;
-~league_create_dropdown($widget_735:37_0, $widget_735:39_1, $widget_735:38_2, $int8, 2);
+~league_create_dropdown($com_league_3_fragments_league_btn_menu0, $com_league_3_fragments_league_menu_frame1, $com_league_3_fragments_league_menu_overlay2, $int8, 2);
 $int8 = 0;
 def_int $colour9 = 0xff981f;
 $colour9 = struct_param($struct7, param_1027);
-if (cc_find(interface_735:6, $comsubid4) = ^true) {
+if (cc_find(league_3_fragments:frame, $comsubid4) = ^true) {
 	cc_setcolour($colour9);
 }
 $int8 = 0;

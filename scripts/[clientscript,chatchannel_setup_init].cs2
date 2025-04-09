@@ -1,10 +1,10 @@
 // 1662
-[clientscript,chatchannel_setup_init](component $widget_94:0_0, component $widget_94:25_1, component $widget_94:26_2, component $widget_94:27_3, component $widget_94:28_4, component $widget_94:29_5, component $widget_94:30_6)
-~scrollbar_vertical($widget_94:29_5, $widget_94:28_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+[clientscript,chatchannel_setup_init](component $com_chatchannel_setup_universe0, component $com_chatchannel_setup_sort_name1, component $com_chatchannel_setup_sort_rank2, component $com_chatchannel_setup_sort_legacy3, component $com_chatchannel_setup_list4, component $com_chatchannel_setup_scrollbar5, component $com_chatchannel_setup_tooltip6)
+~scrollbar_vertical($com_chatchannel_setup_scrollbar5, $com_chatchannel_setup_list4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 switch_int (%varcint186) {
 	case 0, 1, 2, 3, 6, 7 :
 	case default :
 		%varcint186 = 0;
 }
-~chatchannel_setup_build($widget_94:25_1, $widget_94:26_2, $widget_94:27_3, $widget_94:28_4, $widget_94:29_5, $widget_94:30_6);
-if_setonfriendtransmit("chatchannel_setup_build($widget_94:25_1, $widget_94:26_2, $widget_94:27_3, $widget_94:28_4, $widget_94:29_5, $widget_94:30_6)", $widget_94:0_0);
+~chatchannel_setup_build($com_chatchannel_setup_sort_name1, $com_chatchannel_setup_sort_rank2, $com_chatchannel_setup_sort_legacy3, $com_chatchannel_setup_list4, $com_chatchannel_setup_scrollbar5, $com_chatchannel_setup_tooltip6);
+if_setonfriendtransmit("chatchannel_setup_build($com_chatchannel_setup_sort_name1, $com_chatchannel_setup_sort_rank2, $com_chatchannel_setup_sort_legacy3, $com_chatchannel_setup_list4, $com_chatchannel_setup_scrollbar5, $com_chatchannel_setup_tooltip6)", $com_chatchannel_setup_universe0);

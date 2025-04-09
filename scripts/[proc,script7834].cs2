@@ -1,23 +1,23 @@
 // 7834
-[proc,script7834](int $comsubid0)(int)
-switch_int (calc($comsubid0 / 32)) {
+[proc,script7834](int $int0)(int)
+switch_int (calc($int0 / 32)) {
 	case 0 :
-		return(testbit(%var805, $comsubid0));
+		return(testbit(%var805, $int0));
 	case 1 :
-		return(testbit(%var261, calc($comsubid0 - 32)));
+		return(testbit(%var261, calc($int0 - 32)));
 	case 2 :
-		return(testbit(%var262, calc($comsubid0 - 64)));
+		return(testbit(%var262, calc($int0 - 64)));
 	case 3 :
-		return(testbit(%var263, calc($comsubid0 - 96)));
+		return(testbit(%var263, calc($int0 - 96)));
 	case 4 :
-		return(testbit(%var264, calc($comsubid0 - 128)));
+		return(testbit(%var264, calc($int0 - 128)));
 	case 5 :
-		return(testbit(%var265, calc($comsubid0 - 160)));
+		return(testbit(%var265, calc($int0 - 160)));
 	case 6 :
-		return(testbit(%var266, calc($comsubid0 - 192)));
+		return(testbit(%var266, calc($int0 - 192)));
 	case 7 :
-		return(testbit(%var1037, calc($comsubid0 - 224)));
+		return(testbit(%var1037, calc($int0 - 224)));
 	case default :
-		~script2075("Unsupported index: <tostring($comsubid0)>");
+		~script2075("Unsupported index: <tostring($int0)>");
 		return(0);
 }

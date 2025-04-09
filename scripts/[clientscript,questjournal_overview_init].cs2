@@ -1,34 +1,34 @@
 // 6820
-[clientscript,questjournal_overview_init](component $widget_782:0_0, component $widget_782:4_1, component $widget_782:10_2, component $widget_782:9_3, component $widget_782:8_4, component $widget_782:5_5, int $widget_782:6_6, component $widget_782:7_7, component $widget_782:1_8, component $widget_782:3_9, component $widget_782:2_10)
+[clientscript,questjournal_overview_init](component $com_questjournal_overview_universe0, component $com_questjournal_overview_title1, component $com_questjournal_overview_back2, component $com_questjournal_overview_switch3, component $com_questjournal_overview_close4, component $com_questjournal_overview_content_outer5, int $com_questjournal_overview_content_inner6, component $com_questjournal_overview_scrollbar7, component $com_questjournal_overview_inner8, component $com_questjournal_overview_container9, component $com_questjournal_overview_scroll10)
 def_int $int11 = 0;
 if (~speedrunning_world = 1) {
 	$int11 = 1;
 }
 if ($int11 = 1) {
-	if_sethide(false, $widget_782:10_2);
+	if_sethide(false, $com_questjournal_overview_back2);
 } else {
-	if_sethide(true, $widget_782:10_2);
+	if_sethide(true, $com_questjournal_overview_back2);
 }
 def_int $int12 = 0;
 if (~quest_status_get(%var3679) ! 1) {
 	$int12 = 1;
 }
 if ($int12 = 1) {
-	if_sethide(false, $widget_782:9_3);
+	if_sethide(false, $com_questjournal_overview_switch3);
 } else {
-	if_sethide(true, $widget_782:9_3);
+	if_sethide(true, $com_questjournal_overview_switch3);
 }
 if ($int11 = 1) {
-	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $widget_782:9_3);
+	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch3);
 } else {
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $widget_782:9_3);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch3);
 }
-if_setopkey(1, ^key_escape, 0, $widget_782:8_4);
+if_setopkey(1, ^key_escape, 0, $com_questjournal_overview_close4);
 if ($int11 = 1 & $int12 = 1) {
-	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_782:4_1);
+	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
 } else if ($int11 = 1 | $int12 = 1) {
-	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_782:4_1);
+	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
 } else {
-	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_782:4_1);
+	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
 }
-~script6924($widget_782:0_0, $widget_782:1_8, $widget_782:3_9, $widget_782:2_10, $widget_782:7_7, $widget_782:5_5);
+~script6924($com_questjournal_overview_universe0, $com_questjournal_overview_inner8, $com_questjournal_overview_container9, $com_questjournal_overview_scroll10, $com_questjournal_overview_scrollbar7, $com_questjournal_overview_content_outer5);

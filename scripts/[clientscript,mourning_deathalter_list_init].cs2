@@ -1,8 +1,8 @@
 // 4149
-[clientscript,mourning_deathalter_list_init](int $widget_227:0_0, component $widget_227:2_1, component $widget_227:5_2, component $widget_227:3_3)
-def_string $text0 = if_gettext($widget_227:3_3);
-def_int $height4 = paraheight($text0, if_getwidth($widget_227:2_1), p12_full);
-def_int $height5 = calc($height4 * 12 + 5);
-if_setscrollpos(0, 0, $widget_227:2_1);
-if_setscrollsize(0, $height5, $widget_227:2_1);
-~scrollbar_vertical($widget_227:5_2, $widget_227:2_1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+[clientscript,mourning_deathalter_list_init](int $com_mourning_deathalter_list_universe0, component $com_mourning_deathalter_list_list_container1, component $com_mourning_deathalter_list_scrollbar2, component $com_mourning_deathalter_list_list_text3)
+def_string $string0 = if_gettext($com_mourning_deathalter_list_list_text3);
+def_int $int4 = paraheight($string0, if_getwidth($com_mourning_deathalter_list_list_container1), p12_full);
+def_int $int5 = calc($int4 * 12 + 5);
+if_setscrollpos(0, 0, $com_mourning_deathalter_list_list_container1);
+if_setscrollsize(0, $int5, $com_mourning_deathalter_list_list_container1);
+~scrollbar_vertical($com_mourning_deathalter_list_scrollbar2, $com_mourning_deathalter_list_list_container1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

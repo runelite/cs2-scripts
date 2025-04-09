@@ -1,21 +1,21 @@
 // 6144
-[proc,pet_insurance_pets_get_flags](int $int0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5, int $flags6)(int, int)
+[proc,pet_insurance_pets_get_flags](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int)
 def_int $int7 = 31;
 def_int $int8 = 0;
 def_int $int9 = 0;
-def_int $index10 = 0;
+def_int $int10 = 0;
 if ($int0 < $int7) {
-	$int8 = testbit($flags1, $int0);
-	$int9 = testbit($flags4, $int0);
+	$int8 = testbit($int1, $int0);
+	$int9 = testbit($int4, $int0);
 	return($int8, $int9);
 }
 if ($int0 < 62) {
-	$index10 = calc($int0 - $int7);
-	$int8 = testbit($flags2, $index10);
-	$int9 = testbit($flags5, $index10);
+	$int10 = calc($int0 - $int7);
+	$int8 = testbit($int2, $int10);
+	$int9 = testbit($int5, $int10);
 	return($int8, $int9);
 }
-$index10 = calc($int0 - 62);
-$int8 = testbit($flags3, $index10);
-$int9 = testbit($flags6, $index10);
+$int10 = calc($int0 - 62);
+$int8 = testbit($int3, $int10);
+$int9 = testbit($int6, $int10);
 return($int8, $int9);

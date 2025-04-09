@@ -1,7 +1,7 @@
 // 5374
 [proc,script5374](stat $stat0)
 def_int $comsubid1 = ~xptracker_get_id($stat0);
-def_int $xp2 = stat_xp($stat0);
+def_int $int2 = stat_xp($stat0);
 def_string $string0 = ~script5377(~xptracker_xph($stat0));
 def_string $string1 = "Done!";
 def_int $int3 = 0;
@@ -20,12 +20,12 @@ switch_int (~script5534($stat0)) {
 		$int4 = 0;
 }
 if ($int4 ! 0) {
-	$string1 = ~script5377(calc($int4 - $xp2));
+	$string1 = ~script5377(calc($int4 - $int2));
 }
-def_string $text3 = append(append($string0, "<br>"), $string1);
-if (cc_find(interface_729:12, $comsubid1) = ^true) {
+def_string $string3 = append(append($string0, "<br>"), $string1);
+if (cc_find(xptracker:tracker_text_left_desc, $comsubid1) = ^true) {
 	cc_settext(append("XP/Hr: <br>", $string2));
 }
-if (cc_find(interface_729:13, $comsubid1) = ^true) {
-	cc_settext($text3);
+if (cc_find(xptracker:tracker_text_left_data, $comsubid1) = ^true) {
+	cc_settext($string3);
 }

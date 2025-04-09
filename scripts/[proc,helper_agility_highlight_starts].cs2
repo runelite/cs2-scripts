@@ -1,7 +1,7 @@
 // 5168
 [proc,helper_agility_highlight_starts]
-def_int $count0 = 0;
-def_int $count1 = enum_getoutputcount(enum_3508);
+def_int $int0 = 0;
+def_int $int1 = enum_getoutputcount(enum_3508);
 def_int $int2 = 0;
 def_int $int3 = -1;
 def_struct $struct4 = null;
@@ -9,8 +9,8 @@ def_loc $loc5 = null;
 def_npc $npc6 = null;
 def_enum $enum7 = null;
 def_coord $coord8 = null;
-while ($count0 < $count1) {
-	$struct4 = enum(int, struct, enum_3508, $count0);
+while ($int0 < $int1) {
+	$struct4 = enum(int, struct, enum_3508, $int0);
 	if ($struct4 ! null) {
 		$loc5 = struct_param($struct4, param_1347);
 		if ($loc5 ! null) {
@@ -38,5 +38,5 @@ while ($count0 < $count1) {
 			}
 		}
 	}
-	$count0 = calc($count0 + 1);
+	$int0 = calc($int0 + 1);
 }

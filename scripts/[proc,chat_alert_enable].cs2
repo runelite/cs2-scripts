@@ -15,7 +15,7 @@ if (~chat_alert_get($int0) > 24) {
 }
 ~chat_alert_set($int0, 249);
 if ($int1 = 1) {
-	if_setontimer("chat_alert_flash($int0)", interface_601:46);
+	if_setontimer("chat_alert_flash($int0)", toplevel_osm:chat_toggle);
 } else {
 	if_setontimer("chat_alert_flash($int0)", enum(int, component, enum_683, $int0));
 }

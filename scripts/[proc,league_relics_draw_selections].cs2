@@ -1,18 +1,18 @@
 // 3189
-[proc,league_relics_draw_selections](component $widget_655:15_0, component $widget_655:10_1, component $widget_655:17_2, component $widget_655:19_3, component $widget_655:18_4, component $widget_655:21_5, component $widget_655:22_6, component $widget_655:14_7, component $widget_655:23_8, component $widget_655:27_9, component $widget_655:12_10, component $widget_655:24_11, component $widget_655:5_12, component $widget_655:6_13, component $widget_655:11_14, int $comsubid15, int $x16, component $widget_655:7_17, component $widget_655:52_18)
-~script7744(interface_655:1, interface_655:3);
-~league_points_progress_bar($widget_655:7_17, $widget_655:52_18, 0, 1);
-cc_deleteall($widget_655:17_2);
-cc_deleteall($widget_655:19_3);
-cc_deleteall($widget_655:18_4);
-cc_deleteall($widget_655:21_5);
-cc_deleteall($widget_655:22_6);
-cc_deleteall($widget_655:15_0);
-cc_deleteall($widget_655:10_1);
-cc_deleteall($widget_655:5_12);
-cc_deleteall($widget_655:6_13);
-cc_deleteall($widget_655:23_8);
-cc_deleteall(interface_655:16);
+[proc,league_relics_draw_selections](component $com_league_relics_header0, component $com_league_relics_relic_available_header1, component $com_league_relics_backgrounds2, component $com_league_relics_icons3, component $com_league_relics_outlines4, component $com_league_relics_names5, component $com_league_relics_clickzones6, component $com_league_relics_view_all7, component $com_league_relics_view_all_scrollbar8, component $com_league_relics_view_one9, component $com_league_relics_confirm10, component $com_league_relics_loading11, component $com_league_relics_league_btn_menu12, component $com_league_relics_league_menu_frame13, component $com_league_relics_league_menu_overlay14, int $comsubid15, int $int16, component $com_league_relics_progress_bar17, component $com_league_relics_tooltip18)
+~script7744(league_relics:universe, league_relics:content_outer);
+~league_points_progress_bar($com_league_relics_progress_bar17, $com_league_relics_tooltip18, 0, 1);
+cc_deleteall($com_league_relics_backgrounds2);
+cc_deleteall($com_league_relics_icons3);
+cc_deleteall($com_league_relics_outlines4);
+cc_deleteall($com_league_relics_names5);
+cc_deleteall($com_league_relics_clickzones6);
+cc_deleteall($com_league_relics_header0);
+cc_deleteall($com_league_relics_relic_available_header1);
+cc_deleteall($com_league_relics_league_btn_menu12);
+cc_deleteall($com_league_relics_league_menu_frame13);
+cc_deleteall($com_league_relics_view_all_scrollbar8);
+cc_deleteall(league_relics:tutorial);
 def_struct $struct19 = enum(int, struct, enum_2670, %varbit10032);
 def_int $colour20 = 0xff981f;
 def_enum $enum21 = null;
@@ -23,33 +23,33 @@ if ($struct19 ! null) {
 	$enum21 = struct_param($struct19, param_870);
 	$colour20 = struct_param($struct19, param_1027);
 }
-cc_create($widget_655:15_0, ^iftype_graphic, 0);
+cc_create($com_league_relics_header0, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking_light);
-if_sethide(false, $widget_655:14_7);
-if_sethide(false, $widget_655:23_8);
-if_sethide(false, $widget_655:10_1);
-if_sethide(true, $widget_655:27_9);
-if_sethide(true, $widget_655:24_11);
-if_sethide(true, $widget_655:12_10);
-if_sethide(true, interface_655:28);
+if_sethide(false, $com_league_relics_view_all7);
+if_sethide(false, $com_league_relics_view_all_scrollbar8);
+if_sethide(false, $com_league_relics_relic_available_header1);
+if_sethide(true, $com_league_relics_view_one9);
+if_sethide(true, $com_league_relics_loading11);
+if_sethide(true, $com_league_relics_confirm10);
+if_sethide(true, league_relics:extra_info);
 if ($enum21 ! null) {
 	$int23 = enum_getoutputcount($enum21);
 }
 def_int $int25 = 0;
 if (~in_league_tutorial = 0) {
-	~leagues_menu_button($widget_655:5_12, $int25, $widget_655:6_13, $widget_655:11_14);
+	~leagues_menu_button($com_league_relics_league_btn_menu12, $int25, $com_league_relics_league_menu_frame13, $com_league_relics_league_menu_overlay14);
 }
 $int25 = 0;
-~league_create_dropdown($widget_655:5_12, $widget_655:6_13, $widget_655:11_14, $int25, 2);
-if (cc_find(interface_655:2, $comsubid15) = ^true) {
+~league_create_dropdown($com_league_relics_league_btn_menu12, $com_league_relics_league_menu_frame13, $com_league_relics_league_menu_overlay14, $int25, 2);
+if (cc_find(league_relics:frame, $comsubid15) = ^true) {
 	cc_setcolour($colour20);
 }
 def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
-def_int $width29 = 0;
+def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
 def_int $int32 = -1;
@@ -60,15 +60,15 @@ def_int $colour35 = null;
 def_int $colour36 = null;
 def_int $colour37 = null;
 def_int $colour38 = null;
-def_int $trans39 = 0;
+def_int $int39 = 0;
 def_int $int40 = 0;
 def_struct $struct41 = null;
 def_int $int42 = 0;
 def_graphic $graphic43 = null;
 def_int $int44 = 34;
-def_string $text1 = "";
+def_string $string1 = "";
 def_int $int45 = 0;
-def_int $count46 = 0;
+def_int $int46 = 0;
 def_int $int47 = 0;
 def_graphic $graphic48 = null;
 def_int $int49 = 6;
@@ -76,95 +76,95 @@ switch_int (%varcint988) {
 	case 0 :
 		$graphic48 = p11_full;
 		$int49 = 6;
-		if_setsize(0, 18, ^setsize_minus, ^setsize_minus, $widget_655:14_7);
+		if_setsize(0, 18, ^setsize_minus, ^setsize_minus, $com_league_relics_view_all7);
 	case default :
 		$graphic48 = p12_full;
 		$int49 = 8;
-		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $widget_655:14_7);
+		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_league_relics_view_all7);
 }
 if ($int23 > 0) {
-	$int26 = calc(if_getwidth($widget_655:14_7) / $int49);
-	$width29 = calc((if_getwidth($widget_655:14_7) - $int26 * $int49) / 2);
+	$int26 = calc(if_getwidth($com_league_relics_view_all7) / $int49);
+	$int29 = calc((if_getwidth($com_league_relics_view_all7) - $int26 * $int49) / 2);
 }
 while ($int45 < $int23) {
 	$struct22 = enum(int, struct, $enum21, $int45);
 	$enum24 = struct_param($struct22, param_878);
 	if ($int45 > 0) {
-		cc_create(interface_655:20, ^iftype_line, calc($int45 - 1));
+		cc_create(league_relics:dividers, ^iftype_line, calc($int45 - 1), false);
 		cc_setlinewid(1);
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(0x544b40);
 	}
 	if ($enum24 ! null & ~script7692($int45) = 1) {
 		if (~script7691($int45) = 1) {
 			$int31 = 1;
-			cc_create($widget_655:17_2, ^iftype_rectangle, $int45);
+			cc_create($com_league_relics_backgrounds2, ^iftype_rectangle, $int45, false);
 			cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
-			cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setcolour(~script7706);
 			cc_settrans(200);
 			cc_setfill(true);
 			$int32, $string0, $int33, $int34, $int40, $colour36, $colour38 = 127, "", 1, 1, 1, null, null;
 		} else {
-			cc_create($widget_655:17_2, ^iftype_graphic, $int45);
+			cc_create($com_league_relics_backgrounds2, ^iftype_graphic, $int45, false);
 			cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
-			cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphic(tradebacking_dark);
 			cc_settiling(true);
 			$int32, $string0, $int33, $int34, $int40, $colour36, $colour38 = 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
 		}
 	} else if ($int30 = 0 & $enum24 ! null & %var2615 >= struct_param($struct22, param_877)) {
-		cc_create($widget_655:17_2, ^iftype_graphic, $int45);
+		cc_create($com_league_relics_backgrounds2, ^iftype_graphic, $int45, false);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic(tradebacking_light);
 		cc_settiling(true);
 		$int32, $string0, $int33, $int34, $int40, $colour36, $colour38 = 127, "", 1, 1, 1, null, null;
 		$int30 = 1;
 	} else {
-		cc_create($widget_655:17_2, ^iftype_graphic, $int45);
+		cc_create($com_league_relics_backgrounds2, ^iftype_graphic, $int45, false);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic(tradebacking_dark);
 		cc_settiling(true);
 		$int32, $string0, $int33, $int34, $int40, $colour36, $colour38 = 255, "", 1, 0, 1, null, null;
 	}
-	cc_create($widget_655:15_0, ^iftype_text, calc($int45 + 1));
+	cc_create($com_league_relics_header0, ^iftype_text, calc($int45 + 1), false);
 	cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
-	cc_setposition($width29, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont($graphic48);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour($colour20);
 	cc_settext("Tier <tostring(calc($int45 + 1))>");
 	if (enum_getoutputcount($enum24) = 2) {
-		$int27 = calc((if_getheight($widget_655:14_7) - 5) / 3);
-		$int28 = calc($int27 / 2 + (if_getheight($widget_655:14_7) - 6 - $int27 * 3) / 2);
+		$int27 = calc((if_getheight($com_league_relics_view_all7) - 5) / 3);
+		$int28 = calc($int27 / 2 + (if_getheight($com_league_relics_view_all7) - 6 - $int27 * 3) / 2);
 	} else {
-		$int27 = calc((if_getheight($widget_655:14_7) - 5) / 3);
-		$int28 = calc((if_getheight($widget_655:14_7) - 6 - $int27 * 3) / 2);
+		$int27 = calc((if_getheight($com_league_relics_view_all7) - 5) / 3);
+		$int28 = calc((if_getheight($com_league_relics_view_all7) - 6 - $int27 * 3) / 2);
 	}
 	if (%varcint988 = 2 | %varcint988 = 3) {
 		$int28 = calc($int28 + 8);
 	}
-	$count46 = 0;
-	while ($count46 < enum_getoutputcount($enum24)) {
-		$struct41 = enum(int, struct, $enum24, calc($count46 + 1));
+	$int46 = 0;
+	while ($int46 < enum_getoutputcount($enum24)) {
+		$struct41 = enum(int, struct, $enum24, calc($int46 + 1));
 		if ($struct41 ! null) {
 			$int42 = ~league_relic_active($struct41);
 		} else {
 			$int42 = 0;
 		}
-		cc_create($widget_655:21_5, ^iftype_text, $int47);
+		cc_create($com_league_relics_names5, ^iftype_text, $int47, false);
 		if (string_length($string0) > 0) {
-			$text1 = $string0;
+			$string1 = $string0;
 		} else {
-			$text1 = struct_param($struct41, param_879);
+			$string1 = struct_param($struct41, param_879);
 		}
 		cc_setsize(calc($int26 - 10), 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($width29 + 5), calc($int28 + $int27 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
-		cc_settext($text1);
+		cc_setposition(calc($int29 + 5), calc($int28 + $int27 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext($string1);
 		cc_settextfont($graphic48);
 		if ($int42 = 0) {
 			if ($colour36 ! null) {
@@ -185,27 +185,27 @@ while ($int45 < $int23) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		if (%varcint988 = 2 | %varcint988 = 3) {
 			if ($int42 = 1) {
-				$graphic43, $trans39 = struct_param($struct41, param_1853), 0;
+				$graphic43, $int39 = struct_param($struct41, param_1853), 0;
 			} else {
-				$graphic43, $trans39 = struct_param($struct41, param_1854), calc($int32 - 128);
+				$graphic43, $int39 = struct_param($struct41, param_1854), calc($int32 - 128);
 			}
 			$int44 = 60;
 		} else {
 			if ($int42 = 1) {
-				$graphic43, $trans39 = struct_param($struct41, param_881), 0;
+				$graphic43, $int39 = struct_param($struct41, param_881), 0;
 			} else {
-				$graphic43, $trans39 = struct_param($struct41, param_883), calc($int32 - 128);
+				$graphic43, $int39 = struct_param($struct41, param_883), calc($int32 - 128);
 			}
 			$int44 = 30;
 		}
-		cc_create($widget_655:19_3, ^iftype_graphic, $int47);
+		cc_create($com_league_relics_icons3, ^iftype_graphic, $int47, false);
 		cc_setsize($int44, $int44, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($width29 + $int26 / 2 - $int44 / 2), calc($int28 + $int27 / 2 - ($int44 + 1)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int29 + $int26 / 2 - $int44 / 2), calc($int28 + $int27 / 2 - ($int44 + 1)), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic($graphic43);
-		cc_create($widget_655:18_4, ^iftype_graphic, $int47);
+		cc_create($com_league_relics_outlines4, ^iftype_graphic, $int47, false);
 		$int44 = calc($int44 + 4);
 		cc_setsize($int44, $int44, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($width29 + $int26 / 2 - $int44 / 2), calc($int28 + $int27 / 2 - ($int44 - 1)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int29 + $int26 / 2 - $int44 / 2), calc($int28 + $int27 / 2 - ($int44 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 		if (%varcint988 = 2 | %varcint988 = 3) {
 			cc_setgraphic(struct_param($struct19, param_1856));
 		} else {
@@ -216,56 +216,56 @@ while ($int45 < $int23) {
 		} else {
 			cc_settrans(255);
 		}
-		cc_create($widget_655:22_6, ^iftype_rectangle, $int47);
+		cc_create($com_league_relics_clickzones6, ^iftype_rectangle, $int47, false);
 		cc_setsize($int26, $int27, ^setsize_abs, ^setsize_abs);
-		cc_setposition($width29, $int28, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int29, $int28, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(true);
 		cc_settrans(255);
 		if ($int40 = 1) {
 			cc_setop(1, "View");
-			cc_setopbase("<col=ff981f><$text1></col>");
-			cc_setonop("league_relics_loading($widget_655:24_11, $int47, $widget_655:18_4, $int32, $widget_655:19_3, $graphic43, $widget_655:21_5, $colour35)");
+			cc_setopbase("<col=ff981f><$string1></col>");
+			cc_setonop("league_relics_loading($com_league_relics_loading11, $int47, $com_league_relics_outlines4, $int32, $com_league_relics_icons3, $graphic43, $com_league_relics_names5, $colour35)");
 		}
 		if ($int33 = 1 & ~on_mobile = false) {
 			if ($int34 = 1) {
 				if (%varcint988 = 2 | %varcint988 = 3) {
-					cc_setonmouserepeat("league_relic_hover($widget_655:18_4, $trans39, $widget_655:19_3, struct_param($struct41, param_1853), $widget_655:21_5, $colour37, $int47)");
+					cc_setonmouserepeat("league_relic_hover($com_league_relics_outlines4, $int39, $com_league_relics_icons3, struct_param($struct41, param_1853), $com_league_relics_names5, $colour37, $int47)");
 				} else {
-					cc_setonmouserepeat("league_relic_hover($widget_655:18_4, $trans39, $widget_655:19_3, struct_param($struct41, param_881), $widget_655:21_5, $colour37, $int47)");
+					cc_setonmouserepeat("league_relic_hover($com_league_relics_outlines4, $int39, $com_league_relics_icons3, struct_param($struct41, param_881), $com_league_relics_names5, $colour37, $int47)");
 				}
 			} else {
-				cc_setonmouserepeat("league_relic_hover($widget_655:18_4, $trans39, $widget_655:19_3, $graphic43, $widget_655:21_5, $colour37, $int47)");
+				cc_setonmouserepeat("league_relic_hover($com_league_relics_outlines4, $int39, $com_league_relics_icons3, $graphic43, $com_league_relics_names5, $colour37, $int47)");
 			}
 			if ($int42 = 1) {
-				cc_setonmouseleave("league_relic_hover($widget_655:18_4, 255, $widget_655:19_3, $graphic43, $widget_655:21_5, $colour35, $int47)");
+				cc_setonmouseleave("league_relic_hover($com_league_relics_outlines4, 255, $com_league_relics_icons3, $graphic43, $com_league_relics_names5, $colour35, $int47)");
 			} else {
-				cc_setonmouseleave("league_relic_hover($widget_655:18_4, $int32, $widget_655:19_3, $graphic43, $widget_655:21_5, $colour35, $int47)");
+				cc_setonmouseleave("league_relic_hover($com_league_relics_outlines4, $int32, $com_league_relics_icons3, $graphic43, $com_league_relics_names5, $colour35, $int47)");
 			}
 		}
 		$int47 = calc($int47 + 1);
 		$int28 = calc($int28 + $int27);
-		$count46 = calc($count46 + 1);
+		$int46 = calc($int46 + 1);
 	}
-	$width29 = calc($width29 + $int26);
+	$int29 = calc($int29 + $int26);
 	$int45 = calc($int45 + 1);
 }
-cc_create(interface_655:16, ^iftype_rectangle, 0);
+cc_create(league_relics:tutorial, ^iftype_rectangle, 0, false);
 cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_settrans(255);
-cc_create(interface_655:16, ^iftype_rectangle, 1);
+cc_create(league_relics:tutorial, ^iftype_rectangle, 1, false);
 cc_setsize($int26, $int27, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_settrans(255);
 if ($int30 = 1 | $int31 = 1) {
-	cc_deleteall($widget_655:15_0);
-	cc_create($widget_655:10_1, ^iftype_graphic, 0);
+	cc_deleteall($com_league_relics_header0);
+	cc_create($com_league_relics_relic_available_header1, ^iftype_graphic, 0, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic(tradebacking_light);
-	cc_create($widget_655:10_1, ^iftype_text, 1);
+	cc_create($com_league_relics_relic_available_header1, ^iftype_text, 1, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont($graphic48);
@@ -278,21 +278,21 @@ if ($int30 = 1 | $int31 = 1) {
 		cc_settext("You have a new Relic available for selection!");
 	}
 }
-if ($width29 > if_getwidth($widget_655:14_7)) {
-	if_setscrollsize($width29, 0, $widget_655:14_7);
+if ($int29 > if_getwidth($com_league_relics_view_all7)) {
+	if_setscrollsize($int29, 0, $com_league_relics_view_all7);
 } else {
-	if_setscrollsize(0, 0, $widget_655:14_7);
+	if_setscrollsize(0, 0, $com_league_relics_view_all7);
 }
-$x16 = %varcint1182;
+$int16 = %varcint1182;
 if ($int49 < $int23) {
-	if ($x16 = -1) {
-		$x16 = if_getscrollx($widget_655:14_7);
+	if ($int16 = -1) {
+		$int16 = if_getscrollx($com_league_relics_view_all7);
 	}
-	if_setscrollpos($x16, 0, $widget_655:14_7);
-	cc_deleteall($widget_655:23_8);
+	if_setscrollpos($int16, 0, $com_league_relics_view_all7);
+	cc_deleteall($com_league_relics_view_all_scrollbar8);
 	~scrollbar_horizontal(
-		0 = $widget_655:23_8, 
-		1 = $widget_655:14_7, 
+		0 = $com_league_relics_view_all_scrollbar8, 
+		1 = $com_league_relics_view_all7, 
 		2 = graphic_4538, 
 		3 = graphic_4537, 
 		4 = graphic_4536, 
@@ -301,5 +301,5 @@ if ($int49 < $int23) {
 		7 = "scrollbar_v2,3", 
 		8 = 1
 	);
-	~scrollbar_horizontal_rebuild($widget_655:23_8, $widget_655:14_7);
+	~scrollbar_horizontal_rebuild($com_league_relics_view_all_scrollbar8, $com_league_relics_view_all7);
 }

@@ -3,18 +3,18 @@
 if (~on_mobile = false) {
 	return;
 }
-def_int $height0 = if_getheight(interface_162:34);
+def_int $int0 = if_getheight(chatbox:chatarea);
 def_int $int1 = 0;
-if (if_hassub(interface_162:566) = true | if_hassub(interface_162:565) = true | if_gethide(interface_162:38) = false | testbit(%varcint1189, 0) = ^true) {
+if (if_hassub(chatbox:null) = true | if_hassub(chatbox:null) = true | if_gethide(chatbox:mes_layer) = false | testbit(%varcint1189, 0) = ^true) {
 	$int1 = 1;
 }
-def_int $height2 = calc(165 - 20);
-if ($int1 = 0 & if_gethide(interface_162:1) = false) {
-	$height2 = calc(165 - 20 - 30);
+def_int $int2 = calc(165 - 20);
+if ($int1 = 0 & if_gethide(chatbox:controls) = false) {
+	$int2 = calc(165 - 20 - 30);
 }
-if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_162:34);
-if_setsize(519, $height2, ^setsize_abs, ^setsize_abs, interface_162:34);
-if ($height0 ! $height2 | %varcint980 = clientclock) {
-	~scrollbar_resize(interface_162:558, interface_162:57, ~max(calc(if_getscrollheight(interface_162:57) - if_getheight(interface_162:57)), 0));
+if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, chatbox:chatarea);
+if_setsize(519, $int2, ^setsize_abs, ^setsize_abs, chatbox:chatarea);
+if ($int0 ! $int2 | %varcint980 = clientclock) {
+	~scrollbar_resize(chatbox:null, chatbox:scrollarea, ~max(calc(if_getscrollheight(chatbox:scrollarea) - if_getheight(chatbox:scrollarea)), 0));
 }
 ~rebuildchatbox(~script553);

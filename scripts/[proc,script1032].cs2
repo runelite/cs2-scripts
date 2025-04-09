@@ -1,96 +1,96 @@
 // 1032
-[proc,script1032](component $component0, component $widget_137:47_1, component $widget_137:61_2, component $widget_137:6_3, component $widget_137:51_4, component $widget_137:7_5, component $widget_137:52_6, component $widget_137:9_7, component $widget_137:53_8, component $widget_137:10_9, component $widget_137:54_10, component $widget_137:11_11, component $widget_137:55_12, component $widget_137:12_13, component $widget_137:56_14, component $widget_137:13_15, component $widget_137:57_16, component $widget_137:8_17, component $widget_137:58_18, component $widget_137:14_19, component $widget_137:59_20)(int)
+[proc,script1032](component $component0, component $com_xpdrops_setup_dropdown_container1, component $com_xpdrops_setup_tooltip2, component $com_xpdrops_setup_position_display3, component $com_xpdrops_setup_position_options4, component $com_xpdrops_setup_size_display5, component $com_xpdrops_setup_size_options6, component $com_xpdrops_setup_duration_display7, component $com_xpdrops_setup_duration_options8, component $com_xpdrops_setup_counter_display9, component $com_xpdrops_setup_counter_options10, component $com_xpdrops_setup_progress_display11, component $com_xpdrops_setup_progress_options12, component $com_xpdrops_setup_colour_display13, component $com_xpdrops_setup_colour_options14, component $com_xpdrops_setup_grouping_display15, component $com_xpdrops_setup_grouping_options16, component $com_xpdrops_setup_speed_display17, component $com_xpdrops_setup_speed_options18, component $com_xpdrops_setup_fakes_display19, component $com_xpdrops_setup_fakes_options20)(int)
 def_int $intarray0(calc(23 + 1));
 def_int $int21 = calc(23 + 3);
 def_int $int22 = calc(31 + 1);
 def_int $int23 = 0;
 while ($int23 <= 23) {
 	$intarray0($int23) = $int23;
-	cc_create($component0, ^iftype_text, calc($int23 + 1));
+	cc_create($component0, ^iftype_text, calc($int23 + 1), false);
 	~script1033(
 		0 = $component0, 
 		1 = $int22, 
 		2 = 0xff981f, 
-		3 = $widget_137:47_1, 
-		4 = $widget_137:61_2, 
-		5 = $widget_137:6_3, 
-		6 = $widget_137:51_4, 
-		7 = $widget_137:7_5, 
-		8 = $widget_137:52_6, 
-		9 = $widget_137:9_7, 
-		10 = $widget_137:53_8, 
-		11 = $widget_137:10_9, 
-		12 = $widget_137:54_10, 
-		13 = $widget_137:11_11, 
-		14 = $widget_137:55_12, 
-		15 = $widget_137:12_13, 
-		16 = $widget_137:56_14, 
-		17 = $widget_137:13_15, 
-		18 = $widget_137:57_16, 
-		19 = $widget_137:8_17, 
-		20 = $widget_137:58_18, 
-		21 = $widget_137:14_19, 
-		22 = $widget_137:59_20
+		3 = $com_xpdrops_setup_dropdown_container1, 
+		4 = $com_xpdrops_setup_tooltip2, 
+		5 = $com_xpdrops_setup_position_display3, 
+		6 = $com_xpdrops_setup_position_options4, 
+		7 = $com_xpdrops_setup_size_display5, 
+		8 = $com_xpdrops_setup_size_options6, 
+		9 = $com_xpdrops_setup_duration_display7, 
+		10 = $com_xpdrops_setup_duration_options8, 
+		11 = $com_xpdrops_setup_counter_display9, 
+		12 = $com_xpdrops_setup_counter_options10, 
+		13 = $com_xpdrops_setup_progress_display11, 
+		14 = $com_xpdrops_setup_progress_options12, 
+		15 = $com_xpdrops_setup_colour_display13, 
+		16 = $com_xpdrops_setup_colour_options14, 
+		17 = $com_xpdrops_setup_grouping_display15, 
+		18 = $com_xpdrops_setup_grouping_options16, 
+		19 = $com_xpdrops_setup_speed_display17, 
+		20 = $com_xpdrops_setup_speed_options18, 
+		21 = $com_xpdrops_setup_fakes_display19, 
+		22 = $com_xpdrops_setup_fakes_options20
 	);
 	$int23 = calc($int23 + 1);
 }
 while ($int23 < 30) {
-	cc_create($component0, ^iftype_text, calc($int23 + 1));
+	cc_create($component0, ^iftype_text, calc($int23 + 1), false);
 	cc_sethide(true);
 	$int23 = calc($int23 + 1);
 }
-cc_create($component0, ^iftype_text, calc($int23 + 1));
+cc_create($component0, ^iftype_text, calc($int23 + 1), false);
 ~script1033(
 	0 = $component0, 
 	1 = $int22, 
 	2 = 0xff981f, 
-	3 = $widget_137:47_1, 
-	4 = $widget_137:61_2, 
-	5 = $widget_137:6_3, 
-	6 = $widget_137:51_4, 
-	7 = $widget_137:7_5, 
-	8 = $widget_137:52_6, 
-	9 = $widget_137:9_7, 
-	10 = $widget_137:53_8, 
-	11 = $widget_137:10_9, 
-	12 = $widget_137:54_10, 
-	13 = $widget_137:11_11, 
-	14 = $widget_137:55_12, 
-	15 = $widget_137:12_13, 
-	16 = $widget_137:56_14, 
-	17 = $widget_137:13_15, 
-	18 = $widget_137:57_16, 
-	19 = $widget_137:8_17, 
-	20 = $widget_137:58_18, 
-	21 = $widget_137:14_19, 
-	22 = $widget_137:59_20
+	3 = $com_xpdrops_setup_dropdown_container1, 
+	4 = $com_xpdrops_setup_tooltip2, 
+	5 = $com_xpdrops_setup_position_display3, 
+	6 = $com_xpdrops_setup_position_options4, 
+	7 = $com_xpdrops_setup_size_display5, 
+	8 = $com_xpdrops_setup_size_options6, 
+	9 = $com_xpdrops_setup_duration_display7, 
+	10 = $com_xpdrops_setup_duration_options8, 
+	11 = $com_xpdrops_setup_counter_display9, 
+	12 = $com_xpdrops_setup_counter_options10, 
+	13 = $com_xpdrops_setup_progress_display11, 
+	14 = $com_xpdrops_setup_progress_options12, 
+	15 = $com_xpdrops_setup_colour_display13, 
+	16 = $com_xpdrops_setup_colour_options14, 
+	17 = $com_xpdrops_setup_grouping_display15, 
+	18 = $com_xpdrops_setup_grouping_options16, 
+	19 = $com_xpdrops_setup_speed_display17, 
+	20 = $com_xpdrops_setup_speed_options18, 
+	21 = $com_xpdrops_setup_fakes_display19, 
+	22 = $com_xpdrops_setup_fakes_options20
 );
 $int23 = calc($int23 + 1);
-cc_create($component0, ^iftype_text, calc($int23 + 1));
+cc_create($component0, ^iftype_text, calc($int23 + 1), false);
 ~script1033(
 	0 = $component0, 
 	1 = $int22, 
 	2 = 0xff981f, 
-	3 = $widget_137:47_1, 
-	4 = $widget_137:61_2, 
-	5 = $widget_137:6_3, 
-	6 = $widget_137:51_4, 
-	7 = $widget_137:7_5, 
-	8 = $widget_137:52_6, 
-	9 = $widget_137:9_7, 
-	10 = $widget_137:53_8, 
-	11 = $widget_137:10_9, 
-	12 = $widget_137:54_10, 
-	13 = $widget_137:11_11, 
-	14 = $widget_137:55_12, 
-	15 = $widget_137:12_13, 
-	16 = $widget_137:56_14, 
-	17 = $widget_137:13_15, 
-	18 = $widget_137:57_16, 
-	19 = $widget_137:8_17, 
-	20 = $widget_137:58_18, 
-	21 = $widget_137:14_19, 
-	22 = $widget_137:59_20
+	3 = $com_xpdrops_setup_dropdown_container1, 
+	4 = $com_xpdrops_setup_tooltip2, 
+	5 = $com_xpdrops_setup_position_display3, 
+	6 = $com_xpdrops_setup_position_options4, 
+	7 = $com_xpdrops_setup_size_display5, 
+	8 = $com_xpdrops_setup_size_options6, 
+	9 = $com_xpdrops_setup_duration_display7, 
+	10 = $com_xpdrops_setup_duration_options8, 
+	11 = $com_xpdrops_setup_counter_display9, 
+	12 = $com_xpdrops_setup_counter_options10, 
+	13 = $com_xpdrops_setup_progress_display11, 
+	14 = $com_xpdrops_setup_progress_options12, 
+	15 = $com_xpdrops_setup_colour_display13, 
+	16 = $com_xpdrops_setup_colour_options14, 
+	17 = $com_xpdrops_setup_grouping_display15, 
+	18 = $com_xpdrops_setup_grouping_options16, 
+	19 = $com_xpdrops_setup_speed_display17, 
+	20 = $com_xpdrops_setup_speed_options18, 
+	21 = $com_xpdrops_setup_fakes_display19, 
+	22 = $com_xpdrops_setup_fakes_options20
 );
 ~quicksort_intenum(intarray0, 1, 23, enum_108);
 def_int $int24 = 15;
@@ -100,7 +100,7 @@ if (~on_mobile = true) {
 $int23 = 0;
 if (cc_find($component0, calc($intarray0($int23) + 1)) = ^true) {
 	cc_setposition(0, calc($int23 * $int24), ^setpos_abs_centre, ^setpos_abs_top);
-	if ($component0 = $widget_137:54_10) {
+	if ($component0 = $com_xpdrops_setup_counter_options10) {
 		cc_settext("Total XP");
 	} else {
 		cc_settext("Off");
@@ -120,7 +120,7 @@ while ($int23 <= 23) {
 }
 if (cc_find($component0, calc(30 + 1)) = ^true) {
 	cc_setposition(0, calc(($int21 - 1) * $int24), ^setpos_abs_centre, ^setpos_abs_top);
-	if ($component0 = $widget_137:55_12) {
+	if ($component0 = $com_xpdrops_setup_progress_options12) {
 		cc_settext("Total XP goal");
 	} else {
 		cc_settext("Off");

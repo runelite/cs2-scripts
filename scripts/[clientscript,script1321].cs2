@@ -1,10 +1,10 @@
 // 1321
-[clientscript,script1321](int $opindex0, component $widget_12:56_1, int $comsubid2)
+[clientscript,script1321](int $opindex0, component $com_bankmain_incinerator_toggle1, int $comsubid2)
 if ($opindex0 ! 1) {
 	return;
 }
-if (cc_find($widget_12:56_1, $comsubid2) = ^true) {
+if (cc_find($com_bankmain_incinerator_toggle1, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
 	%varbit5102 = calc(1 - %varbit5102);
-	~script1323($widget_12:56_1);
+	~script1323($com_bankmain_incinerator_toggle1);
 }

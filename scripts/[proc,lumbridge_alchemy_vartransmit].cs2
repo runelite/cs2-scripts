@@ -1,40 +1,40 @@
 // 1464
-[proc,lumbridge_alchemy_vartransmit](component $widget_483:1_0, component $widget_483:2_1, component $widget_483:3_2, component $widget_483:7_3, component $widget_483:8_4, int $size5)
-if_settrans(0, $widget_483:1_0);
-if_settrans(0, $widget_483:2_1);
-def_string $op0 = "Low-Alchemy";
+[proc,lumbridge_alchemy_vartransmit](component $com_lumbridge_alchemy_low0, component $com_lumbridge_alchemy_high1, component $com_lumbridge_alchemy_title2, component $com_lumbridge_alchemy_items3, component $com_lumbridge_alchemy_charges4, int $int5)
+if_settrans(0, $com_lumbridge_alchemy_low0);
+if_settrans(0, $com_lumbridge_alchemy_high1);
+def_string $string0 = "Low-Alchemy";
 if (%varbit5398 = 1) {
-	$op0 = "High-Alchemy";
-	if_settext("High Alchemy", $widget_483:3_2);
-	if_setgraphic("magicoff,10", $widget_483:1_0);
-	if_setonmouserepeat("settrans(event_com, 120)", $widget_483:1_0);
-	if_setonmouseleave("settrans(event_com, 0)", $widget_483:1_0);
-	if_setonop("opsound(event_op, 2)", $widget_483:1_0);
-	if_setgraphic("magicon,26", $widget_483:2_1);
-	if_setonmouserepeat(null, $widget_483:2_1);
-	if_setonmouseleave(null, $widget_483:2_1);
-	if_setonop(null, $widget_483:2_1);
+	$string0 = "High-Alchemy";
+	if_settext("High Alchemy", $com_lumbridge_alchemy_title2);
+	if_setgraphic("magicoff,10", $com_lumbridge_alchemy_low0);
+	if_setonmouserepeat("settrans(event_com, 120)", $com_lumbridge_alchemy_low0);
+	if_setonmouseleave("settrans(event_com, 0)", $com_lumbridge_alchemy_low0);
+	if_setonop("opsound(event_op, 2)", $com_lumbridge_alchemy_low0);
+	if_setgraphic("magicon,26", $com_lumbridge_alchemy_high1);
+	if_setonmouserepeat(null, $com_lumbridge_alchemy_high1);
+	if_setonmouseleave(null, $com_lumbridge_alchemy_high1);
+	if_setonop(null, $com_lumbridge_alchemy_high1);
 } else {
-	if_settext("Low Alchemy", $widget_483:3_2);
-	if_setgraphic("magicon,10", $widget_483:1_0);
-	if_setonmouserepeat(null, $widget_483:1_0);
-	if_setonmouseleave(null, $widget_483:1_0);
-	if_setonop(null, $widget_483:1_0);
-	if_setgraphic("magicoff,26", $widget_483:2_1);
-	if_setonmouserepeat("settrans(event_com, 120)", $widget_483:2_1);
-	if_setonmouseleave("settrans(event_com, 0)", $widget_483:2_1);
-	if_setonop("opsound(event_op, 2)", $widget_483:2_1);
+	if_settext("Low Alchemy", $com_lumbridge_alchemy_title2);
+	if_setgraphic("magicon,10", $com_lumbridge_alchemy_low0);
+	if_setonmouserepeat(null, $com_lumbridge_alchemy_low0);
+	if_setonmouseleave(null, $com_lumbridge_alchemy_low0);
+	if_setonop(null, $com_lumbridge_alchemy_low0);
+	if_setgraphic("magicoff,26", $com_lumbridge_alchemy_high1);
+	if_setonmouserepeat("settrans(event_com, 120)", $com_lumbridge_alchemy_high1);
+	if_setonmouseleave("settrans(event_com, 0)", $com_lumbridge_alchemy_high1);
+	if_setonop("opsound(event_op, 2)", $com_lumbridge_alchemy_high1);
 }
-if_settext("Charges: <tostring(calc(30 - %varbit4554))>", $widget_483:8_4);
+if_settext("Charges: <tostring(calc(30 - %varbit4554))>", $com_lumbridge_alchemy_charges4);
 if (%varbit4554 < 30) {
-	if_setcolour(0xff981f, $widget_483:8_4);
+	if_setcolour(0xff981f, $com_lumbridge_alchemy_charges4);
 } else {
-	if_setcolour(^red, $widget_483:8_4);
+	if_setcolour(^red, $com_lumbridge_alchemy_charges4);
 }
-def_int $int6 = $size5;
+def_int $int6 = $int5;
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
-	if (cc_find($widget_483:7_3, $int6) = ^true) {
-		cc_setop(1, $op0);
+	if (cc_find($com_lumbridge_alchemy_items3, $int6) = ^true) {
+		cc_setop(1, $string0);
 	}
 }

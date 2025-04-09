@@ -1,39 +1,39 @@
 // 381
-[clientscript,settings_side_brightness_init](component $widget_116:12_0, component $widget_116:23_1, component $widget_116:24_2, component $widget_116:43_3)
-cc_deleteall($widget_116:23_1);
+[clientscript,settings_side_brightness_init](component $com_settings_side_brightness_icon0, component $com_settings_side_brightness_bobble_container1, component $com_settings_side_brightness_slider_bobble2, component $com_settings_side_tooltip3)
+cc_deleteall($com_settings_side_brightness_bobble_container1);
 def_int $int4 = struct_param(screen_brightness_2736, param_1101);
 def_int $int5 = 0;
-def_int $width6 = if_getwidth($widget_116:23_1);
+def_int $int6 = if_getwidth($com_settings_side_brightness_bobble_container1);
 def_graphic $graphic7 = "options_icons,0";
 def_int $int8 = ~settings_get_slider(15);
 ~settings_set_slider(15, $int8);
-cc_deleteall($widget_116:12_0);
-cc_create($widget_116:12_0, ^iftype_graphic, 0);
+cc_deleteall($com_settings_side_brightness_icon0);
+cc_create($com_settings_side_brightness_icon0, ^iftype_graphic, 0, false);
 cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic($graphic7);
-if_setnoclickthrough(true, $widget_116:24_2);
-if_setonclick("opsound(0, 0)", $widget_116:24_2);
+if_setnoclickthrough(true, $com_settings_side_brightness_slider_bobble2);
+if_setonclick("opsound(0, 0)", $com_settings_side_brightness_slider_bobble2);
 if_setonvartransmit("script3939(
 	0 = 15, 
-	1 = $widget_116:24_2, 
-	2 = $widget_116:23_1, 
+	1 = $com_settings_side_brightness_slider_bobble2, 
+	2 = $com_settings_side_brightness_bobble_container1, 
 	3 = $int4, 
 	4 = $graphic7, 
-	5 = $widget_116:12_0, 
+	5 = $com_settings_side_brightness_icon0, 
 	6 = "", 
 	7 = "", 
-	8 = $widget_116:43_3
-){var2856}", $widget_116:24_2);
+	8 = $com_settings_side_tooltip3
+){var2856}", $com_settings_side_brightness_slider_bobble2);
 while ($int5 <= $int4) {
-	cc_create($widget_116:23_1, ^iftype_rectangle, $int5);
+	cc_create($com_settings_side_brightness_bobble_container1, ^iftype_rectangle, $int5, false);
 	cc_setop(1, "Adjust Brightness");
-	cc_setposition(scale($int5, $int4, $width6), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(scale(calc(1 + $int5), $int4, $width6) - scale($int5, $int4, $width6)), 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition(scale($int5, $int4, $int6), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(scale(calc(1 + $int5), $int4, $int6) - scale($int5, $int4, $int6)), 0, ^setsize_abs, ^setsize_minus);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_settrans(255);
-	cc_setonop("script439(15, $int5, $widget_116:24_2, $widget_116:23_1, $int4, $widget_116:43_3)");
+	cc_setonop("script439(15, $int5, $com_settings_side_brightness_slider_bobble2, $com_settings_side_brightness_bobble_container1, $int4, $com_settings_side_tooltip3)");
 	$int5 = calc($int5 + 1);
 }
-~script3941($int8, $widget_116:24_2, $widget_116:23_1, $int4);
+~script3941($int8, $com_settings_side_brightness_slider_bobble2, $com_settings_side_brightness_bobble_container1, $int4);

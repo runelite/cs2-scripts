@@ -1,9 +1,9 @@
 // 780
-[proc,ge_offers_setup_draw_disableconfirm](component $widget_465:25_0, int $comsubid1, component $widget_465:29_2)
-~v2_stone_button_in_filled($widget_465:29_2);
-if_setonmouserepeat(null, $widget_465:29_2);
-if_setonmouseleave(null, $widget_465:29_2);
-if_setonop(null, $widget_465:29_2);
-if (cc_find($widget_465:25_0, $comsubid1) = ^true) {
+[proc,ge_offers_setup_draw_disableconfirm](component $com_ge_offers_setup0, int $comsubid1, component $com_ge_offers_setup_confirm2)
+~v2_stone_button_in_filled($com_ge_offers_setup_confirm2);
+if_setonmouserepeat(null, $com_ge_offers_setup_confirm2);
+if_setonmouseleave(null, $com_ge_offers_setup_confirm2);
+if_setonop(null, $com_ge_offers_setup_confirm2);
+if (cc_find($com_ge_offers_setup0, $comsubid1) = ^true) {
 	cc_settext("---");
 }

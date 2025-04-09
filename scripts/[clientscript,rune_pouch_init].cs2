@@ -1,19 +1,19 @@
 // 453
-[clientscript,rune_pouch_init](component $widget_190:0_0, component $widget_190:1_1, component $widget_190:3_2, component $widget_190:4_3, component $widget_190:7_4, component $widget_190:11_5, component $widget_190:12_6, component $widget_190:13_7, component $widget_190:14_8)
-cc_deleteall($widget_190:7_4);
+[clientscript,rune_pouch_init](component $com_rune_pouch_universe0, component $com_rune_pouch_frame1, component $com_rune_pouch_top2, component $com_rune_pouch_pouch3, component $com_rune_pouch_inventory4, component $com_rune_pouch_15, component $com_rune_pouch_56, component $com_rune_pouch_x7, component $com_rune_pouch_all8)
+cc_deleteall($com_rune_pouch_inventory4);
 def_int $int9 = 0;
-def_int $size10 = inv_size(inv);
-def_int $int11 = max(1, calc($size10 / 4));
-def_int $int12 = calc((if_getwidth($widget_190:7_4) - (2 + $int11 * 36 + 2)) / ($int11 + 1));
-def_int $int13 = calc(if_getheight($widget_190:7_4) - 22);
+def_int $int10 = inv_size(inv);
+def_int $int11 = max(1, calc($int10 / 4));
+def_int $int12 = calc((if_getwidth($com_rune_pouch_inventory4) - (2 + $int11 * 36 + 2)) / ($int11 + 1));
+def_int $int13 = calc(if_getheight($com_rune_pouch_inventory4) - 22);
 def_int $int14 = calc(($int13 - 4 * 32) / (4 + 1));
 def_int $int15 = calc($int11 * 36 + ($int11 - 1) * $int12);
 def_int $int16 = calc(4 * 32 + (4 - 1) * $int14);
-def_int $int17 = calc((if_getwidth($widget_190:7_4) + 1 - $int15) / 2);
+def_int $int17 = calc((if_getwidth($com_rune_pouch_inventory4) + 1 - $int15) / 2);
 def_int $int18 = calc(($int13 - $int16) / 2 + 20);
 $int12, $int14 = calc($int12 + 36), calc($int14 + 32);
-while ($int9 < $size10) {
-	cc_create($widget_190:7_4, ^iftype_graphic, $int9);
+while ($int9 < $int10) {
+	cc_create($com_rune_pouch_inventory4, ^iftype_graphic, $int9, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int17 + $int9 % $int11 * $int12), calc($int18 + $int9 / $int11 * $int14), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
@@ -22,14 +22,14 @@ while ($int9 < $size10) {
 	cc_setdragdeadtime(5);
 	$int9 = calc($int9 + 1);
 }
-$int9 = ~thinstonebox($widget_190:7_4, $int9);
-~script7873($widget_190:7_4, $size10);
-if_setoninvtransmit("script7872($widget_190:7_4, $size10){inv}", $widget_190:7_4);
-if_setonvartransmit("script7872($widget_190:7_4, $size10){var695}", $widget_190:7_4);
-cc_deleteall($widget_190:4_3);
+$int9 = ~thinstonebox($com_rune_pouch_inventory4, $int9);
+~script7873($com_rune_pouch_inventory4, $int10);
+if_setoninvtransmit("script7872($com_rune_pouch_inventory4, $int10){inv}", $com_rune_pouch_inventory4);
+if_setonvartransmit("script7872($com_rune_pouch_inventory4, $int10){var695, var415}", $com_rune_pouch_inventory4);
+cc_deleteall($com_rune_pouch_pouch3);
 $int9 = 0;
 while ($int9 < 6) {
-	cc_create($widget_190:4_3, ^iftype_graphic, $int9);
+	cc_create($com_rune_pouch_pouch3, ^iftype_graphic, $int9, false);
 	$int9 = calc($int9 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -39,28 +39,38 @@ while ($int9 < 6) {
 }
 def_int $int19 = 0;
 while ($int19 < 6) {
-	cc_create($widget_190:4_3, ^iftype_graphic, $int9);
+	cc_create($com_rune_pouch_pouch3, ^iftype_graphic, $int9, false);
 	$int9 = calc($int9 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject_nonum(obj_11526, 1);
+	cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 	cc_settrans(120);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	$int19 = calc($int19 + 1);
 }
-$int9 = ~thinstonebox($widget_190:4_3, $int9);
-~script7875($widget_190:11_5, $widget_190:12_6, $widget_190:13_7, $widget_190:14_8);
-if_setonvartransmit("script7874($widget_190:11_5, $widget_190:12_6, $widget_190:13_7, $widget_190:14_8){var695}", $widget_190:11_5);
-def_int $comsubid20 = ~steelborder($widget_190:1_1, "", 0);
-cc_deleteall($widget_190:3_2);
+$int9 = ~thinstonebox($com_rune_pouch_pouch3, $int9);
+~script7875($com_rune_pouch_15, $com_rune_pouch_56, $com_rune_pouch_x7, $com_rune_pouch_all8);
+if_setonvartransmit("script7874($com_rune_pouch_15, $com_rune_pouch_56, $com_rune_pouch_x7, $com_rune_pouch_all8){var695, var415}", $com_rune_pouch_15);
+def_int $comsubid20 = ~steelborder($com_rune_pouch_frame1, "", 0);
+cc_deleteall($com_rune_pouch_top2);
 $int9 = 0;
-cc_create($widget_190:3_2, ^iftype_model, $int9);
+cc_create($com_rune_pouch_top2, ^iftype_model, $int9, false);
 def_int $comsubid21 = $int9;
 $int9 = calc($int9 + 1);
-cc_create($widget_190:3_2, ^iftype_model, $int9);
+cc_create($com_rune_pouch_top2, ^iftype_model, $int9, false);
 def_int $comsubid22 = $int9;
 $int9 = calc($int9 + 1);
-~script7871($widget_190:1_1, $comsubid20, $widget_190:3_2, $comsubid21, $comsubid22, $widget_190:4_3);
-if_setonvartransmit("script7870($widget_190:1_1, $comsubid20, $widget_190:3_2, $comsubid21, $comsubid22, $widget_190:4_3){var261, var2606, var2632}", $widget_190:1_1);
-~rune_pouch_drawpouch($widget_190:4_3);
-if_setonvartransmit("rune_pouch_drawpouch($widget_190:4_3){var261, var2606, var2632, var695, var1139, var1140, var3574, var4017}", $widget_190:0_0);
+~script7871($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3);
+if_setonvartransmit("script7870($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3){var261, var2606, var2632}", $com_rune_pouch_frame1);
+~rune_pouch_drawpouch($com_rune_pouch_pouch3);
+if_setonvartransmit("rune_pouch_drawpouch($com_rune_pouch_pouch3){
+	0 = var261, 
+	1 = var2606, 
+	2 = var2632, 
+	3 = var695, 
+	4 = var415, 
+	5 = var1139, 
+	6 = var1140, 
+	7 = var3574, 
+	8 = var4017
+}", $com_rune_pouch_universe0);

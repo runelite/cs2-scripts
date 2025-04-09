@@ -1,13 +1,13 @@
 // 4492
-[proc,tob_scoreboard_tab_update](component $widget_363:4_0, component $widget_363:5_1, component $widget_363:6_2)
-~script3723($widget_363:5_1, 0, "Normal");
-~script3723($widget_363:4_0, 0, "Entry");
-~script3723($widget_363:6_2, 0, "Hard");
+[proc,tob_scoreboard_tab_update](component $com_tob_scoreboard_story_tab0, component $com_tob_scoreboard_normal_tab1, component $com_tob_scoreboard_hard_tab2)
+~script3723($com_tob_scoreboard_normal_tab1, 0, "Normal");
+~script3723($com_tob_scoreboard_story_tab0, 0, "Entry");
+~script3723($com_tob_scoreboard_hard_tab2, 0, "Hard");
 switch_int (%varbit12270) {
 	case 1 :
-		~script3723($widget_363:4_0, 1, "Entry");
+		~script3723($com_tob_scoreboard_story_tab0, 1, "Entry");
 	case 2 :
-		~script3723($widget_363:6_2, 1, "Hard");
+		~script3723($com_tob_scoreboard_hard_tab2, 1, "Hard");
 	case default :
-		~script3723($widget_363:5_1, 1, "Normal");
+		~script3723($com_tob_scoreboard_normal_tab1, 1, "Normal");
 }

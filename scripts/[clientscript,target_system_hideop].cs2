@@ -1,5 +1,5 @@
 // 3142
-[clientscript,target_system_hideop](int $opindex0, int $int1, component $widget_90:5_2, component $widget_90:6_3, component $widget_90:7_4, component $widget_90:12_5, component $widget_90:14_6, component $widget_90:15_7, component $widget_90:16_8, component $widget_90:17_9)
+[clientscript,target_system_hideop](int $opindex0, int $int1, component $com_pvp_icons_target_system2, component $com_pvp_icons_target_hidden3, component $com_pvp_icons_target_visible4, component $com_pvp_icons_target_multiway5, component $com_pvp_icons_target_wildylevel6, component $com_pvp_icons_target_name7, component $com_pvp_icons_target_skip8, component $com_pvp_icons_target_hide9)
 if ($int1 = 1) {
 	switch_int ($opindex0) {
 		case 1 :
@@ -17,4 +17,4 @@ if ($int1 = 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-~target_system_redraw($widget_90:5_2, $widget_90:6_3, $widget_90:7_4, $widget_90:12_5, $widget_90:14_6, $widget_90:15_7, $widget_90:16_8, $widget_90:17_9);
+~target_system_redraw($com_pvp_icons_target_system2, $com_pvp_icons_target_hidden3, $com_pvp_icons_target_visible4, $com_pvp_icons_target_multiway5, $com_pvp_icons_target_wildylevel6, $com_pvp_icons_target_name7, $com_pvp_icons_target_skip8, $com_pvp_icons_target_hide9);

@@ -1,6 +1,6 @@
 // 5380
 [proc,script5380](stat $stat0, int $int1)(int)
-def_int $xp2 = stat_xp($stat0);
+def_int $int2 = stat_xp($stat0);
 def_int $int3 = 0;
 def_int $int4 = ~private_event_world;
 def_int $int5 = 0;
@@ -11,7 +11,7 @@ if ($stat0 = slayer) {
 	}
 	$int3 = calc(scale(%varbit13670, 100, ~max(100, $int5)) / 10);
 	if ($int3 ! 0 & abs(calc(~xptracker_get_slayer_xp(0) - $int3)) <= 1) {
-		return(calc(($int1 - $xp2 - 1) / $int3 + 1));
+		return(calc(($int1 - $int2 - 1) / $int3 + 1));
 	}
 	return(-1);
 }
@@ -83,4 +83,4 @@ if ($int3 <= 0) {
 	return(-2);
 }
 $int3 = scale($int3, 100, ~max(100, $int10));
-return(calc(($int1 - $xp2 - 1) / $int3 + 1));
+return(calc(($int1 - $int2 - 1) / $int3 + 1));

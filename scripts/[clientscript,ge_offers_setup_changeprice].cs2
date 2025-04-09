@@ -1,5 +1,5 @@
 // 778
-[clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $widget_465:25_3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $widget_465:29_16, int $comsubid17, int $comsubid18)
+[clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $com_ge_offers_setup3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $com_ge_offers_setup_confirm16, int $comsubid17, int $comsubid18)
 if ($opindex2 ! 1 | %var1151 = null) {
 	return;
 }
@@ -39,7 +39,7 @@ if ($int1 = 1) {
 }
 ~ge_offers_setup_draw(
 	0 = $boolean0, 
-	1 = $widget_465:25_3, 
+	1 = $com_ge_offers_setup3, 
 	2 = $comsubid4, 
 	3 = $comsubid5, 
 	4 = $comsubid6, 
@@ -52,7 +52,7 @@ if ($int1 = 1) {
 	11 = $comsubid13, 
 	12 = $comsubid14, 
 	13 = $comsubid15, 
-	14 = $widget_465:29_16, 
+	14 = $com_ge_offers_setup_confirm16, 
 	15 = $comsubid17, 
 	16 = $comsubid18
 );

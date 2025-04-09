@@ -1,10 +1,10 @@
 // 6807
 [proc,script6807](dbrow $dbrow0)(int)
 def_dbrow $dbrow1 = ~script4865($dbrow0);
-if ($dbrow1 = null | db_getrowtable($dbrow1) ! dbtable_61) {
+if ($dbrow1 = null | db_getrowtable($dbrow1) ! speedrun) {
 	return(0);
 }
-def_int $int2 = db_getfield($dbrow1, dbtable_61:1, 0);
+def_int $int2 = db_getfield($dbrow1, speedrun:speedrun_state, 0);
 if ($int2 = 2 | $int2 = 3) {
 	return(1);
 }

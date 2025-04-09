@@ -1,5 +1,5 @@
 // 3148
-[proc,script3148](component $widget_90:8_0, component $widget_90:9_1, component $widget_90:10_2)
+[proc,script3148](component $com_pvp_icons_target_pj_layer0, component $com_pvp_icons_target_pj_time1, component $com_pvp_icons_target_pj_text2)
 def_int $int3 = calc(200 - %varbit14890);
 $int3 = interpolate(0, 60, 0, 100, $int3);
 def_int $int4 = 1;
@@ -7,13 +7,13 @@ if (%varbit9495 = 0 | %varbit14888 = 0) {
 	$int3 = scale(60, 100, calc((%varbit10543 - 2) * 2));
 	$int4 = 0;
 }
-~script3150($int3, $widget_90:9_1, $widget_90:10_2, $int4);
+~script3150($int3, $com_pvp_icons_target_pj_time1, $com_pvp_icons_target_pj_text2, $int4);
 if ($int3 > -2) {
-	if_sethide(false, $widget_90:10_2);
-	if_sethide(false, $widget_90:9_1);
-	if_setontimer("script3149(calc(clientclock + 50), calc($int3 - 1), $widget_90:8_0, $widget_90:9_1, $widget_90:10_2, $int4)", $widget_90:8_0);
+	if_sethide(false, $com_pvp_icons_target_pj_text2);
+	if_sethide(false, $com_pvp_icons_target_pj_time1);
+	if_setontimer("script3149(calc(clientclock + 50), calc($int3 - 1), $com_pvp_icons_target_pj_layer0, $com_pvp_icons_target_pj_time1, $com_pvp_icons_target_pj_text2, $int4)", $com_pvp_icons_target_pj_layer0);
 } else {
-	if_sethide(true, $widget_90:10_2);
-	if_sethide(true, $widget_90:9_1);
-	if_setontimer(null, $widget_90:8_0);
+	if_sethide(true, $com_pvp_icons_target_pj_text2);
+	if_sethide(true, $com_pvp_icons_target_pj_time1);
+	if_setontimer(null, $com_pvp_icons_target_pj_layer0);
 }

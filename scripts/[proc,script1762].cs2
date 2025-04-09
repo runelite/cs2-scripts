@@ -1,7 +1,7 @@
 // 1762
 [proc,script1762](int $int0, boolean $boolean1)
-def_component $component2 = interface_823:18;
-def_component $component3 = interface_823:19;
+def_component $component2 = forestry_kit_main:info;
+def_component $component3 = forestry_kit_main:info_scroller;
 cc_deleteall($component2);
 def_namedobj $namedobj4 = enum(int, namedobj, enum_817, $int0);
 def_graphic $graphic5 = b12_full;
@@ -38,15 +38,15 @@ switch_int (%varcint988) {
 }
 def_int $int12 = 0;
 def_int $int13 = 0;
-def_int $width14 = if_getwidth($component2);
+def_int $int14 = if_getwidth($component2);
 def_string $string0 = "This is your Forestry kit";
 if ($namedobj4 ! null) {
 	$string0 = oc_name($namedobj4);
 }
-def_int $int15 = calc(paraheight($string0, calc($width14 - $int9 * 2), $fontmetrics6) * $int11);
-cc_create($component2, ^iftype_text, $int12);
+def_int $int15 = calc(paraheight($string0, calc($int14 - $int9 * 2), $fontmetrics6) * $int11);
+cc_create($component2, ^iftype_text, $int12, false);
 cc_setposition($int9, $int9, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($width14 - $int9 * 2), $int15, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int14 - $int9 * 2), $int15, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, $int11);
 cc_settextshadow(true);
 cc_settextfont($graphic5);
@@ -54,8 +54,8 @@ cc_setcolour(0xff981f);
 cc_settext($string0);
 $int12 = calc($int12 + 1);
 $int13 = calc($int13 + $int9 + $int15 + $int10);
-cc_create($component2, ^iftype_graphic, $int12);
-cc_setposition(calc($width14 / 2 - 36 / 2), $int13, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component2, ^iftype_graphic, $int12, false);
+cc_setposition(calc($int14 / 2 - 36 / 2), $int13, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 if ($namedobj4 ! null) {
 	cc_setobject($namedobj4, -1);
@@ -67,14 +67,14 @@ cc_setgraphicshadow(0x333333);
 $int13 = calc($int13 + 32 + $int10);
 $int12 = calc($int12 + 1);
 if ($namedobj4 ! null) {
-	cc_create($component2, ^iftype_text, $int12);
+	cc_create($component2, ^iftype_text, $int12, false);
 	cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(50, 18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_settextfont($graphic5);
 	cc_setcolour(0xff981f);
-	cc_settext(tostring(inv_total(inv_814, $namedobj4)));
+	cc_settext(tostring(inv_total(forestry_kit, $namedobj4)));
 	$int12 = calc($int12 + 1);
 	$int13 = calc($int13 + 22);
 }
@@ -82,10 +82,10 @@ $string0 = "You can use this kit to store your forestry items.<br><br>This panel
 if ($namedobj4 ! null) {
 	$string0 = oc_param($namedobj4, param_1784);
 }
-$int15 = calc(paraheight($string0, calc($width14 - $int9 * 2), $fontmetrics8) * $int11);
-cc_create($component2, ^iftype_text, $int12);
+$int15 = calc(paraheight($string0, calc($int14 - $int9 * 2), $fontmetrics8) * $int11);
+cc_create($component2, ^iftype_text, $int12, false);
 cc_setposition($int9, $int13, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($width14 - $int9 * 2), $int15, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int14 - $int9 * 2), $int15, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_top, $int11);
 cc_settextshadow(true);
 cc_settextfont($graphic7);

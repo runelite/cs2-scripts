@@ -1,66 +1,66 @@
 // 422
-[proc,slayer_rewards_tasks_currenttask](component $widget_426:26_0, component $widget_426:29_1, component $widget_426:35_2, component $widget_426:11_3, component $widget_426:2_4, component $widget_426:4_5, component $widget_426:8_6, component $widget_426:5_7, component $widget_426:46_8)
+[proc,slayer_rewards_tasks_currenttask](component $com_slayer_rewards_tasks0, component $com_slayer_rewards_tasks_introduction1, component $com_slayer_rewards_tasks_current2, component $com_slayer_rewards_main3, component $com_slayer_rewards_confirm4, component $com_slayer_rewards_confirm_info5, component $com_slayer_rewards_confirm_button6, component $com_slayer_rewards_back_button7, component $com_slayer_rewards_tasks_stored8)
 def_int $int9 = 0;
 if (~league_relic_active(struct_1129) = 1) {
 	$int9 = 1;
 }
 if ($int9 = 1) {
 	if (%varbit12442 = 1) {
-		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br>You may also <col=ffffff>store</col> your current task for later.", $widget_426:29_1);
+		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br>You may also <col=ffffff>store</col> your current task for later.", $com_slayer_rewards_tasks_introduction1);
 	} else {
-		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $widget_426:29_1);
+		if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=06600c>(Free)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=06600c>(Free)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $com_slayer_rewards_tasks_introduction1);
 	}
 } else if (%varbit12442 = 1) {
-	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br>You may also <col=ffffff>store</col> your current task for later.", $widget_426:29_1);
+	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br>You may also <col=ffffff>store</col> your current task for later.", $com_slayer_rewards_tasks_introduction1);
 } else {
-	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $widget_426:29_1);
+	if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $com_slayer_rewards_tasks_introduction1);
 }
-cc_deleteall($widget_426:26_0);
+cc_deleteall($com_slayer_rewards_tasks0);
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_string $string0 = "Creature";
 if (%var262 = 98) {
 	if (%var261 > 0) {
 		$int11, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
-		if_settext("<tostring(%var261)> x <$string0>", $widget_426:35_2);
+		if_settext("<tostring(%var261)> x <$string0>", $com_slayer_rewards_tasks_current2);
 	} else if (%var261 = -1) {
 		$int11, $string0 = 1, struct_param(enum(int, struct, enum_5008, %var263), param_1801);
-		if_settext($string0, $widget_426:35_2);
+		if_settext($string0, $com_slayer_rewards_tasks_current2);
 	} else {
-		if_settext("None", $widget_426:35_2);
+		if_settext("None", $com_slayer_rewards_tasks_current2);
 	}
 } else if (%var261 > 0 & %var262 ! 0) {
 	$int11, $string0 = 1, enum(int, string, enum_693, %var262);
-	if_settext("<tostring(%var261)> x <$string0>", $widget_426:35_2);
+	if_settext("<tostring(%var261)> x <$string0>", $com_slayer_rewards_tasks_current2);
 } else {
-	if_settext("None", $widget_426:35_2);
+	if_settext("None", $com_slayer_rewards_tasks_current2);
 }
 def_int $int12 = 0;
 def_string $string1 = "Creature";
 if (%var265 = 98) {
 	if (%var264 > 0) {
 		$int12, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
-		if_settext("<tostring(%var264)> x <$string1>", $widget_426:46_8);
-		if_setcolour(^white, $widget_426:46_8);
+		if_settext("<tostring(%var264)> x <$string1>", $com_slayer_rewards_tasks_stored8);
+		if_setcolour(^white, $com_slayer_rewards_tasks_stored8);
 	} else if (%var264 = -1) {
 		$int12, $string1 = 1, struct_param(enum(int, struct, enum_5008, %var266), param_1801);
-		if_settext($string1, $widget_426:46_8);
-		if_setcolour(^white, $widget_426:46_8);
+		if_settext($string1, $com_slayer_rewards_tasks_stored8);
+		if_setcolour(^white, $com_slayer_rewards_tasks_stored8);
 	} else {
-		if_settext("No stored task", $widget_426:46_8);
-		if_setcolour(0x9f9f9f, $widget_426:46_8);
+		if_settext("No stored task", $com_slayer_rewards_tasks_stored8);
+		if_setcolour(0x9f9f9f, $com_slayer_rewards_tasks_stored8);
 	}
 } else if (%var264 > 0 & %var265 ! 0) {
 	$int12, $string1 = 1, enum(int, string, enum_693, %var265);
-	if_settext("<tostring(%var264)> x <$string1>", $widget_426:46_8);
-	if_setcolour(^white, $widget_426:46_8);
+	if_settext("<tostring(%var264)> x <$string1>", $com_slayer_rewards_tasks_stored8);
+	if_setcolour(^white, $com_slayer_rewards_tasks_stored8);
 } else {
-	if_settext("No stored task", $widget_426:46_8);
-	if_setcolour(0x9f9f9f, $widget_426:46_8);
+	if_settext("No stored task", $com_slayer_rewards_tasks_stored8);
+	if_setcolour(0x9f9f9f, $com_slayer_rewards_tasks_stored8);
 }
-cc_create($widget_426:26_0, ^iftype_graphic, $int10);
+cc_create($com_slayer_rewards_tasks0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
-.cc_create($widget_426:26_0, ^iftype_text, $int10);
+.cc_create($com_slayer_rewards_tasks0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -76,13 +76,13 @@ if ($int11 = 1) {
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Cancel");
-	cc_setonop("slayer_rewards_tasks_canceltask($string0, 1, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+	cc_setonop("slayer_rewards_tasks_canceltask($string0, 1, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 } else {
 	.cc_setcolour(0x7f4c0f);
 }
-cc_create($widget_426:26_0, ^iftype_graphic, $int10);
+cc_create($com_slayer_rewards_tasks0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
-.cc_create($widget_426:26_0, ^iftype_text, $int10);
+.cc_create($com_slayer_rewards_tasks0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -98,13 +98,13 @@ if ($int11 = 1 & %var262 ! 97 & %var262 ! 105 & %var262 ! 98) {
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Block");
-	cc_setonop("slayer_rewards_tasks_canceltask($string0, 2, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+	cc_setonop("slayer_rewards_tasks_canceltask($string0, 2, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 } else {
 	.cc_setcolour(0x7f4c0f);
 }
-cc_create($widget_426:26_0, ^iftype_graphic, $int10);
+cc_create($com_slayer_rewards_tasks0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
-.cc_create($widget_426:26_0, ^iftype_text, $int10);
+.cc_create($com_slayer_rewards_tasks0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -127,19 +127,19 @@ if (%varbit12442 = 1) {
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 		cc_setop(1, "Swap");
-		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 	} else if ($int11 = 1 & $int12 = 0) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 		cc_setop(1, "Store");
-		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+		cc_setonop("slayer_rewards_tasks_canceltask($string0, 10, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 	} else if ($int11 = 0 & $int12 = 1) {
 		.cc_setcolour(0xff981f);
 		cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 		cc_setop(1, "Unstore");
-		cc_setonop("slayer_rewards_tasks_canceltask($string1, 11, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+		cc_setonop("slayer_rewards_tasks_canceltask($string1, 11, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 	} else {
 		.cc_setcolour(0x7f4c0f);
 	}

@@ -1,5 +1,5 @@
 // 4567
-[proc,settings_side_dropdown_create](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6, string $string0, struct $struct7)
+[proc,settings_side_dropdown_create](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, string $string0, struct $struct7)
 cc_deleteall($component0);
 if ($struct7 = null) {
 	return;
@@ -16,7 +16,7 @@ if (compare($string0, "") ! 0) {
 	$string0 = "<$string0>:";
 }
 def_int $int10 = 0;
-cc_create($component0, ^iftype_graphic, $int10);
+cc_create($component0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -29,27 +29,27 @@ cc_setonclick("settings_side_dropdown_open(
 	3 = $component3, 
 	4 = $component4, 
 	5 = $component5, 
-	6 = $layer6, 
+	6 = $component6, 
 	7 = $enum8, 
 	8 = $int9
 )");
-cc_create($component0, ^iftype_rectangle, $int10);
+cc_create($component0, ^iftype_rectangle, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($component0, ^iftype_rectangle, $int10);
+cc_create($component0, ^iftype_rectangle, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(2, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($component0, ^iftype_graphic, $int10);
+cc_create($component0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_bottom);
-cc_create($component0, ^iftype_text, $int10);
+cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
 cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
@@ -57,7 +57,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~settings_side_dropdown_update($component0, $enum8, $int9);
-cc_create($component0, ^iftype_text, $int10);
+cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);

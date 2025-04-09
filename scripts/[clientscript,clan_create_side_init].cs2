@@ -8,7 +8,7 @@ if (%varbit13058 = 1 | %varbit13059 = 1) {
 	if_settext("<col=ff981f>Form a <$string0></col>", $component1);
 }
 cc_deleteall($component2);
-cc_create($component2, ^iftype_text, 0);
+cc_create($component2, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setcolour(0xffb83f);
@@ -23,10 +23,10 @@ if ($int9 = 1) {
 	$enum10 = enum_4053;
 	$int11 = 1;
 }
-cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component4));
-cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component5));
-cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component6));
-cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component7));
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component4), false);
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component5), false);
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component6), false);
+cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component7), false);
 def_string $string1 = "<col=ff981f><$string0> name</col>";
 if (string_length(%varcstring458) > 0) {
 	$string1 = %varcstring458;

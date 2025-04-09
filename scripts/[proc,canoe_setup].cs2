@@ -1,30 +1,30 @@
 // 3095
-[proc,canoe_setup](component $widget_416:20_0, component $widget_416:21_1, component $widget_416:18_2, component $widget_416:19_3, component $widget_416:12_4, component $widget_416:17_5, component $widget_416:11_6, component $widget_416:22_7)
+[proc,canoe_setup](component $com_canoeing_log0, component $com_canoeing_log_model1, component $com_canoeing_dugout2, component $com_canoeing_dugout_model3, component $com_canoeing_stable_dugout4, component $com_canoeing_stable_dugout_model5, component $com_canoeing_waka6, component $com_canoeing_waka_model7)
 if (stat(woodcutting) < 12) {
 	if_close;
 	mes("You must have at least level 12 woodcutting to start making canoes.");
 	return;
 }
-cc_deleteall($widget_416:20_0);
-cc_deleteall($widget_416:18_2);
-cc_deleteall($widget_416:12_4);
-cc_deleteall($widget_416:11_6);
-~canoe_name("A Log.", $widget_416:20_0, "Log canoe");
+cc_deleteall($com_canoeing_log0);
+cc_deleteall($com_canoeing_dugout2);
+cc_deleteall($com_canoeing_stable_dugout4);
+cc_deleteall($com_canoeing_waka6);
+~canoe_name("A Log.", $com_canoeing_log0, "Log canoe");
 if (stat(woodcutting) < 27) {
-	if_setmodel(model_12104, $widget_416:19_3);
+	if_setmodel(model_12104, $com_canoeing_dugout_model3);
 } else {
-	if_setmodel(model_12103, $widget_416:19_3);
-	~canoe_name("A Dugout.", $widget_416:18_2, "Dugout canoe");
+	if_setmodel(model_12103, $com_canoeing_dugout_model3);
+	~canoe_name("A Dugout.", $com_canoeing_dugout2, "Dugout canoe");
 }
 if (stat(woodcutting) < 42) {
-	if_setmodel(model_12102, $widget_416:17_5);
+	if_setmodel(model_12102, $com_canoeing_stable_dugout_model5);
 } else {
-	if_setmodel(model_12101, $widget_416:17_5);
-	~canoe_name("A Stable Dugout", $widget_416:12_4, "Stable dugout canoe");
+	if_setmodel(model_12101, $com_canoeing_stable_dugout_model5);
+	~canoe_name("A Stable Dugout", $com_canoeing_stable_dugout4, "Stable dugout canoe");
 }
 if (stat(woodcutting) < 57) {
-	if_setmodel(model_12113, $widget_416:22_7);
+	if_setmodel(model_12113, $com_canoeing_waka_model7);
 } else {
-	if_setmodel(model_12112, $widget_416:22_7);
-	~canoe_name("A Waka.", $widget_416:11_6, "Waka canoe");
+	if_setmodel(model_12112, $com_canoeing_waka_model7);
+	~canoe_name("A Waka.", $com_canoeing_waka6, "Waka canoe");
 }

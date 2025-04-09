@@ -1,5 +1,5 @@
 // 2088
-[clientscript,trail_rewardscreen_init](component $widget_73:0_0, component $widget_73:3_1)
-def_int $size2 = inv_size(inv_141);
-~trail_rewardscreen_draw($widget_73:3_1, $size2);
-if_setoninvtransmit("trail_rewardscreen_draw($widget_73:3_1, $size2){inv_141}", $widget_73:0_0);
+[clientscript,trail_rewardscreen_init](component $com_trail_rewardscreen_universe0, component $com_trail_rewardscreen_items1)
+def_int $int2 = inv_size(trail_rewardinv);
+~trail_rewardscreen_draw($com_trail_rewardscreen_items1, $int2);
+if_setoninvtransmit("trail_rewardscreen_draw($com_trail_rewardscreen_items1, $int2){trail_rewardinv}", $com_trail_rewardscreen_universe0);

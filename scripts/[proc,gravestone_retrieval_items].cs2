@@ -1,30 +1,30 @@
 // 1992
-[proc,gravestone_retrieval_items](component $widget_602:3_0, component $widget_602:4_1)
+[proc,gravestone_retrieval_items](component $com_gravestone_retrieval_items0, component $com_gravestone_retrieval_scrollbar1)
 def_obj $obj2 = null;
-def_int $height3 = 0;
+def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int4 < 120) {
-	if (cc_find($widget_602:3_0, $int4) = ^true) {
-		$obj2 = inv_getobj(inv_525, $int4);
+	if (cc_find($com_gravestone_retrieval_items0, $int4) = ^true) {
+		$obj2 = inv_getobj(gravestone, $int4);
 		if ($obj2 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj2, inv_getnum(inv_525, $int4));
+			cc_setobject($obj2, inv_getnum(gravestone, $int4));
 			cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
 			cc_settrans(0);
 			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			cc_setontimer(null);
-			$height3 = calc(cc_gety + cc_getheight);
+			$int3 = calc(cc_gety + cc_getheight);
 		} else {
 			cc_sethide(true);
 		}
 	}
 	$int4 = calc($int4 + 1);
 }
-if ($height3 > if_getheight($widget_602:3_0)) {
-	if_setscrollpos(0, ~min(if_getscrolly($widget_602:3_0), calc($height3 - if_getheight($widget_602:3_0))), $widget_602:3_0);
-	if_setscrollsize(0, $height3, $widget_602:3_0);
+if ($int3 > if_getheight($com_gravestone_retrieval_items0)) {
+	if_setscrollpos(0, ~min(if_getscrolly($com_gravestone_retrieval_items0), calc($int3 - if_getheight($com_gravestone_retrieval_items0))), $com_gravestone_retrieval_items0);
+	if_setscrollsize(0, $int3, $com_gravestone_retrieval_items0);
 } else {
-	if_setscrollpos(0, 0, $widget_602:3_0);
-	if_setscrollsize(0, 0, $widget_602:3_0);
+	if_setscrollpos(0, 0, $com_gravestone_retrieval_items0);
+	if_setscrollsize(0, 0, $com_gravestone_retrieval_items0);
 }
-~scrollbar_vertical_rebuild($widget_602:4_1, $widget_602:3_0);
+~scrollbar_vertical_rebuild($com_gravestone_retrieval_scrollbar1, $com_gravestone_retrieval_items0);

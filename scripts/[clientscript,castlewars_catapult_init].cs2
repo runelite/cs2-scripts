@@ -1,15 +1,15 @@
 // 3634
-[clientscript,castlewars_catapult_init](int $widget_54:0_0, component $widget_54:1_1, component $widget_54:2_2, component $widget_54:5_3, component $widget_54:6_4, component $widget_54:7_5, component $widget_54:18_6, component $widget_54:19_7, component $widget_54:8_8, component $widget_54:11_9, component $widget_54:20_10, component $widget_54:23_11)
-~steelborder($widget_54:1_1, "Catapult Controls", 0);
-~steelbox($widget_54:2_2, 0, false);
-~steelbox($widget_54:8_8, 0, false);
-~steelbox($widget_54:11_9, 0, false);
-~steelbox($widget_54:20_10, 0, false);
-~steelbox($widget_54:23_11, 0, false);
-if_setop(1, "Move Up", $widget_54:6_4);
-if_setop(1, "Move Down", $widget_54:7_5);
-if_setop(1, "Move Left", $widget_54:18_6);
-if_setop(1, "Move Right", $widget_54:19_7);
-~castlewars_catapult_hover($widget_54:5_3, false);
-if_setonmouseover("castlewars_catapult_hover($widget_54:5_3, true)", $widget_54:5_3);
-if_setonmouseleave("castlewars_catapult_hover($widget_54:5_3, false)", $widget_54:5_3);
+[clientscript,castlewars_catapult_init](int $com_castlewars_catapult_universe0, component $com_castlewars_catapult_frame1, component $com_castlewars_catapult_map_frame2, component $com_castlewars_catapult_fire_catapult_button3, component $com_castlewars_catapult_castlewars_z_up4, component $com_castlewars_catapult_castlewars_z_down5, component $com_castlewars_catapult_castlewars_x_up6, component $com_castlewars_catapult_castlewars_x_down7, component $com_castlewars_catapult_value_18, component $com_castlewars_catapult_value_29, component $com_castlewars_catapult_value_310, component $com_castlewars_catapult_value_411)
+~steelborder($com_castlewars_catapult_frame1, "Catapult Controls", 0);
+~steelbox($com_castlewars_catapult_map_frame2, 0, false);
+~steelbox($com_castlewars_catapult_value_18, 0, false);
+~steelbox($com_castlewars_catapult_value_29, 0, false);
+~steelbox($com_castlewars_catapult_value_310, 0, false);
+~steelbox($com_castlewars_catapult_value_411, 0, false);
+if_setop(1, "Move Up", $com_castlewars_catapult_castlewars_z_up4);
+if_setop(1, "Move Down", $com_castlewars_catapult_castlewars_z_down5);
+if_setop(1, "Move Left", $com_castlewars_catapult_castlewars_x_up6);
+if_setop(1, "Move Right", $com_castlewars_catapult_castlewars_x_down7);
+~castlewars_catapult_hover($com_castlewars_catapult_fire_catapult_button3, false);
+if_setonmouseover("castlewars_catapult_hover($com_castlewars_catapult_fire_catapult_button3, true)", $com_castlewars_catapult_fire_catapult_button3);
+if_setonmouseleave("castlewars_catapult_hover($com_castlewars_catapult_fire_catapult_button3, false)", $com_castlewars_catapult_fire_catapult_button3);

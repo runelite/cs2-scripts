@@ -1,7 +1,7 @@
 // 5221
-[clientscript,summary_sidepanel_timer_draw](component $widget_712:2_0, component $widget_712:3_1, int $clock2)
-if (clientclock < calc($clock2 + 10)) {
+[clientscript,summary_sidepanel_timer_draw](component $com_account_summary_sidepanel_summary_contents0, component $com_account_summary_sidepanel_summary_click_layer1, int $int2)
+if (clientclock < calc($int2 + 10)) {
 	return;
 }
-if_setontimer(null, $widget_712:2_0);
-~summary_sidepanel_draw($widget_712:2_0, $widget_712:3_1);
+if_setontimer(null, $com_account_summary_sidepanel_summary_contents0);
+~summary_sidepanel_draw($com_account_summary_sidepanel_summary_contents0, $com_account_summary_sidepanel_summary_click_layer1);

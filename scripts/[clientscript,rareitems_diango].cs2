@@ -1,9 +1,9 @@
 // 450
-[clientscript,rareitems_diango](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5, int $flags6, int $flags7, string $text0)
-if_settext($text0, interface_78:1);
-cc_deleteall(interface_78:3);
-cc_deleteall(interface_78:4);
-def_int $int8 = calc((if_getwidth(interface_78:3) - 10 * 36) / 9 + 36);
+[clientscript,rareitems_diango](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, string $string0)
+if_settext($string0, rareitems_diango:title);
+cc_deleteall(rareitems_diango:items);
+cc_deleteall(rareitems_diango:scrollbar);
+def_int $int8 = calc((if_getwidth(rareitems_diango:items) - 10 * 36) / 9 + 36);
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
@@ -11,49 +11,49 @@ def_namedobj $namedobj12 = null;
 def_int $int13 = 0;
 while ($int13 <= 209) {
 	if ($int13 < 32) {
-		if (testbit($flags0, $int13) = ^true) {
+		if (testbit($int0, $int13) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 64) {
-		if (testbit($flags1, calc($int13 - 32)) = ^true) {
+		if (testbit($int1, calc($int13 - 32)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 96) {
-		if (testbit($flags2, calc($int13 - 64)) = ^true) {
+		if (testbit($int2, calc($int13 - 64)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 128) {
-		if (testbit($flags3, calc($int13 - 96)) = ^true) {
+		if (testbit($int3, calc($int13 - 96)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 160) {
-		if (testbit($flags4, calc($int13 - 128)) = ^true) {
+		if (testbit($int4, calc($int13 - 128)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 192) {
-		if (testbit($flags5, calc($int13 - 160)) = ^true) {
+		if (testbit($int5, calc($int13 - 160)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 224) {
-		if (testbit($flags6, calc($int13 - 192)) = ^true) {
+		if (testbit($int6, calc($int13 - 192)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
 		}
 	} else if ($int13 < 256) {
-		if (testbit($flags7, calc($int13 - 224)) = ^true) {
+		if (testbit($int7, calc($int13 - 224)) = ^true) {
 			$int11 = 1;
 		} else {
 			$int11 = 0;
@@ -61,7 +61,7 @@ while ($int13 <= 209) {
 	} else {
 		$int11 = 0;
 	}
-	cc_create(interface_78:3, ^iftype_graphic, $int13);
+	cc_create(rareitems_diango:items, ^iftype_graphic, $int13, false);
 	if ($int11 = 1) {
 		$namedobj12 = enum(int, namedobj, enum_708, $int13);
 		if ($namedobj12 ! null) {
@@ -96,11 +96,11 @@ if ($int10 > 0) {
 } else if ($int9 > 0) {
 	$int9 = calc($int9 - 15);
 }
-if ($int9 <= if_getheight(interface_78:3)) {
-	if_setscrollsize(0, 0, interface_78:3);
+if ($int9 <= if_getheight(rareitems_diango:items)) {
+	if_setscrollsize(0, 0, rareitems_diango:items);
 } else {
-	if_setscrollsize(0, $int9, interface_78:3);
+	if_setscrollsize(0, $int9, rareitems_diango:items);
 }
-if_setscrollpos(0, 0, interface_78:3);
-~scrollbar_vertical(interface_78:4, interface_78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setoninvtransmit("rareitems_diango_update($flags0, $flags1, $flags2, $flags3, $flags4, $flags5, $flags6, $flags7){inv}", interface_78:3);
+if_setscrollpos(0, 0, rareitems_diango:items);
+~scrollbar_vertical(rareitems_diango:scrollbar, rareitems_diango:items, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if_setoninvtransmit("rareitems_diango_update($int0, $int1, $int2, $int3, $int4, $int5, $int6, $int7){inv}", rareitems_diango:items);

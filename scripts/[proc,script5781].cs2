@@ -19,7 +19,7 @@ while ($int7 < 7) {
 	if ($int8 ! 0) {
 		$struct9 = enum(int, struct, enum_4136, $int8);
 		$int10 = ~script5790($int8);
-		cc_create($component0, ^iftype_text, $int1);
+		cc_create($component0, ^iftype_text, $int1, false);
 		cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
 		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
@@ -37,7 +37,7 @@ while ($int7 < 7) {
 			$string0 = struct_param($struct9, param_1450);
 		}
 		$int6 = calc(paraheight($string0, calc(if_getwidth($component0) - 2 * $int3), p12_full) * $int4);
-		cc_create($component0, ^iftype_text, $int1);
+		cc_create($component0, ^iftype_text, $int1, false);
 		cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(calc($int3 * 2), $int6, ^setsize_minus, ^setsize_abs);
 		cc_settextalign(^settextalign_left, ^settextalign_top, $int4);
@@ -52,7 +52,7 @@ while ($int7 < 7) {
 	$int7 = calc($int7 + 1);
 }
 if ($int11 = 1) {
-	cc_create($component0, ^iftype_text, $int1);
+	cc_create($component0, ^iftype_text, $int1, false);
 	cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
@@ -76,7 +76,7 @@ while ($int7 <= enum_getoutputcount(enum_4137)) {
 	$int7 = calc($int7 + 1);
 }
 if ($int11 = 1) {
-	cc_create($component0, ^iftype_text, $int1);
+	cc_create($component0, ^iftype_text, $int1, false);
 	cc_setposition($int3, $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int3 * 2), $int4, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);

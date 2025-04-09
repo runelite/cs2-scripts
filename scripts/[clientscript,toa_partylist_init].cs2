@@ -1,5 +1,5 @@
 // 6594
-[clientscript,toa_partylist_init](component $widget_772:16_0, component $widget_772:62_1)
+[clientscript,toa_partylist_init](component $com_toa_partylist_list0, component $com_toa_partylist_scrollbar1)
 def_int $int2 = 0;
 def_component $component3 = enum(int, component, enum_4793, $int2);
 while ($component3 ! null) {
@@ -8,12 +8,12 @@ while ($component3 ! null) {
 	$int2 = calc($int2 + 1);
 	$component3 = enum(int, component, enum_4793, $int2);
 }
-if_setscrollsize(0, 0, $widget_772:16_0);
-if_setscrollpos(0, 0, $widget_772:16_0);
-~scrollbar_vertical($widget_772:62_1, $widget_772:16_0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, 0, $com_toa_partylist_list0);
+if_setscrollpos(0, 0, $com_toa_partylist_list0);
+~scrollbar_vertical($com_toa_partylist_scrollbar1, $com_toa_partylist_list0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 %varcint178, %varcint59 = 0, clientclock;
-cc_deleteall($widget_772:16_0);
-cc_create($widget_772:16_0, ^iftype_text, 0);
+cc_deleteall($com_toa_partylist_list0);
+cc_create($com_toa_partylist_list0, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setcolour(0x808080);
@@ -21,19 +21,19 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Loading...");
-cc_deleteall(interface_772:1);
-if_sethide(true, interface_772:63);
-cc_create(interface_772:1, ^iftype_rectangle, enum(component, int, enum_4794, interface_772:63));
+cc_deleteall(toa_partylist:contents);
+if_sethide(true, toa_partylist:refresh);
+cc_create(toa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_4794, toa_partylist:refresh), false);
 cc_sethide(true);
-if_sethide(true, interface_772:64);
-cc_create(interface_772:1, ^iftype_rectangle, enum(component, int, enum_4794, interface_772:64));
+if_sethide(true, toa_partylist:myparty);
+cc_create(toa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_4794, toa_partylist:myparty), false);
 cc_sethide(true);
-if_sethide(true, interface_772:65);
-cc_create(interface_772:1, ^iftype_rectangle, enum(component, int, enum_4794, interface_772:65));
+if_sethide(true, toa_partylist:filter);
+cc_create(toa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_4794, toa_partylist:filter), false);
 cc_sethide(true);
-~script1558(interface_772:63, "Refresh", interface_772:1, enum_4794, -1);
+~script1558(toa_partylist:refresh, "Refresh", toa_partylist:contents, enum_4794, -1);
 ~toa_partylist_setpartybutton;
 ~script6600;
-if_setonvartransmit("toa_partylist_setpartybutton{var3603}", interface_772:64);
-if_setonvartransmit("script6599{var3585}", interface_772:65);
-~toa_partylist_setsize(interface_772:1, ^max_32bit_int, $widget_772:16_0, $widget_772:62_1);
+if_setonvartransmit("toa_partylist_setpartybutton{var3603}", toa_partylist:myparty);
+if_setonvartransmit("script6599{var3585}", toa_partylist:filter);
+~toa_partylist_setsize(toa_partylist:contents, ^max_32bit_int, $com_toa_partylist_list0, $com_toa_partylist_scrollbar1);

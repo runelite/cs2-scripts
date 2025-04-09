@@ -22,10 +22,10 @@ if_setonmouseleave(null, $component0);
 if_setonop(null, $component0);
 if_settext($string0, $component3);
 if_setscrollpos(0, 0, $component7);
-def_int $height9 = calc(paraheight($string0, if_getwidth($component3), p12_full) * 15 + 11);
+def_int $int9 = calc(paraheight($string0, if_getwidth($component3), p12_full) * 15 + 11);
 cc_deleteall($component6);
-if ($height9 > if_getheight($component7)) {
-	if_setscrollsize(0, $height9, $component7);
+if ($int9 > if_getheight($component7)) {
+	if_setscrollsize(0, $int9, $component7);
 } else {
 	if_setscrollsize(0, 0, $component7);
 }

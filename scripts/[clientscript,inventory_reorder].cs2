@@ -3,7 +3,7 @@
 def_int $int6 = $comsubid4;
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
-	if (cc_find($drop0, $int6) = ^true & cc_getinvobject = obj_6512) {
+	if (cc_find($drop0, $int6) = ^true & cc_getinvobject = blankobject_6512) {
 		cc_sethide(true);
 	}
 }
@@ -18,19 +18,19 @@ if ($drop0 ! $drop1) {
 }
 def_boolean $boolean7 = keyheld(^key_shift_left);
 def_obj $obj8 = null;
-def_int $num9 = -1;
+def_int $int9 = -1;
 def_obj $obj10 = null;
-def_int $num11 = -1;
+def_int $int11 = -1;
 if (cc_find($drop0, $comsubid2) = ^true) {
-	$obj8, $num9 = cc_getinvobject, cc_getinvcount;
+	$obj8, $int9 = cc_getinvobject, cc_getinvcount;
 }
 if ($obj8 = null) {
 	return;
 }
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	$obj10, $num11 = cc_getinvobject, cc_getinvcount;
-	~inventory_drawitem($obj8, $num9, $drop0, $comsubid4, $boolean5, $boolean7);
+	$obj10, $int11 = cc_getinvobject, cc_getinvcount;
+	~inventory_drawitem($obj8, $int9, $drop0, $comsubid4, $boolean5, $boolean7);
 }
 if (cc_find($drop0, $comsubid2) = ^true) {
-	~inventory_drawitem($obj10, $num11, $drop0, $comsubid4, $boolean5, $boolean7);
+	~inventory_drawitem($obj10, $int11, $drop0, $comsubid4, $boolean5, $boolean7);
 }

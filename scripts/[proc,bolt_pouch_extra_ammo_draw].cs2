@@ -1,35 +1,35 @@
 // 4039
-[proc,bolt_pouch_extra_ammo_draw](component $widget_387:30_0, component $widget_387:14_1)
-cc_deleteall($widget_387:30_0);
-if_setop(1, "", $widget_387:30_0);
-if_setonop(null, $widget_387:30_0);
-if_sethide(true, $widget_387:14_1);
-if (inv_total(inv, bolt_pouch_9433) <= 0) {
+[proc,bolt_pouch_extra_ammo_draw](component $com_wornitems_extra_ammo_slot0, component $com_wornitems_extra_ammo_link1)
+cc_deleteall($com_wornitems_extra_ammo_slot0);
+if_setop(1, "", $com_wornitems_extra_ammo_slot0);
+if_setonop(null, $com_wornitems_extra_ammo_slot0);
+if_sethide(true, $com_wornitems_extra_ammo_link1);
+if (inv_total(inv, xbows_bolt_pouch_9433) <= 0) {
 	return;
 }
 if (~script5027 = 1 | ~script5028(inv) = 1) {
 	return;
 }
-if_sethide(false, $widget_387:14_1);
-cc_create($widget_387:30_0, ^iftype_graphic, 0);
+if_sethide(false, $com_wornitems_extra_ammo_link1);
+cc_create($com_wornitems_extra_ammo_slot0, ^iftype_graphic, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("miscgraphics,0");
-def_int $num2 = %varbit2472;
+def_int $int2 = %varbit2472;
 def_obj $obj3 = enum(int, obj, enum_336, %varbit2476);
 if ($obj3 = null) {
-	cc_create($widget_387:30_0, ^iftype_graphic, 1);
+	cc_create($com_wornitems_extra_ammo_slot0, ^iftype_graphic, 1, false);
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic("wornicons,10");
 } else {
-	cc_create($widget_387:30_0, ^iftype_graphic, 1);
+	cc_create($com_wornitems_extra_ammo_slot0, ^iftype_graphic, 1, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	cc_setobject($obj3, $num2);
-	if_setop(1, "Wear", $widget_387:30_0);
-	if_setonop("cc_settrans_temporarily($widget_387:30_0, 1, 100, 0)", $widget_387:30_0);
-	if_setopbase("<col=ff9040><oc_name($obj3)></col>", $widget_387:30_0);
+	cc_setobject($obj3, $int2);
+	if_setop(1, "Wear", $com_wornitems_extra_ammo_slot0);
+	if_setonop("cc_settrans_temporarily($com_wornitems_extra_ammo_slot0, 1, 100, 0)", $com_wornitems_extra_ammo_slot0);
+	if_setopbase("<col=ff9040><oc_name($obj3)></col>", $com_wornitems_extra_ammo_slot0);
 }

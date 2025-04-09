@@ -51,7 +51,7 @@ if ($int5 = 1) {
 		10 = ^setsize_abs
 	);
 	$int7 = calc($int7 + 1);
-	cc_create($component0, ^iftype_rectangle, $int7);
+	cc_create($component0, ^iftype_rectangle, $int7, false);
 	cc_sethide(true);
 	$int7 = calc($int7 + 1);
 } else {
@@ -69,7 +69,7 @@ if ($int5 = 1) {
 		10 = ^setsize_abs
 	);
 	$int7 = calc($int7 + 1);
-	cc_create($component0, ^iftype_text, $int7);
+	cc_create($component0, ^iftype_text, $int7, false);
 	cc_setposition(calc($int10 + 32), calc($int11 + 10), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(25, 15, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

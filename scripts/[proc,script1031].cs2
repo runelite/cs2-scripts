@@ -1,44 +1,44 @@
 // 1031
-[proc,script1031](component $component0, enum $enum1, component $widget_137:47_2, component $widget_137:61_3, component $widget_137:6_4, component $widget_137:51_5, component $widget_137:7_6, component $widget_137:52_7, component $widget_137:9_8, component $widget_137:53_9, component $widget_137:10_10, component $widget_137:54_11, component $widget_137:11_12, component $widget_137:55_13, component $widget_137:12_14, component $widget_137:56_15, component $widget_137:13_16, component $widget_137:57_17, component $widget_137:8_18, component $widget_137:58_19, component $widget_137:14_20, component $widget_137:59_21)(int)
-def_int $count22 = enum_getoutputcount($enum1);
+[proc,script1031](component $component0, enum $enum1, component $com_xpdrops_setup_dropdown_container2, component $com_xpdrops_setup_tooltip3, component $com_xpdrops_setup_position_display4, component $com_xpdrops_setup_position_options5, component $com_xpdrops_setup_size_display6, component $com_xpdrops_setup_size_options7, component $com_xpdrops_setup_duration_display8, component $com_xpdrops_setup_duration_options9, component $com_xpdrops_setup_counter_display10, component $com_xpdrops_setup_counter_options11, component $com_xpdrops_setup_progress_display12, component $com_xpdrops_setup_progress_options13, component $com_xpdrops_setup_colour_display14, component $com_xpdrops_setup_colour_options15, component $com_xpdrops_setup_grouping_display16, component $com_xpdrops_setup_grouping_options17, component $com_xpdrops_setup_speed_display18, component $com_xpdrops_setup_speed_options19, component $com_xpdrops_setup_fakes_display20, component $com_xpdrops_setup_fakes_options21)(int)
+def_int $int22 = enum_getoutputcount($enum1);
 def_int $colour23 = 0xff981f;
-def_int $count24 = 0;
+def_int $int24 = 0;
 def_int $int25 = 15;
 if (~on_mobile = true) {
 	$int25 = scale(8, 5, $int25);
 }
-while ($count24 < $count22) {
-	cc_create($component0, ^iftype_text, calc($count24 + 1));
+while ($int24 < $int22) {
+	cc_create($component0, ^iftype_text, calc($int24 + 1), false);
 	if ($enum1 = enum_1168) {
-		$colour23 = enum(int, int, enum_1169, $count24);
+		$colour23 = enum(int, int, enum_1169, $int24);
 	}
 	~script1033(
 		0 = $component0, 
-		1 = $count22, 
+		1 = $int22, 
 		2 = $colour23, 
-		3 = $widget_137:47_2, 
-		4 = $widget_137:61_3, 
-		5 = $widget_137:6_4, 
-		6 = $widget_137:51_5, 
-		7 = $widget_137:7_6, 
-		8 = $widget_137:52_7, 
-		9 = $widget_137:9_8, 
-		10 = $widget_137:53_9, 
-		11 = $widget_137:10_10, 
-		12 = $widget_137:54_11, 
-		13 = $widget_137:11_12, 
-		14 = $widget_137:55_13, 
-		15 = $widget_137:12_14, 
-		16 = $widget_137:56_15, 
-		17 = $widget_137:13_16, 
-		18 = $widget_137:57_17, 
-		19 = $widget_137:8_18, 
-		20 = $widget_137:58_19, 
-		21 = $widget_137:14_20, 
-		22 = $widget_137:59_21
+		3 = $com_xpdrops_setup_dropdown_container2, 
+		4 = $com_xpdrops_setup_tooltip3, 
+		5 = $com_xpdrops_setup_position_display4, 
+		6 = $com_xpdrops_setup_position_options5, 
+		7 = $com_xpdrops_setup_size_display6, 
+		8 = $com_xpdrops_setup_size_options7, 
+		9 = $com_xpdrops_setup_duration_display8, 
+		10 = $com_xpdrops_setup_duration_options9, 
+		11 = $com_xpdrops_setup_counter_display10, 
+		12 = $com_xpdrops_setup_counter_options11, 
+		13 = $com_xpdrops_setup_progress_display12, 
+		14 = $com_xpdrops_setup_progress_options13, 
+		15 = $com_xpdrops_setup_colour_display14, 
+		16 = $com_xpdrops_setup_colour_options15, 
+		17 = $com_xpdrops_setup_grouping_display16, 
+		18 = $com_xpdrops_setup_grouping_options17, 
+		19 = $com_xpdrops_setup_speed_display18, 
+		20 = $com_xpdrops_setup_speed_options19, 
+		21 = $com_xpdrops_setup_fakes_display20, 
+		22 = $com_xpdrops_setup_fakes_options21
 	);
-	cc_setposition(0, calc($count24 * $int25), ^setpos_abs_centre, ^setpos_abs_top);
-	cc_settext(enum(int, string, $enum1, $count24));
-	$count24 = calc($count24 + 1);
+	cc_setposition(0, calc($int24 * $int25), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext(enum(int, string, $enum1, $int24));
+	$int24 = calc($int24 + 1);
 }
-return($count22);
+return($int22);

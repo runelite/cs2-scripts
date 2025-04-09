@@ -1,15 +1,15 @@
 // 3817
-[proc,brew_tools_supplies](component $widget_417:6_0, component $widget_417:10_1, component $widget_417:20_2)
-if (inv_getobj(worn, 0) = pirate_hat_8950) {
-	if_settext(~tostring_spacer(inv_total(inv_448, pipe_section_8930), ","), $widget_417:6_0);
-	if_settext(~tostring_spacer(inv_total(inv_448, bridge_section_8979), ","), $widget_417:10_1);
-	if_settext(~tostring_spacer(inv_total(inv_448, lumber_patch_8932), ","), $widget_417:20_2);
-} else if (inv_getobj(worn, 0) = pirate_bandana_8949) {
-	if_settext(~tostring_spacer(inv_total(inv_452, pipe_section_8930), ","), $widget_417:6_0);
-	if_settext(~tostring_spacer(inv_total(inv_452, bridge_section_8979), ","), $widget_417:10_1);
-	if_settext(~tostring_spacer(inv_total(inv_452, lumber_patch_8932), ","), $widget_417:20_2);
+[proc,brew_tools_supplies](component $com_brew_tools_bamboo_counter0, component $com_brew_tools_bridge_counter1, component $com_brew_tools_patch_counter2)
+if (inv_getobj(worn, 0) = brew_red_pirate_hat_8950) {
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_ame_inv, brew_pipe_section_8930), ","), $com_brew_tools_bamboo_counter0);
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_ame_inv, brew_bridge_section_8979), ","), $com_brew_tools_bridge_counter1);
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_ame_inv, brew_lumber_patch_8932), ","), $com_brew_tools_patch_counter2);
+} else if (inv_getobj(worn, 0) = brew_blue_pirate_hat_8949) {
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_capes_inv, brew_pipe_section_8930), ","), $com_brew_tools_bamboo_counter0);
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_capes_inv, brew_bridge_section_8979), ","), $com_brew_tools_bridge_counter1);
+	if_settext(~tostring_spacer(inv_total(poh_costume_room_capes_inv, brew_lumber_patch_8932), ","), $com_brew_tools_patch_counter2);
 } else {
-	if_settext("", $widget_417:6_0);
-	if_settext("", $widget_417:10_1);
-	if_settext("", $widget_417:20_2);
+	if_settext("", $com_brew_tools_bamboo_counter0);
+	if_settext("", $com_brew_tools_bridge_counter1);
+	if_settext("", $com_brew_tools_patch_counter2);
 }

@@ -1,11 +1,11 @@
 // 6757
-[proc,script6757](int $flags0, int $flags1, int $flags2)(string, string)
-def_int $count3 = 0;
+[proc,script6757](int $int0, int $int1, int $int2)(string, string)
+def_int $int3 = 0;
 def_struct $struct4 = null;
 def_boolean $boolean5 = false;
 def_int $int6 = 0;
 def_int $int7 = 0;
-def_int $count8 = enum_getoutputcount(enum_4664);
+def_int $int8 = enum_getoutputcount(enum_4664);
 def_int $int9 = -1;
 def_int $int10 = -1;
 def_int $int11 = -1;
@@ -25,9 +25,9 @@ def_string $string1 = "Food:";
 def_string $string2 = "Healing Potions:";
 def_string $string3 = "Special Attacks:";
 def_int $int23 = 0;
-while ($count3 < $count8) {
-	$struct4 = enum(int, struct, enum_4664, $count3);
-	$boolean5 = ~script6755($struct4, $flags0, $flags1, $flags2);
+while ($int3 < $int8) {
+	$struct4 = enum(int, struct, enum_4664, $int3);
+	$boolean5 = ~script6755($struct4, $int0, $int1, $int2);
 	$int6 = struct_param($struct4, param_1161);
 	$int7 = struct_param($struct4, param_1299);
 	if ($boolean5 = true) {
@@ -78,7 +78,7 @@ while ($count3 < $count8) {
 				}
 		}
 	}
-	$count3 = calc($count3 + 1);
+	$int3 = calc($int3 + 1);
 }
 $int13 = ~script6758($int23, 500);
 $int14 = ~script6758($int23, 500);

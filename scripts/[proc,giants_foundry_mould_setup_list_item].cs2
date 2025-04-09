@@ -3,16 +3,16 @@
 def_int $int5 = 0;
 if (~giants_foundry_mould_is_unlocked($struct1) = 0) {
 	while ($int5 < 17) {
-		cc_create($component0, ^iftype_rectangle, $int4);
+		cc_create($component0, ^iftype_rectangle, $int4, false);
 		cc_sethide(true);
 		$int4 = calc($int4 + 1);
 		$int5 = calc($int5 + 1);
 	}
 	return($int4, $int3);
 }
-def_int $width6 = 0;
+def_int $int6 = 0;
 def_int $int7 = 40;
-def_int $lvl8 = struct_param($struct1, param_1622);
+def_int $int8 = struct_param($struct1, param_1622);
 def_int $int9 = 1;
 def_graphic $graphic10 = b12_full;
 def_int $int11 = 2;
@@ -48,7 +48,7 @@ switch_int (%varcint988) {
 		$int11 = 3;
 		$int16 = 25;
 }
-if (stat(smithing) >= $lvl8) {
+if (stat(smithing) >= $int8) {
 	$int9 = 0;
 }
 def_int $colour17 = 0x9f9f9f;
@@ -71,9 +71,9 @@ if ($int9 = 1) {
 	);
 	$int4 = calc($int4 + 1);
 }
-cc_create($component0, ^iftype_rectangle, $int4);
+cc_create($component0, ^iftype_rectangle, $int4, false);
 cc_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($width6, $int7, ^setsize_minus, ^setsize_abs);
+cc_setsize($int6, $int7, ^setsize_minus, ^setsize_abs);
 cc_setfill(true);
 cc_setcolour(^black);
 if (calc($int3 / $int7 % 2) = 0) {
@@ -116,7 +116,7 @@ if ($int9 = 0) {
 	);
 	$int4 = calc($int4 + 1);
 }
-cc_create($component0, ^iftype_text, $int4);
+cc_create($component0, ^iftype_text, $int4, false);
 cc_setposition(calc(40 + $int13 + $int15), calc($int3 + $int11), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -125,7 +125,7 @@ cc_settextfont($graphic10);
 cc_setcolour($colour17);
 cc_settext(struct_param($struct1, param_1621));
 $int4 = calc($int4 + 1);
-cc_create($component0, ^iftype_text, $int4);
+cc_create($component0, ^iftype_text, $int4, false);
 cc_setposition(calc(~max($int15, $int13) + $int16), calc($int3 + $int11), ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
@@ -137,14 +137,14 @@ if ($int9 = 0) {
 	cc_sethide(true);
 }
 $int4 = calc($int4 + 1);
-cc_create($component0, ^iftype_text, $int4);
+cc_create($component0, ^iftype_text, $int4, false);
 cc_setposition(~max($int15, $int13), calc($int3 + $int11), ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(55, 16, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settextfont($graphic12);
 cc_setcolour($colour17);
-cc_settext(tostring($lvl8));
+cc_settext(tostring($int8));
 if ($int9 = 0) {
 	cc_sethide(true);
 }

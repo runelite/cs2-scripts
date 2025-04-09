@@ -2,14 +2,14 @@
 [proc,zoom_position_slider]
 def_int $int0 = calc(896 - 128);
 def_int $int1 = calc(896 - 128);
-def_int $int2 = calc(if_getwidth(interface_116:57) - if_getwidth(interface_116:58));
+def_int $int2 = calc(if_getwidth(settings_side:zoom_slider) - if_getwidth(settings_side:zoom_slider_bobble));
 def_int $int3 = 0;
 def_int $int4 = 0;
 $int3, $int4 = viewport_geteffectivesize;
-def_int $x5 = 0;
+def_int $int5 = 0;
 if ($int3 > 334) {
-	$x5 = calc((%varcint74 - 128) * $int2 / $int0);
+	$int5 = calc((%varcint74 - 128) * $int2 / $int0);
 } else {
-	$x5 = calc((%varcint73 - 128) * $int2 / $int1);
+	$int5 = calc((%varcint73 - 128) * $int2 / $int1);
 }
-if_setposition($x5, 0, ^setpos_abs_left, ^setpos_abs_top, interface_116:58);
+if_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top, settings_side:zoom_slider_bobble);

@@ -1,23 +1,23 @@
 // 626
-[proc,poll_results_addquestion](int $int0, string $string0, int $length1, int $flags2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33, int $int34)
-def_int $width35 = if_getwidth(interface_345:11);
-def_int $int36 = calc($width35 - 3 * 2);
+[proc,poll_results_addquestion](int $int0, string $string0, int $length1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33, int $int34)
+def_int $int35 = if_getwidth(poll_results:results);
+def_int $int36 = calc($int35 - 3 * 2);
 def_int $int37 = %varcint43;
-def_int $height38 = %varcint49;
-cc_create(interface_345:11, ^iftype_rectangle, %varcint43);
+def_int $int38 = %varcint49;
+cc_create(poll_results:results, ^iftype_rectangle, %varcint43, false);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(0, $height38, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $int38, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
 cc_settrans(225);
-cc_create(interface_345:11, ^iftype_rectangle, %varcint43);
+cc_create(poll_results:results, ^iftype_rectangle, %varcint43, false);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(0, $height38, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $int38, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0x777775);
 cc_setfill(false);
-cc_create(interface_345:11, ^iftype_rectangle, %varcint43);
+cc_create(poll_results:results, ^iftype_rectangle, %varcint43, false);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(1, calc($height38 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(1, calc($int38 + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0x474745);
 cc_setfill(false);
 %varcint49 = calc(%varcint49 + 3);
@@ -27,7 +27,7 @@ def_int $int39 = calc(paraheight($string1, $int36, p11_full) * 10 + 2);
 if ($int39 < 15) {
 	$int39 = 15;
 }
-cc_create(interface_345:11, ^iftype_text, %varcint43);
+cc_create(poll_results:results, ^iftype_text, %varcint43, false);
 %varcint43 = calc(%varcint43 + 1);
 cc_setposition(3, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int36, $int39, ^setsize_abs, ^setsize_abs);
@@ -39,7 +39,7 @@ cc_settextshadow(true);
 cc_settext($string1);
 $string1, $string0 = ~script632($string0);
 $int39 = calc(paraheight($string1, $int36, p12_full) * 12 + 5);
-cc_create(interface_345:11, ^iftype_text, %varcint43);
+cc_create(poll_results:results, ^iftype_text, %varcint43, false);
 %varcint43 = calc(%varcint43 + 1);
 cc_setposition(3, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int36, $int39, ^setsize_abs, ^setsize_abs);
@@ -55,7 +55,7 @@ $string2, $string0 = ~script632($string0);
 ~poll_addlink(
 	0 = $string1, 
 	1 = $string2, 
-	2 = interface_345:11, 
+	2 = poll_results:results, 
 	3 = $int36, 
 	4 = 3, 
 	5 = p11_full, 
@@ -174,7 +174,7 @@ if ($intarray0(37) ! -1) {
 if ($intarray0(39) > 230) {
 	$intarray0(39) = 230;
 }
-def_int $int43 = calc($width35 - (3 + 95));
+def_int $int43 = calc($int35 - (3 + 95));
 def_int $int44 = calc(3 + $intarray0(39) + 5);
 def_int $int45 = calc($int43 - $int44 - 5);
 $string0 = $string3;
@@ -183,22 +183,22 @@ while ($int41 < $length1) {
 	$string1, $string0 = ~script632($string0);
 	if ($int41 = 0) {
 		$string2 = $string1;
-	} else if ($int41 = 1 & ($length1 = 2 | $length1 = 3 & $intarray0(40) = 2) & $int0 = -1 & compare(lowercase($string2), "yes") = 0 & compare(lowercase($string1), "no") = 0 & $intarray0(42) > 0 & $intarray1(0) >= calc($intarray0(42) * 10) & cc_find(interface_345:11, $int37) = ^true) {
+	} else if ($int41 = 1 & ($length1 = 2 | $length1 = 3 & $intarray0(40) = 2) & $int0 = -1 & compare(lowercase($string2), "yes") = 0 & compare(lowercase($string1), "no") = 0 & $intarray0(42) > 0 & $intarray1(0) >= calc($intarray0(42) * 10) & cc_find(poll_results:results, $int37) = ^true) {
 		cc_setcolour(^green);
 	}
 	$int39 = calc(paraheight($string1, $intarray0(39), p11_full) * 10 + 2);
 	if ($int39 < 15) {
 		$int39 = 15;
 	}
-	cc_create(interface_345:11, ^iftype_text, %varcint43);
+	cc_create(poll_results:results, ^iftype_text, %varcint43, false);
 	%varcint43 = calc(%varcint43 + 1);
-	.cc_create(interface_345:11, ^iftype_text, %varcint43);
+	.cc_create(poll_results:results, ^iftype_text, %varcint43, false);
 	%varcint43 = calc(%varcint43 + 1);
 	cc_setposition(3, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int43, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($intarray0(39), $int39, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(95, $int39, ^setsize_abs, ^setsize_abs);
-	if (testbit($flags2, $int41) = ^true) {
+	if (testbit($int2, $int41) = ^true) {
 		cc_setcolour(0xffff7f);
 		.cc_setcolour(0xffff7f);
 	} else if ($int41 = $intarray0(40)) {
@@ -223,7 +223,7 @@ while ($int41 < $length1) {
 		.cc_settext("-");
 	} else if ($int41 ! $intarray0(40)) {
 		.cc_settext("<tostring(calc($intarray1($int41) / 10))>.<tostring(calc($intarray1($int41) % 10))>% (<~tostring_spacer($intarray0($int41), $string1)>)");
-		cc_create(interface_345:11, ^iftype_graphic, %varcint43);
+		cc_create(poll_results:results, ^iftype_graphic, %varcint43, false);
 		%varcint43 = calc(%varcint43 + 1);
 		cc_setposition($int44, calc(%varcint49 + ($int39 - 11) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(interpolate(0, $intarray0($int41), 0, $int40, $int45), 11, ^setsize_abs, ^setsize_abs);
@@ -239,14 +239,14 @@ while ($int41 < $length1) {
 	$int41, %varcint49 = calc($int41 + 1), calc(%varcint49 + $int39);
 }
 %varcint49 = calc(%varcint49 + 3);
-$int39 = calc(%varcint49 - $height38);
-if (cc_find(interface_345:11, $int37) = ^true) {
-	cc_setsize($width35, $int39, ^setsize_abs, ^setsize_abs);
+$int39 = calc(%varcint49 - $int38);
+if (cc_find(poll_results:results, $int37) = ^true) {
+	cc_setsize($int35, $int39, ^setsize_abs, ^setsize_abs);
 }
-if (cc_find(interface_345:11, calc($int37 + 1)) = ^true) {
-	cc_setsize($width35, $int39, ^setsize_abs, ^setsize_abs);
+if (cc_find(poll_results:results, calc($int37 + 1)) = ^true) {
+	cc_setsize($int35, $int39, ^setsize_abs, ^setsize_abs);
 }
-if (cc_find(interface_345:11, calc($int37 + 2)) = ^true) {
-	cc_setsize(calc($width35 - 2), calc($int39 - 2), ^setsize_abs, ^setsize_abs);
+if (cc_find(poll_results:results, calc($int37 + 2)) = ^true) {
+	cc_setsize(calc($int35 - 2), calc($int39 - 2), ^setsize_abs, ^setsize_abs);
 }
 %varcint49 = calc(%varcint49 + 3);

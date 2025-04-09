@@ -1,9 +1,9 @@
 // 495
 [clientscript,wilderness_lootingbag_setup](string $text0, boolean $boolean0)
-if_settext($text0, interface_81:1);
-def_inv $inv1 = inv_516;
+if_settext($text0, wilderness_lootingbag:title);
+def_inv $inv1 = looting_bag;
 if ($boolean0 = true) {
 	$inv1 = inv;
 }
 ~wilderness_lootingbag_draw($inv1);
-if_setoninvtransmit("wilderness_lootingbag_draw($inv1){$inv1}", interface_81:1);
+if_setoninvtransmit("wilderness_lootingbag_draw($inv1){$inv1}", wilderness_lootingbag:title);

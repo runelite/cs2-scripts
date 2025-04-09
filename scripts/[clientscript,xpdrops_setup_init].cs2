@@ -1,328 +1,328 @@
 // 1010
-[clientscript,xpdrops_setup_init](component $widget_137:0_0, component $widget_137:1_1, component $widget_137:3_2, component $widget_137:4_3, component $widget_137:47_4, component $widget_137:48_5, component $widget_137:49_6, component $widget_137:60_7, component $widget_137:6_8, component $widget_137:51_9, component $widget_137:7_10, component $widget_137:52_11, component $widget_137:9_12, component $widget_137:53_13, component $widget_137:10_14, component $widget_137:54_15, component $widget_137:11_16, component $widget_137:55_17, component $widget_137:12_18, component $widget_137:56_19, component $widget_137:13_20, component $widget_137:57_21, component $widget_137:8_22, component $widget_137:58_23, component $widget_137:14_24, component $widget_137:59_25, component $widget_137:15_26, component $widget_137:17_27, component $widget_137:18_28, component $widget_137:19_29, component $widget_137:21_30, component $widget_137:25_31, component $widget_137:33_32, component $widget_137:22_33, component $widget_137:26_34, component $widget_137:34_35, component $widget_137:30_36, component $widget_137:38_37, component $widget_137:42_38, component $widget_137:29_39, component $widget_137:37_40, component $widget_137:41_41, component $widget_137:31_42, component $widget_137:39_43, component $widget_137:43_44, component $widget_137:45_45, component $widget_137:46_46, component $widget_137:61_47)
+[clientscript,xpdrops_setup_init](component $com_xpdrops_setup_universe0, component $com_xpdrops_setup_contents1, component $com_xpdrops_setup_main2, component $com_xpdrops_setup_configuration3, component $com_xpdrops_setup_dropdown_container4, component $com_xpdrops_setup_dropdown_close5, component $com_xpdrops_setup_dropdown_panel6, component $com_xpdrops_setup_dropdown_scrollbar7, component $com_xpdrops_setup_position_display8, component $com_xpdrops_setup_position_options9, component $com_xpdrops_setup_size_display10, component $com_xpdrops_setup_size_options11, component $com_xpdrops_setup_duration_display12, component $com_xpdrops_setup_duration_options13, component $com_xpdrops_setup_counter_display14, component $com_xpdrops_setup_counter_options15, component $com_xpdrops_setup_progress_display16, component $com_xpdrops_setup_progress_options17, component $com_xpdrops_setup_colour_display18, component $com_xpdrops_setup_colour_options19, component $com_xpdrops_setup_grouping_display20, component $com_xpdrops_setup_grouping_options21, component $com_xpdrops_setup_speed_display22, component $com_xpdrops_setup_speed_options23, component $com_xpdrops_setup_fakes_display24, component $com_xpdrops_setup_fakes_options25, component $com_xpdrops_setup_skillstatus26, component $com_xpdrops_setup_skilllist27, component $com_xpdrops_setup_skillscrollbar28, component $com_xpdrops_setup_skillsetup29, component $com_xpdrops_setup_none30, component $com_xpdrops_setup_tracker31, component $com_xpdrops_setup_goal32, component $com_xpdrops_setup_none_backing33, component $com_xpdrops_setup_tracker_backing34, component $com_xpdrops_setup_goal_backing35, component $com_xpdrops_setup_tracker_start36, component $com_xpdrops_setup_goal_start37, component $com_xpdrops_setup_goal_end38, component $com_xpdrops_setup_tracker_start_display39, component $com_xpdrops_setup_goal_start_display40, component $com_xpdrops_setup_goal_end_display41, component $com_xpdrops_setup_tracker_start_text42, component $com_xpdrops_setup_goal_start_text43, component $com_xpdrops_setup_goal_end_text44, component $com_xpdrops_setup_cancel45, component $com_xpdrops_setup_save46, component $com_xpdrops_setup_tooltip47)
 ~xpdrops_setup_appearance(
-	0 = $widget_137:6_8, 
-	1 = $widget_137:7_10, 
-	2 = $widget_137:8_22, 
-	3 = $widget_137:9_12, 
-	4 = $widget_137:10_14, 
-	5 = $widget_137:11_16, 
-	6 = $widget_137:12_18, 
-	7 = $widget_137:13_20, 
-	8 = $widget_137:14_24
+	0 = $com_xpdrops_setup_position_display8, 
+	1 = $com_xpdrops_setup_size_display10, 
+	2 = $com_xpdrops_setup_speed_display22, 
+	3 = $com_xpdrops_setup_duration_display12, 
+	4 = $com_xpdrops_setup_counter_display14, 
+	5 = $com_xpdrops_setup_progress_display16, 
+	6 = $com_xpdrops_setup_colour_display18, 
+	7 = $com_xpdrops_setup_grouping_display20, 
+	8 = $com_xpdrops_setup_fakes_display24
 );
-if_sethide(true, $widget_137:47_4);
+if_sethide(true, $com_xpdrops_setup_dropdown_container4);
 ~xpdrops_setup_init_display(
-	0 = $widget_137:6_8, 
-	1 = $widget_137:51_9, 
+	0 = $com_xpdrops_setup_position_display8, 
+	1 = $com_xpdrops_setup_position_options9, 
 	2 = enum(int, string, enum_1164, -1), 
 	3 = "Controls the position of the XP display and droplets.", 
 	4 = 170, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:7_10, 
-	1 = $widget_137:52_11, 
+	0 = $com_xpdrops_setup_size_display10, 
+	1 = $com_xpdrops_setup_size_options11, 
 	2 = enum(int, string, enum_1165, -1), 
 	3 = "Controls the text size used by the XP display and droplets.", 
 	4 = 180, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:9_12, 
-	1 = $widget_137:53_13, 
+	0 = $com_xpdrops_setup_duration_display12, 
+	1 = $com_xpdrops_setup_duration_options13, 
 	2 = enum(int, string, enum_1166, -1), 
 	3 = "Controls how long the XP display remains visible after each event.", 
 	4 = 200, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:10_14, 
-	1 = $widget_137:54_15, 
+	0 = $com_xpdrops_setup_counter_display14, 
+	1 = $com_xpdrops_setup_counter_options15, 
 	2 = "Counter", 
 	3 = "Choose which skill will have its details displayed in the number panel.<br><br>'<~text_client("<col=ef1020>", "<col=ff981f>")>Most recent</col>' will show whichever skill gained XP most recently.<br><br>If a <~text_client("<col=ef1020>", "<col=ff981f>")>tracker</col> has been set for the skill, the panel will show XP gained since the tracker's start point.", 
 	4 = 300, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:11_16, 
-	1 = $widget_137:55_17, 
+	0 = $com_xpdrops_setup_progress_display16, 
+	1 = $com_xpdrops_setup_progress_options17, 
 	2 = "Progress bar", 
 	3 = "Choose which skill will have its details displayed in the progress bar.<br><br>'<~text_client("<col=ef1020>", "<col=ff981f>")>Most recent</col>' will show whichever skill gained XP most recently.<br><br>If a <~text_client("<col=ef1020>", "<col=ff981f>")>goal</col> has been set for the skill, the bar will show progress towards that goal.<br><br>Otherwise it will show progress towards the next level.", 
 	4 = 300, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:12_18, 
-	1 = $widget_137:56_19, 
+	0 = $com_xpdrops_setup_colour_display18, 
+	1 = $com_xpdrops_setup_colour_options19, 
 	2 = enum(int, string, enum_1168, -1), 
 	3 = "Controls the text colour of the droplets.", 
 	4 = 150, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:13_20, 
-	1 = $widget_137:57_21, 
+	0 = $com_xpdrops_setup_grouping_display20, 
+	1 = $com_xpdrops_setup_grouping_options21, 
 	2 = enum(int, string, enum_1170, -1), 
 	3 = "When multiple skills increase together, their droplets may be grouped, within limits.", 
 	4 = 300, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:8_22, 
-	1 = $widget_137:58_23, 
+	0 = $com_xpdrops_setup_speed_display22, 
+	1 = $com_xpdrops_setup_speed_options23, 
 	2 = enum(int, string, enum_1140, -1), 
 	3 = "Droplet speed.", 
 	4 = 200, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
 ~xpdrops_setup_init_display(
-	0 = $widget_137:14_24, 
-	1 = $widget_137:59_25, 
+	0 = $com_xpdrops_setup_fakes_display24, 
+	1 = $com_xpdrops_setup_fakes_options25, 
 	2 = enum(int, string, enum_1625, -1), 
 	3 = "Enables fake XP drops in certain situations where XP is blocked.", 
 	4 = 250, 
-	5 = $widget_137:1_1, 
-	6 = $widget_137:47_4, 
-	7 = $widget_137:49_6, 
-	8 = $widget_137:60_7, 
-	9 = $widget_137:61_47, 
-	10 = $widget_137:6_8, 
-	11 = $widget_137:51_9, 
-	12 = $widget_137:7_10, 
-	13 = $widget_137:52_11, 
-	14 = $widget_137:9_12, 
-	15 = $widget_137:53_13, 
-	16 = $widget_137:10_14, 
-	17 = $widget_137:54_15, 
-	18 = $widget_137:11_16, 
-	19 = $widget_137:55_17, 
-	20 = $widget_137:12_18, 
-	21 = $widget_137:56_19, 
-	22 = $widget_137:13_20, 
-	23 = $widget_137:57_21, 
-	24 = $widget_137:8_22, 
-	25 = $widget_137:58_23, 
-	26 = $widget_137:14_24, 
-	27 = $widget_137:59_25
+	5 = $com_xpdrops_setup_contents1, 
+	6 = $com_xpdrops_setup_dropdown_container4, 
+	7 = $com_xpdrops_setup_dropdown_panel6, 
+	8 = $com_xpdrops_setup_dropdown_scrollbar7, 
+	9 = $com_xpdrops_setup_tooltip47, 
+	10 = $com_xpdrops_setup_position_display8, 
+	11 = $com_xpdrops_setup_position_options9, 
+	12 = $com_xpdrops_setup_size_display10, 
+	13 = $com_xpdrops_setup_size_options11, 
+	14 = $com_xpdrops_setup_duration_display12, 
+	15 = $com_xpdrops_setup_duration_options13, 
+	16 = $com_xpdrops_setup_counter_display14, 
+	17 = $com_xpdrops_setup_counter_options15, 
+	18 = $com_xpdrops_setup_progress_display16, 
+	19 = $com_xpdrops_setup_progress_options17, 
+	20 = $com_xpdrops_setup_colour_display18, 
+	21 = $com_xpdrops_setup_colour_options19, 
+	22 = $com_xpdrops_setup_grouping_display20, 
+	23 = $com_xpdrops_setup_grouping_options21, 
+	24 = $com_xpdrops_setup_speed_display22, 
+	25 = $com_xpdrops_setup_speed_options23, 
+	26 = $com_xpdrops_setup_fakes_display24, 
+	27 = $com_xpdrops_setup_fakes_options25
 );
-if_setnoclickthrough(true, $widget_137:48_5);
+if_setnoclickthrough(true, $com_xpdrops_setup_dropdown_close5);
 if_setonclick("xpdrops_setup_display_dropdown_close(
-	0 = $widget_137:47_4, 
-	1 = $widget_137:61_47, 
-	2 = $widget_137:6_8, 
-	3 = $widget_137:7_10, 
-	4 = $widget_137:9_12, 
-	5 = $widget_137:10_14, 
-	6 = $widget_137:11_16, 
-	7 = $widget_137:12_18, 
-	8 = $widget_137:13_20, 
-	9 = $widget_137:8_22, 
-	10 = $widget_137:14_24
-)", $widget_137:48_5);
+	0 = $com_xpdrops_setup_dropdown_container4, 
+	1 = $com_xpdrops_setup_tooltip47, 
+	2 = $com_xpdrops_setup_position_display8, 
+	3 = $com_xpdrops_setup_size_display10, 
+	4 = $com_xpdrops_setup_duration_display12, 
+	5 = $com_xpdrops_setup_counter_display14, 
+	6 = $com_xpdrops_setup_progress_display16, 
+	7 = $com_xpdrops_setup_colour_display18, 
+	8 = $com_xpdrops_setup_grouping_display20, 
+	9 = $com_xpdrops_setup_speed_display22, 
+	10 = $com_xpdrops_setup_fakes_display24
+)", $com_xpdrops_setup_dropdown_close5);
 ~xpdrops_setup_display_update(
-	0 = $widget_137:6_8, 
-	1 = $widget_137:7_10, 
-	2 = $widget_137:9_12, 
-	3 = $widget_137:10_14, 
-	4 = $widget_137:11_16, 
-	5 = $widget_137:12_18, 
-	6 = $widget_137:13_20, 
-	7 = $widget_137:8_22, 
-	8 = $widget_137:14_24
+	0 = $com_xpdrops_setup_position_display8, 
+	1 = $com_xpdrops_setup_size_display10, 
+	2 = $com_xpdrops_setup_duration_display12, 
+	3 = $com_xpdrops_setup_counter_display14, 
+	4 = $com_xpdrops_setup_progress_display16, 
+	5 = $com_xpdrops_setup_colour_display18, 
+	6 = $com_xpdrops_setup_grouping_display20, 
+	7 = $com_xpdrops_setup_speed_display22, 
+	8 = $com_xpdrops_setup_fakes_display24
 );
 if_setonvartransmit("xpdrops_setup_display_update(
-	0 = $widget_137:6_8, 
-	1 = $widget_137:7_10, 
-	2 = $widget_137:9_12, 
-	3 = $widget_137:10_14, 
-	4 = $widget_137:11_16, 
-	5 = $widget_137:12_18, 
-	6 = $widget_137:13_20, 
-	7 = $widget_137:8_22, 
-	8 = $widget_137:14_24
-){var1227, var1141}", $widget_137:0_0);
-cc_deleteall($widget_137:17_27);
+	0 = $com_xpdrops_setup_position_display8, 
+	1 = $com_xpdrops_setup_size_display10, 
+	2 = $com_xpdrops_setup_duration_display12, 
+	3 = $com_xpdrops_setup_counter_display14, 
+	4 = $com_xpdrops_setup_progress_display16, 
+	5 = $com_xpdrops_setup_colour_display18, 
+	6 = $com_xpdrops_setup_grouping_display20, 
+	7 = $com_xpdrops_setup_speed_display22, 
+	8 = $com_xpdrops_setup_fakes_display24
+){var1227, var1141}", $com_xpdrops_setup_universe0);
+cc_deleteall($com_xpdrops_setup_skilllist27);
 def_stat $statarray0(23);
 def_int $int48 = 0;
 while ($int48 <= 23) {
-	cc_create($widget_137:17_27, ^iftype_rectangle, $int48);
+	cc_create($com_xpdrops_setup_skilllist27, ^iftype_rectangle, $int48, false);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, calc($int48 * 25), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setfill(true);
@@ -350,28 +350,28 @@ while ($int48 <= 23) {
 			0 = event_op, 
 			1 = event_comsubid, 
 			2 = $statarray0($int48), 
-			3 = $widget_137:4_3, 
-			4 = $widget_137:15_26, 
-			5 = $widget_137:17_27, 
-			6 = $widget_137:18_28, 
-			7 = $widget_137:19_29, 
-			8 = $widget_137:21_30, 
-			9 = $widget_137:25_31, 
-			10 = $widget_137:33_32, 
-			11 = $widget_137:22_33, 
-			12 = $widget_137:26_34, 
-			13 = $widget_137:34_35, 
-			14 = $widget_137:30_36, 
-			15 = $widget_137:38_37, 
-			16 = $widget_137:42_38, 
-			17 = $widget_137:29_39, 
-			18 = $widget_137:37_40, 
-			19 = $widget_137:41_41, 
-			20 = $widget_137:31_42, 
-			21 = $widget_137:39_43, 
-			22 = $widget_137:43_44, 
-			23 = $widget_137:45_45, 
-			24 = $widget_137:46_46
+			3 = $com_xpdrops_setup_configuration3, 
+			4 = $com_xpdrops_setup_skillstatus26, 
+			5 = $com_xpdrops_setup_skilllist27, 
+			6 = $com_xpdrops_setup_skillscrollbar28, 
+			7 = $com_xpdrops_setup_skillsetup29, 
+			8 = $com_xpdrops_setup_none30, 
+			9 = $com_xpdrops_setup_tracker31, 
+			10 = $com_xpdrops_setup_goal32, 
+			11 = $com_xpdrops_setup_none_backing33, 
+			12 = $com_xpdrops_setup_tracker_backing34, 
+			13 = $com_xpdrops_setup_goal_backing35, 
+			14 = $com_xpdrops_setup_tracker_start36, 
+			15 = $com_xpdrops_setup_goal_start37, 
+			16 = $com_xpdrops_setup_goal_end38, 
+			17 = $com_xpdrops_setup_tracker_start_display39, 
+			18 = $com_xpdrops_setup_goal_start_display40, 
+			19 = $com_xpdrops_setup_goal_end_display41, 
+			20 = $com_xpdrops_setup_tracker_start_text42, 
+			21 = $com_xpdrops_setup_goal_start_text43, 
+			22 = $com_xpdrops_setup_goal_end_text44, 
+			23 = $com_xpdrops_setup_cancel45, 
+			24 = $com_xpdrops_setup_save46
 		)");
 	} else {
 		cc_setopbase("<col=ff9040>Total XP</col>");
@@ -379,28 +379,28 @@ while ($int48 <= 23) {
 			0 = event_op, 
 			1 = event_comsubid, 
 			2 = null, 
-			3 = $widget_137:4_3, 
-			4 = $widget_137:15_26, 
-			5 = $widget_137:17_27, 
-			6 = $widget_137:18_28, 
-			7 = $widget_137:19_29, 
-			8 = $widget_137:21_30, 
-			9 = $widget_137:25_31, 
-			10 = $widget_137:33_32, 
-			11 = $widget_137:22_33, 
-			12 = $widget_137:26_34, 
-			13 = $widget_137:34_35, 
-			14 = $widget_137:30_36, 
-			15 = $widget_137:38_37, 
-			16 = $widget_137:42_38, 
-			17 = $widget_137:29_39, 
-			18 = $widget_137:37_40, 
-			19 = $widget_137:41_41, 
-			20 = $widget_137:31_42, 
-			21 = $widget_137:39_43, 
-			22 = $widget_137:43_44, 
-			23 = $widget_137:45_45, 
-			24 = $widget_137:46_46
+			3 = $com_xpdrops_setup_configuration3, 
+			4 = $com_xpdrops_setup_skillstatus26, 
+			5 = $com_xpdrops_setup_skilllist27, 
+			6 = $com_xpdrops_setup_skillscrollbar28, 
+			7 = $com_xpdrops_setup_skillsetup29, 
+			8 = $com_xpdrops_setup_none30, 
+			9 = $com_xpdrops_setup_tracker31, 
+			10 = $com_xpdrops_setup_goal32, 
+			11 = $com_xpdrops_setup_none_backing33, 
+			12 = $com_xpdrops_setup_tracker_backing34, 
+			13 = $com_xpdrops_setup_goal_backing35, 
+			14 = $com_xpdrops_setup_tracker_start36, 
+			15 = $com_xpdrops_setup_goal_start37, 
+			16 = $com_xpdrops_setup_goal_end38, 
+			17 = $com_xpdrops_setup_tracker_start_display39, 
+			18 = $com_xpdrops_setup_goal_start_display40, 
+			19 = $com_xpdrops_setup_goal_end_display41, 
+			20 = $com_xpdrops_setup_tracker_start_text42, 
+			21 = $com_xpdrops_setup_goal_start_text43, 
+			22 = $com_xpdrops_setup_goal_end_text44, 
+			23 = $com_xpdrops_setup_cancel45, 
+			24 = $com_xpdrops_setup_save46
 		)");
 	}
 	$int48 = calc($int48 + 1);
@@ -409,7 +409,7 @@ while ($int48 <= 23) {
 def_int $int49 = 0;
 while ($int49 <= 23) {
 	%varcint49 = calc($int49 * 25);
-	cc_create($widget_137:17_27, ^iftype_graphic, $int48);
+	cc_create($com_xpdrops_setup_skilllist27, ^iftype_graphic, $int48, false);
 	$int48 = calc($int48 + 1);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
@@ -418,7 +418,7 @@ while ($int49 <= 23) {
 	} else {
 		cc_setgraphic("staticons2,7");
 	}
-	cc_create($widget_137:17_27, ^iftype_text, $int48);
+	cc_create($com_xpdrops_setup_skilllist27, ^iftype_text, $int48, false);
 	$int48 = calc($int48 + 1);
 	cc_setsize(80, 25, ^setsize_abs, ^setsize_abs);
 	cc_setposition(28, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
@@ -431,7 +431,7 @@ while ($int49 <= 23) {
 	} else {
 		cc_settext("Total XP");
 	}
-	cc_create($widget_137:17_27, ^iftype_text, $int48);
+	cc_create($com_xpdrops_setup_skilllist27, ^iftype_text, $int48, false);
 	$int48 = calc($int48 + 1);
 	cc_setsize(110, 26, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, %varcint49, ^setpos_abs_right, ^setpos_abs_top);
@@ -441,117 +441,117 @@ while ($int49 <= 23) {
 	cc_settextshadow(true);
 	$int49 = calc($int49 + 1);
 }
-cc_deleteall($widget_137:18_28);
-if_setscrollpos(0, 0, $widget_137:17_27);
+cc_deleteall($com_xpdrops_setup_skillscrollbar28);
+if_setscrollpos(0, 0, $com_xpdrops_setup_skilllist27);
 %varcint49 = calc(25 * (23 + 1));
-if (%varcint49 > if_getheight($widget_137:17_27)) {
-	if_setscrollsize(0, %varcint49, $widget_137:17_27);
+if (%varcint49 > if_getheight($com_xpdrops_setup_skilllist27)) {
+	if_setscrollsize(0, %varcint49, $com_xpdrops_setup_skilllist27);
 } else {
-	if_setscrollsize(0, 0, $widget_137:17_27);
+	if_setscrollsize(0, 0, $com_xpdrops_setup_skilllist27);
 }
-~scrollbar_vertical($widget_137:18_28, $widget_137:17_27, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_sethide(false, $widget_137:4_3);
-if_sethide(false, $widget_137:15_26);
-if_sethide(true, $widget_137:19_29);
-cc_deleteall($widget_137:19_29);
-cc_create($widget_137:19_29, ^iftype_text, 0);
+~scrollbar_vertical($com_xpdrops_setup_skillscrollbar28, $com_xpdrops_setup_skilllist27, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_sethide(false, $com_xpdrops_setup_configuration3);
+if_sethide(false, $com_xpdrops_setup_skillstatus26);
+if_sethide(true, $com_xpdrops_setup_skillsetup29);
+cc_deleteall($com_xpdrops_setup_skillsetup29);
+cc_create($com_xpdrops_setup_skillsetup29, ^iftype_text, 0, false);
 cc_setsize(10, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-~stonepanel(-1, $widget_137:19_29, 1);
-~script1016($widget_137:21_30);
-~script1016($widget_137:25_31);
-~script1016($widget_137:33_32);
-def_string $op0 = "Discard";
-~script1018(false, 0xff2020, $op0, $widget_137:45_45);
+~stonepanel(-1, $com_xpdrops_setup_skillsetup29, 1);
+~script1016($com_xpdrops_setup_none30);
+~script1016($com_xpdrops_setup_tracker31);
+~script1016($com_xpdrops_setup_goal32);
+def_string $string0 = "Discard";
+~script1018(false, 0xff2020, $string0, $com_xpdrops_setup_cancel45);
 if (~on_mobile = false) {
-	if_setonmouseover("script1017(true, 0xff2020, $op0, event_com)", $widget_137:45_45);
-	if_setonmouseleave("script1017(false, 0xff2020, $op0, event_com)", $widget_137:45_45);
+	if_setonmouseover("script1017(true, 0xff2020, $string0, event_com)", $com_xpdrops_setup_cancel45);
+	if_setonmouseleave("script1017(false, 0xff2020, $string0, event_com)", $com_xpdrops_setup_cancel45);
 }
 if_setonop("script1023(
 	0 = event_op, 
 	1 = -1, 
 	2 = null, 
-	3 = $widget_137:4_3, 
-	4 = $widget_137:15_26, 
-	5 = $widget_137:17_27, 
-	6 = $widget_137:18_28, 
-	7 = $widget_137:19_29, 
-	8 = $widget_137:21_30, 
-	9 = $widget_137:25_31, 
-	10 = $widget_137:33_32, 
-	11 = $widget_137:22_33, 
-	12 = $widget_137:26_34, 
-	13 = $widget_137:34_35, 
-	14 = $widget_137:30_36, 
-	15 = $widget_137:38_37, 
-	16 = $widget_137:42_38, 
-	17 = $widget_137:29_39, 
-	18 = $widget_137:37_40, 
-	19 = $widget_137:41_41, 
-	20 = $widget_137:31_42, 
-	21 = $widget_137:39_43, 
-	22 = $widget_137:43_44, 
-	23 = $widget_137:45_45, 
-	24 = $widget_137:46_46
-)", $widget_137:45_45);
-$op0 = "Save";
-$int48 = ~script1018(false, ^green, $op0, $widget_137:46_46);
+	3 = $com_xpdrops_setup_configuration3, 
+	4 = $com_xpdrops_setup_skillstatus26, 
+	5 = $com_xpdrops_setup_skilllist27, 
+	6 = $com_xpdrops_setup_skillscrollbar28, 
+	7 = $com_xpdrops_setup_skillsetup29, 
+	8 = $com_xpdrops_setup_none30, 
+	9 = $com_xpdrops_setup_tracker31, 
+	10 = $com_xpdrops_setup_goal32, 
+	11 = $com_xpdrops_setup_none_backing33, 
+	12 = $com_xpdrops_setup_tracker_backing34, 
+	13 = $com_xpdrops_setup_goal_backing35, 
+	14 = $com_xpdrops_setup_tracker_start36, 
+	15 = $com_xpdrops_setup_goal_start37, 
+	16 = $com_xpdrops_setup_goal_end38, 
+	17 = $com_xpdrops_setup_tracker_start_display39, 
+	18 = $com_xpdrops_setup_goal_start_display40, 
+	19 = $com_xpdrops_setup_goal_end_display41, 
+	20 = $com_xpdrops_setup_tracker_start_text42, 
+	21 = $com_xpdrops_setup_goal_start_text43, 
+	22 = $com_xpdrops_setup_goal_end_text44, 
+	23 = $com_xpdrops_setup_cancel45, 
+	24 = $com_xpdrops_setup_save46
+)", $com_xpdrops_setup_cancel45);
+$string0 = "Save";
+$int48 = ~script1018(false, ^green, $string0, $com_xpdrops_setup_save46);
 if (~on_mobile = false) {
-	if_setonmouseover("script1017(true, ^green, $op0, event_com)", $widget_137:46_46);
-	if_setonmouseleave("script1017(false, ^green, $op0, event_com)", $widget_137:46_46);
+	if_setonmouseover("script1017(true, ^green, $string0, event_com)", $com_xpdrops_setup_save46);
+	if_setonmouseleave("script1017(false, ^green, $string0, event_com)", $com_xpdrops_setup_save46);
 }
-if_setonop("script1019(event_op, event_com, $int48, ^green)", $widget_137:46_46);
+if_setonop("script1019(event_op, event_com, $int48, ^green)", $com_xpdrops_setup_save46);
 ~script1026(
-	0 = $widget_137:4_3, 
-	1 = $widget_137:15_26, 
-	2 = $widget_137:17_27, 
-	3 = $widget_137:18_28, 
-	4 = $widget_137:19_29, 
-	5 = $widget_137:21_30, 
-	6 = $widget_137:25_31, 
-	7 = $widget_137:33_32, 
-	8 = $widget_137:22_33, 
-	9 = $widget_137:26_34, 
-	10 = $widget_137:34_35, 
-	11 = $widget_137:30_36, 
-	12 = $widget_137:38_37, 
-	13 = $widget_137:42_38, 
-	14 = $widget_137:29_39, 
-	15 = $widget_137:37_40, 
-	16 = $widget_137:41_41, 
-	17 = $widget_137:31_42, 
-	18 = $widget_137:39_43, 
-	19 = $widget_137:43_44, 
-	20 = $widget_137:45_45, 
-	21 = $widget_137:46_46
+	0 = $com_xpdrops_setup_configuration3, 
+	1 = $com_xpdrops_setup_skillstatus26, 
+	2 = $com_xpdrops_setup_skilllist27, 
+	3 = $com_xpdrops_setup_skillscrollbar28, 
+	4 = $com_xpdrops_setup_skillsetup29, 
+	5 = $com_xpdrops_setup_none30, 
+	6 = $com_xpdrops_setup_tracker31, 
+	7 = $com_xpdrops_setup_goal32, 
+	8 = $com_xpdrops_setup_none_backing33, 
+	9 = $com_xpdrops_setup_tracker_backing34, 
+	10 = $com_xpdrops_setup_goal_backing35, 
+	11 = $com_xpdrops_setup_tracker_start36, 
+	12 = $com_xpdrops_setup_goal_start37, 
+	13 = $com_xpdrops_setup_goal_end38, 
+	14 = $com_xpdrops_setup_tracker_start_display39, 
+	15 = $com_xpdrops_setup_goal_start_display40, 
+	16 = $com_xpdrops_setup_goal_end_display41, 
+	17 = $com_xpdrops_setup_tracker_start_text42, 
+	18 = $com_xpdrops_setup_goal_start_text43, 
+	19 = $com_xpdrops_setup_goal_end_text44, 
+	20 = $com_xpdrops_setup_cancel45, 
+	21 = $com_xpdrops_setup_save46
 );
 if_setonvartransmit("script1025(
-	0 = $widget_137:4_3, 
-	1 = $widget_137:15_26, 
-	2 = $widget_137:17_27, 
-	3 = $widget_137:18_28, 
-	4 = $widget_137:19_29, 
-	5 = $widget_137:21_30, 
-	6 = $widget_137:25_31, 
-	7 = $widget_137:33_32, 
-	8 = $widget_137:22_33, 
-	9 = $widget_137:26_34, 
-	10 = $widget_137:34_35, 
-	11 = $widget_137:30_36, 
-	12 = $widget_137:38_37, 
-	13 = $widget_137:42_38, 
-	14 = $widget_137:29_39, 
-	15 = $widget_137:37_40, 
-	16 = $widget_137:41_41, 
-	17 = $widget_137:31_42, 
-	18 = $widget_137:39_43, 
-	19 = $widget_137:43_44, 
-	20 = $widget_137:45_45, 
-	21 = $widget_137:46_46
+	0 = $com_xpdrops_setup_configuration3, 
+	1 = $com_xpdrops_setup_skillstatus26, 
+	2 = $com_xpdrops_setup_skilllist27, 
+	3 = $com_xpdrops_setup_skillscrollbar28, 
+	4 = $com_xpdrops_setup_skillsetup29, 
+	5 = $com_xpdrops_setup_none30, 
+	6 = $com_xpdrops_setup_tracker31, 
+	7 = $com_xpdrops_setup_goal32, 
+	8 = $com_xpdrops_setup_none_backing33, 
+	9 = $com_xpdrops_setup_tracker_backing34, 
+	10 = $com_xpdrops_setup_goal_backing35, 
+	11 = $com_xpdrops_setup_tracker_start36, 
+	12 = $com_xpdrops_setup_goal_start37, 
+	13 = $com_xpdrops_setup_goal_end38, 
+	14 = $com_xpdrops_setup_tracker_start_display39, 
+	15 = $com_xpdrops_setup_goal_start_display40, 
+	16 = $com_xpdrops_setup_goal_end_display41, 
+	17 = $com_xpdrops_setup_tracker_start_text42, 
+	18 = $com_xpdrops_setup_goal_start_text43, 
+	19 = $com_xpdrops_setup_goal_end_text44, 
+	20 = $com_xpdrops_setup_cancel45, 
+	21 = $com_xpdrops_setup_save46
 ){
 	0 = var638, 
 	1 = var261, 
@@ -604,4 +604,4 @@ if_setonvartransmit("script1025(
 	48 = var1273, 
 	49 = var1274, 
 	50 = var1275
-}", $widget_137:3_2);
+}", $com_xpdrops_setup_main2);

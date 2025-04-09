@@ -1,8 +1,8 @@
 // 6818
-[proc,script6818](component $widget_781:7_0)
+[proc,script6818](component $com_questscroll_speedrun_speedrun_trophies0)
 def_string $string0 = ~tostring_spacer(~speedrunning_total_trophies, ",");
 if (~speedrunning_world = 1) {
-	if_settext("Speedrun Trophies: <$string0>", $widget_781:7_0);
+	if_settext("Speedrun Trophies: <$string0>", $com_questscroll_speedrun_speedrun_trophies0);
 } else {
-	if_settext("", $widget_781:7_0);
+	if_settext("", $com_questscroll_speedrun_speedrun_trophies0);
 }

@@ -1,26 +1,26 @@
 // 144
-[clientscript,bank_depositbox_init](int $widget_192:0_0, component $widget_192:23_1, component $widget_192:25_2, component $widget_192:29_3, component $widget_192:30_4, component $widget_192:31_5, component $widget_192:33_6, component $widget_192:34_7, component $widget_192:35_8, component $widget_192:36_9, component $widget_192:37_10, component $widget_192:38_11)
-cc_deleteall($widget_192:23_1);
-def_int $size12 = 0;
-def_int $size13 = inv_size(inv);
-while ($size12 < $size13) {
-	cc_create($widget_192:23_1, ^iftype_graphic, $size12);
+[clientscript,bank_depositbox_init](int $com_bank_depositbox_universe0, component $com_bank_depositbox_inventory1, component $com_bank_depositbox_item_background2, component $com_bank_depositbox_deposit_inv3, component $com_bank_depositbox_deposit_worn4, component $com_bank_depositbox_deposit_lootingbag5, component $com_bank_depositbox_menu6, component $com_bank_depositbox_17, component $com_bank_depositbox_58, component $com_bank_depositbox_109, component $com_bank_depositbox_x10, component $com_bank_depositbox_all11)
+cc_deleteall($com_bank_depositbox_inventory1);
+def_int $int12 = 0;
+def_int $int13 = inv_size(inv);
+while ($int12 < $int13) {
+	cc_create($com_bank_depositbox_inventory1, ^iftype_graphic, $int12, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
 	cc_sethide(false);
-	$size12 = calc($size12 + 1);
+	$int12 = calc($int12 + 1);
 }
-~bank_depositbox_update($widget_192:23_1, $widget_192:25_2);
-if_setoninvtransmit("bank_depositbox_update($widget_192:23_1, $widget_192:25_2){inv}", $widget_192:23_1);
-if_setonvartransmit("bank_depositbox_update($widget_192:23_1, $widget_192:25_2){var261, var262, var263, var867, var1794, var1141, var4611}", $widget_192:23_1);
-~script2133($widget_192:29_3, "Deposit inventory", "bankbuttons,0", "", null, null, null, null);
-~script2133($widget_192:30_4, "Deposit worn items", "bankbuttons,1", "", null, null, null, null);
-~script2133($widget_192:31_5, "Deposit looting bag", "bankbuttons,3", "", null, null, null, null);
-~script7780($widget_192:33_6, 0);
-if_setop(1, "Deposit Lock Settings", $widget_192:33_6);
-~script4081(2, $widget_192:33_6);
-if_setonvartransmit("script4080(2, event_com){var4611}", $widget_192:33_6);
-~script1648(enum_2737, $widget_192:34_7, $widget_192:35_8, $widget_192:36_9, $widget_192:38_11, $widget_192:37_10);
+~bank_depositbox_update($com_bank_depositbox_inventory1, $com_bank_depositbox_item_background2);
+if_setoninvtransmit("bank_depositbox_update($com_bank_depositbox_inventory1, $com_bank_depositbox_item_background2){inv}", $com_bank_depositbox_inventory1);
+if_setonvartransmit("bank_depositbox_update($com_bank_depositbox_inventory1, $com_bank_depositbox_item_background2){var261, var262, var263, var867, var1794, var1141, var4611}", $com_bank_depositbox_inventory1);
+~script2133($com_bank_depositbox_deposit_inv3, "Deposit inventory", "bankbuttons,0", "", null, null, null, null);
+~script2133($com_bank_depositbox_deposit_worn4, "Deposit worn items", "bankbuttons,1", "", null, null, null, null);
+~script2133($com_bank_depositbox_deposit_lootingbag5, "Deposit looting bag", "bankbuttons,3", "", null, null, null, null);
+~script7780($com_bank_depositbox_menu6, 0);
+if_setop(1, "Deposit Lock Settings", $com_bank_depositbox_menu6);
+~script4081(2, $com_bank_depositbox_menu6);
+if_setonvartransmit("script4080(2, event_com){var4611}", $com_bank_depositbox_menu6);
+~script1648(enum_2737, $com_bank_depositbox_17, $com_bank_depositbox_58, $com_bank_depositbox_109, $com_bank_depositbox_all11, $com_bank_depositbox_x10);

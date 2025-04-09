@@ -1,26 +1,26 @@
 // 4902
-[clientscript,script4902](obj $obj0, component $widget_218:3_1, component $widget_218:193_2, component $widget_218:202_3, component $widget_218:1_4, component $widget_218:199_5, component $widget_218:200_6, component $widget_218:201_7, component $widget_218:2_8, component $widget_218:195_9, component $widget_218:198_10, string $string0, string $string1, boolean $boolean11)
+[clientscript,script4902](obj $obj0, component $com_magic_spellbook_spelllayer1, component $com_magic_spellbook_infolayer2, component $com_magic_spellbook_tooltip3, component $com_magic_spellbook_top4, component $com_magic_spellbook_bottom5, component $com_magic_spellbook_infobutton6, component $com_magic_spellbook_filterbutton7, component $com_magic_spellbook_glow8, component $com_magic_spellbook_filtermenu_container9, component $com_magic_spellbook_filtermenu10, string $string0, string $string1, boolean $boolean11)
 if ($obj0 = %varcint393) {
 	~magic_stop_flash($obj0);
 }
 def_int $int12 = %varbit9730;
-if ($obj0 = back_24610) {
+if ($obj0 = placeholder_blighted_sack_bind_24610) {
 	%varbit9730 = 0;
 } else if (oc_param($obj0, param_1883) ! 0) {
 	%varbit9730 = oc_param($obj0, param_1883);
 }
 if (%varbit9730 ! $int12) {
 	~magic_spellbook_redraw(
-		0 = $widget_218:3_1, 
-		1 = $widget_218:193_2, 
-		2 = $widget_218:202_3, 
-		3 = $widget_218:1_4, 
-		4 = $widget_218:199_5, 
-		5 = $widget_218:200_6, 
-		6 = $widget_218:201_7, 
-		7 = $widget_218:2_8, 
-		8 = $widget_218:195_9, 
-		9 = $widget_218:198_10, 
+		0 = $com_magic_spellbook_spelllayer1, 
+		1 = $com_magic_spellbook_infolayer2, 
+		2 = $com_magic_spellbook_tooltip3, 
+		3 = $com_magic_spellbook_top4, 
+		4 = $com_magic_spellbook_bottom5, 
+		5 = $com_magic_spellbook_infobutton6, 
+		6 = $com_magic_spellbook_filterbutton7, 
+		7 = $com_magic_spellbook_glow8, 
+		8 = $com_magic_spellbook_filtermenu_container9, 
+		9 = $com_magic_spellbook_filtermenu10, 
 		10 = $string0, 
 		11 = $string1, 
 		12 = $boolean11

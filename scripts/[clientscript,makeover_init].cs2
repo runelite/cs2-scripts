@@ -1,7 +1,7 @@
 // 6776
-[clientscript,makeover_init](component $widget_516:2_0, component $widget_516:3_1, component $widget_516:7_2, component $widget_516:15_3, component $widget_516:22_4, component $widget_516:24_5, component $widget_516:26_6, component $widget_516:27_7, component $widget_516:28_8, component $widget_516:5_9, component $widget_516:29_10, component $widget_516:31_11, component $widget_516:30_12, component $widget_516:6_13)
-def_component $component14 = interface_516:1;
-def_component $component15 = interface_516:0;
+[clientscript,makeover_init](component $com_makeover_border0, component $com_makeover_content1, component $com_makeover_item_area2, component $com_makeover_model_view3, component $com_makeover_player_model4, component $com_makeover_colours5, component $com_makeover_select_container6, component $com_makeover_select7, component $com_makeover_select_and_close8, component $com_makeover_scroll_bar9, component $com_makeover_burger_btn_menu10, component $com_makeover_burger_menu_frame11, component $com_makeover_burger_menu_overlay12, component $com_makeover_thinbox13)
+def_component $component14 = makeover:universe;
+def_component $component15 = makeover:infinity;
 def_enum $enum16 = null;
 def_enum $enum17 = null;
 def_enum $enum18 = null;
@@ -40,20 +40,20 @@ switch_int (%varbit4130) {
 		$boolean19 = true;
 }
 if ($component15 ! null) {
-	~makeover_size_check($component14, $component15, ^min_32bit_int, ^min_32bit_int, $widget_516:5_9, $widget_516:7_2, $enum18);
+	~makeover_size_check($component14, $component15, ^min_32bit_int, ^min_32bit_int, $com_makeover_scroll_bar9, $com_makeover_item_area2, $enum18);
 }
-~steelborder($widget_516:2_0, "Makeover", 0);
+~steelborder($com_makeover_border0, "Makeover", 0);
 ~makeover_draw_content(
-	0 = $widget_516:3_1, 
-	1 = $widget_516:7_2, 
-	2 = $widget_516:15_3, 
-	3 = $widget_516:22_4, 
-	4 = $widget_516:24_5, 
-	5 = $widget_516:26_6, 
-	6 = $widget_516:27_7, 
-	7 = $widget_516:28_8, 
-	8 = $widget_516:5_9, 
-	9 = $widget_516:6_13, 
+	0 = $com_makeover_content1, 
+	1 = $com_makeover_item_area2, 
+	2 = $com_makeover_model_view3, 
+	3 = $com_makeover_player_model4, 
+	4 = $com_makeover_colours5, 
+	5 = $com_makeover_select_container6, 
+	6 = $com_makeover_select7, 
+	7 = $com_makeover_select_and_close8, 
+	8 = $com_makeover_scroll_bar9, 
+	9 = $com_makeover_thinbox13, 
 	10 = $enum16, 
 	11 = $enum17, 
 	12 = $enum18, 
@@ -67,19 +67,19 @@ if (%varcint1198 = -1) {
 	%varcint1198 = 0;
 }
 if_setonvartransmit("makeover_redraw_content(
-	0 = $widget_516:3_1, 
-	1 = $widget_516:7_2, 
-	2 = $widget_516:15_3, 
-	3 = $widget_516:22_4, 
-	4 = $widget_516:24_5, 
-	5 = $widget_516:26_6, 
-	6 = $widget_516:27_7, 
-	7 = $widget_516:28_8, 
-	8 = $widget_516:5_9, 
-	9 = $widget_516:6_13, 
+	0 = $com_makeover_content1, 
+	1 = $com_makeover_item_area2, 
+	2 = $com_makeover_model_view3, 
+	3 = $com_makeover_player_model4, 
+	4 = $com_makeover_colours5, 
+	5 = $com_makeover_select_container6, 
+	6 = $com_makeover_select7, 
+	7 = $com_makeover_select_and_close8, 
+	8 = $com_makeover_scroll_bar9, 
+	9 = $com_makeover_thinbox13, 
 	10 = $enum16, 
 	11 = $enum17, 
 	12 = $enum18, 
 	13 = $boolean19
-){var3787, var3789, var3788}", $widget_516:3_1);
-~script7083($widget_516:29_10, $widget_516:31_11, $widget_516:30_12, %varbit4130);
+){var3787, var3789, var3788}", $com_makeover_content1);
+~script7083($com_makeover_burger_btn_menu10, $com_makeover_burger_menu_frame11, $com_makeover_burger_menu_overlay12, %varbit4130);

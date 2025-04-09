@@ -7,13 +7,13 @@ sound_synth(interface_select1, 1, 0);
 def_string $string0 = "null";
 switch_int ($opindex0) {
 	case 10 :
-		$string0 = db_getfield($dbrow1, dbtable_34:4, 0);
+		$string0 = db_getfield($dbrow1, item_transmog:ui_examine, 0);
 		if (~string_isnullorempty($string0) = 1) {
-			$string0 = oc_name(db_getfield($dbrow1, dbtable_34:2, 0));
+			$string0 = oc_name(db_getfield($dbrow1, item_transmog:namedobj, 0));
 		}
 		mes($string0);
 	case 1 :
-		%varcint1110 = db_getfield($dbrow1, dbtable_34:1, 0);
+		%varcint1110 = db_getfield($dbrow1, item_transmog:group_id, 0);
 		~script6789($component5, $comsubid2, 0x9f9f9f);
 		if (cc_find($component5, $comsubid3) = ^true) {
 			cc_setcolour(0x9f9f9f);

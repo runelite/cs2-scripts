@@ -13,10 +13,10 @@ def_obj $obj9 = null;
 def_int $int10 = 50;
 def_int $int11 = 40;
 while ($int8 < 93) {
-	$obj9 = inv_getobj(inv_626, $int8);
-	cc_create($component0, ^iftype_graphic, $int8);
+	$obj9 = inv_getobj(seed_vault, $int8);
+	cc_create($component0, ^iftype_graphic, $int8, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	.cc_create($component1, ^iftype_text, $int8);
+	.cc_create($component1, ^iftype_text, $int8, false);
 	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
 	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
 		cc_setop(10, "Examine");
@@ -29,7 +29,7 @@ while ($int8 < 93) {
 			cc_setop(8, "Remove-Placeholder");
 			cc_setop(9, "Remove-All-Placeholders");
 		} else {
-			cc_setobject($obj9, inv_total(inv_626, $obj9));
+			cc_setobject($obj9, inv_total(seed_vault, $obj9));
 			if (%var2195 = ^max_32bit_int) {
 				cc_setop(1, "Withdraw-All");
 			} else if (%var2195 > 1) {
@@ -114,7 +114,7 @@ if (~on_mobile = true) {
 def_int $int17 = calc(if_getwidth($component4) / ($int10 + $int15));
 def_int $intarray1(calc($int7 + 1));
 if (~seed_vault_searching = 1) {
-	cc_create($component2, ^iftype_text, 0);
+	cc_create($component2, ^iftype_text, 0, false);
 	cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
@@ -123,7 +123,7 @@ if (~seed_vault_searching = 1) {
 	cc_settext("Search results: <lowercase(%varcstring359)>");
 	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	$int14 = calc(cc_gety + cc_getheight + 2);
-	.cc_create($component3, ^iftype_graphic, 0);
+	.cc_create($component3, ^iftype_graphic, 0, false);
 	.cc_setgraphic(tradebacking_dark);
 	.cc_settiling(true);
 	.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
@@ -132,7 +132,7 @@ if (~seed_vault_searching = 1) {
 } else {
 	while ($int12 <= $int7) {
 		$int13 = enum(int, int, enum_2304, $int12);
-		cc_create($component2, ^iftype_text, $int12);
+		cc_create($component2, ^iftype_text, $int12, false);
 		cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(0xff981f);
@@ -141,7 +141,7 @@ if (~seed_vault_searching = 1) {
 		cc_settext(enum(int, string, enum_2305, $int13));
 		cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
 		$int14 = calc(cc_gety + cc_getheight + 2);
-		.cc_create($component3, ^iftype_graphic, $int12);
+		.cc_create($component3, ^iftype_graphic, $int12, false);
 		.cc_setgraphic(tradebacking_dark);
 		.cc_settiling(true);
 		.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
@@ -157,7 +157,7 @@ def_int $int18 = 0;
 $int14 = 0;
 def_int $index19 = -1;
 while ($int8 < 93) {
-	$obj9 = inv_getobj(inv_626, $int8);
+	$obj9 = inv_getobj(seed_vault, $int8);
 	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
 		$index19 = oc_param(oc_unplaceholder($obj9), param_709);
 		if (~seed_vault_searching = 1 & ~seed_vault_filteritem($obj9) = 1) {
@@ -200,11 +200,11 @@ while ($int8 < 93) {
 	$int8 = calc($int8 + 1);
 }
 if (~seed_vault_searching = 0) {
-	cc_create($component0, ^iftype_graphic, $int8);
+	cc_create($component0, ^iftype_graphic, $int8, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject_nonum(kelda_seed_5_6117, 0);
+	cc_setobject_nonum(kelda_hop_seed_5_6117, 0);
 	cc_settrans(120);
-	.cc_create($component1, ^iftype_text, $int8);
+	.cc_create($component1, ^iftype_text, $int8, false);
 	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
 	if (~script2831 > 7) {
 		.cc_settext("Add Favourites");
@@ -226,12 +226,12 @@ if (~seed_vault_searching = 0) {
 }
 ~scrollbar_vertical_rebuild($component5, $component4);
 def_int $int20 = 0;
-def_int $height21 = calc($intarray1($int7) + $int16 + 32 + $int11);
-if ($height21 > if_getheight($component4)) {
+def_int $int21 = calc($intarray1($int7) + $int16 + 32 + $int11);
+if ($int21 > if_getheight($component4)) {
 	if (%varcint376 > 0) {
 		$int20 = %varcint376;
 	}
-	if_setscrollsize(0, $height21, $component4);
+	if_setscrollsize(0, $int21, $component4);
 	~scrollbar_resize($component5, $component4, $int20);
 } else {
 	if_setscrollsize(0, 0, $component4);

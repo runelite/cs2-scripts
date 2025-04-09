@@ -1,6 +1,6 @@
 // 6824
-[clientscript,questjournal_overview_button_reset](component $component0, int $int1, int $clock2, int $int3, int $int4, string $string0)
-if (clientclock < $clock2) {
+[clientscript,questjournal_overview_button_reset](component $component0, int $int1, int $int2, int $int3, int $int4, string $string0)
+if (clientclock < $int2) {
 	return;
 }
 if (cc_find($component0, $int1) = ^true) {

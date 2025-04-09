@@ -1,23 +1,23 @@
 // 3797
-[clientscript,script3797](component $widget_111:4_0, component $widget_111:5_1, component $widget_111:6_2)
-if (inv_getobj(inv_438, 0) ! null) {
-	if_sethide(false, $widget_111:4_0);
-	if_setobject_nonum(inv_getobj(inv_438, 0), 1, $widget_111:4_0);
-	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 0))>", $widget_111:4_0);
+[clientscript,script3797](component $com_eyeglo_change_machine_in_00, component $com_eyeglo_change_machine_in_11, component $com_eyeglo_change_machine_in_22)
+if (inv_getobj(eyeglo_inv_in, 0) ! null) {
+	if_sethide(false, $com_eyeglo_change_machine_in_00);
+	if_setobject_nonum(inv_getobj(eyeglo_inv_in, 0), 1, $com_eyeglo_change_machine_in_00);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(eyeglo_inv_in, 0))>", $com_eyeglo_change_machine_in_00);
 } else {
-	if_sethide(true, $widget_111:4_0);
+	if_sethide(true, $com_eyeglo_change_machine_in_00);
 }
-if (inv_getobj(inv_438, 1) ! null) {
-	if_sethide(false, $widget_111:5_1);
-	if_setobject_nonum(inv_getobj(inv_438, 1), 1, $widget_111:5_1);
-	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 1))>", $widget_111:5_1);
+if (inv_getobj(eyeglo_inv_in, 1) ! null) {
+	if_sethide(false, $com_eyeglo_change_machine_in_11);
+	if_setobject_nonum(inv_getobj(eyeglo_inv_in, 1), 1, $com_eyeglo_change_machine_in_11);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(eyeglo_inv_in, 1))>", $com_eyeglo_change_machine_in_11);
 } else {
-	if_sethide(true, $widget_111:5_1);
+	if_sethide(true, $com_eyeglo_change_machine_in_11);
 }
-if (inv_getobj(inv_438, 2) ! null) {
-	if_sethide(false, $widget_111:6_2);
-	if_setobject_nonum(inv_getobj(inv_438, 2), 1, $widget_111:6_2);
-	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 2))>", $widget_111:6_2);
+if (inv_getobj(eyeglo_inv_in, 2) ! null) {
+	if_sethide(false, $com_eyeglo_change_machine_in_22);
+	if_setobject_nonum(inv_getobj(eyeglo_inv_in, 2), 1, $com_eyeglo_change_machine_in_22);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(eyeglo_inv_in, 2))>", $com_eyeglo_change_machine_in_22);
 } else {
-	if_sethide(true, $widget_111:6_2);
+	if_sethide(true, $com_eyeglo_change_machine_in_22);
 }

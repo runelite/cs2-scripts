@@ -1,17 +1,17 @@
 // 2143
-[clientscript,script2143](component $widget_307:0_0)
-cc_deleteall($widget_307:0_0);
+[clientscript,script2143](component $com_fossil_driftnet_sidestore_items0)
+cc_deleteall($com_fossil_driftnet_sidestore_items0);
 def_int $int1 = calc((42 - 36) * 3 - 2);
 def_int $int2 = calc((36 - 32) * 2);
-def_int $size3 = 0;
-def_int $size4 = inv_size(inv);
-while ($size3 < $size4) {
-	cc_create($widget_307:0_0, ^iftype_graphic, $size3);
+def_int $int3 = 0;
+def_int $int4 = inv_size(inv);
+while ($int3 < $int4) {
+	cc_create($com_fossil_driftnet_sidestore_items0, ^iftype_graphic, $int3, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int1 + $size3 % 4 * 42), calc($int2 + $size3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int1 + $int3 % 4 * 42), calc($int2 + $int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$size3 = calc($size3 + 1);
+	$int3 = calc($int3 + 1);
 }
-~script2145($widget_307:0_0);
-if_setoninvtransmit("script2144($widget_307:0_0){inv}", $widget_307:0_0);
+~script2145($com_fossil_driftnet_sidestore_items0);
+if_setoninvtransmit("script2144($com_fossil_driftnet_sidestore_items0){inv}", $com_fossil_driftnet_sidestore_items0);

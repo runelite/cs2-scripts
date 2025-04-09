@@ -3,13 +3,13 @@
 def_int $int8 = calc($int0 + 4);
 def_int $int9 = if_getx($component3);
 def_int $int10 = if_gety($component3);
-def_component $layer11 = if_getlayer($component3);
-$component1 = $layer11;
-while ($layer11 ! null) {
-	$int9, $int10 = calc($int9 + if_getx($layer11) - if_getscrollx($layer11)), calc($int10 + if_gety($layer11) - if_getscrolly($layer11));
-	$layer11 = if_getlayer($layer11);
-	if ($layer11 ! null) {
-		$component1 = $layer11;
+def_component $component11 = if_getlayer($component3);
+$component1 = $component11;
+while ($component11 ! null) {
+	$int9, $int10 = calc($int9 + if_getx($component11) - if_getscrollx($component11)), calc($int10 + if_gety($component11) - if_getscrolly($component11));
+	$component11 = if_getlayer($component11);
+	if ($component11 ! null) {
+		$component1 = $component11;
 	}
 }
 if ($component1 ! null) {

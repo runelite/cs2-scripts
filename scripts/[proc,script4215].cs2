@@ -1,5 +1,5 @@
 // 4215
-[proc,script4215](component $component0, string $op0)
+[proc,script4215](component $component0, string $string0)
 def_graphic $graphic1 = null;
 if (~on_mobile = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component0);
@@ -16,4 +16,4 @@ if (~on_mobile = true) {
 	$graphic1 = "close_buttons,1";
 	if_setonmouseover("graphic_swapper(event_com, $graphic1)", $component0);
 }
-if_setop(1, $op0, $component0);
+if_setop(1, $string0, $component0);

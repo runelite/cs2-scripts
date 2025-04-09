@@ -1,62 +1,62 @@
 // 2814
-[clientscript,seed_vault_build_category_list](component $widget_631:8_0, component $widget_631:7_1, component $widget_631:13_2, component $widget_631:11_3, component $widget_631:10_4, component $widget_631:6_5, component $widget_631:5_6, component $widget_631:2_7, component $widget_631:1_8, component $widget_631:0_9)
-cc_deleteall($widget_631:8_0);
-cc_deleteall($widget_631:7_1);
-cc_deleteall($widget_631:5_6);
+[clientscript,seed_vault_build_category_list](component $com_seed_vault_category_list0, component $com_seed_vault_category_backgrounds1, component $com_seed_vault_category_headers2, component $com_seed_vault_list3, component $com_seed_vault_right_scroll4, component $com_seed_vault_left_list5, component $com_seed_vault_left_scroll6, component $com_seed_vault_frame7, component $com_seed_vault_universe8, component $com_seed_vault_infinity9)
+cc_deleteall($com_seed_vault_category_list0);
+cc_deleteall($com_seed_vault_category_backgrounds1);
+cc_deleteall($com_seed_vault_left_scroll6);
 ~seed_vault_size_check(
-	0 = $widget_631:1_8, 
-	1 = $widget_631:0_9, 
+	0 = $com_seed_vault_universe8, 
+	1 = $com_seed_vault_infinity9, 
 	2 = ^min_32bit_int, 
 	3 = ^min_32bit_int, 
-	4 = $widget_631:11_3, 
-	5 = $widget_631:10_4, 
-	6 = $widget_631:6_5, 
-	7 = $widget_631:5_6, 
-	8 = $widget_631:2_7
+	4 = $com_seed_vault_list3, 
+	5 = $com_seed_vault_right_scroll4, 
+	6 = $com_seed_vault_left_list5, 
+	7 = $com_seed_vault_left_scroll6, 
+	8 = $com_seed_vault_frame7
 );
 def_int $int10 = 0;
-def_int $count11 = 0;
+def_int $int11 = 0;
 def_int $int12 = 0;
-def_int $y13 = 0;
+def_int $int13 = 0;
 if (~on_mobile = true) {
 	$int12 = 20;
 }
-while ($count11 <= enum_getoutputcount(enum_2304)) {
-	$int10 = enum(int, int, enum_2304, $count11);
-	cc_create($widget_631:8_0, ^iftype_text, $count11);
+while ($int11 <= enum_getoutputcount(enum_2304)) {
+	$int10 = enum(int, int, enum_2304, $int11);
+	cc_create($com_seed_vault_category_list0, ^iftype_text, $int11, false);
 	cc_setsize(5, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
-	cc_setposition(5, $y13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(5, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_settext(enum(int, string, enum_2305, $int10));
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_setonmouseover("cc_colour_swapper($widget_631:8_0, $count11, ^white)");
-	cc_setonmouseleave("cc_colour_swapper($widget_631:8_0, $count11, 0xff981f)");
-	cc_setonop("seed_vault_catop($widget_631:13_2, $int10, $widget_631:11_3, $widget_631:10_4)");
-	cc_setonvartransmit("seed_vault_catvar($widget_631:13_2, $widget_631:11_3, $widget_631:10_4){var2194}");
+	cc_setonmouseover("cc_colour_swapper($com_seed_vault_category_list0, $int11, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($com_seed_vault_category_list0, $int11, 0xff981f)");
+	cc_setonop("seed_vault_catop($com_seed_vault_category_headers2, $int10, $com_seed_vault_list3, $com_seed_vault_right_scroll4)");
+	cc_setonvartransmit("seed_vault_catvar($com_seed_vault_category_headers2, $com_seed_vault_list3, $com_seed_vault_right_scroll4){var2194}");
 	cc_setop(1, "Select");
-	.cc_create($widget_631:7_1, ^iftype_rectangle, $count11);
+	.cc_create($com_seed_vault_category_backgrounds1, ^iftype_rectangle, $int11, false);
 	.cc_setsize(0, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
-	.cc_setposition(0, $y13, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setfill(true);
-	if (calc($count11 % 2) = 0) {
+	if (calc($int11 % 2) = 0) {
 		.cc_setcolour(^white);
 		.cc_settrans(255);
 	} else {
 		.cc_setcolour(^black);
 		.cc_settrans(225);
 	}
-	$y13 = calc(cc_gety + cc_getheight);
-	$count11 = calc($count11 + 1);
+	$int13 = calc(cc_gety + cc_getheight);
+	$int11 = calc($int11 + 1);
 }
 def_int $int14 = 0;
-if ($y13 > if_getheight($widget_631:6_5)) {
-	$int14 = if_getscrolly($widget_631:6_5);
-	if_setscrollsize(0, $y13, $widget_631:6_5);
+if ($int13 > if_getheight($com_seed_vault_left_list5)) {
+	$int14 = if_getscrolly($com_seed_vault_left_list5);
+	if_setscrollsize(0, $int13, $com_seed_vault_left_list5);
 } else {
-	if_setscrollsize(0, 0, $widget_631:6_5);
+	if_setscrollsize(0, 0, $com_seed_vault_left_list5);
 	$int14 = 0;
 }
-~scrollbar_vertical($widget_631:5_6, $widget_631:6_5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($widget_631:5_6, $widget_631:6_5, $int14);
+~scrollbar_vertical($com_seed_vault_left_scroll6, $com_seed_vault_left_list5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($com_seed_vault_left_scroll6, $com_seed_vault_left_list5, $int14);

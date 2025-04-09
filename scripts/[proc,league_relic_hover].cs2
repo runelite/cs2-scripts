@@ -1,17 +1,17 @@
 // 3694
-[proc,league_relic_hover](component $widget_655:18_0, int $trans1, component $widget_655:19_2, graphic $graphic3, component $widget_655:21_4, int $colour5, int $comsubid6)
-if ($trans1 > 255) {
-	$trans1 = 255;
+[proc,league_relic_hover](component $com_league_relics_outlines0, int $int1, component $com_league_relics_icons2, graphic $graphic3, component $com_league_relics_names4, int $colour5, int $comsubid6)
+if ($int1 > 255) {
+	$int1 = 255;
 }
-if ($trans1 < 0) {
-	$trans1 = 0;
+if ($int1 < 0) {
+	$int1 = 0;
 }
-if (cc_find($widget_655:18_0, $comsubid6) = ^true) {
-	cc_settrans($trans1);
+if (cc_find($com_league_relics_outlines0, $comsubid6) = ^true) {
+	cc_settrans($int1);
 }
-if (cc_find($widget_655:19_2, $comsubid6) = ^true) {
+if (cc_find($com_league_relics_icons2, $comsubid6) = ^true) {
 	cc_setgraphic($graphic3);
 }
-if (cc_find($widget_655:21_4, $comsubid6) = ^true) {
+if (cc_find($com_league_relics_names4, $comsubid6) = ^true) {
 	cc_setcolour($colour5);
 }

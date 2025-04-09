@@ -1,20 +1,20 @@
 // 6268
-[proc,pvpa_sidepanel_draw](component $widget_762:1_0, component $widget_762:4_1, component $widget_762:8_2, component $widget_762:10_3, component $widget_762:11_4, component $widget_762:12_5, component $widget_762:13_6, component $widget_762:9_7)
-cc_deleteall($widget_762:1_0);
-cc_deleteall($widget_762:12_5);
-cc_deleteall($widget_762:13_6);
-cc_deleteall($widget_762:8_2);
-if (%varbit13989 = 3 & activeclansettings_find_affined(^clantype_pvpa_group) = true) {
+[proc,pvpa_sidepanel_draw](component $com_pvp_arena_sidepanel_header0, component $com_pvp_arena_sidepanel_groupname1, component $com_pvp_arena_sidepanel_playerlist2, component $com_pvp_arena_sidepanel_scrollbar3, component $com_pvp_arena_sidepanel_hint4, component $com_pvp_arena_sidepanel_left5, component $com_pvp_arena_sidepanel_right6, component $com_pvp_arena_sidepanel_worldhop7)
+cc_deleteall($com_pvp_arena_sidepanel_header0);
+cc_deleteall($com_pvp_arena_sidepanel_left5);
+cc_deleteall($com_pvp_arena_sidepanel_right6);
+cc_deleteall($com_pvp_arena_sidepanel_playerlist2);
+if (%varbit13989 = 3 & activeclansettings_find_affined(2) = true) {
 	~pvpa_sidepanel_writecontents(
 		0 = false, 
-		1 = $widget_762:1_0, 
-		2 = $widget_762:4_1, 
-		3 = $widget_762:8_2, 
-		4 = $widget_762:10_3, 
-		5 = $widget_762:11_4, 
-		6 = $widget_762:12_5, 
-		7 = $widget_762:13_6, 
-		8 = $widget_762:9_7
+		1 = $com_pvp_arena_sidepanel_header0, 
+		2 = $com_pvp_arena_sidepanel_groupname1, 
+		3 = $com_pvp_arena_sidepanel_playerlist2, 
+		4 = $com_pvp_arena_sidepanel_scrollbar3, 
+		5 = $com_pvp_arena_sidepanel_hint4, 
+		6 = $com_pvp_arena_sidepanel_left5, 
+		7 = $com_pvp_arena_sidepanel_right6, 
+		8 = $com_pvp_arena_sidepanel_worldhop7
 	);
 	return;
 }
@@ -23,27 +23,27 @@ if (%varbit12164 = 3 & activeclansettings_find_listened = true) {
 		case 1001, 1002, 1003, 1004, 1005, 1006 :
 			~pvpa_sidepanel_writecontents(
 				0 = true, 
-				1 = $widget_762:1_0, 
-				2 = $widget_762:4_1, 
-				3 = $widget_762:8_2, 
-				4 = $widget_762:10_3, 
-				5 = $widget_762:11_4, 
-				6 = $widget_762:12_5, 
-				7 = $widget_762:13_6, 
-				8 = $widget_762:9_7
+				1 = $com_pvp_arena_sidepanel_header0, 
+				2 = $com_pvp_arena_sidepanel_groupname1, 
+				3 = $com_pvp_arena_sidepanel_playerlist2, 
+				4 = $com_pvp_arena_sidepanel_scrollbar3, 
+				5 = $com_pvp_arena_sidepanel_hint4, 
+				6 = $com_pvp_arena_sidepanel_left5, 
+				7 = $com_pvp_arena_sidepanel_right6, 
+				8 = $com_pvp_arena_sidepanel_worldhop7
 			);
 		case default :
-			if_settext("PvP Arena", $widget_762:1_0);
-			if_settext("<col=808080>---</col>", $widget_762:4_1);
-			if_settext("<col=808080>---</col>", $widget_762:11_4);
-			~stonebutton_init("Options", $widget_762:12_5, p12_full, 0);
-			if_setonop("opsound(event_op, 2)", $widget_762:12_5);
-			~stonebutton_init("<col=ff0000>Discard</col>", $widget_762:13_6, p12_full, 0);
-			if_setonop("opsound(event_op, 2)", $widget_762:13_6);
-			if_sethide(false, $widget_762:10_3);
-			if_setscrollpos(0, 0, $widget_762:8_2);
-			if_setscrollsize(0, 0, $widget_762:8_2);
-			cc_create($widget_762:8_2, ^iftype_text, 0);
+			if_settext("PvP Arena", $com_pvp_arena_sidepanel_header0);
+			if_settext("<col=808080>---</col>", $com_pvp_arena_sidepanel_groupname1);
+			if_settext("<col=808080>---</col>", $com_pvp_arena_sidepanel_hint4);
+			~stonebutton_init("Options", $com_pvp_arena_sidepanel_left5, p12_full, 0);
+			if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left5);
+			~stonebutton_init("<col=ff0000>Discard</col>", $com_pvp_arena_sidepanel_right6, p12_full, 0);
+			if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_right6);
+			if_sethide(false, $com_pvp_arena_sidepanel_scrollbar3);
+			if_setscrollpos(0, 0, $com_pvp_arena_sidepanel_playerlist2);
+			if_setscrollsize(0, 0, $com_pvp_arena_sidepanel_playerlist2);
+			cc_create($com_pvp_arena_sidepanel_playerlist2, ^iftype_text, 0, false);
 			cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 			cc_setcolour(0xff981f);
@@ -51,24 +51,24 @@ if (%varbit12164 = 3 & activeclansettings_find_listened = true) {
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 			cc_settextshadow(true);
 			cc_settext("You have currently loaded <col=ffb83f><activeclansettings_getclanname></col>, which is not a PvP Arena group.");
-			cc_deleteall($widget_762:9_7);
-			if_sethide(true, $widget_762:9_7);
+			cc_deleteall($com_pvp_arena_sidepanel_worldhop7);
+			if_sethide(true, $com_pvp_arena_sidepanel_worldhop7);
 	}
 	return;
 }
-cc_deleteall($widget_762:9_7);
-if_sethide(true, $widget_762:9_7);
-if_settext("PvP Arena", $widget_762:1_0);
-if_settext("<col=808080>---</col>", $widget_762:4_1);
-if_settext("<col=808080>---</col>", $widget_762:11_4);
-~stonebutton_init("Options", $widget_762:12_5, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_762:12_5);
-~stonebutton_init("<col=0dc10d>Find</col>", $widget_762:13_6, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_762:13_6);
-if_sethide(false, $widget_762:10_3);
-if_setscrollpos(0, 0, $widget_762:8_2);
-if_setscrollsize(0, 0, $widget_762:8_2);
-cc_create($widget_762:8_2, ^iftype_text, 0);
+cc_deleteall($com_pvp_arena_sidepanel_worldhop7);
+if_sethide(true, $com_pvp_arena_sidepanel_worldhop7);
+if_settext("PvP Arena", $com_pvp_arena_sidepanel_header0);
+if_settext("<col=808080>---</col>", $com_pvp_arena_sidepanel_groupname1);
+if_settext("<col=808080>---</col>", $com_pvp_arena_sidepanel_hint4);
+~stonebutton_init("Options", $com_pvp_arena_sidepanel_left5, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left5);
+~stonebutton_init("<col=0dc10d>Find</col>", $com_pvp_arena_sidepanel_right6, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_right6);
+if_sethide(false, $com_pvp_arena_sidepanel_scrollbar3);
+if_setscrollpos(0, 0, $com_pvp_arena_sidepanel_playerlist2);
+if_setscrollsize(0, 0, $com_pvp_arena_sidepanel_playerlist2);
+cc_create($com_pvp_arena_sidepanel_playerlist2, ^iftype_text, 0, false);
 cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);

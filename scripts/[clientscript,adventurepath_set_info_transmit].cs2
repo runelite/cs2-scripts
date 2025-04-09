@@ -1,5 +1,5 @@
 // 2954
-[clientscript,adventurepath_set_info_transmit](component $widget_642:30_0, component $widget_642:31_1, component $widget_642:29_2, component $widget_642:32_3, component $widget_642:21_4, component $widget_642:23_5, component $widget_642:5_6, component $widget_642:3_7, component $widget_642:7_8, component $widget_642:24_9, component $widget_642:25_10, component $widget_642:33_11, component $widget_642:4_12, component $widget_642:8_13, component $widget_642:11_14, component $widget_642:13_15, component $widget_642:16_16, component $widget_642:17_17, component $widget_642:19_18, component $widget_642:12_19, component $widget_642:26_20)
+[clientscript,adventurepath_set_info_transmit](component $com_adventurepath_task_name0, component $com_adventurepath_task_description1, component $com_adventurepath_task_hint2, component $com_adventurepath_reward_list3, component $com_adventurepath_filters4, component $com_adventurepath_back5, component $com_adventurepath_task_list6, component $com_adventurepath_path_menu7, component $com_adventurepath_tasks8, component $com_adventurepath_path_reward9, component $com_adventurepath_tasks_done10, component $com_adventurepath_rewards_scrollbar11, component $com_adventurepath_banner12, component $com_adventurepath_extra_task_info13, component $com_adventurepath_extra_description14, component $com_adventurepath_extra_hint15, component $com_adventurepath_extra_image_text16, component $com_adventurepath_extra_image17, component $com_adventurepath_extra_task_name18, component $com_adventurepath_extra_link19, component $com_adventurepath_task_focus20)
 if (%var2358 = 0) {
 	return;
 }
@@ -7,38 +7,38 @@ def_enum $enum21 = enum(int, enum, enum_2620, %var2357);
 if ($enum21 = null) {
 	return;
 }
-def_int $count22 = 0;
+def_int $int22 = 0;
 def_struct $struct23 = null;
 def_int $int24 = struct_param($struct23, param_806);
-while ($count22 < enum_getoutputcount($enum21)) {
-	$struct23 = enum(int, struct, $enum21, $count22);
+while ($int22 < enum_getoutputcount($enum21)) {
+	$struct23 = enum(int, struct, $enum21, $int22);
 	if ($struct23 ! null & $int24 = %var2358) {
 		~adventurepath_set_info(
 			0 = $int24, 
-			1 = $widget_642:30_0, 
-			2 = $widget_642:31_1, 
-			3 = $widget_642:29_2, 
-			4 = $widget_642:32_3, 
+			1 = $com_adventurepath_task_name0, 
+			2 = $com_adventurepath_task_description1, 
+			3 = $com_adventurepath_task_hint2, 
+			4 = $com_adventurepath_reward_list3, 
 			5 = $struct23, 
-			6 = $widget_642:21_4, 
-			7 = $widget_642:23_5, 
-			8 = $widget_642:5_6, 
-			9 = $widget_642:3_7, 
-			10 = $widget_642:7_8, 
-			11 = $widget_642:24_9, 
-			12 = $widget_642:25_10, 
-			13 = $widget_642:33_11, 
-			14 = $widget_642:4_12, 
-			15 = $widget_642:8_13, 
-			16 = $widget_642:11_14, 
-			17 = $widget_642:13_15, 
-			18 = $widget_642:16_16, 
-			19 = $widget_642:17_17, 
-			20 = $widget_642:19_18, 
-			21 = $widget_642:12_19, 
-			22 = $widget_642:26_20
+			6 = $com_adventurepath_filters4, 
+			7 = $com_adventurepath_back5, 
+			8 = $com_adventurepath_task_list6, 
+			9 = $com_adventurepath_path_menu7, 
+			10 = $com_adventurepath_tasks8, 
+			11 = $com_adventurepath_path_reward9, 
+			12 = $com_adventurepath_tasks_done10, 
+			13 = $com_adventurepath_rewards_scrollbar11, 
+			14 = $com_adventurepath_banner12, 
+			15 = $com_adventurepath_extra_task_info13, 
+			16 = $com_adventurepath_extra_description14, 
+			17 = $com_adventurepath_extra_hint15, 
+			18 = $com_adventurepath_extra_image_text16, 
+			19 = $com_adventurepath_extra_image17, 
+			20 = $com_adventurepath_extra_task_name18, 
+			21 = $com_adventurepath_extra_link19, 
+			22 = $com_adventurepath_task_focus20
 		);
 		return;
 	}
-	$count22 = calc($count22 + 1);
+	$int22 = calc($int22 + 1);
 }

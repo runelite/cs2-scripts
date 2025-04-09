@@ -3,38 +3,38 @@
 cc_deleteall($component0);
 def_int $int1 = 0;
 def_int $int2 = 0;
-def_int $count3 = 0;
-def_int $count4 = enum_getoutputcount(enum_5625);
-while ($count3 < $count4) {
-	cc_create($component0, ^iftype_rectangle, $int2);
+def_int $int3 = 0;
+def_int $int4 = enum_getoutputcount(enum_5625);
+while ($int3 < $int4) {
+	cc_create($component0, ^iftype_rectangle, $int2, false);
 	$int2 = calc($int2 + 1);
-	$count3 = calc($count3 + 1);
+	$int3 = calc($int3 + 1);
 }
-$count3 = 0;
+$int3 = 0;
 $int2, $int1 = ~script7512($component0, "Activities", $int2, $int1);
 .cc_setonclick("script7477");
 def_dbrow $dbrow5 = null;
 def_int $int6 = 0;
 def_int $int7 = calc(if_getwidth($component0) / 3);
 def_string $string0 = "";
-while ($count3 < $count4) {
-	$dbrow5 = enum(int, dbrow, enum_5625, $count3);
+while ($int3 < $int4) {
+	$dbrow5 = enum(int, dbrow, enum_5625, $int3);
 	if ($dbrow5 ! null) {
 		$int2, $int1, $int6 = ~script7509(
 			0 = $component0, 
 			1 = $int1, 
 			2 = $int2, 
 			3 = $int6, 
-			4 = db_getfield($dbrow5, dbtable_80:2, 0), 
+			4 = db_getfield($dbrow5, hiscores_activity_info:activityicon, 0), 
 			5 = 25, 
 			6 = 25, 
 			7 = $int7, 
-			8 = $count3
+			8 = $int3
 		);
-		$string0 = db_getfield($dbrow5, dbtable_80:1, 0);
+		$string0 = db_getfield($dbrow5, hiscores_activity_info:activityname, 0);
 		~script7516($string0, 0, 0);
 	}
-	$count3 = calc($count3 + 1);
+	$int3 = calc($int3 + 1);
 }
 if ($int6 ! 0) {
 	$int1 = calc($int1 + (25 + 5));

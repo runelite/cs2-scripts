@@ -2,7 +2,7 @@
 [proc,script5876](component $component0, string $string0)
 if_sethide(false, $component0);
 def_int $comsubid1 = ~v2_stone_button_filled($component0);
-cc_create($component0, ^iftype_text, $comsubid1);
+cc_create($component0, ^iftype_text, $comsubid1, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

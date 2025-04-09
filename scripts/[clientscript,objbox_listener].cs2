@@ -1,10 +1,10 @@
 // 2869
-[clientscript,objbox_listener](boolean $boolean0, int $int1, char $char2, int $int3, string $string0, component $component4, int $comsubid5, int $comsubid6, string $text1, component $component7, int $clock8)
-if (clientclock < $clock8) {
+[clientscript,objbox_listener](boolean $boolean0, int $int1, char $char2, int $int3, string $string0, component $component4, int $comsubid5, int $comsubid6, string $string1, component $component7, int $int8)
+if (clientclock < $int8) {
 	return;
 }
 if ($boolean0 = false) {
-	if (~keypress_permit(null, overlayinterface_162) = 0) {
+	if (~keypress_permit(null, chatbox) = 0) {
 		return;
 	} else if ($int1 ! -1 & $int1 = $int3) {
 		$boolean0 = true;
@@ -13,14 +13,14 @@ if ($boolean0 = false) {
 	}
 	return;
 }
-$clock8 = calc(clientclock + 50);
+$int8 = calc(clientclock + 50);
 def_string $string2 = "<col=ffffff>Please wait...</col>";
 if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6) = ^true) {
 	if (parawidth($string2, 479, q8_full) > cc_getwidth) {
 		$string2 = "<col=ffffff>...</col>";
 	}
 	cc_settext($string2);
-	cc_setontimer("objbox_reset($clock8, $component4, $comsubid5, $text1)");
+	cc_setontimer("objbox_reset($int8, $component4, $comsubid5, $string1)");
 	cc_setonop("objbox_listener(
 		0 = true, 
 		1 = -1, 
@@ -30,9 +30,9 @@ if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6)
 		5 = event_com, 
 		6 = $comsubid5, 
 		7 = $comsubid6, 
-		8 = $text1, 
+		8 = $string1, 
 		9 = $component7, 
-		10 = $clock8
+		10 = $int8
 	)");
 	cc_setonkey("objbox_listener(
 		0 = false, 
@@ -43,9 +43,9 @@ if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6)
 		5 = event_com, 
 		6 = $comsubid5, 
 		7 = $comsubid6, 
-		8 = $text1, 
+		8 = $string1, 
 		9 = $component7, 
-		10 = $clock8
+		10 = $int8
 	)");
 	if ($component7 ! null) {
 		if_setonclick("objbox_listener(
@@ -57,9 +57,9 @@ if (cc_find($component4, $comsubid5) = ^true & .cc_find($component4, $comsubid6)
 			5 = event_com, 
 			6 = $comsubid5, 
 			7 = $comsubid6, 
-			8 = $text1, 
+			8 = $string1, 
 			9 = $component7, 
-			10 = $clock8
+			10 = $int8
 		)", $component7);
 	}
 	.cc_resume_pausebutton;

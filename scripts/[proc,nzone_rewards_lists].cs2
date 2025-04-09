@@ -1,16 +1,16 @@
 // 302
-[proc,nzone_rewards_lists](component $widget_206:4_0, component $widget_206:6_1)
-cc_deleteall($widget_206:4_0);
-cc_deleteall($widget_206:6_1);
-def_int $width2 = if_getwidth($widget_206:4_0);
-def_int $int3 = calc($width2 / 7);
+[proc,nzone_rewards_lists](component $com_nzone_rewards_resources0, component $com_nzone_rewards_benefits1)
+cc_deleteall($com_nzone_rewards_resources0);
+cc_deleteall($com_nzone_rewards_benefits1);
+def_int $int2 = if_getwidth($com_nzone_rewards_resources0);
+def_int $int3 = calc($int2 / 7);
 def_int $int4 = calc(($int3 - 36) / 2);
 def_int $int5 = calc(32 + 20);
 def_int $int6 = 0;
 def_namedobj $namedobj7 = enum(int, namedobj, enum_709, $int6);
 while ($namedobj7 ! null) {
-	cc_create($widget_206:4_0, ^iftype_graphic, calc($int6 * 2));
-	.cc_create($widget_206:4_0, ^iftype_text, calc($int6 * 2 + 1));
+	cc_create($com_nzone_rewards_resources0, ^iftype_graphic, calc($int6 * 2), false);
+	.cc_create($com_nzone_rewards_resources0, ^iftype_text, calc($int6 * 2 + 1), false);
 	cc_setposition(calc($int4 + $int6 % 7 * $int3), calc($int6 / 7 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition(cc_getx, calc(cc_gety + 32), ^setpos_abs_left, ^setpos_abs_top);
 	~nzone_rewards_lists_drawitem($namedobj7);
@@ -18,20 +18,20 @@ while ($namedobj7 ! null) {
 	$namedobj7 = enum(int, namedobj, enum_709, $int6);
 }
 def_string $string0 = "These items will give you a benefit in future Nightmare Zone dreams, and cannot be used elsewhere.<br><br>Dominic's potions are sold by the dose. When you purchase a dose, it is automatically stored in Dominic's barrels until you collect it.<br><br>The figures in <col=ffffff>white</col> show the number of doses you've got stored already.";
-$width2 = if_getwidth($widget_206:6_1);
-def_int $int8 = calc(paraheight($string0, $width2, p12_full) * 12 + 5);
-$int3 = calc($width2 / 7);
+$int2 = if_getwidth($com_nzone_rewards_benefits1);
+def_int $int8 = calc(paraheight($string0, $int2, p12_full) * 12 + 5);
+$int3 = calc($int2 / 7);
 $int4 = calc(($int3 - 36) / 2);
 $int5 = calc(32 + 40);
 $int6 = 0;
 $namedobj7 = enum(int, namedobj, enum_814, $int6);
 while ($namedobj7 ! null) {
-	cc_create($widget_206:6_1, ^iftype_graphic, calc($int6 * 3));
-	.cc_create($widget_206:6_1, ^iftype_text, calc($int6 * 3 + 1));
+	cc_create($com_nzone_rewards_benefits1, ^iftype_graphic, calc($int6 * 3), false);
+	.cc_create($com_nzone_rewards_benefits1, ^iftype_text, calc($int6 * 3 + 1), false);
 	cc_setposition(calc($int4 + $int6 % 7 * $int3), calc($int8 + $int6 / 7 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition(cc_getx, calc(cc_gety + 32), ^setpos_abs_left, ^setpos_abs_top);
 	~nzone_rewards_lists_drawitem($namedobj7);
-	cc_create($widget_206:6_1, ^iftype_text, calc($int6 * 3 + 2));
+	cc_create($com_nzone_rewards_benefits1, ^iftype_text, calc($int6 * 3 + 2), false);
 	cc_setsize(36, 20, ^setsize_abs, ^setsize_abs);
 	cc_setposition(.cc_getx, calc(.cc_gety + .cc_getheight), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
@@ -43,8 +43,8 @@ while ($namedobj7 ! null) {
 	$int6 = calc($int6 + 1);
 	$namedobj7 = enum(int, namedobj, enum_814, $int6);
 }
-cc_create($widget_206:6_1, ^iftype_text, calc($int6 * 3));
-cc_setsize($width2, $int8, ^setsize_abs, ^setsize_abs);
+cc_create($com_nzone_rewards_benefits1, ^iftype_text, calc($int6 * 3), false);
+cc_setsize($int2, $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
 cc_setcolour(0xff981f);

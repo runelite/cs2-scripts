@@ -1,9 +1,9 @@
 // 3093
-[clientscript,canoe_init](component $widget_416:0_0, component $widget_416:9_1, component $widget_416:10_2, component $widget_416:20_3, component $widget_416:21_4, component $widget_416:18_5, component $widget_416:19_6, component $widget_416:12_7, component $widget_416:17_8, component $widget_416:11_9, component $widget_416:22_10)
-cc_deleteall($widget_416:9_1);
-cc_deleteall($widget_416:10_2);
+[clientscript,canoe_init](component $com_canoeing_universe0, component $com_canoeing_close1, component $com_canoeing_question2, component $com_canoeing_log3, component $com_canoeing_log_model4, component $com_canoeing_dugout5, component $com_canoeing_dugout_model6, component $com_canoeing_stable_dugout7, component $com_canoeing_stable_dugout_model8, component $com_canoeing_waka9, component $com_canoeing_waka_model10)
+cc_deleteall($com_canoeing_close1);
+cc_deleteall($com_canoeing_question2);
 def_int $int11 = 0;
-cc_create($widget_416:10_2, ^iftype_text, 0);
+cc_create($com_canoeing_question2, ^iftype_text, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(^white);
@@ -11,13 +11,13 @@ cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settext("WHAT SORT OF CANOE WOULD YOU LIKE TO MAKE ?");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_create($widget_416:9_1, ^iftype_graphic, 0);
+cc_create($com_canoeing_close1, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,4");
-if_setonmouserepeat("close_mouse_interact($widget_416:9_1, true, 0)", $widget_416:9_1);
-if_setonmouseleave("close_mouse_interact($widget_416:9_1, false, 0)", $widget_416:9_1);
-if_setop(1, "Close", $widget_416:9_1);
-if_setonop("canoe_close", $widget_416:9_1);
-~canoe_setup($widget_416:20_3, $widget_416:21_4, $widget_416:18_5, $widget_416:19_6, $widget_416:12_7, $widget_416:17_8, $widget_416:11_9, $widget_416:22_10);
-if_setonstattransmit("canoe_remake($widget_416:20_3, $widget_416:21_4, $widget_416:18_5, $widget_416:19_6, $widget_416:12_7, $widget_416:17_8, $widget_416:11_9, $widget_416:22_10){woodcutting}", $widget_416:0_0);
+if_setonmouserepeat("close_mouse_interact($com_canoeing_close1, true, 0)", $com_canoeing_close1);
+if_setonmouseleave("close_mouse_interact($com_canoeing_close1, false, 0)", $com_canoeing_close1);
+if_setop(1, "Close", $com_canoeing_close1);
+if_setonop("canoe_close", $com_canoeing_close1);
+~canoe_setup($com_canoeing_log3, $com_canoeing_log_model4, $com_canoeing_dugout5, $com_canoeing_dugout_model6, $com_canoeing_stable_dugout7, $com_canoeing_stable_dugout_model8, $com_canoeing_waka9, $com_canoeing_waka_model10);
+if_setonstattransmit("canoe_remake($com_canoeing_log3, $com_canoeing_log_model4, $com_canoeing_dugout5, $com_canoeing_dugout_model6, $com_canoeing_stable_dugout7, $com_canoeing_stable_dugout_model8, $com_canoeing_waka9, $com_canoeing_waka_model10){woodcutting}", $com_canoeing_universe0);

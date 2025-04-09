@@ -1,8 +1,8 @@
 // 3782
-[clientscript,gnome_cuisine_confirmation_in](component $widget_49:9_0)
-cc_deleteall($widget_49:9_0);
-def_int $comsubid1 = ~v2_stone_button_in_filled($widget_49:9_0);
-cc_create($widget_49:9_0, ^iftype_text, $comsubid1);
+[clientscript,gnome_cuisine_confirmation_in](component $com_aluft_cooking_confirmation0)
+cc_deleteall($com_aluft_cooking_confirmation0);
+def_int $comsubid1 = ~v2_stone_button_in_filled($com_aluft_cooking_confirmation0);
+cc_create($com_aluft_cooking_confirmation0, ^iftype_text, $comsubid1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);

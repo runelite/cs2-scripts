@@ -1,6 +1,6 @@
 // 663
 [clientscript,chat_onchattransmit]
-def_int $mesuid0 = ~script553;
+def_int $int0 = ~script553;
 def_int $chattype1 = ^chattype_gamemessage;
 def_int $int2 = -1;
 def_string $string0 = "";
@@ -9,12 +9,12 @@ def_string $string2 = "";
 def_int $int3 = 0;
 def_string $string3 = "";
 def_int $int4 = 0;
-if (if_hassub(interface_162:565) = true & %varbit10690 = 1) {
-	$chattype1, $int2, $string0, $string1, $string2, $int3, $string3, $int4 = chat_gethistory_byuid($mesuid0);
+if (if_hassub(chatbox:null) = true & %varbit10690 = 1) {
+	$chattype1, $int2, $string0, $string1, $string2, $int3, $string3, $int4 = chat_gethistory_byuid($int0);
 	if (~meslayer_mode1_enabled($chattype1) = 1) {
 		~meslayer_mode1(~affixtimestamp($string3, $string2, "null"));
 	}
 }
-~rebuildchatbox($mesuid0);
-~rebuildpmbox($mesuid0);
-~chatalerts($mesuid0);
+~rebuildchatbox($int0);
+~rebuildpmbox($int0);
+~chatalerts($int0);

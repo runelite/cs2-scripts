@@ -5,9 +5,9 @@ if ($namedobj7 = null) {
 	return($int3, $int4, $int5, $int6);
 }
 def_string $string0 = oc_name($namedobj7);
-cc_create($component1, ^iftype_graphic, $int3);
+cc_create($component1, ^iftype_graphic, $int3, false);
 $int3 = calc($int3 + 1);
-.cc_create($component1, ^iftype_text, $int3);
+.cc_create($component1, ^iftype_text, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 .cc_setsize(calc(12 + 36 + 4 + 8), 32, ^setsize_minus, ^setsize_abs);

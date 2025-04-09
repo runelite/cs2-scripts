@@ -1,13 +1,13 @@
 // 2878
-[clientscript,clanwars_setup_smallbox_close](int $int0, int $int1, enum $enum2, component $component3, int $comsubid4, component $widget_91:32_5, component $widget_91:45_6)
+[clientscript,clanwars_setup_smallbox_close](int $int0, int $int1, enum $enum2, component $component3, int $comsubid4, component $com_clanwars_setup_dropdown_container5, component $com_clanwars_setup_tooltip6)
 if ($int0 = 1 & $enum2 ! null & ($int1 = -1 | $int1 >= 0 & $int1 < enum_getoutputcount($enum2))) {
 	sound_synth(interface_select1, 1, 0);
 	if ($int1 ! -1) {
 		~script573($enum2, $int1);
 	}
 	~script2881;
-	if_sethide(true, $widget_91:32_5);
-	if_sethide(false, $widget_91:45_6);
+	if_sethide(true, $com_clanwars_setup_dropdown_container5);
+	if_sethide(false, $com_clanwars_setup_tooltip6);
 	~xpdrops_setup_display_hoveroff($component3);
 	if (cc_find($component3, $comsubid4) = ^true) {
 		~clanwars_setup_smallbox_updatetext($enum2);

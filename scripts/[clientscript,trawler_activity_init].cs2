@@ -1,8 +1,8 @@
 // 3048
-[clientscript,trawler_activity_init](component $widget_366:10_0)
-cc_deleteall($widget_366:10_0);
-cc_create($widget_366:10_0, ^iftype_rectangle, 0);
-.cc_create($widget_366:10_0, ^iftype_rectangle, 1);
+[clientscript,trawler_activity_init](component $com_trawler_overlay_activity0)
+cc_deleteall($com_trawler_overlay_activity0);
+cc_create($com_trawler_overlay_activity0, ^iftype_rectangle, 0, false);
+.cc_create($com_trawler_overlay_activity0, ^iftype_rectangle, 1, false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 .cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_settrans(128);
@@ -10,5 +10,5 @@ cc_settrans(128);
 cc_setfill(true);
 .cc_setfill(true);
 .cc_setcolour(^black);
-~trawler_activity_update($widget_366:10_0);
-if_setonvartransmit("trawler_activity_update(event_com, cc_getid, .cc_getid){var391}", $widget_366:10_0);
+~trawler_activity_update($com_trawler_overlay_activity0);
+if_setonvartransmit("trawler_activity_update(event_com, cc_getid, .cc_getid){var391}", $com_trawler_overlay_activity0);

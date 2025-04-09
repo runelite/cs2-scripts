@@ -1,8 +1,8 @@
 // 2941
-[proc,silver_crafting_miscellaneous_setup](component $component0, namedobj $namedobj1, int $lvl2, namedobj $namedobj3, string $string0)
+[proc,silver_crafting_miscellaneous_setup](component $component0, namedobj $namedobj1, int $int2, namedobj $namedobj3, string $string0)
 if_sethide(false, $component0);
 if_setop(1, "Craft", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
-~silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0);
-if_setoninvtransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0){inv}", $component0);
-if_setonstattransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0){crafting}", $component0);
+~silver_crafting_miscellaneous_draw($component0, $namedobj1, $int2, $namedobj3, $string0);
+if_setoninvtransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $int2, $namedobj3, $string0){inv}", $component0);
+if_setonstattransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $int2, $namedobj3, $string0){crafting}", $component0);

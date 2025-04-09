@@ -1,7 +1,7 @@
 // 4913
-[proc,script4913](boolean $boolean0, component $component1, int $flags2, graphic $graphic3, int $width4, int $height5)
+[proc,script4913](boolean $boolean0, component $component1, int $int2, graphic $graphic3, int $int4, int $int5)
 def_int $comsubid6 = 0;
-if (testbit($flags2, 0) = ^true) {
+if (testbit($int2, 0) = ^true) {
 	if ($boolean0 = true) {
 		$comsubid6 = ~v2_stone_button_in_filled($component1);
 	} else {
@@ -20,8 +20,8 @@ if (testbit($flags2, 0) = ^true) {
 	4 = 0, 
 	5 = ^setpos_abs_centre, 
 	6 = ^setpos_abs_centre, 
-	7 = $width4, 
-	8 = $height5, 
+	7 = $int4, 
+	8 = $int5, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );

@@ -1,14 +1,14 @@
 // 5230
-[proc,deadman_sigils_draw](component $widget_719:1_0, component $widget_719:3_1, component $widget_719:4_2, component $widget_719:5_3, component $widget_719:9_4, component $widget_719:6_5, component $widget_719:7_6, component $widget_719:8_7, component $widget_719:10_8, component $widget_719:15_9, component $widget_719:11_10, component $widget_719:12_11, component $widget_719:13_12, component $widget_719:14_13)
-def_int $int14 = calc(if_getwidth($widget_719:1_0) - 20);
-cc_deleteall($widget_719:5_3);
+[proc,deadman_sigils_draw](component $com_deadman_sigils_universe0, component $com_deadman_sigils_offered_container1, component $com_deadman_sigils_offered_scrolling2, component $com_deadman_sigils_offered_display3, component $com_deadman_sigils_offered_scrollbar4, component $com_deadman_sigils_choice05, component $com_deadman_sigils_choice16, component $com_deadman_sigils_choice27, component $com_deadman_sigils_attuned8, component $com_deadman_sigils_scrollbar9, component $com_deadman_sigils_list10, component $com_deadman_sigils_slot011, component $com_deadman_sigils_slot112, component $com_deadman_sigils_slot213)
+def_int $int14 = calc(if_getwidth($com_deadman_sigils_universe0) - 20);
+cc_deleteall($com_deadman_sigils_offered_display3);
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
-	if_sethide(false, $widget_719:3_1);
+	if_sethide(false, $com_deadman_sigils_offered_container1);
 	$int16 = 3;
-	cc_create($widget_719:5_3, ^iftype_text, $int15);
+	cc_create($com_deadman_sigils_offered_display3, ^iftype_text, $int15, false);
 	$int15 = calc($int15 + 1);
 	cc_setsize(6, 25, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
@@ -18,28 +18,28 @@ if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
 	cc_settextfont(p12_full);
 	cc_settext("First, choose a free sigil:");
 	$int16 = calc($int16 + 25);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var261, $widget_719:6_5, 235, $int14, $widget_719:5_3, $int15, $int16);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var262, $widget_719:7_6, 255, $int14, $widget_719:5_3, $int15, $int16);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var263, $widget_719:8_7, 235, $int14, $widget_719:5_3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var261, $com_deadman_sigils_choice05, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var262, $com_deadman_sigils_choice16, 255, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%var263, $com_deadman_sigils_choice27, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
 	$int16 = calc($int16 + 2);
 	if ($int16 > 160) {
-		$int17 = if_getscrolly($widget_719:4_2);
-		if_setscrollsize(0, $int16, $widget_719:4_2);
+		$int17 = if_getscrolly($com_deadman_sigils_offered_scrolling2);
+		if_setscrollsize(0, $int16, $com_deadman_sigils_offered_scrolling2);
 		$int16 = 160;
-		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $widget_719:3_1);
-		~scrollbar_resize($widget_719:9_4, $widget_719:4_2, $int17);
+		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $com_deadman_sigils_offered_container1);
+		~scrollbar_resize($com_deadman_sigils_offered_scrollbar4, $com_deadman_sigils_offered_scrolling2, $int17);
 	} else {
-		if_setscrollsize(0, 0, $widget_719:4_2);
-		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $widget_719:3_1);
-		~scrollbar_resize($widget_719:9_4, $widget_719:4_2, 0);
+		if_setscrollsize(0, 0, $com_deadman_sigils_offered_scrolling2);
+		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $com_deadman_sigils_offered_container1);
+		~scrollbar_resize($com_deadman_sigils_offered_scrollbar4, $com_deadman_sigils_offered_scrolling2, 0);
 	}
 	$int16 = calc($int16 + 3);
 } else {
-	if_sethide(true, $widget_719:3_1);
+	if_sethide(true, $com_deadman_sigils_offered_container1);
 }
-if_setsize(20, calc(50 + $int16), ^setsize_minus, ^setsize_minus, $widget_719:10_8);
+if_setsize(20, calc(50 + $int16), ^setsize_minus, ^setsize_minus, $com_deadman_sigils_attuned8);
 def_int $int18 = calc(($int14 - 18 + 2) / 3);
-def_int $width19 = calc($int18 - 10);
+def_int $int19 = calc($int18 - 10);
 def_struct $struct20 = null;
 def_struct $struct21 = null;
 def_struct $struct22 = null;
@@ -67,8 +67,8 @@ if ($namedobj25 ! null) {
 		$string2 = struct_param($struct22, param_1372);
 	}
 }
-def_int $int26 = calc(4 + 12 * ~max(~max(paraheight($string0, $width19, p12_full), paraheight($string1, $width19, p12_full)), paraheight($string2, $width19, p12_full)));
-def_int $int27 = ~deadman_sigils_buildslot($widget_719:12_11, $struct20, $string0, 0, $width19, $int26, 0);
-$int27 = ~deadman_sigils_buildslot($widget_719:13_12, $struct21, $string1, 1, $width19, $int26, $int27);
-$int27 = ~deadman_sigils_buildslot($widget_719:14_13, $struct22, $string2, 2, $width19, $int26, $int27);
-~script5232($int16, $int27, if_getlayer($widget_719:1_0), $widget_719:1_0, $widget_719:11_10, $widget_719:15_9);
+def_int $int26 = calc(4 + 12 * ~max(~max(paraheight($string0, $int19, p12_full), paraheight($string1, $int19, p12_full)), paraheight($string2, $int19, p12_full)));
+def_int $int27 = ~deadman_sigils_buildslot($com_deadman_sigils_slot011, $struct20, $string0, 0, $int19, $int26, 0);
+$int27 = ~deadman_sigils_buildslot($com_deadman_sigils_slot112, $struct21, $string1, 1, $int19, $int26, $int27);
+$int27 = ~deadman_sigils_buildslot($com_deadman_sigils_slot213, $struct22, $string2, 2, $int19, $int26, $int27);
+~script5232($int16, $int27, if_getlayer($com_deadman_sigils_universe0), $com_deadman_sigils_universe0, $com_deadman_sigils_list10, $com_deadman_sigils_scrollbar9);

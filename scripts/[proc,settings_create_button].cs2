@@ -41,7 +41,7 @@ $int15 = calc($int15 + 5);
 $int11 = calc($int11 - 10);
 def_boolean $boolean17 = ~script3957($struct5);
 def_int $int18 = struct_param($struct5, param_1077);
-cc_create($component6, ^iftype_rectangle, $int3);
+cc_create($component6, ^iftype_rectangle, $int3, false);
 cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
 cc_setposition($int15, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
@@ -50,10 +50,10 @@ cc_settrans(255);
 cc_setop(1, "Select");
 cc_setonop("settings_button_op($struct5, $int18)");
 $int3 = calc($int3 + 1);
-def_int $x19 = calc($int11 - 9 + $int15);
-def_int $y20 = calc($int13 - 9 + $int1);
-def_int $width21 = calc($int11 - 18);
-def_int $height22 = calc($int13 - 18);
+def_int $int19 = calc($int11 - 9 + $int15);
+def_int $int20 = calc($int13 - 9 + $int1);
+def_int $int21 = calc($int11 - 18);
+def_int $int22 = calc($int13 - 18);
 if ($boolean17 = true) {
 	~create_graphic(
 		0 = $component7, 
@@ -85,7 +85,7 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 2), 
 		2 = "v2_stone_button,1", 
-		3 = $x19, 
+		3 = $int19, 
 		4 = $int1, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
@@ -99,7 +99,7 @@ if ($boolean17 = true) {
 		1 = calc($int2 + 3), 
 		2 = "v2_stone_button,2", 
 		3 = $int15, 
-		4 = $y20, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
@@ -111,8 +111,8 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 4), 
 		2 = "v2_stone_button,3", 
-		3 = $x19, 
-		4 = $y20, 
+		3 = $int19, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
@@ -129,7 +129,7 @@ if ($boolean17 = true) {
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
-		8 = $height22, 
+		8 = $int22, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
@@ -141,7 +141,7 @@ if ($boolean17 = true) {
 		4 = $int1, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $width21, 
+		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
@@ -150,12 +150,12 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 7), 
 		2 = "v2_stone_button,6", 
-		3 = $x19, 
+		3 = $int19, 
 		4 = calc(9 + $int1), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
-		8 = $height22, 
+		8 = $int22, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
@@ -164,10 +164,10 @@ if ($boolean17 = true) {
 		1 = calc($int2 + 8), 
 		2 = "v2_stone_button,7", 
 		3 = calc($int15 + 9), 
-		4 = $y20, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $width21, 
+		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
@@ -203,7 +203,7 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 2), 
 		2 = "v2_stone_button_in,1", 
-		3 = $x19, 
+		3 = $int19, 
 		4 = $int1, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
@@ -217,7 +217,7 @@ if ($boolean17 = true) {
 		1 = calc($int2 + 3), 
 		2 = "v2_stone_button_in,2", 
 		3 = $int15, 
-		4 = $y20, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
@@ -229,8 +229,8 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 4), 
 		2 = "v2_stone_button_in,3", 
-		3 = $x19, 
-		4 = $y20, 
+		3 = $int19, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
@@ -247,7 +247,7 @@ if ($boolean17 = true) {
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
-		8 = $height22, 
+		8 = $int22, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
@@ -259,7 +259,7 @@ if ($boolean17 = true) {
 		4 = $int1, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $width21, 
+		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
@@ -268,12 +268,12 @@ if ($boolean17 = true) {
 		0 = $component7, 
 		1 = calc($int2 + 7), 
 		2 = "v2_stone_button_in,6", 
-		3 = $x19, 
+		3 = $int19, 
 		4 = calc(9 + $int1), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
 		7 = 9, 
-		8 = $height22, 
+		8 = $int22, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
@@ -282,17 +282,17 @@ if ($boolean17 = true) {
 		1 = calc($int2 + 8), 
 		2 = "v2_stone_button_in,7", 
 		3 = calc($int15 + 9), 
-		4 = $y20, 
+		4 = $int20, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $width21, 
+		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
 }
 $int2 = calc($int2 + 9);
-cc_create($component7, ^iftype_text, $int2);
+cc_create($component7, ^iftype_text, $int2, false);
 cc_setsize(calc($int11 - 10), $int12, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int15 + 5), calc($int1 + 5), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
@@ -305,7 +305,7 @@ if ($boolean17 = true) {
 }
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
 $int2 = calc($int2 + 1);
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
 cc_setposition($int15, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);

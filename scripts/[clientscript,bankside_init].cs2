@@ -1,13 +1,13 @@
 // 294
-[clientscript,bankside_init](component $widget_15:0_0, component $widget_15:1_1, component $widget_15:2_2, component $widget_15:3_3, component $widget_15:4_4, component $widget_15:5_5, component $widget_15:11_6, component $widget_15:8_7, component $widget_15:12_8, component $widget_15:18_9, component $widget_15:15_10, component $widget_15:19_11, component $widget_15:36_12, component $widget_15:22_13, component $widget_15:41_14, component $widget_15:45_15)
+[clientscript,bankside_init](component $com_bankside_universe0, component $com_bankside_items_container1, component $com_bankside_items_background2, component $com_bankside_items3, component $com_bankside_wornops4, component $com_bankside_lootingbag_container5, component $com_bankside_lootingbag_items6, component $com_bankside_lootingbag_dismiss7, component $com_bankside_league_secondinv_container8, component $com_bankside_league_secondinv_items9, component $com_bankside_league_secondinv_dismiss10, component $com_bankside_runepouch_container11, component $com_bankside_runepouch_select_container12, component $com_bankside_runepouch_dismiss13, component $com_bankside_prepot_device_container14, component $com_bankside_prepot_device_dismiss15)
 %varcint1201 = null;
-cc_deleteall($widget_15:3_3);
-cc_deleteall($widget_15:4_4);
-def_int $size16 = 0;
-def_int $size17 = inv_size(inv);
-while ($size16 < $size17) {
-	cc_create($widget_15:3_3, ^iftype_graphic, $size16);
-	.cc_create($widget_15:4_4, ^iftype_graphic, $size16);
+cc_deleteall($com_bankside_items3);
+cc_deleteall($com_bankside_wornops4);
+def_int $int16 = 0;
+def_int $int17 = inv_size(inv);
+while ($int16 < $int17) {
+	cc_create($com_bankside_items3, ^iftype_graphic, $int16, false);
+	.cc_create($com_bankside_wornops4, ^iftype_graphic, $int16, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -20,100 +20,100 @@ while ($size16 < $size17) {
 	.cc_setdragdeadtime(5);
 	cc_sethide(false);
 	.cc_sethide(false);
-	$size16 = calc($size16 + 1);
+	$int16 = calc($int16 + 1);
 }
 ~bankside_build(
-	0 = $widget_15:1_1, 
-	1 = $widget_15:3_3, 
-	2 = $widget_15:2_2, 
-	3 = $widget_15:4_4, 
-	4 = $widget_15:5_5, 
-	5 = $widget_15:12_8, 
-	6 = $widget_15:19_11, 
-	7 = $widget_15:36_12, 
-	8 = $widget_15:41_14
+	0 = $com_bankside_items_container1, 
+	1 = $com_bankside_items3, 
+	2 = $com_bankside_items_background2, 
+	3 = $com_bankside_wornops4, 
+	4 = $com_bankside_lootingbag_container5, 
+	5 = $com_bankside_league_secondinv_container8, 
+	6 = $com_bankside_runepouch_container11, 
+	7 = $com_bankside_runepouch_select_container12, 
+	8 = $com_bankside_prepot_device_container14
 );
 if_setoninvtransmit("bankside_build(
-	0 = $widget_15:1_1, 
-	1 = $widget_15:3_3, 
-	2 = $widget_15:2_2, 
-	3 = $widget_15:4_4, 
-	4 = $widget_15:5_5, 
-	5 = $widget_15:12_8, 
-	6 = $widget_15:19_11, 
-	7 = $widget_15:36_12, 
-	8 = $widget_15:41_14
-){inv, inv_516, inv_646}", $widget_15:1_1);
+	0 = $com_bankside_items_container1, 
+	1 = $com_bankside_items3, 
+	2 = $com_bankside_items_background2, 
+	3 = $com_bankside_wornops4, 
+	4 = $com_bankside_lootingbag_container5, 
+	5 = $com_bankside_league_secondinv_container8, 
+	6 = $com_bankside_runepouch_container11, 
+	7 = $com_bankside_runepouch_select_container12, 
+	8 = $com_bankside_prepot_device_container14
+){inv, looting_bag, league_secondinv}", $com_bankside_items_container1);
 if_setonvartransmit("bankside_build(
-	0 = $widget_15:1_1, 
-	1 = $widget_15:3_3, 
-	2 = $widget_15:2_2, 
-	3 = $widget_15:4_4, 
-	4 = $widget_15:5_5, 
-	5 = $widget_15:12_8, 
-	6 = $widget_15:19_11, 
-	7 = $widget_15:36_12, 
-	8 = $widget_15:41_14
-){var304, var1666, var1141, var261, var262, var263, var4611}", $widget_15:1_1);
-~bankside_bag_draw($widget_15:11_6, inv_516);
-if_setoninvtransmit("bankside_bag_draw($widget_15:11_6, inv_516){inv_516}", $widget_15:5_5);
-if_setonvartransmit("bankside_bag_draw($widget_15:11_6, inv_516){var304, var1666}", $widget_15:5_5);
-~bankside_bag_draw($widget_15:18_9, inv_646);
-if_setoninvtransmit("bankside_bag_draw($widget_15:18_9, inv_646){inv_646}", $widget_15:12_8);
-if_setonvartransmit("bankside_bag_draw($widget_15:18_9, inv_646){var304, var1666}", $widget_15:12_8);
-~bankside_switchview($widget_15:1_1, $widget_15:5_5, $widget_15:12_8, $widget_15:19_11, $widget_15:36_12, $widget_15:41_14);
+	0 = $com_bankside_items_container1, 
+	1 = $com_bankside_items3, 
+	2 = $com_bankside_items_background2, 
+	3 = $com_bankside_wornops4, 
+	4 = $com_bankside_lootingbag_container5, 
+	5 = $com_bankside_league_secondinv_container8, 
+	6 = $com_bankside_runepouch_container11, 
+	7 = $com_bankside_runepouch_select_container12, 
+	8 = $com_bankside_prepot_device_container14
+){var304, var1666, var1141, var261, var262, var263, var4611}", $com_bankside_items_container1);
+~bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag);
+if_setoninvtransmit("bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag){looting_bag}", $com_bankside_lootingbag_container5);
+if_setonvartransmit("bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag){var304, var1666}", $com_bankside_lootingbag_container5);
+~bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv);
+if_setoninvtransmit("bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv){league_secondinv}", $com_bankside_league_secondinv_container8);
+if_setonvartransmit("bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv){var304, var1666}", $com_bankside_league_secondinv_container8);
+~bankside_switchview($com_bankside_items_container1, $com_bankside_lootingbag_container5, $com_bankside_league_secondinv_container8, $com_bankside_runepouch_container11, $com_bankside_runepouch_select_container12, $com_bankside_prepot_device_container14);
 if_setonvartransmit("bankside_switchview(
 	0 = -1, 
 	1 = null, 
-	2 = $widget_15:1_1, 
-	3 = $widget_15:5_5, 
-	4 = $widget_15:12_8, 
-	5 = $widget_15:19_11, 
-	6 = $widget_15:36_12, 
-	7 = $widget_15:41_14, 
+	2 = $com_bankside_items_container1, 
+	3 = $com_bankside_lootingbag_container5, 
+	4 = $com_bankside_league_secondinv_container8, 
+	5 = $com_bankside_runepouch_container11, 
+	6 = $com_bankside_runepouch_select_container12, 
+	7 = $com_bankside_prepot_device_container14, 
 	8 = -1
-){var115, var4385}", $widget_15:0_0);
+){var115, var4385}", $com_bankside_universe0);
 if_setonop("bankside_switchview(
 	0 = event_op, 
 	1 = null, 
-	2 = $widget_15:1_1, 
-	3 = $widget_15:5_5, 
-	4 = $widget_15:12_8, 
-	5 = $widget_15:19_11, 
-	6 = $widget_15:36_12, 
-	7 = $widget_15:41_14, 
+	2 = $com_bankside_items_container1, 
+	3 = $com_bankside_lootingbag_container5, 
+	4 = $com_bankside_league_secondinv_container8, 
+	5 = $com_bankside_runepouch_container11, 
+	6 = $com_bankside_runepouch_select_container12, 
+	7 = $com_bankside_prepot_device_container14, 
 	8 = 0
-)", $widget_15:8_7);
+)", $com_bankside_lootingbag_dismiss7);
 if_setonop("bankside_switchview(
 	0 = event_op, 
 	1 = null, 
-	2 = $widget_15:1_1, 
-	3 = $widget_15:5_5, 
-	4 = $widget_15:12_8, 
-	5 = $widget_15:19_11, 
-	6 = $widget_15:36_12, 
-	7 = $widget_15:41_14, 
+	2 = $com_bankside_items_container1, 
+	3 = $com_bankside_lootingbag_container5, 
+	4 = $com_bankside_league_secondinv_container8, 
+	5 = $com_bankside_runepouch_container11, 
+	6 = $com_bankside_runepouch_select_container12, 
+	7 = $com_bankside_prepot_device_container14, 
 	8 = 0
-)", $widget_15:15_10);
+)", $com_bankside_league_secondinv_dismiss10);
 if_setonop("bankside_switchview(
 	0 = event_op, 
 	1 = null, 
-	2 = $widget_15:1_1, 
-	3 = $widget_15:5_5, 
-	4 = $widget_15:12_8, 
-	5 = $widget_15:19_11, 
-	6 = $widget_15:36_12, 
-	7 = $widget_15:41_14, 
+	2 = $com_bankside_items_container1, 
+	3 = $com_bankside_lootingbag_container5, 
+	4 = $com_bankside_league_secondinv_container8, 
+	5 = $com_bankside_runepouch_container11, 
+	6 = $com_bankside_runepouch_select_container12, 
+	7 = $com_bankside_prepot_device_container14, 
 	8 = 0
-)", $widget_15:22_13);
+)", $com_bankside_runepouch_dismiss13);
 if_setonop("bankside_switchview(
 	0 = event_op, 
 	1 = null, 
-	2 = $widget_15:1_1, 
-	3 = $widget_15:5_5, 
-	4 = $widget_15:12_8, 
-	5 = $widget_15:19_11, 
-	6 = $widget_15:36_12, 
-	7 = $widget_15:41_14, 
+	2 = $com_bankside_items_container1, 
+	3 = $com_bankside_lootingbag_container5, 
+	4 = $com_bankside_league_secondinv_container8, 
+	5 = $com_bankside_runepouch_container11, 
+	6 = $com_bankside_runepouch_select_container12, 
+	7 = $com_bankside_prepot_device_container14, 
 	8 = 0
-)", $widget_15:45_15);
+)", $com_bankside_prepot_device_dismiss15);

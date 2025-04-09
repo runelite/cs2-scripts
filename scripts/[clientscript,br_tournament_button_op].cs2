@@ -6,7 +6,7 @@ if ($opindex0 ! 1) {
 sound_synth(interface_select1, 1, 0);
 cc_deleteall($component1);
 def_int $comsubid2 = ~options_button_on($component1, 0);
-cc_create($component1, ^iftype_text, $comsubid2);
+cc_create($component1, ^iftype_text, $comsubid2, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0x8f8f8f);

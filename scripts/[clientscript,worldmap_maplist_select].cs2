@@ -1,58 +1,58 @@
 // 1711
-[clientscript,worldmap_maplist_select](int $opindex0, wma $wma1, component $widget_595:26_2, component $widget_595:31_3, component $widget_595:9_4, component $widget_595:10_5, component $widget_595:13_6, component $widget_595:27_7, component $widget_595:28_8)
+[clientscript,worldmap_maplist_select](int $opindex0, wma $wma1, component $com_worldmap_maplist_display2, component $com_worldmap_maplist_container3, component $com_worldmap_map_overlay4, component $com_worldmap_overview_container5, component $com_worldmap_overview_overlay6, component $com_worldmap_zoom_out7, component $com_worldmap_zoom_in8)
 if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-~worldmap_maplist_close($widget_595:26_2, $widget_595:31_3);
-if (worldmap_getcurrentmap ! $wma1 & cc_find($widget_595:26_2, 4) = ^true) {
+~worldmap_maplist_close($com_worldmap_maplist_display2, $com_worldmap_maplist_container3);
+if (worldmap_getcurrentmap ! $wma1 & cc_find($com_worldmap_maplist_display2, 4) = ^true) {
 	if (~worldmap_findcoordinmap($wma1, %varcint188) ! null) {
 		~worldmap_loadmap(
 			0 = $wma1, 
 			1 = %varcint188, 
-			2 = $widget_595:26_2, 
-			3 = $widget_595:31_3, 
-			4 = $widget_595:9_4, 
-			5 = $widget_595:10_5, 
-			6 = $widget_595:13_6, 
-			7 = $widget_595:27_7, 
-			8 = $widget_595:28_8
+			2 = $com_worldmap_maplist_display2, 
+			3 = $com_worldmap_maplist_container3, 
+			4 = $com_worldmap_map_overlay4, 
+			5 = $com_worldmap_overview_container5, 
+			6 = $com_worldmap_overview_overlay6, 
+			7 = $com_worldmap_zoom_out7, 
+			8 = $com_worldmap_zoom_in8
 		);
 	} else if (~worldmap_findcoordinmap($wma1, %varcint401) ! null) {
 		~worldmap_loadmap(
 			0 = $wma1, 
 			1 = %varcint401, 
-			2 = $widget_595:26_2, 
-			3 = $widget_595:31_3, 
-			4 = $widget_595:9_4, 
-			5 = $widget_595:10_5, 
-			6 = $widget_595:13_6, 
-			7 = $widget_595:27_7, 
-			8 = $widget_595:28_8
+			2 = $com_worldmap_maplist_display2, 
+			3 = $com_worldmap_maplist_container3, 
+			4 = $com_worldmap_map_overlay4, 
+			5 = $com_worldmap_overview_container5, 
+			6 = $com_worldmap_overview_overlay6, 
+			7 = $com_worldmap_zoom_out7, 
+			8 = $com_worldmap_zoom_in8
 		);
 	} else if (~worldmap_findcoordinmap($wma1, %varcint1078) ! null) {
 		~worldmap_loadmap(
 			0 = $wma1, 
 			1 = %varcint1078, 
-			2 = $widget_595:26_2, 
-			3 = $widget_595:31_3, 
-			4 = $widget_595:9_4, 
-			5 = $widget_595:10_5, 
-			6 = $widget_595:13_6, 
-			7 = $widget_595:27_7, 
-			8 = $widget_595:28_8
+			2 = $com_worldmap_maplist_display2, 
+			3 = $com_worldmap_maplist_container3, 
+			4 = $com_worldmap_map_overlay4, 
+			5 = $com_worldmap_overview_container5, 
+			6 = $com_worldmap_overview_overlay6, 
+			7 = $com_worldmap_zoom_out7, 
+			8 = $com_worldmap_zoom_in8
 		);
 	} else {
 		~worldmap_loadmap(
 			0 = $wma1, 
 			1 = null, 
-			2 = $widget_595:26_2, 
-			3 = $widget_595:31_3, 
-			4 = $widget_595:9_4, 
-			5 = $widget_595:10_5, 
-			6 = $widget_595:13_6, 
-			7 = $widget_595:27_7, 
-			8 = $widget_595:28_8
+			2 = $com_worldmap_maplist_display2, 
+			3 = $com_worldmap_maplist_container3, 
+			4 = $com_worldmap_map_overlay4, 
+			5 = $com_worldmap_overview_container5, 
+			6 = $com_worldmap_overview_overlay6, 
+			7 = $com_worldmap_zoom_out7, 
+			8 = $com_worldmap_zoom_in8
 		);
 	}
 }

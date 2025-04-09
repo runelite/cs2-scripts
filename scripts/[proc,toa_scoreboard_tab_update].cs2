@@ -1,13 +1,13 @@
 // 6773
-[proc,toa_scoreboard_tab_update](component $widget_775:85_0, component $widget_775:86_1, component $widget_775:87_2)
-~script3723($widget_775:86_1, 0, "Normal");
-~script3723($widget_775:85_0, 0, "Entry");
-~script3723($widget_775:87_2, 0, "Expert");
+[proc,toa_scoreboard_tab_update](component $com_toa_scoreboard_story_tab0, component $com_toa_scoreboard_normal_tab1, component $com_toa_scoreboard_hard_tab2)
+~script3723($com_toa_scoreboard_normal_tab1, 0, "Normal");
+~script3723($com_toa_scoreboard_story_tab0, 0, "Entry");
+~script3723($com_toa_scoreboard_hard_tab2, 0, "Expert");
 switch_int (%varbit14320) {
 	case 1 :
-		~script3723($widget_775:85_0, 1, "Entry");
+		~script3723($com_toa_scoreboard_story_tab0, 1, "Entry");
 	case 2 :
-		~script3723($widget_775:87_2, 1, "Expert");
+		~script3723($com_toa_scoreboard_hard_tab2, 1, "Expert");
 	case default :
-		~script3723($widget_775:86_1, 1, "Normal");
+		~script3723($com_toa_scoreboard_normal_tab1, 1, "Normal");
 }

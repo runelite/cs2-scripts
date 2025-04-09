@@ -1,5 +1,5 @@
 // 5291
-[proc,script5291](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $text0, graphic $graphic6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
+[proc,script5291](component $component0, int $int1, int $int2, int $int3, int $int4, int $colour5, string $string0, graphic $graphic6, int $colour7, int $int8, graphic $graphic9, int $int10, int $int11, int $int12, int $int13, int $int14)(int)
 def_int $int15 = 4;
 def_int $int16 = 1;
 def_int $int17 = calc($int2 * ($int3 + $int4));
@@ -7,16 +7,16 @@ def_struct $struct18 = struct_3712;
 if ($int14 = 0) {
 	$struct18 = struct_3714;
 }
-def_int $width19 = calc($int15 - $int16);
+def_int $int19 = calc($int15 - $int16);
 def_int $int20 = $int1;
-cc_create($component0, ^iftype_rectangle, $int20);
+cc_create($component0, ^iftype_rectangle, $int20, false);
 cc_setposition(1, calc($int17 + 1), ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($width19, calc($int3 - 2), ^setsize_minus, ^setsize_abs);
+cc_setsize($int19, calc($int3 - 2), ^setsize_minus, ^setsize_abs);
 cc_setfill(true);
 cc_setcolour($colour5);
 if ($int14 = 0) {
 	cc_setop(1, "View");
-	cc_setopbase("<col=ff9040><$text0></col>");
+	cc_setopbase("<col=ff9040><$string0></col>");
 	if (~on_mobile = false) {
 		cc_setonmouseover("script5292($component0, $int20, struct_3713)");
 		cc_setonmouseleave("script5292($component0, $int20, struct_3714)");
@@ -24,9 +24,9 @@ if ($int14 = 0) {
 }
 $int1 = calc($int1 + 1);
 if ($int14 = 0) {
-	$width19 = calc($int15 * 2 - $int16);
+	$int19 = calc($int15 * 2 - $int16);
 } else {
-	$width19 = $int15;
+	$int19 = $int15;
 }
 ~create_graphic(
 	0 = $component0, 
@@ -36,16 +36,16 @@ if ($int14 = 0) {
 	4 = calc($int17 + 2), 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width19, 
+	7 = $int19, 
 	8 = calc($int3 - 4), 
 	9 = ^setsize_minus, 
 	10 = ^setsize_abs
 );
 $int1 = calc($int1 + 1);
 if ($int17 = 0 & $int14 = 1) {
-	$width19 = $int15;
+	$int19 = $int15;
 } else {
-	$width19 = calc(2 * $int15 - $int16);
+	$int19 = calc(2 * $int15 - $int16);
 }
 ~create_graphic(
 	0 = $component0, 
@@ -55,16 +55,16 @@ if ($int17 = 0 & $int14 = 1) {
 	4 = $int17, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width19, 
+	7 = $int19, 
 	8 = $int15, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_abs
 );
 $int1 = calc($int1 + 1);
 if (calc($int17 + $int3) = if_getheight($component0) & $int14 = 1) {
-	$width19 = $int15;
+	$int19 = $int15;
 } else {
-	$width19 = calc(2 * $int15 - $int16);
+	$int19 = calc(2 * $int15 - $int16);
 }
 ~create_graphic(
 	0 = $component0, 
@@ -74,7 +74,7 @@ if (calc($int17 + $int3) = if_getheight($component0) & $int14 = 1) {
 	4 = calc($int17 + $int3 - $int15), 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width19, 
+	7 = $int19, 
 	8 = $int15, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_abs
@@ -136,7 +136,7 @@ $int1 = calc($int1 + 1);
 	10 = ^setsize_abs
 );
 $int1 = calc($int1 + 1);
-cc_create($component0, ^iftype_text, $int1);
+cc_create($component0, ^iftype_text, $int1, false);
 def_int $int21 = 0;
 if ($graphic6 = null) {
 	cc_sethide(true);
@@ -148,7 +148,7 @@ if ($graphic6 = null) {
 	cc_settextshadow(true);
 	cc_settextfont($graphic6);
 	cc_setcolour($colour7);
-	cc_settext($text0);
+	cc_settext($string0);
 }
 $int1 = calc($int1 + 1);
 if (cc_find($component0, $int20) = ^true) {

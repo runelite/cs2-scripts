@@ -6,10 +6,10 @@ def_enum $enum2 = ~toplevel_getcomponents;
 def_component $component3 = null;
 if (~on_mobile = true & %varcint1220 = 1 & %varbit16116 = 0) {
 	if (calc(~chat_alert_get(73) / 25 % 2) = 1) {
-		if (cc_find(interface_601:46, 0) = ^true) {
+		if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
 			cc_setgraphic(graphic_5775);
 		}
-	} else if (cc_find(interface_601:46, 0) = ^true) {
+	} else if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
 		cc_setgraphic(graphic_5773);
 	}
 	return;
@@ -58,17 +58,17 @@ if (%varbit26 = 1) {
 	if_settext(enum(int, string, enum_3844, 0), enum(int, component, enum_3843, 1));
 }
 if (~is_group_iron = 1) {
-	if_settext("Group<br> ", interface_162:29);
-	if_setop(3, "<col=ffff00>Group:</col> Show all", interface_162:27);
-	if_setop(4, "<col=ffff00>Group:</col> Show friends", interface_162:27);
-	if_setop(5, "<col=ffff00>Group:</col> Show none", interface_162:27);
-	if_setop(7, "<col=ffff00>Group:</col> Clear history", interface_162:27);
-	if_setop(6, "<col=ffff00>Set chat mode:</col> Group (/@g)", interface_162:4);
+	if_settext("Group<br> ", chatbox:chat_trade_text);
+	if_setop(3, "<col=ffff00>Group:</col> Show all", chatbox:chat_trade);
+	if_setop(4, "<col=ffff00>Group:</col> Show friends", chatbox:chat_trade);
+	if_setop(5, "<col=ffff00>Group:</col> Show none", chatbox:chat_trade);
+	if_setop(7, "<col=ffff00>Group:</col> Clear history", chatbox:chat_trade);
+	if_setop(6, "<col=ffff00>Set chat mode:</col> Group (/@g)", chatbox:chat_all);
 } else {
-	if_settext("Trade<br> ", interface_162:29);
-	if_setop(3, "<col=ffff00>Trade:</col> Show all", interface_162:27);
-	if_setop(4, "<col=ffff00>Trade:</col> Show friends", interface_162:27);
-	if_setop(5, "<col=ffff00>Trade:</col> Show none", interface_162:27);
-	if_setop(7, "", interface_162:27);
-	if_setop(6, "", interface_162:4);
+	if_settext("Trade<br> ", chatbox:chat_trade_text);
+	if_setop(3, "<col=ffff00>Trade:</col> Show all", chatbox:chat_trade);
+	if_setop(4, "<col=ffff00>Trade:</col> Show friends", chatbox:chat_trade);
+	if_setop(5, "<col=ffff00>Trade:</col> Show none", chatbox:chat_trade);
+	if_setop(7, "", chatbox:chat_trade);
+	if_setop(6, "", chatbox:chat_all);
 }

@@ -1,5 +1,5 @@
 // 4249
-[clientscript,clan_members_search_toggle](int $opindex0, component $widget_693:1_1, component $widget_693:2_2, int $comsubid3, component $widget_693:22_4, component $widget_693:9_5, component $widget_693:14_6, component $widget_693:10_7, component $widget_693:7_8, component $widget_693:11_9, component $widget_693:8_10, component $widget_693:13_11)
+[clientscript,clan_members_search_toggle](int $opindex0, component $com_clans_members_universe1, component $com_clans_members_frame2, int $int3, component $com_clans_members_search4, component $com_clans_members_scrollcontents5, component $com_clans_members_scrollbar6, component $com_clans_members_name7, component $com_clans_members_header18, component $com_clans_members_column19, component $com_clans_members_header210, component $com_clans_members_column211)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -7,43 +7,43 @@ sound_synth(interface_select1, 1, 0);
 if (~clan_members_searching = 1) {
 	~meslayer_close(true, true, true);
 	~clan_members_search_setbutton(
-		0 = $widget_693:1_1, 
-		1 = $widget_693:2_2, 
-		2 = $comsubid3, 
-		3 = $widget_693:22_4, 
-		4 = $widget_693:9_5, 
-		5 = $widget_693:14_6, 
-		6 = $widget_693:10_7, 
-		7 = $widget_693:7_8, 
-		8 = $widget_693:11_9, 
-		9 = $widget_693:8_10, 
-		10 = $widget_693:13_11
+		0 = $com_clans_members_universe1, 
+		1 = $com_clans_members_frame2, 
+		2 = $int3, 
+		3 = $com_clans_members_search4, 
+		4 = $com_clans_members_scrollcontents5, 
+		5 = $com_clans_members_scrollbar6, 
+		6 = $com_clans_members_name7, 
+		7 = $com_clans_members_header18, 
+		8 = $com_clans_members_column19, 
+		9 = $com_clans_members_header210, 
+		10 = $com_clans_members_column211
 	);
 	~clan_members_draw(
-		0 = $widget_693:1_1, 
-		1 = $widget_693:2_2, 
-		2 = $comsubid3, 
-		3 = $widget_693:9_5, 
-		4 = $widget_693:14_6, 
-		5 = $widget_693:10_7, 
-		6 = $widget_693:7_8, 
-		7 = $widget_693:11_9, 
-		8 = $widget_693:8_10, 
-		9 = $widget_693:13_11
+		0 = $com_clans_members_universe1, 
+		1 = $com_clans_members_frame2, 
+		2 = $int3, 
+		3 = $com_clans_members_scrollcontents5, 
+		4 = $com_clans_members_scrollbar6, 
+		5 = $com_clans_members_name7, 
+		6 = $com_clans_members_header18, 
+		7 = $com_clans_members_column19, 
+		8 = $com_clans_members_header210, 
+		9 = $com_clans_members_column211
 	);
 	return;
 }
 ~meslayer_mode18;
 ~clan_members_search_setbutton(
-	0 = $widget_693:1_1, 
-	1 = $widget_693:2_2, 
-	2 = $comsubid3, 
-	3 = $widget_693:22_4, 
-	4 = $widget_693:9_5, 
-	5 = $widget_693:14_6, 
-	6 = $widget_693:10_7, 
-	7 = $widget_693:7_8, 
-	8 = $widget_693:11_9, 
-	9 = $widget_693:8_10, 
-	10 = $widget_693:13_11
+	0 = $com_clans_members_universe1, 
+	1 = $com_clans_members_frame2, 
+	2 = $int3, 
+	3 = $com_clans_members_search4, 
+	4 = $com_clans_members_scrollcontents5, 
+	5 = $com_clans_members_scrollbar6, 
+	6 = $com_clans_members_name7, 
+	7 = $com_clans_members_header18, 
+	8 = $com_clans_members_column19, 
+	9 = $com_clans_members_header210, 
+	10 = $com_clans_members_column211
 );

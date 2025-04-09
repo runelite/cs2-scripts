@@ -15,7 +15,7 @@ while ($int5 < $int2) {
 	if (.cc_find($component1, $int5) = ^true) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
-			cc_create($component1, ^iftype_text, $int4);
+			cc_create($component1, ^iftype_text, $int4, false);
 			$int4 = calc($int4 + 1);
 			cc_setsize(16, $int3, ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);

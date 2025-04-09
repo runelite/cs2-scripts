@@ -1,8 +1,8 @@
 // 5995
-[proc,questlist_completed](component $widget_399:9_0)
+[proc,questlist_completed](component $com_questlist_completed0)
 def_string $string0 = ",";
 if (~speedrunning_world = 0) {
-	if_settext("Completed: <~tostring_spacer(%varbit6347, $string0)>/<~tostring_spacer(%varbit11877, $string0)>", $widget_399:9_0);
+	if_settext("Completed: <~tostring_spacer(%varbit6347, $string0)>/<~tostring_spacer(%varbit11877, $string0)>", $com_questlist_completed0);
 } else {
-	if_settext("Speedrun Points: <~tostring_spacer(~min(%var3365, 800000), $string0)>", $widget_399:9_0);
+	if_settext("Speedrun Points: <~tostring_spacer(~min(%var3365, 800000), $string0)>", $com_questlist_completed0);
 }

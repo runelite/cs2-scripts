@@ -1,6 +1,6 @@
 // 7529
 [proc,script7529](string $string0, int $int0)
-if_sethide(true, interface_894:15);
+if_sethide(true, hiscores:hiscores_lookup_fail);
 def_int $int1 = hiscore_getstatus;
 if ($int1 = 2 | $int1 = 3) {
 	hiscore_clear;
@@ -19,19 +19,19 @@ if (~script7487 = 1) {
 	hiscore_setapi(0);
 }
 hiscore_lookup($string0, %varcint1227);
-if (cc_find(interface_894:13, 2) = ^true) {
+if (cc_find(hiscores:hiscores_text_input, 2) = ^true) {
 	cc_settext($string0);
 }
-if (cc_find(interface_894:10, 5) = ^true) {
+if (cc_find(hiscores:hiscores_dropdown, 5) = ^true) {
 	cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
 }
-if (cc_find(interface_894:10, 4) = ^true) {
+if (cc_find(hiscores:hiscores_dropdown, 4) = ^true) {
 	cc_settext(enum(int, string, enum_5622, %varcint1227));
 }
-if_sethide(false, interface_894:3);
-cc_deleteall(interface_894:3);
+if_sethide(false, hiscores:loading_data);
+cc_deleteall(hiscores:loading_data);
 ~loading_icon_init(
-	0 = interface_894:3, 
+	0 = hiscores:loading_data, 
 	1 = null, 
 	2 = enum_3789, 
 	3 = 10, 
@@ -43,4 +43,4 @@ cc_deleteall(interface_894:3);
 	9 = 3, 
 	10 = ""
 );
-if_setontimer("script7530($string0, 1)", interface_894:1);
+if_setontimer("script7530($string0, 1)", hiscores:content);

@@ -1,7 +1,7 @@
 // 1608
-[proc,raids_storage_private_drawitem](obj $obj0, int $num1, int $int2, component $component3)(int)
+[proc,raids_storage_private_drawitem](obj $obj0, int $int1, int $int2, component $component3)(int)
 if ($obj0 ! null) {
-	cc_setobject($obj0, $num1);
+	cc_setobject($obj0, $int1);
 	cc_settrans(0);
 	cc_setop(1, "Withdraw");
 	cc_setop(2, "Withdraw-5");
@@ -16,7 +16,7 @@ if ($obj0 ! null) {
 	$int2 = calc($int2 + 1);
 } else {
 	cc_settrans(255);
-	cc_setobject_nonum(obj_6512, 1);
+	cc_setobject_nonum(blankobject_6512, 1);
 	cc_setonop(null);
 	cc_setondrag(null);
 	cc_setondragcomplete(null);

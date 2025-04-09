@@ -2,7 +2,7 @@
 [proc,worldswitcher_sortbutton_draw](component $component0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, int $int9, int $int10, graphic $graphic11, fontmetrics $fontmetrics12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22)
 if_sethide(false, $component0);
 cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, 0);
+cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(7, 5, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if (%varbit4596 = $int2) {
@@ -105,7 +105,7 @@ if ($component0 = $component14) {
 	}
 }
 if ($int23 ! 0) {
-	cc_create($component0, ^iftype_graphic, 1);
+	cc_create($component0, ^iftype_graphic, 1, false);
 	cc_setposition(4, 2, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(7, 5, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(graphic_4940);

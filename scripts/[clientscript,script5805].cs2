@@ -1,7 +1,7 @@
 // 5805
 [clientscript,script5805]
 if (%var3345 < 1) {
-	if_sethide(true, interface_737:20);
+	if_sethide(true, league_3_select_class:confirmation_overlay);
 	return;
 }
 def_int $colour0 = ~league_get_league_colour(3);
@@ -19,10 +19,10 @@ if (%var3345 = 2) {
 if (%var3345 = 3) {
 	$string0, $string1, $string2, $graphic1 = "Masterful Wizard", "Arcane Conduit", "Chance to save Runes and Magic Weapon Charges.", graphic_4241;
 }
-if_sethide(false, interface_737:20);
-cc_deleteall(interface_737:22);
-$int2 = ~steelbox(interface_737:22, $int2, true);
-cc_create(interface_737:22, ^iftype_text, $int2);
+if_sethide(false, league_3_select_class:confirmation_overlay);
+cc_deleteall(league_3_select_class:confirmation_message);
+$int2 = ~steelbox(league_3_select_class:confirmation_message, $int2, true);
+cc_create(league_3_select_class:confirmation_message, ^iftype_text, $int2, false);
 cc_setposition(16, 16, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
@@ -32,7 +32,7 @@ cc_setcolour($colour0);
 cc_settext("<col=cfcfcf>Are you sure you wish to become a:<br><$string0><br><col=cfcfcf>Other combat skills and Fragments may still be unlocked later.");
 $int2 = calc($int2 + 1);
 ~create_graphic(
-	0 = interface_737:22, 
+	0 = league_3_select_class:confirmation_message, 
 	1 = $int2, 
 	2 = $graphic1, 
 	3 = 0, 
@@ -45,7 +45,7 @@ $int2 = calc($int2 + 1);
 	10 = ^setsize_abs
 );
 $int2 = calc($int2 + 1);
-cc_create(interface_737:22, ^iftype_text, $int2);
+cc_create(league_3_select_class:confirmation_message, ^iftype_text, $int2, false);
 cc_setposition(16, 165, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
@@ -54,11 +54,11 @@ cc_settextfont(b12_full);
 cc_setcolour($colour0);
 cc_settext("<$string1> Fragment:<br><col=cfcfcf><$string2>");
 $int2 = calc($int2 + 1);
-~script5820(interface_737:23, 0, 0, 0, if_getwidth(interface_737:23), if_getheight(interface_737:23), struct_3927);
-~script5820(interface_737:26, 0, 0, 0, if_getwidth(interface_737:26), if_getheight(interface_737:26), struct_3924);
+~script5820(league_3_select_class:confirmation_cancel, 0, 0, 0, if_getwidth(league_3_select_class:confirmation_cancel), if_getheight(league_3_select_class:confirmation_cancel), struct_3927);
+~script5820(league_3_select_class:confirmation_accept, 0, 0, 0, if_getwidth(league_3_select_class:confirmation_accept), if_getheight(league_3_select_class:confirmation_accept), struct_3924);
 if (~on_mobile = false) {
-	if_setonmouseover("script5821(interface_737:23, 0, struct_3929)", interface_737:23);
-	if_setonmouseover("script5821(interface_737:26, 0, struct_3926)", interface_737:26);
-	if_setonmouseleave("script5821(interface_737:23, 0, struct_3927)", interface_737:23);
-	if_setonmouseleave("script5821(interface_737:26, 0, struct_3924)", interface_737:26);
+	if_setonmouseover("script5821(league_3_select_class:confirmation_cancel, 0, struct_3929)", league_3_select_class:confirmation_cancel);
+	if_setonmouseover("script5821(league_3_select_class:confirmation_accept, 0, struct_3926)", league_3_select_class:confirmation_accept);
+	if_setonmouseleave("script5821(league_3_select_class:confirmation_cancel, 0, struct_3927)", league_3_select_class:confirmation_cancel);
+	if_setonmouseleave("script5821(league_3_select_class:confirmation_accept, 0, struct_3924)", league_3_select_class:confirmation_accept);
 }

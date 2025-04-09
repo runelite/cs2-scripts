@@ -1,8 +1,8 @@
 // 263
-[clientscript,nzone_game_subtitle](component $component0, int $comsubid1, int $comsubid2, int $clock3)
+[clientscript,nzone_game_subtitle](component $component0, int $comsubid1, int $comsubid2, int $int3)
 def_int $int4 = pow(50, 2);
 def_int $int5 = calc(50 * 2);
-def_int $int6 = calc(clientclock - $clock3);
+def_int $int6 = calc(clientclock - $int3);
 if ($int6 < 50) {
 	if ($int6 < 0) {
 		$int6 = 0;

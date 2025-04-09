@@ -1,100 +1,100 @@
 // 7511
 [proc,script7511]
-if (if_getheight(interface_894:6) = 0) {
+if (if_getheight(hiscores:hiscores_container) = 0) {
 	return;
 }
-def_int $height0 = 126;
+def_int $int0 = 126;
 if (~script7487 = 1) {
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:19);
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_group_skills);
 	if (%varcint1235 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:19);
-		if (cc_find(interface_894:19, 28) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_skills);
+		if (cc_find(hiscores:hiscores_group_skills, 28) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:19), ^setsize_minus, ^setsize_abs, interface_894:19);
-		if (cc_find(interface_894:19, 28) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_group_skills), ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_skills);
+		if (cc_find(hiscores:hiscores_group_skills, 28) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
-	$height0 = calc($height0 + if_getheight(interface_894:19));
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:21);
+	$int0 = calc($int0 + if_getheight(hiscores:hiscores_group_skills));
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_group_xp);
 	if (%varcint1236 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:21);
-		if (cc_find(interface_894:21, 28) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_xp);
+		if (cc_find(hiscores:hiscores_group_xp, 28) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:21), ^setsize_minus, ^setsize_abs, interface_894:21);
-		if (cc_find(interface_894:21, 28) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_group_xp), ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_xp);
+		if (cc_find(hiscores:hiscores_group_xp, 28) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
-	$height0 = calc($height0 + if_getheight(interface_894:21));
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:23);
+	$int0 = calc($int0 + if_getheight(hiscores:hiscores_group_xp));
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_group_members);
 	if (%varcint1237 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:23);
-		$height0 = calc($height0 + if_getheight(interface_894:23));
-		if_setsize(0, 0, ^setsize_abs, ^setsize_abs, interface_894:25);
-		if (cc_find(interface_894:23, 53) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_members);
+		$int0 = calc($int0 + if_getheight(hiscores:hiscores_group_members));
+		if_setsize(0, 0, ^setsize_abs, ^setsize_abs, hiscores:hiscores_group_members_dropdown);
+		if (cc_find(hiscores:hiscores_group_members, 53) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:23), ^setsize_minus, ^setsize_abs, interface_894:23);
-		if_setsize(10, 30, ^setsize_minus, ^setsize_abs, interface_894:25);
-		if_setposition(0, calc($height0 + 43), ^setpos_abs_centre, ^setpos_abs_top, interface_894:25);
-		$height0 = calc($height0 + if_getheight(interface_894:23) + 10);
-		if (cc_find(interface_894:23, 53) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_group_members), ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_members);
+		if_setsize(10, 30, ^setsize_minus, ^setsize_abs, hiscores:hiscores_group_members_dropdown);
+		if_setposition(0, calc($int0 + 43), ^setpos_abs_centre, ^setpos_abs_top, hiscores:hiscores_group_members_dropdown);
+		$int0 = calc($int0 + if_getheight(hiscores:hiscores_group_members) + 10);
+		if (cc_find(hiscores:hiscores_group_members, 53) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
 } else {
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:7);
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_skills);
 	if (%varcint1228 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:7);
-		if (cc_find(interface_894:7, 29) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_skills);
+		if (cc_find(hiscores:hiscores_skills, 29) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:7), ^setsize_minus, ^setsize_abs, interface_894:7);
-		if (cc_find(interface_894:7, 29) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_skills), ^setsize_minus, ^setsize_abs, hiscores:hiscores_skills);
+		if (cc_find(hiscores:hiscores_skills, 29) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
-	$height0 = calc($height0 + if_getheight(interface_894:7));
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:8);
+	$int0 = calc($int0 + if_getheight(hiscores:hiscores_skills));
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_activities);
 	if (%varcint1229 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:8);
-		if (cc_find(interface_894:8, 13) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_activities);
+		if (cc_find(hiscores:hiscores_activities, 13) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:8), ^setsize_minus, ^setsize_abs, interface_894:8);
-		if (cc_find(interface_894:8, 13) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_activities), ^setsize_minus, ^setsize_abs, hiscores:hiscores_activities);
+		if (cc_find(hiscores:hiscores_activities, 13) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
-	$height0 = calc($height0 + if_getheight(interface_894:8));
-	if_setposition(0, $height0, ^setpos_abs_left, ^setpos_abs_top, interface_894:9);
+	$int0 = calc($int0 + if_getheight(hiscores:hiscores_activities));
+	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, hiscores:hiscores_bosses);
 	if (%varcint1230 = 1) {
-		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_894:9);
-		if (cc_find(interface_894:9, 69) = ^true) {
+		if_setsize(0, 43, ^setsize_minus, ^setsize_abs, hiscores:hiscores_bosses);
+		if (cc_find(hiscores:hiscores_bosses, 69) = ^true) {
 			cc_setgraphic(graphic_4918);
 		}
 	} else {
-		if_setsize(0, if_getcolour(interface_894:9), ^setsize_minus, ^setsize_abs, interface_894:9);
-		if (cc_find(interface_894:9, 69) = ^true) {
+		if_setsize(0, if_getcolour(hiscores:hiscores_bosses), ^setsize_minus, ^setsize_abs, hiscores:hiscores_bosses);
+		if (cc_find(hiscores:hiscores_bosses, 69) = ^true) {
 			cc_setgraphic(graphic_4917);
 		}
 	}
-	$height0 = calc($height0 + if_getheight(interface_894:9));
+	$int0 = calc($int0 + if_getheight(hiscores:hiscores_bosses));
 }
-if ($height0 > if_getheight(interface_894:6)) {
-	if_setscrollsize(0, $height0, interface_894:6);
+if ($int0 > if_getheight(hiscores:hiscores_container)) {
+	if_setscrollsize(0, $int0, hiscores:hiscores_container);
 } else {
-	if_setscrollsize(0, 0, interface_894:6);
+	if_setscrollsize(0, 0, hiscores:hiscores_container);
 }
-~scrollbar_vertical(interface_894:5, interface_894:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(hiscores:hiscores_scrollbar, hiscores:hiscores_container, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (%varcint1254 > 0) {
-	~scrollbar_resize(interface_894:5, interface_894:6, %varcint1254);
+	~scrollbar_resize(hiscores:hiscores_scrollbar, hiscores:hiscores_container, %varcint1254);
 }

@@ -1,8 +1,8 @@
 // 1286
-[clientscript,glidermap_init](component $widget_138:0_0, component $widget_138:26_1, component $widget_138:17_2, component $widget_138:22_3)
-~glidermap_hideshow($widget_138:26_1, $widget_138:17_2, $widget_138:22_3);
-if_setonvartransmit("glidermap_hideshow($widget_138:26_1, $widget_138:17_2, $widget_138:22_3){var153, var416, var1339}", $widget_138:0_0);
-cc_deleteall($widget_138:0_0);
-cc_create($widget_138:0_0, ^iftype_model, 0);
+[clientscript,glidermap_init](component $com_glidermap_universe0, component $com_glidermap_close1, component $com_glidermap_ogrearea_container2, component $com_glidermap_apeatoll_container3)
+~glidermap_hideshow($com_glidermap_close1, $com_glidermap_ogrearea_container2, $com_glidermap_apeatoll_container3);
+if_setonvartransmit("glidermap_hideshow($com_glidermap_close1, $com_glidermap_ogrearea_container2, $com_glidermap_apeatoll_container3){var153, var416, var1339}", $com_glidermap_universe0);
+cc_deleteall($com_glidermap_universe0);
+cc_create($com_glidermap_universe0, ^iftype_model, 0, false);
 ~glidermap_fly;
 cc_setonvartransmit("glidermap_fly(event_com, event_comsubid){var153}");

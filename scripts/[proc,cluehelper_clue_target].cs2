@@ -2,39 +2,39 @@
 [proc,cluehelper_clue_target](dbrow $dbrow0)(dbrow)
 def_int $dbfield1 = 0;
 switch_dbtable (db_getrowtable($dbrow0)) {
-	case dbtable_8 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_8:3, 0));
-		return(db_getfield($dbrow0, dbtable_8:3, $dbfield1));
-	case dbtable_4 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_4:3, 0));
-		return(db_getfield($dbrow0, dbtable_4:3, $dbfield1));
-	case dbtable_5 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_5:2, 0));
-		return(db_getfield($dbrow0, dbtable_5:2, $dbfield1));
-	case dbtable_12 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_12:2, 0));
-		return(db_getfield($dbrow0, dbtable_12:2, $dbfield1));
-	case dbtable_9 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_9:3, 0));
-		return(db_getfield($dbrow0, dbtable_9:3, $dbfield1));
-	case dbtable_7 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_7:3, 0));
-		return(db_getfield($dbrow0, dbtable_7:3, $dbfield1));
-	case dbtable_14 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_14:4, 0));
-		return(db_getfield($dbrow0, dbtable_14:4, $dbfield1));
-	case dbtable_13 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_13:4, 0));
-		return(db_getfield($dbrow0, dbtable_13:4, $dbfield1));
-	case dbtable_11 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_11:3, 0));
-		return(db_getfield($dbrow0, dbtable_11:3, $dbfield1));
-	case dbtable_6 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_6:3, 0));
-		return(db_getfield($dbrow0, dbtable_6:3, $dbfield1));
-	case dbtable_10 :
-		$dbfield1 = ~script6657(db_getfield($dbrow0, dbtable_10:5, 0));
-		return(db_getfield($dbrow0, dbtable_10:5, $dbfield1));
+	case cluehelper_clue_cryptic :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_cryptic:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_cryptic:target, $dbfield1));
+	case cluehelper_clue_anagram :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_anagram:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_anagram:target, $dbfield1));
+	case cluehelper_clue_map :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_map:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_map:target, $dbfield1));
+	case cluehelper_clue_hotcold :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_hotcold:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_hotcold:target, $dbfield1));
+	case cluehelper_clue_emote :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_emote:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_emote:target, $dbfield1));
+	case cluehelper_clue_coordinate :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_coordinate:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_coordinate:target, $dbfield1));
+	case cluehelper_clue_skillchallenge :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_skillchallenge:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_skillchallenge:target, $dbfield1));
+	case cluehelper_clue_music :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_music:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_music:target, $dbfield1));
+	case cluehelper_clue_falobard :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_falobard:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_falobard:target, $dbfield1));
+	case cluehelper_clue_cipher :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_cipher:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_cipher:target, $dbfield1));
+	case cluehelper_clue_fairyring :
+		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_fairyring:target, 0));
+		return(db_getfield($dbrow0, cluehelper_clue_fairyring:target, $dbfield1));
 	case default :
 		return(null);
 }

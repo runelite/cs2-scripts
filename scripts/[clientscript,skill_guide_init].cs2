@@ -1,21 +1,21 @@
 // 654
-[clientscript,skill_guide_init](component $widget_214:1_0, component $widget_214:7_1, component $widget_214:8_2, component $widget_214:10_3, component $widget_214:29_4, component $widget_214:11_5, component $widget_214:5_6, component $widget_214:4_7, component $widget_214:6_8, component $widget_214:12_9, component $widget_214:0_10)
+[clientscript,skill_guide_init](component $com_skill_guide_universe0, component $com_skill_guide_title1, component $com_skill_guide_description2, component $com_skill_guide_info3, component $com_skill_guide_icons4, component $com_skill_guide_scrollbar5, component $com_skill_guide_scroll_top6, component $com_skill_guide_scroll_middle7, component $com_skill_guide_scroll_bottom8, component $com_skill_guide_categories9, component $com_skill_guide_infinity10)
 ~skill_guide_build(
-	0 = $widget_214:7_1, 
-	1 = $widget_214:8_2, 
-	2 = $widget_214:10_3, 
-	3 = $widget_214:29_4, 
-	4 = $widget_214:11_5, 
-	5 = $widget_214:5_6, 
-	6 = $widget_214:4_7, 
-	7 = $widget_214:6_8, 
-	8 = $widget_214:12_9, 
-	9 = $widget_214:0_10
+	0 = $com_skill_guide_title1, 
+	1 = $com_skill_guide_description2, 
+	2 = $com_skill_guide_info3, 
+	3 = $com_skill_guide_icons4, 
+	4 = $com_skill_guide_scrollbar5, 
+	5 = $com_skill_guide_scroll_top6, 
+	6 = $com_skill_guide_scroll_middle7, 
+	7 = $com_skill_guide_scroll_bottom8, 
+	8 = $com_skill_guide_categories9, 
+	9 = $com_skill_guide_infinity10
 );
 def_enum $enum11 = ~toplevel_getcomponents;
-def_component $component12 = enum(component, component, $enum11, interface_161:16);
+def_component $component12 = enum(component, component, $enum11, toplevel_osrs_stretch:mainmodal);
 if (~on_mobile = true) {
-	if_setontimer("script3833($widget_214:0_10, $widget_214:1_0, 0)", $widget_214:0_10);
+	if_setontimer("script3833($com_skill_guide_infinity10, $com_skill_guide_universe0, 0)", $com_skill_guide_infinity10);
 } else {
 	if (%varcint1170 = 0 & %varcint1171 = 0 & %varcint1168 = 0 & %varcint1169 = 0) {
 		%varcint1168 = if_getwidth($component12);
@@ -23,19 +23,19 @@ if (~on_mobile = true) {
 		%varcint1170 = if_getx($component12);
 		%varcint1171 = if_gety($component12);
 	}
-	if_setontimer("script6110($widget_214:0_10, -1)", $widget_214:0_10);
-	if_setonresize("skill_guide_rebuild", $widget_214:0_10);
+	if_setontimer("script6110($com_skill_guide_infinity10, -1)", $com_skill_guide_infinity10);
+	if_setonresize("skill_guide_rebuild", $com_skill_guide_infinity10);
 }
 if_setonvartransmit("skill_guide_build(
-	0 = $widget_214:7_1, 
-	1 = $widget_214:8_2, 
-	2 = $widget_214:10_3, 
-	3 = $widget_214:29_4, 
-	4 = $widget_214:11_5, 
-	5 = $widget_214:5_6, 
-	6 = $widget_214:4_7, 
-	7 = $widget_214:6_8, 
-	8 = $widget_214:12_9, 
-	9 = $widget_214:0_10
-){var965}", $widget_214:1_0);
-~script1911(-1, -1, $widget_214:0_10, $widget_214:1_0);
+	0 = $com_skill_guide_title1, 
+	1 = $com_skill_guide_description2, 
+	2 = $com_skill_guide_info3, 
+	3 = $com_skill_guide_icons4, 
+	4 = $com_skill_guide_scrollbar5, 
+	5 = $com_skill_guide_scroll_top6, 
+	6 = $com_skill_guide_scroll_middle7, 
+	7 = $com_skill_guide_scroll_bottom8, 
+	8 = $com_skill_guide_categories9, 
+	9 = $com_skill_guide_infinity10
+){var965}", $com_skill_guide_universe0);
+~script1911(-1, -1, $com_skill_guide_infinity10, $com_skill_guide_universe0);

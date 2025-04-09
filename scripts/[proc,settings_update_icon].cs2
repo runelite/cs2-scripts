@@ -1,5 +1,5 @@
 // 3937
-[proc,settings_update_icon](int $int0, component $component1, string $string0, string $string1, component $widget_116:43_2)
+[proc,settings_update_icon](int $int0, component $component1, string $string0, string $string1, component $com_settings_side_tooltip2)
 if (cc_find($component1, 1) = ^true) {
 	if ($int0 = 0) {
 		cc_sethide(false);
@@ -9,9 +9,9 @@ if (cc_find($component1, 1) = ^true) {
 }
 if ($int0 <= 0) {
 	if_setop(1, "Unmute", $component1);
-	if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $widget_116:43_2, $string1, 25, 190)", $component1);
+	if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $com_settings_side_tooltip2, $string1, 25, 190)", $component1);
 } else {
 	if_setop(1, "Mute", $component1);
-	if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $widget_116:43_2, $string0, 25, 190)", $component1);
+	if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $com_settings_side_tooltip2, $string0, 25, 190)", $component1);
 }
 %varcint2 = 0;

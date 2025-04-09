@@ -1,7 +1,7 @@
 // 775
-[proc,ge_offers_setup_buttongraphic](component $widget_465:25_0, int $comsubid1, graphic $graphic2, int $int3)(int)
-if (cc_find($widget_465:25_0, $comsubid1) = ^true) {
-	.cc_create($widget_465:25_0, ^iftype_graphic, $int3);
+[proc,ge_offers_setup_buttongraphic](component $com_ge_offers_setup0, int $comsubid1, graphic $graphic2, int $int3)(int)
+if (cc_find($com_ge_offers_setup0, $comsubid1) = ^true) {
+	.cc_create($com_ge_offers_setup0, ^iftype_graphic, $int3, false);
 	$int3 = calc($int3 + 1);
 	.cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(calc(cc_getx + 8), calc(cc_gety + 8), ^setpos_abs_left, ^setpos_abs_top);

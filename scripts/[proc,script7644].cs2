@@ -3,7 +3,7 @@
 if ($dbrow0 = null) {
 	return;
 }
-def_struct $struct2 = db_getfield($dbrow0, dbtable_85:4, 0);
+def_struct $struct2 = db_getfield($dbrow0, leagues_echo_bosses:ca_data, 0);
 if ($struct2 = null) {
 	return;
 }
@@ -19,7 +19,7 @@ def_int $int11 = struct_param($struct2, param_1329);
 cc_deleteall($component1);
 if_setop(1, "", $component1);
 if_setonop(null, $component1);
-cc_create($component1, ^iftype_model, 0);
+cc_create($component1, ^iftype_model, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if ($model4 = null) {

@@ -7,12 +7,12 @@ if ($int3 = 0) {
 	$int9 = $int7;
 	$int3 = 0;
 }
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int9 + 3), $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic($graphic4);
-.cc_create($component0, ^iftype_text, $int2);
+.cc_create($component0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 .cc_settextfont(p11_full);
 .cc_settextshadow(true);

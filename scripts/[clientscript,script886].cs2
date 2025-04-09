@@ -1,17 +1,17 @@
 // 886
-[clientscript,script886](component $widget_676:22_0, component $widget_676:8_1, int $int2, component $widget_676:5_3, component $widget_676:20_4, int $int5)
+[clientscript,script886](component $com_league_firsts_dropdown_league0, component $com_league_firsts_league_filter1, int $int2, component $com_league_firsts_dropdown_container3, component $com_league_firsts_dropdown_box4, int $int5)
 sound_synth(interface_select1, 1, 0);
-~league_setup_display_hoverdisable($widget_676:8_1, $int5);
-if_sethide(false, $widget_676:5_3);
-if_setonclick("script1108(1, -1, $widget_676:8_1, $int2, $widget_676:5_3, $int5)", $widget_676:5_3);
-def_int $int6 = if_getx($widget_676:8_1);
-def_int $int7 = if_gety($widget_676:8_1);
-def_component $layer8 = if_getlayer($widget_676:8_1);
-while ($layer8 ! null) {
-	$int6, $int7 = calc($int6 + if_getx($layer8) - if_getscrollx($layer8)), calc($int7 + if_gety($layer8) - if_getscrolly($layer8));
-	$layer8 = if_getlayer($layer8);
+~league_setup_display_hoverdisable($com_league_firsts_league_filter1, $int5);
+if_sethide(false, $com_league_firsts_dropdown_container3);
+if_setonclick("script1108(1, -1, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)", $com_league_firsts_dropdown_container3);
+def_int $int6 = if_getx($com_league_firsts_league_filter1);
+def_int $int7 = if_gety($com_league_firsts_league_filter1);
+def_component $component8 = if_getlayer($com_league_firsts_league_filter1);
+while ($component8 ! null) {
+	$int6, $int7 = calc($int6 + if_getx($component8) - if_getscrollx($component8)), calc($int7 + if_gety($component8) - if_getscrolly($component8));
+	$component8 = if_getlayer($component8);
 }
-def_int $count9 = enum_getoutputcount(enum_2670);
+def_int $int9 = enum_getoutputcount(enum_2670);
 def_int $int10 = 14;
 if (~on_mobile = true) {
 	$int10 = 18;
@@ -22,27 +22,27 @@ if (~on_mobile = true) {
 } else {
 	$int11 = calc($int7 + $int10 + 5);
 }
-def_int $int12 = calc(2 + $count9 * $int10 + 2);
-if (calc($int11 + $int12 + 2) > if_getheight(if_getlayer($widget_676:20_4))) {
-	$int11 = calc($int7 + if_getheight($widget_676:8_1) - $int12 - 19);
+def_int $int12 = calc(2 + $int9 * $int10 + 2);
+if (calc($int11 + $int12 + 2) > if_getheight(if_getlayer($com_league_firsts_dropdown_box4))) {
+	$int11 = calc($int7 + if_getheight($com_league_firsts_league_filter1) - $int12 - 19);
 }
-if_setposition($int6, $int11, ^setpos_abs_left, ^setpos_abs_top, $widget_676:20_4);
-if_setsize(if_getwidth($widget_676:8_1), $int12, ^setsize_abs, ^setsize_abs, $widget_676:20_4);
-cc_deleteall($widget_676:20_4);
-~thinbox($widget_676:20_4, 0);
-if_sethide(false, $widget_676:22_0);
+if_setposition($int6, $int11, ^setpos_abs_left, ^setpos_abs_top, $com_league_firsts_dropdown_box4);
+if_setsize(if_getwidth($com_league_firsts_league_filter1), $int12, ^setsize_abs, ^setsize_abs, $com_league_firsts_dropdown_box4);
+cc_deleteall($com_league_firsts_dropdown_box4);
+~thinbox($com_league_firsts_dropdown_box4, 0);
+if_sethide(false, $com_league_firsts_dropdown_league0);
 def_int $int13 = 0;
-.cc_create($widget_676:22_0, ^iftype_rectangle, $int13);
+.cc_create($com_league_firsts_dropdown_league0, ^iftype_rectangle, $int13, false);
 $int13 = calc($int13 + 1);
 .cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_int $count14 = 1;
-while ($count14 <= $count9) {
-	cc_create($widget_676:22_0, ^iftype_text, $int13);
-	cc_setposition(0, calc(($count14 - 1) * $int10), ^setpos_abs_centre, ^setpos_abs_top);
+def_int $int14 = 1;
+while ($int14 <= $int9) {
+	cc_create($com_league_firsts_dropdown_league0, ^iftype_text, $int13, false);
+	cc_setposition(0, calc(($int14 - 1) * $int10), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 	cc_setcolour($int5);
 	cc_settextshadow(true);
@@ -53,7 +53,7 @@ while ($count14 <= $count9) {
 		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int5)");
 		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int5)");
 	}
-	cc_setonop("script1108(event_op, $count14, $widget_676:8_1, $int2, $widget_676:5_3, $int5)");
-	cc_settext(struct_param(enum(int, struct, enum_2670, $count14), param_858));
-	$count14, $int13 = calc($count14 + 1), calc($int13 + 1);
+	cc_setonop("script1108(event_op, $int14, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)");
+	cc_settext(struct_param(enum(int, struct, enum_2670, $int14), param_858));
+	$int14, $int13 = calc($int14 + 1), calc($int13 + 1);
 }

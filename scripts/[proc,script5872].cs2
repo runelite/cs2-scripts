@@ -1,13 +1,13 @@
 // 5872
-[proc,script5872](component $widget_740:2_0, component $widget_740:6_1, component $widget_740:7_2, component $widget_740:8_3, component $widget_740:9_4, component $widget_740:10_5)
-if_setsize(400, 277, ^setsize_abs, ^setsize_abs, $widget_740:2_0);
-cc_deleteall($widget_740:6_1);
-cc_deleteall($widget_740:7_2);
-cc_deleteall($widget_740:8_3);
-cc_deleteall($widget_740:9_4);
-cc_deleteall($widget_740:10_5);
+[proc,script5872](component $com_speedrunning_intro_main0, component $com_speedrunning_intro_header1, component $com_speedrunning_intro_text2, component $com_speedrunning_intro_button_13, component $com_speedrunning_intro_button_24, component $com_speedrunning_intro_graphic5)
+if_setsize(400, 277, ^setsize_abs, ^setsize_abs, $com_speedrunning_intro_main0);
+cc_deleteall($com_speedrunning_intro_header1);
+cc_deleteall($com_speedrunning_intro_text2);
+cc_deleteall($com_speedrunning_intro_button_13);
+cc_deleteall($com_speedrunning_intro_button_24);
+cc_deleteall($com_speedrunning_intro_graphic5);
 def_int $colour6 = 0xff981f;
-cc_create($widget_740:6_1, ^iftype_text, 0);
+cc_create($com_speedrunning_intro_header1, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -15,7 +15,7 @@ cc_setcolour($colour6);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settext("Welcome to Speedrunning Worlds!");
-cc_create($widget_740:7_2, ^iftype_text, 0);
+cc_create($com_speedrunning_intro_text2, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
@@ -33,20 +33,20 @@ if (string_length($string0) > 0) {
 			$int7 = 4;
 		}
 		$int7 = calc(12 - $int7);
-		if_setsize(400, calc(277 - $int7 * 14), ^setsize_abs, ^setsize_abs, $widget_740:2_0);
+		if_setsize(400, calc(277 - $int7 * 14), ^setsize_abs, ^setsize_abs, $com_speedrunning_intro_main0);
 	}
 }
 def_string $string1 = "Exit Speedrunning";
 if (string_length($string1) > 0) {
-	~script5876($widget_740:8_3, $string1);
+	~script5876($com_speedrunning_intro_button_13, $string1);
 } else {
-	if_sethide(true, $widget_740:8_3);
+	if_sethide(true, $com_speedrunning_intro_button_13);
 }
 def_string $string2 = "Get Started";
 if (string_length($string2) > 0) {
-	~script5876($widget_740:9_4, $string2);
+	~script5876($com_speedrunning_intro_button_24, $string2);
 } else {
-	if_sethide(true, $widget_740:9_4);
+	if_sethide(true, $com_speedrunning_intro_button_24);
 }
-if_setposition(-88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_740:8_3);
-if_setposition(88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $widget_740:9_4);
+if_setposition(-88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $com_speedrunning_intro_button_13);
+if_setposition(88, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $com_speedrunning_intro_button_24);

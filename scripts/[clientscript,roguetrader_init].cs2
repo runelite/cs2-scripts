@@ -1,13 +1,13 @@
 // 4162
-[clientscript,roguetrader_init](component $widget_292:9_0, component $widget_292:14_1, component $widget_292:10_2, component $widget_292:12_3, component $widget_292:8_4, component $widget_292:11_5, component $widget_292:7_6, component $widget_292:13_7)
+[clientscript,roguetrader_init](component $com_roguetrader_sudoku_runes0, component $com_roguetrader_sudoku_game_clickzones1, component $com_roguetrader_sudoku_btn_opencasket2, component $com_roguetrader_sudoku_game_frame3, component $com_roguetrader_sudoku_runes_frame4, component $com_roguetrader_sudoku_game_holder5, component $com_roguetrader_sudoku_runes_holder6, component $com_roguetrader_sudoku_game_runes7)
 def_int $int8 = %varbit12163;
 def_int $int9 = %varbit12161;
-~roguetrader_game_size($widget_292:7_6, $widget_292:11_5, $int8);
-~roguetrader_draw_frames($widget_292:10_2, $widget_292:12_3, $widget_292:8_4, $int8);
-~roguetrader_draw_runes($int8, $widget_292:9_0);
-~roguetrader_draw_game($int8, $int9, $widget_292:14_1, $widget_292:13_7);
-if_setonvartransmit("roguetrader_selectrune_transmit($int8, $widget_292:9_0){var540}", $widget_292:9_0);
-if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $widget_292:14_1, $widget_292:13_7){
+~roguetrader_game_size($com_roguetrader_sudoku_runes_holder6, $com_roguetrader_sudoku_game_holder5, $int8);
+~roguetrader_draw_frames($com_roguetrader_sudoku_btn_opencasket2, $com_roguetrader_sudoku_game_frame3, $com_roguetrader_sudoku_runes_frame4, $int8);
+~roguetrader_draw_runes($int8, $com_roguetrader_sudoku_runes0);
+~roguetrader_draw_game($int8, $int9, $com_roguetrader_sudoku_game_clickzones1, $com_roguetrader_sudoku_game_runes7);
+if_setonvartransmit("roguetrader_selectrune_transmit($int8, $com_roguetrader_sudoku_runes0){var540}", $com_roguetrader_sudoku_runes0);
+if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $com_roguetrader_sudoku_game_clickzones1, $com_roguetrader_sudoku_game_runes7){
 	0 = var261, 
 	1 = var262, 
 	2 = var263, 
@@ -20,4 +20,4 @@ if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $widget_292:14
 	9 = var2983, 
 	10 = var2984, 
 	11 = var540
-}", $widget_292:14_1);
+}", $com_roguetrader_sudoku_game_clickzones1);

@@ -1,10 +1,10 @@
 // 298
 [clientscript,bankside_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
-def_int $size11 = inv_size(inv);
-if ($comsubid2 < 0 | $comsubid2 >= $size11) {
+def_int $comsubid11 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $comsubid11) {
 	return;
 }
-if ($dropsubid3 < 0 | $dropsubid3 >= $size11) {
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid11) {
 	return;
 }
 if ($drop0 ! $drop1) {
@@ -50,11 +50,11 @@ if (cc_find($drop0, $comsubid2) = ^true) {
 	);
 }
 switch_obj ($obj12) {
-	case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+	case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 		cc_deleteall($component4);
 	case default :
 		switch_obj ($obj13) {
-			case looting_bag_11941, looting_bag_22586, extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+			case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 				cc_deleteall($component4);
 		}
 }

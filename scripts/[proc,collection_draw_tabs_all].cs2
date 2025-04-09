@@ -1,35 +1,35 @@
 // 2389
 [proc,collection_draw_tabs_all](int $int0)
-~collection_draw_tab(interface_621:4, bosses_471, $int0);
-~collection_draw_tab(interface_621:5, raids_472, $int0);
-~collection_draw_tab(interface_621:6, clues_473, $int0);
-~collection_draw_tab(interface_621:7, minigames_474, $int0);
-~collection_draw_tab(interface_621:8, other_475, $int0);
-if_sethide(true, interface_621:10);
-if_sethide(true, interface_621:13);
-if_sethide(true, interface_621:14);
-if_sethide(true, interface_621:23);
-if_sethide(true, interface_621:24);
-if_sethide(true, interface_621:25);
-if_sethide(true, interface_621:26);
-if_sethide(true, interface_621:28);
-if_sethide(true, interface_621:29);
-if_sethide(true, interface_621:30);
+~collection_draw_tab(collection:boss_tab, bosses_471, $int0);
+~collection_draw_tab(collection:raid_tab, raids_472, $int0);
+~collection_draw_tab(collection:clue_tab, clues_473, $int0);
+~collection_draw_tab(collection:minigame_tab, minigames_474, $int0);
+~collection_draw_tab(collection:other_tab, other_475, $int0);
+if_sethide(true, collection:boss_container);
+if_sethide(true, collection:boss_scrollbar);
+if_sethide(true, collection:raid_container);
+if_sethide(true, collection:raid_scrollbar);
+if_sethide(true, collection:clue_container);
+if_sethide(true, collection:clue_scrollbar);
+if_sethide(true, collection:minigame_container);
+if_sethide(true, collection:minigame_scrollbar);
+if_sethide(true, collection:other_container);
+if_sethide(true, collection:other_scrollbar);
 switch_int ($int0) {
 	case 0 :
-		if_sethide(false, interface_621:10);
-		if_sethide(false, interface_621:13);
+		if_sethide(false, collection:boss_container);
+		if_sethide(false, collection:boss_scrollbar);
 	case 1 :
-		if_sethide(false, interface_621:14);
-		if_sethide(false, interface_621:23);
+		if_sethide(false, collection:raid_container);
+		if_sethide(false, collection:raid_scrollbar);
 	case 2 :
-		if_sethide(false, interface_621:24);
-		if_sethide(false, interface_621:25);
+		if_sethide(false, collection:clue_container);
+		if_sethide(false, collection:clue_scrollbar);
 	case 3 :
-		if_sethide(false, interface_621:26);
-		if_sethide(false, interface_621:28);
+		if_sethide(false, collection:minigame_container);
+		if_sethide(false, collection:minigame_scrollbar);
 	case 4 :
-		if_sethide(false, interface_621:29);
-		if_sethide(false, interface_621:30);
+		if_sethide(false, collection:other_container);
+		if_sethide(false, collection:other_scrollbar);
 }
 ~collection_search_init;

@@ -1,9 +1,9 @@
 // 2755
-[proc,wint_timer_resynch](component $widget_396:26_0)
+[proc,wint_timer_resynch](component $com_wint_status_energy_title0)
 if (%varbit7980 <= 0) {
-	if_setontimer(null, $widget_396:26_0);
+	if_setontimer(null, $com_wint_status_energy_title0);
 	return;
 }
 def_int $int1 = calc(clientclock + %varbit7980 * 30);
-~wint_timer_countdown($widget_396:26_0, $int1);
-if_setontimer("wint_timer_countdown($widget_396:26_0, $int1)", $widget_396:26_0);
+~wint_timer_countdown($com_wint_status_energy_title0, $int1);
+if_setontimer("wint_timer_countdown($com_wint_status_energy_title0, $int1)", $com_wint_status_energy_title0);

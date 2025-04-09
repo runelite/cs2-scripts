@@ -9,19 +9,19 @@ if ($obj0 = ~script3588) {
 } else {
 	$int5 = ~magic_runecount($obj0, inv_getobj(worn, 3), inv_getobj(worn, 5));
 }
-cc_create($component2, ^iftype_graphic, $int3);
+cc_create($component2, ^iftype_graphic, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 cc_setobject_nonum($obj0, 1);
-cc_create($component2, ^iftype_text, $int3);
+cc_create($component2, ^iftype_text, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-.cc_create($component2, ^iftype_graphic, $int3);
+.cc_create($component2, ^iftype_graphic, $int3, false);
 $int3 = calc($int3 + 1);
 if ($int5 >= $int1) {
 	cc_setcolour(0xff981f);

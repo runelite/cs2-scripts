@@ -1,5 +1,5 @@
 // 3483
-[proc,script3483](component $component0, component $widget_670:9_1, component $widget_670:10_2, component $widget_670:11_3, component $widget_670:12_4, component $widget_670:13_5)
+[proc,script3483](component $component0, component $com_death_coffer_11, component $com_death_coffer_52, component $com_death_coffer_x3, component $com_death_coffer_all4, component $com_death_coffer_confirm5)
 def_string $string0 = ",";
 def_obj $obj6 = null;
 def_int $int7 = 0;
@@ -18,9 +18,9 @@ if ($obj6 ! null) {
 				.cc_settext("<~tostring_spacer(%var264, $string0)> coins");
 			}
 			if (calc(^max_32bit_int / %var264) < $int7) {
-				~death_coffer_activebutton($widget_670:13_5, "Many coins", $widget_670:13_5);
+				~death_coffer_activebutton($com_death_coffer_confirm5, "Many coins", $com_death_coffer_confirm5);
 			} else {
-				~death_coffer_activebutton($widget_670:13_5, "<~tostring_spacer(calc($int7 * %var264), $string0)> coins", $widget_670:13_5);
+				~death_coffer_activebutton($com_death_coffer_confirm5, "<~tostring_spacer(calc($int7 * %var264), $string0)> coins", $com_death_coffer_confirm5);
 			}
 		} else if (%var264 = 1) {
 			if ($int7 > 1) {
@@ -28,57 +28,57 @@ if ($obj6 ! null) {
 			} else {
 				.cc_settext("<col=ff0000>1 coin</col>");
 			}
-			~death_coffer_activebutton($widget_670:13_5, "Unacceptable item", $widget_670:13_5);
+			~death_coffer_activebutton($com_death_coffer_confirm5, "Unacceptable item", $com_death_coffer_confirm5);
 		} else {
 			if ($int7 > 1) {
 				.cc_settext("<~tostring_spacer($int7, $string0)> x <col=ff0000><~tostring_spacer(%var264, $string0)> coins</col>");
 			} else {
 				.cc_settext("<col=ff0000><~tostring_spacer(%var264, $string0)> coins</col>");
 			}
-			~death_coffer_activebutton($widget_670:13_5, "Unacceptable item", $widget_670:13_5);
+			~death_coffer_activebutton($com_death_coffer_confirm5, "Unacceptable item", $com_death_coffer_confirm5);
 		}
 	} else {
 		.cc_settext("Select a quantity...");
-		~death_coffer_inactivebutton($widget_670:13_5, "", 0, $widget_670:13_5);
-		if_setontimer(null, $widget_670:13_5);
+		~death_coffer_inactivebutton($com_death_coffer_confirm5, "", 0, $com_death_coffer_confirm5);
+		if_setontimer(null, $com_death_coffer_confirm5);
 	}
 	switch_int (%var263) {
 		case 1 :
-			~death_coffer_inactivebutton($widget_670:9_1, "1", 1, $widget_670:13_5);
-			if_setontimer(null, $widget_670:9_1);
-			~death_coffer_activebutton($widget_670:10_2, "5", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:11_3, "X", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:12_4, "All", $widget_670:13_5);
+			~death_coffer_inactivebutton($com_death_coffer_11, "1", 1, $com_death_coffer_confirm5);
+			if_setontimer(null, $com_death_coffer_11);
+			~death_coffer_activebutton($com_death_coffer_52, "5", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_x3, "X", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_all4, "All", $com_death_coffer_confirm5);
 		case 5 :
-			~death_coffer_activebutton($widget_670:9_1, "1", $widget_670:13_5);
-			~death_coffer_inactivebutton($widget_670:10_2, "5", 1, $widget_670:13_5);
-			if_setontimer(null, $widget_670:10_2);
-			~death_coffer_activebutton($widget_670:11_3, "X", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:12_4, "All", $widget_670:13_5);
+			~death_coffer_activebutton($com_death_coffer_11, "1", $com_death_coffer_confirm5);
+			~death_coffer_inactivebutton($com_death_coffer_52, "5", 1, $com_death_coffer_confirm5);
+			if_setontimer(null, $com_death_coffer_52);
+			~death_coffer_activebutton($com_death_coffer_x3, "X", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_all4, "All", $com_death_coffer_confirm5);
 		case default :
-			~death_coffer_activebutton($widget_670:9_1, "1", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:10_2, "5", $widget_670:13_5);
-			~death_coffer_inactivebutton($widget_670:11_3, "X", 1, $widget_670:13_5);
-			if_setontimer(null, $widget_670:11_3);
-			~death_coffer_activebutton($widget_670:12_4, "All", $widget_670:13_5);
+			~death_coffer_activebutton($com_death_coffer_11, "1", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_52, "5", $com_death_coffer_confirm5);
+			~death_coffer_inactivebutton($com_death_coffer_x3, "X", 1, $com_death_coffer_confirm5);
+			if_setontimer(null, $com_death_coffer_x3);
+			~death_coffer_activebutton($com_death_coffer_all4, "All", $com_death_coffer_confirm5);
 		case ^max_32bit_int :
-			~death_coffer_activebutton($widget_670:9_1, "1", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:10_2, "5", $widget_670:13_5);
-			~death_coffer_activebutton($widget_670:11_3, "X", $widget_670:13_5);
-			~death_coffer_inactivebutton($widget_670:12_4, "All", 1, $widget_670:13_5);
-			if_setontimer(null, $widget_670:12_4);
+			~death_coffer_activebutton($com_death_coffer_11, "1", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_52, "5", $com_death_coffer_confirm5);
+			~death_coffer_activebutton($com_death_coffer_x3, "X", $com_death_coffer_confirm5);
+			~death_coffer_inactivebutton($com_death_coffer_all4, "All", 1, $com_death_coffer_confirm5);
+			if_setontimer(null, $com_death_coffer_all4);
 	}
 } else {
 	cc_settext("Select an item...");
 	.cc_settext("---");
-	~death_coffer_inactivebutton($widget_670:9_1, "1", 0, $widget_670:13_5);
-	if_setontimer(null, $widget_670:9_1);
-	~death_coffer_inactivebutton($widget_670:10_2, "5", 0, $widget_670:13_5);
-	if_setontimer(null, $widget_670:10_2);
-	~death_coffer_inactivebutton($widget_670:11_3, "X", 0, $widget_670:13_5);
-	if_setontimer(null, $widget_670:11_3);
-	~death_coffer_inactivebutton($widget_670:12_4, "All", 0, $widget_670:13_5);
-	if_setontimer(null, $widget_670:12_4);
-	~death_coffer_inactivebutton($widget_670:13_5, "", 0, $widget_670:13_5);
-	if_setontimer(null, $widget_670:13_5);
+	~death_coffer_inactivebutton($com_death_coffer_11, "1", 0, $com_death_coffer_confirm5);
+	if_setontimer(null, $com_death_coffer_11);
+	~death_coffer_inactivebutton($com_death_coffer_52, "5", 0, $com_death_coffer_confirm5);
+	if_setontimer(null, $com_death_coffer_52);
+	~death_coffer_inactivebutton($com_death_coffer_x3, "X", 0, $com_death_coffer_confirm5);
+	if_setontimer(null, $com_death_coffer_x3);
+	~death_coffer_inactivebutton($com_death_coffer_all4, "All", 0, $com_death_coffer_confirm5);
+	if_setontimer(null, $com_death_coffer_all4);
+	~death_coffer_inactivebutton($com_death_coffer_confirm5, "", 0, $com_death_coffer_confirm5);
+	if_setontimer(null, $com_death_coffer_confirm5);
 }

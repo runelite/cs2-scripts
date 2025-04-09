@@ -1,11 +1,11 @@
 // 352
-[proc,script352](component $widget_375:3_0, int $int1)(int)
-def_int $width2 = if_getwidth($widget_375:3_0);
-def_int $height3 = if_getheight($widget_375:3_0);
-def_int $x4 = calc($width2 - 5);
-def_int $y5 = calc($height3 - 5);
+[proc,script352](component $com_soul_wars_game_activity0, int $int1)(int)
+def_int $int2 = if_getwidth($com_soul_wars_game_activity0);
+def_int $int3 = if_getheight($com_soul_wars_game_activity0);
+def_int $int4 = calc($int2 - 5);
+def_int $int5 = calc($int3 - 5);
 ~create_graphic(
-	0 = $widget_375:3_0, 
+	0 = $com_soul_wars_game_activity0, 
 	1 = $int1, 
 	2 = graphic_2897, 
 	3 = 0, 
@@ -19,10 +19,10 @@ def_int $y5 = calc($height3 - 5);
 );
 $int1 = calc($int1 + 1);
 ~create_graphic(
-	0 = $widget_375:3_0, 
+	0 = $com_soul_wars_game_activity0, 
 	1 = $int1, 
 	2 = graphic_2898, 
-	3 = $x4, 
+	3 = $int4, 
 	4 = 0, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
@@ -33,11 +33,11 @@ $int1 = calc($int1 + 1);
 );
 $int1 = calc($int1 + 1);
 ~create_graphic(
-	0 = $widget_375:3_0, 
+	0 = $com_soul_wars_game_activity0, 
 	1 = $int1, 
 	2 = graphic_2899, 
 	3 = 0, 
-	4 = $y5, 
+	4 = $int5, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 5, 
@@ -47,11 +47,11 @@ $int1 = calc($int1 + 1);
 );
 $int1 = calc($int1 + 1);
 ~create_graphic(
-	0 = $widget_375:3_0, 
+	0 = $com_soul_wars_game_activity0, 
 	1 = $int1, 
 	2 = graphic_2900, 
-	3 = $x4, 
-	4 = $y5, 
+	3 = $int4, 
+	4 = $int5, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 5, 

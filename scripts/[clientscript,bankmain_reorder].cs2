@@ -1,5 +1,5 @@
 // 285
-[clientscript,bankmain_reorder](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $trans4, component $component5, component $drop6, component $component7, component $component8)
+[clientscript,bankmain_reorder](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $int4, component $component5, component $drop6, component $component7, component $component8)
 if ($comsubid1 < 0 | $comsubid1 >= 1220) {
 	return;
 }
@@ -11,7 +11,7 @@ def_int $int9 = ~bank_tabforslot($dropsubid3);
 if ($drop2 ! $drop0 | $dropsubid3 < 0 | $dropsubid3 >= 1220 | ~bank_tabforslot($comsubid1) ! $int9) {
 	if (cc_find($drop0, $comsubid1) = ^true) {
 		cc_settrans(200);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int4, calc(clientclock + 10))");
 	}
 	return;
 }
@@ -32,18 +32,18 @@ if (%varbit3959 = 0 | $dropsubid3 = calc($comsubid1 + 1) | $dropsubid3 = calc($c
 if ($obj11 = null | ~bankmain_searching = 1) {
 	if (cc_find($drop0, $comsubid1) = ^true) {
 		cc_settrans(200);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int4, calc(clientclock + 10))");
 	}
 	return;
 }
 def_int $dropsubid12 = -1;
-def_int $slot13 = -1;
+def_int $int13 = -1;
 if ($dropsubid3 < $comsubid1) {
 	$dropsubid12 = $comsubid1;
 	while ($dropsubid12 > $dropsubid3) {
 		if (cc_find($drop0, $dropsubid12) = ^true) {
-			$slot13 = calc($dropsubid12 - 1);
-			~bankmain_drawitem(inv_getobj(bank, $slot13), inv_getnum(bank, $slot13), $drop0, $component5, $drop6, $component7, $component8);
+			$int13 = calc($dropsubid12 - 1);
+			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $drop0, $component5, $drop6, $component7, $component8);
 		}
 		$dropsubid12 = calc($dropsubid12 - 1);
 	}
@@ -51,8 +51,8 @@ if ($dropsubid3 < $comsubid1) {
 	$dropsubid12 = $comsubid1;
 	while ($dropsubid12 < $dropsubid3) {
 		if (cc_find($drop0, $dropsubid12) = ^true) {
-			$slot13 = calc($dropsubid12 + 1);
-			~bankmain_drawitem(inv_getobj(bank, $slot13), inv_getnum(bank, $slot13), $drop0, $component5, $drop6, $component7, $component8);
+			$int13 = calc($dropsubid12 + 1);
+			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $drop0, $component5, $drop6, $component7, $component8);
 		}
 		$dropsubid12 = calc($dropsubid12 + 1);
 	}

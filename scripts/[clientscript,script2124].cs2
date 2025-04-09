@@ -1,17 +1,17 @@
 // 2124
-[clientscript,script2124](component $widget_287:0_0, component $widget_287:10_1, component $widget_287:3_2, component $widget_287:5_3, component $widget_287:7_4)
-cc_deleteall($widget_287:10_1);
-cc_create($widget_287:10_1, ^iftype_graphic, 0);
+[clientscript,script2124](component $com_fossil_underwater_training_universe0, component $com_fossil_underwater_training_bottom1, component $com_fossil_underwater_training_agility2, component $com_fossil_underwater_training_thieving3, component $com_fossil_underwater_training_both4)
+cc_deleteall($com_fossil_underwater_training_bottom1);
+cc_create($com_fossil_underwater_training_bottom1, ^iftype_graphic, 0, false);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-.cc_create($widget_287:10_1, ^iftype_text, 1);
+.cc_create($com_fossil_underwater_training_bottom1, ^iftype_text, 1, false);
 .cc_setcolour(0xff981f);
 .cc_settextfont(p12_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-~script2131($widget_287:10_1);
-if_setoninvtransmit("script2130($widget_287:10_1, cc_getid, .cc_getid){inv}", $widget_287:0_0);
-~script2125($widget_287:3_2, "Agility XP", $widget_287:3_2, $widget_287:5_3, $widget_287:7_4);
-~script2125($widget_287:5_3, "Thieving XP", $widget_287:3_2, $widget_287:5_3, $widget_287:7_4);
-~script2125($widget_287:7_4, "Both skills", $widget_287:3_2, $widget_287:5_3, $widget_287:7_4);
+~script2131($com_fossil_underwater_training_bottom1);
+if_setoninvtransmit("script2130($com_fossil_underwater_training_bottom1, cc_getid, .cc_getid){inv}", $com_fossil_underwater_training_universe0);
+~script2125($com_fossil_underwater_training_agility2, "Agility XP", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);
+~script2125($com_fossil_underwater_training_thieving3, "Thieving XP", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);
+~script2125($com_fossil_underwater_training_both4, "Both skills", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);

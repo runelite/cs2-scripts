@@ -1,12 +1,12 @@
 // 1994
-[clientscript,fossilquest_progress](component $widget_603:5_0, component $widget_603:6_1, component $widget_603:4_2)
-def_int $int3 = interpolate(0, if_getwidth($widget_603:4_2), 0, 100, %varbit5798);
-if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, $widget_603:5_0);
-if_setsize(calc(if_getwidth($widget_603:4_2) - $int3), 0, ^setsize_abs, ^setsize_minus, $widget_603:6_1);
-if ($int3 < calc(if_getwidth($widget_603:4_2) / 4)) {
-	if_setcolour(0xee1111, $widget_603:5_0);
-} else if ($int3 < calc(if_getwidth($widget_603:4_2) / 2)) {
-	if_setcolour(0xeeee11, $widget_603:5_0);
+[clientscript,fossilquest_progress](component $com_fossilquest_sailing_overlay_progress_filled0, component $com_fossilquest_sailing_overlay_progress_empty1, component $com_fossilquest_sailing_overlay_progress_bar2)
+def_int $int3 = interpolate(0, if_getwidth($com_fossilquest_sailing_overlay_progress_bar2), 0, 100, %varbit5798);
+if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, $com_fossilquest_sailing_overlay_progress_filled0);
+if_setsize(calc(if_getwidth($com_fossilquest_sailing_overlay_progress_bar2) - $int3), 0, ^setsize_abs, ^setsize_minus, $com_fossilquest_sailing_overlay_progress_empty1);
+if ($int3 < calc(if_getwidth($com_fossilquest_sailing_overlay_progress_bar2) / 4)) {
+	if_setcolour(0xee1111, $com_fossilquest_sailing_overlay_progress_filled0);
+} else if ($int3 < calc(if_getwidth($com_fossilquest_sailing_overlay_progress_bar2) / 2)) {
+	if_setcolour(0xeeee11, $com_fossilquest_sailing_overlay_progress_filled0);
 } else {
-	if_setcolour(0x11ee11, $widget_603:5_0);
+	if_setcolour(0x11ee11, $com_fossilquest_sailing_overlay_progress_filled0);
 }

@@ -1,26 +1,26 @@
 // 3757
 [clientscript,script3757]
-cc_deleteall(interface_119:5);
-cc_deleteall(interface_119:6);
-if_setscrollpos(0, 0, interface_119:5);
-if_setscrollsize(0, 0, interface_119:5);
-def_int $count0 = enum_getoutputcount(enum_1540);
-def_int $count1 = 0;
-while ($count1 < $count0) {
-	cc_create(interface_119:5, ^iftype_rectangle, $count1);
-	$count1 = calc($count1 + 1);
+cc_deleteall(questjournal:textlayer);
+cc_deleteall(questjournal:scrollbar);
+if_setscrollpos(0, 0, questjournal:textlayer);
+if_setscrollsize(0, 0, questjournal:textlayer);
+def_int $int0 = enum_getoutputcount(enum_1540);
+def_int $int1 = 0;
+while ($int1 < $int0) {
+	cc_create(questjournal:textlayer, ^iftype_rectangle, $int1, false);
+	$int1 = calc($int1 + 1);
 	cc_sethide(true);
 	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 }
-def_int $int2 = calc(if_getwidth(interface_119:5) / 2);
+def_int $int2 = calc(if_getwidth(questjournal:textlayer) / 2);
 def_int $int3 = calc($int2 - 5);
 def_int $int4 = calc($int2 + 5);
-$count1 = ~recipe_for_disaster_button(0, 0, 0, mountain_dwarf_3390, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button($int4, 0, 1, general_wartface_3391, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button(0, 50, 2, pirate_pete_3389, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button($int4, 50, 3, lumbridge_guide_3393, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button(0, 100, 4, evil_dave_3394, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button($int4, 100, 5, skrach_uglogwee_3398, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button(0, 150, 6, sir_amik_varze_3395, $int3, $count1, interface_119:5);
-$count1 = ~recipe_for_disaster_button($int4, 150, 7, awowogei_3396, $int3, $count1, interface_119:5);
+$int1 = ~recipe_for_disaster_button(0, 0, 0, 100_dwarf_mountain_3390, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button($int4, 0, 1, 100_general_wartface_3391, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button(0, 50, 2, 100_pirate_3389, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button($int4, 50, 3, 100_lumbridge_guide_3393, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button(0, 100, 4, 100_agrith_dave_3394, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button($int4, 100, 5, 100_skrach_uglogwee_3398, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button(0, 150, 6, 100_sir_amik_varze_3395, $int3, $int1, questjournal:textlayer);
+$int1 = ~recipe_for_disaster_button($int4, 150, 7, 100_mm_awowogei_cutscene_3396, $int3, $int1, questjournal:textlayer);

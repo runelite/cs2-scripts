@@ -1,11 +1,11 @@
 // 1043
-[clientscript,zoom_slider_dragcomplete](component $widget_116:58_0, component $widget_116:57_1, int $mousex2)
+[clientscript,zoom_slider_dragcomplete](component $com_settings_side_zoom_slider_bobble0, component $com_settings_side_zoom_slider1, int $mousex2)
 ~settings_side_op_sound;
-if ($widget_116:58_0 ! interface_116:58) {
+if ($com_settings_side_zoom_slider_bobble0 ! settings_side:zoom_slider_bobble) {
 	return;
 }
 if (%varbit4606 ! 0) {
 	return;
 }
 ~zoom_position_slider;
-if_setontimer("zoom_timer(%varcint73, %varcint74)", interface_116:58);
+if_setontimer("zoom_timer(%varcint73, %varcint74)", settings_side:zoom_slider_bobble);

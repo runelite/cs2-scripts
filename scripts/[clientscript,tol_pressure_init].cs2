@@ -1,12 +1,12 @@
 // 1427
-[clientscript,tol_pressure_init](component $widget_510:0_0)
+[clientscript,tol_pressure_init](component $com_tol_pressure_machine_com_00)
 ~tol_pressure_draw;
-if_setonvartransmit("tol_pressure_draw{var977, var978}", $widget_510:0_0);
-~tol_pressure_valveinit("Turn-left", interface_510:128, 1, 0);
-~tol_pressure_valveinit("Turn-right", interface_510:129, 1, 0);
-~tol_pressure_valveinit("Turn-left", interface_510:130, 1, 1);
-~tol_pressure_valveinit("Turn-right", interface_510:131, 1, 1);
-~tol_pressure_valveinit("Turn-left", interface_510:132, 2, 0);
-~tol_pressure_valveinit("Turn-right", interface_510:133, 2, 0);
-~tol_pressure_valveinit("Turn-left", interface_510:134, 2, 1);
-~tol_pressure_valveinit("Turn-right", interface_510:135, 2, 1);
+if_setonvartransmit("tol_pressure_draw{var977, var978}", $com_tol_pressure_machine_com_00);
+~tol_pressure_valveinit("Turn-left", tol_pressure_machine:valve_1_left, 1, 0);
+~tol_pressure_valveinit("Turn-right", tol_pressure_machine:valve_1_right, 1, 0);
+~tol_pressure_valveinit("Turn-left", tol_pressure_machine:valve_2_left, 1, 1);
+~tol_pressure_valveinit("Turn-right", tol_pressure_machine:valve_2_right, 1, 1);
+~tol_pressure_valveinit("Turn-left", tol_pressure_machine:valve_3_left, 2, 0);
+~tol_pressure_valveinit("Turn-right", tol_pressure_machine:valve_3_right, 2, 0);
+~tol_pressure_valveinit("Turn-left", tol_pressure_machine:valve_4_left, 2, 1);
+~tol_pressure_valveinit("Turn-right", tol_pressure_machine:valve_4_right, 2, 1);

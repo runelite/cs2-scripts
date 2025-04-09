@@ -28,7 +28,7 @@ if (~on_mobile = true) {
 if ($int17 = 1) {
 	~chatdefault_stopinput;
 }
-def_int $height20 = 0;
+def_int $int20 = 0;
 def_int $int21 = 1;
 def_int $int22 = 1;
 def_int $int23 = 1;
@@ -38,14 +38,14 @@ while ($int21 <= $int12) {
 	$int16 = ~telenexus_get_slot($int21);
 	$struct15 = enum(int, struct, enum_1377, $int16);
 	if ($struct15 ! null) {
-		$int13, $int23, $height20, $int22 = ~script2675(
+		$int13, $int23, $int20, $int22 = ~script2675(
 			0 = $component9, 
 			1 = $component1, 
 			2 = $component2, 
 			3 = $int19, 
 			4 = $int13, 
 			5 = $int18, 
-			6 = $height20, 
+			6 = $int20, 
 			7 = $struct15, 
 			8 = $int23, 
 			9 = $int17, 
@@ -56,14 +56,14 @@ while ($int21 <= $int12) {
 		if ($struct15 ! null) {
 			$int24, $string0 = ~script2664($struct15);
 			if ($int24 = 1) {
-				$int14, $int23, $height20, $int22 = ~script2675(
+				$int14, $int23, $int20, $int22 = ~script2675(
 					0 = $component10, 
 					1 = $component6, 
 					2 = $component8, 
 					3 = $int19, 
 					4 = $int14, 
 					5 = $int18, 
-					6 = $height20, 
+					6 = $int20, 
 					7 = $struct15, 
 					8 = $int23, 
 					9 = $int17, 
@@ -71,13 +71,13 @@ while ($int21 <= $int12) {
 					11 = $component7
 				);
 			} else {
-				cc_create($component6, ^iftype_text, $int14);
+				cc_create($component6, ^iftype_text, $int14, false);
 				cc_sethide(true);
-				cc_create($component10, ^iftype_rectangle, $int14);
+				cc_create($component10, ^iftype_rectangle, $int14, false);
 				cc_sethide(true);
-				cc_create($component7, ^iftype_rectangle, $int14);
+				cc_create($component7, ^iftype_rectangle, $int14, false);
 				cc_sethide(true);
-				cc_create($component8, ^iftype_graphic, $int14);
+				cc_create($component8, ^iftype_graphic, $int14, false);
 				cc_sethide(true);
 				$int14 = calc($int14 + 1);
 			}
@@ -85,8 +85,8 @@ while ($int21 <= $int12) {
 	}
 	$int21 = calc($int21 + 1);
 }
-if ($height20 > if_getheight($component0)) {
-	if_setscrollsize(0, $height20, $component3);
+if ($int20 > if_getheight($component0)) {
+	if_setscrollsize(0, $int20, $component3);
 } else {
 	if_setscrollsize(0, 0, $component3);
 	if_setscrollpos(0, 0, $component3);

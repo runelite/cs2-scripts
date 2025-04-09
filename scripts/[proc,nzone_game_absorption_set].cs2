@@ -40,13 +40,13 @@ if (cc_find($component0, 3) = ^true & .cc_find($component0, 5) = ^true) {
 	cc_sethide(false);
 	.cc_sethide(false);
 	if ($int1 < interpolate(0, 40, 0, 100, 50)) {
-		cc_setobject(absorption_1_11737, 1);
+		cc_setobject(nzone1doseabsorptionpotion_11737, 1);
 	} else if ($int1 < interpolate(0, 75, 0, 100, 50)) {
-		cc_setobject(absorption_2_11736, 1);
+		cc_setobject(nzone2doseabsorptionpotion_11736, 1);
 	} else if ($int1 < interpolate(0, 95, 0, 100, 50)) {
-		cc_setobject(absorption_3_11735, 1);
+		cc_setobject(nzone3doseabsorptionpotion_11735, 1);
 	} else {
-		cc_setobject(absorption_4_11734, 1);
+		cc_setobject(nzone4doseabsorptionpotion_11734, 1);
 	}
 	if ($int1 < $int2) {
 		$int3 = $int1;

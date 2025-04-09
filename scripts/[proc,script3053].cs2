@@ -1,17 +1,17 @@
 // 3053
-[proc,script3053](component $widget_366:12_0, component $widget_366:13_1, component $widget_366:14_2)
+[proc,script3053](component $com_trawler_overlay_net0, component $com_trawler_overlay_catch1, component $com_trawler_overlay_time2)
 def_string $string0 = "";
 def_int $int3 = ~min(4000, scale(%varbit9346, 1000, interpolate(1000, 1500, 100, 255, %varbit3377)));
 if (calc(%varbit12120 + %varbit12121) > 0) {
-	if_settext("Net: <col=dd0000>Kraken attack!</col>", $widget_366:12_0);
+	if_settext("Net: <col=dd0000>Kraken attack!</col>", $com_trawler_overlay_net0);
 } else {
 	if (%varbit12123 ! 0 | %varbit12124 ! 0) {
 		$string0 = " - Rail: <col=dd0000>Broken!</col>";
 	}
 	if (%varbit9344 = 1) {
-		if_settext("Net: <col=dd0000>Ripped!</col><$string0>", $widget_366:12_0);
+		if_settext("Net: <col=dd0000>Ripped!</col><$string0>", $com_trawler_overlay_net0);
 	} else {
-		if_settext("Net: <col=00ff00>OK</col><$string0>", $widget_366:12_0);
+		if_settext("Net: <col=00ff00>OK</col><$string0>", $com_trawler_overlay_net0);
 	}
 }
 def_string $string1 = ",";
@@ -20,16 +20,16 @@ if (%varbit3377 >= 50) {
 	$string2 = "<col=ffffff>";
 }
 if ($int3 <= 0) {
-	if_settext("Catch: <$string2>Nothing", $widget_366:13_1);
+	if_settext("Catch: <$string2>Nothing", $com_trawler_overlay_catch1);
 } else if ($int3 < 4000) {
-	if_settext("Catch: <$string2><~tostring_spacer($int3, $string1)> fish", $widget_366:13_1);
+	if_settext("Catch: <$string2><~tostring_spacer($int3, $string1)> fish", $com_trawler_overlay_catch1);
 } else {
-	if_settext("Catch: Lots!", $widget_366:13_1);
+	if_settext("Catch: Lots!", $com_trawler_overlay_catch1);
 }
 if (%varbit9345 <= 0) {
-	if_settext("Time left: Under 1 min", $widget_366:14_2);
+	if_settext("Time left: Under 1 min", $com_trawler_overlay_time2);
 } else if (%varbit9345 = 1) {
-	if_settext("Time left: 1 min", $widget_366:14_2);
+	if_settext("Time left: 1 min", $com_trawler_overlay_time2);
 } else {
-	if_settext("Time left: <tostring(%varbit9345)> mins", $widget_366:14_2);
+	if_settext("Time left: <tostring(%varbit9345)> mins", $com_trawler_overlay_time2);
 }

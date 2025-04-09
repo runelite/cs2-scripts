@@ -1,9 +1,9 @@
 // 2685
-[clientscript,telenexus_keyinput_listener](int $key0, char $keychar1, component $component2, int $comsubid3, int $key4, string $string0, string $string1, int $int5, int $clock6)
-if (clientclock < $clock6) {
+[clientscript,telenexus_keyinput_listener](int $key0, char $keychar1, component $component2, int $comsubid3, int $key4, string $string0, string $string1, int $int5, int $int6)
+if (clientclock < $int6) {
 	return;
 }
-if (~keypress_permit(null, overlayinterface_162) = 0) {
+if (~keypress_permit(null, chatbox) = 0) {
 	return;
 }
 def_int $int7 = 0;
@@ -14,4 +14,4 @@ if ($key0 ! null & $key0 = $key4) {
 } else {
 	return;
 }
-~telenexus_keyinput_matched($component2, $comsubid3, $key4, $string0, $string1, $int5, $clock6);
+~telenexus_keyinput_matched($component2, $comsubid3, $key4, $string0, $string1, $int5, $int6);

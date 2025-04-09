@@ -1,22 +1,22 @@
 // 7469
-[clientscript,script7469](component $widget_894:6_0, int $widget_894:5_1, component $widget_894:10_2, component $widget_894:20_3, component $widget_894:14_4, component $widget_894:24_5, component $widget_894:12_6, component $widget_894:13_7, component $widget_894:7_8, component $widget_894:8_9, component $widget_894:9_10)
-~script7520($widget_894:10_2, $widget_894:20_3, $widget_894:14_4, $widget_894:24_5, $widget_894:12_6);
-~script7525($widget_894:13_7);
+[clientscript,script7469](component $com_hiscores_hiscores_container0, int $com_hiscores_hiscores_scrollbar1, component $com_hiscores_hiscores_dropdown2, component $com_hiscores_dropdown_panel3, component $com_hiscores_dropdown_close4, component $com_hiscores_dropdown_buttons5, component $com_hiscores_dropdown_container6, component $com_hiscores_hiscores_text_input7, component $com_hiscores_hiscores_skills8, component $com_hiscores_hiscores_activities9, component $com_hiscores_hiscores_bosses10)
+~script7520($com_hiscores_hiscores_dropdown2, $com_hiscores_dropdown_panel3, $com_hiscores_dropdown_close4, $com_hiscores_dropdown_buttons5, $com_hiscores_dropdown_container6);
+~script7525($com_hiscores_hiscores_text_input7);
 cc_input_setonsubmit("script7527(event_com, event_comsubid)");
-cc_input_setonfocuschange("script7526(event_com, event_comsubid)");
+cc_input_setonfocuschanged("script7526(event_com, event_comsubid)");
 if (~script7487 = 1) {
 	~script7490;
 	~script7495;
 	~script7500;
 } else {
-	~script7472($widget_894:7_8);
-	~script7478($widget_894:8_9);
-	~script7483($widget_894:9_10);
+	~script7472($com_hiscores_hiscores_skills8);
+	~script7478($com_hiscores_hiscores_activities9);
+	~script7483($com_hiscores_hiscores_bosses10);
 }
 ~script7511;
-if_setonresize("script7510", $widget_894:6_0);
+if_setonresize("script7510", $com_hiscores_hiscores_container0);
 if (hiscore_getstatus = 2) {
 	~script6717;
 } else if (string_length(%varcstring1233) > 0) {
-	if_setontimer("script7470(clientclock, $widget_894:6_0)", $widget_894:6_0);
+	if_setontimer("script7470(clientclock, $com_hiscores_hiscores_container0)", $com_hiscores_hiscores_container0);
 }

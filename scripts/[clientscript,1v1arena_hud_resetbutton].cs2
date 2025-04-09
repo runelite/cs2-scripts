@@ -1,6 +1,6 @@
 // 2715
-[clientscript,1v1arena_hud_resetbutton](component $component0, int $comsubid1, int $clock2)
-if (clientclock < $clock2) {
+[clientscript,1v1arena_hud_resetbutton](component $component0, int $comsubid1, int $int2)
+if (clientclock < $int2) {
 	return;
 }
 if (cc_find($component0, $comsubid1) = ^true) {

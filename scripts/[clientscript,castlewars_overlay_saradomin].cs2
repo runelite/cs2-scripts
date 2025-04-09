@@ -1,49 +1,53 @@
 // 887
-[clientscript,castlewars_overlay_saradomin](component $widget_58:5_0, component $widget_58:7_1, component $widget_58:9_2, component $widget_58:11_3, component $widget_58:13_4, component $widget_58:15_5, component $widget_58:23_6, component $widget_58:25_7, component $widget_58:28_8, component $widget_58:27_9, component $widget_58:18_10)
+[clientscript,castlewars_overlay_saradomin](component $com_castlewars_status_overlay_saradomin_maindoor0, component $com_castlewars_status_overlay_saradomin_sidedoor1, component $com_castlewars_status_overlay_saradomin_tunnel12, component $com_castlewars_status_overlay_saradomin_tunnel23, component $com_castlewars_status_overlay_saradomin_catapult4, component $com_castlewars_status_overlay_saradomin_barricades5, component $com_castlewars_status_overlay_saradomin_saradominflag6, component $com_castlewars_status_overlay_saradomin_zamorakflag7, component $com_castlewars_status_overlay_saradomin_saradominscore8, component $com_castlewars_status_overlay_saradomin_zamorakscore9, component $com_castlewars_status_overlay_saradomin_timer10)
 if (%varbit136 > 0) {
-	if_settext("Health <tostring(%varbit136)>%", $widget_58:5_0);
+	if_settext("Health <tostring(%varbit136)>%", $com_castlewars_status_overlay_saradomin_maindoor0);
 } else {
-	if_settext("<col=ff0000>Health <tostring(%varbit136)>%</col>", $widget_58:5_0);
+	if_settext("<col=ff0000>Health <tostring(%varbit136)>%</col>", $com_castlewars_status_overlay_saradomin_maindoor0);
 }
 if (%varbit137 = 1) {
-	if_settext("<col=ff0000>Unlocked</col>", $widget_58:7_1);
+	if_settext("<col=ff0000>Unlocked</col>", $com_castlewars_status_overlay_saradomin_sidedoor1);
 } else {
-	if_settext("Locked", $widget_58:7_1);
+	if_settext("Locked", $com_castlewars_status_overlay_saradomin_sidedoor1);
 }
 if (%varbit138 = 1) {
-	if_settext("<col=ff0000>Cleared</col>", $widget_58:9_2);
+	if_settext("<col=ff0000>Cleared</col>", $com_castlewars_status_overlay_saradomin_tunnel12);
 } else {
-	if_settext("Collapsed", $widget_58:9_2);
+	if_settext("Collapsed", $com_castlewars_status_overlay_saradomin_tunnel12);
 }
 if (%varbit139 = 1) {
-	if_settext("<col=ff0000>Cleared</col>", $widget_58:11_3);
+	if_settext("<col=ff0000>Cleared</col>", $com_castlewars_status_overlay_saradomin_tunnel23);
 } else {
-	if_settext("Collapsed", $widget_58:11_3);
+	if_settext("Collapsed", $com_castlewars_status_overlay_saradomin_tunnel23);
 }
 if (%varbit140 = 1) {
-	if_settext("<col=ff0000>Destroyed</col>", $widget_58:13_4);
+	if_settext("<col=ff0000>Destroyed</col>", $com_castlewars_status_overlay_saradomin_catapult4);
 } else {
-	if_settext("Operational", $widget_58:13_4);
+	if_settext("Operational", $com_castlewars_status_overlay_saradomin_catapult4);
 }
-if_settext("<tostring(%varbit16198)>/10 Inside<br><tostring(%varbit16199)>/7 Outside", $widget_58:15_5);
-if (%varbit143 = 0) {
-	if_settext("Safe", $widget_58:23_6);
-} else if (%varbit143 = 1) {
-	if_settext("<col=ff0000>Taken</col>", $widget_58:23_6);
-} else if (%varbit143 = 2) {
-	if_settext("<col=ffff00>Dropped</col>", $widget_58:23_6);
+if (%varbit16207 = 1) {
+	if_settext("<tostring(%varbit16198)>/10 Inside<br><tostring(%varbit16199)>/7 Outside", $com_castlewars_status_overlay_saradomin_barricades5);
 } else {
-	if_settext("", $widget_58:23_6);
+	if_settext("<tostring(%varbit16198)>/10 Barricades", $com_castlewars_status_overlay_saradomin_barricades5);
+}
+if (%varbit143 = 0) {
+	if_settext("Safe", $com_castlewars_status_overlay_saradomin_saradominflag6);
+} else if (%varbit143 = 1) {
+	if_settext("<col=ff0000>Taken</col>", $com_castlewars_status_overlay_saradomin_saradominflag6);
+} else if (%varbit143 = 2) {
+	if_settext("<col=ffff00>Dropped</col>", $com_castlewars_status_overlay_saradomin_saradominflag6);
+} else {
+	if_settext("", $com_castlewars_status_overlay_saradomin_saradominflag6);
 }
 if (%varbit153 = 0) {
-	if_settext("Safe", $widget_58:25_7);
+	if_settext("Safe", $com_castlewars_status_overlay_saradomin_zamorakflag7);
 } else if (%varbit153 = 1) {
-	if_settext("<col=ff0000>Taken</col>", $widget_58:25_7);
+	if_settext("<col=ff0000>Taken</col>", $com_castlewars_status_overlay_saradomin_zamorakflag7);
 } else if (%varbit153 = 2) {
-	if_settext("<col=ffff00>Dropped</col>", $widget_58:25_7);
+	if_settext("<col=ffff00>Dropped</col>", $com_castlewars_status_overlay_saradomin_zamorakflag7);
 } else {
-	if_settext("", $widget_58:25_7);
+	if_settext("", $com_castlewars_status_overlay_saradomin_zamorakflag7);
 }
-if_settext("<tostring(%varbit145)> = Saradomin", $widget_58:28_8);
-if_settext("Zamorak = <tostring(%varbit155)>", $widget_58:27_9);
-if_settext("<tostring(%var380)> Min", $widget_58:18_10);
+if_settext("<tostring(%varbit145)> = Saradomin", $com_castlewars_status_overlay_saradomin_saradominscore8);
+if_settext("Zamorak = <tostring(%varbit155)>", $com_castlewars_status_overlay_saradomin_zamorakscore9);
+if_settext("<tostring(%var380)> Min", $com_castlewars_status_overlay_saradomin_timer10);

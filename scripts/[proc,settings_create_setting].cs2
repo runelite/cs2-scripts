@@ -76,13 +76,13 @@ if ($int22 = 1) {
 $int28 = 0;
 $int30 = 0;
 if ($int27 = 1) {
-	cc_create($component8, ^iftype_rectangle, $int3);
+	cc_create($component8, ^iftype_rectangle, $int3, false);
 	cc_sethide(true);
 	$int3 = calc($int3 + 1);
 	if ($int26 = 1 & struct_param($struct0, param_1105) = true) {
 		$int30 = struct_param($struct0, param_1101);
 		while ($int28 < $int30) {
-			cc_create($component17, ^iftype_rectangle, $int4);
+			cc_create($component17, ^iftype_rectangle, $int4, false);
 			$int4 = calc($int4 + 1);
 			$int28 = calc($int28 + 1);
 		}
@@ -237,7 +237,7 @@ switch_int ($int26) {
 			8 = $int7
 		);
 	case default :
-		cc_create($component8, ^iftype_rectangle, $int3);
+		cc_create($component8, ^iftype_rectangle, $int3, false);
 		cc_sethide(true);
 		$int3 = calc($int3 + 1);
 }

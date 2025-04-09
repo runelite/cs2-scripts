@@ -1,8 +1,8 @@
 // 4284
-[clientscript,clan_info_init](component $widget_690:1_0, component $widget_690:2_1, component $widget_690:4_2, component $widget_690:6_3, component $widget_690:18_4, component $widget_690:19_5, component $widget_690:20_6, component $widget_690:21_7, component $widget_690:22_8, component $widget_690:23_9, component $widget_690:24_10, component $widget_690:25_11, component $widget_690:26_12)
-def_int $comsubid13 = ~steelborder($widget_690:2_1, "", 1);
-cc_deleteall($widget_690:4_2);
-cc_create($widget_690:4_2, ^iftype_text, 0);
+[clientscript,clan_info_init](component $com_clans_info_universe0, component $com_clans_info_frame1, component $com_clans_info_contents2, component $com_clans_info_info_container3, component $com_clans_info_button_container4, component $com_clans_info_events5, component $com_clans_info_members6, component $com_clans_info_applications7, component $com_clans_info_hall8, component $com_clans_info_permissions9, component $com_clans_info_titles10, component $com_clans_info_banned11, component $com_clans_info_quit12)
+def_int $comsubid13 = ~steelborder($com_clans_info_frame1, "", 1);
+cc_deleteall($com_clans_info_contents2);
+cc_create($com_clans_info_contents2, ^iftype_text, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -12,56 +12,56 @@ cc_settextshadow(true);
 cc_settext("Loading...");
 def_int $comsubid14 = cc_getid;
 ~clan_info_draw(
-	0 = $widget_690:2_1, 
+	0 = $com_clans_info_frame1, 
 	1 = $comsubid13, 
-	2 = $widget_690:4_2, 
+	2 = $com_clans_info_contents2, 
 	3 = $comsubid14, 
-	4 = $widget_690:6_3, 
-	5 = $widget_690:18_4, 
-	6 = $widget_690:19_5, 
-	7 = $widget_690:20_6, 
-	8 = $widget_690:21_7, 
-	9 = $widget_690:22_8, 
-	10 = $widget_690:23_9, 
-	11 = $widget_690:25_11, 
-	12 = $widget_690:26_12
+	4 = $com_clans_info_info_container3, 
+	5 = $com_clans_info_button_container4, 
+	6 = $com_clans_info_events5, 
+	7 = $com_clans_info_members6, 
+	8 = $com_clans_info_applications7, 
+	9 = $com_clans_info_hall8, 
+	10 = $com_clans_info_permissions9, 
+	11 = $com_clans_info_banned11, 
+	12 = $com_clans_info_quit12
 );
 if_setonvartransmit("clan_info_draw(
-	0 = $widget_690:2_1, 
+	0 = $com_clans_info_frame1, 
 	1 = $comsubid13, 
-	2 = $widget_690:4_2, 
+	2 = $com_clans_info_contents2, 
 	3 = $comsubid14, 
-	4 = $widget_690:6_3, 
-	5 = $widget_690:18_4, 
-	6 = $widget_690:19_5, 
-	7 = $widget_690:20_6, 
-	8 = $widget_690:21_7, 
-	9 = $widget_690:22_8, 
-	10 = $widget_690:23_9, 
-	11 = $widget_690:25_11, 
-	12 = $widget_690:26_12
-){var3019}", $widget_690:1_0);
+	4 = $com_clans_info_info_container3, 
+	5 = $com_clans_info_button_container4, 
+	6 = $com_clans_info_events5, 
+	7 = $com_clans_info_members6, 
+	8 = $com_clans_info_applications7, 
+	9 = $com_clans_info_hall8, 
+	10 = $com_clans_info_permissions9, 
+	11 = $com_clans_info_banned11, 
+	12 = $com_clans_info_quit12
+){var3019}", $com_clans_info_universe0);
 if_setonclansettingstransmit("clan_info_draw(
-	0 = $widget_690:2_1, 
+	0 = $com_clans_info_frame1, 
 	1 = $comsubid13, 
-	2 = $widget_690:4_2, 
+	2 = $com_clans_info_contents2, 
 	3 = $comsubid14, 
-	4 = $widget_690:6_3, 
-	5 = $widget_690:18_4, 
-	6 = $widget_690:19_5, 
-	7 = $widget_690:20_6, 
-	8 = $widget_690:21_7, 
-	9 = $widget_690:22_8, 
-	10 = $widget_690:23_9, 
-	11 = $widget_690:25_11, 
-	12 = $widget_690:26_12
-)", $widget_690:1_0);
-~stonebutton_init("Titles", $widget_690:24_10, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_690:24_10);
-if_setonop("opsound(event_op, 2)", $widget_690:19_5);
-if_setonop("opsound(event_op, 2)", $widget_690:20_6);
-if_setonop("opsound(event_op, 2)", $widget_690:21_7);
-if_setonop("opsound(event_op, 2)", $widget_690:22_8);
-if_setonop("opsound(event_op, 2)", $widget_690:23_9);
-if_setonop("opsound(event_op, 2)", $widget_690:25_11);
-if_setonop("opsound(event_op, 2)", $widget_690:26_12);
+	4 = $com_clans_info_info_container3, 
+	5 = $com_clans_info_button_container4, 
+	6 = $com_clans_info_events5, 
+	7 = $com_clans_info_members6, 
+	8 = $com_clans_info_applications7, 
+	9 = $com_clans_info_hall8, 
+	10 = $com_clans_info_permissions9, 
+	11 = $com_clans_info_banned11, 
+	12 = $com_clans_info_quit12
+)", $com_clans_info_universe0);
+~stonebutton_init("Titles", $com_clans_info_titles10, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_clans_info_titles10);
+if_setonop("opsound(event_op, 2)", $com_clans_info_events5);
+if_setonop("opsound(event_op, 2)", $com_clans_info_members6);
+if_setonop("opsound(event_op, 2)", $com_clans_info_applications7);
+if_setonop("opsound(event_op, 2)", $com_clans_info_hall8);
+if_setonop("opsound(event_op, 2)", $com_clans_info_permissions9);
+if_setonop("opsound(event_op, 2)", $com_clans_info_banned11);
+if_setonop("opsound(event_op, 2)", $com_clans_info_quit12);

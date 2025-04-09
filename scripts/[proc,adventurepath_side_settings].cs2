@@ -1,12 +1,12 @@
 // 3023
-[proc,adventurepath_side_settings](component $widget_644:12_0, component $widget_644:7_1, component $widget_644:1_2)
+[proc,adventurepath_side_settings](component $com_adventurepath_side_settings0, component $com_adventurepath_side_main1, component $com_adventurepath_side_settings_tab2)
 def_int $comsubid3 = 0;
-$comsubid3 = ~v2_stone_button_filled($widget_644:12_0);
-cc_create($widget_644:12_0, ^iftype_graphic, $comsubid3);
+$comsubid3 = ~v2_stone_button_filled($com_adventurepath_side_settings0);
+cc_create($com_adventurepath_side_settings0, ^iftype_graphic, $comsubid3, false);
 cc_setgraphic(graphic_2209);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
-if_setop(1, "Show<col=ff9040> Settings", $widget_644:12_0);
-if_setonop("adventurepath_side_settings_button_op($widget_644:7_1, $widget_644:1_2)", $widget_644:12_0);
-if_setonmouseover("adventurepath_side_settings_mouseover($widget_644:12_0, $comsubid3)", $widget_644:12_0);
-if_setonmouseleave("adventurepath_side_settings_mouseleave($widget_644:12_0, $comsubid3)", $widget_644:12_0);
+if_setop(1, "Show<col=ff9040> Settings", $com_adventurepath_side_settings0);
+if_setonop("adventurepath_side_settings_button_op($com_adventurepath_side_main1, $com_adventurepath_side_settings_tab2)", $com_adventurepath_side_settings0);
+if_setonmouseover("adventurepath_side_settings_mouseover($com_adventurepath_side_settings0, $comsubid3)", $com_adventurepath_side_settings0);
+if_setonmouseleave("adventurepath_side_settings_mouseleave($com_adventurepath_side_settings0, $comsubid3)", $com_adventurepath_side_settings0);

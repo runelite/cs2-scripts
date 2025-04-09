@@ -1,28 +1,28 @@
 // 1707
-[clientscript,worldmap_init](component $widget_595:2_0, component $widget_595:1_1, component $widget_595:5_2, component $widget_595:7_3, component $widget_595:9_4, component $widget_595:14_5, component $widget_595:10_6, component $widget_595:13_7, component $widget_595:29_8, component $widget_595:24_9, component $widget_595:21_10, component $widget_595:25_11, component $widget_595:26_12, component $widget_595:31_13, component $widget_595:32_14, component $widget_595:33_15, component $widget_595:35_16, component $widget_595:36_17, component $widget_595:27_18, component $widget_595:28_19, component $widget_595:16_20, component $widget_595:19_21, component $widget_595:20_22, component $widget_595:41_23, component $widget_595:42_24)
-~script4729($widget_595:1_1, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
-if_setonscrollwheel("worldmap_zoom_scroll(event_mousey, $widget_595:27_18, $widget_595:28_19)", $widget_595:9_4);
-if_setpinch(true, $widget_595:9_4);
-~worldmap_overview_toggle(false, $widget_595:10_6, $widget_595:29_8);
-cc_deleteall($widget_595:2_0);
+[clientscript,worldmap_init](component $com_worldmap_content0, component $com_worldmap_safezone1, component $com_worldmap_window2, component $com_worldmap_map_container3, component $com_worldmap_map_overlay4, component $com_worldmap_side5, component $com_worldmap_overview_container6, component $com_worldmap_overview_overlay7, component $com_worldmap_overview_toggle8, component $com_worldmap_key_toggle9, component $com_worldmap_toggles10, component $com_worldmap_search11, component $com_worldmap_maplist_display12, component $com_worldmap_maplist_container13, component $com_worldmap_maplist_close14, component $com_worldmap_maplist_box15, component $com_worldmap_maplist_list16, component $com_worldmap_maplist_scrollbar17, component $com_worldmap_zoom_out18, component $com_worldmap_zoom_in19, component $com_worldmap_key_container20, component $com_worldmap_key_entries21, component $com_worldmap_key_scrollbar22, component $com_worldmap_tooltip23, component $com_worldmap_resize_preview24)
+~script4729($com_worldmap_safezone1, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
+if_setonscrollwheel("worldmap_zoom_scroll(event_mousey, $com_worldmap_zoom_out18, $com_worldmap_zoom_in19)", $com_worldmap_map_overlay4);
+if_setpinch(true, $com_worldmap_map_overlay4);
+~worldmap_overview_toggle(false, $com_worldmap_overview_container6, $com_worldmap_overview_toggle8);
+cc_deleteall($com_worldmap_content0);
 def_int $int25 = 0;
 if (~toplevel_getcomponents ! enum_1132) {
 	while ($int25 < 8) {
-		cc_create($widget_595:2_0, ^iftype_graphic, $int25);
+		cc_create($com_worldmap_content0, ^iftype_graphic, $int25, false);
 		cc_sethide(false);
 		cc_settiling(true);
 		cc_settrans(255);
 		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 75, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
-		cc_setdraggable($widget_595:2_0, -1);
+		cc_setdraggable($com_worldmap_content0, -1);
 		cc_setdragdeadzone(1);
 		cc_setdragdeadtime(5);
 		$int25 = calc($int25 + 1);
 	}
-	cc_deleteall($widget_595:42_24);
+	cc_deleteall($com_worldmap_resize_preview24);
 	$int25 = 0;
 	while ($int25 < 4) {
-		cc_create($widget_595:42_24, ^iftype_rectangle, $int25);
+		cc_create($com_worldmap_resize_preview24, ^iftype_rectangle, $int25, false);
 		cc_sethide(false);
 		cc_setsize(calc($int25 * 2), calc($int25 * 2), ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -33,10 +33,10 @@ if (~toplevel_getcomponents ! enum_1132) {
 	}
 }
 def_int $int26 = calc((4 + 1) * 21);
-if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $widget_595:16_20);
-if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $widget_595:21_10);
+if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $com_worldmap_key_container20);
+if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $com_worldmap_toggles10);
 def_int $intarray0(~max(enum_getoutputcount(enum_1705), calc(44 + 1)));
-cc_deleteall($widget_595:19_21);
+cc_deleteall($com_worldmap_key_entries21);
 $int25 = 0;
 def_int $int27 = 16;
 if (~on_mobile = true) {
@@ -50,19 +50,19 @@ while ($category30 ! null) {
 	$intarray0($int28) = $int28;
 	$int28 = calc($int28 + 1);
 	$string0 = enum(category, string, enum_1713, $category30);
-	cc_create($widget_595:19_21, ^iftype_rectangle, $int25);
+	cc_create($com_worldmap_key_entries21, ^iftype_rectangle, $int25, false);
 	$int25 = calc($int25 + 1);
 	cc_setsize(0, $int27, ^setsize_minus, ^setsize_abs);
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_setop(1, "Flash icons");
 	cc_setopbase("<col=ff9040><$string0></col>");
-	~worldmap_keybutton($category30, $widget_595:19_21, cc_getid);
-	cc_create($widget_595:19_21, ^iftype_graphic, $int25);
+	~worldmap_keybutton($category30, $com_worldmap_key_entries21, cc_getid);
+	cc_create($com_worldmap_key_entries21, ^iftype_graphic, $int25, false);
 	$int25 = calc($int25 + 1);
 	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(enum(category, graphic, enum_1712, $category30));
-	cc_create($widget_595:19_21, ^iftype_text, $int25);
+	cc_create($com_worldmap_key_entries21, ^iftype_text, $int25, false);
 	$int25 = calc($int25 + 1);
 	cc_setsize(18, $int27, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(0xff981f);
@@ -71,7 +71,7 @@ while ($category30 ! null) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settext($string0);
 	$int29 = ~max($int29, parawidth($string0, 512, p12_full));
-	cc_create($widget_595:19_21, ^iftype_text, $int25);
+	cc_create($com_worldmap_key_entries21, ^iftype_text, $int25, false);
 	$int25 = calc($int25 + 1);
 	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^black);
@@ -83,7 +83,7 @@ while ($category30 ! null) {
 	$category30 = enum(int, category, enum_1705, $int28);
 }
 if ($int28 >= 2) {
-	~worldmap_keysort(intarray0, $widget_595:19_21, 0, calc(enum_getoutputcount(enum_1705) - 1));
+	~worldmap_keysort(intarray0, $com_worldmap_key_entries21, 0, calc(enum_getoutputcount(enum_1705) - 1));
 }
 $int29 = calc($int29 + 18);
 def_int $int31 = -1;
@@ -93,10 +93,10 @@ def_int $int33 = 0;
 def_int $int34 = 0;
 def_int $int35 = 0;
 def_int $int36 = 0;
-def_int $y37 = 0;
+def_int $int37 = 0;
 $int26 = 0;
 while ($int36 < $int28) {
-	if (cc_find($widget_595:19_21, calc($intarray0($int36) * 4 + 3)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 3)) = ^true) {
 		$string1, $string0 = ~script632(cc_gettext);
 		$int32 = string_length($string1);
 		if ($int32 > 0 & compare($string1, tostring($int31)) ! 0) {
@@ -116,7 +116,7 @@ while ($int36 < $int28) {
 			if ($int26 > 0) {
 				$int26 = calc($int26 + 5);
 			}
-			cc_create($widget_595:19_21, ^iftype_text, $int25);
+			cc_create($com_worldmap_key_entries21, ^iftype_text, $int25, false);
 			$int25 = calc($int25 + 1);
 			cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_top);
@@ -130,18 +130,18 @@ while ($int36 < $int28) {
 			$int31, $int26 = $int35, calc($int26 + 20);
 		}
 	}
-	if (cc_find($widget_595:19_21, calc($intarray0($int36) * 4)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	if (~on_mobile = true) {
-		$y37 = calc($int26 + 1);
+		$int37 = calc($int26 + 1);
 	} else {
-		$y37 = $int26;
+		$int37 = $int26;
 	}
-	if (cc_find($widget_595:19_21, calc($intarray0($int36) * 4 + 1)) = ^true) {
-		cc_setposition(1, $y37, ^setpos_abs_left, ^setpos_abs_top);
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 1)) = ^true) {
+		cc_setposition(1, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find($widget_595:19_21, calc($intarray0($int36) * 4 + 2)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 2)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
 	$int26, $int36 = calc($int26 + $int27), calc($int36 + 1);
@@ -149,63 +149,63 @@ while ($int36 < $int28) {
 if ($int28 > 0) {
 	$int26 = calc($int26 + 1);
 }
-if_setscrollpos(0, 0, $widget_595:19_21);
-if ($int26 > if_getheight($widget_595:19_21)) {
-	if_setscrollsize(0, $int26, $widget_595:19_21);
-	%varcint182 = ~max(~min(%varcint182, calc($int26 - if_getheight($widget_595:19_21))), 0);
+if_setscrollpos(0, 0, $com_worldmap_key_entries21);
+if ($int26 > if_getheight($com_worldmap_key_entries21)) {
+	if_setscrollsize(0, $int26, $com_worldmap_key_entries21);
+	%varcint182 = ~max(~min(%varcint182, calc($int26 - if_getheight($com_worldmap_key_entries21))), 0);
 } else {
-	if_setscrollsize(0, 0, $widget_595:19_21);
+	if_setscrollsize(0, 0, $com_worldmap_key_entries21);
 	%varcint182 = 0;
 }
-~scrollbar_vertical($widget_595:20_22, $widget_595:19_21, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($widget_595:20_22, $widget_595:19_21, %varcint182);
+~scrollbar_vertical($com_worldmap_key_scrollbar22, $com_worldmap_key_entries21, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($com_worldmap_key_scrollbar22, $com_worldmap_key_entries21, %varcint182);
 $int29 = calc($int29 + 22);
-cc_deleteall($widget_595:21_10);
-~worldmap_toggles_createbutton(0, $widget_595:21_10);
-~worldmap_toggles_createbutton(1, $widget_595:21_10);
-~worldmap_toggles_createbutton(2, $widget_595:21_10);
-~worldmap_toggles_createbutton(3, $widget_595:21_10);
-~worldmap_toggles_createbutton(4, $widget_595:21_10);
+cc_deleteall($com_worldmap_toggles10);
+~worldmap_toggles_createbutton(0, $com_worldmap_toggles10);
+~worldmap_toggles_createbutton(1, $com_worldmap_toggles10);
+~worldmap_toggles_createbutton(2, $com_worldmap_toggles10);
+~worldmap_toggles_createbutton(3, $com_worldmap_toggles10);
+~worldmap_toggles_createbutton(4, $com_worldmap_toggles10);
 $int25 = calc(4 + 1);
 $int26 = calc(21 * 0);
-cc_create($widget_595:21_10, ^iftype_graphic, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(23, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(-2, calc($int26 - 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(struct_param(your_position_1, param_459));
 $int26 = calc(21 * 1);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 cc_setposition(1, calc($int26 + 8), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc($int26 + 7), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^yellow);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 cc_setposition(12, calc($int26 + 8), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 cc_setposition(11, calc($int26 + 7), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^yellow);
-cc_create($widget_595:21_10, ^iftype_line, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_line, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(9, 0, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, calc($int26 + 10), ^setpos_abs_left, ^setpos_abs_top);
 cc_setlinewid(2);
 cc_setcolour(^yellow);
 $int26 = calc(21 * 2);
-cc_create($widget_595:21_10, ^iftype_text, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_text, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int26, ^setpos_abs_left, ^setpos_abs_top);
@@ -215,45 +215,45 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("AB<br>YZ");
 $int26 = calc(21 * 3);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(20, 15, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc($int26 + 3), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(0xffffa0);
-cc_create($widget_595:21_10, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(20, 15, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc($int26 + 3), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(^black);
 $int26 = calc(21 * 4);
-cc_create($widget_595:21_10, ^iftype_graphic, $int25);
+cc_create($com_worldmap_toggles10, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, calc($int26 + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("options_icons_small,1");
 def_int $int38 = 0;
-$int25, $int38 = ~worldmap_toggles_enablebutton(0, $widget_595:21_10, $int25, $int38, $widget_595:9_4, $widget_595:13_7, $widget_595:41_23);
-$int25, $int38 = ~worldmap_toggles_enablebutton(1, $widget_595:21_10, $int25, $int38, $widget_595:9_4, $widget_595:13_7, $widget_595:41_23);
-$int25, $int38 = ~worldmap_toggles_enablebutton(2, $widget_595:21_10, $int25, $int38, $widget_595:9_4, $widget_595:13_7, $widget_595:41_23);
-$int25, $int38 = ~worldmap_toggles_enablebutton(3, $widget_595:21_10, $int25, $int38, $widget_595:9_4, $widget_595:13_7, $widget_595:41_23);
-$int25, $int38 = ~worldmap_toggles_enablebutton(4, $widget_595:21_10, $int25, $int38, $widget_595:9_4, $widget_595:13_7, $widget_595:41_23);
+$int25, $int38 = ~worldmap_toggles_enablebutton(0, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
+$int25, $int38 = ~worldmap_toggles_enablebutton(1, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
+$int25, $int38 = ~worldmap_toggles_enablebutton(2, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
+$int25, $int38 = ~worldmap_toggles_enablebutton(3, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
+$int25, $int38 = ~worldmap_toggles_enablebutton(4, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
 $int29 = ~max($int29, calc($int38 + 6));
-if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $widget_595:14_5);
-~worldmap_key_toggle(%varbit10294, $int29, $widget_595:7_3, $widget_595:14_5, $widget_595:24_9);
-if (if_find(interface_595:39) = ^true & ~on_mobile = true) {
+if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $com_worldmap_side5);
+~worldmap_key_toggle(%varbit10294, $int29, $com_worldmap_map_container3, $com_worldmap_side5, $com_worldmap_key_toggle9);
+if (if_find(worldmap:resize_indicator) = ^true & ~on_mobile = true) {
 	cc_sethide(true);
 }
-cc_deleteall($widget_595:25_11);
+cc_deleteall($com_worldmap_search11);
 $int25 = 0;
-cc_create($widget_595:25_11, ^iftype_graphic, $int25);
+cc_create($com_worldmap_search11, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settiling(true);
 cc_setgraphic(tradebacking_dark);
-.cc_create($widget_595:25_11, ^iftype_text, $int25);
+.cc_create($com_worldmap_search11, ^iftype_text, $int25, false);
 def_int $int39 = $int25;
 $int25 = calc($int25 + 1);
 .cc_setsize(4, 12, ^setsize_minus, ^setsize_abs);
@@ -261,15 +261,15 @@ $int25 = calc($int25 + 1);
 .cc_setcolour(0x9f9f9f);
 .cc_settextfont(p11_full);
 .cc_settextshadow(true);
-~worldmap_search_off($widget_595:25_11);
-$int25 = ~thinbox($widget_595:25_11, $int25);
-cc_deleteall($widget_595:35_16);
+~worldmap_search_off($com_worldmap_search11);
+$int25 = ~thinbox($com_worldmap_search11, $int25);
+cc_deleteall($com_worldmap_maplist_list16);
 $int25 = 0;
 $int27 = 15;
 if (~on_mobile = true) {
 	$int27 = scale(8, 5, $int27);
 }
-.cc_create($widget_595:35_16, ^iftype_rectangle, $int25);
+.cc_create($com_worldmap_maplist_list16, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 .cc_setsize(0, calc($int27 + 2), ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
@@ -286,7 +286,7 @@ def_wma $wma45 = enum(int, wma, enum_1697, $int28);
 while ($wma45 ! null) {
 	$intarray0($int28) = $int25;
 	$int28 = calc($int28 + 1);
-	cc_create($widget_595:35_16, ^iftype_text, $int25);
+	cc_create($com_worldmap_maplist_list16, ^iftype_text, $int25, false);
 	$int25 = calc($int25 + 1);
 	cc_setsize(0, $int27, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(0xff981f);
@@ -307,13 +307,13 @@ while ($wma45 ! null) {
 	cc_setonop("worldmap_maplist_select(
 		0 = event_op, 
 		1 = $wma45, 
-		2 = $widget_595:26_12, 
-		3 = $widget_595:31_13, 
-		4 = $widget_595:9_4, 
-		5 = $widget_595:10_6, 
-		6 = $widget_595:13_7, 
-		7 = $widget_595:27_18, 
-		8 = $widget_595:28_19
+		2 = $com_worldmap_maplist_display12, 
+		3 = $com_worldmap_maplist_container13, 
+		4 = $com_worldmap_map_overlay4, 
+		5 = $com_worldmap_overview_container6, 
+		6 = $com_worldmap_overview_overlay7, 
+		7 = $com_worldmap_zoom_out18, 
+		8 = $com_worldmap_zoom_in19
 	)");
 	if (~script1814($wma45) = 1) {
 		$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
@@ -329,121 +329,121 @@ while ($wma45 ! null) {
 }
 def_int $comsubidarray1(3);
 $comsubidarray1(0) = $int25;
-cc_create($widget_595:35_16, ^iftype_graphic, $int25);
+cc_create($com_worldmap_maplist_list16, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(your_position_1, param_624));
 $comsubidarray1(1) = $int25;
-cc_create($widget_595:35_16, ^iftype_graphic, $int25);
+cc_create($com_worldmap_maplist_list16, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(clue_scroll_343, param_624));
 $comsubidarray1(2) = $int25;
-cc_create($widget_595:35_16, ^iftype_graphic, $int25);
+cc_create($com_worldmap_maplist_list16, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(gravestone_317, param_624));
 if ($int28 >= 3) {
-	~quicksort_cctext(intarray0, $widget_595:35_16, 1, 44);
+	~quicksort_cctext(intarray0, $com_worldmap_maplist_list16, 1, 44);
 }
 $int29 = calc(3 + $int29 + 2 + 26 + 2 + 16 + 3);
-if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $widget_595:26_12);
+if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $com_worldmap_maplist_display12);
 def_int $int46 = calc(262 + $int29);
-~worldmap_window_set($widget_595:2_0, $widget_595:5_2, $widget_595:42_24, $widget_595:7_3, $int46);
+~worldmap_window_set($com_worldmap_content0, $com_worldmap_window2, $com_worldmap_resize_preview24, $com_worldmap_map_container3, $int46);
 ~worldmap_size_handler(
-	0 = $widget_595:2_0, 
-	1 = $widget_595:5_2, 
-	2 = $widget_595:42_24, 
-	3 = $widget_595:7_3, 
+	0 = $com_worldmap_content0, 
+	1 = $com_worldmap_window2, 
+	2 = $com_worldmap_resize_preview24, 
+	3 = $com_worldmap_map_container3, 
 	4 = ^min_32bit_int, 
 	5 = ^min_32bit_int, 
-	6 = $widget_595:19_21, 
-	7 = $widget_595:20_22, 
+	6 = $com_worldmap_key_entries21, 
+	7 = $com_worldmap_key_scrollbar22, 
 	8 = $int29, 
 	9 = $int46, 
-	10 = $widget_595:25_11, 
+	10 = $com_worldmap_search11, 
 	11 = $int39
 );
-if_setscrollpos(0, 0, $widget_595:35_16);
+if_setscrollpos(0, 0, $com_worldmap_maplist_list16);
 $int26 = calc($int36 * $int27 + 2);
 def_int $int47 = 124;
 if (~on_mobile = true) {
 	$int47 = 196;
 }
 if ($int26 >= calc($int47 - 4)) {
-	if_setscrollsize(0, $int26, $widget_595:35_16);
+	if_setscrollsize(0, $int26, $com_worldmap_maplist_list16);
 } else {
-	if_setscrollsize(0, 0, $widget_595:35_16);
+	if_setscrollsize(0, 0, $com_worldmap_maplist_list16);
 	$int47 = calc($int26 + 4);
 }
-if_setsize($int29, $int47, ^setsize_abs, ^setsize_abs, $widget_595:33_15);
-cc_deleteall($widget_595:36_17);
-~scrollbar_vertical($widget_595:36_17, $widget_595:35_16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-$int26 = if_gety($widget_595:26_12);
-def_component $layer48 = if_getlayer($widget_595:26_12);
-while ($layer48 ! $widget_595:5_2) {
-	$int26 = calc($int26 + if_gety($layer48) - if_getscrolly($layer48));
-	$layer48 = if_getlayer($layer48);
+if_setsize($int29, $int47, ^setsize_abs, ^setsize_abs, $com_worldmap_maplist_box15);
+cc_deleteall($com_worldmap_maplist_scrollbar17);
+~scrollbar_vertical($com_worldmap_maplist_scrollbar17, $com_worldmap_maplist_list16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$int26 = if_gety($com_worldmap_maplist_display12);
+def_component $com_worldmap_window48 = if_getlayer($com_worldmap_maplist_display12);
+while ($com_worldmap_window48 ! $com_worldmap_window2) {
+	$int26 = calc($int26 + if_gety($com_worldmap_window48) - if_getscrolly($com_worldmap_window48));
+	$com_worldmap_window48 = if_getlayer($com_worldmap_window48);
 }
 if (~on_mobile = false) {
-	if_setposition(0, calc(if_getheight($widget_595:5_2) - 1 - $int26), ^setpos_abs_centre, ^setpos_abs_bottom, $widget_595:33_15);
+	if_setposition(0, calc(if_getheight($com_worldmap_window2) - 1 - $int26), ^setpos_abs_centre, ^setpos_abs_bottom, $com_worldmap_maplist_box15);
 } else {
-	if_setposition(0, calc(if_getheight($widget_595:5_2) - 2 - $int26), ^setpos_abs_centre, ^setpos_abs_top, $widget_595:33_15);
+	if_setposition(0, calc(if_getheight($com_worldmap_window2) - 2 - $int26), ^setpos_abs_centre, ^setpos_abs_top, $com_worldmap_maplist_box15);
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find($widget_595:35_16, $intarray0($int28)) = ^true & cc_gethide = false) {
+	if (cc_find($com_worldmap_maplist_list16, $intarray0($int28)) = ^true & cc_gethide = false) {
 		$int36 = calc($int36 - 1);
 		cc_setposition(0, calc($int36 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 }
-cc_deleteall($widget_595:26_12);
+cc_deleteall($com_worldmap_maplist_display12);
 $int25 = 0;
-cc_create($widget_595:26_12, ^iftype_graphic, $int25);
+cc_create($com_worldmap_maplist_display12, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking);
 cc_settiling(true);
-cc_setonclick("worldmap_maplist_open($widget_595:26_12, $widget_595:31_13, $widget_595:35_16, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
-if_setonclick("worldmap_maplist_close($widget_595:26_12, $widget_595:31_13)", $widget_595:32_14);
-cc_create($widget_595:26_12, ^iftype_rectangle, $int25);
+cc_setonclick("worldmap_maplist_open($com_worldmap_maplist_display12, $com_worldmap_maplist_container13, $com_worldmap_maplist_list16, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
+if_setonclick("worldmap_maplist_close($com_worldmap_maplist_display12, $com_worldmap_maplist_container13)", $com_worldmap_maplist_close14);
+cc_create($com_worldmap_maplist_display12, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($widget_595:26_12, ^iftype_rectangle, $int25);
+cc_create($com_worldmap_maplist_display12, ^iftype_rectangle, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($widget_595:26_12, ^iftype_graphic, $int25);
+cc_create($com_worldmap_maplist_display12, ^iftype_graphic, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
-cc_create($widget_595:26_12, ^iftype_text, $int25);
+cc_create($com_worldmap_maplist_display12, ^iftype_text, $int25, false);
 $int25 = calc($int25 + 1);
 cc_setsize(20, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-~xpdrops_setup_display_hoveroff($widget_595:26_12);
+~xpdrops_setup_display_hoveroff($com_worldmap_maplist_display12);
 ~worldmap_loadmap(
 	0 = $wma40, 
 	1 = $coord42, 
-	2 = $widget_595:26_12, 
-	3 = $widget_595:31_13, 
-	4 = $widget_595:9_4, 
-	5 = $widget_595:10_6, 
-	6 = $widget_595:13_7, 
-	7 = $widget_595:27_18, 
-	8 = $widget_595:28_19
+	2 = $com_worldmap_maplist_display12, 
+	3 = $com_worldmap_maplist_container13, 
+	4 = $com_worldmap_map_overlay4, 
+	5 = $com_worldmap_overview_container6, 
+	6 = $com_worldmap_overview_overlay7, 
+	7 = $com_worldmap_zoom_out18, 
+	8 = $com_worldmap_zoom_in19
 );
 ~worldmap_mobile_layout;
-if_setopkey(1, ^key_escape, 0, interface_595:4);
+if_setopkey(1, ^key_escape, 0, worldmap:esckey);

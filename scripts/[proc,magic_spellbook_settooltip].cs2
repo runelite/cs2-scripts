@@ -20,82 +20,82 @@ def_stat $stat18 = oc_param($obj1, param_1187);
 def_int $int19 = oc_param($obj1, param_1188);
 def_string $string2 = ~script4132($obj1);
 switch_obj ($obj1) {
-	case heal_group_9137 :
+	case 95_heal_group_9137 :
 		if (%varbit925 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case magic_imbue_9124 :
+	case 82_magic_imbue_9124 :
 		if (%varbit5438 > 0) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case fertile_soil_9125 :
+	case 83_treat_soil_9125 :
 		if (%varbit5960 = 1) {
 			$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
 		}
-	case ice_rush_4633, ice_burst_4639, ice_blitz_4645, ice_barrage_4651 :
-		if (~script1897 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
-			$obj16, $int17 = blighted_ancient_ice_sack_24607, 1;
+	case 58_ice_rush_4633, 70_ice_burst_4639, 82_ice_blitz_4645, 94_ice_barrage_4651 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_icebarrage_24607) > 0) {
+			$obj16, $int17 = blighted_sack_icebarrage_24607, 1;
 		}
-	case bind_3283, snare_3300, entangle_3322 :
-		if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
-			$obj16, $int17 = blighted_entangle_sack_24613, 1;
+	case 20_bind_3283, 50_snare_3300, 79_entangle_3322 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
+			$obj16, $int17 = blighted_sack_entangle_24613, 1;
 		}
-	case tele_block_4555, dead_orb_17152 :
-		if (~script1897 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
-			$obj16, $int17 = blighted_teleport_spell_sack_24615, 1;
+	case 85_teleport_block_4555, placeholder_caveorb4dot_17152 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_teleblock_24615) > 0) {
+			$obj16, $int17 = blighted_sack_teleblock_24615, 1;
 		}
-	case vengeance_other_9135, vengeance_9136 :
-		if (~script1897 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
-			$obj16, $int17 = blighted_vengeance_sack_24621, 1;
+	case 93_vengeance_other_9135, 94_vengeance_9136 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_vengeance_24621) > 0) {
+			$obj16, $int17 = blighted_sack_vengeance_24621, 1;
 		}
 		if (%varbit2451 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case wind_wave_3313, wind_surge_21876 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj14, $int15 = blighted_surge_sack_26705, 1;
+	case 62_wind_wave_3313, 81_wind_surge_21876 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj14, $int15 = blighted_sack_surge_26705, 1;
 		}
-	case water_wave_3315, earth_wave_3319, fire_wave_3321, water_surge_21877, earth_surge_21878, fire_surge_21879 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj16, $int17 = blighted_surge_sack_26705, 1;
+	case 65_water_wave_3315, 70_earth_wave_3319, 75_fire_wave_3321, 85_water_surge_21877, 90_earth_surge_21878, 95_fire_surge_21879 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj16, $int17 = blighted_sack_surge_26705, 1;
 		}
-	case lesser_corruption_10511, greater_corruption_20762 :
+	case zanarischoir_dummy_10511, skillcape_ardy_hood_firecape_20762 :
 		if (%varbit12288 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case dark_lure_15303 :
+	case placeholder_snakepet_orange_15303 :
 		if (%varbit12289 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case death_charge_15309 :
+	case placeholder_vetion_pet2_15309 :
 		if (%varbit12138 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case resurrect_lesser_ghost_25511, resurrect_lesser_skeleton_25509, resurrect_lesser_zombie_25508, resurrect_superior_ghost_25506, resurrect_superior_skeleton_25512, resurrect_superior_zombie_25513, resurrect_greater_ghost_25507, resurrect_greater_skeleton_25510, resurrect_greater_zombie_25514 :
+	case osb8_monkey_cow_25511, osb8_monkey_bob_25509, osb8_monkey_donie_25508, osb8_bamboo_25506, osb8_monkey_unicorn_25512, osb8_monkey_sheep_25513, osb8_monkey_trap_25507, osb8_monkey_aereck_25510, osb8_unicorn_horn_25514 :
 		if (%varbit12290 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case shadow_veil_15344 :
+	case placeholder_skillpethunter_grey_15344 :
 		if (%varbit12291 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case vile_vigour_15304 :
+	case placeholder_snakepet_blue_15304 :
 		if (%varbit12292 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case ward_of_arceuus_20763 :
+	case placeholder_skillcape_ardy_hood_firecape_20763 :
 		if (%varbit12293 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case demonic_offering_15346, sinister_offering_8796 :
+	case placeholder_skillpethunter_gold_15346, poh_temp_limestonebrick_8796 :
 		if (%varbit12423 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	case confuse_3274, weaken_3278, curse_3282 :
+	case 03_confuse_3274, 11_weaken_3278, 19_curse_3282 :
 		if ($obj7 = tome_of_water_25574 & map_members = true) {
 			$string1 = ~string_findandreplace($string1, "5%", "<col=ffffff><tostring(addpercent(5, 50))>%</col>");
 		}
-	case vulnerability_3317, enfeeble_3320, stun_3324 :
+	case 66_vulnerability_3317, 73_enfeeble_3320, 80_stun_3324 :
 		if ($obj7 = tome_of_water_25574 & map_members = true) {
 			$string1 = ~string_findandreplace($string1, "10%", "<col=ffffff><tostring(addpercent(10, 50))>%</col>");
 		}
@@ -126,23 +126,23 @@ if ($comsubid3 ! -1 & cc_find($component2, $comsubid3) = ^true) {
 		$int23 = calc($int23 - 5);
 	}
 }
-cc_create($component4, ^iftype_rectangle, 0);
+cc_create($component4, ^iftype_rectangle, 0, false);
 cc_setposition(5, $int23, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(180, $int22, ^setsize_abs, ^setsize_abs);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(42);
-cc_create($component4, ^iftype_rectangle, 1);
+cc_create($component4, ^iftype_rectangle, 1, false);
 cc_setposition(6, calc($int23 + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(179, calc($int22 - 1), ^setsize_abs, ^setsize_abs);
 cc_setfill(false);
 cc_setcolour(0x2e2b23);
-cc_create($component4, ^iftype_rectangle, 2);
+cc_create($component4, ^iftype_rectangle, 2, false);
 cc_setposition(5, $int23, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(179, calc($int22 - 1), ^setsize_abs, ^setsize_abs);
 cc_setfill(false);
 cc_setcolour(0x726451);
-cc_create($component4, ^iftype_text, 3);
+cc_create($component4, ^iftype_text, 3, false);
 cc_setposition(7, calc($int23 + 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(177, $int20, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -154,7 +154,7 @@ if ($int8 > 0 & $boolean9 = false) {
 } else {
 	cc_settext($string0);
 }
-cc_create($component4, ^iftype_text, 4);
+cc_create($component4, ^iftype_text, 4, false);
 cc_setposition(7, calc($int23 + 3 + $int20), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(175, $int21, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
@@ -179,12 +179,12 @@ def_int $int25 = calc((190 - $int24 * 35) / ($int24 + 1));
 def_int $int26 = 0;
 def_int $int27 = 5;
 if ($obj10 ! null) {
-	cc_create($component4, ^iftype_graphic, $int27);
+	cc_create($component4, ^iftype_graphic, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition($int25, calc($int23 + 2 + $int20 + $int21), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj10, -1);
-	cc_create($component4, ^iftype_text, $int27);
+	cc_create($component4, ^iftype_text, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition($int25, calc($int23 + 2 + $int20 + $int21 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
@@ -200,12 +200,12 @@ if ($obj10 ! null) {
 	cc_settext("<~magic_tostring($int26)>/<tostring($int11)>");
 }
 if ($obj12 ! null) {
-	cc_create($component4, ^iftype_graphic, $int27);
+	cc_create($component4, ^iftype_graphic, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 2 + 35), calc($int23 + 2 + $int20 + $int21), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj12, -1);
-	cc_create($component4, ^iftype_text, $int27);
+	cc_create($component4, ^iftype_text, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 2 + 35), calc($int23 + 2 + $int20 + $int21 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
@@ -221,12 +221,12 @@ if ($obj12 ! null) {
 	cc_settext("<~magic_tostring($int26)>/<tostring($int13)>");
 }
 if ($obj14 ! null) {
-	cc_create($component4, ^iftype_graphic, $int27);
+	cc_create($component4, ^iftype_graphic, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 3 + 70), calc($int23 + 2 + $int20 + $int21), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj14, -1);
-	cc_create($component4, ^iftype_text, $int27);
+	cc_create($component4, ^iftype_text, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 3 + 70), calc($int23 + 2 + $int20 + $int21 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
@@ -242,12 +242,12 @@ if ($obj14 ! null) {
 	cc_settext("<~magic_tostring($int26)>/<tostring($int15)>");
 }
 if ($obj16 ! null) {
-	cc_create($component4, ^iftype_graphic, $int27);
+	cc_create($component4, ^iftype_graphic, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 4 + 105), calc($int23 + 2 + $int20 + $int21), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj16, -1);
-	cc_create($component4, ^iftype_text, $int27);
+	cc_create($component4, ^iftype_text, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * 4 + 105), calc($int23 + 2 + $int20 + $int21 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
@@ -263,12 +263,12 @@ if ($obj16 ! null) {
 	cc_settext("<~magic_tostring($int26)>/<tostring($int17)>");
 }
 if ($stat18 ! null) {
-	cc_create($component4, ^iftype_graphic, $int27);
+	cc_create($component4, ^iftype_graphic, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * $int24 + 35 * ($int24 - 1)), calc($int23 + 2 + $int20 + $int21), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(enum(stat, graphic, enum_255, $stat18));
-	cc_create($component4, ^iftype_text, $int27);
+	cc_create($component4, ^iftype_text, $int27, false);
 	$int27 = calc($int27 + 1);
 	cc_setposition(calc($int25 * $int24 + 34 * ($int24 - 1)), calc($int23 + 2 + $int20 + $int21 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);

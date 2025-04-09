@@ -1,21 +1,21 @@
 // 7280
-[clientscript,script7280](string $string0, int $int0, component $component1, boolean $boolean2, component $widget_821:4_3, component $widget_821:5_4, component $widget_821:6_5, component $widget_821:7_6, component $widget_821:8_7)
+[clientscript,script7280](string $string0, int $int0, component $component1, boolean $boolean2, component $com_worldswitcher_options_filter_member3, component $com_worldswitcher_options_filter_country4, component $com_worldswitcher_options_filter_theme5, component $com_worldswitcher_options_search6, component $com_worldswitcher_options_reset7)
 if (%varcint5 = $int0 & calc(clientclock % 20) ! 0) {
 	return;
 }
 def_string $string1 = ~worldswitcher_search_get;
 if (~script7281($string1, $string0) = 1) {
-	~worldswitcher_options_filters_redrawbutton($component1, $boolean2, $widget_821:4_3, $widget_821:5_4, $widget_821:6_5, $widget_821:7_6, $widget_821:8_7);
-	~worldswitcher_options_filters_redrawbutton($widget_821:8_7, $boolean2, $widget_821:4_3, $widget_821:5_4, $widget_821:6_5, $widget_821:7_6, $widget_821:8_7);
+	~worldswitcher_options_filters_redrawbutton($component1, $boolean2, $com_worldswitcher_options_filter_member3, $com_worldswitcher_options_filter_country4, $com_worldswitcher_options_filter_theme5, $com_worldswitcher_options_search6, $com_worldswitcher_options_reset7);
+	~worldswitcher_options_filters_redrawbutton($com_worldswitcher_options_reset7, $boolean2, $com_worldswitcher_options_filter_member3, $com_worldswitcher_options_filter_country4, $com_worldswitcher_options_filter_theme5, $com_worldswitcher_options_search6, $com_worldswitcher_options_reset7);
 }
 if_setontimer("script7280(
 	0 = $string1, 
 	1 = %varcint5, 
 	2 = $component1, 
 	3 = $boolean2, 
-	4 = $widget_821:4_3, 
-	5 = $widget_821:5_4, 
-	6 = $widget_821:6_5, 
-	7 = $widget_821:7_6, 
-	8 = $widget_821:8_7
+	4 = $com_worldswitcher_options_filter_member3, 
+	5 = $com_worldswitcher_options_filter_country4, 
+	6 = $com_worldswitcher_options_filter_theme5, 
+	7 = $com_worldswitcher_options_search6, 
+	8 = $com_worldswitcher_options_reset7
 )", $component1);

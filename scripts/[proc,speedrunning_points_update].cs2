@@ -1,6 +1,6 @@
 // 5889
-[proc,speedrunning_points_update](component $widget_779:13_0, component $widget_779:64_1)
+[proc,speedrunning_points_update](component $com_speedrunning_panel_points0, component $com_speedrunning_panel_total_points1)
 def_string $string0 = ",";
-def_string $text1 = ~tostring_spacer(~min(%var3365, 800000), $string0);
-if_settext("Speedrun Points<br><col=ffffff><$text1></col>", $widget_779:13_0);
-if_settext($text1, $widget_779:64_1);
+def_string $string1 = ~tostring_spacer(~min(%var3365, 800000), $string0);
+if_settext("Speedrun Points<br><col=ffffff><$string1></col>", $com_speedrunning_panel_points0);
+if_settext($string1, $com_speedrunning_panel_total_points1);

@@ -1,12 +1,12 @@
 // 373
-[proc,script373](component $widget_375:6_0, int $int1)
+[proc,script373](component $com_soul_wars_game_activity_bar_fill0, int $int1)
 def_int $int2 = ~script374;
-def_int $height3 = if_getheight(if_getlayer($widget_375:6_0));
+def_int $int3 = if_getheight(if_getlayer($com_soul_wars_game_activity_bar_fill0));
 if ($int1 <= 0) {
 	$int1 = 0;
 } else if ($int1 >= $int2) {
-	$int1 = $height3;
+	$int1 = $int3;
 } else {
-	$int1 = ~minmax(1, $height3, scale($height3, $int2, $int1));
+	$int1 = ~minmax(1, $int3, scale($int3, $int2, $int1));
 }
-if_setsize(0, $int1, ^setsize_minus, ^setsize_abs, $widget_375:6_0);
+if_setsize(0, $int1, ^setsize_minus, ^setsize_abs, $com_soul_wars_game_activity_bar_fill0);

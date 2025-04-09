@@ -1,5 +1,5 @@
 // 342
-[clientscript,godwars_darkness](component $widget_406:3_0)
+[clientscript,godwars_darkness](component $com_godwars_overlay_darkness0)
 def_int $int1 = 255;
 def_coord $coord2 = coord;
 if (%varbit4733 = 0) {
@@ -24,6 +24,6 @@ if ($int3 > $int1) {
 	}
 }
 if ($int3 ! %varcint50) {
-	if_settrans($int3, $widget_406:3_0);
+	if_settrans($int3, $com_godwars_overlay_darkness0);
 	%varcint50 = $int3;
 }

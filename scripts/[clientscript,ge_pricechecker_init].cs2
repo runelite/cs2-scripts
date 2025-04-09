@@ -1,6 +1,6 @@
 // 784
-[clientscript,ge_pricechecker_init](component $widget_464:0_0)
-cc_deleteall(interface_464:3);
-~scrollbar_vertical(interface_464:3, interface_464:2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+[clientscript,ge_pricechecker_init](component $com_ge_pricechecker_universe0)
+cc_deleteall(ge_pricechecker:scrollbar);
+~scrollbar_vertical(ge_pricechecker:scrollbar, ge_pricechecker:items, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~ge_pricechecker_redraw;
-if_setoninvtransmit("ge_pricechecker_redraw{inv_90}", $widget_464:0_0);
+if_setoninvtransmit("ge_pricechecker_redraw{tradeoffer}", $com_ge_pricechecker_universe0);

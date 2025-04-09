@@ -1,16 +1,16 @@
 // 4956
-[proc,script4956](component $component0, component $component1, component $component2, component $component3, int $int4, int $flags5)
-def_component $component6 = interface_626:8;
+[proc,script4956](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
+def_component $component6 = colosseum_intermission:modifier_scrollbar;
 def_int $int7 = ~script1776(%var4136);
 def_string $string0 = ~script4159($int7, 1);
 def_int $int8 = ~script1776(%var4137);
-def_string $text1 = ~script4159($int8, 1);
-def_string $text2 = tostring(%var4132);
+def_string $string1 = ~script4159($int8, 1);
+def_string $string2 = tostring(%var4132);
 if (%var4132 = ^max_32bit_int) {
-	$text2 = "Lots!";
+	$string2 = "Lots!";
 }
 def_int $int9 = 0;
-def_int $height10 = 30;
+def_int $int10 = 30;
 def_int $int11 = 0;
 def_int $int12 = %var4136;
 def_int $int13 = 0;
@@ -26,13 +26,13 @@ if ($int12 > 0 & $int12 < 500) {
 	$int15 = calc((500 - $int12) * $int4);
 }
 def_int $int16 = 0;
-def_int $count17 = 0;
-def_int $count18 = enum_getoutputcount(enum_5312);
+def_int $int17 = 0;
+def_int $int18 = enum_getoutputcount(enum_5312);
 def_struct $struct19 = null;
 def_int $int20 = 1;
-while ($count17 < $count18) {
-	$struct19 = enum(int, struct, enum_5312, $count17);
-	if ($struct19 ! null & ~script4978($struct19, $flags5) = 1) {
+while ($int17 < $int18) {
+	$struct19 = enum(int, struct, enum_5312, $int17);
+	if ($struct19 ! null & ~script4978($struct19, $int5) = 1) {
 		if (struct_param($struct19, param_1901) = true) {
 			$int20 = ~script4980($struct19);
 		} else {
@@ -40,12 +40,12 @@ while ($count17 < $count18) {
 		}
 		$int16 = calc($int16 + struct_param($struct19, param_1903));
 	}
-	$count17 = calc($count17 + 1);
+	$int17 = calc($int17 + 1);
 }
-if_settext($text2, $component2);
-if_settext($text1, $component3);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(15, $height10, ^setpos_abs_left, ^setpos_abs_top);
+if_settext($string2, $component2);
+if_settext($string1, $component3);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(15, $int10, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -53,8 +53,8 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("Wave complete: ");
 $int9 = calc($int9 + 1);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(0, $height10, ^setpos_abs_right, ^setpos_abs_top);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -62,9 +62,9 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("<col=0dc10d>+<tostring($int14)></col>");
 $int9 = calc($int9 + 1);
-$height10 = calc($height10 + 30);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(15, $height10, ^setpos_abs_left, ^setpos_abs_top);
+$int10 = calc($int10 + 30);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(15, $int10, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -72,8 +72,8 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("Speed bonus: ");
 $int9 = calc($int9 + 1);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(0, $height10, ^setpos_abs_right, ^setpos_abs_top);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -81,9 +81,9 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("<col=0dc10d>+<tostring($int15)></col> (<$string0>)");
 $int9 = calc($int9 + 1);
-$height10 = calc($height10 + 30);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(15, $height10, ^setpos_abs_left, ^setpos_abs_top);
+$int10 = calc($int10 + 30);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(15, $int10, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -91,8 +91,8 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("Modifier choice:");
 $int9 = calc($int9 + 1);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(0, $height10, ^setpos_abs_right, ^setpos_abs_top);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -100,9 +100,9 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("<col=0dc10d>+<tostring($int16)></col>");
 $int9 = calc($int9 + 1);
-$height10 = calc($height10 + 30);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(15, $height10, ^setpos_abs_left, ^setpos_abs_top);
+$int10 = calc($int10 + 30);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(15, $int10, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -110,42 +110,42 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("Damage Taken:");
 $int9 = calc($int9 + 1);
-cc_create($component1, ^iftype_text, $int9);
-cc_setposition(0, $height10, ^setpos_abs_right, ^setpos_abs_top);
+cc_create($component1, ^iftype_text, $int9, false);
+cc_setposition(0, $int10, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setsize(8192, 28, ^setsize_proportion, ^setsize_abs);
 cc_settext("<col=0dc10d>+<tostring($int13)></col> (<tostring(%var4134)>)");
-$count17 = 0;
-$count18 = enum_getoutputcount(enum_5312);
+$int17 = 0;
+$int18 = enum_getoutputcount(enum_5312);
 $struct19 = null;
 $int9 = 0;
 def_int $int21 = 0;
-while ($count17 < $count18) {
-	$struct19 = enum(int, struct, enum_5312, $count17);
-	if ($struct19 ! null & ~script4978($struct19, $flags5) = 1) {
+while ($int17 < $int18) {
+	$struct19 = enum(int, struct, enum_5312, $int17);
+	if ($struct19 ! null & ~script4978($struct19, $int5) = 1) {
 		$int9 = ~script4957($component0, $struct19, $int21, $int9);
 		$int21 = calc($int21 + 1);
 	}
-	$count17 = calc($count17 + 1);
+	$int17 = calc($int17 + 1);
 }
-def_int $y22 = if_getscrolly($component0);
+def_int $int22 = if_getscrolly($component0);
 if ($int21 > 0) {
 	~scrollbar_vertical($component6, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 }
-$height10 = calc($int21 * 28 + 32 + 10);
-if ($height10 >= if_getheight($component0)) {
-	if_setscrollsize(0, $height10, $component0);
+$int10 = calc($int21 * 28 + 32 + 10);
+if ($int10 >= if_getheight($component0)) {
+	if_setscrollsize(0, $int10, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }
-if_setscrollpos(0, $y22, $component0);
+if_setscrollpos(0, $int22, $component0);
 if ($int21 > 0) {
 	~scrollbar_vertical_rebuild($component6, $component0);
 } else {
-	cc_create($component0, ^iftype_text, $int9);
+	cc_create($component0, ^iftype_text, $int9, false);
 	cc_setposition(10, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_settextfont(p12_full);

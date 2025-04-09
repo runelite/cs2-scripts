@@ -1,7 +1,7 @@
 // 4309
-[clientscript,clan_ranktitles_checksize](int $int0, int $int1, component $component2, component $component3, int $int4, int $int5, component $component6, component $component7, int $int8, component $component9, int $height10)
-def_int $height11 = if_getheight(if_getlayer($component9));
-if ($height11 ! $height10) {
+[clientscript,clan_ranktitles_checksize](int $int0, int $int1, component $component2, component $component3, int $int4, int $int5, component $component6, component $component7, int $int8, component $component9, int $int10)
+def_int $int11 = if_getheight(if_getlayer($component9));
+if ($int11 ! $int10) {
 	~clan_ranktitles_setsize(
 		0 = $int0, 
 		1 = $int1, 
@@ -13,6 +13,6 @@ if ($height11 ! $height10) {
 		7 = $component7, 
 		8 = $int8, 
 		9 = $component9, 
-		10 = $height11
+		10 = $int11
 	);
 }

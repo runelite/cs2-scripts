@@ -1,15 +1,15 @@
 // 4516
-[proc,script4516](component $widget_708:5_0, int $int1, int $int2, boolean $boolean3)(int)
-def_int $x4 = calc(4 * $int1 + 1);
-cc_create($widget_708:5_0, ^iftype_graphic, $int2);
+[proc,script4516](component $com_stat_boosts_hud_timers_container0, int $int1, int $int2, boolean $boolean3)(int)
+def_int $int4 = calc(4 * $int1 + 1);
+cc_create($com_stat_boosts_hud_timers_container0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(4, 35, ^setsize_abs, ^setsize_abs);
-cc_setposition($x4, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int4, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking);
 cc_settrans(100);
 cc_settiling(true);
-cc_setontimer("script4520($widget_708:5_0, $int2, $boolean3)");
-cc_create($widget_708:5_0, ^iftype_rectangle, $int2);
+cc_setontimer("script4520($com_stat_boosts_hud_timers_container0, $int2, $boolean3)");
+cc_create($com_stat_boosts_hud_timers_container0, ^iftype_rectangle, $int2, false);
 if ($boolean3 = true) {
 	%varcint530 = $int2;
 } else {
@@ -17,7 +17,7 @@ if ($boolean3 = true) {
 }
 $int2 = calc($int2 + 1);
 cc_setsize(4, 1, ^setsize_abs, ^setsize_abs);
-cc_setposition($x4, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int4, 1, ^setpos_abs_left, ^setpos_abs_top);
 if ($boolean3 = true) {
 	cc_setcolour(0xff8888);
 } else {

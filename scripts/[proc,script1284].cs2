@@ -1,7 +1,7 @@
 // 1284
 [proc,script1284](int $int0, boolean $boolean1)
-def_component $component2 = interface_823:21;
-def_component $component3 = interface_823:22;
+def_component $component2 = forestry_kit_main:list;
+def_component $component3 = forestry_kit_main:list_scroller;
 cc_deleteall($component2);
 def_int $int4 = 1;
 def_int $int5 = 0;
@@ -16,7 +16,7 @@ while ($namedobj9 ! null) {
 	} else {
 		$int8 = 0;
 	}
-	$int6, $int7, $int10 = ~script1760($int6, $int4, $int5, $namedobj9, inv_total(inv_814, $namedobj9), $int8);
+	$int6, $int7, $int10 = ~script1760($int6, $int4, $int5, $namedobj9, inv_total(forestry_kit, $namedobj9), $int8);
 	if ($int7 = 1) {
 		$int5 = calc($int5 + 1);
 	}

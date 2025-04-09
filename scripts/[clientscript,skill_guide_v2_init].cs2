@@ -1,19 +1,19 @@
 // 1902
 [clientscript,skill_guide_v2_init](int $int0, int $int1)
-def_component $component2 = interface_860:0;
-def_component $component3 = interface_860:1;
+def_component $component2 = skill_guide_v2:infinity;
+def_component $component3 = skill_guide_v2:universe;
 def_int $int4 = 56360963;
 def_int $int5 = 56360964;
 def_int $int6 = 56360965;
-def_component $component7 = interface_860:2;
-def_component $component8 = interface_860:8;
+def_component $component7 = skill_guide_v2:resize_preview;
+def_component $component8 = skill_guide_v2:list;
 if (%varcint1172 ! $int0 | %varcint1173 ! $int1) {
 	if_setscrollpos(0, 0, $component8);
 }
 %varcint1172 = $int0;
 %varcint1173 = $int1;
 def_enum $enum9 = ~toplevel_getcomponents;
-def_component $component10 = enum(component, component, $enum9, interface_161:16);
+def_component $component10 = enum(component, component, $enum9, toplevel_osrs_stretch:mainmodal);
 if (~on_mobile = true) {
 	if_setontimer("script3833($component2, $component3, 0)", $component2);
 } else {
@@ -37,7 +37,7 @@ if ($enum9 = enum_1132) {
 cc_deleteall($component2);
 def_int $int11 = 0;
 while ($int11 < 9) {
-	cc_create($component2, ^iftype_graphic, $int11);
+	cc_create($component2, ^iftype_graphic, $int11, false);
 	cc_settiling(true);
 	cc_settrans(255);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
@@ -50,7 +50,7 @@ while ($int11 < 9) {
 cc_deleteall($component7);
 $int11 = 0;
 while ($int11 < 4) {
-	cc_create($component7, ^iftype_rectangle, $int11);
+	cc_create($component7, ^iftype_rectangle, $int11, false);
 	cc_setsize(calc($int11 * 2), calc($int11 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);

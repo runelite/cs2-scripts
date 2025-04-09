@@ -1,5 +1,5 @@
 // 1185
-[proc,clancup_hud_update](component $widget_208:3_0, component $widget_208:4_1)
+[proc,clancup_hud_update](component $com_clan_cup_hud_header0, component $com_clan_cup_hud_results1)
 def_string $string0 = "";
 if (%varbit4820 > %varbit4821) {
 	$string0 = "<col=ffffff><~tostring_spacer(%varbit4820, ",")></col><br><~tostring_spacer(%varbit4821, ",")>";
@@ -9,19 +9,19 @@ if (%varbit4820 > %varbit4821) {
 	$string0 = "<~tostring_spacer(%varbit4820, ",")><br><~tostring_spacer(%varbit4821, ",")>";
 }
 if (%varbit4822 >= ^max_32bit_int) {
-	if_settext("Your team:<br>Opponents:<br>Starting soon...", $widget_208:3_0);
+	if_settext("Your team:<br>Opponents:<br>Starting soon...", $com_clan_cup_hud_header0);
 	$string0 = append($string0, "<br>");
 } else if (%varbit4822 > 1) {
-	if_settext("Your team:<br>Opponents:<br>Time:", $widget_208:3_0);
+	if_settext("Your team:<br>Opponents:<br>Time:", $com_clan_cup_hud_header0);
 	$string0 = append($string0, "<br><tostring(%varbit4822)> mins");
 } else if (%varbit4822 = 1) {
-	if_settext("Your team:<br>Opponents:<br>Time:", $widget_208:3_0);
+	if_settext("Your team:<br>Opponents:<br>Time:", $com_clan_cup_hud_header0);
 	$string0 = append($string0, "<br>1 min");
 } else if (%varbit4820 = %varbit4821) {
-	if_settext("Your team:<br>Opponents:<br>", $widget_208:3_0);
+	if_settext("Your team:<br>Opponents:<br>", $com_clan_cup_hud_header0);
 	$string0 = append($string0, "<br>Next kill wins!");
 } else {
-	if_settext("Your team:<br>Opponents:<br>Ending...", $widget_208:3_0);
+	if_settext("Your team:<br>Opponents:<br>Ending...", $com_clan_cup_hud_header0);
 	$string0 = append($string0, "<br>");
 }
-if_settext($string0, $widget_208:4_1);
+if_settext($string0, $com_clan_cup_hud_results1);

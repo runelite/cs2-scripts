@@ -5,7 +5,7 @@ if ($opindex0 = 1) {
 	sound_synth(interface_select1, 1, 0);
 	cc_deleteall($component1);
 	$comsubid7 = ~options_button_on($component1, 0);
-	.cc_create($component1, ^iftype_graphic, $comsubid7);
+	.cc_create($component1, ^iftype_graphic, $comsubid7, false);
 	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	.cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
 	.cc_setgraphic($graphic2);

@@ -1,9 +1,9 @@
 // 6853
-[clientscript,herbiboar_helper_stattransmit](component $component0, int $lvl1, int $lvl2)
+[clientscript,herbiboar_helper_stattransmit](component $component0, int $int1, int $int2)
 if (~inzone(0_56_58_0_0, 3_59_60_63_63, coord) = 0) {
 	return;
 }
-if ($lvl1 = stat(hunter) & $lvl2 = stat(herblore)) {
+if ($int1 = stat(hunter) & $int2 = stat(herblore)) {
 	return;
 }
 ~herbiboar_helper_update(%varbit14172);

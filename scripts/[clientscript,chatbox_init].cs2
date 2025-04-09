@@ -34,13 +34,13 @@ if_setonvartransmit("script924{
 	28 = var3196, 
 	29 = var3008, 
 	30 = var3009
-}", interface_162:0);
-if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(interface_162:566), if_hassub(interface_162:565), ~toplevel_getcomponents)", interface_162:0);
-if_setonchattransmit("chat_onchattransmit", interface_162:0);
-if_setonfriendtransmit("chat_onchattransmit", interface_162:0);
-if_setonclantransmit("rebuildchatbox", interface_162:0);
-if_setonclansettingstransmit("rebuildchatbox", interface_162:0);
-if_setonmisctransmit("script664(true)", interface_162:0);
+}", chatbox:universe);
+if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(chatbox:null), if_hassub(chatbox:null), ~toplevel_getcomponents)", chatbox:universe);
+if_setonchattransmit("chat_onchattransmit", chatbox:universe);
+if_setonfriendtransmit("chat_onchattransmit", chatbox:universe);
+if_setonclantransmit("rebuildchatbox", chatbox:universe);
+if_setonclansettingstransmit("rebuildchatbox", chatbox:universe);
+if_setonmisctransmit("script664(true)", chatbox:universe);
 %varcstring335, %varcint42 = "", -1;
 if (%varcint41 >= 0 & %varcint41 <= 6 | %varcint41 = 1337) {
 	%varcint41 = %varcint41;
@@ -97,8 +97,8 @@ if (%varcint41 >= 0 & %varcint41 <= 6 | %varcint41 = 1337) {
 def_int $int0 = 0;
 def_component $component1 = enum(int, component, enum_579, $int0);
 while ($component1 ! null) {
-	cc_create(interface_162:57, ^iftype_text, calc($int0 * 4));
-	.cc_create(interface_162:57, ^iftype_text, calc($int0 * 4 + 1));
+	cc_create(chatbox:scrollarea, ^iftype_text, calc($int0 * 4), false);
+	.cc_create(chatbox:scrollarea, ^iftype_text, calc($int0 * 4 + 1), false);
 	cc_setcolour(^black);
 	.cc_setcolour(^black);
 	cc_settextfont(p12_full);
@@ -107,8 +107,8 @@ while ($component1 ! null) {
 	.cc_settextalign(^settextalign_left, ^settextalign_top, 14);
 	cc_sethide(true);
 	.cc_sethide(true);
-	cc_create(interface_162:57, ^iftype_text, calc($int0 * 4 + 2));
-	.cc_create(interface_162:57, ^iftype_graphic, calc($int0 * 4 + 3));
+	cc_create(chatbox:scrollarea, ^iftype_text, calc($int0 * 4 + 2), false);
+	.cc_create(chatbox:scrollarea, ^iftype_graphic, calc($int0 * 4 + 3), false);
 	cc_setcolour(^black);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 14);
@@ -120,13 +120,13 @@ while ($component1 ! null) {
 $int0 = 0;
 def_int $int2 = ~ca_tasks_total;
 while ($int0 < $int2) {
-	cc_create(interface_162:35, ^iftype_rectangle, $int0);
+	cc_create(chatbox:chat_achievement_click, ^iftype_rectangle, $int0, false);
 	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	$int0 = calc($int0 + 1);
 }
-if_setscrollpos(0, 0, interface_162:57);
-~scrollbar_vertical(interface_162:558, interface_162:57, null, null, null, null, null, null);
+if_setscrollpos(0, 0, chatbox:scrollarea);
+~scrollbar_vertical(chatbox:null, chatbox:scrollarea, null, null, null, null, null, null);
 ~toplevel_chatbox_background;
 chat_setmessagefilter("");
 ~script223;

@@ -1,16 +1,16 @@
 // 4804
-[clientscript,ca_overview_init](component $widget_717:4_0, component $widget_717:5_1, component $widget_717:9_2, component $widget_717:14_3, component $widget_717:15_4, component $widget_717:17_5, component $widget_717:16_6, component $widget_717:10_7, component $widget_717:11_8, component $widget_717:7_9, component $widget_717:8_10, component $widget_717:12_11)
-~script4767($widget_717:15_4, $widget_717:17_5, $widget_717:16_6, 0);
-def_int $comsubid12 = ~steelborder(interface_717:2, "Combat Achievements - Overview", 0);
+[clientscript,ca_overview_init](component $com_ca_overview_ca_general_header0, component $com_ca_overview_ca_personal_header1, component $com_ca_overview_ca_general_content2, component $com_ca_overview_ca_personal_content3, component $com_ca_overview_burger_btn_menu4, component $com_ca_overview_burger_menu_frame5, component $com_ca_overview_burger_menu_overlay6, component $com_ca_overview_ca_tier_name7, component $com_ca_overview_ca_tier_icon8, component $com_ca_overview_ca_buttons9, component $com_ca_overview_ca_buttons_click10, component $com_ca_overview_ca_progress11)
+~script4767($com_ca_overview_burger_btn_menu4, $com_ca_overview_burger_menu_frame5, $com_ca_overview_burger_menu_overlay6, 0);
+def_int $comsubid12 = ~steelborder(ca_overview:frame, "Combat Achievements - Overview", 0);
 ~ca_overview_draw_interface(
-	0 = $widget_717:4_0, 
-	1 = $widget_717:5_1, 
-	2 = $widget_717:9_2, 
-	3 = $widget_717:14_3, 
+	0 = $com_ca_overview_ca_general_header0, 
+	1 = $com_ca_overview_ca_personal_header1, 
+	2 = $com_ca_overview_ca_general_content2, 
+	3 = $com_ca_overview_ca_personal_content3, 
 	4 = $comsubid12, 
-	5 = $widget_717:10_7, 
-	6 = $widget_717:11_8, 
-	7 = $widget_717:7_9, 
-	8 = $widget_717:8_10, 
-	9 = $widget_717:12_11
+	5 = $com_ca_overview_ca_tier_name7, 
+	6 = $com_ca_overview_ca_tier_icon8, 
+	7 = $com_ca_overview_ca_buttons9, 
+	8 = $com_ca_overview_ca_buttons_click10, 
+	9 = $com_ca_overview_ca_progress11
 );

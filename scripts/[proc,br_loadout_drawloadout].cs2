@@ -5,16 +5,16 @@ def_component $component7 = null;
 def_int $int8 = 0;
 def_namedobj $namedobj9 = null;
 def_int $int10 = 0;
-def_int $size11 = inv_size(worn);
-while ($int10 < $size11) {
+def_int $int11 = inv_size(worn);
+while ($int10 < $int11) {
 	$component7 = enum(int, component, $enum2, $int10);
 	if ($component7 ! null) {
 		cc_deleteall($component7);
-		cc_create($component7, ^iftype_graphic, 0);
+		cc_create($component7, ^iftype_graphic, 0, false);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
-		cc_create($component7, ^iftype_graphic, 1);
+		cc_create($component7, ^iftype_graphic, 1, false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		$int8 = ~br_loadout_get_worn($int0, $int10);
@@ -54,7 +54,7 @@ while ($int10 < $size11) {
 		} else {
 			cc_settrans(255);
 			cc_clearops;
-			cc_create($component7, ^iftype_graphic, 2);
+			cc_create($component7, ^iftype_graphic, 2, false);
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 			cc_setgraphic(enum(int, graphic, enum_904, $int10));
@@ -66,11 +66,11 @@ cc_deleteall($component4);
 def_int $int12 = calc((if_getwidth($component4) - 6 - 4 * 36) / 3 + 36);
 def_int $int13 = calc((if_getheight($component4) - 6 - 7 * 32) / 6 + 32);
 $int10 = 0;
-def_int $size14 = inv_size(inv);
-while ($int10 < $size14) {
+def_int $int14 = inv_size(inv);
+while ($int10 < $int14) {
 	$int8 = ~br_loadout_get_inv($int0, $int10);
 	$namedobj9 = enum(int, namedobj, $enum1, $int8);
-	cc_create($component4, ^iftype_graphic, $int10);
+	cc_create($component4, ^iftype_graphic, $int10, false);
 	cc_setposition(calc(4 + $int12 * ($int10 % 4)), calc(3 + $int13 * ($int10 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if ($namedobj9 ! null) {
@@ -102,7 +102,7 @@ while ($int10 < $size14) {
 			10 = $drop5, 
 			11 = $component6
 		)");
-		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $size14)");
+		cc_setondrag("br_loadout_hidewarning(event_com, event_comsubid, $int14)");
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
 	} else {
@@ -113,7 +113,7 @@ while ($int10 < $size14) {
 }
 def_int $int15 = $int10;
 def_int $int16 = 0;
-$int10 = $size11;
+$int10 = $int11;
 while ($int10 > 0) {
 	$int10 = calc($int10 - 1);
 	$component7 = enum(int, component, $enum2, $int10);
@@ -124,7 +124,7 @@ while ($int10 > 0) {
 			if ($intarray0($int8) > 0) {
 				$intarray0($int8) = calc($intarray0($int8) - 1);
 			} else {
-				cc_create($component7, ^iftype_model, 2);
+				cc_create($component7, ^iftype_model, 2, false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(1, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 				cc_setmodel(bank_filler_7669);
@@ -135,8 +135,8 @@ while ($int10 > 0) {
 	}
 }
 $int10 = 0;
-while ($int10 < $size14) {
-	cc_create($component4, ^iftype_model, $int15);
+while ($int10 < $int14) {
+	cc_create($component4, ^iftype_model, $int15, false);
 	$int15 = calc($int15 + 1);
 	$int8 = ~br_loadout_get_inv($int0, $int10);
 	$namedobj9 = enum(int, namedobj, $enum1, $int8);

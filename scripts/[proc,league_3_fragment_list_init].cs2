@@ -1,6 +1,6 @@
 // 5751
 [proc,league_3_fragment_list_init](component $component0, component $component1)
-def_int $height2 = if_getscrollheight($component0);
+def_int $int2 = if_getscrollheight($component0);
 cc_deleteall($component0);
 cc_deleteall($component1);
 def_int $int3 = 0;
@@ -34,10 +34,10 @@ while ($struct7 ! null) {
 	$int4 = calc($int4 + 1);
 	$struct7 = enum(int, struct, enum_4136, $int4);
 }
-def_int $height8 = calc($int5 * 42);
-if ($height8 < if_getheight($component0)) {
-	cc_create($component0, ^iftype_rectangle, $int3);
-	cc_setsize(0, calc(if_getheight($component0) - $height8), ^setsize_minus, ^setsize_abs);
+def_int $int8 = calc($int5 * 42);
+if ($int8 < if_getheight($component0)) {
+	cc_create($component0, ^iftype_rectangle, $int3, false);
+	cc_setsize(0, calc(if_getheight($component0) - $int8), ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setcolour(^black);
 	cc_setfill(true);
@@ -47,10 +47,10 @@ if ($height8 < if_getheight($component0)) {
 		cc_settrans(220);
 	}
 	$int3 = calc($int3 + 1);
-	$height8 = if_getheight($component0);
+	$int8 = if_getheight($component0);
 }
 if ($int5 = 0) {
-	cc_create($component0, ^iftype_text, $int3);
+	cc_create($component0, ^iftype_text, $int3, false);
 	cc_setposition(10, 20, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(20, 30, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 18);
@@ -60,8 +60,8 @@ if ($int5 = 0) {
 	cc_setcolour(~league_get_league_colour(3));
 	$int3 = calc($int3 + 1);
 }
-if_setscrollsize(if_getwidth($component0), $height8, $component0);
-if ($height2 ! if_getscrollheight($component0)) {
+if_setscrollsize(if_getwidth($component0), $int8, $component0);
+if ($int2 ! if_getscrollheight($component0)) {
 	if_setscrollpos(0, 0, $component0);
 }
 ~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

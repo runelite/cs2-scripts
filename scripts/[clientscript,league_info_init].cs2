@@ -1,22 +1,22 @@
 // 3217
-[clientscript,league_info_init](component $widget_654:4_0, component $widget_654:5_1, component $widget_654:6_2, component $widget_654:7_3, component $widget_654:9_4, component $widget_654:11_5, component $widget_654:10_6, component $widget_654:12_7, component $widget_654:16_8, component $widget_654:17_9, component $widget_654:8_10, component $widget_654:15_11)
-~leagues_close_button($widget_654:15_11, false, 0);
-def_string $text0 = "League Info";
-def_int $comsubid12 = ~steelborder(interface_654:2, $text0, 1);
-def_component $component13 = interface_654:0;
+[clientscript,league_info_init](component $com_league_info_league_general_header0, component $com_league_info_league_specific_header1, component $com_league_info_league_general2, component $com_league_info_league_specific3, component $com_league_info_league_general_content4, component $com_league_info_league_specific_content5, component $com_league_info_league_general_scrollbar6, component $com_league_info_league_specific_scrollbar7, component $com_league_info_league_btn_menu8, component $com_league_info_league_menu_frame9, component $com_league_info_league_menu_overlay10, component $com_league_info_close_button11)
+~leagues_close_button($com_league_info_close_button11, false, 0);
+def_string $string0 = "League Info";
+def_int $comsubid12 = ~steelborder(league_info:frame, $string0, 1);
+def_component $component13 = league_info:infinity;
 if_setontimer("script6110($component13, -1)", $component13);
 if_setonresize("league_info_draw_interface(
-	0 = $widget_654:4_0, 
-	1 = $widget_654:5_1, 
-	2 = $widget_654:6_2, 
-	3 = $widget_654:7_3, 
-	4 = $widget_654:9_4, 
-	5 = $widget_654:11_5, 
-	6 = $widget_654:10_6, 
-	7 = $widget_654:12_7, 
-	8 = $widget_654:16_8, 
-	9 = $widget_654:17_9, 
-	10 = $widget_654:8_10, 
+	0 = $com_league_info_league_general_header0, 
+	1 = $com_league_info_league_specific_header1, 
+	2 = $com_league_info_league_general2, 
+	3 = $com_league_info_league_specific3, 
+	4 = $com_league_info_league_general_content4, 
+	5 = $com_league_info_league_specific_content5, 
+	6 = $com_league_info_league_general_scrollbar6, 
+	7 = $com_league_info_league_specific_scrollbar7, 
+	8 = $com_league_info_league_btn_menu8, 
+	9 = $com_league_info_league_menu_frame9, 
+	10 = $com_league_info_league_menu_overlay10, 
 	11 = 0, 
 	12 = 0, 
 	13 = $comsubid12

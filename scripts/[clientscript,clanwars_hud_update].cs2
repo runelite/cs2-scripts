@@ -1,6 +1,6 @@
 // 594
-[clientscript,clanwars_hud_update](component $widget_88:0_0, component $widget_88:2_1, int $int2, component $widget_88:4_3, int $comsubid4)
-~clanwars_hud_info_update($widget_88:0_0, $widget_88:2_1, $int2);
-if (cc_find($widget_88:4_3, $comsubid4) = ^true) {
-	~clanwars_hud_countdown_update($widget_88:0_0, $widget_88:4_3);
+[clientscript,clanwars_hud_update](component $com_clanwars_hud_universe0, component $com_clanwars_hud_info1, int $int2, component $com_clanwars_hud_countdown3, int $comsubid4)
+~clanwars_hud_info_update($com_clanwars_hud_universe0, $com_clanwars_hud_info1, $int2);
+if (cc_find($com_clanwars_hud_countdown3, $comsubid4) = ^true) {
+	~clanwars_hud_countdown_update($com_clanwars_hud_universe0, $com_clanwars_hud_countdown3);
 }

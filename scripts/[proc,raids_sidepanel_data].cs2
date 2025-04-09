@@ -1,5 +1,5 @@
 // 1540
-[proc,raids_sidepanel_data](component $widget_500:12_0, component $widget_500:14_1)
+[proc,raids_sidepanel_data](component $com_raids_sidepanel_bottom0, component $com_raids_sidepanel_start1)
 def_string $string0 = "Party size: <col=ffffff><tostring(%varbit5424)></col>  Combat level: <col=ffffff><tostring(%varbit12285)></col>";
 if (%varbit9540 > %varbit5424) {
 	$string0 = append($string0, "<br>Scaled party size: <col=ffffff><tostring(%varbit9540)></col>");
@@ -28,20 +28,20 @@ if (%varbit5425 = 0) {
 }
 def_string $string1 = "Start raid";
 if (%varbit5423 = 1 & %varbit5425 = 0) {
-	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($widget_500:14_1), ^setsize_abs, ^setsize_abs, $widget_500:14_1);
-	if_sethide(false, $widget_500:14_1);
-	~raids_sidepanel_drawbutton(false, $string1, $widget_500:14_1);
-	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string1, $widget_500:14_1)", $widget_500:14_1);
-	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string1, $widget_500:14_1)", $widget_500:14_1);
-	if_setonop("raids_sidepanel_opbutton(event_op, $string1, $widget_500:14_1)", $widget_500:14_1);
-	if_setontimer(null, $widget_500:14_1);
-	if_setop(1, $string1, $widget_500:14_1);
+	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($com_raids_sidepanel_start1), ^setsize_abs, ^setsize_abs, $com_raids_sidepanel_start1);
+	if_sethide(false, $com_raids_sidepanel_start1);
+	~raids_sidepanel_drawbutton(false, $string1, $com_raids_sidepanel_start1);
+	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
+	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
+	if_setonop("raids_sidepanel_opbutton(event_op, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
+	if_setontimer(null, $com_raids_sidepanel_start1);
+	if_setop(1, $string1, $com_raids_sidepanel_start1);
 } else {
-	if_sethide(true, $widget_500:14_1);
-	cc_deleteall($widget_500:14_1);
-	if_clearops($widget_500:14_1);
-	if_setonmouserepeat(null, $widget_500:14_1);
-	if_setonmouseleave(null, $widget_500:14_1);
-	if_setonop(null, $widget_500:14_1);
-	if_setontimer(null, $widget_500:14_1);
+	if_sethide(true, $com_raids_sidepanel_start1);
+	cc_deleteall($com_raids_sidepanel_start1);
+	if_clearops($com_raids_sidepanel_start1);
+	if_setonmouserepeat(null, $com_raids_sidepanel_start1);
+	if_setonmouseleave(null, $com_raids_sidepanel_start1);
+	if_setonop(null, $com_raids_sidepanel_start1);
+	if_setontimer(null, $com_raids_sidepanel_start1);
 }

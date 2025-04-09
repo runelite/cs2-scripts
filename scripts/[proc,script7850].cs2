@@ -1,7 +1,7 @@
 // 7850
-[proc,script7850](int $int0, component $component1, string $text0, enum $enum2, int $int3, int $int4)(int)
+[proc,script7850](int $int0, component $component1, string $string0, enum $enum2, int $int3, int $int4)(int)
 def_int $int5 = 0;
-cc_create($component1, ^iftype_graphic, $int5);
+cc_create($component1, ^iftype_graphic, $int5, false);
 $int5 = calc($int5 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -11,7 +11,7 @@ if (%var261 >= $int0) {
 	cc_setgraphic(tradebacking_dark);
 }
 cc_settiling(true);
-.cc_create($component1, ^iftype_rectangle, $int5);
+.cc_create($component1, ^iftype_rectangle, $int5, false);
 $int5 = calc($int5 + 1);
 .cc_sethide(false);
 .cc_setsize(calc(36 + 4), calc(32 + 4), ^setsize_abs, ^setsize_abs);
@@ -20,11 +20,11 @@ $int5 = calc($int5 + 1);
 .cc_settrans(220);
 def_int $int6 = 0;
 while ($int6 <= 12) {
-	cc_create($component1, ^iftype_graphic, $int5);
+	cc_create($component1, ^iftype_graphic, $int5, false);
 	$int5, $int6 = calc($int5 + 1), calc($int6 + 1);
 	cc_sethide(true);
 }
-cc_create($component1, ^iftype_text, $int5);
+cc_create($component1, ^iftype_text, $int5, false);
 $int5 = calc($int5 + 1);
 cc_setsize(20, 23, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
@@ -32,17 +32,17 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
-cc_settext($text0);
+cc_settext($string0);
 $int5 = ~thinstonebox($component1, $int5);
 def_obj $obj7 = null;
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
-def_int $count12 = enum_getoutputcount($enum2);
-def_int $count13 = 0;
-while ($count13 < $count12) {
-	$int6 = enum(int, int, $enum2, $count13);
+def_int $int12 = enum_getoutputcount($enum2);
+def_int $int13 = 0;
+while ($int13 < $int12) {
+	$int6 = enum(int, int, $enum2, $int13);
 	$obj7 = enum(int, obj, enum_5215, $int6);
 	if ($obj7 ! null) {
 		$int8 = oc_param($obj7, levelrequire);
@@ -68,7 +68,7 @@ while ($count13 < $count12) {
 			if ($int11 = 0 & %var262 = $int6) {
 				.cc_setposition(calc($int10 - 2), 8, ^setpos_abs_left, ^setpos_abs_bottom);
 				$int11 = 1;
-				.cc_create($component1, ^iftype_rectangle, $int5);
+				.cc_create($component1, ^iftype_rectangle, $int5, false);
 				$int5 = calc($int5 + 1);
 				.cc_sethide(false);
 				.cc_setsize(calc(36 + 4), calc(32 + 4), ^setsize_abs, ^setsize_abs);
@@ -76,7 +76,7 @@ while ($count13 < $count12) {
 				.cc_setfill(false);
 				.cc_settrans(0);
 				.cc_setposition(calc($int10 - 2), 8, ^setpos_abs_left, ^setpos_abs_bottom);
-				.cc_create($component1, ^iftype_rectangle, $int5);
+				.cc_create($component1, ^iftype_rectangle, $int5, false);
 				$int5 = calc($int5 + 1);
 				.cc_sethide(false);
 				.cc_setsize(calc(36 + 2), calc(32 + 2), ^setsize_abs, ^setsize_abs);
@@ -87,7 +87,7 @@ while ($count13 < $count12) {
 			}
 		}
 	}
-	$count13 = calc($count13 + 1);
+	$int13 = calc($int13 + 1);
 }
 if ($int11 = 0) {
 	.cc_sethide(true);

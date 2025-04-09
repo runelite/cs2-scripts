@@ -2,9 +2,9 @@
 [proc,script7584]
 def_int $colour0 = ~settings_get_colour_or_default(113);
 if (%varbit16112 = 1) {
-	shiftop_tile_set(1, "Mark tile", script4762);
+	clientop_tile_set(1, "Mark tile", script4762);
 } else {
-	shiftop_tile_del(1);
+	clientop_tile_del(1);
 }
 if (%varbit16115 = 1) {
 	highlight_tile_setup(6, null, 0, 0, 64);

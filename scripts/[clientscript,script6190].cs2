@@ -24,12 +24,12 @@ while ($int14 > 0) {
 	if ($component15 ! null) {
 		cc_deleteall($component15);
 		$int16 = 0;
-		cc_create($component15, ^iftype_graphic, $int16);
+		cc_create($component15, ^iftype_graphic, $int16, false);
 		$int16 = calc($int16 + 1);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
-		cc_create($component15, ^iftype_graphic, $int16);
+		cc_create($component15, ^iftype_graphic, $int16, false);
 		$int16 = calc($int16 + 1);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		if ($objarray0($int14) ! null) {
@@ -46,11 +46,11 @@ while ($int14 > 0) {
 			if_clearops($component15);
 			if_setonop(null, $component15);
 		}
-		cc_create($component15, ^iftype_graphic, $int16);
+		cc_create($component15, ^iftype_graphic, $int16, false);
 		$int16 = calc($int16 + 1);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-		~script6192($int14, interface_756:56);
-		cc_setonvartransmit("script6191(event_com, event_comsubid, $int14, interface_756:56){var286}");
+		~script6192($int14, pvp_arena_legacyduel_confirm:tooltip);
+		cc_setonvartransmit("script6191(event_com, event_comsubid, $int14, pvp_arena_legacyduel_confirm:tooltip){var286}");
 	}
 }

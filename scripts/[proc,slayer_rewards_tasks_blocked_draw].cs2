@@ -1,5 +1,5 @@
 // 426
-[proc,slayer_rewards_tasks_blocked_draw](component $component0, int $int1, int $int2, component $widget_426:11_3, component $widget_426:2_4, component $widget_426:4_5, component $widget_426:8_6, component $widget_426:5_7)
+[proc,slayer_rewards_tasks_blocked_draw](component $component0, int $int1, int $int2, component $com_slayer_rewards_main3, component $com_slayer_rewards_confirm4, component $com_slayer_rewards_confirm_info5, component $com_slayer_rewards_confirm_button6, component $com_slayer_rewards_back_button7)
 cc_deleteall($component0);
 def_int $int8 = 0;
 def_int $int9 = -1;
@@ -23,7 +23,7 @@ switch_int ($int1) {
 }
 $int9 = calc(56 + $int9);
 def_int $int10 = 0;
-cc_create($component0, ^iftype_text, $int10);
+cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(85, 0, ^setsize_abs, ^setsize_minus);
@@ -32,7 +32,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext("Slot <tostring($int1)>:");
-cc_create($component0, ^iftype_text, $int10);
+cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(170, 0, ^setsize_minus, ^setsize_minus);
@@ -63,9 +63,9 @@ if ($int8 = 0) {
 	cc_settextfont(p12_full);
 	cc_settext(enum(int, string, enum_693, $int8));
 }
-cc_create($component0, ^iftype_graphic, $int10);
+cc_create($component0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);
-.cc_create($component0, ^iftype_text, $int10);
+.cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 .cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -81,7 +81,7 @@ if ($int8 ! 0) {
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Unblock");
-	cc_setonop("slayer_rewards_tasks_unblocktask($int8, $int9, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)");
+	cc_setonop("slayer_rewards_tasks_unblocktask($int8, $int9, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)");
 } else {
 	.cc_setcolour(0x7f4c0f);
 }

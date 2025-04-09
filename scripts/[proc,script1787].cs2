@@ -1,15 +1,15 @@
 // 1787
 [proc,script1787](obj $obj0)(string)
 def_string $string0 = oc_name($obj0);
-if (map_members = true | oc_members($obj0) = ^false) {
+if (map_members = true | oc_members($obj0) = 0) {
 	switch_obj ($obj0) {
-		case escape_crystal_22517 :
+		case tob_teleport_22517 :
 			if (%varbit14838 = 1) {
 				$string0 = "<$string0> (Active)";
 			} else {
 				$string0 = "<$string0> (Inactive)";
 			}
-		case bankers_note_28767 :
+		case league_bankers_note_28767 :
 			if (%var4034 ! null) {
 				$string0 = oc_name(%var4034);
 			}

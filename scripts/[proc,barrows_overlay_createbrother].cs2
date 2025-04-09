@@ -1,7 +1,7 @@
 // 1071
-[proc,barrows_overlay_createbrother](string $string0, int $int0, component $widget_24:4_1)(int)
-cc_create($widget_24:4_1, ^iftype_text, calc($int0 * 2));
-.cc_create($widget_24:4_1, ^iftype_graphic, calc($int0 * 2 + 1));
+[proc,barrows_overlay_createbrother](string $string0, int $int0, component $com_barrows_overlay_brothers1)(int)
+cc_create($com_barrows_overlay_brothers1, ^iftype_text, calc($int0 * 2), false);
+.cc_create($com_barrows_overlay_brothers1, ^iftype_graphic, calc($int0 * 2 + 1), false);
 cc_setsize(20, 17, ^setsize_minus, ^setsize_abs);
 .cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);

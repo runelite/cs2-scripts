@@ -1,5 +1,5 @@
 // 3535
-[proc,poh_costumes_draw_big](int $int0, namedobj $namedobj1, int $int2, int $int3, int $count4, graphic $graphic5, int $int6, boolean $boolean7, component $component8)(int, int)
+[proc,poh_costumes_draw_big](int $int0, namedobj $namedobj1, int $int2, int $int3, int $int4, graphic $graphic5, int $int6, boolean $boolean7, component $component8)(int, int)
 def_int $int9 = calc($int2 * $int6);
 def_int $int10 = calc($int9 + 4);
 def_int $int11 = calc($int9 + $int6);
@@ -126,7 +126,7 @@ if (cc_find($component8, $int9) = ^true) {
 }
 $int0 = calc($int0 + $int20);
 if (cc_find($component8, calc($int9 + 2)) = ^true) {
-	if ($int3 < calc($count4 - 1)) {
+	if ($int3 < calc($int4 - 1)) {
 		$int0 = calc($int0 + 3);
 		cc_sethide(false);
 		cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);

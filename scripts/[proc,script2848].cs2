@@ -1,8 +1,8 @@
 // 2848
-[proc,script2848](component $widget_477:6_0, int $int1, int $int2, int $y3, int $int4, int $int5)(int)
+[proc,script2848](component $com_hunting_customfurs_choices_items0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
 def_int $int6 = $int5;
 def_int $int7 = ~script2849($int1, $int2);
-def_int $int8 = calc(if_getwidth($widget_477:6_0) / $int7);
+def_int $int8 = calc(if_getwidth($com_hunting_customfurs_choices_items0) / $int7);
 def_int $int9 = 20;
 def_int $int10 = 0;
 def_struct $struct11 = null;
@@ -17,8 +17,8 @@ while ($int1 <= $int2) {
 		}
 		$obj12 = struct_param($struct11, param_737);
 		if ($obj12 ! bones_526) {
-			cc_create($widget_477:6_0, ^iftype_graphic, $int6);
-			cc_setposition(calc($int10 + $int4), $y3, ^setpos_abs_left, ^setpos_abs_top);
+			cc_create($com_hunting_customfurs_choices_items0, ^iftype_graphic, $int6, false);
+			cc_setposition(calc($int10 + $int4), $int3, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setobject($obj12, -1);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setgraphicshadow(0x333333);

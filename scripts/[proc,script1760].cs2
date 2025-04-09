@@ -1,10 +1,10 @@
 // 1760
-[proc,script1760](int $int0, int $int1, int $int2, namedobj $namedobj3, int $total4, int $int5)(int, int, int)
+[proc,script1760](int $int0, int $int1, int $int2, namedobj $namedobj3, int $int4, int $int5)(int, int, int)
 def_int $int6 = 0;
-if (oc_param($namedobj3, param_1793) = true & inv_total(inv_814, $namedobj3) < 1) {
+if (oc_param($namedobj3, param_1793) = true & inv_total(forestry_kit, $namedobj3) < 1) {
 	$int6 = 1;
 }
-def_component $component7 = interface_823:21;
+def_component $component7 = forestry_kit_main:list;
 def_int $int8 = 3;
 def_int $int9 = 7;
 def_int $int10 = 74;
@@ -43,7 +43,7 @@ def_int $int18 = calc($int2 / $int15 * ($int10 + $int8) + $int8);
 def_int $int19 = 0;
 if ($int6 = 1) {
 	while ($int19 < 12) {
-		cc_create($component7, ^iftype_rectangle, $int0);
+		cc_create($component7, ^iftype_rectangle, $int0, false);
 		cc_sethide(true);
 		$int0 = calc($int0 + 1);
 		$int19 = calc($int19 + 1);
@@ -92,14 +92,14 @@ if ($int5 = 0) {
 } else {
 	cc_setonop("script1761(-1, event_op)");
 }
-cc_create($component7, ^iftype_graphic, $int0);
+cc_create($component7, ^iftype_graphic, $int0, false);
 cc_setposition(calc($int17 + $int16 / 2 - 36 / 2), calc($int18 + $int9), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setobject($namedobj3, $total4);
+cc_setobject($namedobj3, $int4);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 $int0 = calc($int0 + 1);
-cc_create($component7, ^iftype_text, $int0);
+cc_create($component7, ^iftype_text, $int0, false);
 cc_setposition(calc($int17 + 7), calc($int18 + 27 + $int9 + $int14), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($int16 - 14), 40, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);

@@ -1,8 +1,8 @@
 // 4664
-[clientscript,gim_options_indexop](component $widget_744:12_0, component $widget_744:13_1, int $comsubid2, int $int3, int $int4, int $int5)
-if (cc_find($widget_744:12_0, $comsubid2) = ^true) {
+[clientscript,gim_options_indexop](component $com_gim_options_list_contents0, component $com_gim_options_list_scrollbar1, int $comsubid2, int $int3, int $int4, int $int5)
+if (cc_find($com_gim_options_list_contents0, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_setcolour(^red);
 	cc_setontimer("gim_options_titlereset(event_com, event_comsubid, $int4, $int5, clientclock)");
-	~scrollbar_resize($widget_744:13_1, $widget_744:12_0, ~min(calc(if_getscrollheight($widget_744:12_0) - if_getheight($widget_744:12_0)), ~max(0, $int3)));
+	~scrollbar_resize($com_gim_options_list_scrollbar1, $com_gim_options_list_contents0, ~min(calc(if_getscrollheight($com_gim_options_list_contents0) - if_getheight($com_gim_options_list_contents0)), ~max(0, $int3)));
 }

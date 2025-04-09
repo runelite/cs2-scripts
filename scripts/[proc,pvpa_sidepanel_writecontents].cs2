@@ -1,142 +1,142 @@
 // 6269
-[proc,pvpa_sidepanel_writecontents](boolean $boolean0, component $widget_762:1_1, component $widget_762:4_2, component $widget_762:8_3, component $widget_762:10_4, component $widget_762:11_5, component $widget_762:12_6, component $widget_762:13_7, component $widget_762:9_8)
-def_int $clanslot9 = null;
-def_string $text0 = "";
-def_string $text1 = "";
+[proc,pvpa_sidepanel_writecontents](boolean $boolean0, component $com_pvp_arena_sidepanel_header1, component $com_pvp_arena_sidepanel_groupname2, component $com_pvp_arena_sidepanel_playerlist3, component $com_pvp_arena_sidepanel_scrollbar4, component $com_pvp_arena_sidepanel_hint5, component $com_pvp_arena_sidepanel_left6, component $com_pvp_arena_sidepanel_right7, component $com_pvp_arena_sidepanel_worldhop8)
+def_int $int9 = -1;
+def_string $string0 = "";
+def_string $string1 = "";
 def_int $int10 = 0;
 def_int $int11 = 0;
 switch_int (%varclansetting33) {
 	case 1001 :
-		$clanslot9, $text0 = activeclansettings_getcurrentowner_slot, "1v1 Tournament";
-		if ($clanslot9 ! null) {
-			$text1 = activeclansettings_getaffineddisplayname($clanslot9);
+		$int9, $string0 = activeclansettings_getcurrentowner_slot, "1v1 Tournament";
+		if ($int9 ! -1) {
+			$string1 = activeclansettings_getaffineddisplayname($int9);
 		} else {
-			$text1 = "Host not found";
+			$string1 = "Host not found";
 		}
-		if ($clanslot9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
+		if ($int9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
 			$int11 = 1;
 		}
 	case 1002 :
-		$text0, $text1, $int10 = "1v1 Tournament", "<img=1> Official Group", 1;
+		$string0, $string1, $int10 = "1v1 Tournament", "<img=1> Official Group", 1;
 	case 1003 :
-		$clanslot9, $text0 = activeclansettings_getcurrentowner_slot, "Group Battle";
-		if ($clanslot9 ! null) {
-			$text1 = activeclansettings_getaffineddisplayname($clanslot9);
+		$int9, $string0 = activeclansettings_getcurrentowner_slot, "Group Battle";
+		if ($int9 ! -1) {
+			$string1 = activeclansettings_getaffineddisplayname($int9);
 		} else {
-			$text1 = activeclansettings_getclanname;
+			$string1 = activeclansettings_getclanname;
 		}
-		if ($clanslot9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
+		if ($int9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
 			$int11 = 1;
 		}
 	case 1004 :
-		$text0, $text1, $int10 = "Group Battle", "<img=1> Official Group", 1;
+		$string0, $string1, $int10 = "Group Battle", "<img=1> Official Group", 1;
 	case 1005 :
-		$clanslot9, $text0 = activeclansettings_getcurrentowner_slot, "1v1 Duels";
-		if ($clanslot9 ! null) {
-			$text1 = activeclansettings_getaffineddisplayname($clanslot9);
+		$int9, $string0 = activeclansettings_getcurrentowner_slot, "1v1 Duels";
+		if ($int9 ! -1) {
+			$string1 = activeclansettings_getaffineddisplayname($int9);
 		} else {
-			$text1 = activeclansettings_getclanname;
+			$string1 = activeclansettings_getclanname;
 		}
-		if ($clanslot9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
+		if ($int9 = activeclansettings_getaffinedslot(removetags(chat_playername))) {
 			$int11 = 1;
 		}
 	case 1006 :
-		$text0, $text1, $int10 = "1v1 Duels", "<img=1> Official Group", 1;
+		$string0, $string1, $int10 = "1v1 Duels", "<img=1> Official Group", 1;
 }
-if_settext($text0, $widget_762:1_1);
-if_settext($text1, $widget_762:4_2);
-def_string $text2 = "";
+if_settext($string0, $com_pvp_arena_sidepanel_header1);
+if_settext($string1, $com_pvp_arena_sidepanel_groupname2);
+def_string $string2 = "";
 def_string $string3 = "<tostring(activeclansettings_getaffinedcount)>/<tostring(64)>";
 if ($int10 = 1) {
 	if ($boolean0 = true) {
-		$text2 = "<col=ffb83f>Sign up</col> to be invited to fights.";
-		~stonebutton_init("<col=0dc10d>Sign up</col>", $widget_762:12_6, p12_full, 0);
-		if_setonop("opsound(event_op, 2)", $widget_762:12_6);
-		~stonebutton_init("<col=ff0000>Discard</col>", $widget_762:13_7, p12_full, 0);
+		$string2 = "<col=ffb83f>Sign up</col> to be invited to fights.";
+		~stonebutton_init("<col=0dc10d>Sign up</col>", $com_pvp_arena_sidepanel_left6, p12_full, 0);
+		if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left6);
+		~stonebutton_init("<col=ff0000>Discard</col>", $com_pvp_arena_sidepanel_right7, p12_full, 0);
 	} else {
-		$text2 = "Waiting for players to match...";
-		~stonebutton_init("Options", $widget_762:12_6, p12_full, 0);
-		if_setonop("opsound(event_op, 2)", $widget_762:12_6);
-		~stonebutton_init("<col=ff0000>Leave</col>", $widget_762:13_7, p12_full, 0);
+		$string2 = "Waiting for players to match...";
+		~stonebutton_init("Options", $com_pvp_arena_sidepanel_left6, p12_full, 0);
+		if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left6);
+		~stonebutton_init("<col=ff0000>Leave</col>", $com_pvp_arena_sidepanel_right7, p12_full, 0);
 	}
 } else if ($int11 = 1 & $boolean0 = false) {
-	$text1 = "JC: <activeclansettings_getclanname>";
-	if_settext($text1, $widget_762:4_2);
-	$text2 = ~text_device("<$string3> - Click <col=ffb83f>Start</col> when ready.", "<$string3> - Tap <col=ffb83f>Start</col> when ready.");
-	~stonebutton_init("<col=0dc10d>Start</col>", $widget_762:12_6, p12_full, 0);
-	if_setonop("opsound(event_op, 2)", $widget_762:12_6);
-	~stonebutton_init("<col=ff981f>Options</col>", $widget_762:13_7, p12_full, 0);
+	$string1 = "JC: <activeclansettings_getclanname>";
+	if_settext($string1, $com_pvp_arena_sidepanel_groupname2);
+	$string2 = ~text_device("<$string3> - Click <col=ffb83f>Start</col> when ready.", "<$string3> - Tap <col=ffb83f>Start</col> when ready.");
+	~stonebutton_init("<col=0dc10d>Start</col>", $com_pvp_arena_sidepanel_left6, p12_full, 0);
+	if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left6);
+	~stonebutton_init("<col=ff981f>Options</col>", $com_pvp_arena_sidepanel_right7, p12_full, 0);
 } else if ($boolean0 = true) {
-	$text2 = "<col=ffb83f>Sign up</col> to be invited to the fight.";
-	~stonebutton_init("<col=0dc10d>Sign up</col>", $widget_762:12_6, p12_full, 0);
-	if_setonop("opsound(event_op, 2)", $widget_762:12_6);
-	~stonebutton_init("<col=ff0000>Discard</col>", $widget_762:13_7, p12_full, 0);
+	$string2 = "<col=ffb83f>Sign up</col> to be invited to the fight.";
+	~stonebutton_init("<col=0dc10d>Sign up</col>", $com_pvp_arena_sidepanel_left6, p12_full, 0);
+	if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_left6);
+	~stonebutton_init("<col=ff0000>Discard</col>", $com_pvp_arena_sidepanel_right7, p12_full, 0);
 } else {
-	$text2 = "<$string3> - Waiting for group leader.";
-	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $widget_762:12_6);
-	if_setonmouserepeat(null, $widget_762:12_6);
-	if_setonmouseleave(null, $widget_762:12_6);
-	if_clearops($widget_762:12_6);
-	if_setonop(null, $widget_762:12_6);
-	if_setontimer(null, $widget_762:12_6);
-	~stonebutton_init("<col=ff0000>Leave</col>", $widget_762:13_7, p12_full, 0);
+	$string2 = "<$string3> - Waiting for group leader.";
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $com_pvp_arena_sidepanel_left6);
+	if_setonmouserepeat(null, $com_pvp_arena_sidepanel_left6);
+	if_setonmouseleave(null, $com_pvp_arena_sidepanel_left6);
+	if_clearops($com_pvp_arena_sidepanel_left6);
+	if_setonop(null, $com_pvp_arena_sidepanel_left6);
+	if_setontimer(null, $com_pvp_arena_sidepanel_left6);
+	~stonebutton_init("<col=ff0000>Leave</col>", $com_pvp_arena_sidepanel_right7, p12_full, 0);
 }
-if_setonop("opsound(event_op, 2)", $widget_762:13_7);
-if_sethide(false, $widget_762:10_4);
+if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_right7);
+if_sethide(false, $com_pvp_arena_sidepanel_scrollbar4);
 def_int $int12 = 0;
-def_string $text4 = "";
+def_string $string4 = "";
 if ($boolean0 = true) {
 	if (activeclanchannel_find_listened = true) {
 		$int12 = activeclanchannel_getusercount;
 		if ($int12 > 0) {
-			if_settext($text2, $widget_762:11_5);
-			~clan_sidepanel_drawchannel($boolean0, $int12, $widget_762:8_3, 0, $widget_762:10_4);
+			if_settext($string2, $com_pvp_arena_sidepanel_hint5);
+			~clan_sidepanel_drawchannel($boolean0, $int12, $com_pvp_arena_sidepanel_playerlist3, 0, $com_pvp_arena_sidepanel_scrollbar4);
 			return;
 		}
-		$text4 = "There are no players to list.";
+		$string4 = "There are no players to list.";
 	} else {
-		$text4 = "Loading player list...";
+		$string4 = "Loading player list...";
 	}
-	cc_deleteall($widget_762:9_8);
-	if_sethide(true, $widget_762:9_8);
+	cc_deleteall($com_pvp_arena_sidepanel_worldhop8);
+	if_sethide(true, $com_pvp_arena_sidepanel_worldhop8);
 } else if (%varbit14013 ! 0) {
 	if (map_world = %varbit14013) {
-		$text4 = "Join your opponents<br>upstairs in the Arena building. Hurry!";
-		$text2 = "A fight has been found for you!";
-		if_sethide(false, $widget_762:9_8);
-		~stonebutton_init("<col=0dc10d>Join fight</col>", $widget_762:9_8, p12_full, 0);
-		if_setonop("opsound(event_op, 2)", $widget_762:9_8);
+		$string4 = "Join your opponents<br>upstairs in the Arena building. Hurry!";
+		$string2 = "A fight has been found for you!";
+		if_sethide(false, $com_pvp_arena_sidepanel_worldhop8);
+		~stonebutton_init("<col=0dc10d>Join fight</col>", $com_pvp_arena_sidepanel_worldhop8, p12_full, 0);
+		if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_worldhop8);
 	} else {
-		$text4 = "Waiting for you<br>on world <tostring(%varbit14013)>...";
-		$text2 = "A fight has been found for you!";
-		if_sethide(false, $widget_762:9_8);
-		~stonebutton_init("<col=0dc10d>Switch world</col>", $widget_762:9_8, p12_full, 0);
-		if_setonop("opsound(event_op, 2)", $widget_762:9_8);
+		$string4 = "Waiting for you<br>on world <tostring(%varbit14013)>...";
+		$string2 = "A fight has been found for you!";
+		if_sethide(false, $com_pvp_arena_sidepanel_worldhop8);
+		~stonebutton_init("<col=0dc10d>Switch world</col>", $com_pvp_arena_sidepanel_worldhop8, p12_full, 0);
+		if_setonop("opsound(event_op, 2)", $com_pvp_arena_sidepanel_worldhop8);
 	}
-} else if (activeclanchannel_find_affined(^clantype_pvpa_group) = true) {
-	cc_deleteall($widget_762:9_8);
-	if_sethide(true, $widget_762:9_8);
+} else if (activeclanchannel_find_affined(2) = true) {
+	cc_deleteall($com_pvp_arena_sidepanel_worldhop8);
+	if_sethide(true, $com_pvp_arena_sidepanel_worldhop8);
 	$int12 = activeclanchannel_getusercount;
 	if ($int12 > 0) {
-		if_settext($text2, $widget_762:11_5);
-		~clan_sidepanel_drawchannel($boolean0, $int12, $widget_762:8_3, 0, $widget_762:10_4);
+		if_settext($string2, $com_pvp_arena_sidepanel_hint5);
+		~clan_sidepanel_drawchannel($boolean0, $int12, $com_pvp_arena_sidepanel_playerlist3, 0, $com_pvp_arena_sidepanel_scrollbar4);
 		return;
 	}
-	$text4 = "There are no players to list.";
+	$string4 = "There are no players to list.";
 } else {
-	$text4 = "Loading player list...";
-	cc_deleteall($widget_762:9_8);
-	if_sethide(true, $widget_762:9_8);
+	$string4 = "Loading player list...";
+	cc_deleteall($com_pvp_arena_sidepanel_worldhop8);
+	if_sethide(true, $com_pvp_arena_sidepanel_worldhop8);
 }
-if_settext($text2, $widget_762:11_5);
-if_setscrollpos(0, 0, $widget_762:8_3);
-if_setscrollsize(0, 0, $widget_762:8_3);
-cc_create($widget_762:8_3, ^iftype_text, 0);
+if_settext($string2, $com_pvp_arena_sidepanel_hint5);
+if_setscrollpos(0, 0, $com_pvp_arena_sidepanel_playerlist3);
+if_setscrollsize(0, 0, $com_pvp_arena_sidepanel_playerlist3);
+cc_create($com_pvp_arena_sidepanel_playerlist3, ^iftype_text, 0, false);
 cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
 cc_settextshadow(true);
-cc_settext($text4);
-~scrollbar_resize($widget_762:10_4, $widget_762:8_3, 0);
+cc_settext($string4);
+~scrollbar_resize($com_pvp_arena_sidepanel_scrollbar4, $com_pvp_arena_sidepanel_playerlist3, 0);

@@ -1,32 +1,32 @@
 // 873
-[clientscript,wom_telescope_init](component $widget_386:1_0, component $widget_386:2_1, component $widget_386:3_2)
-cc_deleteall($widget_386:1_0);
-cc_create($widget_386:1_0, ^iftype_rectangle, 0);
+[clientscript,wom_telescope_init](component $com_wom_telescope_mask0, component $com_wom_telescope_lens_outer1, component $com_wom_telescope_lens_inner2)
+cc_deleteall($com_wom_telescope_mask0);
+cc_create($com_wom_telescope_mask0, ^iftype_rectangle, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(0);
 cc_sethide(true);
-cc_create($widget_386:1_0, ^iftype_rectangle, 1);
+cc_create($com_wom_telescope_mask0, ^iftype_rectangle, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(0);
 cc_sethide(true);
-cc_create($widget_386:1_0, ^iftype_rectangle, 2);
+cc_create($com_wom_telescope_mask0, ^iftype_rectangle, 2, false);
 cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(0);
 cc_sethide(true);
-cc_create($widget_386:1_0, ^iftype_rectangle, 3);
+cc_create($com_wom_telescope_mask0, ^iftype_rectangle, 3, false);
 cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(0);
 cc_sethide(true);
-~wom_telescope_borders($widget_386:1_0, if_getwidth($widget_386:1_0), if_getheight($widget_386:1_0), $widget_386:2_1, $widget_386:3_2);
+~wom_telescope_borders($com_wom_telescope_mask0, if_getwidth($com_wom_telescope_mask0), if_getheight($com_wom_telescope_mask0), $com_wom_telescope_lens_outer1, $com_wom_telescope_lens_inner2);

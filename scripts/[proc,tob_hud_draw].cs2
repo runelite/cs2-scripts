@@ -1,29 +1,29 @@
 // 2297
-[proc,tob_hud_draw](component $widget_28:0_0, component $widget_28:3_1, component $widget_28:5_2, component $widget_28:11_3, component $widget_28:9_4, component $widget_28:36_5, component $widget_28:37_6, component $widget_28:7_7, component $widget_28:16_8, component $widget_28:19_9, component $widget_28:20_10, component $widget_28:23_11, component $widget_28:24_12, component $widget_28:27_13, component $widget_28:28_14, component $widget_28:31_15, component $widget_28:32_16, component $widget_28:35_17, component $widget_28:13_18, component $widget_28:38_19)
+[proc,tob_hud_draw](component $com_tob_hud_universe0, component $com_tob_hud_hud1, component $com_tob_hud_names_container2, component $com_tob_hud_names_header3, component $com_tob_hud_progress_container4, component $com_tob_hud_progress_bar5, component $com_tob_hud_progress_text6, component $com_tob_hud_status_container7, component $com_tob_hud_0_container8, component $com_tob_hud_0_filler9, component $com_tob_hud_1_container10, component $com_tob_hud_1_filler11, component $com_tob_hud_2_container12, component $com_tob_hud_2_filler13, component $com_tob_hud_3_container14, component $com_tob_hud_3_filler15, component $com_tob_hud_4_container16, component $com_tob_hud_4_filler17, component $com_tob_hud_spectator_container18, component $com_tob_hud_tooltip19)
 %varcint219 = calc(clientclock + 30);
-~script4729($widget_28:3_1, null, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($com_tob_hud_hud1, null, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, false);
 if (~inzone(0_56_50_56_2, 1_57_50_36_36, coord) = 1) {
 	if (%varbit6440 ! 3) {
-		if_sethide(false, $widget_28:5_2);
-		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_28:5_2);
+		if_sethide(false, $com_tob_hud_names_container2);
+		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $com_tob_hud_names_container2);
 		if (%varbit6440 = 2) {
-			if_settext("Step inside now!", $widget_28:11_3);
-			if_setcolour(~tob_hud_nameflasher, $widget_28:11_3);
-			if_setontimer("tob_hud_nameflasher($widget_28:11_3)", $widget_28:11_3);
+			if_settext("Step inside now!", $com_tob_hud_names_header3);
+			if_setcolour(~tob_hud_nameflasher, $com_tob_hud_names_header3);
+			if_setontimer("tob_hud_nameflasher($com_tob_hud_names_header3)", $com_tob_hud_names_header3);
 		} else if (%varbit6440 = 0) {
-			if_settext("No party", $widget_28:11_3);
-			if_setcolour(0xff981f, $widget_28:11_3);
-			if_setontimer(null, $widget_28:11_3);
+			if_settext("No party", $com_tob_hud_names_header3);
+			if_setcolour(0xff981f, $com_tob_hud_names_header3);
+			if_setontimer(null, $com_tob_hud_names_header3);
 		} else {
-			if_settext("Party", $widget_28:11_3);
-			if_setcolour(0xff981f, $widget_28:11_3);
-			if_setontimer(null, $widget_28:11_3);
+			if_settext("Party", $com_tob_hud_names_header3);
+			if_setcolour(0xff981f, $com_tob_hud_names_header3);
+			if_setontimer(null, $com_tob_hud_names_header3);
 		}
 	} else {
-		if_sethide(true, $widget_28:5_2);
+		if_sethide(true, $com_tob_hud_names_container2);
 	}
 } else {
-	if_sethide(true, $widget_28:5_2);
+	if_sethide(true, $com_tob_hud_names_container2);
 }
 def_int $int20 = 90;
 def_int $int21 = 0;
@@ -32,73 +32,73 @@ def_int $int23 = 0;
 def_int $int24 = 0;
 if (~instance_check(coord) = 1) {
 	if (%varbit6440 = 2) {
-		if_sethide(false, $widget_28:7_7);
-		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $widget_28:7_7);
-		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $widget_28:9_4);
+		if_sethide(false, $com_tob_hud_status_container7);
+		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $com_tob_hud_status_container7);
+		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $com_tob_hud_progress_container4);
 		if (~on_mobile = true) {
 			$int20 = 400;
 		}
-		$int21 = if_getwidth($widget_28:3_1);
+		$int21 = if_getwidth($com_tob_hud_hud1);
 		$int22 = scale(4, 7, $int21);
 		$int23 = calc($int21 - $int20);
 		if ($int22 <= $int23) {
-			if_setsize(scale(4, 7, 16384), if_getheight($widget_28:9_4), ^setsize_proportion, ^setsize_abs, $widget_28:9_4);
+			if_setsize(scale(4, 7, 16384), if_getheight($com_tob_hud_progress_container4), ^setsize_proportion, ^setsize_abs, $com_tob_hud_progress_container4);
 		} else {
-			if_setsize($int20, if_getheight($widget_28:9_4), ^setsize_minus, ^setsize_abs, $widget_28:9_4);
+			if_setsize($int20, if_getheight($com_tob_hud_progress_container4), ^setsize_minus, ^setsize_abs, $com_tob_hud_progress_container4);
 		}
-		if (cc_find($widget_28:36_5, 0) = ^true & .cc_find($widget_28:36_5, 1) = ^true) {
+		if (cc_find($com_tob_hud_progress_bar5, 0) = ^true & .cc_find($com_tob_hud_progress_bar5, 1) = ^true) {
 			if (%varbit6447 = 1) {
 				cc_setcolour(^red);
 				.cc_setcolour(0x0dc10d);
 				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
-				if_settext("<tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%", $widget_28:37_6);
+				if_settext("<tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%", $com_tob_hud_progress_text6);
 			} else if (%varbit6447 = 3) {
 				cc_setcolour(0x002620);
 				.cc_setcolour(0x00d2ac);
 				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
-				if_settext("<col=ff0000><tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%</col>", $widget_28:37_6);
+				if_settext("<col=ff0000><tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%</col>", $com_tob_hud_progress_text6);
 			} else {
 				cc_setcolour(0x7f5813);
 				.cc_setcolour(0x7f7fff);
-				if_settext("", $widget_28:37_6);
+				if_settext("", $com_tob_hud_progress_text6);
 			}
-			~tob_hud_updateprogress(scale(%varbit6448, ~max(1, %varbit6449), 16384), $widget_28:36_5);
+			~tob_hud_updateprogress(scale(%varbit6448, ~max(1, %varbit6449), 16384), $com_tob_hud_progress_bar5);
 			if (%varbit6447 = 0) {
-				if_sethide(true, $widget_28:9_4);
+				if_sethide(true, $com_tob_hud_progress_container4);
 				%varcint220 = -1;
 			} else {
-				if_sethide(false, $widget_28:9_4);
+				if_sethide(false, $com_tob_hud_progress_container4);
 			}
 		} else {
 			%varcint220 = -1;
-			if_setontimer(null, $widget_28:36_5);
-			if_settext("", $widget_28:37_6);
+			if_setontimer(null, $com_tob_hud_progress_bar5);
+			if_settext("", $com_tob_hud_progress_text6);
 		}
-		~tob_hud_statusrefresh(0, %varbit6442, %varcstring330, $widget_28:16_8, $widget_28:19_9, $widget_28:38_19);
-		~tob_hud_statusrefresh(1, %varbit6443, %varcstring331, $widget_28:20_10, $widget_28:23_11, $widget_28:38_19);
-		~tob_hud_statusrefresh(2, %varbit6444, %varcstring332, $widget_28:24_12, $widget_28:27_13, $widget_28:38_19);
-		~tob_hud_statusrefresh(3, %varbit6445, %varcstring333, $widget_28:28_14, $widget_28:31_15, $widget_28:38_19);
-		~tob_hud_statusrefresh(4, %varbit6446, %varcstring334, $widget_28:32_16, $widget_28:35_17, $widget_28:38_19);
+		~tob_hud_statusrefresh(0, %varbit6442, %varcstring330, $com_tob_hud_0_container8, $com_tob_hud_0_filler9, $com_tob_hud_tooltip19);
+		~tob_hud_statusrefresh(1, %varbit6443, %varcstring331, $com_tob_hud_1_container10, $com_tob_hud_1_filler11, $com_tob_hud_tooltip19);
+		~tob_hud_statusrefresh(2, %varbit6444, %varcstring332, $com_tob_hud_2_container12, $com_tob_hud_2_filler13, $com_tob_hud_tooltip19);
+		~tob_hud_statusrefresh(3, %varbit6445, %varcstring333, $com_tob_hud_3_container14, $com_tob_hud_3_filler15, $com_tob_hud_tooltip19);
+		~tob_hud_statusrefresh(4, %varbit6446, %varcstring334, $com_tob_hud_4_container16, $com_tob_hud_4_filler17, $com_tob_hud_tooltip19);
 		if (%varbit6441 = 0) {
-			if_sethide(false, $widget_28:13_18);
-			if_setsize(34, 209, ^setsize_abs, ^setsize_abs, $widget_28:7_7);
+			if_sethide(false, $com_tob_hud_spectator_container18);
+			if_setsize(34, 209, ^setsize_abs, ^setsize_abs, $com_tob_hud_status_container7);
 		} else {
-			if_sethide(true, $widget_28:13_18);
-			if_setsize(34, 174, ^setsize_abs, ^setsize_abs, $widget_28:7_7);
+			if_sethide(true, $com_tob_hud_spectator_container18);
+			if_setsize(34, 174, ^setsize_abs, ^setsize_abs, $com_tob_hud_status_container7);
 		}
 	} else {
 		%varcint220 = -1;
-		if_setontimer(null, $widget_28:36_5);
-		if_sethide(true, $widget_28:9_4);
-		if_sethide(true, $widget_28:7_7);
-		if_sethide(true, $widget_28:13_18);
-		~deltooltip_action($widget_28:38_19);
+		if_setontimer(null, $com_tob_hud_progress_bar5);
+		if_sethide(true, $com_tob_hud_progress_container4);
+		if_sethide(true, $com_tob_hud_status_container7);
+		if_sethide(true, $com_tob_hud_spectator_container18);
+		~deltooltip_action($com_tob_hud_tooltip19);
 	}
 } else {
 	%varcint220 = -1;
-	if_setontimer(null, $widget_28:36_5);
-	if_sethide(true, $widget_28:9_4);
-	if_sethide(true, $widget_28:7_7);
-	if_sethide(true, $widget_28:13_18);
-	~deltooltip_action($widget_28:38_19);
+	if_setontimer(null, $com_tob_hud_progress_bar5);
+	if_sethide(true, $com_tob_hud_progress_container4);
+	if_sethide(true, $com_tob_hud_status_container7);
+	if_sethide(true, $com_tob_hud_spectator_container18);
+	~deltooltip_action($com_tob_hud_tooltip19);
 }

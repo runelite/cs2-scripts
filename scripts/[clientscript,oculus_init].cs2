@@ -1,21 +1,21 @@
 // 114
-[clientscript,oculus_init](component $widget_16:0_0, component $widget_16:4_1, component $widget_16:3_2, component $widget_16:8_3, component $widget_16:21_4, component $widget_16:32_5)
+[clientscript,oculus_init](component $com_oculus_universe0, component $com_oculus_frame1, component $com_oculus_infopanel2, component $com_oculus_flasher13, component $com_oculus_flasher24, component $com_oculus_flasher35)
 if (%varcint204 > 15 | %varcint204 < 3) {
 	%varcint204 = 9;
 }
-_3129(%varcint204, 2);
-if_setonscrollwheel("camera_zoom(event_mousey)", $widget_16:0_0);
-if_setnoclickthrough(true, $widget_16:0_0);
+setfreecamspeed(%varcint204, 2);
+if_setonscrollwheel("camera_zoom(event_mousey)", $com_oculus_universe0);
+if_setnoclickthrough(true, $com_oculus_universe0);
 renderself(false);
-~steelborder($widget_16:4_1, "Camera Controls", 1);
-cc_deleteall($widget_16:0_0);
-cc_create($widget_16:0_0, ^iftype_text, 0);
+~steelborder($com_oculus_frame1, "Camera Controls", 1);
+cc_deleteall($com_oculus_universe0);
+cc_create($com_oculus_universe0, ^iftype_text, 0, false);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(p11_full);
 cc_settext("");
-~script1655(%varcint214, $widget_16:0_0, $widget_16:3_2, $widget_16:8_3, $widget_16:21_4, $widget_16:32_5);
-cc_create($widget_16:0_0, ^iftype_text, 1);
+~script1655(%varcint214, $com_oculus_universe0, $com_oculus_infopanel2, $com_oculus_flasher13, $com_oculus_flasher24, $com_oculus_flasher35);
+cc_create($com_oculus_universe0, ^iftype_text, 1, false);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(p11_full);

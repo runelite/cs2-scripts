@@ -1,22 +1,22 @@
 // 4457
-[clientscript,clan_permission_init](component $widget_706:1_0, component $widget_706:2_1, component $widget_706:5_2, component $widget_706:4_3, component $widget_706:8_4, component $widget_706:9_5, component $widget_706:10_6, component $widget_706:12_7, component $widget_706:13_8)
-def_int $comsubid9 = ~steelborder($widget_706:2_1, "", 0);
-~clan_permission_settitle($widget_706:2_1, $comsubid9);
-if_setonvartransmit("clan_permission_settitle($widget_706:2_1, $comsubid9){var3019}", $widget_706:2_1);
-if_setonclansettingstransmit("clan_permission_settitle($widget_706:2_1, $comsubid9)", $widget_706:2_1);
+[clientscript,clan_permission_init](component $com_clans_permissions_universe0, component $com_clans_permissions_frame1, component $com_clans_permissions_exit2, component $com_clans_permissions_left3, component $com_clans_permissions_index_contents4, component $com_clans_permissions_index_scrollbar5, component $com_clans_permissions_right6, component $com_clans_permissions_list_contents7, component $com_clans_permissions_list_scrollbar8)
+def_int $comsubid9 = ~steelborder($com_clans_permissions_frame1, "", 0);
+~clan_permission_settitle($com_clans_permissions_frame1, $comsubid9);
+if_setonvartransmit("clan_permission_settitle($com_clans_permissions_frame1, $comsubid9){var3019}", $com_clans_permissions_frame1);
+if_setonclansettingstransmit("clan_permission_settitle($com_clans_permissions_frame1, $comsubid9)", $com_clans_permissions_frame1);
 def_string $string0 = "<col=ff0000>Back</col>";
 def_int $int10 = ~max(70, calc(parawidth($string0, 512, p12_full) + 20));
-if_setsize($int10, if_getheight($widget_706:5_2), ^setsize_abs, ^setsize_abs, $widget_706:5_2);
-~stonebutton_init($string0, $widget_706:5_2, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_706:5_2);
+if_setsize($int10, if_getheight($com_clans_permissions_exit2), ^setsize_abs, ^setsize_abs, $com_clans_permissions_exit2);
+~stonebutton_init($string0, $com_clans_permissions_exit2, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_clans_permissions_exit2);
 $int10 = calc($int10 + 20);
 def_enum $enum11 = null;
 def_struct $struct12 = null;
-def_int $count13 = enum_getoutputcount(enum_3825);
+def_int $int13 = enum_getoutputcount(enum_3825);
 def_int $int14 = 0;
-def_int $count15 = 0;
-while ($count15 < $count13) {
-	$enum11 = enum(int, enum, enum_3825, $count15);
+def_int $int15 = 0;
+while ($int15 < $int13) {
+	$enum11 = enum(int, enum, enum_3825, $int15);
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
@@ -29,10 +29,10 @@ while ($count15 < $count13) {
 		}
 		$int14 = calc($int14 + enum_getoutputcount($enum11) - 1);
 	}
-	$count15 = calc($count15 + 1);
+	$int15 = calc($int15 + 1);
 }
-if_setsize($int10, 0, ^setsize_abs, ^setsize_minus, $widget_706:4_3);
-if_setsize(calc($int10 - 1), 0, ^setsize_minus, ^setsize_minus, $widget_706:10_6);
+if_setsize($int10, 0, ^setsize_abs, ^setsize_minus, $com_clans_permissions_left3);
+if_setsize(calc($int10 - 1), 0, ^setsize_minus, ^setsize_minus, $com_clans_permissions_right6);
 def_int $int16 = 0;
 def_int $int17 = 265;
 while ($int17 > 0) {
@@ -40,21 +40,21 @@ while ($int17 > 0) {
 	$int17 = calc($int17 - 1);
 }
 $int16 = calc(6 + 13 + 3 + $int16 + 3 + 13 + 6);
-cc_deleteall($widget_706:8_4);
+cc_deleteall($com_clans_permissions_index_contents4);
 def_int $int18 = 0;
 def_int $int19 = 20;
 if (~on_mobile = true) {
 	$int19 = scale(5, 3, $int19);
 }
-cc_deleteall($widget_706:12_7);
+cc_deleteall($com_clans_permissions_list_contents7);
 def_int $int20 = 0;
 while ($int20 <= $int14) {
-	cc_create($widget_706:12_7, ^iftype_graphic, $int20);
+	cc_create($com_clans_permissions_list_contents7, ^iftype_graphic, $int20, false);
 	cc_setgraphic(tradebacking);
 	cc_settiling(true);
 	$int20 = calc($int20 + 1);
 }
-$int10 = calc(if_getwidth(if_getlayer($widget_706:4_3)) - ($int10 - 1 + 4 + 16));
+$int10 = calc(if_getwidth(if_getlayer($com_clans_permissions_left3)) - ($int10 - 1 + 4 + 16));
 def_int $int21 = calc(($int10 - 8 * 3) / 2);
 def_int $int22 = calc(8 + $int21 + 8);
 def_int $int23 = 6;
@@ -68,13 +68,13 @@ $int20, $int24 = ~clan_permissions_buttoninit(
 	5 = 0, 
 	6 = permission_access_2943, 
 	7 = null, 
-	8 = $widget_706:12_7
+	8 = $com_clans_permissions_list_contents7
 );
 $int23 = calc($int23 + $int24 + 6);
 def_int $int25 = 0;
-$count15, $int14 = 0, 1;
-while ($count15 < $count13) {
-	$enum11 = enum(int, enum, enum_3825, $count15);
+$int15, $int14 = 0, 1;
+while ($int15 < $int13) {
+	$enum11 = enum(int, enum, enum_3825, $int15);
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
@@ -82,11 +82,11 @@ while ($count15 < $count13) {
 				0 = $int20, 
 				1 = $int23, 
 				2 = struct_param($struct12, param_1251), 
-				3 = $widget_706:12_7, 
-				4 = $widget_706:8_4, 
+				3 = $com_clans_permissions_list_contents7, 
+				4 = $com_clans_permissions_index_contents4, 
 				5 = $int18, 
-				6 = $widget_706:13_8, 
-				7 = $count15, 
+				6 = $com_clans_permissions_list_scrollbar8, 
+				7 = $int15, 
 				8 = $int19, 
 				9 = struct_param($struct12, param_1551), 
 				10 = struct_param($struct12, param_1552)
@@ -107,7 +107,7 @@ while ($count15 < $count13) {
 						5 = $int14, 
 						6 = $struct12, 
 						7 = enum(int, struct, $enum11, calc($int17 - 1)), 
-						8 = $widget_706:12_7
+						8 = $com_clans_permissions_list_contents7
 					);
 					$int23 = calc($int23 + $int24 + 6);
 				} else if ($int17 < calc($int25 - 1)) {
@@ -120,7 +120,7 @@ while ($count15 < $count13) {
 						5 = $int14, 
 						6 = $struct12, 
 						7 = enum(int, struct, $enum11, calc($int17 + 1)), 
-						8 = $widget_706:12_7
+						8 = $com_clans_permissions_list_contents7
 					);
 				} else {
 					$int20, $int24 = ~clan_permissions_buttoninit(
@@ -132,7 +132,7 @@ while ($count15 < $count13) {
 						5 = $int14, 
 						6 = $struct12, 
 						7 = null, 
-						8 = $widget_706:12_7
+						8 = $com_clans_permissions_list_contents7
 					);
 					$int23 = calc($int23 + $int24 + 6);
 				}
@@ -141,8 +141,8 @@ while ($count15 < $count13) {
 			$int17 = calc($int17 + 1);
 		}
 	}
-	$count15 = calc($count15 + 1);
+	$int15 = calc($int15 + 1);
 }
-~scrollbar_vertical($widget_706:13_8, $widget_706:12_7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_vertical($widget_706:9_5, $widget_706:8_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~clan_permissions_setsize($int23, $widget_706:12_7, $widget_706:13_8, calc($int19 * $count13), $widget_706:8_4, $widget_706:9_5, $widget_706:1_0, if_getheight(if_getlayer($widget_706:1_0)));
+~scrollbar_vertical($com_clans_permissions_list_scrollbar8, $com_clans_permissions_list_contents7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_clans_permissions_index_scrollbar5, $com_clans_permissions_index_contents4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~clan_permissions_setsize($int23, $com_clans_permissions_list_contents7, $com_clans_permissions_list_scrollbar8, calc($int19 * $int13), $com_clans_permissions_index_contents4, $com_clans_permissions_index_scrollbar5, $com_clans_permissions_universe0, if_getheight(if_getlayer($com_clans_permissions_universe0)));

@@ -1,9 +1,9 @@
 // 3150
-[proc,script3150](int $int0, component $widget_90:9_1, component $widget_90:10_2, int $int3)
+[proc,script3150](int $int0, component $com_pvp_icons_target_pj_time1, component $com_pvp_icons_target_pj_text2, int $int3)
 if ($int3 = 1) {
-	if_settext("Lobby time remaining:", $widget_90:10_2);
+	if_settext("Lobby time remaining:", $com_pvp_icons_target_pj_text2);
 } else {
-	if_settext("<col=ff9040>Pile-jumping immunity:</col>", $widget_90:10_2);
+	if_settext("<col=ff9040>Pile-jumping immunity:</col>", $com_pvp_icons_target_pj_text2);
 }
 if ($int0 < 0) {
 	$int0 = 0;
@@ -11,11 +11,11 @@ if ($int0 < 0) {
 def_int $int4 = calc($int0 / 60);
 $int0 = calc($int0 % 60);
 if ($int0 >= 10) {
-	if_setcolour(0xff981f, $widget_90:9_1);
-	if_settext("<tostring($int4)>:<tostring($int0)>", $widget_90:9_1);
+	if_setcolour(0xff981f, $com_pvp_icons_target_pj_time1);
+	if_settext("<tostring($int4)>:<tostring($int0)>", $com_pvp_icons_target_pj_time1);
 } else {
-	if_setcolour(0xff4747, $widget_90:9_1);
-	if_settext("<tostring($int4)>:0<tostring($int0)>", $widget_90:9_1);
+	if_setcolour(0xff4747, $com_pvp_icons_target_pj_time1);
+	if_settext("<tostring($int4)>:0<tostring($int0)>", $com_pvp_icons_target_pj_time1);
 }
 if ($int0 = 5) {
 	sound_synth(ii_clock_tick, 1, 0);

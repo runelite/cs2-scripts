@@ -1,54 +1,54 @@
 // 474
-[clientscript,rareitems_diango_update](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5, int $flags6, int $flags7)
+[clientscript,rareitems_diango_update](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
 def_int $int8 = 0;
 def_namedobj $namedobj9 = null;
 def_int $int10 = 0;
 while ($int10 <= 209) {
-	if (cc_find(interface_78:3, $int10) = ^true) {
+	if (cc_find(rareitems_diango:items, $int10) = ^true) {
 		if ($int10 < 32) {
-			if (testbit($flags0, $int10) = ^true) {
+			if (testbit($int0, $int10) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 64) {
-			if (testbit($flags1, calc($int10 - 32)) = ^true) {
+			if (testbit($int1, calc($int10 - 32)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 96) {
-			if (testbit($flags2, calc($int10 - 64)) = ^true) {
+			if (testbit($int2, calc($int10 - 64)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 128) {
-			if (testbit($flags3, calc($int10 - 96)) = ^true) {
+			if (testbit($int3, calc($int10 - 96)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 160) {
-			if (testbit($flags4, calc($int10 - 128)) = ^true) {
+			if (testbit($int4, calc($int10 - 128)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 192) {
-			if (testbit($flags5, calc($int10 - 160)) = ^true) {
+			if (testbit($int5, calc($int10 - 160)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 224) {
-			if (testbit($flags6, calc($int10 - 192)) = ^true) {
+			if (testbit($int6, calc($int10 - 192)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;
 			}
 		} else if ($int10 < 256) {
-			if (testbit($flags7, calc($int10 - 224)) = ^true) {
+			if (testbit($int7, calc($int10 - 224)) = ^true) {
 				$int8 = 1;
 			} else {
 				$int8 = 0;

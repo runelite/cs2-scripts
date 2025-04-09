@@ -1,27 +1,27 @@
 // 7023
-[proc,script7023](component $widget_881:13_0, component $widget_881:10_1, component $widget_881:11_2, component $widget_881:12_3, boolean $boolean4)
-if_settext("<tostring(%varbit11199)>%", $widget_881:13_0);
-def_int $width5 = if_getwidth($widget_881:10_1);
-def_int $int6 = scale(%varbit11199, 100, $width5);
+[proc,script7023](component $com_eaa_shameometer_bar_text0, component $com_eaa_shameometer_bar_back1, component $com_eaa_shameometer_bar_sliding2, component $com_eaa_shameometer_bar_progress3, boolean $boolean4)
+if_settext("<tostring(%varbit11199)>%", $com_eaa_shameometer_bar_text0);
+def_int $int5 = if_getwidth($com_eaa_shameometer_bar_back1);
+def_int $int6 = scale(%varbit11199, 100, $int5);
 if ($int6 = 0 & %varbit11199 > 0) {
 	$int6 = 1;
 }
-if ($int6 = $width5 & %varbit11199 < 100) {
+if ($int6 = $int5 & %varbit11199 < 100) {
 	$int6 = calc($int6 - 1);
 }
 if ($boolean4 = true) {
-	if_setsize($int6, if_getheight($widget_881:12_3), ^setsize_abs, ^setsize_abs, $widget_881:11_2);
-	if_setsize($int6, if_getheight($widget_881:12_3), ^setsize_abs, ^setsize_abs, $widget_881:12_3);
-	if_setontimer(null, $widget_881:11_2);
+	if_setsize($int6, if_getheight($com_eaa_shameometer_bar_progress3), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_sliding2);
+	if_setsize($int6, if_getheight($com_eaa_shameometer_bar_progress3), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_progress3);
+	if_setontimer(null, $com_eaa_shameometer_bar_sliding2);
 	return;
 }
-def_int $width7 = if_getwidth($widget_881:12_3);
-if ($int6 < $width7) {
-	if_setsize($int6, if_getheight($widget_881:12_3), ^setsize_abs, ^setsize_abs, $widget_881:12_3);
-	if (if_getwidth($widget_881:11_2) < $width7) {
-		if_setsize($width7, if_getheight($widget_881:11_2), ^setsize_abs, ^setsize_abs, $widget_881:11_2);
+def_int $int7 = if_getwidth($com_eaa_shameometer_bar_progress3);
+if ($int6 < $int7) {
+	if_setsize($int6, if_getheight($com_eaa_shameometer_bar_progress3), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_progress3);
+	if (if_getwidth($com_eaa_shameometer_bar_sliding2) < $int7) {
+		if_setsize($int7, if_getheight($com_eaa_shameometer_bar_sliding2), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_sliding2);
 	}
-	if_setontimer("script7030($widget_881:11_2, $int6, calc(clientclock + 20))", $widget_881:11_2);
+	if_setontimer("script7030($com_eaa_shameometer_bar_sliding2, $int6, calc(clientclock + 20))", $com_eaa_shameometer_bar_sliding2);
 } else {
-	if_setontimer("script7030($widget_881:12_3, $int6, -1)", $widget_881:12_3);
+	if_setontimer("script7030($com_eaa_shameometer_bar_progress3, $int6, -1)", $com_eaa_shameometer_bar_progress3);
 }

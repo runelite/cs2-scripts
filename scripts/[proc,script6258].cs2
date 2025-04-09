@@ -9,7 +9,7 @@ def_int $int2 = calc(paraheight($string0, $int1, p12_full) * 15 + 7);
 cc_deleteall($component0);
 def_int $int3 = 0;
 while ($int3 < 3) {
-	cc_create($component0, ^iftype_rectangle, $int3);
+	cc_create($component0, ^iftype_rectangle, $int3, false);
 	cc_setsize(calc($int1 - $int3 * 2), calc($int2 - $int3 * 2), ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setfill(true);
@@ -17,7 +17,7 @@ while ($int3 < 3) {
 	cc_settrans(240);
 	$int3 = calc($int3 + 1);
 }
-cc_create($component0, ^iftype_text, $int3);
+cc_create($component0, ^iftype_text, $int3, false);
 cc_setsize(calc($int1 - $int3 * 2), calc($int2 - $int3 * 2), ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0xff981f);

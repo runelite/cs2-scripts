@@ -3,29 +3,29 @@
 if (db_getfield($dbrow0, quest:members, 0) = true & map_members = false & %varcint103 = 0) {
 	return(0);
 }
-def_int $int1 = db_getfieldcount($dbrow0, quest:questreq);
+def_int $int1 = db_getfieldcount($dbrow0, quest:requirement_quests);
 def_int $int2 = 0;
 while ($int2 < $int1) {
-	if (~quest_requirement_check_quest(db_getfield($dbrow0, quest:questreq, $int2)) = 0) {
+	if (~quest_requirement_check_quest(db_getfield($dbrow0, quest:requirement_quests, $int2)) = 0) {
 		return(0);
 	}
 	$int2 = calc($int2 + 1);
 }
 def_stat $stat3 = null;
 def_int $int4 = -1;
-$int1 = db_getfieldcount($dbrow0, quest:statreq);
+$int1 = db_getfieldcount($dbrow0, quest:requirement_stats);
 $int2 = 0;
 while ($int2 < $int1) {
-	$stat3, $int4 = db_getfield($dbrow0, quest:statreq, $int2);
+	$stat3, $int4 = db_getfield($dbrow0, quest:requirement_stats, $int2);
 	if (~quest_requirement_check_skill($stat3, $int4) = 0) {
 		return(0);
 	}
 	$int2 = calc($int2 + 1);
 }
-if (%var101 < db_getfield($dbrow0, quest:pointsreq, 0)) {
+if (%var101 < db_getfield($dbrow0, quest:requirement_questpoints, 0)) {
 	return(0);
 }
-if (%varcint52 < db_getfield($dbrow0, quest:comlevelreq, 0)) {
+if (%varcint52 < db_getfield($dbrow0, quest:requirement_combat, 0)) {
 	return(0);
 }
 if (~quest_requirement_check_misc($dbrow0) = 0) {

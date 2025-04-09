@@ -1,39 +1,39 @@
 // 2576
-[proc,bankside_extraop](obj $obj0, int $index1)(string)
+[proc,bankside_extraop](obj $obj0, int $int1)(string)
 if (%varbit10079 = 1) {
 	return("");
 }
 def_string $string0 = oc_param($obj0, param_595);
 switch_obj ($obj0) {
-	case small_pouch_5509 :
+	case rcu_pouch_small_5509 :
 		if (testbit(%var261, 0) = ^true) {
 			$string0 = "Empty";
 		}
-	case medium_pouch_5510, medium_pouch_5511 :
+	case rcu_pouch_medium_5510, rcu_pouch_medium_degrade_5511 :
 		if (testbit(%var261, 1) = ^true) {
 			$string0 = "Empty";
 		}
-	case large_pouch_5512, large_pouch_5513 :
+	case rcu_pouch_large_5512, rcu_pouch_large_degrade_5513 :
 		if (testbit(%var261, 2) = ^true) {
 			$string0 = "Empty";
 		}
-	case giant_pouch_5514, giant_pouch_5515 :
+	case rcu_pouch_giant_5514, rcu_pouch_giant_degrade_5515 :
 		if (testbit(%var261, 3) = ^true) {
 			$string0 = "Empty";
 		}
-	case colossal_pouch_26784, colossal_pouch_26786 :
+	case rcu_pouch_colossal_26784, rcu_pouch_colossal_degrade_26786 :
 		if (testbit(%var261, 4) = ^true) {
 			$string0 = "Empty";
 		}
-	case coal_bag_12019, open_coal_bag_24480 :
+	case coal_bag_12019, coal_bag_open_24480 :
 		if (testbit(%var261, 5) = ^true) {
 			$string0 = "Fill";
 		}
 	case default :
-		if (string_length($string0) <= 0 & (map_members = true | oc_members($obj0) = ^false)) {
-			if (testbit(%var262, $index1) = ^true) {
+		if (string_length($string0) <= 0 & (map_members = true | oc_members($obj0) = 0)) {
+			if (testbit(%var262, $int1) = ^true) {
 				$string0 = oc_iop($obj0, oc_param($obj0, param_148));
-			} else if (testbit(%var263, $index1) = ^true) {
+			} else if (testbit(%var263, $int1) = ^true) {
 				$string0 = oc_iop($obj0, 1);
 			}
 		}

@@ -1,13 +1,13 @@
 // 6914
 [proc,script6914]
-def_component $component0 = interface_787:11;
+def_component $component0 = fsw_sp:points_refresh_background;
 def_int $colour1 = 0x777777;
 def_int $int2 = 0;
 if (%varbit14581 = 1) {
 	$int2 = 1;
 }
 def_int $int3 = 0;
-.cc_create($component0, ^iftype_rectangle, $int3);
+.cc_create($component0, ^iftype_rectangle, $int3, false);
 $int3 = calc($int3 + 1);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

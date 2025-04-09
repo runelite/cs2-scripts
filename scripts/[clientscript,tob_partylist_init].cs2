@@ -1,5 +1,5 @@
 // 2337
-[clientscript,tob_partylist_init](component $widget_364:17_0, component $widget_364:63_1)
+[clientscript,tob_partylist_init](component $com_tob_partylist_list0, component $com_tob_partylist_scrollbar1)
 def_int $int2 = 0;
 def_component $component3 = enum(int, component, enum_1937, $int2);
 while ($component3 ! null) {
@@ -7,12 +7,12 @@ while ($component3 ! null) {
 	$int2 = calc($int2 + 1);
 	$component3 = enum(int, component, enum_1937, $int2);
 }
-if_setscrollsize(0, 0, $widget_364:17_0);
-if_setscrollpos(0, 0, $widget_364:17_0);
-~scrollbar_vertical($widget_364:63_1, $widget_364:17_0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, 0, $com_tob_partylist_list0);
+if_setscrollpos(0, 0, $com_tob_partylist_list0);
+~scrollbar_vertical($com_tob_partylist_scrollbar1, $com_tob_partylist_list0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 %varcint178, %varcint59 = 0, clientclock;
-cc_deleteall($widget_364:17_0);
-cc_create($widget_364:17_0, ^iftype_text, 0);
+cc_deleteall($com_tob_partylist_list0);
+cc_create($com_tob_partylist_list0, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setcolour(0x808080);
@@ -20,19 +20,19 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Loading...");
-cc_deleteall(interface_364:3);
-if_sethide(true, interface_364:64);
-cc_create(interface_364:3, ^iftype_rectangle, enum(component, int, enum_1938, interface_364:64));
+cc_deleteall(tob_partylist:contents);
+if_sethide(true, tob_partylist:refresh);
+cc_create(tob_partylist:contents, ^iftype_rectangle, enum(component, int, enum_1938, tob_partylist:refresh), false);
 cc_sethide(true);
-if_sethide(true, interface_364:66);
-cc_create(interface_364:3, ^iftype_rectangle, enum(component, int, enum_1938, interface_364:66));
+if_sethide(true, tob_partylist:myparty);
+cc_create(tob_partylist:contents, ^iftype_rectangle, enum(component, int, enum_1938, tob_partylist:myparty), false);
 cc_sethide(true);
-if_sethide(true, interface_364:67);
-cc_create(interface_364:3, ^iftype_rectangle, enum(component, int, enum_1938, interface_364:67));
+if_sethide(true, tob_partylist:filter);
+cc_create(tob_partylist:contents, ^iftype_rectangle, enum(component, int, enum_1938, tob_partylist:filter), false);
 cc_sethide(true);
-~script1558(interface_364:64, "Refresh", interface_364:3, enum_1938, -1);
+~script1558(tob_partylist:refresh, "Refresh", tob_partylist:contents, enum_1938, -1);
 ~tob_partylist_setpartybutton;
 ~script5219;
-if_setonvartransmit("tob_partylist_setpartybutton{var1740}", interface_364:66);
-if_setonvartransmit("script5218{var3052}", interface_364:67);
-if_sethide(true, interface_50:61);
+if_setonvartransmit("tob_partylist_setpartybutton{var1740}", tob_partylist:myparty);
+if_setonvartransmit("script5218{var3052}", tob_partylist:filter);
+if_sethide(true, tob_partydetails:leader_highlight);

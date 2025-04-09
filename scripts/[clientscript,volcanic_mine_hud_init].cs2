@@ -1,8 +1,8 @@
 // 2016
-[clientscript,volcanic_mine_hud_init](component $widget_611:0_0, component $widget_611:24_1, component $widget_611:25_2, component $widget_611:2_3, component $widget_611:26_4)
-~script4729($widget_611:24_1, $widget_611:2_3, setbit(setbit(52960, 12), 13), ^setpos_abs_left, ^setpos_abs_centre, true);
-~script4729($widget_611:25_2, $widget_611:26_4, setbit(setbit(36578, 12), 13), ^setpos_abs_right, ^setpos_abs_centre, false);
+[clientscript,volcanic_mine_hud_init](component $com_fossil_volcanic_mine_universe0, component $com_fossil_volcanic_mine_dodger_left1, component $com_fossil_volcanic_mine_dodger_right2, component $com_fossil_volcanic_mine_main_info3, component $com_fossil_volcanic_mine_vent_chambers_info4)
+~script4729($com_fossil_volcanic_mine_dodger_left1, $com_fossil_volcanic_mine_main_info3, setbit(setbit(52960, 12), 13), ^setpos_abs_left, ^setpos_abs_centre, true);
+~script4729($com_fossil_volcanic_mine_dodger_right2, $com_fossil_volcanic_mine_vent_chambers_info4, setbit(setbit(36578, 12), 13), ^setpos_abs_right, ^setpos_abs_centre, false);
 ~volcanic_mine_set_venttext;
 ~volcanic_mine_set_chambertext;
 ~volcanic_mine_set_otherinfo;
-if_setonvartransmit("volcanic_mine_updatehud{var1653, var1654, var1655}", $widget_611:0_0);
+if_setonvartransmit("volcanic_mine_updatehud{var1653, var1654, var1655}", $com_fossil_volcanic_mine_universe0);

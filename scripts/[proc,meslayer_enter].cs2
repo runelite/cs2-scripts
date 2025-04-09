@@ -4,10 +4,10 @@ if (%varcint5 = 14 | %varcint5 = 17) {
 	%varcint66 = 1;
 	return;
 }
-def_int $mesuid0 = -1;
+def_int $int0 = -1;
 def_string $string0 = "";
-def_int $length1 = string_length(%varcstring359);
-if ($length1 > 0) {
+def_int $int1 = string_length(%varcstring359);
+if ($int1 > 0) {
 	switch_int (%varcint5) {
 		case 1 :
 			return;
@@ -35,9 +35,9 @@ if ($length1 > 0) {
 				if (chat_getfilter_private = ^chatfilter_off) {
 					chat_setfilter(chat_getfilter_public, ^chatfilter_friends, chat_getfilter_trade);
 					~redraw_chat_buttons;
-					$mesuid0 = ~script553;
-					~rebuildchatbox($mesuid0);
-					~rebuildpmbox($mesuid0);
+					$int0 = ~script553;
+					~rebuildchatbox($int0);
+					~rebuildpmbox($int0);
 				}
 				if (%varbit4394 = 1) {
 					friend_del(%varcstring360);
@@ -82,9 +82,9 @@ if ($length1 > 0) {
 				return;
 			}
 			%varcstring362 = removetags(%varcstring359);
-			clan_joinchat(%varcstring359);
+			friendschat_joinchat(%varcstring359);
 		case 12 :
-			if ($length1 > 10) {
+			if ($int1 > 10) {
 				$string0 = substring(%varcstring359, 0, 9);
 			} else {
 				$string0 = %varcstring359;
@@ -99,7 +99,7 @@ if ($length1 > 0) {
 			}
 			%varcstring358, %varcint62 = %varcstring359, 0;
 			~chat_autotyper_updateop;
-			if_setontimer("chat_autotyper(event_com, true)", interface_162:11);
+			if_setontimer("chat_autotyper(event_com, true)", chatbox:chat_public);
 		case 11, 18 :
 			~meslayer_close(false, true, true);
 			return;

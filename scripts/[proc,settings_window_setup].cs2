@@ -1,48 +1,48 @@
 // 3828
-[proc,settings_window_setup](component $widget_134:0_0, component $widget_134:1_1, component $widget_134:3_2, component $widget_134:4_3, component $widget_134:5_4, component $widget_134:6_5, component $widget_134:13_6, component $widget_134:19_7, component $widget_134:18_8, component $widget_134:20_9, component $widget_134:26_10, component $widget_134:25_11, component $widget_134:28_12, component $widget_134:29_13, component $widget_134:22_14, component $widget_134:21_15, component $widget_134:17_16, component $widget_134:2_17)
-cc_deleteall($widget_134:3_2);
-def_int $comsubid18 = ~steelborder($widget_134:3_2, "Settings", 1);
+[proc,settings_window_setup](component $com_settings_infinite0, component $com_settings_universe1, component $com_settings_frame2, component $com_settings_close3, component $com_settings_tooltip_inside_if_clickzone4, component $com_settings_tooltip_inside_if5, component $com_settings_settings6, component $com_settings_settings_clickzone7, component $com_settings_settings_content8, component $com_settings_scrollbar9, component $com_settings_dropdown_panel10, component $com_settings_dropdown_close11, component $com_settings_dropdown_buttons12, component $com_settings_dropdown_scrollbar13, component $com_settings_dropdown_container14, component $com_settings_settings_sliderclickzone15, component $com_settings_settings_sliderzone16, component $com_settings_tooltip17)
+cc_deleteall($com_settings_frame2);
+def_int $comsubid18 = ~steelborder($com_settings_frame2, "Settings", 1);
 def_graphic $graphic19 = null;
 def_int $int20 = 0;
 def_boolean $boolean21 = ~on_mobile;
 if ($boolean21 = true) {
-	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $widget_134:4_3);
-	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $widget_134:4_3);
-	if_setgraphic("steelborder_close_button,0", $widget_134:4_3);
+	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_settings_close3);
+	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
+	if_setgraphic("steelborder_close_button,0", $com_settings_close3);
 	$int20 = calc(165 - (20 + 30));
 } else {
-	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $widget_134:4_3);
-	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $widget_134:4_3);
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_settings_close3);
+	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
 	$graphic19 = "close_buttons,0";
-	if_setgraphic($graphic19, $widget_134:4_3);
-	if_setonmouseleave("graphic_swapper(event_com, $graphic19)", $widget_134:4_3);
+	if_setgraphic($graphic19, $com_settings_close3);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic19)", $com_settings_close3);
 	$graphic19 = "close_buttons,1";
-	if_setonmouseover("graphic_swapper(event_com, $graphic19)", $widget_134:4_3);
+	if_setonmouseover("graphic_swapper(event_com, $graphic19)", $com_settings_close3);
 }
-if_setop(1, "Close", $widget_134:4_3);
-if_setonop("opsound(event_op, 2)", $widget_134:4_3);
-if_setopkey(2, ^key_escape, 0, $widget_134:4_3);
-if_setop(2, "", $widget_134:4_3);
-cc_deleteall($widget_134:6_5);
-cc_deleteall($widget_134:5_4);
-if_setop(1, "Toggle", $widget_134:5_4);
+if_setop(1, "Close", $com_settings_close3);
+if_setonop("opsound(event_op, 2)", $com_settings_close3);
+if_setopkey(2, ^key_escape, 0, $com_settings_close3);
+if_setop(2, "", $com_settings_close3);
+cc_deleteall($com_settings_tooltip_inside_if5);
+cc_deleteall($com_settings_tooltip_inside_if_clickzone4);
+if_setop(1, "Toggle", $com_settings_tooltip_inside_if_clickzone4);
 if ($boolean21 = true) {
-	if_setsize(150, 35, ^setsize_abs, ^setsize_abs, $widget_134:5_4);
-	if_setposition(7, 0, ^setpos_abs_left, ^setpos_abs_top, $widget_134:5_4);
-	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $widget_134:6_5);
-	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $widget_134:6_5);
+	if_setsize(150, 35, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
+	if_setposition(7, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if_clickzone4);
+	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_tooltip_inside_if5);
+	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_tooltip_inside_if5);
 } else {
-	if_setsize(150, 21, ^setsize_abs, ^setsize_abs, $widget_134:5_4);
-	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, $widget_134:5_4);
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $widget_134:6_5);
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $widget_134:6_5);
+	if_setsize(150, 21, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
+	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if_clickzone4);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_settings_tooltip_inside_if5);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if5);
 }
-$comsubid18 = ~v2_stone_button_filled($widget_134:6_5);
+$comsubid18 = ~v2_stone_button_filled($com_settings_tooltip_inside_if5);
 if ($boolean21 = false) {
-	if_setonmouseover("v2_stone_button_change_in($widget_134:6_5, 0)", $widget_134:6_5);
-	if_setonmouseleave("v2_stone_button_change_out($widget_134:6_5, 0)", $widget_134:6_5);
+	if_setonmouseover("v2_stone_button_change_in($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
+	if_setonmouseleave("v2_stone_button_change_out($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
 }
-cc_create($widget_134:6_5, ^iftype_text, $comsubid18);
+cc_create($com_settings_tooltip_inside_if5, ^iftype_text, $comsubid18, false);
 cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if (%varbit9665 = 0) {
@@ -55,39 +55,39 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setonop("script3829(
-	0 = $widget_134:6_5, 
+	0 = $com_settings_tooltip_inside_if5, 
 	1 = $comsubid18, 
-	2 = $widget_134:13_6, 
-	3 = $widget_134:19_7, 
-	4 = $widget_134:18_8, 
-	5 = $widget_134:20_9, 
-	6 = $widget_134:26_10, 
-	7 = $widget_134:25_11, 
-	8 = $widget_134:28_12, 
-	9 = $widget_134:29_13, 
-	10 = $widget_134:22_14, 
-	11 = $widget_134:21_15, 
-	12 = $widget_134:17_16, 
-	13 = $widget_134:2_17, 
-	14 = $widget_134:5_4
-)", $widget_134:5_4);
+	2 = $com_settings_settings6, 
+	3 = $com_settings_settings_clickzone7, 
+	4 = $com_settings_settings_content8, 
+	5 = $com_settings_scrollbar9, 
+	6 = $com_settings_dropdown_panel10, 
+	7 = $com_settings_dropdown_close11, 
+	8 = $com_settings_dropdown_buttons12, 
+	9 = $com_settings_dropdown_scrollbar13, 
+	10 = $com_settings_dropdown_container14, 
+	11 = $com_settings_settings_sliderclickzone15, 
+	12 = $com_settings_settings_sliderzone16, 
+	13 = $com_settings_tooltip17, 
+	14 = $com_settings_tooltip_inside_if_clickzone4
+)", $com_settings_tooltip_inside_if_clickzone4);
 if_setonvartransmit("script3830(
 	0 = %varbit9665, 
-	1 = $widget_134:6_5, 
+	1 = $com_settings_tooltip_inside_if5, 
 	2 = $comsubid18, 
-	3 = $widget_134:13_6, 
-	4 = $widget_134:19_7, 
-	5 = $widget_134:18_8, 
-	6 = $widget_134:20_9, 
-	7 = $widget_134:26_10, 
-	8 = $widget_134:25_11, 
-	9 = $widget_134:28_12, 
-	10 = $widget_134:29_13, 
-	11 = $widget_134:22_14, 
-	12 = $widget_134:21_15, 
-	13 = $widget_134:17_16, 
-	14 = $widget_134:2_17, 
-	15 = $widget_134:5_4
-){var2856}", $widget_134:5_4);
-if_setontimer("settings_window_resize($widget_134:0_0, $widget_134:1_1, $widget_134:20_9, $widget_134:13_6, $int20, 0, 0)", $widget_134:1_1);
-if_setontimer("script3833($widget_134:0_0, $widget_134:1_1, 0)", $widget_134:0_0);
+	3 = $com_settings_settings6, 
+	4 = $com_settings_settings_clickzone7, 
+	5 = $com_settings_settings_content8, 
+	6 = $com_settings_scrollbar9, 
+	7 = $com_settings_dropdown_panel10, 
+	8 = $com_settings_dropdown_close11, 
+	9 = $com_settings_dropdown_buttons12, 
+	10 = $com_settings_dropdown_scrollbar13, 
+	11 = $com_settings_dropdown_container14, 
+	12 = $com_settings_settings_sliderclickzone15, 
+	13 = $com_settings_settings_sliderzone16, 
+	14 = $com_settings_tooltip17, 
+	15 = $com_settings_tooltip_inside_if_clickzone4
+){var2856}", $com_settings_tooltip_inside_if_clickzone4);
+if_setontimer("settings_window_resize($com_settings_infinite0, $com_settings_universe1, $com_settings_scrollbar9, $com_settings_settings6, $int20, 0, 0)", $com_settings_universe1);
+if_setontimer("script3833($com_settings_infinite0, $com_settings_universe1, 0)", $com_settings_infinite0);

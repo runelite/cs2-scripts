@@ -1,29 +1,29 @@
 // 2008
-[proc,fossil_storage_build](component $widget_605:9_0, component $widget_605:11_1, component $widget_605:8_2, component $widget_605:10_3)
-cc_deleteall($widget_605:11_1);
+[proc,fossil_storage_build](component $com_fossil_storage_titles0, component $com_fossil_storage_list1, component $com_fossil_storage_scrolling2, component $com_fossil_storage_scrollbar3)
+cc_deleteall($com_fossil_storage_list1);
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 10;
-def_int $height7 = 0;
+def_int $int7 = 0;
 def_int $int8 = 10;
 def_int $int9 = $int8;
-def_int $num10 = 0;
+def_int $int10 = 0;
 def_int $int11 = 5;
 def_namedobj $namedobj12 = enum(int, namedobj, enum_1782, $int4);
 while ($namedobj12 ! null) {
 	switch_namedobj ($namedobj12) {
-		case rare_fossilised_limbs_21610, rare_fossilised_spine_21612, rare_fossilised_ribs_21614, rare_fossilised_pelvis_21616, rare_fossilised_skull_21618, rare_fossilised_tusk_21620 :
+		case fossil_rare_1_21610, fossil_rare_2_21612, fossil_rare_3_21614, fossil_rare_4_21616, fossil_rare_5_21618, fossil_rare_6_21620 :
 			$int11 = 6;
 		case default :
 			$int11 = 5;
 	}
 	if (compare(enum(obj, string, enum_1783, $namedobj12), "") ! 0) {
 		if ($int4 ! 0) {
-			$height7 = calc(3 + $height7 + (if_getheight($widget_605:11_1) - $int6) / 6);
+			$int7 = calc(3 + $int7 + (if_getheight($com_fossil_storage_list1) - $int6) / 6);
 			$int9 = $int8;
 		}
-		cc_create($widget_605:9_0, ^iftype_text, $int5);
-		cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($com_fossil_storage_titles0, ^iftype_text, $int5, false);
+		cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(100, 32, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
@@ -32,14 +32,14 @@ while ($namedobj12 ! null) {
 		cc_settext(enum(obj, string, enum_1783, $namedobj12));
 		$int5 = calc($int5 + 1);
 	}
-	cc_create($widget_605:11_1, ^iftype_graphic, $int4);
-	$num10 = ~fossil_storage_get($namedobj12);
+	cc_create($com_fossil_storage_list1, ^iftype_graphic, $int4, false);
+	$int10 = ~fossil_storage_get($namedobj12);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition($int9, $height7, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject($namedobj12, $num10);
+	cc_setposition($int9, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject($namedobj12, $int10);
 	cc_setgraphicshadow(0x333333);
 	cc_setopbase("<col=ff9040><oc_name($namedobj12)></col>");
-	if ($num10 > 0) {
+	if ($int10 > 0) {
 		cc_setoutline(1);
 		cc_settrans(0);
 		cc_setop(1, "Withdraw");
@@ -55,15 +55,15 @@ while ($namedobj12 ! null) {
 		cc_setop(10, "Examine");
 	}
 	$int4 = calc($int4 + 1);
-	$int9 = calc(3 + $int9 + if_getwidth($widget_605:11_1) / $int11);
+	$int9 = calc(3 + $int9 + if_getwidth($com_fossil_storage_list1) / $int11);
 	$namedobj12 = enum(int, namedobj, enum_1782, $int4);
 }
 def_int $int13 = 0;
-$height7 = calc($height7 + 32);
-if ($height7 > if_getheight($widget_605:11_1)) {
-	$int13 = if_getscrolly($widget_605:11_1);
-	if_setscrollsize(0, $height7, $widget_605:11_1);
+$int7 = calc($int7 + 32);
+if ($int7 > if_getheight($com_fossil_storage_list1)) {
+	$int13 = if_getscrolly($com_fossil_storage_list1);
+	if_setscrollsize(0, $int7, $com_fossil_storage_list1);
 } else {
-	if_setscrollsize(0, 0, $widget_605:11_1);
+	if_setscrollsize(0, 0, $com_fossil_storage_list1);
 }
-~scrollbar_resize($widget_605:10_3, $widget_605:11_1, $int13);
+~scrollbar_resize($com_fossil_storage_scrollbar3, $com_fossil_storage_list1, $int13);

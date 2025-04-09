@@ -20,13 +20,13 @@ while ($int1 > 0) {
 	if ($component0 ! null) {
 		if (testbit(%varbit642, $int1) = ^true) {
 			if_sethide(false, $component0);
-			if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_755:99, enum(int, string, enum_4388, $int1), 25, 300)", $component0);
-			if_setonmouseleave("deltooltip(interface_755:99)", $component0);
+			if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, pvp_arena_legacyduel_options:tooltip, enum(int, string, enum_4388, $int1), 25, 300)", $component0);
+			if_setonmouseleave("deltooltip(pvp_arena_legacyduel_options:tooltip)", $component0);
 		} else {
 			if_sethide(true, $component0);
 			if_setonmouserepeat(null, $component0);
 			if_setonmouseleave(null, $component0);
-			~deltooltip_action(interface_755:99);
+			~deltooltip_action(pvp_arena_legacyduel_options:tooltip);
 		}
 	}
 }

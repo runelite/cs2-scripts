@@ -1,9 +1,9 @@
 // 4391
-[proc,clan_applicants_framedraw](component $widget_699:2_0, int $comsubid1)
-if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
-	if (cc_find($widget_699:2_0, $comsubid1) = ^true) {
+[proc,clan_applicants_framedraw](component $com_clans_applicants_frame0, int $comsubid1)
+if (%varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+	if (cc_find($com_clans_applicants_frame0, $comsubid1) = ^true) {
 		cc_settext("<activeclansettings_getclanname>: Applicants");
 	}
-} else if (cc_find($widget_699:2_0, $comsubid1) = ^true) {
+} else if (cc_find($com_clans_applicants_frame0, $comsubid1) = ^true) {
 	cc_settext(~script4287);
 }

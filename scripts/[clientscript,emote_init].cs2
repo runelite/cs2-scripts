@@ -1,22 +1,22 @@
 // 699
-[clientscript,emote_init](component $widget_216:0_0, component $widget_216:2_1, component $widget_216:1_2, component $widget_216:4_3, component $widget_216:5_4)
-cc_deleteall($widget_216:2_1);
-cc_deleteall($widget_216:4_3);
+[clientscript,emote_init](component $com_emote_universe0, component $com_emote_contents1, component $com_emote_scrollable2, component $com_emote_scrollbar3, component $com_emote_tooltip4)
+cc_deleteall($com_emote_contents1);
+cc_deleteall($com_emote_scrollbar3);
 def_int $int5 = 0;
-def_int $height6 = 0;
+def_int $int6 = 0;
 def_int $int7 = 0;
-def_int $int8 = calc(if_getwidth($widget_216:2_1) / 4);
+def_int $int8 = calc(if_getwidth($com_emote_contents1) / 4);
 while ($int7 <= 54) {
-	cc_create($widget_216:2_1, ^iftype_rectangle, $int7);
+	cc_create($com_emote_contents1, ^iftype_rectangle, $int7, false);
 	if (enum(int, graphic, enum_1001, $int7) ! null) {
 		cc_sethide(false);
 		cc_setcolour(^black);
 		cc_settrans(255);
 		cc_setsize($int8, 48, ^setsize_abs, ^setsize_abs);
-		$height6 = calc($int5 / 4 * 49 + 6);
-		cc_setposition(calc($int5 % 4 * $int8), $height6, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $widget_216:5_4, ~emote_get_name($int7), 25, 120)");
-		cc_setonmouseleave("deltooltip($widget_216:5_4)");
+		$int6 = calc($int5 / 4 * 49 + 6);
+		cc_setposition(calc($int5 % 4 * $int8), $int6, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_emote_tooltip4, ~emote_get_name($int7), 25, 120)");
+		cc_setonmouseleave("deltooltip($com_emote_tooltip4)");
 		$int5 = calc($int5 + 1);
 	} else {
 		cc_sethide(true);
@@ -24,15 +24,15 @@ while ($int7 <= 54) {
 	$int7 = calc($int7 + 1);
 }
 $int7 = 0;
-$height6 = 0;
+$int6 = 0;
 $int5 = 0;
 while ($int7 <= 54) {
-	cc_create($widget_216:2_1, ^iftype_graphic, calc(54 + $int7 + 1));
+	cc_create($com_emote_contents1, ^iftype_graphic, calc(54 + $int7 + 1), false);
 	if (enum(int, graphic, enum_1001, $int7) ! null) {
 		cc_sethide(false);
 		cc_setsize(48, 48, ^setsize_abs, ^setsize_abs);
-		$height6 = calc($int5 / 4 * 49 + 6);
-		cc_setposition(calc($int5 % 4 * $int8), $height6, ^setpos_abs_left, ^setpos_abs_top);
+		$int6 = calc($int5 / 4 * 49 + 6);
+		cc_setposition(calc($int5 % 4 * $int8), $int6, ^setpos_abs_left, ^setpos_abs_top);
 		$int5 = calc($int5 + 1);
 	} else {
 		cc_sethide(true);
@@ -40,15 +40,15 @@ while ($int7 <= 54) {
 	$int7 = calc($int7 + 1);
 }
 if ($int5 > 0) {
-	$height6 = calc($height6 + 48);
+	$int6 = calc($int6 + 48);
 }
-if_setscrollpos(0, 0, $widget_216:1_2);
-if ($height6 > if_getheight($widget_216:1_2)) {
-	if_setscrollsize(0, $height6, $widget_216:1_2);
+if_setscrollpos(0, 0, $com_emote_scrollable2);
+if ($int6 > if_getheight($com_emote_scrollable2)) {
+	if_setscrollsize(0, $int6, $com_emote_scrollable2);
 } else {
-	if_setscrollsize(0, 0, $widget_216:1_2);
+	if_setscrollsize(0, 0, $com_emote_scrollable2);
 }
-~scrollbar_vertical($widget_216:4_3, $widget_216:1_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~emote_update($widget_216:2_1, $widget_216:5_4);
-if_setonvartransmit("emote_update($widget_216:2_1, $widget_216:5_4){var313, var802, var465, var101, var904, var1336, var2886, var4130}", $widget_216:0_0);
-if_setonstattransmit("emote_update($widget_216:2_1, $widget_216:5_4)", $widget_216:0_0);
+~scrollbar_vertical($com_emote_scrollbar3, $com_emote_scrollable2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~emote_update($com_emote_contents1, $com_emote_tooltip4);
+if_setonvartransmit("emote_update($com_emote_contents1, $com_emote_tooltip4){var313, var802, var465, var101, var904, var1336, var2886, var4130}", $com_emote_universe0);
+if_setonstattransmit("emote_update($com_emote_contents1, $com_emote_tooltip4)", $com_emote_universe0);

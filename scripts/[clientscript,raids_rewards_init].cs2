@@ -1,6 +1,6 @@
 // 1579
-[clientscript,raids_rewards_init](component $widget_539:0_0, component $widget_539:5_1)
-def_int $size2 = inv_size(inv_581);
-~raids_rewards_build($widget_539:5_1, $size2);
-if_setoninvtransmit("raids_rewards_build($widget_539:5_1, $size2){inv_581}", $widget_539:0_0);
-if_setonvartransmit("raids_rewards_build($widget_539:5_1, $size2){var1432}", $widget_539:0_0);
+[clientscript,raids_rewards_init](component $com_raids_rewards_universe0, component $com_raids_rewards_items1)
+def_int $int2 = inv_size(raids_rewards);
+~raids_rewards_build($com_raids_rewards_items1, $int2);
+if_setoninvtransmit("raids_rewards_build($com_raids_rewards_items1, $int2){raids_rewards}", $com_raids_rewards_universe0);
+if_setonvartransmit("raids_rewards_build($com_raids_rewards_items1, $int2){var1432}", $com_raids_rewards_universe0);

@@ -1,6 +1,6 @@
 // 1729
-[clientscript,worldmap_keyreset](category $category0, component $component1, int $comsubid2, int $clock3)
-if (clientclock < $clock3) {
+[clientscript,worldmap_keyreset](category $category0, component $component1, int $comsubid2, int $int3)
+if (clientclock < $int3) {
 	return;
 }
 if (cc_find($component1, $comsubid2) = ^true) {

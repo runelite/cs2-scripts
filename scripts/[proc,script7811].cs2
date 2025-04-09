@@ -7,7 +7,7 @@ if (~on_mobile = true) {
 	if_setsize(21, 21, ^setsize_abs, ^setsize_abs, $component0);
 	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, $component0);
 }
-cc_create($component0, ^iftype_graphic, $comsubid1);
+cc_create($component0, ^iftype_graphic, $comsubid1, false);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("menu_buttons,0");

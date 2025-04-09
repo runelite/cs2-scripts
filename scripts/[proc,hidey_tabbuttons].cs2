@@ -1,36 +1,36 @@
 // 1481
 [proc,hidey_tabbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-if_sethide(true, interface_493:6);
-if_sethide(true, interface_493:7);
-if_sethide(true, interface_493:8);
-if_sethide(true, interface_493:9);
-if_sethide(true, interface_493:10);
-if_sethide(true, interface_493:11);
-if_sethide(true, interface_493:12);
-if_sethide(true, interface_493:13);
-if_sethide(true, interface_493:14);
-if_sethide(true, interface_493:15);
-if_sethide(true, interface_493:4);
-if_sethide(true, interface_493:5);
+if_sethide(true, hidey_holes:easy_contents);
+if_sethide(true, hidey_holes:easy_scrollbar);
+if_sethide(true, hidey_holes:medium_contents);
+if_sethide(true, hidey_holes:medium_scrollbar);
+if_sethide(true, hidey_holes:hard_contents);
+if_sethide(true, hidey_holes:hard_scrollbar);
+if_sethide(true, hidey_holes:elite_contents);
+if_sethide(true, hidey_holes:elite_scrollbar);
+if_sethide(true, hidey_holes:master_contents);
+if_sethide(true, hidey_holes:master_scrollbar);
+if_sethide(true, hidey_holes:beginner_contents);
+if_sethide(true, hidey_holes:beginner_scrollbar);
 if ($component0 = $component2) {
-	if_sethide(false, interface_493:8);
-	if_sethide(false, interface_493:9);
+	if_sethide(false, hidey_holes:medium_contents);
+	if_sethide(false, hidey_holes:medium_scrollbar);
 } else if ($component0 = $component3) {
-	if_sethide(false, interface_493:10);
-	if_sethide(false, interface_493:11);
+	if_sethide(false, hidey_holes:hard_contents);
+	if_sethide(false, hidey_holes:hard_scrollbar);
 } else if ($component0 = $component4) {
-	if_sethide(false, interface_493:12);
-	if_sethide(false, interface_493:13);
+	if_sethide(false, hidey_holes:elite_contents);
+	if_sethide(false, hidey_holes:elite_scrollbar);
 } else if ($component0 = $component5) {
-	if_sethide(false, interface_493:14);
-	if_sethide(false, interface_493:15);
+	if_sethide(false, hidey_holes:master_contents);
+	if_sethide(false, hidey_holes:master_scrollbar);
 } else if ($component0 = $component1) {
-	if_sethide(false, interface_493:6);
-	if_sethide(false, interface_493:7);
+	if_sethide(false, hidey_holes:easy_contents);
+	if_sethide(false, hidey_holes:easy_scrollbar);
 } else {
 	$component0 = $component6;
-	if_sethide(false, interface_493:4);
-	if_sethide(false, interface_493:5);
+	if_sethide(false, hidey_holes:beginner_contents);
+	if_sethide(false, hidey_holes:beginner_scrollbar);
 }
 ~hidey_tabbuttons_draw(
 	0 = $component1, 

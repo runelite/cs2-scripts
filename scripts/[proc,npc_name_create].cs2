@@ -28,14 +28,14 @@ if (%varbit14168 = 1 & %varbit14169 > 0 & (highlight_group_get(~script6690($npc3
 	return;
 }
 cc_create_entityoverlay($entityoverlay0, ^iftype_text, 0);
-def_int $width7 = parawidth($string0, 1000, $fontmetrics4);
+def_int $int7 = parawidth($string0, 1000, $fontmetrics4);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setsize($width7, 20, ^setsize_abs, ^setsize_abs);
+cc_setsize($int7, 20, ^setsize_abs, ^setsize_abs);
 cc_setcolour($colour6);
 cc_settextfont($graphic5);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
 cc_settextshadow(true);
 cc_settext($string0);
 if (if_find_entityoverlay($entityoverlay0) = ^true) {
-	cc_setsize($width7, 20, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int7, 20, ^setsize_abs, ^setsize_abs);
 }

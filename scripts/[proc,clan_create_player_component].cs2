@@ -1,6 +1,6 @@
 // 4450
 [proc,clan_create_player_component](component $component0, string $string0, int $int1, string $string1)
-cc_create($component0, ^iftype_text, $int1);
+cc_create($component0, ^iftype_text, $int1, false);
 cc_setposition(10, calc(20 * $int1 + 8), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(10, 20, ^setsize_minus, ^setsize_abs);
 cc_setcolour(^white);

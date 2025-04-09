@@ -1,5 +1,5 @@
 // 755
-[clientscript,trade_main_init](component $widget_335:2_0, component $widget_335:25_1, component $widget_335:26_2, component $widget_335:28_3, component $widget_335:29_4, component $widget_335:12_5)
+[clientscript,trade_main_init](component $com_trademain_universe0, component $com_trademain_your_offer1, component $com_trademain_your_removed2, component $com_trademain_other_offer3, component $com_trademain_other_removed4, component $com_trademain_accept_text5)
 %varcint12 = 0;
 %varcint13 = 0;
 %varcint14 = 0;
@@ -28,13 +28,13 @@
 %varcint37 = 0;
 %varcint38 = 0;
 %varcint39 = 0;
-def_int $size6 = inv_size(inv_90);
-cc_deleteall($widget_335:25_1);
-cc_deleteall($widget_335:28_3);
-def_int $size7 = 0;
-while ($size7 < $size6) {
-	cc_create($widget_335:25_1, ^iftype_graphic, $size7);
-	.cc_create($widget_335:28_3, ^iftype_graphic, $size7);
+def_int $int6 = inv_size(tradeoffer);
+cc_deleteall($com_trademain_your_offer1);
+cc_deleteall($com_trademain_other_offer3);
+def_int $int7 = 0;
+while ($int7 < $int6) {
+	cc_create($com_trademain_your_offer1, ^iftype_graphic, $int7, false);
+	.cc_create($com_trademain_other_offer3, ^iftype_graphic, $int7, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -43,14 +43,14 @@ while ($size7 < $size6) {
 	.cc_setoutline(1);
 	cc_sethide(true);
 	.cc_sethide(true);
-	$size7 = calc($size7 + 1);
+	$int7 = calc($int7 + 1);
 }
 def_int $comsubid8 = 0;
-$size7 = 0;
-while ($size7 < $size6) {
-	$comsubid8 = calc($size6 + $size7);
-	cc_create($widget_335:25_1, ^iftype_graphic, $comsubid8);
-	.cc_create($widget_335:28_3, ^iftype_graphic, $comsubid8);
+$int7 = 0;
+while ($int7 < $int6) {
+	$comsubid8 = calc($int6 + $int7);
+	cc_create($com_trademain_your_offer1, ^iftype_graphic, $comsubid8, false);
+	.cc_create($com_trademain_other_offer3, ^iftype_graphic, $comsubid8, false);
 	cc_setgraphic(exclamation_mark);
 	.cc_setgraphic(exclamation_mark);
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
@@ -59,9 +59,9 @@ while ($size7 < $size6) {
 	.cc_sethide(false);
 	cc_settrans(255);
 	.cc_settrans(255);
-	$size7 = calc($size7 + 1);
+	$int7 = calc($int7 + 1);
 }
 def_int $int9 = calc((36 - 10) / 2);
-~trade_main_drawitems($size6, $int9, $widget_335:25_1, $widget_335:26_2, $widget_335:28_3, $widget_335:29_4, $widget_335:12_5);
-if_setoninvtransmit("trade_main_drawitems($size6, $int9, $widget_335:25_1, $widget_335:26_2, $widget_335:28_3, $widget_335:29_4, $widget_335:12_5){inv_90}", $widget_335:2_0);
-if_setonvartransmit("trade_main_drawitems($size6, $int9, $widget_335:25_1, $widget_335:26_2, $widget_335:28_3, $widget_335:29_4, $widget_335:12_5){var1042}", $widget_335:2_0);
+~trade_main_drawitems($int6, $int9, $com_trademain_your_offer1, $com_trademain_your_removed2, $com_trademain_other_offer3, $com_trademain_other_removed4, $com_trademain_accept_text5);
+if_setoninvtransmit("trade_main_drawitems($int6, $int9, $com_trademain_your_offer1, $com_trademain_your_removed2, $com_trademain_other_offer3, $com_trademain_other_removed4, $com_trademain_accept_text5){tradeoffer}", $com_trademain_universe0);
+if_setonvartransmit("trade_main_drawitems($int6, $int9, $com_trademain_your_offer1, $com_trademain_your_removed2, $com_trademain_other_offer3, $com_trademain_other_removed4, $com_trademain_accept_text5){var1042}", $com_trademain_universe0);

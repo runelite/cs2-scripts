@@ -1,21 +1,21 @@
 // 1339
-[proc,light_puzzle_update](component $widget_322:3_0)
+[proc,light_puzzle_update](component $com_light_puzzle_lights0)
 def_int $int1 = 0;
-def_int $width2 = if_getwidth($widget_322:3_0);
+def_int $int2 = if_getwidth($com_light_puzzle_lights0);
 def_int $int3 = 0;
 def_namedobj $namedobj4 = null;
 def_int $int5 = 8;
 def_int $int6 = 5;
-def_int $int7 = calc(($width2 - 36 * $int6) / ($int6 + 1));
-def_int $int8 = calc((if_getheight($widget_322:3_0) - 32 * $int6 - $int5) / ($int6 + 1));
-cc_deleteall($widget_322:3_0);
+def_int $int7 = calc(($int2 - 36 * $int6) / ($int6 + 1));
+def_int $int8 = calc((if_getheight($com_light_puzzle_lights0) - 32 * $int6 - $int5) / ($int6 + 1));
+cc_deleteall($com_light_puzzle_lights0);
 while ($int1 < 25) {
 	if (testbit(%var1356, $int1) = ^true) {
-		$namedobj4 = obj_20356;
+		$namedobj4 = trail_light_unlit_20356;
 	} else {
-		$namedobj4 = obj_20357;
+		$namedobj4 = trail_light_lit_20357;
 	}
-	cc_create($widget_322:3_0, ^iftype_graphic, $int1);
+	cc_create($com_light_puzzle_lights0, ^iftype_graphic, $int1, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int7 + $int1 % $int6 * (36 + $int7) + 1), calc($int5 + $int1 / $int6 * (32 + $int8)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject_nonum($namedobj4, 0);

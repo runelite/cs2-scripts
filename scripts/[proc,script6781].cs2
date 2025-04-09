@@ -6,7 +6,7 @@ if ($boolean0 = true) {
 } else {
 	$int2 = ~v2_stone_button_out_filled($component1);
 }
-cc_create($component1, ^iftype_text, $int2);
+cc_create($component1, ^iftype_text, $int2, false);
 def_int $int3 = calc($int2 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 if ($boolean0 = true) {

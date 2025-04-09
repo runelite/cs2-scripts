@@ -1,24 +1,24 @@
 // 427
-[clientscript,slayer_rewards_tasks_unblocktask](int $int0, int $comsubid1, component $widget_426:11_2, component $widget_426:2_3, component $widget_426:4_4, component $widget_426:8_5, component $widget_426:5_6)
+[clientscript,slayer_rewards_tasks_unblocktask](int $int0, int $comsubid1, component $com_slayer_rewards_main2, component $com_slayer_rewards_confirm3, component $com_slayer_rewards_confirm_info4, component $com_slayer_rewards_confirm_button5, component $com_slayer_rewards_back_button6)
 sound_synth(interface_select1, 1, 0);
-if_sethide(true, $widget_426:11_2);
-if_sethide(false, $widget_426:2_3);
-cc_deleteall($widget_426:8_5);
-if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $widget_426:5_6);
-if_sethide(false, $widget_426:8_5);
-if_settext("<u=ff981f><enum(int, string, enum_693, $int0)></u><br><br>Slayer Masters will once again be able to assign you this creature.<br><br>You will not get your points back.", $widget_426:4_4);
+if_sethide(true, $com_slayer_rewards_main2);
+if_sethide(false, $com_slayer_rewards_confirm3);
+cc_deleteall($com_slayer_rewards_confirm_button5);
+if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $com_slayer_rewards_back_button6);
+if_sethide(false, $com_slayer_rewards_confirm_button5);
+if_settext("<u=ff981f><enum(int, string, enum_693, $int0)></u><br><br>Slayer Masters will once again be able to assign you this creature.<br><br>You will not get your points back.", $com_slayer_rewards_confirm_info4);
 def_int $comsubid7 = 0;
 while ($comsubid7 < $comsubid1) {
-	cc_create($widget_426:8_5, ^iftype_rectangle, $comsubid7);
+	cc_create($com_slayer_rewards_confirm_button5, ^iftype_rectangle, $comsubid7, false);
 	cc_sethide(true);
 	$comsubid7 = calc($comsubid7 + 1);
 }
-cc_create($widget_426:8_5, ^iftype_rectangle, $comsubid1);
+cc_create($com_slayer_rewards_confirm_button5, ^iftype_rectangle, $comsubid1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_settrans(255);
 cc_setop(1, "Unblock");
-cc_setonop("slayer_rewards_confirm_back(true, event_op, $widget_426:11_2, $widget_426:2_3, $widget_426:4_4, $widget_426:8_5, $widget_426:5_6)");
-if_setop(1, "Back", $widget_426:5_6);
-if_setonop("slayer_rewards_confirm_back(false, event_op, $widget_426:11_2, $widget_426:2_3, $widget_426:4_4, $widget_426:8_5, $widget_426:5_6)", $widget_426:5_6);
+cc_setonop("slayer_rewards_confirm_back(true, event_op, $com_slayer_rewards_main2, $com_slayer_rewards_confirm3, $com_slayer_rewards_confirm_info4, $com_slayer_rewards_confirm_button5, $com_slayer_rewards_back_button6)");
+if_setop(1, "Back", $com_slayer_rewards_back_button6);
+if_setonop("slayer_rewards_confirm_back(false, event_op, $com_slayer_rewards_main2, $com_slayer_rewards_confirm3, $com_slayer_rewards_confirm_info4, $com_slayer_rewards_confirm_button5, $com_slayer_rewards_back_button6)", $com_slayer_rewards_back_button6);

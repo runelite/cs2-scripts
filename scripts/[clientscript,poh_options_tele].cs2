@@ -1,9 +1,9 @@
 // 1077
-[clientscript,poh_options_tele](component $widget_370:8_0, component $widget_370:9_1)
+[clientscript,poh_options_tele](component $com_poh_options_tele_on0, component $com_poh_options_tele_off1)
 if (%varbit4744 = 1) {
-	if_setgraphic("options_radio_buttons,0", $widget_370:8_0);
-	if_setgraphic("options_radio_buttons,2", $widget_370:9_1);
+	if_setgraphic("options_radio_buttons,0", $com_poh_options_tele_on0);
+	if_setgraphic("options_radio_buttons,2", $com_poh_options_tele_off1);
 } else {
-	if_setgraphic("options_radio_buttons,2", $widget_370:8_0);
-	if_setgraphic("options_radio_buttons,0", $widget_370:9_1);
+	if_setgraphic("options_radio_buttons,2", $com_poh_options_tele_on0);
+	if_setgraphic("options_radio_buttons,0", $com_poh_options_tele_off1);
 }

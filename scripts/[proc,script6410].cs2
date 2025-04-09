@@ -1,5 +1,5 @@
 // 6410
-[proc,script6410](int $int0, string $string0, boolean $boolean1, int $int2, int $int3, int $int4, int $comsubid5, int $comsubid6, component $component7, boolean $boolean8, string $text1, int $int9, component $component10, component $component11, component $component12)(int, int, int, int, int)
+[proc,script6410](int $int0, string $string0, boolean $boolean1, int $int2, int $int3, int $int4, int $comsubid5, int $comsubid6, component $component7, boolean $boolean8, string $string1, int $int9, component $component10, component $component11, component $component12)(int, int, int, int, int)
 def_int $int13 = calc($int4 - $int3 + 6);
 def_int $int14 = 0;
 if ($boolean8 = true) {
@@ -8,14 +8,14 @@ if ($boolean8 = true) {
 		$int13 = calc($int13 + (30 - $int14));
 	}
 }
-def_int $trans15 = 0;
+def_int $int15 = 0;
 if (cc_find($component7, $comsubid5) = ^true) {
 	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
-	$trans15 = cc_gettrans;
+	$int15 = cc_gettrans;
 } else {
 	~debug_mes_error("CR UI", "Unable to find background component when resizing list entry. Did you call <col=0059de>~cr_ui_create_list_entry</col>first?");
 }
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 def_int $comsubid16 = $int2;
 $int2 = calc($int2 + 1);
 cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
@@ -39,13 +39,13 @@ if ($boolean8 = true) {
 	$int17 = calc(if_getwidth($component7) - 80 - 4);
 	$int18 = calc($int3 + $int13 - 30 - 6);
 	$int2, $int9, $int19 = ~cr_ui_list_entry_create_button(
-		0 = $text1, 
+		0 = $string1, 
 		1 = $int17, 
 		2 = $int18, 
 		3 = $int2, 
 		4 = $int9, 
 		5 = $comsubid5, 
-		6 = $trans15, 
+		6 = $int15, 
 		7 = $component7, 
 		8 = $component10, 
 		9 = $component7, 

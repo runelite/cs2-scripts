@@ -2,11 +2,11 @@
 [proc,script3154](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, string $string0, string $string1)
 def_boolean $boolean8 = ~on_mobile;
 cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, 0);
+cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic("options_icons_small,2");
-.cc_create($component0, ^iftype_text, 1);
+.cc_create($component0, ^iftype_text, 1, false);
 .cc_setsize(24, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 .cc_setcolour(0xff981f);

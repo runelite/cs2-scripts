@@ -3,9 +3,9 @@
 def_int $int2 = 0;
 cc_deleteall($component0);
 if_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-def_int $length3 = string_length($string0);
-if ($length3 < $int1) {
-	$int1 = $length3;
+def_int $int3 = string_length($string0);
+if ($int3 < $int1) {
+	$int1 = $int3;
 }
 if ($int1 <= 0) {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_abs, $component0);
@@ -15,11 +15,11 @@ def_int $int4 = 0;
 def_int $intarray0($int1);
 def_int $int5 = 1;
 def_dbrow $dbrow6 = null;
-cc_create($component0, ^iftype_rectangle, 0);
+cc_create($component0, ^iftype_rectangle, 0, false);
 cc_sethide(true);
 while ($int5 <= $int1) {
 	$dbrow6 = ~script6154($int5);
-	cc_create($component0, ^iftype_text, $int5);
+	cc_create($component0, ^iftype_text, $int5, false);
 	if (~questdisplay_hide_quest($dbrow6) = 1) {
 		cc_sethide(true);
 	} else {

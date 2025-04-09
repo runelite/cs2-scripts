@@ -1,19 +1,19 @@
 // 4805
-[proc,ca_overview_draw_interface](component $widget_717:4_0, component $widget_717:5_1, component $widget_717:9_2, component $widget_717:14_3, int $comsubid4, component $widget_717:10_5, component $widget_717:11_6, component $widget_717:7_7, component $widget_717:8_8, component $widget_717:12_9)
-cc_deleteall($widget_717:4_0);
-cc_deleteall($widget_717:5_1);
-cc_deleteall($widget_717:9_2);
-cc_deleteall($widget_717:14_3);
-cc_deleteall($widget_717:7_7);
-cc_deleteall($widget_717:8_8);
-cc_deleteall($widget_717:10_5);
+[proc,ca_overview_draw_interface](component $com_ca_overview_ca_general_header0, component $com_ca_overview_ca_personal_header1, component $com_ca_overview_ca_general_content2, component $com_ca_overview_ca_personal_content3, int $comsubid4, component $com_ca_overview_ca_tier_name5, component $com_ca_overview_ca_tier_icon6, component $com_ca_overview_ca_buttons7, component $com_ca_overview_ca_buttons_click8, component $com_ca_overview_ca_progress9)
+cc_deleteall($com_ca_overview_ca_general_header0);
+cc_deleteall($com_ca_overview_ca_personal_header1);
+cc_deleteall($com_ca_overview_ca_general_content2);
+cc_deleteall($com_ca_overview_ca_personal_content3);
+cc_deleteall($com_ca_overview_ca_buttons7);
+cc_deleteall($com_ca_overview_ca_buttons_click8);
+cc_deleteall($com_ca_overview_ca_tier_name5);
 def_int $colour10 = 0xff981f;
-if (cc_find(interface_717:2, $comsubid4) = ^true) {
+if (cc_find(ca_overview:frame, $comsubid4) = ^true) {
 	cc_setcolour($colour10);
 } else {
 	mes("Couldn't find the frame.");
 }
-cc_create($widget_717:4_0, ^iftype_text, 0);
+cc_create($com_ca_overview_ca_general_header0, ^iftype_text, 0, false);
 cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 1, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -21,7 +21,7 @@ cc_setcolour($colour10);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settext("Difficulty Tiers");
-cc_create($widget_717:5_1, ^iftype_text, 0);
+cc_create($com_ca_overview_ca_personal_header1, ^iftype_text, 0, false);
 cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 1, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -36,7 +36,7 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
-def_int $width18 = if_getwidth($widget_717:9_2);
-def_int $width19 = if_getwidth($widget_717:14_3);
-~ca_overview_create_tiers($widget_717:9_2, $widget_717:10_5, $widget_717:11_6, $widget_717:7_7, $widget_717:8_8, $widget_717:12_9);
-~ca_overview_create_personal($widget_717:14_3);
+def_int $int18 = if_getwidth($com_ca_overview_ca_general_content2);
+def_int $int19 = if_getwidth($com_ca_overview_ca_personal_content3);
+~ca_overview_create_tiers($com_ca_overview_ca_general_content2, $com_ca_overview_ca_tier_name5, $com_ca_overview_ca_tier_icon6, $com_ca_overview_ca_buttons7, $com_ca_overview_ca_buttons_click8, $com_ca_overview_ca_progress9);
+~ca_overview_create_personal($com_ca_overview_ca_personal_content3);

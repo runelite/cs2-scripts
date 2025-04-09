@@ -1,12 +1,12 @@
 // 7286
-[clientscript,worldswitcher_filter_init](component $widget_820:0_0, component $widget_820:1_1, component $widget_820:2_2, component $widget_820:3_3, component $widget_820:4_4, component $widget_820:7_5, component $widget_820:8_6, component $widget_820:9_7, component $widget_820:10_8)
-~script4206($widget_820:1_1, $widget_820:2_2, $widget_820:3_3, 0, interface_821:27);
-~steelborder($widget_820:4_4, "Filter", 1);
-~stonebutton_init("Clear", $widget_820:9_7, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_820:9_7);
-~stonebutton_init("<col=0dc10d>Done</col>", $widget_820:10_8, p12_full, 0);
-if_setonop("script4208(0, $widget_820:1_1, $widget_820:2_2, $widget_820:3_3, interface_821:27)", $widget_820:10_8);
-~scrollbar_vertical($widget_820:8_6, $widget_820:7_5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+[clientscript,worldswitcher_filter_init](component $com_worldswitcher_filter_universe0, component $com_worldswitcher_filter_clamp1, component $com_worldswitcher_filter_fader2, component $com_worldswitcher_filter_window3, component $com_worldswitcher_filter_frame4, component $com_worldswitcher_filter_options5, component $com_worldswitcher_filter_scrollbar6, component $com_worldswitcher_filter_clear7, component $com_worldswitcher_filter_close8)
+~script4206($com_worldswitcher_filter_clamp1, $com_worldswitcher_filter_fader2, $com_worldswitcher_filter_window3, 0, worldswitcher_options:popup);
+~steelborder($com_worldswitcher_filter_frame4, "Filter", 1);
+~stonebutton_init("Clear", $com_worldswitcher_filter_clear7, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_worldswitcher_filter_clear7);
+~stonebutton_init("<col=0dc10d>Done</col>", $com_worldswitcher_filter_close8, p12_full, 0);
+if_setonop("script4208(0, $com_worldswitcher_filter_clamp1, $com_worldswitcher_filter_fader2, $com_worldswitcher_filter_window3, worldswitcher_options:popup)", $com_worldswitcher_filter_close8);
+~scrollbar_vertical($com_worldswitcher_filter_scrollbar6, $com_worldswitcher_filter_options5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_boolean $boolean9 = ~on_mobile;
-~worldswitcher_filter_build($widget_820:1_1, $widget_820:2_2, $widget_820:3_3, $widget_820:7_5, $widget_820:8_6, $boolean9, -1);
-if_setonvartransmit("worldswitcher_filter_build($widget_820:1_1, $widget_820:2_2, $widget_820:3_3, $widget_820:7_5, $widget_820:8_6, $boolean9){var735, var3014}", $widget_820:0_0);
+~worldswitcher_filter_build($com_worldswitcher_filter_clamp1, $com_worldswitcher_filter_fader2, $com_worldswitcher_filter_window3, $com_worldswitcher_filter_options5, $com_worldswitcher_filter_scrollbar6, $boolean9, -1);
+if_setonvartransmit("worldswitcher_filter_build($com_worldswitcher_filter_clamp1, $com_worldswitcher_filter_fader2, $com_worldswitcher_filter_window3, $com_worldswitcher_filter_options5, $com_worldswitcher_filter_scrollbar6, $boolean9){var735, var3014}", $com_worldswitcher_filter_universe0);

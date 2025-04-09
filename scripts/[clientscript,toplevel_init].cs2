@@ -42,43 +42,43 @@ if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
 	%varcint171 = 3;
 }
 %varcint172, %varcint173 = null, -1;
-$component3 = enum(component, component, $enum1, interface_161:31);
+$component3 = enum(component, component, $enum1, toplevel_osrs_stretch:compassclick);
 ~script7560($component3, $enum1);
 ~script1044;
 if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
 	setshowmousecross(false);
 	setshowloadingmessages(false);
-	setclickgraphic(cross, null);
-	_3131(false);
+	setfeedbacksprite(cross, null);
+	setfeedbackshowpopuptext(false);
 } else if ($enum1 = enum_1745) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
 	~script5965;
-	_3131(true);
-	~script4729(interface_601:7, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script4729(interface_601:19, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script4729(interface_601:16, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
-	~script868(interface_601:38);
-	~script957(interface_601:39);
+	setfeedbackshowpopuptext(true);
+	~script4729(toplevel_osm:safezone_hudcontainer, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(toplevel_osm:safezone, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(toplevel_osm:zeah, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script868(toplevel_osm:wifi);
+	~script957(toplevel_osm:battery);
 	~script7608;
 	~script7612;
-	if (if_getheight(interface_601:20) < 503) {
-		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, interface_601:50);
+	if (if_getheight(toplevel_osm:gameframe) < 503) {
+		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_osm:side_right_tabs);
 	}
 } else {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
-	setclickgraphic(cross, null);
-	_3131(false);
+	setfeedbacksprite(cross, null);
+	setfeedbackshowpopuptext(false);
 }
 ~account_update_display;
-~notification_init(enum(component, component, $enum1, interface_161:13));
-~gravestone_hud_init(enum(component, component, $enum1, interface_161:21));
-def_component $component4 = enum(component, component, $enum1, interface_161:11);
-def_component $component5 = enum(component, component, $enum1, interface_161:12);
+~notification_init(enum(component, component, $enum1, toplevel_osrs_stretch:notifications));
+~gravestone_hud_init(enum(component, component, $enum1, toplevel_osrs_stretch:gravestone));
+def_component $component4 = enum(component, component, $enum1, toplevel_osrs_stretch:helper_dodger);
+def_component $component5 = enum(component, component, $enum1, toplevel_osrs_stretch:helper_content);
 if ($component4 ! null & $component5 ! null) {
 	~helper_init($component4, $component5);
 }

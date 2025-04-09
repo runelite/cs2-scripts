@@ -1,10 +1,10 @@
 // 2573
-[clientscript,tutorial_displayname_init](component $widget_558:0_0, component $widget_558:18_1, component $widget_558:19_2, component $widget_558:12_3, component $widget_558:2_4, component $widget_558:8_5, component $widget_558:7_6)
+[clientscript,tutorial_displayname_init](component $com_tutorial_displayname_universe0, component $com_tutorial_displayname_look_up_name1, component $com_tutorial_displayname_set_name2, component $com_tutorial_displayname_name_text3, component $com_tutorial_displayname_main4, component $com_tutorial_displayname_name_highlight5, component $com_tutorial_displayname_name6)
 if (~on_mobile = true) {
-	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top, $widget_558:2_4);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top, $com_tutorial_displayname_main4);
 }
 ~chatdefault_stopinput;
-~tutorial_displayname_buttons($widget_558:18_1, $widget_558:19_2, $widget_558:12_3, $widget_558:8_5, $widget_558:7_6);
+~tutorial_displayname_buttons($com_tutorial_displayname_look_up_name1, $com_tutorial_displayname_set_name2, $com_tutorial_displayname_name_text3, $com_tutorial_displayname_name_highlight5, $com_tutorial_displayname_name6);
 %varcstring436 = %varcstring437;
-if_settext("<%varcstring436>*", $widget_558:12_3);
-if_setonvartransmit("tutorial_displayname_buttons($widget_558:18_1, $widget_558:19_2, $widget_558:12_3, $widget_558:8_5, $widget_558:7_6){var1042}", $widget_558:0_0);
+if_settext("<%varcstring436>*", $com_tutorial_displayname_name_text3);
+if_setonvartransmit("tutorial_displayname_buttons($com_tutorial_displayname_look_up_name1, $com_tutorial_displayname_set_name2, $com_tutorial_displayname_name_text3, $com_tutorial_displayname_name_highlight5, $com_tutorial_displayname_name6){var1042}", $com_tutorial_displayname_universe0);

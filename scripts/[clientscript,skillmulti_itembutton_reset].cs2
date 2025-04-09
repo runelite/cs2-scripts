@@ -1,6 +1,6 @@
 // 2053
-[clientscript,skillmulti_itembutton_reset](int $clock0, obj $obj1, component $component2, string $string0, int $int3, int $int4, int $int5, int $int6)
-if (clientclock < $clock0) {
+[clientscript,skillmulti_itembutton_reset](int $int0, obj $obj1, component $component2, string $string0, int $int3, int $int4, int $int5, int $int6)
+if (clientclock < $int0) {
 	return;
 }
 ~skillmulti_itembutton_draw(false, $obj1, $component2, $int5, $int6);

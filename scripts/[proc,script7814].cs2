@@ -10,14 +10,14 @@ if (~on_mobile = true) {
 def_int $int8 = calc($int6 / 2);
 def_int $int9 = 6;
 if_setsize($int7, calc($int6 + 12), ^setsize_abs, ^setsize_abs, $component1);
-cc_create($component1, ^iftype_graphic, $int3);
+cc_create($component1, ^iftype_graphic, $int3, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking_light);
 $int3 = calc($int3 + 1);
 $int3 = ~steelbox($component1, $int3, false);
 if_sethide(true, $component1);
-cc_create($component1, ^iftype_rectangle, $int3);
+cc_create($component1, ^iftype_rectangle, $int3, false);
 cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
@@ -28,7 +28,7 @@ if ($int4 = 0) {
 	cc_settrans(255);
 }
 $int3 = calc($int3 + 1);
-cc_create($component1, ^iftype_text, $int3);
+cc_create($component1, ^iftype_text, $int3, false);
 cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext("View Log");
@@ -49,7 +49,7 @@ cc_setonop("script7813($component0, $component1, $component2)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 $int3 = calc($int3 + 1);
 $int9 = calc($int9 + $int8);
-cc_create($component1, ^iftype_rectangle, $int3);
+cc_create($component1, ^iftype_rectangle, $int3, false);
 cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
@@ -60,7 +60,7 @@ if ($int4 = 1) {
 	cc_settrans(255);
 }
 $int3 = calc($int3 + 1);
-cc_create($component1, ^iftype_text, $int3);
+cc_create($component1, ^iftype_text, $int3, false);
 cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext("Overview");

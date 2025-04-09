@@ -1,8 +1,8 @@
 // 3056
-[clientscript,macro_beekeeper_init](component $widget_420:0_0, component $widget_420:10_1, component $widget_420:11_2, component $widget_420:12_3, component $widget_420:13_4, component $widget_420:15_5, component $widget_420:17_6, component $widget_420:19_7, component $widget_420:21_8, component $widget_420:22_9, component $widget_420:23_10, component $widget_420:25_11)
+[clientscript,macro_beekeeper_init](component $com_beehive_universe0, component $com_beehive_start_11, component $com_beehive_start_22, component $com_beehive_start_33, component $com_beehive_start_44, component $com_beehive_dest_15, component $com_beehive_dest_26, component $com_beehive_dest_37, component $com_beehive_dest_48, component $com_beehive_confirm9, component $com_beehive_confirm_text10, component $com_beehive_confirm_highlight11)
 if (~on_mobile = false) {
-	if_setonmouseover("macro_beekeeper_confirmbutton(true, $widget_420:23_10, $widget_420:25_11)", $widget_420:22_9);
-	if_setonmouseleave("macro_beekeeper_confirmbutton(false, $widget_420:23_10, $widget_420:25_11)", $widget_420:22_9);
+	if_setonmouseover("macro_beekeeper_confirmbutton(true, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
+	if_setonmouseleave("macro_beekeeper_confirmbutton(false, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
 }
 %varcint404 = random(2048);
 %varcint407 = random(2048);
@@ -18,36 +18,36 @@ if (~on_mobile = false) {
 %varcint414 = calc(25 - randominc(50));
 ~macro_beekeeper_update(
 	0 = 1, 
-	1 = $widget_420:0_0, 
-	2 = $widget_420:10_1, 
-	3 = $widget_420:11_2, 
-	4 = $widget_420:12_3, 
-	5 = $widget_420:13_4, 
-	6 = $widget_420:15_5, 
-	7 = $widget_420:17_6, 
-	8 = $widget_420:19_7, 
-	9 = $widget_420:21_8
+	1 = $com_beehive_universe0, 
+	2 = $com_beehive_start_11, 
+	3 = $com_beehive_start_22, 
+	4 = $com_beehive_start_33, 
+	5 = $com_beehive_start_44, 
+	6 = $com_beehive_dest_15, 
+	7 = $com_beehive_dest_26, 
+	8 = $com_beehive_dest_37, 
+	9 = $com_beehive_dest_48
 );
 if_setonvartransmit("macro_beekeeper_transmit(
-	0 = $widget_420:0_0, 
-	1 = $widget_420:10_1, 
-	2 = $widget_420:11_2, 
-	3 = $widget_420:12_3, 
-	4 = $widget_420:13_4, 
-	5 = $widget_420:15_5, 
-	6 = $widget_420:17_6, 
-	7 = $widget_420:19_7, 
-	8 = $widget_420:21_8
-){var805}", $widget_420:0_0);
+	0 = $com_beehive_universe0, 
+	1 = $com_beehive_start_11, 
+	2 = $com_beehive_start_22, 
+	3 = $com_beehive_start_33, 
+	4 = $com_beehive_start_44, 
+	5 = $com_beehive_dest_15, 
+	6 = $com_beehive_dest_26, 
+	7 = $com_beehive_dest_37, 
+	8 = $com_beehive_dest_48
+){var805}", $com_beehive_universe0);
 if_setontimer("macro_beekeeper_timer(
 	0 = 0, 
-	1 = $widget_420:0_0, 
-	2 = $widget_420:10_1, 
-	3 = $widget_420:11_2, 
-	4 = $widget_420:12_3, 
-	5 = $widget_420:13_4, 
-	6 = $widget_420:15_5, 
-	7 = $widget_420:17_6, 
-	8 = $widget_420:19_7, 
-	9 = $widget_420:21_8
-)", $widget_420:0_0);
+	1 = $com_beehive_universe0, 
+	2 = $com_beehive_start_11, 
+	3 = $com_beehive_start_22, 
+	4 = $com_beehive_start_33, 
+	5 = $com_beehive_start_44, 
+	6 = $com_beehive_dest_15, 
+	7 = $com_beehive_dest_26, 
+	8 = $com_beehive_dest_37, 
+	9 = $com_beehive_dest_48
+)", $com_beehive_universe0);

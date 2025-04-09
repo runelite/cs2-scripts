@@ -1,12 +1,12 @@
 // 6142
-[clientscript,script6142](component $component0, int $comsubid1, int $trans2, int $clock3)
-if (clientclock < $clock3) {
+[clientscript,script6142](component $component0, int $int1, int $int2, int $int3)
+if (clientclock < $int3) {
 	return;
 }
-if (cc_find($component0, $comsubid1) = ^true) {
-	cc_settrans($trans2);
+if (cc_find($component0, $int1) = ^true) {
+	cc_settrans($int2);
 	cc_setontimer(null);
 }
-if (cc_find(interface_148:11, calc($comsubid1 + 1)) = ^true) {
+if (cc_find(pet_insurance:pets, calc($int1 + 1)) = ^true) {
 	cc_settrans(0);
 }

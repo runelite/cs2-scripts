@@ -6,11 +6,11 @@ def_int $int3 = 126;
 def_int $int4 = ~deadman_world;
 if ($int4 ! 0) {
 	if (%varbit4965 > 0) {
-		if_sethide(true, interface_90:49);
+		if_sethide(true, pvp_icons:comlevelrange);
 		return;
 	}
 	if (%varcint78 = 2 | %varbit1463 = 1) {
-		if_settext("", interface_90:49);
+		if_settext("", pvp_icons:comlevelrange);
 		return;
 	}
 	if ($int4 = 3 & ~private_event_world = 0) {
@@ -26,4 +26,4 @@ if ($int4 ! 0) {
 	$int3 = calc(%varbit13027 + $int1);
 	$int2, $int3 = ~max(3, $int2), ~min(126, $int3);
 }
-if_settext("<tostring($int2)>-<tostring($int3)>", interface_90:49);
+if_settext("<tostring($int2)>-<tostring($int3)>", pvp_icons:comlevelrange);

@@ -1,15 +1,15 @@
 // 413
-[proc,script413](int $int0, string $string0, component $widget_426:11_1, component $widget_426:2_2, component $widget_426:4_3, component $widget_426:8_4, component $widget_426:5_5)
+[proc,script413](int $int0, string $string0, component $com_slayer_rewards_main1, component $com_slayer_rewards_confirm2, component $com_slayer_rewards_confirm_info3, component $com_slayer_rewards_confirm_button4, component $com_slayer_rewards_back_button5)
 if ($int0 < 32 & testbit(%var1076, $int0) = ^true | $int0 >= 32 & testbit(%var1344, calc($int0 % 32)) = ^true) {
 	switch_int ($int0) {
 		case 35 :
-			~script6068(%varbit14825, $int0, $string0, $widget_426:11_1, $widget_426:2_2, $widget_426:4_3, $widget_426:8_4, $widget_426:5_5);
+			~script6068(%varbit14825, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
 			return;
 		case 43 :
-			~script6068(%varbit14824, $int0, $string0, $widget_426:11_1, $widget_426:2_2, $widget_426:4_3, $widget_426:8_4, $widget_426:5_5);
+			~script6068(%varbit14824, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
 			return;
 		case 53 :
-			~script6068(%varbit14823, $int0, $string0, $widget_426:11_1, $widget_426:2_2, $widget_426:4_3, $widget_426:8_4, $widget_426:5_5);
+			~script6068(%varbit14823, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
 			return;
 		case default :
 			cc_setgraphic("options_radio_buttons,6");
@@ -19,11 +19,11 @@ if ($int0 < 32 & testbit(%var1076, $int0) = ^true | $int0 >= 32 & testbit(%var13
 					0 = false, 
 					1 = $int0, 
 					2 = $string0, 
-					3 = $widget_426:11_1, 
-					4 = $widget_426:2_2, 
-					5 = $widget_426:4_3, 
-					6 = $widget_426:8_4, 
-					7 = $widget_426:5_5, 
+					3 = $com_slayer_rewards_main1, 
+					4 = $com_slayer_rewards_confirm2, 
+					5 = $com_slayer_rewards_confirm_info3, 
+					6 = $com_slayer_rewards_confirm_button4, 
+					7 = $com_slayer_rewards_back_button5, 
 					8 = -1
 				)");
 			} else {
@@ -38,11 +38,11 @@ if ($int0 < 32 & testbit(%var1076, $int0) = ^true | $int0 >= 32 & testbit(%var13
 		0 = true, 
 		1 = $int0, 
 		2 = $string0, 
-		3 = $widget_426:11_1, 
-		4 = $widget_426:2_2, 
-		5 = $widget_426:4_3, 
-		6 = $widget_426:8_4, 
-		7 = $widget_426:5_5, 
+		3 = $com_slayer_rewards_main1, 
+		4 = $com_slayer_rewards_confirm2, 
+		5 = $com_slayer_rewards_confirm_info3, 
+		6 = $com_slayer_rewards_confirm_button4, 
+		7 = $com_slayer_rewards_back_button5, 
 		8 = -1
 	)");
 }

@@ -1,26 +1,26 @@
 // 4225
-[clientscript,clan_members_header_open](component $component0, component $component1, component $widget_693:1_2, component $widget_693:2_3, int $comsubid4, component $widget_693:22_5, component $widget_693:9_6, component $widget_693:14_7, component $widget_693:15_8, component $widget_693:16_9, component $widget_693:18_10, component $widget_693:10_11, component $widget_693:7_12, component $widget_693:11_13, component $widget_693:19_14, component $widget_693:8_15, component $widget_693:13_16, component $widget_693:20_17)
+[clientscript,clan_members_header_open](component $component0, component $component1, component $com_clans_members_universe2, component $com_clans_members_frame3, int $comsubid4, component $com_clans_members_search5, component $com_clans_members_scrollcontents6, component $com_clans_members_scrollbar7, component $com_clans_members_dropdown_container8, component $com_clans_members_dropdown_box9, component $com_clans_members_dropdown_scrollbar10, component $com_clans_members_name11, component $com_clans_members_header112, component $com_clans_members_column113, component $com_clans_members_options114, component $com_clans_members_header215, component $com_clans_members_column216, component $com_clans_members_options217)
 sound_synth(interface_select1, 1, 0);
 ~xpdrops_setup_display_hoverdisable($component0);
-if_sethide(false, $widget_693:15_8);
-if_setposition(if_getx($component0), calc(if_gety($component0) + if_getheight($component0)), ^setpos_abs_left, ^setpos_abs_top, $widget_693:16_9);
-cc_deleteall($widget_693:19_14);
-cc_deleteall($widget_693:20_17);
-cc_deleteall($widget_693:18_10);
+if_sethide(false, $com_clans_members_dropdown_container8);
+if_setposition(if_getx($component0), calc(if_gety($component0) + if_getheight($component0)), ^setpos_abs_left, ^setpos_abs_top, $com_clans_members_dropdown_box9);
+cc_deleteall($com_clans_members_options114);
+cc_deleteall($com_clans_members_options217);
+cc_deleteall($com_clans_members_dropdown_scrollbar10);
 def_int $int18 = 15;
 if (~on_mobile = true) {
 	$int18 = scale(8, 5, $int18);
 }
-.cc_create($component1, ^iftype_rectangle, 0);
+.cc_create($component1, ^iftype_rectangle, 0, false);
 .cc_setsize(0, calc($int18 + 2), ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_int $count19 = 0;
-def_int $count20 = enum_getoutputcount(enum_3793);
-while ($count19 < $count20) {
-	cc_create($component1, ^iftype_text, calc($count19 + 1));
+def_int $int19 = 0;
+def_int $int20 = enum_getoutputcount(enum_3793);
+while ($int19 < $int20) {
+	cc_create($component1, ^iftype_text, calc($int19 + 1), false);
 	cc_setsize(0, $int18, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextshadow(true);
@@ -33,35 +33,35 @@ while ($count19 < $count20) {
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
 	cc_setonop("clan_members_header_op(
 		0 = event_op, 
-		1 = $count19, 
+		1 = $int19, 
 		2 = $component0, 
-		3 = $widget_693:1_2, 
-		4 = $widget_693:2_3, 
+		3 = $com_clans_members_universe2, 
+		4 = $com_clans_members_frame3, 
 		5 = $comsubid4, 
-		6 = $widget_693:22_5, 
-		7 = $widget_693:9_6, 
-		8 = $widget_693:14_7, 
-		9 = $widget_693:15_8, 
-		10 = $widget_693:16_9, 
-		11 = $widget_693:18_10, 
-		12 = $widget_693:10_11, 
-		13 = $widget_693:7_12, 
-		14 = $widget_693:11_13, 
-		15 = $widget_693:8_15, 
-		16 = $widget_693:13_16
+		6 = $com_clans_members_search5, 
+		7 = $com_clans_members_scrollcontents6, 
+		8 = $com_clans_members_scrollbar7, 
+		9 = $com_clans_members_dropdown_container8, 
+		10 = $com_clans_members_dropdown_box9, 
+		11 = $com_clans_members_dropdown_scrollbar10, 
+		12 = $com_clans_members_name11, 
+		13 = $com_clans_members_header112, 
+		14 = $com_clans_members_column113, 
+		15 = $com_clans_members_header215, 
+		16 = $com_clans_members_column216
 	)");
-	cc_setposition(0, calc($count19 * $int18), ^setpos_abs_centre, ^setpos_abs_top);
-	cc_settext(enum(int, string, enum_3793, $count19));
-	$count19 = calc($count19 + 1);
+	cc_setposition(0, calc($int19 * $int18), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext(enum(int, string, enum_3793, $int19));
+	$int19 = calc($int19 + 1);
 }
 if_setscrollpos(0, 0, $component1);
-def_int $int21 = calc($count20 * $int18 + 2);
-def_int $height22 = calc($int21 + 4);
-if ($height22 > 150) {
-	if_setsize(if_getwidth($component0), 150, ^setsize_abs, ^setsize_abs, $widget_693:16_9);
+def_int $int21 = calc($int20 * $int18 + 2);
+def_int $int22 = calc($int21 + 4);
+if ($int22 > 150) {
+	if_setsize(if_getwidth($component0), 150, ^setsize_abs, ^setsize_abs, $com_clans_members_dropdown_box9);
 	if_setscrollsize(0, $int21, $component1);
 } else {
-	if_setsize(if_getwidth($component0), $height22, ^setsize_abs, ^setsize_abs, $widget_693:16_9);
+	if_setsize(if_getwidth($component0), $int22, ^setsize_abs, ^setsize_abs, $com_clans_members_dropdown_box9);
 	if_setscrollsize(0, 0, $component1);
 }
-~scrollbar_vertical($widget_693:18_10, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_clans_members_dropdown_scrollbar10, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,7 +1,7 @@
 // 3856
-[proc,settings_create_input_setting](int $int0, int $int1, int $int2, int $int3, int $trans4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
-def_int $width9 = parawidth(struct_param($struct5, param_1114), 1000, p12_full);
-def_int $int10 = calc($width9 + 10);
+[proc,settings_create_input_setting](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
+def_int $int9 = parawidth(struct_param($struct5, param_1114), 1000, p12_full);
+def_int $int10 = calc($int9 + 10);
 def_string $string0 = struct_param($struct5, param_1086);
 def_boolean $boolean11 = ~on_mobile;
 if ($boolean11 = true & string_length(struct_param($struct5, param_1087)) > 0) {
@@ -28,14 +28,14 @@ if ($boolean11 = true & $int15 < 20) {
 def_int $int16 = calc($int15 + $int12 + 12);
 def_int $int17 = struct_param($struct5, param_1077);
 def_boolean $boolean18 = ~script3957($struct5);
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 cc_setsize(10, $int16, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
-cc_settrans($trans4);
+cc_settrans($int4);
 $int2 = calc($int2 + 1);
-cc_create($component7, ^iftype_text, $int2);
+cc_create($component7, ^iftype_text, $int2, false);
 cc_setsize(calc($int10 + 25), $int15, ^setsize_minus, ^setsize_abs);
 cc_setposition(10, calc($int0 + 6), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
@@ -52,28 +52,28 @@ if ($boolean11 = false & $int13 = 1 & string_length($string1) > 0) {
 }
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 $int2 = calc($int2 + 1);
-cc_create($component7, ^iftype_graphic, $int2);
+cc_create($component7, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(tradebacking);
 cc_settiling(true);
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 def_int $comsubid19 = $int2;
 $int2 = calc($int2 + 1);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(calc($int10 - 2), 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(11, calc($int0 + ($int16 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($component7, ^iftype_text, $int2);
+cc_create($component7, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize(calc($width9 + 6), 16, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int9 + 6), 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(12, calc($int0 + ($int16 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
 cc_settextfont(p12_full);
 if ($boolean18 = true) {
@@ -94,7 +94,7 @@ if ($int20 > 1) {
 } else {
 	cc_settext("1<text_switch(~int_to_bool(string_length(struct_param($struct5, param_1111))), $string3, $string4)><struct_param($struct5, param_1111)>");
 }
-cc_create($component6, ^iftype_rectangle, $int3);
+cc_create($component6, ^iftype_rectangle, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setsize($int10, 25, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
@@ -103,7 +103,7 @@ cc_setcolour(^black);
 cc_settrans(255);
 cc_setop(1, "Select");
 cc_setonop("settings_input_op($struct5)");
-cc_create($component7, ^iftype_rectangle, $int2);
+cc_create($component7, ^iftype_rectangle, $int2, false);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(true);
@@ -119,7 +119,7 @@ if ($boolean11 = false & $boolean18 = true) {
 }
 $int2 = calc($int2 + 1);
 if ($boolean14 = false & $int13 = 0 & $int12 > 0) {
-	cc_create($component7, ^iftype_text, $int2);
+	cc_create($component7, ^iftype_text, $int2, false);
 	cc_setsize(calc($int10 + 25), $int12, ^setsize_minus, ^setsize_abs);
 	cc_setposition(10, calc($int0 + $int15 + 6), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string1);

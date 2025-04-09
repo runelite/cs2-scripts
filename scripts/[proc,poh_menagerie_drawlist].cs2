@@ -1,20 +1,20 @@
 // 641
-[proc,poh_menagerie_drawlist](component $widget_211:7_0, component $widget_211:8_1, int $y2)
-cc_deleteall($widget_211:7_0);
-def_int $width3 = if_getwidth($widget_211:7_0);
-def_int $height4 = if_getheight($widget_211:7_0);
-def_int $int5 = calc(($width3 - 36 * 6) / 5 + 36);
+[proc,poh_menagerie_drawlist](component $com_poh_menagerie_list0, component $com_poh_menagerie_scrollbar1, int $int2)
+cc_deleteall($com_poh_menagerie_list0);
+def_int $int3 = if_getwidth($com_poh_menagerie_list0);
+def_int $int4 = if_getheight($com_poh_menagerie_list0);
+def_int $int5 = calc(($int3 - 36 * 6) / 5 + 36);
 def_int $int6 = 0;
-def_int $height7 = 0;
+def_int $int7 = 0;
 def_enum $enum8 = null;
 def_int $int9 = 0;
 def_namedobj $namedobj10 = null;
 while ($int9 <= 62) {
-	cc_create($widget_211:7_0, ^iftype_graphic, $int9);
+	cc_create($com_poh_menagerie_list0, ^iftype_graphic, $int9, false);
 	if ($int9 < 32 & testbit(%var864, $int9) = ^true | $int9 >= 32 & testbit(%var1416, calc($int9 - 32)) = ^true) {
 		$namedobj10 = enum(int, namedobj, enum_985, $int9);
 		$enum8 = oc_param($namedobj10, param_446);
-		$height7 = ~poh_menagerie_drawpet($namedobj10, $enum8, $int5, $int6);
+		$int7 = ~poh_menagerie_drawpet($namedobj10, $enum8, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
@@ -22,28 +22,28 @@ while ($int9 <= 62) {
 	$int9 = calc($int9 + 1);
 }
 def_obj $obj11 = null;
-def_int $size12 = 0;
-def_int $size13 = inv_size(inv_517);
-while ($size12 < $size13) {
-	cc_create($widget_211:7_0, ^iftype_graphic, $int9);
-	$obj11 = inv_getobj(inv_517, $size12);
+def_int $int12 = 0;
+def_int $int13 = inv_size(poh_menagerie_pets);
+while ($int12 < $int13) {
+	cc_create($com_poh_menagerie_list0, ^iftype_graphic, $int9, false);
+	$obj11 = inv_getobj(poh_menagerie_pets, $int12);
 	if ($obj11 ! null) {
-		$height7 = ~poh_menagerie_drawpet($obj11, null, $int5, $int6);
+		$int7 = ~poh_menagerie_drawpet($obj11, null, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
 	}
-	$int9, $size12 = calc($int9 + 1), calc($size12 + 1);
+	$int9, $int12 = calc($int9 + 1), calc($int12 + 1);
 }
 if ($int6 > 0) {
-	$height7 = calc($height7 + 32);
+	$int7 = calc($int7 + 32);
 }
-if ($height7 > $height4) {
-	if_setscrollsize(0, $height7, $widget_211:7_0);
-	if_setscrollpos(0, $y2, $widget_211:7_0);
+if ($int7 > $int4) {
+	if_setscrollsize(0, $int7, $com_poh_menagerie_list0);
+	if_setscrollpos(0, $int2, $com_poh_menagerie_list0);
 } else {
-	$height7 = 0;
-	if_setscrollsize(0, 0, $widget_211:7_0);
-	if_setscrollpos(0, 0, $widget_211:7_0);
+	$int7 = 0;
+	if_setscrollsize(0, 0, $com_poh_menagerie_list0);
+	if_setscrollpos(0, 0, $com_poh_menagerie_list0);
 }
-~scrollbar_resize($widget_211:8_1, $widget_211:7_0, $height7);
+~scrollbar_resize($com_poh_menagerie_scrollbar1, $com_poh_menagerie_list0, $int7);

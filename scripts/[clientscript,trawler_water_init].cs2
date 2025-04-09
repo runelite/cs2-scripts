@@ -1,8 +1,8 @@
 // 3045
-[clientscript,trawler_water_init](component $widget_366:7_0)
-cc_deleteall($widget_366:7_0);
-cc_create($widget_366:7_0, ^iftype_rectangle, 0);
-.cc_create($widget_366:7_0, ^iftype_rectangle, 1);
+[clientscript,trawler_water_init](component $com_trawler_overlay_water0)
+cc_deleteall($com_trawler_overlay_water0);
+cc_create($com_trawler_overlay_water0, ^iftype_rectangle, 0, false);
+.cc_create($com_trawler_overlay_water0, ^iftype_rectangle, 1, false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 .cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_settrans(128);
@@ -11,5 +11,5 @@ cc_setfill(true);
 .cc_setfill(true);
 cc_setcolour(0x7f7fff);
 .cc_setcolour(^black);
-~trawler_water_update($widget_366:7_0);
-if_setonvartransmit("trawler_water_update(event_com, cc_getid, .cc_getid){var391}", $widget_366:7_0);
+~trawler_water_update($com_trawler_overlay_water0);
+if_setonvartransmit("trawler_water_update(event_com, cc_getid, .cc_getid){var391}", $com_trawler_overlay_water0);

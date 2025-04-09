@@ -1,163 +1,163 @@
 // 3658
-[proc,league_areas_draw_interface](component $widget_512:6_0, component $widget_512:7_1, component $widget_512:11_2, component $widget_512:5_3, int $comsubid4, component $widget_512:44_5, component $widget_512:46_6, component $widget_512:47_7, component $widget_512:48_8, component $widget_512:49_9, component $widget_512:50_10, component $widget_512:51_11, component $widget_512:52_12, component $widget_512:53_13, component $widget_512:54_14, component $widget_512:55_15, component $widget_512:92_16, component $widget_512:94_17, component $widget_512:95_18, component $widget_512:96_19, component $widget_512:97_20, component $widget_512:98_21, component $widget_512:99_22, component $widget_512:100_23, component $widget_512:101_24, component $widget_512:102_25, component $widget_512:103_26, component $widget_512:41_27, component $widget_512:42_28, component $widget_512:43_29, component $widget_512:78_30, component $widget_512:82_31, component $widget_512:83_32, component $widget_512:89_33, component $widget_512:40_34, component $widget_512:36_35, component $widget_512:8_36, component $widget_512:2_37)
-~script726(interface_512:1, interface_512:4);
-~league_areas_progress_bar($widget_512:8_36, $widget_512:2_37, 0, 1);
-cc_deleteall($widget_512:36_35);
+[proc,league_areas_draw_interface](component $com_trailblazer_areas_league_btn_menu0, component $com_trailblazer_areas_league_menu_frame1, component $com_trailblazer_areas_league_menu_overlay2, component $com_trailblazer_areas_close_button3, int $comsubid4, component $com_trailblazer_areas_league_shield_misthalin5, component $com_trailblazer_areas_league_shield_karamja6, component $com_trailblazer_areas_league_shield_desert7, component $com_trailblazer_areas_league_shield_morytania8, component $com_trailblazer_areas_league_shield_asgarnia9, component $com_trailblazer_areas_league_shield_kandarin10, component $com_trailblazer_areas_league_shield_fremennik11, component $com_trailblazer_areas_league_shield_tirannwn12, component $com_trailblazer_areas_league_shield_wilderness13, component $com_trailblazer_areas_league_shield_kebos_kourend14, component $com_trailblazer_areas_league_shield_varlamore15, component $com_trailblazer_areas_league_name_misthalin16, component $com_trailblazer_areas_league_name_karamja17, component $com_trailblazer_areas_league_name_desert18, component $com_trailblazer_areas_league_name_morytania19, component $com_trailblazer_areas_league_name_asgarnia20, component $com_trailblazer_areas_league_name_kandarin21, component $com_trailblazer_areas_league_name_fremennik22, component $com_trailblazer_areas_league_name_tirannwn23, component $com_trailblazer_areas_league_name_wilderness24, component $com_trailblazer_areas_league_name_kebos_kourend25, component $com_trailblazer_areas_league_name_varlamore26, component $com_trailblazer_areas_league_area_details27, component $com_trailblazer_areas_name_shield28, component $com_trailblazer_areas_name_header29, component $com_trailblazer_areas_description30, component $com_trailblazer_areas_select_button31, component $com_trailblazer_areas_select_back32, component $com_trailblazer_areas_league_area_icon33, component $com_trailblazer_areas_loading34, component $com_trailblazer_areas_header35, component $com_trailblazer_areas_progress_bar36, component $com_trailblazer_areas_tooltip37)
+~script726(trailblazer_areas:universe, trailblazer_areas:content_outer);
+~league_areas_progress_bar($com_trailblazer_areas_progress_bar36, $com_trailblazer_areas_tooltip37, 0, 1);
+cc_deleteall($com_trailblazer_areas_header35);
 def_struct $struct38 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct38 = null) {
 	return;
 }
 def_int $colour39 = struct_param($struct38, param_1027);
-if (cc_find(interface_512:3, $comsubid4) = ^true) {
+if (cc_find(trailblazer_areas:frame, $comsubid4) = ^true) {
 	cc_setcolour($colour39);
 }
 ~script3659;
 ~league_areas_setup_events(
 	0 = 1, 
-	1 = $widget_512:44_5, 
-	2 = $widget_512:92_16, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_misthalin5, 
+	2 = $com_trailblazer_areas_league_name_misthalin16, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 2, 
-	1 = $widget_512:46_6, 
-	2 = $widget_512:94_17, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_karamja6, 
+	2 = $com_trailblazer_areas_league_name_karamja17, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 6, 
-	1 = $widget_512:47_7, 
-	2 = $widget_512:95_18, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_desert7, 
+	2 = $com_trailblazer_areas_league_name_desert18, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 5, 
-	1 = $widget_512:48_8, 
-	2 = $widget_512:96_19, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_morytania8, 
+	2 = $com_trailblazer_areas_league_name_morytania19, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 3, 
-	1 = $widget_512:49_9, 
-	2 = $widget_512:97_20, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_asgarnia9, 
+	2 = $com_trailblazer_areas_league_name_asgarnia20, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 4, 
-	1 = $widget_512:50_10, 
-	2 = $widget_512:98_21, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_kandarin10, 
+	2 = $com_trailblazer_areas_league_name_kandarin21, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 8, 
-	1 = $widget_512:51_11, 
-	2 = $widget_512:99_22, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_fremennik11, 
+	2 = $com_trailblazer_areas_league_name_fremennik22, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 7, 
-	1 = $widget_512:52_12, 
-	2 = $widget_512:100_23, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_tirannwn12, 
+	2 = $com_trailblazer_areas_league_name_tirannwn23, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 11, 
-	1 = $widget_512:53_13, 
-	2 = $widget_512:101_24, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_wilderness13, 
+	2 = $com_trailblazer_areas_league_name_wilderness24, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 20, 
-	1 = $widget_512:54_14, 
-	2 = $widget_512:102_25, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_kebos_kourend14, 
+	2 = $com_trailblazer_areas_league_name_kebos_kourend25, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 ~league_areas_setup_events(
 	0 = 21, 
-	1 = $widget_512:55_15, 
-	2 = $widget_512:103_26, 
-	3 = $widget_512:41_27, 
-	4 = $widget_512:42_28, 
-	5 = $widget_512:43_29, 
-	6 = $widget_512:78_30, 
-	7 = $widget_512:82_31, 
-	8 = $widget_512:83_32, 
-	9 = $widget_512:89_33, 
-	10 = $widget_512:40_34
+	1 = $com_trailblazer_areas_league_shield_varlamore15, 
+	2 = $com_trailblazer_areas_league_name_varlamore26, 
+	3 = $com_trailblazer_areas_league_area_details27, 
+	4 = $com_trailblazer_areas_name_shield28, 
+	5 = $com_trailblazer_areas_name_header29, 
+	6 = $com_trailblazer_areas_description30, 
+	7 = $com_trailblazer_areas_select_button31, 
+	8 = $com_trailblazer_areas_select_back32, 
+	9 = $com_trailblazer_areas_league_area_icon33, 
+	10 = $com_trailblazer_areas_loading34
 );
 def_struct $struct40 = ~script3682(0);
 def_int $int41 = 0;
-def_string $text0 = "";
+def_string $string0 = "";
 def_int $int42 = 1;
 if (%varbit10666 > 0) {
 	$int42 = 5;
@@ -176,22 +176,22 @@ if ($struct40 ! null) {
 		$int41 = 0;
 	}
 	if ($int41 = 0) {
-		$text0 = "You have a new area available for selection!";
+		$string0 = "You have a new area available for selection!";
 	} else if ($int41 = 1) {
-		$text0 = "You have unlocked <tostring($int42)>/5 areas.";
+		$string0 = "You have unlocked <tostring($int42)>/5 areas.";
 	} else {
-		$text0 = "You have unlocked <tostring($int42)>/5 areas.";
+		$string0 = "You have unlocked <tostring($int42)>/5 areas.";
 	}
 }
 if ($int42 = 5) {
-	$text0 = "You have unlocked 5/5 areas!";
+	$string0 = "You have unlocked 5/5 areas!";
 }
-cc_create($widget_512:36_35, ^iftype_text, 0);
+cc_create($com_trailblazer_areas_header35, ^iftype_text, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour($colour39);
-cc_settext($text0);
+cc_settext($string0);
 ~script7630;

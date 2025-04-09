@@ -1,6 +1,6 @@
 // 6920
-[clientscript,script6920](int $clock0, component $component1)
-def_int $int2 = ~max(0, calc(50 * 30 - (clientclock - $clock0)));
+[clientscript,script6920](int $int0, component $component1)
+def_int $int2 = ~max(0, calc(50 * 30 - (clientclock - $int0)));
 if ($int2 <= 0) {
 	if_settext("0", $component1);
 } else {

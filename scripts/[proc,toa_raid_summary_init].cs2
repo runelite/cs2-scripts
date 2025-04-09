@@ -1,7 +1,7 @@
 // 6587
-[proc,toa_raid_summary_init](int $widget_482:37_0, int $widget_482:8_1, int $widget_482:24_2, int $widget_482:57_3, int $widget_482:65_4)
-~thinbox_tab_draw(interface_482:35, 0, "Paths");
-~thinbox_tab_draw(interface_482:36, 0, "Bosses");
-if_setonop("toa_raid_summary_timetab(0)", interface_482:36);
-if_setonop("toa_raid_summary_timetab(1)", interface_482:35);
+[proc,toa_raid_summary_init](int $com_toa_raid_summary_player_stats_table0, int $com_toa_raid_summary_boss_times_table1, int $com_toa_raid_summary_path_times_table2, int $com_toa_raid_summary_invocations_table3, int $com_toa_raid_summary_total_times_table4)
+~thinbox_tab_draw(toa_raid_summary:tab_paths, 0, "Paths");
+~thinbox_tab_draw(toa_raid_summary:tab_bosses, 0, "Bosses");
+if_setonop("toa_raid_summary_timetab(0)", toa_raid_summary:tab_bosses);
+if_setonop("toa_raid_summary_timetab(1)", toa_raid_summary:tab_paths);
 ~toa_raid_summary_timetab(0);

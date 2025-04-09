@@ -1,12 +1,12 @@
 // 741
-[clientscript,pest_activity_init](component $widget_408:10_0, component $widget_408:12_1)
-cc_deleteall($widget_408:10_0);
-cc_deleteall($widget_408:12_1);
-cc_create($widget_408:10_0, ^iftype_rectangle, 0);
+[clientscript,pest_activity_init](component $com_pest_status_overlay_activity_container0, component $com_pest_status_overlay_activity_bar1)
+cc_deleteall($com_pest_status_overlay_activity_container0);
+cc_deleteall($com_pest_status_overlay_activity_bar1);
+cc_create($com_pest_status_overlay_activity_container0, ^iftype_rectangle, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
-.cc_create($widget_408:12_1, ^iftype_rectangle, 0);
+.cc_create($com_pest_status_overlay_activity_bar1, ^iftype_rectangle, 0, false);
 .cc_setfill(true);
 ~pest_activity_update;
-if_setonvartransmit("pest_activity_update($widget_408:10_0, cc_getid, $widget_408:12_1, .cc_getid){var243}", $widget_408:10_0);
+if_setonvartransmit("pest_activity_update($com_pest_status_overlay_activity_container0, cc_getid, $com_pest_status_overlay_activity_bar1, .cc_getid){var243}", $com_pest_status_overlay_activity_container0);

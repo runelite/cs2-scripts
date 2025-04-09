@@ -1,7 +1,7 @@
 // 6690
 [proc,script6690](npc $npc0)(string)
 def_string $string0 = "2|";
-$string0 = append($string0, nc_getopbase($npc0, 1, false));
+$string0 = append($string0, nc_getopbase($npc0, true, false));
 $string0 = append($string0, "|");
 $string0 = append($string0, nc_getop($npc0, 1, false));
 $string0 = append($string0, "|");

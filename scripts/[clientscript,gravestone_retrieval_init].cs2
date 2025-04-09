@@ -1,20 +1,20 @@
 // 1985
-[clientscript,gravestone_retrieval_init](component $widget_602:0_0, component $widget_602:1_1, component $widget_602:3_2, component $widget_602:4_3, component $widget_602:6_4, component $widget_602:7_5, component $widget_602:8_6, component $widget_602:9_7, component $widget_602:10_8, component $widget_602:11_9)
-def_int $comsubid10 = ~steelborder($widget_602:1_1, "", 0);
-~gravestone_retrieval_unlockstatus($widget_602:1_1, $comsubid10, $widget_602:6_4, $widget_602:7_5, $widget_602:10_8, $widget_602:11_9);
-if_setonvartransmit("gravestone_retrieval_unlockstatus($widget_602:1_1, $comsubid10, $widget_602:6_4, $widget_602:7_5, $widget_602:10_8, $widget_602:11_9){var261, var262}", $widget_602:0_0);
-if_setgraphic("miscgraphics,0", $widget_602:8_6);
-if_setop(1, "Discard-All", $widget_602:8_6);
-if_setontimer(null, $widget_602:8_6);
-if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $widget_602:9_7, null, null)", $widget_602:8_6);
-if_setonmouseleave("gravestone_retrieval_buttonhover(false, $widget_602:9_7, null, null)", $widget_602:8_6);
-if_setonop("gravestone_retrieval_buttonop(event_op, $widget_602:8_6, $widget_602:9_7, null, null)", $widget_602:8_6);
+[clientscript,gravestone_retrieval_init](component $com_gravestone_retrieval_universe0, component $com_gravestone_retrieval_frame1, component $com_gravestone_retrieval_items2, component $com_gravestone_retrieval_scrollbar3, component $com_gravestone_retrieval_button4, component $com_gravestone_retrieval_button_gfx5, component $com_gravestone_retrieval_discard6, component $com_gravestone_retrieval_discard_gfx7, component $com_gravestone_retrieval_info8, component $com_gravestone_retrieval_fee9)
+def_int $comsubid10 = ~steelborder($com_gravestone_retrieval_frame1, "", 0);
+~gravestone_retrieval_unlockstatus($com_gravestone_retrieval_frame1, $comsubid10, $com_gravestone_retrieval_button4, $com_gravestone_retrieval_button_gfx5, $com_gravestone_retrieval_info8, $com_gravestone_retrieval_fee9);
+if_setonvartransmit("gravestone_retrieval_unlockstatus($com_gravestone_retrieval_frame1, $comsubid10, $com_gravestone_retrieval_button4, $com_gravestone_retrieval_button_gfx5, $com_gravestone_retrieval_info8, $com_gravestone_retrieval_fee9){var261, var262}", $com_gravestone_retrieval_universe0);
+if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_discard6);
+if_setop(1, "Discard-All", $com_gravestone_retrieval_discard6);
+if_setontimer(null, $com_gravestone_retrieval_discard6);
+if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
+if_setonmouseleave("gravestone_retrieval_buttonhover(false, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
+if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_discard6, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
 def_int $int11 = calc(36 + 10);
 def_int $int12 = calc(32 + 8);
-cc_deleteall($widget_602:3_2);
+cc_deleteall($com_gravestone_retrieval_items2);
 def_int $int13 = 0;
 while ($int13 < 120) {
-	cc_create($widget_602:3_2, ^iftype_graphic, $int13);
+	cc_create($com_gravestone_retrieval_items2, ^iftype_graphic, $int13, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(1 + $int13 % 8 * $int11), calc(3 + $int13 / 8 * $int12), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
@@ -25,6 +25,6 @@ while ($int13 < 120) {
 	cc_sethide(true);
 	$int13 = calc($int13 + 1);
 }
-~scrollbar_vertical($widget_602:4_3, $widget_602:3_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~gravestone_retrieval_items($widget_602:3_2, $widget_602:4_3);
-if_setoninvtransmit("gravestone_retrieval_items($widget_602:3_2, $widget_602:4_3){inv_525}", $widget_602:0_0);
+~scrollbar_vertical($com_gravestone_retrieval_scrollbar3, $com_gravestone_retrieval_items2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~gravestone_retrieval_items($com_gravestone_retrieval_items2, $com_gravestone_retrieval_scrollbar3);
+if_setoninvtransmit("gravestone_retrieval_items($com_gravestone_retrieval_items2, $com_gravestone_retrieval_scrollbar3){gravestone}", $com_gravestone_retrieval_universe0);

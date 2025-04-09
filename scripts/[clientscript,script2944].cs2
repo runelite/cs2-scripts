@@ -1,73 +1,73 @@
 // 2944
-[clientscript,script2944](int $int0, component $widget_642:3_1, component $widget_642:34_2, component $widget_642:35_3, component $widget_642:5_4, component $widget_642:7_5, component $widget_642:27_6, component $widget_642:28_7, component $widget_642:30_8, component $widget_642:31_9, component $widget_642:29_10, component $widget_642:32_11, component $widget_642:21_12, component $widget_642:23_13, component $widget_642:24_14, component $widget_642:25_15, component $widget_642:0_16, component $widget_642:1_17, component $widget_642:4_18, component $widget_642:33_19, component $widget_642:8_20, component $widget_642:11_21, component $widget_642:13_22, component $widget_642:16_23, component $widget_642:17_24, component $widget_642:19_25, component $widget_642:12_26, component $widget_642:26_27)
-cc_deleteall($widget_642:35_3);
+[clientscript,script2944](int $int0, component $com_adventurepath_path_menu1, component $com_adventurepath_scrollbar_paths2, component $com_adventurepath_paths3, component $com_adventurepath_task_list4, component $com_adventurepath_tasks5, component $com_adventurepath_scrollbar_task6, component $com_adventurepath_task_info7, component $com_adventurepath_task_name8, component $com_adventurepath_task_description9, component $com_adventurepath_task_hint10, component $com_adventurepath_reward_list11, component $com_adventurepath_filters12, component $com_adventurepath_back13, component $com_adventurepath_path_reward14, component $com_adventurepath_tasks_done15, component $com_adventurepath_universe16, component $com_adventurepath_frame17, component $com_adventurepath_banner18, component $com_adventurepath_rewards_scrollbar19, component $com_adventurepath_extra_task_info20, component $com_adventurepath_extra_description21, component $com_adventurepath_extra_hint22, component $com_adventurepath_extra_image_text23, component $com_adventurepath_extra_image24, component $com_adventurepath_extra_task_name25, component $com_adventurepath_extra_link26, component $com_adventurepath_task_focus27)
+cc_deleteall($com_adventurepath_paths3);
 def_int $int28 = ~adventurepath_init(
-	0 = $widget_642:3_1, 
-	1 = $widget_642:34_2, 
-	2 = $widget_642:35_3, 
-	3 = $widget_642:5_4, 
-	4 = $widget_642:7_5, 
-	5 = $widget_642:27_6, 
-	6 = $widget_642:28_7, 
-	7 = $widget_642:30_8, 
-	8 = $widget_642:31_9, 
-	9 = $widget_642:29_10, 
-	10 = $widget_642:32_11, 
-	11 = $widget_642:21_12, 
-	12 = $widget_642:23_13, 
-	13 = $widget_642:24_14, 
-	14 = $widget_642:25_15, 
-	15 = $widget_642:0_16, 
-	16 = $widget_642:1_17, 
-	17 = $widget_642:4_18, 
-	18 = $widget_642:33_19, 
-	19 = $widget_642:8_20, 
-	20 = $widget_642:11_21, 
-	21 = $widget_642:13_22, 
-	22 = $widget_642:16_23, 
-	23 = $widget_642:17_24, 
-	24 = $widget_642:19_25, 
-	25 = $widget_642:12_26, 
-	26 = $widget_642:26_27
+	0 = $com_adventurepath_path_menu1, 
+	1 = $com_adventurepath_scrollbar_paths2, 
+	2 = $com_adventurepath_paths3, 
+	3 = $com_adventurepath_task_list4, 
+	4 = $com_adventurepath_tasks5, 
+	5 = $com_adventurepath_scrollbar_task6, 
+	6 = $com_adventurepath_task_info7, 
+	7 = $com_adventurepath_task_name8, 
+	8 = $com_adventurepath_task_description9, 
+	9 = $com_adventurepath_task_hint10, 
+	10 = $com_adventurepath_reward_list11, 
+	11 = $com_adventurepath_filters12, 
+	12 = $com_adventurepath_back13, 
+	13 = $com_adventurepath_path_reward14, 
+	14 = $com_adventurepath_tasks_done15, 
+	15 = $com_adventurepath_universe16, 
+	16 = $com_adventurepath_frame17, 
+	17 = $com_adventurepath_banner18, 
+	18 = $com_adventurepath_rewards_scrollbar19, 
+	19 = $com_adventurepath_extra_task_info20, 
+	20 = $com_adventurepath_extra_description21, 
+	21 = $com_adventurepath_extra_hint22, 
+	22 = $com_adventurepath_extra_image_text23, 
+	23 = $com_adventurepath_extra_image24, 
+	24 = $com_adventurepath_extra_task_name25, 
+	25 = $com_adventurepath_extra_link26, 
+	26 = $com_adventurepath_task_focus27
 );
 if ($int28 ! $int0) {
-	if ($int28 > if_getheight($widget_642:35_3)) {
-		if_setscrollsize(0, $int28, $widget_642:35_3);
-		if_setscrollpos(0, ~min(if_getscrolly($widget_642:35_3), calc($int28 - if_getheight($widget_642:35_3))), $widget_642:35_3);
+	if ($int28 > if_getheight($com_adventurepath_paths3)) {
+		if_setscrollsize(0, $int28, $com_adventurepath_paths3);
+		if_setscrollpos(0, ~min(if_getscrolly($com_adventurepath_paths3), calc($int28 - if_getheight($com_adventurepath_paths3))), $com_adventurepath_paths3);
 	} else {
-		if_setscrollsize(0, 0, $widget_642:35_3);
-		if_setscrollpos(0, 0, $widget_642:35_3);
+		if_setscrollsize(0, 0, $com_adventurepath_paths3);
+		if_setscrollpos(0, 0, $com_adventurepath_paths3);
 	}
-	~scrollbar_vertical($widget_642:34_2, $widget_642:35_3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~scrollbar_vertical($com_adventurepath_scrollbar_paths2, $com_adventurepath_paths3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	$int0 = $int28;
 }
 if_setonvartransmit("script2944(
 	0 = $int0, 
-	1 = $widget_642:3_1, 
-	2 = $widget_642:34_2, 
-	3 = $widget_642:35_3, 
-	4 = $widget_642:5_4, 
-	5 = $widget_642:7_5, 
-	6 = $widget_642:27_6, 
-	7 = $widget_642:28_7, 
-	8 = $widget_642:30_8, 
-	9 = $widget_642:31_9, 
-	10 = $widget_642:29_10, 
-	11 = $widget_642:32_11, 
-	12 = $widget_642:21_12, 
-	13 = $widget_642:23_13, 
-	14 = $widget_642:24_14, 
-	15 = $widget_642:25_15, 
-	16 = $widget_642:0_16, 
-	17 = $widget_642:1_17, 
-	18 = $widget_642:4_18, 
-	19 = $widget_642:33_19, 
-	20 = $widget_642:8_20, 
-	21 = $widget_642:11_21, 
-	22 = $widget_642:13_22, 
-	23 = $widget_642:16_23, 
-	24 = $widget_642:17_24, 
-	25 = $widget_642:19_25, 
-	26 = $widget_642:12_26, 
-	27 = $widget_642:26_27
-){var2360, var2357}", $widget_642:35_3);
+	1 = $com_adventurepath_path_menu1, 
+	2 = $com_adventurepath_scrollbar_paths2, 
+	3 = $com_adventurepath_paths3, 
+	4 = $com_adventurepath_task_list4, 
+	5 = $com_adventurepath_tasks5, 
+	6 = $com_adventurepath_scrollbar_task6, 
+	7 = $com_adventurepath_task_info7, 
+	8 = $com_adventurepath_task_name8, 
+	9 = $com_adventurepath_task_description9, 
+	10 = $com_adventurepath_task_hint10, 
+	11 = $com_adventurepath_reward_list11, 
+	12 = $com_adventurepath_filters12, 
+	13 = $com_adventurepath_back13, 
+	14 = $com_adventurepath_path_reward14, 
+	15 = $com_adventurepath_tasks_done15, 
+	16 = $com_adventurepath_universe16, 
+	17 = $com_adventurepath_frame17, 
+	18 = $com_adventurepath_banner18, 
+	19 = $com_adventurepath_rewards_scrollbar19, 
+	20 = $com_adventurepath_extra_task_info20, 
+	21 = $com_adventurepath_extra_description21, 
+	22 = $com_adventurepath_extra_hint22, 
+	23 = $com_adventurepath_extra_image_text23, 
+	24 = $com_adventurepath_extra_image24, 
+	25 = $com_adventurepath_extra_task_name25, 
+	26 = $com_adventurepath_extra_link26, 
+	27 = $com_adventurepath_task_focus27
+){var2360, var2357}", $com_adventurepath_paths3);

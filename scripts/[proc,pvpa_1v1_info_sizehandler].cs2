@@ -1,15 +1,15 @@
 // 6354
-[proc,pvpa_1v1_info_sizehandler](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, int $width11, int $int12, int $int13)
-def_int $width14 = if_getwidth($component0);
+[proc,pvpa_1v1_info_sizehandler](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12, int $int13)
+def_int $int14 = if_getwidth($component0);
 def_int $int15 = calc(if_getheight($component0) - $int3);
-if ($width11 = $width14 & $int12 = $int15 & $int13 = %varbit14020) {
+if ($int11 = $int14 & $int12 = $int15 & $int13 = %varbit14020) {
 	return;
 }
-if (calc(if_getx($component1) + if_getwidth($component1)) >= calc($width11 - 10)) {
+if (calc(if_getx($component1) + if_getwidth($component1)) >= calc($int11 - 10)) {
 	if (if_getx($component1) <= 10) {
-		%varcint207 = calc(%varcint207 + ($width14 - $width11));
+		%varcint207 = calc(%varcint207 + ($int14 - $int11));
 	} else {
-		%varcint209 = calc(%varcint209 + ($width14 - $width11));
+		%varcint209 = calc(%varcint209 + ($int14 - $int11));
 	}
 }
 if (calc(if_gety($component1) + if_getheight($component1)) >= calc($int12 - 10)) {
@@ -44,7 +44,7 @@ if_setontimer("pvpa_1v1_info_sizehandler(
 	8 = $component8, 
 	9 = $component9, 
 	10 = $component10, 
-	11 = $width14, 
+	11 = $int14, 
 	12 = $int15, 
 	13 = %varbit14020
 )", $component0);

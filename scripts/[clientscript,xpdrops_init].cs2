@@ -1,6 +1,6 @@
 // 993
-[clientscript,xpdrops_init](component $widget_122:0_0, component $widget_122:1_1, component $widget_122:3_2, component $widget_122:2_3, component $widget_122:4_4, component $widget_122:9_5, component $widget_122:10_6, component $widget_122:11_7, component $widget_122:16_8, component $widget_122:17_9, component $widget_122:25_10)
-~script2511($widget_122:1_1, $widget_122:3_2, $widget_122:4_4);
+[clientscript,xpdrops_init](component $com_xp_drops_universe0, component $com_xp_drops_tlidodger1, component $com_xp_drops_containerdodger2, component $com_xp_drops_statlistener3, component $com_xp_drops_container4, component $com_xp_drops_counter_icon5, component $com_xp_drops_counter6, component $com_xp_drops_progress_container7, component $com_xp_drops_progress_bar8, component $com_xp_drops_drops_container9, component $com_xp_drops_tooltip10)
+~script2511($com_xp_drops_tlidodger1, $com_xp_drops_containerdodger2, $com_xp_drops_container4);
 %varcint70, %varcint71 = 0, 0;
 %varcint953, %varcint954, %varcint955, %varcint956, %varcint957, %varcint958, %varcint959 = -1, -1, -1, -1, -1, -1, -1;
 %varcint960, %varcint961, %varcint962, %varcint963, %varcint964, %varcint965, %varcint966 = -1, -1, -1, -1, -1, -1, -1;
@@ -11,7 +11,7 @@ def_int $int11 = 0;
 def_component $component12 = enum(int, component, enum_1163, $int11);
 while ($component12 ! null) {
 	cc_deleteall($component12);
-	cc_create($component12, ^iftype_text, 0);
+	cc_create($component12, ^iftype_text, 0, false);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 	cc_settext("");
@@ -20,18 +20,18 @@ while ($component12 ! null) {
 	$int11 = calc($int11 + 1);
 	$component12 = enum(int, component, enum_1163, $int11);
 }
-~xpdrops_redraw($widget_122:0_0, $widget_122:4_4, $widget_122:3_2, $widget_122:10_6, $widget_122:11_7, $widget_122:17_9, $widget_122:25_10);
-~xpdrops_setbar($widget_122:4_4, $widget_122:9_5, $widget_122:10_6, $widget_122:11_7, $widget_122:16_8, $widget_122:17_9, $widget_122:25_10);
+~xpdrops_redraw($com_xp_drops_universe0, $com_xp_drops_container4, $com_xp_drops_containerdodger2, $com_xp_drops_counter6, $com_xp_drops_progress_container7, $com_xp_drops_drops_container9, $com_xp_drops_tooltip10);
+~xpdrops_setbar($com_xp_drops_container4, $com_xp_drops_counter_icon5, $com_xp_drops_counter6, $com_xp_drops_progress_container7, $com_xp_drops_progress_bar8, $com_xp_drops_drops_container9, $com_xp_drops_tooltip10);
 if_setonvartransmit("xpdrops_vartransmit(
-	0 = $widget_122:0_0, 
-	1 = $widget_122:4_4, 
-	2 = $widget_122:3_2, 
-	3 = $widget_122:9_5, 
-	4 = $widget_122:10_6, 
-	5 = $widget_122:11_7, 
-	6 = $widget_122:16_8, 
-	7 = $widget_122:17_9, 
-	8 = $widget_122:25_10
+	0 = $com_xp_drops_universe0, 
+	1 = $com_xp_drops_container4, 
+	2 = $com_xp_drops_containerdodger2, 
+	3 = $com_xp_drops_counter_icon5, 
+	4 = $com_xp_drops_counter6, 
+	5 = $com_xp_drops_progress_container7, 
+	6 = $com_xp_drops_progress_bar8, 
+	7 = $com_xp_drops_drops_container9, 
+	8 = $com_xp_drops_tooltip10
 ){
 	0 = var1227, 
 	1 = var1228, 
@@ -82,19 +82,19 @@ if_setonvartransmit("xpdrops_vartransmit(
 	46 = var1273, 
 	47 = var1274, 
 	48 = var1275
-}", $widget_122:0_0);
+}", $com_xp_drops_universe0);
 ~xpdrops_setstatlistener(
-	0 = $widget_122:0_0, 
-	1 = $widget_122:2_3, 
-	2 = $widget_122:4_4, 
-	3 = $widget_122:9_5, 
-	4 = $widget_122:10_6, 
-	5 = $widget_122:11_7, 
-	6 = $widget_122:16_8, 
-	7 = $widget_122:17_9, 
-	8 = $widget_122:25_10, 
+	0 = $com_xp_drops_universe0, 
+	1 = $com_xp_drops_statlistener3, 
+	2 = $com_xp_drops_container4, 
+	3 = $com_xp_drops_counter_icon5, 
+	4 = $com_xp_drops_counter6, 
+	5 = $com_xp_drops_progress_container7, 
+	6 = $com_xp_drops_progress_bar8, 
+	7 = $com_xp_drops_drops_container9, 
+	8 = $com_xp_drops_tooltip10, 
 	9 = $int11
 );
-if_setonvartransmit("xpdrops_setposition($widget_122:4_4, $widget_122:3_2){var1227, var3074, var1054}", $widget_122:4_4);
-if_setonsubchange("xpdrops_setposition($widget_122:4_4, $widget_122:3_2)", $widget_122:4_4);
-~xpdrops_showpanel($widget_122:0_0, $widget_122:4_4, $widget_122:17_9, $widget_122:25_10);
+if_setonvartransmit("xpdrops_setposition($com_xp_drops_container4, $com_xp_drops_containerdodger2){var1227, var3074, var1054}", $com_xp_drops_container4);
+if_setonsubchange("xpdrops_setposition($com_xp_drops_container4, $com_xp_drops_containerdodger2)", $com_xp_drops_container4);
+~xpdrops_showpanel($com_xp_drops_universe0, $com_xp_drops_container4, $com_xp_drops_drops_container9, $com_xp_drops_tooltip10);

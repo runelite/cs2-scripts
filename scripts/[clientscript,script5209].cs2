@@ -1,0 +1,13 @@
+// 5209
+[clientscript,script5209]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%varbit12979 = 0 | highlight_tile_get(tile_coord, 4, 0) = true) {
+	return;
+}
+highlight_tile_clear(4);
+if (p_routelength > 0 & tile_coord = p_route(0) | tile_coord = coord) {
+	return;
+}
+highlight_tile_on(tile_coord, 4, 0);

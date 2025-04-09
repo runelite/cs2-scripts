@@ -1,12 +1,12 @@
 // 2818
-[clientscript,seed_vault_init](component $widget_631:15_0, component $widget_631:16_1, component $widget_631:13_2, component $widget_631:14_3, component $widget_631:11_4, component $widget_631:10_5, component $widget_631:12_6, component $widget_631:24_7)
+[clientscript,seed_vault_init](component $com_seed_vault_obj_list0, component $com_seed_vault_text_list1, component $com_seed_vault_category_headers2, component $com_seed_vault_category_lines3, component $com_seed_vault_list4, component $com_seed_vault_right_scroll5, component $com_seed_vault_faves6, component $com_seed_vault_search7)
 def_int $int8 = %varcint376;
 if (~seed_vault_searching = 1) {
 	~meslayer_close(true, true, true);
 }
-~scrollbar_vertical($widget_631:10_5, $widget_631:11_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6);
-if_setonop("seed_vault_search_toggle($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6, $widget_631:24_7)", $widget_631:24_7);
-if_setoninvtransmit("seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6){inv_626}", $widget_631:11_4);
-if_setonvartransmit("seed_vault_build($widget_631:15_0, $widget_631:16_1, $widget_631:13_2, $widget_631:14_3, $widget_631:11_4, $widget_631:10_5, $widget_631:12_6){var2195, var2196, var2197}", $widget_631:11_4);
+~scrollbar_vertical($com_seed_vault_right_scroll5, $com_seed_vault_list4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6);
+if_setonop("seed_vault_search_toggle($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6, $com_seed_vault_search7)", $com_seed_vault_search7);
+if_setoninvtransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6){seed_vault}", $com_seed_vault_list4);
+if_setonvartransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6){var2195, var2196, var2197}", $com_seed_vault_list4);
 %varcint376 = $int8;

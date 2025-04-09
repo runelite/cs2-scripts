@@ -1,24 +1,24 @@
 // 2382
-[proc,script2382](component $widget_110:12_0, component $widget_110:13_1)
+[proc,script2382](component $com_my2arm_boatride_map0, component $com_my2arm_boatride_blackout1)
 switch_int (%var75) {
 	case -1 :
-		if_setmodelanim(seq_8173, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_outward_8173, $com_my2arm_boatride_map0);
 	case -2 :
-		if_setmodelanim(seq_8174, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_returning_8174, $com_my2arm_boatride_map0);
 	case 1 :
-		if_setmodelanim(seq_8175, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_0_1_8175, $com_my2arm_boatride_map0);
 	case 2 :
-		if_setmodelanim(seq_8176, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_1_2_8176, $com_my2arm_boatride_map0);
 	case 3 :
-		if_setmodelanim(seq_8177, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_2_3_8177, $com_my2arm_boatride_map0);
 	case 4 :
-		if_setmodelanim(seq_8178, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_3_1_8178, $com_my2arm_boatride_map0);
 	case 5 :
-		if_setmodelanim(seq_8179, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_3_4_8179, $com_my2arm_boatride_map0);
 	case 6 :
-		if_setmodelanim(seq_8180, $widget_110:12_0);
+		if_setmodelanim(my2arm_map_interface_out_4_5_8180, $com_my2arm_boatride_map0);
 	case default :
-		if_sethide(false, $widget_110:13_1);
+		if_sethide(false, $com_my2arm_boatride_blackout1);
 		return;
 }
-if_sethide(true, $widget_110:13_1);
+if_sethide(true, $com_my2arm_boatride_blackout1);

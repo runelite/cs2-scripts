@@ -678,7 +678,7 @@ def_int $int29 = -1;
 def_int $int30 = 0;
 def_int $int31 = 0;
 def_string $string0 = "Create";
-def_int $lvl32 = 0;
+def_int $int32 = 0;
 def_enum $enum33 = %var4074;
 def_namedobj $namedobj34 = null;
 if ($enum33 ! null) {
@@ -689,9 +689,9 @@ if ($namedobj34 ! null) {
 	$obj35 = oc_param($namedobj34, param_608);
 }
 def_string $string1 = enum(obj, string, enum_5272, $namedobj34);
-def_string $op2 = $string0;
+def_string $string2 = $string0;
 if (string_length($string1) > 0) {
-	$op2 = "Create <col=ff9040><$string1></col>";
+	$string2 = "Create <col=ff9040><$string1></col>";
 }
 if ($obj35 = null) {
 	~teletab_confirm_draw(true, "<col=9f9f9f>---</col>", $component24);
@@ -705,12 +705,12 @@ if ($obj35 = null) {
 	if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component24)", $component24);
 	if_setonmouseleave("teletab_confirm_draw(false, $string0, $component24)", $component24);
 	if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component24);
-	if_setop(1, $op2, $component24);
-	$lvl32 = oc_param($obj35, spell_levelreq);
-	if (stat(magic) >= $lvl32) {
-		if_settext("<$string1>: Level <tostring($lvl32)>", $component23);
+	if_setop(1, $string2, $component24);
+	$int32 = oc_param($obj35, spell_levelreq);
+	if (stat(magic) >= $int32) {
+		if_settext("<$string1>: Level <tostring($int32)>", $component23);
 	} else {
-		if_settext("<$string1>: <col=ff0000>Level <tostring($lvl32)></col>", $component23);
+		if_settext("<$string1>: <col=ff0000>Level <tostring($int32)></col>", $component23);
 	}
 	$int28, $int31 = ~teletab_addingredient(~script3588, 1, $component22, $int28, $int31);
 	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_1), oc_param($obj35, magic_runecount_1), $component22, $int28, $int31);
@@ -719,7 +719,7 @@ if ($obj35 = null) {
 	$int28, $int31 = ~teletab_addingredient(oc_param($obj35, magic_runetype_4), oc_param($obj35, magic_runecount_4), $component22, $int28, $int31);
 	switch_int ($int31) {
 		case 0 :
-			cc_create($component22, ^iftype_text, $int28);
+			cc_create($component22, ^iftype_text, $int28, false);
 			$int28 = calc($int28 + 1);
 			cc_setsize(10, calc(32 + 12), ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top);

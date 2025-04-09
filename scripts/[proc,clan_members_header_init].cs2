@@ -1,8 +1,8 @@
 // 4224
-[proc,clan_members_header_init](component $component0, component $component1, component $widget_693:1_2, component $widget_693:2_3, int $comsubid4, component $widget_693:22_5, component $widget_693:9_6, component $widget_693:14_7, component $widget_693:15_8, component $widget_693:16_9, component $widget_693:18_10, component $widget_693:10_11, component $widget_693:7_12, component $widget_693:11_13, component $widget_693:19_14, component $widget_693:8_15, component $widget_693:13_16, component $widget_693:20_17)
+[proc,clan_members_header_init](component $component0, component $component1, component $com_clans_members_universe2, component $com_clans_members_frame3, int $comsubid4, component $com_clans_members_search5, component $com_clans_members_scrollcontents6, component $com_clans_members_scrollbar7, component $com_clans_members_dropdown_container8, component $com_clans_members_dropdown_box9, component $com_clans_members_dropdown_scrollbar10, component $com_clans_members_name11, component $com_clans_members_header112, component $com_clans_members_column113, component $com_clans_members_options114, component $com_clans_members_header215, component $com_clans_members_column216, component $com_clans_members_options217)
 cc_deleteall($component0);
 def_int $int18 = 0;
-cc_create($component0, ^iftype_graphic, $int18);
+cc_create($component0, ^iftype_graphic, $int18, false);
 $int18 = calc($int18 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -11,40 +11,40 @@ cc_settiling(true);
 cc_setonclick("clan_members_header_open(
 	0 = $component0, 
 	1 = $component1, 
-	2 = $widget_693:1_2, 
-	3 = $widget_693:2_3, 
+	2 = $com_clans_members_universe2, 
+	3 = $com_clans_members_frame3, 
 	4 = $comsubid4, 
-	5 = $widget_693:22_5, 
-	6 = $widget_693:9_6, 
-	7 = $widget_693:14_7, 
-	8 = $widget_693:15_8, 
-	9 = $widget_693:16_9, 
-	10 = $widget_693:18_10, 
-	11 = $widget_693:10_11, 
-	12 = $widget_693:7_12, 
-	13 = $widget_693:11_13, 
-	14 = $widget_693:19_14, 
-	15 = $widget_693:8_15, 
-	16 = $widget_693:13_16, 
-	17 = $widget_693:20_17
+	5 = $com_clans_members_search5, 
+	6 = $com_clans_members_scrollcontents6, 
+	7 = $com_clans_members_scrollbar7, 
+	8 = $com_clans_members_dropdown_container8, 
+	9 = $com_clans_members_dropdown_box9, 
+	10 = $com_clans_members_dropdown_scrollbar10, 
+	11 = $com_clans_members_name11, 
+	12 = $com_clans_members_header112, 
+	13 = $com_clans_members_column113, 
+	14 = $com_clans_members_options114, 
+	15 = $com_clans_members_header215, 
+	16 = $com_clans_members_column216, 
+	17 = $com_clans_members_options217
 )");
-cc_create($component0, ^iftype_rectangle, $int18);
+cc_create($component0, ^iftype_rectangle, $int18, false);
 $int18 = calc($int18 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_create($component0, ^iftype_rectangle, $int18);
+cc_create($component0, ^iftype_rectangle, $int18, false);
 $int18 = calc($int18 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($component0, ^iftype_graphic, $int18);
+cc_create($component0, ^iftype_graphic, $int18, false);
 $int18 = calc($int18 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
-cc_create($component0, ^iftype_text, $int18);
+cc_create($component0, ^iftype_text, $int18, false);
 $int18 = calc($int18 + 1);
 cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
 cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);

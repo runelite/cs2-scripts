@@ -1,24 +1,24 @@
 // 418
 [clientscript,longscroll_setup](string $string0, string $string1)
-def_component $component0 = interface_625:4;
-def_component $component1 = interface_625:7;
-def_component $component2 = interface_625:5;
-def_component $component3 = interface_625:6;
+def_component $component0 = longscroll:scroll_title;
+def_component $component1 = longscroll:scroll_text;
+def_component $component2 = longscroll:scroll_text_layer;
+def_component $component3 = longscroll:scrollbar;
 def_int $int4 = 0;
 if (string_length($string0) = 0) {
 	$int4 = 1;
 }
-def_int $height5 = calc(paraheight($string1, if_getwidth($component1), q8_full) * 16 + 10);
+def_int $int5 = calc(paraheight($string1, if_getwidth($component1), q8_full) * 16 + 10);
 if ($int4 = 1) {
-	if ($height5 < 266) {
-		$height5 = 266;
+	if ($int5 < 266) {
+		$int5 = 266;
 	}
-} else if ($height5 < 244) {
-	$height5 = 244;
+} else if ($int5 < 244) {
+	$int5 = 244;
 }
 if_settext($string1, $component1);
-if_setscrollsize(0, $height5, $component2);
-if_setsize(if_getwidth($component1), $height5, ^setsize_abs, ^setsize_abs, $component1);
+if_setscrollsize(0, $int5, $component2);
+if_setsize(if_getwidth($component1), $int5, ^setsize_abs, ^setsize_abs, $component1);
 if_setscrollpos(0, 0, $component2);
 if ($int4 = 1) {
 	if_sethide(true, $component0);

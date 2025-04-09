@@ -1,15 +1,15 @@
 // 2854
-[proc,script2854](component $widget_323:5_0)
+[proc,script2854](component $com_tai_bwo_wannai_post_items0)
 def_int $int1 = 0;
 def_obj $obj2 = null;
 def_int $int3 = 0;
 def_int $int4 = 4;
 while ($int1 < 28) {
-	if (cc_find($widget_323:5_0, $int1) = ^true) {
+	if (cc_find($com_tai_bwo_wannai_post_items0, $int1) = ^true) {
 		$obj2 = inv_getobj(inv, $int1);
 		cc_clearops;
 		cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);
-		~script2855($widget_323:5_0, $obj2, $int1, inv_getnum(inv, $int1));
+		~script2855($com_tai_bwo_wannai_post_items0, $obj2, $int1, inv_getnum(inv, $int1));
 		$int3 = calc($int3 + 36 + 5);
 		if (calc(($int1 + 1) % 7) = 0) {
 			$int3 = 0;

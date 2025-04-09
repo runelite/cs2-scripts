@@ -1,30 +1,30 @@
 // 2170
-[clientscript,script2170](component $widget_905:0_0, component $widget_905:6_1, component $widget_905:7_2, component $widget_905:8_3, component $widget_905:9_4, component $widget_905:10_5, component $widget_905:11_6, component $widget_905:12_7, component $widget_905:13_8, component $widget_905:14_9)
-if_setontimer(null, $widget_905:0_0);
+[clientscript,script2170](component $com_csat_universe0, component $com_csat_close1, component $com_csat_contents2, component $com_csat_question3, component $com_csat_options4, component $com_csat_15, component $com_csat_26, component $com_csat_37, component $com_csat_48, component $com_csat_59)
+if_setontimer(null, $com_csat_universe0);
 def_int $int10 = 180;
-cc_deleteall($widget_905:6_1);
-cc_create($widget_905:6_1, ^iftype_graphic, 0);
+cc_deleteall($com_csat_close1);
+cc_create($com_csat_close1, ^iftype_graphic, 0, false);
 cc_setsize(26, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 def_graphic $graphic11 = "close_buttons,0";
 cc_setgraphic($graphic11);
-if_setonmouseleave("script3440(event_com, cc_getid, $graphic11, null)", $widget_905:6_1);
+if_setonmouseleave("script3440(event_com, cc_getid, $graphic11, null)", $com_csat_close1);
 $graphic11 = "close_buttons,1";
-if_setonmouseover("script3440(event_com, cc_getid, $graphic11, null)", $widget_905:6_1);
-if_setop(1, "Close", $widget_905:6_1);
-if_setonop("closebutton_click_sound", $widget_905:6_1);
+if_setonmouseover("script3440(event_com, cc_getid, $graphic11, null)", $com_csat_close1);
+if_setop(1, "Close", $com_csat_close1);
+if_setonop("closebutton_click_sound", $com_csat_close1);
 if (%varbit4681 = 1) {
-	if_setopkey(1, ^key_escape, 0, $widget_905:6_1);
+	if_setopkey(1, ^key_escape, 0, $com_csat_close1);
 }
-if_setop(1, "1", $widget_905:10_5);
-if_setop(1, "2", $widget_905:11_6);
-if_setop(1, "3", $widget_905:12_7);
-if_setop(1, "4", $widget_905:13_8);
-if_setop(1, "5", $widget_905:14_9);
-if_setonop("script2173(event_op, 1, $widget_905:0_0, $widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9)", $widget_905:10_5);
-if_setonop("script2173(event_op, 2, $widget_905:0_0, $widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9)", $widget_905:11_6);
-if_setonop("script2173(event_op, 3, $widget_905:0_0, $widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9)", $widget_905:12_7);
-if_setonop("script2173(event_op, 4, $widget_905:0_0, $widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9)", $widget_905:13_8);
-if_setonop("script2173(event_op, 5, $widget_905:0_0, $widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9)", $widget_905:14_9);
-~script2454($widget_905:10_5, $widget_905:11_6, $widget_905:12_7, $widget_905:13_8, $widget_905:14_9, -1, 0);
-~script2172($widget_905:7_2, $int10, $widget_905:8_3, $widget_905:9_4);
+if_setop(1, "1", $com_csat_15);
+if_setop(1, "2", $com_csat_26);
+if_setop(1, "3", $com_csat_37);
+if_setop(1, "4", $com_csat_48);
+if_setop(1, "5", $com_csat_59);
+if_setonop("script2173(event_op, 1, $com_csat_universe0, $com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59)", $com_csat_15);
+if_setonop("script2173(event_op, 2, $com_csat_universe0, $com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59)", $com_csat_26);
+if_setonop("script2173(event_op, 3, $com_csat_universe0, $com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59)", $com_csat_37);
+if_setonop("script2173(event_op, 4, $com_csat_universe0, $com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59)", $com_csat_48);
+if_setonop("script2173(event_op, 5, $com_csat_universe0, $com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59)", $com_csat_59);
+~script2454($com_csat_15, $com_csat_26, $com_csat_37, $com_csat_48, $com_csat_59, -1, 0);
+~script2172($com_csat_contents2, $int10, $com_csat_question3, $com_csat_options4);

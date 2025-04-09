@@ -1,10 +1,10 @@
 // 3662
-[proc,league_areas_onclick](int $int0, component $component1, component $component2, component $widget_512:41_3, component $widget_512:42_4, component $widget_512:43_5, component $widget_512:78_6, component $widget_512:82_7, component $widget_512:83_8, component $widget_512:89_9, component $widget_512:40_10)
+[proc,league_areas_onclick](int $int0, component $component1, component $component2, component $com_trailblazer_areas_league_area_details3, component $com_trailblazer_areas_name_shield4, component $com_trailblazer_areas_name_header5, component $com_trailblazer_areas_description6, component $com_trailblazer_areas_select_button7, component $com_trailblazer_areas_select_back8, component $com_trailblazer_areas_league_area_icon9, component $com_trailblazer_areas_loading10)
 def_string $string0 = ~script5484($int0);
 if ($int0 ! 2 & %varbit10037 < 9 & ~script3681(2) = 0) {
 	sound_synth(pillory_wrong, 1, 0);
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if_sethide(false, $widget_512:40_10);
+if_sethide(false, $com_trailblazer_areas_loading10);
 ~league_areas_mouseleave($int0, $component1, $component2);

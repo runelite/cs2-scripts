@@ -1,10 +1,10 @@
 // 6057
 [proc,script6057]
-def_component $component0 = interface_160:15;
+def_component $component0 = orbs:health_regen;
 if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component0 = interface_895:12;
+	$component0 = orbs_nomap:health_regen;
 } else if (~on_mobile = true & %varbit6254 = 1) {
-	$component0 = interface_898:12;
+	$component0 = orbs_osm_nomap:health_regen;
 }
 cc_deleteall($component0);
 if_setontimer(null, $component0);

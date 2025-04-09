@@ -1,8 +1,8 @@
 // 4709
 [proc,helper_generic_draw_text](int $int0)
-def_int $height1 = paraheight(~helper_generic_get_string($int0), %varcint492, p12_full);
-def_int $int2 = calc($height1 * 14);
-if (cc_find(interface_711:5, $int0) = ^true) {
+def_int $int1 = paraheight(~helper_generic_get_string($int0), %varcint492, p12_full);
+def_int $int2 = calc($int1 * 14);
+if (cc_find(helper_generic:content, $int0) = ^true) {
 	cc_setsize(%varcint492, $int2, ^setsize_abs, ^setsize_abs);
 	cc_setposition(1, %varcint493, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);

@@ -1,6 +1,6 @@
 // 6331
-[proc,script6331](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, component $widget_758:118_5)
-def_int $trans6 = 0;
+[proc,script6331](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, component $com_pvp_arena_stagingarea_supplies_stats_status5)
+def_int $int6 = 0;
 def_graphic $graphic7 = "options_radio_buttons,0";
 if (%varbit14025 = 1) {
 	if (cc_find($component0, $comsubid1) = ^true) {
@@ -12,23 +12,23 @@ if (%varbit14025 = 1) {
 			if (cc_find($component0, $comsubid1) = ^true) {
 				cc_settext("<col=ffb83f>Character build for this fight</col>");
 			}
-			if ($widget_758:118_5 ! null) {
-				if_settext("Ensure your chosen equipment can be used with these stats.", $widget_758:118_5);
+			if ($com_pvp_arena_stagingarea_supplies_stats_status5 ! null) {
+				if_settext("Ensure your chosen equipment can be used with these stats.", $com_pvp_arena_stagingarea_supplies_stats_status5);
 			}
-			$trans6, $graphic7 = 125, "options_radio_buttons,1";
+			$int6, $graphic7 = 125, "options_radio_buttons,1";
 		case default :
 			if (cc_find($component0, $comsubid1) = ^true) {
 				cc_settext("<col=ffb83f>View the stats for each build</col>");
 			}
-			if ($widget_758:118_5 ! null) {
-				if_settext("For each build, use this menu to select suitable equipment.", $widget_758:118_5);
+			if ($com_pvp_arena_stagingarea_supplies_stats_status5 ! null) {
+				if_settext("For each build, use this menu to select suitable equipment.", $com_pvp_arena_stagingarea_supplies_stats_status5);
 			}
 	}
 }
 if (%varbit14024 = 1) {
 	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 	if (cc_find($component0, $comsubid3) = ^true) {
 		cc_setgraphic("options_radio_buttons,2");
@@ -36,16 +36,16 @@ if (%varbit14024 = 1) {
 	}
 	if (cc_find($component0, $comsubid4) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 } else if (%varbit14024 = 2) {
 	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 	if (cc_find($component0, $comsubid3) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 	if (cc_find($component0, $comsubid4) = ^true) {
 		cc_setgraphic("options_radio_buttons,2");
@@ -58,10 +58,10 @@ if (%varbit14024 = 1) {
 	}
 	if (cc_find($component0, $comsubid3) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 	if (cc_find($component0, $comsubid4) = ^true) {
 		cc_setgraphic($graphic7);
-		cc_settrans($trans6);
+		cc_settrans($int6);
 	}
 }

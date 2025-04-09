@@ -1,11 +1,11 @@
 // 7269
-[proc,worldswitcher_loaded](component $component0, component $widget_69:3_1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $widget_69:26_18)
+[proc,worldswitcher_loaded](component $component0, component $com_worldswitcher_title1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $com_worldswitcher_tooltip18)
 def_graphic $graphic19 = p12_full;
 def_fontmetrics $fontmetrics20 = p12_full;
-if ($widget_69:3_1 ! null) {
-	~worldswitcher_settitle($widget_69:3_1);
-	if_setonvartransmit("worldswitcher_settitle($widget_69:3_1){var3014}", $widget_69:3_1);
-	if_setonsubchange("worldswitcher_settitle($widget_69:3_1)", $widget_69:3_1);
+if ($com_worldswitcher_title1 ! null) {
+	~worldswitcher_settitle($com_worldswitcher_title1);
+	if_setonvartransmit("worldswitcher_settitle($com_worldswitcher_title1){var3014}", $com_worldswitcher_title1);
+	if_setonsubchange("worldswitcher_settitle($com_worldswitcher_title1)", $com_worldswitcher_title1);
 	$graphic19, $fontmetrics20 = p11_full, p11_full;
 }
 if_sethide(false, $component2);
@@ -29,7 +29,7 @@ if_sethide(false, $component2);
 	16 = $component15, 
 	17 = $component16, 
 	18 = $component17, 
-	19 = $widget_69:26_18
+	19 = $com_worldswitcher_tooltip18
 );
 if_setonvartransmit("worldswitcher_draw(
 	0 = $component0, 
@@ -51,7 +51,7 @@ if_setonvartransmit("worldswitcher_draw(
 	16 = $component15, 
 	17 = $component16, 
 	18 = $component17, 
-	19 = $widget_69:26_18
+	19 = $com_worldswitcher_tooltip18
 ){var477, var735, var1575}", $component0);
 if_setonstattransmit("worldswitcher_draw(
 	0 = $component0, 
@@ -73,7 +73,7 @@ if_setonstattransmit("worldswitcher_draw(
 	16 = $component15, 
 	17 = $component16, 
 	18 = $component17, 
-	19 = $widget_69:26_18
+	19 = $com_worldswitcher_tooltip18
 )", $component0);
 if_setontimer("script7272(
 	0 = ~worldswitcher_search_get, 
@@ -97,5 +97,5 @@ if_setontimer("script7272(
 	18 = $component15, 
 	19 = $component16, 
 	20 = $component17, 
-	21 = $widget_69:26_18
+	21 = $com_worldswitcher_tooltip18
 )", $component0);

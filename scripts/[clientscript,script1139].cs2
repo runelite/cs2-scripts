@@ -1,9 +1,9 @@
 // 1139
-[clientscript,script1139](int $widget_862:0_0, component $widget_862:1_1, component $widget_862:2_2, component $widget_862:3_3, component $widget_862:5_4, component $widget_862:8_5, component $widget_862:9_6, component $widget_862:10_7, component $widget_862:11_8, component $widget_862:12_9, component $widget_862:13_10, component $widget_862:14_11, component $widget_862:15_12)
-~script4206($widget_862:1_1, $widget_862:2_2, $widget_862:3_3, 0, interface_863:24);
-cc_deleteall($widget_862:5_4);
-cc_create($widget_862:5_4, ^iftype_text, 0);
-cc_setsize(calc(if_getwidth(if_getlayer($widget_862:8_5)) + 5), 0, ^setsize_minus, ^setsize_minus);
+[clientscript,script1139](int $com_bond_convert_universe0, component $com_bond_convert_clamp1, component $com_bond_convert_fader2, component $com_bond_convert_window3, component $com_bond_convert_contents4, component $com_bond_convert_right5, component $com_bond_convert_a6, component $com_bond_convert_b7, component $com_bond_convert_c8, component $com_bond_convert_d9, component $com_bond_convert_e10, component $com_bond_convert_cancel11, component $com_bond_convert_accept12)
+~script4206($com_bond_convert_clamp1, $com_bond_convert_fader2, $com_bond_convert_window3, 0, bond_management:popup);
+cc_deleteall($com_bond_convert_contents4);
+cc_create($com_bond_convert_contents4, ^iftype_text, 0, false);
+cc_setsize(calc(if_getwidth(if_getlayer($com_bond_convert_right5)) + 5), 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
@@ -11,14 +11,14 @@ cc_settextalign(^settextalign_left, ^settextalign_top, 14);
 cc_settextshadow(true);
 ~script1145;
 cc_setonvartransmit("script1144(event_com, event_comsubid){var263, var499}");
-def_int $width13 = if_getwidth($widget_862:8_5);
-cc_deleteall($widget_862:8_5);
+def_int $int13 = if_getwidth($com_bond_convert_right5);
+cc_deleteall($com_bond_convert_right5);
 def_int $int14 = 0;
 def_int $int15 = 0;
 def_string $string0 = "Inventory contents:";
 def_string $string1 = "Number to convert:";
-def_int $int16 = max(parawidth($string0, $width13, p12_full), parawidth($string1, $width13, p12_full));
-cc_create($widget_862:8_5, ^iftype_text, $int14);
+def_int $int16 = max(parawidth($string0, $int13, p12_full), parawidth($string1, $int13, p12_full));
+cc_create($com_bond_convert_right5, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int15, ^setpos_abs_left, ^setpos_abs_top);
@@ -27,16 +27,16 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 cc_settextshadow(true);
 cc_settext($string0);
-def_int $int17 = calc($width13 - ($int16 + 36 + 36));
+def_int $int17 = calc($int13 - ($int16 + 36 + 36));
 def_int $int18 = calc($int17 / 3);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 def_int $int19 = $int14;
 $int14 = calc($int14 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int18 + 36 + $int18), $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 def_int $int20 = $int14;
 $int14 = calc($int14 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -44,7 +44,7 @@ cc_setposition($int18, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 $int15 = calc($int15 + 32 + 8);
-cc_create($widget_862:8_5, ^iftype_text, $int14);
+cc_create($com_bond_convert_right5, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int15, ^setpos_abs_left, ^setpos_abs_top);
@@ -53,25 +53,25 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 cc_settextshadow(true);
 cc_settext($string1);
-$int17 = calc($width13 - ($int16 + 55));
+$int17 = calc($int13 - ($int16 + 55));
 $int18 = calc($int17 / 2);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(4, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition($int18, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1125);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(calc(55 - 8), 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int18 + 4), $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1124);
 cc_settiling(true);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(4, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int18 + 55 - 4), $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1123);
-cc_create($widget_862:8_5, ^iftype_text, $int14);
+cc_create($com_bond_convert_right5, ^iftype_text, $int14, false);
 def_int $int21 = $int14;
 $int14 = calc($int14 + 1);
 cc_setsize(55, 20, ^setsize_abs, ^setsize_abs);
@@ -81,28 +81,28 @@ cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 $int15 = calc($int15 + 20 + 8);
-def_int $int22 = if_getwidth($widget_862:9_6);
-$int18 = calc(($width13 - 5 * $int22) / 4);
+def_int $int22 = if_getwidth($com_bond_convert_a6);
+$int18 = calc(($int13 - 5 * $int22) / 4);
 $int18 = calc($int18 + $int22);
-if_setposition(calc(0 - $int18 * 2), $int15, ^setpos_abs_centre, ^setpos_abs_top, $widget_862:9_6);
-if_setposition(calc(0 - $int18), $int15, ^setpos_abs_centre, ^setpos_abs_top, $widget_862:10_7);
-if_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top, $widget_862:11_8);
-if_setposition($int18, $int15, ^setpos_abs_centre, ^setpos_abs_top, $widget_862:12_9);
-if_setposition(calc($int18 * 2), $int15, ^setpos_abs_centre, ^setpos_abs_top, $widget_862:13_10);
-if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $widget_862:9_6);
-if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $widget_862:10_7);
-if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $widget_862:11_8);
-if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $widget_862:12_9);
-if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $widget_862:13_10);
-~stonebutton_init("-5", $widget_862:9_6, p12_full, 1);
-~stonebutton_init("-1", $widget_862:10_7, p12_full, 1);
-~stonebutton_init("+1", $widget_862:11_8, p12_full, 1);
-~stonebutton_init("+5", $widget_862:12_9, p12_full, 1);
-~stonebutton_init("All", $widget_862:13_10, p12_full, 1);
+if_setposition(calc(0 - $int18 * 2), $int15, ^setpos_abs_centre, ^setpos_abs_top, $com_bond_convert_a6);
+if_setposition(calc(0 - $int18), $int15, ^setpos_abs_centre, ^setpos_abs_top, $com_bond_convert_b7);
+if_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top, $com_bond_convert_c8);
+if_setposition($int18, $int15, ^setpos_abs_centre, ^setpos_abs_top, $com_bond_convert_d9);
+if_setposition(calc($int18 * 2), $int15, ^setpos_abs_centre, ^setpos_abs_top, $com_bond_convert_e10);
+if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $com_bond_convert_a6);
+if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $com_bond_convert_b7);
+if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $com_bond_convert_c8);
+if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $com_bond_convert_d9);
+if_setsize($int22, $int22, ^setsize_abs, ^setsize_abs, $com_bond_convert_e10);
+~stonebutton_init("-5", $com_bond_convert_a6, p12_full, 1);
+~stonebutton_init("-1", $com_bond_convert_b7, p12_full, 1);
+~stonebutton_init("+1", $com_bond_convert_c8, p12_full, 1);
+~stonebutton_init("+5", $com_bond_convert_d9, p12_full, 1);
+~stonebutton_init("All", $com_bond_convert_e10, p12_full, 1);
 $int15 = calc($int15 + $int22 + 8);
 $string0, $string1 = "Cost:", "<~tostring_spacer(^max_32bit_int, ",")> coins";
-$int16, $int22 = parawidth($string0, $width13, p12_full), calc(parawidth($string1, $width13, b12_full) + 10);
-cc_create($widget_862:8_5, ^iftype_text, $int14);
+$int16, $int22 = parawidth($string0, $int13, p12_full), calc(parawidth($string1, $int13, b12_full) + 10);
+cc_create($com_bond_convert_right5, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int15, ^setpos_abs_left, ^setpos_abs_top);
@@ -111,25 +111,25 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 cc_settextshadow(true);
 cc_settext($string0);
-$int17 = calc($width13 - $int16);
+$int17 = calc($int13 - $int16);
 $int18 = calc(($int17 - $int22) / 2);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(4, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition($int18, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1125);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(calc($int22 - 8), 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int18 + 4), $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1124);
 cc_settiling(true);
-cc_create($widget_862:8_5, ^iftype_graphic, $int14);
+cc_create($com_bond_convert_right5, ^iftype_graphic, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setsize(4, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int18 + $int22 - 4), $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(graphic_1123);
-cc_create($widget_862:8_5, ^iftype_text, $int14);
+cc_create($com_bond_convert_right5, ^iftype_text, $int14, false);
 def_int $int23 = $int14;
 $int14 = calc($int14 + 1);
 cc_setsize($int22, 20, ^setsize_abs, ^setsize_abs);
@@ -140,31 +140,31 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 $int15 = calc($int15 + 20 + 8);
 $string0, $string1 = "<col=ff0000>Cancel</col>", "<col=0dc10d>Accept</col>";
-$int16 = calc(30 + max(parawidth($string0, $width13, p12_full), parawidth($string1, $width13, p12_full)));
-if_setsize($int16, $int15, ^setsize_abs, ^setsize_minus, $widget_862:14_11);
-if_setsize($int16, $int15, ^setsize_abs, ^setsize_minus, $widget_862:15_12);
-$int17 = calc($width13 - $int16 * 2);
+$int16 = calc(30 + max(parawidth($string0, $int13, p12_full), parawidth($string1, $int13, p12_full)));
+if_setsize($int16, $int15, ^setsize_abs, ^setsize_minus, $com_bond_convert_cancel11);
+if_setsize($int16, $int15, ^setsize_abs, ^setsize_minus, $com_bond_convert_accept12);
+$int17 = calc($int13 - $int16 * 2);
 def_int $int24 = calc(($int17 + 2) / 3);
-~stonebutton_init($string0, $widget_862:14_11, p12_full, 1);
-~stonebutton_init($string1, $widget_862:15_12, p12_full, 1);
-if_setonop("script4208(0, $widget_862:1_1, $widget_862:2_2, $widget_862:3_3, interface_863:24)", $widget_862:14_11);
+~stonebutton_init($string0, $com_bond_convert_cancel11, p12_full, 1);
+~stonebutton_init($string1, $com_bond_convert_accept12, p12_full, 1);
+if_setonop("script4208(0, $com_bond_convert_clamp1, $com_bond_convert_fader2, $com_bond_convert_window3, bond_management:popup)", $com_bond_convert_cancel11);
 ~script1142(
 	0 = 1, 
-	1 = $widget_862:1_1, 
-	2 = $widget_862:2_2, 
-	3 = $widget_862:3_3, 
-	4 = interface_863:24, 
-	5 = $widget_862:8_5, 
+	1 = $com_bond_convert_clamp1, 
+	2 = $com_bond_convert_fader2, 
+	3 = $com_bond_convert_window3, 
+	4 = bond_management:popup, 
+	5 = $com_bond_convert_right5, 
 	6 = $int19, 
 	7 = $int20, 
 	8 = $int21, 
 	9 = $int23, 
-	10 = $widget_862:9_6, 
-	11 = $widget_862:10_7, 
-	12 = $widget_862:11_8, 
-	13 = $widget_862:12_9, 
-	14 = $widget_862:13_10, 
-	15 = $widget_862:14_11, 
-	16 = $widget_862:15_12, 
+	10 = $com_bond_convert_a6, 
+	11 = $com_bond_convert_b7, 
+	12 = $com_bond_convert_c8, 
+	13 = $com_bond_convert_d9, 
+	14 = $com_bond_convert_e10, 
+	15 = $com_bond_convert_cancel11, 
+	16 = $com_bond_convert_accept12, 
 	17 = $int24
 );

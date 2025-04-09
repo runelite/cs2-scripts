@@ -1,7 +1,7 @@
 // 3733
-[clientscript,slideshow_timer](component $component0, enum $enum1, int $int2, int $int3, int $clock4)
+[clientscript,slideshow_timer](component $component0, enum $enum1, int $int2, int $int3, int $int4)
 def_int $int5 = calc($int2 * 50);
-def_int $int6 = calc(clientclock - $clock4);
+def_int $int6 = calc(clientclock - $int4);
 if ($int6 = 0) {
 	return;
 }

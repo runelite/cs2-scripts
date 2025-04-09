@@ -37,10 +37,10 @@ if_sethide(false, $component1);
 if_sethide(false, $component2);
 if_sethide(true, $component3);
 def_int $int13 = 0;
-$int12 = inv_size(inv_516);
+$int12 = inv_size(looting_bag);
 while ($int12 > 0 & $int13 = 0) {
 	$int12 = calc($int12 - 1);
-	if (inv_getobj(inv_516, $int12) ! null) {
+	if (inv_getobj(looting_bag, $int12) ! null) {
 		$int13 = 1;
 	}
 }
@@ -76,17 +76,17 @@ while ($int12 > 0) {
 			$int14 = ~script7783($component2, $int16, $int17, $int18, $int14);
 		}
 		switch_obj ($obj11) {
-			case looting_bag_11941, looting_bag_22586 :
+			case looting_bag_11941, looting_bag_open_22586 :
 				if ($int13 = 1) {
-					.cc_create($component2, ^iftype_graphic, $int14);
+					.cc_create($component2, ^iftype_graphic, $int14, false);
 					$int14 = calc($int14 + 1);
 					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 					.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
 					.cc_setgraphic("prayerglow,0");
 					.cc_settrans(180);
 				}
-			case extradimensional_bag_25106, extradimensional_bag_25108, rune_pouch_12791, rune_pouch_l_24416, divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
-				.cc_create($component2, ^iftype_graphic, $int14);
+			case league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
+				.cc_create($component2, ^iftype_graphic, $int14, false);
 				$int14 = calc($int14 + 1);
 				.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 				.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);

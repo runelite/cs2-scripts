@@ -1,7 +1,7 @@
 // 6096
 [proc,giants_foundry_mould_setup_list]
-def_component $component0 = interface_718:9;
-def_component $component1 = interface_718:11;
+def_component $component0 = giants_foundry_mould:content;
+def_component $component1 = giants_foundry_mould:content_scroller;
 cc_deleteall($component0);
 cc_deleteall($component1);
 def_int $int2 = 0;
@@ -51,7 +51,7 @@ switch_int (%varcint988) {
 	case 3 :
 		$int9 = 48;
 }
-cc_create($component0, ^iftype_rectangle, $int2);
+cc_create($component0, ^iftype_rectangle, $int2, false);
 cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
@@ -63,14 +63,14 @@ if (calc($int4 / $int9 % 2) = 0) {
 }
 $int2 = calc($int2 + 1);
 if ($int5 >= 0) {
-	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_create($component0, ^iftype_rectangle, $int2, false);
 	cc_setposition(1, calc($int5 + 1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(2, calc($int9 - 2), ^setsize_minus, ^setsize_abs);
 	cc_setfill(false);
 	cc_setcolour(0xff981f);
 	cc_settrans(200);
 	$int2 = calc($int2 + 1);
-	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_create($component0, ^iftype_rectangle, $int2, false);
 	cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
 	cc_setfill(false);

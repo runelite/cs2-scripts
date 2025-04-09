@@ -4,16 +4,16 @@ def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 = null) {
 	return;
 }
-def_component $component1 = enum(component, component, $enum0, interface_161:1);
+def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:overlay_atmosphere);
 if ($component1 = null) {
 	return;
 }
 cc_deleteall($component1);
-cc_create($component1, ^iftype_model, 0);
+cc_create($component1, ^iftype_model, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel(model_16238);
-.cc_create($component1, ^iftype_rectangle, 1);
+.cc_create($component1, ^iftype_rectangle, 1, false);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setcolour(0x0a0a0a);

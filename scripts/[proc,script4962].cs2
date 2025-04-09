@@ -1,17 +1,17 @@
 // 4962
 [proc,script4962](component $component0, component $component1, boolean $boolean2)
 def_int $comsubid3 = ~v2_stone_button($component0);
-def_string $op0 = "Continue";
+def_string $string0 = "Continue";
 def_boolean $boolean4 = ~on_mobile;
 def_int $colour5 = 0x00f010;
 if (%varcint1194 = 0) {
 	$colour5 = 0x9f9f9f;
 }
-if_setop(1, $op0, $component0);
-cc_create($component0, ^iftype_text, $comsubid3);
+if_setop(1, $string0, $component0);
+cc_create($component0, ^iftype_text, $comsubid3, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_settext($op0);
+cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour($colour5);
@@ -21,28 +21,28 @@ if (%varcint1194 = 0) {
 }
 cc_sethide(false);
 if ($boolean4 = false & %varcint1194 ! 0) {
-	if_setonmouseleave("script4915($component0, false, $op0, $colour5)", $component0);
-	if_setonmouserepeat("script4915($component0, true, $op0, $colour5)", $component0);
+	if_setonmouseleave("script4915($component0, false, $string0, $colour5)", $component0);
+	if_setonmouserepeat("script4915($component0, true, $string0, $colour5)", $component0);
 } else {
 	if_setonmouseleave(null, $component0);
 	if_setonmouserepeat(null, $component0);
 }
 if ($boolean2 = true) {
-	$op0 = "Claim";
+	$string0 = "Claim";
 	$colour5 = 0xff981f;
 	if ($boolean4 = false) {
-		if_setonmouseleave("script4915($component1, false, $op0, $colour5)", $component1);
-		if_setonmouserepeat("script4915($component1, true, $op0, $colour5)", $component1);
+		if_setonmouseleave("script4915($component1, false, $string0, $colour5)", $component1);
+		if_setonmouserepeat("script4915($component1, true, $string0, $colour5)", $component1);
 	}
-	if_setop(1, $op0, $component1);
+	if_setop(1, $string0, $component1);
 	if_setonop("script4970", $component1);
 	if_sethide(false, $component1);
 	$comsubid3 = 0;
 	$comsubid3 = ~v2_stone_button($component1);
-	cc_create($component1, ^iftype_text, $comsubid3);
+	cc_create($component1, ^iftype_text, $comsubid3, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($op0);
+	cc_settext($string0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour($colour5);

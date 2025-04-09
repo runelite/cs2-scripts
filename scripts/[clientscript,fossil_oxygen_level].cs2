@@ -1,15 +1,15 @@
 // 1997
-[clientscript,fossil_oxygen_level](component $widget_609:4_0, component $widget_609:6_1, component $widget_609:8_2)
-if_setsize(interpolate(0, 16384, 0, 1000, %varbit5811), 0, ^setsize_proportion, ^setsize_minus, $widget_609:4_0);
-if (if_getwidth($widget_609:4_0) = 0 & %varbit5811 ! 0) {
-	if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $widget_609:4_0);
+[clientscript,fossil_oxygen_level](component $com_fossil_underwater_oxygen_bar0, component $com_fossil_underwater_oxygen_level1, component $com_fossil_underwater_warning_layer2)
+if_setsize(interpolate(0, 16384, 0, 1000, %varbit5811), 0, ^setsize_proportion, ^setsize_minus, $com_fossil_underwater_oxygen_bar0);
+if (if_getwidth($com_fossil_underwater_oxygen_bar0) = 0 & %varbit5811 ! 0) {
+	if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $com_fossil_underwater_oxygen_bar0);
 }
 if (%varbit5811 = 0) {
-	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $widget_609:4_0);
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $com_fossil_underwater_oxygen_bar0);
 	return;
 }
-if_settext("Oxygen Level: <tostring(calc(%varbit5811 / 10))>%", $widget_609:6_1);
+if_settext("Oxygen Level: <tostring(calc(%varbit5811 / 10))>%", $com_fossil_underwater_oxygen_level1);
 if (%varbit5811 <= 100 & %varcint198 ! 1) {
-	if_sethide(false, $widget_609:8_2);
-	if_setontimer("fossil_warning_flasher($widget_609:8_2, $widget_609:6_1, clientclock, 250)", $widget_609:6_1);
+	if_sethide(false, $com_fossil_underwater_warning_layer2);
+	if_setontimer("fossil_warning_flasher($com_fossil_underwater_warning_layer2, $com_fossil_underwater_oxygen_level1, clientclock, 250)", $com_fossil_underwater_oxygen_level1);
 }

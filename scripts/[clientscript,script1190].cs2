@@ -1,11 +1,11 @@
 // 1190
-[clientscript,script1190](component $widget_75:0_0, component $widget_75:3_1, component $widget_75:71_2, component $widget_75:4_3)
-if_setscrollsize(0, if_getheight($widget_75:4_3), $widget_75:3_1);
-if_setscrollpos(0, 0, $widget_75:3_1);
-~scrollbar_vertical($widget_75:71_2, $widget_75:3_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($widget_75:71_2, $widget_75:3_1, %varcint80);
+[clientscript,script1190](component $com_lunar_contact_npc_universe0, component $com_lunar_contact_npc_contents1, component $com_lunar_contact_npc_scrollbar2, component $com_lunar_contact_npc_scrolllayer3)
+if_setscrollsize(0, if_getheight($com_lunar_contact_npc_scrolllayer3), $com_lunar_contact_npc_contents1);
+if_setscrollpos(0, 0, $com_lunar_contact_npc_contents1);
+~scrollbar_vertical($com_lunar_contact_npc_scrollbar2, $com_lunar_contact_npc_contents1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($com_lunar_contact_npc_scrollbar2, $com_lunar_contact_npc_contents1, %varcint80);
 ~script2094;
-if_setonstattransmit("script687{cooking, fishing}", $widget_75:0_0);
+if_setonstattransmit("script687{cooking, fishing}", $com_lunar_contact_npc_universe0);
 if_setonvartransmit("script687{
 	0 = var635, 
 	1 = var359, 
@@ -21,4 +21,4 @@ if_setonvartransmit("script687{
 	11 = var4225, 
 	12 = var1704, 
 	13 = var261
-}", $widget_75:0_0);
+}", $com_lunar_contact_npc_universe0);

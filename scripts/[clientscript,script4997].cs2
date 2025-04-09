@@ -1,21 +1,21 @@
 // 4997
-[clientscript,script4997](component $component0, int $comsubid1, component $component2, int $mousey3, int $clock4)
+[clientscript,script4997](component $component0, int $comsubid1, component $component2, int $mousey3, int $int4)
 def_int $int5 = 5;
 def_int $int6 = 0;
 def_int $int7 = if_getscrolly($component0);
 if (calc($mousey3 - $int7) < 15) {
-	if ($clock4 <= clientclock) {
+	if ($int4 <= clientclock) {
 		if (cc_find($component0, $comsubid1) = ^true) {
 			cc_setondrag("script4997(event_com, event_comsubid, $component2, event_mousey, calc(clientclock + 2))");
 			return;
 		}
-	} else if (calc($clock4 - clientclock) < 5) {
+	} else if (calc($int4 - clientclock) < 5) {
 		if (cc_find($component0, $comsubid1) = ^true) {
-			cc_setondrag("script4997(event_com, event_comsubid, $component2, event_mousey, calc($clock4 + 2))");
+			cc_setondrag("script4997(event_com, event_comsubid, $component2, event_mousey, calc($int4 + 2))");
 			return;
 		}
 	} else if (cc_find($component0, $comsubid1) = ^true) {
-		cc_setondrag("script4997(event_com, event_comsubid, $component2, event_mousey, calc($clock4 + 1))");
+		cc_setondrag("script4997(event_com, event_comsubid, $component2, event_mousey, calc($int4 + 1))");
 	}
 	if (calc($mousey3 - $int7) < 5) {
 		$int5 = 8;

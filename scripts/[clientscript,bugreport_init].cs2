@@ -1,64 +1,64 @@
 // 1093
-[clientscript,bugreport_init](int $widget_156:0_0, component $widget_156:3_1, component $widget_156:10_2, component $widget_156:25_3, component $widget_156:11_4, component $widget_156:15_5, component $widget_156:16_6, component $widget_156:26_7, component $widget_156:17_8, component $widget_156:21_9, component $widget_156:22_10, component $widget_156:24_11, component $widget_156:23_12)
+[clientscript,bugreport_init](int $com_bugreport_universe0, component $com_bugreport_introduction1, component $com_bugreport_continue2, component $com_bugreport_home3, component $com_bugreport_form4, component $com_bugreport_description_text5, component $com_bugreport_description_scrollbar6, component $com_bugreport_next7, component $com_bugreport_form_repro8, component $com_bugreport_reproduction_text9, component $com_bugreport_reproduction_scrollbar10, component $com_bugreport_back11, component $com_bugreport_submit12)
 ~chatdefault_stopinput;
 %varcstring372, %varcstring373 = "", "";
-if_sethide(false, $widget_156:3_1);
-if_sethide(true, $widget_156:11_4);
-def_string $text0 = "Continue";
-~bugreport_drawbutton(false, $widget_156:10_2, $text0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $text0)", $widget_156:10_2);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $text0)", $widget_156:10_2);
-if_setonclick("bugreport_continue($widget_156:3_1, $widget_156:11_4)", $widget_156:10_2);
-$text0 = "Back";
-~bugreport_drawbutton(false, $widget_156:25_3, $text0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $text0)", $widget_156:25_3);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $text0)", $widget_156:25_3);
-if_setonclick("bugreport_home($widget_156:3_1, $widget_156:11_4)", $widget_156:25_3);
-$text0 = "Submit";
-~bugreport_drawbutton(false, $widget_156:23_12, $text0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $text0)", $widget_156:23_12);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $text0)", $widget_156:23_12);
-if_setonclick("bugreport_submit", $widget_156:23_12);
-if_clearops($widget_156:23_12);
-if_setonop(null, $widget_156:23_12);
-~scrollbar_vertical($widget_156:16_6, $widget_156:15_5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_vertical($widget_156:22_10, $widget_156:21_9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~bugreport_init_textinput($widget_156:15_5);
-~bugreport_init_textinput($widget_156:21_9);
-~bugreport_switch_textinput($widget_156:15_5, $widget_156:16_6, $widget_156:21_9, $widget_156:22_10, $widget_156:11_4, $widget_156:15_5, $widget_156:21_9, $widget_156:23_12);
-$text0 = "Next";
-~bugreport_drawbutton(false, $widget_156:26_7, $text0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $text0)", $widget_156:26_7);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $text0)", $widget_156:26_7);
+if_sethide(false, $com_bugreport_introduction1);
+if_sethide(true, $com_bugreport_form4);
+def_string $string0 = "Continue";
+~bugreport_drawbutton(false, $com_bugreport_continue2, $string0);
+if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_continue2);
+if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_continue2);
+if_setonclick("bugreport_continue($com_bugreport_introduction1, $com_bugreport_form4)", $com_bugreport_continue2);
+$string0 = "Back";
+~bugreport_drawbutton(false, $com_bugreport_home3, $string0);
+if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_home3);
+if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_home3);
+if_setonclick("bugreport_home($com_bugreport_introduction1, $com_bugreport_form4)", $com_bugreport_home3);
+$string0 = "Submit";
+~bugreport_drawbutton(false, $com_bugreport_submit12, $string0);
+if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_submit12);
+if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_submit12);
+if_setonclick("bugreport_submit", $com_bugreport_submit12);
+if_clearops($com_bugreport_submit12);
+if_setonop(null, $com_bugreport_submit12);
+~scrollbar_vertical($com_bugreport_description_scrollbar6, $com_bugreport_description_text5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_bugreport_reproduction_scrollbar10, $com_bugreport_reproduction_text9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~bugreport_init_textinput($com_bugreport_description_text5);
+~bugreport_init_textinput($com_bugreport_reproduction_text9);
+~bugreport_switch_textinput($com_bugreport_description_text5, $com_bugreport_description_scrollbar6, $com_bugreport_reproduction_text9, $com_bugreport_reproduction_scrollbar10, $com_bugreport_form4, $com_bugreport_description_text5, $com_bugreport_reproduction_text9, $com_bugreport_submit12);
+$string0 = "Next";
+~bugreport_drawbutton(false, $com_bugreport_next7, $string0);
+if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_next7);
+if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_next7);
 if_setonclick("bugreport_next(
-	0 = $widget_156:11_4, 
-	1 = $widget_156:17_8, 
-	2 = $widget_156:15_5, 
-	3 = $widget_156:16_6, 
-	4 = $widget_156:21_9, 
-	5 = $widget_156:22_10, 
-	6 = $widget_156:11_4, 
-	7 = $widget_156:15_5, 
-	8 = $widget_156:21_9, 
-	9 = $widget_156:23_12
-)", $widget_156:26_7);
-if_clearops($widget_156:26_7);
-if_setonop(null, $widget_156:26_7);
-$text0 = "Back";
-~bugreport_drawbutton(false, $widget_156:24_11, $text0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $text0)", $widget_156:24_11);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $text0)", $widget_156:24_11);
+	0 = $com_bugreport_form4, 
+	1 = $com_bugreport_form_repro8, 
+	2 = $com_bugreport_description_text5, 
+	3 = $com_bugreport_description_scrollbar6, 
+	4 = $com_bugreport_reproduction_text9, 
+	5 = $com_bugreport_reproduction_scrollbar10, 
+	6 = $com_bugreport_form4, 
+	7 = $com_bugreport_description_text5, 
+	8 = $com_bugreport_reproduction_text9, 
+	9 = $com_bugreport_submit12
+)", $com_bugreport_next7);
+if_clearops($com_bugreport_next7);
+if_setonop(null, $com_bugreport_next7);
+$string0 = "Back";
+~bugreport_drawbutton(false, $com_bugreport_back11, $string0);
+if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_back11);
+if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_back11);
 if_setonclick("bugreport_back(
-	0 = $widget_156:11_4, 
-	1 = $widget_156:17_8, 
-	2 = $widget_156:15_5, 
-	3 = $widget_156:16_6, 
-	4 = $widget_156:21_9, 
-	5 = $widget_156:22_10, 
-	6 = $widget_156:11_4, 
-	7 = $widget_156:15_5, 
-	8 = $widget_156:21_9, 
-	9 = $widget_156:23_12
-)", $widget_156:24_11);
-if_clearops($widget_156:24_11);
-if_setonop(null, $widget_156:24_11);
+	0 = $com_bugreport_form4, 
+	1 = $com_bugreport_form_repro8, 
+	2 = $com_bugreport_description_text5, 
+	3 = $com_bugreport_description_scrollbar6, 
+	4 = $com_bugreport_reproduction_text9, 
+	5 = $com_bugreport_reproduction_scrollbar10, 
+	6 = $com_bugreport_form4, 
+	7 = $com_bugreport_description_text5, 
+	8 = $com_bugreport_reproduction_text9, 
+	9 = $com_bugreport_submit12
+)", $com_bugreport_back11);
+if_clearops($com_bugreport_back11);
+if_setonop(null, $com_bugreport_back11);

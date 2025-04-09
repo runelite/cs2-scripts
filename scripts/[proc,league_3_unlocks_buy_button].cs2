@@ -9,11 +9,11 @@ if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
 } else if ($int1 = 2) {
 	$int4 = ~script5820($component0, $int4, 0, 0, if_getwidth($component0), if_getheight($component0), struct_3926);
 }
-def_string $text0 = "„ <tostring($int3)>";
+def_string $string0 = "„ <tostring($int3)>";
 if ($int1 = 4 | $int1 = 0) {
-	$text0 = "„";
+	$string0 = "„";
 }
-cc_create($component0, ^iftype_text, $int4);
+cc_create($component0, ^iftype_text, $int4, false);
 cc_setposition(1, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -24,9 +24,9 @@ if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
 } else {
 	cc_setcolour(0x90e2c8);
 }
-cc_settext($text0);
+cc_settext($string0);
 $int4 = calc($int4 + 1);
-cc_create($component0, ^iftype_text, $int4);
+cc_create($component0, ^iftype_text, $int4, false);
 cc_setposition(0, 1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -37,7 +37,7 @@ if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
 } else {
 	cc_setcolour(^black);
 }
-cc_settext($text0);
+cc_settext($string0);
 $int4 = calc($int4 + 1);
 if (~on_mobile = false & ($int1 = 1 | $int1 = 2)) {
 	if_setonmouseover("league_3_unlocks_buy_button($component0, 2, $int2, $int3)", $component0);

@@ -1,14 +1,14 @@
 // 6011
-[proc,inventory_drawitem](obj $obj0, int $num1, component $component2, int $int3, boolean $boolean4, boolean $boolean5)
+[proc,inventory_drawitem](obj $obj0, int $int1, component $component2, int $int3, boolean $boolean4, boolean $boolean5)
 cc_clearops;
 cc_settargetverb("");
-cc_setlowpriobreak(-1);
+cc_setoppriority(-1);
 cc_setopbase("");
 cc_setonmouserepeat(null);
 cc_setdragdeadtime(6);
 def_int $int6 = -1;
 if ($obj0 ! null) {
-	cc_setobject($obj0, $num1);
+	cc_setobject($obj0, $int1);
 	cc_sethide(false);
 	if ($boolean4 = true) {
 		cc_settrans(0);
@@ -21,7 +21,7 @@ if ($obj0 ! null) {
 		} else if ($int6 > 10) {
 			$int6 = 10;
 		}
-		cc_setlowpriobreak($int6);
+		cc_setoppriority($int6);
 		~inventory_setophelds($obj0, $boolean5);
 		cc_setopbase("<col=ff9040><~script1787($obj0)></col>");
 		cc_setondrag("inventory_startdrag(event_com, $int3)");
@@ -45,7 +45,7 @@ if ($obj0 ! null) {
 	}
 } else {
 	cc_settrans(255);
-	cc_setobject(obj_6512, 1);
+	cc_setobject(blankobject_6512, 1);
 	cc_setonop(null);
 	cc_setondrag(null);
 	cc_setondragcomplete(null);

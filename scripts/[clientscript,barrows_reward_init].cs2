@@ -1,5 +1,5 @@
 // 1065
-[clientscript,barrows_reward_init](component $widget_155:3_0)
-def_int $size1 = inv_size(inv_141);
-~barrows_reward_draw($widget_155:3_0, $size1);
-if_setoninvtransmit("barrows_reward_draw($widget_155:3_0, $size1){inv_141}", $widget_155:3_0);
+[clientscript,barrows_reward_init](component $com_barrows_reward_items0)
+def_int $int1 = inv_size(trail_rewardinv);
+~barrows_reward_draw($com_barrows_reward_items0, $int1);
+if_setoninvtransmit("barrows_reward_draw($com_barrows_reward_items0, $int1){trail_rewardinv}", $com_barrows_reward_items0);

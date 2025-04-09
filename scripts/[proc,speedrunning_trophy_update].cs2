@@ -1,7 +1,7 @@
 // 5891
 [proc,speedrunning_trophy_update](component $component0, int $int1, graphic $graphic2, int $int3)
 cc_deleteall($component0);
-cc_create($component0, ^iftype_text, 0);
+cc_create($component0, ^iftype_text, 0, false);
 cc_setposition(0, 4, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setsize(61, 73, ^setsize_abs, ^setsize_minus);
 cc_settextfont(p12_full);
@@ -17,7 +17,7 @@ if ($int1 > 0) {
 } else {
 	cc_settext("-");
 }
-cc_create($component0, ^iftype_graphic, 1);
+cc_create($component0, ^iftype_graphic, 1, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(61, 73, ^setsize_abs, ^setsize_abs);
 cc_setgraphic($graphic2);

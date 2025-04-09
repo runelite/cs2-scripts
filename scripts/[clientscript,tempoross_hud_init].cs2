@@ -1,18 +1,18 @@
 // 4071
-[clientscript,tempoross_hud_init](component $widget_437:4_0, component $widget_437:2_1)
-if_sethide(true, interface_437:3);
-~script4729($widget_437:4_0, $widget_437:2_1, 65256, ^setpos_abs_left, ^setpos_abs_top, true);
-if_sethide(true, interface_437:7);
-if_sethide(true, interface_437:9);
-if_sethide(true, interface_437:8);
-if_sethide(true, interface_437:13);
-if_sethide(true, interface_437:22);
-if_sethide(true, interface_437:18);
-if_sethide(true, interface_437:17);
-if_sethide(true, interface_437:20);
-if_setsize(scale(50, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:28);
-if_setsize(scale(100, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:38);
-if_setsize(scale(0, 100, if_getwidth(interface_437:37)), 0, ^setsize_abs, ^setsize_minus, interface_437:48);
-if_settext("Energy: 50%", interface_437:35);
-if_settext("Essence: 100%", interface_437:45);
-if_settext("Storm Intensity: 0%", interface_437:55);
+[clientscript,tempoross_hud_init](component $com_tempoross_hud_dodger0, component $com_tempoross_hud_status1)
+if_sethide(true, tempoross_hud:wave_overlay);
+~script4729($com_tempoross_hud_dodger0, $com_tempoross_hud_status1, 65256, ^setpos_abs_left, ^setpos_abs_top, true);
+if_sethide(true, tempoross_hud:fire_1);
+if_sethide(true, tempoross_hud:fire_2);
+if_sethide(true, tempoross_hud:fire_3);
+if_sethide(true, tempoross_hud:fire_4);
+if_sethide(true, tempoross_hud:mast_line_1);
+if_sethide(true, tempoross_hud:mast_line_2);
+if_sethide(true, tempoross_hud:mast_line_3);
+if_sethide(true, tempoross_hud:mast_line_4);
+if_setsize(scale(50, 100, if_getwidth(tempoross_hud:essence_bar_back)), 0, ^setsize_abs, ^setsize_minus, tempoross_hud:energy_bar);
+if_setsize(scale(100, 100, if_getwidth(tempoross_hud:essence_bar_back)), 0, ^setsize_abs, ^setsize_minus, tempoross_hud:essence_bar);
+if_setsize(scale(0, 100, if_getwidth(tempoross_hud:essence_bar_back)), 0, ^setsize_abs, ^setsize_minus, tempoross_hud:storm_intensity_bar);
+if_settext("Energy: 50%", tempoross_hud:energy_title);
+if_settext("Essence: 100%", tempoross_hud:essence_title);
+if_settext("Storm Intensity: 0%", tempoross_hud:storm_intensity_title);

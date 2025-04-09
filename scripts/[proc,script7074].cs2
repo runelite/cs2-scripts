@@ -1,12 +1,12 @@
 // 7074
-[proc,script7074](component $widget_516:15_0, component $widget_516:22_1)
+[proc,script7074](component $com_makeover_model_view0, component $com_makeover_player_model1)
 def_int $int2 = 0;
 def_int $int3 = -1;
-def_component $layer4 = if_getlayer($widget_516:22_1);
+def_component $component4 = if_getlayer($com_makeover_player_model1);
 switch_int (%varbit4130) {
 	case 0, 1 :
 		~create_graphic(
-			0 = $widget_516:15_0, 
+			0 = $com_makeover_model_view0, 
 			1 = $int2, 
 			2 = tradebacking_dark, 
 			3 = 0, 
@@ -19,10 +19,10 @@ switch_int (%varbit4130) {
 			10 = ^setsize_minus
 		);
 		$int2 = calc($int2 + 1);
-		$int2 = ~thinbox($widget_516:15_0, $int2);
-		cc_create($widget_516:15_0, ^iftype_model, $int2);
+		$int2 = ~thinbox($com_makeover_model_view0, $int2);
+		cc_create($com_makeover_model_view0, ^iftype_model, $int2, false);
 		cc_setplayerhead_self;
-		cc_setmodelanim(seq_10057);
+		cc_setmodelanim(chathap_idle_10057);
 		cc_setmodelangle(0, 0, 0, %varcint1150, 0, 1000);
 		cc_setsize(5, 5, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_top);
@@ -30,11 +30,11 @@ switch_int (%varbit4130) {
 		cc_setop(1, "Toggle");
 		cc_setopbase("<col=ff9040>Spin");
 		cc_setonop("script7076");
-		if_sethide(true, $layer4);
+		if_sethide(true, $component4);
 	case default :
-		if_sethide(false, $layer4);
+		if_sethide(false, $component4);
 		~create_graphic(
-			0 = $widget_516:15_0, 
+			0 = $com_makeover_model_view0, 
 			1 = $int2, 
 			2 = tradebacking_dark, 
 			3 = 0, 
@@ -49,7 +49,7 @@ switch_int (%varbit4130) {
 		$int2 = calc($int2 + 1);
 		cc_setop(1, "Toggle");
 		cc_setopbase("<col=ff9040>Zoom");
-		cc_setonop("script5163($widget_516:22_1, $widget_516:15_0, $int2)");
-		$int2 = ~thinbox($widget_516:15_0, $int2);
-		~script5164($widget_516:22_1, $widget_516:15_0, $int2);
+		cc_setonop("script5163($com_makeover_player_model1, $com_makeover_model_view0, $int2)");
+		$int2 = ~thinbox($com_makeover_model_view0, $int2);
+		~script5164($com_makeover_player_model1, $com_makeover_model_view0, $int2);
 }

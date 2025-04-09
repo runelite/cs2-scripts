@@ -1,22 +1,22 @@
 // 5257
-[proc,gim_sidepanel_draw](component $widget_726:1_0, int $comsubid1, int $comsubid2, component $widget_726:3_3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $widget_726:6_8, component $widget_726:7_9, component $widget_726:8_10)
+[proc,gim_sidepanel_draw](component $com_gim_sidepanel_title0, int $comsubid1, int $comsubid2, component $com_gim_sidepanel_subtitle3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $com_gim_sidepanel_members8, component $com_gim_sidepanel_invite9, component $com_gim_sidepanel_settings10)
 if (%varbit13063 = 1) {
-	~stonebutton_init("<col=0dc10d>Inviting</col>", $widget_726:7_9, p12_full, 0);
-	if_setonop("opsound(event_op, 2)", $widget_726:7_9);
+	~stonebutton_init("<col=0dc10d>Inviting</col>", $com_gim_sidepanel_invite9, p12_full, 0);
+	if_setonop("opsound(event_op, 2)", $com_gim_sidepanel_invite9);
 } else if (%varbit13063 = 2) {
-	~stonebutton_init("<col=ff0000>Not inviting</col>", $widget_726:7_9, p12_full, 0);
-	if_setonop("opsound(event_op, 2)", $widget_726:7_9);
+	~stonebutton_init("<col=ff0000>Not inviting</col>", $com_gim_sidepanel_invite9, p12_full, 0);
+	if_setonop("opsound(event_op, 2)", $com_gim_sidepanel_invite9);
 } else {
-	if_setonmouserepeat(null, $widget_726:7_9);
-	if_setonmouseleave(null, $widget_726:7_9);
-	if_setontimer(null, $widget_726:7_9);
-	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $widget_726:7_9);
-	if_setop(1, "Invite", $widget_726:7_9);
-	if_setonop("opsound(0, 0)", $widget_726:7_9);
+	if_setonmouserepeat(null, $com_gim_sidepanel_invite9);
+	if_setonmouseleave(null, $com_gim_sidepanel_invite9);
+	if_setontimer(null, $com_gim_sidepanel_invite9);
+	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $com_gim_sidepanel_invite9);
+	if_setop(1, "Invite", $com_gim_sidepanel_invite9);
+	if_setonop("opsound(0, 0)", $com_gim_sidepanel_invite9);
 }
-~stonebutton_init("<col=ff981f>Settings</col>", $widget_726:8_10, p12_full, 0);
-if_setonop("opsound(event_op, 2)", $widget_726:8_10);
-cc_deleteall($widget_726:6_8);
+~stonebutton_init("<col=ff981f>Settings</col>", $com_gim_sidepanel_settings10, p12_full, 0);
+if_setonop("opsound(event_op, 2)", $com_gim_sidepanel_settings10);
+cc_deleteall($com_gim_sidepanel_members8);
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = -1;
@@ -25,15 +25,15 @@ def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = -1;
-def_int $width19 = if_getwidth($widget_726:3_3);
+def_int $int19 = if_getwidth($com_gim_sidepanel_subtitle3);
 def_int $int20 = 0;
-def_int $world21 = -1;
-def_int $world22 = -1;
+def_int $int21 = -1;
+def_int $int22 = -1;
 def_int $int23 = 0;
 def_string $string0 = "";
 def_int $int24 = 0;
-if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
-	if (cc_find($widget_726:1_0, $comsubid1) = ^true & .cc_find($widget_726:1_0, $comsubid2) = ^true) {
+if (%varbit13060 = 3 & activeclansettings_find_affined(1) = true) {
+	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
 		$string0 = activeclansettings_getclanname;
 		cc_settext($string0);
 		$int24 = parawidth($string0, 190, b12_full);
@@ -48,7 +48,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		}
 	}
 	$int12 = ~min(5, %varclansetting37);
-	if (cc_find($widget_726:3_3, $comsubid4) = ^true & .cc_find($widget_726:3_3, $comsubid5) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = ^true) {
 		if ($int12 > 0) {
 			$string0 = "<col=ffb83f><tostring(%varclansetting37)></col>";
 		} else {
@@ -60,25 +60,25 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		.cc_setgraphic("group_icon,0");
 		$int24 = calc($int24 + 3 + 13);
 		if (%varclansetting41 > 0 & %varclansetting40 <= 0) {
-			$int20 = calc(($width19 / 2 - $int24) / 2);
+			$int20 = calc(($int19 / 2 - $int24) / 2);
 			.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setposition(calc($int20 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
-			if (cc_find($widget_726:3_3, $comsubid6) = ^true & .cc_find($widget_726:3_3, $comsubid7) = ^true) {
+			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
 				$string0 = "<col=ffb83f><tostring(%varclansetting41)></col>";
 				$int24 = parawidth($string0, 190, p11_full);
 				cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
 				cc_settext($string0);
 				.cc_setgraphic(heart_icon);
 				$int24 = calc($int24 + 3 + 13);
-				$int20 = calc($width19 / 2 + ($width19 / 2 - $int24) / 2);
+				$int20 = calc($int19 / 2 + ($int19 / 2 - $int24) / 2);
 				.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);
 				cc_setposition(calc($int20 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
 			}
 		} else {
-			$int20 = calc(($width19 - $int24) / 2);
+			$int20 = calc(($int19 - $int24) / 2);
 			.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setposition(calc($int20 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
-			if (cc_find($widget_726:3_3, $comsubid6) = ^true & .cc_find($widget_726:3_3, $comsubid7) = ^true) {
+			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
 				cc_settext("");
 				.cc_setgraphic(null);
 			}
@@ -86,7 +86,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 	}
 	$int15, $int13 = activeclansettings_getaffinedcount, activeclansettings_getcurrentowner_slot;
 	while ($int14 < $int15) {
-		cc_create($widget_726:6_8, ^iftype_rectangle, $int11);
+		cc_create($com_gim_sidepanel_members8, ^iftype_rectangle, $int11, false);
 		$int11 = calc($int11 + 1);
 		cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 		cc_setcolour(^white);
@@ -101,14 +101,14 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, 255)");
 		$int14 = calc($int14 + 1);
 	}
-	$world21 = map_world;
+	$int21 = map_world;
 	while ($int16 < $int15) {
 		$int14 = activeclansettings_getsortedaffinedslot($int16);
-		if (.cc_find($widget_726:6_8, $int14) = ^true) {
+		if (.cc_find($com_gim_sidepanel_members8, $int14) = ^true) {
 			.cc_clearops;
 			if ($int14 = $int13) {
 				$int17, $int18 = 0, $int16;
-				cc_create($widget_726:6_8, ^iftype_graphic, $int11);
+				cc_create($com_gim_sidepanel_members8, ^iftype_graphic, $int11, false);
 				$int11 = calc($int11 + 1);
 				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 				cc_setgraphic(enum(int, graphic, enum_3798, -4));
@@ -125,7 +125,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 			} else {
 				$int23 = 0;
 			}
-			cc_create($widget_726:6_8, ^iftype_text, $int11);
+			cc_create($com_gim_sidepanel_members8, ^iftype_text, $int11, false);
 			$int11 = calc($int11 + 1);
 			cc_setposition(0, $int17, ^setpos_abs_right, ^setpos_abs_top);
 			cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
@@ -135,18 +135,18 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 			cc_setcolour(^white);
 			cc_settext($string0);
 			$int24 = calc((15 - 13) / 2);
-			cc_create($widget_726:6_8, ^iftype_text, $int11);
+			cc_create($com_gim_sidepanel_members8, ^iftype_text, $int11, false);
 			$int11 = calc($int11 + 1);
 			cc_setposition($int24, $int17, ^setpos_abs_right, ^setpos_abs_top);
 			cc_setsize($int24, 25, ^setsize_minus, ^setsize_abs);
 			cc_settextshadow(true);
 			cc_settextfont(p12_full);
 			cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-			if (activeclanchannel_find_affined(^clantype_gim) = true) {
+			if (activeclanchannel_find_affined(1) = true) {
 				$int20 = activeclanchannel_getuserslot($string0);
 				if ($int20 ! -1) {
-					$world22 = activeclanchannel_getuserworld($int20);
-					if ($world22 ! $world21) {
+					$int22 = activeclanchannel_getuserworld($int20);
+					if ($int22 ! $int21) {
 						cc_setcolour(0xffff64);
 						if ($int23 = 0) {
 							.cc_setop(10, "Switch world");
@@ -154,14 +154,14 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 					} else {
 						cc_setcolour(0x0dc10d);
 					}
-					cc_settext("W<tostring($world22)>");
+					cc_settext("W<tostring($int22)>");
 				} else {
-					$world22 = -1;
+					$int22 = -1;
 					cc_setcolour(0x808080);
 					cc_settext("---");
 				}
 			} else {
-				$world22 = -1;
+				$int22 = -1;
 				cc_setcolour(0x808080);
 				cc_settext("---");
 			}
@@ -177,10 +177,10 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 						.cc_setop(3, "Add ignore");
 					}
 				}
-				.cc_setonop("gim_sidepanel_op(event_op, event_com, event_comsubid, $string0, $world22)");
+				.cc_setonop("gim_sidepanel_op(event_op, event_com, event_comsubid, $string0, $int22)");
 			}
 			if (activeclansettings_getaffinedextrainfo($int14, 28, 28) = 1) {
-				cc_create($widget_726:6_8, ^iftype_graphic, $int11);
+				cc_create($com_gim_sidepanel_members8, ^iftype_graphic, $int11, false);
 				$int11 = calc($int11 + 1);
 				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 				cc_setgraphic(enum(int, graphic, enum_3798, 39));
@@ -190,7 +190,7 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		$int16 = calc($int16 + 1);
 	}
 	while ($int16 < $int12) {
-		cc_create($widget_726:6_8, ^iftype_text, $int11);
+		cc_create($com_gim_sidepanel_members8, ^iftype_text, $int11, false);
 		$int11 = calc($int11 + 1);
 		cc_setposition(0, calc($int16 * 25), ^setpos_abs_right, ^setpos_abs_top);
 		cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
@@ -202,23 +202,23 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(^clantype_gim) = true) {
 		$int16 = calc($int16 + 1);
 	}
 } else {
-	if (cc_find($widget_726:1_0, $comsubid1) = ^true & .cc_find($widget_726:1_0, $comsubid2) = ^true) {
+	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
 		cc_settext("<col=808080><enum(int, string, enum_3839, %varbit13071)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		.cc_setgraphic(null);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	}
-	if (cc_find($widget_726:3_3, $comsubid4) = ^true & .cc_find($widget_726:3_3, $comsubid5) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = ^true) {
 		cc_settext("<col=808080><~script2357(%varbit13060)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		.cc_setgraphic(null);
 	}
-	if (cc_find($widget_726:3_3, $comsubid6) = ^true & .cc_find($widget_726:3_3, $comsubid7) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
 		cc_settext("");
 		.cc_setgraphic(null);
 	}
-	cc_create($widget_726:6_8, ^iftype_text, $int11);
+	cc_create($com_gim_sidepanel_members8, ^iftype_text, $int11, false);
 	$int11 = calc($int11 + 1);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);

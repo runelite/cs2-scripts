@@ -10,19 +10,19 @@ if ($boolean4 = true) {
 	$int5 = scale(8, 5, $int5);
 }
 cc_deleteall($component3);
-.cc_create($component3, ^iftype_rectangle, 0);
+.cc_create($component3, ^iftype_rectangle, 0, false);
 .cc_setsize(0, calc($int5 + 2), ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_int $count6 = enum_getoutputcount(enum_4389);
+def_int $int6 = enum_getoutputcount(enum_4389);
 def_int $int7 = 0;
 def_int $int8 = -1;
-def_int $count9 = 0;
-while ($count9 < $count6) {
-	cc_create($component3, ^iftype_text, calc($count9 + 1));
-	$int8 = enum(int, int, enum_4389, $count9);
+def_int $int9 = 0;
+while ($int9 < $int6) {
+	cc_create($component3, ^iftype_text, calc($int9 + 1), false);
+	$int8 = enum(int, int, enum_4389, $int9);
 	if ($int0 = 2 & $int8 = 2) {
 		cc_sethide(true);
 	} else {
@@ -42,7 +42,7 @@ while ($count9 < $count6) {
 		cc_settext(enum(int, string, enum_4208, $int8));
 		$int7 = calc($int7 + 1);
 	}
-	$count9 = calc($count9 + 1);
+	$int9 = calc($int9 + 1);
 }
-~thinstonebox($component3, calc($count9 + 1));
+~thinstonebox($component3, calc($int9 + 1));
 if_setsize(if_getwidth($component3), calc($int7 * $int5 + 2 + 4), ^setsize_abs, ^setsize_abs, $component3);

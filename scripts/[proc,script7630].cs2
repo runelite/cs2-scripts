@@ -1,11 +1,11 @@
 // 7630
 [proc,script7630]
-def_component $component0 = interface_512:79;
-def_component $component1 = interface_512:74;
-def_component $component2 = interface_512:62;
-def_component $component3 = interface_512:70;
-def_component $component4 = interface_512:64;
-def_component $component5 = interface_512:89;
+def_component $component0 = trailblazer_areas:league_tab_layer;
+def_component $component1 = trailblazer_areas:league_sub_tab_layer;
+def_component $component2 = trailblazer_areas:league_tab_infolayer;
+def_component $component3 = trailblazer_areas:league_sub_tab_frame;
+def_component $component4 = trailblazer_areas:league_info_background;
+def_component $component5 = trailblazer_areas:league_area_icon;
 cc_deleteall($component0);
 cc_deleteall($component2);
 cc_deleteall($component3);
@@ -100,19 +100,19 @@ def_string $string1 = struct_param($struct14, param_2021);
 def_string $string2 = struct_param($struct14, param_2022);
 def_string $string3 = struct_param($struct14, param_2023);
 $string2 = "<$string2>This region will add the following tasks to your slayer list (Combat level where they are enabled):<br><br><~script7754($int7)>";
-def_component $component15 = interface_512:78;
-def_component $component16 = interface_512:104;
+def_component $component15 = trailblazer_areas:description;
+def_component $component16 = trailblazer_areas:description_sub_tab;
 if_settext("", $component15);
 if_settext("", $component16);
 if_setcolour($colour8, $component15);
 if_setcolour($colour8, $component16);
 if_settextfont($graphic9, $component15);
 if_settextfont($graphic9, $component16);
-def_component $component17 = interface_512:66;
-def_component $component18 = interface_512:65;
-def_component $component19 = interface_512:72;
-def_component $component20 = interface_512:76;
-def_int $height21 = 0;
+def_component $component17 = trailblazer_areas:league_tab_info_scrollbar;
+def_component $component18 = trailblazer_areas:league_tab_info_content;
+def_component $component19 = trailblazer_areas:league_sub_tab_info_scrollbar;
+def_component $component20 = trailblazer_areas:league_sub_tab_info_content;
+def_int $int21 = 0;
 cc_deleteall($component17);
 cc_deleteall($component19);
 cc_deleteall($component18);
@@ -121,30 +121,30 @@ if_setscrollpos(0, 0, $component20);
 if_setscrollpos(0, 0, $component18);
 switch_int (%varcint1239) {
 	case 0 :
-		$height21 = ~script7635($string0, $component15, $component18);
-		~script7631($height21, $component17, $component18);
+		$int21 = ~script7635($string0, $component15, $component18);
+		~script7631($int21, $component17, $component18);
 	case 1 :
 		~script7633($component3, $component1, $graphic9, $colour8, "Key Info", "Unlocks", "Drops", 3);
 		switch_int (%varcint1240) {
 			case 0 :
-				$height21 = ~script7635($string1, $component16, $component20);
+				$int21 = ~script7635($string1, $component16, $component20);
 			case 1 :
-				$height21 = ~script7635($string2, $component16, $component20);
+				$int21 = ~script7635($string2, $component16, $component20);
 			case 2 :
-				$height21 = ~script7635($string3, $component16, $component20);
+				$int21 = ~script7635($string3, $component16, $component20);
 		}
-		~script7631($height21, $component19, $component20);
+		~script7631($int21, $component19, $component20);
 	case 2 :
 		~script7633($component3, $component1, $graphic9, $colour8, "Boss", "Items", "", 2);
 		~script7636($int7, $component5);
 		~script7645(0, $int7);
 		switch_int (%varcint1240) {
 			case 0 :
-				$height21 = ~script7637($component20, $int7, $colour8, $graphic9);
+				$int21 = ~script7637($component20, $int7, $colour8, $graphic9);
 			case 1 :
-				$height21 = ~script7640($component20, $int7, $colour8, $graphic9);
+				$int21 = ~script7640($component20, $int7, $colour8, $graphic9);
 		}
-		~script7631($height21, $component19, $component20);
+		~script7631($int21, $component19, $component20);
 		return;
 }
 ~script7645(1, $int7);

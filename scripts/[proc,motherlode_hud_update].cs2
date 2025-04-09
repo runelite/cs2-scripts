@@ -1,13 +1,13 @@
 // 1635
-[proc,motherlode_hud_update](component $widget_382:5_0, component $widget_382:6_1)
-if_settext(tostring(%varbit5558), $widget_382:5_0);
+[proc,motherlode_hud_update](component $com_motherlode_hud_pay_dirt0, component $com_motherlode_hud_deposits1)
+if_settext(tostring(%varbit5558), $com_motherlode_hud_pay_dirt0);
 def_int $int2 = 108;
 if (%varbit5556 = 1) {
 	$int2 = 189;
 }
 if (%varbit5558 >= $int2) {
-	if_setcolour(^red, $widget_382:5_0);
+	if_setcolour(^red, $com_motherlode_hud_pay_dirt0);
 } else {
-	if_setcolour(0xc8c8c8, $widget_382:5_0);
+	if_setcolour(0xc8c8c8, $com_motherlode_hud_pay_dirt0);
 }
-~script1123($widget_382:5_0, $widget_382:6_1, $int2);
+~script1123($com_motherlode_hud_pay_dirt0, $com_motherlode_hud_deposits1, $int2);

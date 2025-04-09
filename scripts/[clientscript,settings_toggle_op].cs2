@@ -4,7 +4,7 @@ if (~settings_op_checker($struct0) = false) {
 	return;
 }
 ~settings_clicked_toggle($int1);
-def_int $int6 = ~script6716($int1);
+def_int $int6 = ~settings_get_toggle($int1);
 if ($boolean4 = true) {
 	$int6 = calc(1 - $int6);
 }

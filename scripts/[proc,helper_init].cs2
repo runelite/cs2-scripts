@@ -1,7 +1,7 @@
 // 4688
 [proc,helper_init](component $component0, component $component1)
-def_int $flags2 = 188073;
+def_int $int2 = 188073;
 if (~on_mobile = true) {
-	$flags2 = clearbit($flags2, 12);
+	$int2 = clearbit($int2, 12);
 }
-~script4729($component0, $component1, setbit($flags2, 31), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component0, $component1, setbit($int2, 31), ^setpos_abs_left, ^setpos_abs_top, true);

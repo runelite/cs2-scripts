@@ -1,24 +1,24 @@
 // 5859
 [proc,script5859]
-if_settext(tostring(~minmax(0, 15, %varbit13603)), interface_738:27);
-if_settext(tostring(~minmax(0, 15, %varbit13604)), interface_738:28);
-if_settext(tostring(~minmax(0, 15, %varbit13605)), interface_738:29);
-def_int $height0 = 0;
+if_settext(tostring(~minmax(0, 15, %varbit13603)), lotg_machine:counter1);
+if_settext(tostring(~minmax(0, 15, %varbit13604)), lotg_machine:counter2);
+if_settext(tostring(~minmax(0, 15, %varbit13605)), lotg_machine:counter3);
+def_int $int0 = 0;
 if (%varbit13603 < 15) {
-	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13603));
+	$int0 = scale(106, 15, ~minmax(0, 15, %varbit13603));
 } else {
-	$height0 = 106;
+	$int0 = 106;
 }
-if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:7);
+if_setsize(0, $int0, ^setsize_minus, ^setsize_abs, lotg_machine:meter_1);
 if (%varbit13604 < 15) {
-	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13604));
+	$int0 = scale(106, 15, ~minmax(0, 15, %varbit13604));
 } else {
-	$height0 = 106;
+	$int0 = 106;
 }
-if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:9);
+if_setsize(0, $int0, ^setsize_minus, ^setsize_abs, lotg_machine:meter_2);
 if (%varbit13605 < 15) {
-	$height0 = scale(106, 15, ~minmax(0, 15, %varbit13605));
+	$int0 = scale(106, 15, ~minmax(0, 15, %varbit13605));
 } else {
-	$height0 = 106;
+	$int0 = 106;
 }
-if_setsize(0, $height0, ^setsize_minus, ^setsize_abs, interface_738:11);
+if_setsize(0, $int0, ^setsize_minus, ^setsize_abs, lotg_machine:meter_3);

@@ -1,17 +1,17 @@
 // 6479
 [proc,script6479](int $int0)
-if (%var3546 = null | db_getrowtable(%var3546) ! dbtable_13 | %varbit14182 = 0 | %varbit14186 = 0) {
-	cc_deleteall(interface_239:5);
+if (%var3546 = null | db_getrowtable(%var3546) ! cluehelper_clue_music | %varbit14182 = 0 | %varbit14186 = 0) {
+	cc_deleteall(music:overlay);
 	return;
 }
 def_int $int1 = -1;
 def_int $int2 = -1;
 def_int $int3 = 0;
-def_dbrow $dbrow4 = db_getfield(%var3546, dbtable_13:2, 0);
+def_dbrow $dbrow4 = db_getfield(%var3546, cluehelper_clue_music:music, 0);
 def_int $comsubid5 = -1;
-def_int $int6 = db_find_with_count(dbtable_44:8, false);
+def_int $int6 = db_find(music:hidden, false);
 while ($int3 < $int6 & $comsubid5 < 0) {
-	if ($dbrow4 = db_findbyindex($int3)) {
+	if ($dbrow4 = db_find_get($int3)) {
 		$comsubid5 = $int3;
 	} else {
 		$int3 = calc($int3 + 1);
@@ -20,17 +20,17 @@ while ($int3 < $int6 & $comsubid5 < 0) {
 if ($comsubid5 < 0) {
 	return;
 }
-cc_deleteall(interface_239:5);
-if (cc_find(interface_239:6, $comsubid5) = ^true) {
+cc_deleteall(music:overlay);
+if (cc_find(music:jukebox, $comsubid5) = ^true) {
 	$int1 = cc_gety;
 	$int2 = calc($int1 + cc_getheight);
-	.cc_create(interface_239:5, ^iftype_rectangle, 0);
+	.cc_create(music:overlay, ^iftype_rectangle, 0, false);
 	.cc_setposition(cc_getx, $int1, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
 	.cc_setfill(true);
 	.cc_setcolour(^white);
 	.cc_settrans(225);
-	.cc_create(interface_239:5, ^iftype_graphic, 1);
+	.cc_create(music:overlay, ^iftype_graphic, 1, false);
 	.cc_setposition(0, calc($int1 + cc_getheight / 2 - 7), ^setpos_abs_right, ^setpos_abs_top);
 	.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
 	.cc_setgraphic("worldmap_marker_mini,2");
@@ -41,10 +41,10 @@ if ($int0 = 1) {
 		return;
 	}
 	$int7 = calc(($int1 + $int2) / 2);
-	$int7 = calc($int7 - if_getheight(interface_239:4) / 2);
+	$int7 = calc($int7 - if_getheight(music:scrollable) / 2);
 	if ($int7 < 0) {
 		$int7 = 0;
 	}
-	if_setscrollpos(0, $int7, interface_239:4);
-	~scrollbar_vertical_rebuild(interface_239:7, interface_239:4);
+	if_setscrollpos(0, $int7, music:scrollable);
+	~scrollbar_vertical_rebuild(music:scrollbar, music:scrollable);
 }

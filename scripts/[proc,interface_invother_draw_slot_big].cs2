@@ -1,11 +1,11 @@
 // 161
-[proc,interface_invother_draw_slot_big](inv $inv0, int $slot1, component $component2, int $comsubid3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8, boolean $boolean6)
+[proc,interface_invother_draw_slot_big](inv $inv0, int $int1, component $component2, int $comsubid3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8, boolean $boolean6)
 def_obj $obj7 = null;
 if (cc_find($component2, $comsubid3) = ^true) {
-	$obj7 = invother_getobj($inv0, $slot1);
+	$obj7 = invother_getobj($inv0, $int1);
 	if ($obj7 ! null) {
 		if ($boolean6 = true) {
-			cc_setobject($obj7, invother_getnum($inv0, $slot1));
+			cc_setobject($obj7, invother_getnum($inv0, $int1));
 		} else {
 			cc_setobject_nonum($obj7, 1);
 		}

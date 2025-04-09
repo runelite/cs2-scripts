@@ -1,11 +1,11 @@
 // 3202
-[clientscript,league_tasks_init](component $widget_657:16_0, component $widget_657:17_1, component $widget_657:18_2, component $widget_657:19_3, component $widget_657:20_4, component $widget_657:21_5, component $widget_657:22_6, component $widget_657:23_7, component $widget_657:24_8, component $widget_657:25_9, component $widget_657:15_10, component $widget_657:4_11, component $widget_657:6_12, component $widget_657:13_13, component $widget_657:3_14, component $widget_657:7_15, component $widget_657:40_16, component $widget_657:42_17, component $widget_657:43_18)
-~leagues_close_button($widget_657:3_14, false, 1);
-def_component $component19 = interface_657:0;
-def_component $component20 = interface_657:1;
-def_component $component21 = interface_657:41;
+[clientscript,league_tasks_init](component $com_league_tasks_tasks_list0, component $com_league_tasks_tasks_background1, component $com_league_tasks_tasks_name2, component $com_league_tasks_tasks_points3, component $com_league_tasks_tasks_type4, component $com_league_tasks_tasks_area5, component $com_league_tasks_tasks_description6, component $com_league_tasks_tasks_expand7, component $com_league_tasks_tasks_tier8, component $com_league_tasks_tasks_none9, component $com_league_tasks_tasks_scrollbar10, component $com_league_tasks_league_btn_menu11, component $com_league_tasks_league_menu_frame12, component $com_league_tasks_league_menu_overlay13, component $com_league_tasks_close_button14, component $com_league_tasks_progress_bar15, component $com_league_tasks_tooltip16, component $com_league_tasks_searchbar_image17, component $com_league_tasks_search_text18)
+~leagues_close_button($com_league_tasks_close_button14, false, 1);
+def_component $component19 = league_tasks:infinity;
+def_component $component20 = league_tasks:universe;
+def_component $component21 = league_tasks:resize_preview;
 def_enum $enum22 = ~toplevel_getcomponents;
-def_component $component23 = enum(component, component, $enum22, interface_161:16);
+def_component $component23 = enum(component, component, $enum22, toplevel_osrs_stretch:mainmodal);
 if (~on_mobile = true) {
 	if_setontimer("script3833($component19, $component20, 0)", $component19);
 } else {
@@ -19,69 +19,69 @@ if (~on_mobile = true) {
 }
 if_setonresize("league_tasks_draw_list(
 	0 = -1, 
-	1 = $widget_657:16_0, 
-	2 = $widget_657:17_1, 
-	3 = $widget_657:18_2, 
-	4 = $widget_657:19_3, 
-	5 = $widget_657:20_4, 
-	6 = $widget_657:21_5, 
-	7 = $widget_657:22_6, 
-	8 = $widget_657:23_7, 
-	9 = $widget_657:24_8, 
-	10 = $widget_657:25_9, 
-	11 = $widget_657:15_10, 
-	12 = $widget_657:4_11, 
-	13 = $widget_657:6_12, 
-	14 = $widget_657:13_13, 
-	15 = $widget_657:7_15, 
-	16 = $widget_657:40_16, 
-	17 = $widget_657:42_17, 
-	18 = $widget_657:43_18
-)", interface_657:0);
+	1 = $com_league_tasks_tasks_list0, 
+	2 = $com_league_tasks_tasks_background1, 
+	3 = $com_league_tasks_tasks_name2, 
+	4 = $com_league_tasks_tasks_points3, 
+	5 = $com_league_tasks_tasks_type4, 
+	6 = $com_league_tasks_tasks_area5, 
+	7 = $com_league_tasks_tasks_description6, 
+	8 = $com_league_tasks_tasks_expand7, 
+	9 = $com_league_tasks_tasks_tier8, 
+	10 = $com_league_tasks_tasks_none9, 
+	11 = $com_league_tasks_tasks_scrollbar10, 
+	12 = $com_league_tasks_league_btn_menu11, 
+	13 = $com_league_tasks_league_menu_frame12, 
+	14 = $com_league_tasks_league_menu_overlay13, 
+	15 = $com_league_tasks_progress_bar15, 
+	16 = $com_league_tasks_tooltip16, 
+	17 = $com_league_tasks_searchbar_image17, 
+	18 = $com_league_tasks_search_text18
+)", league_tasks:infinity);
 if_setonvartransmit("league_tasks_transmit(
 	0 = -1, 
-	1 = $widget_657:16_0, 
-	2 = $widget_657:17_1, 
-	3 = $widget_657:18_2, 
-	4 = $widget_657:19_3, 
-	5 = $widget_657:20_4, 
-	6 = $widget_657:21_5, 
-	7 = $widget_657:22_6, 
-	8 = $widget_657:23_7, 
-	9 = $widget_657:24_8, 
-	10 = $widget_657:25_9, 
-	11 = $widget_657:15_10, 
-	12 = $widget_657:4_11, 
-	13 = $widget_657:6_12, 
-	14 = $widget_657:13_13, 
-	15 = $widget_657:7_15, 
-	16 = $widget_657:40_16, 
-	17 = $widget_657:42_17, 
-	18 = $widget_657:43_18
-){var2614}", interface_657:0);
+	1 = $com_league_tasks_tasks_list0, 
+	2 = $com_league_tasks_tasks_background1, 
+	3 = $com_league_tasks_tasks_name2, 
+	4 = $com_league_tasks_tasks_points3, 
+	5 = $com_league_tasks_tasks_type4, 
+	6 = $com_league_tasks_tasks_area5, 
+	7 = $com_league_tasks_tasks_description6, 
+	8 = $com_league_tasks_tasks_expand7, 
+	9 = $com_league_tasks_tasks_tier8, 
+	10 = $com_league_tasks_tasks_none9, 
+	11 = $com_league_tasks_tasks_scrollbar10, 
+	12 = $com_league_tasks_league_btn_menu11, 
+	13 = $com_league_tasks_league_menu_frame12, 
+	14 = $com_league_tasks_league_menu_overlay13, 
+	15 = $com_league_tasks_progress_bar15, 
+	16 = $com_league_tasks_tooltip16, 
+	17 = $com_league_tasks_searchbar_image17, 
+	18 = $com_league_tasks_search_text18
+){var2614}", league_tasks:infinity);
 if_setonvartransmit("script2435(
 	0 = -1, 
-	1 = $widget_657:16_0, 
-	2 = $widget_657:17_1, 
-	3 = $widget_657:18_2, 
-	4 = $widget_657:19_3, 
-	5 = $widget_657:20_4, 
-	6 = $widget_657:21_5, 
-	7 = $widget_657:22_6, 
-	8 = $widget_657:23_7, 
-	9 = $widget_657:24_8, 
-	10 = $widget_657:25_9, 
-	11 = $widget_657:15_10, 
-	12 = $widget_657:4_11, 
-	13 = $widget_657:6_12, 
-	14 = $widget_657:13_13, 
-	15 = $widget_657:7_15, 
-	16 = $widget_657:40_16, 
-	17 = $widget_657:42_17, 
-	18 = $widget_657:43_18, 
+	1 = $com_league_tasks_tasks_list0, 
+	2 = $com_league_tasks_tasks_background1, 
+	3 = $com_league_tasks_tasks_name2, 
+	4 = $com_league_tasks_tasks_points3, 
+	5 = $com_league_tasks_tasks_type4, 
+	6 = $com_league_tasks_tasks_area5, 
+	7 = $com_league_tasks_tasks_description6, 
+	8 = $com_league_tasks_tasks_expand7, 
+	9 = $com_league_tasks_tasks_tier8, 
+	10 = $com_league_tasks_tasks_none9, 
+	11 = $com_league_tasks_tasks_scrollbar10, 
+	12 = $com_league_tasks_league_btn_menu11, 
+	13 = $com_league_tasks_league_menu_frame12, 
+	14 = $com_league_tasks_league_menu_overlay13, 
+	15 = $com_league_tasks_progress_bar15, 
+	16 = $com_league_tasks_tooltip16, 
+	17 = $com_league_tasks_searchbar_image17, 
+	18 = $com_league_tasks_search_text18, 
 	19 = %var2606, 
 	20 = %var2805
-){var2606, var2805}", $widget_657:17_1);
+){var2606, var2805}", $com_league_tasks_tasks_background1);
 if_sethide(false, $component20);
 if_sethide(true, $component21);
 if ($enum22 = enum_1132) {
@@ -89,31 +89,31 @@ if ($enum22 = enum_1132) {
 	if_setsize(12, 12, ^setsize_minus, ^setsize_minus, $component20);
 	~league_tasks_draw_list(
 		0 = -1, 
-		1 = $widget_657:16_0, 
-		2 = $widget_657:17_1, 
-		3 = $widget_657:18_2, 
-		4 = $widget_657:19_3, 
-		5 = $widget_657:20_4, 
-		6 = $widget_657:21_5, 
-		7 = $widget_657:22_6, 
-		8 = $widget_657:23_7, 
-		9 = $widget_657:24_8, 
-		10 = $widget_657:25_9, 
-		11 = $widget_657:15_10, 
-		12 = $widget_657:4_11, 
-		13 = $widget_657:6_12, 
-		14 = $widget_657:13_13, 
-		15 = $widget_657:7_15, 
-		16 = $widget_657:40_16, 
-		17 = $widget_657:42_17, 
-		18 = $widget_657:43_18
+		1 = $com_league_tasks_tasks_list0, 
+		2 = $com_league_tasks_tasks_background1, 
+		3 = $com_league_tasks_tasks_name2, 
+		4 = $com_league_tasks_tasks_points3, 
+		5 = $com_league_tasks_tasks_type4, 
+		6 = $com_league_tasks_tasks_area5, 
+		7 = $com_league_tasks_tasks_description6, 
+		8 = $com_league_tasks_tasks_expand7, 
+		9 = $com_league_tasks_tasks_tier8, 
+		10 = $com_league_tasks_tasks_none9, 
+		11 = $com_league_tasks_tasks_scrollbar10, 
+		12 = $com_league_tasks_league_btn_menu11, 
+		13 = $com_league_tasks_league_menu_frame12, 
+		14 = $com_league_tasks_league_menu_overlay13, 
+		15 = $com_league_tasks_progress_bar15, 
+		16 = $com_league_tasks_tooltip16, 
+		17 = $com_league_tasks_searchbar_image17, 
+		18 = $com_league_tasks_search_text18
 	);
 	return;
 }
 cc_deleteall($component19);
 def_int $int24 = 0;
 while ($int24 < 9) {
-	cc_create($component19, ^iftype_graphic, $int24);
+	cc_create($component19, ^iftype_graphic, $int24, false);
 	cc_settiling(true);
 	cc_settrans(255);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
@@ -126,7 +126,7 @@ while ($int24 < 9) {
 cc_deleteall($component21);
 $int24 = 0;
 while ($int24 < 4) {
-	cc_create($component21, ^iftype_rectangle, $int24);
+	cc_create($component21, ^iftype_rectangle, $int24, false);
 	cc_setsize(calc($int24 * 2), calc($int24 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);

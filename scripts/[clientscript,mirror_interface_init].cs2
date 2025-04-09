@@ -1,19 +1,19 @@
 // 2896
-[clientscript,mirror_interface_init](component $widget_635:18_0, component $widget_635:19_1, component $widget_635:1_2, component $widget_635:2_3, string $text0, string $text1)
-~mirror_interface_button_draw($widget_635:18_0, $text0, false);
-~mirror_interface_button_draw($widget_635:19_1, $text1, false);
+[clientscript,mirror_interface_init](component $com_lighttemple_pillar_rotate0, component $com_lighttemple_pillar_remove1, component $com_lighttemple_pillar_close2, component $com_lighttemple_pillar_close_graphic3, string $string0, string $string1)
+~mirror_interface_button_draw($com_lighttemple_pillar_rotate0, $string0, false);
+~mirror_interface_button_draw($com_lighttemple_pillar_remove1, $string1, false);
 if (~on_mobile = true) {
 	return;
 }
-if_setonkey("mirror_interface_keypress(event_keycode, event_keychar, $widget_635:18_0, "1", $text0, $widget_635:18_0)", $widget_635:18_0);
-if_setontimer(null, $widget_635:18_0);
-if_setonkey("mirror_interface_keypress(event_keycode, event_keychar, $widget_635:19_1, "2", $text1, $widget_635:18_0)", $widget_635:19_1);
-if_setontimer(null, $widget_635:19_1);
-if_setonmouserepeat("mirror_interface_button_draw($widget_635:18_0, $text0, true)", $widget_635:18_0);
-if_setonmouseleave("mirror_interface_button_draw($widget_635:18_0, $text0, false)", $widget_635:18_0);
-if_setonmouserepeat("mirror_interface_button_draw($widget_635:19_1, $text1, true)", $widget_635:19_1);
-if_setonmouseleave("mirror_interface_button_draw($widget_635:19_1, $text1, false)", $widget_635:19_1);
+if_setonkey("mirror_interface_keypress(event_keycode, event_keychar, $com_lighttemple_pillar_rotate0, "1", $string0, $com_lighttemple_pillar_rotate0)", $com_lighttemple_pillar_rotate0);
+if_setontimer(null, $com_lighttemple_pillar_rotate0);
+if_setonkey("mirror_interface_keypress(event_keycode, event_keychar, $com_lighttemple_pillar_remove1, "2", $string1, $com_lighttemple_pillar_rotate0)", $com_lighttemple_pillar_remove1);
+if_setontimer(null, $com_lighttemple_pillar_remove1);
+if_setonmouserepeat("mirror_interface_button_draw($com_lighttemple_pillar_rotate0, $string0, true)", $com_lighttemple_pillar_rotate0);
+if_setonmouseleave("mirror_interface_button_draw($com_lighttemple_pillar_rotate0, $string0, false)", $com_lighttemple_pillar_rotate0);
+if_setonmouserepeat("mirror_interface_button_draw($com_lighttemple_pillar_remove1, $string1, true)", $com_lighttemple_pillar_remove1);
+if_setonmouseleave("mirror_interface_button_draw($com_lighttemple_pillar_remove1, $string1, false)", $com_lighttemple_pillar_remove1);
 def_graphic $graphic4 = "close_buttons,6";
 def_graphic $graphic5 = "close_buttons,7";
-if_setonmouserepeat("graphic_swapper($widget_635:2_3, $graphic5)", $widget_635:1_2);
-if_setonmouseleave("graphic_swapper($widget_635:2_3, $graphic4)", $widget_635:1_2);
+if_setonmouserepeat("graphic_swapper($com_lighttemple_pillar_close_graphic3, $graphic5)", $com_lighttemple_pillar_close2);
+if_setonmouseleave("graphic_swapper($com_lighttemple_pillar_close_graphic3, $graphic4)", $com_lighttemple_pillar_close2);

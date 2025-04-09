@@ -1,31 +1,31 @@
 // 4809
-[proc,ca_overview_create_personal_stat](component $widget_717:14_0, int $int1, int $int2, int $int3, int $int4, int $int5, string $text0, string $text1)(int, int)
-cc_create($widget_717:14_0, ^iftype_rectangle, $int1);
+[proc,ca_overview_create_personal_stat](component $com_ca_overview_ca_personal_content0, int $int1, int $int2, int $int3, int $int4, int $int5, string $string0, string $string1)(int, int)
+cc_create($com_ca_overview_ca_personal_content0, ^iftype_rectangle, $int1, false);
 cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
-def_int $trans6 = 0;
+def_int $int6 = 0;
 if (calc($int1 % 2) = 1) {
-	$trans6 = 230;
+	$int6 = 230;
 } else {
-	$trans6 = 245;
+	$int6 = 245;
 }
-cc_settrans($trans6);
+cc_settrans($int6);
 $int1 = calc($int1 + 1);
-cc_create($widget_717:14_0, ^iftype_text, $int1);
+cc_create($com_ca_overview_ca_personal_content0, ^iftype_text, $int1, false);
 cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int2 + 5), $int3, ^setpos_abs_left, ^setpos_abs_top);
-cc_settext($text0);
+cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff9933);
 $int1 = calc($int1 + 1);
-cc_create($widget_717:14_0, ^iftype_text, $int1);
+cc_create($com_ca_overview_ca_personal_content0, ^iftype_text, $int1, false);
 cc_setsize(calc($int4 - 5), $int5, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
-cc_settext($text1);
+cc_settext($string1);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);

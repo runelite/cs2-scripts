@@ -1,17 +1,17 @@
 // 4798
 [clientscript,ca_searchbar_keypress](int $key0, char $keychar1, component $component2, component $component3)
-def_component $component4 = interface_716:10;
-def_component $component5 = interface_716:13;
-def_component $component6 = interface_716:19;
-def_component $component7 = interface_716:14;
-def_component $component8 = interface_716:11;
-def_component $component9 = interface_716:12;
-def_component $component10 = interface_716:16;
-def_component $component11 = interface_716:17;
-def_component $component12 = interface_716:18;
-def_component $component13 = interface_716:20;
-def_component $component14 = interface_716:9;
-def_component $component15 = interface_716:15;
+def_component $component4 = ca_bosses:bosses_list;
+def_component $component5 = ca_bosses:bosses_background;
+def_component $component6 = ca_bosses:bosses_progress;
+def_component $component7 = ca_bosses:bosses_name;
+def_component $component8 = ca_bosses:bosses_button;
+def_component $component9 = ca_bosses:bosses_button_click;
+def_component $component10 = ca_bosses:bosses_monster;
+def_component $component11 = ca_bosses:bosses_description;
+def_component $component12 = ca_bosses:bosses_icon;
+def_component $component13 = ca_bosses:bosses_none;
+def_component $component14 = ca_bosses:bosses_scrollbar;
+def_component $component15 = ca_bosses:bosses_button_click_pause;
 if (%varbit12884 = 0) {
 	return;
 }
@@ -70,10 +70,10 @@ if ($key0 = ^key_return) {
 	return;
 }
 def_string $string0 = %varcstring527;
-def_int $length16 = string_length($string0);
+def_int $int16 = string_length($string0);
 if ($key0 = ^key_backspace) {
-	if ($length16 > 0) {
-		%varcstring527 = substring($string0, 0, calc($length16 - 1));
+	if ($int16 > 0) {
+		%varcstring527 = substring($string0, 0, calc($int16 - 1));
 	}
 	~ca_searchbar_set_text($component3);
 	~ca_bosses_draw_list(

@@ -1,27 +1,27 @@
 // 3248
-[proc,script3248](component $widget_540:5_0)
-cc_deleteall($widget_540:5_0);
+[proc,script3248](component $com_ii_elnocks_exchange_price0)
+cc_deleteall($com_ii_elnocks_exchange_price0);
 def_struct $struct1 = null;
 def_int $int2 = 0;
-def_int $int3 = calc(if_getwidth($widget_540:5_0) / 3);
-def_int $int4 = calc(if_getheight($widget_540:5_0) / 4);
+def_int $int3 = calc(if_getwidth($com_ii_elnocks_exchange_price0) / 3);
+def_int $int4 = calc(if_getheight($com_ii_elnocks_exchange_price0) / 4);
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $count7 = 0;
-def_int $count8 = enum_getoutputcount(enum_2752);
-while ($count7 < $count8) {
-	$struct1 = enum(int, struct, enum_2752, calc($count7 + 1));
+def_int $int7 = 0;
+def_int $int8 = enum_getoutputcount(enum_2752);
+while ($int7 < $int8) {
+	$struct1 = enum(int, struct, enum_2752, calc($int7 + 1));
 	if ($struct1 ! null) {
-		$int6 = calc($int4 * $count7);
+		$int6 = calc($int4 * $int7);
 		$int5 = calc(1 - $int5);
 		if (struct_param($struct1, param_913) = true) {
-			cc_create($widget_540:5_0, ^iftype_graphic, $int2);
+			cc_create($com_ii_elnocks_exchange_price0, ^iftype_graphic, $int2, false);
 			cc_setgraphic(struct_param($struct1, param_910));
 			cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
 			cc_setposition(5, calc($int6 + 5), ^setpos_abs_left, ^setpos_abs_top);
 			$int2 = calc($int2 + 1);
-			cc_create($widget_540:5_0, ^iftype_text, $int2);
-			cc_setsize(calc(if_getwidth($widget_540:5_0) - 107), $int4, ^setsize_abs, ^setsize_abs);
+			cc_create($com_ii_elnocks_exchange_price0, ^iftype_text, $int2, false);
+			cc_setsize(calc(if_getwidth($com_ii_elnocks_exchange_price0) - 107), $int4, ^setsize_abs, ^setsize_abs);
 			cc_setposition(57, $int6, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_settextfont(p11_full);
@@ -31,7 +31,7 @@ while ($count7 < $count8) {
 		} else {
 			$int2 = ~script3249(
 				0 = $int2, 
-				1 = $widget_540:5_0, 
+				1 = $com_ii_elnocks_exchange_price0, 
 				2 = $int6, 
 				3 = calc($int3 * 0), 
 				4 = $int3, 
@@ -44,7 +44,7 @@ while ($count7 < $count8) {
 			);
 			$int2 = ~script3249(
 				0 = $int2, 
-				1 = $widget_540:5_0, 
+				1 = $com_ii_elnocks_exchange_price0, 
 				2 = $int6, 
 				3 = calc($int3 * 1), 
 				4 = $int3, 
@@ -57,7 +57,7 @@ while ($count7 < $count8) {
 			);
 			$int2 = ~script3249(
 				0 = $int2, 
-				1 = $widget_540:5_0, 
+				1 = $com_ii_elnocks_exchange_price0, 
 				2 = $int6, 
 				3 = calc($int3 * 2), 
 				4 = $int3, 
@@ -70,5 +70,5 @@ while ($count7 < $count8) {
 			);
 		}
 	}
-	$count7 = calc($count7 + 1);
+	$int7 = calc($int7 + 1);
 }

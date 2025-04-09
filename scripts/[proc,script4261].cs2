@@ -14,7 +14,7 @@ while ($int8 < $int1) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
 			$string0 = removetags(activeclansettings_getaffineddisplayname($int7));
-			cc_create($component0, ^iftype_text, $int3);
+			cc_create($component0, ^iftype_text, $int3, false);
 			$int3 = calc($int3 + 1);
 			cc_setsize(16, $int2, ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);

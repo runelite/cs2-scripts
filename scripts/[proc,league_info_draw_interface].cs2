@@ -1,14 +1,14 @@
 // 3218
-[proc,league_info_draw_interface](component $widget_654:4_0, component $widget_654:5_1, component $widget_654:6_2, component $widget_654:7_3, component $widget_654:9_4, component $widget_654:11_5, component $widget_654:10_6, component $widget_654:12_7, component $widget_654:16_8, component $widget_654:17_9, component $widget_654:8_10, int $int11, int $int12, int $comsubid13)
-def_component $component14 = interface_654:1;
-def_component $component15 = interface_654:3;
+[proc,league_info_draw_interface](component $com_league_info_league_general_header0, component $com_league_info_league_specific_header1, component $com_league_info_league_general2, component $com_league_info_league_specific3, component $com_league_info_league_general_content4, component $com_league_info_league_specific_content5, component $com_league_info_league_general_scrollbar6, component $com_league_info_league_specific_scrollbar7, component $com_league_info_league_btn_menu8, component $com_league_info_league_menu_frame9, component $com_league_info_league_menu_overlay10, int $int11, int $int12, int $comsubid13)
+def_component $component14 = league_info:universe;
+def_component $component15 = league_info:content_outer;
 ~script6109($component14, $component15);
-cc_deleteall($widget_654:4_0);
-cc_deleteall($widget_654:5_1);
-cc_deleteall($widget_654:9_4);
-cc_deleteall($widget_654:11_5);
-cc_deleteall($widget_654:16_8);
-cc_deleteall($widget_654:17_9);
+cc_deleteall($com_league_info_league_general_header0);
+cc_deleteall($com_league_info_league_specific_header1);
+cc_deleteall($com_league_info_league_general_content4);
+cc_deleteall($com_league_info_league_specific_content5);
+cc_deleteall($com_league_info_league_btn_menu8);
+cc_deleteall($com_league_info_league_menu_frame9);
 def_struct $struct16 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct16 = null) {
 	return;
@@ -20,29 +20,29 @@ if (%varbit10032 = 3) {
 } else {
 	$colour18 = struct_param($struct16, param_1027);
 }
-if (cc_find(interface_654:2, $comsubid13) = ^true) {
+if (cc_find(league_info:frame, $comsubid13) = ^true) {
 	cc_setcolour($colour18);
 } else {
 	~debug_mes("Couldn't find the frame.");
 }
-def_int $width19 = if_getwidth($component15);
-if_setsize(calc($width19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $widget_654:4_0);
-if_setsize(calc($width19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $widget_654:5_1);
+def_int $int19 = if_getwidth($component15);
+if_setsize(calc($int19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $com_league_info_league_general_header0);
+if_setsize(calc($int19 / 2 + 3), 23, ^setsize_minus, ^setsize_abs, $com_league_info_league_specific_header1);
 switch_int (%varcint988) {
 	case 0 :
-		if_setposition(0, 45, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
-		if_setsize(calc($width19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $widget_654:6_2);
-		if_setsize(calc($width19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $widget_654:7_3);
+		if_setposition(0, 45, ^setpos_proportion_centre, ^setpos_abs_top, league_info:divider);
+		if_setsize(calc($int19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $com_league_info_league_general2);
+		if_setsize(calc($int19 / 2 + 3), 31, ^setsize_minus, ^setsize_minus, $com_league_info_league_specific3);
 	case 1, 2 :
-		if_setposition(0, 49, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
-		if_setsize(calc($width19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $widget_654:6_2);
-		if_setsize(calc($width19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $widget_654:7_3);
+		if_setposition(0, 49, ^setpos_proportion_centre, ^setpos_abs_top, league_info:divider);
+		if_setsize(calc($int19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $com_league_info_league_general2);
+		if_setsize(calc($int19 / 2 + 3), 33, ^setsize_minus, ^setsize_minus, $com_league_info_league_specific3);
 	case 3 :
-		if_setposition(0, 53, ^setpos_proportion_centre, ^setpos_abs_top, interface_654:13);
-		if_setsize(calc($width19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $widget_654:6_2);
-		if_setsize(calc($width19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $widget_654:7_3);
+		if_setposition(0, 53, ^setpos_proportion_centre, ^setpos_abs_top, league_info:divider);
+		if_setsize(calc($int19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $com_league_info_league_general2);
+		if_setsize(calc($int19 / 2 + 3), 35, ^setsize_minus, ^setsize_minus, $com_league_info_league_specific3);
 }
-cc_create($widget_654:4_0, ^iftype_text, 0);
+cc_create($com_league_info_league_general_header0, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -50,7 +50,7 @@ cc_setcolour($colour18);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settext("General League Information");
-cc_create($widget_654:5_1, ^iftype_text, 0);
+cc_create($com_league_info_league_specific_header1, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -75,142 +75,142 @@ if ($int25 < 1) {
 }
 def_int $int29 = 0;
 def_int $int30 = 0;
-def_int $x31 = 0;
-def_int $height32 = 0;
-def_int $height33 = 0;
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $int33 = 0;
 def_int $int34 = 0;
 def_string $string0 = "";
-def_int $width35 = if_getwidth($widget_654:9_4);
-def_int $width36 = if_getwidth($widget_654:11_5);
+def_int $int35 = if_getwidth($com_league_info_league_general_content4);
+def_int $int36 = if_getwidth($com_league_info_league_specific_content5);
 def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
 def_string $string2 = $string1;
-def_int $int37 = calc(12 * paraheight($string2, calc($width35 - 10), p12_full) + 10);
-def_string $url3 = "https://secure.runescape.com/m=news/leagues-v-raging-echoes-out-now?oldschool=1";
-def_string $url4 = $url3;
-def_int $int38 = calc(12 * paraheight($string1, calc($width36 - 10), p12_full) + 10);
+def_int $int37 = calc(12 * paraheight($string2, calc($int35 - 10), p12_full) + 10);
+def_string $string3 = "https://secure.runescape.com/m=news/leagues-v-raging-echoes-out-now?oldschool=1";
+def_string $string4 = $string3;
+def_int $int38 = calc(12 * paraheight($string1, calc($int36 - 10), p12_full) + 10);
 def_int $int39 = $int38;
 if ($int37 > $int38) {
 	$int39 = $int37;
 }
 $int39 = calc($int39 + 10);
 if (~in_league_tutorial = 0) {
-	~leagues_menu_button($widget_654:16_8, $int30, $widget_654:17_9, $widget_654:8_10);
+	~leagues_menu_button($com_league_info_league_btn_menu8, $int30, $com_league_info_league_menu_frame9, $com_league_info_league_menu_overlay10);
 }
 $int30 = 0;
-~league_create_dropdown($widget_654:16_8, $widget_654:17_9, $widget_654:8_10, $int30, 0);
+~league_create_dropdown($com_league_info_league_btn_menu8, $com_league_info_league_menu_frame9, $com_league_info_league_menu_overlay10, $int30, 0);
 $int30 = 0;
 while ($int29 < enum_getoutputcount($enum20)) {
 	if ($int29 = 0 & $int28 = 0) {
-		cc_create($widget_654:9_4, ^iftype_rectangle, $int30);
-		cc_setsize($width35, $int39, ^setsize_abs, ^setsize_abs);
+		cc_create($com_league_info_league_general_content4, ^iftype_rectangle, $int30, false);
+		cc_setsize($int35, $int39, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(235);
 		$int30 = calc($int30 + 1);
-		cc_create($widget_654:9_4, ^iftype_text, $int30);
-		cc_setposition(0, $height32, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($com_league_info_league_general_content4, ^iftype_text, $int30, false);
+		cc_setposition(0, $int32, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext($string2);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour18);
-		cc_setsize(calc($width35 - 10), $int39, ^setsize_abs, ^setsize_abs);
+		cc_setsize(calc($int35 - 10), $int39, ^setsize_abs, ^setsize_abs);
 		if (~on_mobile = false) {
-			cc_setonmouseover("league_info_mouseover($widget_654:9_4, $int30)");
-			cc_setonmouseleave("league_info_mouseleave($widget_654:9_4, $int30, $colour18)");
+			cc_setonmouseover("league_info_mouseover($com_league_info_league_general_content4, $int30)");
+			cc_setonmouseleave("league_info_mouseleave($com_league_info_league_general_content4, $int30, $colour18)");
 		}
 		cc_setop(1, "Open Link");
-		cc_setonop("league_blog_click($url4)");
-		$height32 = calc($height32 + $int39);
+		cc_setonop("league_blog_click($string4)");
+		$int32 = calc($int32 + $int39);
 		$int30 = calc($int30 + 1);
 	}
-	cc_create($widget_654:9_4, ^iftype_rectangle, $int30);
-	cc_setsize($width35, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height32, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_league_info_league_general_content4, ^iftype_rectangle, $int30, false);
+	cc_setsize($int35, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
 	$int30 = calc($int30 + 1);
-	cc_create($widget_654:9_4, ^iftype_text, $int30);
+	cc_create($com_league_info_league_general_content4, ^iftype_text, $int30, false);
 	cc_settext(enum(int, string, $enum20, $int29));
-	cc_setposition(0, $height32, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setcolour($colour18);
 	cc_settextshadow(true);
-	cc_setsize($width35, 20, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int35, 20, ^setsize_abs, ^setsize_abs);
 	$int30 = calc($int30 + 1);
-	$height32 = calc($height32 + 20);
+	$int32 = calc($int32 + 20);
 	$string0 = enum(int, string, $enum21, $int29);
 	$string0 = ~string_findandreplace($string0, "|", "<br><br>");
-	$int34 = paraheight($string0, calc($width35 - 10), $fontmetrics27);
-	cc_create($widget_654:9_4, ^iftype_rectangle, $int30);
-	cc_setsize($width35, calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height32, ^setpos_abs_left, ^setpos_abs_top);
+	$int34 = paraheight($string0, calc($int35 - 10), $fontmetrics27);
+	cc_create($com_league_info_league_general_content4, ^iftype_rectangle, $int30, false);
+	cc_setsize($int35, calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(235);
 	$int30 = calc($int30 + 1);
-	cc_create($widget_654:9_4, ^iftype_text, $int30);
-	cc_setposition(5, $height32, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_league_info_league_general_content4, ^iftype_text, $int30, false);
+	cc_setposition(5, $int32, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
 	cc_settextfont($graphic26);
 	cc_settextshadow(true);
 	cc_setcolour($colour18);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
-	cc_setsize(calc($width35 - 10), calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int35 - 10), calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
 	$int30 = calc($int30 + 1);
-	$height32 = calc($height32 + (15 * $int34 + 15));
+	$int32 = calc($int32 + (15 * $int34 + 15));
 	$int29 = calc($int29 + 1);
 }
 $int29 = 0;
 $int30 = 0;
-$x31 = 5;
+$int31 = 5;
 while ($int29 < enum_getoutputcount($enum22)) {
 	if ($int29 = 0 & $int28 = 0) {
-		cc_create($widget_654:11_5, ^iftype_rectangle, $int30);
-		cc_setsize($width36, $int39, ^setsize_abs, ^setsize_abs);
+		cc_create($com_league_info_league_specific_content5, ^iftype_rectangle, $int30, false);
+		cc_setsize($int36, $int39, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(235);
 		$int30 = calc($int30 + 1);
-		cc_create($widget_654:11_5, ^iftype_text, $int30);
-		cc_setposition(0, $height33, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($com_league_info_league_specific_content5, ^iftype_text, $int30, false);
+		cc_setposition(0, $int33, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext($string1);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour18);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_setsize(calc($width36 - 10), $int39, ^setsize_abs, ^setsize_abs);
+		cc_setsize(calc($int36 - 10), $int39, ^setsize_abs, ^setsize_abs);
 		if (~on_mobile = false) {
-			cc_setonmouseover("league_info_mouseover($widget_654:11_5, $int30)");
-			cc_setonmouseleave("league_info_mouseleave($widget_654:11_5, $int30, $colour18)");
+			cc_setonmouseover("league_info_mouseover($com_league_info_league_specific_content5, $int30)");
+			cc_setonmouseleave("league_info_mouseleave($com_league_info_league_specific_content5, $int30, $colour18)");
 		}
 		cc_setop(1, "Open Link");
-		cc_setonop("league_blog_click($url3)");
-		$height33 = calc($height33 + $int39);
+		cc_setonop("league_blog_click($string3)");
+		$int33 = calc($int33 + $int39);
 		$int30 = calc($int30 + 1);
 	}
-	cc_create($widget_654:11_5, ^iftype_rectangle, $int30);
-	cc_setsize($width36, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height33, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_league_info_league_specific_content5, ^iftype_rectangle, $int30, false);
+	cc_setsize($int36, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int33, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
 	$int30 = calc($int30 + 1);
-	cc_create($widget_654:11_5, ^iftype_text, $int30);
+	cc_create($com_league_info_league_specific_content5, ^iftype_text, $int30, false);
 	cc_settext(enum(int, string, $enum22, $int29));
-	cc_setposition(0, $height33, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, $int33, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setcolour($colour18);
 	cc_settextshadow(true);
-	cc_setsize($width36, 20, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int36, 20, ^setsize_abs, ^setsize_abs);
 	$int30 = calc($int30 + 1);
-	$height33 = calc($height33 + 20);
+	$int33 = calc($int33 + 20);
 	$string0 = enum(int, string, $enum23, $int29);
 	if ($int29 = 0) {
 		if ($int25 = 1) {
@@ -220,39 +220,39 @@ while ($int29 < enum_getoutputcount($enum22)) {
 		}
 	}
 	$string0 = ~string_findandreplace($string0, "|", "<br><br>");
-	$int34 = paraheight($string0, calc($width36 - 10), $fontmetrics27);
-	cc_create($widget_654:11_5, ^iftype_rectangle, $int30);
-	cc_setsize($width36, calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height33, ^setpos_abs_left, ^setpos_abs_top);
+	$int34 = paraheight($string0, calc($int36 - 10), $fontmetrics27);
+	cc_create($com_league_info_league_specific_content5, ^iftype_rectangle, $int30, false);
+	cc_setsize($int36, calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int33, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(235);
 	$int30 = calc($int30 + 1);
-	cc_create($widget_654:11_5, ^iftype_text, $int30);
-	cc_setposition($x31, $height33, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_league_info_league_specific_content5, ^iftype_text, $int30, false);
+	cc_setposition($int31, $int33, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
 	cc_settextfont($graphic26);
 	cc_settextshadow(true);
 	cc_setcolour($colour18);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
-	cc_setsize(calc($width36 - 10), calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int36 - 10), calc(15 * $int34 + 15), ^setsize_abs, ^setsize_abs);
 	$int30 = calc($int30 + 1);
-	$height33 = calc($height33 + (15 * $int34 + 15));
+	$int33 = calc($int33 + (15 * $int34 + 15));
 	$int29 = calc($int29 + 1);
 }
-cc_deleteall($widget_654:10_6);
-cc_deleteall($widget_654:12_7);
-def_int $height40 = if_getheight($widget_654:9_4);
-if ($height32 > $height40) {
-	if_setscrollsize(0, $height32, $widget_654:9_4);
+cc_deleteall($com_league_info_league_general_scrollbar6);
+cc_deleteall($com_league_info_league_specific_scrollbar7);
+def_int $int40 = if_getheight($com_league_info_league_general_content4);
+if ($int32 > $int40) {
+	if_setscrollsize(0, $int32, $com_league_info_league_general_content4);
 } else {
-	if_setscrollsize(0, 0, $widget_654:9_4);
+	if_setscrollsize(0, 0, $com_league_info_league_general_content4);
 }
-~scrollbar_vertical($widget_654:10_6, $widget_654:9_4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-def_int $height41 = if_getheight($widget_654:11_5);
-if ($height33 > $height41) {
-	if_setscrollsize(0, $height33, $widget_654:11_5);
+~scrollbar_vertical($com_league_info_league_general_scrollbar6, $com_league_info_league_general_content4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int41 = if_getheight($com_league_info_league_specific_content5);
+if ($int33 > $int41) {
+	if_setscrollsize(0, $int33, $com_league_info_league_specific_content5);
 } else {
-	if_setscrollsize(0, 0, $widget_654:11_5);
+	if_setscrollsize(0, 0, $com_league_info_league_specific_content5);
 }
-~scrollbar_vertical($widget_654:12_7, $widget_654:11_5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_league_info_league_specific_scrollbar7, $com_league_info_league_specific_content5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

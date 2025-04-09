@@ -2,47 +2,47 @@
 [proc,toplevel_side_customise](enum $enum0)
 def_component $component1 = null;
 def_component $component2 = null;
-def_int $x3 = 0;
-def_int $y4 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
 def_int $setposh5 = ^setpos_abs_left;
 def_int $setposv6 = ^setpos_abs_top;
 if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, enum_1137, %varcint171);
 	}
-	$component2 = enum(component, component, $enum0, interface_164:96);
-	if ((if_hassub(enum(component, component, $enum0, interface_161:74)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
+	$component2 = enum(component, component, $enum0, toplevel_pre_eoc:side_container);
+	if ((if_hassub(enum(component, component, $enum0, toplevel_osrs_stretch:sidemodal)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
 		if_sethide(false, $component2);
 	} else {
 		if_sethide(true, $component2);
 	}
 	if ($enum0 = enum_1745) {
-		if (if_getheight(interface_601:20) < 503) {
+		if (if_getheight(toplevel_osm:gameframe) < 503) {
 			if (%varcint1222 = 1) {
-				$x3, $y4, $setposh5, $setposv6 = 58, 4, ^setpos_abs_right, ^setpos_abs_bottom;
+				$int3, $int4, $setposh5, $setposv6 = 58, 4, ^setpos_abs_right, ^setpos_abs_bottom;
 			} else {
-				$x3, $y4, $setposh5, $setposv6 = 85, 4, ^setpos_abs_right, ^setpos_abs_bottom;
+				$int3, $int4, $setposh5, $setposv6 = 85, 4, ^setpos_abs_right, ^setpos_abs_bottom;
 			}
 		} else if (%varcint1222 = 1) {
-			$x3, $y4, $setposh5, $setposv6 = 58, 87, ^setpos_abs_right, ^setpos_abs_centre;
+			$int3, $int4, $setposh5, $setposv6 = 58, 87, ^setpos_abs_right, ^setpos_abs_centre;
 		} else {
-			$x3, $y4, $setposh5, $setposv6 = 85, 87, ^setpos_abs_right, ^setpos_abs_centre;
+			$int3, $int4, $setposh5, $setposv6 = 85, 87, ^setpos_abs_right, ^setpos_abs_centre;
 		}
 		if (~script7830 = 1) {
 			$setposh5 = ^setpos_abs_left;
-			$x3 = 58;
+			$int3 = 58;
 		}
-		if_setposition($x3, $y4, $setposh5, $setposv6, $component2);
-		if_setposition(0, $y4, ^setpos_abs_right, $setposv6, interface_601:50);
+		if_setposition($int3, $int4, $setposh5, $setposv6, $component2);
+		if_setposition(0, $int4, ^setpos_abs_right, $setposv6, toplevel_osm:side_right_tabs);
 	}
 	~script2526;
 	%varcint384 = clientclock;
 	~script2386;
-	if (if_gethide(enum(component, component, $enum0, interface_161:58)) = true) {
-		if_sethide(true, enum(component, component, $enum0, interface_161:46));
-		if_sethide(true, enum(component, component, $enum0, interface_161:53));
+	if (if_gethide(enum(component, component, $enum0, toplevel_osrs_stretch:side_top)) = true) {
+		if_sethide(true, enum(component, component, $enum0, toplevel_osrs_stretch:stone10));
+		if_sethide(true, enum(component, component, $enum0, toplevel_osrs_stretch:icon10));
 	} else {
-		if_sethide(false, enum(component, component, $enum0, interface_161:46));
-		if_sethide(false, enum(component, component, $enum0, interface_161:53));
+		if_sethide(false, enum(component, component, $enum0, toplevel_osrs_stretch:stone10));
+		if_sethide(false, enum(component, component, $enum0, toplevel_osrs_stretch:icon10));
 	}
 }

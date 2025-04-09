@@ -1,21 +1,21 @@
 // 7663
-[proc,script7663](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $x15, int $int16, int $int17, int $int18, int $int19)
+[proc,script7663](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19)
 def_int $int20 = 49;
 def_graphic $graphic21 = graphic_6283;
-def_int $height22 = 50;
-def_int $width23 = 44;
+def_int $int22 = 50;
+def_int $int23 = 44;
 switch_int (%varcint988) {
 	case 2, 3 :
 		$int20 = 96;
 		$graphic21 = graphic_6284;
-		$width23, $height22 = 78, 96;
+		$int23, $int22 = 78, 96;
 }
 def_int $int24 = calc($int20 + 4);
 def_int $int25 = calc((if_getwidth($component0) - $int24) / $int14);
 def_int $int26 = if_getheight($component0);
 def_int $int27 = $int26;
-def_int $width28 = 0;
-def_int $width29 = $width28;
+def_int $int28 = 0;
+def_int $int29 = $int28;
 def_int $int30 = 0;
 def_int $int31 = 0;
 def_int $int32 = 1;
@@ -37,7 +37,7 @@ $int26 = calc(($int27 - 6) / enum_getoutputcount(enum_5690));
 ~script7664($component8, $int24, $int25, $int26, $int27);
 while ($int31 < enum_getoutputcount(enum_5690)) {
 	$int32 = 1;
-	$width28 = $int24;
+	$int28 = $int24;
 	$enum41 = enum(int, enum, enum_5690, $int31);
 	if ($enum41 ! null) {
 		while ($int32 <= enum_getoutputcount($enum41)) {
@@ -54,7 +54,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 					$int35, $int34 = ~script7671(
 						0 = $component1, 
 						1 = $component2, 
-						2 = calc($width28 - $int18 / 2 - 10), 
+						2 = calc($int28 - $int18 / 2 - 10), 
 						3 = calc($int30 + $int26 / 2), 
 						4 = 2, 
 						5 = $int25, 
@@ -67,7 +67,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 					$int35, $int34 = ~script7671(
 						0 = $component1, 
 						1 = $component2, 
-						2 = calc($width28 - $int20 / 2), 
+						2 = calc($int28 - $int20 / 2), 
 						3 = calc($int30 + $int26 / 2), 
 						4 = 2, 
 						5 = calc($int25 - 5), 
@@ -80,7 +80,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						$int35, $int34 = ~script7671(
 							0 = $component1, 
 							1 = $component2, 
-							2 = calc($width28 - $int20 / 2), 
+							2 = calc($int28 - $int20 / 2), 
 							3 = calc($int30 + $int26 / 2), 
 							4 = $int26, 
 							5 = 2, 
@@ -93,7 +93,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						$int35, $int34 = ~script7671(
 							0 = $component1, 
 							1 = $component2, 
-							2 = calc($width28 - $int20 / 2), 
+							2 = calc($int28 - $int20 / 2), 
 							3 = calc($int30 + 2 - $int26 / 2), 
 							4 = calc($int26 - 1), 
 							5 = 2, 
@@ -104,9 +104,9 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						);
 					}
 				}
-				cc_create($component5, ^iftype_graphic, $int33);
-				cc_setsize($width23, $height22, ^setsize_abs, ^setsize_abs);
-				cc_setposition(calc($width28 + $int25 / 2 - $int18 / 2 - 2), calc($int30 + $int26 / 2 - $int18 / 2 - 2), ^setpos_abs_left, ^setpos_abs_top);
+				cc_create($component5, ^iftype_graphic, $int33, false);
+				cc_setsize($int23, $int22, ^setsize_abs, ^setsize_abs);
+				cc_setposition(calc($int28 + $int25 / 2 - $int18 / 2 - 2), calc($int30 + $int26 / 2 - $int18 / 2 - 2), ^setpos_abs_left, ^setpos_abs_top);
 				if ($int18 = 74) {
 					if ($int45 = 1) {
 						cc_setgraphic(graphic_6288);
@@ -137,7 +137,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						0 = $component4, 
 						1 = $int33, 
 						2 = $graphic43, 
-						3 = calc($width28 + $int25 / 2 - $int18 / 2), 
+						3 = calc($int28 + $int25 / 2 - $int18 / 2), 
 						4 = calc($int30 + $int26 / 2 - $int18 / 2), 
 						5 = ^setpos_abs_left, 
 						6 = ^setpos_abs_top, 
@@ -156,7 +156,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						0 = $component4, 
 						1 = $int33, 
 						2 = $graphic43, 
-						3 = calc($width28 + $int25 / 2 - $int18 / 2), 
+						3 = calc($int28 + $int25 / 2 - $int18 / 2), 
 						4 = calc($int30 + $int26 / 2 - $int18 / 2), 
 						5 = ^setpos_abs_left, 
 						6 = ^setpos_abs_top, 
@@ -167,14 +167,14 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 					);
 				}
 				cc_settiling(false);
-				~script7665($component9, $component10, $int25, $int26, $width28, $int30, $int33, struct_param($struct42, param_2026));
+				~script7665($component9, $component10, $int25, $int26, $int28, $int30, $int33, struct_param($struct42, param_2026));
 				cc_setonop("script7666($component10, event_com, $component11, $int18, $struct42, $int45, $int33, $int32)");
 				if ($boolean44 = false) {
 					cc_setonmouserepeat("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, true, $int32)");
 					cc_setonmouseleave("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, false, $int32)");
 				}
 				if ($int45 = 2) {
-					$int38 = ~script7680($component7, $int38, calc($width28 + 3), calc($int30 + $int26 / 2 - 16), enum_5724);
+					$int38 = ~script7680($component7, $int38, calc($int28 + 3), calc($int30 + $int26 / 2 - 16), enum_5724);
 					if ($int18 = 40) {
 						$int37, $graphic40 = 16, enum(int, graphic, enum_5696, $int32);
 					} else {
@@ -184,7 +184,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						0 = $component3, 
 						1 = $int36, 
 						2 = $graphic40, 
-						3 = calc($width28 + $int25 / 2 - $int37 / 2), 
+						3 = calc($int28 + $int25 / 2 - $int37 / 2), 
 						4 = calc($int30 + $int26 / 2 + scale(72, 100, $int37)), 
 						5 = ^setpos_abs_left, 
 						6 = ^setpos_abs_top, 
@@ -203,7 +203,7 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 						0 = $component3, 
 						1 = $int36, 
 						2 = $graphic40, 
-						3 = calc($width28 + $int25 / 2 - $int37 / 2), 
+						3 = calc($int28 + $int25 / 2 - $int37 / 2), 
 						4 = calc($int30 + $int26 / 2 + scale(72, 100, $int37)), 
 						5 = ^setpos_abs_left, 
 						6 = ^setpos_abs_top, 
@@ -216,9 +216,9 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 				cc_settiling(false);
 				$int36 = calc($int36 + 1);
 				$int33 = calc($int33 + 1);
-				$width28 = calc($width28 + $int25);
-				if ($width28 > $width29) {
-					$width29 = $width28;
+				$int28 = calc($int28 + $int25);
+				if ($int28 > $int29) {
+					$int29 = $int28;
 				}
 			}
 			$int32 = calc($int32 + 1);
@@ -247,17 +247,17 @@ if ($int18 = 74) {
 );
 cc_settiling(false);
 $int38 = ~script7680($component7, $int38, calc($int20 / 2 - 10), calc($int26 * 3 / 2 - $int20 / 2 - $int48), enum_5723);
-if ($width29 > if_getwidth($component0)) {
-	if_setscrollsize($width29, 0, $component13);
+if ($int29 > if_getwidth($component0)) {
+	if_setscrollsize($int29, 0, $component13);
 } else {
 	if_setscrollsize(0, 0, $component13);
 }
 if ($int16 = 1) {
-	$x15 = %varcint1238;
-	if ($x15 = -1) {
-		$x15 = if_getscrollx($component13);
+	$int15 = %varcint1238;
+	if ($int15 = -1) {
+		$int15 = if_getscrollx($component13);
 	}
-	if_setscrollpos($x15, 0, $component13);
+	if_setscrollpos($int15, 0, $component13);
 	cc_deleteall($component12);
 	~scrollbar_horizontal(
 		0 = $component12, 

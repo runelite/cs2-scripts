@@ -1,34 +1,34 @@
 // 7662
-[proc,script7662](int $x0, int $int1)
+[proc,script7662](int $int0, int $int1)
 def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
 def_int $int3 = 16750623;
 if ($struct2 ! null) {
 	$int3 = struct_param($struct2, param_1027);
 }
-def_component $component4 = interface_311:28;
-def_component $component5 = interface_311:29;
-def_component $component6 = interface_311:33;
-def_component $component7 = interface_311:35;
-def_component $component8 = interface_311:32;
-def_component $component9 = interface_311:34;
-def_component $component10 = interface_311:36;
-def_component $component11 = interface_311:31;
-def_component $component12 = interface_311:30;
-def_component $component13 = interface_311:8;
-def_component $component14 = interface_311:27;
-def_component $component15 = interface_311:14;
-def_component $component16 = interface_311:9;
-def_component $component17 = interface_311:27;
-def_component $component18 = interface_311:11;
-def_component $component19 = interface_311:13;
-def_component $component20 = interface_311:10;
-def_component $component21 = interface_311:77;
-def_component $component22 = interface_311:78;
-def_component $component23 = interface_311:66;
-def_component $component24 = interface_311:5;
-def_component $component25 = interface_311:2;
-def_component $component26 = interface_311:73;
-def_component $component27 = interface_311:12;
+def_component $component4 = league_combat_mastery:backgrounds;
+def_component $component5 = league_combat_mastery:tutorial;
+def_component $component6 = league_combat_mastery:icons;
+def_component $component7 = league_combat_mastery:sparks;
+def_component $component8 = league_combat_mastery:outlines;
+def_component $component9 = league_combat_mastery:tier_icons;
+def_component $component10 = league_combat_mastery:clickzones;
+def_component $component11 = league_combat_mastery:lines;
+def_component $component12 = league_combat_mastery:lines_background;
+def_component $component13 = league_combat_mastery:view_all;
+def_component $component14 = league_combat_mastery:masteries_tab;
+def_component $component15 = league_combat_mastery:view_all_frame;
+def_component $component16 = league_combat_mastery:view_all_scrollbar;
+def_component $component17 = league_combat_mastery:masteries_tab;
+def_component $component18 = league_combat_mastery:view_one;
+def_component $component19 = league_combat_mastery:confirm;
+def_component $component20 = league_combat_mastery:loading;
+def_component $component21 = league_combat_mastery:league_btn_menu;
+def_component $component22 = league_combat_mastery:league_menu_frame;
+def_component $component23 = league_combat_mastery:league_menu_overlay;
+def_component $component24 = league_combat_mastery:progress_bar;
+def_component $component25 = league_combat_mastery:tooltip;
+def_component $component26 = league_combat_mastery:combat_mastery_tabs;
+def_component $component27 = league_combat_mastery:extra_info;
 cc_deleteall($component4);
 cc_deleteall($component5);
 cc_deleteall($component6);
@@ -57,7 +57,7 @@ if (~in_league_tutorial = 0) {
 	~leagues_menu_button($component21, $int28, $component22, $component23);
 }
 ~league_create_dropdown($component21, $component22, $component23, $int28, 5);
-if (cc_find(interface_311:3, 1) = ^true) {
+if (cc_find(league_combat_mastery:frame, 1) = ^true) {
 	cc_setcolour($int3);
 }
 def_int $int29 = -1;
@@ -106,7 +106,7 @@ switch_int (%varbit11596) {
 			12 = $component16, 
 			13 = $component17, 
 			14 = $int30, 
-			15 = $x0, 
+			15 = $int0, 
 			16 = $int33, 
 			17 = $int3, 
 			18 = $int31, 

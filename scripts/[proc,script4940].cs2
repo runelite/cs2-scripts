@@ -1,8 +1,8 @@
 // 4940
 [proc,script4940]
-def_component $component0 = interface_865:26;
+def_component $component0 = colosseum_intermission_2:tab_content_1;
 cc_deleteall($component0);
-def_string $text0 = "Select a modifier";
+def_string $string0 = "Select a modifier";
 ~create_text(
 	0 = $component0, 
 	1 = 0, 
@@ -15,14 +15,14 @@ def_string $text0 = "Select a modifier";
 	8 = 20, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_abs, 
-	11 = $text0, 
+	11 = $string0, 
 	12 = true, 
 	13 = 0xff981f, 
 	14 = ^settextalign_centre, 
 	15 = ^settextalign_centre, 
 	16 = 13
 );
-$text0 = "Use the buttons below to select a modifier before continuing to the next wave.<br><br>Alternatively, you may end this run now and claim the loot you've earned so far.";
+$string0 = "Use the buttons below to select a modifier before continuing to the next wave.<br><br>Alternatively, you may end this run now and claim the loot you've earned so far.";
 ~create_text(
 	0 = $component0, 
 	1 = 1, 
@@ -35,7 +35,7 @@ $text0 = "Use the buttons below to select a modifier before continuing to the ne
 	8 = 20, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_minus, 
-	11 = $text0, 
+	11 = $string0, 
 	12 = true, 
 	13 = 0xff981f, 
 	14 = ^settextalign_centre, 

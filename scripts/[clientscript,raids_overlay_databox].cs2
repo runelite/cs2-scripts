@@ -1,9 +1,9 @@
 // 1510
-[clientscript,raids_overlay_databox](component $widget_513:3_0, int $comsubid1, int $comsubid2)
-if (cc_find($widget_513:3_0, $comsubid1) = ^true & .cc_find($widget_513:3_0, $comsubid2) = ^true) {
-	~raids_overlay_databox($widget_513:3_0);
+[clientscript,raids_overlay_databox](component $com_raids_overlay_data0, int $comsubid1, int $comsubid2)
+if (cc_find($com_raids_overlay_data0, $comsubid1) = ^true & .cc_find($com_raids_overlay_data0, $comsubid2) = ^true) {
+	~raids_overlay_databox($com_raids_overlay_data0);
 	if (%varbit6386 > 0 & %varbit5425 < 5) {
-		cc_setontimer("raids_overlay_timer($widget_513:3_0, $comsubid1, $comsubid2)");
+		cc_setontimer("raids_overlay_timer($com_raids_overlay_data0, $comsubid1, $comsubid2)");
 	}
 	if (%varbit5425 >= 5) {
 		cc_setontimer(null);

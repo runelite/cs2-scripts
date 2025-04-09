@@ -15,7 +15,7 @@ def_int $int8 = 0;
 def_enum $enum9 = null;
 def_component $component10 = null;
 def_component $component11 = null;
-def_int $index12 = -1;
+def_int $int12 = -1;
 if (cc_find($component2, $comsubid3) = ^true) {
 	cc_setontimer(null);
 	if (cc_crmview_gethasresponse = true) {
@@ -57,11 +57,11 @@ if (cc_find($component2, $comsubid3) = ^true) {
 		if ($component10 ! null) {
 			cc_deleteall($component10);
 		}
-		$index12 = struct_param($struct1, param_1871);
-		if ($index12 ! -1) {
-			%varcint1189 = setbit(%varcint1189, $index12);
-			~script1210($index12);
-			if_setontimer("script1209(event_com, $index12)", $component2);
+		$int12 = struct_param($struct1, param_1871);
+		if ($int12 ! -1) {
+			%varcint1189 = setbit(%varcint1189, $int12);
+			~script1210($int12);
+			if_setontimer("script1209(event_com, $int12)", $component2);
 			if_setonsubchange("script1203(event_com, $struct1)", $component2);
 			~debug_mes("CRM overlay request succeeded at <tostring(clientclock)>.");
 		}

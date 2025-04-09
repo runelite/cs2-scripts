@@ -20,13 +20,13 @@ switch_int ($int2) {
 	case 4 :
 		return(enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0)));
 	case 5 :
-		return(enum(int, string, enum_2097, db_getfield($dbrow0, quest:storyline, 0)));
+		return(enum(int, string, enum_2097, db_getfield($dbrow0, quest:series, 0)));
 	case 6 :
 		return(enum(int, string, enum_2096, db_getfield($dbrow0, quest:location, 0)));
 	case 7 :
-		return("Level <tostring(~max(db_getfield($dbrow0, quest:comlevelreq, 0), db_getfield($dbrow0, quest:comlevelrec, 0)))>");
+		return("Level <tostring(~max(db_getfield($dbrow0, quest:requirement_combat, 0), db_getfield($dbrow0, quest:recommended_combat, 0)))>");
 	case 8 :
-		$int3, $int4, $int5 = db_getfield($dbrow0, quest:year, 0);
+		$int3, $int4, $int5 = db_getfield($dbrow0, quest:releasedate, 0);
 		if ($int5 < 2001) {
 			return("Unknown Year");
 		}

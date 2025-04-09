@@ -1,23 +1,23 @@
 // 6425
-[proc,script6425](int $flags0, obj $obj1, int $index2)(int)
-if (testbit($flags0, $index2) = ^false) {
+[proc,script6425](int $int0, obj $obj1, int $int2)(int)
+if (testbit($int0, $int2) = ^false) {
 	return(1);
 }
 switch_obj ($obj1) {
-	case air_rune_556 :
-		if (testbit($flags0, 15) = ^false | testbit($flags0, 17) = ^false | testbit($flags0, 20) = ^false) {
+	case airrune_556 :
+		if (testbit($int0, 15) = ^false | testbit($int0, 17) = ^false | testbit($int0, 20) = ^false) {
 			return(1);
 		}
-	case water_rune_555 :
-		if (testbit($flags0, 15) = ^false | testbit($flags0, 16) = ^false | testbit($flags0, 19) = ^false) {
+	case waterrune_555 :
+		if (testbit($int0, 15) = ^false | testbit($int0, 16) = ^false | testbit($int0, 19) = ^false) {
 			return(1);
 		}
-	case earth_rune_557 :
-		if (testbit($flags0, 17) = ^false | testbit($flags0, 16) = ^false | testbit($flags0, 18) = ^false) {
+	case earthrune_557 :
+		if (testbit($int0, 17) = ^false | testbit($int0, 16) = ^false | testbit($int0, 18) = ^false) {
 			return(1);
 		}
-	case fire_rune_554 :
-		if (testbit($flags0, 20) = ^false | testbit($flags0, 19) = ^false | testbit($flags0, 18) = ^false | testbit($flags0, 22) = ^false) {
+	case firerune_554 :
+		if (testbit($int0, 20) = ^false | testbit($int0, 19) = ^false | testbit($int0, 18) = ^false | testbit($int0, 22) = ^false) {
 			return(1);
 		}
 }

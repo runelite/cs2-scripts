@@ -1,6 +1,6 @@
 // 1717
-[proc,worldmap_toggles_enablebutton](int $int0, component $widget_595:21_1, int $int2, int $int3, component $widget_595:9_4, component $widget_595:13_5, component $widget_595:41_6)(int, int)
-cc_create($widget_595:21_1, ^iftype_text, $int2);
+[proc,worldmap_toggles_enablebutton](int $int0, component $com_worldmap_toggles1, int $int2, int $int3, component $com_worldmap_map_overlay4, component $com_worldmap_overview_overlay5, component $com_worldmap_tooltip6)(int, int)
+cc_create($com_worldmap_toggles1, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(25, 21, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, calc($int0 * 21), ^setpos_abs_right, ^setpos_abs_top);
@@ -10,15 +10,15 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 def_string $string0 = enum(int, string, enum_1704, $int0);
 cc_settext($string0);
-cc_create($widget_595:21_1, ^iftype_graphic, $int2);
+cc_create($com_worldmap_toggles1, ^iftype_graphic, $int2, false);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(1, calc($int0 * 21 + 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("clickcross,5");
-if (.cc_find($widget_595:21_1, $int0) = ^true) {
+if (.cc_find($com_worldmap_toggles1, $int0) = ^true) {
 	.cc_setopbase("<col=ff9040><$string0></col>");
-	.cc_setonop("worldmap_toggles_op(event_op, $widget_595:21_1, $int0, $int2, $widget_595:9_4, $widget_595:13_5, $widget_595:41_6)");
-	.cc_setonvartransmit("worldmap_toggles_vartransmit($widget_595:21_1, $int0, $int2, $widget_595:9_4, $widget_595:13_5, $widget_595:41_6){var1568}");
-	~worldmap_toggles_set($widget_595:21_1, $int0, $widget_595:9_4, $widget_595:13_5, $widget_595:41_6);
+	.cc_setonop("worldmap_toggles_op(event_op, $com_worldmap_toggles1, $int0, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6)");
+	.cc_setonvartransmit("worldmap_toggles_vartransmit($com_worldmap_toggles1, $int0, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6){var1568}");
+	~worldmap_toggles_set($com_worldmap_toggles1, $int0, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6);
 }
 $int2 = calc($int2 + 1);
 return($int2, ~max($int3, calc(25 + parawidth($string0, 512, p12_full))));

@@ -15,7 +15,7 @@ if (~on_mobile = true) {
 def_int $int9 = calc($int7 / 5);
 def_int $int10 = 6;
 if_setsize($int8, calc($int7 + 12), ^setsize_abs, ^setsize_abs, $component1);
-cc_create($component1, ^iftype_graphic, $int3);
+cc_create($component1, ^iftype_graphic, $int3, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking_light);
@@ -50,9 +50,9 @@ $int3 = ~script7743(
 	10 = $int3
 );
 $int10 = calc($int10 + $int9);
-def_string $text0 = "Areas";
+def_string $string0 = "Areas";
 if (%varbit10032 = 3) {
-	$text0 = "Unlocks";
+	$string0 = "Unlocks";
 }
 $int3 = ~script7743(
 	0 = $component1, 
@@ -61,16 +61,16 @@ $int3 = ~script7743(
 	3 = $int8, 
 	4 = $int9, 
 	5 = $int10, 
-	6 = $text0, 
+	6 = $string0, 
 	7 = 3, 
 	8 = $int4, 
 	9 = $colour5, 
 	10 = $int3
 );
 $int10 = calc($int10 + $int9);
-$text0 = "Relics";
+$string0 = "Relics";
 if (%varbit10032 = 3) {
-	$text0 = "Fragments";
+	$string0 = "Fragments";
 }
 $int3 = ~script7743(
 	0 = $component1, 
@@ -79,7 +79,7 @@ $int3 = ~script7743(
 	3 = $int8, 
 	4 = $int9, 
 	5 = $int10, 
-	6 = $text0, 
+	6 = $string0, 
 	7 = 2, 
 	8 = $int4, 
 	9 = $colour5, 

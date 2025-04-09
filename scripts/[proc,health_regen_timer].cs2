@@ -3,13 +3,13 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_component $component4 = interface_160:15;
+def_component $component4 = orbs:health_regen;
 if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component4 = interface_895:12;
+	$component4 = orbs_nomap:health_regen;
 } else if (~on_mobile = true & %varbit6254 = 0) {
-	$component4 = interface_897:11;
+	$component4 = orbs_osm:health_regen;
 } else if (~on_mobile = true & %varbit6254 = 1) {
-	$component4 = interface_898:12;
+	$component4 = orbs_osm_nomap:health_regen;
 }
 cc_deleteall($component4);
 if_setonstattransmit("health_orb_stattransmit{hitpoints}", $component4);
@@ -35,7 +35,7 @@ if ($int2 = 0) {
 } else if ($int3 >= $int2) {
 	$int3 = calc($int3 % $int2);
 }
-.cc_create($component4, ^iftype_arc, 0);
+.cc_create($component4, ^iftype_arc, 0, false);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setcolour(0x024def);
@@ -46,7 +46,7 @@ if ($int2 > 0) {
 } else {
 	.cc_setarc(0, 0);
 }
-cc_create($component4, ^iftype_arc, 1);
+cc_create($component4, ^iftype_arc, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xf00b04);

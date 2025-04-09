@@ -1,96 +1,96 @@
 // 5255
-[clientscript,gim_sidepanel_init](component $widget_726:0_0, component $widget_726:1_1, component $widget_726:3_2, component $widget_726:6_3, component $widget_726:7_4, component $widget_726:8_5)
-cc_deleteall($widget_726:1_1);
-cc_create($widget_726:1_1, ^iftype_text, 0);
+[clientscript,gim_sidepanel_init](component $com_gim_sidepanel_universe0, component $com_gim_sidepanel_title1, component $com_gim_sidepanel_subtitle2, component $com_gim_sidepanel_members3, component $com_gim_sidepanel_invite4, component $com_gim_sidepanel_settings5)
+cc_deleteall($com_gim_sidepanel_title1);
+cc_create($com_gim_sidepanel_title1, ^iftype_text, 0, false);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_int $comsubid6 = cc_getid;
-cc_create($widget_726:1_1, ^iftype_graphic, 1);
+cc_create($com_gim_sidepanel_title1, ^iftype_graphic, 1, false);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 def_int $comsubid7 = cc_getid;
-cc_deleteall($widget_726:3_2);
-cc_create($widget_726:3_2, ^iftype_text, 0);
+cc_deleteall($com_gim_sidepanel_subtitle2);
+cc_create($com_gim_sidepanel_subtitle2, ^iftype_text, 0, false);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_int $comsubid8 = cc_getid;
-cc_create($widget_726:3_2, ^iftype_graphic, 1);
+cc_create($com_gim_sidepanel_subtitle2, ^iftype_graphic, 1, false);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 def_int $comsubid9 = cc_getid;
-cc_create($widget_726:3_2, ^iftype_text, 2);
+cc_create($com_gim_sidepanel_subtitle2, ^iftype_text, 2, false);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_int $comsubid10 = cc_getid;
-cc_create($widget_726:3_2, ^iftype_graphic, 3);
+cc_create($com_gim_sidepanel_subtitle2, ^iftype_graphic, 3, false);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 def_int $comsubid11 = cc_getid;
 ~gim_sidepanel_draw(
-	0 = $widget_726:1_1, 
+	0 = $com_gim_sidepanel_title1, 
 	1 = $comsubid6, 
 	2 = $comsubid7, 
-	3 = $widget_726:3_2, 
+	3 = $com_gim_sidepanel_subtitle2, 
 	4 = $comsubid8, 
 	5 = $comsubid9, 
 	6 = $comsubid10, 
 	7 = $comsubid11, 
-	8 = $widget_726:6_3, 
-	9 = $widget_726:7_4, 
-	10 = $widget_726:8_5
+	8 = $com_gim_sidepanel_members3, 
+	9 = $com_gim_sidepanel_invite4, 
+	10 = $com_gim_sidepanel_settings5
 );
 if_setonvartransmit("gim_sidepanel_draw(
-	0 = $widget_726:1_1, 
+	0 = $com_gim_sidepanel_title1, 
 	1 = $comsubid6, 
 	2 = $comsubid7, 
-	3 = $widget_726:3_2, 
+	3 = $com_gim_sidepanel_subtitle2, 
 	4 = $comsubid8, 
 	5 = $comsubid9, 
 	6 = $comsubid10, 
 	7 = $comsubid11, 
-	8 = $widget_726:6_3, 
-	9 = $widget_726:7_4, 
-	10 = $widget_726:8_5
-){var3172}", $widget_726:0_0);
+	8 = $com_gim_sidepanel_members3, 
+	9 = $com_gim_sidepanel_invite4, 
+	10 = $com_gim_sidepanel_settings5
+){var3172}", $com_gim_sidepanel_universe0);
 if_setonclansettingstransmit("gim_sidepanel_draw(
-	0 = $widget_726:1_1, 
+	0 = $com_gim_sidepanel_title1, 
 	1 = $comsubid6, 
 	2 = $comsubid7, 
-	3 = $widget_726:3_2, 
+	3 = $com_gim_sidepanel_subtitle2, 
 	4 = $comsubid8, 
 	5 = $comsubid9, 
 	6 = $comsubid10, 
 	7 = $comsubid11, 
-	8 = $widget_726:6_3, 
-	9 = $widget_726:7_4, 
-	10 = $widget_726:8_5
-)", $widget_726:0_0);
+	8 = $com_gim_sidepanel_members3, 
+	9 = $com_gim_sidepanel_invite4, 
+	10 = $com_gim_sidepanel_settings5
+)", $com_gim_sidepanel_universe0);
 if_setonclanchanneltransmit("gim_sidepanel_draw(
-	0 = $widget_726:1_1, 
+	0 = $com_gim_sidepanel_title1, 
 	1 = $comsubid6, 
 	2 = $comsubid7, 
-	3 = $widget_726:3_2, 
+	3 = $com_gim_sidepanel_subtitle2, 
 	4 = $comsubid8, 
 	5 = $comsubid9, 
 	6 = $comsubid10, 
 	7 = $comsubid11, 
-	8 = $widget_726:6_3, 
-	9 = $widget_726:7_4, 
-	10 = $widget_726:8_5
-)", $widget_726:0_0);
+	8 = $com_gim_sidepanel_members3, 
+	9 = $com_gim_sidepanel_invite4, 
+	10 = $com_gim_sidepanel_settings5
+)", $com_gim_sidepanel_universe0);
 if_setonfriendtransmit("gim_sidepanel_draw(
-	0 = $widget_726:1_1, 
+	0 = $com_gim_sidepanel_title1, 
 	1 = $comsubid6, 
 	2 = $comsubid7, 
-	3 = $widget_726:3_2, 
+	3 = $com_gim_sidepanel_subtitle2, 
 	4 = $comsubid8, 
 	5 = $comsubid9, 
 	6 = $comsubid10, 
 	7 = $comsubid11, 
-	8 = $widget_726:6_3, 
-	9 = $widget_726:7_4, 
-	10 = $widget_726:8_5
-)", $widget_726:0_0);
+	8 = $com_gim_sidepanel_members3, 
+	9 = $com_gim_sidepanel_invite4, 
+	10 = $com_gim_sidepanel_settings5
+)", $com_gim_sidepanel_universe0);

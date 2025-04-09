@@ -1,15 +1,15 @@
 // 7271
-[proc,worldswitcher_settitle](component $widget_69:3_0)
+[proc,worldswitcher_settitle](component $com_worldswitcher_title0)
 def_enum $enum1 = null;
 def_component $component2 = null;
 if (%varbit14978 = 1) {
 	$enum1 = ~toplevel_getcomponents;
 	if ($enum1 ! null) {
-		$component2 = enum(component, component, $enum1, interface_161:16);
+		$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:mainmodal);
 		if ($component2 ! null & if_hassub($component2) = true) {
-			if_settext("<col=9f9f9f>Configuring...</col>", $widget_69:3_0);
+			if_settext("<col=9f9f9f>Configuring...</col>", $com_worldswitcher_title0);
 			return;
 		}
 	}
 }
-if_settext("Current world - <tostring(map_world)>", $widget_69:3_0);
+if_settext("Current world - <tostring(map_world)>", $com_worldswitcher_title0);

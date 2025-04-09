@@ -11,32 +11,32 @@ def_string $string2 = "I can start this <$string1> by ";
 if ($int9 ! 1) {
 	$string2 = "I started this <$string1> by ";
 }
-if (db_getfield($dbrow0, quest:autodisable, 0) = true) {
+if (db_getfield($dbrow0, quest:in_prerelease, 0) = true) {
 	$string2 = "This <$string1> is coming soon...<br>When it releases, I can start it by ";
 }
 $string2 = "<$string2><$string0>";
-def_string $text3 = enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0));
-def_string $text4 = enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0));
-def_string $text5 = enum(int, string, enum_2097, db_getfield($dbrow0, quest:storyline, 0));
+def_string $string3 = enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0));
+def_string $string4 = enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0));
+def_string $string5 = enum(int, string, enum_2097, db_getfield($dbrow0, quest:series, 0));
 def_boolean $boolean10 = false;
 def_string $string6 = "";
-$boolean10, $string6 = db_getfield($dbrow0, quest:12, 0);
-if (db_getfield($dbrow0, quest:storyline, 0) >= 0) {
+$boolean10, $string6 = db_getfield($dbrow0, quest:seriesno_override, 0);
+if (db_getfield($dbrow0, quest:series, 0) >= 0) {
 	if ($boolean10 = true) {
 		if (string_length($string6) > 0) {
-			$text5 = "<$text5> #<$string6>";
+			$string5 = "<$string5> #<$string6>";
 		}
 	} else {
-		$text5 = "<$text5> #<tostring(db_getfield($dbrow0, quest:storyindex, 0))>";
+		$string5 = "<$string5> #<tostring(db_getfield($dbrow0, quest:seriesno, 0))>";
 	}
 }
-def_string $text7 = "Unknown Year";
+def_string $string7 = "Unknown Year";
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
-$int13, $int12, $int11 = db_getfield($dbrow0, quest:year, 0);
+$int13, $int12, $int11 = db_getfield($dbrow0, quest:releasedate, 0);
 if ($int11 >= 2001) {
-	$text7 = tostring($int11);
+	$string7 = tostring($int11);
 }
 def_string $string8 = "";
 def_string $string9 = "";
@@ -45,7 +45,7 @@ def_string $string10 = ~script6828($dbrow0);
 def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 $int16 = calc(paraheight($string2, calc(if_getwidth($component2) - 10), p12_full) * 20);
@@ -57,9 +57,9 @@ cc_settextshadow(false);
 cc_settext($string2);
 $int15 = calc($int15 + $int16);
 def_string $string11 = "";
-def_coord $coord17 = db_getfield($dbrow0, quest:mapcoord, 0);
+def_coord $coord17 = db_getfield($dbrow0, quest:startcoord, 0);
 if ($coord17 ! null & $coord17 ! 0_0_0_0_0) {
-	cc_create($component2, ^iftype_text, $int14);
+	cc_create($component2, ^iftype_text, $int14, false);
 	$int14 = calc($int14 + 1);
 	$int15 = calc($int15 - 4);
 	cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
@@ -81,13 +81,13 @@ if ($coord17 ! null & $coord17 ! 0_0_0_0_0) {
 } else {
 	$int15 = calc($int15 + 5);
 }
-cc_create($component2, ^iftype_line, $int14);
+cc_create($component2, ^iftype_line, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(2, 0, ^setsize_minus, ^setsize_abs);
 cc_setcolour(0x33281a);
 $int15 = calc($int15 + 10);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_left, ^setpos_abs_top);
 $int16 = 20;
@@ -97,7 +97,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext("Difficulty:");
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component2) / 2), $int16, ^setsize_abs, ^setsize_abs);
@@ -107,7 +107,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext("Length:");
 $int15 = calc($int15 + $int16);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_left, ^setpos_abs_top);
 $int16 = 20;
@@ -116,8 +116,8 @@ cc_setcolour(0x800000);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
-cc_settext($text3);
-cc_create($component2, ^iftype_text, $int14);
+cc_settext($string3);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component2) / 2), $int16, ^setsize_abs, ^setsize_abs);
@@ -125,9 +125,9 @@ cc_setcolour(0x800000);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
-cc_settext($text4);
+cc_settext($string4);
 $int15 = calc($int15 + $int16 + 6);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_left, ^setpos_abs_top);
 $int16 = 20;
@@ -137,7 +137,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext("Storyline:");
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component2) / 2), $int16, ^setsize_abs, ^setsize_abs);
@@ -147,7 +147,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext("Release Year:");
 $int15 = calc($int15 + $int16);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_left, ^setpos_abs_top);
 $int16 = 20;
@@ -156,8 +156,8 @@ cc_setcolour(0x800000);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
-cc_settext($text5);
-cc_create($component2, ^iftype_text, $int14);
+cc_settext($string5);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(3, $int15, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component2) / 2), $int16, ^setsize_abs, ^setsize_abs);
@@ -165,15 +165,15 @@ cc_setcolour(0x800000);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
-cc_settext($text7);
+cc_settext($string7);
 $int15 = calc($int15 + $int16 + 5);
-cc_create($component2, ^iftype_line, $int14);
+cc_create($component2, ^iftype_line, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(2, 0, ^setsize_minus, ^setsize_abs);
 cc_setcolour(0x33281a);
 $int15 = calc($int15 + 10);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 $int16 = 20;
@@ -188,7 +188,7 @@ if (string_length($string9) <= 0) {
 	cc_settext("Quest Requirements:");
 }
 $int15 = calc($int15 + $int16);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 $int16 = calc(paraheight($string8, if_getwidth($component2), p12_full) * 20);
@@ -200,7 +200,7 @@ cc_settextshadow(false);
 cc_settext($string8);
 $int15 = calc($int15 + $int16 + 6);
 if (string_length($string9) > 0) {
-	cc_create($component2, ^iftype_text, $int14);
+	cc_create($component2, ^iftype_text, $int14, false);
 	$int14 = calc($int14 + 1);
 	cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 	$int16 = 20;
@@ -211,7 +211,7 @@ if (string_length($string9) > 0) {
 	cc_settextshadow(false);
 	cc_settext("Skill Requirements:");
 	$int15 = calc($int15 + $int16);
-	cc_create($component2, ^iftype_text, $int14);
+	cc_create($component2, ^iftype_text, $int14, false);
 	$int14 = calc($int14 + 1);
 	cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 	$int16 = calc(paraheight($string9, if_getwidth($component2), p12_full) * 20);
@@ -223,7 +223,7 @@ if (string_length($string9) > 0) {
 	cc_settext($string9);
 	$int15 = calc($int15 + $int16 + 6);
 }
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 $int16 = 20;
@@ -234,7 +234,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext("Recommendations:");
 $int15 = calc($int15 + $int16);
-cc_create($component2, ^iftype_text, $int14);
+cc_create($component2, ^iftype_text, $int14, false);
 $int14 = calc($int14 + 1);
 cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
 $int16 = calc(paraheight($string10, if_getwidth($component2), p12_full) * 20);

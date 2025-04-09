@@ -1,5 +1,5 @@
 // 4877
-[clientscript,script4877](component $component0, int $comsubid1, obj $obj2, component $widget_15:36_3)
+[clientscript,script4877](component $component0, int $comsubid1, obj $obj2, component $com_bankside_runepouch_select_container3)
 if ($obj2 ! null) {
 	resume_objdialog($obj2);
 	if (enum(obj, int, enum_55, $obj2) ! 0) {
@@ -13,11 +13,11 @@ if ($obj2 ! null) {
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 			cc_setontimer("script4897(calc(clientclock + 29), event_com, event_comsubid)");
-			.cc_setontimer("script4898(calc(clientclock + 31), $component0, event_comsubid, $widget_15:36_3)");
+			.cc_setontimer("script4898(calc(clientclock + 31), $component0, event_comsubid, $com_bankside_runepouch_select_container3)");
 			return;
 		}
 	} else {
 		sound_synth(interface_select1, 1, 0);
 	}
 }
-if_sethide(true, $widget_15:36_3);
+if_sethide(true, $com_bankside_runepouch_select_container3);

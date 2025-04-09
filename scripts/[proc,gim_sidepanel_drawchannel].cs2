@@ -12,7 +12,7 @@ def_int $int9 = 0;
 def_string $string0 = "";
 $int2, $int3 = activeclansettings_getaffinedcount, activeclansettings_getcurrentowner_slot;
 while ($int1 < $int2) {
-	cc_create($component0, ^iftype_rectangle, $int5);
+	cc_create($component0, ^iftype_rectangle, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(^white);
@@ -29,7 +29,7 @@ while ($int6 < $int2) {
 		.cc_clearops;
 		if ($int1 = $int3) {
 			$int8, $int4 = 0, $int6;
-			cc_create($component0, ^iftype_graphic, $int5);
+			cc_create($component0, ^iftype_graphic, $int5, false);
 			$int5 = calc($int5 + 1);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setgraphic(enum(int, graphic, enum_3798, -4));
@@ -46,7 +46,7 @@ while ($int6 < $int2) {
 		} else {
 			$int9 = 0;
 		}
-		cc_create($component0, ^iftype_text, $int5);
+		cc_create($component0, ^iftype_text, $int5, false);
 		$int5 = calc($int5 + 1);
 		cc_setposition(0, $int8, ^setpos_abs_right, ^setpos_abs_top);
 		cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);
@@ -56,7 +56,7 @@ while ($int6 < $int2) {
 		cc_setcolour(^white);
 		cc_settext($string0);
 		if (activeclansettings_getaffinedextrainfo($int1, 28, 28) = 1) {
-			cc_create($component0, ^iftype_graphic, $int5);
+			cc_create($component0, ^iftype_graphic, $int5, false);
 			$int5 = calc($int5 + 1);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setgraphic(enum(int, graphic, enum_3798, 39));
@@ -66,7 +66,7 @@ while ($int6 < $int2) {
 	$int6 = calc($int6 + 1);
 }
 while ($int6 < $int7) {
-	cc_create($component0, ^iftype_text, $int5);
+	cc_create($component0, ^iftype_text, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setposition(0, calc($int6 * 25), ^setpos_abs_right, ^setpos_abs_top);
 	cc_setsize(15, 25, ^setsize_minus, ^setsize_abs);

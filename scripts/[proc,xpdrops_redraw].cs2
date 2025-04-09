@@ -1,5 +1,5 @@
 // 995
-[proc,xpdrops_redraw](component $widget_122:0_0, component $widget_122:4_1, component $widget_122:3_2, component $widget_122:10_3, component $widget_122:11_4, component $widget_122:17_5, component $widget_122:25_6)
+[proc,xpdrops_redraw](component $com_xp_drops_universe0, component $com_xp_drops_container1, component $com_xp_drops_containerdodger2, component $com_xp_drops_counter3, component $com_xp_drops_progress_container4, component $com_xp_drops_drops_container5, component $com_xp_drops_tooltip6)
 def_fontmetrics $fontmetrics7 = p11_full;
 def_graphic $graphic8 = p11_full;
 def_int $int9 = 16;
@@ -8,9 +8,9 @@ if (%varbit4693 = 1 & ~on_mobile = false) {
 } else if (%varbit4693 = 2 & ~on_mobile = false) {
 	$fontmetrics7, $graphic8, $int9 = b12_full, b12_full, 25;
 }
-def_int $width10 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics7) + 2);
-if_setsize($width10, if_getheight($widget_122:4_1), ^setsize_abs, ^setsize_abs, $widget_122:4_1);
-if_settextfont($graphic8, $widget_122:10_3);
+def_int $int10 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics7) + 2);
+if_setsize($int10, if_getheight($com_xp_drops_container1), ^setsize_abs, ^setsize_abs, $com_xp_drops_container1);
+if_settextfont($graphic8, $com_xp_drops_counter3);
 def_int $int11 = 0;
 def_component $component12 = enum(int, component, enum_1163, $int11);
 while ($component12 ! null) {
@@ -21,4 +21,4 @@ while ($component12 ! null) {
 	$int11 = calc($int11 + 1);
 	$component12 = enum(int, component, enum_1163, $int11);
 }
-~xpdrops_setposition($widget_122:4_1, $widget_122:3_2);
+~xpdrops_setposition($com_xp_drops_container1, $com_xp_drops_containerdodger2);

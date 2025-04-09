@@ -10,7 +10,7 @@ def_graphic $graphic2 = "options_radio_buttons,0";
 def_graphic $graphic3 = "options_radio_buttons,4";
 def_graphic $graphic4 = "options_radio_buttons,2";
 def_graphic $graphic5 = "options_radio_buttons,6";
-cc_create($component0, ^iftype_graphic, 0);
+cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, 3, ^setpos_abs_left, ^setpos_abs_top);
 if (%varbit6671 = 0) {
@@ -18,7 +18,7 @@ if (%varbit6671 = 0) {
 } else {
 	cc_setgraphic($graphic2);
 }
-cc_create($component0, ^iftype_graphic, 1);
+cc_create($component0, ^iftype_graphic, 1, false);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_bottom);
 if (%varbit6671 = 1) {
@@ -26,7 +26,7 @@ if (%varbit6671 = 1) {
 } else {
 	cc_setgraphic($graphic2);
 }
-cc_create($component0, ^iftype_text, 2);
+cc_create($component0, ^iftype_text, 2, false);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
@@ -42,7 +42,7 @@ if (%varbit6671 = 0) {
 	cc_setonmouseover("telenexus_options_mouseover(event_com, 0, 2, $graphic3)");
 	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 0, 2, $graphic2)");
 }
-cc_create($component0, ^iftype_text, 3);
+cc_create($component0, ^iftype_text, 3, false);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);

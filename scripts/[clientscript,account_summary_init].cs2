@@ -1,7 +1,7 @@
 // 3174
-[clientscript,account_summary_init](component $widget_712:2_0, component $widget_712:3_1, component $widget_712:1_2)
-if_settext(chat_playername, $widget_712:1_2);
-if_setonvartransmit("summary_sidepanel_draw($widget_712:2_0, $widget_712:3_1){
+[clientscript,account_summary_init](component $com_account_summary_sidepanel_summary_contents0, component $com_account_summary_sidepanel_summary_click_layer1, component $com_account_summary_sidepanel_summary_player_name2)
+if_settext(chat_playername, $com_account_summary_sidepanel_summary_player_name2);
+if_setonvartransmit("summary_sidepanel_draw($com_account_summary_sidepanel_summary_contents0, $com_account_summary_sidepanel_summary_click_layer1){
 	0 = var101, 
 	1 = var904, 
 	2 = var2920, 
@@ -22,5 +22,5 @@ if_setonvartransmit("summary_sidepanel_draw($widget_712:2_0, $widget_712:3_1){
 	17 = var1200, 
 	18 = var1190, 
 	19 = var1191
-}", $widget_712:2_0);
-~summary_sidepanel_draw($widget_712:2_0, $widget_712:3_1);
+}", $com_account_summary_sidepanel_summary_contents0);
+~summary_sidepanel_draw($com_account_summary_sidepanel_summary_contents0, $com_account_summary_sidepanel_summary_click_layer1);

@@ -1,20 +1,20 @@
 // 2813
-[proc,seed_vault_side_draw](component $widget_630:1_0)
-cc_deleteall($widget_630:1_0);
+[proc,seed_vault_side_draw](component $com_seed_vault_deposit_inv0)
+cc_deleteall($com_seed_vault_deposit_inv0);
 def_int $int1 = calc((42 - 36) * 3 - 2);
 def_int $int2 = calc((36 - 32) * 2);
-def_int $size3 = 0;
+def_int $int3 = 0;
 def_obj $obj4 = null;
-while ($size3 < inv_size(inv)) {
-	cc_create($widget_630:1_0, ^iftype_graphic, $size3);
+while ($int3 < inv_size(inv)) {
+	cc_create($com_seed_vault_deposit_inv0, ^iftype_graphic, $int3, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int1 + $size3 % 4 * 42), calc($int2 + $size3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int1 + $int3 % 4 * 42), calc($int2 + $int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$obj4 = inv_getobj(inv, $size3);
+	$obj4 = inv_getobj(inv, $int3);
 	if ($obj4 ! null) {
 		cc_sethide(false);
-		cc_setobject($obj4, inv_getnum(inv, $size3));
+		cc_setobject($obj4, inv_getnum(inv, $int3));
 		cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
 		cc_setop(10, "Examine");
 		if (%var2195 = ^max_32bit_int) {
@@ -32,7 +32,7 @@ while ($size3 < inv_size(inv)) {
 		cc_setop(7, "Deposit-All");
 	} else {
 		cc_sethide(true);
-		cc_setobject(obj_6512, 1);
+		cc_setobject(blankobject_6512, 1);
 	}
-	$size3 = calc($size3 + 1);
+	$int3 = calc($int3 + 1);
 }

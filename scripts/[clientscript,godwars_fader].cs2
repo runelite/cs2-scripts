@@ -1,6 +1,6 @@
 // 344
-[clientscript,godwars_fader](component $component0, int $clock1, int $int2, int $int3, int $int4)
-def_int $int5 = calc(clientclock - $clock1);
+[clientscript,godwars_fader](component $component0, int $int1, int $int2, int $int3, int $int4)
+def_int $int5 = calc(clientclock - $int1);
 if ($int5 < $int2) {
 	if_settrans(calc(255 - scale($int5, $int2, 255)), $component0);
 	return;

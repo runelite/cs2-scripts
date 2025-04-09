@@ -1,15 +1,15 @@
 // 4397
-[proc,clan_sidepanel_draw](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $widget_702:10_6)
+[proc,clan_sidepanel_draw](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $com_clans_guest_sidepanel_search6)
 cc_deleteall($component1);
 cc_deleteall($component4);
 cc_deleteall($component5);
-if ($widget_702:10_6 ! null) {
-	cc_deleteall($widget_702:10_6);
+if ($com_clans_guest_sidepanel_search6 ! null) {
+	cc_deleteall($com_clans_guest_sidepanel_search6);
 }
 cc_deleteall($component2);
 def_int $int7 = 0;
 def_int $int8 = 1;
-def_string $text0 = "";
+def_string $string0 = "";
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
@@ -43,7 +43,7 @@ if ($boolean0 = true) {
 				$string1 = activeclansettings_getclanname;
 		}
 		$int14 = parawidth($string1, 150, b12_full);
-		cc_create($component1, ^iftype_text, $int10);
+		cc_create($component1, ^iftype_text, $int10, false);
 		cc_setsize($int14, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(-5, 0, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settext($string1);
@@ -54,11 +54,11 @@ if ($boolean0 = true) {
 		$int10 = calc($int10 + 1);
 		if ($int11 = 1) {
 			$int19 = $int10;
-			cc_create($component1, ^iftype_graphic, $int10);
+			cc_create($component1, ^iftype_graphic, $int10, false);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_text, $int10);
+			cc_create($component1, ^iftype_text, $int10, false);
 			cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
 			cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
@@ -66,7 +66,7 @@ if ($boolean0 = true) {
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_setcolour(0xffb83f);
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_graphic, $int10);
+			cc_create($component1, ^iftype_graphic, $int10, false);
 			cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(-12 - $int14 / 2), 0, ^setpos_abs_centre, ^setpos_abs_top);
 			if ($int12 = 1) {
@@ -77,18 +77,18 @@ if ($boolean0 = true) {
 				cc_setgraphic("options_icons_small,11");
 			}
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_graphic, $int10);
+			cc_create($component1, ^iftype_graphic, $int10, false);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int14 / 2 + 4), 2, ^setpos_abs_centre, ^setpos_abs_top);
 			cc_setgraphic("clan_rank_icons,42");
 			$int10 = calc($int10 + 1);
 			if ($int12 = 1) {
-				cc_create($component1, ^iftype_graphic, $int10);
+				cc_create($component1, ^iftype_graphic, $int10, false);
 				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 				cc_setposition(75, 20, ^setpos_abs_left, ^setpos_abs_top);
 				cc_setgraphic(heart_icon);
 				$int10 = calc($int10 + 1);
-				cc_create($component1, ^iftype_text, $int10);
+				cc_create($component1, ^iftype_text, $int10, false);
 				cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
 				cc_setposition(82, 17, ^setpos_abs_left, ^setpos_abs_top);
 				cc_settext(tostring(%varclansetting41));
@@ -99,7 +99,7 @@ if ($boolean0 = true) {
 				$int10 = calc($int10 + 1);
 			}
 		} else if ($int13 = 1) {
-			cc_create($component1, ^iftype_text, $int10);
+			cc_create($component1, ^iftype_text, $int10, false);
 			cc_setsize(65, 20, ^setsize_minus, ^setsize_abs);
 			cc_setposition(0, 17, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setcolour(0xffb83f);
@@ -114,11 +114,11 @@ if ($boolean0 = true) {
 			$int10 = calc($int10 + 1);
 		} else {
 			$int19 = $int10;
-			cc_create($component1, ^iftype_graphic, $int10);
+			cc_create($component1, ^iftype_graphic, $int10, false);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_text, $int10);
+			cc_create($component1, ^iftype_text, $int10, false);
 			cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
 			cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
@@ -126,12 +126,12 @@ if ($boolean0 = true) {
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_setcolour(0xffb83f);
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_graphic, $int10);
+			cc_create($component1, ^iftype_graphic, $int10, false);
 			cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 			cc_setposition(75, 20, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphic("group_icon,1");
 			$int10 = calc($int10 + 1);
-			cc_create($component1, ^iftype_text, $int10);
+			cc_create($component1, ^iftype_text, $int10, false);
 			cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
 			cc_setposition(89, 17, ^setpos_abs_left, ^setpos_abs_top);
 			if (%varbit12168 > 0) {
@@ -149,13 +149,13 @@ if ($boolean0 = true) {
 		if ($int11 = 1) {
 			if_sethide(true, $component4);
 			if_setposition(102, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component5);
-			if_setposition(22, 2, ^setpos_abs_right, ^setpos_abs_bottom, $widget_702:10_6);
+			if_setposition(22, 2, ^setpos_abs_right, ^setpos_abs_bottom, $com_clans_guest_sidepanel_search6);
 		}
 		~stonebutton_init("Settings", $component5, p12_full, 0);
 		if_setonop("opsound(event_op, 2)", $component5);
-		if ($widget_702:10_6 ! null) {
-			~stonebutton_init("<col=ff0000>Discard</col>", $widget_702:10_6, p12_full, 0);
-			if_setonop("opsound(event_op, 2)", $widget_702:10_6);
+		if ($com_clans_guest_sidepanel_search6 ! null) {
+			~stonebutton_init("<col=ff0000>Discard</col>", $com_clans_guest_sidepanel_search6, p12_full, 0);
+			if_setonop("opsound(event_op, 2)", $com_clans_guest_sidepanel_search6);
 		}
 		if_sethide(false, $component3);
 		if ($int13 = 1) {
@@ -164,7 +164,7 @@ if ($boolean0 = true) {
 			if_setonmouseleave(null, $component4);
 			if_clearops($component4);
 			if_setonop(null, $component4);
-			$text0 = "You have currently loaded a <col=ffb93f>PvP Arena</col> group.<br><br>You can see its details via the <col=ffb93f>Grouping</col> tab.";
+			$string0 = "You have currently loaded a <col=ffb93f>PvP Arena</col> group.<br><br>You can see its details via the <col=ffb93f>Grouping</col> tab.";
 		} else if (activeclanchannel_find_listened = true) {
 			if (%varbit12169 = 1) {
 				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
@@ -193,7 +193,7 @@ if ($boolean0 = true) {
 				}
 				return;
 			}
-			$text0 = "No-one is currently chatting in this clan's channel.";
+			$string0 = "No-one is currently chatting in this clan's channel.";
 		} else {
 			if (%varbit12169 = 1) {
 				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
@@ -209,11 +209,11 @@ if ($boolean0 = true) {
 				~gim_sidepanel_drawchannel($component2);
 				return;
 			}
-			$text0 = "You are not currently chatting in this clan's channel.";
+			$string0 = "You are not currently chatting in this clan's channel.";
 		}
 		if_setscrollpos(0, 0, $component2);
 		if_setscrollsize(0, 0, $component2);
-		cc_create($component2, ^iftype_text, $int10);
+		cc_create($component2, ^iftype_text, $int10, false);
 		$int10 = calc($int10 + 1);
 		cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -221,23 +221,23 @@ if ($boolean0 = true) {
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settext($text0);
+		cc_settext($string0);
 		~scrollbar_resize($component3, $component2, 0);
 		if ($int13 = 0) {
 			~script4394(activeclansettings_getclanname);
 		}
 		return;
 	}
-	if ($widget_702:10_6 ! null) {
-		~stonebutton_init("<col=0dc10d>Find</col>", $widget_702:10_6, p12_full, 0);
-		if_setonop("opsound(event_op, 2)", $widget_702:10_6);
+	if ($com_clans_guest_sidepanel_search6 ! null) {
+		~stonebutton_init("<col=0dc10d>Find</col>", $com_clans_guest_sidepanel_search6, p12_full, 0);
+		if_setonop("opsound(event_op, 2)", $com_clans_guest_sidepanel_search6);
 	}
 } else {
 	$int7 = %varbit933;
-	if (%varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
+	if (%varbit933 = 3 & activeclansettings_find_affined(0) = true) {
 		$string1 = activeclansettings_getclanname;
 		$int14 = parawidth($string1, 150, b12_full);
-		cc_create($component1, ^iftype_text, $int10);
+		cc_create($component1, ^iftype_text, $int10, false);
 		cc_setsize($int14, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settext($string1);
@@ -247,11 +247,11 @@ if ($boolean0 = true) {
 		cc_setcolour(0xe6981f);
 		$int10 = calc($int10 + 1);
 		$int19 = $int10;
-		cc_create($component1, ^iftype_graphic, $int10);
+		cc_create($component1, ^iftype_graphic, $int10, false);
 		cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 		cc_setposition(6, 20, ^setpos_abs_left, ^setpos_abs_top);
 		$int10 = calc($int10 + 1);
-		cc_create($component1, ^iftype_text, $int10);
+		cc_create($component1, ^iftype_text, $int10, false);
 		cc_setsize(47, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(22, 17, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p11_full);
@@ -259,12 +259,12 @@ if ($boolean0 = true) {
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_setcolour(0xffb83f);
 		$int10 = calc($int10 + 1);
-		cc_create($component1, ^iftype_graphic, $int10);
+		cc_create($component1, ^iftype_graphic, $int10, false);
 		cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 		cc_setposition(75, 20, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("group_icon,1");
 		$int10 = calc($int10 + 1);
-		cc_create($component1, ^iftype_text, $int10);
+		cc_create($component1, ^iftype_text, $int10, false);
 		cc_setsize(24, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(89, 17, ^setpos_abs_left, ^setpos_abs_top);
 		if (%varbit12167 > 0) {
@@ -280,7 +280,7 @@ if ($boolean0 = true) {
 		~stonebutton_init("Settings", $component5, p12_full, 0);
 		if_setonop("opsound(event_op, 2)", $component5);
 		if_sethide(false, $component3);
-		if (activeclanchannel_find_affined(^clantype_clan) = true) {
+		if (activeclanchannel_find_affined(0) = true) {
 			if (%varbit13806 = 1) {
 				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
@@ -307,9 +307,9 @@ if ($boolean0 = true) {
 				}
 				return;
 			}
-			$text0 = "No-one is currently chatting in this clan's channel.";
+			$string0 = "No-one is currently chatting in this clan's channel.";
 		} else {
-			$text0 = "You are not currently chatting in this clan's channel.";
+			$string0 = "You are not currently chatting in this clan's channel.";
 			if (%varbit13806 = 1) {
 				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
@@ -323,7 +323,7 @@ if ($boolean0 = true) {
 		}
 		if_setscrollpos(0, 0, $component2);
 		if_setscrollsize(0, 0, $component2);
-		cc_create($component2, ^iftype_text, $int10);
+		cc_create($component2, ^iftype_text, $int10, false);
 		$int10 = calc($int10 + 1);
 		cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -331,14 +331,14 @@ if ($boolean0 = true) {
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settext($text0);
+		cc_settext($string0);
 		~scrollbar_resize($component3, $component2, 0);
 		return;
 	}
 }
 cc_deleteall($component1);
 $int10 = 0;
-cc_create($component1, ^iftype_text, $int10);
+cc_create($component1, ^iftype_text, $int10, false);
 cc_setsize(65, 15, ^setsize_minus, ^setsize_abs);
 cc_setposition(-5, 4, ^setpos_abs_centre, ^setpos_abs_top);
 cc_settext(enum(int, string, enum_3839, $int8));
@@ -347,7 +347,7 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0x808080);
 $int10 = calc($int10 + 1);
-cc_create($component1, ^iftype_text, $int10);
+cc_create($component1, ^iftype_text, $int10, false);
 cc_setsize(100, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(25, 17, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext(~script4288($int7));
@@ -358,7 +358,7 @@ cc_setcolour(0x808080);
 if ($boolean0 = true) {
 	if_sethide(false, $component4);
 	if_setposition(62, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component5);
-	if_setposition(1, 2, ^setpos_abs_right, ^setpos_abs_bottom, $widget_702:10_6);
+	if_setposition(1, 2, ^setpos_abs_right, ^setpos_abs_bottom, $com_clans_guest_sidepanel_search6);
 }
 ~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 if_setonmouserepeat(null, $component4);

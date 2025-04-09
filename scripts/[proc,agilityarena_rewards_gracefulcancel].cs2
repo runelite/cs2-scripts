@@ -1,13 +1,13 @@
 // 2038
-[proc,agilityarena_rewards_gracefulcancel](component $widget_107:30_0, string $text0, boolean $boolean1)
-cc_deleteall($widget_107:30_0);
+[proc,agilityarena_rewards_gracefulcancel](component $com_agilityarena_rewards_graceful_cancel0, string $string0, boolean $boolean1)
+cc_deleteall($com_agilityarena_rewards_graceful_cancel0);
 def_int $int2 = 0;
 if ($boolean1 = true) {
-	$int2 = ~options_button_on($widget_107:30_0, $int2);
+	$int2 = ~options_button_on($com_agilityarena_rewards_graceful_cancel0, $int2);
 } else {
-	$int2 = ~options_button_off($widget_107:30_0, $int2);
+	$int2 = ~options_button_off($com_agilityarena_rewards_graceful_cancel0, $int2);
 }
-cc_create($widget_107:30_0, ^iftype_text, $int2);
+cc_create($com_agilityarena_rewards_graceful_cancel0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -19,4 +19,4 @@ if ($boolean1 = true) {
 	cc_setcolour(0xff981f);
 }
 cc_settextshadow(true);
-cc_settext($text0);
+cc_settext($string0);

@@ -1,11 +1,11 @@
 // 7245
-[proc,omnishop_main_buttons_setup](int $int0, string $text0)
-def_component $component1 = interface_819:25;
-def_component $component2 = interface_819:26;
-def_component $component3 = interface_819:27;
-def_component $component4 = interface_819:28;
-def_component $component5 = interface_819:24;
-def_component $component6 = interface_819:19;
+[proc,omnishop_main_buttons_setup](int $int0, string $string0)
+def_component $component1 = omnishop_main:button_1;
+def_component $component2 = omnishop_main:button_2;
+def_component $component3 = omnishop_main:button_3;
+def_component $component4 = omnishop_main:button_4;
+def_component $component5 = omnishop_main:note_button_layer;
+def_component $component6 = omnishop_main:buttons_info;
 def_graphic $graphic7 = p11_full;
 switch_int (%varcint988) {
 	case 1 :
@@ -15,14 +15,14 @@ switch_int (%varcint988) {
 	case 3 :
 		$graphic7 = verdana_13pt_regular;
 }
-cc_create($component6, ^iftype_text, 0);
+cc_create($component6, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 cc_settextshadow(true);
 cc_settextfont($graphic7);
 cc_setcolour(0xff981f);
-cc_settext($text0);
+cc_settext($string0);
 def_int $int8 = calc((if_getwidth($component6) - 18) / 4);
 def_int $int9 = ~script2288;
 if ($int9 = 1) {
@@ -52,7 +52,7 @@ if ($int0 < 1 & $int0 ! -1) {
 }
 ~script7139($component1, "1", $boolean10, false);
 if ($boolean10 = true) {
-	if_setop(1, "<$text0>-1", $component1);
+	if_setop(1, "<$string0>-1", $component1);
 } else {
 	if_clearops($component1);
 }
@@ -61,7 +61,7 @@ if ($int0 < 5 & $int0 ! -1) {
 }
 ~script7139($component2, "5", $boolean10, false);
 if ($boolean10 = true) {
-	if_setop(1, "<$text0>-5", $component2);
+	if_setop(1, "<$string0>-5", $component2);
 } else {
 	if_clearops($component2);
 }
@@ -70,7 +70,7 @@ if ($int0 < 10 & $int0 ! -1) {
 }
 ~script7139($component3, "10", $boolean10, false);
 if ($boolean10 = true) {
-	if_setop(1, "<$text0>-10", $component3);
+	if_setop(1, "<$string0>-10", $component3);
 } else {
 	if_clearops($component3);
 }
@@ -79,7 +79,7 @@ if ($int0 < 50 & $int0 ! -1) {
 }
 ~script7139($component4, "50", $boolean10, false);
 if ($boolean10 = true) {
-	if_setop(1, "<$text0>-50", $component4);
+	if_setop(1, "<$string0>-50", $component4);
 } else {
 	if_clearops($component4);
 }

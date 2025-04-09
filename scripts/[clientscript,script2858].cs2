@@ -1,142 +1,142 @@
 // 2858
-[clientscript,script2858](component $widget_26:0_0, component $widget_26:5_1, component $widget_26:6_2, component $widget_26:4_3, component $widget_26:13_4, component $widget_26:16_5, component $widget_26:19_6, component $widget_26:8_7, component $widget_26:9_8, component $widget_26:7_9, component $widget_26:14_10, component $widget_26:17_11, component $widget_26:20_12, component $widget_26:11_13, component $widget_26:12_14, component $widget_26:10_15, component $widget_26:15_16, component $widget_26:18_17, component $widget_26:21_18, component $widget_26:25_19)
-if_setop(1, "Unlock", $widget_26:25_19);
-if_setonop("script3774(event_op)", $widget_26:25_19);
+[clientscript,script2858](component $com_pirate_combilock_universe0, component $com_pirate_combilock_left_up1, component $com_pirate_combilock_left_down2, component $com_pirate_combilock_left_arrows3, component $com_pirate_combilock_left_top4, component $com_pirate_combilock_left_middle5, component $com_pirate_combilock_left_bottom6, component $com_pirate_combilock_centre_up7, component $com_pirate_combilock_centre_down8, component $com_pirate_combilock_centre_arrows9, component $com_pirate_combilock_centre_top10, component $com_pirate_combilock_centre_middle11, component $com_pirate_combilock_centre_bottom12, component $com_pirate_combilock_right_up13, component $com_pirate_combilock_right_down14, component $com_pirate_combilock_right_arrows15, component $com_pirate_combilock_right_top16, component $com_pirate_combilock_right_middle17, component $com_pirate_combilock_right_bottom18, component $com_pirate_combilock_confirm19)
+if_setop(1, "Unlock", $com_pirate_combilock_confirm19);
+if_setonop("script3774(event_op)", $com_pirate_combilock_confirm19);
 if (~on_mobile = false) {
-	if_setonmouseover("settrans(event_com, 240)", $widget_26:25_19);
-	if_setonmouseleave("settrans(event_com, 255)", $widget_26:25_19);
-	if_setonmouseover("model_swapper($widget_26:4_3, model_38985)", $widget_26:5_1);
-	if_setonmouseleave("model_swapper($widget_26:4_3, model_7747)", $widget_26:5_1);
-	if_setonmouseover("model_swapper($widget_26:4_3, model_38985)", $widget_26:6_2);
-	if_setonmouseleave("model_swapper($widget_26:4_3, model_7747)", $widget_26:6_2);
-	if_setonmouseover("model_swapper($widget_26:7_9, model_38985)", $widget_26:8_7);
-	if_setonmouseleave("model_swapper($widget_26:7_9, model_7747)", $widget_26:8_7);
-	if_setonmouseover("model_swapper($widget_26:7_9, model_38985)", $widget_26:9_8);
-	if_setonmouseleave("model_swapper($widget_26:7_9, model_7747)", $widget_26:9_8);
-	if_setonmouseover("model_swapper($widget_26:10_15, model_38985)", $widget_26:11_13);
-	if_setonmouseleave("model_swapper($widget_26:10_15, model_7747)", $widget_26:11_13);
-	if_setonmouseover("model_swapper($widget_26:10_15, model_38985)", $widget_26:12_14);
-	if_setonmouseleave("model_swapper($widget_26:10_15, model_7747)", $widget_26:12_14);
+	if_setonmouseover("settrans(event_com, 240)", $com_pirate_combilock_confirm19);
+	if_setonmouseleave("settrans(event_com, 255)", $com_pirate_combilock_confirm19);
+	if_setonmouseover("model_swapper($com_pirate_combilock_left_arrows3, model_38985)", $com_pirate_combilock_left_up1);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_left_arrows3, model_7747)", $com_pirate_combilock_left_up1);
+	if_setonmouseover("model_swapper($com_pirate_combilock_left_arrows3, model_38985)", $com_pirate_combilock_left_down2);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_left_arrows3, model_7747)", $com_pirate_combilock_left_down2);
+	if_setonmouseover("model_swapper($com_pirate_combilock_centre_arrows9, model_38985)", $com_pirate_combilock_centre_up7);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_centre_arrows9, model_7747)", $com_pirate_combilock_centre_up7);
+	if_setonmouseover("model_swapper($com_pirate_combilock_centre_arrows9, model_38985)", $com_pirate_combilock_centre_down8);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_centre_arrows9, model_7747)", $com_pirate_combilock_centre_down8);
+	if_setonmouseover("model_swapper($com_pirate_combilock_right_arrows15, model_38985)", $com_pirate_combilock_right_up13);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_right_arrows15, model_7747)", $com_pirate_combilock_right_up13);
+	if_setonmouseover("model_swapper($com_pirate_combilock_right_arrows15, model_38985)", $com_pirate_combilock_right_down14);
+	if_setonmouseleave("model_swapper($com_pirate_combilock_right_arrows15, model_7747)", $com_pirate_combilock_right_down14);
 }
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:13_4);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:16_5);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:19_6);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:14_10);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:17_11);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:20_12);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:15_16);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:18_17);
-if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $widget_26:21_18);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_left_top4);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_left_middle5);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_left_bottom6);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_centre_top10);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_centre_middle11);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_centre_bottom12);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_right_top16);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_right_middle17);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $com_pirate_combilock_right_bottom18);
 ~script3773(
-	0 = $widget_26:13_4, 
-	1 = $widget_26:16_5, 
-	2 = $widget_26:19_6, 
-	3 = $widget_26:14_10, 
-	4 = $widget_26:17_11, 
-	5 = $widget_26:20_12, 
-	6 = $widget_26:15_16, 
-	7 = $widget_26:18_17, 
-	8 = $widget_26:21_18
+	0 = $com_pirate_combilock_left_top4, 
+	1 = $com_pirate_combilock_left_middle5, 
+	2 = $com_pirate_combilock_left_bottom6, 
+	3 = $com_pirate_combilock_centre_top10, 
+	4 = $com_pirate_combilock_centre_middle11, 
+	5 = $com_pirate_combilock_centre_bottom12, 
+	6 = $com_pirate_combilock_right_top16, 
+	7 = $com_pirate_combilock_right_middle17, 
+	8 = $com_pirate_combilock_right_bottom18
 );
 if_setonvartransmit("script3767(
-	0 = $widget_26:0_0, 
-	1 = $widget_26:13_4, 
-	2 = $widget_26:16_5, 
-	3 = $widget_26:19_6, 
-	4 = $widget_26:14_10, 
-	5 = $widget_26:17_11, 
-	6 = $widget_26:20_12, 
-	7 = $widget_26:15_16, 
-	8 = $widget_26:18_17, 
-	9 = $widget_26:21_18
-){var531}", $widget_26:0_0);
-if_setop(1, "Rotate", $widget_26:5_1);
-if_setop(1, "Rotate", $widget_26:6_2);
-if_setop(1, "Rotate", $widget_26:8_7);
-if_setop(1, "Rotate", $widget_26:9_8);
-if_setop(1, "Rotate", $widget_26:11_13);
-if_setop(1, "Rotate", $widget_26:12_14);
-if_setopbase("<col=ff9040>Left column</col>", $widget_26:5_1);
-if_setopbase("<col=ff9040>Left column</col>", $widget_26:6_2);
-if_setopbase("<col=ff9040>Centre column</col>", $widget_26:8_7);
-if_setopbase("<col=ff9040>Centre column</col>", $widget_26:9_8);
-if_setopbase("<col=ff9040>Right column</col>", $widget_26:11_13);
-if_setopbase("<col=ff9040>Right column</col>", $widget_26:12_14);
+	0 = $com_pirate_combilock_universe0, 
+	1 = $com_pirate_combilock_left_top4, 
+	2 = $com_pirate_combilock_left_middle5, 
+	3 = $com_pirate_combilock_left_bottom6, 
+	4 = $com_pirate_combilock_centre_top10, 
+	5 = $com_pirate_combilock_centre_middle11, 
+	6 = $com_pirate_combilock_centre_bottom12, 
+	7 = $com_pirate_combilock_right_top16, 
+	8 = $com_pirate_combilock_right_middle17, 
+	9 = $com_pirate_combilock_right_bottom18
+){var531}", $com_pirate_combilock_universe0);
+if_setop(1, "Rotate", $com_pirate_combilock_left_up1);
+if_setop(1, "Rotate", $com_pirate_combilock_left_down2);
+if_setop(1, "Rotate", $com_pirate_combilock_centre_up7);
+if_setop(1, "Rotate", $com_pirate_combilock_centre_down8);
+if_setop(1, "Rotate", $com_pirate_combilock_right_up13);
+if_setop(1, "Rotate", $com_pirate_combilock_right_down14);
+if_setopbase("<col=ff9040>Left column</col>", $com_pirate_combilock_left_up1);
+if_setopbase("<col=ff9040>Left column</col>", $com_pirate_combilock_left_down2);
+if_setopbase("<col=ff9040>Centre column</col>", $com_pirate_combilock_centre_up7);
+if_setopbase("<col=ff9040>Centre column</col>", $com_pirate_combilock_centre_down8);
+if_setopbase("<col=ff9040>Right column</col>", $com_pirate_combilock_right_up13);
+if_setopbase("<col=ff9040>Right column</col>", $com_pirate_combilock_right_down14);
 if_setonop("script3770(
 	0 = event_op, 
 	1 = 1, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:5_1);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_left_up1);
 if_setonop("script3770(
 	0 = event_op, 
 	1 = 3, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:6_2);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_left_down2);
 if_setonop("script3771(
 	0 = event_op, 
 	1 = 1, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:8_7);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_centre_up7);
 if_setonop("script3771(
 	0 = event_op, 
 	1 = 3, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:9_8);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_centre_down8);
 if_setonop("script3772(
 	0 = event_op, 
 	1 = 1, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:11_13);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_right_up13);
 if_setonop("script3772(
 	0 = event_op, 
 	1 = 3, 
-	2 = $widget_26:13_4, 
-	3 = $widget_26:16_5, 
-	4 = $widget_26:19_6, 
-	5 = $widget_26:14_10, 
-	6 = $widget_26:17_11, 
-	7 = $widget_26:20_12, 
-	8 = $widget_26:15_16, 
-	9 = $widget_26:18_17, 
-	10 = $widget_26:21_18
-)", $widget_26:12_14);
+	2 = $com_pirate_combilock_left_top4, 
+	3 = $com_pirate_combilock_left_middle5, 
+	4 = $com_pirate_combilock_left_bottom6, 
+	5 = $com_pirate_combilock_centre_top10, 
+	6 = $com_pirate_combilock_centre_middle11, 
+	7 = $com_pirate_combilock_centre_bottom12, 
+	8 = $com_pirate_combilock_right_top16, 
+	9 = $com_pirate_combilock_right_middle17, 
+	10 = $com_pirate_combilock_right_bottom18
+)", $com_pirate_combilock_right_down14);

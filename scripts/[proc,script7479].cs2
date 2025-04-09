@@ -1,27 +1,27 @@
 // 7479
 [proc,script7479]
 def_int $int0 = calc(enum_getoutputcount(enum_5625) + 9 + 1);
-def_int $count1 = enum_getoutputcount(enum_5625);
+def_int $int1 = enum_getoutputcount(enum_5625);
 def_dbrow $dbrow2 = null;
-def_int $count3 = 0;
+def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_varp $varp6 = null;
 def_string $string0 = "";
 def_int $int7 = 0;
-while ($count3 < $count1) {
-	$dbrow2 = enum(int, dbrow, enum_5625, $count3);
+while ($int3 < $int1) {
+	$dbrow2 = enum(int, dbrow, enum_5625, $int3);
 	if ($dbrow2 ! null) {
-		$varp6 = db_getfield($dbrow2, dbtable_80:0, 0);
+		$varp6 = db_getfield($dbrow2, hiscores_activity_info:activityvarp, 0);
 		$int4 = ~max(0, hiscore_getbosskills($varp6));
 		$int5 = ~max(0, calc(hiscore_getbossrank($varp6) + 1));
-		if (cc_find(interface_894:8, $int0) = ^true) {
+		if (cc_find(hiscores:hiscores_activities, $int0) = ^true) {
 			cc_settext(~script7513($int4));
 		}
 		switch_dbrow ($dbrow2) {
 			case dbrow_3997 :
 				if ($int5 > 0) {
-					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>All: <~tostring_spacer(~min($int4, ^max_32bit_int), ",")> Rank: <~tostring_spacer($int5, ",")>";
+					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>All: <~tostring_spacer(~min($int4, ^max_32bit_int), ",")> Rank: <~tostring_spacer($int5, ",")>";
 					$int7 = calc(hiscore_getbossrank(varp2201) + 1);
 					$string0 = append($string0, "<br>Beginner: <~tostring_spacer(~max(0, hiscore_getbosskills(varp2201)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
 					$int7 = calc(hiscore_getbossrank(varp1111) + 1);
@@ -35,19 +35,19 @@ while ($count3 < $count1) {
 					$int7 = calc(hiscore_getbossrank(varp1534) + 1);
 					$string0 = append($string0, "<br>Master: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1534)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
 				} else {
-					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>Rank: Unranked";
+					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: Unranked";
 				}
 			case default :
 				if ($int5 > 0) {
-					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>Rank: <~tostring_spacer($int5, ",")><br>Score: <~tostring_spacer($int4, ",")>";
+					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: <~tostring_spacer($int5, ",")><br>Score: <~tostring_spacer($int4, ",")>";
 				} else {
-					$string0 = "<db_getfield($dbrow2, dbtable_80:1, 0)><br>Rank: Unranked";
+					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: Unranked";
 				}
 		}
-		if (cc_find(interface_894:8, $count3) = ^true) {
+		if (cc_find(hiscores:hiscores_activities, $int3) = ^true) {
 			~script7516($string0, 0, 0);
 		}
 		$int0 = calc($int0 + 2);
 	}
-	$count3 = calc($count3 + 1);
+	$int3 = calc($int3 + 1);
 }

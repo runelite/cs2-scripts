@@ -1,20 +1,20 @@
 // 3784
-[clientscript,gnome_cuisine_update_if](component $widget_49:3_0, component $widget_49:4_1, component $widget_49:8_2, component $widget_49:6_3, enum $enum4)
-~gnome_show_cuisine($widget_49:3_0, $widget_49:4_1, $widget_49:8_2, $widget_49:6_3, $enum4);
-def_int $count5 = 0;
-def_int $count6 = enum_getoutputcount($enum4);
+[clientscript,gnome_cuisine_update_if](component $com_aluft_cooking_cuisine0, component $com_aluft_cooking_cuisine_clickzone1, component $com_aluft_cooking_ingredients2, component $com_aluft_cooking_aluft_balck_rect3, enum $enum4)
+~gnome_show_cuisine($com_aluft_cooking_cuisine0, $com_aluft_cooking_cuisine_clickzone1, $com_aluft_cooking_ingredients2, $com_aluft_cooking_aluft_balck_rect3, $enum4);
+def_int $int5 = 0;
+def_int $int6 = enum_getoutputcount($enum4);
 def_struct $struct7 = null;
-while ($count5 < $count6) {
-	$struct7 = enum(int, struct, $enum4, $count5);
+while ($int5 < $int6) {
+	$struct7 = enum(int, struct, $enum4, $int5);
 	if ($struct7 ! null & %varbit2517 = struct_param($struct7, param_1056)) {
-		$count5 = $count6;
+		$int5 = $int6;
 	} else {
 		$struct7 = null;
 	}
-	$count5 = calc($count5 + 1);
+	$int5 = calc($int5 + 1);
 }
 if ($struct7 = null) {
 	if_close;
 	return;
 }
-~gnome_show_ingredients($widget_49:8_2, $struct7, $widget_49:6_3);
+~gnome_show_ingredients($com_aluft_cooking_ingredients2, $struct7, $com_aluft_cooking_aluft_balck_rect3);

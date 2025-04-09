@@ -8,14 +8,14 @@ if_sethide(true, $component8);
 if_sethide(true, $component1);
 if_sethide(true, $component2);
 if_sethide(true, $component3);
-~script3723(interface_442:4, 0, "Experience");
-~script3723(interface_442:5, 0, "Imbues");
-~script3723(interface_442:6, 0, "Other");
+~script3723(soul_wars_rewards:xp_rewards_tab, 0, "Experience");
+~script3723(soul_wars_rewards:imbue_rewards_tab, 0, "Imbues");
+~script3723(soul_wars_rewards:other_rewards_tab, 0, "Other");
 if ($int0 = 0) {
 	~script536(-1, $component1, $component4, $component5, $component2, $component3);
-	if_sethide(false, interface_442:24);
-	if_sethide(false, interface_442:14);
-	~script3723(interface_442:4, 1, "Experience");
+	if_sethide(false, soul_wars_rewards:confirm_xp);
+	if_sethide(false, soul_wars_rewards:xp_rewards);
+	~script3723(soul_wars_rewards:xp_rewards_tab, 1, "Experience");
 	if_setonop("soul_wars_rewards_init(
 		0 = 1, 
 		1 = $component1, 
@@ -31,7 +31,7 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:5);
+	)", soul_wars_rewards:imbue_rewards_tab);
 	if_setonop("soul_wars_rewards_init(
 		0 = 2, 
 		1 = $component1, 
@@ -47,12 +47,12 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:6);
+	)", soul_wars_rewards:other_rewards_tab);
 } else if ($int0 = 1) {
 	~script675(-1, $component2, $component6, $component7, $component12, 0, $component1, $component3);
-	if_sethide(false, interface_442:23);
-	if_sethide(false, interface_442:16);
-	~script3723(interface_442:5, 1, "Imbues");
+	if_sethide(false, soul_wars_rewards:confirm_imbue);
+	if_sethide(false, soul_wars_rewards:imbue_rewards);
+	~script3723(soul_wars_rewards:imbue_rewards_tab, 1, "Imbues");
 	if_setonop("soul_wars_rewards_init(
 		0 = 0, 
 		1 = $component1, 
@@ -68,7 +68,7 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:4);
+	)", soul_wars_rewards:xp_rewards_tab);
 	if_setonop("soul_wars_rewards_init(
 		0 = 2, 
 		1 = $component1, 
@@ -84,8 +84,8 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:6);
-	if_setoninvtransmit("script674(-1, $component2, $component6, $component7, interface_442:17, $component1, $component3){inv}", $component2);
+	)", soul_wars_rewards:other_rewards_tab);
+	if_setoninvtransmit("script674(-1, $component2, $component6, $component7, soul_wars_rewards:imbue_scrollbar, $component1, $component3){inv}", $component2);
 } else if ($int0 = 2) {
 	~script842(
 		0 = -1, 
@@ -98,9 +98,9 @@ if ($int0 = 0) {
 		7 = $component1, 
 		8 = $component2
 	);
-	if_sethide(false, interface_442:22);
-	if_sethide(false, interface_442:19);
-	~script3723(interface_442:6, 1, "Other");
+	if_sethide(false, soul_wars_rewards:confirm_other);
+	if_sethide(false, soul_wars_rewards:other_rewards);
+	~script3723(soul_wars_rewards:other_rewards_tab, 1, "Other");
 	if_setonop("soul_wars_rewards_init(
 		0 = 0, 
 		1 = $component1, 
@@ -116,7 +116,7 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:4);
+	)", soul_wars_rewards:xp_rewards_tab);
 	if_setonop("soul_wars_rewards_init(
 		0 = 1, 
 		1 = $component1, 
@@ -132,7 +132,7 @@ if ($int0 = 0) {
 		11 = $component11, 
 		12 = $component12, 
 		13 = $component13
-	)", interface_442:5);
+	)", soul_wars_rewards:imbue_rewards_tab);
 }
 ~script852($component10);
 ~script852($component11);

@@ -1,33 +1,33 @@
 // 363
-[proc,soul_wars_game_hud_update](component $widget_375:24_0, component $widget_375:26_1, component $widget_375:28_2, component $widget_375:29_3, component $widget_375:31_4, component $widget_375:33_5, component $widget_375:34_6, component $widget_375:36_7, component $widget_375:38_8, component $widget_375:6_9)
-~script373($widget_375:6_9, %varbit9794);
-~script365($widget_375:29_3, %varbit3812);
-~script366($widget_375:33_5, %varbit9849);
+[proc,soul_wars_game_hud_update](component $com_soul_wars_game_graveyard_west0, component $com_soul_wars_game_graveyard_west_fill1, component $com_soul_wars_game_graveyard_west_bar2, component $com_soul_wars_game_obelisk3, component $com_soul_wars_game_obelisk_fill4, component $com_soul_wars_game_obelisk_bar5, component $com_soul_wars_game_graveyard_east6, component $com_soul_wars_game_graveyard_east_fill7, component $com_soul_wars_game_graveyard_east_bar8, component $com_soul_wars_game_activity_bar_fill9)
+~script373($com_soul_wars_game_activity_bar_fill9, %varbit9794);
+~script365($com_soul_wars_game_obelisk3, %varbit3812);
+~script366($com_soul_wars_game_obelisk_bar5, %varbit9849);
 switch_int (%varbit3809) {
 	case 1 :
-		if_setcolour(0x3366ff, $widget_375:31_4);
+		if_setcolour(0x3366ff, $com_soul_wars_game_obelisk_fill4);
 	case 2 :
-		if_setcolour(0xff3232, $widget_375:31_4);
+		if_setcolour(0xff3232, $com_soul_wars_game_obelisk_fill4);
 	case default :
-		if_setcolour(0xa5a5a5, $widget_375:31_4);
+		if_setcolour(0xa5a5a5, $com_soul_wars_game_obelisk_fill4);
 }
-~script365($widget_375:24_0, %varbit3814);
-~script366($widget_375:28_2, %varbit9852);
+~script365($com_soul_wars_game_graveyard_west0, %varbit3814);
+~script366($com_soul_wars_game_graveyard_west_bar2, %varbit9852);
 switch_int (%varbit3811) {
 	case 1 :
-		if_setcolour(0x3366ff, $widget_375:26_1);
+		if_setcolour(0x3366ff, $com_soul_wars_game_graveyard_west_fill1);
 	case 2 :
-		if_setcolour(0xff3232, $widget_375:26_1);
+		if_setcolour(0xff3232, $com_soul_wars_game_graveyard_west_fill1);
 	case default :
-		if_setcolour(0xa5a5a5, $widget_375:26_1);
+		if_setcolour(0xa5a5a5, $com_soul_wars_game_graveyard_west_fill1);
 }
-~script365($widget_375:34_6, %varbit3813);
-~script366($widget_375:38_8, %varbit9850);
+~script365($com_soul_wars_game_graveyard_east6, %varbit3813);
+~script366($com_soul_wars_game_graveyard_east_bar8, %varbit9850);
 switch_int (%varbit3810) {
 	case 1 :
-		if_setcolour(0x3366ff, $widget_375:36_7);
+		if_setcolour(0x3366ff, $com_soul_wars_game_graveyard_east_fill7);
 	case 2 :
-		if_setcolour(0xff3232, $widget_375:36_7);
+		if_setcolour(0xff3232, $com_soul_wars_game_graveyard_east_fill7);
 	case default :
-		if_setcolour(0xa5a5a5, $widget_375:36_7);
+		if_setcolour(0xa5a5a5, $com_soul_wars_game_graveyard_east_fill7);
 }

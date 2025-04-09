@@ -1,14 +1,14 @@
 // 2316
-[clientscript,tob_partydetails_init](component $widget_50:0_0, component $widget_50:4_1, component $widget_50:8_2, component $widget_50:14_3, component $widget_50:27_4, component $widget_50:28_5, component $widget_50:31_6, component $widget_50:42_7, component $widget_50:2_8, component $widget_50:9_9, component $widget_50:46_10, component $widget_50:49_11, component $widget_50:53_12, component $widget_50:57_13, component $widget_50:47_14)
+[clientscript,tob_partydetails_init](component $com_tob_partydetails_universe0, component $com_tob_partydetails_top1, component $com_tob_partydetails_header2, component $com_tob_partydetails_timer3, component $com_tob_partydetails_current4, component $com_tob_partydetails_middle5, component $com_tob_partydetails_sortarea6, component $com_tob_partydetails_applicants7, component $com_tob_partydetails_back8, component $com_tob_partydetails_refresh9, component $com_tob_partydetails_unblock10, component $com_tob_partydetails_size11, component $com_tob_partydetails_level12, component $com_tob_partydetails_action13, component $com_tob_partydetails_mode14)
 %varcint178 = 0;
-cc_deleteall($widget_50:27_4);
-cc_deleteall($widget_50:42_7);
-if_sethide(true, $widget_50:8_2);
-if_sethide(true, $widget_50:31_6);
-cc_deleteall($widget_50:4_1);
-cc_deleteall($widget_50:28_5);
-cc_create($widget_50:4_1, ^iftype_text, 0);
-.cc_create($widget_50:28_5, ^iftype_text, 0);
+cc_deleteall($com_tob_partydetails_current4);
+cc_deleteall($com_tob_partydetails_applicants7);
+if_sethide(true, $com_tob_partydetails_header2);
+if_sethide(true, $com_tob_partydetails_sortarea6);
+cc_deleteall($com_tob_partydetails_top1);
+cc_deleteall($com_tob_partydetails_middle5);
+cc_create($com_tob_partydetails_top1, ^iftype_text, 0, false);
+.cc_create($com_tob_partydetails_middle5, ^iftype_text, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -23,46 +23,46 @@ cc_settextshadow(true);
 .cc_settextshadow(true);
 cc_settext("Loading...");
 .cc_settext("Loading...");
-cc_deleteall($widget_50:0_0);
-if_sethide(true, $widget_50:2_8);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:2_8));
+cc_deleteall($com_tob_partydetails_universe0);
+if_sethide(true, $com_tob_partydetails_back8);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_back8), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:9_9);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:9_9));
+if_sethide(true, $com_tob_partydetails_refresh9);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_refresh9), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:46_10);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:46_10));
+if_sethide(true, $com_tob_partydetails_unblock10);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_unblock10), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:49_11);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:49_11));
+if_sethide(true, $com_tob_partydetails_size11);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_size11), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:53_12);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:53_12));
+if_sethide(true, $com_tob_partydetails_level12);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_level12), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:57_13);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:57_13));
+if_sethide(true, $com_tob_partydetails_action13);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_action13), false);
 cc_sethide(true);
-if_sethide(true, $widget_50:47_14);
-cc_create($widget_50:0_0, ^iftype_rectangle, enum(component, int, enum_1939, $widget_50:47_14));
+if_sethide(true, $com_tob_partydetails_mode14);
+cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, enum(component, int, enum_1939, $com_tob_partydetails_mode14), false);
 cc_sethide(true);
 def_int $int15 = enum_getoutputcount(enum_1939);
 def_int $int16 = 5;
 while ($int16 > 0) {
-	cc_create($widget_50:0_0, ^iftype_rectangle, $int15);
+	cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, $int15, false);
 	cc_sethide(true);
 	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
 $int16 = 10;
 while ($int16 > 0) {
-	cc_create($widget_50:0_0, ^iftype_rectangle, $int15);
+	cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, $int15, false);
 	cc_sethide(true);
 	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
 $int16 = 10;
 while ($int16 > 0) {
-	cc_create($widget_50:0_0, ^iftype_rectangle, $int15);
+	cc_create($com_tob_partydetails_universe0, ^iftype_rectangle, $int15, false);
 	cc_sethide(true);
 	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
-if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $widget_50:14_3);
-if_setontimer(null, $widget_50:0_0);
+if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_tob_partydetails_timer3);
+if_setontimer(null, $com_tob_partydetails_universe0);

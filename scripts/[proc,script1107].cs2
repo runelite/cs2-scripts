@@ -1,24 +1,24 @@
 // 1107
-[proc,script1107](int $int0, int $int1, component $widget_676:8_2, int $int3, component $widget_676:5_4, int $int5)
+[proc,script1107](int $int0, int $int1, component $com_league_firsts_league_filter2, int $int3, component $com_league_firsts_dropdown_container4, int $int5)
 if ($int0 = 1) {
 	sound_synth(interface_select1, 1, 0);
-	if_sethide(true, interface_676:22);
-	cc_deleteall(interface_676:22);
-	if_sethide(true, $widget_676:5_4);
-	~league_setup_display_hoveroff($widget_676:8_2, $int5);
+	if_sethide(true, league_firsts:dropdown_league);
+	cc_deleteall(league_firsts:dropdown_league);
+	if_sethide(true, $com_league_firsts_dropdown_container4);
+	~league_setup_display_hoveroff($com_league_firsts_league_filter2, $int5);
 	if ($int1 ! -1) {
 		~script858(
-			0 = interface_676:1, 
+			0 = league_firsts:frame, 
 			1 = 44302345, 
-			2 = interface_676:10, 
-			3 = interface_676:11, 
-			4 = interface_676:16, 
-			5 = interface_676:17, 
-			6 = interface_676:18, 
-			7 = interface_676:12, 
-			8 = interface_676:7, 
+			2 = league_firsts:data, 
+			3 = league_firsts:name_column, 
+			4 = league_firsts:medal_column, 
+			5 = league_firsts:title_column, 
+			6 = league_firsts:date_column, 
+			7 = league_firsts:scrollbar, 
+			8 = league_firsts:close_button, 
 			9 = $int1
 		);
-		~script1109($widget_676:8_2, $int1);
+		~script1109($com_league_firsts_league_filter2, $int1);
 	}
 }

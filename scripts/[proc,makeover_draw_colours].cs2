@@ -1,6 +1,6 @@
 // 7077
-[proc,makeover_draw_colours](component $widget_516:24_0, enum $enum1, enum $enum2)(int)
-cc_deleteall($widget_516:24_0);
+[proc,makeover_draw_colours](component $com_makeover_colours0, enum $enum1, enum $enum2)(int)
+cc_deleteall($com_makeover_colours0);
 if ($enum1 = null) {
 	return(1);
 }
@@ -24,7 +24,7 @@ while ($int6 < enum_getoutputcount($enum1)) {
 	} else {
 		$int9 = calc($int9 + $int3);
 	}
-	cc_create($widget_516:24_0, ^iftype_rectangle, $int5);
+	cc_create($com_makeover_colours0, ^iftype_rectangle, $int5, false);
 	cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);
@@ -38,7 +38,7 @@ while ($int6 < enum_getoutputcount($enum1)) {
 		cc_setonmouseleave("makeover_hover_colour(event_com, event_comsubid, false)");
 	}
 	$int5 = calc($int5 + 1);
-	cc_create($widget_516:24_0, ^iftype_rectangle, $int5);
+	cc_create($com_makeover_colours0, ^iftype_rectangle, $int5, false);
 	cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(27, 27, ^setsize_abs, ^setsize_abs);
 	cc_setfill(false);

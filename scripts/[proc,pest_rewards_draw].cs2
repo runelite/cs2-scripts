@@ -141,7 +141,7 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int5 = ~pest_rewards_itemdraw(
-	0 = dummy_copper_ore_980, 
+	0 = cert_highwayman_mask_980, 
 	1 = $int6, 
 	2 = $int7, 
 	3 = $int7, 
@@ -155,7 +155,7 @@ $int5 = ~pest_rewards_itemdraw(
 );
 $int6 = calc($int6 + 32 + 3);
 $int5 = ~pest_rewards_itemdraw(
-	0 = banana_tree_seed_5_5235, 
+	0 = banana_seed_5_5235, 
 	1 = $int6, 
 	2 = 0, 
 	3 = $int7, 
@@ -170,7 +170,7 @@ $int5 = ~pest_rewards_itemdraw(
 $int6 = calc($int6 + 32);
 $int6, $int5 = ~pest_rewards_divider(5, $component2, $int6, $int5);
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_knight_mace_8841, 
+	0 = pest_void_knight_mace_8841, 
 	1 = $int6, 
 	2 = 0, 
 	3 = $int7, 
@@ -183,7 +183,7 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_knight_top_8839, 
+	0 = pest_void_knight_top_8839, 
 	1 = $int6, 
 	2 = $int7, 
 	3 = $int7, 
@@ -197,7 +197,7 @@ $int5 = ~pest_rewards_itemdraw(
 );
 $int6 = calc($int6 + 32 + 3);
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_knight_robe_8840, 
+	0 = pest_void_knight_robes_8840, 
 	1 = $int6, 
 	2 = 0, 
 	3 = $int7, 
@@ -210,7 +210,7 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_knight_gloves_8842, 
+	0 = pest_void_knight_gloves_8842, 
 	1 = $int6, 
 	2 = $int7, 
 	3 = $int7, 
@@ -224,7 +224,7 @@ $int5 = ~pest_rewards_itemdraw(
 );
 $int6 = calc($int6 + 32 + 3);
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_mage_helm_11663, 
+	0 = game_pest_mage_helm_11663, 
 	1 = $int6, 
 	2 = 0, 
 	3 = $int7, 
@@ -237,7 +237,7 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_ranger_helm_11664, 
+	0 = game_pest_archer_helm_11664, 
 	1 = $int6, 
 	2 = $int7, 
 	3 = $int7, 
@@ -251,7 +251,7 @@ $int5 = ~pest_rewards_itemdraw(
 );
 $int6 = calc($int6 + 32 + 3);
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_melee_helm_11665, 
+	0 = game_pest_melee_helm_11665, 
 	1 = $int6, 
 	2 = 0, 
 	3 = $int7, 
@@ -264,7 +264,7 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int5 = ~pest_rewards_itemdraw(
-	0 = void_seal_8_11666, 
+	0 = pest_seal_8_11666, 
 	1 = $int6, 
 	2 = $int7, 
 	3 = $int7, 
@@ -277,28 +277,28 @@ $int5 = ~pest_rewards_itemdraw(
 	10 = $int0
 );
 $int6 = calc($int6 + 32 + 5);
-def_string $text0 = "";
+def_string $string0 = "";
 cc_deleteall($component3);
 $int5 = 0;
 if ($int0 ! -1) {
-	$text0 = enum(int, string, enum_2285, $int0);
-	~pest_rewards_confirmdraw(false, $text0, $component4);
+	$string0 = enum(int, string, enum_2285, $int0);
+	~pest_rewards_confirmdraw(false, $string0, $component4);
 	while ($int5 < $int0) {
-		cc_create($component3, ^iftype_rectangle, $int5);
+		cc_create($component3, ^iftype_rectangle, $int5, false);
 		cc_sethide(true);
 		$int5 = calc($int5 + 1);
 	}
-	cc_create($component3, ^iftype_rectangle, $int5);
+	cc_create($component3, ^iftype_rectangle, $int5, false);
 	cc_sethide(false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setop(1, "Confirm");
-	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component4)");
-	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component4)");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $string0, $component4)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $string0, $component4)");
 	cc_setonop("pest_rewards_confirmop(event_op, $component1, $component2, $component3, $component4)");
 } else {
 	$int5 = ~v2_stone_button_in_filled($component4);
-	cc_create($component4, ^iftype_text, $int5);
+	cc_create($component4, ^iftype_text, $int5, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x7f7f7f);

@@ -3,71 +3,71 @@
 def_int $int16 = calc(bitcount($int2) + bitcount($int3) + bitcount($int4));
 def_int $int17 = calc(bitcount($int5) + bitcount($int6) + bitcount($int7));
 if ($int16 = 0) {
-	if_settext("You haven't found any pets yet", interface_148:6);
+	if_settext("You haven't found any pets yet", pet_insurance:pets_message);
 	return;
 }
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $height18 = if_getheight($component0);
-def_int $width19 = 233;
+def_int $int18 = if_getheight($component0);
+def_int $int19 = 233;
 def_int $int20 = 30;
 def_int $int21 = 0;
-def_int $height22 = 0;
+def_int $int22 = 0;
 def_int $int23 = 0;
-def_int $x24 = 0;
-def_int $y25 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
 def_int $int26 = 0;
-cc_create($component0, ^iftype_rectangle, $int23);
+cc_create($component0, ^iftype_rectangle, $int23, false);
 $int23 = calc($int23 + 1);
-cc_setposition($x24, $y25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(233, $int20, ^setsize_abs, ^setsize_abs);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(215);
-cc_create($component0, ^iftype_text, $int23);
+cc_create($component0, ^iftype_text, $int23, false);
 $int23 = calc($int23 + 1);
-cc_setposition($x24, $y25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
 cc_setcolour(0xff981f);
-cc_setsize($width19, $int20, ^setsize_abs, ^setsize_abs);
+cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Reclaimable Pets");
-$height22 = $int20;
-.cc_create($component0, ^iftype_rectangle, $int23);
+$int22 = $int20;
+.cc_create($component0, ^iftype_rectangle, $int23, false);
 .cc_setsize(233, $int20, ^setsize_abs, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^black);
 .cc_settrans(215);
 $int23 = calc($int23 + 1);
-cc_create($component0, ^iftype_text, $int23);
+cc_create($component0, ^iftype_text, $int23, false);
 cc_settextfont(b12_full);
 cc_setcolour(0xff981f);
-cc_setsize($width19, $int20, ^setsize_abs, ^setsize_abs);
+cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Insured Pets");
 $int23 = calc($int23 + 1);
-cc_create($component0, ^iftype_text, $int23);
+cc_create($component0, ^iftype_text, $int23, false);
 $int23 = calc($int23 + 1);
-cc_create($component0, ^iftype_text, $int23);
+cc_create($component0, ^iftype_text, $int23, false);
 $int23 = calc($int23 + 1);
 if (calc($int16 - $int17) <= 0) {
-	cc_setposition($x24, $height22, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int24, $int22, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_setcolour(0x9f9f9f);
-	cc_setsize($width19, $int20, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_settext("You have no reclaimable pets");
-	$height22 = calc($height22 + $int20);
+	$int22 = calc($int22 + $int20);
 } else {
 	cc_sethide(true);
-	$int23, $height22, $int21 = ~pet_insurance_draw_pets(
+	$int23, $int22, $int21 = ~pet_insurance_draw_pets(
 		0 = 1, 
 		1 = $component0, 
 		2 = $int23, 
-		3 = $height22, 
+		3 = $int22, 
 		4 = $int21, 
 		5 = $int2, 
 		6 = $int3, 
@@ -85,29 +85,29 @@ if (calc($int16 - $int17) <= 0) {
 		18 = $int15
 	);
 }
-$y25 = $height22;
-.cc_setposition($x24, $y25, ^setpos_abs_left, ^setpos_abs_top);
+$int25 = $int22;
+.cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
 if (cc_find($component0, calc(.cc_getid + 1)) = ^true) {
-	cc_setposition(0, $y25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_top);
 }
-$height22 = calc($height22 + $int20);
+$int22 = calc($int22 + $int20);
 if ($int17 <= 0) {
 	if (cc_find($component0, calc(.cc_getid + 2)) = ^true) {
-		cc_setposition($x24, $height22, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int24, $int22, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_setcolour(0x9f9f9f);
-		cc_setsize($width19, $int20, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		cc_settext("You have no other pets");
-		$height22 = calc($height22 + $int20);
+		$int22 = calc($int22 + $int20);
 	}
 } else {
-	$int23, $height22, $int21 = ~pet_insurance_draw_pets(
+	$int23, $int22, $int21 = ~pet_insurance_draw_pets(
 		0 = 0, 
 		1 = $component0, 
 		2 = $int23, 
-		3 = $height22, 
+		3 = $int22, 
 		4 = $int21, 
 		5 = $int2, 
 		6 = $int3, 
@@ -126,8 +126,8 @@ if ($int17 <= 0) {
 	);
 }
 if_setscrollpos(0, 0, $component0);
-if ($height22 > $height18) {
-	if_setscrollsize(0, $height22, $component0);
+if ($int22 > $int18) {
+	if_setscrollsize(0, $int22, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

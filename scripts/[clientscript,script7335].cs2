@@ -1,10 +1,10 @@
 // 7335
 [clientscript,script7335]
-def_component $component0 = interface_885:3;
-def_component $component1 = interface_885:4;
-def_component $component2 = interface_885:5;
-def_int $index3 = ~script7334(coord);
-def_int $flags4 = ~script7333($index3);
+def_component $component0 = chartering_menu_side:list_background;
+def_component $component1 = chartering_menu_side:list_content;
+def_component $component2 = chartering_menu_side:list_scroller;
+def_int $int3 = ~script7334(coord);
+def_int $int4 = ~script7333($int3);
 cc_deleteall($component0);
 cc_deleteall($component1);
 cc_deleteall($component2);
@@ -16,7 +16,7 @@ def_int $int7 = 0;
 def_dbrow $dbrow8 = enum(int, dbrow, enum_5565, $int5);
 while ($dbrow8 ! null) {
 	$dbrow8;
-	$int6, $int7 = ~script7336(intarray0, $int6, $int7, $flags4, 0);
+	$int6, $int7 = ~script7336(intarray0, $int6, $int7, $int4, 0);
 	$int5 = calc($int5 + 1);
 	$dbrow8 = enum(int, dbrow, enum_5565, $int5);
 }

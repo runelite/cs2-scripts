@@ -1,6 +1,6 @@
 // 2712
-[clientscript,1v1arena_clear_resetbutton](component $component0, int $comsubid1, int $comsubid2, int $clock3)
-if (clientclock < $clock3) {
+[clientscript,1v1arena_clear_resetbutton](component $component0, int $comsubid1, int $comsubid2, int $int3)
+if (clientclock < $int3) {
 	return;
 }
 if (cc_find($component0, $comsubid2) = ^true) {

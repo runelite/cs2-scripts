@@ -28,9 +28,9 @@ if ($int6 >= 0) {
 } else {
 	$string2 = "  Kills>";
 }
-def_string $text3 = append(append("  XP Gained: <br>", $string2), $string1);
-if (cc_find(interface_729:14, $comsubid1) = ^true) {
-	cc_settext($text3);
+def_string $string3 = append(append("  XP Gained: <br>", $string2), $string1);
+if (cc_find(xptracker:tracker_text_right_desc, $comsubid1) = ^true) {
+	cc_settext($string3);
 }
 def_int $int7 = ~script5379($stat0, $int5);
 def_string $string4 = "Done!";
@@ -43,7 +43,7 @@ if ($int6 >= 0) {
 } else {
 	$string4 = "";
 }
-def_string $text5 = append(append($string0, "<br>"), $string4);
-if (cc_find(interface_729:15, $comsubid1) = ^true) {
-	cc_settext($text5);
+def_string $string5 = append(append($string0, "<br>"), $string4);
+if (cc_find(xptracker:tracker_text_right_data, $comsubid1) = ^true) {
+	cc_settext($string5);
 }

@@ -1,10 +1,10 @@
 // 7252
 [clientscript,omnishop_swapsideitem](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, string $string0, dbrow $dbrow4)
-def_int $size5 = inv_size(inv);
-if ($comsubid1 < 0 | $comsubid1 >= $size5) {
+def_int $comsubid5 = inv_size(inv);
+if ($comsubid1 < 0 | $comsubid1 >= $comsubid5) {
 	return;
 }
-if ($dropsubid3 < 0 | $dropsubid3 >= $size5) {
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid5) {
 	return;
 }
 if ($drop0 ! $drop2) {

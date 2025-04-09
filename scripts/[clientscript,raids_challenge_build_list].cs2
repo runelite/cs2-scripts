@@ -1,36 +1,36 @@
 // 2290
-[clientscript,raids_challenge_build_list](component $widget_21:1_0, component $widget_21:0_1, component $widget_21:5_2, component $widget_21:6_3)
+[clientscript,raids_challenge_build_list](component $com_raids_challenge_list0, component $com_raids_challenge_backgrounds1, component $com_raids_challenge_scrolling2, component $com_raids_challenge_list_scrollbar3)
 def_int $int4 = 20;
-cc_deleteall($widget_21:1_0);
-cc_create($widget_21:1_0, ^iftype_rectangle, 0);
+cc_deleteall($com_raids_challenge_list0);
+cc_create($com_raids_challenge_list0, ^iftype_rectangle, 0, false);
 cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
 cc_settrans(210);
-def_int $count5 = 1;
+def_int $int5 = 1;
 def_int $int6 = -1;
-if_settext("World <tostring(map_world)>", interface_21:18);
-while ($count5 <= enum_getoutputcount(enum_1915)) {
-	$int6 = enum(int, int, enum_1915, $count5);
-	cc_create($widget_21:0_1, ^iftype_rectangle, calc($count5 - 1));
-	if (calc($count5 % 2) = 1) {
+if_settext("World <tostring(map_world)>", raids_challenge:world);
+while ($int5 <= enum_getoutputcount(enum_1915)) {
+	$int6 = enum(int, int, enum_1915, $int5);
+	cc_create($com_raids_challenge_backgrounds1, ^iftype_rectangle, calc($int5 - 1), false);
+	if (calc($int5 % 2) = 1) {
 		cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, calc($count5 * $int4 - $int4), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, calc($int5 * $int4 - $int4), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(235);
 	}
-	cc_create($widget_21:1_0, ^iftype_text, $count5);
+	cc_create($com_raids_challenge_list0, ^iftype_text, $int5, false);
 	cc_setsize(5, $int4, ^setsize_minus, ^setsize_abs);
-	cc_setposition(5, calc($count5 * $int4 - $int4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(5, calc($int5 * $int4 - $int4), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext(enum(int, string, enum_1914, $int6));
 	cc_setop(1, "Select");
-	cc_setonop("raids_challenge_move_highlight($widget_21:1_0, 0, cc_gety)");
-	$count5 = calc($count5 + 1);
+	cc_setonop("raids_challenge_move_highlight($com_raids_challenge_list0, 0, cc_gety)");
+	$int5 = calc($int5 + 1);
 }
-if_setscrollsize(0, calc($count5 * $int4 - $int4), $widget_21:5_2);
-~scrollbar_vertical($widget_21:6_3, $widget_21:5_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, calc($int5 * $int4 - $int4), $com_raids_challenge_scrolling2);
+~scrollbar_vertical($com_raids_challenge_list_scrollbar3, $com_raids_challenge_scrolling2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

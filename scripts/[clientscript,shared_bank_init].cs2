@@ -1,19 +1,19 @@
 // 5264
-[clientscript,shared_bank_init](component $widget_724:1_0, component $widget_724:2_1, component $widget_724:4_2, component $widget_724:7_3, component $widget_724:9_4, int $widget_724:12_5, component $widget_724:16_6, component $widget_724:10_7, component $widget_724:11_8, component $widget_724:23_9, component $widget_724:25_10, component $widget_724:29_11, component $widget_724:31_12, component $widget_724:35_13, component $widget_724:37_14, component $widget_724:39_15, component $widget_724:41_16, component $widget_724:43_17, component $widget_724:45_18, component $widget_724:34_19, component $widget_724:3_20, int $widget_724:8_21)
-cc_deleteall($widget_724:1_0);
-cc_deleteall($widget_724:10_7);
-def_int $comsubid22 = ~steelborder($widget_724:2_1, "", 1);
+[clientscript,shared_bank_init](component $com_shared_bank_universe0, component $com_shared_bank_frame1, component $com_shared_bank_occupiedslots2, component $com_shared_bank_capacity3, component $com_shared_bank_main_bank4, int $com_shared_bank_storage_unlocks5, component $com_shared_bank_search6, component $com_shared_bank_items7, component $com_shared_bank_scrollbar8, component $com_shared_bank_swap9, component $com_shared_bank_insert10, component $com_shared_bank_item11, component $com_shared_bank_note12, component $com_shared_bank_quantity_layer13, component $com_shared_bank_quantity114, component $com_shared_bank_quantity515, component $com_shared_bank_quantity1016, component $com_shared_bank_quantityx17, component $com_shared_bank_quantityall18, component $com_shared_bank_save_button19, component $com_shared_bank_close20, int $com_shared_bank_countdown21)
+cc_deleteall($com_shared_bank_universe0);
+cc_deleteall($com_shared_bank_items7);
+def_int $int22 = ~steelborder($com_shared_bank_frame1, "", 1);
 def_int $int23 = %var261;
 def_int $int24 = %var262;
-def_int $flags25 = %var263;
-def_int $flags26 = %var264;
-cc_create($widget_724:1_0, ^iftype_text, 0);
+def_int $int25 = %var263;
+def_int $int26 = %var264;
+cc_create($com_shared_bank_universe0, ^iftype_text, 0, false);
 cc_setposition(36, 9, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0xff891f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_settextshadow(true);
-.cc_create($widget_724:1_0, ^iftype_graphic, 1);
+.cc_create($com_shared_bank_universe0, ^iftype_graphic, 1, false);
 .cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
 .cc_setgraphic("ge_smallicons,0");
 ~shared_bank_drawcap($int23, $int24);
@@ -22,44 +22,44 @@ if (~bankmain_searching = 1) {
 } else if (%varcint5 <= 0) {
 	%varcstring359 = "";
 }
-~shared_bank_search_setbutton($widget_724:16_6, $widget_724:1_0, $widget_724:10_7, $widget_724:11_8, $flags25, $widget_724:2_1, $comsubid22, $widget_724:4_2);
+~shared_bank_search_setbutton($com_shared_bank_search6, $com_shared_bank_universe0, $com_shared_bank_items7, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2);
 if_setonop("shared_bank_search_toggle(
 	0 = event_op, 
-	1 = $widget_724:16_6, 
-	2 = $widget_724:1_0, 
-	3 = $widget_724:10_7, 
-	4 = $widget_724:11_8, 
-	5 = $flags25, 
-	6 = $widget_724:2_1, 
-	7 = $comsubid22, 
-	8 = $widget_724:4_2
-)", $widget_724:16_6);
-if_settext(~tostring_spacer($flags25, ","), $widget_724:7_3);
-def_int $flags27 = 0;
-while ($flags27 < $flags25) {
-	cc_create($widget_724:10_7, ^iftype_graphic, $flags27);
+	1 = $com_shared_bank_search6, 
+	2 = $com_shared_bank_universe0, 
+	3 = $com_shared_bank_items7, 
+	4 = $com_shared_bank_scrollbar8, 
+	5 = $int25, 
+	6 = $com_shared_bank_frame1, 
+	7 = $int22, 
+	8 = $com_shared_bank_occupiedslots2
+)", $com_shared_bank_search6);
+if_settext(~tostring_spacer($int25, ","), $com_shared_bank_capacity3);
+def_int $int27 = 0;
+while ($int27 < $int25) {
+	cc_create($com_shared_bank_items7, ^iftype_graphic, $int27, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	$flags27 = calc($flags27 + 1);
+	$int27 = calc($int27 + 1);
 }
-~scrollbar_vertical($widget_724:11_8, $widget_724:10_7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~shared_bank_update($widget_724:1_0, $widget_724:10_7, $widget_724:11_8, $flags25, $widget_724:2_1, $comsubid22, $widget_724:4_2);
-if_setoninvtransmit("shared_bank_update($widget_724:1_0, event_com, $widget_724:11_8, $flags25, $widget_724:2_1, $comsubid22, $widget_724:4_2){inv_659}", $widget_724:10_7);
-if_setonvartransmit("shared_bank_update($widget_724:1_0, event_com, $widget_724:11_8, $flags25, $widget_724:2_1, $comsubid22, $widget_724:4_2){var1666, var304}", $widget_724:10_7);
-~bankmain_swapinsert($widget_724:23_9, $widget_724:25_10);
-if_setonvartransmit("bankmain_swapinsert($widget_724:23_9, $widget_724:25_10){var304}", $widget_724:23_9);
-~bankmain_itemnote($widget_724:29_11, $widget_724:31_12);
-if_setonvartransmit("bankmain_itemnote($widget_724:29_11, $widget_724:31_12){var115}", $widget_724:29_11);
-~bankmain_quantity_buttons($widget_724:37_14, $widget_724:39_15, $widget_724:41_16, $widget_724:43_17, $widget_724:45_18);
-if_setonvartransmit("bankmain_quantity_buttons($widget_724:37_14, $widget_724:39_15, $widget_724:41_16, $widget_724:43_17, $widget_724:45_18){var1666, var304}", $widget_724:35_13);
-~options_bigbutton_init($widget_724:34_19, "Save", b12_full);
-if ($flags26 = 1) {
-	~ge_offers_bigbutton($widget_724:9_4, "Back to bank", 0);
+~scrollbar_vertical($com_shared_bank_scrollbar8, $com_shared_bank_items7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~shared_bank_update($com_shared_bank_universe0, $com_shared_bank_items7, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2);
+if_setoninvtransmit("shared_bank_update($com_shared_bank_universe0, event_com, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2){inv_group_temp}", $com_shared_bank_items7);
+if_setonvartransmit("shared_bank_update($com_shared_bank_universe0, event_com, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2){var1666, var304}", $com_shared_bank_items7);
+~bankmain_swapinsert($com_shared_bank_swap9, $com_shared_bank_insert10);
+if_setonvartransmit("bankmain_swapinsert($com_shared_bank_swap9, $com_shared_bank_insert10){var304}", $com_shared_bank_swap9);
+~bankmain_itemnote($com_shared_bank_item11, $com_shared_bank_note12);
+if_setonvartransmit("bankmain_itemnote($com_shared_bank_item11, $com_shared_bank_note12){var115}", $com_shared_bank_item11);
+~bankmain_quantity_buttons($com_shared_bank_quantity114, $com_shared_bank_quantity515, $com_shared_bank_quantity1016, $com_shared_bank_quantityx17, $com_shared_bank_quantityall18);
+if_setonvartransmit("bankmain_quantity_buttons($com_shared_bank_quantity114, $com_shared_bank_quantity515, $com_shared_bank_quantity1016, $com_shared_bank_quantityx17, $com_shared_bank_quantityall18){var1666, var304}", $com_shared_bank_quantity_layer13);
+~options_bigbutton_init($com_shared_bank_save_button19, "Save", b12_full);
+if ($int26 = 1) {
+	~ge_offers_bigbutton($com_shared_bank_main_bank4, "Back to bank", 0);
 } else {
-	if_clearops($widget_724:9_4);
+	if_clearops($com_shared_bank_main_bank4);
 }
-~shared_bank_closebutton($widget_724:3_20);
-if_setonvartransmit("shared_bank_closebutton(event_com){var1293, var1224}", $widget_724:3_20);
+~shared_bank_closebutton($com_shared_bank_close20);
+if_setonvartransmit("shared_bank_closebutton(event_com){var1293, var1224}", $com_shared_bank_close20);

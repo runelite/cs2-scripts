@@ -1,12 +1,12 @@
 // 672
-[clientscript,rune_pouch_inventoryreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $trans4, int $trans5, int $comsubid6)
+[clientscript,rune_pouch_inventoryreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $int4, int $int5, int $comsubid6)
 if ($comsubid2 < 0 | $comsubid2 >= $comsubid6) {
 	return;
 }
 if ($drop1 ! $drop0) {
 	if (cc_find($drop0, $comsubid2) = ^true) {
-		cc_settrans($trans4);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans5, calc(clientclock + 30))");
+		cc_settrans($int4);
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int5, calc(clientclock + 30))");
 	}
 	return;
 }

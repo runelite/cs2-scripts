@@ -1,10 +1,10 @@
 // 705
 [clientscript,bank_depositbox_drag](component $component0, component $component1, int $comsubid2, int $dropsubid3)
-def_int $size4 = inv_size(inv);
-if ($comsubid2 < 0 | $comsubid2 >= $size4) {
+def_int $comsubid4 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $comsubid4) {
 	return;
 }
-if ($dropsubid3 < 0 | $dropsubid3 >= $size4) {
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid4) {
 	return;
 }
 def_obj $obj5 = inv_getobj(inv, $comsubid2);

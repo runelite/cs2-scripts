@@ -11,16 +11,16 @@ if ($int1 = 1) {
 	$graphic2, $graphic3 = graphic_2576, graphic_2577;
 }
 cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, 0);
+cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic($graphic2);
-cc_create($component0, ^iftype_graphic, 1);
+cc_create($component0, ^iftype_graphic, 1, false);
 cc_setsize(40, 26, ^setsize_minus, ^setsize_abs);
 cc_setposition(20, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic($graphic3);
 cc_settiling(true);
-cc_create($component0, ^iftype_graphic, 2);
+cc_create($component0, ^iftype_graphic, 2, false);
 cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic($graphic2);
@@ -33,7 +33,7 @@ if ($int1 = 1) {
 	if_setonmouseleave("script3727($component0, 0, $string0)", $component0);
 }
 if (string_length($string0) > 0) {
-	cc_create($component0, ^iftype_text, 3);
+	cc_create($component0, ^iftype_text, 3, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_settextshadow(true);

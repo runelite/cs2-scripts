@@ -3,7 +3,7 @@
 def_graphic $graphic0 = null;
 def_int $int1 = 0;
 def_boolean $boolean2 = ~on_mobile;
-def_component $component3 = interface_621:1;
+def_component $component3 = collection:close;
 if ($boolean2 = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component3);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $component3);
@@ -22,11 +22,11 @@ if_setop(1, "Close", $component3);
 if_setonop("opsound(event_op, 2)", $component3);
 if_setopkey(2, ^key_escape, 0, $component3);
 if_setop(2, "", $component3);
-def_component $component4 = interface_621:87;
-def_component $component5 = interface_621:88;
-def_component $component6 = interface_621:89;
+def_component $component4 = collection:infinity;
+def_component $component5 = collection:universe;
+def_component $component6 = collection:resize_preview;
 def_enum $enum7 = ~toplevel_getcomponents;
-def_component $component8 = enum(component, component, $enum7, interface_161:16);
+def_component $component8 = enum(component, component, $enum7, toplevel_osrs_stretch:mainmodal);
 if (%varcint1245 ! 1) {
 	%varcint1247 = if_getx($component8);
 	%varcint1248 = if_gety($component8);
@@ -58,7 +58,7 @@ if ($enum7 = enum_1132) {
 cc_deleteall($component4);
 def_int $int9 = 0;
 while ($int9 < 9) {
-	cc_create($component4, ^iftype_graphic, $int9);
+	cc_create($component4, ^iftype_graphic, $int9, false);
 	cc_settiling(true);
 	cc_settrans(255);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
@@ -71,7 +71,7 @@ while ($int9 < 9) {
 cc_deleteall($component6);
 $int9 = 0;
 while ($int9 < 4) {
-	cc_create($component6, ^iftype_rectangle, $int9);
+	cc_create($component6, ^iftype_rectangle, $int9, false);
 	cc_setsize(calc($int9 * 2), calc($int9 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);

@@ -1,19 +1,19 @@
 // 3772
-[clientscript,script3772](int $opindex0, int $int1, component $widget_26:13_2, component $widget_26:16_3, component $widget_26:19_4, component $widget_26:14_5, component $widget_26:17_6, component $widget_26:20_7, component $widget_26:15_8, component $widget_26:18_9, component $widget_26:21_10)
+[clientscript,script3772](int $opindex0, int $int1, component $com_pirate_combilock_left_top2, component $com_pirate_combilock_left_middle3, component $com_pirate_combilock_left_bottom4, component $com_pirate_combilock_centre_top5, component $com_pirate_combilock_centre_middle6, component $com_pirate_combilock_centre_bottom7, component $com_pirate_combilock_right_top8, component $com_pirate_combilock_right_middle9, component $com_pirate_combilock_right_bottom10)
 if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(piratechest_turn, 1, 0);
 %varbit9594 = calc((%varbit9594 + $int1) % 4);
 ~script3773(
-	0 = $widget_26:13_2, 
-	1 = $widget_26:16_3, 
-	2 = $widget_26:19_4, 
-	3 = $widget_26:14_5, 
-	4 = $widget_26:17_6, 
-	5 = $widget_26:20_7, 
-	6 = $widget_26:15_8, 
-	7 = $widget_26:18_9, 
-	8 = $widget_26:21_10
+	0 = $com_pirate_combilock_left_top2, 
+	1 = $com_pirate_combilock_left_middle3, 
+	2 = $com_pirate_combilock_left_bottom4, 
+	3 = $com_pirate_combilock_centre_top5, 
+	4 = $com_pirate_combilock_centre_middle6, 
+	5 = $com_pirate_combilock_centre_bottom7, 
+	6 = $com_pirate_combilock_right_top8, 
+	7 = $com_pirate_combilock_right_middle9, 
+	8 = $com_pirate_combilock_right_bottom10
 );
 %varcint110 = clientclock;

@@ -1,64 +1,64 @@
 // 2611
-[proc,magic_spellbook_redraw](component $widget_218:3_0, component $widget_218:193_1, component $widget_218:202_2, component $widget_218:1_3, component $widget_218:199_4, component $widget_218:200_5, component $widget_218:201_6, component $widget_218:2_7, component $widget_218:195_8, component $widget_218:198_9, string $string0, string $string1, boolean $boolean10)
+[proc,magic_spellbook_redraw](component $com_magic_spellbook_spelllayer0, component $com_magic_spellbook_infolayer1, component $com_magic_spellbook_tooltip2, component $com_magic_spellbook_top3, component $com_magic_spellbook_bottom4, component $com_magic_spellbook_infobutton5, component $com_magic_spellbook_filterbutton6, component $com_magic_spellbook_glow7, component $com_magic_spellbook_filtermenu_container8, component $com_magic_spellbook_filtermenu9, string $string0, string $string1, boolean $boolean10)
 def_int $int11 = 190;
 def_int $int12 = 261;
 def_int $int13 = 0;
 if ($boolean10 = true) {
-	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $widget_218:1_3);
+	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $com_magic_spellbook_top3);
 	$int11, $int12 = calc(190 - 6), 240;
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:1_3);
-	if_sethide(false, $widget_218:199_4);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_top3);
+	if_sethide(false, $com_magic_spellbook_bottom4);
 	$int13 = calc(~max(parawidth($string0, 190, p11_full), parawidth($string1, 190, p11_full)) + 14);
-	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $widget_218:200_5);
-	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $widget_218:201_6);
+	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $com_magic_spellbook_infobutton5);
+	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $com_magic_spellbook_filterbutton6);
 	$int13 = calc((190 - $int13 * 2) / 3);
-	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_centre, $widget_218:200_5);
-	if_setposition($int13, 0, ^setpos_abs_right, ^setpos_abs_centre, $widget_218:201_6);
+	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_centre, $com_magic_spellbook_infobutton5);
+	if_setposition($int13, 0, ^setpos_abs_right, ^setpos_abs_centre, $com_magic_spellbook_filterbutton6);
 } else if (%varbit6718 = 1) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $widget_218:1_3);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $widget_218:1_3);
-	if_sethide(true, $widget_218:199_4);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_magic_spellbook_top3);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_top3);
+	if_sethide(true, $com_magic_spellbook_bottom4);
 	~script2603(
 		0 = null, 
 		1 = $boolean10, 
-		2 = $widget_218:200_5, 
-		3 = $widget_218:201_6, 
-		4 = $widget_218:3_0, 
-		5 = $widget_218:193_1, 
-		6 = $widget_218:2_7, 
-		7 = $widget_218:195_8, 
-		8 = $widget_218:198_9, 
-		9 = $widget_218:202_2, 
+		2 = $com_magic_spellbook_infobutton5, 
+		3 = $com_magic_spellbook_filterbutton6, 
+		4 = $com_magic_spellbook_spelllayer0, 
+		5 = $com_magic_spellbook_infolayer1, 
+		6 = $com_magic_spellbook_glow7, 
+		7 = $com_magic_spellbook_filtermenu_container8, 
+		8 = $com_magic_spellbook_filtermenu9, 
+		9 = $com_magic_spellbook_tooltip2, 
 		10 = $string0, 
 		11 = $string1
 	);
 } else {
-	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $widget_218:1_3);
+	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $com_magic_spellbook_top3);
 	$int11, $int12 = calc(190 - 6), 240;
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:1_3);
-	if_sethide(false, $widget_218:199_4);
-	if_setsize(calc(parawidth($string1, 190, p11_full) + 14), 0, ^setsize_abs, ^setsize_minus, $widget_218:201_6);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $widget_218:201_6);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_top3);
+	if_sethide(false, $com_magic_spellbook_bottom4);
+	if_setsize(calc(parawidth($string1, 190, p11_full) + 14), 0, ^setsize_abs, ^setsize_minus, $com_magic_spellbook_filterbutton6);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_filterbutton6);
 }
-cc_deleteall($widget_218:3_0);
-cc_deleteall($widget_218:193_1);
-cc_deleteall($widget_218:202_2);
+cc_deleteall($com_magic_spellbook_spelllayer0);
+cc_deleteall($com_magic_spellbook_infolayer1);
+cc_deleteall($com_magic_spellbook_tooltip2);
 def_enum $enum14 = enum(int, enum, enum_1981, %varbit4070);
 def_enum $enum15 = enum(int, enum, enum_5280, %varbit4070);
 if (%varbit9730 >= 0) {
 	$enum14 = enum(int, enum, $enum15, %varbit9730);
 }
-def_int $count16 = 0;
-def_int $count17 = enum_getoutputcount(enum_1981);
+def_int $int16 = 0;
+def_int $int17 = enum_getoutputcount(enum_1981);
 def_int $int18 = 1;
 def_int $int19 = 0;
 def_enum $enum20 = null;
-while ($count16 < $count17) {
-	$enum20 = enum(int, enum, enum_1981, $count16);
+while ($int16 < $int17) {
+	$enum20 = enum(int, enum, enum_1981, $int16);
 	if ($enum20 ! $enum14) {
 		~magic_spellbook_hidespells($enum20);
 	}
-	$enum15 = enum(int, enum, enum_5280, $count16);
+	$enum15 = enum(int, enum, enum_5280, $int16);
 	$int18 = 1;
 	$int19 = enum_getoutputcount($enum15);
 	while ($int18 <= $int19) {
@@ -68,18 +68,18 @@ while ($count16 < $count17) {
 		}
 		$int18 = calc($int18 + 1);
 	}
-	$count16 = calc($count16 + 1);
+	$int16 = calc($int16 + 1);
 }
 if ($enum14 = null) {
 	return;
 }
-def_int $count21 = enum_getoutputcount($enum14);
-def_int $intarray0($count21);
+def_int $length21 = enum_getoutputcount($enum14);
+def_int $intarray0($length21);
 def_int $int22 = 0;
 def_obj $obj23 = null;
 def_int $int24 = 0;
 if ($boolean10 = false & %varbit6718 = 1) {
-	while ($int24 < $count21) {
+	while ($int24 < $length21) {
 		$obj23 = enum(int, obj, $enum14, $int24);
 		if (~league_world = 1) {
 			$obj23 = ~script3159($obj23);
@@ -90,7 +90,7 @@ if ($boolean10 = false & %varbit6718 = 1) {
 		$int24 = calc($int24 + 1);
 	}
 } else {
-	while ($int24 < $count21) {
+	while ($int24 < $length21) {
 		$obj23 = enum(int, obj, $enum14, $int24);
 		if (~league_world = 1) {
 			$obj23 = ~script3159($obj23);
@@ -109,7 +109,7 @@ def_int $int25 = 0;
 if ($int22 >= 2) {
 	~magic_spellbook_sort(intarray0, 0, calc($int22 - 1), $enum14);
 } else if ($int22 <= 0) {
-	cc_create($widget_218:3_0, ^iftype_text, $int25);
+	cc_create($com_magic_spellbook_spelllayer0, ^iftype_text, $int25, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);
@@ -125,20 +125,20 @@ def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
 def_int $int30 = 0;
-def_int $height31 = $int12;
+def_int $int31 = $int12;
 if ($boolean10 = false & %varbit6718 = 1) {
 	$int27, $int28, $int30, $int29 = ~script6419(%varbit4070);
 	switch_int (%varbit4070) {
 		case default :
-			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:3_0);
+			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 		case 1 :
-			if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:3_0);
+			if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 		case 2 :
-			if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:3_0);
+			if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 		case 3 :
-			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $widget_218:3_0);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 	}
-	$height31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
+	$int31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
 } else if (%varbit6548 = 1 | $boolean10 = false & (%varbit8121 = 1 | %varbit6549 = 1)) {
 	if ($int22 <= 28) {
 		$int27 = 4;
@@ -150,8 +150,8 @@ if ($boolean10 = false & %varbit6718 = 1) {
 	if ($int28 >= 2) {
 		$int29 = ~max(0, ~min($int30, calc(($int12 - $int26 * $int28) / ($int28 - 1))));
 	}
-	$height31 = ~max(calc($int28 * $int26 + ($int28 - 1) * $int29), calc($int12 - 30));
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $widget_218:3_0);
+	$int31 = ~max(calc($int28 * $int26 + ($int28 - 1) * $int29), calc($int12 - 30));
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_spelllayer0);
 } else {
 	if ($int22 <= 15) {
 		$int26, $int27 = 40, 3;
@@ -165,17 +165,17 @@ if ($boolean10 = false & %varbit6718 = 1) {
 	if ($int28 >= 2) {
 		$int29 = ~max(0, ~min($int30, calc(($int12 - $int26 * $int28) / ($int28 - 1))));
 	}
-	$height31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $widget_218:3_0);
+	$int31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_spelllayer0);
 }
-if_setsize(calc($int27 * $int26 + ($int27 - 1) * $int30), $height31, ^setsize_abs, ^setsize_abs, $widget_218:3_0);
+if_setsize(calc($int27 * $int26 + ($int27 - 1) * $int30), $int31, ^setsize_abs, ^setsize_abs, $com_magic_spellbook_spelllayer0);
 def_int $int32 = 0;
 def_component $component33 = null;
 def_int $int34 = calc($int26 + $int30);
 def_int $int35 = calc($int26 + $int29);
 def_graphic $graphic36 = null;
-def_int $x37 = 0;
-def_int $y38 = 0;
+def_int $int37 = 0;
+def_int $int38 = 0;
 $int24 = 0;
 while ($int24 < $int22) {
 	$obj23 = enum(int, obj, $enum14, $intarray0($int24));
@@ -184,8 +184,8 @@ while ($int24 < $int22) {
 	}
 	$component33 = oc_param($obj23, spell_button);
 	if_setsize($int26, $int26, ^setsize_abs, ^setsize_abs, $component33);
-	$x37, $y38 = calc($int24 % $int27 * $int34), calc($int24 / $int27 * $int35);
-	if_setposition($x37, $y38, ^setpos_abs_left, ^setpos_abs_top, $component33);
+	$int37, $int38 = calc($int24 % $int27 * $int34), calc($int24 / $int27 * $int35);
+	if_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top, $component33);
 	$int32, $graphic36 = ~script2614($obj23, $component33, $int26);
 	if ($int32 = 1) {
 		if ($int26 >= 40) {
@@ -200,24 +200,24 @@ while ($int24 < $int22) {
 			if_setgraphic(oc_param($obj23, spell_graphic1_off), $component33);
 		}
 		if ($graphic36 ! null) {
-			cc_create($widget_218:3_0, ^iftype_graphic, $int25);
+			cc_create($com_magic_spellbook_spelllayer0, ^iftype_graphic, $int25, false);
 			cc_setsize($int26, $int26, ^setsize_abs, ^setsize_abs);
-			cc_setposition($x37, $y38, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphic($graphic36);
 			$int25 = calc($int25 + 1);
 		}
 	}
 	~magic_spellbook_modifyops($component33);
 	if ($boolean10 = true) {
-		cc_create($widget_218:193_1, ^iftype_graphic, $int24);
+		cc_create($com_magic_spellbook_infolayer1, ^iftype_graphic, $int24, false);
 		cc_setsize($int26, $int26, ^setsize_abs, ^setsize_abs);
-		cc_setposition($x37, $y38, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject($obj23, 1);
 		cc_settrans(255);
-		cc_setonclick("script2612($obj23, $widget_218:193_1, $widget_218:202_2, $int12)");
+		cc_setonclick("script2612($obj23, $com_magic_spellbook_infolayer1, $com_magic_spellbook_tooltip2, $int12)");
 	} else {
-		if_setonmouserepeat("magic_spellbook_settooltip(true, $obj23, event_com, -1, $widget_218:202_2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
-		if_setonmouseleave("magic_spellbook_settooltip(false, $obj23, event_com, -1, $widget_218:202_2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
+		if_setonmouserepeat("magic_spellbook_settooltip(true, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
+		if_setonmouseleave("magic_spellbook_settooltip(false, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
 	}
 	$int24 = calc($int24 + 1);
 }

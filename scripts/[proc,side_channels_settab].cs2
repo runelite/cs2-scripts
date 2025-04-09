@@ -25,7 +25,7 @@ if (%varbit13071 = $int0) {
 	if_setonop("opsound(0, 0)", $component1);
 	cc_deleteall($component7);
 	$component13 = if_getlayer($component1);
-	cc_create($component7, ^iftype_line, 0);
+	cc_create($component7, ^iftype_line, 0, false);
 	cc_setcolour($colour12);
 	if (if_getwidth($component7) = 1) {
 		$int14 = calc(if_getx($component1) - 2);
@@ -37,7 +37,7 @@ if (%varbit13071 = $int0) {
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 	}
 	cc_setsize($int15, 1, ^setsize_abs, ^setsize_abs);
-	cc_create($component7, ^iftype_line, 1);
+	cc_create($component7, ^iftype_line, 1, false);
 	cc_setcolour($colour12);
 	$int15 = 500;
 	if (if_getwidth($component7) = 1) {

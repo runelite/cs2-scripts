@@ -1,32 +1,32 @@
 // 1941
-[proc,blast_mining_hud_update](component $widget_598:8_0, component $widget_598:9_1, component $widget_598:10_2, component $widget_598:11_3, component $widget_598:12_4)
-if_settext(tostring(%varbit10698), $widget_598:8_0);
+[proc,blast_mining_hud_update](component $com_lovakengj_blast_mining_hud_text_coal0, component $com_lovakengj_blast_mining_hud_text_gold1, component $com_lovakengj_blast_mining_hud_text_mithril2, component $com_lovakengj_blast_mining_hud_text_addy3, component $com_lovakengj_blast_mining_hud_text_rune4)
+if_settext(tostring(%varbit10698), $com_lovakengj_blast_mining_hud_text_coal0);
 if (%varbit10698 >= 900) {
-	if_setcolour(0xc80000, $widget_598:8_0);
+	if_setcolour(0xc80000, $com_lovakengj_blast_mining_hud_text_coal0);
 } else {
-	if_setcolour(^yellow, $widget_598:8_0);
+	if_setcolour(^yellow, $com_lovakengj_blast_mining_hud_text_coal0);
 }
-if_settext(tostring(%varbit10699), $widget_598:9_1);
+if_settext(tostring(%varbit10699), $com_lovakengj_blast_mining_hud_text_gold1);
 if (%varbit10699 >= 900) {
-	if_setcolour(0xc80000, $widget_598:9_1);
+	if_setcolour(0xc80000, $com_lovakengj_blast_mining_hud_text_gold1);
 } else {
-	if_setcolour(^yellow, $widget_598:9_1);
+	if_setcolour(^yellow, $com_lovakengj_blast_mining_hud_text_gold1);
 }
-if_settext(tostring(%varbit10700), $widget_598:10_2);
+if_settext(tostring(%varbit10700), $com_lovakengj_blast_mining_hud_text_mithril2);
 if (%varbit10700 >= 900) {
-	if_setcolour(0xc80000, $widget_598:10_2);
+	if_setcolour(0xc80000, $com_lovakengj_blast_mining_hud_text_mithril2);
 } else {
-	if_setcolour(^yellow, $widget_598:10_2);
+	if_setcolour(^yellow, $com_lovakengj_blast_mining_hud_text_mithril2);
 }
-if_settext(tostring(%varbit10701), $widget_598:11_3);
+if_settext(tostring(%varbit10701), $com_lovakengj_blast_mining_hud_text_addy3);
 if (%varbit10701 >= 900) {
-	if_setcolour(0xc80000, $widget_598:11_3);
+	if_setcolour(0xc80000, $com_lovakengj_blast_mining_hud_text_addy3);
 } else {
-	if_setcolour(^yellow, $widget_598:11_3);
+	if_setcolour(^yellow, $com_lovakengj_blast_mining_hud_text_addy3);
 }
-if_settext(tostring(%varbit10702), $widget_598:12_4);
+if_settext(tostring(%varbit10702), $com_lovakengj_blast_mining_hud_text_rune4);
 if (%varbit10702 >= 900) {
-	if_setcolour(0xc80000, $widget_598:12_4);
+	if_setcolour(0xc80000, $com_lovakengj_blast_mining_hud_text_rune4);
 } else {
-	if_setcolour(^yellow, $widget_598:12_4);
+	if_setcolour(^yellow, $com_lovakengj_blast_mining_hud_text_rune4);
 }

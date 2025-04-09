@@ -1,50 +1,50 @@
 // 2946
-[proc,adventurepath_draw_path](component $widget_642:3_0, component $widget_642:35_1, int $int2, struct $struct3, int $width4, int $int5, int $int6, int $int7, int $int8, component $widget_642:5_9, component $widget_642:7_10, component $widget_642:27_11, component $widget_642:28_12, component $widget_642:30_13, component $widget_642:31_14, component $widget_642:29_15, component $widget_642:32_16, component $widget_642:21_17, component $widget_642:23_18, component $widget_642:24_19, component $widget_642:25_20, int $count21, component $widget_642:33_22, component $widget_642:4_23, component $widget_642:8_24, component $widget_642:11_25, component $widget_642:13_26, component $widget_642:16_27, component $widget_642:17_28, component $widget_642:19_29, component $widget_642:12_30, component $widget_642:26_31)(int)
+[proc,adventurepath_draw_path](component $com_adventurepath_path_menu0, component $com_adventurepath_paths1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, int $int8, component $com_adventurepath_task_list9, component $com_adventurepath_tasks10, component $com_adventurepath_scrollbar_task11, component $com_adventurepath_task_info12, component $com_adventurepath_task_name13, component $com_adventurepath_task_description14, component $com_adventurepath_task_hint15, component $com_adventurepath_reward_list16, component $com_adventurepath_filters17, component $com_adventurepath_back18, component $com_adventurepath_path_reward19, component $com_adventurepath_tasks_done20, int $int21, component $com_adventurepath_rewards_scrollbar22, component $com_adventurepath_banner23, component $com_adventurepath_extra_task_info24, component $com_adventurepath_extra_description25, component $com_adventurepath_extra_hint26, component $com_adventurepath_extra_image_text27, component $com_adventurepath_extra_image28, component $com_adventurepath_extra_task_name29, component $com_adventurepath_extra_link30, component $com_adventurepath_task_focus31)(int)
 def_int $int32 = struct_param($struct3, param_829);
-cc_create($widget_642:35_1, ^iftype_graphic, $int2);
+cc_create($com_adventurepath_paths1, ^iftype_graphic, $int2, false);
 cc_setsize($int6, 69, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($width4 / 2 * $int7 + ($width4 / 4 - $int6 / 2)), calc($int5 / 2 * $int8 + 5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 / 2 * $int7 + ($int4 / 4 - $int6 / 2)), calc($int5 / 2 * $int8 + 5), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(struct_param($struct3, param_830));
 cc_setop(1, "Select <col=ff9040><struct_param($struct3, param_828)>");
 cc_setonop("adventurepath_task_init(
-	0 = $widget_642:3_0, 
+	0 = $com_adventurepath_path_menu0, 
 	1 = $int32, 
-	2 = $widget_642:35_1, 
-	3 = $widget_642:5_9, 
-	4 = $widget_642:7_10, 
-	5 = $widget_642:27_11, 
-	6 = $widget_642:28_12, 
-	7 = $widget_642:30_13, 
-	8 = $widget_642:31_14, 
-	9 = $widget_642:29_15, 
-	10 = $widget_642:32_16, 
-	11 = $widget_642:21_17, 
-	12 = $widget_642:23_18, 
-	13 = $widget_642:24_19, 
-	14 = $widget_642:25_20, 
+	2 = $com_adventurepath_paths1, 
+	3 = $com_adventurepath_task_list9, 
+	4 = $com_adventurepath_tasks10, 
+	5 = $com_adventurepath_scrollbar_task11, 
+	6 = $com_adventurepath_task_info12, 
+	7 = $com_adventurepath_task_name13, 
+	8 = $com_adventurepath_task_description14, 
+	9 = $com_adventurepath_task_hint15, 
+	10 = $com_adventurepath_reward_list16, 
+	11 = $com_adventurepath_filters17, 
+	12 = $com_adventurepath_back18, 
+	13 = $com_adventurepath_path_reward19, 
+	14 = $com_adventurepath_tasks_done20, 
 	15 = event_op, 
-	16 = $widget_642:33_22, 
-	17 = $widget_642:4_23, 
-	18 = $widget_642:8_24, 
-	19 = $widget_642:11_25, 
-	20 = $widget_642:13_26, 
-	21 = $widget_642:16_27, 
-	22 = $widget_642:17_28, 
-	23 = $widget_642:19_29, 
-	24 = $widget_642:12_30, 
-	25 = $widget_642:26_31
+	16 = $com_adventurepath_rewards_scrollbar22, 
+	17 = $com_adventurepath_banner23, 
+	18 = $com_adventurepath_extra_task_info24, 
+	19 = $com_adventurepath_extra_description25, 
+	20 = $com_adventurepath_extra_hint26, 
+	21 = $com_adventurepath_extra_image_text27, 
+	22 = $com_adventurepath_extra_image28, 
+	23 = $com_adventurepath_extra_task_name29, 
+	24 = $com_adventurepath_extra_link30, 
+	25 = $com_adventurepath_task_focus31
 )");
 if (~on_mobile = false) {
-	cc_setonmouserepeat("cc_settrans($widget_642:35_1, cc_getid, 50, null)");
-	cc_setonmouseleave("cc_settrans($widget_642:35_1, cc_getid, 0, null)");
+	cc_setonmouserepeat("cc_settrans($com_adventurepath_paths1, cc_getid, 50, null)");
+	cc_setonmouseleave("cc_settrans($com_adventurepath_paths1, cc_getid, 0, null)");
 }
 $int2 = calc($int2 + 1);
 $int2 = ~create_v2_stone_button_filled_free(
-	0 = $widget_642:35_1, 
+	0 = $com_adventurepath_paths1, 
 	1 = $int2, 
-	2 = calc($width4 / 2 - 5 * 2), 
+	2 = calc($int4 / 2 - 5 * 2), 
 	3 = calc(5 * 7), 
-	4 = calc($width4 / 2 * $int7 + 5), 
+	4 = calc($int4 / 2 * $int7 + 5), 
 	5 = calc($int5 / 2 * ($int8 + 1) - 5 * 8), 
 	6 = struct_param($struct3, param_828), 
 	7 = 0xff981f, 
@@ -54,56 +54,56 @@ $int2 = ~create_v2_stone_button_filled_free(
 );
 cc_setop(1, "Select <col=ff9040><struct_param($struct3, param_828)>");
 cc_setonop("adventurepath_task_init(
-	0 = $widget_642:3_0, 
+	0 = $com_adventurepath_path_menu0, 
 	1 = $int32, 
-	2 = $widget_642:35_1, 
-	3 = $widget_642:5_9, 
-	4 = $widget_642:7_10, 
-	5 = $widget_642:27_11, 
-	6 = $widget_642:28_12, 
-	7 = $widget_642:30_13, 
-	8 = $widget_642:31_14, 
-	9 = $widget_642:29_15, 
-	10 = $widget_642:32_16, 
-	11 = $widget_642:21_17, 
-	12 = $widget_642:23_18, 
-	13 = $widget_642:24_19, 
-	14 = $widget_642:25_20, 
+	2 = $com_adventurepath_paths1, 
+	3 = $com_adventurepath_task_list9, 
+	4 = $com_adventurepath_tasks10, 
+	5 = $com_adventurepath_scrollbar_task11, 
+	6 = $com_adventurepath_task_info12, 
+	7 = $com_adventurepath_task_name13, 
+	8 = $com_adventurepath_task_description14, 
+	9 = $com_adventurepath_task_hint15, 
+	10 = $com_adventurepath_reward_list16, 
+	11 = $com_adventurepath_filters17, 
+	12 = $com_adventurepath_back18, 
+	13 = $com_adventurepath_path_reward19, 
+	14 = $com_adventurepath_tasks_done20, 
 	15 = event_op, 
-	16 = $widget_642:33_22, 
-	17 = $widget_642:4_23, 
-	18 = $widget_642:8_24, 
-	19 = $widget_642:11_25, 
-	20 = $widget_642:13_26, 
-	21 = $widget_642:16_27, 
-	22 = $widget_642:17_28, 
-	23 = $widget_642:19_29, 
-	24 = $widget_642:12_30, 
-	25 = $widget_642:26_31
+	16 = $com_adventurepath_rewards_scrollbar22, 
+	17 = $com_adventurepath_banner23, 
+	18 = $com_adventurepath_extra_task_info24, 
+	19 = $com_adventurepath_extra_description25, 
+	20 = $com_adventurepath_extra_hint26, 
+	21 = $com_adventurepath_extra_image_text27, 
+	22 = $com_adventurepath_extra_image28, 
+	23 = $com_adventurepath_extra_task_name29, 
+	24 = $com_adventurepath_extra_link30, 
+	25 = $com_adventurepath_task_focus31
 )");
 def_int $int33 = ~adventurepath_return_path_length($int32);
 def_int $int34 = ~adventurepath_return_path_tasks_done($int32);
 $int2 = ~script2990(
-	0 = $widget_642:35_1, 
+	0 = $com_adventurepath_paths1, 
 	1 = $int2, 
 	2 = calc($int6 - 30), 
 	3 = 29, 
-	4 = calc($width4 / 2 * $int7 + ($width4 / 4 - $int6 / 2)), 
+	4 = calc($int4 / 2 * $int7 + ($int4 / 4 - $int6 / 2)), 
 	5 = calc($int5 / 2 * ($int8 + 1) - 69), 
 	6 = $int34, 
 	7 = $int33, 
 	8 = 0, 
 	9 = " Tasks done"
 );
-$int2 = ~stoneborder_free($widget_642:35_1, $int2, calc($width4 / 2), calc($int5 / 2), calc($width4 / 2 * $int7), calc($int5 / 2 * $int8));
+$int2 = ~stoneborder_free($com_adventurepath_paths1, $int2, calc($int4 / 2), calc($int5 / 2), calc($int4 / 2 * $int7), calc($int5 / 2 * $int8));
 def_graphic $graphic35 = tick;
 if (~adventurepath_return_path_status($int32) = 1) {
 	$int2 = ~script2984(
-		0 = $widget_642:35_1, 
+		0 = $com_adventurepath_paths1, 
 		1 = $int2, 
 		2 = 29, 
 		3 = 29, 
-		4 = calc($width4 / 2 * $int7 + ($width4 / 4 + $int6 / 2 - 30)), 
+		4 = calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), 
 		5 = calc($int5 / 2 * ($int8 + 1) - 69), 
 		6 = "", 
 		7 = $graphic35, 
@@ -116,11 +116,11 @@ if (~adventurepath_return_path_status($int32) = 1) {
 	);
 } else if ($int32 = %varbit9324) {
 	$int2 = ~script2984(
-		0 = $widget_642:35_1, 
+		0 = $com_adventurepath_paths1, 
 		1 = $int2, 
 		2 = 29, 
 		3 = 29, 
-		4 = calc($width4 / 2 * $int7 + ($width4 / 4 + $int6 / 2 - 30)), 
+		4 = calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), 
 		5 = calc($int5 / 2 * ($int8 + 1) - 69), 
 		6 = "Drop<col=ff9040> Focus", 
 		7 = graphic_2223, 
@@ -133,11 +133,11 @@ if (~adventurepath_return_path_status($int32) = 1) {
 	);
 } else {
 	$int2 = ~script2984(
-		0 = $widget_642:35_1, 
+		0 = $com_adventurepath_paths1, 
 		1 = $int2, 
 		2 = 29, 
 		3 = 29, 
-		4 = calc($width4 / 2 * $int7 + ($width4 / 4 + $int6 / 2 - 30)), 
+		4 = calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), 
 		5 = calc($int5 / 2 * ($int8 + 1) - 69), 
 		6 = "Set<col=ff9040> Focus", 
 		7 = graphic_2224, 

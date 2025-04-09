@@ -1,6 +1,6 @@
 // 4323
-[clientscript,script4323](int $key0, char $keychar1, component $component2, int $count3, int $key4, string $string0)
-if (clientclock < calc(%varcint455 + 10) & %varbit12227 = $count3) {
+[clientscript,script4323](int $key0, char $keychar1, component $component2, int $int3, int $key4, string $string0)
+if (clientclock < calc(%varcint455 + 10) & %varbit12227 = $int3) {
 	return;
 }
 def_int $int5 = 0;
@@ -11,4 +11,4 @@ if ($key0 ! null & $key0 = $key4) {
 } else {
 	return;
 }
-~script4325($count3);
+~script4325($int3);

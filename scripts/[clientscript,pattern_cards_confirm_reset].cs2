@@ -1,6 +1,6 @@
 // 347
-[clientscript,pattern_cards_confirm_reset](int $clock0, component $component1)
-if (clientclock < $clock0) {
+[clientscript,pattern_cards_confirm_reset](int $int0, component $component1)
+if (clientclock < $int0) {
 	return;
 }
 if_setontimer(null, $component1);

@@ -1,5 +1,5 @@
 // 1092
-[proc,slayer_rewards_etcetera_draw](component $widget_426:20_0, component $widget_426:11_1, component $widget_426:2_2, component $widget_426:4_3, component $widget_426:8_4, component $widget_426:5_5)
+[proc,slayer_rewards_etcetera_draw](component $com_slayer_rewards_extend_etcetera0, component $com_slayer_rewards_main1, component $com_slayer_rewards_confirm2, component $com_slayer_rewards_confirm_info3, component $com_slayer_rewards_confirm_button4, component $com_slayer_rewards_back_button5)
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
@@ -18,9 +18,9 @@ while ($int9 ! -1 & $int9 <= 56) {
 if ($int10 = 1) {
 	$int7 = 0;
 }
-cc_deleteall($widget_426:20_0);
-def_int $int11 = ~options_button_off($widget_426:20_0, 0);
-cc_create($widget_426:20_0, ^iftype_text, $int11);
+cc_deleteall($com_slayer_rewards_extend_etcetera0);
+def_int $int11 = ~options_button_off($com_slayer_rewards_extend_etcetera0, 0);
+cc_create($com_slayer_rewards_extend_etcetera0, ^iftype_text, $int11, false);
 $int11 = calc($int11 + 1);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -41,26 +41,26 @@ if ($int6 > 0 & $int7 > 0) {
 	}
 	cc_setcolour(0xff981f);
 	cc_settext($string0);
-	if_setonmouserepeat("options_button_on(event_com, 0)", $widget_426:20_0);
-	if_setonmouseleave("options_button_off(event_com, 0)", $widget_426:20_0);
-	if_setop(1, "Extend", $widget_426:20_0);
+	if_setonmouserepeat("options_button_on(event_com, 0)", $com_slayer_rewards_extend_etcetera0);
+	if_setonmouseleave("options_button_off(event_com, 0)", $com_slayer_rewards_extend_etcetera0);
+	if_setop(1, "Extend", $com_slayer_rewards_extend_etcetera0);
 	if_setonop("slayer_rewards_unlock_confirm(
 		0 = null, 
 		1 = calc(56 + 9), 
 		2 = $string1, 
-		3 = $widget_426:11_1, 
-		4 = $widget_426:2_2, 
-		5 = $widget_426:4_3, 
-		6 = $widget_426:8_4, 
-		7 = $widget_426:5_5, 
+		3 = $com_slayer_rewards_main1, 
+		4 = $com_slayer_rewards_confirm2, 
+		5 = $com_slayer_rewards_confirm_info3, 
+		6 = $com_slayer_rewards_confirm_button4, 
+		7 = $com_slayer_rewards_back_button5, 
 		8 = $int7
-	)", $widget_426:20_0);
+	)", $com_slayer_rewards_extend_etcetera0);
 } else {
 	cc_setcolour(0x7f4c0f);
 	cc_settext($string0);
-	if_setonmouserepeat(null, $widget_426:20_0);
-	if_setonmouseleave(null, $widget_426:20_0);
-	if_clearops($widget_426:20_0);
-	if_setonop(null, $widget_426:20_0);
+	if_setonmouserepeat(null, $com_slayer_rewards_extend_etcetera0);
+	if_setonmouseleave(null, $com_slayer_rewards_extend_etcetera0);
+	if_clearops($com_slayer_rewards_extend_etcetera0);
+	if_setonop(null, $com_slayer_rewards_extend_etcetera0);
 }
-if_setsize(calc(parawidth($string0, if_getwidth(if_getlayer($widget_426:20_0)), p11_full) + 20), if_getheight($widget_426:20_0), ^setsize_abs, ^setsize_abs, $widget_426:20_0);
+if_setsize(calc(parawidth($string0, if_getwidth(if_getlayer($com_slayer_rewards_extend_etcetera0)), p11_full) + 20), if_getheight($com_slayer_rewards_extend_etcetera0), ^setsize_abs, ^setsize_abs, $com_slayer_rewards_extend_etcetera0);

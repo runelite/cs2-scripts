@@ -1,17 +1,17 @@
 // 5000
-[clientscript,script5000](component $widget_872:0_0)
-cc_deleteall($widget_872:0_0);
-def_int $size1 = inv_size(inv);
-def_int $size2 = 0;
-while ($size2 < $size1) {
-	cc_create($widget_872:0_0, ^iftype_graphic, $size2);
+[clientscript,script5000](component $com_huntsmans_kit_side_items0)
+cc_deleteall($com_huntsmans_kit_side_items0);
+def_int $comsubid1 = inv_size(inv);
+def_int $comsubid2 = 0;
+while ($comsubid2 < $comsubid1) {
+	cc_create($com_huntsmans_kit_side_items0, ^iftype_graphic, $comsubid2, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	$size2 = calc($size2 + 1);
+	$comsubid2 = calc($comsubid2 + 1);
 }
-~script5002($size1, $widget_872:0_0);
-if_setoninvtransmit("script5001($size1, $widget_872:0_0){inv}", $widget_872:0_0);
-if_setonvartransmit("script5001($size1, $widget_872:0_0){var2894}", $widget_872:0_0);
+~script5002($comsubid1, $com_huntsmans_kit_side_items0);
+if_setoninvtransmit("script5001($comsubid1, $com_huntsmans_kit_side_items0){inv}", $com_huntsmans_kit_side_items0);
+if_setonvartransmit("script5001($comsubid1, $com_huntsmans_kit_side_items0){var2894}", $com_huntsmans_kit_side_items0);

@@ -5,7 +5,7 @@ if ($enum30 = null) {
 	return;
 }
 def_namedobj $namedobj31 = enum(int, namedobj, $enum30, calc($int1 - 1));
-def_string $text0 = enum(obj, string, enum_5272, $namedobj31);
+def_string $string0 = enum(obj, string, enum_5272, $namedobj31);
 if ($namedobj31 = null) {
 	if_sethide(true, $component2);
 	return;
@@ -20,14 +20,14 @@ if (stat(magic) >= oc_param($obj32, spell_levelreq) & ~magic_spellbook_hasrunes(
 	$boolean33 = true;
 }
 if (%varbit10600 = $int1) {
-	~teletab_button_draw(true, $enum30, $text0, $int1, $component2, $boolean33);
+	~teletab_button_draw(true, $enum30, $string0, $int1, $component2, $boolean33);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 	if_setonop("opsound(event_op, 2)", $component2);
 } else {
-	~teletab_button_draw(false, $enum30, $text0, $int1, $component2, $boolean33);
-	if_setonmouserepeat("teletab_button_draw(true, $enum30, $text0, $int1, $component2, $boolean33)", $component2);
-	if_setonmouseleave("teletab_button_draw(false, $enum30, $text0, $int1, $component2, $boolean33)", $component2);
+	~teletab_button_draw(false, $enum30, $string0, $int1, $component2, $boolean33);
+	if_setonmouserepeat("teletab_button_draw(true, $enum30, $string0, $int1, $component2, $boolean33)", $component2);
+	if_setonmouseleave("teletab_button_draw(false, $enum30, $string0, $int1, $component2, $boolean33)", $component2);
 	if_setonop("teletab_button_op(
 		0 = $component0, 
 		1 = event_op, 

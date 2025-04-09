@@ -5,7 +5,7 @@ cc_deleteall($component2);
 cc_deleteall($component3);
 def_int $int7 = 0;
 $int7 = ~v2_stone_button_filled($component5);
-cc_create($component5, ^iftype_text, $int7);
+cc_create($component5, ^iftype_text, $int7, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settext("<lt><lt>   Back");
@@ -18,7 +18,7 @@ if_setonmouseleave("adventurepath_side_settings_back_leave($component5, 0, 0xff9
 if_setop(1, "Back", $component5);
 if_setonop("adventurepath_side_settings_back_op($component0, $component1)", $component5);
 $int7 = 0;
-cc_create($component2, ^iftype_text, $int7);
+cc_create($component2, ^iftype_text, $int7, false);
 cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settext("Settings");
@@ -26,16 +26,16 @@ cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
-def_int $width8 = if_getwidth($component3);
+def_int $int8 = if_getwidth($component3);
 def_int $int9 = 0;
-def_int $height10 = if_getheight($component3);
-def_int $height11 = 0;
+def_int $int10 = if_getheight($component3);
+def_int $int11 = 0;
 $int7 = 0;
 $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
 	1 = $int9, 
 	2 = $component3, 
-	3 = $width8, 
+	3 = $int8, 
 	4 = 40, 
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
@@ -49,7 +49,7 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
 	1 = $int9, 
 	2 = $component3, 
-	3 = $width8, 
+	3 = $int8, 
 	4 = 40, 
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
@@ -63,7 +63,7 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
 	1 = $int9, 
 	2 = $component3, 
-	3 = $width8, 
+	3 = $int8, 
 	4 = 40, 
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
@@ -77,7 +77,7 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
 	1 = $int9, 
 	2 = $component3, 
-	3 = $width8, 
+	3 = $int8, 
 	4 = 40, 
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
@@ -91,7 +91,7 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
 	1 = $int9, 
 	2 = $component3, 
-	3 = $width8, 
+	3 = $int8, 
 	4 = 40, 
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
@@ -104,9 +104,9 @@ cc_setonop("script3342($component3, calc($int7 - 2))");
 $int7 = 0;
 def_int $int12 = 5;
 if ($int6 = 1) {
-	$height11 = calc(15 * ($int9 - 1) + $int9 * 34 + 5);
-	if ($height11 > $height10) {
-		if_setscrollsize(0, $height11, $component3);
+	$int11 = calc(15 * ($int9 - 1) + $int9 * 34 + 5);
+	if ($int11 > $int10) {
+		if_setscrollsize(0, $int11, $component3);
 		if_sethide(false, $component4);
 	} else {
 		if_setscrollsize(0, 0, $component3);

@@ -1,41 +1,41 @@
 // 6202
-[proc,script6202](component $widget_757:5_0, component $widget_757:6_1, component $widget_757:7_2, component $widget_757:9_3, component $widget_757:24_4, component $widget_757:56_5, component $widget_757:88_6, component $widget_757:120_7)
-if_sethide(false, $widget_757:5_0);
+[proc,script6202](component $com_pvp_arena_unrankedduel_tab_stats0, component $com_pvp_arena_unrankedduel_tab_myequipment1, component $com_pvp_arena_unrankedduel_tab_theirequipment2, component $com_pvp_arena_unrankedduel_stats3, component $com_pvp_arena_unrankedduel_0equipment4, component $com_pvp_arena_unrankedduel_1equipment5, component $com_pvp_arena_unrankedduel_2equipment6, component $com_pvp_arena_unrankedduel_opponent7)
+if_sethide(false, $com_pvp_arena_unrankedduel_tab_stats0);
 def_component $component8 = null;
 def_component $component9 = null;
 def_component $component10 = null;
 def_string $string0 = "";
 if (%varbit14028 <= 1) {
 	%varcint213 = -1;
-	~script6294($widget_757:5_0, "Stats");
-	if_sethide(true, $widget_757:6_1);
-	if_sethide(true, $widget_757:7_2);
-	if_sethide(false, $widget_757:9_3);
-	if_sethide(true, $widget_757:24_4);
-	if_sethide(true, $widget_757:56_5);
-	if_sethide(true, $widget_757:88_6);
+	~script6294($com_pvp_arena_unrankedduel_tab_stats0, "Stats");
+	if_sethide(true, $com_pvp_arena_unrankedduel_tab_myequipment1);
+	if_sethide(true, $com_pvp_arena_unrankedduel_tab_theirequipment2);
+	if_sethide(false, $com_pvp_arena_unrankedduel_stats3);
+	if_sethide(true, $com_pvp_arena_unrankedduel_0equipment4);
+	if_sethide(true, $com_pvp_arena_unrankedduel_1equipment5);
+	if_sethide(true, $com_pvp_arena_unrankedduel_2equipment6);
 } else {
 	switch_int (%varbit14024) {
 		case default :
-			$string0, $component8, $component9, $component10 = "Max/Med kit", $widget_757:24_4, $widget_757:56_5, $widget_757:88_6;
+			$string0, $component8, $component9, $component10 = "Max/Med kit", $com_pvp_arena_unrankedduel_0equipment4, $com_pvp_arena_unrankedduel_1equipment5, $com_pvp_arena_unrankedduel_2equipment6;
 		case 1 :
-			$string0, $component8, $component9, $component10 = "Zerker kit", $widget_757:56_5, $widget_757:88_6, $widget_757:24_4;
+			$string0, $component8, $component9, $component10 = "Zerker kit", $com_pvp_arena_unrankedduel_1equipment5, $com_pvp_arena_unrankedduel_2equipment6, $com_pvp_arena_unrankedduel_0equipment4;
 		case 2 :
-			$string0, $component8, $component9, $component10 = "1 Def Pure kit", $widget_757:88_6, $widget_757:24_4, $widget_757:56_5;
+			$string0, $component8, $component9, $component10 = "1 Def Pure kit", $com_pvp_arena_unrankedduel_2equipment6, $com_pvp_arena_unrankedduel_0equipment4, $com_pvp_arena_unrankedduel_1equipment5;
 	}
 	if_sethide(true, $component9);
 	if_sethide(true, $component10);
-	if_sethide(false, $widget_757:6_1);
-	if_sethide(false, $widget_757:7_2);
+	if_sethide(false, $com_pvp_arena_unrankedduel_tab_myequipment1);
+	if_sethide(false, $com_pvp_arena_unrankedduel_tab_theirequipment2);
 	~script6204(
 		0 = "Stats", 
-		1 = $widget_757:9_3, 
-		2 = $widget_757:5_0, 
+		1 = $com_pvp_arena_unrankedduel_stats3, 
+		2 = $com_pvp_arena_unrankedduel_tab_stats0, 
 		3 = $string0, 
 		4 = $component8, 
-		5 = $widget_757:6_1, 
+		5 = $com_pvp_arena_unrankedduel_tab_myequipment1, 
 		6 = "Opponent's kit", 
-		7 = $widget_757:120_7, 
-		8 = $widget_757:7_2
+		7 = $com_pvp_arena_unrankedduel_opponent7, 
+		8 = $com_pvp_arena_unrankedduel_tab_theirequipment2
 	);
 }

@@ -7,7 +7,7 @@ def_string $string0 = "";
 def_int $int10 = 0;
 $string0 = oc_param($namedobj0, param_2059);
 $int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
-cc_create($component4, ^iftype_text, $int8);
+cc_create($component4, ^iftype_text, $int8, false);
 cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
@@ -21,7 +21,7 @@ $string0 = oc_param($namedobj0, param_2060);
 if (string_length($string0) > 0) {
 	$string0 = "<col=0xffffff>Special Attack: </col><$string0>";
 	$int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
-	cc_create($component4, ^iftype_text, $int8);
+	cc_create($component4, ^iftype_text, $int8, false);
 	cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
@@ -34,7 +34,7 @@ if (string_length($string0) > 0) {
 }
 def_int $int11 = 0;
 if ($dbrow1 ! null) {
-	$int11 = db_getfield($dbrow1, dbtable_85:3, $dbfield2);
+	$int11 = db_getfield($dbrow1, leagues_echo_bosses:unique_drop_rate, $dbfield2);
 	if ($int11 = 1) {
 		$string0 = "Guarenteed";
 	} else {
@@ -46,7 +46,7 @@ if ($dbrow1 ! null) {
 if (string_length($string0) > 0) {
 	$string0 = "This item has a drop rate of <col=0xffffff><$string0>.";
 	$int10 = calc(paraheight($string0, if_getwidth($component4), $fontmetrics6) * 15);
-	cc_create($component4, ^iftype_text, $int8);
+	cc_create($component4, ^iftype_text, $int8, false);
 	cc_setposition(0, $int9, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
@@ -67,27 +67,27 @@ switch_int (%varcint988) {
 	case 3 :
 		$int12 = 420;
 }
-def_string $text1 = ~script7643(oc_param($namedobj0, param_0));
-def_string $text2 = ~script7643(oc_param($namedobj0, param_1));
-def_string $text3 = ~script7643(oc_param($namedobj0, param_2));
-def_string $text4 = ~script7643(oc_param($namedobj0, param_3));
-def_string $text5 = ~script7643(oc_param($namedobj0, param_4));
-def_string $text6 = ~script7643(oc_param($namedobj0, param_5));
-def_string $text7 = ~script7643(oc_param($namedobj0, param_6));
-def_string $text8 = ~script7643(oc_param($namedobj0, param_7));
-def_string $text9 = ~script7643(oc_param($namedobj0, param_8));
-def_string $text10 = ~script7643(oc_param($namedobj0, param_9));
-def_string $text11 = ~script7643(oc_param($namedobj0, param_10));
-def_string $text12 = ~script7643(oc_param($namedobj0, param_189));
+def_string $string1 = ~script7643(oc_param($namedobj0, param_0));
+def_string $string2 = ~script7643(oc_param($namedobj0, param_1));
+def_string $string3 = ~script7643(oc_param($namedobj0, param_2));
+def_string $string4 = ~script7643(oc_param($namedobj0, param_3));
+def_string $string5 = ~script7643(oc_param($namedobj0, param_4));
+def_string $string6 = ~script7643(oc_param($namedobj0, param_5));
+def_string $string7 = ~script7643(oc_param($namedobj0, param_6));
+def_string $string8 = ~script7643(oc_param($namedobj0, param_7));
+def_string $string9 = ~script7643(oc_param($namedobj0, param_8));
+def_string $string10 = ~script7643(oc_param($namedobj0, param_9));
+def_string $string11 = ~script7643(oc_param($namedobj0, param_10));
+def_string $string12 = ~script7643(oc_param($namedobj0, param_189));
 def_int $int14 = oc_param($namedobj0, param_299);
 if ($int14 > 0) {
 	$int14 = calc($int14 / 10);
 }
-def_string $text13 = "<~script7643($int14)>%";
-def_string $text14 = ~script7643(oc_param($namedobj0, param_11));
-def_string $text15 = "<tostring(oc_param($namedobj0, param_14))> ticks (0.6s per)";
+def_string $string13 = "<~script7643($int14)>%";
+def_string $string14 = ~script7643(oc_param($namedobj0, param_11));
+def_string $string15 = "<tostring(oc_param($namedobj0, param_14))> ticks (0.6s per)";
 def_int $int15 = max(1, oc_param($namedobj0, param_13));
-def_string $text16 = "<tostring($int15)> <~text_plural($int15, "tile", "tiles")>";
+def_string $string16 = "<tostring($int15)> <~text_plural($int15, "tile", "tiles")>";
 $int8, $int9 = ~script7642(
 	0 = $component4, 
 	1 = $int8, 
@@ -127,11 +127,11 @@ $int8, $int9 = ~script7642(
 	5 = $colour7, 
 	6 = $graphic5, 
 	7 = 5, 
-	8 = $text1, 
-	9 = $text2, 
-	10 = $text3, 
-	11 = $text4, 
-	12 = $text5
+	8 = $string1, 
+	9 = $string2, 
+	10 = $string3, 
+	11 = $string4, 
+	12 = $string5
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -172,11 +172,11 @@ $int8, $int9 = ~script7642(
 	5 = $colour7, 
 	6 = $graphic5, 
 	7 = 5, 
-	8 = $text6, 
-	9 = $text7, 
-	10 = $text8, 
-	11 = $text9, 
-	12 = $text10
+	8 = $string6, 
+	9 = $string7, 
+	10 = $string8, 
+	11 = $string9, 
+	12 = $string10
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -217,10 +217,10 @@ $int8, $int9 = ~script7642(
 	5 = $colour7, 
 	6 = $graphic5, 
 	7 = 4, 
-	8 = $text11, 
-	9 = $text12, 
-	10 = $text13, 
-	11 = $text14, 
+	8 = $string11, 
+	9 = $string12, 
+	10 = $string13, 
+	11 = $string14, 
 	12 = "0"
 );
 if (oc_param($namedobj0, param_2061) = false) {
@@ -248,8 +248,8 @@ if (oc_param($namedobj0, param_2061) = false) {
 		5 = $colour7, 
 		6 = $graphic5, 
 		7 = 2, 
-		8 = $text15, 
-		9 = $text16, 
+		8 = $string15, 
+		9 = $string16, 
 		10 = "0", 
 		11 = "0", 
 		12 = "0"

@@ -1,8 +1,8 @@
 // 1011
-[proc,xpdrops_setup_init_display](component $component0, component $component1, string $text0, string $string1, int $width2, component $widget_137:1_3, component $widget_137:47_4, component $widget_137:49_5, component $widget_137:60_6, component $widget_137:61_7, component $widget_137:6_8, component $widget_137:51_9, component $widget_137:7_10, component $widget_137:52_11, component $widget_137:9_12, component $widget_137:53_13, component $widget_137:10_14, component $widget_137:54_15, component $widget_137:11_16, component $widget_137:55_17, component $widget_137:12_18, component $widget_137:56_19, component $widget_137:13_20, component $widget_137:57_21, component $widget_137:8_22, component $widget_137:58_23, component $widget_137:14_24, component $widget_137:59_25)
+[proc,xpdrops_setup_init_display](component $component0, component $component1, string $string0, string $string1, int $int2, component $com_xpdrops_setup_contents3, component $com_xpdrops_setup_dropdown_container4, component $com_xpdrops_setup_dropdown_panel5, component $com_xpdrops_setup_dropdown_scrollbar6, component $com_xpdrops_setup_tooltip7, component $com_xpdrops_setup_position_display8, component $com_xpdrops_setup_position_options9, component $com_xpdrops_setup_size_display10, component $com_xpdrops_setup_size_options11, component $com_xpdrops_setup_duration_display12, component $com_xpdrops_setup_duration_options13, component $com_xpdrops_setup_counter_display14, component $com_xpdrops_setup_counter_options15, component $com_xpdrops_setup_progress_display16, component $com_xpdrops_setup_progress_options17, component $com_xpdrops_setup_colour_display18, component $com_xpdrops_setup_colour_options19, component $com_xpdrops_setup_grouping_display20, component $com_xpdrops_setup_grouping_options21, component $com_xpdrops_setup_speed_display22, component $com_xpdrops_setup_speed_options23, component $com_xpdrops_setup_fakes_display24, component $com_xpdrops_setup_fakes_options25)
 cc_deleteall($component0);
 def_int $int26 = 0;
-cc_create($component0, ^iftype_graphic, $int26);
+cc_create($component0, ^iftype_graphic, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -11,56 +11,56 @@ cc_settiling(true);
 cc_setonclick("xpdrops_setup_display_open(
 	0 = $component0, 
 	1 = $component1, 
-	2 = $widget_137:1_3, 
-	3 = $widget_137:47_4, 
-	4 = $widget_137:49_5, 
-	5 = $widget_137:60_6, 
-	6 = $widget_137:61_7, 
-	7 = $widget_137:6_8, 
-	8 = $widget_137:51_9, 
-	9 = $widget_137:7_10, 
-	10 = $widget_137:52_11, 
-	11 = $widget_137:9_12, 
-	12 = $widget_137:53_13, 
-	13 = $widget_137:10_14, 
-	14 = $widget_137:54_15, 
-	15 = $widget_137:11_16, 
-	16 = $widget_137:55_17, 
-	17 = $widget_137:12_18, 
-	18 = $widget_137:56_19, 
-	19 = $widget_137:13_20, 
-	20 = $widget_137:57_21, 
-	21 = $widget_137:8_22, 
-	22 = $widget_137:58_23, 
-	23 = $widget_137:14_24, 
-	24 = $widget_137:59_25
+	2 = $com_xpdrops_setup_contents3, 
+	3 = $com_xpdrops_setup_dropdown_container4, 
+	4 = $com_xpdrops_setup_dropdown_panel5, 
+	5 = $com_xpdrops_setup_dropdown_scrollbar6, 
+	6 = $com_xpdrops_setup_tooltip7, 
+	7 = $com_xpdrops_setup_position_display8, 
+	8 = $com_xpdrops_setup_position_options9, 
+	9 = $com_xpdrops_setup_size_display10, 
+	10 = $com_xpdrops_setup_size_options11, 
+	11 = $com_xpdrops_setup_duration_display12, 
+	12 = $com_xpdrops_setup_duration_options13, 
+	13 = $com_xpdrops_setup_counter_display14, 
+	14 = $com_xpdrops_setup_counter_options15, 
+	15 = $com_xpdrops_setup_progress_display16, 
+	16 = $com_xpdrops_setup_progress_options17, 
+	17 = $com_xpdrops_setup_colour_display18, 
+	18 = $com_xpdrops_setup_colour_options19, 
+	19 = $com_xpdrops_setup_grouping_display20, 
+	20 = $com_xpdrops_setup_grouping_options21, 
+	21 = $com_xpdrops_setup_speed_display22, 
+	22 = $com_xpdrops_setup_speed_options23, 
+	23 = $com_xpdrops_setup_fakes_display24, 
+	24 = $com_xpdrops_setup_fakes_options25
 )");
-cc_create($component0, ^iftype_rectangle, $int26);
+cc_create($component0, ^iftype_rectangle, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
-cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $widget_137:61_7, $string1, 25, $width2)");
-cc_setonmouseleave("deltooltip($widget_137:61_7)");
-cc_create($component0, ^iftype_rectangle, $int26);
+cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_xpdrops_setup_tooltip7, $string1, 25, $int2)");
+cc_setonmouseleave("deltooltip($com_xpdrops_setup_tooltip7)");
+cc_create($component0, ^iftype_rectangle, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(2, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(false);
 cc_setcolour(0x474745);
-cc_create($component0, ^iftype_graphic, $int26);
+cc_create($component0, ^iftype_graphic, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_bottom);
-cc_create($component0, ^iftype_text, $int26);
+cc_create($component0, ^iftype_text, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
 cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_create($component0, ^iftype_text, $int26);
+cc_create($component0, ^iftype_text, $int26, false);
 $int26 = calc($int26 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
@@ -68,5 +68,5 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-cc_settext($text0);
+cc_settext($string0);
 ~xpdrops_setup_display_hoveroff($component0);

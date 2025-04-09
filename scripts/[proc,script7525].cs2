@@ -1,7 +1,7 @@
 // 7525
-[proc,script7525](component $widget_894:13_0)
-cc_deleteall($widget_894:13_0);
-cc_create($widget_894:13_0, ^iftype_rectangle, 0);
+[proc,script7525](component $com_hiscores_hiscores_text_input0)
+cc_deleteall($com_hiscores_hiscores_text_input0);
+cc_create($com_hiscores_hiscores_text_input0, ^iftype_rectangle, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
@@ -11,12 +11,12 @@ if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 192, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 225, null)");
 }
-cc_create($widget_894:13_0, ^iftype_rectangle, 1);
+cc_create($com_hiscores_hiscores_text_input0, ^iftype_rectangle, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(^black);
 cc_settrans(128);
-cc_create($widget_894:13_0, ^iftype_inputfield, 2);
+cc_create($com_hiscores_hiscores_text_input0, ^iftype_inputfield, 2, false);
 cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(p12_full);

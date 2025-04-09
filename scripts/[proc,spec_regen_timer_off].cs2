@@ -3,11 +3,11 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-def_component $component0 = interface_160:40;
+def_component $component0 = orbs:spec_regen;
 if (~on_enhanced_desktop = 1 & ~toplevel_getcomponents ! enum_1129 & %varbit12986 = 1) {
-	$component0 = interface_895:37;
+	$component0 = orbs_nomap:spec_regen;
 } else if (~on_mobile = true & %varbit6254 = 1) {
-	$component0 = interface_898:37;
+	$component0 = orbs_osm_nomap:spec_regen;
 }
 if_setontimer(null, $component0);
 cc_deleteall($component0);

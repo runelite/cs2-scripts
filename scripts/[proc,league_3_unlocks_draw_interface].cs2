@@ -1,25 +1,25 @@
 // 5807
-[proc,league_3_unlocks_draw_interface](component $widget_733:22_0, component $widget_733:24_1, component $widget_733:23_2, component $widget_733:9_3, int $comsubid4)
-cc_deleteall($widget_733:22_0);
-cc_deleteall($widget_733:24_1);
-cc_deleteall($widget_733:9_3);
+[proc,league_3_unlocks_draw_interface](component $com_league_3_unlocks_league_btn_menu0, component $com_league_3_unlocks_league_menu_frame1, component $com_league_3_unlocks_league_menu_overlay2, component $com_league_3_unlocks_side_menu3, int $comsubid4)
+cc_deleteall($com_league_3_unlocks_league_btn_menu0);
+cc_deleteall($com_league_3_unlocks_league_menu_frame1);
+cc_deleteall($com_league_3_unlocks_side_menu3);
 def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct5 = null) {
 	return;
 }
 def_int $int6 = 0;
 if (~in_league_tutorial = 0) {
-	~leagues_menu_button($widget_733:22_0, $int6, $widget_733:24_1, $widget_733:23_2);
+	~leagues_menu_button($com_league_3_unlocks_league_btn_menu0, $int6, $com_league_3_unlocks_league_menu_frame1, $com_league_3_unlocks_league_menu_overlay2);
 }
 $int6 = 0;
-~league_create_dropdown($widget_733:22_0, $widget_733:24_1, $widget_733:23_2, $int6, 3);
+~league_create_dropdown($com_league_3_unlocks_league_btn_menu0, $com_league_3_unlocks_league_menu_frame1, $com_league_3_unlocks_league_menu_overlay2, $int6, 3);
 $int6 = 0;
 def_int $colour7 = ~league_get_league_colour(3);
-if (cc_find(interface_733:2, $comsubid4) = ^true) {
+if (cc_find(league_3_unlocks:frame, $comsubid4) = ^true) {
 	cc_setcolour($colour7);
 }
 $int6 = ~script5291(
-	0 = $widget_733:9_3, 
+	0 = $com_league_3_unlocks_side_menu3, 
 	1 = $int6, 
 	2 = 0, 
 	3 = 38, 
@@ -37,7 +37,7 @@ $int6 = ~script5291(
 	15 = ~is_equal(0, %var3343)
 );
 $int6 = ~script5291(
-	0 = $widget_733:9_3, 
+	0 = $com_league_3_unlocks_side_menu3, 
 	1 = $int6, 
 	2 = 1, 
 	3 = 38, 
@@ -55,7 +55,7 @@ $int6 = ~script5291(
 	15 = ~is_equal(1, %var3343)
 );
 $int6 = ~script5291(
-	0 = $widget_733:9_3, 
+	0 = $com_league_3_unlocks_side_menu3, 
 	1 = $int6, 
 	2 = 2, 
 	3 = 38, 

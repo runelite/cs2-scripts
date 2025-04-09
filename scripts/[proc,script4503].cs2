@@ -1,7 +1,7 @@
 // 4503
-[proc,script4503](string $text0, int $int0, component $component1, component $component2, int $comsubid3, int $comsubid4, struct $struct5, component $component6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10)(int)
+[proc,script4503](string $string0, int $int0, component $component1, component $component2, int $comsubid3, int $comsubid4, struct $struct5, component $component6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10)(int)
 ~meslayer_open($int0);
-if_settext($text0, interface_162:42);
+if_settext($string0, chatbox:mes_text);
 ~script222("");
 def_string $string1 = "";
 if_setonkey("script4504(
@@ -18,8 +18,8 @@ if_setonkey("script4504(
 	10 = $comsubid8, 
 	11 = $comsubid9, 
 	12 = $comsubid10
-)", interface_162:43);
-if_setondialogabort("meslayer_ondialogabort", interface_162:43);
+)", chatbox:mes_text2);
+if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
 if (~on_mobile = true) {
 	if ($int0 ! 22) {
 		~keyboard_show(1, 3);

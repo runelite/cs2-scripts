@@ -6,35 +6,35 @@ def_obj $obj7 = null;
 def_dbrow $dbrow8 = null;
 def_namedobj $namedobj9 = null;
 def_int $int10 = 0;
-def_int $int11 = db_getfield($dbrow0, dbtable_39:8, 0);
-def_int $int12 = db_getfield($dbrow0, dbtable_39:6, 0);
-def_int $int13 = db_getfield($dbrow0, dbtable_39:7, 0);
+def_int $int11 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_cost_mod_haggle, 0);
+def_int $int12 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_cost_mod_buy, 0);
+def_int $int13 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_cost_mod_sell, 0);
 def_int $int14 = 0;
 def_int $int15 = 0;
-if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
-	$dbrow6 = db_getfield($dbrow0, dbtable_39:5, $int2);
-	if ($int4 = 0 & db_getfield($dbrow6, dbtable_40:15, 0) = false) {
+if (db_getfieldcount($dbrow0, omnishop_shop_data:omnishop_shop_stock) > 0) {
+	$dbrow6 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_stock, $int2);
+	if ($int4 = 0 & db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_sellable, 0) = false) {
 		return(null, 0);
 	}
-	if ($int4 = 1 & db_getfield($dbrow6, dbtable_40:14, 0) = false) {
+	if ($int4 = 1 & db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_buyable, 0) = false) {
 		return(null, 0);
 	}
-	if (db_getfieldcount($dbrow6, dbtable_40:6) > 0) {
-		if ($dbfield3 < db_getfieldcount($dbrow6, dbtable_40:6)) {
-			$dbrow8, $int10 = db_getfield($dbrow6, dbtable_40:6, $dbfield3);
-			$namedobj9 = db_getfield($dbrow8, dbtable_41:0, 0);
-			$int14 = db_getfield($dbrow6, dbtable_40:9, 0);
+	if (db_getfieldcount($dbrow6, omnishop_stock_data:omnishop_stock_cost) > 0) {
+		if ($dbfield3 < db_getfieldcount($dbrow6, omnishop_stock_data:omnishop_stock_cost)) {
+			$dbrow8, $int10 = db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_cost, $dbfield3);
+			$namedobj9 = db_getfield($dbrow8, omnishop_currency_data:omnishop_currency_obj, 0);
+			$int14 = db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_cost_mod_haggle, 0);
 			if ($int14 ! ^min_32bit_int) {
 				$int11 = $int14;
 			}
 			if ($int4 = 1) {
-				$int14 = db_getfield($dbrow6, dbtable_40:7, 0);
+				$int14 = db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_cost_mod_buy, 0);
 				if ($int14 ! ^min_32bit_int) {
 					$int12 = $int14;
 				}
 				$int10 = ~script7261($int10, $int11, $int12, $int15, $namedobj9);
 			} else {
-				$int14 = db_getfield($dbrow6, dbtable_40:8, 0);
+				$int14 = db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_cost_mod_sell, 0);
 				if ($int14 ! ^min_32bit_int) {
 					$int13 = $int14;
 				}
@@ -45,13 +45,13 @@ if (db_getfieldcount($dbrow0, dbtable_39:5) > 0) {
 		}
 		return(null, 0);
 	}
-	$obj7 = db_getfield($dbrow6, dbtable_40:0, 0);
+	$obj7 = db_getfield($dbrow6, omnishop_stock_data:omnishop_stock_obj, 0);
 } else {
 	$obj7 = inv_getobj($inv1, $int2);
 }
 if ($dbfield3 = 0) {
-	$dbrow8, $int10 = db_getfield($dbrow0, dbtable_39:9, 0), ~shop_cost($inv1, $obj7);
-	$namedobj9 = db_getfield($dbrow8, dbtable_41:0, 0);
+	$dbrow8, $int10 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_cost_currency, 0), ~shop_cost($inv1, $obj7);
+	$namedobj9 = db_getfield($dbrow8, omnishop_currency_data:omnishop_currency_obj, 0);
 	if ($int4 = 1) {
 		$int10 = ~script7261($int10, $int11, $int12, $int15, $namedobj9);
 	} else {

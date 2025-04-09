@@ -6,11 +6,11 @@ if (%varbit4611 = 1) {
 	if_setonkey("toplevel_keypress(event_keycode, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-def_component $component2 = enum(component, component, $enum1, interface_161:95);
+def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:map_container);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:31);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:compassclick);
 if ($component2 ! null) {
 	if (%varbit542 = 1 | %varbit4606 ! 0) {
 		if_sethide(true, $component2);
@@ -18,7 +18,7 @@ if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
 }
-def_component $component3 = enum(component, component, $enum1, interface_161:1);
+def_component $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:overlay_atmosphere);
 def_int $int4 = 0;
 def_int $int5 = 0;
 $int5, $int4 = viewport_getfov;
@@ -139,7 +139,7 @@ if ($component7 ! null) {
 	if_setgraphic(enum(int, graphic, enum_3841, %varbit13071), $component7);
 	if_setonvartransmit("script5303($component7, $component9){var499}", $component7);
 }
-$component7 = enum(component, component, $enum1, interface_161:38);
+$component7 = enum(component, component, $enum1, toplevel_osrs_stretch:side_background);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic(tradebacking_dark, $component7);
@@ -149,7 +149,7 @@ if ($component7 ! null) {
 		if_settrans(150, $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, interface_161:20);
+$component7 = enum(component, component, $enum1, toplevel_osrs_stretch:multiway_icon);
 if ($component7 ! null) {
 	if ($enum1 = enum_1745) {
 		~script3506($component7);
@@ -180,20 +180,20 @@ if ($component7 ! null) {
 		if_sethide(true, $component7);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_161:6);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:buff_bar);
 if (%varbit9528 = 0 & %varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
 %varcint384 = clientclock;
-$component2 = enum(component, component, $enum1, interface_161:93);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:pm_container);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:96);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:chat_container);
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 1 & %varbit4606 = 3) {
 		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
@@ -220,26 +220,26 @@ if ($enum1 ! enum_1129) {
 }
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 0) {
-		if_sethide(false, interface_601:38);
-		if_sethide(false, interface_601:39);
+		if_sethide(false, toplevel_osm:wifi);
+		if_sethide(false, toplevel_osm:battery);
 	} else {
-		if_sethide(true, interface_601:38);
-		if_sethide(true, interface_601:39);
+		if_sethide(true, toplevel_osm:wifi);
+		if_sethide(true, toplevel_osm:battery);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_161:5);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:stat_boosts_hud);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:4);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:helper);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:2);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:hpbar_hud);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
@@ -257,7 +257,7 @@ if (%varbit5599 = 1) {
 	setfolloweropslowpriority(false);
 }
 ~mouseover_ops;
-$component2 = enum(component, component, $enum1, interface_161:37);
+$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:mouseover);
 if (%varbit542 = 0) {
 	if_sethide(false, $component2);
 } else {
@@ -272,7 +272,7 @@ if (%varcint967 = 0) {
 ~logout_timer_notifier;
 ~script6682($enum1);
 ~script5355($enum1);
-$component2 = enum(component, component, $enum1, interface_601:41);
+$component2 = enum(component, component, $enum1, toplevel_osm:side_left_chat);
 if ($component2 ! null) {
 	if (%varbit542 = 0) {
 		if_sethide(false, $component2);
@@ -280,7 +280,7 @@ if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
 }
-$component2 = enum(component, component, $enum1, interface_601:40);
+$component2 = enum(component, component, $enum1, toplevel_osm:hotkeys);
 if ($component2 ! null) {
 	if (%varbit542 = 0) {
 		if_sethide(false, $component2);

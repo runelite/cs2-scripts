@@ -1,14 +1,14 @@
 // 3099
-[clientscript,canoe_map_init](component $widget_647:11_0, component $widget_647:12_1, component $widget_647:15_2, component $widget_647:16_3, component $widget_647:17_4, component $widget_647:14_5, component $widget_647:18_6, component $widget_647:19_7)
-cc_deleteall($widget_647:11_0);
-cc_deleteall($widget_647:12_1);
-cc_deleteall($widget_647:15_2);
-cc_deleteall($widget_647:16_3);
-cc_deleteall($widget_647:17_4);
-cc_deleteall($widget_647:14_5);
-cc_deleteall($widget_647:18_6);
-cc_deleteall($widget_647:19_7);
-cc_create($widget_647:11_0, ^iftype_text, 0);
+[clientscript,canoe_map_init](component $com_canoe_map_where_to_go_text0, component $com_canoe_map_close1, component $com_canoe_map_lumbridge2, component $com_canoe_map_champions3, component $com_canoe_map_barbarian4, component $com_canoe_map_edgeville5, component $com_canoe_map_wilderness6, component $com_canoe_map_sanctuary7)
+cc_deleteall($com_canoe_map_where_to_go_text0);
+cc_deleteall($com_canoe_map_close1);
+cc_deleteall($com_canoe_map_lumbridge2);
+cc_deleteall($com_canoe_map_champions3);
+cc_deleteall($com_canoe_map_barbarian4);
+cc_deleteall($com_canoe_map_edgeville5);
+cc_deleteall($com_canoe_map_wilderness6);
+cc_deleteall($com_canoe_map_sanctuary7);
+cc_create($com_canoe_map_where_to_go_text0, ^iftype_text, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xc8d1db);
@@ -16,16 +16,16 @@ cc_settextshadow(true);
 cc_settextfont(q8_full);
 cc_settext("Please Select <br>Your Destination");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_create($widget_647:12_1, ^iftype_graphic, 0);
+cc_create($com_canoe_map_close1, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,4");
 if (~on_mobile = false) {
-	if_setonmouserepeat("close_mouse_interact($widget_647:12_1, true, 0)", $widget_647:12_1);
-	if_setonmouseleave("close_mouse_interact($widget_647:12_1, false, 0)", $widget_647:12_1);
+	if_setonmouserepeat("close_mouse_interact($com_canoe_map_close1, true, 0)", $com_canoe_map_close1);
+	if_setonmouseleave("close_mouse_interact($com_canoe_map_close1, false, 0)", $com_canoe_map_close1);
 }
-if_setop(1, "Close", $widget_647:12_1);
-if_setonop("canoe_close", $widget_647:12_1);
+if_setop(1, "Close", $com_canoe_map_close1);
+if_setonop("canoe_close", $com_canoe_map_close1);
 def_int $int8 = 1;
 def_int $int9 = 1;
 def_int $int10 = 1;
@@ -34,32 +34,32 @@ def_int $int12 = 1;
 def_int $int13 = 1;
 $int8, $int9, $int10, $int11, $int12, $int13 = ~canoe_return_locations;
 if ($int8 ! 1) {
-	~canoe_location_setup($widget_647:15_2, "Lumbridge", false, model_12103, model_12104, "Travel to<col=ff9040> Lumbridge", 0, 15);
+	~canoe_location_setup($com_canoe_map_lumbridge2, "Lumbridge", false, model_12103, model_12104, "Travel to<col=ff9040> Lumbridge", 0, 15);
 }
 if ($int9 ! 1) {
-	~canoe_location_setup($widget_647:16_3, "Champions <br>Guild", false, model_12103, model_12104, "Travel to<col=ff9040> Champions Guild", -20, 0);
+	~canoe_location_setup($com_canoe_map_champions3, "Champions <br>Guild", false, model_12103, model_12104, "Travel to<col=ff9040> Champions Guild", -20, 0);
 }
 if ($int10 ! 1) {
-	~canoe_location_setup($widget_647:17_4, "Barbarian <br> Village", false, model_12103, model_12104, "Travel to<col=ff9040> Barbarian Village", -10, 20);
+	~canoe_location_setup($com_canoe_map_barbarian4, "Barbarian <br> Village", false, model_12103, model_12104, "Travel to<col=ff9040> Barbarian Village", -10, 20);
 }
 if ($int11 ! 1) {
-	~canoe_location_setup($widget_647:14_5, "Edgeville", false, model_12103, model_12104, "Travel to<col=ff9040> Edgeville", -10, 25);
+	~canoe_location_setup($com_canoe_map_edgeville5, "Edgeville", false, model_12103, model_12104, "Travel to<col=ff9040> Edgeville", -10, 25);
 }
 if ($int12 ! 1) {
-	~canoe_location_setup($widget_647:18_6, "Wilderness Pond - <br>No canoe trees here.", true, null, null, "Travel to<col=ff9040> Wilderness Pond", 0, 0);
+	~canoe_location_setup($com_canoe_map_wilderness6, "Wilderness Pond - <br>No canoe trees here.", true, null, null, "Travel to<col=ff9040> Wilderness Pond", 0, 0);
 }
 if ($int13 ! 1) {
-	~canoe_location_setup($widget_647:19_7, "Ferox <br> Enclave", false, model_12103, model_12104, "Travel to<col=ff9040> Ferox Enclave", -15, 35);
+	~canoe_location_setup($com_canoe_map_sanctuary7, "Ferox <br> Enclave", false, model_12103, model_12104, "Travel to<col=ff9040> Ferox Enclave", -15, 35);
 }
 switch_int (%varbit1846) {
 	case 3 :
-		~canoe_location_you_are_here($widget_647:17_4);
+		~canoe_location_you_are_here($com_canoe_map_barbarian4);
 	case 2 :
-		~canoe_location_you_are_here($widget_647:16_3);
+		~canoe_location_you_are_here($com_canoe_map_champions3);
 	case 4 :
-		~canoe_location_you_are_here($widget_647:14_5);
+		~canoe_location_you_are_here($com_canoe_map_edgeville5);
 	case 1 :
-		~canoe_location_you_are_here($widget_647:15_2);
+		~canoe_location_you_are_here($com_canoe_map_lumbridge2);
 	case 5 :
-		~canoe_location_you_are_here($widget_647:19_7);
+		~canoe_location_you_are_here($com_canoe_map_sanctuary7);
 }

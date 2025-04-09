@@ -5,16 +5,16 @@ cc_deleteall($component21);
 cc_deleteall($component22);
 cc_deleteall($component4);
 cc_deleteall($component22);
-cc_deleteall(interface_642:22);
-def_string $text0 = struct_param($struct5, param_810);
-if_settext($text0, $component1);
+cc_deleteall(adventurepath:navigation);
+def_string $string0 = struct_param($struct5, param_810);
+if_settext($string0, $component1);
 if_setcolour(0xff981f, $component1);
-def_string $text1 = struct_param($struct5, param_812);
-if_settext($text1, $component2);
+def_string $string1 = struct_param($struct5, param_812);
+if_settext($string1, $component2);
 if_setcolour(0xff981f, $component2);
 def_int $int23 = 0;
 if (~on_mobile = false) {
-	cc_create($component3, ^iftype_rectangle, $int23);
+	cc_create($component3, ^iftype_rectangle, $int23, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);
@@ -24,7 +24,7 @@ if (~on_mobile = false) {
 	cc_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)");
 	$int23 = calc(1 + $int23);
 }
-cc_create($component3, ^iftype_text, $int23);
+cc_create($component3, ^iftype_text, $int23, false);
 cc_settextalign(^settextalign_left, ^settextalign_top, 17);
 cc_setcolour(0xff981f);
 cc_settext(~adventurepath_replace(struct_param($struct5, param_813)));
@@ -33,7 +33,7 @@ cc_settextfont(p12_full);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 $int23 = calc(1 + $int23);
-cc_create($component3, ^iftype_text, $int23);
+cc_create($component3, ^iftype_text, $int23, false);
 cc_settextalign(^settextalign_right, ^settextalign_bottom, 13);
 cc_setcolour(0xff981f);
 cc_settext("<~text_device("Click", "Tap")> here for more information.<img=15>");
@@ -48,28 +48,28 @@ def_int $int25 = 0;
 def_int $int26 = 0;
 def_int $int27 = 0;
 $int23 = 0;
-def_int $width28 = if_getwidth($component4);
+def_int $int28 = if_getwidth($component4);
 def_struct $struct29 = struct_param($struct5, param_808);
-def_int $index30 = -1;
+def_int $int30 = -1;
 if ($struct29 ! null) {
-	$index30 = struct_param($struct29, param_806);
+	$int30 = struct_param($struct29, param_806);
 }
-if (($index30 = -1 | ~adventurepath_return_task_status($index30) = 1) & ~adventurepath_return_task_status($int0) = 0 & struct_param($struct5, param_927) ! null) {
-	if_setop(1, "Show<col=ff9040> Hint", interface_642:22);
-	if_setop(2, "Remove<col=ff9040> Hint arrow", interface_642:22);
-	$int23 = ~v2_stone_button_filled(interface_642:22);
-	if_setonmouserepeat("v2_stone_button_change_in(interface_642:22, 0)", interface_642:22);
-	if_setonmouseleave("v2_stone_button_change_out(interface_642:22, 0)", interface_642:22);
-	if_setonop("button_select_sound", interface_642:22);
+if (($int30 = -1 | ~adventurepath_return_task_status($int30) = 1) & ~adventurepath_return_task_status($int0) = 0 & struct_param($struct5, param_927) ! null) {
+	if_setop(1, "Show<col=ff9040> Hint", adventurepath:navigation);
+	if_setop(2, "Remove<col=ff9040> Hint arrow", adventurepath:navigation);
+	$int23 = ~v2_stone_button_filled(adventurepath:navigation);
+	if_setonmouserepeat("v2_stone_button_change_in(adventurepath:navigation, 0)", adventurepath:navigation);
+	if_setonmouseleave("v2_stone_button_change_out(adventurepath:navigation, 0)", adventurepath:navigation);
+	if_setonop("button_select_sound", adventurepath:navigation);
 } else {
-	if_setop(1, "", interface_642:22);
-	if_setop(2, "", interface_642:22);
-	$int23 = ~v2_stone_button_in_filled(interface_642:22);
-	if_setonmouserepeat(null, interface_642:22);
-	if_setonmouseleave(null, interface_642:22);
-	if_setonop(null, interface_642:22);
+	if_setop(1, "", adventurepath:navigation);
+	if_setop(2, "", adventurepath:navigation);
+	$int23 = ~v2_stone_button_in_filled(adventurepath:navigation);
+	if_setonmouserepeat(null, adventurepath:navigation);
+	if_setonmouseleave(null, adventurepath:navigation);
+	if_setonop(null, adventurepath:navigation);
 }
-cc_create(interface_642:22, ^iftype_graphic, $int23);
+cc_create(adventurepath:navigation, ^iftype_graphic, $int23, false);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("worldmap_icon,0");
@@ -109,7 +109,7 @@ if ($enum33 ! null & $enum34 ! null) {
 						3 = enum(namedobj, int, $enumarray1(0), $namedobj36), 
 						4 = $int24, 
 						5 = $int27, 
-						6 = $width28, 
+						6 = $int28, 
 						7 = $int37, 
 						8 = false, 
 						9 = $int38
@@ -134,7 +134,7 @@ if ($enum33 ! null & $enum34 ! null) {
 						3 = enum(namedobj, int, $enumarray1(1), $namedobj36), 
 						4 = $int24, 
 						5 = $int27, 
-						6 = $width28, 
+						6 = $int28, 
 						7 = $int37, 
 						8 = true, 
 						9 = $int38
@@ -166,7 +166,7 @@ if ($enum33 ! null & $enum34 ! null) {
 						3 = enum(namedobj, int, $enumarray1(2), $namedobj36), 
 						4 = $int24, 
 						5 = $int27, 
-						6 = $width28, 
+						6 = $int28, 
 						7 = $int37, 
 						8 = false, 
 						9 = $int38
@@ -190,7 +190,7 @@ if ($enum33 ! null & $enum34 ! null) {
 						3 = enum(namedobj, int, $enumarray1(3), $namedobj36), 
 						4 = $int24, 
 						5 = $int27, 
-						6 = $width28, 
+						6 = $int28, 
 						7 = $int37, 
 						8 = true, 
 						9 = $int38
@@ -205,27 +205,27 @@ if ($enum33 ! null & $enum34 ! null) {
 		}
 	}
 }
-def_int $height39 = 0;
-def_int $height40 = if_getheight($component4);
-cc_create($component4, ^iftype_graphic, $int23);
+def_int $int39 = 0;
+def_int $int40 = if_getheight($component4);
+cc_create($component4, ^iftype_graphic, $int23, false);
 cc_setgraphic("v2_borders_slim,1");
 $int23 = calc($int23 + 1);
 $int37 = calc(16 + $int37);
-$height39 = calc(32 * $int26 + $int37);
-if ($height39 > $height40) {
-	cc_setsize(32, calc($height39 - 15), ^setsize_abs, ^setsize_abs);
+$int39 = calc(32 * $int26 + $int37);
+if ($int39 > $int40) {
+	cc_setsize(32, calc($int39 - 15), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(if_getwidth($component4) / 2 - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
-	if_setscrollsize(0, $height39, $component4);
+	if_setscrollsize(0, $int39, $component4);
 	if_sethide(false, $component13);
 } else {
-	cc_setsize(32, calc($height40 - 20), ^setsize_abs, ^setsize_abs);
+	cc_setsize(32, calc($int40 - 20), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(if_getwidth($component4) / 2 - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
 	if_setscrollsize(0, 0, $component4);
 	if_sethide(true, $component13);
 }
 if_setscrollpos(0, 0, $component4);
 ~scrollbar_vertical($component13, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_settext($text0, $component20);
+if_settext($string0, $component20);
 if_setcolour(0xff981f, $component20);
 ~adventurepath_hint_list(struct_param($struct5, param_814), $component17);
 def_graphic $graphic41 = struct_param($struct5, param_822);
@@ -234,13 +234,13 @@ if ($graphic41 ! null) {
 	if_settext(~adventurepath_replace(struct_param($struct5, param_823)), $component18);
 	if_setcolour(0xff981f, $component18);
 }
-if_settext($text1, $component16);
+if_settext($string1, $component16);
 if_setcolour(0xff981f, $component16);
 def_boolean $boolean42 = struct_param($struct5, param_825);
-def_string $url2 = struct_param($struct5, param_824);
+def_string $string2 = struct_param($struct5, param_824);
 $int23 = 0;
 if ($boolean42 = true) {
-	cc_create($component21, ^iftype_text, $int23);
+	cc_create($component21, ^iftype_text, $int23, false);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 13);
 	cc_setcolour(0xf4f4f4);
 	cc_settext("<img=13><~text_device("Click", "Tap")> here to go to a helpful web page.");
@@ -249,7 +249,7 @@ if ($boolean42 = true) {
 	cc_settextfont(p12_full);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setonop("adventurepath_open_url($url2)");
+	cc_setonop("adventurepath_open_url($string2)");
 	cc_setop(1, "Open link");
 	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, 0xbebebe)");
@@ -260,23 +260,23 @@ def_int $int43 = struct_param($struct5, param_807);
 def_int $int44 = ~adventurepath_return_task_focus($int43);
 if (~script2973($int0, $int43) ! $int0) {
 	$int23 = ~v2_stone_button_in_filled($component22);
-	cc_create($component22, ^iftype_graphic, $int23);
+	cc_create($component22, ^iftype_graphic, $int23, false);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic("clickcross,5");
 	cc_setop(1, "Set<col=ff9040> Focus");
 	cc_setonop("button_select_sound");
-	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
+	cc_create($component22, ^iftype_rectangle, calc(1 + $int23), false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	if_setonmouserepeat("adventurepath_do_nothing", $component22);
 	if_setonmouseleave("adventurepath_do_nothing", $component22);
 } else if ($int44 = $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
-	cc_create($component22, ^iftype_graphic, $int23);
+	cc_create($component22, ^iftype_graphic, $int23, false);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 	cc_setgraphic(graphic_2223);
-	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
+	cc_create($component22, ^iftype_rectangle, calc(1 + $int23), false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	cc_setop(1, "Remove<col=ff9040> Focus");
@@ -285,21 +285,21 @@ if (~script2973($int0, $int43) ! $int0) {
 	if_setonmouseleave("script2999($component22, $int44, $int0, $int43)", $component22);
 } else if (~adventurepath_return_task_status($int0) = 1) {
 	$int23 = ~v2_stone_button_in_filled($component22);
-	cc_create($component22, ^iftype_graphic, $int23);
+	cc_create($component22, ^iftype_graphic, $int23, false);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic(tick);
-	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
+	cc_create($component22, ^iftype_rectangle, calc(1 + $int23), false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	if_setonmouserepeat("adventurepath_do_nothing", $component22);
 	if_setonmouseleave("adventurepath_do_nothing", $component22);
 } else {
 	$int23 = ~v2_stone_button_filled($component22);
-	cc_create($component22, ^iftype_graphic, $int23);
+	cc_create($component22, ^iftype_graphic, $int23, false);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 	cc_setgraphic(graphic_2224);
-	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
+	cc_create($component22, ^iftype_rectangle, calc(1 + $int23), false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	cc_setop(1, "Set<col=ff9040> Focus");

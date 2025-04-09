@@ -6,7 +6,7 @@ def_int $comsubid4 = -1;
 if (%varbit4285 ! $int3) {
 	if (%varbit4285 = 1) {
 		$comsubid4 = ~v2_stone_button_in_filled($component2);
-		cc_create($component2, ^iftype_text, $comsubid4);
+		cc_create($component2, ^iftype_text, $comsubid4, false);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextfont(p12_full);
@@ -18,7 +18,7 @@ if (%varbit4285 ! $int3) {
 		if_setonmouseleave(null, $component2);
 	} else {
 		$comsubid4 = ~v2_stone_button_out_filled($component2);
-		cc_create($component2, ^iftype_text, $comsubid4);
+		cc_create($component2, ^iftype_text, $comsubid4, false);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextfont(p12_full);

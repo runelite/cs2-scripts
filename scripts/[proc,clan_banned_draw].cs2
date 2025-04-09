@@ -1,13 +1,13 @@
 // 4271
 [proc,clan_banned_draw](component $component0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, int $int6, int $int7, component $component8, int $int9)
 def_string $string0 = "";
-def_int $clanslot10 = null;
+def_int $int10 = -1;
 def_int $int11 = -1;
-def_string $text1 = "";
+def_string $string1 = "";
 def_graphic $graphic12 = null;
 def_int $int13 = -1;
 def_int $int14 = 0;
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		if (~clan_members_searching = 1) {
 			$string0 = ~bankmain_filterstring;
@@ -20,19 +20,19 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			cc_settext("<activeclansettings_getclanname>: Ban list");
 		}
 	}
-	$clanslot10 = activeclansettings_getaffinedslot(removetags(chat_playername));
-	if ($clanslot10 ! null) {
+	$int10 = activeclansettings_getaffinedslot(removetags(chat_playername));
+	if ($int10 ! -1) {
 		$int11 = ~clan_permission_get(ban_from_chat_2956);
-		if (activeclansettings_getaffinedrank($clanslot10) >= $int11) {
+		if (activeclansettings_getaffinedrank($int10) >= $int11) {
 			if_settext("<~text_device("Click", "Tap")> a name to remove it from the ban list.", $component8);
 		} else {
-			$text1, $graphic12 = ~script4302($int11);
+			$string1, $graphic12 = ~script4302($int11);
 			if (~league_world = 1) {
 				if_settext("You may not administer clans from a League world.", $component8);
 			} else if (~speedrunning_world = 1) {
 				if_settext("You may not administer clans from a Speedrunning world.", $component8);
 			} else {
-				if_settext("Only clan members with a rank of <$text1> may unban players.", $component8);
+				if_settext("Only clan members with a rank of <$string1> may unban players.", $component8);
 			}
 		}
 		$int13 = activeclansettings_getbannedcount;
@@ -46,15 +46,15 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		~clan_banned_wipedisplay("Only clan members may unban players.", $component3, $component4);
 	}
 } else {
-	$text1 = ~script4287;
+	$string1 = ~script4287;
 	if (cc_find($component1, $comsubid2) = ^true) {
-		cc_settext($text1);
+		cc_settext($string1);
 	}
-	if_settext("<col=9f9f9f><$text1></col>", $component8);
-	~clan_banned_wipedisplay($text1, $component3, $component4);
+	if_settext("<col=9f9f9f><$string1></col>", $component8);
+	~clan_banned_wipedisplay($string1, $component3, $component4);
 }
-def_component $layer15 = if_getlayer($component0);
-if ($layer15 ! null) {
-	~clan_banned_setsize($layer15, $component0, $component3, $component4, ~max(180, $int14), if_getheight($layer15));
+def_component $component15 = if_getlayer($component0);
+if ($component15 ! null) {
+	~clan_banned_setsize($component15, $component0, $component3, $component4, ~max(180, $int14), if_getheight($component15));
 }
 ~clan_banned_blocker($component5, $int6, $int7);

@@ -1,7 +1,7 @@
 // 4950
-[proc,script4950](string $text0, string $text1)
-def_component $component0 = interface_865:19;
-def_component $component1 = interface_865:21;
+[proc,script4950](string $string0, string $string1)
+def_component $component0 = colosseum_intermission_2:confirm;
+def_component $component1 = colosseum_intermission_2:confirm_content;
 ~create_text(
 	0 = $component1, 
 	1 = 0, 
@@ -14,7 +14,7 @@ def_component $component1 = interface_865:21;
 	8 = 36, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_abs, 
-	11 = $text0, 
+	11 = $string0, 
 	12 = true, 
 	13 = 0xff981f, 
 	14 = ^settextalign_centre, 
@@ -33,7 +33,7 @@ def_component $component1 = interface_865:21;
 	8 = 56, 
 	9 = ^setsize_minus, 
 	10 = ^setsize_minus, 
-	11 = $text1, 
+	11 = $string1, 
 	12 = true, 
 	13 = 0xff981f, 
 	14 = ^settextalign_centre, 

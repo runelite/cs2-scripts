@@ -1,12 +1,12 @@
 // 7210
 [proc,script7210](component $component0, int $int1, int $int2, int $int3, int $setsize4, int $setsize5, int $int6, int $int7, int $setposh8, int $setposv9)(int)
-cc_create($component0, ^iftype_rectangle, $int1);
+cc_create($component0, ^iftype_rectangle, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize($int2, $int3, $setsize4, $setsize5);
 cc_setposition($int6, $int7, $setposh8, $setposv9);
 cc_setfill(true);
 cc_setcolour(0x372e22);
-cc_create($component0, ^iftype_inputfield, $int1);
+cc_create($component0, ^iftype_inputfield, $int1, false);
 $int1 = calc($int1 + 1);
 if ($setsize4 = ^setsize_abs) {
 	$int2 = calc($int2 - 4);
@@ -19,7 +19,7 @@ if ($setsize5 = ^setsize_abs) {
 	$int3 = calc($int3 + 4);
 }
 cc_setsize($int2, $int3, $setsize4, $setsize5);
-cc_input_setwidth(calc(cc_getwidth - 2));
+cc_input_setlinewrappingwidth(calc(cc_getwidth - 2));
 if ($setposh8 ! ^setpos_abs_centre & $setposh8 < ^setpos_proportion_left) {
 	$int6 = calc($int6 + 5);
 }

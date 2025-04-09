@@ -1,7 +1,7 @@
 // 1622
-[proc,raids_storage_side_private_drawitem](obj $obj0, int $num1)
+[proc,raids_storage_side_private_drawitem](obj $obj0, int $int1)
 if ($obj0 ! null) {
-	cc_setobject($obj0, $num1);
+	cc_setobject($obj0, $int1);
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 	cc_setop(1, "Store");
 	cc_setop(2, "Store-5");
@@ -15,6 +15,6 @@ if ($obj0 ! null) {
 } else {
 	cc_clearops;
 	cc_settrans(255);
-	cc_setobject_nonum(obj_6512, 1);
+	cc_setobject_nonum(blankobject_6512, 1);
 	cc_setondragcomplete(null);
 }

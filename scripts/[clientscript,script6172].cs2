@@ -1,5 +1,5 @@
 // 6172
-[clientscript,script6172](int $opindex0, int $index1, string $string0, component $component2, int $comsubid3, string $string1, component $component4, boolean $boolean5)
+[clientscript,script6172](int $opindex0, int $int1, string $string0, component $component2, int $comsubid3, string $string1, component $component4, boolean $boolean5)
 if ($opindex0 = 2) {
 	if ($boolean5 = true) {
 		sound_synth(interface_select1, 1, 0);
@@ -7,11 +7,11 @@ if ($opindex0 = 2) {
 	}
 } else if ($opindex0 = 1) {
 	sound_synth(interface_select1, 1, 0);
-	if ($index1 ! -1) {
-		if (testbit(%var286, $index1) = ^true) {
-			%var286 = clearbit(%var286, $index1);
+	if ($int1 ! -1) {
+		if (testbit(%var286, $int1) = ^true) {
+			%var286 = clearbit(%var286, $int1);
 		} else {
-			%var286 = setbit(%var286, $index1);
+			%var286 = setbit(%var286, $int1);
 		}
 		~script6175;
 	}

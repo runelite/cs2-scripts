@@ -1,21 +1,21 @@
 // 4172
-[clientscript,script4172](component $widget_292:10_0, boolean $boolean1, string $text0)
+[clientscript,script4172](component $com_roguetrader_sudoku_btn_opencasket0, boolean $boolean1, string $string0)
 if ($boolean1 = true) {
-	~v2_stone_button_in($widget_292:10_0);
-	cc_create($widget_292:10_0, ^iftype_text, 9);
+	~v2_stone_button_in($com_roguetrader_sudoku_btn_opencasket0);
+	cc_create($com_roguetrader_sudoku_btn_opencasket0, ^iftype_text, 9, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($text0);
+	cc_settext($string0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(0xaaaaaa);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 } else {
-	~v2_stone_button($widget_292:10_0);
-	cc_create($widget_292:10_0, ^iftype_text, 8);
+	~v2_stone_button($com_roguetrader_sudoku_btn_opencasket0);
+	cc_create($com_roguetrader_sudoku_btn_opencasket0, ^iftype_text, 8, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($text0);
+	cc_settext($string0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(^white);

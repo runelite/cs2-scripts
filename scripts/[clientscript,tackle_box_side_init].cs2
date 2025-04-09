@@ -1,17 +1,17 @@
 // 4061
-[clientscript,tackle_box_side_init](component $widget_684:0_0)
-cc_deleteall($widget_684:0_0);
-def_int $size1 = inv_size(inv);
-def_int $size2 = 0;
-while ($size2 < $size1) {
-	cc_create($widget_684:0_0, ^iftype_graphic, $size2);
+[clientscript,tackle_box_side_init](component $com_tackle_box_side_items0)
+cc_deleteall($com_tackle_box_side_items0);
+def_int $comsubid1 = inv_size(inv);
+def_int $comsubid2 = 0;
+while ($comsubid2 < $comsubid1) {
+	cc_create($com_tackle_box_side_items0, ^iftype_graphic, $comsubid2, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	$size2 = calc($size2 + 1);
+	$comsubid2 = calc($comsubid2 + 1);
 }
-~tackle_box_side_draw($size1, $widget_684:0_0);
-if_setoninvtransmit("tackle_box_side_draw($size1, $widget_684:0_0){inv}", $widget_684:0_0);
-if_setonvartransmit("tackle_box_side_draw($size1, $widget_684:0_0){var2894}", $widget_684:0_0);
+~tackle_box_side_draw($comsubid1, $com_tackle_box_side_items0);
+if_setoninvtransmit("tackle_box_side_draw($comsubid1, $com_tackle_box_side_items0){inv}", $com_tackle_box_side_items0);
+if_setonvartransmit("tackle_box_side_draw($comsubid1, $com_tackle_box_side_items0){var2894}", $com_tackle_box_side_items0);

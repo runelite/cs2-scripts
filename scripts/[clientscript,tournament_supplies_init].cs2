@@ -1,8 +1,8 @@
 // 962
-[clientscript,tournament_supplies_init](int $widget_100:0_0, component $widget_100:2_1, component $widget_100:3_2, component $widget_100:4_3, component $widget_100:5_4, component $widget_100:6_5, component $widget_100:7_6, component $widget_100:9_7)
-cc_deleteall($widget_100:4_3);
-cc_deleteall($widget_100:5_4);
-def_int $int8 = calc((if_getwidth($widget_100:4_3) - 10 * 36) / (10 - 1));
+[clientscript,tournament_supplies_init](int $com_tournament_supplies_universe0, component $com_tournament_supplies_switchlayer1, component $com_tournament_supplies_item_container2, component $com_tournament_supplies_list3, component $com_tournament_supplies_scrollbar4, component $com_tournament_supplies_search5, component $com_tournament_supplies_loadout_container6, component $com_tournament_supplies_inv7)
+cc_deleteall($com_tournament_supplies_list3);
+cc_deleteall($com_tournament_supplies_scrollbar4);
+def_int $int8 = calc((if_getwidth($com_tournament_supplies_list3) - 10 * 36) / (10 - 1));
 def_int $int9 = calc(32 + 10);
 def_int $int10 = 0;
 def_enum $enum11 = enum_1124;
@@ -15,7 +15,7 @@ if (~beta_world = 1) {
 }
 def_namedobj $namedobj13 = enum(int, namedobj, $enum11, $int10);
 while ($namedobj13 ! null) {
-	cc_create($widget_100:4_3, ^iftype_graphic, $int10);
+	cc_create($com_tournament_supplies_list3, ^iftype_graphic, $int10, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject_nonum($namedobj13, 10000);
 	cc_setgraphicshadow(0x333333);
@@ -38,7 +38,7 @@ if ($int12 = 1) {
 	$int14 = 0;
 	$namedobj13 = enum(int, namedobj, enum_1906, $int14);
 	while ($namedobj13 ! null) {
-		cc_create($widget_100:4_3, ^iftype_graphic, $int10);
+		cc_create($com_tournament_supplies_list3, ^iftype_graphic, $int10, false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setobject_nonum($namedobj13, 10000);
 		cc_setgraphicshadow(0x333333);
@@ -58,7 +58,7 @@ if ($int12 = 1) {
 		$namedobj13 = enum(int, namedobj, enum_1906, $int14);
 	}
 }
-cc_create($widget_100:4_3, ^iftype_text, $int10);
+cc_create($com_tournament_supplies_list3, ^iftype_text, $int10, false);
 cc_setsize(0, 50, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0xff981f);
@@ -67,39 +67,39 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("No matching items found.");
 cc_sethide(true);
-~scrollbar_vertical($widget_100:5_4, $widget_100:4_3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_tournament_supplies_scrollbar4, $com_tournament_supplies_list3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (~bankmain_searching = 1) {
 	~meslayer_close(true, true, true);
 }
-~tournament_supplies_search_off($widget_100:4_3, $widget_100:5_4, $widget_100:6_5, $int8, $int9);
+~tournament_supplies_search_off($com_tournament_supplies_list3, $com_tournament_supplies_scrollbar4, $com_tournament_supplies_search5, $int8, $int9);
 if (~tournament_world = 1) {
 	~tournament_supplies_switchlayer(
-		0 = $widget_100:7_6, 
-		1 = $widget_100:2_1, 
-		2 = $widget_100:3_2, 
+		0 = $com_tournament_supplies_loadout_container6, 
+		1 = $com_tournament_supplies_switchlayer1, 
+		2 = $com_tournament_supplies_item_container2, 
 		3 = "Items", 
-		4 = $widget_100:7_6, 
+		4 = $com_tournament_supplies_loadout_container6, 
 		5 = "Load-outs", 
-		6 = $widget_100:4_3, 
-		7 = $widget_100:5_4, 
-		8 = $widget_100:6_5, 
+		6 = $com_tournament_supplies_list3, 
+		7 = $com_tournament_supplies_scrollbar4, 
+		8 = $com_tournament_supplies_search5, 
 		9 = $int8, 
 		10 = $int9
 	);
 } else {
 	~tournament_supplies_switchlayer(
-		0 = $widget_100:3_2, 
-		1 = $widget_100:2_1, 
-		2 = $widget_100:3_2, 
+		0 = $com_tournament_supplies_item_container2, 
+		1 = $com_tournament_supplies_switchlayer1, 
+		2 = $com_tournament_supplies_item_container2, 
 		3 = "Items", 
-		4 = $widget_100:7_6, 
+		4 = $com_tournament_supplies_loadout_container6, 
 		5 = "Load-outs", 
-		6 = $widget_100:4_3, 
-		7 = $widget_100:5_4, 
-		8 = $widget_100:6_5, 
+		6 = $com_tournament_supplies_list3, 
+		7 = $com_tournament_supplies_scrollbar4, 
+		8 = $com_tournament_supplies_search5, 
 		9 = $int8, 
 		10 = $int9
 	);
 }
-~tournament_supplies_previewarea($widget_100:9_7);
-if_setoninvtransmit("tournament_supplies_previewarea($widget_100:9_7){inv_207}", $widget_100:9_7);
+~tournament_supplies_previewarea($com_tournament_supplies_inv7);
+if_setoninvtransmit("tournament_supplies_previewarea($com_tournament_supplies_inv7){trail_puzzlehintinv}", $com_tournament_supplies_inv7);

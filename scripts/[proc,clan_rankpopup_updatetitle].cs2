@@ -1,8 +1,8 @@
 // 4320
-[proc,clan_rankpopup_updatetitle](int $int0, int $y1)
+[proc,clan_rankpopup_updatetitle](int $int0, int $int1)
 def_string $string0 = "Loading...";
 def_graphic $graphic2 = null;
-if (%varbit12165 = 1 & activeclansettings_find_listened = true | %varbit12165 = 0 & activeclansettings_find_affined(^clantype_clan) = true) {
+if (%varbit12165 = 1 & activeclansettings_find_listened = true | %varbit12165 = 0 & activeclansettings_find_affined(0) = true) {
 	$string0, $graphic2 = ~script4302($int0);
 }
 cc_settext($string0);
@@ -12,4 +12,4 @@ if ($graphic2 = null) {
 	cc_setposition(calc((13 + 4) / 2), cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
 }
 .cc_setgraphic($graphic2);
-.cc_setposition(calc(0 - (parawidth($string0, 512, p12_full) + 4) / 2), $y1, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(calc(0 - (parawidth($string0, 512, p12_full) + 4) / 2), $int1, ^setpos_abs_centre, ^setpos_abs_top);

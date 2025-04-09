@@ -7,40 +7,40 @@ if ($component5 = null) {
 if_setsize(50, 25, ^setsize_abs, ^setsize_abs, $component5);
 cc_deleteall($component5);
 def_int $int6 = 0;
-cc_create($component5, ^iftype_graphic, $int6);
+cc_create($component5, ^iftype_graphic, $int6, false);
 $int6 = calc($int6 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
-.cc_create($component5, ^iftype_rectangle, $int6);
+.cc_create($component5, ^iftype_rectangle, $int6, false);
 $int6 = calc($int6 + 1);
 .cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_int $trans7 = 255;
-def_int $trans8 = 240;
-def_int $trans9 = 220;
+def_int $int7 = 255;
+def_int $int8 = 240;
+def_int $int9 = 220;
 if ($int3 = 1) {
 	.cc_setcolour(^red);
-	$trans7, $trans8, $trans9 = 235, 210, 190;
+	$int7, $int8, $int9 = 235, 210, 190;
 } else {
 	.cc_setcolour(^white);
 }
-.cc_settrans($trans7);
+.cc_settrans($int7);
 .cc_setfill(true);
 def_int $comsubid10 = .cc_getid;
-if_setonmouserepeat("cc_settrans(event_com, $comsubid10, $trans8, null)", $component5);
-if_setonmouseleave("cc_settrans(event_com, $comsubid10, $trans7, null)", $component5);
+if_setonmouserepeat("cc_settrans(event_com, $comsubid10, $int8, null)", $component5);
+if_setonmouseleave("cc_settrans(event_com, $comsubid10, $int7, null)", $component5);
 if_setop(1, "Details", $component5);
 if_setop(10, "Teleport", $component5);
 if ($int3 = 1) {
-	cc_create($component5, ^iftype_rectangle, $int6);
+	cc_create($component5, ^iftype_rectangle, $int6, false);
 	$int6 = calc($int6 + 1);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setfill(false);
 	cc_setcolour(0xffffd0);
-	cc_create($component5, ^iftype_rectangle, $int6);
+	cc_create($component5, ^iftype_rectangle, $int6, false);
 	$int6 = calc($int6 + 1);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
@@ -49,7 +49,7 @@ if ($int3 = 1) {
 } else {
 	$int6 = ~thinstonebox($component5, $int6);
 }
-cc_create($component5, ^iftype_text, $int6);
+cc_create($component5, ^iftype_text, $int6, false);
 $int6 = calc($int6 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -57,14 +57,14 @@ cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-def_int $flags11 = 0;
+def_int $int11 = 0;
 def_string $string2 = "-";
 if (string_length($string0) > 0) {
-	$string2, $flags11 = substring($string0, 0, 1), setbit($flags11, 0);
+	$string2, $int11 = substring($string0, 0, 1), setbit($int11, 0);
 }
 def_string $string3 = "-";
 if (string_length($string1) > 0) {
-	$string3, $flags11 = substring($string1, 0, 1), setbit($flags11, 1);
+	$string3, $int11 = substring($string1, 0, 1), setbit($int11, 1);
 }
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -81,30 +81,30 @@ switch_int ($int2) {
 		cc_settext("<$string2> <col=8f8f8f>v</col> <col=ffffff><$string3></col>");
 	case 2 :
 		cc_settext("<$string2> <col=8f8f8f>v</col> <$string3>");
-		if ($flags11 = 3 & $coord4 ! null) {
+		if ($int11 = 3 & $coord4 ! null) {
 			$int12, $int13 = coordx($coord4), coordz($coord4);
 			$int14, $int15 = calc($int12 / 100), calc($int12 % 100);
 			$int16, $int17 = calc($int13 / 100), calc($int13 % 100);
 			$int15, $int17 = ~max(1, $int15), ~max(1, $int17);
-			.cc_create($component5, ^iftype_rectangle, $int6);
+			.cc_create($component5, ^iftype_rectangle, $int6, false);
 			$int6 = calc($int6 + 1);
 			.cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_setsize(4, 4, ^setsize_minus, ^setsize_abs);
 			.cc_setfill(true);
 			.cc_setcolour(^black);
-			.cc_create($component5, ^iftype_rectangle, $int6);
+			.cc_create($component5, ^iftype_rectangle, $int6, false);
 			$int6 = calc($int6 + 1);
 			.cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setsize(scale(~min($int15, $int14), $int15, calc(if_getwidth($component5) - 4)), 4, ^setsize_abs, ^setsize_abs);
 			.cc_setfill(true);
 			.cc_setcolour(^red);
-			.cc_create($component5, ^iftype_rectangle, $int6);
+			.cc_create($component5, ^iftype_rectangle, $int6, false);
 			$int6 = calc($int6 + 1);
 			.cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_bottom);
 			.cc_setsize(4, 4, ^setsize_minus, ^setsize_abs);
 			.cc_setfill(true);
 			.cc_setcolour(^black);
-			.cc_create($component5, ^iftype_rectangle, $int6);
+			.cc_create($component5, ^iftype_rectangle, $int6, false);
 			$int6 = calc($int6 + 1);
 			.cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 			.cc_setsize(scale(~min($int17, $int16), $int17, calc(if_getwidth($component5) - 4)), 4, ^setsize_abs, ^setsize_abs);
@@ -120,9 +120,9 @@ if_setonop("pvpa_1v1_info_expanddata(
 	0 = event_op, 
 	1 = event_com, 
 	2 = $comsubid10, 
-	3 = $trans7, 
-	4 = $trans8, 
-	5 = $trans9, 
+	3 = $int7, 
+	4 = $int8, 
+	5 = $int9, 
 	6 = $string4, 
 	7 = $string5, 
 	8 = $int2

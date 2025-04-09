@@ -1,9 +1,9 @@
 // 2452
 [proc,league_side_panel_rank](component $component0, int $colour1)
-def_component $component2 = interface_656:15;
-def_component $component3 = interface_656:14;
-def_component $component4 = interface_656:10;
-def_component $component5 = interface_656:11;
+def_component $component2 = league_side_panel:rank_trophy;
+def_component $component3 = league_side_panel:rank_text;
+def_component $component4 = league_side_panel:rank;
+def_component $component5 = league_side_panel:rank_backing;
 if_setcolour($colour1, $component3);
 if_setop(1, "Show <col=ff9040>Ranks</col>", $component4);
 if_setgraphic(enum(int, graphic, enum_5199, ~league_current_rank), $component2);

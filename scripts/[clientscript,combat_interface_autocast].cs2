@@ -1,14 +1,21 @@
 // 329
 [clientscript,combat_interface_autocast](component $component0, component $component1, int $int2)
-def_int $width3 = 33;
-def_int $height4 = 36;
-def_int $x5 = 0;
+def_int $int3 = 33;
+def_int $int4 = 36;
+def_int $int5 = 0;
 def_graphic $graphic6 = "sideicons_interface,6";
 def_obj $obj7 = enum(int, obj, enum_1986, %varbit276);
+def_obj $obj8 = inv_getobj(worn, 3);
+def_obj $obj9 = inv_getobj(worn, 5);
 if ($obj7 ! null) {
 	$graphic6 = oc_param($obj7, spell_graphic1_on);
+	if (~magic_spellbook_hasrunes($obj7, $obj8, $obj9) = 1 & stat(magic) >= oc_param($obj7, spell_levelreq)) {
+		$graphic6 = oc_param($obj7, spell_graphic1_on);
+	} else {
+		$graphic6 = oc_param($obj7, spell_graphic1_off);
+	}
 	if ($graphic6 ! null) {
-		$width3, $height4 = 24, 24;
+		$int3, $int4 = 24, 24;
 	} else {
 		$graphic6 = "sideicons_interface,6";
 	}
@@ -20,9 +27,9 @@ if ($obj7 ! null) {
 } else {
 	~options_button_off($component1, 0);
 }
-if_setsize($width3, $height4, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize($int3, $int4, ^setsize_abs, ^setsize_abs, $component0);
 if_setgraphic($graphic6, $component0);
 if ($int2 = 1) {
-	$x5 = 14;
+	$int5 = 14;
 }
-if_setposition($x5, -5, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+if_setposition($int5, -5, ^setpos_abs_centre, ^setpos_abs_centre, $component0);

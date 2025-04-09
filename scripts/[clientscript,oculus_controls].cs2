@@ -1,6 +1,6 @@
 // 2220
 [clientscript,oculus_controls](int $key0)
-if (~keypress_permit(interface_16, null) = 0) {
+if (~keypress_permit(oculus, null) = 0) {
 	return;
 }
 switch_int ($key0) {
@@ -11,11 +11,11 @@ switch_int ($key0) {
 	case ^key_page_up :
 		if (%varcint204 < 15) {
 			%varcint204 = ~min(15, calc(%varcint204 + 1));
-			_3129(%varcint204, 2);
+			setfreecamspeed(%varcint204, 2);
 		}
 	case ^key_page_down :
 		if (%varcint204 > 3) {
 			%varcint204 = ~max(3, calc(%varcint204 - 1));
-			_3129(%varcint204, 2);
+			setfreecamspeed(%varcint204, 2);
 		}
 }

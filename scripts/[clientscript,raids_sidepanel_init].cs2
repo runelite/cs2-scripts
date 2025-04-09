@@ -1,16 +1,16 @@
 // 1538
-[clientscript,raids_sidepanel_init](component $widget_500:0_0, component $widget_500:10_1, component $widget_500:11_2, component $widget_500:2_3, component $widget_500:5_4, component $widget_500:6_5, component $widget_500:12_6, component $widget_500:14_7)
-~raids_sidepanel_refresheffect(0, $widget_500:0_0, $widget_500:10_1, $widget_500:11_2, $widget_500:2_3, $widget_500:5_4, $widget_500:6_5);
-if_setonop("raids_sidepanel_refresh(event_op, $widget_500:0_0, $widget_500:10_1, $widget_500:11_2, $widget_500:2_3, $widget_500:5_4, $widget_500:6_5)", $widget_500:2_3);
-cc_deleteall($widget_500:10_1);
-if_setscrollsize(0, 0, $widget_500:10_1);
-if_setscrollpos(0, 0, $widget_500:10_1);
-~scrollbar_vertical($widget_500:11_2, $widget_500:10_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+[clientscript,raids_sidepanel_init](component $com_raids_sidepanel_universe0, component $com_raids_sidepanel_list1, component $com_raids_sidepanel_scrollbar2, component $com_raids_sidepanel_refresh3, component $com_raids_sidepanel_loading4, component $com_raids_sidepanel_sortlayer5, component $com_raids_sidepanel_bottom6, component $com_raids_sidepanel_start7)
+~raids_sidepanel_refresheffect(0, $com_raids_sidepanel_universe0, $com_raids_sidepanel_list1, $com_raids_sidepanel_scrollbar2, $com_raids_sidepanel_refresh3, $com_raids_sidepanel_loading4, $com_raids_sidepanel_sortlayer5);
+if_setonop("raids_sidepanel_refresh(event_op, $com_raids_sidepanel_universe0, $com_raids_sidepanel_list1, $com_raids_sidepanel_scrollbar2, $com_raids_sidepanel_refresh3, $com_raids_sidepanel_loading4, $com_raids_sidepanel_sortlayer5)", $com_raids_sidepanel_refresh3);
+cc_deleteall($com_raids_sidepanel_list1);
+if_setscrollsize(0, 0, $com_raids_sidepanel_list1);
+if_setscrollpos(0, 0, $com_raids_sidepanel_list1);
+~scrollbar_vertical($com_raids_sidepanel_scrollbar2, $com_raids_sidepanel_list1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 %varcint179 = 0;
-cc_deleteall($widget_500:10_1);
-cc_deleteall($widget_500:12_6);
-def_int $int8 = ~thinbox($widget_500:12_6, 0);
-cc_create($widget_500:12_6, ^iftype_text, $int8);
+cc_deleteall($com_raids_sidepanel_list1);
+cc_deleteall($com_raids_sidepanel_bottom6);
+def_int $int8 = ~thinbox($com_raids_sidepanel_bottom6, 0);
+cc_create($com_raids_sidepanel_bottom6, ^iftype_text, $int8, false);
 $int8 = calc($int8 + 1);
 cc_setsize(6, 23, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
@@ -18,7 +18,7 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-.cc_create($widget_500:12_6, ^iftype_text, $int8);
+.cc_create($com_raids_sidepanel_bottom6, ^iftype_text, $int8, false);
 $int8 = calc($int8 + 1);
 .cc_setsize(6, 24, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -26,5 +26,5 @@ $int8 = calc($int8 + 1);
 .cc_settextfont(p12_full);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
-if_setonvartransmit("raids_sidepanel_data($widget_500:12_6, cc_getid, .cc_getid, $widget_500:14_7){var1430, var1429}", $widget_500:0_0);
-~raids_sidepanel_data($widget_500:12_6, $widget_500:14_7);
+if_setonvartransmit("raids_sidepanel_data($com_raids_sidepanel_bottom6, cc_getid, .cc_getid, $com_raids_sidepanel_start7){var1430, var1429}", $com_raids_sidepanel_universe0);
+~raids_sidepanel_data($com_raids_sidepanel_bottom6, $com_raids_sidepanel_start7);

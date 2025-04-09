@@ -1,5 +1,5 @@
 // 3699
-[proc,league_task_display](int $int0, int $int1, int $int2, int $int3, int $int4, string $string0, string $string1, string $string2, int $length5)(int)
+[proc,league_task_display](int $int0, int $int1, int $int2, int $int3, int $int4, string $string0, string $string1, string $string2, int $int5)(int)
 if (%varbit10033 ! 0 & %varbit10033 ! $int0) {
 	return(0);
 }
@@ -19,7 +19,7 @@ if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int1) {
 	return(0);
 }
 def_int $int6 = 0;
-if ($length5 > 1) {
+if ($int5 > 1) {
 	if (string_indexof_string(lowercase($string0), lowercase($string2), 0) ! -1) {
 		$int6 = 1;
 	} else if (string_indexof_string(lowercase($string1), lowercase($string2), 0) ! -1) {

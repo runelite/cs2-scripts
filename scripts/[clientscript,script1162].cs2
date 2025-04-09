@@ -1,10 +1,10 @@
 // 1162
 [clientscript,script1162](component $component0, int $comsubid1, int $dropsubid2)
-def_int $size3 = inv_size(inv);
-if ($comsubid1 < 0 | $comsubid1 >= $size3) {
+def_int $comsubid3 = inv_size(inv);
+if ($comsubid1 < 0 | $comsubid1 >= $comsubid3) {
 	return;
 }
-if ($dropsubid2 < 0 | $dropsubid2 >= $size3) {
+if ($dropsubid2 < 0 | $dropsubid2 >= $comsubid3) {
 	return;
 }
 def_obj $obj4 = inv_getobj(inv, $comsubid1);

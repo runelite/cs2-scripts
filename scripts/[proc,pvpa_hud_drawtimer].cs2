@@ -12,7 +12,7 @@ if (%varbit14017 = 1) {
 	if_setsize(75, 36, ^setsize_abs, ^setsize_abs, $component0);
 }
 def_int $int2 = 0;
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -20,7 +20,7 @@ cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 cc_settrans(120);
 $int2 = ~thinstonebox($component0, $int2);
-cc_create($component0, ^iftype_text, $int2);
+cc_create($component0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

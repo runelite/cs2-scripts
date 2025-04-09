@@ -1,45 +1,45 @@
 // 239
-[proc,autocast_tooltip](component $widget_201:2_0, obj $obj1)
+[proc,autocast_tooltip](component $com_autocast_info0, obj $obj1)
 if ($obj1 = null) {
-	if (cc_find($widget_201:2_0, 0) = ^true) {
+	if (cc_find($com_autocast_info0, 0) = ^true) {
 		cc_sethide(false);
 	}
-	if (cc_find($widget_201:2_0, 1) = ^true) {
+	if (cc_find($com_autocast_info0, 1) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 2) = ^true) {
+	if (cc_find($com_autocast_info0, 2) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 3) = ^true) {
+	if (cc_find($com_autocast_info0, 3) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 4) = ^true) {
+	if (cc_find($com_autocast_info0, 4) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 5) = ^true) {
+	if (cc_find($com_autocast_info0, 5) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 6) = ^true) {
+	if (cc_find($com_autocast_info0, 6) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 7) = ^true) {
+	if (cc_find($com_autocast_info0, 7) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 8) = ^true) {
+	if (cc_find($com_autocast_info0, 8) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 9) = ^true) {
+	if (cc_find($com_autocast_info0, 9) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($widget_201:2_0, 10) = ^true) {
+	if (cc_find($com_autocast_info0, 10) = ^true) {
 		cc_sethide(true);
 	}
 	return;
 }
-if (cc_find($widget_201:2_0, 0) = ^true) {
+if (cc_find($com_autocast_info0, 0) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($widget_201:2_0, 1) = ^true) {
+if (cc_find($com_autocast_info0, 1) = ^true) {
 	cc_sethide(false);
 	if (oc_param($obj1, spell_levelreq) > 0 & oc_param($obj1, param_1884) = false) {
 		cc_settext("Level <tostring(oc_param($obj1, spell_levelreq))>: <oc_param($obj1, spell_name)>");
@@ -47,7 +47,7 @@ if (cc_find($widget_201:2_0, 1) = ^true) {
 		cc_settext(oc_param($obj1, spell_name));
 	}
 }
-if (cc_find($widget_201:2_0, 2) = ^true) {
+if (cc_find($com_autocast_info0, 2) = ^true) {
 	cc_sethide(false);
 	cc_settext(oc_param($obj1, spell_desc));
 }
@@ -60,45 +60,45 @@ def_int $int7 = oc_param($obj1, magic_runecount_3);
 def_obj $obj8 = oc_param($obj1, magic_runetype_4);
 def_int $int9 = oc_param($obj1, magic_runecount_4);
 switch_obj ($obj1) {
-	case ice_rush_4633, ice_burst_4639, ice_blitz_4645, ice_barrage_4651 :
-		if (~script1897 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
-			$obj8, $int9 = blighted_ancient_ice_sack_24607, 1;
+	case 58_ice_rush_4633, 70_ice_burst_4639, 82_ice_blitz_4645, 94_ice_barrage_4651 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_icebarrage_24607) > 0) {
+			$obj8, $int9 = blighted_sack_icebarrage_24607, 1;
 		}
-	case bind_3283 :
-		if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
-			$obj8, $int9 = dummy_priest_gown_24609, 1;
+	case 20_bind_3283 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
+			$obj8, $int9 = blighted_sack_bind_24609, 1;
 		}
-	case snare_3300 :
-		if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
-			$obj8, $int9 = dummy_priest_gown_24611, 1;
+	case 50_snare_3300 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
+			$obj8, $int9 = blighted_sack_snare_24611, 1;
 		}
-	case entangle_3322 :
-		if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
-			$obj8, $int9 = blighted_entangle_sack_24613, 1;
+	case 79_entangle_3322 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
+			$obj8, $int9 = blighted_sack_entangle_24613, 1;
 		}
-	case tele_block_4555, dead_orb_17152 :
-		if (~script1897 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
-			$obj8, $int9 = blighted_teleport_spell_sack_24615, 1;
+	case 85_teleport_block_4555, placeholder_caveorb4dot_17152 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_teleblock_24615) > 0) {
+			$obj8, $int9 = blighted_sack_teleblock_24615, 1;
 		}
-	case vengeance_other_9135, vengeance_9136 :
-		if (~script1897 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
-			$obj8, $int9 = blighted_vengeance_sack_24621, 1;
+	case 93_vengeance_other_9135, 94_vengeance_9136 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_vengeance_24621) > 0) {
+			$obj8, $int9 = blighted_sack_vengeance_24621, 1;
 		}
-	case wind_wave_3313 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj6, $int7 = blighted_surge_sack_26705, 1;
+	case 62_wind_wave_3313 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj6, $int7 = blighted_sack_surge_26705, 1;
 		}
-	case water_wave_3315, earth_wave_3319, fire_wave_3321 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj8, $int9 = blighted_surge_sack_26705, 1;
+	case 65_water_wave_3315, 70_earth_wave_3319, 75_fire_wave_3321 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj8, $int9 = blighted_sack_surge_26705, 1;
 		}
-	case wind_surge_21876 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj6, $int7 = blighted_surge_sack_26705, 1;
+	case 81_wind_surge_21876 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj6, $int7 = blighted_sack_surge_26705, 1;
 		}
-	case water_surge_21877, earth_surge_21878, fire_surge_21879 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
-			$obj8, $int9 = blighted_surge_sack_26705, 1;
+	case 85_water_surge_21877, 90_earth_surge_21878, 95_fire_surge_21879 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			$obj8, $int9 = blighted_sack_surge_26705, 1;
 		}
 }
 def_int $int10 = 4;
@@ -106,33 +106,33 @@ if ($obj8 = null) {
 	if ($obj6 = null) {
 		if ($obj4 = null) {
 			if ($obj2 = null) {
-				if (cc_find($widget_201:2_0, 3) = ^true) {
+				if (cc_find($com_autocast_info0, 3) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 4) = ^true) {
+				if (cc_find($com_autocast_info0, 4) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 5) = ^true) {
+				if (cc_find($com_autocast_info0, 5) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 6) = ^true) {
+				if (cc_find($com_autocast_info0, 6) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 7) = ^true) {
+				if (cc_find($com_autocast_info0, 7) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 8) = ^true) {
+				if (cc_find($com_autocast_info0, 8) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 9) = ^true) {
+				if (cc_find($com_autocast_info0, 9) = ^true) {
 					cc_sethide(true);
 				}
-				if (cc_find($widget_201:2_0, 10) = ^true) {
+				if (cc_find($com_autocast_info0, 10) = ^true) {
 					cc_sethide(true);
 				}
 				return;
 			}
-			if (cc_find($widget_201:2_0, 3) = ^true & .cc_find($widget_201:2_0, 4) = ^true) {
+			if (cc_find($com_autocast_info0, 3) = ^true & .cc_find($com_autocast_info0, 4) = ^true) {
 				cc_sethide(false);
 				.cc_sethide(false);
 				cc_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -141,20 +141,20 @@ if ($obj8 = null) {
 				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){inv, worn}");
 				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 			}
-			if (cc_find($widget_201:2_0, 5) = ^true & .cc_find($widget_201:2_0, 6) = ^true) {
+			if (cc_find($com_autocast_info0, 5) = ^true & .cc_find($com_autocast_info0, 6) = ^true) {
 				cc_sethide(true);
 				.cc_sethide(true);
 			}
-			if (cc_find($widget_201:2_0, 7) = ^true & .cc_find($widget_201:2_0, 8) = ^true) {
+			if (cc_find($com_autocast_info0, 7) = ^true & .cc_find($com_autocast_info0, 8) = ^true) {
 				cc_sethide(true);
 				.cc_sethide(true);
 			}
-			if (cc_find($widget_201:2_0, 9) = ^true & .cc_find($widget_201:2_0, 10) = ^true) {
+			if (cc_find($com_autocast_info0, 9) = ^true & .cc_find($com_autocast_info0, 10) = ^true) {
 				cc_sethide(true);
 				.cc_sethide(true);
 			}
 		} else {
-			if (cc_find($widget_201:2_0, 3) = ^true & .cc_find($widget_201:2_0, 4) = ^true) {
+			if (cc_find($com_autocast_info0, 3) = ^true & .cc_find($com_autocast_info0, 4) = ^true) {
 				cc_sethide(false);
 				.cc_sethide(false);
 				cc_setposition(-32, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -163,7 +163,7 @@ if ($obj8 = null) {
 				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){inv, worn}");
 				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 			}
-			if (cc_find($widget_201:2_0, 5) = ^true & .cc_find($widget_201:2_0, 6) = ^true) {
+			if (cc_find($com_autocast_info0, 5) = ^true & .cc_find($com_autocast_info0, 6) = ^true) {
 				cc_sethide(false);
 				.cc_sethide(false);
 				cc_setposition(32, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -172,17 +172,17 @@ if ($obj8 = null) {
 				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){inv, worn}");
 				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 			}
-			if (cc_find($widget_201:2_0, 7) = ^true & .cc_find($widget_201:2_0, 8) = ^true) {
+			if (cc_find($com_autocast_info0, 7) = ^true & .cc_find($com_autocast_info0, 8) = ^true) {
 				cc_sethide(true);
 				.cc_sethide(true);
 			}
-			if (cc_find($widget_201:2_0, 9) = ^true & .cc_find($widget_201:2_0, 10) = ^true) {
+			if (cc_find($com_autocast_info0, 9) = ^true & .cc_find($com_autocast_info0, 10) = ^true) {
 				cc_sethide(true);
 				.cc_sethide(true);
 			}
 		}
 	} else {
-		if (cc_find($widget_201:2_0, 3) = ^true & .cc_find($widget_201:2_0, 4) = ^true) {
+		if (cc_find($com_autocast_info0, 3) = ^true & .cc_find($com_autocast_info0, 4) = ^true) {
 			cc_sethide(false);
 			.cc_sethide(false);
 			cc_setposition(-53, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -191,7 +191,7 @@ if ($obj8 = null) {
 			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){inv, worn}");
 			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 		}
-		if (cc_find($widget_201:2_0, 5) = ^true & .cc_find($widget_201:2_0, 6) = ^true) {
+		if (cc_find($com_autocast_info0, 5) = ^true & .cc_find($com_autocast_info0, 6) = ^true) {
 			cc_sethide(false);
 			.cc_sethide(false);
 			cc_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -200,7 +200,7 @@ if ($obj8 = null) {
 			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){inv, worn}");
 			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 		}
-		if (cc_find($widget_201:2_0, 7) = ^true & .cc_find($widget_201:2_0, 8) = ^true) {
+		if (cc_find($com_autocast_info0, 7) = ^true & .cc_find($com_autocast_info0, 8) = ^true) {
 			cc_sethide(false);
 			.cc_sethide(false);
 			cc_setposition(53, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -209,13 +209,13 @@ if ($obj8 = null) {
 			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){inv, worn}");
 			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 		}
-		if (cc_find($widget_201:2_0, 9) = ^true & .cc_find($widget_201:2_0, 10) = ^true) {
+		if (cc_find($com_autocast_info0, 9) = ^true & .cc_find($com_autocast_info0, 10) = ^true) {
 			cc_sethide(true);
 			.cc_sethide(true);
 		}
 	}
 } else {
-	if (cc_find($widget_201:2_0, 3) = ^true & .cc_find($widget_201:2_0, 4) = ^true) {
+	if (cc_find($com_autocast_info0, 3) = ^true & .cc_find($com_autocast_info0, 4) = ^true) {
 		cc_sethide(false);
 		.cc_sethide(false);
 		cc_setposition(-61, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -224,7 +224,7 @@ if ($obj8 = null) {
 		cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){inv, worn}");
 		cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 	}
-	if (cc_find($widget_201:2_0, 5) = ^true & .cc_find($widget_201:2_0, 6) = ^true) {
+	if (cc_find($com_autocast_info0, 5) = ^true & .cc_find($com_autocast_info0, 6) = ^true) {
 		cc_sethide(false);
 		.cc_sethide(false);
 		cc_setposition(-20, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -233,7 +233,7 @@ if ($obj8 = null) {
 		cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){inv, worn}");
 		cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 	}
-	if (cc_find($widget_201:2_0, 7) = ^true & .cc_find($widget_201:2_0, 8) = ^true) {
+	if (cc_find($com_autocast_info0, 7) = ^true & .cc_find($com_autocast_info0, 8) = ^true) {
 		cc_sethide(false);
 		.cc_sethide(false);
 		cc_setposition(20, 37, ^setpos_abs_centre, ^setpos_abs_top);
@@ -242,7 +242,7 @@ if ($obj8 = null) {
 		cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){inv, worn}");
 		cc_setonvartransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){var638, var375, var1139, var1140, var1377, var1105, var3464}");
 	}
-	if (cc_find($widget_201:2_0, 9) = ^true & .cc_find($widget_201:2_0, 10) = ^true) {
+	if (cc_find($com_autocast_info0, 9) = ^true & .cc_find($com_autocast_info0, 10) = ^true) {
 		cc_sethide(false);
 		.cc_sethide(false);
 		cc_setposition(61, 37, ^setpos_abs_centre, ^setpos_abs_top);

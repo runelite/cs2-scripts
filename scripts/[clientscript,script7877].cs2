@@ -1,8 +1,17 @@
 // 7877
 [clientscript,script7877](int $opindex0, component $component1, string $string0, int $int2, component $component3, component $component4, component $component5, component $component6)
-if ($opindex0 ! 1) {
-	return;
+if ($component1 = $component5) {
+	if ($opindex0 = 2) {
+		sound_synth(interface_select1, 1, 0);
+		return;
+	}
+	if ($opindex0 = 1 & %varbit16206 > 0) {
+		sound_synth(interface_select1, 1, 0);
+		%varbit16201 = $int2;
+		~script7875($component3, $component4, $component5, $component6);
+	}
+} else if ($opindex0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	%varbit16201 = $int2;
+	~script7875($component3, $component4, $component5, $component6);
 }
-sound_synth(interface_select1, 1, 0);
-%varbit16201 = $int2;
-~script7875($component3, $component4, $component5, $component6);

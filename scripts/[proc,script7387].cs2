@@ -1,7 +1,7 @@
 // 7387
 [proc,script7387](component $component0)
 cc_deleteall($component0);
-cc_create($component0, ^iftype_text, 0);
+cc_create($component0, ^iftype_text, 0, false);
 cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
 cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
@@ -14,7 +14,7 @@ if ($int1 < 0) {
 } else {
 	cc_settext(tostring($int1));
 }
-cc_create($component0, ^iftype_text, 1);
+cc_create($component0, ^iftype_text, 1, false);
 cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
 cc_setposition(23, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
@@ -27,7 +27,7 @@ if ($int1 < 0) {
 } else {
 	cc_settext(tostring($int1));
 }
-cc_create($component0, ^iftype_text, 2);
+cc_create($component0, ^iftype_text, 2, false);
 cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
 cc_setposition(43, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
@@ -40,7 +40,7 @@ if ($int1 < 0) {
 } else {
 	cc_settext(tostring($int1));
 }
-cc_create($component0, ^iftype_text, 3);
+cc_create($component0, ^iftype_text, 3, false);
 cc_setsize(16, 19, ^setsize_abs, ^setsize_abs);
 cc_setposition(63, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);

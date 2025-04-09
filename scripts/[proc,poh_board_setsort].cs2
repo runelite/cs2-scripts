@@ -7,7 +7,7 @@ def_int $int5 = 40;
 def_int $int6 = 100;
 $int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 0, 1, $component1, "Sort by name", null);
 $int4 = ~poh_board_v_line($component2, $int4, $int6);
-cc_create($component0, ^iftype_text, $int3);
+cc_create($component0, ^iftype_text, $int3, false);
 cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(100, 0, ^setsize_abs, ^setsize_minus);
 cc_settext("Player Name");

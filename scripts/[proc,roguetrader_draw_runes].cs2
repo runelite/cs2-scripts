@@ -4,7 +4,7 @@ cc_deleteall($component1);
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 4;
-def_int $x5 = 12;
+def_int $int5 = 12;
 def_int $int6 = 10;
 def_obj $obj7 = null;
 if ($int0 = 1) {
@@ -12,9 +12,9 @@ if ($int0 = 1) {
 }
 while ($int2 <= $int4) {
 	$obj7 = enum(int, obj, enum_3759, $int2);
-	cc_create($component1, ^iftype_graphic, $int3);
+	cc_create($component1, ^iftype_graphic, $int3, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject_nonum($obj7, 1);
 	if ($int2 = 0) {
 		cc_setop(1, "Remove Runes");
@@ -30,10 +30,10 @@ while ($int2 <= $int4) {
 		cc_setoutline(1);
 	}
 	if (calc($int2 % 2) = 0) {
-		$x5 = 50;
+		$int5 = 50;
 	} else {
 		$int6 = calc($int6 + 37);
-		$x5 = 12;
+		$int5 = 12;
 	}
 	$int2 = calc($int2 + 1);
 	$int3 = calc($int3 + 1);

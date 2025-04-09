@@ -34,7 +34,7 @@ if ($boolean0 = true) {
 	)", $component2);
 }
 if ($int3 ! -1) {
-	cc_create($component2, ^iftype_text, $comsubid10);
+	cc_create($component2, ^iftype_text, $comsubid10, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	if ($boolean0 = true | $boolean1 = true) {
@@ -51,7 +51,7 @@ if ($int3 ! -1) {
 		cc_settext("X");
 	}
 } else {
-	cc_create($component2, ^iftype_graphic, $comsubid10);
+	cc_create($component2, ^iftype_graphic, $comsubid10, false);
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic("options_icons,28");

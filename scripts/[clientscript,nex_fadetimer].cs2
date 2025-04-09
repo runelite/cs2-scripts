@@ -1,7 +1,7 @@
 // 5312
 [clientscript,nex_fadetimer]
-if (if_gettrans(interface_406:2) > %varcint550) {
-	if_settrans(~max(50, calc(if_gettrans(interface_406:2) - 1)), interface_406:2);
-} else if (if_gettrans(interface_406:2) < %varcint550) {
-	if_settrans(~min(255, calc(if_gettrans(interface_406:2) + 1)), interface_406:2);
+if (if_gettrans(godwars_overlay:tint_box) > %varcint550) {
+	if_settrans(~max(50, calc(if_gettrans(godwars_overlay:tint_box) - 1)), godwars_overlay:tint_box);
+} else if (if_gettrans(godwars_overlay:tint_box) < %varcint550) {
+	if_settrans(~min(255, calc(if_gettrans(godwars_overlay:tint_box) + 1)), godwars_overlay:tint_box);
 }

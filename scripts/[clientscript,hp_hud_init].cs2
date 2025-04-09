@@ -1,37 +1,37 @@
 // 2099
-[clientscript,hp_hud_init](component $widget_303:0_0, component $widget_303:2_1, component $widget_303:4_2, component $widget_303:5_3, component $widget_303:8_4, component $widget_303:10_5, component $widget_303:20_6, component $widget_303:13_7, component $widget_303:14_8, component $widget_303:15_9, component $widget_303:9_10, int $widget_303:6_11, int $widget_303:7_12, int $widget_303:11_13, component $widget_303:18_14, component $widget_303:19_15, component $widget_303:16_16, component $widget_303:17_17, component $widget_303:3_18)
-~script4729($widget_303:2_1, $widget_303:3_18, setbit(65256, 17), ^setpos_abs_left, ^setpos_abs_top, true);
+[clientscript,hp_hud_init](component $com_hpbar_hud_universe0, component $com_hpbar_hud_hpdodgerside1, component $com_hpbar_hud_hpdodger2, component $com_hpbar_hud_hp3, component $com_hpbar_hud_name_area4, component $com_hpbar_hud_hp_bar5, component $com_hpbar_hud_hp_bar_text6, component $com_hpbar_hud_health_bar_back7, component $com_hpbar_hud_health_bar_sliding8, component $com_hpbar_hud_health_bar_remaining9, component $com_hpbar_hud_creature_name10, int $com_hpbar_hud_outer_border11, int $com_hpbar_hud_name_backing12, int $com_hpbar_hud_inner_border13, component $com_hpbar_hud_health_bar_lower_threshold14, component $com_hpbar_hud_health_bar_upper_threshold15, component $com_hpbar_hud_hp_bar_116, component $com_hpbar_hud_hp_bar_217, component $com_hpbar_hud_hpcontentside18)
+~script4729($com_hpbar_hud_hpdodgerside1, $com_hpbar_hud_hpcontentside18, setbit(65256, 17), ^setpos_abs_left, ^setpos_abs_top, true);
 if_setonsubchange("hp_hud_pos(
 	0 = 0, 
-	1 = $widget_303:0_0, 
-	2 = $widget_303:5_3, 
-	3 = $widget_303:8_4, 
-	4 = $widget_303:10_5, 
-	5 = $widget_303:9_10, 
-	6 = $widget_303:20_6, 
-	7 = $widget_303:13_7, 
-	8 = $widget_303:14_8, 
-	9 = $widget_303:15_9, 
-	10 = $widget_303:18_14, 
-	11 = $widget_303:19_15, 
-	12 = $widget_303:16_16, 
-	13 = $widget_303:17_17, 
+	1 = $com_hpbar_hud_universe0, 
+	2 = $com_hpbar_hud_hp3, 
+	3 = $com_hpbar_hud_name_area4, 
+	4 = $com_hpbar_hud_hp_bar5, 
+	5 = $com_hpbar_hud_creature_name10, 
+	6 = $com_hpbar_hud_hp_bar_text6, 
+	7 = $com_hpbar_hud_health_bar_back7, 
+	8 = $com_hpbar_hud_health_bar_sliding8, 
+	9 = $com_hpbar_hud_health_bar_remaining9, 
+	10 = $com_hpbar_hud_health_bar_lower_threshold14, 
+	11 = $com_hpbar_hud_health_bar_upper_threshold15, 
+	12 = $com_hpbar_hud_hp_bar_116, 
+	13 = $com_hpbar_hud_hp_bar_217, 
 	14 = %varbit12401, 
-	15 = $widget_303:4_2, 
-	16 = $widget_303:3_18, 
-	17 = $widget_303:2_1
-)", $widget_303:0_0);
+	15 = $com_hpbar_hud_hpdodger2, 
+	16 = $com_hpbar_hud_hpcontentside18, 
+	17 = $com_hpbar_hud_hpdodgerside1
+)", $com_hpbar_hud_universe0);
 if_setonvartransmit("hp_hud_update(
-	0 = $widget_303:5_3, 
-	1 = $widget_303:20_6, 
-	2 = $widget_303:13_7, 
-	3 = $widget_303:14_8, 
-	4 = $widget_303:15_9, 
-	5 = $widget_303:8_4, 
-	6 = $widget_303:9_10, 
-	7 = $widget_303:18_14, 
-	8 = $widget_303:19_15, 
-	9 = $widget_303:16_16, 
-	10 = $widget_303:17_17, 
+	0 = $com_hpbar_hud_hp3, 
+	1 = $com_hpbar_hud_hp_bar_text6, 
+	2 = $com_hpbar_hud_health_bar_back7, 
+	3 = $com_hpbar_hud_health_bar_sliding8, 
+	4 = $com_hpbar_hud_health_bar_remaining9, 
+	5 = $com_hpbar_hud_name_area4, 
+	6 = $com_hpbar_hud_creature_name10, 
+	7 = $com_hpbar_hud_health_bar_lower_threshold14, 
+	8 = $com_hpbar_hud_health_bar_upper_threshold15, 
+	9 = $com_hpbar_hud_hp_bar_116, 
+	10 = $com_hpbar_hud_hp_bar_217, 
 	11 = false
-){var1682, var1683}", $widget_303:20_6);
+){var1682, var1683}", $com_hpbar_hud_hp_bar_text6);

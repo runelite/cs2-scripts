@@ -1,15 +1,15 @@
 // 4826
-[clientscript,ca_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $widget_715:27_4, component $widget_715:28_5, int $int6, component $widget_715:1_7, component $widget_715:34_8)
+[clientscript,ca_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $com_ca_tasks_dropdown_container4, component $com_ca_tasks_dropdown_box5, int $int6, component $com_ca_tasks_universe7, component $com_ca_tasks_dropdown_scrollbar8)
 sound_synth(interface_select1, 1, 0);
 ~ca_setup_display_hoverdisable($component2, $int6);
-if_sethide(false, $widget_715:27_4);
-if_setonclick("ca_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $widget_715:27_4, $int6)", $widget_715:27_4);
+if_sethide(false, $com_ca_tasks_dropdown_container4);
+if_setonclick("ca_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $com_ca_tasks_dropdown_container4, $int6)", $com_ca_tasks_dropdown_container4);
 def_int $int9 = if_getx($component2);
 def_int $int10 = if_gety($component2);
-def_component $layer11 = if_getlayer($component2);
-while ($layer11 ! null) {
-	$int9, $int10 = calc($int9 + if_getx($layer11) - if_getscrollx($layer11)), calc($int10 + if_gety($layer11) - if_getscrolly($layer11));
-	$layer11 = if_getlayer($layer11);
+def_component $component11 = if_getlayer($component2);
+while ($component11 ! null) {
+	$int9, $int10 = calc($int9 + if_getx($component11) - if_getscrollx($component11)), calc($int10 + if_gety($component11) - if_getscrolly($component11));
+	$component11 = if_getlayer($component11);
 }
 def_int $int12 = calc(enum_getoutputcount($enum0) - 1);
 def_int $int13 = 14;
@@ -18,13 +18,13 @@ if (~on_mobile = true) {
 }
 def_int $int14 = calc($int10 + if_getheight($component2) - 1);
 def_int $int15 = calc($int12 * $int13);
-cc_deleteall($widget_715:28_5);
-~thinbox($widget_715:28_5, 0);
-if_setsize(if_getwidth($component2), 0, ^setsize_abs, ^setsize_abs, $widget_715:28_5);
+cc_deleteall($com_ca_tasks_dropdown_box5);
+~thinbox($com_ca_tasks_dropdown_box5, 0);
+if_setsize(if_getwidth($component2), 0, ^setsize_abs, ^setsize_abs, $com_ca_tasks_dropdown_box5);
 ~script4831;
 if_sethide(false, $component1);
 def_int $int16 = 0;
-.cc_create($component1, ^iftype_rectangle, $int16);
+.cc_create($component1, ^iftype_rectangle, $int16, false);
 $int16 = calc($int16 + 1);
 .cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
@@ -35,7 +35,7 @@ def_int $int17 = 0;
 def_int $intarray0($int12);
 while ($int17 < $int12) {
 	$intarray0($int17) = $int17;
-	cc_create($component1, ^iftype_text, $int16);
+	cc_create($component1, ^iftype_text, $int16, false);
 	cc_setposition(0, calc($int17 * $int13), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
 	cc_setcolour($int6);
@@ -47,7 +47,7 @@ while ($int17 < $int12) {
 		cc_setonmouserepeat("ca_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
 		cc_setonmouseleave("ca_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
-	cc_setonop("ca_task_filter_close(event_op, $int17, $enum0, $component2, $comsubid3, $widget_715:27_4, $int6)");
+	cc_setonop("ca_task_filter_close(event_op, $int17, $enum0, $component2, $comsubid3, $com_ca_tasks_dropdown_container4, $int6)");
 	cc_settext(~script4783(enum(int, string, $enum0, $int17), calc(if_getwidth($component1) - 8), p11_full));
 	$int17, $int16 = calc($int17 + 1), calc($int16 + 1);
 }
@@ -61,7 +61,7 @@ if ($enum0 = enum_3970 | $enum0 = enum_3968) {
 		$int17 = calc($int17 + 1);
 	}
 }
-cc_deleteall($widget_715:34_8);
-~scrollbar_vertical($widget_715:34_8, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall($com_ca_tasks_dropdown_scrollbar8);
+~scrollbar_vertical($com_ca_tasks_dropdown_scrollbar8, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if_setscrollpos(0, 0, $component1);
-~script4426($int15, null, 334, $component2, if_getwidth($component2), $widget_715:34_8, $component1, $widget_715:28_5);
+~script4426($int15, null, 334, $component2, if_getwidth($component2), $com_ca_tasks_dropdown_scrollbar8, $component1, $com_ca_tasks_dropdown_box5);

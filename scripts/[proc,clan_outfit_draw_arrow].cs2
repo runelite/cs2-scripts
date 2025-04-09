@@ -1,7 +1,7 @@
 // 4437
 [proc,clan_outfit_draw_arrow](component $component0, graphic $graphic1, graphic $graphic2, int $int3)
 cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, 0);
+cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(45, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic($graphic1);

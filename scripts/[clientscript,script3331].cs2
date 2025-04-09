@@ -3,7 +3,7 @@
 if ($coord1 = null | worldmap_isloaded = false) {
 	return;
 }
-def_wma $wma3 = _6623($coord1);
+def_wma $wma3 = worldmap_getmap($coord1);
 def_int $int4 = -1;
 def_int $int5 = -1;
 $int4, $int5 = worldmap_getdisplayposition;

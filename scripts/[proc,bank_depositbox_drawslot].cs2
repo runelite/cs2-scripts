@@ -1,8 +1,8 @@
 // 172
-[proc,bank_depositbox_drawslot](component $component0, component $component1, obj $obj2, int $num3, int $index4, int $int5)
+[proc,bank_depositbox_drawslot](component $component0, component $component1, obj $obj2, int $int3, int $int4, int $int5)
 if ($obj2 ! null) {
 	cc_settrans(0);
-	cc_setobject($obj2, $num3);
+	cc_setobject($obj2, $int3);
 	cc_clearops;
 	switch_int (%varbit4430) {
 		case default :
@@ -37,7 +37,7 @@ if ($obj2 ! null) {
 			cc_setop(4, "Deposit-10");
 			cc_setop(5, "Deposit-X");
 	}
-	cc_setop(9, ~bankside_extraop($obj2, $index4));
+	cc_setop(9, ~bankside_extraop($obj2, $int4));
 	if (~script7795 = 1) {
 		if ($int5 = 1) {
 			cc_setop(10, "Unlock-slot");
@@ -55,6 +55,6 @@ if ($obj2 ! null) {
 		cc_setopbase("<col=ff9040>Slot</col>");
 	}
 	cc_settrans(255);
-	cc_setobject(obj_6512, 1);
+	cc_setobject(blankobject_6512, 1);
 	cc_setondragcomplete(null);
 }

@@ -1,9 +1,9 @@
 // 1147
-[proc,script1147](string $string0, component $component0, int $width1, int $int2, int $int3)(int, int)
-def_int $int4 = calc(paraheight($string0, $width1, p12_full) * 14 + 6);
-cc_create($component0, ^iftype_text, $int2);
+[proc,script1147](string $string0, component $component0, int $int1, int $int2, int $int3)(int, int)
+def_int $int4 = calc(paraheight($string0, $int1, p12_full) * 14 + 6);
+cc_create($component0, ^iftype_text, $int2, false);
 cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize($width1, $int4, ^setsize_abs, ^setsize_abs);
+cc_setsize($int1, $int4, ^setsize_abs, ^setsize_abs);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p12_full);

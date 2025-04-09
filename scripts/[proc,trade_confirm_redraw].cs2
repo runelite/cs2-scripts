@@ -1,129 +1,129 @@
 // 768
-[proc,trade_confirm_redraw](int $size0, int $width1, int $x2, component $widget_334:28_3, component $widget_334:29_4, component $widget_334:27_5, component $widget_334:31_6)
+[proc,trade_confirm_redraw](int $int0, int $int1, int $int2, component $com_tradeconfirm_your_offer3, component $com_tradeconfirm_other_offer4, component $com_tradeconfirm_other_flashers5, component $com_tradeconfirm_removal_warning6)
 if (%varbit4375 = 1) {
-	if_settext("Trade modified", $widget_334:31_6);
+	if_settext("Trade modified", $com_tradeconfirm_removal_warning6);
 } else {
-	if_settext("", $widget_334:31_6);
+	if_settext("", $com_tradeconfirm_removal_warning6);
 }
-cc_deleteall($widget_334:28_3);
-cc_deleteall($widget_334:29_4);
-cc_deleteall($widget_334:27_5);
-def_int $int7 = calc(($size0 + 1) / 2);
+cc_deleteall($com_tradeconfirm_your_offer3);
+cc_deleteall($com_tradeconfirm_other_offer4);
+cc_deleteall($com_tradeconfirm_other_flashers5);
+def_int $int7 = calc(($int0 + 1) / 2);
 def_int $int8 = calc(clientclock - 750);
 def_int $int9 = 0;
 def_int $int10 = 0;
-def_int $size11 = 0;
-while ($size11 < $size0) {
-	if (inv_getobj(inv_90, $size11) ! null) {
+def_int $int11 = 0;
+while ($int11 < $int0) {
+	if (inv_getobj(tradeoffer, $int11) ! null) {
 		$int9 = calc($int9 + 1);
 	}
-	if (invother_getobj(inv_90, $size11) ! null) {
+	if (invother_getobj(tradeoffer, $int11) ! null) {
 		$int10 = calc($int10 + 1);
-	} else if (~script148($size11) > $int8) {
+	} else if (~script148($int11) > $int8) {
 		$int10 = calc($int10 + 1);
 	}
-	$size11 = calc($size11 + 1);
+	$int11 = calc($int11 + 1);
 }
 def_obj $obj12 = null;
 def_string $string0 = "";
-def_int $width13 = $width1;
-def_int $width14 = $width1;
+def_int $int13 = $int1;
+def_int $int14 = $int1;
 if ($int9 > $int7) {
-	$width13 = $x2;
+	$int13 = $int2;
 }
 if ($int10 > $int7) {
-	$width14 = $x2;
+	$int14 = $int2;
 }
-def_int $x15 = 0;
-def_int $y16 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
-$size11 = 0;
-while ($size11 < $size0) {
-	$obj12 = inv_getobj(inv_90, $size11);
+$int11 = 0;
+while ($int11 < $int0) {
+	$obj12 = inv_getobj(tradeoffer, $int11);
 	if ($obj12 ! null) {
-		cc_create($widget_334:28_3, ^iftype_text, $int17);
-		cc_setsize($width13, 17, ^setsize_abs, ^setsize_abs);
+		cc_create($com_tradeconfirm_your_offer3, ^iftype_text, $int17, false);
+		cc_setsize($int13, 17, ^setsize_abs, ^setsize_abs);
 		cc_setcolour(0xff9040);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		$string0 = ~trade_confirm_itemtext($obj12, inv_getnum(inv_90, $size11));
+		$string0 = ~trade_confirm_itemtext($obj12, inv_getnum(tradeoffer, $int11));
 		if ($int9 > $int7) {
-			if (parawidth($string0, 512, p12_full) > $x2) {
+			if (parawidth($string0, 512, p12_full) > $int2) {
 				cc_settextfont(p11_full);
 			} else {
 				cc_settextfont(p12_full);
 			}
 			if (calc($int17 % 2) = 0) {
-				cc_setposition($x2, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setposition($int2, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 			} else {
-				cc_setposition($width1, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setposition($int1, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 			}
 		} else {
-			if (parawidth($string0, 512, p12_full) > $width1) {
+			if (parawidth($string0, 512, p12_full) > $int1) {
 				cc_settextfont(p11_full);
-			} else if (parawidth($string0, 512, b12_full) > $width1) {
+			} else if (parawidth($string0, 512, b12_full) > $int1) {
 				cc_settextfont(p12_full);
 			} else {
 				cc_settextfont(b12_full);
 			}
-			cc_setposition($x2, calc($int17 * 12), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int2, calc($int17 * 12), ^setpos_abs_left, ^setpos_abs_top);
 		}
 		cc_settext($string0);
 		$int17 = calc($int17 + 1);
 	}
-	$obj12 = invother_getobj(inv_90, $size11);
-	$int20 = ~script148($size11);
+	$obj12 = invother_getobj(tradeoffer, $int11);
+	$int20 = ~script148($int11);
 	if ($obj12 ! null) {
-		cc_create($widget_334:29_4, ^iftype_text, $int18);
-		cc_setsize($width14, 17, ^setsize_abs, ^setsize_abs);
+		cc_create($com_tradeconfirm_other_offer4, ^iftype_text, $int18, false);
+		cc_setsize($int14, 17, ^setsize_abs, ^setsize_abs);
 		cc_setcolour(0xff9040);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		$string0 = ~trade_confirm_itemtext($obj12, invother_getnum(inv_90, $size11));
+		$string0 = ~trade_confirm_itemtext($obj12, invother_getnum(tradeoffer, $int11));
 		if ($int10 > $int7) {
-			if (parawidth($string0, 512, p12_full) > $x2) {
+			if (parawidth($string0, 512, p12_full) > $int2) {
 				cc_settextfont(p11_full);
 			} else {
 				cc_settextfont(p12_full);
 			}
-			$y16 = calc($int18 / 2 * 12);
+			$int16 = calc($int18 / 2 * 12);
 			if (calc($int18 % 2) = 0) {
-				cc_setposition($x2, $y16, ^setpos_abs_left, ^setpos_abs_top);
-				$x15 = 0;
+				cc_setposition($int2, $int16, ^setpos_abs_left, ^setpos_abs_top);
+				$int15 = 0;
 			} else {
-				cc_setposition($width1, $y16, ^setpos_abs_left, ^setpos_abs_top);
-				$x15 = $x2;
+				cc_setposition($int1, $int16, ^setpos_abs_left, ^setpos_abs_top);
+				$int15 = $int2;
 			}
 		} else {
-			if (parawidth($string0, 512, p12_full) > $width1) {
+			if (parawidth($string0, 512, p12_full) > $int1) {
 				cc_settextfont(p11_full);
-			} else if (parawidth($string0, 512, b12_full) > $width1) {
+			} else if (parawidth($string0, 512, b12_full) > $int1) {
 				cc_settextfont(p12_full);
 			} else {
 				cc_settextfont(b12_full);
 			}
-			$y16 = calc($int18 * 12);
-			cc_setposition($x2, $y16, ^setpos_abs_left, ^setpos_abs_top);
-			$x15 = 0;
+			$int16 = calc($int18 * 12);
+			cc_setposition($int2, $int16, ^setpos_abs_left, ^setpos_abs_top);
+			$int15 = 0;
 		}
 		cc_settext($string0);
 		if ($int20 > $int8) {
-			.cc_create($widget_334:27_5, ^iftype_rectangle, $int19);
-			.cc_setsize($width14, 12, ^setsize_abs, ^setsize_abs);
-			.cc_setposition($x15, $y16, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_create($com_tradeconfirm_other_flashers5, ^iftype_rectangle, $int19, false);
+			.cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
+			.cc_setposition($int15, $int16, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setcolour(^red);
 			.cc_setfill(true);
 			.cc_settrans(255);
 			.cc_setontimer("trade_slot_flasher(event_com, event_comsubid, $int20)");
 			$int19 = calc($int19 + 1);
-			.cc_create($widget_334:27_5, ^iftype_rectangle, $int19);
-			.cc_setsize($width14, 12, ^setsize_abs, ^setsize_abs);
-			.cc_setposition($x15, $y16, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_create($com_tradeconfirm_other_flashers5, ^iftype_rectangle, $int19, false);
+			.cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
+			.cc_setposition($int15, $int16, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setcolour(0x990000);
 			.cc_setfill(false);
 			.cc_settrans(255);
@@ -137,12 +137,12 @@ while ($size11 < $size0) {
 			$int22 = $int20;
 		}
 	}
-	$size11 = calc($size11 + 1);
+	$int11 = calc($int11 + 1);
 }
 if ($int17 <= 0) {
-	cc_create($widget_334:28_3, ^iftype_text, 0);
-	cc_setsize($width1, 17, ^setsize_abs, ^setsize_abs);
-	cc_setposition($x2, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_tradeconfirm_your_offer3, ^iftype_text, 0, false);
+	cc_setsize($int1, 17, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
@@ -151,9 +151,9 @@ if ($int17 <= 0) {
 	$int17 = calc($int17 + 1);
 }
 if ($int18 <= 0) {
-	cc_create($widget_334:29_4, ^iftype_text, 0);
-	cc_setsize($width1, 17, ^setsize_abs, ^setsize_abs);
-	cc_setposition($x2, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($com_tradeconfirm_other_offer4, ^iftype_text, 0, false);
+	cc_setsize($int1, 17, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
@@ -163,17 +163,17 @@ if ($int18 <= 0) {
 }
 while ($int21 > 0) {
 	$int21 = calc($int21 - 1);
-	cc_create($widget_334:27_5, ^iftype_rectangle, $int19);
+	cc_create($com_tradeconfirm_other_flashers5, ^iftype_rectangle, $int19, false);
 	$int19 = calc($int19 + 1);
-	.cc_create($widget_334:27_5, ^iftype_rectangle, $int19);
+	.cc_create($com_tradeconfirm_other_flashers5, ^iftype_rectangle, $int19, false);
 	$int19 = calc($int19 + 1);
-	cc_setsize($width14, 12, ^setsize_abs, ^setsize_abs);
-	.cc_setsize($width14, 12, ^setsize_abs, ^setsize_abs);
+	cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
 	if ($int10 > $int7) {
 		if (calc($int18 % 2) = 0) {
-			cc_setposition($x2, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int2, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 		} else {
-			cc_setposition($width1, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int1, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 		}
 	} else {
 		cc_setposition(0, calc($int18 * 12), ^setpos_abs_left, ^setpos_abs_top);

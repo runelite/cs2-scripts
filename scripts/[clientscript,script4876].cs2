@@ -1,8 +1,8 @@
 // 4876
-[clientscript,script4876](component $widget_15:26_0, component $widget_15:36_1, component $widget_15:38_2, component $widget_15:39_3)
-cc_deleteall($widget_15:26_0);
+[clientscript,script4876](component $com_bankside_runepouch_top0, component $com_bankside_runepouch_select_container1, component $com_bankside_runepouch_select_list2, component $com_bankside_runepouch_select_scrollbar3)
+cc_deleteall($com_bankside_runepouch_top0);
 def_int $int4 = 0;
-cc_create($widget_15:26_0, ^iftype_rectangle, $int4);
+cc_create($com_bankside_runepouch_top0, ^iftype_rectangle, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -10,7 +10,7 @@ cc_setcolour(^black);
 cc_setfill(true);
 cc_settrans(220);
 while ($int4 <= 4) {
-	cc_create($widget_15:26_0, ^iftype_graphic, $int4);
+	cc_create($com_bankside_runepouch_top0, ^iftype_graphic, $int4, false);
 	$int4 = calc($int4 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -20,26 +20,26 @@ while ($int4 <= 4) {
 }
 def_int $int5 = 0;
 while ($int5 < 4) {
-	cc_create($widget_15:26_0, ^iftype_graphic, $int4);
+	cc_create($com_bankside_runepouch_top0, ^iftype_graphic, $int4, false);
 	$int4 = calc($int4 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject_nonum(obj_11526, 1);
+	cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 	cc_settrans(120);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	$int5 = calc($int5 + 1);
 }
-cc_create($widget_15:26_0, ^iftype_model, $int4);
+cc_create($com_bankside_runepouch_top0, ^iftype_model, $int4, false);
 def_int $int6 = $int4;
 $int4 = calc($int4 + 1);
 cc_setsize(45, 45, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-~script4881($widget_15:26_0, $int6);
-if_setonvartransmit("script4880(event_com, $int6){var115, var304, var1666, var1139, var1140, var3574, var4017}", $widget_15:26_0);
-if_sethide(true, $widget_15:36_1);
-cc_deleteall($widget_15:38_2);
+~script4881($com_bankside_runepouch_top0, $int6);
+if_setonvartransmit("script4880(event_com, $int6){var115, var304, var1666, var1139, var1140, var3574, var4017}", $com_bankside_runepouch_top0);
+if_sethide(true, $com_bankside_runepouch_select_container1);
+cc_deleteall($com_bankside_runepouch_select_list2);
 $int4 = 0;
-cc_create($widget_15:38_2, ^iftype_graphic, $int4);
+cc_create($com_bankside_runepouch_select_list2, ^iftype_graphic, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -47,10 +47,10 @@ cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_settrans(0);
 cc_setontimer(null);
-def_int $width7 = if_getwidth($widget_15:38_2);
-def_int $int8 = calc(($width7 - 4 * 36) / 3);
-def_int $int9 = calc(($width7 - (4 * 36 + 3 * $int8)) / 2);
-def_int $height10 = -1;
+def_int $int7 = if_getwidth($com_bankside_runepouch_select_list2);
+def_int $int8 = calc(($int7 - 4 * 36) / 3);
+def_int $int9 = calc(($int7 - (4 * 36 + 3 * $int8)) / 2);
+def_int $int10 = -1;
 def_int $int11 = scale(7, 8, $int8);
 def_int $int12 = 0;
 def_namedobj $namedobj13 = null;
@@ -59,11 +59,11 @@ def_int $int15 = 1;
 while ($int15 <= 22) {
 	$namedobj13 = enum(int, namedobj, enum_982, $int15);
 	if ($namedobj13 ! null) {
-		cc_create($widget_15:38_2, ^iftype_graphic, $int4);
+		cc_create($com_bankside_runepouch_select_list2, ^iftype_graphic, $int4, false);
 		$int4 = calc($int4 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$height10 = calc($int12 / 4 * (32 + $int11));
-		cc_setposition(calc($int9 + $int12 % 4 * (36 + $int8)), $height10, ^setpos_abs_left, ^setpos_abs_top);
+		$int10 = calc($int12 / 4 * (32 + $int11));
+		cc_setposition(calc($int9 + $int12 % 4 * (36 + $int8)), $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		cc_setobject_nonum($namedobj13, 1);
@@ -75,19 +75,19 @@ while ($int15 <= 22) {
 		cc_setontimer(null);
 		cc_setop(1, "Select");
 		cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
-		cc_setonop("script4877(event_com, event_comsubid, $namedobj13, $widget_15:36_1)");
+		cc_setonop("script4877(event_com, event_comsubid, $namedobj13, $com_bankside_runepouch_select_container1)");
 		$int12 = calc($int12 + 1);
 	}
 	$int15 = calc($int15 + 1);
 }
-cc_create($widget_15:38_2, ^iftype_graphic, $int4);
+cc_create($com_bankside_runepouch_select_list2, ^iftype_graphic, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-$height10 = calc($int12 / 4 * (32 + $int11));
-cc_setposition(calc($int9 + $int12 % 4 * (36 + $int8)), $height10, ^setpos_abs_left, ^setpos_abs_top);
+$int10 = calc($int12 / 4 * (32 + $int11));
+cc_setposition(calc($int9 + $int12 % 4 * (36 + $int8)), $int10, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-cc_setobject_nonum(obj_11526, 1);
+cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 cc_settrans(120);
 if ($boolean14 = false) {
 	cc_setonmouserepeat("script4878(true, event_com, event_comsubid, 160, 120)");
@@ -96,12 +96,12 @@ cc_setonmouseleave("script4878(false, event_com, event_comsubid, 160, 120)");
 cc_setontimer(null);
 cc_setop(1, "Select");
 cc_setopbase("<col=ff9040>Empty slot</col>");
-cc_setonop("script4877(event_com, event_comsubid, obj_11526, $widget_15:36_1)");
-$height10 = calc($height10 + 32);
-if_setscrollpos(0, 0, $widget_15:38_2);
-if ($height10 > if_getheight($widget_15:38_2)) {
-	if_setscrollsize(0, $height10, $widget_15:38_2);
+cc_setonop("script4877(event_com, event_comsubid, pattern_lime_dummy_11526, $com_bankside_runepouch_select_container1)");
+$int10 = calc($int10 + 32);
+if_setscrollpos(0, 0, $com_bankside_runepouch_select_list2);
+if ($int10 > if_getheight($com_bankside_runepouch_select_list2)) {
+	if_setscrollsize(0, $int10, $com_bankside_runepouch_select_list2);
 } else {
-	if_setscrollsize(0, 0, $widget_15:38_2);
+	if_setscrollsize(0, 0, $com_bankside_runepouch_select_list2);
 }
-~scrollbar_vertical($widget_15:39_3, $widget_15:38_2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_bankside_runepouch_select_scrollbar3, $com_bankside_runepouch_select_list2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,6 +1,6 @@
 // 3456
-[clientscript,deathkeep_right_resetbutton](int $clock0, component $component1, int $int2, string $string0, boolean $boolean3)
-if (clientclock < $clock0) {
+[clientscript,deathkeep_right_resetbutton](int $int0, component $component1, int $int2, string $string0, boolean $boolean3)
+if (clientclock < $int0) {
 	return;
 }
 def_int $comsubid4 = ~deathkeep_right_drawbutton($component1, $int2, $string0, $boolean3, 0);

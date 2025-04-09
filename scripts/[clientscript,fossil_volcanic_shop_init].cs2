@@ -1,46 +1,46 @@
 // 2010
-[clientscript,fossil_volcanic_shop_init](int $widget_612:0_0, component $widget_612:3_1, component $widget_612:4_2, component $widget_612:5_3)
-def_int $int4 = calc(if_getwidth($widget_612:3_1) / 2);
-cc_deleteall($widget_612:3_1);
+[clientscript,fossil_volcanic_shop_init](int $com_fossil_volcanic_shop_universe0, component $com_fossil_volcanic_shop_items1, component $com_fossil_volcanic_shop_scrollbar2, component $com_fossil_volcanic_shop_points3)
+def_int $int4 = calc(if_getwidth($com_fossil_volcanic_shop_items1) / 2);
+cc_deleteall($com_fossil_volcanic_shop_items1);
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $height7 = 0;
-def_int $trans8 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
 def_int $int9 = 0;
 def_namedobj $namedobj10 = enum(int, namedobj, enum_1779, $int9);
 while ($namedobj10 ! null) {
-	cc_create($widget_612:3_1, ^iftype_rectangle, $int5);
+	cc_create($com_fossil_volcanic_shop_items1, ^iftype_rectangle, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	if (calc($int9 % 2) = 0) {
 		cc_setsize($int4, 40, ^setsize_abs, ^setsize_abs);
-		$height7 = calc($int6 * 40);
-		cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
+		$int7 = calc($int6 * 40);
+		cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
 		if (calc($int6 % 2) = 0) {
-			$trans8 = 245;
+			$int8 = 245;
 		} else {
-			$trans8 = 235;
+			$int8 = 235;
 		}
 	} else {
 		cc_setsize($int4, 40, ^setsize_minus, ^setsize_abs);
-		$height7 = calc($int6 * 40);
-		cc_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top);
+		$int7 = calc($int6 * 40);
+		cc_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top);
 		if (calc($int6 % 2) = 0) {
-			$trans8 = 235;
+			$int8 = 235;
 		} else {
-			$trans8 = 245;
+			$int8 = 245;
 		}
 		$int6 = calc($int6 + 1);
 	}
-	cc_settrans($trans8);
+	cc_settrans($int8);
 	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans8, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int8, null)");
 	cc_setop(1, "Value");
 	cc_setop(10, "Examine");
-	if ($namedobj10 = heat_proof_vessel_21539) {
+	if ($namedobj10 = fossil_mine_water_container_21539) {
 		cc_setop(2, "Unlock");
-	} else if ($namedobj10 = ash_covered_tome_21697) {
+	} else if ($namedobj10 = fossil_mine_ultrasoil_book_21697) {
 		cc_setop(2, "Buy");
 	} else if (oc_param($namedobj10, param_142) > 0) {
 		cc_setop(2, "Buy");
@@ -53,7 +53,7 @@ while ($namedobj10 ! null) {
 		}
 		cc_setop(6, "Buy-X");
 	}
-	if ($namedobj10 = heat_proof_vessel_21539) {
+	if ($namedobj10 = fossil_mine_water_container_21539) {
 		cc_setopbase("<col=ff9040>Large water container</col>");
 	}
 	cc_setopbase("<col=ff9040><oc_name($namedobj10)></col>");
@@ -63,10 +63,10 @@ while ($namedobj10 ! null) {
 }
 if ($int9 > 0) {
 	if (calc($int9 % 2) = 1) {
-		cc_create($widget_612:3_1, ^iftype_rectangle, $int5);
+		cc_create($com_fossil_volcanic_shop_items1, ^iftype_rectangle, $int5, false);
 		$int5 = calc($int5 + 1);
 		cc_setsize($int4, 40, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top);
+		cc_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		if (calc($int6 % 2) = 0) {
@@ -75,65 +75,65 @@ if ($int9 > 0) {
 			cc_settrans(245);
 		}
 	}
-	$height7 = calc($height7 + 40);
+	$int7 = calc($int7 + 40);
 }
-if_setscrollpos(0, 0, $widget_612:3_1);
-if ($height7 > if_getheight($widget_612:3_1)) {
-	if_setscrollsize(0, $height7, $widget_612:3_1);
+if_setscrollpos(0, 0, $com_fossil_volcanic_shop_items1);
+if ($int7 > if_getheight($com_fossil_volcanic_shop_items1)) {
+	if_setscrollsize(0, $int7, $com_fossil_volcanic_shop_items1);
 } else {
-	if_setscrollsize(0, 0, $widget_612:3_1);
-	cc_create($widget_612:3_1, ^iftype_rectangle, $int5);
+	if_setscrollsize(0, 0, $com_fossil_volcanic_shop_items1);
+	cc_create($com_fossil_volcanic_shop_items1, ^iftype_rectangle, $int5, false);
 	$int5 = calc($int5 + 1);
-	cc_setsize(0, $height7, ^setsize_minus, ^setsize_minus);
+	cc_setsize(0, $int7, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setcolour(^black);
 	cc_setfill(true);
 	cc_settrans(245);
 }
-~scrollbar_vertical($widget_612:4_2, $widget_612:3_1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($com_fossil_volcanic_shop_scrollbar2, $com_fossil_volcanic_shop_items1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $int11 = calc((40 - 32) / 2);
 def_int $int12 = calc(3 + 36 + 3);
-def_int $width13 = calc($int4 - $int12);
+def_int $int13 = calc($int4 - $int12);
 def_int $int14 = 0;
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
-	if (cc_find($widget_612:3_1, $int9) = ^true) {
+	if (cc_find($com_fossil_volcanic_shop_items1, $int9) = ^true) {
 		$namedobj10 = enum(int, namedobj, enum_1779, $int9);
-		.cc_create($widget_612:3_1, ^iftype_graphic, $int5);
+		.cc_create($com_fossil_volcanic_shop_items1, ^iftype_graphic, $int5, false);
 		$int5 = calc($int5 + 1);
 		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(cc_getx + 3), calc(cc_gety + $int11), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setobject_nonum(oc_uncert($namedobj10), 1);
 		.cc_setoutline(1);
 		.cc_setgraphicshadow(0x333333);
-		.cc_create($widget_612:3_1, ^iftype_text, $int5);
+		.cc_create($com_fossil_volcanic_shop_items1, ^iftype_text, $int5, false);
 		$int5 = calc($int5 + 1);
-		.cc_setsize($width13, 27, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int13, 27, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(cc_getx + $int12), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setcolour(0xff981f);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
 		.cc_settextfont(p12_full);
-		if ($namedobj10 = heat_proof_vessel_21539) {
+		if ($namedobj10 = fossil_mine_water_container_21539) {
 			.cc_settext("Large water container");
-		} else if ($namedobj10 = ash_covered_tome_21697) {
+		} else if ($namedobj10 = fossil_mine_ultrasoil_book_21697) {
 			.cc_settext("Ultra-fertile soil spell");
 		} else {
 			.cc_settext(oc_name($namedobj10));
 		}
-		.cc_create($widget_612:3_1, ^iftype_text, $int5);
+		.cc_create($com_fossil_volcanic_shop_items1, ^iftype_text, $int5, false);
 		$int5 = calc($int5 + 1);
-		.cc_setsize($width13, calc(40 - 27), ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int13, calc(40 - 27), ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(cc_getx + $int12), calc(cc_gety + 27), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setcolour(0xafafaf);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
 		.cc_settextfont(p11_full);
 		$int14 = enum(obj, int, enum_1780, $namedobj10);
-		if ($namedobj10 = heat_proof_vessel_21539 & %varbit5959 = 1) {
+		if ($namedobj10 = fossil_mine_water_container_21539 & %varbit5959 = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
-		} else if ($namedobj10 = ash_covered_tome_21697 & %varbit5960 = 1) {
+		} else if ($namedobj10 = fossil_mine_ultrasoil_book_21697 & %varbit5960 = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
 		} else if ($int14 > 1) {
@@ -147,5 +147,5 @@ while ($int9 > 0) {
 		}
 	}
 }
-~fossil_volcanic_shop_points($widget_612:5_3, 0);
-if_setonvartransmit("fossil_volcanic_shop_points($widget_612:5_3){var261}", $widget_612:5_3);
+~fossil_volcanic_shop_points($com_fossil_volcanic_shop_points3, 0);
+if_setonvartransmit("fossil_volcanic_shop_points($com_fossil_volcanic_shop_points3){var261}", $com_fossil_volcanic_shop_points3);

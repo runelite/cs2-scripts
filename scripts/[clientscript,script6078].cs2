@@ -1,24 +1,24 @@
 // 6078
-[clientscript,script6078](component $widget_12:48_0)
+[clientscript,script6078](component $com_bankmain_potionstore_button0)
 def_int $int1 = 0;
 if (%varbit11295 = 0) {
-	cc_deleteall($widget_12:48_0);
-	if_setonop(null, $widget_12:48_0);
-	if_setop(1, "", $widget_12:48_0);
-	if_sethide(true, $widget_12:48_0);
+	cc_deleteall($com_bankmain_potionstore_button0);
+	if_setonop(null, $com_bankmain_potionstore_button0);
+	if_setop(1, "", $com_bankmain_potionstore_button0);
+	if_sethide(true, $com_bankmain_potionstore_button0);
 	if (~on_mobile = false) {
-		if_setonmouseleave(null, $widget_12:48_0);
-		if_setonmouserepeat(null, $widget_12:48_0);
+		if_setonmouseleave(null, $com_bankmain_potionstore_button0);
+		if_setonmouserepeat(null, $com_bankmain_potionstore_button0);
 	}
 } else {
-	cc_create($widget_12:48_0, ^iftype_model, $int1);
+	cc_create($com_bankmain_potionstore_button0, ^iftype_model, $int1, false);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setmodel(potion_storage_54550);
 	cc_setmodelangle(0, 40, 145, 1950, 0, 1000);
 	$int1 = calc($int1 + 1);
-	if_setop(1, "Potion store", $widget_12:48_0);
-	if_sethide(false, $widget_12:48_0);
+	if_setop(1, "Potion store", $com_bankmain_potionstore_button0);
+	if_sethide(false, $com_bankmain_potionstore_button0);
 }
 if_setonvartransmit("script6079{
 	0 = var4278, 
@@ -131,5 +131,5 @@ if_setonvartransmit("script6079{
 	107 = var4384, 
 	108 = var4497, 
 	109 = var4286
-}", interface_12:52);
+}", bankmain:potionstore_items);
 ~script6080;

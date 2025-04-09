@@ -1,5 +1,5 @@
 // 3580
-[proc,hallowed_tools_side_update](component $component0, obj $obj1, string $text0, int $int2)
+[proc,hallowed_tools_side_update](component $component0, obj $obj1, string $string0, int $int2)
 def_int $int3 = 0;
 def_namedobj $namedobj4 = null;
 $int3, $namedobj4 = ~hallowed_tools_getcarried($obj1);
@@ -8,7 +8,7 @@ if ($int3 > 0) {
 	$colour5 = 0x20df20;
 }
 if (cc_find($component0, $int2) = ^true & .cc_find($component0, calc($int2 + 1)) = ^true) {
-	cc_settext($text0);
+	cc_settext($string0);
 	cc_setcolour($colour5);
 	.cc_setcolour($colour5);
 	.cc_settext(~magic_tostring($int3));

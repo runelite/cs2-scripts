@@ -1,5 +1,5 @@
 // 4401
-[proc,clan_sidepanel_op](int $int0, int $int1, string $username0, int $clanslot2, int $int3, int $comsubid4)
+[proc,clan_sidepanel_op](int $int0, int $int1, string $string0, int $int2, int $int3, int $comsubid4)
 switch_int ($int0) {
 	case 5 :
 		if ($comsubid4 ! -1) {
@@ -8,14 +8,14 @@ switch_int ($int0) {
 	case 6 :
 		return;
 	case 7 :
-		if ($clanslot2 ! null) {
-			if ($int3 = 2 & activeclanchannel_getuserrank($clanslot2) > -1) {
+		if ($int2 ! -1) {
+			if ($int3 = 2 & activeclanchannel_getuserrank($int2) > -1) {
 				return;
 			}
 			if ($int3 = 0) {
 				~chat_send("Attempting to kick player from clan chat...", 3, $int3, 0, -1);
 			}
-			activeclanchannel_kickuser($clanslot2);
+			activeclanchannel_kickuser($int2);
 		} else {
 			mes("That player appears to have left the channel.");
 		}
@@ -24,11 +24,11 @@ switch_int ($int0) {
 			if ($int3 = 2) {
 				return;
 			}
-			if ($clanslot2 ! null) {
+			if ($int2 ! -1) {
 				if ($int3 = 0) {
 					~chat_send("Attempting to ban player from clan chat...", 3, $int3, 0, -1);
 				}
-				affinedclansettings_addbanned_fromchannel($clanslot2, $int3);
+				affinedclansettings_addbanned_fromchannel($int2, $int3);
 			} else {
 				mes("That player appears to have left the channel.");
 			}
@@ -37,14 +37,14 @@ switch_int ($int0) {
 		}
 	case 9 :
 		if ($int1 = 1) {
-			friend_del($username0);
+			friend_del($string0);
 		} else {
-			friend_add($username0);
+			friend_add($string0);
 		}
 	case 10 :
 		if ($int1 = 2) {
-			ignore_del($username0);
+			ignore_del($string0);
 		} else {
-			ignore_add($username0);
+			ignore_add($string0);
 		}
 }

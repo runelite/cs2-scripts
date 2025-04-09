@@ -1,13 +1,13 @@
 // 5275
-[clientscript,shared_bank_search_toggle](int $opindex0, component $widget_724:16_1, component $widget_724:1_2, component $widget_724:10_3, component $widget_724:11_4, int $flags5, component $widget_724:2_6, int $comsubid7, component $widget_724:4_8)
+[clientscript,shared_bank_search_toggle](int $opindex0, component $com_shared_bank_search1, component $com_shared_bank_universe2, component $com_shared_bank_items3, component $com_shared_bank_scrollbar4, int $int5, component $com_shared_bank_frame6, int $int7, component $com_shared_bank_occupiedslots8)
 if ($opindex0 ! 1) {
 	return;
 }
 if (~bankmain_searching = 1) {
 	~meslayer_close(true, true, true);
-	~shared_bank_search_setbutton($widget_724:16_1, $widget_724:1_2, $widget_724:10_3, $widget_724:11_4, $flags5, $widget_724:2_6, $comsubid7, $widget_724:4_8);
-	~shared_bank_update($widget_724:1_2, $widget_724:10_3, $widget_724:11_4, $flags5, $widget_724:2_6, $comsubid7, $widget_724:4_8);
+	~shared_bank_search_setbutton($com_shared_bank_search1, $com_shared_bank_universe2, $com_shared_bank_items3, $com_shared_bank_scrollbar4, $int5, $com_shared_bank_frame6, $int7, $com_shared_bank_occupiedslots8);
+	~shared_bank_update($com_shared_bank_universe2, $com_shared_bank_items3, $com_shared_bank_scrollbar4, $int5, $com_shared_bank_frame6, $int7, $com_shared_bank_occupiedslots8);
 	return;
 }
 ~meslayer_mode11;
-~shared_bank_search_setbutton($widget_724:16_1, $widget_724:1_2, $widget_724:10_3, $widget_724:11_4, $flags5, $widget_724:2_6, $comsubid7, $widget_724:4_8);
+~shared_bank_search_setbutton($com_shared_bank_search1, $com_shared_bank_universe2, $com_shared_bank_items3, $com_shared_bank_scrollbar4, $int5, $com_shared_bank_frame6, $int7, $com_shared_bank_occupiedslots8);

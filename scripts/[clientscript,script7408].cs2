@@ -1,12 +1,12 @@
 // 7408
 [clientscript,script7408]
 ~script7409;
-if_setonvartransmit("script7417(%varbit11534, %varbit11535, %varbit11536, %varbit11537, %varbit11538, ~popout_available(-1)){var1021, var3417, var3539, var4504, var4505}", interface_892:1);
-if_setonvartransmit("script7416(%varbit11557){var3053}", interface_892:2);
+if_setonvartransmit("script7417(%varbit11534, %varbit11535, %varbit11536, %varbit11537, %varbit11538, ~popout_available(-1)){var1021, var3417, var3539, var4504, var4505}", osm_hotkeys:content);
+if_setonvartransmit("script7416(%varbit11557){var3053}", osm_hotkeys:hide_on_transmit);
 if (%varbit11557 = 1) {
-	if_sethide(true, interface_892:1);
+	if_sethide(true, osm_hotkeys:content);
 } else {
-	if_sethide(false, interface_892:1);
+	if_sethide(false, osm_hotkeys:content);
 	if (%varbit16112 = 0) {
 		%varcint1212 = -1;
 		%varcint1213 = -1;

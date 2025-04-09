@@ -1,12 +1,12 @@
 // 4460
-[proc,clan_permissions_categorytitle](int $int0, int $int1, string $op0, component $widget_706:12_2, component $widget_706:8_3, int $int4, component $widget_706:13_5, int $count6, int $int7, boolean $boolean8, string $text1)(int, int)
-cc_create($widget_706:12_2, ^iftype_graphic, $int0);
+[proc,clan_permissions_categorytitle](int $int0, int $int1, string $string0, component $com_clans_permissions_list_contents2, component $com_clans_permissions_index_contents3, int $int4, component $com_clans_permissions_list_scrollbar5, int $int6, int $int7, boolean $boolean8, string $string1)(int, int)
+cc_create($com_clans_permissions_list_contents2, ^iftype_graphic, $int0, false);
 $int0 = calc($int0 + 1);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setgraphic(tradebacking);
 cc_settiling(true);
-cc_create($widget_706:12_2, ^iftype_text, $int0);
+cc_create($com_clans_permissions_list_contents2, ^iftype_text, $int0, false);
 $int0 = calc($int0 + 1);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top);
@@ -14,14 +14,14 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settext($op0);
-.cc_create($widget_706:8_3, ^iftype_rectangle, $int4);
+cc_settext($string0);
+.cc_create($com_clans_permissions_index_contents3, ^iftype_rectangle, $int4, false);
 $int4 = calc($int4 + 1);
 .cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
-.cc_setposition(0, calc($count6 * $int7), ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, calc($int6 * $int7), ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setcolour(^white);
 .cc_setfill(true);
-if (calc($count6 % 2) = 0) {
+if (calc($int6 % 2) = 0) {
 	.cc_settrans(230);
 	.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 230, null)");
 } else {
@@ -31,12 +31,12 @@ if (calc($count6 % 2) = 0) {
 if (~on_mobile = false) {
 	.cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
 }
-.cc_setop(1, $op0);
-.cc_setonop("clan_permissions_indexop($widget_706:12_2, $widget_706:13_5, cc_getid, $int1, 16711680, 16750623)");
-.cc_create($widget_706:8_3, ^iftype_text, $int4);
+.cc_setop(1, $string0);
+.cc_setonop("clan_permissions_indexop($com_clans_permissions_list_contents2, $com_clans_permissions_list_scrollbar5, cc_getid, $int1, 16711680, 16750623)");
+.cc_create($com_clans_permissions_index_contents3, ^iftype_text, $int4, false);
 $int4 = calc($int4 + 1);
 .cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
-.cc_setposition(0, calc($count6 * $int7), ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, calc($int6 * $int7), ^setpos_abs_centre, ^setpos_abs_top);
 if ($boolean8 = true) {
 	.cc_setcolour(^white);
 } else {
@@ -50,8 +50,8 @@ if ($boolean8 = true) {
 }
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if ($boolean8 = true) {
-	.cc_settext($text1);
+	.cc_settext($string1);
 } else {
-	.cc_settext($op0);
+	.cc_settext($string0);
 }
 return($int0, $int4);

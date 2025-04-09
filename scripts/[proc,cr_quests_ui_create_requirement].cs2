@@ -28,15 +28,15 @@ $int0 = 0;
 def_int $int17 = 1;
 def_int $int18 = 1;
 def_int $int19 = 4;
-def_int $width20 = 0;
+def_int $int20 = 0;
 def_fontmetrics $fontmetrics21 = null;
 def_int $int22 = 0;
 if ($int15 < 0) {
-	$width20 = ~cr_ui_list_entry_description_width($component14);
+	$int20 = ~cr_ui_list_entry_description_width($component14);
 	$fontmetrics21 = p11_full;
 	$int22 = 12;
 } else {
-	$width20 = ~cr_ui_list_entry_details_width(1, $component14);
+	$int20 = ~cr_ui_list_entry_details_width(1, $component14);
 	$fontmetrics21 = p11_full;
 	$int22 = 12;
 }
@@ -48,10 +48,10 @@ if ($int2 > 0) {
 } else {
 	$int18 = 0;
 }
-def_int $width23 = parawidth($string3, $width20, $fontmetrics21);
-def_int $width24 = parawidth($string4, $width20, $fontmetrics21);
-def_int $int25 = calc($int4 + $int17 + $width23 + $int18 + $width24);
-if ($int6 = 0 & calc($int16 + $int25) > $width20) {
+def_int $int23 = parawidth($string3, $int20, $fontmetrics21);
+def_int $int24 = parawidth($string4, $int20, $fontmetrics21);
+def_int $int25 = calc($int4 + $int17 + $int23 + $int18 + $int24);
+if ($int6 = 0 & calc($int16 + $int25) > $int20) {
 	$int9 = 1;
 	return(~cr_quests_ui_create_requirement(
 		0 = $string0, 
@@ -74,7 +74,7 @@ if ($int6 = 0 & calc($int16 + $int25) > $width20) {
 	));
 }
 if ($graphic3 ! null) {
-	cc_create($component14, ^iftype_graphic, $int11);
+	cc_create($component14, ^iftype_graphic, $int11, false);
 	$int11 = calc($int11 + 1);
 	cc_setgraphic($graphic3);
 	if ($int15 < 0) {

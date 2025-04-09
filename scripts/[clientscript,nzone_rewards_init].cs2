@@ -1,7 +1,7 @@
 // 248
-[clientscript,nzone_rewards_init](component $widget_206:0_0, component $widget_206:2_1, component $widget_206:4_2, component $widget_206:5_3, component $widget_206:6_4)
-~nzone_rewards_tabs($widget_206:2_1, $widget_206:4_2, $widget_206:5_3, $widget_206:6_4, $widget_206:4_2);
-~nzone_rewards_lists($widget_206:4_2, $widget_206:6_4);
-if_setoninvtransmit("nzone_rewards_lists($widget_206:4_2, $widget_206:6_4){inv_464, inv_108}", $widget_206:0_0);
-~nzone_rewards_upgrades($widget_206:5_3);
-if_setoninvtransmit("nzone_rewards_upgrades($widget_206:5_3){inv, inv_464, inv_108}", $widget_206:5_3);
+[clientscript,nzone_rewards_init](component $com_nzone_rewards_universe0, component $com_nzone_rewards_tabs1, component $com_nzone_rewards_resources2, component $com_nzone_rewards_upgrades3, component $com_nzone_rewards_benefits4)
+~nzone_rewards_tabs($com_nzone_rewards_tabs1, $com_nzone_rewards_resources2, $com_nzone_rewards_upgrades3, $com_nzone_rewards_benefits4, $com_nzone_rewards_resources2);
+~nzone_rewards_lists($com_nzone_rewards_resources2, $com_nzone_rewards_benefits4);
+if_setoninvtransmit("nzone_rewards_lists($com_nzone_rewards_resources2, $com_nzone_rewards_benefits4){ranging_guild_bowshop_skillcape_trimmed, smithing_iron3}", $com_nzone_rewards_universe0);
+~nzone_rewards_upgrades($com_nzone_rewards_upgrades3);
+if_setoninvtransmit("nzone_rewards_upgrades($com_nzone_rewards_upgrades3){inv, ranging_guild_bowshop_skillcape_trimmed, smithing_iron3}", $com_nzone_rewards_upgrades3);

@@ -1,29 +1,29 @@
 // 2513
-[proc,script2513](component $component0, component $component1, component $component2, int $clock3, component $component4)
+[proc,script2513](component $component0, component $component1, component $component2, int $int3, component $component4)
 def_enum $enum5 = null;
-def_int $width6 = 0;
-def_int $y7 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
 def_int $int8 = 0;
-if ($clock3 ! %varcint222 | %varcint490 ! $component4 | calc(clientclock % 75) = 0) {
+if ($int3 ! %varcint222 | %varcint490 ! $component4 | calc(clientclock % 75) = 0) {
 	~xpdrops_setposition($component2, $component1);
-	$y7 = ~script2372($component2);
+	$int7 = ~script2372($component2);
 	$enum5 = ~toplevel_getcomponents;
 	if ($enum5 = enum_1745) {
 		$int8 = ~script2519;
 		if ($int8 = 3 | $int8 = 4) {
 			if (%varbit6254 = 0) {
-				$width6 = calc(if_getwidth(enum(component, component, $enum5, interface_164:96)) - 181);
+				$int6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:side_container)) - 181);
 			} else {
-				$width6 = calc(if_getwidth(enum(component, component, $enum5, interface_164:96)) - 84);
+				$int6 = calc(if_getwidth(enum(component, component, $enum5, toplevel_pre_eoc:side_container)) - 84);
 			}
 		} else {
-			$width6 = 2;
+			$int6 = 2;
 		}
-		if_setposition(0, $y7, ^setpos_abs_left, ^setpos_abs_top, $component0);
-		if_setsize($width6, $y7, ^setsize_minus, ^setsize_minus, $component0);
+		if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize($int6, $int7, ^setsize_minus, ^setsize_minus, $component0);
 	} else {
-		if_setposition(0, $y7, ^setpos_abs_left, ^setpos_abs_top, $component0);
-		if_setsize(0, $y7, ^setsize_minus, ^setsize_minus, $component0);
+		if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(0, $int7, ^setsize_minus, ^setsize_minus, $component0);
 	}
 	if_setontimer("script2512($component0, $component1, $component2, %varcint222, %varcint490)", $component0);
 }

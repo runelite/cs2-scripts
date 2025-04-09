@@ -1,8 +1,8 @@
 // 544
-[proc,league_reward_draw_item](int $int0, int $y1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, struct $struct22)(int, int)
-.cc_create($component11, ^iftype_rectangle, $int7);
+[proc,league_reward_draw_item](int $int0, int $int1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, struct $struct22)(int, int)
+.cc_create($component11, ^iftype_rectangle, $int7, false);
 .cc_setsize($int2, 32, ^setsize_abs, ^setsize_abs);
-.cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setcolour(^black);
 .cc_setfill(true);
 .cc_settrans(255);
@@ -12,18 +12,18 @@ def_namedobj $namedobj23 = struct_param($struct3, param_150);
 if ($namedobj23 = null) {
 	return($int6, $int7);
 }
-cc_create($component12, ^iftype_graphic, $int6);
+cc_create($component12, ^iftype_graphic, $int6, false);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int0 + (40 - 36) / 2), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int0 + (40 - 36) / 2), $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($namedobj23, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-def_int $width24 = calc($int2 - 40);
+def_int $int24 = calc($int2 - 40);
 $int0 = calc($int0 + 40);
 $int6 = calc($int6 + 1);
-cc_create($component12, ^iftype_text, $int6);
-cc_setsize($width24, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component12, ^iftype_text, $int6, false);
+cc_setsize($int24, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -37,7 +37,7 @@ if ($int5 = $int4) {
 	$colour27, $string2 = ^white, "<col=ffffff>";
 	.cc_setonmouserepeat(null);
 	.cc_setonmouseleave(null);
-} else if (oc_members($namedobj23) = ^true & map_members = false) {
+} else if (oc_members($namedobj23) = 1 & map_members = false) {
 	$colour27, $string2 = 0x9f9f9f, "<col=9f9f9f>";
 } else if (%var2613 < $int25 & $boolean26 = false) {
 	$colour27, $string2 = 0x9f9f9f, "<col=9f9f9f>";

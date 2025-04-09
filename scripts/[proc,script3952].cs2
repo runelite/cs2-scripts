@@ -1,8 +1,8 @@
 // 3952
-[proc,script3952](component $component0, int $x1, int $y2, int $width3, int $height4, string $string0, int $int5)(int)
-cc_create($component0, ^iftype_rectangle, $int5);
-cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
-cc_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top);
+[proc,script3952](component $component0, int $int1, int $int2, int $int3, int $int4, string $string0, int $int5)(int)
+cc_create($component0, ^iftype_rectangle, $int5, false);
+cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
 cc_settrans(255);
 if (string_length($string0) > 0) {
 	cc_setonop("button_select_sound");

@@ -1,7 +1,7 @@
 // 2614
 [proc,script2614](obj $obj0, component $component1, int $int2)(int, graphic)
 switch_obj ($obj0) {
-	case high_level_alchemy_3303, low_level_alchemy_3284 :
+	case 55_high_alchemy_3303, 21_low_alchemy_3284 :
 		if (~league_relic_active(struct_1131) = 1) {
 			return(1, null);
 		}
@@ -11,75 +11,75 @@ if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	return(0, null);
 }
 switch_component ($component1) {
-	case interface_218:142, interface_218:141 :
+	case magic_spellbook:vengeance, magic_spellbook:vengeance_other :
 		if (%varbit2451 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:143 :
+	case magic_spellbook:heal_group :
 		if (%varbit925 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:128 :
+	case magic_spellbook:magic_imbue :
 		if (%varbit5438 > 0) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:21 :
-		if ((inv_total(inv, explorers_ring_1_13125) > 0 | inv_total(inv, explorers_ring_2_13126) > 0 | inv_total(inv, explorers_ring_3_13127) > 0 | inv_total(worn, explorers_ring_1_13125) > 0 | inv_total(worn, explorers_ring_2_13126) > 0 | inv_total(worn, explorers_ring_3_13127) > 0 | inv_total(inv, explorers_ring_4_13128) > 0 | inv_total(worn, explorers_ring_4_13128) > 0) & map_members = true & %varbit4554 < 30) {
+	case magic_spellbook:low_alchemy :
+		if ((inv_total(inv, lumbridge_ring_easy_13125) > 0 | inv_total(inv, lumbridge_ring_medium_13126) > 0 | inv_total(inv, lumbridge_ring_hard_13127) > 0 | inv_total(worn, lumbridge_ring_easy_13125) > 0 | inv_total(worn, lumbridge_ring_medium_13126) > 0 | inv_total(worn, lumbridge_ring_hard_13127) > 0 | inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %varbit4554 < 30) {
 			return(1, null);
 		}
-	case interface_218:44 :
-		if ((inv_total(inv, explorers_ring_4_13128) > 0 | inv_total(worn, explorers_ring_4_13128) > 0) & map_members = true & %varbit4554 < 30) {
+	case magic_spellbook:high_alchemy :
+		if ((inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %varbit4554 < 30) {
 			return(1, null);
 		}
-	case interface_218:175, interface_218:176 :
+	case magic_spellbook:lesser_corruption, magic_spellbook:greater_corruption :
 		if (%varbit12288 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:182 :
+	case magic_spellbook:dark_lure :
 		if (%varbit12289 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:183 :
+	case magic_spellbook:death_charge :
 		if (%varbit12138 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:184, interface_218:185, interface_218:186, interface_218:187, interface_218:188, interface_218:189, interface_218:190, interface_218:191, interface_218:192 :
+	case magic_spellbook:resurrect_lesser_ghost, magic_spellbook:resurrect_lesser_skeleton, magic_spellbook:resurrect_lesser_zombie, magic_spellbook:resurrect_superior_ghost, magic_spellbook:resurrect_superior_skeleton, magic_spellbook:resurrect_superior_zombie, magic_spellbook:resurrect_greater_ghost, magic_spellbook:resurrect_greater_skeleton, magic_spellbook:resurrect_greater_zombie :
 		if (%varbit12290 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:180 :
+	case magic_spellbook:shadow_veil :
 		if (%varbit12291 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:181 :
+	case magic_spellbook:vile_vigour :
 		if (%varbit12292 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:174 :
+	case magic_spellbook:ward_of_arceuus :
 		if (%varbit12293 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case interface_218:177, interface_218:178 :
+	case magic_spellbook:demonic_offering, magic_spellbook:sinister_offering :
 		if (%varbit12423 = 1) {
 			if_settrans(150, $component1);
 		} else {

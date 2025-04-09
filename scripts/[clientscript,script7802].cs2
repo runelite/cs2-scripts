@@ -1,30 +1,30 @@
 // 7802
-[clientscript,script7802](component $widget_908:9_0, component $widget_908:23_1, component $widget_908:8_2, component $widget_908:22_3, component $widget_908:27_4, component $widget_908:14_5, component $widget_908:11_6, component $widget_908:15_7, component $widget_908:13_8, component $widget_908:17_9, component $widget_908:21_10, component $widget_908:5_11, component $widget_908:7_12, component $widget_908:19_13)
+[clientscript,script7802](component $com_collection_overview_close0, component $com_collection_overview_subsection_general_content1, component $com_collection_overview_subsection_buttons2, component $com_collection_overview_subsection_buttons_click3, component $com_collection_overview_subsection_progress4, component $com_collection_overview_progress_bar5, component $com_collection_overview_progress_bar_rank_left6, component $com_collection_overview_progress_bar_rank_right7, component $com_collection_overview_progress_left_text8, component $com_collection_overview_progress_right_text9, component $com_collection_overview_latest_items_data10, component $com_collection_overview_burger_btn_menu11, component $com_collection_overview_burger_menu_frame12, component $com_collection_overview_burger_menu_overlay13)
 def_graphic $graphic14 = null;
 def_int $int15 = 0;
 if (~on_mobile = true) {
-	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $widget_908:9_0);
-	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $widget_908:9_0);
-	if_setgraphic("steelborder_close_button,0", $widget_908:9_0);
+	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_collection_overview_close0);
+	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_collection_overview_close0);
+	if_setgraphic("steelborder_close_button,0", $com_collection_overview_close0);
 	$int15 = calc(165 - (20 + 30));
 } else {
-	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $widget_908:9_0);
-	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $widget_908:9_0);
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_collection_overview_close0);
+	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $com_collection_overview_close0);
 	$graphic14 = "close_buttons,0";
-	if_setgraphic($graphic14, $widget_908:9_0);
-	if_setonmouseleave("graphic_swapper(event_com, $graphic14)", $widget_908:9_0);
+	if_setgraphic($graphic14, $com_collection_overview_close0);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic14)", $com_collection_overview_close0);
 	$graphic14 = "close_buttons,1";
-	if_setonmouseover("graphic_swapper(event_com, $graphic14)", $widget_908:9_0);
+	if_setonmouseover("graphic_swapper(event_com, $graphic14)", $com_collection_overview_close0);
 }
-if_setop(1, "Close", $widget_908:9_0);
-if_setonop("opsound(event_op, 2)", $widget_908:9_0);
-if_setopkey(2, ^key_escape, 0, $widget_908:9_0);
-if_setop(2, "", $widget_908:9_0);
-def_component $component16 = interface_908:0;
-def_component $component17 = interface_908:1;
-def_component $component18 = interface_908:2;
+if_setop(1, "Close", $com_collection_overview_close0);
+if_setonop("opsound(event_op, 2)", $com_collection_overview_close0);
+if_setopkey(2, ^key_escape, 0, $com_collection_overview_close0);
+if_setop(2, "", $com_collection_overview_close0);
+def_component $component16 = collection_overview:infinity;
+def_component $component17 = collection_overview:universe;
+def_component $component18 = collection_overview:resize_preview;
 def_enum $enum19 = ~toplevel_getcomponents;
-def_component $component20 = enum(component, component, $enum19, interface_161:16);
+def_component $component20 = enum(component, component, $enum19, toplevel_osrs_stretch:mainmodal);
 if (%varcint1245 ! 1) {
 	%varcint1247 = if_getx($component20);
 	%varcint1248 = if_gety($component20);
@@ -44,19 +44,19 @@ if (~on_mobile = true) {
 	if_setontimer("script6110($component16, -1)", $component16);
 }
 if_setonresize("script7808(
-	0 = $widget_908:23_1, 
-	1 = $widget_908:8_2, 
-	2 = $widget_908:22_3, 
-	3 = $widget_908:27_4, 
-	4 = $widget_908:14_5, 
-	5 = $widget_908:11_6, 
-	6 = $widget_908:15_7, 
-	7 = $widget_908:13_8, 
-	8 = $widget_908:17_9, 
-	9 = $widget_908:21_10, 
-	10 = $widget_908:5_11, 
-	11 = $widget_908:7_12, 
-	12 = $widget_908:19_13
+	0 = $com_collection_overview_subsection_general_content1, 
+	1 = $com_collection_overview_subsection_buttons2, 
+	2 = $com_collection_overview_subsection_buttons_click3, 
+	3 = $com_collection_overview_subsection_progress4, 
+	4 = $com_collection_overview_progress_bar5, 
+	5 = $com_collection_overview_progress_bar_rank_left6, 
+	6 = $com_collection_overview_progress_bar_rank_right7, 
+	7 = $com_collection_overview_progress_left_text8, 
+	8 = $com_collection_overview_progress_right_text9, 
+	9 = $com_collection_overview_latest_items_data10, 
+	10 = $com_collection_overview_burger_btn_menu11, 
+	11 = $com_collection_overview_burger_menu_frame12, 
+	12 = $com_collection_overview_burger_menu_overlay13
 )", $component16);
 if_sethide(false, $component17);
 if_sethide(true, $component18);
@@ -64,25 +64,25 @@ if ($enum19 = enum_1132) {
 	if_setposition(6, 6, ^setpos_abs_centre, ^setpos_abs_centre, $component17);
 	if_setsize(12, 12, ^setsize_minus, ^setsize_minus, $component17);
 	~script7809(
-		0 = $widget_908:23_1, 
-		1 = $widget_908:8_2, 
-		2 = $widget_908:22_3, 
-		3 = $widget_908:27_4, 
-		4 = $widget_908:14_5, 
-		5 = $widget_908:11_6, 
-		6 = $widget_908:15_7, 
-		7 = $widget_908:13_8, 
-		8 = $widget_908:17_9, 
-		9 = $widget_908:21_10, 
-		10 = $widget_908:5_11, 
-		11 = $widget_908:7_12, 
-		12 = $widget_908:19_13
+		0 = $com_collection_overview_subsection_general_content1, 
+		1 = $com_collection_overview_subsection_buttons2, 
+		2 = $com_collection_overview_subsection_buttons_click3, 
+		3 = $com_collection_overview_subsection_progress4, 
+		4 = $com_collection_overview_progress_bar5, 
+		5 = $com_collection_overview_progress_bar_rank_left6, 
+		6 = $com_collection_overview_progress_bar_rank_right7, 
+		7 = $com_collection_overview_progress_left_text8, 
+		8 = $com_collection_overview_progress_right_text9, 
+		9 = $com_collection_overview_latest_items_data10, 
+		10 = $com_collection_overview_burger_btn_menu11, 
+		11 = $com_collection_overview_burger_menu_frame12, 
+		12 = $com_collection_overview_burger_menu_overlay13
 	);
 	return;
 }
 cc_deleteall($component16);
 def_int $int21 = 0;
-cc_create($component16, ^iftype_graphic, $int21);
+cc_create($component16, ^iftype_graphic, $int21, false);
 cc_settiling(true);
 cc_settrans(255);
 cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
@@ -93,7 +93,7 @@ cc_setdragdeadtime(5);
 cc_deleteall($component18);
 $int21 = 0;
 while ($int21 < 4) {
-	cc_create($component18, ^iftype_rectangle, $int21);
+	cc_create($component18, ^iftype_rectangle, $int21, false);
 	cc_setsize(calc($int21 * 2), calc($int21 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);

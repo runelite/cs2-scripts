@@ -1,9 +1,9 @@
 // 1632
-[clientscript,script1632](char $keychar0, int $comsubid1, component $component2, string $string0, string $string1, int $clock3)
-if (clientclock < $clock3) {
+[clientscript,script1632](char $keychar0, int $comsubid1, component $component2, string $string0, string $string1, int $int3)
+if (clientclock < $int3) {
 	return;
 }
-if (~keypress_permit(interface_458, null) = 0) {
+if (~keypress_permit(poh_furniture_creation, null) = 0) {
 	return;
 }
 if ($keychar0 ! null & (string_indexof_char($string0, $keychar0) ! -1 | string_indexof_char($string1, $keychar0) ! -1)) {
@@ -13,7 +13,7 @@ if ($keychar0 ! null & (string_indexof_char($string0, $keychar0) ! -1 | string_i
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
 	}
 	sound_synth(interface_select1, 1, 0);
-	if (cc_find(interface_458:2, $comsubid1) = ^true) {
+	if (cc_find(poh_furniture_creation:contents, $comsubid1) = ^true) {
 		cc_resume_pausebutton;
 	}
 }

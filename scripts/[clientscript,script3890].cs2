@@ -1,10 +1,10 @@
 // 3890
-[clientscript,script3890](component $component0, int $comsubid1, int $mousex2, int $int3, int $y4, int $int5, component $component6)
-if_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top, $component6);
+[clientscript,script3890](component $component0, int $comsubid1, int $mousex2, int $int3, int $int4, int $int5, component $component6)
+if_setposition($int5, $int4, ^setpos_abs_left, ^setpos_abs_top, $component6);
 if_setsize($int3, 16, ^setsize_abs, ^setsize_abs, $component6);
 def_int $int7 = calc($int3 - 16);
-~script4563($component0, $comsubid1, ~min($int7, $mousex2), $int3, $y4, $int5);
+~script4563($component0, $comsubid1, ~min($int7, $mousex2), $int3, $int4, $int5);
 if (~toplevel_getcomponents = enum_1745) {
-	~toplevel_resize(interface_601:0, enum_1745);
+	~toplevel_resize(toplevel_osm:control, enum_1745);
 	~script5355(~toplevel_getcomponents);
 }

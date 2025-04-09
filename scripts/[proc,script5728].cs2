@@ -1,5 +1,5 @@
 // 5728
-[proc,script5728](entityoverlay $entityoverlay0, loc $loc1, coord $coord2, int $lvl3, int $lvl4, int $lvl5, string $string0, boolean $boolean6)
+[proc,script5728](entityoverlay $entityoverlay0, loc $loc1, coord $coord2, int $int3, int $int4, int $int5, string $string0, boolean $boolean6)
 cc_deleteall_entityoverlay($entityoverlay0);
 if (%varbit13136 = 1) {
 	return;
@@ -15,7 +15,7 @@ cc_settrans(110);
 cc_settiling(true);
 $int7 = ~thinbox_entityoverlay($entityoverlay0, $int7);
 def_int $int9 = 0;
-if ($lvl3 > 0) {
+if ($int3 > 0) {
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int7);
 	$int7 = calc($int7 + 1);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
@@ -25,9 +25,9 @@ if ($lvl3 > 0) {
 	$int7 = calc($int7 + 1);
 	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if (enum(loc, int, enum_4817, $loc1) = 0 & $lvl3 > stat(agility)) {
+	if (enum(loc, int, enum_4817, $loc1) = 0 & $int3 > stat(agility)) {
 		cc_setcolour(^red);
-	} else if (enum(loc, int, enum_4817, $loc1) = 1 & $lvl3 > stat_base(agility)) {
+	} else if (enum(loc, int, enum_4817, $loc1) = 1 & $int3 > stat_base(agility)) {
 		cc_setcolour(^red);
 	} else {
 		cc_setcolour(^green);
@@ -35,10 +35,10 @@ if ($lvl3 > 0) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(tostring($lvl3));
+	cc_settext(tostring($int3));
 	$int8 = calc($int8 + 25);
 }
-if ($lvl4 > 0) {
+if ($int4 > 0) {
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int7);
 	$int7 = calc($int7 + 1);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
@@ -48,7 +48,7 @@ if ($lvl4 > 0) {
 	$int7 = calc($int7 + 1);
 	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($lvl4 > stat(strength)) {
+	if ($int4 > stat(strength)) {
 		cc_setcolour(^red);
 	} else {
 		cc_setcolour(^green);
@@ -56,10 +56,10 @@ if ($lvl4 > 0) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(tostring($lvl4));
+	cc_settext(tostring($int4));
 	$int8 = calc($int8 + 25);
 }
-if ($lvl5 > 0) {
+if ($int5 > 0) {
 	cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int7);
 	$int7 = calc($int7 + 1);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
@@ -69,7 +69,7 @@ if ($lvl5 > 0) {
 	$int7 = calc($int7 + 1);
 	cc_setposition(15, $int8, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	if ($lvl5 > stat(ranged)) {
+	if ($int5 > stat(ranged)) {
 		cc_setcolour(^red);
 	} else {
 		cc_setcolour(^green);
@@ -77,7 +77,7 @@ if ($lvl5 > 0) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	cc_settext(tostring($lvl5));
+	cc_settext(tostring($int5));
 	$int8 = calc($int8 + 25);
 }
 $int9 = calc($int9 + 60);

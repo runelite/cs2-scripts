@@ -41,10 +41,10 @@ if ($enum10 = null & $enum11 = null) {
 def_namedobj $namedobj12 = ~script4556($enum10);
 def_namedobj $namedobj13 = ~script4556($enum11);
 def_namedobj $namedobj14 = null;
-def_int $trans15 = 0;
+def_int $int15 = 0;
 if ($namedobj12 = null & $namedobj13 = null) {
 	$namedobj14 = struct_param($struct1, param_1270);
-	$trans15 = 100;
+	$int15 = 100;
 	if ($namedobj14 = null) {
 		if ($npc_uid2 ! null & $int3 ! -1) {
 			highlight_npc_off($npc_uid2, $int3, 11);
@@ -57,14 +57,14 @@ if ($namedobj12 = null & $namedobj13 = null) {
 }
 def_int $int16 = enum(obj, int, enum_3864, $namedobj12);
 def_int $int17 = enum(obj, int, enum_3864, $namedobj13);
-def_int $lvl18 = stat(fishing);
+def_int $int18 = stat(fishing);
 def_int $int19 = 0;
 if ($namedobj14 = null) {
-	if ($namedobj12 ! null & $int8 = 1 & $int16 <= $lvl18) {
+	if ($namedobj12 ! null & $int8 = 1 & $int16 <= $int18) {
 		$namedobj14 = $namedobj12;
 		$int19 = $int16;
 	}
-	if ($namedobj13 ! null & $int9 = 1 & $int17 <= $lvl18) {
+	if ($namedobj13 ! null & $int9 = 1 & $int17 <= $int18) {
 		if ($namedobj14 ! null) {
 			if ($int17 > $int16) {
 				$namedobj14 = $namedobj13;
@@ -81,7 +81,7 @@ if ($namedobj14 = null) {
 		} else {
 			$namedobj14 = $namedobj13;
 		}
-		$trans15 = 100;
+		$int15 = 100;
 	}
 }
 if ($namedobj14 = null) {
@@ -98,7 +98,7 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($namedobj14, 1);
 cc_setoutline(1);
-cc_settrans($trans15);
+cc_settrans($int15);
 if ($npc_uid2 ! null & $int3 ! -1) {
 	highlight_npc_on($npc_uid2, $int3, 11);
 }

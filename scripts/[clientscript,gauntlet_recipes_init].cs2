@@ -1,37 +1,37 @@
 // 2917
-[clientscript,gauntlet_recipes_init](component $widget_640:4_0, component $widget_640:5_1, component $widget_640:6_2, component $widget_640:29_3, component $widget_640:7_4, component $widget_640:8_5, component $widget_640:9_6, component $widget_640:10_7, component $widget_640:11_8, component $widget_640:12_9, component $widget_640:13_10, component $widget_640:14_11, component $widget_640:15_12, component $widget_640:16_13, component $widget_640:17_14, component $widget_640:18_15, component $widget_640:19_16, component $widget_640:20_17, component $widget_640:21_18, component $widget_640:22_19, component $widget_640:23_20, component $widget_640:24_21, component $widget_640:25_22, component $widget_640:26_23, component $widget_640:27_24, component $widget_640:28_25)
-def_int $height26 = if_getheight($widget_640:6_2);
-if_setscrollsize(0, $height26, $widget_640:5_1);
-~scrollbar_vertical($widget_640:29_3, $widget_640:5_1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setscrollpos(0, 0, $widget_640:5_1);
-if_settext("Crystal Singing Recipes", $widget_640:4_0);
-~script2918($widget_640:7_4, "Crystal Vial", "<tostring(10)> <~script2920> Shards", ~gauntlet_select_item(vial_23879, %varbit9292));
+[clientscript,gauntlet_recipes_init](component $com_gauntlet_recipes_scroll_title0, component $com_gauntlet_recipes_scroll_layer_outer1, component $com_gauntlet_recipes_scroll_layer_inner2, component $com_gauntlet_recipes_scrollbar3, component $com_gauntlet_recipes_entry14, component $com_gauntlet_recipes_entry25, component $com_gauntlet_recipes_entry36, component $com_gauntlet_recipes_entry47, component $com_gauntlet_recipes_entry58, component $com_gauntlet_recipes_entry69, component $com_gauntlet_recipes_entry710, component $com_gauntlet_recipes_entry811, component $com_gauntlet_recipes_entry912, component $com_gauntlet_recipes_entry1013, component $com_gauntlet_recipes_entry1114, component $com_gauntlet_recipes_entry1215, component $com_gauntlet_recipes_entry1316, component $com_gauntlet_recipes_entry1417, component $com_gauntlet_recipes_entry1518, component $com_gauntlet_recipes_entry1619, component $com_gauntlet_recipes_entry1720, component $com_gauntlet_recipes_entry1821, component $com_gauntlet_recipes_entry1922, component $com_gauntlet_recipes_entry2023, component $com_gauntlet_recipes_entry2124, component $com_gauntlet_recipes_entry2225)
+def_int $int26 = if_getheight($com_gauntlet_recipes_scroll_layer_inner2);
+if_setscrollsize(0, $int26, $com_gauntlet_recipes_scroll_layer_outer1);
+~scrollbar_vertical($com_gauntlet_recipes_scrollbar3, $com_gauntlet_recipes_scroll_layer_outer1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if_setscrollpos(0, 0, $com_gauntlet_recipes_scroll_layer_outer1);
+if_settext("Crystal Singing Recipes", $com_gauntlet_recipes_scroll_title0);
+~script2918($com_gauntlet_recipes_entry14, "Crystal Vial", "<tostring(10)> <~script2920> Shards", ~gauntlet_select_item(gauntlet_vial_empty_23879, %varbit9292));
 def_string $string0 = "";
 if (%varbit9292 = 1) {
 	$string0 = "Corrupted ";
 }
-~script2918($widget_640:8_5, "<$string0>Teleport Crystal", "<tostring(40)> <~script2920> Shards", ~gauntlet_select_item(teleport_crystal_23904, %varbit9292));
-~script2918($widget_640:9_6, "<$string0>Escape Crystal", "<tostring(200)> <~script2920> Shards", ~gauntlet_select_item(escape_crystal_25961, %varbit9292));
-~script2918($widget_640:10_7, "<~script2920> Paddlefish", "<tostring(10)> <~script2920> Shards & 1 Paddlefish", ~gauntlet_select_item(crystal_paddlefish_25960, %varbit9292));
-~script2918($widget_640:11_8, "Basic <~script2920> Halberd", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_halberd_basic_23895, %varbit9292));
-~script2918($widget_640:12_9, "Basic <~script2920> Bow", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_bow_basic_23901, %varbit9292));
-~script2918($widget_640:13_10, "Basic <~script2920> Staff", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_staff_basic_23898, %varbit9292));
-~script2918($widget_640:14_11, "Basic <~script2920> Helm", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_basic_23886, %varbit9292));
-~script2918($widget_640:15_12, "Basic <~script2920> Body", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_body_basic_23889, %varbit9292));
-~script2918($widget_640:16_13, "Basic <~script2920> Legs", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_basic_23892, %varbit9292));
-~script2918($widget_640:17_14, "Attuned <~script2920> Halberd", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Halberd", ~gauntlet_select_item(crystal_halberd_attuned_23896, %varbit9292));
-~script2918($widget_640:18_15, "Attuned <~script2920> Bow", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Bow", ~gauntlet_select_item(crystal_bow_attuned_23902, %varbit9292));
-~script2918($widget_640:19_16, "Attuned <~script2920> Staff", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Staff", ~gauntlet_select_item(crystal_staff_attuned_23899, %varbit9292));
-~script2918($widget_640:20_17, "Attuned <~script2920> Helm", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Helm, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_attuned_23887, %varbit9292));
-~script2918($widget_640:21_18, "Attuned <~script2920> Body", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Body, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_body_attuned_23890, %varbit9292));
-~script2918($widget_640:22_19, "Attuned <~script2920> Legs", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Legs, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_attuned_23893, %varbit9292));
-~script2918($widget_640:23_20, "Perfected <~script2920> Halberd", "1 Attuned <~script2920> Halberd & 1 <~script2920> Spike", ~gauntlet_select_item(crystal_halberd_perfected_23897, %varbit9292));
+~script2918($com_gauntlet_recipes_entry25, "<$string0>Teleport Crystal", "<tostring(40)> <~script2920> Shards", ~gauntlet_select_item(gauntlet_teleport_crystal_23904, %varbit9292));
+~script2918($com_gauntlet_recipes_entry36, "<$string0>Escape Crystal", "<tostring(200)> <~script2920> Shards", ~gauntlet_select_item(gauntlet_escape_crystal_25961, %varbit9292));
+~script2918($com_gauntlet_recipes_entry47, "<~script2920> Paddlefish", "<tostring(10)> <~script2920> Shards & 1 Paddlefish", ~gauntlet_select_item(gauntlet_combo_food_25960, %varbit9292));
+~script2918($com_gauntlet_recipes_entry58, "Basic <~script2920> Halberd", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(gauntlet_melee_t1_23895, %varbit9292));
+~script2918($com_gauntlet_recipes_entry69, "Basic <~script2920> Bow", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(gauntlet_ranged_t1_23901, %varbit9292));
+~script2918($com_gauntlet_recipes_entry710, "Basic <~script2920> Staff", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(gauntlet_magic_t1_23898, %varbit9292));
+~script2918($com_gauntlet_recipes_entry811, "Basic <~script2920> Helm", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(gauntlet_helmet_t1_23886, %varbit9292));
+~script2918($com_gauntlet_recipes_entry912, "Basic <~script2920> Body", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(gauntlet_chestplate_t1_23889, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1013, "Basic <~script2920> Legs", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(gauntlet_platelegs_t1_23892, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1114, "Attuned <~script2920> Halberd", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Halberd", ~gauntlet_select_item(gauntlet_melee_t2_23896, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1215, "Attuned <~script2920> Bow", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Bow", ~gauntlet_select_item(gauntlet_ranged_t2_23902, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1316, "Attuned <~script2920> Staff", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Staff", ~gauntlet_select_item(gauntlet_magic_t2_23899, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1417, "Attuned <~script2920> Helm", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Helm, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(gauntlet_helmet_t2_23887, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1518, "Attuned <~script2920> Body", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Body, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(gauntlet_chestplate_t2_23890, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1619, "Attuned <~script2920> Legs", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Legs, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(gauntlet_platelegs_t2_23893, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1720, "Perfected <~script2920> Halberd", "1 Attuned <~script2920> Halberd & 1 <~script2920> Spike", ~gauntlet_select_item(gauntlet_melee_t3_23897, %varbit9292));
 $string0 = "Crystalline";
 if (%varbit9292 = 1) {
 	$string0 = "Corrupted";
 }
-~script2918($widget_640:24_21, "Perfected <~script2920> Bow", "1 Attuned <~script2920> Bow & 1 <$string0> Bowstring", ~gauntlet_select_item(crystal_bow_perfected_23903, %varbit9292));
-~script2918($widget_640:25_22, "Perfected <~script2920> Staff", "1 Attuned <~script2920> Staff & 1 <~script2920> Orb", ~gauntlet_select_item(crystal_staff_perfected_23900, %varbit9292));
-~script2918($widget_640:26_23, "Perfected <~script2920> Helm", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Helm, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_perfected_23888, %varbit9292));
-~script2918($widget_640:27_24, "Perfected <~script2920> Body", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Body, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_body_perfected_23891, %varbit9292));
-~script2918($widget_640:28_25, "Perfected <~script2920> Legs", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Legs, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_perfected_23894, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1821, "Perfected <~script2920> Bow", "1 Attuned <~script2920> Bow & 1 <$string0> Bowstring", ~gauntlet_select_item(gauntlet_ranged_t3_23903, %varbit9292));
+~script2918($com_gauntlet_recipes_entry1922, "Perfected <~script2920> Staff", "1 Attuned <~script2920> Staff & 1 <~script2920> Orb", ~gauntlet_select_item(gauntlet_magic_t3_23900, %varbit9292));
+~script2918($com_gauntlet_recipes_entry2023, "Perfected <~script2920> Helm", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Helm, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(gauntlet_helmet_t3_23888, %varbit9292));
+~script2918($com_gauntlet_recipes_entry2124, "Perfected <~script2920> Body", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Body, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(gauntlet_chestplate_t3_23891, %varbit9292));
+~script2918($com_gauntlet_recipes_entry2225, "Perfected <~script2920> Legs", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Legs, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(gauntlet_platelegs_t3_23894, %varbit9292));

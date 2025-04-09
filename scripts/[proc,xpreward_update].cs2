@@ -4,7 +4,7 @@ def_stat $stat3 = enum(int, stat, enum_681, $int0);
 if ($stat3 ! null & ~script3809(%var261, $stat3, 0) = 0) {
 	$int0, $stat3 = 0, null;
 }
-def_string $mes0 = "You need to choose which skill you wish to be advanced.";
+def_string $string0 = "You need to choose which skill you wish to be advanced.";
 if ($stat3 ! null) {
 	if (cc_find($component2, 0) = ^true) {
 		cc_setcolour(0x999999);
@@ -20,7 +20,7 @@ if ($stat3 ! null) {
 	}
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
-	if_setonop("mes($mes0)", $component2);
+	if_setonop("mes($string0)", $component2);
 }
 if_setonvartransmit("xpreward_update(0, $int0, $component1, $component2){var261, var80, var63, var738}", $component1);
 if_setonstattransmit("xpreward_update(0, $int0, $component1, $component2)", $component1);
@@ -38,7 +38,7 @@ while ($int7 <= 23) {
 		} else {
 			$comsubid4 = ~options_button_off($component5, 0);
 		}
-		cc_create($component5, ^iftype_graphic, $comsubid4);
+		cc_create($component5, ^iftype_graphic, $comsubid4, false);
 		cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic(enum(stat, graphic, enum_255, $stat6));

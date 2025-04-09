@@ -4,9 +4,9 @@ if ($int2 <= 0) {
 	return;
 }
 cc_deleteall($component0);
-def_int $height4 = if_getheight($component1);
+def_int $int4 = if_getheight($component1);
 if_setscrollpos(0, 0, $component1);
-if ($int2 <= $height4) {
+if ($int2 <= $int4) {
 	if_setscrollsize(0, 0, $component1);
 } else {
 	if_setscrollsize(0, $int2, $component1);

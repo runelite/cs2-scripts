@@ -1,33 +1,33 @@
 // 466
-[clientscript,quickprayer_init](int $widget_77:0_0, component $widget_77:4_1, component $widget_77:5_2)
-if_setgraphic("combatboxesmed,0", $widget_77:5_2);
-if_setontimer(null, $widget_77:5_2);
-cc_deleteall($widget_77:4_1);
+[clientscript,quickprayer_init](int $com_quickprayer_universe0, component $com_quickprayer_buttons1, component $com_quickprayer_close2)
+if_setgraphic("combatboxesmed,0", $com_quickprayer_close2);
+if_setontimer(null, $com_quickprayer_close2);
+cc_deleteall($com_quickprayer_buttons1);
 def_enum $enum3 = ~script7823;
-def_int $countarray0(enum_getoutputcount($enum3));
+def_int $intarray0(enum_getoutputcount($enum3));
 def_int $int4 = 0;
-def_int $count5 = 0;
+def_int $int5 = 0;
 def_component $component6 = null;
 def_obj $obj7 = null;
-while ($count5 < enum_getoutputcount($enum3)) {
-	$obj7 = enum(int, obj, $enum3, $count5);
+while ($int5 < enum_getoutputcount($enum3)) {
+	$obj7 = enum(int, obj, $enum3, $int5);
 	$component6 = oc_param($obj7, param_1751);
 	if ($component6 ! null) {
-		cc_create($widget_77:4_1, ^iftype_graphic, $count5);
+		cc_create($com_quickprayer_buttons1, ^iftype_graphic, $int5, false);
 		cc_sethide(false);
 		cc_settrans(255);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
-		$countarray0($int4) = $count5;
+		$intarray0($int4) = $int5;
 		$int4 = calc($int4 + 1);
 	} else {
-		cc_create($widget_77:4_1, ^iftype_graphic, $count5);
+		cc_create($com_quickprayer_buttons1, ^iftype_graphic, $int5, false);
 		cc_sethide(true);
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 	}
-	$count5 = calc($count5 + 1);
+	$int5 = calc($int5 + 1);
 }
 if ($int4 > 0) {
-	~prayer_quicksort(countarray0, 0, calc($int4 - 1));
+	~prayer_quicksort(intarray0, 0, calc($int4 - 1));
 }
 def_int $int8 = enum_getoutputcount($enum3);
 def_int $int9 = 0;
@@ -35,22 +35,22 @@ def_int $int10 = 0;
 def_int $int11 = 0;
 while ($int11 < $int4) {
 	$int9, $int10 = calc($int11 % 5 * 37), calc($int11 / 5 * 37);
-	if (cc_find($widget_77:4_1, $countarray0($int11)) = ^true) {
-		$obj7 = enum(int, obj, $enum3, $countarray0($int11));
+	if (cc_find($com_quickprayer_buttons1, $intarray0($int11)) = ^true) {
+		$obj7 = enum(int, obj, $enum3, $intarray0($int11));
 		cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setop(1, "Toggle");
-		.cc_create($widget_77:4_1, ^iftype_graphic, $int8);
+		.cc_create($com_quickprayer_buttons1, ^iftype_graphic, $int8, false);
 		$int8 = calc($int8 + 1);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc($int9 + 2), calc($int10 + 2), ^setpos_abs_left, ^setpos_abs_top);
 		~quickprayer_icon_update($obj7);
-		if ($obj7 = chivalry_20828 | $obj7 = piety_20829) {
+		if ($obj7 = xmas16_blue_partyhat_20828 | $obj7 = placeholder_xmas16_blue_partyhat_20829) {
 			.cc_setonstattransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){prayer, defence}");
 			.cc_setonvartransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){var1050, var1377, var2900, var1636}");
-		} else if ($obj7 = rigour_20827 | $obj7 = augury_20830 | $obj7 = preserve_20831) {
+		} else if ($obj7 = placeholder_xmas16_green_partyhat_20827 | $obj7 = xmas16_teddy_20830 | $obj7 = placeholder_xmas16_teddy_20831) {
 			.cc_setonstattransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){prayer, defence}");
 			.cc_setonvartransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){var1429}");
-		} else if ($obj7 = dummy_priest_gown_25939 | $obj7 = dummy_priest_gown_27034) {
+		} else if ($obj7 = cert_ca_teleport_anim_offhand_easy_25939 | $obj7 = placeholder_giants_foundry_tester_27034) {
 			.cc_setonstattransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){prayer}");
 			.cc_setonvartransmit("quickprayer_icon_update($obj7, event_com, event_comsubid){var4655}");
 		} else {
@@ -59,7 +59,7 @@ while ($int11 < $int4) {
 		.cc_settrans(50);
 		cc_setonmouseover("cc_settrans(event_com, .cc_getid, 0, null)");
 		cc_setonmouseleave("cc_settrans(event_com, .cc_getid, 50, null)");
-		.cc_create($widget_77:4_1, ^iftype_graphic, $int8);
+		.cc_create($com_quickprayer_buttons1, ^iftype_graphic, $int8, false);
 		$int8 = calc($int8 + 1);
 		.cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		.cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);

@@ -1,20 +1,20 @@
 // 842
-[proc,script842](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, int $y6, component $component7, component $component8)
+[proc,script842](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, int $int6, component $component7, component $component8)
 cc_deleteall($component2);
 def_int $int9 = 0;
-def_int $height10 = 10;
+def_int $int10 = 10;
 def_int $int11 = 2;
-def_int $width12 = if_getwidth($component2);
+def_int $int12 = if_getwidth($component2);
 def_int $int13 = calc((if_getwidth($component2) - 2) / 2);
-def_int $count14 = 0;
-def_int $count15 = enum_getoutputcount(enum_3553);
-while ($count14 < $count15) {
+def_int $int14 = 0;
+def_int $int15 = enum_getoutputcount(enum_3553);
+while ($int14 < $int15) {
 	$int9 = ~soul_wars_rewards_drawitem_other(
-		0 = $count14, 
+		0 = $int14, 
 		1 = $int1, 
 		2 = enum_3553, 
 		3 = enum_3540, 
-		4 = $height10, 
+		4 = $int10, 
 		5 = $int11, 
 		6 = $int13, 
 		7 = 2, 
@@ -26,21 +26,21 @@ while ($count14 < $count15) {
 		13 = $component7, 
 		14 = $component8
 	);
-	$count14 = calc($count14 + 1);
+	$int14 = calc($int14 + 1);
 	$int11 = calc($int11 + $int13);
-	if (calc($int11 + $int13) > $width12 & $count14 < $count15) {
+	if (calc($int11 + $int13) > $int12 & $int14 < $int15) {
 		$int11 = 2;
-		$height10 = calc($height10 + 32 + 10);
+		$int10 = calc($int10 + 32 + 10);
 	}
 }
 ~scrollbar_vertical($component5, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-$height10 = calc($height10 + 32 + 10);
-if ($height10 >= if_getheight($component2)) {
-	if_setscrollsize(0, $height10, $component2);
+$int10 = calc($int10 + 32 + 10);
+if ($int10 >= if_getheight($component2)) {
+	if_setscrollsize(0, $int10, $component2);
 } else {
 	if_setscrollsize(0, 0, $component2);
 }
-if_setscrollpos(0, $y6, $component2);
+if_setscrollpos(0, $int6, $component2);
 ~scrollbar_vertical_rebuild($component5, $component2);
 if ($int1 = 0) {
 	%var3426 = 1;

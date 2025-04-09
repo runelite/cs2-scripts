@@ -1,6 +1,6 @@
 // 749
-[clientscript,tutorial_progressbar_init](component $widget_614:0_0, component $widget_614:2_1, component $widget_614:3_2, component $widget_614:4_3, component $widget_614:12_4, component $widget_614:15_5)
-~script4729($widget_614:2_1, $widget_614:4_3, 65256, ^setpos_abs_left, ^setpos_abs_top, false);
-~script4729($widget_614:3_2, $widget_614:12_4, setbit(setbit(setbit(52960, 13), 12), 1), ^setpos_abs_centre, ^setpos_abs_bottom, false);
-~tutorial_progressbar_set($widget_614:15_5);
-if_setonvartransmit("tutorial_progressbar_set($widget_614:15_5){var406}", $widget_614:0_0);
+[clientscript,tutorial_progressbar_init](component $com_tutorial_overlay_universe0, component $com_tutorial_overlay_dodger_top1, component $com_tutorial_overlay_dodger_bottom2, component $com_tutorial_overlay_hint_layer3, component $com_tutorial_overlay_progressbar_container4, component $com_tutorial_overlay_progressbar5)
+~script4729($com_tutorial_overlay_dodger_top1, $com_tutorial_overlay_hint_layer3, 65256, ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($com_tutorial_overlay_dodger_bottom2, $com_tutorial_overlay_progressbar_container4, setbit(setbit(setbit(52960, 13), 12), 1), ^setpos_abs_centre, ^setpos_abs_bottom, false);
+~tutorial_progressbar_set($com_tutorial_overlay_progressbar5);
+if_setonvartransmit("tutorial_progressbar_set($com_tutorial_overlay_progressbar5){var406}", $com_tutorial_overlay_universe0);

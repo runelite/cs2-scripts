@@ -1,28 +1,28 @@
 // 4033
 [clientscript,warguild_defence_mini_highlight](int $int0)
-~v2_stone_button_out_filled(interface_411:6);
-~v2_stone_button_out_filled(interface_411:8);
-~v2_stone_button_out_filled(interface_411:10);
-~v2_stone_button_out_filled(interface_411:12);
-if_setcolour(0xff6600, interface_411:7);
-if_setcolour(0xff6600, interface_411:9);
-if_setcolour(0xff6600, interface_411:11);
-if_setcolour(0xff6600, interface_411:13);
-if_setmodelanim(null, interface_411:1);
-if_setmodelanim(null, interface_411:2);
-if_setmodelanim(null, interface_411:3);
-if_setmodelanim(null, interface_411:4);
+~v2_stone_button_out_filled(warguild_defence_mini:stab);
+~v2_stone_button_out_filled(warguild_defence_mini:crush);
+~v2_stone_button_out_filled(warguild_defence_mini:slash);
+~v2_stone_button_out_filled(warguild_defence_mini:magic);
+if_setcolour(0xff6600, warguild_defence_mini:text_stab);
+if_setcolour(0xff6600, warguild_defence_mini:text_crush);
+if_setcolour(0xff6600, warguild_defence_mini:text_slash);
+if_setcolour(0xff6600, warguild_defence_mini:text_magic);
+if_setmodelanim(null, warguild_defence_mini:model_stab);
+if_setmodelanim(null, warguild_defence_mini:model_crush);
+if_setmodelanim(null, warguild_defence_mini:model_slash);
+if_setmodelanim(null, warguild_defence_mini:model_magic);
 switch_int ($int0) {
 	case 26935302 :
-		if_setcolour(^white, interface_411:7);
-		if_setmodelanim(seq_4165, interface_411:1);
+		if_setcolour(^white, warguild_defence_mini:text_stab);
+		if_setmodelanim(warguild_projspin_4165, warguild_defence_mini:model_stab);
 	case 26935304 :
-		if_setcolour(^white, interface_411:9);
-		if_setmodelanim(seq_4165, interface_411:2);
+		if_setcolour(^white, warguild_defence_mini:text_crush);
+		if_setmodelanim(warguild_projspin_4165, warguild_defence_mini:model_crush);
 	case 26935306 :
-		if_setcolour(^white, interface_411:11);
-		if_setmodelanim(seq_4165, interface_411:3);
+		if_setcolour(^white, warguild_defence_mini:text_slash);
+		if_setmodelanim(warguild_projspin_4165, warguild_defence_mini:model_slash);
 	case 26935308 :
-		if_setcolour(^white, interface_411:13);
-		if_setmodelanim(seq_4165, interface_411:4);
+		if_setcolour(^white, warguild_defence_mini:text_magic);
+		if_setmodelanim(warguild_projspin_4165, warguild_defence_mini:model_magic);
 }

@@ -1,10 +1,10 @@
 // 7232
 [proc,script7232](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3, int $int4, obj $obj5, int $int6, int $int7, int $colour8, int $int9, int $int10, boolean $boolean11, boolean $boolean12)(int)
-def_int $y13 = calc(($int4 - $int2 - 1) * 17);
+def_int $int13 = calc(($int4 - $int2 - 1) * 17);
 cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize(108, 17, ^setsize_minus, ^setsize_abs);
-cc_setposition(0, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_settextfont(p12_full);
 cc_setcolour($colour8);
 cc_settextshadow(true);
@@ -24,7 +24,7 @@ if (%varbit14885 = 0) {
 	}
 }
 cc_settext($string0);
-def_int $width14 = parawidth($string0, 300, p12_full);
+def_int $int14 = parawidth($string0, 300, p12_full);
 def_graphic $graphic15 = null;
 def_graphic $graphic16 = null;
 if ($int10 = 1) {
@@ -43,7 +43,7 @@ if ($int10 = 1) {
 	}
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	.cc_setgraphic($graphic15);
-	.cc_setposition(calc($width14 / 2 + 27), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+	.cc_setposition(calc($int14 / 2 + 27), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 	.cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic16, null)");
 	.cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 2), $graphic15, null)");
 	.cc_setnoclickthrough(true);
@@ -60,7 +60,7 @@ if ($int10 = 1) {
 	}
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic($graphic15);
-	cc_setposition(calc($width14 / 2 + 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setposition(calc($int14 / 2 + 10), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setonmouserepeat("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic16, null)");
 	cc_setonmouseleave("cc_graphic_swapper_entityoverlay($entityoverlay0, calc($int3 - 1), $graphic15, null)");
 	cc_setnoclickthrough(true);
@@ -80,15 +80,15 @@ if (obj_findbyindex($coord1, $int9) = true) {
 	if ($int17 > 0 | $int18 > 0 | $boolean12 = true) {
 		cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 		cc_setsize(34, 17, ^setsize_abs, ^setsize_abs);
-		$int19 = calc(0 - $width14 / 2 - 34 / 2);
-		cc_setposition($int19, $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+		$int19 = calc(0 - $int14 / 2 - 34 / 2);
+		cc_setposition($int19, $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		$int3 = calc($int3 + 1);
 		.cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, $int3);
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc($int19 - 34 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+		.cc_setposition(calc($int19 - 34 / 2 - 10), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 		$int3 = calc($int3 + 1);
 		if ($int18 > 0) {
 			cc_settext("[<~buff_bar_time_string($int18)>]");
@@ -99,7 +99,7 @@ if (obj_findbyindex($coord1, $int9) = true) {
 				cc_settext("[<~buff_bar_time_string($int17)>]");
 				cc_setcolour(~script7244($int17, $colour8));
 			} else {
-				.cc_setposition(calc(0 - $width14 / 2 - 10), $y13, ^setpos_abs_centre, ^setpos_abs_bottom);
+				.cc_setposition(calc(0 - $int14 / 2 - 10), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 			}
 			if ($boolean12 = true) {
 				.cc_setgraphic("ground_items_visibility,0");
@@ -115,8 +115,8 @@ if (obj_findbyindex($coord1, $int9) = true) {
 			6 = $boolean12, 
 			7 = $boolean11, 
 			8 = calc($int3 - 1), 
-			9 = $width14, 
-			10 = $y13
+			9 = $int14, 
+			10 = $int13
 		)");
 	}
 }

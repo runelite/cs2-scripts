@@ -1,14 +1,14 @@
 // 4885
-[proc,script4885](int $int0, component $component1, int $int2, int $y3, component $widget_15:36_4, component $widget_15:38_5)
+[proc,script4885](int $int0, component $component1, int $int2, int $int3, component $com_bankside_runepouch_select_container4, component $com_bankside_runepouch_select_list5)
 def_int $int6 = 4;
 if (%varbit9727 = 3) {
 	$int6 = 3;
 }
 def_int $int7 = calc(($int2 - 36 * $int6) / ($int6 + 1));
 def_int $int8 = 0;
-def_int $num9 = 0;
+def_int $int9 = 0;
 def_namedobj $namedobj10 = null;
-def_int $x11 = 0;
+def_int $int11 = 0;
 def_boolean $boolean12 = ~on_mobile;
 def_int $int13 = 1;
 def_namedobj $namedobj14 = null;
@@ -18,14 +18,14 @@ def_int $int17 = 1;
 while ($int17 <= $int6) {
 	if (cc_find($component1, $int17) = ^true & .cc_find($component1, calc($int17 + 4)) = ^true) {
 		cc_sethide(false);
-		$x11 = calc($int7 + ($int6 - $int17) * (36 + $int7) - 1);
-		cc_setposition($x11, 0, ^setpos_abs_right, ^setpos_abs_centre);
-		.cc_setposition($x11, $y3, ^setpos_abs_right, ^setpos_abs_centre);
-		$int8, $num9 = ~script4895($int0, $int17);
+		$int11 = calc($int7 + ($int6 - $int17) * (36 + $int7) - 1);
+		cc_setposition($int11, 0, ^setpos_abs_right, ^setpos_abs_centre);
+		.cc_setposition($int11, $int3, ^setpos_abs_right, ^setpos_abs_centre);
+		$int8, $int9 = ~script4895($int0, $int17);
 		$namedobj10 = enum(int, namedobj, enum_982, $int8);
 		if ($namedobj10 ! null) {
-			if ($num9 > 0) {
-				cc_setobject_alwaysnum($namedobj10, $num9);
+			if ($int9 > 0) {
+				cc_setobject_alwaysnum($namedobj10, $int9);
 			} else {
 				cc_setobject_nonum($namedobj10, 1);
 			}
@@ -55,7 +55,7 @@ while ($int17 <= $int6) {
 			cc_setop(1, "Change");
 			cc_setopbase("<col=ff9040><oc_name($namedobj10)></col>");
 		} else {
-			cc_setobject_nonum(obj_11526, 1);
+			cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 			cc_settrans(120);
 			if ($boolean12 = false) {
 				cc_setonmouserepeat("script4878(true, event_com, event_comsubid, 160, 120)");
@@ -66,7 +66,7 @@ while ($int17 <= $int6) {
 			.cc_sethide(true);
 		}
 		cc_setontimer(null);
-		cc_setonop("script4886(event_op, $widget_15:36_4, $widget_15:38_5)");
+		cc_setonop("script4886(event_op, $com_bankside_runepouch_select_container4, $com_bankside_runepouch_select_list5)");
 	}
 	$int17 = calc($int17 + 1);
 }

@@ -1,7 +1,7 @@
 // 2157
 [proc,chatdefault_stopinput]
 %varcint11 = 1;
-if (if_gethide(interface_162:38) = false) {
+if (if_gethide(chatbox:mes_layer) = false) {
 	~meslayer_close(true, true, true);
 }
 ~chatdefault_setonkey(0);

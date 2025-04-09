@@ -1,16 +1,16 @@
 // 6286
-[clientscript,script6286](int $widget_758:0_0, component $widget_758:1_1, component $widget_758:3_2, component $widget_758:4_3, component $widget_758:105_4, component $widget_758:5_5, component $widget_758:9_6, component $widget_758:6_7, component $widget_758:41_8, component $widget_758:7_9, component $widget_758:73_10)
-def_int $comsubid11 = ~steelborder($widget_758:1_1, "", 0);
-if (cc_find($widget_758:1_1, $comsubid11) = ^true) {
+[clientscript,script6286](int $com_pvp_arena_stagingarea_supplies_universe0, component $com_pvp_arena_stagingarea_supplies_frame1, component $com_pvp_arena_stagingarea_supplies_top2, component $com_pvp_arena_stagingarea_supplies_tab_stats3, component $com_pvp_arena_stagingarea_supplies_stats4, component $com_pvp_arena_stagingarea_supplies_tab_equipment05, component $com_pvp_arena_stagingarea_supplies_0equipment6, component $com_pvp_arena_stagingarea_supplies_tab_equipment17, component $com_pvp_arena_stagingarea_supplies_1equipment8, component $com_pvp_arena_stagingarea_supplies_tab_equipment29, component $com_pvp_arena_stagingarea_supplies_2equipment10)
+def_int $comsubid11 = ~steelborder($com_pvp_arena_stagingarea_supplies_frame1, "", 0);
+if (cc_find($com_pvp_arena_stagingarea_supplies_frame1, $comsubid11) = ^true) {
 	~script6298;
 }
-if_setonvartransmit("script6297($widget_758:1_1, $comsubid11){var3464, var3465}", $widget_758:1_1);
-cc_deleteall($widget_758:3_2);
+if_setonvartransmit("script6297($com_pvp_arena_stagingarea_supplies_frame1, $comsubid11){var3464, var3465}", $com_pvp_arena_stagingarea_supplies_frame1);
+cc_deleteall($com_pvp_arena_stagingarea_supplies_top2);
 def_string $string0 = "Are you ready to fight?";
-def_int $int12 = calc(parawidth($string0, if_getwidth($widget_758:3_2), p12_full) + 3 + 17);
-cc_create($widget_758:3_2, ^iftype_rectangle, 0);
-.cc_create($widget_758:3_2, ^iftype_text, 1);
-def_int $comsubid13 = .cc_getid;
+def_int $int12 = calc(parawidth($string0, if_getwidth($com_pvp_arena_stagingarea_supplies_top2), p12_full) + 3 + 17);
+cc_create($com_pvp_arena_stagingarea_supplies_top2, ^iftype_rectangle, 0, false);
+.cc_create($com_pvp_arena_stagingarea_supplies_top2, ^iftype_text, 1, false);
+def_int $int13 = .cc_getid;
 cc_setsize(calc(3 + $int12), 1, ^setsize_abs, ^setsize_minus);
 .cc_setsize($int12, 1, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
@@ -23,35 +23,35 @@ cc_setop(1, "Set");
 .cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settext($string0);
-.cc_create($widget_758:3_2, ^iftype_graphic, 2);
+.cc_create($com_pvp_arena_stagingarea_supplies_top2, ^iftype_graphic, 2, false);
 .cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-.cc_setposition(0, calc((if_getheight($widget_758:3_2) - 1 - 17) / 2), ^setpos_abs_right, ^setpos_abs_top);
+.cc_setposition(0, calc((if_getheight($com_pvp_arena_stagingarea_supplies_top2) - 1 - 17) / 2), ^setpos_abs_right, ^setpos_abs_top);
 %varcint213 = -1;
 if_setonvartransmit("script6287(
 	0 = event_com, 
 	1 = cc_getid, 
-	2 = $comsubid13, 
+	2 = $int13, 
 	3 = .cc_getid, 
-	4 = $widget_758:4_3, 
-	5 = $widget_758:105_4, 
-	6 = $widget_758:5_5, 
-	7 = $widget_758:9_6, 
-	8 = $widget_758:6_7, 
-	9 = $widget_758:41_8, 
-	10 = $widget_758:7_9, 
-	11 = $widget_758:73_10
-){var3464, var3465}", $widget_758:3_2);
+	4 = $com_pvp_arena_stagingarea_supplies_tab_stats3, 
+	5 = $com_pvp_arena_stagingarea_supplies_stats4, 
+	6 = $com_pvp_arena_stagingarea_supplies_tab_equipment05, 
+	7 = $com_pvp_arena_stagingarea_supplies_0equipment6, 
+	8 = $com_pvp_arena_stagingarea_supplies_tab_equipment17, 
+	9 = $com_pvp_arena_stagingarea_supplies_1equipment8, 
+	10 = $com_pvp_arena_stagingarea_supplies_tab_equipment29, 
+	11 = $com_pvp_arena_stagingarea_supplies_2equipment10
+){var3464, var3465}", $com_pvp_arena_stagingarea_supplies_top2);
 ~script6288(
-	0 = $widget_758:3_2, 
+	0 = $com_pvp_arena_stagingarea_supplies_top2, 
 	1 = cc_getid, 
-	2 = $comsubid13, 
+	2 = $int13, 
 	3 = .cc_getid, 
-	4 = $widget_758:4_3, 
-	5 = $widget_758:105_4, 
-	6 = $widget_758:5_5, 
-	7 = $widget_758:9_6, 
-	8 = $widget_758:6_7, 
-	9 = $widget_758:41_8, 
-	10 = $widget_758:7_9, 
-	11 = $widget_758:73_10
+	4 = $com_pvp_arena_stagingarea_supplies_tab_stats3, 
+	5 = $com_pvp_arena_stagingarea_supplies_stats4, 
+	6 = $com_pvp_arena_stagingarea_supplies_tab_equipment05, 
+	7 = $com_pvp_arena_stagingarea_supplies_0equipment6, 
+	8 = $com_pvp_arena_stagingarea_supplies_tab_equipment17, 
+	9 = $com_pvp_arena_stagingarea_supplies_1equipment8, 
+	10 = $com_pvp_arena_stagingarea_supplies_tab_equipment29, 
+	11 = $com_pvp_arena_stagingarea_supplies_2equipment10
 );

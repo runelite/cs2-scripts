@@ -1,18 +1,18 @@
 // 1786
-[proc,inventory_op_override](obj $obj0, int $opindex1)(string)
-def_string $string0 = oc_iop($obj0, $opindex1);
-if (map_members = true | oc_members($obj0) = ^false) {
+[proc,inventory_op_override](obj $obj0, int $int1)(string)
+def_string $string0 = oc_iop($obj0, $int1);
+if (map_members = true | oc_members($obj0) = 0) {
 	switch_obj ($obj0) {
-		case escape_crystal_22517 :
-			if ($opindex1 = 3) {
+		case tob_teleport_22517 :
+			if ($int1 = 3) {
 				if (%varbit14838 = 1) {
 					$string0 = "Disable-autotele";
 				} else {
 					$string0 = "Enable-autotele";
 				}
 			}
-		case bankers_note_28767 :
-			if ($opindex1 = 1 & %var4034 ! null) {
+		case league_bankers_note_28767 :
+			if ($int1 = 1 & %var4034 ! null) {
 				$string0 = "all";
 				if (%varbit17306 = 0) {
 					if (%varbit17307 > 0 & %varbit17307 < 27) {
@@ -26,78 +26,78 @@ if (map_members = true | oc_members($obj0) = ^false) {
 					$string0 = "Un-note-<$string0>";
 				}
 			}
-		case teleport_crystal_5_13102, teleport_crystal_4_6099, teleport_crystal_3_6100, teleport_crystal_2_6101, teleport_crystal_1_6102, eternal_teleport_crystal_23946 :
+		case mourning_teleport_crystal_5_13102, mourning_teleport_crystal_4_6099, mourning_teleport_crystal_3_6100, mourning_teleport_crystal_2_6101, mourning_teleport_crystal_1_6102, prif_teleport_crystal_23946 :
 			if (%varbit9666 = 0) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Lletya";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Prifddinas";
 				}
 			} else if (%varbit9666 = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Prifddinas";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Lletya";
 				}
 			}
-		case small_pouch_5509 :
+		case rcu_pouch_small_5509 :
 			if (~script3197(%varbit603, ~script3198, %varbit2088) = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Fill";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Empty";
 				}
-			} else if ($opindex1 = 1) {
+			} else if ($int1 = 1) {
 				$string0 = "Empty";
-			} else if ($opindex1 = 2) {
+			} else if ($int1 = 2) {
 				$string0 = "Fill";
 			}
-		case medium_pouch_5510, medium_pouch_5511 :
+		case rcu_pouch_medium_5510, rcu_pouch_medium_degrade_5511 :
 			if (~script3197(%varbit604, ~script3670, %varbit2089) = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Fill";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Empty";
 				}
-			} else if ($opindex1 = 1) {
+			} else if ($int1 = 1) {
 				$string0 = "Empty";
-			} else if ($opindex1 = 2) {
+			} else if ($int1 = 2) {
 				$string0 = "Fill";
 			}
-		case large_pouch_5512, large_pouch_5513 :
+		case rcu_pouch_large_5512, rcu_pouch_large_degrade_5513 :
 			if (~script3197(%varbit605, ~script3671, %varbit2090) = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Fill";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Empty";
 				}
-			} else if ($opindex1 = 1) {
+			} else if ($int1 = 1) {
 				$string0 = "Empty";
-			} else if ($opindex1 = 2) {
+			} else if ($int1 = 2) {
 				$string0 = "Fill";
 			}
-		case giant_pouch_5514, giant_pouch_5515 :
+		case rcu_pouch_giant_5514, rcu_pouch_giant_degrade_5515 :
 			if (~script3197(%varbit606, ~script3695, %varbit2091) = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Fill";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Empty";
 				}
-			} else if ($opindex1 = 1) {
+			} else if ($int1 = 1) {
 				$string0 = "Empty";
-			} else if ($opindex1 = 2) {
+			} else if ($int1 = 2) {
 				$string0 = "Fill";
 			}
-		case colossal_pouch_26784, colossal_pouch_26786 :
+		case rcu_pouch_colossal_26784, rcu_pouch_colossal_degrade_26786 :
 			if (~script3197(%varbit13682, ~script4592, %varbit13684) = 1) {
-				if ($opindex1 = 1) {
+				if ($int1 = 1) {
 					$string0 = "Fill";
-				} else if ($opindex1 = 2) {
+				} else if ($int1 = 2) {
 					$string0 = "Empty";
 				}
-			} else if ($opindex1 = 1) {
+			} else if ($int1 = 1) {
 				$string0 = "Empty";
-			} else if ($opindex1 = 2) {
+			} else if ($int1 = 2) {
 				$string0 = "Fill";
 			}
 	}

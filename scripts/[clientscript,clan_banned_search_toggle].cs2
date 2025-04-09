@@ -1,5 +1,5 @@
 // 4283
-[clientscript,clan_banned_search_toggle](int $opindex0, component $widget_689:1_1, component $widget_689:2_2, int $comsubid3, component $widget_689:13_4, component $widget_689:6_5, component $widget_689:8_6, component $widget_689:9_7, int $comsubid8, int $comsubid9, component $widget_689:12_10, int $int11)
+[clientscript,clan_banned_search_toggle](int $opindex0, component $com_clans_banned_universe1, component $com_clans_banned_frame2, int $int3, component $com_clans_banned_search4, component $com_clans_banned_list_contents5, component $com_clans_banned_list_scrollbar6, component $com_clans_banned_list_blocker7, int $int8, int $int9, component $com_clans_banned_hint10, int $int11)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -7,43 +7,43 @@ sound_synth(interface_select1, 1, 0);
 if (~clan_members_searching = 1) {
 	~meslayer_close(true, true, true);
 	~clan_banned_search_setbutton(
-		0 = $widget_689:1_1, 
-		1 = $widget_689:2_2, 
-		2 = $comsubid3, 
-		3 = $widget_689:13_4, 
-		4 = $widget_689:6_5, 
-		5 = $widget_689:8_6, 
-		6 = $widget_689:9_7, 
-		7 = $comsubid8, 
-		8 = $comsubid9, 
-		9 = $widget_689:12_10, 
+		0 = $com_clans_banned_universe1, 
+		1 = $com_clans_banned_frame2, 
+		2 = $int3, 
+		3 = $com_clans_banned_search4, 
+		4 = $com_clans_banned_list_contents5, 
+		5 = $com_clans_banned_list_scrollbar6, 
+		6 = $com_clans_banned_list_blocker7, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = $com_clans_banned_hint10, 
 		10 = $int11
 	);
 	~clan_banned_draw(
-		0 = $widget_689:1_1, 
-		1 = $widget_689:2_2, 
-		2 = $comsubid3, 
-		3 = $widget_689:6_5, 
-		4 = $widget_689:8_6, 
-		5 = $widget_689:9_7, 
-		6 = $comsubid8, 
-		7 = $comsubid9, 
-		8 = $widget_689:12_10, 
+		0 = $com_clans_banned_universe1, 
+		1 = $com_clans_banned_frame2, 
+		2 = $int3, 
+		3 = $com_clans_banned_list_contents5, 
+		4 = $com_clans_banned_list_scrollbar6, 
+		5 = $com_clans_banned_list_blocker7, 
+		6 = $int8, 
+		7 = $int9, 
+		8 = $com_clans_banned_hint10, 
 		9 = $int11
 	);
 	return;
 }
 ~meslayer_mode18;
 ~clan_banned_search_setbutton(
-	0 = $widget_689:1_1, 
-	1 = $widget_689:2_2, 
-	2 = $comsubid3, 
-	3 = $widget_689:13_4, 
-	4 = $widget_689:6_5, 
-	5 = $widget_689:8_6, 
-	6 = $widget_689:9_7, 
-	7 = $comsubid8, 
-	8 = $comsubid9, 
-	9 = $widget_689:12_10, 
+	0 = $com_clans_banned_universe1, 
+	1 = $com_clans_banned_frame2, 
+	2 = $int3, 
+	3 = $com_clans_banned_search4, 
+	4 = $com_clans_banned_list_contents5, 
+	5 = $com_clans_banned_list_scrollbar6, 
+	6 = $com_clans_banned_list_blocker7, 
+	7 = $int8, 
+	8 = $int9, 
+	9 = $com_clans_banned_hint10, 
 	10 = $int11
 );

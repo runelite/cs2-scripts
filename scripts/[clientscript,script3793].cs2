@@ -1,27 +1,27 @@
 // 3793
-[clientscript,script3793](component $widget_189:6_0, component $widget_189:7_1, component $widget_189:13_2, component $widget_189:14_3, component $widget_189:15_4, component $widget_189:33_5, component $widget_189:34_6)
-if_setmodel(enum(int, model, enum_1551, calc(%varbit2512 / 10)), $widget_189:6_0);
-if_setmodel(enum(int, model, enum_1551, calc(%varbit2512 % 10)), $widget_189:7_1);
-if_setobject_nonum(%var851, 1, $widget_189:33_5);
-if_setobject_nonum(%var852, 1, $widget_189:34_6);
+[clientscript,script3793](component $com_eyeglo_gnome_machine_unlocked_digit_middle_tens0, component $com_eyeglo_gnome_machine_unlocked_digit_middle_units1, component $com_eyeglo_gnome_machine_unlocked_arrow_2_up2, component $com_eyeglo_gnome_machine_unlocked_arrow_2_middle3, component $com_eyeglo_gnome_machine_unlocked_arrow_2_down4, component $com_eyeglo_gnome_machine_unlocked_coin_display2_15, component $com_eyeglo_gnome_machine_unlocked_coin_display2_26)
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2512 / 10)), $com_eyeglo_gnome_machine_unlocked_digit_middle_tens0);
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2512 % 10)), $com_eyeglo_gnome_machine_unlocked_digit_middle_units1);
+if_setobject_nonum(%var851, 1, $com_eyeglo_gnome_machine_unlocked_coin_display2_15);
+if_setobject_nonum(%var852, 1, $com_eyeglo_gnome_machine_unlocked_coin_display2_26);
 if (%varbit2541 = 0) {
-	if_setmodel(model_17219, $widget_189:14_3);
-	if_setmodel(null, $widget_189:13_2);
-	if_setmodel(null, $widget_189:15_4);
+	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_2_middle3);
+	if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_2_up2);
+	if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_2_down4);
 	return;
 }
 if (%varbit2541 > %varbit2512) {
-	if_setmodel(model_17219, $widget_189:14_3);
-	if_setmodel(model_17221, $widget_189:13_2);
-	if_setmodel(model_17217, $widget_189:15_4);
+	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_2_middle3);
+	if_setmodel(model_17221, $com_eyeglo_gnome_machine_unlocked_arrow_2_up2);
+	if_setmodel(model_17217, $com_eyeglo_gnome_machine_unlocked_arrow_2_down4);
 	return;
 }
 if (%varbit2541 < %varbit2512) {
-	if_setmodel(model_17219, $widget_189:14_3);
-	if_setmodel(model_17220, $widget_189:13_2);
-	if_setmodel(model_17218, $widget_189:15_4);
+	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_2_middle3);
+	if_setmodel(model_17220, $com_eyeglo_gnome_machine_unlocked_arrow_2_up2);
+	if_setmodel(model_17218, $com_eyeglo_gnome_machine_unlocked_arrow_2_down4);
 	return;
 }
-if_setmodel(model_17216, $widget_189:14_3);
-if_setmodel(null, $widget_189:13_2);
-if_setmodel(null, $widget_189:15_4);
+if_setmodel(model_17216, $com_eyeglo_gnome_machine_unlocked_arrow_2_middle3);
+if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_2_up2);
+if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_2_down4);

@@ -1,21 +1,21 @@
 // 5011
-[clientscript,script5011](component $component0, int $comsubid1, int $int2, int $int3, boolean $boolean4, component $widget_874:17_5, component $widget_874:18_6, component $widget_874:19_7, component $widget_874:20_8, model $model9, boolean $boolean10)
+[clientscript,script5011](component $component0, int $comsubid1, int $int2, int $int3, boolean $boolean4, component $com_quetzal_menu_selected_back5, component $com_quetzal_menu_selected_front6, component $com_quetzal_menu_selected_locked7, component $com_quetzal_menu_selected_current8, model $model9, boolean $boolean10)
 if (cc_find($component0, $comsubid1) = ^true) {
-	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $widget_874:17_5);
-	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $widget_874:18_6);
-	if_setmodel($model9, $widget_874:18_6);
-	if_sethide(false, $widget_874:17_5);
-	if_sethide(false, $widget_874:18_6);
+	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_selected_back5);
+	if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_selected_front6);
+	if_setmodel($model9, $com_quetzal_menu_selected_front6);
+	if_sethide(false, $com_quetzal_menu_selected_back5);
+	if_sethide(false, $com_quetzal_menu_selected_front6);
 	if ($boolean4 = false) {
-		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $widget_874:19_7);
-		if_sethide(false, $widget_874:19_7);
+		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_selected_locked7);
+		if_sethide(false, $com_quetzal_menu_selected_locked7);
 	} else {
-		if_sethide(true, $widget_874:19_7);
+		if_sethide(true, $com_quetzal_menu_selected_locked7);
 	}
 	if ($boolean10 = true) {
-		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $widget_874:20_8);
-		if_sethide(false, $widget_874:20_8);
+		if_setposition(calc(46 + $int2), calc(33 + $int3), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_selected_current8);
+		if_sethide(false, $com_quetzal_menu_selected_current8);
 	} else {
-		if_sethide(true, $widget_874:20_8);
+		if_sethide(true, $com_quetzal_menu_selected_current8);
 	}
 }

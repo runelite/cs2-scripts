@@ -1,14 +1,14 @@
 // 1929
-[clientscript,script1929](component $widget_863:0_0, component $widget_863:2_1, component $widget_863:4_2, component $widget_863:8_3, component $widget_863:9_4, component $widget_863:13_5, component $widget_863:11_6, component $widget_863:12_7, component $widget_863:14_8, component $widget_863:15_9, component $widget_863:17_10, component $widget_863:18_11, component $widget_863:19_12, component $widget_863:20_13, component $widget_863:21_14, component $widget_863:23_15)
-~ge_offers_bigbutton($widget_863:2_1, "Buy or Redeem Bonds", 0);
-cc_deleteall($widget_863:4_2);
+[clientscript,script1929](component $com_bond_management_universe0, component $com_bond_management_redeem_bonds1, component $com_bond_management_top2, component $com_bond_management_bonds_header3, component $com_bond_management_bonds_tradeable4, component $com_bond_management_bonds_untradeable5, component $com_bond_management_tradeable_inv6, component $com_bond_management_tradeable_pouch7, component $com_bond_management_untradeable_inv8, component $com_bond_management_untradeable_pouch9, component $com_bond_management_110, component $com_bond_management_511, component $com_bond_management_x12, component $com_bond_management_all13, component $com_bond_management_convert_container14, component $com_bond_management_convert_button15)
+~ge_offers_bigbutton($com_bond_management_redeem_bonds1, "Buy or Redeem Bonds", 0);
+cc_deleteall($com_bond_management_top2);
 def_int $int16 = 0;
-cc_create($widget_863:4_2, ^iftype_graphic, $int16);
+cc_create($com_bond_management_top2, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(128, 64, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic(graphic_5256);
-cc_create($widget_863:4_2, ^iftype_text, $int16);
+cc_create($com_bond_management_top2, ^iftype_text, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(128, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
@@ -17,11 +17,11 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 cc_settextshadow(true);
 cc_settext("Bonds can be stored in your <col=ffffff>bond pouch</col>, to save space in your inventory and bank.<br><br>Move bonds <col=ffffff>in & out</col> of your pouch via the <col=ffffff>options below</col>:");
-cc_deleteall($widget_863:21_14);
-$int16 = ~thinbox($widget_863:21_14, 0);
-def_int $width17 = calc(if_getwidth($widget_863:21_14) - 10);
+cc_deleteall($com_bond_management_convert_container14);
+$int16 = ~thinbox($com_bond_management_convert_container14, 0);
+def_int $int17 = calc(if_getwidth($com_bond_management_convert_container14) - 10);
 def_int $int18 = 5;
-cc_create($widget_863:21_14, ^iftype_text, $int16);
+cc_create($com_bond_management_convert_container14, ^iftype_text, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setposition(0, $int18, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
@@ -31,11 +31,11 @@ cc_settextfont(b12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 cc_settextshadow(true);
 cc_settext("<col=ffb83f>Convert Bonds</col>");
-$int16, $int18 = ~script1147("Bonds may be <col=ffffff>tradeable</col> or <col=ffffff>untradeable</col>.", $widget_863:21_14, $width17, $int16, $int18);
-cc_create($widget_863:21_14, ^iftype_graphic, $int16);
+$int16, $int18 = ~script1147("Bonds may be <col=ffffff>tradeable</col> or <col=ffffff>untradeable</col>.", $com_bond_management_convert_container14, $int17, $int16, $int18);
+cc_create($com_bond_management_convert_container14, ^iftype_graphic, $int16, false);
 def_int $int19 = $int16;
 $int16 = calc($int16 + 1);
-.cc_create($widget_863:21_14, ^iftype_graphic, $int16);
+.cc_create($com_bond_management_convert_container14, ^iftype_graphic, $int16, false);
 def_int $int20 = $int16;
 $int16 = calc($int16 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -46,64 +46,64 @@ cc_setgraphicshadow(0x333333);
 .cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 .cc_setoutline(1);
-cc_setobject_nonum(old_school_bond_13190, 1);
-.cc_setobject_nonum(old_school_bond_untradeable_13192, 1);
+cc_setobject_nonum(osrs_bond_13190, 1);
+.cc_setobject_nonum(osrs_bond_untradeable_13192, 1);
 $int18 = calc($int18 + 32 + 4);
-def_int $int21 = calc(if_getheight($widget_863:21_14) - $int18);
-def_int $height22 = if_getheight($widget_863:23_15);
-cc_create($widget_863:21_14, ^iftype_text, $int16);
+def_int $int21 = calc(if_getheight($com_bond_management_convert_container14) - $int18);
+def_int $int22 = if_getheight($com_bond_management_convert_button15);
+cc_create($com_bond_management_convert_container14, ^iftype_text, $int16, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-cc_setsize($width17, $int18, ^setsize_abs, ^setsize_minus);
+cc_setsize($int17, $int18, ^setsize_abs, ^setsize_minus);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 14);
-~script2418($width17, $int21, $height22, $widget_863:23_15);
-if_setonvartransmit("script2417(event_com, $int16, $width17, $int21, $height22, $widget_863:23_15){var263, var499}", $widget_863:21_14);
-~stonebutton_init("<col=0dc10d>Convert</col>", $widget_863:23_15, b12_full, 1);
-if_setonop("opsound(event_op, 2)", $widget_863:23_15);
-def_int $x23 = calc(5 + 36 + 5);
+~script2418($int17, $int21, $int22, $com_bond_management_convert_button15);
+if_setonvartransmit("script2417(event_com, $int16, $int17, $int21, $int22, $com_bond_management_convert_button15){var263, var499}", $com_bond_management_convert_container14);
+~stonebutton_init("<col=0dc10d>Convert</col>", $com_bond_management_convert_button15, b12_full, 1);
+if_setonop("opsound(event_op, 2)", $com_bond_management_convert_button15);
+def_int $int23 = calc(5 + 36 + 5);
 def_int $int24 = calc((36 - 30) / 2);
 def_int $int25 = calc(80 + 36 + 5);
-def_int $width26 = calc($int25 + 5 + 36 + 5 + 36 + 5);
-cc_deleteall($widget_863:8_3);
+def_int $int26 = calc($int25 + 5 + 36 + 5 + 36 + 5);
+cc_deleteall($com_bond_management_bonds_header3);
 $int16 = 0;
-cc_create($widget_863:8_3, ^iftype_graphic, $int16);
+cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(80 + $int24), 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic(graphic_5258);
-cc_create($widget_863:8_3, ^iftype_graphic, $int16);
+cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(5 + 36 + 5 + $int24), 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic(graphic_5257);
-cc_create($widget_863:8_3, ^iftype_graphic, $int16);
+cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(5 + $int24), 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic(graphic_5259);
 ~script1930(
-	0 = $widget_863:9_4, 
-	1 = $widget_863:11_6, 
-	2 = $widget_863:12_7, 
+	0 = $com_bond_management_bonds_tradeable4, 
+	1 = $com_bond_management_tradeable_inv6, 
+	2 = $com_bond_management_tradeable_pouch7, 
 	3 = "Tradeable bonds", 
-	4 = $x23, 
-	5 = $width26, 
+	4 = $int23, 
+	5 = $int26, 
 	6 = $int25, 
-	7 = $widget_863:9_4, 
-	8 = $widget_863:13_5
+	7 = $com_bond_management_bonds_tradeable4, 
+	8 = $com_bond_management_bonds_untradeable5
 );
 ~script1930(
-	0 = $widget_863:13_5, 
-	1 = $widget_863:14_8, 
-	2 = $widget_863:15_9, 
+	0 = $com_bond_management_bonds_untradeable5, 
+	1 = $com_bond_management_untradeable_inv8, 
+	2 = $com_bond_management_untradeable_pouch9, 
 	3 = "Untradeable bonds", 
-	4 = $x23, 
-	5 = $width26, 
+	4 = $int23, 
+	5 = $int26, 
 	6 = $int25, 
-	7 = $widget_863:9_4, 
-	8 = $widget_863:13_5
+	7 = $com_bond_management_bonds_tradeable4, 
+	8 = $com_bond_management_bonds_untradeable5
 );
-~script2420($widget_863:17_10, $widget_863:18_11, $widget_863:19_12, $widget_863:20_13);
-if_setonvartransmit("script2419($widget_863:17_10, $widget_863:18_11, $widget_863:19_12, $widget_863:20_13){var2894}", $widget_863:0_0);
+~script2420($com_bond_management_110, $com_bond_management_511, $com_bond_management_x12, $com_bond_management_all13);
+if_setonvartransmit("script2419($com_bond_management_110, $com_bond_management_511, $com_bond_management_x12, $com_bond_management_all13){var2894}", $com_bond_management_universe0);

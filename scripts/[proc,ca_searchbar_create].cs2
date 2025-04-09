@@ -1,18 +1,18 @@
 // 4793
-[proc,ca_searchbar_create](component $widget_716:2_0)
-cc_deleteall($widget_716:2_0);
+[proc,ca_searchbar_create](component $com_ca_bosses_searchbar_image0)
+cc_deleteall($com_ca_bosses_searchbar_image0);
 def_int $int1 = 0;
-cc_create($widget_716:2_0, ^iftype_graphic, $int1);
+cc_create($com_ca_bosses_searchbar_image0, ^iftype_graphic, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(graphic_1124);
-cc_create($widget_716:2_0, ^iftype_graphic, $int1);
+cc_create($com_ca_bosses_searchbar_image0, ^iftype_graphic, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(4, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic(graphic_1123);
-cc_create($widget_716:2_0, ^iftype_graphic, $int1);
+cc_create($com_ca_bosses_searchbar_image0, ^iftype_graphic, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(4, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);

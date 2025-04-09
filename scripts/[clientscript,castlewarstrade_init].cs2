@@ -1,11 +1,11 @@
 // 443
-[clientscript,castlewarstrade_init](component $widget_83:2_0)
+[clientscript,castlewarstrade_init](component $com_castlewars_trade_itemlist0)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_namedobj $namedobj3 = enum(int, namedobj, enum_852, $int2);
 while ($namedobj3 ! null) {
-	cc_create($widget_83:2_0, ^iftype_graphic, $int2);
-	if (map_members = false & oc_members($namedobj3) = ^true) {
+	cc_create($com_castlewars_trade_itemlist0, ^iftype_graphic, $int2, false);
+	if (map_members = false & oc_members($namedobj3) = 1) {
 		cc_sethide(true);
 	} else {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

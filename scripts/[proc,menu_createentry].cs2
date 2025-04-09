@@ -1,12 +1,12 @@
 // 218
-[proc,menu_createentry](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4, boolean $boolean5)(int, int)
-def_int $int6 = calc(paraheight($string0, $width2, p12_full) * 14 + 2);
+[proc,menu_createentry](string $string0, component $component0, component $component1, int $int2, int $int3, int $int4, boolean $boolean5)(int, int)
+def_int $int6 = calc(paraheight($string0, $int2, p12_full) * 14 + 2);
 if (~on_mobile = true) {
 	$int6 = scale(4, 3, $int6);
 }
-cc_create($component0, ^iftype_text, $int3);
-.cc_create($component1, ^iftype_rectangle, $int3);
-cc_setposition(0, $height4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_create($component0, ^iftype_text, $int3, false);
+.cc_create($component1, ^iftype_rectangle, $int3, false);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -41,4 +41,4 @@ if ($boolean5 = true & $int3 < 36) {
 	)");
 }
 cc_settext($string0);
-return($int3, calc($height4 + $int6));
+return($int3, calc($int4 + $int6));

@@ -1,10 +1,10 @@
 // 791
-[proc,ge_collect_drawslot](component $component0, int $int1, component $component2, component $widget_402:3_3, component $widget_402:4_4, int $int5, inv $inv6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13)
+[proc,ge_collect_drawslot](component $component0, int $int1, component $component2, component $com_ge_collect_collect_inv3, component $com_ge_collect_collect_bank4, int $int5, inv $inv6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13)
 if (cc_find($component0, $comsubid9) = ^true) {
-	~ge_collect_drawitem(0, $inv6, $component0, $comsubid7, $widget_402:3_3, $widget_402:4_4);
+	~ge_collect_drawitem(0, $inv6, $component0, $comsubid7, $com_ge_collect_collect_inv3, $com_ge_collect_collect_bank4);
 }
 if (cc_find($component0, $comsubid10) = ^true) {
-	~ge_collect_drawitem(1, $inv6, $component0, $comsubid8, $widget_402:3_3, $widget_402:4_4);
+	~ge_collect_drawitem(1, $inv6, $component0, $comsubid8, $com_ge_collect_collect_inv3, $com_ge_collect_collect_bank4);
 }
 def_int $int14 = 0;
 def_int $int15 = 0;

@@ -18,7 +18,7 @@ cc_deleteall($component0);
 def_int $int7 = 0;
 $int2 = enum(int, int, enum_999, $int7);
 while ($int2 ! -1) {
-	cc_create($component0, ^iftype_rectangle, $int7);
+	cc_create($component0, ^iftype_rectangle, $int7, false);
 	if (~makeover_unlockedcolour($int2) = 1) {
 		if ($int2 = %var262) {
 			$int6 = $int5;
@@ -37,14 +37,14 @@ while ($int2 ! -1) {
 	$int7 = calc($int7 + 1);
 	$int2 = enum(int, int, enum_999, $int7);
 }
-cc_create($component0, ^iftype_rectangle, $int7);
+cc_create($component0, ^iftype_rectangle, $int7, false);
 $int7 = calc($int7 + 1);
 cc_setsize(0, calc($int5 + 1), ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(^black);
 if ($int6 ! -1) {
-	cc_create($component0, ^iftype_graphic, $int7);
+	cc_create($component0, ^iftype_graphic, $int7, false);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(cross);
 	cc_setposition(0, calc($int6 - (16 - $int4) / 2), ^setpos_abs_centre, ^setpos_abs_top);

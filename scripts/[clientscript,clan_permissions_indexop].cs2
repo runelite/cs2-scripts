@@ -1,8 +1,8 @@
 // 4461
-[clientscript,clan_permissions_indexop](component $widget_706:12_0, component $widget_706:13_1, int $comsubid2, int $int3, int $int4, int $int5)
-if (cc_find($widget_706:12_0, $comsubid2) = ^true) {
+[clientscript,clan_permissions_indexop](component $com_clans_permissions_list_contents0, component $com_clans_permissions_list_scrollbar1, int $comsubid2, int $int3, int $int4, int $int5)
+if (cc_find($com_clans_permissions_list_contents0, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_setcolour(^red);
 	cc_setontimer("clan_permissions_titlereset(event_com, event_comsubid, $int4, $int5, clientclock)");
-	~scrollbar_resize($widget_706:13_1, $widget_706:12_0, ~min(calc(if_getscrollheight($widget_706:12_0) - if_getheight($widget_706:12_0)), ~max(0, $int3)));
+	~scrollbar_resize($com_clans_permissions_list_scrollbar1, $com_clans_permissions_list_contents0, ~min(calc(if_getscrollheight($com_clans_permissions_list_contents0) - if_getheight($com_clans_permissions_list_contents0)), ~max(0, $int3)));
 }

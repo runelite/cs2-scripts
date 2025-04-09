@@ -1,6 +1,6 @@
 // 6682
 [proc,script6682](enum $enum0)
-def_component $component1 = enum(component, component, $enum0, interface_161:36);
+def_component $component1 = enum(component, component, $enum0, toplevel_osrs_stretch:ehc_listener);
 def_int $int2 = -1;
 cc_deleteall($component1);
 if (~on_enhanced_any = 0) {
@@ -8,12 +8,12 @@ if (~on_enhanced_any = 0) {
 }
 def_boolean $boolean3 = ~on_mobile;
 def_int $int4 = 0;
-cc_create($component1, ^iftype_rectangle, 0);
+cc_create($component1, ^iftype_rectangle, 0, false);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 cc_setonstattransmit("herbiboar_helper_stattransmit($component1, stat(hunter), stat(herblore)){hunter, herblore}");
-cc_create($component1, ^iftype_rectangle, 1);
+cc_create($component1, ^iftype_rectangle, 1, false);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
@@ -22,7 +22,7 @@ cc_setonmappost("cluehelper_overlay_mappost");
 if (%var3546 ! null & %varbit14182 = 1) {
 	~cluehelper_overlay(%var3546, ~cluehelper_clue_target(%var3546));
 }
-cc_create($component1, ^iftype_rectangle, 2);
+cc_create($component1, ^iftype_rectangle, 2, false);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
@@ -39,7 +39,7 @@ if ($boolean3 = true) {
 	minimap_setzoom(~minmax(2, 8, %varcint1146));
 	cc_setontimer("script7052($component1, %varcint1146, $boolean3)");
 }
-cc_create($component1, ^iftype_rectangle, 3);
+cc_create($component1, ^iftype_rectangle, 3, false);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);

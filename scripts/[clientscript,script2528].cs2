@@ -1,12 +1,12 @@
 // 2528
-[clientscript,script2528](component $widget_166:2_0, component $widget_166:3_1, component $widget_166:1_2)
-if_setmodeltransparent(true, $widget_166:3_1);
-if_setmodelangle(0, 0, 480, 512, 0, 113, $widget_166:2_0);
-if_setmodelangle(0, 0, 480, 512, 0, 113, $widget_166:3_1);
+[clientscript,script2528](component $com_desert_treasure_mirror_mirror_outer0, component $com_desert_treasure_mirror_mirror_inner1, component $com_desert_treasure_mirror_mirror_inner_mobile2)
+if_setmodeltransparent(true, $com_desert_treasure_mirror_mirror_inner1);
+if_setmodelangle(0, 0, 480, 512, 0, 113, $com_desert_treasure_mirror_mirror_outer0);
+if_setmodelangle(0, 0, 480, 512, 0, 113, $com_desert_treasure_mirror_mirror_inner1);
 if (~on_mobile = true) {
-	if_sethide(true, $widget_166:3_1);
-	if_sethide(false, $widget_166:1_2);
+	if_sethide(true, $com_desert_treasure_mirror_mirror_inner1);
+	if_sethide(false, $com_desert_treasure_mirror_mirror_inner_mobile2);
 } else {
-	if_sethide(true, $widget_166:1_2);
-	if_sethide(false, $widget_166:3_1);
+	if_sethide(true, $com_desert_treasure_mirror_mirror_inner_mobile2);
+	if_sethide(false, $com_desert_treasure_mirror_mirror_inner1);
 }

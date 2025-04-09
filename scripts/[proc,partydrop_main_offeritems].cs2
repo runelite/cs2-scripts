@@ -7,11 +7,11 @@ while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
 	if (cc_find($component1, $int9) = ^true) {
 		cc_clearops;
-		$obj8 = inv_getobj(inv_92, $int9);
+		$obj8 = inv_getobj(partyroom_tempinv, $int9);
 		if ($obj8 ! null) {
 			$int7 = 1;
 			cc_sethide(false);
-			cc_setobject($obj8, inv_getnum(inv_92, $int9));
+			cc_setobject($obj8, inv_getnum(partyroom_tempinv, $int9));
 			switch_int (%varbit7792) {
 				case default :
 					cc_setop(1, "Withdraw 1");

@@ -1,19 +1,19 @@
 // 1309
-[clientscript,poh_options_viewer_init](component $widget_370:1_0)
-cc_deleteall($widget_370:1_0);
-def_int $int1 = ~options_button_off($widget_370:1_0, 0);
-cc_create($widget_370:1_0, ^iftype_graphic, $int1);
+[clientscript,poh_options_viewer_init](component $com_poh_options_viewer0)
+cc_deleteall($com_poh_options_viewer0);
+def_int $int1 = ~options_button_off($com_poh_options_viewer0, 0);
+cc_create($com_poh_options_viewer0, ^iftype_graphic, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(64, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(-2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic(options_poh_icon);
-.cc_create($widget_370:1_0, ^iftype_text, $int1);
+.cc_create($com_poh_options_viewer0, ^iftype_text, $int1, false);
 $int1 = calc($int1 + 1);
 .cc_setsize(56, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 .cc_settextfont(p12_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-.cc_settext(if_getop(1, $widget_370:1_0));
-~poh_options_viewer_set($widget_370:1_0);
-if_setonvartransmit("poh_options_viewer_set(event_com, cc_getid, .cc_getid){var780}", $widget_370:1_0);
+.cc_settext(if_getop(1, $com_poh_options_viewer0));
+~poh_options_viewer_set($com_poh_options_viewer0);
+if_setonvartransmit("poh_options_viewer_set(event_com, cc_getid, .cc_getid){var780}", $com_poh_options_viewer0);

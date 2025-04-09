@@ -1,13 +1,13 @@
 // 2067
 [proc,v2_stone_button_in](component $component0)(int)
 cc_deleteall($component0);
-def_int $width1 = if_getwidth($component0);
-def_int $height2 = if_getheight($component0);
-def_int $x3 = calc($width1 - 9);
-def_int $y4 = calc($height2 - 9);
-def_int $width5 = calc($width1 - 18);
-def_int $height6 = calc($height2 - 18);
-cc_create($component0, ^iftype_rectangle, 0);
+def_int $int1 = if_getwidth($component0);
+def_int $int2 = if_getheight($component0);
+def_int $int3 = calc($int1 - 9);
+def_int $int4 = calc($int2 - 9);
+def_int $int5 = calc($int1 - 18);
+def_int $int6 = calc($int2 - 18);
+cc_create($component0, ^iftype_rectangle, 0, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
@@ -30,7 +30,7 @@ cc_settrans(200);
 	0 = $component0, 
 	1 = 2, 
 	2 = "v2_stone_button_in,1", 
-	3 = $x3, 
+	3 = $int3, 
 	4 = 0, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
@@ -44,7 +44,7 @@ cc_settrans(200);
 	1 = 3, 
 	2 = "v2_stone_button_in,2", 
 	3 = 0, 
-	4 = $y4, 
+	4 = $int4, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 9, 
@@ -56,8 +56,8 @@ cc_settrans(200);
 	0 = $component0, 
 	1 = 4, 
 	2 = "v2_stone_button_in,3", 
-	3 = $x3, 
-	4 = $y4, 
+	3 = $int3, 
+	4 = $int4, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 9, 
@@ -74,7 +74,7 @@ cc_settrans(200);
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 9, 
-	8 = $height6, 
+	8 = $int6, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
@@ -86,7 +86,7 @@ cc_settrans(200);
 	4 = 0, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width5, 
+	7 = $int5, 
 	8 = 9, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
@@ -95,12 +95,12 @@ cc_settrans(200);
 	0 = $component0, 
 	1 = 7, 
 	2 = "v2_stone_button_in,6", 
-	3 = $x3, 
+	3 = $int3, 
 	4 = 9, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 9, 
-	8 = $height6, 
+	8 = $int6, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
@@ -109,10 +109,10 @@ cc_settrans(200);
 	1 = 8, 
 	2 = "v2_stone_button_in,7", 
 	3 = 9, 
-	4 = $y4, 
+	4 = $int4, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width5, 
+	7 = $int5, 
 	8 = 9, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs

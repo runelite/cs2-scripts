@@ -1,27 +1,27 @@
 // 763
-[proc,trade_main_drawitems](int $size0, int $int1, component $widget_335:25_2, component $widget_335:26_3, component $widget_335:28_4, component $widget_335:29_5, component $widget_335:12_6)
+[proc,trade_main_drawitems](int $int0, int $int1, component $com_trademain_your_offer2, component $com_trademain_your_removed3, component $com_trademain_other_offer4, component $com_trademain_other_removed5, component $com_trademain_accept_text6)
 if (%varbit4374 = 1) {
-	if_settext("Trade modified", $widget_335:26_3);
+	if_settext("Trade modified", $com_trademain_your_removed3);
 } else {
-	if_settext("", $widget_335:26_3);
+	if_settext("", $com_trademain_your_removed3);
 }
 if (%varbit4375 = 1) {
-	if_settext("Trade modified", $widget_335:29_5);
+	if_settext("Trade modified", $com_trademain_other_removed5);
 } else {
-	if_settext("", $widget_335:29_5);
+	if_settext("", $com_trademain_other_removed5);
 }
 def_int $intarray0(4);
-def_int $int7 = calc($size0 / 4);
+def_int $int7 = calc($int0 / 4);
 if ($int7 < 2) {
 	$int7 = 2;
 }
-def_int $int8 = calc((if_getheight($widget_335:25_2) - $int7 * 32) / ($int7 - 1));
-def_int $int9 = calc((if_getwidth($widget_335:25_2) - 12 - 4 * 36) / 3);
+def_int $int8 = calc((if_getheight($com_trademain_your_offer2) - $int7 * 32) / ($int7 - 1));
+def_int $int9 = calc((if_getwidth($com_trademain_your_offer2) - 12 - 4 * 36) / 3);
 $intarray0(0) = 6;
 $intarray0(1) = calc($intarray0(0) + $int9 + 36);
 $intarray0(2) = calc($intarray0(1) + $int9 + 36);
 $intarray0(3) = calc($intarray0(2) + $int9 + 36);
-def_int $intarray1($size0);
+def_int $intarray1($int0);
 $intarray1(0) = %varcint81;
 $intarray1(1) = %varcint82;
 $intarray1(2) = %varcint83;
@@ -55,13 +55,13 @@ def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $index13 = 0;
 def_int $int14 = 0;
-def_int $y15 = 0;
-def_int $size16 = 0;
-while ($size16 < $size0) {
-	if (cc_find($widget_335:25_2, $size16) = ^true & .cc_find($widget_335:25_2, calc($size0 + $size16)) = ^true) {
-		$obj10 = inv_getobj(inv_90, $size16);
+def_int $int15 = 0;
+def_int $int16 = 0;
+while ($int16 < $int0) {
+	if (cc_find($com_trademain_your_offer2, $int16) = ^true & .cc_find($com_trademain_your_offer2, calc($int0 + $int16)) = ^true) {
+		$obj10 = inv_getobj(tradeoffer, $int16);
 		if ($obj10 ! null) {
-			$int11 = inv_getnum(inv_90, $size16);
+			$int11 = inv_getnum(tradeoffer, $int16);
 			cc_sethide(false);
 			cc_setobject($obj10, $int11);
 			cc_setop(1, "Remove");
@@ -71,22 +71,22 @@ while ($size16 < $size0) {
 			cc_setop(5, "Remove-X");
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj10)></col>");
-			~trade_tooltip($int11, $intarray1($size16), interface_335:32);
+			~trade_tooltip($int11, $intarray1($int16), trademain:tooltip);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$index13, $int12 = calc($size16 % 4), calc($size16 / 4);
+		$index13, $int12 = calc($int16 % 4), calc($int16 / 4);
 		$int14 = $intarray0($index13);
-		$y15 = calc($int12 * (32 + $int8));
-		cc_setposition($int14, $y15, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int14 + $int1), $y15, ^setpos_abs_left, ^setpos_abs_top);
+		$int15 = calc($int12 * (32 + $int8));
+		cc_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int14 + $int1), $int15, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$size16 = calc($size16 + 1);
+	$int16 = calc($int16 + 1);
 }
-$int9 = calc((if_getwidth($widget_335:28_4) - 12 - 4 * 36) / 3);
+$int9 = calc((if_getwidth($com_trademain_other_offer4) - 12 - 4 * 36) / 3);
 $intarray0(0) = 6;
 $intarray0(1) = calc($intarray0(0) + $int9 + 36);
 $intarray0(2) = calc($intarray0(1) + $int9 + 36);
@@ -119,38 +119,38 @@ $intarray1(24) = %varcint134;
 $intarray1(25) = %varcint135;
 $intarray1(26) = %varcint136;
 $intarray1(27) = %varcint137;
-$size16 = 0;
-while ($size16 < $size0) {
-	if (cc_find($widget_335:28_4, $size16) = ^true & .cc_find($widget_335:28_4, calc($size0 + $size16)) = ^true) {
-		$obj10 = invother_getobj(inv_90, $size16);
+$int16 = 0;
+while ($int16 < $int0) {
+	if (cc_find($com_trademain_other_offer4, $int16) = ^true & .cc_find($com_trademain_other_offer4, calc($int0 + $int16)) = ^true) {
+		$obj10 = invother_getobj(tradeoffer, $int16);
 		if ($obj10 ! null) {
-			$int11 = invother_getnum(inv_90, $size16);
+			$int11 = invother_getnum(tradeoffer, $int16);
 			cc_sethide(false);
 			cc_setobject($obj10, $int11);
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj10)></col>");
-			~trade_tooltip($int11, $intarray1($size16), interface_335:32);
+			~trade_tooltip($int11, $intarray1($int16), trademain:tooltip);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$index13, $int12 = calc($size16 % 4), calc($size16 / 4);
+		$index13, $int12 = calc($int16 % 4), calc($int16 / 4);
 		$int14 = $intarray0($index13);
-		$y15 = calc($int12 * (32 + $int8));
-		cc_setposition($int14, $y15, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int14 + $int1), $y15, ^setpos_abs_left, ^setpos_abs_top);
+		$int15 = calc($int12 * (32 + $int8));
+		cc_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int14 + $int1), $int15, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$size16 = calc($size16 + 1);
+	$int16 = calc($int16 + 1);
 }
 def_int $int17 = 0;
 if (%varbit13141 > 0) {
 	$int17 = ~min(3, ~time_convert_seconds(%varbit13141));
-	if_settext("Check offer!<br><tostring($int17)>...", $widget_335:12_6);
-	if_setcolour(0x666666, $widget_335:12_6);
+	if_settext("Check offer!<br><tostring($int17)>...", $com_trademain_accept_text6);
+	if_setcolour(0x666666, $com_trademain_accept_text6);
 } else {
-	if_settext("Accept", $widget_335:12_6);
-	if_setcolour(0x00c000, $widget_335:12_6);
-	if_setonop(null, interface_335:10);
+	if_settext("Accept", $com_trademain_accept_text6);
+	if_setcolour(0x00c000, $com_trademain_accept_text6);
+	if_setonop(null, trademain:accept);
 }

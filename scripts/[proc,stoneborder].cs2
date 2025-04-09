@@ -1,8 +1,8 @@
 // 711
-[proc,stoneborder](component $component0, string $text0, int $flags1)(int)
+[proc,stoneborder](component $component0, string $string0, int $int1)(int)
 cc_deleteall($component0);
-def_int $width2 = if_getwidth($component0);
-def_int $height3 = if_getheight($component0);
+def_int $int2 = if_getwidth($component0);
+def_int $int3 = if_getheight($component0);
 ~create_graphic(
 	0 = $component0, 
 	1 = 0, 
@@ -11,22 +11,22 @@ def_int $height3 = if_getheight($component0);
 	4 = 1, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = calc($width2 - 2), 
-	8 = calc($height3 - 2), 
+	7 = calc($int2 - 2), 
+	8 = calc($int3 - 2), 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
-cc_create($component0, ^iftype_text, 1);
+cc_create($component0, ^iftype_text, 1, false);
 cc_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($width2 - 12), 23, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int2 - 12), 23, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
-cc_settext($text0);
-def_int $comsubid4 = cc_getid;
-def_int $x5 = calc($width2 - 32);
-def_int $y6 = calc($height3 - 32);
+cc_settext($string0);
+def_int $int4 = cc_getid;
+def_int $int5 = calc($int2 - 32);
+def_int $int6 = calc($int3 - 32);
 ~create_graphic(
 	0 = $component0, 
 	1 = 2, 
@@ -44,7 +44,7 @@ def_int $y6 = calc($height3 - 32);
 	0 = $component0, 
 	1 = 3, 
 	2 = "v2_stone_borders,5", 
-	3 = $x5, 
+	3 = $int5, 
 	4 = 0, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
@@ -58,7 +58,7 @@ def_int $y6 = calc($height3 - 32);
 	1 = 4, 
 	2 = "v2_stone_borders,6", 
 	3 = 0, 
-	4 = $y6, 
+	4 = $int6, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
@@ -70,8 +70,8 @@ def_int $y6 = calc($height3 - 32);
 	0 = $component0, 
 	1 = 5, 
 	2 = "v2_stone_borders,7", 
-	3 = $x5, 
-	4 = $y6, 
+	3 = $int5, 
+	4 = $int6, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
@@ -79,7 +79,7 @@ def_int $y6 = calc($height3 - 32);
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
-def_int $width7 = calc($width2 - 64);
+def_int $int7 = calc($int2 - 64);
 ~create_graphic(
 	0 = $component0, 
 	1 = 6, 
@@ -88,7 +88,7 @@ def_int $width7 = calc($width2 - 64);
 	4 = -13, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width7, 
+	7 = $int7, 
 	8 = 32, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
@@ -98,15 +98,15 @@ def_int $width7 = calc($width2 - 64);
 	1 = 7, 
 	2 = "v2_stone_borders,2", 
 	3 = 32, 
-	4 = calc($height3 - 20), 
+	4 = calc($int3 - 20), 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width7, 
+	7 = $int7, 
 	8 = 32, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
-def_int $height8 = calc($height3 - 64);
+def_int $int8 = calc($int3 - 64);
 ~create_graphic(
 	0 = $component0, 
 	1 = 8, 
@@ -116,7 +116,7 @@ def_int $height8 = calc($height3 - 64);
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
-	8 = $height8, 
+	8 = $int8, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
@@ -124,12 +124,12 @@ def_int $height8 = calc($height3 - 64);
 	0 = $component0, 
 	1 = 9, 
 	2 = "v2_stone_borders,3", 
-	3 = calc($width2 - 20), 
+	3 = calc($int2 - 20), 
 	4 = 32, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
-	8 = $height8, 
+	8 = $int8, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
@@ -150,7 +150,7 @@ def_int $height8 = calc($height3 - 64);
 	0 = $component0, 
 	1 = 11, 
 	2 = "v2_stone_borders,10", 
-	3 = $x5, 
+	3 = $int5, 
 	4 = 17, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
@@ -167,36 +167,36 @@ def_int $height8 = calc($height3 - 64);
 	4 = 15, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = calc($width2 - 22), 
+	7 = calc($int2 - 22), 
 	8 = 32, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
 def_graphic $graphic9 = "v2_stone_close_button,0";
 def_graphic $graphic10 = "v2_stone_close_button,1";
-def_int $x11 = calc($width2 - 26);
-def_int $y12 = 10;
-def_int $width13 = 16;
-def_int $height14 = 16;
+def_int $int11 = calc($int2 - 26);
+def_int $int12 = 10;
+def_int $int13 = 16;
+def_int $int14 = 16;
 if (~on_mobile = true) {
 	$graphic9 = "stoneborder_close_button,0";
 	$graphic10 = "stoneborder_close_button,0";
-	$x11 = calc($width2 - 34);
-	$y12 = 2;
-	$width13 = 32;
-	$height14 = 32;
+	$int11 = calc($int2 - 34);
+	$int12 = 2;
+	$int13 = 32;
+	$int14 = 32;
 }
-if (testbit($flags1, 0) = ^false) {
+if (testbit($int1, 0) = ^false) {
 	~create_graphic(
 		0 = $component0, 
 		1 = 13, 
 		2 = $graphic9, 
-		3 = $x11, 
-		4 = $y12, 
+		3 = $int11, 
+		4 = $int12, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $width13, 
-		8 = $height14, 
+		7 = $int13, 
+		8 = $int14, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
@@ -205,4 +205,4 @@ if (testbit($flags1, 0) = ^false) {
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click");
 }
-return($comsubid4);
+return($int4);

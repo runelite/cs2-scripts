@@ -1,7 +1,7 @@
 // 6900
 [proc,script6900](component $component0, int $int1, int $int2)
 def_int $int3 = 0;
-if ($component0 = interface_788:25) {
+if ($component0 = fsw_optin:fs_info_content) {
 	$int3 = 1;
 }
 def_int $int4 = 8;
@@ -25,7 +25,7 @@ switch_int (%varcint988) {
 		$fontmetrics9 = verdana_13pt_regular;
 }
 def_int $int10 = 0;
-def_int $width11 = calc($int1 - $int4 * 2);
+def_int $int11 = calc($int1 - $int4 * 2);
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = 0;
@@ -41,15 +41,15 @@ def_string $string2 = "";
 def_string $string3 = "";
 def_int $int16 = 0;
 if ($int3 = 1) {
-	$int16 = db_getfieldcount(dbrow_170, dbtable_30:0);
+	$int16 = db_getfieldcount(dbrow_170, fsw_info_fresh_table:info);
 } else if ($int3 = 0) {
-	$int16 = db_getfieldcount(dbrow_171, dbtable_31:0);
+	$int16 = db_getfieldcount(dbrow_171, fsw_info_normal_table:info);
 }
 while ($int10 < $int16) {
 	if ($int3 = 1) {
-		$string0, $string1, $string2 = db_getfield(dbrow_170, dbtable_30:0, $int10);
+		$string0, $string1, $string2 = db_getfield(dbrow_170, fsw_info_fresh_table:info, $int10);
 	} else {
-		$string0, $string1, $string2 = db_getfield(dbrow_171, dbtable_31:0, $int10);
+		$string0, $string1, $string2 = db_getfield(dbrow_171, fsw_info_normal_table:info, $int10);
 	}
 	if (%varcint988 = 0) {
 		$string3 = $string0;
@@ -58,10 +58,10 @@ while ($int10 < $int16) {
 	} else {
 		$string3 = $string2;
 	}
-	$int13 = calc(paraheight($string3, $width11, $fontmetrics9) * $int7);
+	$int13 = calc(paraheight($string3, $int11, $fontmetrics9) * $int7);
 	$int14 = calc($int14 - $int13);
 	if ($int14 >= 0) {
-		cc_create($component0, ^iftype_text, $int10);
+		cc_create($component0, ^iftype_text, $int10, false);
 		cc_setposition($int4, $int15, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont($graphic8);
 		if (calc($int10 % 2) = 0) {
@@ -69,7 +69,7 @@ while ($int10 < $int16) {
 		} else {
 			cc_setcolour(0xe6dbca);
 		}
-		cc_setsize($width11, $int13, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, $int7);
 		cc_settextshadow(true);
 		cc_settext($string3);

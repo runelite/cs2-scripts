@@ -1,12 +1,12 @@
 // 458
-[clientscript,prayer_init](component $widget_541:0_0, component $widget_541:7_1, component $widget_541:3_2, component $widget_541:8_3, component $widget_541:2_4, component $widget_541:4_5, component $widget_541:42_6, component $widget_541:6_7, component $widget_541:39_8)
+[clientscript,prayer_init](component $com_prayerbook_universe0, component $com_prayerbook_level1, component $com_prayerbook_container2, component $com_prayerbook_info3, component $com_prayerbook_infoglow4, component $com_prayerbook_filtermenu_container5, component $com_prayerbook_filtermenu6, component $com_prayerbook_filterbutton7, component $com_prayerbook_tooltip8)
 def_int $int9 = 0;
 def_boolean $boolean10 = ~on_mobile;
 def_string $string0 = "Info";
 def_string $string1 = "Filters";
 if ($boolean10 = true) {
 	while ($int9 < 4) {
-		cc_create($widget_541:2_4, ^iftype_rectangle, $int9);
+		cc_create($com_prayerbook_infoglow4, ^iftype_rectangle, $int9, false);
 		cc_sethide(false);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(calc($int9 * 2), calc($int9 * 2), ^setsize_minus, ^setsize_minus);
@@ -19,52 +19,52 @@ if ($boolean10 = true) {
 ~script3156(
 	0 = null, 
 	1 = $boolean10, 
-	2 = $widget_541:8_3, 
-	3 = $widget_541:6_7, 
-	4 = $widget_541:3_2, 
-	5 = $widget_541:2_4, 
-	6 = $widget_541:4_5, 
-	7 = $widget_541:42_6, 
-	8 = $widget_541:39_8, 
+	2 = $com_prayerbook_info3, 
+	3 = $com_prayerbook_filterbutton7, 
+	4 = $com_prayerbook_container2, 
+	5 = $com_prayerbook_infoglow4, 
+	6 = $com_prayerbook_filtermenu_container5, 
+	7 = $com_prayerbook_filtermenu6, 
+	8 = $com_prayerbook_tooltip8, 
 	9 = $string0, 
 	10 = $string1
 );
 ~prayer_redraw(
 	0 = $boolean10, 
-	1 = $widget_541:7_1, 
-	2 = $widget_541:3_2, 
-	3 = $widget_541:8_3, 
-	4 = $widget_541:2_4, 
-	5 = $widget_541:4_5, 
-	6 = $widget_541:42_6, 
-	7 = $widget_541:6_7, 
-	8 = $widget_541:39_8, 
+	1 = $com_prayerbook_level1, 
+	2 = $com_prayerbook_container2, 
+	3 = $com_prayerbook_info3, 
+	4 = $com_prayerbook_infoglow4, 
+	5 = $com_prayerbook_filtermenu_container5, 
+	6 = $com_prayerbook_filtermenu6, 
+	7 = $com_prayerbook_filterbutton7, 
+	8 = $com_prayerbook_tooltip8, 
 	9 = $string0, 
 	10 = $string1
 );
 if_setonvartransmit("prayer_redraw(
 	0 = $boolean10, 
-	1 = $widget_541:7_1, 
-	2 = $widget_541:3_2, 
-	3 = $widget_541:8_3, 
-	4 = $widget_541:2_4, 
-	5 = $widget_541:4_5, 
-	6 = $widget_541:42_6, 
-	7 = $widget_541:6_7, 
-	8 = $widget_541:39_8, 
+	1 = $com_prayerbook_level1, 
+	2 = $com_prayerbook_container2, 
+	3 = $com_prayerbook_info3, 
+	4 = $com_prayerbook_infoglow4, 
+	5 = $com_prayerbook_filtermenu_container5, 
+	6 = $com_prayerbook_filtermenu6, 
+	7 = $com_prayerbook_filterbutton7, 
+	8 = $com_prayerbook_tooltip8, 
 	9 = $string0, 
 	10 = $string1
-){var1377, var2900, var1050, var2972, var3109, var1429, var3782, var4655}", $widget_541:0_0);
+){var1377, var2900, var1050, var2972, var3109, var1429, var3782, var4655}", $com_prayerbook_universe0);
 if_setonstattransmit("prayer_redraw(
 	0 = $boolean10, 
-	1 = $widget_541:7_1, 
-	2 = $widget_541:3_2, 
-	3 = $widget_541:8_3, 
-	4 = $widget_541:2_4, 
-	5 = $widget_541:4_5, 
-	6 = $widget_541:42_6, 
-	7 = $widget_541:6_7, 
-	8 = $widget_541:39_8, 
+	1 = $com_prayerbook_level1, 
+	2 = $com_prayerbook_container2, 
+	3 = $com_prayerbook_info3, 
+	4 = $com_prayerbook_infoglow4, 
+	5 = $com_prayerbook_filtermenu_container5, 
+	6 = $com_prayerbook_filtermenu6, 
+	7 = $com_prayerbook_filterbutton7, 
+	8 = $com_prayerbook_tooltip8, 
 	9 = $string0, 
 	10 = $string1
-){prayer}", $widget_541:0_0);
+){prayer}", $com_prayerbook_universe0);

@@ -1,5 +1,5 @@
 // 345
-[proc,pattern_cards_confirm_update](component $widget_559:68_0)
+[proc,pattern_cards_confirm_update](component $com_pattern_cards_confirm0)
 def_int $int1 = -1;
 def_int $int2 = -1;
 def_int $int3 = -1;
@@ -13,12 +13,12 @@ while ($int4 < 15) {
 		} else if ($int3 = -1) {
 			$int3 = $int4;
 		} else {
-			~stonebutton_draw(true, "<col=9f9f9f>Too many cards!</col>", p11_full, 0, $widget_559:68_0);
-			if_setonmouserepeat(null, $widget_559:68_0);
-			if_setonmouseleave(null, $widget_559:68_0);
-			if_setonop(null, $widget_559:68_0);
-			if_setontimer(null, $widget_559:68_0);
-			if_clearops($widget_559:68_0);
+			~stonebutton_draw(true, "<col=9f9f9f>Too many cards!</col>", p11_full, 0, $com_pattern_cards_confirm0);
+			if_setonmouserepeat(null, $com_pattern_cards_confirm0);
+			if_setonmouseleave(null, $com_pattern_cards_confirm0);
+			if_setonop(null, $com_pattern_cards_confirm0);
+			if_setontimer(null, $com_pattern_cards_confirm0);
+			if_clearops($com_pattern_cards_confirm0);
 			return;
 		}
 	}
@@ -26,19 +26,19 @@ while ($int4 < 15) {
 }
 if ($int3 = -1) {
 	if ($int1 = -1) {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 3 more</col>", p11_full, 0, $widget_559:68_0);
+		~stonebutton_draw(true, "<col=9f9f9f>Select 3 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	} else if ($int2 = -1) {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 2 more</col>", p11_full, 0, $widget_559:68_0);
+		~stonebutton_draw(true, "<col=9f9f9f>Select 2 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	} else {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 1 more</col>", p11_full, 0, $widget_559:68_0);
+		~stonebutton_draw(true, "<col=9f9f9f>Select 1 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	}
-	if_setonmouserepeat(null, $widget_559:68_0);
-	if_setonmouseleave(null, $widget_559:68_0);
-	if_setonop(null, $widget_559:68_0);
-	if_setontimer(null, $widget_559:68_0);
-	if_clearops($widget_559:68_0);
+	if_setonmouserepeat(null, $com_pattern_cards_confirm0);
+	if_setonmouseleave(null, $com_pattern_cards_confirm0);
+	if_setonop(null, $com_pattern_cards_confirm0);
+	if_setontimer(null, $com_pattern_cards_confirm0);
+	if_clearops($com_pattern_cards_confirm0);
 	return;
 }
-~stonebutton_init("Confirm", $widget_559:68_0, p12_full, 0);
-if_setonop("pattern_cards_confirm_op(event_op, $widget_559:68_0)", $widget_559:68_0);
-if_setontimer(null, $widget_559:68_0);
+~stonebutton_init("Confirm", $com_pattern_cards_confirm0, p12_full, 0);
+if_setonop("pattern_cards_confirm_op(event_op, $com_pattern_cards_confirm0)", $com_pattern_cards_confirm0);
+if_setontimer(null, $com_pattern_cards_confirm0);

@@ -1,16 +1,16 @@
 // 3863
-[clientscript,settings_slider_on_transmit](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $int6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
+[clientscript,settings_slider_on_transmit](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $int6, int $int7, int $int8, int $int9, component $component10, int $comsubid11, string $string0, int $int12, enum $enum13, boolean $boolean14)
 def_boolean $boolean15 = ~script3957($struct0);
 def_int $int16 = ~settings_get_slider($int1);
 def_string $string1 = "";
 def_graphic $graphic17 = "settings_slider,7";
 if (cc_find($component5, $int6) = ^true) {
 	if ($int16 = 0) {
-		cc_setposition($int8, $y7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int8, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	} else if ($int16 = calc($int2 - 1)) {
-		cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int9 - 16), $int7, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int8 + scale(calc($int16 * 2), calc(($int2 - 1) * 2), calc($int4 - 16))), $y7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int8 + scale(calc($int16 * 2), calc(($int2 - 1) * 2), calc($int4 - 16))), $int7, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if ($boolean15 = true) {
 		if ($boolean14 = true) {

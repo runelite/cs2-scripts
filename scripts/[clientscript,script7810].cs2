@@ -1,6 +1,6 @@
 // 7810
-[clientscript,script7810](int $int0, obj $obj1, component $widget_908:21_2, int $comsubid3)
-if (cc_find($widget_908:21_2, $comsubid3) = ^true) {
+[clientscript,script7810](int $int0, obj $obj1, component $com_collection_overview_latest_items_data2, int $comsubid3)
+if (cc_find($com_collection_overview_latest_items_data2, $comsubid3) = ^true) {
 	cc_settrans(100);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
 }

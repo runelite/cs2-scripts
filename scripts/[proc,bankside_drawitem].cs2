@@ -1,12 +1,12 @@
 // 297
-[proc,bankside_drawitem](obj $obj0, int $num1, int $index2, component $component3, component $component4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12)
+[proc,bankside_drawitem](obj $obj0, int $int1, int $int2, component $component3, component $component4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12)
 cc_clearops;
 def_string $string0 = "";
 if ($obj0 ! null) {
 	cc_settrans(0);
-	cc_setobject($obj0, $num1);
+	cc_setobject($obj0, $int1);
 	switch_obj ($obj0) {
-		case looting_bag_11941, looting_bag_22586 :
+		case looting_bag_11941, looting_bag_open_22586 :
 			if ($int5 = 1) {
 				cc_setop(1, "View");
 				cc_setonop("bankside_switchview(
@@ -23,7 +23,7 @@ if ($obj0 ! null) {
 			} else {
 				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			}
-		case extradimensional_bag_25106, extradimensional_bag_25108 :
+		case league_second_inventory_25106, league_second_inventory_open_25108 :
 			cc_setop(1, "View");
 			cc_setonop("bankside_switchview(
 				0 = event_op, 
@@ -36,7 +36,7 @@ if ($obj0 ! null) {
 				7 = $component11, 
 				8 = 2
 			)");
-		case rune_pouch_12791, rune_pouch_l_24416 :
+		case bh_rune_pouch_12791, bh_rune_pouch_trouver_24416 :
 			cc_setop(1, "Configure");
 			cc_setonop("bankside_switchview(
 				0 = event_op, 
@@ -49,7 +49,7 @@ if ($obj0 ! null) {
 				7 = $component11, 
 				8 = 3
 			)");
-		case divine_rune_pouch_27281, divine_rune_pouch_l_27509 :
+		case divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 			cc_setop(1, "Configure");
 			cc_setonop("bankside_switchview(
 				0 = event_op, 
@@ -91,7 +91,7 @@ if ($obj0 ! null) {
 	}
 	cc_setop(7, "Deposit-X");
 	cc_setop(8, "Deposit-All");
-	cc_setop(9, ~bankside_extraop($obj0, $index2));
+	cc_setop(9, ~bankside_extraop($obj0, $int2));
 	if (~script7795 = 1) {
 		if ($int12 = 1) {
 			cc_setop(10, "Unlock-slot");
@@ -121,7 +121,7 @@ if ($obj0 ! null) {
 		cc_setopbase("<col=ff9040>Slot</col>");
 	}
 	cc_settrans(255);
-	cc_setobject(obj_6512, 1);
+	cc_setobject(blankobject_6512, 1);
 	cc_setonop(null);
 	cc_setondragcomplete(null);
 }

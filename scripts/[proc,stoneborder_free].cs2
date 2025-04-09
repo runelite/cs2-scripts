@@ -1,9 +1,9 @@
 // 2991
 [proc,stoneborder_free](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
-def_int $width6 = calc($int2 - 64);
-def_int $height7 = calc($int3 - 64);
+def_int $int6 = calc($int2 - 64);
+def_int $int7 = calc($int3 - 64);
 def_int $int8 = calc($int4 + $int2 - 32);
-def_int $y9 = calc($int5 + $int3 - 32);
+def_int $int9 = calc($int5 + $int3 - 32);
 ~create_graphic(
 	0 = $component0, 
 	1 = $int1, 
@@ -35,7 +35,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	1 = calc($int1 + 2), 
 	2 = "v2_borders_slim,6", 
 	3 = $int4, 
-	4 = $y9, 
+	4 = $int9, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
@@ -48,7 +48,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	1 = calc($int1 + 3), 
 	2 = "v2_borders_slim,7", 
 	3 = $int8, 
-	4 = $y9, 
+	4 = $int9, 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
@@ -64,7 +64,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	4 = calc($int5 - 13), 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width6, 
+	7 = $int6, 
 	8 = 32, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
@@ -77,7 +77,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	4 = calc($int5 + $int3 - 20), 
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
-	7 = $width6, 
+	7 = $int6, 
 	8 = 32, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
@@ -91,7 +91,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
-	8 = $height7, 
+	8 = $int7, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );
@@ -104,7 +104,7 @@ def_int $y9 = calc($int5 + $int3 - 32);
 	5 = ^setpos_abs_left, 
 	6 = ^setpos_abs_top, 
 	7 = 32, 
-	8 = $height7, 
+	8 = $int7, 
 	9 = ^setsize_abs, 
 	10 = ^setsize_abs
 );

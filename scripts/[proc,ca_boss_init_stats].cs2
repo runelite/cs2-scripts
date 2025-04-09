@@ -1,10 +1,10 @@
 // 4843
-[proc,ca_boss_init_stats](component $widget_713:22_0, struct $struct1)(int)
+[proc,ca_boss_init_stats](component $com_ca_boss_ca_boss_stats0, struct $struct1)(int)
 def_int $int2 = 0;
 def_int $int3 = 41;
 def_int $int4 = 20;
 def_int $colour5 = 0xff981f;
-def_int $width6 = 0;
+def_int $int6 = 0;
 def_graphic $graphic7 = p12_full;
 def_int $int8 = %var261;
 def_int $int9 = 0;
@@ -14,8 +14,8 @@ if ($int8 > -1) {
 	if ($int8 > 0) {
 		$string0 = ~time_convert_option($int8);
 	}
-	cc_create($widget_713:22_0, ^iftype_text, $int2);
-	cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+	cc_create($com_ca_boss_ca_boss_stats0, ^iftype_text, $int2, false);
+	cc_setsize($int6, $int4, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settextshadow(true);
 	cc_settextfont($graphic7);
@@ -27,8 +27,8 @@ if ($int8 > -1) {
 } else {
 	$int3 = 32;
 }
-cc_create($widget_713:22_0, ^iftype_text, $int2);
-cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+cc_create($com_ca_boss_ca_boss_stats0, ^iftype_text, $int2, false);
+cc_setsize($int6, $int4, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 cc_settextshadow(true);
 cc_settextfont($graphic7);
@@ -38,8 +38,8 @@ cc_setcolour($colour5);
 $int2 = calc($int2 + 1);
 $int3 = calc($int3 - $int4);
 def_int $int11 = struct_param($struct1, param_1314);
-cc_create($widget_713:22_0, ^iftype_text, $int2);
-cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+cc_create($com_ca_boss_ca_boss_stats0, ^iftype_text, $int2, false);
+cc_setsize($int6, $int4, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
 cc_settextshadow(true);
 cc_settextfont($graphic7);

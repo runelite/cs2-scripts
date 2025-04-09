@@ -31,12 +31,12 @@ def_int $int33 = ^max_32bit_int;
 def_int $int34 = 0;
 def_int $int35 = %varbit16073;
 def_string $string0 = %varcstring417;
-def_string $text1 = "null";
+def_string $string1 = "null";
 def_int $int36 = 0;
 def_int $int37 = 0;
 if ($int35 = 1) {
 	if (string_length($string0) = 0) {
-		cc_create($component5, ^iftype_text, 0);
+		cc_create($component5, ^iftype_text, 0, false);
 		cc_setsize(20, 20, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		if (~on_mobile = false) {
@@ -54,15 +54,15 @@ if ($int35 = 1) {
 		~scrollbar_vertical($component6, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 		return;
 	}
-	$int36, $text1 = ~script3880(lowercase($string0));
+	$int36, $string1 = ~script3880(lowercase($string0));
 	if ($int36 = 1) {
-		cc_create($component5, ^iftype_text, 0);
+		cc_create($component5, ^iftype_text, 0, false);
 		cc_setsize(20, 20, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour(0xff981f);
-		cc_settext($text1);
+		cc_settext($string1);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, 16);
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component5);
 		if_setscrollpos(0, 0, $component8);
@@ -159,7 +159,7 @@ if ($int34 > 0) {
 	$int34 = 0;
 }
 if ($int35 = 1 & $int25 = 0) {
-	cc_create($component5, ^iftype_text, 0);
+	cc_create($component5, ^iftype_text, 0, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext("<br><br>Could not find any settings that match what you are looking for.<br><br>Try searching for something else.");

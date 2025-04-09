@@ -1,5 +1,5 @@
 // 2298
-[proc,tob_hud_statusrefresh](int $int0, int $int1, string $string0, component $component2, component $component3, component $widget_28:38_4)
+[proc,tob_hud_statusrefresh](int $int0, int $int1, string $string0, component $component2, component $component3, component $com_tob_hud_tooltip4)
 def_int $int5 = 0;
 if ($int1 ! 0 & cc_find($component2, 0) = ^true) {
 	if_sethide(false, $component2);
@@ -12,8 +12,8 @@ if ($int1 ! 0 & cc_find($component2, 0) = ^true) {
 	} else {
 		cc_settext(substring($string0, 0, 1));
 	}
-	if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $widget_28:38_4, $string0, 25, 512)", $component2);
-	if_setonmouseleave("deltooltip($widget_28:38_4)", $component2);
+	if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $com_tob_hud_tooltip4, $string0, 25, 512)", $component2);
+	if_setonmouseleave("deltooltip($com_tob_hud_tooltip4)", $component2);
 	if ($int1 = 31) {
 		if (.cc_find($component3, 0) = ^true) {
 			.cc_setgraphic("orb_filler,3");
@@ -45,5 +45,5 @@ if ($int1 ! 0 & cc_find($component2, 0) = ^true) {
 	if_setonstattransmit(null, $component2);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
-	~deltooltip_action($widget_28:38_4);
+	~deltooltip_action($com_tob_hud_tooltip4);
 }

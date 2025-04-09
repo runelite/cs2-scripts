@@ -1,6 +1,6 @@
 // 4965
 [proc,script4965](int $int0, int $int1)
-cc_deleteall(interface_626:20);
+cc_deleteall(colosseum_intermission:modifier_information);
 def_int $int2 = 0;
 def_int $int3 = 0;
 if ($int0 = 0 & %varcint1194 ! 0) {
@@ -14,22 +14,22 @@ if ($int0 = 0 & %varcint1194 ! 0) {
 }
 def_struct $struct4 = enum(int, struct, enum_5312, $int3);
 def_string $string0 = struct_param($struct4, param_1896);
-def_string $text1 = ~script4920($struct4);
+def_string $string1 = ~script4920($struct4);
 def_int $int5 = ~script4980($struct4);
 if ($int5 = 1) {
 	$string0 = append($string0, " (II)");
 } else if ($int5 = 2) {
 	$string0 = append($string0, " (III)");
 }
-cc_create(interface_626:20, ^iftype_graphic, $int2);
+cc_create(colosseum_intermission:modifier_information, ^iftype_graphic, $int2, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
 $int2 = calc($int2 + 1);
-$int2 = ~thinbox(interface_626:20, $int2);
+$int2 = ~thinbox(colosseum_intermission:modifier_information, $int2);
 if ($int1 = 1 & $int3 ! 0) {
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext($string0);
@@ -38,16 +38,16 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($text1);
+	cc_settext($string1);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");
@@ -66,8 +66,8 @@ if ($int1 = 1 & $int3 ! 0) {
 	}
 	$struct4 = enum(int, struct, enum_5312, $int3);
 	$string0 = struct_param($struct4, param_1896);
-	$text1 = ~script4920($struct4);
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	$string1 = ~script4920($struct4);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext($string0);
@@ -76,16 +76,16 @@ if ($int1 = 1 & $int3 ! 0) {
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($text1);
+	cc_settext($string1);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	$int2 = calc($int2 + 1);
-	cc_create(interface_626:20, ^iftype_text, $int2);
+	cc_create(colosseum_intermission:modifier_information, ^iftype_text, $int2, false);
 	cc_setsize(5, 5406, ^setsize_minus, ^setsize_proportion);
 	cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_settext("+<tostring(struct_param($struct4, param_1903))> Glory per wave");

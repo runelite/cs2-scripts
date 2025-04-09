@@ -1,12 +1,12 @@
 // 3492
-[proc,death_office_redraw](component $widget_669:3_0, component $widget_669:4_1, component $widget_669:6_2, component $widget_669:7_3, component $widget_669:8_4, component $widget_669:9_5, component $widget_669:10_6, component $widget_669:11_7)
-def_int $width8 = if_getwidth($widget_669:3_0);
-def_int $int9 = ~max(1, calc($width8 / (36 + 10)));
+[proc,death_office_redraw](component $com_death_office_items0, component $com_death_office_scrollbar1, component $com_death_office_12, component $com_death_office_53, component $com_death_office_x4, component $com_death_office_all5, component $com_death_office_takeall6, component $com_death_office_info7)
+def_int $int8 = if_getwidth($com_death_office_items0);
+def_int $int9 = ~max(1, calc($int8 / (36 + 10)));
 def_int $int10 = 0;
 if ($int9 > 1) {
-	$int10 = calc(($width8 - $int9 * 36) / ($int9 - 1));
+	$int10 = calc(($int8 - $int9 * 36) / ($int9 - 1));
 }
-def_int $int11 = calc($width8 - ($int9 * 36 + ($int9 - 1) * $int10));
+def_int $int11 = calc($int8 - ($int9 * 36 + ($int9 - 1) * $int10));
 def_int $int12 = calc(($int11 + 1) / 2);
 def_int $int13 = 0;
 def_obj $obj14 = null;
@@ -15,17 +15,17 @@ def_obj $obj16 = null;
 def_int $int17 = 0;
 def_int $int18 = 0;
 while ($int18 < 120) {
-	if (cc_find($widget_669:3_0, $int18) = ^true) {
-		$obj14 = inv_getobj(inv_636, $int18);
+	if (cc_find($com_death_office_items0, $int18) = ^true) {
+		$obj14 = inv_getobj(death_permanent, $int18);
 		if ($obj14 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj14, inv_getnum(inv_636, $int18));
+			cc_setobject($obj14, inv_getnum(death_permanent, $int18));
 			cc_setopbase("<col=ff9040><oc_name($obj14)></col>");
 			$int13 = calc($int15 / $int9 * (32 + 10));
 			cc_setposition(calc($int12 + $int15 % $int9 * (36 + $int10)), $int13, ^setpos_abs_left, ^setpos_abs_top);
 			if (%var262 = $int18) {
 				cc_setoutline(2);
-				$obj16, $int17 = $obj14, inv_total(inv_636, $obj14);
+				$obj16, $int17 = $obj14, inv_total(death_permanent, $obj14);
 			} else {
 				cc_setoutline(1);
 			}
@@ -38,22 +38,22 @@ while ($int18 < 120) {
 }
 if ($int13 >= 0) {
 	$int13 = calc($int13 + 32);
-	if_setscrollpos(0, ~min(if_getscrolly($widget_669:3_0), calc($int13 - if_getheight($widget_669:3_0))), $widget_669:3_0);
-	if_setscrollsize(0, $int13, $widget_669:3_0);
+	if_setscrollpos(0, ~min(if_getscrolly($com_death_office_items0), calc($int13 - if_getheight($com_death_office_items0))), $com_death_office_items0);
+	if_setscrollsize(0, $int13, $com_death_office_items0);
 } else {
-	if_setscrollpos(0, 0, $widget_669:3_0);
-	if_setscrollsize(0, 0, $widget_669:3_0);
+	if_setscrollpos(0, 0, $com_death_office_items0);
+	if_setscrollsize(0, 0, $com_death_office_items0);
 }
-~scrollbar_vertical_rebuild($widget_669:4_1, $widget_669:3_0);
+~scrollbar_vertical_rebuild($com_death_office_scrollbar1, $com_death_office_items0);
 def_string $string0 = "";
 def_string $string1 = ",";
 if ($obj16 ! null) {
-	if_sethide(false, $widget_669:6_2);
-	if_sethide(false, $widget_669:7_3);
-	if_sethide(false, $widget_669:8_4);
-	if_sethide(false, $widget_669:9_5);
-	if_setsize(if_getx($widget_669:6_2), 0, ^setsize_abs, ^setsize_minus, $widget_669:11_7);
-	if_settextfont(p11_full, $widget_669:11_7);
+	if_sethide(false, $com_death_office_12);
+	if_sethide(false, $com_death_office_53);
+	if_sethide(false, $com_death_office_x4);
+	if_sethide(false, $com_death_office_all5);
+	if_setsize(if_getx($com_death_office_12), 0, ^setsize_abs, ^setsize_minus, $com_death_office_info7);
+	if_settextfont(p11_full, $com_death_office_info7);
 	if ($int17 > 1) {
 		if (%var263 ! 1) {
 			if (calc(^max_32bit_int / $int17) < %var263) {
@@ -61,21 +61,21 @@ if ($obj16 ! null) {
 			} else {
 				$string0 = "Fee: <col=ffffff><~tostring_spacer(%var263, $string1)> coins</col> each (<col=ffffff><~tostring_spacer(calc($int17 * %var263), $string1)></col>)";
 			}
-			if_settext("<~tostring_spacer($int17, $string1)> x <oc_name($obj16)>:<br><$string0><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $widget_669:11_7);
+			if_settext("<~tostring_spacer($int17, $string1)> x <oc_name($obj16)>:<br><$string0><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $com_death_office_info7);
 		} else {
-			if_settext("<~tostring_spacer($int17, $string1)> x <oc_name($obj16)>:<br>Fee: <col=ffffff>1 coin</col> each<br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $widget_669:11_7);
+			if_settext("<~tostring_spacer($int17, $string1)> x <oc_name($obj16)>:<br>Fee: <col=ffffff>1 coin</col> each<br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $com_death_office_info7);
 		}
 	} else if (%var263 ! 1) {
-		if_settext("<oc_name($obj16)>:<br>Fee: <col=ffffff><~tostring_spacer(%var263, $string1)> coins</col><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $widget_669:11_7);
+		if_settext("<oc_name($obj16)>:<br>Fee: <col=ffffff><~tostring_spacer(%var263, $string1)> coins</col><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $com_death_office_info7);
 	} else {
-		if_settext("<oc_name($obj16)>:<br>Fee: <col=ffffff>1 coin</col><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $widget_669:11_7);
+		if_settext("<oc_name($obj16)>:<br>Fee: <col=ffffff>1 coin</col><br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)> coins</col>", $com_death_office_info7);
 	}
 } else {
-	if_sethide(true, $widget_669:6_2);
-	if_sethide(true, $widget_669:7_3);
-	if_sethide(true, $widget_669:8_4);
-	if_sethide(true, $widget_669:9_5);
-	if_setsize(if_getx($widget_669:10_6), 0, ^setsize_abs, ^setsize_minus, $widget_669:11_7);
-	if_settextfont(p12_full, $widget_669:11_7);
-	if_settext("Select an item to retrieve.<br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)></col>", $widget_669:11_7);
+	if_sethide(true, $com_death_office_12);
+	if_sethide(true, $com_death_office_53);
+	if_sethide(true, $com_death_office_x4);
+	if_sethide(true, $com_death_office_all5);
+	if_setsize(if_getx($com_death_office_takeall6), 0, ^setsize_abs, ^setsize_minus, $com_death_office_info7);
+	if_settextfont(p12_full, $com_death_office_info7);
+	if_settext("Select an item to retrieve.<br>Death's Coffer: <col=ffffff><~tostring_spacer(%var261, $string1)></col>", $com_death_office_info7);
 }

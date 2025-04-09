@@ -1,6 +1,6 @@
 // 3616
-[clientscript,partydrop_main_confirm_reset](int $clock0, component $component1)
-if (clientclock < $clock0) {
+[clientscript,partydrop_main_confirm_reset](int $int0, component $component1)
+if (clientclock < $int0) {
 	return;
 }
 if_setontimer(null, $component1);

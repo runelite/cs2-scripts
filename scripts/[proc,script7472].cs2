@@ -4,9 +4,9 @@ cc_deleteall($component0);
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
-def_int $count4 = enum_getoutputcount(enum_5624);
-while ($int3 < calc($count4 + 2)) {
-	cc_create($component0, ^iftype_rectangle, $int2);
+def_int $int4 = enum_getoutputcount(enum_5624);
+while ($int3 < calc($int4 + 2)) {
+	cc_create($component0, ^iftype_rectangle, $int2, false);
 	$int2 = calc($int2 + 1);
 	$int3 = calc($int3 + 1);
 }
@@ -18,7 +18,7 @@ def_int $int6 = 0;
 def_int $int7 = calc(if_getwidth($component0) / 3);
 def_int $int8 = 0;
 def_string $string0 = "";
-while ($int3 < $count4) {
+while ($int3 < $int4) {
 	$dbrow5 = enum(int, dbrow, enum_5624, $int3);
 	if ($dbrow5 ! null) {
 		$int2, $int1, $int6 = ~script7509(
@@ -26,13 +26,13 @@ while ($int3 < $count4) {
 			1 = $int1, 
 			2 = $int2, 
 			3 = $int6, 
-			4 = db_getfield($dbrow5, dbtable_79:2, 0), 
+			4 = db_getfield($dbrow5, hiscores_skill_info:skillicon, 0), 
 			5 = 25, 
 			6 = 25, 
 			7 = $int7, 
 			8 = $int3
 		);
-		$string0 = db_getfield($dbrow5, dbtable_79:0, 0);
+		$string0 = db_getfield($dbrow5, hiscores_skill_info:skillname, 0);
 		~script7516($string0, 0, 0);
 	}
 	$int3 = calc($int3 + 1);
@@ -41,13 +41,13 @@ if ($int6 ! 0) {
 	$int1 = calc($int1 + (25 + 5));
 }
 $int7 = calc(if_getwidth($component0) / 2);
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int7 / 2 - 36), $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("side_icons,0");
 cc_settiling(true);
-.cc_create($component0, ^iftype_text, $int2);
+.cc_create($component0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 .cc_settextfont(p12_full);
 .cc_settextshadow(true);
@@ -56,18 +56,18 @@ $int2 = calc($int2 + 1);
 .cc_settext("--");
 .cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 .cc_setposition(calc($int7 / 2), $int1, ^setpos_abs_left, ^setpos_abs_top);
-if (cc_find($component0, $count4) = ^true) {
+if (cc_find($component0, $int4) = ^true) {
 	cc_setsize(66, 36, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int7 / 2 - 36), $int1, ^setpos_abs_left, ^setpos_abs_top);
 	~script7516("Combat", 0, 0);
 }
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int7 / 2), $int1, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic("side_icons,1");
 cc_settiling(true);
-.cc_create($component0, ^iftype_text, $int2);
+.cc_create($component0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 .cc_settextfont(p12_full);
 .cc_settextshadow(true);
@@ -76,7 +76,7 @@ $int2 = calc($int2 + 1);
 .cc_settext("--");
 .cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 .cc_setposition(calc($int7 / 2 - 36), $int1, ^setpos_abs_right, ^setpos_abs_top);
-if (cc_find($component0, calc($count4 + 1)) = ^true) {
+if (cc_find($component0, calc($int4 + 1)) = ^true) {
 	cc_setsize(66, 36, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int7 / 2 - 36), $int1, ^setpos_abs_right, ^setpos_abs_top);
 	~script7516("Overall", 0, 0);

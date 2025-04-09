@@ -1,9 +1,9 @@
 // 334
-[clientscript,godwars_hideshow_init](component $widget_406:0_0, component $widget_406:1_1, component $widget_406:19_2, component $widget_406:4_3, component $widget_406:5_4)
-~script4729($widget_406:4_3, $widget_406:5_4, 65256, ^setpos_abs_left, ^setpos_abs_top, true);
+[clientscript,godwars_hideshow_init](component $com_godwars_overlay_universe0, component $com_godwars_overlay_contents1, component $com_godwars_overlay_fader2, component $com_godwars_overlay_dodger3, component $com_godwars_overlay_kills_layer4)
+~script4729($com_godwars_overlay_dodger3, $com_godwars_overlay_kills_layer4, 65256, ^setpos_abs_left, ^setpos_abs_top, true);
 %varcint50 = 256;
 %varcint550 = 255;
-~godwars_hideshow($widget_406:1_1, $widget_406:19_2);
-if_setontimer("godwars_hideshow($widget_406:1_1, $widget_406:19_2)", $widget_406:0_0);
-~script5166($widget_406:5_4);
-if_setonvartransmit("script5165($widget_406:5_4){var3264}", $widget_406:0_0);
+~godwars_hideshow($com_godwars_overlay_contents1, $com_godwars_overlay_fader2);
+if_setontimer("godwars_hideshow($com_godwars_overlay_contents1, $com_godwars_overlay_fader2)", $com_godwars_overlay_universe0);
+~script5166($com_godwars_overlay_kills_layer4);
+if_setonvartransmit("script5165($com_godwars_overlay_kills_layer4){var3264}", $com_godwars_overlay_universe0);

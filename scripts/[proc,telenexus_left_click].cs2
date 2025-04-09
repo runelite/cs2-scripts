@@ -36,7 +36,7 @@ if (%varbit6669 = 0 | $struct14 = null) {
 	if_setgraphic($graphic11, $component3);
 	if_setonmouseover("telenexus_tick_mouseover($component3, $component4, $graphic12)", $component4);
 	if_setonmouseleave("telenexus_tick_mouseleave($component3, $component4, $graphic11)", $component4);
-	cc_create($component2, ^iftype_graphic, 0);
+	cc_create($component2, ^iftype_graphic, 0, false);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 3, ^setpos_abs_left, ^setpos_abs_top);
 	if (%varbit6669 < 150) {
@@ -44,7 +44,7 @@ if (%varbit6669 = 0 | $struct14 = null) {
 	} else {
 		cc_setgraphic($graphic5);
 	}
-	cc_create($component2, ^iftype_graphic, 1);
+	cc_create($component2, ^iftype_graphic, 1, false);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 33, ^setpos_abs_left, ^setpos_abs_top);
 	if (%varbit6669 > 150) {
@@ -52,7 +52,7 @@ if (%varbit6669 = 0 | $struct14 = null) {
 	} else {
 		cc_setgraphic($graphic5);
 	}
-	cc_create($component2, ^iftype_text, 2);
+	cc_create($component2, ^iftype_text, 2, false);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_settextshadow(true);
@@ -78,7 +78,7 @@ if (%varbit6669 = 0 | $struct14 = null) {
 		cc_setonmouseleave(null);
 	}
 	$int13, $string0 = ~script2664(struct_param($struct14, param_679));
-	cc_create($component2, ^iftype_text, 3);
+	cc_create($component2, ^iftype_text, 3, false);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_settextshadow(true);

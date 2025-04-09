@@ -1,7 +1,7 @@
 // 3606
-[proc,100guide_flour_drawitems](int $size0, component $component1, inv $inv2)
+[proc,100guide_flour_drawitems](int $int0, component $component1, inv $inv2)
 def_obj $obj3 = null;
-def_int $int4 = $size0;
+def_int $int4 = $int0;
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);
 	if (cc_find($component1, $int4) = ^true) {

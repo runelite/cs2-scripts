@@ -14,13 +14,13 @@ if ($int1 = 1) {
 	if_setonop("script7781(event_op, event_com)", $component0);
 	if_setontimer(null, $component0);
 }
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(-5, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("bankbuttons,7");
 cc_settrans(0);
-cc_create($component0, ^iftype_graphic, $int2);
+cc_create($component0, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(7, 1, ^setpos_abs_centre, ^setpos_abs_centre);

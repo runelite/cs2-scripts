@@ -1,19 +1,19 @@
 // 1460
-[clientscript,lumbridge_alchemy_init](component $widget_483:0_0, component $widget_483:1_1, component $widget_483:2_2, component $widget_483:3_3, component $widget_483:7_4, component $widget_483:8_5)
-def_int $size6 = inv_size(inv);
-def_int $size7 = 0;
-while ($size7 < $size6) {
-	cc_create($widget_483:7_4, ^iftype_graphic, $size7);
+[clientscript,lumbridge_alchemy_init](component $com_lumbridge_alchemy_universe0, component $com_lumbridge_alchemy_low1, component $com_lumbridge_alchemy_high2, component $com_lumbridge_alchemy_title3, component $com_lumbridge_alchemy_items4, component $com_lumbridge_alchemy_charges5)
+def_int $int6 = inv_size(inv);
+def_int $int7 = 0;
+while ($int7 < $int6) {
+	cc_create($com_lumbridge_alchemy_items4, ^iftype_graphic, $int7, false);
 	cc_sethide(true);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($size7 % 4 * (36 + 8)), calc($size7 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int7 % 4 * (36 + 8)), calc($int7 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setoutline(1);
 	cc_setgraphicshadow(0x333333);
 	cc_setop(10, "Examine");
 	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-	$size7 = calc($size7 + 1);
+	$int7 = calc($int7 + 1);
 }
-~lumbridge_alchemy_invtransmit($widget_483:7_4, $size6);
-if_setoninvtransmit("lumbridge_alchemy_invtransmit($widget_483:7_4, $size6){inv}", $widget_483:0_0);
-~lumbridge_alchemy_vartransmit($widget_483:1_1, $widget_483:2_2, $widget_483:3_3, $widget_483:7_4, $widget_483:8_5, $size6);
-if_setonvartransmit("lumbridge_alchemy_vartransmit($widget_483:1_1, $widget_483:2_2, $widget_483:3_3, $widget_483:7_4, $widget_483:8_5, $size6){var318, var925}", $widget_483:0_0);
+~lumbridge_alchemy_invtransmit($com_lumbridge_alchemy_items4, $int6);
+if_setoninvtransmit("lumbridge_alchemy_invtransmit($com_lumbridge_alchemy_items4, $int6){inv}", $com_lumbridge_alchemy_universe0);
+~lumbridge_alchemy_vartransmit($com_lumbridge_alchemy_low1, $com_lumbridge_alchemy_high2, $com_lumbridge_alchemy_title3, $com_lumbridge_alchemy_items4, $com_lumbridge_alchemy_charges5, $int6);
+if_setonvartransmit("lumbridge_alchemy_vartransmit($com_lumbridge_alchemy_low1, $com_lumbridge_alchemy_high2, $com_lumbridge_alchemy_title3, $com_lumbridge_alchemy_items4, $com_lumbridge_alchemy_charges5, $int6){var318, var925}", $com_lumbridge_alchemy_universe0);

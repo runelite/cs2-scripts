@@ -1,31 +1,31 @@
 // 4164
-[proc,roguetrader_draw_frames](component $widget_292:10_0, component $widget_292:12_1, component $widget_292:8_2, int $int3)
-cc_deleteall($widget_292:10_0);
-cc_deleteall($widget_292:12_1);
-cc_deleteall($widget_292:8_2);
+[proc,roguetrader_draw_frames](component $com_roguetrader_sudoku_btn_opencasket0, component $com_roguetrader_sudoku_game_frame1, component $com_roguetrader_sudoku_runes_frame2, int $int3)
+cc_deleteall($com_roguetrader_sudoku_btn_opencasket0);
+cc_deleteall($com_roguetrader_sudoku_game_frame1);
+cc_deleteall($com_roguetrader_sudoku_runes_frame2);
 def_int $int4 = 0;
-cc_create($widget_292:8_2, ^iftype_graphic, $int4);
+cc_create($com_roguetrader_sudoku_runes_frame2, ^iftype_graphic, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking_light);
-$int4 = ~steelbox($widget_292:8_2, $int4, false);
+$int4 = ~steelbox($com_roguetrader_sudoku_runes_frame2, $int4, false);
 $int4 = 0;
-$int4 = ~v2_stone_button($widget_292:10_0);
-cc_create($widget_292:10_0, ^iftype_text, $int4);
+$int4 = ~v2_stone_button($com_roguetrader_sudoku_btn_opencasket0);
+cc_create($com_roguetrader_sudoku_btn_opencasket0, ^iftype_text, $int4, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_string $op0 = "Open Casket";
-cc_settext($op0);
+def_string $string0 = "Open Casket";
+cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if_setop(1, $op0, $widget_292:10_0);
-if_setonmouseleave("script4172($widget_292:10_0, false, $op0)", $widget_292:10_0);
-if_setonmouserepeat("script4172($widget_292:10_0, true, $op0)", $widget_292:10_0);
+if_setop(1, $string0, $com_roguetrader_sudoku_btn_opencasket0);
+if_setonmouseleave("script4172($com_roguetrader_sudoku_btn_opencasket0, false, $string0)", $com_roguetrader_sudoku_btn_opencasket0);
+if_setonmouserepeat("script4172($com_roguetrader_sudoku_btn_opencasket0, true, $string0)", $com_roguetrader_sudoku_btn_opencasket0);
 $int4 = 0;
-cc_create($widget_292:12_1, ^iftype_graphic, $int4);
+cc_create($com_roguetrader_sudoku_game_frame1, ^iftype_graphic, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -45,7 +45,7 @@ def_int $int12 = 0;
 def_int $int13 = calc(1 + $int5 * $int6);
 while ($int11 < $int13) {
 	while ($int10 < $int13) {
-		cc_create($widget_292:12_1, ^iftype_rectangle, $int4);
+		cc_create($com_roguetrader_sudoku_game_frame1, ^iftype_rectangle, $int4, false);
 		$int4 = calc($int4 + 1);
 		cc_setsize(38, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top);
@@ -55,7 +55,7 @@ while ($int11 < $int13) {
 		} else {
 			cc_setcolour(0xbdaa8d);
 		}
-		cc_create($widget_292:12_1, ^iftype_rectangle, $int4);
+		cc_create($com_roguetrader_sudoku_game_frame1, ^iftype_rectangle, $int4, false);
 		$int4 = calc($int4 + 1);
 		cc_setsize(38, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top);
@@ -76,4 +76,4 @@ while ($int11 < $int13) {
 	$int11 = calc($int11 + 1);
 	$int10 = 1;
 }
-$int4 = ~steelbox($widget_292:12_1, $int4, false);
+$int4 = ~steelbox($com_roguetrader_sudoku_game_frame1, $int4, false);

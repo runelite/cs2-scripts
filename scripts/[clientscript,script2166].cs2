@@ -1,8 +1,8 @@
 // 2166
-[clientscript,script2166](component $widget_182:15_0, component $widget_182:16_1, component $widget_182:17_2)
-if_setop(1, "Thumbs Up", $widget_182:16_1);
-if_setop(1, "Thumbs Down", $widget_182:17_2);
-if_setonop("script2167(event_op, 2, $widget_182:16_1, $widget_182:17_2)", $widget_182:16_1);
-if_setonop("script2167(event_op, 1, $widget_182:16_1, $widget_182:17_2)", $widget_182:17_2);
-~script2169($widget_182:16_1, $widget_182:17_2);
-if_setonvartransmit("script2168($widget_182:16_1, $widget_182:17_2){var1707}", $widget_182:15_0);
+[clientscript,script2166](component $com_logout_satisfaction_binary0, component $com_logout_satisfaction_good1, component $com_logout_satisfaction_bad2)
+if_setop(1, "Thumbs Up", $com_logout_satisfaction_good1);
+if_setop(1, "Thumbs Down", $com_logout_satisfaction_bad2);
+if_setonop("script2167(event_op, 2, $com_logout_satisfaction_good1, $com_logout_satisfaction_bad2)", $com_logout_satisfaction_good1);
+if_setonop("script2167(event_op, 1, $com_logout_satisfaction_good1, $com_logout_satisfaction_bad2)", $com_logout_satisfaction_bad2);
+~script2169($com_logout_satisfaction_good1, $com_logout_satisfaction_bad2);
+if_setonvartransmit("script2168($com_logout_satisfaction_good1, $com_logout_satisfaction_bad2){var1707}", $com_logout_satisfaction_binary0);

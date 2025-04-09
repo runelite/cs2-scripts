@@ -1,11 +1,11 @@
 // 3829
-[clientscript,script3829](component $widget_134:6_0, int $comsubid1, component $widget_134:13_2, component $widget_134:19_3, component $widget_134:18_4, component $widget_134:20_5, component $widget_134:26_6, component $widget_134:25_7, component $widget_134:28_8, component $widget_134:29_9, component $widget_134:22_10, component $widget_134:21_11, component $widget_134:17_12, component $widget_134:2_13, component $widget_134:5_14)
+[clientscript,script3829](component $com_settings_tooltip_inside_if0, int $comsubid1, component $com_settings_settings2, component $com_settings_settings_clickzone3, component $com_settings_settings_content4, component $com_settings_scrollbar5, component $com_settings_dropdown_panel6, component $com_settings_dropdown_close7, component $com_settings_dropdown_buttons8, component $com_settings_dropdown_scrollbar9, component $com_settings_dropdown_container10, component $com_settings_settings_sliderclickzone11, component $com_settings_settings_sliderzone12, component $com_settings_tooltip13, component $com_settings_tooltip_inside_if_clickzone14)
 %varbit9665 = calc(1 - %varbit9665);
-if_setonop(null, $widget_134:25_7);
-if_sethide(true, $widget_134:22_10);
-cc_deleteall($widget_134:29_9);
-cc_deleteall($widget_134:28_8);
-if (cc_find($widget_134:6_0, $comsubid1) = ^true) {
+if_setonop(null, $com_settings_dropdown_close7);
+if_sethide(true, $com_settings_dropdown_container10);
+cc_deleteall($com_settings_dropdown_scrollbar9);
+cc_deleteall($com_settings_dropdown_buttons8);
+if (cc_find($com_settings_tooltip_inside_if0, $comsubid1) = ^true) {
 	if (%varbit9665 = 0) {
 		cc_settext("Show <col=ffffff>less <col=ff981f>information");
 	} else {
@@ -15,37 +15,37 @@ if (cc_find($widget_134:6_0, $comsubid1) = ^true) {
 ~settings_populate_settings(
 	0 = 1, 
 	1 = 1, 
-	2 = if_getscrolly($widget_134:13_2), 
+	2 = if_getscrolly($com_settings_settings2), 
 	3 = 0, 
-	4 = $widget_134:19_3, 
-	5 = $widget_134:18_4, 
-	6 = $widget_134:20_5, 
+	4 = $com_settings_settings_clickzone3, 
+	5 = $com_settings_settings_content4, 
+	6 = $com_settings_scrollbar5, 
 	7 = %varbit9656, 
-	8 = $widget_134:13_2, 
-	9 = $widget_134:26_6, 
-	10 = $widget_134:25_7, 
-	11 = $widget_134:28_8, 
-	12 = $widget_134:29_9, 
-	13 = $widget_134:22_10, 
-	14 = $widget_134:21_11, 
-	15 = $widget_134:17_12, 
-	16 = $widget_134:2_13
+	8 = $com_settings_settings2, 
+	9 = $com_settings_dropdown_panel6, 
+	10 = $com_settings_dropdown_close7, 
+	11 = $com_settings_dropdown_buttons8, 
+	12 = $com_settings_dropdown_scrollbar9, 
+	13 = $com_settings_dropdown_container10, 
+	14 = $com_settings_settings_sliderclickzone11, 
+	15 = $com_settings_settings_sliderzone12, 
+	16 = $com_settings_tooltip13
 );
 if_setonvartransmit("script3830(
 	0 = %varbit9665, 
-	1 = $widget_134:6_0, 
+	1 = $com_settings_tooltip_inside_if0, 
 	2 = $comsubid1, 
-	3 = $widget_134:13_2, 
-	4 = $widget_134:19_3, 
-	5 = $widget_134:18_4, 
-	6 = $widget_134:20_5, 
-	7 = $widget_134:26_6, 
-	8 = $widget_134:25_7, 
-	9 = $widget_134:28_8, 
-	10 = $widget_134:29_9, 
-	11 = $widget_134:22_10, 
-	12 = $widget_134:21_11, 
-	13 = $widget_134:17_12, 
-	14 = $widget_134:2_13, 
-	15 = $widget_134:5_14
-){var2856}", $widget_134:5_14);
+	3 = $com_settings_settings2, 
+	4 = $com_settings_settings_clickzone3, 
+	5 = $com_settings_settings_content4, 
+	6 = $com_settings_scrollbar5, 
+	7 = $com_settings_dropdown_panel6, 
+	8 = $com_settings_dropdown_close7, 
+	9 = $com_settings_dropdown_buttons8, 
+	10 = $com_settings_dropdown_scrollbar9, 
+	11 = $com_settings_dropdown_container10, 
+	12 = $com_settings_settings_sliderclickzone11, 
+	13 = $com_settings_settings_sliderzone12, 
+	14 = $com_settings_tooltip13, 
+	15 = $com_settings_tooltip_inside_if_clickzone14
+){var2856}", $com_settings_tooltip_inside_if_clickzone14);

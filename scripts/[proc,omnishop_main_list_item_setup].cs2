@@ -1,11 +1,11 @@
 // 7144
 [proc,omnishop_main_list_item_setup](int $int0, int $int1, dbrow $dbrow2, inv $inv3, int $int4)(int, int)
 def_int $int5 = calc($int0 * 12);
-def_component $component6 = interface_819:33;
+def_component $component6 = omnishop_main:list;
 def_obj $obj7 = null;
 def_namedobj $namedobj8 = null;
-def_int $num9 = 0;
-$obj7, $namedobj8, $num9 = ~script7263($dbrow2, $inv3, $int0);
+def_int $int9 = 0;
+$obj7, $namedobj8, $int9 = ~script7263($dbrow2, $inv3, $int0);
 if ($obj7 = null) {
 	$obj7 = $namedobj8;
 }
@@ -15,15 +15,15 @@ if ($obj7 = null) {
 }
 def_int $int11 = 0;
 def_int $int12 = -1;
-def_dbrow $dbrow13 = db_getfield($dbrow2, dbtable_39:5, $int0);
+def_dbrow $dbrow13 = db_getfield($dbrow2, omnishop_shop_data:omnishop_shop_stock, $int0);
 def_int $int14 = 0;
 def_int $int15 = 0;
 if (%var3872 > 0) {
 	$int10 = 1;
 	if ($dbrow13 ! null) {
-		$int15 = db_getfieldcount($dbrow13, dbtable_40:5);
+		$int15 = db_getfieldcount($dbrow13, omnishop_stock_data:omnishop_stock_filter_id);
 		while ($int14 < $int15) {
-			if (db_getfield($dbrow13, dbtable_40:5, $int14) = %var3872) {
+			if (db_getfield($dbrow13, omnishop_stock_data:omnishop_stock_filter_id, $int14) = %var3872) {
 				$int10 = 0;
 			}
 			$int14 = calc($int14 + 1);
@@ -32,12 +32,12 @@ if (%var3872 > 0) {
 }
 def_int $int16 = 1;
 if ($dbrow13 ! null) {
-	if (db_getfield($dbrow13, dbtable_40:14, 0) = false) {
+	if (db_getfield($dbrow13, omnishop_stock_data:omnishop_stock_buyable, 0) = false) {
 		$int10 = 1;
 	}
-	$int16 = db_getfield($dbrow13, dbtable_40:10, 0);
+	$int16 = db_getfield($dbrow13, omnishop_stock_data:omnishop_stock_transaction_multiplier, 0);
 }
-def_int $int17 = db_getfield($dbrow13, dbtable_40:13, 0);
+def_int $int17 = db_getfield($dbrow13, omnishop_stock_data:omnishop_stock_restricted_uim, 0);
 if ($int17 ! 0) {
 	if ($int17 = 1 & %varbit1777 = 2) {
 		$int10 = 1;
@@ -50,7 +50,7 @@ if (~script4203($dbrow13) = 1) {
 }
 if ($int10 = 1) {
 	while ($int11 < 12) {
-		cc_create($component6, ^iftype_rectangle, $int5);
+		cc_create($component6, ^iftype_rectangle, $int5, false);
 		cc_sethide(true);
 		$int5 = calc($int5 + 1);
 		$int11 = calc($int11 + 1);
@@ -64,7 +64,7 @@ def_int $int21 = 110;
 def_graphic $graphic22 = p12_full;
 def_int $int23 = 496;
 def_int $int24 = 0;
-def_string $string0 = db_getfield($dbrow2, dbtable_39:13, 0);
+def_string $string0 = db_getfield($dbrow2, omnishop_shop_data:omnishop_shop_main_op_text, 0);
 if (%var3871 = 1) {
 	$int20 = 50;
 	$int21 = 54;
@@ -144,14 +144,14 @@ def_int $int31 = 0;
 if (%var3871 = 1) {
 	$int31 = 2;
 }
-cc_create($component6, ^iftype_graphic, $int5);
+cc_create($component6, ^iftype_graphic, $int5, false);
 cc_setposition(calc($int27 + $int26 / 2 - 36 / 2 + 2), calc($int28 + $int19 + $int31), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setobject($obj7, $num9);
+cc_setobject($obj7, $int9);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 $int5 = calc($int5 + 1);
-cc_create($component6, ^iftype_text, $int5);
+cc_create($component6, ^iftype_text, $int5, false);
 cc_setposition(calc($int27 + 7), calc($int28 + 27 + $int19 + $int24), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($int26 - 14), 40, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 16);

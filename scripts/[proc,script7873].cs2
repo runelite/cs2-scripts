@@ -1,9 +1,9 @@
 // 7873
-[proc,script7873](component $widget_190:7_0, int $size1)
-def_int $int2 = $size1;
+[proc,script7873](component $com_rune_pouch_inventory0, int $int1)
+def_int $int2 = $int1;
 while ($int2 > 0) {
 	$int2 = calc($int2 - 1);
-	if (cc_find($widget_190:7_0, $int2) = ^true) {
-		~rune_pouch_drawinventory_slot(inv_getobj(inv, $int2), inv_getnum(inv, $int2), $size1);
+	if (cc_find($com_rune_pouch_inventory0, $int2) = ^true) {
+		~rune_pouch_drawinventory_slot(inv_getobj(inv, $int2), inv_getnum(inv, $int2), $int1);
 	}
 }

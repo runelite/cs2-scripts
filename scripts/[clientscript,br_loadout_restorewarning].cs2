@@ -1,6 +1,6 @@
 // 3072
-[clientscript,br_loadout_restorewarning](int $clock0, component $component1, int $comsubid2)
-if (clientclock < $clock0) {
+[clientscript,br_loadout_restorewarning](int $int0, component $component1, int $comsubid2)
+if (clientclock < $int0) {
 	return;
 }
 if (cc_find($component1, $comsubid2) = ^true) {

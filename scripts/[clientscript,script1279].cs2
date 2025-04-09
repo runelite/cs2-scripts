@@ -1,6 +1,6 @@
 // 1279
 [clientscript,script1279](int $int0, int $int1, graphic $graphic2, coord $coord3, string $string0, string $string1)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:mainmodal)) = false) {
 	return;
 }
 def_component $component4 = enum(int, component, enum_1302, $int0);
@@ -26,14 +26,14 @@ if (string_length($string1) > 0) {
 	if_setonmouseleave(null, $component4);
 	$int5 = ~v2_stone_button_in_filled($component4);
 	$int5 = ~script1280($component4, $int5, $string0, $int1, $graphic2, $coord3);
-	cc_create($component4, ^iftype_graphic, $int5);
+	cc_create($component4, ^iftype_graphic, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic(tradebacking_dark);
 	cc_settiling(true);
 	cc_settrans(75);
-	cc_create($component4, ^iftype_text, $int5);
+	cc_create($component4, ^iftype_text, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

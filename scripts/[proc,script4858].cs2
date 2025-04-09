@@ -1,6 +1,6 @@
 // 4858
-[proc,script4858](int $height0, component $component1, component $component2, component $component3, component $component4)
-def_int $int5 = ~max(314, calc($height0 + 4 + 88));
+[proc,script4858](int $int0, component $component1, component $component2, component $component3, component $component4)
+def_int $int5 = ~max(314, calc($int0 + 4 + 88));
 def_int $int6 = 334;
 if ($component1 ! null) {
 	$int6 = if_getheight($component1);
@@ -10,8 +10,8 @@ def_int $int7 = %varcint529;
 if ($int7 = -1) {
 	$int7 = if_getscrolly($component3);
 }
-if ($height0 > if_getheight($component3)) {
-	if_setscrollsize(0, $height0, $component3);
+if ($int0 > if_getheight($component3)) {
+	if_setscrollsize(0, $int0, $component3);
 	~scrollbar_resize($component4, $component3, $int7);
 } else {
 	%varcint529 = 0;
@@ -19,5 +19,5 @@ if ($height0 > if_getheight($component3)) {
 	~scrollbar_resize($component4, $component3, 0);
 }
 if ($component1 ! null) {
-	if_setontimer("ca_bosses_reviewsize($height0, $component1, $component2, $component3, $component4, $int6)", $component2);
+	if_setontimer("ca_bosses_reviewsize($int0, $component1, $component2, $component3, $component4, $int6)", $component2);
 }

@@ -1,5 +1,5 @@
 // 2058
-[proc,skillmulti_quantitybutton_draw](boolean $boolean0, string $text0, component $component1)
+[proc,skillmulti_quantitybutton_draw](boolean $boolean0, string $string0, component $component1)
 cc_deleteall($component1);
 def_int $int2 = 0;
 if ($boolean0 = true) {
@@ -7,11 +7,11 @@ if ($boolean0 = true) {
 } else {
 	$int2 = ~beige_stone_button_out($component1, $int2);
 }
-cc_create($component1, ^iftype_text, $int2);
+cc_create($component1, ^iftype_text, $int2, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_setcolour(if_getcolour(interface_270:5));
+cc_setcolour(if_getcolour(skillmulti:title));
 cc_settextshadow(false);
 cc_settextfont(p11_full);
-cc_settext($text0);
+cc_settext($string0);

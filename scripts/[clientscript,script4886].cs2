@@ -1,5 +1,5 @@
 // 4886
-[clientscript,script4886](int $opindex0, component $widget_15:36_1, component $widget_15:38_2)
+[clientscript,script4886](int $opindex0, component $com_bankside_runepouch_select_container1, component $com_bankside_runepouch_select_list2)
 if (%varcint5 = 7) {
 	~meslayer_close(true, true, true);
 }
@@ -7,9 +7,9 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if_sethide(false, $widget_15:36_1);
-if (cc_find($widget_15:38_2, 0) = ^true) {
+if_sethide(false, $com_bankside_runepouch_select_container1);
+if (cc_find($com_bankside_runepouch_select_list2, 0) = ^true) {
 	cc_settrans(0);
 	cc_setontimer("script4887(clientclock, event_com, event_comsubid)");
-	cc_setondialogabort("script4877(event_com, event_comsubid, null, $widget_15:36_1)");
+	cc_setondialogabort("script4877(event_com, event_comsubid, null, $com_bankside_runepouch_select_container1)");
 }

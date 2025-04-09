@@ -1,30 +1,30 @@
 // 4130
-[clientscript,stat_boosts_hud_init](component $widget_708:1_0, component $widget_708:3_1, component $widget_708:0_2, component $widget_708:5_3, component $widget_708:6_4, component $widget_708:4_5)
+[clientscript,stat_boosts_hud_init](component $com_stat_boosts_hud_dodger0, component $com_stat_boosts_hud_content1, component $com_stat_boosts_hud_universe2, component $com_stat_boosts_hud_timers_container3, component $com_stat_boosts_hud_stats_container4, component $com_stat_boosts_hud_tooltip5)
 if (~on_enhanced_any = 0) {
 	return;
 }
 if (~on_mobile = false) {
-	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $widget_708:3_1);
-	~script4729($widget_708:1_0, $widget_708:3_1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, false);
+	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $com_stat_boosts_hud_content1);
+	~script4729($com_stat_boosts_hud_dodger0, $com_stat_boosts_hud_content1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, false);
 } else {
-	if_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_bottom, $widget_708:3_1);
-	~script4729($widget_708:1_0, $widget_708:3_1, setbit(0, 1), ^setpos_abs_right, ^setpos_abs_bottom, false);
+	if_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_bottom, $com_stat_boosts_hud_content1);
+	~script4729($com_stat_boosts_hud_dodger0, $com_stat_boosts_hud_content1, setbit(0, 1), ^setpos_abs_right, ^setpos_abs_bottom, false);
 }
-if_setonstattransmit("stat_boosts_hud_update_displays($widget_708:3_1, $widget_708:6_4, $widget_708:4_5, $widget_708:5_3)", $widget_708:6_4);
-if_setonvartransmit("stat_boosts_hud_update_displays($widget_708:3_1, $widget_708:6_4, $widget_708:4_5, $widget_708:5_3){var3074}", $widget_708:6_4);
-if_setonvartransmit("stat_boosts_hud_update_enabled($widget_708:3_1, $widget_708:4_5){var3074}", $widget_708:0_2);
-if_setsize(calc(4 * 2 + 3), 35, ^setsize_abs, ^setsize_abs, $widget_708:5_3);
+if_setonstattransmit("stat_boosts_hud_update_displays($com_stat_boosts_hud_content1, $com_stat_boosts_hud_stats_container4, $com_stat_boosts_hud_tooltip5, $com_stat_boosts_hud_timers_container3)", $com_stat_boosts_hud_stats_container4);
+if_setonvartransmit("stat_boosts_hud_update_displays($com_stat_boosts_hud_content1, $com_stat_boosts_hud_stats_container4, $com_stat_boosts_hud_tooltip5, $com_stat_boosts_hud_timers_container3){var3074}", $com_stat_boosts_hud_stats_container4);
+if_setonvartransmit("stat_boosts_hud_update_enabled($com_stat_boosts_hud_content1, $com_stat_boosts_hud_tooltip5){var3074}", $com_stat_boosts_hud_universe2);
+if_setsize(calc(4 * 2 + 3), 35, ^setsize_abs, ^setsize_abs, $com_stat_boosts_hud_timers_container3);
 def_int $int6 = 0;
-$int6 = ~script4516($widget_708:5_3, 0, $int6, true);
-$int6 = ~script4516($widget_708:5_3, 1, $int6, false);
-cc_create($widget_708:5_3, ^iftype_rectangle, $int6);
+$int6 = ~script4516($com_stat_boosts_hud_timers_container3, 0, $int6, true);
+$int6 = ~script4516($com_stat_boosts_hud_timers_container3, 1, $int6, false);
+cc_create($com_stat_boosts_hud_timers_container3, ^iftype_rectangle, $int6, false);
 $int6 = calc($int6 + 1);
 cc_setcolour(0x383023);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_create($widget_708:5_3, ^iftype_rectangle, $int6);
+cc_create($com_stat_boosts_hud_timers_container3, ^iftype_rectangle, $int6, false);
 $int6 = calc($int6 + 1);
 cc_setcolour(0x5a5245);
 cc_setsize(1, 1, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-if_sethide(true, $widget_708:5_3);
+if_sethide(true, $com_stat_boosts_hud_timers_container3);

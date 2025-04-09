@@ -1,12 +1,12 @@
 // 2613
-[clientscript,script2613](component $widget_218:193_0, component $widget_218:202_1, int $int2)
+[clientscript,script2613](component $com_magic_spellbook_infolayer0, component $com_magic_spellbook_tooltip1, int $int2)
 def_int $int3 = 0;
 def_int $int4 = 0;
 if (%varcint225 ! null) {
 	while ($int4 = 0) {
-		if (cc_find($widget_218:193_0, $int3) = ^true) {
+		if (cc_find($com_magic_spellbook_infolayer0, $int3) = ^true) {
 			if (cc_getinvobject = %varcint225) {
-				~magic_spellbook_settooltip(true, %varcint225, $widget_218:193_0, $int3, $widget_218:202_1, $int2, inv_getobj(worn, 3), inv_getobj(worn, 5));
+				~magic_spellbook_settooltip(true, %varcint225, $com_magic_spellbook_infolayer0, $int3, $com_magic_spellbook_tooltip1, $int2, inv_getobj(worn, 3), inv_getobj(worn, 5));
 				return;
 			}
 		} else {
@@ -16,4 +16,4 @@ if (%varcint225 ! null) {
 	}
 }
 %varcint225 = null;
-if_setontimer(null, $widget_218:193_0);
+if_setontimer(null, $com_magic_spellbook_infolayer0);

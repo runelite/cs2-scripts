@@ -1,18 +1,18 @@
 // 6889
 [proc,script6889]
 def_int $int0 = 20;
-def_int $width1 = calc(if_getwidth(interface_784:34) - $int0);
-def_int $height2 = calc(if_getheight(interface_784:34) - $int0);
+def_int $int1 = calc(if_getwidth(fsw_sp_points:about_content) - $int0);
+def_int $int2 = calc(if_getheight(fsw_sp_points:about_content) - $int0);
 def_int $int3 = 0;
 def_graphic $graphic4 = verdana_11pt_regular;
 def_int $int5 = 12;
-def_int $x6 = calc($int0 / 2);
-def_int $y7 = 10;
-def_int $y8 = 50;
-def_int $y9 = 85;
-def_int $y10 = 120;
-def_int $y11 = 175;
-cc_create(interface_784:34, ^iftype_rectangle, $int3);
+def_int $int6 = calc($int0 / 2);
+def_int $int7 = 10;
+def_int $int8 = 50;
+def_int $int9 = 85;
+def_int $int10 = 120;
+def_int $int11 = 175;
+cc_create(fsw_sp_points:about_content, ^iftype_rectangle, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
@@ -23,76 +23,76 @@ switch_int (%varcint988) {
 	case 1 :
 		$graphic4 = verdana_13pt_regular;
 		$int5 = 14;
-		$y7 = 25;
-		$y8 = 75;
-		$y9 = 130;
-		$y10 = 185;
-		$y11 = 250;
+		$int7 = 25;
+		$int8 = 75;
+		$int9 = 130;
+		$int10 = 185;
+		$int11 = 250;
 	case 2, 3 :
 		$graphic4 = verdana_15pt_regular;
 		$int5 = 16;
-		$y7 = 40;
-		$y8 = 100;
-		$y9 = 165;
-		$y10 = 230;
-		$y11 = 315;
+		$int7 = 40;
+		$int8 = 100;
+		$int9 = 165;
+		$int10 = 230;
+		$int11 = 315;
 }
-def_string $text0 = "Achievement Points are a fun way to compare yourself with your friends.";
-def_string $text1 = "Who is making the best progress? Who has the highest skill levels? Who has killed the most bosses?";
-def_string $text2 = "Earn points by playing the game: skilling, quests, bosses, diaries, clues, they all earn you points.";
-def_string $text3 = "The points are weighted to try and encourage trying out different things. The first time you kill a boss you'll get a 20x multiplier on that bosses points. So explore and fight as many different things as you can!";
-def_string $text4 = "There are no buyable rewards for earned points, it's all pure competition!";
+def_string $string0 = "Achievement Points are a fun way to compare yourself with your friends.";
+def_string $string1 = "Who is making the best progress? Who has the highest skill levels? Who has killed the most bosses?";
+def_string $string2 = "Earn points by playing the game: skilling, quests, bosses, diaries, clues, they all earn you points.";
+def_string $string3 = "The points are weighted to try and encourage trying out different things. The first time you kill a boss you'll get a 20x multiplier on that bosses points. So explore and fight as many different things as you can!";
+def_string $string4 = "There are no buyable rewards for earned points, it's all pure competition!";
 $int3 = ~script6890(
 	0 = $int3, 
-	1 = $text0, 
-	2 = $x6, 
-	3 = $y7, 
-	4 = $width1, 
-	5 = $height2, 
+	1 = $string0, 
+	2 = $int6, 
+	3 = $int7, 
+	4 = $int1, 
+	5 = $int2, 
 	6 = $graphic4, 
 	7 = $int5, 
 	8 = 0xe6dbca
 );
 $int3 = ~script6890(
 	0 = $int3, 
-	1 = $text1, 
-	2 = $x6, 
-	3 = $y8, 
-	4 = $width1, 
-	5 = $height2, 
+	1 = $string1, 
+	2 = $int6, 
+	3 = $int8, 
+	4 = $int1, 
+	5 = $int2, 
 	6 = $graphic4, 
 	7 = $int5, 
 	8 = 0xccb794
 );
 $int3 = ~script6890(
 	0 = $int3, 
-	1 = $text2, 
-	2 = $x6, 
-	3 = $y9, 
-	4 = $width1, 
-	5 = $height2, 
+	1 = $string2, 
+	2 = $int6, 
+	3 = $int9, 
+	4 = $int1, 
+	5 = $int2, 
 	6 = $graphic4, 
 	7 = $int5, 
 	8 = 0xe6dbca
 );
 $int3 = ~script6890(
 	0 = $int3, 
-	1 = $text3, 
-	2 = $x6, 
-	3 = $y10, 
-	4 = $width1, 
-	5 = $height2, 
+	1 = $string3, 
+	2 = $int6, 
+	3 = $int10, 
+	4 = $int1, 
+	5 = $int2, 
 	6 = $graphic4, 
 	7 = $int5, 
 	8 = 0xccb794
 );
 $int3 = ~script6890(
 	0 = $int3, 
-	1 = $text4, 
-	2 = $x6, 
-	3 = $y11, 
-	4 = $width1, 
-	5 = $height2, 
+	1 = $string4, 
+	2 = $int6, 
+	3 = $int11, 
+	4 = $int1, 
+	5 = $int2, 
 	6 = $graphic4, 
 	7 = $int5, 
 	8 = 0xe6dbca

@@ -1,24 +1,24 @@
 // 2925
-[proc,prif_recipe_add](int $int0, component $component1, string $text0, string $string1, namedobj $namedobj2)(int)
+[proc,prif_recipe_add](int $int0, component $component1, string $string0, string $string1, namedobj $namedobj2)(int)
 cc_deleteall($component1);
-cc_create($component1, ^iftype_graphic, 0);
+cc_create($component1, ^iftype_graphic, 0, false);
 cc_setobject($namedobj2, -1);
 cc_setoutline(1);
 cc_setgraphicshadow(0x604e32);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-def_int $width3 = calc(if_getwidth($component1) - (36 + 7));
-cc_create($component1, ^iftype_text, 1);
-cc_setsize($width3, 16, ^setsize_abs, ^setsize_abs);
+def_int $int3 = calc(if_getwidth($component1) - (36 + 7));
+cc_create($component1, ^iftype_text, 1, false);
+cc_setsize($int3, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_setcolour(0xf5e9d5);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-cc_settext($text0);
-def_int $int4 = calc(paraheight($string1, $width3, p11_full) * 10 + 2);
-cc_create($component1, ^iftype_text, 2);
-cc_setsize($width3, 16, ^setsize_abs, ^setsize_minus);
+cc_settext($string0);
+def_int $int4 = calc(paraheight($string1, $int3, p11_full) * 10 + 2);
+cc_create($component1, ^iftype_text, 2, false);
+cc_setsize($int3, 16, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setcolour(0xf5e9d5);

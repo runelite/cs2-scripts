@@ -5,7 +5,7 @@ def_int $int11 = 2;
 def_int $int12 = calc((if_getwidth($component0) - $int11) / 2);
 $int7 = ~script3953($component0, $int7, $int5, $int12, $int3, $int2, $int10);
 $int8 = ~script3952($component1, $int3, $int2, $int12, $int5, $string1, $int8);
-.cc_create($component0, ^iftype_text, $int7);
+.cc_create($component0, ^iftype_text, $int7, false);
 .cc_setsize(calc(if_getwidth($component0) / 2 - 10), $int5, ^setsize_abs, ^setsize_abs);
 .cc_setposition(calc($int3 + 5), calc($int2 + 10), ^setpos_abs_left, ^setpos_abs_top);
 .cc_setcolour(0xff9933);
@@ -20,12 +20,12 @@ if (string_length($string1) > 0 & ~on_mobile = false) {
 $int7 = calc($int7 + 1);
 def_int $int13 = calc(paraheight($string0, calc(if_getwidth($component0) / 2 - 20), p11_full) * 12);
 def_int $int14 = 18;
-cc_create($component0, ^iftype_graphic, $int7);
+cc_create($component0, ^iftype_graphic, $int7, false);
 cc_setgraphic($graphic6);
 cc_setsize($int14, $int14, ^setsize_abs, ^setsize_abs);
 def_int $int15 = calc($int3 + $int12 / 2);
-def_int $x16 = calc($int15 - $int14 / 2);
-cc_setposition($x16, calc($int2 + $int13 + 15), ^setpos_abs_left, ^setpos_abs_top);
+def_int $int16 = calc($int15 - $int14 / 2);
+cc_setposition($int16, calc($int2 + $int13 + 15), ^setpos_abs_left, ^setpos_abs_top);
 if ($int9 = 1) {
 	$int2 = calc($int2 + $int5 + 4 + $int4);
 }

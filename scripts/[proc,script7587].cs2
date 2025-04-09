@@ -4,13 +4,13 @@ if (~on_enhanced_mobile = 0) {
 	return;
 }
 if (%varbit16112 = 1) {
-	shiftop_tile_set(1, "Mark tile", script4762);
-	_7462(2, 0);
-	_7462(4, 0);
+	clientop_tile_set(1, "Mark tile", script4762);
+	minimenu_setblockmode(2, 0);
+	minimenu_setblockmode(4, 0);
 } else {
-	shiftop_tile_del(1);
-	_7462(2, calc(1 - %varbit11526));
-	_7462(4, calc(1 - %varbit11528));
+	clientop_tile_del(1);
+	minimenu_setblockmode(2, calc(1 - %varbit11526));
+	minimenu_setblockmode(4, calc(1 - %varbit11528));
 }
 ~script7432(3);
 ~script7431;

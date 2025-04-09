@@ -3,29 +3,29 @@
 if ($comsubid3 = $dropsubid4 | $comsubid3 < 0 | $dropsubid4 < 0) {
 	return;
 }
-def_obj $obj5 = inv_getobj(inv_911, $comsubid3);
-def_int $total6 = inv_total(inv_911, $obj5);
+def_obj $obj5 = inv_getobj(prepot_device_inv, $comsubid3);
+def_int $int6 = inv_total(prepot_device_inv, $obj5);
 def_obj $obj7 = null;
 def_int $int8 = 0;
 def_int $int9 = -1;
 def_dbrow $dbrow10 = null;
 if ($drop2 = $drop1) {
-	$obj7 = inv_getobj(inv_911, $dropsubid4);
-	$int8 = inv_total(inv_911, $obj7);
+	$obj7 = inv_getobj(prepot_device_inv, $dropsubid4);
+	$int8 = inv_total(prepot_device_inv, $obj7);
 	if (cc_find($drop1, $comsubid3) = ^true) {
 		~script7357($obj7, $int8, $int0);
 	}
 	if (cc_find($drop1, $dropsubid4) = ^true) {
-		~script7357($obj5, $total6, $int0);
+		~script7357($obj5, $int6, $int0);
 	}
 } else {
-	db_find_with_count(dbtable_77:2, $drop2);
+	db_find(prepot_device_loadout_ui:contents_com, $drop2);
 	$dbrow10 = db_findnext;
 	if ($dbrow10 ! null) {
-		$int9 = db_getfield($dbrow10, dbtable_77:0, 0);
+		$int9 = db_getfield($dbrow10, prepot_device_loadout_ui:loadout_id, 0);
 	}
 	if ($int9 >= 0) {
-		~script7367($int9, $dropsubid4, $obj5, $total6);
+		~script7367($int9, $dropsubid4, $obj5, $int6);
 		~script7363($dbrow10, $int0);
 	}
 }

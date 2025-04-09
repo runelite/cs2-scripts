@@ -1,22 +1,22 @@
 // 3064
-[clientscript,bees](component $component0, int $int1, int $int2, component $component3, int $clock4)
+[clientscript,bees](component $component0, int $int1, int $int2, component $component3, int $int4)
 def_int $int5 = calc(if_getx($component0) + $int1);
 def_int $int6 = calc(if_gety($component0) + $int2);
 if (if_getx($component3) >= $int5 & if_getx($component3) < calc($int5 + if_getwidth($component0))) {
 	if (if_gety($component3) >= $int6 & if_gety($component3) < calc($int6 + if_getheight($component0))) {
 		$int5 = calc($int5 - (random(3) + 2));
 		$int6 = calc($int6 - (random(3) + 2));
-		if ($clock4 <= clientclock) {
+		if ($int4 <= clientclock) {
 			sound_synth(swarm_attack, 1, 0);
-			$clock4 = calc(clientclock + 20 + random(40));
+			$int4 = calc(clientclock + 20 + random(40));
 		}
 	}
 } else if ($int5 >= if_getx($component3) & $int5 < calc(if_getx($component3) + if_getwidth($component3)) & $int6 >= if_gety($component3) & $int6 < calc(if_gety($component3) + if_getheight($component3))) {
 	$int5 = calc($int5 + random(3) + 2);
 	$int6 = calc($int6 + random(3) + 2);
-	if ($clock4 <= clientclock) {
+	if ($int4 <= clientclock) {
 		sound_synth(swarm_attack, 1, 0);
-		$clock4 = calc(clientclock + 20 + random(40));
+		$int4 = calc(clientclock + 20 + random(40));
 	}
 }
 $int5 = ~max($int5, 0);
@@ -38,4 +38,4 @@ if ($int2 = 0) {
 	$int2 = calc(random(3) + 1);
 }
 if_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top, $component0);
-if_setontimer("bees($component0, $int1, $int2, $component3, $clock4)", $component0);
+if_setontimer("bees($component0, $int1, $int2, $component3, $int4)", $component0);

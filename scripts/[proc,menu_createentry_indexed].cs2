@@ -1,12 +1,12 @@
 // 379
-[proc,menu_createentry_indexed](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4)(int, int)
-def_int $int5 = calc(paraheight($string0, $width2, p12_full) * 14 + 2);
+[proc,menu_createentry_indexed](string $string0, component $component0, component $component1, int $int2, int $int3, int $int4)(int, int)
+def_int $int5 = calc(paraheight($string0, $int2, p12_full) * 14 + 2);
 if (~on_mobile = true) {
 	$int5 = scale(4, 3, $int5);
 }
-cc_create($component0, ^iftype_text, $int3);
-.cc_create($component1, ^iftype_rectangle, $int3);
-cc_setposition(0, $height4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_create($component0, ^iftype_text, $int3, false);
+.cc_create($component1, ^iftype_rectangle, $int3, false);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -33,4 +33,4 @@ $string0 = append("<col=735a28><tostring($int3)></col>: ", $string0);
 	9 = 0
 )");
 cc_settext($string0);
-return($int3, calc($height4 + $int5));
+return($int3, calc($int4 + $int5));

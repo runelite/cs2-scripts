@@ -4,18 +4,18 @@ def_string $string0 = %varcstring417;
 if (~on_mobile = true & compare($string0, "") ! 0 & $int0 = 0) {
 	return;
 }
-def_component $component1 = interface_621:83;
-def_component $component2 = interface_621:85;
-def_component $component3 = interface_621:82;
-def_component $component4 = interface_621:84;
+def_component $component1 = collection:search_results_container;
+def_component $component2 = collection:search_results;
+def_component $component3 = collection:search_scrollbar;
+def_component $component4 = collection:search_results_background;
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $count7 = 0;
+def_int $int7 = 0;
 def_int $int8 = 0;
 def_enum $enum9 = enum_2103;
 def_int $int10 = -1;
 def_struct $structarray0(150);
-def_int $countarray1(150);
+def_int $intarray1(150);
 def_int $intarray2(150);
 def_int $int11 = 0;
 def_int $int12 = 0;
@@ -70,9 +70,9 @@ if (compare($string0, "") = 0) {
 	return;
 }
 $int11 = calc(enum_getoutputcount(enum_2103) + enum_getoutputcount(enum_2104) + enum_getoutputcount(enum_2105) + enum_getoutputcount(enum_2106) + enum_getoutputcount(enum_2107));
-while ($count7 < enum_getoutputcount(enum_2102)) {
+while ($int7 < enum_getoutputcount(enum_2102)) {
 	while ($int6 < enum_getoutputcount($enum9)) {
-		switch_int ($count7) {
+		switch_int ($int7) {
 			case 0 :
 				$enum9 = enum_2103;
 			case 1 :
@@ -86,13 +86,13 @@ while ($count7 < enum_getoutputcount(enum_2102)) {
 		}
 		if ($int6 < enum_getoutputcount($enum9)) {
 			$structarray0($int8) = enum(int, struct, $enum9, $int6);
-			$countarray1($int8) = $count7;
+			$intarray1($int8) = $int7;
 			$int8 = calc($int8 + 1);
 		}
 		$int6 = calc($int6 + 1);
 	}
 	$int6 = 0;
-	$count7 = calc($count7 + 1);
+	$int7 = calc($int7 + 1);
 }
 $int8 = 0;
 $enum9 = null;
@@ -113,7 +113,7 @@ while ($int8 < $int11) {
 			$int6 = $int13;
 		} else {
 			if ($int6 = 0) {
-				.cc_create($component4, ^iftype_rectangle, $int8);
+				.cc_create($component4, ^iftype_rectangle, $int8, false);
 				.cc_sethide(true);
 			}
 			$namedobj14 = enum(int, namedobj, $enum9, $int6);
@@ -133,7 +133,7 @@ while ($int8 < $int11) {
 						.cc_settrans($int23);
 						.cc_setop(1, "Check");
 						.cc_setopbase("<col=ff9040><$string2></col>");
-						.cc_setonop("script4900($countarray1($int8), $structarray0($int8), $int6)");
+						.cc_setonop("script4900($intarray1($int8), $structarray0($int8), $int6)");
 						if (~on_mobile = false) {
 							.cc_setonmouseover("cc_settrans(event_com, event_comsubid, calc($int23 - 40), null)");
 							.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int23, null)");

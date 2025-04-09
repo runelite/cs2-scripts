@@ -1,7 +1,7 @@
 // 6089
 [proc,script6089](int $int0, boolean $boolean1)
-def_component $component2 = interface_753:19;
-def_component $component3 = interface_753:20;
+def_component $component2 = giants_foundry_reward_shop:info;
+def_component $component3 = giants_foundry_reward_shop:info_scroller;
 cc_deleteall($component2);
 def_struct $struct4 = enum(int, struct, enum_4379, $int0);
 def_obj $obj5 = null;
@@ -45,17 +45,17 @@ switch_int (%varcint988) {
 }
 def_int $int15 = 0;
 def_int $int16 = 0;
-def_int $width17 = if_getwidth($component2);
+def_int $int17 = if_getwidth($component2);
 def_string $string0 = "Welcome to the Giants' Foundry Reward Shop.";
 if ($obj5 ! null) {
 	$string0 = oc_name($obj5);
 } else if ($struct6 ! null) {
 	$string0 = struct_param($struct6, param_1621);
 }
-def_int $int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics9) * $int14);
-cc_create($component2, ^iftype_text, $int15);
+def_int $int18 = calc(paraheight($string0, calc($int17 - $int12 * 2), $fontmetrics9) * $int14);
+cc_create($component2, ^iftype_text, $int15, false);
 cc_setposition($int12, $int12, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, $int14);
 cc_settextshadow(true);
 cc_settextfont($graphic8);
@@ -64,8 +64,8 @@ cc_settext($string0);
 $int15 = calc($int15 + 1);
 $int16 = calc($int16 + $int12 + $int18 + $int13);
 if ($obj5 ! null) {
-	cc_create($component2, ^iftype_graphic, $int15);
-	cc_setposition(calc($width17 / 2 - 36 / 2), $int16, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($component2, ^iftype_graphic, $int15, false);
+	cc_setposition(calc($int17 / 2 - 36 / 2), $int16, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject($obj5, -1);
 	cc_setoutline(1);
@@ -77,7 +77,7 @@ if ($obj5 ! null) {
 		0 = $component2, 
 		1 = $int15, 
 		2 = struct_param($struct6, param_1623), 
-		3 = calc($width17 / 2 - 20), 
+		3 = calc($int17 / 2 - 20), 
 		4 = $int16, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
@@ -92,10 +92,10 @@ if ($obj5 ! null) {
 if ($obj5 ! null | $struct6 ! null) {
 	$int7 = struct_param($struct4, param_1638);
 	$string0 = "Cost: <tostring($int7)>";
-	$int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics11) * $int14);
-	cc_create($component2, ^iftype_text, $int15);
+	$int18 = calc(paraheight($string0, calc($int17 - $int12 * 2), $fontmetrics11) * $int14);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -108,10 +108,10 @@ $string0 = "You can check your current balance in the Foundry Reputation section
 if ($obj5 ! null | $struct6 ! null) {
 	$string0 = struct_param($struct4, param_1639);
 }
-$int18 = calc(paraheight($string0, calc($width17 - $int12 * 2), $fontmetrics11) * $int14);
-cc_create($component2, ^iftype_text, $int15);
+$int18 = calc(paraheight($string0, calc($int17 - $int12 * 2), $fontmetrics11) * $int14);
+cc_create($component2, ^iftype_text, $int15, false);
 cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 cc_settextshadow(true);
 cc_settextfont($graphic10);
@@ -122,9 +122,9 @@ $int16 = calc($int16 + $int18 + $int13);
 def_int $int19 = 0;
 if ($struct6 ! null) {
 	$int18 = $int14;
-	cc_create($component2, ^iftype_text, $int15);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -132,9 +132,9 @@ if ($struct6 ! null) {
 	cc_settext("Smithing Level: <tostring(struct_param($struct6, param_1622))>");
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + $int18);
-	cc_create($component2, ^iftype_text, $int15);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -153,9 +153,9 @@ if ($struct6 ! null) {
 	if ($int19 < 0) {
 		$int19 = calc(0 - $int19);
 	}
-	cc_create($component2, ^iftype_text, $int15);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -168,9 +168,9 @@ if ($struct6 ! null) {
 	if ($int19 < 0) {
 		$int19 = calc(0 - $int19);
 	}
-	cc_create($component2, ^iftype_text, $int15);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -183,9 +183,9 @@ if ($struct6 ! null) {
 	if ($int19 < 0) {
 		$int19 = calc(0 - $int19);
 	}
-	cc_create($component2, ^iftype_text, $int15);
+	cc_create($component2, ^iftype_text, $int15, false);
 	cc_setposition($int12, $int16, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc($width17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int17 - $int12 * 2), $int18, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, $int14);
 	cc_settextshadow(true);
 	cc_settextfont($graphic10);
@@ -200,8 +200,8 @@ if ($boolean1 = true) {
 if_setscrollsize(if_getwidth($component2), $int16, $component2);
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_vertical_rebuild($component3, $component2);
-def_component $component20 = interface_753:16;
-def_component $component21 = interface_753:17;
+def_component $component20 = giants_foundry_reward_shop:buy_button_border;
+def_component $component21 = giants_foundry_reward_shop:buy_button_text;
 if_settextfont($graphic8, $component21);
 if ($struct6 ! null) {
 	if_settext("Unlock", $component21);

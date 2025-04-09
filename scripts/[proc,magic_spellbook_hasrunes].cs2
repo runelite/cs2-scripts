@@ -2,56 +2,56 @@
 [proc,magic_spellbook_hasrunes](obj $obj0, obj $obj1, obj $obj2)(int)
 def_int $int3 = ~script7867($obj0);
 switch_obj ($obj0) {
-	case blood_blitz_4644, blood_barrage_4650 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
+	case 80_blood_blitz_4644, 92_blood_barrage_4650 :
+		if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		}
-	case ice_blitz_4645, ice_barrage_4651 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
+	case 82_ice_blitz_4645, 94_ice_barrage_4651 :
+		if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
-		} else if (~script1897 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
-			return(1);
-		}
-	case ice_rush_4633, ice_burst_4639 :
-		if (~script1897 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
+		} else if (~script1897 = 1 & inv_total(inv, blighted_sack_icebarrage_24607) > 0) {
 			return(1);
 		}
-	case bind_3283, snare_3300 :
-		if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
+	case 58_ice_rush_4633, 70_ice_burst_4639 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_icebarrage_24607) > 0) {
 			return(1);
 		}
-	case entangle_3322 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
-			return(1);
-		} else if (~script1897 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
+	case 20_bind_3283, 50_snare_3300 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
 			return(1);
 		}
-	case tele_block_4555, dead_orb_17152 :
-		if (~script1897 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
+	case 79_entangle_3322 :
+		if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
+			return(1);
+		} else if (~script1897 = 1 & inv_total(inv, blighted_sack_entangle_24613) > 0) {
 			return(1);
 		}
-	case cure_me_9113 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
+	case 85_teleport_block_4555, placeholder_caveorb4dot_17152 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_teleblock_24615) > 0) {
 			return(1);
 		}
-	case vengeance_other_9135 :
-		if (~script1897 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
+	case 71_cure_me_9113 :
+		if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		}
-	case vengeance_9136 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
-			return(1);
-		} else if (~script1897 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
+	case 93_vengeance_other_9135 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_vengeance_24621) > 0) {
 			return(1);
 		}
-	case wind_wave_3313, water_wave_3315, earth_wave_3319, fire_wave_3321 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
+	case 94_vengeance_9136 :
+		if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
+			return(1);
+		} else if (~script1897 = 1 & inv_total(inv, blighted_sack_vengeance_24621) > 0) {
 			return(1);
 		}
-	case wind_surge_21876, water_surge_21877, earth_surge_21878, fire_surge_21879 :
-		if (~script1897 = 1 & inv_total(inv, blighted_surge_sack_26705) > 0) {
+	case 62_wind_wave_3313, 65_water_wave_3315, 70_earth_wave_3319, 75_fire_wave_3321 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
 			return(1);
-		} else if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
+		}
+	case 81_wind_surge_21876, 85_water_surge_21877, 90_earth_surge_21878, 95_fire_surge_21879 :
+		if (~script1897 = 1 & inv_total(inv, blighted_sack_surge_26705) > 0) {
+			return(1);
+		} else if (inv_total(inv, br_rune_replacement_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		}
 }

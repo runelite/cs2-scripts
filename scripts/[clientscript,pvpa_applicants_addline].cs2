@@ -22,35 +22,35 @@ if (compare("-", $string1) = 0) {
 	}
 	return;
 }
-cc_create($component2, ^iftype_rectangle, 0);
-cc_create($component2, ^iftype_rectangle, 1);
-cc_create($component2, ^iftype_rectangle, 2);
+cc_create($component2, ^iftype_rectangle, 0, false);
+cc_create($component2, ^iftype_rectangle, 1, false);
+cc_create($component2, ^iftype_rectangle, 2, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
 ~pvpa_applicants_entry_init($int0);
 def_int $int5 = 0;
-def_int $width6 = if_getwidth(interface_760:9);
-cc_create($component2, ^iftype_text, 3);
+def_int $int6 = if_getwidth(pvp_arena_applicants:sort_name);
+cc_create($component2, ^iftype_text, 3, false);
 cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
+cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext($string1);
-$int5 = calc($int5 + $width6);
+$int5 = calc($int5 + $int6);
 def_int $int7 = ~pvpa_world;
-.cc_create($component2, ^iftype_graphic, 4);
+.cc_create($component2, ^iftype_graphic, 4, false);
 .cc_setgraphic(enum(int, graphic, enum_4407, ~string_to_int($string2)));
 .cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 if ($int7 = 0) {
 	.cc_sethide(true);
 }
-$width6 = if_getwidth(interface_760:10);
-cc_create($component2, ^iftype_text, 5);
+$int6 = if_getwidth(pvp_arena_applicants:sort_rank);
+cc_create($component2, ^iftype_text, 5, false);
 cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
+cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
 cc_setcolour(0xffb83f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -62,15 +62,15 @@ if ($int7 = 1) {
 	cc_settext($string2);
 }
 def_int $int8 = 0;
-def_int $width9 = parawidth($string3, 250, p12_full);
+def_int $int9 = parawidth($string3, 250, p12_full);
 if ($int7 = 1) {
-	cc_setsize($width9, 0, ^setsize_abs, ^setsize_minus);
-	$int8 = calc($width6 / 2 - $width9 / 2);
+	cc_setsize($int9, 0, ^setsize_abs, ^setsize_minus);
+	$int8 = calc($int6 / 2 - $int9 / 2);
 	.cc_setposition(calc($int8 + $int5 - 10), 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setposition(calc($int8 + $int5 + 10), 0, ^setpos_abs_left, ^setpos_abs_centre);
 }
-$int5 = calc($int5 + $width6 + 10);
-cc_create($component2, ^iftype_text, 6);
+$int5 = calc($int5 + $int6 + 10);
+cc_create($component2, ^iftype_text, 6, false);
 cc_sethide(true);
 cc_setcolour(0xff981f);
 cc_settextfont(p11_full);

@@ -1,6 +1,6 @@
 // 1098
 [clientscript,bugreport_keypress](int $key0, char $keychar1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-if (~keypress_permit(interface_156, null) = 0) {
+if (~keypress_permit(bugreport, null) = 0) {
 	return;
 }
 if ($key0 = ^key_return & ~on_mobile = true) {
@@ -27,19 +27,19 @@ if ($component2 = $component5) {
 }
 $string0 = ~bugreport_parse($string0, 1);
 $string0 = append($string0, "<col=ffffff>*</col>");
-def_int $height8 = calc(paraheight($string0, if_getwidth($component2), p12_full) * 12 + 5);
-def_int $height9 = if_getheight($component2);
-if ($height8 < $height9) {
-	$height8 = $height9;
+def_int $int8 = calc(paraheight($string0, if_getwidth($component2), p12_full) * 12 + 5);
+def_int $int9 = if_getheight($component2);
+if ($int8 < $int9) {
+	$int8 = $int9;
 }
 if (cc_find($component2, 0) = ^true & .cc_find($component2, 1) = ^true) {
-	cc_setsize(0, $height8, ^setsize_minus, ^setsize_abs);
-	.cc_setsize(0, $height8, ^setsize_minus, ^setsize_abs);
+	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
+	.cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	.cc_settext($string0);
 }
-if ($height8 > $height9) {
-	if_setscrollsize(0, $height8, $component2);
+if ($int8 > $int9) {
+	if_setscrollsize(0, $int8, $component2);
 } else {
 	if_setscrollsize(0, 0, $component2);
 }
-~scrollbar_resize($component3, $component2, $height8);
+~scrollbar_resize($component3, $component2, $int8);

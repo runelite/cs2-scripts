@@ -1,5 +1,5 @@
 // 2817
-[proc,seed_vault_catselect](component $widget_631:13_0, component $widget_631:11_1, component $widget_631:10_2)
-if (.cc_find($widget_631:13_0, %varbit8171) = ^true & cc_find($widget_631:10_2, 1) = ^true) {
-	~scrollbar_vertical_doscroll($widget_631:10_2, $widget_631:11_1, .cc_gety, true);
+[proc,seed_vault_catselect](component $com_seed_vault_category_headers0, component $com_seed_vault_list1, component $com_seed_vault_right_scroll2)
+if (.cc_find($com_seed_vault_category_headers0, %varbit8171) = ^true & cc_find($com_seed_vault_right_scroll2, 1) = ^true) {
+	~scrollbar_vertical_doscroll($com_seed_vault_right_scroll2, $com_seed_vault_list1, .cc_gety, true);
 }

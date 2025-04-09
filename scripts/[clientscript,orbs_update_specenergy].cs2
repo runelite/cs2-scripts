@@ -12,18 +12,18 @@ def_int $int6 = %var300;
 def_int $int7 = 100;
 def_int $int8 = ~script3648(inv_getobj(worn, 3));
 def_obj $obj9 = inv_getobj(worn, 3);
-if ($obj9 = soulreaper_axe_28338) {
+if ($obj9 = soulreaper_28338) {
 	$int6, $int7 = %var3784, 5;
-	if_setgraphic("orb_icon,16", interface_160:41);
-} else if ($obj9 = obj_30369) {
+	if_setgraphic("orb_icon,16", orbs:specenergy_icon);
+} else if ($obj9 = weapon_of_sol_30369) {
 	$int6, $int7 = %var4600, 20;
-	if_setgraphic("orb_icon,18", interface_160:41);
+	if_setgraphic("orb_icon,18", orbs:specenergy_icon);
 } else if (~league_relic_active(weapon_master_4721) = 1 & $int6 < $int8 & stat(hitpoints) > 25) {
 	$int6 = calc((stat(hitpoints) - 1) / 25);
 	$int7 = calc((stat_base(hitpoints) - 1) / 25);
-	if_setgraphic("orb_icon,0", interface_160:41);
+	if_setgraphic("orb_icon,0", orbs:specenergy_icon);
 } else {
 	$int6, $int7 = calc(%var300 / 10), 100;
-	if_setgraphic("orb_icon,6", interface_160:41);
+	if_setgraphic("orb_icon,6", orbs:specenergy_icon);
 }
 ~orbs_update($component1, $component2, $int6, $int7);

@@ -1,7 +1,7 @@
 // 3128
 [clientscript,screen_glow_start](int $colour0, component $component1, int $int2, int $int3, int $int4, int $int5)
 cc_deleteall($component1);
-cc_create($component1, ^iftype_rectangle, 0);
+cc_create($component1, ^iftype_rectangle, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setfill(true);

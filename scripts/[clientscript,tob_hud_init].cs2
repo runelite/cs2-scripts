@@ -1,134 +1,134 @@
 // 2087
-[clientscript,tob_hud_init](component $widget_28:0_0, component $widget_28:2_1, component $widget_28:3_2, component $widget_28:4_3, component $widget_28:6_4, component $widget_28:8_5, component $widget_28:5_6, component $widget_28:11_7, component $widget_28:9_8, component $widget_28:36_9, component $widget_28:37_10, component $widget_28:7_11, component $widget_28:16_12, component $widget_28:19_13, component $widget_28:20_14, component $widget_28:23_15, component $widget_28:24_16, component $widget_28:27_17, component $widget_28:28_18, component $widget_28:31_19, component $widget_28:32_20, component $widget_28:35_21, component $widget_28:13_22, component $widget_28:38_23)
-~script4729($widget_28:2_1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-~script4729($widget_28:4_3, $widget_28:5_6, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
-~script4729($widget_28:6_4, $widget_28:7_11, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
-~script4729($widget_28:8_5, $widget_28:9_8, setbit(clearbit(clearbit(52968, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, false);
-cc_deleteall($widget_28:36_9);
-cc_create($widget_28:36_9, ^iftype_rectangle, 0);
-.cc_create($widget_28:36_9, ^iftype_rectangle, 1);
+[clientscript,tob_hud_init](component $com_tob_hud_universe0, component $com_tob_hud_safezone1, component $com_tob_hud_hud2, component $com_tob_hud_left_dodger_names3, component $com_tob_hud_left_dodger_status4, component $com_tob_hud_middle_dodger5, component $com_tob_hud_names_container6, component $com_tob_hud_names_header7, component $com_tob_hud_progress_container8, component $com_tob_hud_progress_bar9, component $com_tob_hud_progress_text10, component $com_tob_hud_status_container11, component $com_tob_hud_0_container12, component $com_tob_hud_0_filler13, component $com_tob_hud_1_container14, component $com_tob_hud_1_filler15, component $com_tob_hud_2_container16, component $com_tob_hud_2_filler17, component $com_tob_hud_3_container18, component $com_tob_hud_3_filler19, component $com_tob_hud_4_container20, component $com_tob_hud_4_filler21, component $com_tob_hud_spectator_container22, component $com_tob_hud_tooltip23)
+~script4729($com_tob_hud_safezone1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($com_tob_hud_left_dodger_names3, $com_tob_hud_names_container6, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($com_tob_hud_left_dodger_status4, $com_tob_hud_status_container11, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($com_tob_hud_middle_dodger5, $com_tob_hud_progress_container8, setbit(clearbit(clearbit(52968, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, false);
+cc_deleteall($com_tob_hud_progress_bar9);
+cc_create($com_tob_hud_progress_bar9, ^iftype_rectangle, 0, false);
+.cc_create($com_tob_hud_progress_bar9, ^iftype_rectangle, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setfill(true);
 .cc_setfill(true);
-~tob_hud_status_init($widget_28:16_12, $widget_28:19_13);
-~tob_hud_status_init($widget_28:20_14, $widget_28:23_15);
-~tob_hud_status_init($widget_28:24_16, $widget_28:27_17);
-~tob_hud_status_init($widget_28:28_18, $widget_28:31_19);
-~tob_hud_status_init($widget_28:32_20, $widget_28:35_21);
+~tob_hud_status_init($com_tob_hud_0_container12, $com_tob_hud_0_filler13);
+~tob_hud_status_init($com_tob_hud_1_container14, $com_tob_hud_1_filler15);
+~tob_hud_status_init($com_tob_hud_2_container16, $com_tob_hud_2_filler17);
+~tob_hud_status_init($com_tob_hud_3_container18, $com_tob_hud_3_filler19);
+~tob_hud_status_init($com_tob_hud_4_container20, $com_tob_hud_4_filler21);
 ~tob_hud_draw(
-	0 = $widget_28:0_0, 
-	1 = $widget_28:3_2, 
-	2 = $widget_28:5_6, 
-	3 = $widget_28:11_7, 
-	4 = $widget_28:9_8, 
-	5 = $widget_28:36_9, 
-	6 = $widget_28:37_10, 
-	7 = $widget_28:7_11, 
-	8 = $widget_28:16_12, 
-	9 = $widget_28:19_13, 
-	10 = $widget_28:20_14, 
-	11 = $widget_28:23_15, 
-	12 = $widget_28:24_16, 
-	13 = $widget_28:27_17, 
-	14 = $widget_28:28_18, 
-	15 = $widget_28:31_19, 
-	16 = $widget_28:32_20, 
-	17 = $widget_28:35_21, 
-	18 = $widget_28:13_22, 
-	19 = $widget_28:38_23
+	0 = $com_tob_hud_universe0, 
+	1 = $com_tob_hud_hud2, 
+	2 = $com_tob_hud_names_container6, 
+	3 = $com_tob_hud_names_header7, 
+	4 = $com_tob_hud_progress_container8, 
+	5 = $com_tob_hud_progress_bar9, 
+	6 = $com_tob_hud_progress_text10, 
+	7 = $com_tob_hud_status_container11, 
+	8 = $com_tob_hud_0_container12, 
+	9 = $com_tob_hud_0_filler13, 
+	10 = $com_tob_hud_1_container14, 
+	11 = $com_tob_hud_1_filler15, 
+	12 = $com_tob_hud_2_container16, 
+	13 = $com_tob_hud_2_filler17, 
+	14 = $com_tob_hud_3_container18, 
+	15 = $com_tob_hud_3_filler19, 
+	16 = $com_tob_hud_4_container20, 
+	17 = $com_tob_hud_4_filler21, 
+	18 = $com_tob_hud_spectator_container22, 
+	19 = $com_tob_hud_tooltip23
 );
 if_setonvartransmit("tob_hud_draw(
 	0 = true, 
-	1 = $widget_28:0_0, 
-	2 = $widget_28:3_2, 
-	3 = $widget_28:5_6, 
-	4 = $widget_28:11_7, 
-	5 = $widget_28:9_8, 
-	6 = $widget_28:36_9, 
-	7 = $widget_28:37_10, 
-	8 = $widget_28:7_11, 
-	9 = $widget_28:16_12, 
-	10 = $widget_28:19_13, 
-	11 = $widget_28:20_14, 
-	12 = $widget_28:23_15, 
-	13 = $widget_28:24_16, 
-	14 = $widget_28:27_17, 
-	15 = $widget_28:28_18, 
-	16 = $widget_28:31_19, 
-	17 = $widget_28:32_20, 
-	18 = $widget_28:35_21, 
-	19 = $widget_28:13_22, 
-	20 = $widget_28:38_23
-){var1745, var1737, var1227, var1055}", $widget_28:0_0);
+	1 = $com_tob_hud_universe0, 
+	2 = $com_tob_hud_hud2, 
+	3 = $com_tob_hud_names_container6, 
+	4 = $com_tob_hud_names_header7, 
+	5 = $com_tob_hud_progress_container8, 
+	6 = $com_tob_hud_progress_bar9, 
+	7 = $com_tob_hud_progress_text10, 
+	8 = $com_tob_hud_status_container11, 
+	9 = $com_tob_hud_0_container12, 
+	10 = $com_tob_hud_0_filler13, 
+	11 = $com_tob_hud_1_container14, 
+	12 = $com_tob_hud_1_filler15, 
+	13 = $com_tob_hud_2_container16, 
+	14 = $com_tob_hud_2_filler17, 
+	15 = $com_tob_hud_3_container18, 
+	16 = $com_tob_hud_3_filler19, 
+	17 = $com_tob_hud_4_container20, 
+	18 = $com_tob_hud_4_filler21, 
+	19 = $com_tob_hud_spectator_container22, 
+	20 = $com_tob_hud_tooltip23
+){var1745, var1737, var1227, var1055}", $com_tob_hud_universe0);
 if_setonresize("tob_hud_draw(
 	0 = true, 
-	1 = $widget_28:0_0, 
-	2 = $widget_28:3_2, 
-	3 = $widget_28:5_6, 
-	4 = $widget_28:11_7, 
-	5 = $widget_28:9_8, 
-	6 = $widget_28:36_9, 
-	7 = $widget_28:37_10, 
-	8 = $widget_28:7_11, 
-	9 = $widget_28:16_12, 
-	10 = $widget_28:19_13, 
-	11 = $widget_28:20_14, 
-	12 = $widget_28:23_15, 
-	13 = $widget_28:24_16, 
-	14 = $widget_28:27_17, 
-	15 = $widget_28:28_18, 
-	16 = $widget_28:31_19, 
-	17 = $widget_28:32_20, 
-	18 = $widget_28:35_21, 
-	19 = $widget_28:13_22, 
-	20 = $widget_28:38_23
-)", $widget_28:0_0);
+	1 = $com_tob_hud_universe0, 
+	2 = $com_tob_hud_hud2, 
+	3 = $com_tob_hud_names_container6, 
+	4 = $com_tob_hud_names_header7, 
+	5 = $com_tob_hud_progress_container8, 
+	6 = $com_tob_hud_progress_bar9, 
+	7 = $com_tob_hud_progress_text10, 
+	8 = $com_tob_hud_status_container11, 
+	9 = $com_tob_hud_0_container12, 
+	10 = $com_tob_hud_0_filler13, 
+	11 = $com_tob_hud_1_container14, 
+	12 = $com_tob_hud_1_filler15, 
+	13 = $com_tob_hud_2_container16, 
+	14 = $com_tob_hud_2_filler17, 
+	15 = $com_tob_hud_3_container18, 
+	16 = $com_tob_hud_3_filler19, 
+	17 = $com_tob_hud_4_container20, 
+	18 = $com_tob_hud_4_filler21, 
+	19 = $com_tob_hud_spectator_container22, 
+	20 = $com_tob_hud_tooltip23
+)", $com_tob_hud_universe0);
 if_setonsubchange("tob_hud_draw(
 	0 = true, 
-	1 = $widget_28:0_0, 
-	2 = $widget_28:3_2, 
-	3 = $widget_28:5_6, 
-	4 = $widget_28:11_7, 
-	5 = $widget_28:9_8, 
-	6 = $widget_28:36_9, 
-	7 = $widget_28:37_10, 
-	8 = $widget_28:7_11, 
-	9 = $widget_28:16_12, 
-	10 = $widget_28:19_13, 
-	11 = $widget_28:20_14, 
-	12 = $widget_28:23_15, 
-	13 = $widget_28:24_16, 
-	14 = $widget_28:27_17, 
-	15 = $widget_28:28_18, 
-	16 = $widget_28:31_19, 
-	17 = $widget_28:32_20, 
-	18 = $widget_28:35_21, 
-	19 = $widget_28:13_22, 
-	20 = $widget_28:38_23
-)", $widget_28:0_0);
+	1 = $com_tob_hud_universe0, 
+	2 = $com_tob_hud_hud2, 
+	3 = $com_tob_hud_names_container6, 
+	4 = $com_tob_hud_names_header7, 
+	5 = $com_tob_hud_progress_container8, 
+	6 = $com_tob_hud_progress_bar9, 
+	7 = $com_tob_hud_progress_text10, 
+	8 = $com_tob_hud_status_container11, 
+	9 = $com_tob_hud_0_container12, 
+	10 = $com_tob_hud_0_filler13, 
+	11 = $com_tob_hud_1_container14, 
+	12 = $com_tob_hud_1_filler15, 
+	13 = $com_tob_hud_2_container16, 
+	14 = $com_tob_hud_2_filler17, 
+	15 = $com_tob_hud_3_container18, 
+	16 = $com_tob_hud_3_filler19, 
+	17 = $com_tob_hud_4_container20, 
+	18 = $com_tob_hud_4_filler21, 
+	19 = $com_tob_hud_spectator_container22, 
+	20 = $com_tob_hud_tooltip23
+)", $com_tob_hud_universe0);
 if_setontimer("tob_hud_draw(
 	0 = false, 
-	1 = $widget_28:0_0, 
-	2 = $widget_28:3_2, 
-	3 = $widget_28:5_6, 
-	4 = $widget_28:11_7, 
-	5 = $widget_28:9_8, 
-	6 = $widget_28:36_9, 
-	7 = $widget_28:37_10, 
-	8 = $widget_28:7_11, 
-	9 = $widget_28:16_12, 
-	10 = $widget_28:19_13, 
-	11 = $widget_28:20_14, 
-	12 = $widget_28:23_15, 
-	13 = $widget_28:24_16, 
-	14 = $widget_28:27_17, 
-	15 = $widget_28:28_18, 
-	16 = $widget_28:31_19, 
-	17 = $widget_28:32_20, 
-	18 = $widget_28:35_21, 
-	19 = $widget_28:13_22, 
-	20 = $widget_28:38_23
-)", $widget_28:0_0);
+	1 = $com_tob_hud_universe0, 
+	2 = $com_tob_hud_hud2, 
+	3 = $com_tob_hud_names_container6, 
+	4 = $com_tob_hud_names_header7, 
+	5 = $com_tob_hud_progress_container8, 
+	6 = $com_tob_hud_progress_bar9, 
+	7 = $com_tob_hud_progress_text10, 
+	8 = $com_tob_hud_status_container11, 
+	9 = $com_tob_hud_0_container12, 
+	10 = $com_tob_hud_0_filler13, 
+	11 = $com_tob_hud_1_container14, 
+	12 = $com_tob_hud_1_filler15, 
+	13 = $com_tob_hud_2_container16, 
+	14 = $com_tob_hud_2_filler17, 
+	15 = $com_tob_hud_3_container18, 
+	16 = $com_tob_hud_3_filler19, 
+	17 = $com_tob_hud_4_container20, 
+	18 = $com_tob_hud_4_filler21, 
+	19 = $com_tob_hud_spectator_container22, 
+	20 = $com_tob_hud_tooltip23
+)", $com_tob_hud_universe0);

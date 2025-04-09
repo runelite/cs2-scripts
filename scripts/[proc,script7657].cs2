@@ -22,14 +22,14 @@ switch_int (struct_param($struct0, param_2027)) {
 if ($enum1 = null) {
 	return(0);
 }
-def_int $count3 = 1;
+def_int $int3 = 1;
 def_int $int4 = -1;
 def_int $int5 = 0;
-while ($count3 <= enum_getoutputcount($enum1) & $int5 = 0) {
-	if (enum(int, struct, $enum1, $count3) = $struct0) {
-		$int5, $int4 = 1, $count3;
+while ($int3 <= enum_getoutputcount($enum1) & $int5 = 0) {
+	if (enum(int, struct, $enum1, $int3) = $struct0) {
+		$int5, $int4 = 1, $int3;
 	} else {
-		$count3 = calc($count3 + 1);
+		$int3 = calc($int3 + 1);
 	}
 }
 if ($int4 = -1) {

@@ -1,12 +1,12 @@
 // 1616
-[proc,raids_storage_side_setup](component $widget_551:2_0, component $widget_551:7_1, component $widget_551:8_2)
-~raids_storage_side_warning($widget_551:7_1);
-cc_deleteall($widget_551:8_2);
+[proc,raids_storage_side_setup](component $com_raids_storage_side_warning0, component $com_raids_storage_side_text1, component $com_raids_storage_side_dismiss2)
+~raids_storage_side_warning($com_raids_storage_side_text1);
+cc_deleteall($com_raids_storage_side_dismiss2);
 if (%varbit5509 = 1 | %varbit3459 = 1) {
-	if_sethide(true, $widget_551:2_0);
-	if_setonop(null, $widget_551:8_2);
-	if_setontimer(null, $widget_551:8_2);
+	if_sethide(true, $com_raids_storage_side_warning0);
+	if_setonop(null, $com_raids_storage_side_dismiss2);
+	if_setontimer(null, $com_raids_storage_side_dismiss2);
 	return;
 }
-if_sethide(false, $widget_551:2_0);
-~raids_storage_side_dismiss_enable($widget_551:8_2);
+if_sethide(false, $com_raids_storage_side_warning0);
+~raids_storage_side_dismiss_enable($com_raids_storage_side_dismiss2);

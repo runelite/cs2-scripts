@@ -1,28 +1,28 @@
 // 3785
-[proc,gnome_show_cuisine](component $widget_49:3_0, component $widget_49:4_1, component $widget_49:8_2, component $widget_49:6_3, enum $enum4)
+[proc,gnome_show_cuisine](component $com_aluft_cooking_cuisine0, component $com_aluft_cooking_cuisine_clickzone1, component $com_aluft_cooking_ingredients2, component $com_aluft_cooking_aluft_balck_rect3, enum $enum4)
 if ($enum4 = null) {
 	if_close;
 	return;
 }
-cc_deleteall($widget_49:3_0);
+cc_deleteall($com_aluft_cooking_cuisine0);
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $int7 = calc(if_getwidth($widget_49:4_1) / 4);
-def_int $int8 = calc(if_getheight($widget_49:4_1) / 2);
+def_int $int7 = calc(if_getwidth($com_aluft_cooking_cuisine_clickzone1) / 4);
+def_int $int8 = calc(if_getheight($com_aluft_cooking_cuisine_clickzone1) / 2);
 def_int $int9 = 0;
 def_int $int10 = 0;
-def_int $count11 = 0;
-def_int $count12 = enum_getoutputcount($enum4);
+def_int $int11 = 0;
+def_int $int12 = enum_getoutputcount($enum4);
 def_int $int13 = 0;
 def_int $int14 = 0;
 def_struct $struct15 = null;
 def_int $int16 = 0;
-while ($count11 < $count12) {
-	$struct15 = enum(int, struct, $enum4, $count11);
+while ($int11 < $int12) {
+	$struct15 = enum(int, struct, $enum4, $int11);
 	$int13 = calc($int7 * $int9);
 	$int14 = calc($int8 * $int10);
 	$int16 = ~cuisine_check_inv($struct15);
-	cc_create($widget_49:3_0, ^iftype_model, $int5);
+	cc_create($com_aluft_cooking_cuisine0, ^iftype_model, $int5, false);
 	$int5 = calc($int5 + 1);
 	if ($int16 = 1) {
 		cc_setobject(struct_param($struct15, param_1057), 1);
@@ -32,7 +32,7 @@ while ($count11 < $count12) {
 	cc_setsize(38, 38, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int13 + $int7 / 2 - 19), calc($int14 + 5), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setmodelangle(0, 0, cc_getmodelangle_x, cc_getmodelangle_y, cc_getmodelangle_z, 400);
-	cc_create($widget_49:3_0, ^iftype_text, $int5);
+	cc_create($com_aluft_cooking_cuisine0, ^iftype_text, $int5, false);
 	$int5 = calc($int5 + 1);
 	cc_setposition($int13, calc($int14 + 48), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int7, 32, ^setsize_abs, ^setsize_abs);
@@ -45,7 +45,7 @@ while ($count11 < $count12) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
 	cc_settext(struct_param($struct15, param_1055));
-	cc_create($widget_49:4_1, ^iftype_rectangle, $int6);
+	cc_create($com_aluft_cooking_cuisine_clickzone1, ^iftype_rectangle, $int6, false);
 	cc_setsize(calc($int7 - 6), calc($int8 - 6), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(3 + $int13), calc(3 + $int14), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);
@@ -53,13 +53,13 @@ while ($count11 < $count12) {
 	cc_settrans(255);
 	$int6 = calc($int6 + 1);
 	cc_setop(1, "Select <col=ff9040><struct_param($struct15, param_1055)>");
-	cc_setonop("gnome_show_ingredients($widget_49:8_2, $struct15, $widget_49:6_3)");
+	cc_setonop("gnome_show_ingredients($com_aluft_cooking_ingredients2, $struct15, $com_aluft_cooking_aluft_balck_rect3)");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("cc_colour_swapper($widget_49:3_0, calc($int5 - 1), ^white)");
+		cc_setonmouserepeat("cc_colour_swapper($com_aluft_cooking_cuisine0, calc($int5 - 1), ^white)");
 		if ($int16 = 1) {
-			cc_setonmouseleave("cc_colour_swapper($widget_49:3_0, calc($int5 - 1), ^green)");
+			cc_setonmouseleave("cc_colour_swapper($com_aluft_cooking_cuisine0, calc($int5 - 1), ^green)");
 		} else {
-			cc_setonmouseleave("cc_colour_swapper($widget_49:3_0, calc($int5 - 1), 0x9f9f9f)");
+			cc_setonmouseleave("cc_colour_swapper($com_aluft_cooking_cuisine0, calc($int5 - 1), 0x9f9f9f)");
 		}
 	}
 	$int9 = calc($int9 + 1);
@@ -67,5 +67,5 @@ while ($count11 < $count12) {
 		$int9 = 0;
 		$int10 = calc($int10 + 1);
 	}
-	$count11 = calc($count11 + 1);
+	$int11 = calc($int11 + 1);
 }

@@ -1,12 +1,12 @@
 // 7317
 [proc,script7317](mapelement $mapelement0)(string)
-db_find_with_count(dbtable_89:6, $mapelement0);
+db_find(fairyring:mapelement, $mapelement0);
 def_dbrow $dbrow1 = db_findnext;
 if ($dbrow1 = null) {
 	return(enum(category, string, enum_1713, mec_category($mapelement0)));
 }
 def_string $string0 = "Fairy ring";
-if (~script7866(db_getfield($dbrow1, dbtable_89:0, 0)) = 1) {
-	return(db_getfield($dbrow1, dbtable_89:7, 0));
+if (~script7866(db_getfield($dbrow1, fairyring:id, 0)) = 1) {
+	return(db_getfield($dbrow1, fairyring:mapelement_tooltip, 0));
 }
 return($string0);

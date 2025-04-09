@@ -1,62 +1,62 @@
 // 5886
-[clientscript,speedrunning_init](component $widget_779:5_0, component $widget_779:7_1, component $widget_779:9_2, component $widget_779:8_3, component $widget_779:10_4, component $widget_779:25_5, component $widget_779:26_6, component $widget_779:14_7, component $widget_779:15_8, component $widget_779:20_9, component $widget_779:13_10, component $widget_779:17_11, component $widget_779:18_12, component $widget_779:19_13, component $widget_779:39_14, component $widget_779:40_15, component $widget_779:41_16, component $widget_779:42_17, component $widget_779:43_18, component $widget_779:36_19, component $widget_779:45_20, component $widget_779:37_21, component $widget_779:47_22, component $widget_779:78_23, component $widget_779:86_24, component $widget_779:83_25, component $widget_779:84_26, component $widget_779:85_27, component $widget_779:48_28, component $widget_779:77_29, component $widget_779:62_30, component $widget_779:64_31, component $widget_779:66_32, component $widget_779:68_33, component $widget_779:70_34, component $widget_779:72_35, component $widget_779:74_36, component $widget_779:76_37)
-~questlist_draw($widget_779:5_0, $widget_779:7_1, $widget_779:9_2, $widget_779:8_3, $widget_779:10_4, true);
+[clientscript,speedrunning_init](component $com_speedrunning_panel_list_layer0, component $com_speedrunning_panel_list_container1, component $com_speedrunning_panel_list_text_container2, component $com_speedrunning_panel_list_scrollbar3, component $com_speedrunning_panel_list4, component $com_speedrunning_panel_start_abandon_button5, component $com_speedrunning_panel_journal_button6, component $com_speedrunning_panel_info_button7, component $com_speedrunning_panel_stats_button8, component $com_speedrunning_panel_title9, component $com_speedrunning_panel_points10, component $com_speedrunning_panel_main_scrollbar11, component $com_speedrunning_panel_main_content12, component $com_speedrunning_panel_main_content_inner13, component $com_speedrunning_panel_bronze14, component $com_speedrunning_panel_silver15, component $com_speedrunning_panel_gold16, component $com_speedrunning_panel_platinum17, component $com_speedrunning_panel_diamond18, component $com_speedrunning_panel_unlocks19, component $com_speedrunning_panel_unlocks_content20, component $com_speedrunning_panel_items21, component $com_speedrunning_panel_items_content22, component $com_speedrunning_panel_info_overlay23, component $com_speedrunning_panel_info_overlay_close24, component $com_speedrunning_panel_info_overlay_scrollbar25, component $com_speedrunning_panel_info_overlay_text_layer26, component $com_speedrunning_panel_info_overlay_text27, component $com_speedrunning_panel_stats_overlay28, component $com_speedrunning_panel_stats_overlay_close29, component $com_speedrunning_panel_total_speedruns30, component $com_speedrunning_panel_total_points31, component $com_speedrunning_panel_total_trophies32, component $com_speedrunning_panel_total_bronze33, component $com_speedrunning_panel_total_silver34, component $com_speedrunning_panel_total_gold35, component $com_speedrunning_panel_total_platinum36, component $com_speedrunning_panel_total_diamond37)
+~questlist_draw($com_speedrunning_panel_list_layer0, $com_speedrunning_panel_list_container1, $com_speedrunning_panel_list_text_container2, $com_speedrunning_panel_list_scrollbar3, $com_speedrunning_panel_list4, true);
 if (%var3373 ! null) {
 	if (~script6807(%var3373) = 1) {
-		if_settext("<~get_quest_name(%var3373)> (Beta)", $widget_779:20_9);
+		if_settext("<~get_quest_name(%var3373)> (Beta)", $com_speedrunning_panel_title9);
 	} else {
-		if_settext(~get_quest_name(%var3373), $widget_779:20_9);
+		if_settext(~get_quest_name(%var3373), $com_speedrunning_panel_title9);
 	}
 }
 ~speedrunning_stats_update(
-	0 = $widget_779:13_10, 
-	1 = $widget_779:39_14, 
-	2 = $widget_779:40_15, 
-	3 = $widget_779:41_16, 
-	4 = $widget_779:42_17, 
-	5 = $widget_779:43_18, 
-	6 = $widget_779:62_30, 
-	7 = $widget_779:64_31, 
-	8 = $widget_779:66_32, 
-	9 = $widget_779:68_33, 
-	10 = $widget_779:70_34, 
-	11 = $widget_779:72_35, 
-	12 = $widget_779:74_36, 
-	13 = $widget_779:76_37
+	0 = $com_speedrunning_panel_points10, 
+	1 = $com_speedrunning_panel_bronze14, 
+	2 = $com_speedrunning_panel_silver15, 
+	3 = $com_speedrunning_panel_gold16, 
+	4 = $com_speedrunning_panel_platinum17, 
+	5 = $com_speedrunning_panel_diamond18, 
+	6 = $com_speedrunning_panel_total_speedruns30, 
+	7 = $com_speedrunning_panel_total_points31, 
+	8 = $com_speedrunning_panel_total_trophies32, 
+	9 = $com_speedrunning_panel_total_bronze33, 
+	10 = $com_speedrunning_panel_total_silver34, 
+	11 = $com_speedrunning_panel_total_gold35, 
+	12 = $com_speedrunning_panel_total_platinum36, 
+	13 = $com_speedrunning_panel_total_diamond37
 );
 if_setonvartransmit("speedrunning_stats_update(
-	0 = $widget_779:13_10, 
-	1 = $widget_779:39_14, 
-	2 = $widget_779:40_15, 
-	3 = $widget_779:41_16, 
-	4 = $widget_779:42_17, 
-	5 = $widget_779:43_18, 
-	6 = $widget_779:62_30, 
-	7 = $widget_779:64_31, 
-	8 = $widget_779:66_32, 
-	9 = $widget_779:68_33, 
-	10 = $widget_779:70_34, 
-	11 = $widget_779:72_35, 
-	12 = $widget_779:74_36, 
-	13 = $widget_779:76_37
-){var3365, var3366, var3367, var3368, var3369, var3766}", $widget_779:13_10);
-~script5909($widget_779:36_19, $widget_779:45_20, $widget_779:37_21, $widget_779:47_22, $widget_779:19_13);
-if_sethide(true, $widget_779:78_23);
-if_sethide(true, $widget_779:48_28);
+	0 = $com_speedrunning_panel_points10, 
+	1 = $com_speedrunning_panel_bronze14, 
+	2 = $com_speedrunning_panel_silver15, 
+	3 = $com_speedrunning_panel_gold16, 
+	4 = $com_speedrunning_panel_platinum17, 
+	5 = $com_speedrunning_panel_diamond18, 
+	6 = $com_speedrunning_panel_total_speedruns30, 
+	7 = $com_speedrunning_panel_total_points31, 
+	8 = $com_speedrunning_panel_total_trophies32, 
+	9 = $com_speedrunning_panel_total_bronze33, 
+	10 = $com_speedrunning_panel_total_silver34, 
+	11 = $com_speedrunning_panel_total_gold35, 
+	12 = $com_speedrunning_panel_total_platinum36, 
+	13 = $com_speedrunning_panel_total_diamond37
+){var3365, var3366, var3367, var3368, var3369, var3766}", $com_speedrunning_panel_points10);
+~script5909($com_speedrunning_panel_unlocks19, $com_speedrunning_panel_unlocks_content20, $com_speedrunning_panel_items21, $com_speedrunning_panel_items_content22, $com_speedrunning_panel_main_content_inner13);
+if_sethide(true, $com_speedrunning_panel_info_overlay23);
+if_sethide(true, $com_speedrunning_panel_stats_overlay28);
 def_string $string0 = ~script5913;
-if_settext($string0, $widget_779:85_27);
-def_int $int38 = paraheight($string0, if_getwidth($widget_779:85_27), p12_full);
+if_settext($string0, $com_speedrunning_panel_info_overlay_text27);
+def_int $int38 = paraheight($string0, if_getwidth($com_speedrunning_panel_info_overlay_text27), p12_full);
 $int38 = calc($int38 * 14 + 9);
-if_setsize(12, $int38, ^setsize_minus, ^setsize_abs, $widget_779:85_27);
-if_setscrollsize(0, if_getheight($widget_779:19_13), $widget_779:18_12);
-if_setscrollpos(0, 0, $widget_779:18_12);
-~scrollbar_vertical($widget_779:17_11, $widget_779:18_12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_setscrollsize(0, $int38, $widget_779:84_26);
-if_setscrollpos(0, 0, $widget_779:84_26);
-~scrollbar_vertical($widget_779:83_25, $widget_779:84_26, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script5896($widget_779:25_5, "Set Up Speedrun", "Abandon Speedrun");
-~speedrunning_button_init($widget_779:26_6, "Quest Journal");
-~script5897($widget_779:14_7, "Info", $widget_779:78_23);
-~script5897($widget_779:15_8, "Stats", $widget_779:48_28);
-~script5905($widget_779:86_24, $widget_779:78_23);
-~script5905($widget_779:77_29, $widget_779:48_28);
+if_setsize(12, $int38, ^setsize_minus, ^setsize_abs, $com_speedrunning_panel_info_overlay_text27);
+if_setscrollsize(0, if_getheight($com_speedrunning_panel_main_content_inner13), $com_speedrunning_panel_main_content12);
+if_setscrollpos(0, 0, $com_speedrunning_panel_main_content12);
+~scrollbar_vertical($com_speedrunning_panel_main_scrollbar11, $com_speedrunning_panel_main_content12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollsize(0, $int38, $com_speedrunning_panel_info_overlay_text_layer26);
+if_setscrollpos(0, 0, $com_speedrunning_panel_info_overlay_text_layer26);
+~scrollbar_vertical($com_speedrunning_panel_info_overlay_scrollbar25, $com_speedrunning_panel_info_overlay_text_layer26, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script5896($com_speedrunning_panel_start_abandon_button5, "Set Up Speedrun", "Abandon Speedrun");
+~speedrunning_button_init($com_speedrunning_panel_journal_button6, "Quest Journal");
+~script5897($com_speedrunning_panel_info_button7, "Info", $com_speedrunning_panel_info_overlay23);
+~script5897($com_speedrunning_panel_stats_button8, "Stats", $com_speedrunning_panel_stats_overlay28);
+~script5905($com_speedrunning_panel_info_overlay_close24, $com_speedrunning_panel_info_overlay23);
+~script5905($com_speedrunning_panel_stats_overlay_close29, $com_speedrunning_panel_stats_overlay28);

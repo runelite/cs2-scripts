@@ -3,7 +3,7 @@
 sound_synth(interface_select1, 1, 0);
 cc_deleteall($component0);
 def_int $comsubid5 = ~options_button_on($component0, 0);
-cc_create($component0, ^iftype_text, $comsubid5);
+cc_create($component0, ^iftype_text, $comsubid5, false);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setcolour(^white);

@@ -1,5 +1,5 @@
 // 322
-[clientscript,slayer_rewards_buy_op](int $opindex0, component $component1, int $comsubid2, component $widget_426:11_3, component $widget_426:2_4, component $widget_426:4_5, component $widget_426:8_6, component $widget_426:5_7)
+[clientscript,slayer_rewards_buy_op](int $opindex0, component $component1, int $comsubid2, component $com_slayer_rewards_main3, component $com_slayer_rewards_confirm4, component $com_slayer_rewards_confirm_info5, component $com_slayer_rewards_confirm_button6, component $com_slayer_rewards_back_button7)
 def_namedobj $namedobj8 = null;
 def_string $string0 = "Choose an item from the shop.";
 def_int $int9 = 0;
@@ -10,16 +10,16 @@ if (~league_relic_active(struct_1129) = 1) {
 }
 if ($opindex0 <= 1) {
 	sound_synth(interface_select1, 1, 0);
-	if_sethide(true, $widget_426:11_3);
-	if_sethide(false, $widget_426:2_4);
-	cc_deleteall($widget_426:8_6);
-	if_setposition(92, 165, ^setpos_abs_left, ^setpos_abs_top, $widget_426:5_7);
-	if_sethide(true, $widget_426:8_6);
+	if_sethide(true, $com_slayer_rewards_main3);
+	if_sethide(false, $com_slayer_rewards_confirm4);
+	cc_deleteall($com_slayer_rewards_confirm_button6);
+	if_setposition(92, 165, ^setpos_abs_left, ^setpos_abs_top, $com_slayer_rewards_back_button7);
+	if_sethide(true, $com_slayer_rewards_confirm_button6);
 	$namedobj8 = enum(int, namedobj, enum_840, $comsubid2);
 	if ($namedobj8 ! null) {
 		$string0 = "<u=ff981f><oc_name($namedobj8)></u><br><br><enum(obj, string, enum_843, $namedobj8)><br><br>";
 		$int9 = enum(obj, int, enum_842, $namedobj8);
-		if ($int11 = 1 & ($namedobj8 = rune_pouch_12791 | $namedobj8 = looting_bag_11941 | $namedobj8 = herb_sack_13226)) {
+		if ($int11 = 1 & ($namedobj8 = bh_rune_pouch_12791 | $namedobj8 = looting_bag_11941 | $namedobj8 = slayer_herb_sack_13226)) {
 			$int9 = 0;
 		}
 		$int10 = enum(obj, int, enum_841, $namedobj8);
@@ -35,9 +35,9 @@ if ($opindex0 <= 1) {
 			$string0 = append($string0, "Cost: 1 point each");
 		}
 	}
-	if_settext($string0, $widget_426:4_5);
-	if_setop(1, "Back", $widget_426:5_7);
-	if_setonop("slayer_rewards_confirm_back(false, event_op, $widget_426:11_3, $widget_426:2_4, $widget_426:4_5, $widget_426:8_6, $widget_426:5_7)", $widget_426:5_7);
+	if_settext($string0, $com_slayer_rewards_confirm_info5);
+	if_setop(1, "Back", $com_slayer_rewards_back_button7);
+	if_setonop("slayer_rewards_confirm_back(false, event_op, $com_slayer_rewards_main3, $com_slayer_rewards_confirm4, $com_slayer_rewards_confirm_info5, $com_slayer_rewards_confirm_button6, $com_slayer_rewards_back_button7)", $com_slayer_rewards_back_button7);
 	return;
 }
 if ($opindex0 >= 10) {

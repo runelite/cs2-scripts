@@ -1,10 +1,10 @@
 // 3617
-[clientscript,partydrop_side_init](component $widget_266:0_0)
-cc_deleteall($widget_266:0_0);
-def_int $size1 = 0;
-def_int $size2 = inv_size(inv);
-while ($size1 < $size2) {
-	cc_create($widget_266:0_0, ^iftype_graphic, $size1);
+[clientscript,partydrop_side_init](component $com_partydrop_side_items0)
+cc_deleteall($com_partydrop_side_items0);
+def_int $int1 = 0;
+def_int $int2 = inv_size(inv);
+while ($int1 < $int2) {
+	cc_create($com_partydrop_side_items0, ^iftype_graphic, $int1, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
@@ -12,8 +12,8 @@ while ($size1 < $size2) {
 	cc_setdragdeadtime(5);
 	cc_settrans(0);
 	cc_sethide(false);
-	$size1 = calc($size1 + 1);
+	$int1 = calc($int1 + 1);
 }
-~partydrop_side_build($widget_266:0_0, $size2);
-if_setonvartransmit("partydrop_side_build($widget_266:0_0, $size2){var675}", $widget_266:0_0);
-if_setoninvtransmit("partydrop_side_build($widget_266:0_0, $size2){inv}", $widget_266:0_0);
+~partydrop_side_build($com_partydrop_side_items0, $int2);
+if_setonvartransmit("partydrop_side_build($com_partydrop_side_items0, $int2){var675}", $com_partydrop_side_items0);
+if_setoninvtransmit("partydrop_side_build($com_partydrop_side_items0, $int2){inv}", $com_partydrop_side_items0);

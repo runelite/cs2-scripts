@@ -1,6 +1,6 @@
 // 7235
-[clientscript,ground_items_update_time_remaining](entityoverlay $entityoverlay0, int $comsubid1, int $clock2, int $int3, int $int4, int $colour5, boolean $boolean6, boolean $boolean7, int $comsubid8, int $width9, int $y10)
-def_int $int11 = calc(clientclock - $clock2);
+[clientscript,ground_items_update_time_remaining](entityoverlay $entityoverlay0, int $comsubid1, int $int2, int $int3, int $int4, int $colour5, boolean $boolean6, boolean $boolean7, int $comsubid8, int $int9, int $int10)
+def_int $int11 = calc(clientclock - $int2);
 def_int $int12 = 0;
 def_graphic $graphic13 = null;
 if (calc($int11 % 25) = 0) {
@@ -22,7 +22,7 @@ if (calc($int11 % 25) = 0) {
 			return;
 		} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & .cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
 			.cc_setgraphic($graphic13);
-			.cc_setposition(calc(0 - $width9 / 2 - 10), $y10, ^setpos_abs_centre, ^setpos_abs_bottom);
+			.cc_setposition(calc(0 - $int9 / 2 - 10), $int10, ^setpos_abs_centre, ^setpos_abs_bottom);
 			cc_settext("");
 			cc_setontimer(null);
 			return;

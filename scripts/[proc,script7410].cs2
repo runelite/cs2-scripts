@@ -1,17 +1,17 @@
 // 7410
 [proc,script7410]
-def_int $count0 = 0;
-def_int $count1 = enum_getoutputcount(enum_5611);
+def_int $int0 = 0;
+def_int $int1 = enum_getoutputcount(enum_5611);
 def_int $int2 = 1;
 $int2 = calc($int2 + 9);
 def_int $int3 = 0;
 def_component $component4 = null;
 def_struct $struct5 = null;
 def_int $int6 = 0;
-while ($count0 < $count1) {
-	$component4 = enum(int, component, enum_5611, $count0);
+while ($int0 < $int1) {
+	$component4 = enum(int, component, enum_5611, $int0);
 	if ($component4 ! null) {
-		$int3 = ~script7441(calc($count0 + 1));
+		$int3 = ~script7441(calc($int0 + 1));
 		$struct5 = enum(int, struct, enum_5607, $int3);
 		if ((%varbit11559 = 1 | $struct5 ! null & $int3 > 0) & %varcint1224 ! 1) {
 			if_sethide(false, $component4);
@@ -26,13 +26,13 @@ while ($count0 < $count1) {
 			if_setop(1, "", $component4);
 		}
 	}
-	$count0 = calc($count0 + 1);
+	$int0 = calc($int0 + 1);
 }
 if ($int6 = 1) {
-	if_setsize(0, 33, ^setsize_minus, ^setsize_abs, interface_892:16);
+	if_setsize(0, 33, ^setsize_minus, ^setsize_abs, osm_hotkeys:master_toggle);
 } else {
-	if_setsize(0, 43, ^setsize_minus, ^setsize_abs, interface_892:16);
+	if_setsize(0, 43, ^setsize_minus, ^setsize_abs, osm_hotkeys:master_toggle);
 }
-$int2 = calc($int2 + if_getheight(interface_892:16));
-if_setsize(58, $int2, ^setsize_abs, ^setsize_abs, interface_892:1);
+$int2 = calc($int2 + if_getheight(osm_hotkeys:master_toggle));
+if_setsize(58, $int2, ^setsize_abs, ^setsize_abs, osm_hotkeys:content);
 ~script7412(~toplevel_getcomponents);

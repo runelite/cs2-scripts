@@ -3,16 +3,16 @@
 switch_obj ($obj0) {
 	case rake_5341 :
 		return(calc(pow(2, 1) * %varbit8357 + %varbit1435), rake_5341);
-	case seed_dibber_5343 :
-		return(calc(pow(2, 1) * %varbit8358 + %varbit1436), seed_dibber_5343);
+	case dibber_5343 :
+		return(calc(pow(2, 1) * %varbit8358 + %varbit1436), dibber_5343);
 	case spade_952 :
 		return(calc(pow(2, 1) * %varbit8361 + %varbit1437), spade_952);
 	case secateurs_5329 :
 		if (%varbit1848 = 1) {
-			return(calc(pow(2, 1) * %varbit8359 + %varbit1438), magic_secateurs_7409);
+			return(calc(pow(2, 1) * %varbit8359 + %varbit1438), fairy_enchanted_secateurs_7409);
 		}
 		return(calc(pow(2, 1) * %varbit8359 + %varbit1438), secateurs_5329);
-	case watering_can_6797 :
+	case watering_can_dummy_6797 :
 		if (%varbit1439 <= 0) {
 			return(0, null);
 		}
@@ -26,17 +26,17 @@ switch_obj ($obj0) {
 			return(1, bottomless_compost_bucket_22994);
 		}
 		if (%varbit7915 > 1) {
-			return(1, bottomless_compost_bucket_22997);
+			return(1, bottomless_compost_bucket_filled_22997);
 		}
 		return(0, bottomless_compost_bucket_22994);
-	case bucket_1925 :
-		return(calc(pow(2, 8) * %varbit6265 + pow(2, 5) * %varbit4731 + %varbit1441), bucket_1925);
-	case compost_6032 :
-		return(calc(pow(2, 8) * %varbit6266 + %varbit1442), compost_6032);
-	case supercompost_6034 :
-		return(calc(pow(2, 8) * %varbit6267 + %varbit1443), supercompost_6034);
-	case ultracompost_21483 :
-		return(%varbit5732, ultracompost_21483);
+	case bucket_empty_1925 :
+		return(calc(pow(2, 8) * %varbit6265 + pow(2, 5) * %varbit4731 + %varbit1441), bucket_empty_1925);
+	case bucket_compost_6032 :
+		return(calc(pow(2, 8) * %varbit6266 + %varbit1442), bucket_compost_6032);
+	case bucket_supercompost_6034 :
+		return(calc(pow(2, 8) * %varbit6267 + %varbit1443), bucket_supercompost_6034);
+	case bucket_ultracompost_21483 :
+		return(%varbit5732, bucket_ultracompost_21483);
 	case default :
 		return(0, null);
 }

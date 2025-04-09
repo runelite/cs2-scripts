@@ -19,7 +19,7 @@ if ($int1 < 1) {
 	.cc_sethide(false);
 	$string0 = ~tostring_spacer($int0, ",");
 }
-def_int $width2 = parawidth($string0, 512, p11_full);
-cc_setsize($width2, .cc_getheight, ^setsize_abs, ^setsize_abs);
-.cc_setposition(calc(36 + $width2 + 2), cc_gety, ^setpos_abs_right, ^setpos_abs_top);
+def_int $int2 = parawidth($string0, 512, p11_full);
+cc_setsize($int2, .cc_getheight, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc(36 + $int2 + 2), cc_gety, ^setpos_abs_right, ^setpos_abs_top);
 cc_settext($string0);

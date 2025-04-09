@@ -1,19 +1,19 @@
 // 3269
 [proc,account_update_tabs](int $int0)
-if_sethide(true, interface_109:28);
-if_sethide(true, interface_109:56);
-if_sethide(true, interface_109:84);
-~script2598(interface_109:4, interface_109:6, interface_109:8, interface_109:3, interface_109:5, interface_109:7);
-~script2598(interface_109:12, interface_109:14, interface_109:16, interface_109:11, interface_109:13, interface_109:15);
-~script2598(interface_109:21, interface_109:23, interface_109:25, interface_109:20, interface_109:22, interface_109:24);
+if_sethide(true, account:account);
+if_sethide(true, account:community);
+if_sethide(true, account:usefullinks);
+~script2598(account:tab_1_1, account:tab_1_2, account:tab_1_3, account:tab_1_1_backing, account:tab_1_2_backing, account:tab_1_3_backing);
+~script2598(account:tab_2_1, account:tab_2_2, account:tab_2_3, account:tab_2_1_backing, account:tab_2_2_backing, account:tab_2_3_backing);
+~script2598(account:tab_3_1, account:tab_3_2, account:tab_3_3, account:tab_3_1_backing, account:tab_3_2_backing, account:tab_3_3_backing);
 switch_int ($int0) {
 	case 1 :
-		if_sethide(false, interface_109:56);
-		~script2597(interface_109:19, interface_109:12, interface_109:14, interface_109:16, interface_109:11, interface_109:13, interface_109:15);
+		if_sethide(false, account:community);
+		~script2597(account:tab_line, account:tab_2_1, account:tab_2_2, account:tab_2_3, account:tab_2_1_backing, account:tab_2_2_backing, account:tab_2_3_backing);
 	case 2 :
-		if_sethide(false, interface_109:84);
-		~script2597(interface_109:19, interface_109:21, interface_109:23, interface_109:25, interface_109:20, interface_109:22, interface_109:24);
+		if_sethide(false, account:usefullinks);
+		~script2597(account:tab_line, account:tab_3_1, account:tab_3_2, account:tab_3_3, account:tab_3_1_backing, account:tab_3_2_backing, account:tab_3_3_backing);
 	case default :
-		if_sethide(false, interface_109:28);
-		~script2597(interface_109:19, interface_109:4, interface_109:6, interface_109:8, interface_109:3, interface_109:5, interface_109:7);
+		if_sethide(false, account:account);
+		~script2597(account:tab_line, account:tab_1_1, account:tab_1_2, account:tab_1_3, account:tab_1_1_backing, account:tab_1_2_backing, account:tab_1_3_backing);
 }

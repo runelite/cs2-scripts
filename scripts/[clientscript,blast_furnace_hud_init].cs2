@@ -1,13 +1,13 @@
 // 1422
-[clientscript,blast_furnace_hud_init](component $widget_474:0_0, component $widget_474:1_1, component $widget_474:2_2)
-~script4729($widget_474:1_1, $widget_474:2_2, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
-if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $widget_474:2_2);
+[clientscript,blast_furnace_hud_init](component $com_blast_furnace_hud_universe0, component $com_blast_furnace_hud_dodger1, component $com_blast_furnace_hud_display2)
+~script4729($com_blast_furnace_hud_dodger1, $com_blast_furnace_hud_display2, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
+if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $com_blast_furnace_hud_display2);
 def_string $string0 = "Coffer";
-if_setsize(calc(parawidth($string0, 512, p12_full) + 10), 58, ^setsize_abs, ^setsize_abs, $widget_474:2_2);
-cc_deleteall($widget_474:2_2);
-def_int $int3 = ~thinbox($widget_474:2_2, 0);
-cc_create($widget_474:2_2, ^iftype_text, $int3);
-.cc_create($widget_474:2_2, ^iftype_graphic, calc($int3 + 1));
+if_setsize(calc(parawidth($string0, 512, p12_full) + 10), 58, ^setsize_abs, ^setsize_abs, $com_blast_furnace_hud_display2);
+cc_deleteall($com_blast_furnace_hud_display2);
+def_int $int3 = ~thinbox($com_blast_furnace_hud_display2, 0);
+cc_create($com_blast_furnace_hud_display2, ^iftype_text, $int3, false);
+.cc_create($com_blast_furnace_hud_display2, ^iftype_graphic, calc($int3 + 1), false);
 cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -19,6 +19,6 @@ cc_settext($string0);
 .cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 .cc_setgraphicshadow(0x333333);
 .cc_setoutline(1);
-~blast_furnace_hud_update($widget_474:2_2);
-if_setonsubchange("blast_furnace_hud_update($widget_474:2_2, .cc_getid)", $widget_474:0_0);
-if_setonvartransmit("blast_furnace_hud_update($widget_474:2_2, .cc_getid){var795}", $widget_474:0_0);
+~blast_furnace_hud_update($com_blast_furnace_hud_display2);
+if_setonsubchange("blast_furnace_hud_update($com_blast_furnace_hud_display2, .cc_getid)", $com_blast_furnace_hud_universe0);
+if_setonvartransmit("blast_furnace_hud_update($com_blast_furnace_hud_display2, .cc_getid){var795}", $com_blast_furnace_hud_universe0);

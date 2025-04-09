@@ -17,13 +17,13 @@ switch_int ($int6) {
 		$int4 = 200000000;
 }
 def_int $int7 = calc(stat_xp($stat0) - $int3);
-def_int $width8 = scale($int7, calc($int4 - $int3), 16384);
-if (cc_find(interface_729:8, $comsubid1) = ^true) {
+def_int $int8 = scale($int7, calc($int4 - $int3), 16384);
+if (cc_find(xptracker:tracker_progress, $comsubid1) = ^true) {
 	if ($int5 = 1) {
 		cc_setcolour(0x885500);
 		cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
 	} else {
 		cc_setcolour(0x006600);
-		cc_setsize($width8, 15, ^setsize_proportion, ^setsize_abs);
+		cc_setsize($int8, 15, ^setsize_proportion, ^setsize_abs);
 	}
 }

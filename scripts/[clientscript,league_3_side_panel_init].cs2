@@ -1,51 +1,51 @@
 // 5798
-[clientscript,league_3_side_panel_init](component $widget_736:21_0, component $widget_736:25_1, component $widget_736:30_2, component $widget_736:35_3, int $widget_736:2_4)
-cc_deleteall($widget_736:21_0);
-cc_deleteall($widget_736:25_1);
-cc_deleteall($widget_736:30_2);
-~v2_stone_button_filled($widget_736:21_0);
+[clientscript,league_3_side_panel_init](component $com_league_3_side_panel_info_button0, component $com_league_3_side_panel_tasks_button1, component $com_league_3_side_panel_relics_button2, component $com_league_3_side_panel_unlocks_button3, int $com_league_3_side_panel_header4)
+cc_deleteall($com_league_3_side_panel_info_button0);
+cc_deleteall($com_league_3_side_panel_tasks_button1);
+cc_deleteall($com_league_3_side_panel_relics_button2);
+~v2_stone_button_filled($com_league_3_side_panel_info_button0);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_side_panel_button_hover($widget_736:21_0, 0)", $widget_736:21_0);
-	if_setonmouseover("league_side_panel_button_hover($widget_736:21_0, 1)", $widget_736:21_0);
+	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_info_button0, 0)", $com_league_3_side_panel_info_button0);
+	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_info_button0, 1)", $com_league_3_side_panel_info_button0);
 }
-if_setonop("button_select_sound", $widget_736:21_0);
-~v2_stone_button_filled($widget_736:25_1);
+if_setonop("button_select_sound", $com_league_3_side_panel_info_button0);
+~v2_stone_button_filled($com_league_3_side_panel_tasks_button1);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_side_panel_button_hover($widget_736:25_1, 0)", $widget_736:25_1);
-	if_setonmouseover("league_side_panel_button_hover($widget_736:25_1, 1)", $widget_736:25_1);
+	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_tasks_button1, 0)", $com_league_3_side_panel_tasks_button1);
+	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_tasks_button1, 1)", $com_league_3_side_panel_tasks_button1);
 }
-if_setonop("button_select_sound", $widget_736:25_1);
-~v2_stone_button_filled($widget_736:30_2);
+if_setonop("button_select_sound", $com_league_3_side_panel_tasks_button1);
+~v2_stone_button_filled($com_league_3_side_panel_relics_button2);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_side_panel_button_hover($widget_736:30_2, 0)", $widget_736:30_2);
-	if_setonmouseover("league_side_panel_button_hover($widget_736:30_2, 1)", $widget_736:30_2);
+	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_relics_button2, 0)", $com_league_3_side_panel_relics_button2);
+	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_relics_button2, 1)", $com_league_3_side_panel_relics_button2);
 }
-~v2_stone_button_filled($widget_736:35_3);
+~v2_stone_button_filled($com_league_3_side_panel_unlocks_button3);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_side_panel_button_hover($widget_736:35_3, 0)", $widget_736:35_3);
-	if_setonmouseover("league_side_panel_button_hover($widget_736:35_3, 1)", $widget_736:35_3);
+	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_unlocks_button3, 0)", $com_league_3_side_panel_unlocks_button3);
+	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_unlocks_button3, 1)", $com_league_3_side_panel_unlocks_button3);
 }
 def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
 def_int $colour6 = 0xff981f;
 if ($struct5 ! null) {
-	if_setgraphic(struct_param($struct5, param_1024), interface_736:10);
-	if_setgraphic(struct_param($struct5, param_1025), interface_736:9);
+	if_setgraphic(struct_param($struct5, param_1024), league_3_side_panel:fill);
+	if_setgraphic(struct_param($struct5, param_1025), league_3_side_panel:bkg);
 	$colour6 = struct_param($struct5, param_1027);
 }
-if_setcolour($colour6, interface_736:2);
-if_setcolour($colour6, interface_736:6);
-if_setcolour($colour6, interface_736:12);
-if_setcolour($colour6, interface_736:14);
-if_setcolour($colour6, interface_736:16);
+if_setcolour($colour6, league_3_side_panel:header);
+if_setcolour($colour6, league_3_side_panel:points_next_relic);
+if_setcolour($colour6, league_3_side_panel:total_tasks_text);
+if_setcolour($colour6, league_3_side_panel:total_points_text);
+if_setcolour($colour6, league_3_side_panel:unlock_points_text);
 def_string $string0 = "Display Fragments";
-def_component $component7 = interface_736:33;
-def_component $component8 = interface_736:32;
+def_component $component7 = league_3_side_panel:tooltip;
+def_component $component8 = league_3_side_panel:hud;
 if_setopbase("<col=ff9040><$string0></col>", $component8);
 if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component8), ^setsize_abs, ^setsize_abs, $component8);
-cc_create($component8, ^iftype_graphic, 0);
+cc_create($component8, ^iftype_graphic, 0, false);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
-.cc_create($component8, ^iftype_text, 1);
+.cc_create($component8, ^iftype_text, 1, false);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setcolour($colour6);
@@ -61,5 +61,5 @@ if (~on_mobile = false) {
 ~league_side_panel_hudtoggle($component8, $component7);
 if_setonvartransmit("league_side_panel_hudtoggle($component8, cc_getid, .cc_getid, $component7){var1734}", $component8);
 if_setonop("league_side_panel_hudop(event_op, $component8, cc_getid, .cc_getid, $component7)", $component8);
-~league_3_side_panel_update_bar(interface_736:10, %var2615);
-if_setonvartransmit("script5799(interface_736:10){var2615, var3276}", interface_736:9);
+~league_3_side_panel_update_bar(league_3_side_panel:fill, %var2615);
+if_setonvartransmit("script5799(league_3_side_panel:fill){var2615, var3276}", league_3_side_panel:bkg);

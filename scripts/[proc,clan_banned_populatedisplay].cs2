@@ -11,7 +11,7 @@ def_int $int13 = 0;
 if (~clan_members_searching = 1) {
 	$int13 = string_length(~bankmain_filterstring);
 }
-def_int $index14 = -1;
+def_int $int14 = -1;
 def_boolean $boolean15 = ~on_mobile;
 def_int $int16 = 0;
 while ($int16 < 500) {
@@ -37,8 +37,8 @@ while ($int16 < 500) {
 				cc_setopbase("<col=ff9040><$string0></col>");
 				$int12 = string_length($string0);
 				if ($int7 < $int12) {
-					$index14 = ~min($int12, calc($int7 + $int13));
-					.cc_settext(append(append(substring($string0, 0, $int7), "<col=ffffff><substring($string0, $int7, $index14)></col>"), substring($string0, $index14, $int12)));
+					$int14 = ~min($int12, calc($int7 + $int13));
+					.cc_settext(append(append(substring($string0, 0, $int7), "<col=ffffff><substring($string0, $int7, $int14)></col>"), substring($string0, $int14, $int12)));
 				} else {
 					.cc_settext($string0);
 				}

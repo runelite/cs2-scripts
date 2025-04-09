@@ -1,5 +1,5 @@
 // 5725
-[proc,script5725](entityoverlay $entityoverlay0, loc $loc1, coord $coord2, int $lvl3, int $lvl4, int $lvl5, string $string0, boolean $boolean6)
+[proc,script5725](entityoverlay $entityoverlay0, loc $loc1, coord $coord2, int $int3, int $int4, int $int5, string $string0, boolean $boolean6)
 if (~on_mobile = true | %varbit13136 = 1 | enum(coord, int, enum_4080, $coord2) = 1) {
 	return;
 }
@@ -10,5 +10,5 @@ cc_setgraphic("staticons,7");
 if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setonmouseleave("helper_agility_mouseleave($entityoverlay0, $loc1, $coord2)");
-	cc_setonmouseover("helper_agility_mouseover($entityoverlay0, $loc1, $coord2, $lvl3, $lvl4, $lvl5, $string0, $boolean6)");
+	cc_setonmouseover("helper_agility_mouseover($entityoverlay0, $loc1, $coord2, $int3, $int4, $int5, $string0, $boolean6)");
 }

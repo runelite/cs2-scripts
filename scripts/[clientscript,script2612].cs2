@@ -1,11 +1,11 @@
 // 2612
-[clientscript,script2612](obj $obj0, component $widget_218:193_1, component $widget_218:202_2, int $int3)
+[clientscript,script2612](obj $obj0, component $com_magic_spellbook_infolayer1, component $com_magic_spellbook_tooltip2, int $int3)
 sound_synth(interface_select1, 1, 0);
-cc_deleteall($widget_218:202_2);
+cc_deleteall($com_magic_spellbook_tooltip2);
 if (%varcint225 = $obj0) {
 	%varcint225 = null;
-	if_setontimer(null, $widget_218:193_1);
+	if_setontimer(null, $com_magic_spellbook_infolayer1);
 	return;
 }
 %varcint225 = $obj0;
-if_setontimer("script2613($widget_218:193_1, $widget_218:202_2, $int3)", $widget_218:193_1);
+if_setontimer("script2613($com_magic_spellbook_infolayer1, $com_magic_spellbook_tooltip2, $int3)", $com_magic_spellbook_infolayer1);

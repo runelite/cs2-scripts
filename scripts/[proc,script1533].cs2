@@ -1,21 +1,21 @@
 // 1533
-[proc,script1533](component $component0, string $text0)
+[proc,script1533](component $component0, string $string0)
 def_int $int1 = 0;
-if ($component0 = interface_507:13) {
+if ($component0 = raids_lobby_partydetails:preferred_size) {
 	$int1 = %varbit5433;
-} else if ($component0 = interface_507:17) {
+} else if ($component0 = raids_lobby_partydetails:preferred_comlevel) {
 	$int1 = %varbit5426;
-} else if ($component0 = interface_507:21) {
+} else if ($component0 = raids_lobby_partydetails:preferred_skilltotal) {
 	$int1 = %varbit5427;
-} else if ($component0 = interface_507:22) {
+} else if ($component0 = raids_lobby_partydetails:scaling_layer) {
 	$int1 = %varbit9539;
 }
 if ($int1 > 0) {
-	cc_settext("<$text0>: <col=ffffff><tostring($int1)></col>");
-} else if ($component0 = interface_507:23) {
-	cc_settext($text0);
-} else if ($component0 = interface_507:24) {
-	cc_settext($text0);
+	cc_settext("<$string0>: <col=ffffff><tostring($int1)></col>");
+} else if ($component0 = raids_lobby_partydetails:challenge_layer) {
+	cc_settext($string0);
+} else if ($component0 = raids_lobby_partydetails:mappool_layer) {
+	cc_settext($string0);
 } else {
-	cc_settext("<$text0>: ---");
+	cc_settext("<$string0>: ---");
 }

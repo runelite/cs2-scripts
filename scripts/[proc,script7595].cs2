@@ -6,7 +6,7 @@ def_int $int3 = 38862853;
 def_int $int4 = 38862857;
 def_int $int5 = 38862861;
 def_int $int6 = 38862865;
-def_component $component7 = interface_593:45;
+def_component $component7 = combat_interface:infobutton;
 def_int $int8 = 38862875;
 def_int $int9 = 38862870;
 cc_deleteall($component7);
@@ -21,7 +21,7 @@ if ($boolean0 = false) {
 }
 if_setonclick("script7594($boolean10)", $component7);
 if_sethide(false, $component7);
-cc_create($component7, ^iftype_text, $int1);
+cc_create($component7, ^iftype_text, $int1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -32,5 +32,5 @@ cc_settext("Info");
 ~script7600($boolean0);
 ~script7596($boolean0);
 if ($boolean0 = false) {
-	cc_deleteall(interface_593:46);
+	cc_deleteall(combat_interface:info_layer);
 }

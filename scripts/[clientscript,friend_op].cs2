@@ -1,18 +1,18 @@
 // 126
-[clientscript,friend_op](int $opindex0, string $opbase0, component $component1, int $comsubid2, int $comsubid3, string $string1, string $text2, int $comsubid4)
-def_string $username3 = removetags($opbase0);
+[clientscript,friend_op](int $opindex0, string $opbase0, component $component1, int $comsubid2, int $comsubid3, string $string1, string $string2, int $comsubid4)
+def_string $string3 = removetags($opbase0);
 switch_int ($opindex0) {
 	case 1 :
-		~meslayer_mode6($username3);
+		~meslayer_mode6($string3);
 	case 2 :
 		mes("That player is currently offline.");
 	case 3 :
-		friend_del($username3);
+		friend_del($string3);
 	case 4 :
 		~script7573($comsubid4);
 	case 10 :
 		if ($component1 ! null & cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
-			~script2467($string1, $text2);
+			~script2467($string1, $string2);
 		}
 	case default :
 		return;

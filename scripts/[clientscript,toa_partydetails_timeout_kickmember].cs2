@@ -1,6 +1,6 @@
 // 6726
-[clientscript,toa_partydetails_timeout_kickmember](int $clock0, int $int1, component $component2, int $comsubid3, string $string0, int $int4)
-if (clientclock < $clock0) {
+[clientscript,toa_partydetails_timeout_kickmember](int $int0, int $int1, component $component2, int $comsubid3, string $string0, int $int4)
+if (clientclock < $int0) {
 	return;
 }
 if (cc_find($component2, $comsubid3) = ^true) {

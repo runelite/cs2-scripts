@@ -1,36 +1,36 @@
 // 547
-[proc,prayer_redraw](boolean $boolean0, component $widget_541:7_1, component $widget_541:3_2, component $widget_541:8_3, component $widget_541:2_4, component $widget_541:4_5, component $widget_541:42_6, component $widget_541:6_7, component $widget_541:39_8, string $string0, string $string1)
-def_int $count9 = 0;
-while ($count9 < enum_getoutputcount(enum_864)) {
-	if_sethide(true, enum(int, component, enum_864, $count9));
-	$count9 = calc($count9 + 1);
+[proc,prayer_redraw](boolean $boolean0, component $com_prayerbook_level1, component $com_prayerbook_container2, component $com_prayerbook_info3, component $com_prayerbook_infoglow4, component $com_prayerbook_filtermenu_container5, component $com_prayerbook_filtermenu6, component $com_prayerbook_filterbutton7, component $com_prayerbook_tooltip8, string $string0, string $string1)
+def_int $int9 = 0;
+while ($int9 < enum_getoutputcount(enum_864)) {
+	if_sethide(true, enum(int, component, enum_864, $int9));
+	$int9 = calc($int9 + 1);
 }
 def_enum $enum10 = ~script7823;
-def_int $countarray0(enum_getoutputcount($enum10));
+def_int $intarray0(enum_getoutputcount($enum10));
 def_int $int11 = 0;
 def_component $component12 = null;
-def_int $count13 = 0;
+def_int $int13 = 0;
 def_obj $obj14 = null;
 ~script3154(
-	0 = $widget_541:7_1, 
-	1 = $widget_541:3_2, 
-	2 = $widget_541:8_3, 
-	3 = $widget_541:2_4, 
-	4 = $widget_541:4_5, 
-	5 = $widget_541:42_6, 
-	6 = $widget_541:6_7, 
-	7 = $widget_541:39_8, 
+	0 = $com_prayerbook_level1, 
+	1 = $com_prayerbook_container2, 
+	2 = $com_prayerbook_info3, 
+	3 = $com_prayerbook_infoglow4, 
+	4 = $com_prayerbook_filtermenu_container5, 
+	5 = $com_prayerbook_filtermenu6, 
+	6 = $com_prayerbook_filterbutton7, 
+	7 = $com_prayerbook_tooltip8, 
 	8 = $string0, 
 	9 = $string1
 );
-while ($count13 < enum_getoutputcount($enum10)) {
-	$obj14 = enum(int, obj, $enum10, $count13);
+while ($int13 < enum_getoutputcount($enum10)) {
+	$obj14 = enum(int, obj, $enum10, $int13);
 	$component12 = oc_param($obj14, param_1751);
 	if ($component12 ! null) {
-		$countarray0($int11) = $count13;
+		$intarray0($int11) = $int13;
 		$int11 = calc($int11 + 1);
 		cc_deleteall($component12);
-		cc_create($component12, ^iftype_graphic, 0);
+		cc_create($component12, ^iftype_graphic, 0, false);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		if (%varbit14826 = 1) {
@@ -38,24 +38,24 @@ while ($count13 < enum_getoutputcount($enum10)) {
 		} else {
 			cc_setgraphic("prayerglow,0");
 		}
-		.cc_create($component12, ^iftype_graphic, 1);
+		.cc_create($component12, ^iftype_graphic, 1, false);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		~prayer_updatebutton(false, $obj14, $component12, $widget_541:3_2, $widget_541:39_8);
+		~prayer_updatebutton(false, $obj14, $component12, $com_prayerbook_container2, $com_prayerbook_tooltip8);
 	}
-	$count13 = calc($count13 + 1);
+	$int13 = calc($int13 + 1);
 }
 if ($int11 > 0) {
-	~prayer_quicksort(countarray0, 0, calc($int11 - 1));
+	~prayer_quicksort(intarray0, 0, calc($int11 - 1));
 }
-def_int $width15 = if_getwidth(oc_param($obj14, param_1751));
-def_int $int16 = calc((if_getwidth($widget_541:3_2) - 5 * $width15) / 4 + $width15);
+def_int $int15 = if_getwidth(oc_param($obj14, param_1751));
+def_int $int16 = calc((if_getwidth($com_prayerbook_container2) - 5 * $int15) / 4 + $int15);
 def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
 if ($boolean0 = false & %varbit6579 = 1) {
 	while ($int18 < $int11) {
-		$obj14 = enum(int, obj, $enum10, $countarray0($int18));
+		$obj14 = enum(int, obj, $enum10, $intarray0($int18));
 		$int17 = calc($int18 / 5 * $int16);
 		if_setposition(calc($int18 % 5 * $int16), $int17, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj14, param_1751));
 		if_sethide(false, oc_param($obj14, param_1751));
@@ -63,7 +63,7 @@ if ($boolean0 = false & %varbit6579 = 1) {
 	}
 } else {
 	while ($int18 < $int11) {
-		$obj14 = enum(int, obj, $enum10, $countarray0($int18));
+		$obj14 = enum(int, obj, $enum10, $intarray0($int18));
 		if (~prayer_passfilter($obj14) = 1) {
 			if_sethide(false, oc_param($obj14, param_1751));
 			$int17 = calc($int19 / 5 * $int16);
@@ -75,4 +75,4 @@ if ($boolean0 = false & %varbit6579 = 1) {
 		$int18 = calc($int18 + 1);
 	}
 }
-if_setsize(0, calc(4 + $int17 + 34 + 4), ^setsize_minus, ^setsize_abs, $widget_541:2_4);
+if_setsize(0, calc(4 + $int17 + 34 + 4), ^setsize_minus, ^setsize_abs, $com_prayerbook_infoglow4);

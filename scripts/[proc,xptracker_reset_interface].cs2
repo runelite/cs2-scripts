@@ -1,11 +1,11 @@
 // 5449
 [proc,xptracker_reset_interface]
-if (cc_find(interface_729:3, 0) = ^false) {
+if (cc_find(xptracker:tracker_container, 0) = ^false) {
 	return;
 }
-cc_deleteall(interface_729:3);
-cc_deleteall(interface_729:2);
-cc_create(interface_729:3, ^iftype_rectangle, 0);
+cc_deleteall(xptracker:tracker_container);
+cc_deleteall(xptracker:tracker_scrollbar);
+cc_create(xptracker:tracker_container, ^iftype_rectangle, 0, false);
 ~xptracker_create_overall;
 %varcint561 = 1;
 def_stat $stat0 = null;
@@ -21,12 +21,12 @@ while ($int1 <= 23) {
 	}
 }
 %varcint562 = calc(%varcint561 * (48 + 2));
-if (%varcint562 > if_getheight(interface_729:3)) {
-	if_setscrollsize(0, %varcint562, interface_729:3);
+if (%varcint562 > if_getheight(xptracker:tracker_container)) {
+	if_setscrollsize(0, %varcint562, xptracker:tracker_container);
 } else {
-	if_setscrollsize(0, 0, interface_729:3);
+	if_setscrollsize(0, 0, xptracker:tracker_container);
 }
-~scrollbar_vertical(interface_729:2, interface_729:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(xptracker:tracker_scrollbar, xptracker:tracker_container, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (%varcint1255 > 0) {
-	~scrollbar_resize(interface_729:2, interface_729:3, %varcint1255);
+	~scrollbar_resize(xptracker:tracker_scrollbar, xptracker:tracker_container, %varcint1255);
 }

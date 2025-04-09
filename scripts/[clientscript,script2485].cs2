@@ -10,12 +10,12 @@ if ($dbrow1 = dbrow_162) {
 	$int2 = calc($int2 + 1);
 	$int3 = calc($int3 + 7);
 }
-if ($int2 ! db_getfield($dbrow1, quest:33, 0)) {
-	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite direct differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:33, 0))></col>  Actual: <col=0059de><tostring($int2)></col>");
+if ($int2 ! db_getfield($dbrow1, quest:prerequisite_direct, 0)) {
+	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite direct differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:prerequisite_direct, 0))></col>  Actual: <col=0059de><tostring($int2)></col>");
 }
-if ($int3 ! db_getfield($dbrow1, quest:34, 0)) {
-	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite indirect differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:34, 0))></col>  Actual: <col=0059de><tostring($int3)></col>");
+if ($int3 ! db_getfield($dbrow1, quest:prerequisite_indirect, 0)) {
+	~debug_mes_warn("Quests", "<~get_quest_name($dbrow1)> (id <tostring($int0)>) prerequisite indirect differs! Config: <col=0059de><tostring(db_getfield($dbrow1, quest:prerequisite_indirect, 0))></col>  Actual: <col=0059de><tostring($int3)></col>");
 }
-if ($int0 = db_listall_with_count(quest)) {
+if ($int0 = db_listall(quest)) {
 	~debug_mes_info("Quest", "All quests verified, check above for any warnings.");
 }

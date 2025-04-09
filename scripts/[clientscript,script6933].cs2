@@ -1,12 +1,12 @@
 // 6933
-[clientscript,script6933](int $comsubid0, int $colour1)
-if (cc_find(interface_788:28, calc($comsubid0 + 1)) = ^true) {
+[clientscript,script6933](int $int0, int $colour1)
+if (cc_find(fsw_optin:fs_info_more_button, calc($int0 + 1)) = ^true) {
 	cc_setcolour($colour1);
 }
-if (cc_find(interface_788:28, calc($comsubid0 + 11)) = ^true) {
+if (cc_find(fsw_optin:fs_info_more_button, calc($int0 + 11)) = ^true) {
 	cc_setcolour($colour1);
 }
-if (cc_find(interface_788:28, calc($comsubid0 + 12)) = ^true) {
+if (cc_find(fsw_optin:fs_info_more_button, calc($int0 + 12)) = ^true) {
 	cc_setcolour($colour1);
 }
-if_setcolour($colour1, interface_788:29);
+if_setcolour($colour1, fsw_optin:fs_info_more_text);

@@ -1,8 +1,8 @@
 // 727
-[clientscript,script727](component $widget_64:13_0, int $widget_64:14_1, int $widget_64:16_2, int $widget_64:15_3)
+[clientscript,script727](component $com_league_rank_close_button0, int $com_league_rank_league_btn_menu1, int $com_league_rank_league_menu_frame2, int $com_league_rank_league_menu_overlay3)
 sound_synth(interface_select1, 1, 0);
-~leagues_close_button($widget_64:13_0, false, 0);
-def_int $comsubid4 = ~steelborder(interface_64:2, "League Ranks", 1);
-if (cc_find(interface_64:2, 1) = ^true) {
+~leagues_close_button($com_league_rank_close_button0, false, 0);
+def_int $int4 = ~steelborder(league_rank:frame, "League Ranks", 1);
+if (cc_find(league_rank:frame, 1) = ^true) {
 	cc_setcolour(~script7734);
 }

@@ -2,7 +2,7 @@
 [clientscript,clan_info_editable](string $string0, component $component0, boolean $boolean1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
-cc_create($component0, ^iftype_graphic, $int3);
+cc_create($component0, ^iftype_graphic, $int3, false);
 def_int $int4 = $int3;
 $int3 = calc($int3 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -17,9 +17,9 @@ $string0, $string2 = ~script632($string0);
 def_int $int5 = calc(parawidth($string1, 512, p12_full) + 5);
 def_int $int6 = calc($int5 + 2);
 def_int $int7 = calc(3 + 13 * paraheight($string0, calc(if_getwidth($component0) - $int6), p12_full));
-cc_create($component0, ^iftype_text, $int3);
+cc_create($component0, ^iftype_text, $int3, false);
 $int3 = calc($int3 + 1);
-.cc_create($component0, ^iftype_text, $int3);
+.cc_create($component0, ^iftype_text, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setsize($int5, $int7, ^setsize_abs, ^setsize_abs);
 .cc_setsize($int6, $int7, ^setsize_minus, ^setsize_abs);
@@ -51,7 +51,7 @@ if_setontimer(null, $component0);
 if_setposition(0, %varcint49, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 def_int $int8 = calc(6 + $int7 + 6);
 $int8 = calc($int8 + 3);
-cc_create($component0, ^iftype_graphic, $int3);
+cc_create($component0, ^iftype_graphic, $int3, false);
 $int3 = calc($int3 + 1);
 cc_setgraphic("v2_borders_slim,8");
 cc_settrans(0);
@@ -62,16 +62,16 @@ if_setsize(0, $int8, ^setsize_minus, ^setsize_abs, $component0);
 if ($int2 ! -1) {
 	%varcint49 = calc(%varcint49 + $int8 - 3);
 	if ($int2 = 1) {
-		~script4215(interface_690:3, "Back to Recruitment Board");
-		if_setonop("opsound(event_op, 2)", interface_690:3);
-		if_setopkey(1, ^key_escape, 0, interface_690:3);
+		~script4215(clans_info:close, "Back to Recruitment Board");
+		if_setonop("opsound(event_op, 2)", clans_info:close);
+		if_setopkey(1, ^key_escape, 0, clans_info:close);
 	} else {
-		~script4215(interface_690:3, "Close");
-		if_setonop("closebutton_click", interface_690:3);
+		~script4215(clans_info:close, "Close");
+		if_setonop("closebutton_click", clans_info:close);
 	}
-	cc_deleteall(interface_690:17);
-	~scrollbar_vertical(interface_690:17, interface_690:10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~clan_info_setsize(%varcint43, %varcint49, if_getheight(interface_690:0));
+	cc_deleteall(clans_info:scrollbar);
+	~scrollbar_vertical(clans_info:scrollbar, clans_info:editable, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~clan_info_setsize(%varcint43, %varcint49, if_getheight(clans_info:infinite));
 } else {
 	%varcint49 = calc(%varcint49 + $int8);
 }

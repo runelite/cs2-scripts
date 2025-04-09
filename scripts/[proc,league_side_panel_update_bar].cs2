@@ -17,15 +17,15 @@ if ($struct3 ! null) {
 } else {
 	$int5 = 750;
 }
-def_int $width6 = -1;
+def_int $int6 = -1;
 def_int $int7 = calc($int1 - $int5);
 def_int $int8 = calc($int4 - $int5);
 if ($int4 ! -1 & $int5 ! -1 & $int4 > 0 & $int5 ! $int4) {
-	$width6 = scale($int7, $int8, 130);
+	$int6 = scale($int7, $int8, 130);
 } else {
-	$width6 = 130;
+	$int6 = 130;
 }
 if (if_find($component0) = ^true) {
-	cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
+	cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
 }
-~league_side_panel_update_text(interface_656:18, interface_656:19, interface_656:28, interface_656:26, $int1, $int4);
+~league_side_panel_update_text(league_side_panel:points_next_area, league_side_panel:points_next_relic, league_side_panel:total_points, league_side_panel:total_tasks, $int1, $int4);

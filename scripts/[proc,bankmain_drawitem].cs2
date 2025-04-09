@@ -1,5 +1,5 @@
 // 278
-[proc,bankmain_drawitem](obj $obj0, int $num1, component $component2, component $component3, component $drop4, component $component5, component $component6)
+[proc,bankmain_drawitem](obj $obj0, int $int1, component $component2, component $component3, component $drop4, component $component5, component $component6)
 if ($obj0 ! null) {
 	cc_clearops;
 	if ($obj0 = bank_filler_20594) {
@@ -34,12 +34,8 @@ if ($obj0 ! null) {
 			8 = $component6
 		)");
 	} else {
-		cc_setobject($obj0, $num1);
-		if (%varbit16125 = 0) {
-			~script7856;
-		} else {
-			~script7857($obj0);
-		}
+		cc_setobject($obj0, $int1);
+		~script669($obj0);
 		cc_settrans(0);
 		cc_setondragcomplete("bankmain_reorder(
 			0 = event_com, 
@@ -58,7 +54,7 @@ if ($obj0 ! null) {
 	cc_setondrag("bankmain_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component3, 0)");
 } else {
 	cc_settrans(255);
-	cc_setobject(obj_6512, 1);
+	cc_setobject(blankobject_6512, 1);
 	cc_clearops;
 	cc_setondrag(null);
 	cc_setondragcomplete(null);

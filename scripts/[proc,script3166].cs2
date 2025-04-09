@@ -1,8 +1,8 @@
 // 3166
-[proc,script3166](dbrow $dbrow0, int $int1, int $width2)
-def_component $component3 = interface_819:10;
-def_component $component4 = interface_819:40;
-def_component $component5 = interface_819:41;
+[proc,script3166](dbrow $dbrow0, int $int1, int $int2)
+def_component $component3 = omnishop_main:points_layer_1;
+def_component $component4 = omnishop_main:points_title_1;
+def_component $component5 = omnishop_main:points_value_1;
 if ($int1 < 1) {
 	return;
 }
@@ -15,7 +15,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 2;
 def_int $int9 = 2;
-def_int $int10 = calc($width2 / ~minmax(1, 3, $int1));
+def_int $int10 = calc($int2 / ~minmax(1, 3, $int1));
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_dbrow $dbrow13 = null;
@@ -34,10 +34,10 @@ if ($int1 > 1) {
 	}
 }
 while ($int6 < $int1) {
-	$dbrow13 = db_getfield($dbrow0, dbtable_39:2, $int6);
+	$dbrow13 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_currency, $int6);
 	if ($dbrow13 ! null) {
-		$string0 = db_getfield($dbrow13, dbtable_41:2, 0);
-		$graphic17, $graphic18 = db_getfield($dbrow13, dbtable_41:3, 0);
+		$string0 = db_getfield($dbrow13, omnishop_currency_data:omnishop_currency_name_plural, 0);
+		$graphic17, $graphic18 = db_getfield($dbrow13, omnishop_currency_data:omnishop_currency_graphic, 0);
 		$int14 = ~omnishop_var_getter($dbrow13);
 		if ($graphic18 ! null) {
 			$int12 = calc($int8 + scale(45, 100, $int10) - ($int19 + 11));

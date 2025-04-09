@@ -1,5 +1,5 @@
 // 258
-[clientscript,nzone_game_points_tickup](component $component0, int $comsubid1, int $int2, int $int3, int $clock4)
+[clientscript,nzone_game_points_tickup](component $component0, int $comsubid1, int $int2, int $int3, int $int4)
 def_int $int5 = calc($int3 - $int2);
 if ($int5 = 0) {
 	if (cc_find($component0, $comsubid1) = ^true) {
@@ -8,7 +8,7 @@ if ($int5 = 0) {
 	~nzone_game_points_set($component0, $int3);
 	return;
 }
-if (clientclock < $clock4) {
+if (clientclock < $int4) {
 	if ($int5 <= -2) {
 		$int5 = calc($int5 / 2);
 	} else if ($int5 >= 2) {
@@ -17,7 +17,7 @@ if (clientclock < $clock4) {
 }
 $int2 = calc($int2 + $int5);
 if (cc_find($component0, $comsubid1) = ^true) {
-	cc_setontimer("nzone_game_points_tickup($component0, $comsubid1, $int2, $int3, $clock4)");
+	cc_setontimer("nzone_game_points_tickup($component0, $comsubid1, $int2, $int3, $int4)");
 	~nzone_game_points_set($component0, $int2);
 	sound_synth(knife_break, 1, 0);
 }

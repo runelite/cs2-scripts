@@ -1,5 +1,5 @@
 // 2630
-[clientscript,book_indexed_init](component $widget_680:7_0, component $widget_680:8_1, component $widget_680:108_2, component $widget_680:109_3, component $widget_680:110_4, component $widget_680:111_5, component $widget_680:9_6)
+[clientscript,book_indexed_init](component $com_indexed_book_close_button0, component $com_indexed_book_close_graphic1, component $com_indexed_book_page_left_button2, component $com_indexed_book_page_left_graphic3, component $com_indexed_book_page_right_button4, component $com_indexed_book_page_right_graphic5, component $com_indexed_book_index_jump_button6)
 def_graphic $graphic7 = "close_buttons,4";
 def_graphic $graphic8 = "close_buttons,5";
 def_graphic $graphic9 = leftarrow;
@@ -7,18 +7,18 @@ def_graphic $graphic10 = leftarrow_highlight;
 def_graphic $graphic11 = rightarrow;
 def_graphic $graphic12 = rightarrow_highlight;
 if (~on_mobile = false) {
-	if_setonmouseover("graphic_swapper($widget_680:8_1, $graphic8)", $widget_680:7_0);
-	if_setonmouseleave("graphic_swapper($widget_680:8_1, $graphic7)", $widget_680:7_0);
-	if_setonmouseover("graphic_swapper($widget_680:109_3, $graphic10)", $widget_680:108_2);
-	if_setonmouseleave("graphic_swapper($widget_680:109_3, $graphic9)", $widget_680:108_2);
-	if_setonmouseover("graphic_swapper($widget_680:111_5, $graphic12)", $widget_680:110_4);
-	if_setonmouseleave("graphic_swapper($widget_680:111_5, $graphic11)", $widget_680:110_4);
-	if_setonmouseover("text_colour_swapper($widget_680:9_6, 0xffbd70)", $widget_680:9_6);
-	if_setonmouseleave("text_colour_swapper($widget_680:9_6, 0xff981f)", $widget_680:9_6);
-	if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $widget_680:7_0);
-	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $widget_680:7_0);
+	if_setonmouseover("graphic_swapper($com_indexed_book_close_graphic1, $graphic8)", $com_indexed_book_close_button0);
+	if_setonmouseleave("graphic_swapper($com_indexed_book_close_graphic1, $graphic7)", $com_indexed_book_close_button0);
+	if_setonmouseover("graphic_swapper($com_indexed_book_page_left_graphic3, $graphic10)", $com_indexed_book_page_left_button2);
+	if_setonmouseleave("graphic_swapper($com_indexed_book_page_left_graphic3, $graphic9)", $com_indexed_book_page_left_button2);
+	if_setonmouseover("graphic_swapper($com_indexed_book_page_right_graphic5, $graphic12)", $com_indexed_book_page_right_button4);
+	if_setonmouseleave("graphic_swapper($com_indexed_book_page_right_graphic5, $graphic11)", $com_indexed_book_page_right_button4);
+	if_setonmouseover("text_colour_swapper($com_indexed_book_index_jump_button6, 0xffbd70)", $com_indexed_book_index_jump_button6);
+	if_setonmouseleave("text_colour_swapper($com_indexed_book_index_jump_button6, 0xff981f)", $com_indexed_book_index_jump_button6);
+	if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $com_indexed_book_close_button0);
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_indexed_book_close_button0);
 } else {
-	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, $widget_680:7_0);
-	if_setsize(30, 27, ^setsize_abs, ^setsize_abs, $widget_680:7_0);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, $com_indexed_book_close_button0);
+	if_setsize(30, 27, ^setsize_abs, ^setsize_abs, $com_indexed_book_close_button0);
 }
-if_setonop("closebutton_click", $widget_680:7_0);
+if_setonop("closebutton_click", $com_indexed_book_close_button0);

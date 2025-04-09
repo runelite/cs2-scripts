@@ -1,10 +1,10 @@
 // 5525
-[clientscript,script5525](component $widget_116:5_0, component $widget_116:43_1, int $int2)
-if (~on_mobile = false & cc_find($widget_116:5_0, 0) = ^true) {
+[clientscript,script5525](component $com_settings_side_skull_prevention0, component $com_settings_side_tooltip1, int $int2)
+if (~on_mobile = false & cc_find($com_settings_side_skull_prevention0, 0) = ^true) {
 	if (~deadman_world = 0) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(0x9f9f9f);
 	}
 }
-~deltooltip_action($widget_116:43_1);
+~deltooltip_action($com_settings_side_tooltip1);

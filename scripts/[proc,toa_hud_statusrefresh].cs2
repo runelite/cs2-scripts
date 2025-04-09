@@ -1,5 +1,5 @@
 // 6583
-[proc,toa_hud_statusrefresh](int $int0, int $int1, int $int2, string $string0, component $component3, component $component4, component $widget_481:38_5)(int)
+[proc,toa_hud_statusrefresh](int $int0, int $int1, int $int2, string $string0, component $component3, component $component4, component $com_toa_hud_tooltip5)(int)
 %varcint1081 = calc(clientclock + 30);
 def_int $int6 = 0;
 if ($int1 ! 0 & cc_find($component3, 0) = ^true) {
@@ -14,8 +14,8 @@ if ($int1 ! 0 & cc_find($component3, 0) = ^true) {
 		cc_settext(substring($string0, 0, 1));
 	}
 	if (~on_mobile = false) {
-		if_setonmouserepeat("tooltip_mouserepeat($component3, -1, $widget_481:38_5, $string0, 25, 256)", $component3);
-		if_setonmouseleave("deltooltip($widget_481:38_5)", $component3);
+		if_setonmouserepeat("tooltip_mouserepeat($component3, -1, $com_toa_hud_tooltip5, $string0, 25, 256)", $component3);
+		if_setonmouseleave("deltooltip($com_toa_hud_tooltip5)", $component3);
 	}
 	if ($int1 = 31) {
 		if (.cc_find($component4, 0) = ^true) {
@@ -49,5 +49,5 @@ if_sethide(true, $component3);
 if_setonstattransmit(null, $component3);
 if_setonmouserepeat(null, $component3);
 if_setonmouseleave(null, $component3);
-~deltooltip_action($widget_481:38_5);
+~deltooltip_action($com_toa_hud_tooltip5);
 return(0);
