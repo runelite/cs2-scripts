@@ -5,15 +5,15 @@ if_sethide(false, league_3_unlocks:confirmation_overlay);
 def_struct $struct2 = null;
 def_graphic $graphic3 = null;
 def_int $int4 = 0;
-if (%var3343 = 0) {
-	$struct2 = enum(int, struct, enum_4129, calc(%var3344 - 1));
-} else if (%var3343 = 1) {
-	$struct2 = enum(int, struct, enum_4130, calc(%var3344 - 1));
+if (%league_3_unlocks_current_tab = 0) {
+	$struct2 = enum(int, struct, enum_4129, calc(%league_3_unlocks_current_selection - 1));
+} else if (%league_3_unlocks_current_tab = 1) {
+	$struct2 = enum(int, struct, enum_4130, calc(%league_3_unlocks_current_selection - 1));
 } else {
-	$struct2 = enum(int, struct, enum_4131, calc(%var3344 - 1));
+	$struct2 = enum(int, struct, enum_4131, calc(%league_3_unlocks_current_selection - 1));
 }
 def_string $string0 = struct_param($struct2, param_1437);
-if (%var3343 = 2) {
+if (%league_3_unlocks_current_tab = 2) {
 	$graphic3 = "side_icons,2";
 	$int4 = ~script5832(struct_param($struct2, param_1444));
 } else {
@@ -31,13 +31,13 @@ cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
 cc_setcolour($int1);
-if (%var3343 = 2) {
+if (%league_3_unlocks_current_tab = 2) {
 	cc_settext("<col=cfcfcf>Are you sure you wish to complete:<br><$string0>");
 } else {
 	cc_settext("<col=cfcfcf>Are you sure you wish to unlock:<br><$string0>");
 }
 $int5 = calc($int5 + 1);
-if (%var3343 = 2) {
+if (%league_3_unlocks_current_tab = 2) {
 	cc_create(league_3_unlocks:confirmation_message, ^iftype_text, $int5, false);
 	cc_setposition(16, 70, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);

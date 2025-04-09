@@ -2,12 +2,12 @@
 [proc,buff_bar_dynamic_obj](int $int0)(namedobj)
 switch_int ($int0) {
 	case 41 :
-		if (%var3158 ! null) {
-			return(%var3158);
+		if (%buff_bar_ammo_type ! null) {
+			return(%buff_bar_ammo_type);
 		}
-		return(%var3160);
+		return(%buff_bar_weapon);
 	case 40 :
-		return(%var3158);
+		return(%buff_bar_ammo_type);
 	case default :
 		return(null);
 }

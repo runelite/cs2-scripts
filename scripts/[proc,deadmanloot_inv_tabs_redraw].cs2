@@ -5,7 +5,7 @@ def_int $int1 = 0;
 def_graphic $graphic2 = "banktabs,0";
 def_graphic $graphic3 = "banktabs,1";
 while ($int0 < 5) {
-	if (%varbit4842 = $int0) {
+	if (%deadman_loot_tab = $int0) {
 		if (cc_find(deadmanloot:tabs, $int0) = ^true) {
 			cc_setgraphic("banktabs,2");
 			cc_setop(1, "View tab");

@@ -106,25 +106,25 @@ if (compare($string0, "jad slippers") = 0) {
 if (compare($string0, "g4uafs") = 0) {
 	return("", amulet_of_glory_inf_19707, 0);
 }
-if (compare($string0, "collection log") = 0 & %var2943 = %var2944) {
+if (compare($string0, "collection log") = 0 & %collection_count = %collection_count_max) {
 	return("Wait, you're not actually supposed to complete the log... JMODS, CODE RED!", null, -1);
 }
-if (compare($string0, "collection log") = 0 & %var2943 > 1300) {
-	return("<tostring(%var2943)> unique items? Okay, you're nuts.", null, -1);
+if (compare($string0, "collection log") = 0 & %collection_count > 1300) {
+	return("<tostring(%collection_count)> unique items? Okay, you're nuts.", null, -1);
 }
-if (compare($string0, "collection log") = 0 & %var2943 > 1000) {
-	return("Seriously impressive collection. Only <tostring(calc(%var2944 - %var2943))> items to go!", null, -1);
+if (compare($string0, "collection log") = 0 & %collection_count > 1000) {
+	return("Seriously impressive collection. Only <tostring(calc(%collection_count_max - %collection_count))> items to go!", null, -1);
 }
-if (compare($string0, "collection log") = 0 & %var2943 > 500) {
-	return("<tostring(%var2943)> unique items is not bad at all. Keep it up!", null, -1);
+if (compare($string0, "collection log") = 0 & %collection_count > 500) {
+	return("<tostring(%collection_count)> unique items is not bad at all. Keep it up!", null, -1);
 }
-if (compare($string0, "collection log") = 0 & %var2943 > 200) {
+if (compare($string0, "collection log") = 0 & %collection_count > 200) {
 	return("That's a decent collection you got there. I believe in you champion.", null, -1);
 }
-if (compare($string0, "collection log") = 0 & %var2943 = 0) {
+if (compare($string0, "collection log") = 0 & %collection_count = 0) {
 	return("Why are you looking for easter eggs in an empty Collection log?<br><br>C'mon, you're better than this.", null, -1);
 }
 if (compare($string0, "collection log") = 0) {
-	return("Only <tostring(calc(%var2944 - %var2943))> items to go. :')", null, -1);
+	return("Only <tostring(calc(%collection_count_max - %collection_count))> items to go. :')", null, -1);
 }
 return("", null, -1);

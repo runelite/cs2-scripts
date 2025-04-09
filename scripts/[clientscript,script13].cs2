@@ -5,7 +5,7 @@ if (~target_world = 0) {
 	if_setontimer(null, $com_pvp_icons_quitterwarning0);
 	return;
 }
-def_int $int1 = calc(200 - %varbit14890);
+def_int $int1 = calc(200 - %bh_lobby_timer);
 $int1 = interpolate(0, 60, 0, 100, $int1);
 def_int $int2 = clientclock;
 if_setontimer("script14($com_pvp_icons_quitterwarning0, $int1, $int2)", $com_pvp_icons_quitterwarning0);

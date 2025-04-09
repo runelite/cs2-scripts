@@ -1,7 +1,7 @@
 // 1640
 [proc,deadman_tournament_timer_update](component $component0, int $int1)
-if (%varbit6462 = 1) {
-	if_setontimer("deadman_tournament_timer_update($component0, %varbit4164)", $component0);
+if (%deadman_tournament_paused_pl = 1) {
+	if_setontimer("deadman_tournament_timer_update($component0, %deadman_tournament_timer)", $component0);
 	return;
 }
 $int1 = calc($int1 - clientclock);

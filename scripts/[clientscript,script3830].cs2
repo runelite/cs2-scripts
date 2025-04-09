@@ -1,6 +1,6 @@
 // 3830
 [clientscript,script3830](int $int0, component $com_settings_tooltip_inside_if1, int $comsubid2, component $com_settings_settings3, component $com_settings_settings_clickzone4, component $com_settings_settings_content5, component $com_settings_scrollbar6, component $com_settings_dropdown_panel7, component $com_settings_dropdown_close8, component $com_settings_dropdown_buttons9, component $com_settings_dropdown_scrollbar10, component $com_settings_dropdown_container11, component $com_settings_settings_sliderclickzone12, component $com_settings_settings_sliderzone13, component $com_settings_tooltip14, component $com_settings_tooltip_inside_if_clickzone15)
-if ($int0 = %varbit9665) {
+if ($int0 = %settings_disable_tooltip_in_interface) {
 	return;
 }
 if_setonop(null, $com_settings_dropdown_close8);
@@ -8,7 +8,7 @@ if_sethide(true, $com_settings_dropdown_container11);
 cc_deleteall($com_settings_dropdown_scrollbar10);
 cc_deleteall($com_settings_dropdown_buttons9);
 if (cc_find($com_settings_tooltip_inside_if1, $comsubid2) = ^true) {
-	if (%varbit9665 = 0) {
+	if (%settings_disable_tooltip_in_interface = 0) {
 		cc_settext("Show <col=ffffff>less <col=ff981f>information");
 	} else {
 		cc_settext("Show <col=ffffff>more <col=ff981f>information");
@@ -22,7 +22,7 @@ if (cc_find($com_settings_tooltip_inside_if1, $comsubid2) = ^true) {
 	4 = $com_settings_settings_clickzone4, 
 	5 = $com_settings_settings_content5, 
 	6 = $com_settings_scrollbar6, 
-	7 = %varbit9656, 
+	7 = %settings_category, 
 	8 = $com_settings_settings3, 
 	9 = $com_settings_dropdown_panel7, 
 	10 = $com_settings_dropdown_close8, 
@@ -34,7 +34,7 @@ if (cc_find($com_settings_tooltip_inside_if1, $comsubid2) = ^true) {
 	16 = $com_settings_tooltip14
 );
 if_setonvartransmit("script3830(
-	0 = %varbit9665, 
+	0 = %settings_disable_tooltip_in_interface, 
 	1 = $com_settings_tooltip_inside_if1, 
 	2 = $comsubid2, 
 	3 = $com_settings_settings3, 
@@ -50,4 +50,4 @@ if_setonvartransmit("script3830(
 	13 = $com_settings_settings_sliderzone13, 
 	14 = $com_settings_tooltip14, 
 	15 = $com_settings_tooltip_inside_if_clickzone15
-){var2856}", $com_settings_tooltip_inside_if_clickzone15);
+){settings_varp_1}", $com_settings_tooltip_inside_if_clickzone15);

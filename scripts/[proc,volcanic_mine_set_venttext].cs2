@@ -3,15 +3,15 @@
 def_string $string0 = "A: -%";
 def_string $string1 = "B: -%";
 def_string $string2 = "C: -%";
-if (%varbit5941 >= 2) {
-	if (%varbit5939 ! 127) {
-		$string0 = "A: <~volcanic_mine_ventcolour(%varbit5939)>";
+if (%fossil_mine_progress_status >= 2) {
+	if (%fossil_mine_venta_status ! 127) {
+		$string0 = "A: <~volcanic_mine_ventcolour(%fossil_mine_venta_status)>";
 	}
-	if (%varbit5940 ! 127) {
-		$string1 = "B: <~volcanic_mine_ventcolour(%varbit5940)>";
+	if (%fossil_mine_ventb_status ! 127) {
+		$string1 = "B: <~volcanic_mine_ventcolour(%fossil_mine_ventb_status)>";
 	}
-	if (%varbit5942 ! 127) {
-		$string2 = "C: <~volcanic_mine_ventcolour(%varbit5942)>";
+	if (%fossil_mine_ventc_status ! 127) {
+		$string2 = "C: <~volcanic_mine_ventcolour(%fossil_mine_ventc_status)>";
 	}
 }
 if_settext($string0, fossil_volcanic_mine:vent_a);

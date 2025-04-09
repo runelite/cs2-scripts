@@ -2,13 +2,13 @@
 [clientscript,welcome_screen_init](component $com_welcome_screen_content0, component $com_welcome_screen_dodger1, component $com_welcome_screen_clickhere_text2, component $com_welcome_screen_lastlogin3, component $com_welcome_screen_membership_area4, component $com_welcome_screen_messages_area5, component $com_welcome_screen_messages6, component $com_welcome_screen_messages_highlight7, component $com_welcome_screen_credit8, component $com_welcome_screen_membership_highlight9, int $com_welcome_screen_banner10)
 ~script4729($com_welcome_screen_dodger1, $com_welcome_screen_content0, setbit(setbit(0, 12), 4), ^setpos_abs_centre, ^setpos_abs_top, false);
 ~welcome_screen_lastlogin($com_welcome_screen_lastlogin3);
-if_setonvartransmit("welcome_screen_lastlogin($com_welcome_screen_lastlogin3){var261}", $com_welcome_screen_lastlogin3);
+if_setonvartransmit("welcome_screen_lastlogin($com_welcome_screen_lastlogin3){if1}", $com_welcome_screen_lastlogin3);
 ~welcome_screen_messages($com_welcome_screen_messages_area5, $com_welcome_screen_messages6, $com_welcome_screen_messages_highlight7);
-if_setonvartransmit("welcome_screen_messages($com_welcome_screen_messages_area5, $com_welcome_screen_messages6, $com_welcome_screen_messages_highlight7){var1781, var1226}", $com_welcome_screen_messages6);
+if_setonvartransmit("welcome_screen_messages($com_welcome_screen_messages_area5, $com_welcome_screen_messages6, $com_welcome_screen_messages_highlight7){account_messages, sidestone_keybindings_3}", $com_welcome_screen_messages6);
 ~welcome_screen_credit($com_welcome_screen_membership_area4, $com_welcome_screen_credit8, $com_welcome_screen_membership_highlight9);
-if_setonvartransmit("welcome_screen_credit($com_welcome_screen_membership_area4, $com_welcome_screen_credit8, $com_welcome_screen_membership_highlight9){var1780, var1226}", $com_welcome_screen_credit8);
+if_setonvartransmit("welcome_screen_credit($com_welcome_screen_membership_area4, $com_welcome_screen_credit8, $com_welcome_screen_membership_highlight9){account_credit, sidestone_keybindings_3}", $com_welcome_screen_credit8);
 ~script2218;
-if_setonvartransmit("script2217{var264}", $com_welcome_screen_content0);
+if_setonvartransmit("script2217{if4}", $com_welcome_screen_content0);
 if_settext(~text_device("CLICK HERE TO PLAY", "TAP HERE TO PLAY"), $com_welcome_screen_clickhere_text2);
 ~script1188(struct_781);
 if_setopkey(1, ^key_escape, 0, welcome_screen:esckey);

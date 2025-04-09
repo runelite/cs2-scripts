@@ -14,7 +14,7 @@ def_int $int7 = 0;
 if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $int2 & (map_members = true | oc_members($obj1) = 0)) {
 	$int7 = 1;
 }
-if (%varbit13893 = enum(component, int, enum_4319, $component0) & %varbit13893 ! 0 & $int7 = 1) {
+if (%crafting_silver_item_lasttype = enum(component, int, enum_4319, $component0) & %crafting_silver_item_lasttype ! 0 & $int7 = 1) {
 	cc_create($component0, ^iftype_rectangle, $int6, false);
 	$int6 = calc($int6 + 1);
 	cc_setcolour(^white);

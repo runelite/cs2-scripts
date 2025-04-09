@@ -43,7 +43,7 @@ if (oc_members($namedobj10) = 1 & map_members = false) {
 	$string0 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("br_reward_shop_refuse($string0, $component4, $component5, $component6, $component7)");
 	$colour13, $colour14 = 0x9f9f9f, 0x9f9f9f;
-} else if (%var262 < $int16) {
+} else if (%if2 < $int16) {
 	cc_setcolour(0x9f9f9f);
 	if ($int16 > 1) {
 		$string0 = "You must achieve <tostring($int16)> wins before you can have that item.";
@@ -52,7 +52,7 @@ if (oc_members($namedobj10) = 1 & map_members = false) {
 	}
 	.cc_setonop("br_reward_shop_refuse($string0, $component4, $component5, $component6, $component7)");
 	$colour13, $colour14 = 0x9f9f9f, 0x9f9f9f;
-} else if (%var261 < $int15) {
+} else if (%if1 < $int15) {
 	cc_setcolour(0x9f9f9f);
 	$string0 = "You need <~pest_rewards_costpoints($int15)> to claim that reward.";
 	.cc_setonop("br_reward_shop_refuse($string0, $component4, $component5, $component6, $component7)");
@@ -66,13 +66,13 @@ if (oc_members($namedobj10) = 1 & map_members = false) {
 	.cc_setonop("br_reward_shop_select($int0, $component4, $component5, $component6, $component7)");
 }
 if ($int0 = 64) {
-	$int17 = %varbit9520;
+	$int17 = %bh_unlocks_ags_spec;
 } else if ($int0 = 65) {
-	$int17 = %varbit9521;
+	$int17 = %bh_unlocks_bgs_spec;
 } else if ($int0 = 66) {
-	$int17 = %varbit9522;
+	$int17 = %bh_unlocks_sgs_spec;
 } else if ($int0 = 67) {
-	$int17 = %varbit9523;
+	$int17 = %bh_unlocks_zgs_spec;
 }
 if ($int17 = 1) {
 	if ($int9 = $int0) {

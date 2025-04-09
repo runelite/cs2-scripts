@@ -1,33 +1,33 @@
 // 1540
 [proc,raids_sidepanel_data](component $com_raids_sidepanel_bottom0, component $com_raids_sidepanel_start1)
-def_string $string0 = "Party size: <col=ffffff><tostring(%varbit5424)></col>  Combat level: <col=ffffff><tostring(%varbit12285)></col>";
-if (%varbit9540 > %varbit5424) {
-	$string0 = append($string0, "<br>Scaled party size: <col=ffffff><tostring(%varbit9540)></col>");
+def_string $string0 = "Party size: <col=ffffff><tostring(%raids_client_partysize)></col>  Combat level: <col=ffffff><tostring(%raids_client_highestcombat)></col>";
+if (%raids_client_partysize_scaled > %raids_client_partysize) {
+	$string0 = append($string0, "<br>Scaled party size: <col=ffffff><tostring(%raids_client_partysize_scaled)></col>");
 }
 cc_settext($string0);
-if (%varbit5425 = 0) {
-	if (%varbit5423 = 1) {
+if (%raids_client_progress = 0) {
+	if (%raids_client_isleader = 1) {
 		.cc_settext("");
 	} else {
 		.cc_settext("Waiting for your leader to begin the raid...");
 	}
-} else if (%varbit5425 = 1) {
+} else if (%raids_client_progress = 1) {
 	.cc_settext("Your party is exploring the upper level...");
-} else if (%varbit5425 = 2) {
-	if (%varbit6385 = 1) {
+} else if (%raids_client_progress = 2) {
+	if (%raids_challenge_mode = 1) {
 		.cc_settext("Your party has reached the middle level...");
 	} else {
 		.cc_settext("Your party has reached the lower level...");
 	}
-} else if (%varbit5425 = 3) {
+} else if (%raids_client_progress = 3) {
 	.cc_settext("Your party has reached the lower level...");
-} else if (%varbit5425 = 4) {
+} else if (%raids_client_progress = 4) {
 	.cc_settext("Your party has reached the bottom...");
 } else {
 	.cc_settext("Get out! Get out!<br>GET OUT!");
 }
 def_string $string1 = "Start raid";
-if (%varbit5423 = 1 & %varbit5425 = 0) {
+if (%raids_client_isleader = 1 & %raids_client_progress = 0) {
 	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($com_raids_sidepanel_start1), ^setsize_abs, ^setsize_abs, $com_raids_sidepanel_start1);
 	if_sethide(false, $com_raids_sidepanel_start1);
 	~raids_sidepanel_drawbutton(false, $string1, $com_raids_sidepanel_start1);

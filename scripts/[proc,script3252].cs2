@@ -2,10 +2,10 @@
 [proc,script3252](component $com_ii_elnocks_exchange_confirm0)
 def_int $comsubid1 = 0;
 def_namedobj $namedobj2 = null;
-if (%varbit3729 = 0) {
+if (%ii_elnex = 0) {
 	$comsubid1 = ~v2_stone_button_in_filled($com_ii_elnocks_exchange_confirm0);
 } else {
-	$namedobj2 = enum(int, namedobj, enum_2750, %varbit3729);
+	$namedobj2 = enum(int, namedobj, enum_2750, %ii_elnex);
 	$comsubid1 = ~v2_stone_button_filled($com_ii_elnocks_exchange_confirm0);
 }
 cc_create($com_ii_elnocks_exchange_confirm0, ^iftype_text, $comsubid1, false);
@@ -15,7 +15,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-if (%varbit3729 = 0) {
+if (%ii_elnex = 0) {
 	cc_settext("Select an item");
 } else {
 	if ($namedobj2 ! null) {

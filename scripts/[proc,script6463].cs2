@@ -3,10 +3,10 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (%varbit14179 = 0) {
-	%varbit14179 = 1;
+if (%option_minimap_icons_max_zoom_disabled = 0) {
+	%option_minimap_icons_max_zoom_disabled = 1;
 	minimap_seticonzoomlimit(3);
 } else {
-	%varbit14179 = 0;
+	%option_minimap_icons_max_zoom_disabled = 0;
 	minimap_seticonzoomlimit(2);
 }

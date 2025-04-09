@@ -40,13 +40,13 @@
 	15 = $com_settings_settings_sliderzone18, 
 	16 = $com_settings_tooltip21
 );
-if (%varbit16073 = 1 & %varbit16074 = 1) {
+if (%floater_is_searching = 1 & %floater_search_listen_for_keyboard = 1) {
 	~chatdefault_stopinput;
 }
 ~settings_create_tabs(
 	0 = $com_settings_categories_clickzone6, 
 	1 = $com_settings_categories_tabs7, 
-	2 = %varbit9656, 
+	2 = %settings_category, 
 	3 = $com_settings_settings_clickzone8, 
 	4 = $com_settings_settings_content9, 
 	5 = $com_settings_scrollbar10, 
@@ -70,7 +70,7 @@ if (%varbit16073 = 1 & %varbit16074 = 1) {
 	4 = $com_settings_settings_clickzone8, 
 	5 = $com_settings_settings_content9, 
 	6 = $com_settings_scrollbar10, 
-	7 = %varbit9656, 
+	7 = %settings_category, 
 	8 = $com_settings_settings11, 
 	9 = $com_settings_dropdown_panel12, 
 	10 = $com_settings_dropdown_close13, 

@@ -128,7 +128,7 @@ if_setsize(16, $int7, ^setsize_abs, ^setsize_minus, $component2);
 	21 = $component18, 
 	22 = $component19
 );
-switch_int (%varbit4596) {
+switch_int (%worldswitcher_sort) {
 	case 2 :
 		worldlist_sort(7, false, 0, false);
 	case 3 :
@@ -171,7 +171,7 @@ def_component $component28 = if_getlayer($component0);
 cc_deleteall($component3);
 $int20 = 0;
 def_int $int29 = 0;
-switch_int (%varbit4596) {
+switch_int (%worldswitcher_sort) {
 	case default :
 		$int20, $int29 = ~script7273(
 			0 = $component3, 
@@ -381,9 +381,9 @@ def_string $string0 = "";
 def_int $int33 = -1;
 def_int $int34 = 0;
 def_string $string1 = "";
-if (%varbit4597 > 0) {
+if (%worldswitcher_favourite_1 > 0) {
 	if_sethide(true, $component18);
-	$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4597);
+	$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%worldswitcher_favourite_1);
 	if (~script961($int31, $int32) = 0) {
 		$int31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 	}
@@ -411,8 +411,8 @@ if (%varbit4597 > 0) {
 		20 = $int27, 
 		21 = $component19
 	);
-	if (%varbit4598 > 0) {
-		$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
+	if (%worldswitcher_favourite_2 > 0) {
+		$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%worldswitcher_favourite_2);
 		if (~script961($int31, $int32) = 0) {
 			$int31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}
@@ -445,9 +445,9 @@ if (%varbit4597 > 0) {
 	}
 } else {
 	~worldswitcher_wipe_favourite($component16);
-	if (%varbit4598 > 0) {
+	if (%worldswitcher_favourite_2 > 0) {
 		if_sethide(true, $component18);
-		$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%varbit4598);
+		$int31, $int32, $string0, $int33, $int34, $string1 = ~worldswitcher_list_specific(%worldswitcher_favourite_2);
 		if (~script961($int31, $int32) = 0) {
 			$int31, $string0, $int33, $int34 = 0, "Unavailable", -1, 0;
 		}

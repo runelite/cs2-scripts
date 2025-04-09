@@ -28,9 +28,9 @@ if (~pvp_world = 1) {
 	if_sethide(true, pvp_icons:skullduration);
 	if_sethide(true, pvp_icons:deadman_fog);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
-} else if (%varbit5314 = 1) {
+} else if (%br_ingame = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
-	if (%varbit5320 > 0 & %varbit5316 > 0) {
+	if (%br_safecoord_x > 0 & %br_safecoord_z > 0) {
 		if_sethide(false, br_overlay:deadman_fog);
 		if_setgradientmode(2, br_overlay:deadman_fog);
 		if_setontimer("br_fogcolour", br_overlay:deadman_fog);
@@ -43,7 +43,7 @@ if (~pvp_world = 1) {
 	~pvp_icons_toggletargetsystem(true);
 	if (if_gethide(pvp_icons:wildernesslevel) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
-	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
+	} else if (%multiway_indicator = 1 | %singleway_plus_indicator = 1 | %td_multiway_indicator > 0 | %gravestone_duration > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
@@ -56,21 +56,21 @@ if (~pvp_world = 1) {
 	} else {
 		if_sethide(false, pvp_icons:icons);
 	}
-	if (%var1676 >= 4) {
+	if (%deadman_tournament_mode_pl >= 4) {
 		$int6 = 12;
 		if (~private_event_world = 4) {
 			$int6 = 2;
 		} else if (~private_event_world = 1) {
 			$int6 = 8;
-		} else if (%varbit1497 = 2) {
+		} else if (%deadman_tournament_finalarea = 2) {
 			$int6 = 13;
 		}
 		if (if_gettop = toplevel_spectator) {
 			if_sethide(true, pvp_icons:deadman_final);
-		} else if (%var1676 > 6 | %varbit4989 = $int6) {
+		} else if (%deadman_tournament_mode_pl > 6 | %deadman_tournament_saferadius = $int6) {
 			~script1434(false, $enum4, true);
 			if_sethide(true, pvp_icons:deadman_finallocation);
-		} else if (%var1676 = 5 | %var1676 = 6) {
+		} else if (%deadman_tournament_mode_pl = 5 | %deadman_tournament_mode_pl = 6) {
 			~script1434(false, $enum4, false);
 			if_sethide(false, pvp_icons:deadman_finallocation);
 		}
@@ -83,7 +83,7 @@ if (~pvp_world = 1) {
 		if_sethide(true, pvp_icons:deadman_fog);
 	}
 	if (~deadman_world = 3) {
-		if (%varbit1463 = 1) {
+		if (%spectator_toplevel_enabled = 1) {
 			if_setgraphic(null, pvp_icons:pvp);
 		} else if (~private_event_world ! 0) {
 			if_setgraphic(enum(int, graphic, enum_4042, -1), pvp_icons:pvp);
@@ -93,18 +93,18 @@ if (~pvp_world = 1) {
 	} else {
 		if_setgraphic("pvpw_icons,0", pvp_icons:pvp);
 	}
-	if (%varbit4965 > 0) {
+	if (%deadman_protection_left > 0) {
 		if_setsize(78, 73, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
 		if_sethide(true, pvp_icons:comlevelrange);
 		if_setposition(0, 30, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:comlevelrange);
 		if_sethide(false, pvp_icons:skullduration);
-		if (%varbit4965 >= 60) {
-			if_settext("<tostring(calc(%varbit4965 / 60))>h <tostring(calc(%varbit4965 % 60))>m", pvp_icons:skullduration);
+		if (%deadman_protection_left >= 60) {
+			if_settext("<tostring(calc(%deadman_protection_left / 60))>h <tostring(calc(%deadman_protection_left % 60))>m", pvp_icons:skullduration);
 		} else {
-			if_settext("<tostring(calc(%varbit4965 % 60))>min", pvp_icons:skullduration);
+			if_settext("<tostring(calc(%deadman_protection_left % 60))>min", pvp_icons:skullduration);
 		}
 	} else if (%varcint78 ! 2) {
-		if (%varbit4854 > 0) {
+		if (%deadman_skullduration > 0) {
 			if_setsize(78, 84, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
 			if_setposition(0, 43, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:wildernesslevel);
 			if_sethide(false, pvp_icons:comlevelrange);
@@ -121,7 +121,7 @@ if (~pvp_world = 1) {
 			~pvp_icons_comlevelrange($int7);
 			if_sethide(true, pvp_icons:skullduration);
 		}
-	} else if (%varbit4854 > 0) {
+	} else if (%deadman_skullduration > 0) {
 		if_setsize(78, 73, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
 		if_setposition(0, 31, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:wildernesslevel);
 		if_sethide(true, pvp_icons:comlevelrange);
@@ -135,12 +135,12 @@ if (~pvp_world = 1) {
 	}
 	~pvp_icons_toggletargetsystem(true);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
-} else if (%varbit14022 = 1 | ~pvpa_world = 1) {
+} else if (%pvpa_transmit_challengeorbattlearea = 1 | ~pvpa_world = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
 	$int5 = 15;
 	if_sethide(true, pvp_icons:comlevelrange);
-	if (%varbit14017 ! 0) {
-		if (%varbit14017 = 1) {
+	if (%pvpa_battlearea_status ! 0) {
+		if (%pvpa_battlearea_status = 1) {
 			if_setgraphic("pvpw_icons,0", pvp_icons:pvp);
 		} else {
 			if_setgraphic(overlay_duel, pvp_icons:pvp);
@@ -157,7 +157,7 @@ if (~pvp_world = 1) {
 	~pvp_icons_toggletargetsystem(true);
 	if (if_gethide(pvp_icons:wildernesslevel) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
-	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
+	} else if (%multiway_indicator = 1 | %singleway_plus_indicator = 1 | %td_multiway_indicator > 0 | %gravestone_duration > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
@@ -169,11 +169,11 @@ if (~pvp_world = 1) {
 	if_setcolour(^yellow, pvp_icons:wildernesslevel);
 	if_sethide(true, pvp_icons:comlevelrange);
 	if_setgraphic("pvpw_icons,0", pvp_icons:pvp);
-	if (%varbit5701 >= 1) {
-		if (%varbit5701 > 2) {
+	if (%wildwars_mode_pl >= 1) {
+		if (%wildwars_mode_pl > 2) {
 			~script1434(false, $enum4, true);
 			if_sethide(true, pvp_icons:deadman_finallocation);
-		} else if (%varbit5701 = 2) {
+		} else if (%wildwars_mode_pl = 2) {
 			~script1434(false, $enum4, false);
 			if_sethide(false, pvp_icons:deadman_finallocation);
 		}
@@ -212,18 +212,18 @@ if (~pvp_world = 1) {
 		~pvp_icons_toggletargetsystem(true);
 	} else {
 		if_settrans(0, pvp_icons:pvpw_safe);
-		if (%varbit4163 > 100) {
+		if (%teleblock_cycles > 100) {
 			if_setgraphic("pvpw_icons,3", pvp_icons:pvp);
 			if_setop(1, "Show time remaining", pvp_icons:pvp);
-			if (%varbit10531 = 0) {
+			if (%teleblock_tooltip = 0) {
 				if_setonop("teleblock_timer_tooltip(pvp_icons:pvp, pvp_icons:tooltip, true)", pvp_icons:pvp);
 			}
 		} else {
 			if_setgraphic("pvpw_icons,0", pvp_icons:pvp);
 			if_setonop(null, pvp_icons:pvp);
-			%varbit10531 = 0;
+			%teleblock_tooltip = 0;
 		}
-		if (~target_world = 1 & %varbit14887 = 1) {
+		if (~target_world = 1 & %bh_in_bh = 1) {
 			~pvp_icons_toggletargetsystem(false);
 		} else {
 			~pvp_icons_toggletargetsystem(true);
@@ -252,7 +252,7 @@ if (~pvp_world = 1) {
 	}
 	if (if_gethide(pvp_icons:wildernesslevel) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
-	} else if (%varbit4605 = 1 | %varbit5961 = 1 | %varbit10960 > 0 | %varbit10465 > 0) {
+	} else if (%multiway_indicator = 1 | %singleway_plus_indicator = 1 | %td_multiway_indicator > 0 | %gravestone_duration > 0) {
 		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, pvp_icons:attackstyle);
@@ -272,7 +272,7 @@ if (~on_mobile = true) {
 } else {
 	if_setposition(0, 40, ^setpos_abs_right, ^setpos_abs_bottom, pvp_icons:icons);
 }
-if (%varbit542 = 1) {
+if (%cutscene_status = 1) {
 	if_sethide(true, pvp_icons:icons);
 } else {
 	if_sethide(false, pvp_icons:icons);

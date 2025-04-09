@@ -5,7 +5,7 @@ if ($opindex0 ! 1) {
 }
 if (cc_find($com_bankmain_banktut_toggle1, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
-	%varbit10336 = calc(1 - %varbit10336);
+	%bank_hidebanktut = calc(1 - %bank_hidebanktut);
 	~script3422($com_bankmain_banktut_toggle1);
 	~script3369(bankmain:bank_tut);
 }

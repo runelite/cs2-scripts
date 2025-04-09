@@ -83,7 +83,7 @@ if ($int3 = 2) {
 		$int26 = calc($int26 + 1);
 	}
 	$int24 = db_getfield($dbrow4, quest:requirement_combat, 0);
-	$int25 = calc($int24 - %varbit13027);
+	$int25 = calc($int24 - %combatlevel_transmit);
 	if ($int25 > 0) {
 		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement(
 			0 = "Requirements: ", 
@@ -107,7 +107,7 @@ if ($int3 = 2) {
 		$int27 = calc($int27 + 1);
 	}
 	$int24 = db_getfield($dbrow4, quest:requirement_questpoints, 0);
-	$int25 = calc($int24 - %var101);
+	$int25 = calc($int24 - %qp);
 	if ($int25 > 0) {
 		$int7, $int15, $int21, $int18, $int29, $int28 = ~cr_quests_ui_create_requirement(
 			0 = "Requirements: ", 
@@ -205,7 +205,7 @@ if ($int3 = 2) {
 		$int26 = calc($int26 + 1);
 	}
 	$int24 = db_getfield($dbrow4, quest:recommended_combat, 0);
-	$int25 = calc($int24 - %varbit13027);
+	$int25 = calc($int24 - %combatlevel_transmit);
 	if ($int25 > 0) {
 		if ($int29 = 1 & $int27 > 0) {
 			$int30 = 1;

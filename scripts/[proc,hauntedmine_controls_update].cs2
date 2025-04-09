@@ -1,47 +1,47 @@
 // 3820
 [proc,hauntedmine_controls_update](component $com_hauntedmine_controls_start0, component $com_hauntedmine_controls_a1, component $com_hauntedmine_controls_b2, component $com_hauntedmine_controls_c3, component $com_hauntedmine_controls_d4, component $com_hauntedmine_controls_e5, component $com_hauntedmine_controls_i6, component $com_hauntedmine_controls_j7, component $com_hauntedmine_controls_k8, component $com_hauntedmine_controls_null9, component $com_hauntedmine_controls_null10, component $com_hauntedmine_controls_null11, component $com_hauntedmine_controls_null12, component $com_hauntedmine_controls_null13, component $com_hauntedmine_controls_null14, component $com_hauntedmine_controls_null15, component $com_hauntedmine_controls_null16, component $com_hauntedmine_controls_null17)
-if (%varbit2386 = 1) {
+if (%hauntedmine_lever_a = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_a1);
 } else {
 	if_setmodel(model_4914, $com_hauntedmine_controls_a1);
 }
-if (%varbit2385 = 1) {
+if (%hauntedmine_lever_b = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_b2);
 } else {
 	if_setmodel(model_4914, $com_hauntedmine_controls_b2);
 }
-if (%varbit2387 = 1) {
+if (%hauntedmine_lever_c = 1) {
 	if_setmodel(model_4913, $com_hauntedmine_controls_c3);
 } else {
 	if_setmodel(model_4915, $com_hauntedmine_controls_c3);
 }
-if (%varbit2388 = 1) {
+if (%hauntedmine_lever_d = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_d4);
 } else {
 	if_setmodel(model_4914, $com_hauntedmine_controls_d4);
 }
-if (%varbit2389 = 1) {
+if (%hauntedmine_lever_e = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_e5);
 } else {
 	if_setmodel(model_4914, $com_hauntedmine_controls_e5);
 }
-if (%varbit2390 = 1) {
+if (%hauntedmine_lever_i = 1) {
 	if_setmodel(model_4913, $com_hauntedmine_controls_i6);
 } else {
 	if_setmodel(model_4915, $com_hauntedmine_controls_i6);
 }
-if (%varbit2391 = 1) {
+if (%hauntedmine_lever_j = 1) {
 	if_setmodel(model_4913, $com_hauntedmine_controls_j7);
 } else {
 	if_setmodel(model_4915, $com_hauntedmine_controls_j7);
 }
-if (%varbit2392 = 1) {
+if (%hauntedmine_lever_k = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_k8);
 } else {
 	if_setmodel(model_4914, $com_hauntedmine_controls_k8);
 }
 def_int $int18 = 0;
-if (%varbit2518 = 1) {
+if (%hauntedmine_animate_start = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null10);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null10);
@@ -49,7 +49,7 @@ if (%varbit2518 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null10);
 }
-if (%varbit2519 = 1) {
+if (%hauntedmine_animate_success = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null11);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null11);
@@ -57,7 +57,7 @@ if (%varbit2519 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null11);
 }
-if (%varbit2520 = 1) {
+if (%hauntedmine_animate_38_42 = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null12);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null12);
@@ -65,7 +65,7 @@ if (%varbit2520 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null12);
 }
-if (%varbit2521 = 1) {
+if (%hauntedmine_animate_38_44 = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null13);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null13);
@@ -73,7 +73,7 @@ if (%varbit2521 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null13);
 }
-if (%varbit2522 = 1) {
+if (%hauntedmine_animate_37_47 = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null14);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null14);
@@ -81,7 +81,7 @@ if (%varbit2522 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null14);
 }
-if (%varbit2523 = 1) {
+if (%hauntedmine_animate_39_50 = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null15);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null15);
@@ -89,7 +89,7 @@ if (%varbit2523 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null15);
 }
-if (%varbit2524 = 1) {
+if (%hauntedmine_animate_35_59 = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null16);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null16);
@@ -97,7 +97,7 @@ if (%varbit2524 = 1) {
 } else {
 	if_sethide(true, $com_hauntedmine_controls_null16);
 }
-if (%varbit2525 = 1) {
+if (%hauntedmine_animate_returned = 1) {
 	$int18 = 1;
 	if_sethide(false, $com_hauntedmine_controls_null17);
 	if_setmodel(model_4910, $com_hauntedmine_controls_null17);

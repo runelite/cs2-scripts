@@ -17,10 +17,10 @@ cc_create($component1, ^iftype_rectangle, 1, false);
 cc_settrans(255);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
-cc_setonvartransmit("cluehelper_overlay_vartransmit(%var3546, %varbit14182){var3546, var3543}");
+cc_setonvartransmit("cluehelper_overlay_vartransmit(%cluehelper_infobox_clue, %option_cluehelper_enabled){cluehelper_infobox_clue, option_cluehelper}");
 cc_setonmappost("cluehelper_overlay_mappost");
-if (%var3546 ! null & %varbit14182 = 1) {
-	~cluehelper_overlay(%var3546, ~cluehelper_clue_target(%var3546));
+if (%cluehelper_infobox_clue ! null & %option_cluehelper_enabled = 1) {
+	~cluehelper_overlay(%cluehelper_infobox_clue, ~cluehelper_clue_target(%cluehelper_infobox_clue));
 }
 cc_create($component1, ^iftype_rectangle, 2, false);
 cc_settrans(255);

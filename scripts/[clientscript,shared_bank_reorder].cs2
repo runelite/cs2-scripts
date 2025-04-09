@@ -15,7 +15,7 @@ if (~bankmain_searching = 1) {
 	return;
 }
 def_obj $obj9 = inv_getobj(inv_group_temp, $dropsubid4);
-if (%varbit3959 = 0 | $dropsubid4 = calc($comsubid2 + 1) | $dropsubid4 = calc($comsubid2 - 1) | $obj9 = null) {
+if (%bank_insertmode = 0 | $dropsubid4 = calc($comsubid2 + 1) | $dropsubid4 = calc($comsubid2 - 1) | $obj9 = null) {
 	if (cc_find($drop1, $dropsubid4) = ^true) {
 		~shared_bank_drawitem($obj8, inv_getnum(inv_group_temp, $comsubid2), $comsubid5, $component0, $drop1, $component7);
 	}

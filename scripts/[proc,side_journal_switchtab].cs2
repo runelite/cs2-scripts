@@ -3,15 +3,15 @@
 ~script2596($com_side_journal_tab_1_12, $com_side_journal_tab_1_23, $com_side_journal_tab_1_34, $com_side_journal_tab_1_1_backing21, $com_side_journal_tab_1_2_backing22, $com_side_journal_tab_1_3_backing23);
 ~script2596($com_side_journal_tab_2_16, $com_side_journal_tab_2_27, $com_side_journal_tab_2_38, $com_side_journal_tab_2_1_backing24, $com_side_journal_tab_2_2_backing25, $com_side_journal_tab_2_3_backing26);
 ~script2596($com_side_journal_tab_3_110, $com_side_journal_tab_3_211, $com_side_journal_tab_3_312, $com_side_journal_tab_3_1_backing27, $com_side_journal_tab_3_2_backing28, $com_side_journal_tab_3_3_backing29);
-if (%varbit9340 ! 0) {
+if (%adventurepath_player_participating ! 0) {
 	~script2596($com_side_journal_tab_4_114, $com_side_journal_tab_4_215, $com_side_journal_tab_4_316, $com_side_journal_tab_4_1_backing30, $com_side_journal_tab_4_2_backing31, $com_side_journal_tab_4_3_backing32);
 }
 if (~deadman_world = 3) {
 	~script2596($com_side_journal_tab_5_118, $com_side_journal_tab_5_219, $com_side_journal_tab_5_320, $com_side_journal_tab_5_1_backing33, $com_side_journal_tab_5_2_backing34, $com_side_journal_tab_5_3_backing35);
-} else if (~league_world = 1 & %varbit10037 >= 3) {
+} else if (~league_world = 1 & %league_tutorial_completed >= 3) {
 	~script2596($com_side_journal_tab_5_118, $com_side_journal_tab_5_219, $com_side_journal_tab_5_320, $com_side_journal_tab_5_1_backing33, $com_side_journal_tab_5_2_backing34, $com_side_journal_tab_5_3_backing35);
 }
-switch_int (%varbit8168) {
+switch_int (%side_journal_tab) {
 	case 0 :
 		~script2595($com_side_journal_tab_1_12, $com_side_journal_tab_1_23, $com_side_journal_tab_1_34, $com_side_journal_tab_1_1_backing21, $com_side_journal_tab_1_2_backing22, $com_side_journal_tab_1_3_backing23, $com_side_journal_tabs0, $com_side_journal_tab_line36);
 	case 1 :

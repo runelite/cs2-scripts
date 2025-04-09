@@ -1,6 +1,6 @@
 // 1431
 [proc,script1431](component $com_bankmain_depositworn_toggle0)
-if (%varbit5364 = 1) {
+if (%bank_hidedepositworn = 1) {
 	cc_setgraphic("options_radio_buttons,1");
 	if_setop(1, "Show", $com_bankmain_depositworn_toggle0);
 } else {

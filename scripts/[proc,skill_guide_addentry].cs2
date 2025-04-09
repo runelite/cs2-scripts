@@ -22,7 +22,7 @@ def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
 if (oc_param($namedobj1, param_1757) ! null) {
 	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = oc_param($namedobj1, param_1757), 30, 30, 3, 0, 0, ^black;
-} else if (%varbit4371 = 4) {
+} else if (%skill_guide_skill = 4) {
 	$graphic14 = oc_param($namedobj1, spell_graphic1_on);
 	if ($graphic14 ! null) {
 		$int8, $int9, $int10, $int11, $int12, $colour13 = 24, 24, 6, 0, 0, ^black;
@@ -37,7 +37,7 @@ if ($graphic14 ! null) {
 } else {
 	cc_setobject($namedobj1, -1);
 }
-switch_int (%varbit4371) {
+switch_int (%skill_guide_skill) {
 	case 4 :
 		if ($int5 >= 0 & $int5 <= 3) {
 			cc_setop(1, "Check runes");

@@ -1,11 +1,11 @@
 // 7155
 [clientscript,script7155](dbrow $dbrow0, inv $inv1)
-if (%var3871 = 1) {
-	%var3871 = 0;
+if (%omnishop_view_expanded = 1) {
+	%omnishop_view_expanded = 0;
 } else {
-	%var3871 = 1;
+	%omnishop_view_expanded = 1;
 }
-%var3869 = -1;
+%omnishop_selected_id = -1;
 ~omnishop_main_info_setup(
 	0 = $dbrow0, 
 	1 = $inv1, 

@@ -36,7 +36,7 @@ cc_setcolour(0x726451);
 $int0 = calc($int0 + 1);
 cc_create(bankmain:potionstore_items, ^iftype_text, $int0, false);
 cc_setposition(3, calc($int1 * 36 + 36 / 2), ^setpos_abs_right, ^setpos_abs_top);
-def_string $string1 = "Vials: <tostring(%var4286)>";
+def_string $string1 = "Vials: <tostring(%potionstore_vials)>";
 cc_setsize(parawidth($string1, 3000, p12_full), calc(36 - 2 - 36 / 2), ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_setcolour(0xff981f);
@@ -44,13 +44,13 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_right, ^settextalign_bottom, 0);
 cc_settext($string1);
 cc_setop(1, "Withdraw-<~script2579>");
-if (%varbit6590 ! 0) {
+if (%bank_quantity_type ! 0) {
 	cc_setop(2, "Withdraw-1");
 }
 cc_setop(3, "Withdraw-5");
 cc_setop(4, "Withdraw-10");
-if (%varbit3960 > 0) {
-	cc_setop(5, "Withdraw-<tostring(%varbit3960)>");
+if (%bank_requestedquantity > 0) {
+	cc_setop(5, "Withdraw-<tostring(%bank_requestedquantity)>");
 }
 cc_setop(6, "Withdraw-X");
 cc_setop(7, "Withdraw-All");

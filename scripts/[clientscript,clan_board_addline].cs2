@@ -153,7 +153,7 @@ if ($int0 >= calc(45 - 1)) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		~script4360;
-		cc_setonvartransmit("script4359(event_com, event_comsubid){var807, var808}");
+		cc_setonvartransmit("script4359(event_com, event_comsubid){macro_bee_pos_3, macro_bee_pos_4}");
 	}
 	$int0 = 0;
 	while ($int0 <= 15) {
@@ -182,7 +182,7 @@ if ($int0 >= calc(45 - 1)) {
 			.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 			.cc_setposition(1, calc($int5 + ($int7 - 17) / 2), ^setpos_abs_left, ^setpos_abs_top);
 			~clan_board_filterupdate($int8);
-			cc_setonvartransmit("clan_board_filterupdate(event_com, .cc_getid, $int8){var807, var808}");
+			cc_setonvartransmit("clan_board_filterupdate(event_com, .cc_getid, $int8){macro_bee_pos_3, macro_bee_pos_4}");
 			cc_create(clans_board:filters, ^iftype_text, $int0, false);
 			$int0 = calc($int0 + 1);
 			cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);

@@ -1,21 +1,21 @@
 // 3699
 [proc,league_task_display](int $int0, int $int1, int $int2, int $int3, int $int4, string $string0, string $string1, string $string2, int $int5)(int)
-if (%varbit10033 ! 0 & %varbit10033 ! $int0) {
+if (%league_task_filter_tier ! 0 & %league_task_filter_tier ! $int0) {
 	return(0);
 }
-if (%varbit11689 ! 0 & %varbit11689 ! $int2) {
+if (%league_task_filter_type ! 0 & %league_task_filter_type ! $int2) {
 	return(0);
 }
-if (%varbit11692 ! 0) {
-	if (enum(int, int, enum_3415, %varbit11692) = 23) {
+if (%league_task_filter_area ! 0) {
+	if (enum(int, int, enum_3415, %league_task_filter_area) = 23) {
 		if ($int3 ! 0 & ~script3681($int3) = 0) {
 			return(0);
 		}
-	} else if (enum(int, int, enum_3415, %varbit11692) ! $int3) {
+	} else if (enum(int, int, enum_3415, %league_task_filter_area) ! $int3) {
 		return(0);
 	}
 }
-if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int1) {
+if (%league_task_filter_completed ! 0 & calc(%league_task_filter_completed - 1) ! $int1) {
 	return(0);
 }
 def_int $int6 = 0;

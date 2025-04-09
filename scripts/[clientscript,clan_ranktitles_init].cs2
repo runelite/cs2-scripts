@@ -18,7 +18,7 @@ if ($component12 ! null) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
 	~script174($string0, $string1);
-	cc_setonvartransmit("script173(event_com, event_comsubid, $string0, $string1){var3026}");
+	cc_setonvartransmit("script173(event_com, event_comsubid, $string0, $string1){clan_editing_3}");
 }
 $int11 = calc($int11 + 40);
 if_setsize(0, $int11, ^setsize_minus, ^setsize_minus, $com_clans_ranktitles_titles_container5);
@@ -159,4 +159,4 @@ def_int $int24 = ~min(calc($int23 + $int22), calc($int11 + $int19));
 	10 = if_getheight(if_getlayer($com_clans_ranktitles_universe0))
 );
 ~clan_ranktitles_draw($int20, $com_clans_ranktitles_contents2, $com_clans_ranktitles_tiers_list3, $com_clans_ranktitles_tiers_scrollbar4, $com_clans_ranktitles_titles_list6, $com_clans_ranktitles_cancel8, $com_clans_ranktitles_save9);
-if_setonvartransmit("clan_ranktitles_draw($int20, $com_clans_ranktitles_contents2, $com_clans_ranktitles_tiers_list3, $com_clans_ranktitles_tiers_scrollbar4, $com_clans_ranktitles_titles_list6, $com_clans_ranktitles_cancel8, $com_clans_ranktitles_save9){var3023, var3024, var3025, var3026, var3027, var733, var736, var737}", $com_clans_ranktitles_universe0);
+if_setonvartransmit("clan_ranktitles_draw($int20, $com_clans_ranktitles_contents2, $com_clans_ranktitles_tiers_list3, $com_clans_ranktitles_tiers_scrollbar4, $com_clans_ranktitles_titles_list6, $com_clans_ranktitles_cancel8, $com_clans_ranktitles_save9){clan_editing_0, clan_editing_1, clan_editing_2, clan_editing_3, clan_editing_4, royal_signy_uid, royal_beigarth_uid, royal_reinn_uid}", $com_clans_ranktitles_universe0);

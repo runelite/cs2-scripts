@@ -1,22 +1,22 @@
 // 690
 [proc,trail_slidepuzzle_synch](component $com_trail_slidepuzzle_pieces0, int $int1, int $int2, int $int3, int $int4, component $com_trail_slidepuzzle_grid_standard5, component $com_trail_slidepuzzle_grid_mm6, component $com_trail_slidepuzzle_grid_background7)
 def_inv $inv8 = trail_puzzleinv;
-if (%var261 = 8) {
+if (%if1 = 8) {
 	$inv8 = reinitialisation_inv_inactive;
-} else if (%var261 = 7) {
+} else if (%if1 = 7) {
 	$inv8 = reinitialisation_inv;
 }
 def_enum $enum9 = null;
 def_enum $enum10 = null;
-$enum9, $enum10 = enum(int, enum, enum_1864, %var261), enum(int, enum, enum_1865, %var261);
-if (%var261 = 7 | %var261 = 8) {
+$enum9, $enum10 = enum(int, enum, enum_1864, %if1), enum(int, enum, enum_1865, %if1);
+if (%if1 = 7 | %if1 = 8) {
 	if_sethide(true, $com_trail_slidepuzzle_grid_standard5);
 	if_sethide(false, $com_trail_slidepuzzle_grid_mm6);
 } else {
 	if_sethide(false, $com_trail_slidepuzzle_grid_standard5);
 	if_sethide(true, $com_trail_slidepuzzle_grid_mm6);
 }
-switch_int (%var261) {
+switch_int (%if1) {
 	case 9 :
 		if_setcolour(0x492e04, $com_trail_slidepuzzle_grid_background7);
 	case default :
@@ -29,7 +29,7 @@ while ($int12 < $int1) {
 		$obj11 = inv_getobj($inv8, $int12);
 		~trail_slidepuzzle_setint($int12, enum(obj, int, $enum10, $obj11));
 		if (cc_find($com_trail_slidepuzzle_pieces0, $int12) = ^true) {
-			if (%var261 = 8) {
+			if (%if1 = 8) {
 				cc_clearops;
 				cc_setonop(null);
 			} else {

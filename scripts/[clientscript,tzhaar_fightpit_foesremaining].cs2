@@ -1,7 +1,7 @@
 // 70
 [clientscript,tzhaar_fightpit_foesremaining]
-if (%var560 < 1) {
+if (%tzhaar_fightpit_remaining < 1) {
 	if_settext("You're the Winner!", tzhaar_fightpit:tzhaar_fightpit_foes);
 } else {
-	if_settext("Foes Remaining: <tostring(%var560)>", tzhaar_fightpit:tzhaar_fightpit_foes);
+	if_settext("Foes Remaining: <tostring(%tzhaar_fightpit_remaining)>", tzhaar_fightpit:tzhaar_fightpit_foes);
 }

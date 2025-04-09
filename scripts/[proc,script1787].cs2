@@ -4,14 +4,14 @@ def_string $string0 = oc_name($obj0);
 if (map_members = true | oc_members($obj0) = 0) {
 	switch_obj ($obj0) {
 		case tob_teleport_22517 :
-			if (%varbit14838 = 1) {
+			if (%teleport_crystal_afk_mode = 1) {
 				$string0 = "<$string0> (Active)";
 			} else {
 				$string0 = "<$string0> (Inactive)";
 			}
 		case league_bankers_note_28767 :
-			if (%var4034 ! null) {
-				$string0 = oc_name(%var4034);
+			if (%league_reusable_protected_obj ! null) {
+				$string0 = oc_name(%league_reusable_protected_obj);
 			}
 	}
 }

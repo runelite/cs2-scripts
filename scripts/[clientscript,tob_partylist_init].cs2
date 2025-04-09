@@ -33,6 +33,6 @@ cc_sethide(true);
 ~script1558(tob_partylist:refresh, "Refresh", tob_partylist:contents, enum_1938, -1);
 ~tob_partylist_setpartybutton;
 ~script5219;
-if_setonvartransmit("tob_partylist_setpartybutton{var1740}", tob_partylist:myparty);
-if_setonvartransmit("script5218{var3052}", tob_partylist:filter);
+if_setonvartransmit("tob_partylist_setpartybutton{tob_mycontroller}", tob_partylist:myparty);
+if_setonvartransmit("script5218{tob_temp_transmit_3}", tob_partylist:filter);
 if_sethide(true, tob_partydetails:leader_highlight);

@@ -46,7 +46,7 @@ while ($int24 <= 22) {
 			cc_setcolour(^white);
 			cc_setfill(true);
 			cc_settrans(255);
-			if (%varbit14161 <= 1) {
+			if (%pvpa_transmit_viewingrunepouch <= 1) {
 				if ($boolean22 = false) {
 					cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 235, null)");
 				}
@@ -76,8 +76,8 @@ while ($int24 <= 22) {
 	$int24 = calc($int24 + 1);
 }
 ~script6424;
-if_setonvartransmit("script6423{var3450}", pvp_arena_runepouch:runes);
+if_setonvartransmit("script6423{pvpa_editing}", pvp_arena_runepouch:runes);
 $int18 = ~thinbox(pvp_arena_runepouch:runes, $int18);
 %varcint225 = null;
 ~script6427($boolean22, $int1, $int2, $obj3, $obj4);
-if_setonvartransmit("script6426($boolean22, $int1, $int2, $obj3, $obj4){var3450}", pvp_arena_runepouch:spells);
+if_setonvartransmit("script6426($boolean22, $int1, $int2, $obj3, $obj4){pvpa_editing}", pvp_arena_runepouch:spells);

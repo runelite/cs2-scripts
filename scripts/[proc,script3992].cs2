@@ -4,7 +4,7 @@ def_struct $struct1 = null;
 if (~script6790 = 1) {
 	if_setgraphic("achievement_diary_icons,11", $com_side_journal_tab_icon_50);
 } else if (~league_world = 1) {
-	$struct1 = enum(int, struct, enum_2670, %varbit10032);
+	$struct1 = enum(int, struct, enum_2670, %league_type);
 	if ($struct1 ! null) {
 		if_setgraphic(struct_param($struct1, param_2054), $com_side_journal_tab_icon_50);
 	} else {

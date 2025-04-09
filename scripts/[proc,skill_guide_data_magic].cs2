@@ -23,10 +23,10 @@ switch_int ($int0) {
 				$string3 = "Tap a spell icon below to see the required runes to cast each spell.<br><br>";
 				return(-1, battlestaff_1391, "<~text_device($string2, $string3)>By opening the spellbook icon on the side interface, <~text_device($string0, $string1)>");
 			case 1 :
-				if (~league_world = 1 & %varbit10032 = 1) {
+				if (~league_world = 1 & %league_type = 1) {
 					return(-1, league_twisted_home_teleport_24369, "Home teleport (Kourend)");
 				}
-				if (~league_world = 1 & %varbit10032 = 3) {
+				if (~league_world = 1 & %league_type = 3) {
 					return(-1, league_3_home_teleport_26553, "Home teleport (Catherby)");
 				}
 				return(-1, 48_home_teleport_9712, "Home teleport (Lumbridge)");
@@ -176,7 +176,7 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, staff_of_zaros_4675, "Ancient magicks are available after<br>completing the Desert Treasure I quest.");
 			case 1 :
-				if (~league_world = 1 & %varbit10032 = 3) {
+				if (~league_world = 1 & %league_type = 3) {
 					return(-1, league_3_home_teleport_2_26563, "Home teleport (Catherby)");
 				}
 				return(-1, 01_zaros_home_tele_11142, "Home teleport (Edgeville)");
@@ -238,7 +238,7 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, lunar_moonclan_liminal_staff_9084, "Lunar spells are available after<br>completing the Lunar Diplomacy quest.");
 			case 1 :
-				if (~league_world = 1 & %varbit10032 = 3) {
+				if (~league_world = 1 & %league_type = 3) {
 					return(-1, league_3_home_teleport_3_26564, "Home teleport (Catherby)");
 				}
 				return(-1, 01_lunar_home_tele_11143, "Home teleport (Lunar Isle)");
@@ -338,7 +338,7 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, arceuus_tele_icon_13578, "Arceuus spells are unlocked<br>in Arceuus.");
 			case 1 :
-				if (~league_world = 1 & %varbit10032 = 3) {
+				if (~league_world = 1 & %league_type = 3) {
 					return(-1, league_3_home_teleport_4_26565, "Home teleport (Catherby)");
 				}
 				return(-1, deadman_level99_lamp_21835, "Home teleport (Dark Altar)");

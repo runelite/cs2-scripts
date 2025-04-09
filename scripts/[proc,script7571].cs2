@@ -14,7 +14,7 @@ while ($int3 < $int1) {
 	if (~popout_available_inner($int3) = true) {
 		.cc_setsize(52, 40, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_bottom);
-		if (%varbit13090 = $int3) {
+		if (%popout_open = $int3) {
 			.cc_setop(1, "Close");
 			.cc_setgraphic(graphic_5777);
 		} else {

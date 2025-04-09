@@ -54,13 +54,13 @@ if_setonvartransmit("bankside_build(
 	6 = $com_bankside_runepouch_container11, 
 	7 = $com_bankside_runepouch_select_container12, 
 	8 = $com_bankside_prepot_device_container14
-){var304, var1666, var1141, var261, var262, var263, var4611}", $com_bankside_items_container1);
+){bankinsert, gargboss_perm_transmit, item_redemption, if1, if2, if3, bank_locked_slots}", $com_bankside_items_container1);
 ~bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag);
 if_setoninvtransmit("bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag){looting_bag}", $com_bankside_lootingbag_container5);
-if_setonvartransmit("bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag){var304, var1666}", $com_bankside_lootingbag_container5);
+if_setonvartransmit("bankside_bag_draw($com_bankside_lootingbag_items6, looting_bag){bankinsert, gargboss_perm_transmit}", $com_bankside_lootingbag_container5);
 ~bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv);
 if_setoninvtransmit("bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv){league_secondinv}", $com_bankside_league_secondinv_container8);
-if_setonvartransmit("bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv){var304, var1666}", $com_bankside_league_secondinv_container8);
+if_setonvartransmit("bankside_bag_draw($com_bankside_league_secondinv_items9, league_secondinv){bankinsert, gargboss_perm_transmit}", $com_bankside_league_secondinv_container8);
 ~bankside_switchview($com_bankside_items_container1, $com_bankside_lootingbag_container5, $com_bankside_league_secondinv_container8, $com_bankside_runepouch_container11, $com_bankside_runepouch_select_container12, $com_bankside_prepot_device_container14);
 if_setonvartransmit("bankside_switchview(
 	0 = -1, 
@@ -72,7 +72,7 @@ if_setonvartransmit("bankside_switchview(
 	6 = $com_bankside_runepouch_select_container12, 
 	7 = $com_bankside_prepot_device_container14, 
 	8 = -1
-){var115, var4385}", $com_bankside_universe0);
+){bankcert, bank_viewcontainer_obj}", $com_bankside_universe0);
 if_setonop("bankside_switchview(
 	0 = event_op, 
 	1 = null, 

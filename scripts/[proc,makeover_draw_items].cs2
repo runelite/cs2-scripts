@@ -35,7 +35,7 @@ while ($int12 < $int14) {
 	} else {
 		$int8 = calc($int8 + $int4);
 	}
-	switch_int (%varbit4130) {
+	switch_int (%makeover_interface_type) {
 		case 0 :
 			$model15 = db_getfield($dbrow13, hair_styles:head_model, 0);
 			$string0 = db_getfield($dbrow13, hair_styles:name, 0);
@@ -46,7 +46,7 @@ while ($int12 < $int14) {
 			$string1 = "Facial Hairstyle";
 		case 2 :
 		case 3 :
-			if (%varbit10989 = 0) {
+			if (%makeover_bodytype = 0) {
 				$model15 = db_getfield($dbrow13, torso_styles:torso_model_type_a_1, 0);
 				$model16 = db_getfield($dbrow13, torso_styles:torso_model_type_a_2, 0);
 			} else {
@@ -56,7 +56,7 @@ while ($int12 < $int14) {
 			$string0 = db_getfield($dbrow13, torso_styles:name, 0);
 			$string1 = "Clothes";
 		case 4 :
-			if (%varbit10989 = 0) {
+			if (%makeover_bodytype = 0) {
 				$model15 = db_getfield($dbrow13, sleeve_styles:sleeve_model_type_a, 0);
 			} else {
 				$model15 = db_getfield($dbrow13, sleeve_styles:sleeve_model_type_b, 0);
@@ -64,7 +64,7 @@ while ($int12 < $int14) {
 			$string0 = db_getfield($dbrow13, sleeve_styles:name, 0);
 			$string1 = "Clothes";
 		case 5 :
-			if (%varbit10989 = 0) {
+			if (%makeover_bodytype = 0) {
 				$model15 = db_getfield($dbrow13, legging_styles:legging_model_type_a, 0);
 			} else {
 				$model15 = db_getfield($dbrow13, legging_styles:legging_model_type_b, 0);
@@ -72,7 +72,7 @@ while ($int12 < $int14) {
 			$string0 = db_getfield($dbrow13, legging_styles:name, 0);
 			$string1 = "Clothes";
 		case 6 :
-			if (%varbit10989 = 0) {
+			if (%makeover_bodytype = 0) {
 				$model15 = db_getfield($dbrow13, shoe_styles:shoe_model_type_a, 0);
 			} else {
 				$model15 = db_getfield($dbrow13, shoe_styles:shoe_model_type_b, 0);
@@ -80,7 +80,7 @@ while ($int12 < $int14) {
 			$string0 = db_getfield($dbrow13, shoe_styles:name, 0);
 			$string1 = "Shoes";
 		case 7 :
-			if (%varbit10989 = 0) {
+			if (%makeover_bodytype = 0) {
 				$model15 = db_getfield($dbrow13, hand_styles:hand_model_type_a, 0);
 			} else {
 				$model15 = db_getfield($dbrow13, hand_styles:hand_model_type_b, 0);

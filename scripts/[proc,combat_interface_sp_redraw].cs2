@@ -3,7 +3,7 @@
 def_int $int1 = 0;
 def_obj $obj2 = inv_getobj(worn, 3);
 def_int $int3 = 0;
-if (map_members = true | %varbit5314 = 1) {
+if (map_members = true | %br_ingame = 1) {
 	$int1 = ~script3648($obj2);
 }
 if ($int1 <= 0) {
@@ -20,12 +20,12 @@ if (if_gethide(combat_interface:sp_attackbar) = true) {
 	$int4 = 1;
 }
 if_sethide(false, combat_interface:sp_attackbar);
-if (%var301 > 0) {
+if (%sa_attack > 0) {
 	if_setcolour(^yellow, combat_interface:sp_indicator);
 } else {
 	if_setcolour(0x000010, combat_interface:sp_indicator);
 }
-def_int $int5 = %var300;
+def_int $int5 = %sa_energy;
 def_int $int6 = 1000;
 def_int $int7 = $int1;
 def_int $int8 = 0;
@@ -33,13 +33,13 @@ if ($int5 < 0) {
 	$int5 = 0;
 }
 if ($obj2 = soulreaper_28338) {
-	$int5, $int6 = %var3784, 5;
+	$int5, $int6 = %soulreaper_stacks, 5;
 	if ($int5 > 0) {
 		$int3 = 1;
 	}
 	if_settext("Special Attack: <tostring($int5)>/5", combat_interface:sp_indicator);
 } else if ($obj2 = weapon_of_sol_30369) {
-	$int5, $int6 = %var4600, 20;
+	$int5, $int6 = %weapon_of_sol_stacks, 20;
 	if_settext("Special Attack: <tostring($int5)>/<tostring(20)>", combat_interface:sp_indicator);
 } else if (~league_relic_active(weapon_master_4721) = 1 & $int5 < $int7 & stat(hitpoints) > 25) {
 	$int5 = calc((stat(hitpoints) - 1) / 25);
@@ -73,7 +73,7 @@ def_obj $obj10 = inv_getobj(worn, 1);
 if ($obj9 = null & $obj10 ! null & oc_param($obj10, param_1910) = 1) {
 	$obj9 = inv_getobj(dizanas_quiver_ammo, 0);
 }
-if (%varbit5712 = 0) {
+if (%option_satooltips = 0) {
 	if (($obj2 = darkbow_11235 | $obj2 = br_darkbow_20408 | $obj2 = darkbow_green_12765 | $obj2 = darkbow_white_12768 | $obj2 = darkbow_yellow_12767 | $obj2 = deadman_blighted_dark_bow_29599) & ($obj9 = dragon_arrow_11212 | $obj9 = dragon_arrow_p_11227 | $obj9 = dragon_arrow_p+_11228 | $obj9 = dragon_arrow_p++_11229)) {
 		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(~script3648($obj2) / 10))>%)";
 	}

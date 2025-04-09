@@ -45,7 +45,7 @@ if_setonvartransmit("league_tasks_transmit(
 	16 = $component16, 
 	17 = $component17, 
 	18 = $component18
-){var2614}", league_tasks:infinity);
+){league_points_completed}", league_tasks:infinity);
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
@@ -129,7 +129,7 @@ if ($int23 = 0) {
 	}
 }
 def_int $int29 = 0;
-def_struct $struct30 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct30 = enum(int, struct, enum_2670, %league_type);
 if ($struct30 = null) {
 	return;
 }
@@ -188,7 +188,7 @@ def_int $int44 = 0;
 def_string $string2 = %varcstring1180;
 def_int $int45 = string_length(~script7124($string2));
 def_int $int46 = 1;
-if (%varbit10033 = 0 & %varbit11689 = 0 & %varbit11692 = 0 & $int45 <= 1) {
+if (%league_task_filter_tier = 0 & %league_task_filter_type = 0 & %league_task_filter_area = 0 & $int45 <= 1) {
 	$int46 = 0;
 }
 def_int $int47 = 1;
@@ -213,7 +213,7 @@ while ($int34 < $int33) {
 			7 = $string2, 
 			8 = $int45
 		);
-	} else if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int38) {
+	} else if (%league_task_filter_completed ! 0 & calc(%league_task_filter_completed - 1) ! $int38) {
 		$int47 = 0;
 	} else {
 		$int47 = 1;
@@ -370,7 +370,7 @@ if_setscrollpos(0, $int19, $component1);
 cc_deleteall($component11);
 ~scrollbar_vertical($component11, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_resize($component11, $component1, $int19);
-if ($int29 = 0 & %varbit17310 = 0) {
+if ($int29 = 0 & %league_tasks_is_searching = 0) {
 	if_sethide(false, $component10);
 } else {
 	if_sethide(true, $component10);

@@ -1,6 +1,6 @@
 // 1389
 [proc,poh_viewer_setlevel](int $int0, int $int1, int $int2)
-if_setonvartransmit("poh_viewer_setlevel(false, $int0, $int1, $int2){var780}", poh_viewer:layerbuttons);
+if_setonvartransmit("poh_viewer_setlevel(false, $int0, $int1, $int2){poh_debug}", poh_viewer:layerbuttons);
 if ($int0 < $int1) {
 	$int0 = $int1;
 } else if ($int0 > $int2) {
@@ -40,7 +40,7 @@ while ($int7 < $int4) {
 	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 def_int $int8 = -1;
-def_int $comsubid9 = calc(%varbit5330 - 1);
+def_int $comsubid9 = calc(%poh_viewer_destination - 1);
 if ($comsubid9 >= 0 & $comsubid9 < $int4) {
 	$int8 = 0;
 } else if ($comsubid9 >= $int4 & $comsubid9 < calc($int4 * 2)) {

@@ -41,7 +41,7 @@ def_string $string1 = "null";
 ~script7188;
 ~script7185;
 ~script7182(-1);
-switch_int (%varbit9607) {
+switch_int (%option_loottracker_display_group_mode) {
 	case 0 :
 		$int7 = 10;
 		$int9 = 0;
@@ -68,7 +68,7 @@ while ($int8 < $int7) {
 	$int32 = 0;
 	$int27 = 0;
 	$boolean25 = stringvector_contains(stringvector_1, $string0, true, false);
-	if (($boolean25 = false | %varbit14880 = 1) & $int11 ! 0) {
+	if (($boolean25 = false | %option_loottracker_display_ignored_entries = 1) & $int11 ! 0) {
 		$int27, $int26, $comsubid28, $comsubid29, $comsubid30 = ~script2907(
 			0 = $component1, 
 			1 = $int8, 
@@ -83,7 +83,7 @@ while ($int8 < $int7) {
 		while ($int16 < $int15) {
 			if (cc_find($component0, $int16) = ^true) {
 				$obj17, $int18, $int19, $int21, $int20, $int22, $int24 = ~script7173($component0, $int16);
-				if ($int24 = 0 | %varbit14880 = 1) {
+				if ($int24 = 0 | %option_loottracker_display_ignored_entries = 1) {
 					if ($int13 = 1) {
 						$int27, $int26, $int31, $int32, $int23 = ~script3042(
 							0 = $component4, 
@@ -104,7 +104,7 @@ while ($int8 < $int7) {
 							15 = $int23
 						);
 					}
-					if (%varbit14881 = 0) {
+					if (%option_loottracker_display_value_mode = 0) {
 						if ($int22 >= 0) {
 							$int14 = ~script1226($int14, $int22);
 						} else {
@@ -141,7 +141,7 @@ while ($int8 < $int7) {
 		if (cc_find($component1, 4) = ^true) {
 			cc_settext("<~magic_spacer_tostring_extended($int14, ".", 1)> gp");
 		}
-		if (%varbit9607 = 0) {
+		if (%option_loottracker_display_group_mode = 0) {
 			$int5 = ~script1226($int5, $int12);
 		} else {
 			$int5 = ~script1226($int5, 1);

@@ -1,8 +1,8 @@
 // 4489
 [clientscript,script4489](component $com_tob_midway_stores_items0, int $comsubid1, namedobj $namedobj2)
 if (cc_find($com_tob_midway_stores_items0, $comsubid1) = ^true) {
-	if (%varbit12272 ! 0) {
-		cc_setop(3, "Buy-<tostring(%varbit12272)>");
+	if (%tob_midwaychest_last_x ! 0) {
+		cc_setop(3, "Buy-<tostring(%tob_midwaychest_last_x)>");
 	} else {
 		cc_clearops;
 		cc_setop(1, "Value");

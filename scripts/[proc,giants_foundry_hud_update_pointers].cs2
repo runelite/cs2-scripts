@@ -13,23 +13,23 @@ def_component $component9 = giants_foundry_hud:grind_bar_highlight;
 def_component $component10 = giants_foundry_hud:polish_bar_highlight;
 def_int $int11 = calc(if_getwidth($component5) - 2);
 def_int $int12 = 0;
-$int12 = scale(%varbit13939, 205, $int11);
+$int12 = scale(%giants_foundry_preform_quality, 205, $int11);
 if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component0);
 if_setsize(calc($int12 + 1), 2, ^setsize_abs, ^setsize_minus, $component6);
-$int12 = scale(%varbit13950, 205, $int11);
+$int12 = scale(%giants_foundry_preform_start_quality, 205, $int11);
 if_setsize(calc($int12 + 1), 2, ^setsize_abs, ^setsize_minus, $component7);
-if (%varbit13939 = 0) {
+if (%giants_foundry_preform_quality = 0) {
 	if_sethide(true, $component6);
 } else {
 	if_sethide(false, $component6);
 }
-$int12 = scale(%varbit13948, 1000, $int11);
+$int12 = scale(%giants_foundry_preform_temperature, 1000, $int11);
 if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
-$int12 = scale(%varbit13949, 1000, $int11);
+$int12 = scale(%giants_foundry_preform_completion, 1000, $int11);
 if_setposition($int12, -1, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
 def_int $int13 = ~giants_foundry_section_count;
 def_int $int14 = ~script6120;
-if (%varbit13949 >= 1000) {
+if (%giants_foundry_preform_completion >= 1000) {
 	if_sethide(true, $component4);
 	if_sethide(false, $component3);
 } else {
@@ -47,19 +47,19 @@ if_setsize($int15, 2, ^setsize_abs, ^setsize_minus, $component4);
 def_int $int17 = 0;
 def_int $int18 = 0;
 $int17, $int18 = ~script6121(0);
-if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+if (%giants_foundry_preform_temperature >= $int17 & %giants_foundry_preform_temperature <= calc($int17 + $int18)) {
 	if_sethide(false, $component8);
 } else {
 	if_sethide(true, $component8);
 }
 $int17, $int18 = ~script6121(1);
-if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+if (%giants_foundry_preform_temperature >= $int17 & %giants_foundry_preform_temperature <= calc($int17 + $int18)) {
 	if_sethide(false, $component9);
 } else {
 	if_sethide(true, $component9);
 }
 $int17, $int18 = ~script6121(2);
-if (%varbit13948 >= $int17 & %varbit13948 <= calc($int17 + $int18)) {
+if (%giants_foundry_preform_temperature >= $int17 & %giants_foundry_preform_temperature <= calc($int17 + $int18)) {
 	if_sethide(false, $component10);
 } else {
 	if_sethide(true, $component10);

@@ -1,6 +1,6 @@
 // 325
 [clientscript,combat_interface_retaliate]
-if (%var172 = 0) {
+if (%option_nodef = 0) {
 	~options_button_on(combat_interface:retaliate_back, 0);
 	if_setgraphic("combat_autoretaliate,1", combat_interface:retaliate_icon);
 	if_settext("Auto Retaliate<br>(On)", combat_interface:retaliate_text);

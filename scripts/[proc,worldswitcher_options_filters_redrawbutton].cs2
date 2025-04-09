@@ -2,16 +2,16 @@
 [proc,worldswitcher_options_filters_redrawbutton](component $component0, boolean $boolean1, component $com_worldswitcher_options_filter_member2, component $com_worldswitcher_options_filter_country3, component $com_worldswitcher_options_filter_theme4, component $com_worldswitcher_options_search5, component $com_worldswitcher_options_reset6)
 def_int $int7 = 0;
 if ($component0 = $com_worldswitcher_options_filter_member2) {
-	$int7 = %varbit14967;
+	$int7 = %worldswitcher_filter_member;
 } else if ($component0 = $com_worldswitcher_options_filter_country3) {
-	$int7 = %varbit14968;
+	$int7 = %worldswitcher_filter_country;
 } else if ($component0 = $com_worldswitcher_options_filter_theme4) {
-	$int7 = %varbit14969;
+	$int7 = %worldswitcher_filter_theme;
 } else if ($component0 = $com_worldswitcher_options_search5) {
 	if (string_length(~worldswitcher_search_get) > 0) {
 		$int7 = -1;
 	}
-} else if ($component0 = $com_worldswitcher_options_reset6 & (%varbit14967 ! 0 | %varbit14968 ! 0 | %varbit14969 ! 0 | string_length(~worldswitcher_search_get) > 0)) {
+} else if ($component0 = $com_worldswitcher_options_reset6 & (%worldswitcher_filter_member ! 0 | %worldswitcher_filter_country ! 0 | %worldswitcher_filter_theme ! 0 | string_length(~worldswitcher_search_get) > 0)) {
 	$int7 = -1;
 }
 if ($int7 ! 0) {

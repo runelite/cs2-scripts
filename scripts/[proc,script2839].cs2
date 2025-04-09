@@ -1,6 +1,6 @@
 // 2839
 [proc,script2839](component $com_bankmain_depositinv_toggle0)
-if (%varbit8352 = 1) {
+if (%bank_hidedepositinv = 1) {
 	cc_setgraphic("options_radio_buttons,1");
 	if_setop(1, "Show", $com_bankmain_depositinv_toggle0);
 } else {

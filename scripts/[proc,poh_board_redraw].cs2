@@ -55,7 +55,7 @@ switch_int (%varcint379) {
 		while ($int1 > 0) {
 			$int1 = calc($int1 - 1);
 			if (cc_find(poh_board:name, $intarray0($int1)) = ^true & .cc_find(poh_board:location, $intarray0($int1)) = ^true) {
-				if (string_length(cc_gettext) = 0 | %varbit9448 = 1 & compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) ! 0) {
+				if (string_length(cc_gettext) = 0 | %poh_board_filtered = 1 & compare(~poh_board_loc(tostring(%poh_board_last_loc)), .cc_gettext) ! 0) {
 					$boolean7 = true;
 				} else {
 					$boolean7 = false;
@@ -124,7 +124,7 @@ switch_int (%varcint379) {
 				if ($boolean7 = true) {
 					cc_sethide(true);
 					.cc_sethide(true);
-				} else if (compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) = 0) {
+				} else if (compare(~poh_board_loc(tostring(%poh_board_last_loc)), .cc_gettext) = 0) {
 					cc_sethide(false);
 					.cc_sethide(true);
 				} else {
@@ -139,7 +139,7 @@ switch_int (%varcint379) {
 	case default :
 		while ($int1 < $int5) {
 			if (cc_find(poh_board:name, $intarray0($int1)) = ^true & .cc_find(poh_board:location, $intarray0($int1)) = ^true) {
-				if (string_length(cc_gettext) = 0 | %varbit9448 = 1 & compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) ! 0) {
+				if (string_length(cc_gettext) = 0 | %poh_board_filtered = 1 & compare(~poh_board_loc(tostring(%poh_board_last_loc)), .cc_gettext) ! 0) {
 					$boolean7 = true;
 				} else {
 					$boolean7 = false;
@@ -208,7 +208,7 @@ switch_int (%varcint379) {
 				if ($boolean7 = true) {
 					cc_sethide(true);
 					.cc_sethide(true);
-				} else if (compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) = 0) {
+				} else if (compare(~poh_board_loc(tostring(%poh_board_last_loc)), .cc_gettext) = 0) {
 					cc_sethide(false);
 					.cc_sethide(true);
 				} else {

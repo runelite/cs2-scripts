@@ -4,7 +4,7 @@ cc_deleteall($com_pvp_arena_sidepanel_header0);
 cc_deleteall($com_pvp_arena_sidepanel_left5);
 cc_deleteall($com_pvp_arena_sidepanel_right6);
 cc_deleteall($com_pvp_arena_sidepanel_playerlist2);
-if (%varbit13989 = 3 & activeclansettings_find_affined(2) = true) {
+if (%pvpa_affinitystatus = 3 & activeclansettings_find_affined(2) = true) {
 	~pvpa_sidepanel_writecontents(
 		0 = false, 
 		1 = $com_pvp_arena_sidepanel_header0, 
@@ -18,7 +18,7 @@ if (%varbit13989 = 3 & activeclansettings_find_affined(2) = true) {
 	);
 	return;
 }
-if (%varbit12164 = 3 & activeclansettings_find_listened = true) {
+if (%clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true) {
 	switch_int (%varclansetting33) {
 		case 1001, 1002, 1003, 1004, 1005, 1006 :
 			~pvpa_sidepanel_writecontents(
@@ -76,24 +76,24 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 def_int $int8 = -1;
-switch_int (%varbit13989) {
+switch_int (%pvpa_affinitystatus) {
 	case 0, 2 :
-		$int8 = %varbit13989;
+		$int8 = %pvpa_affinitystatus;
 	case 1 :
-		if (%varbit12164 = 1) {
+		if (%clan_guest_affinitystatus = 1) {
 			cc_settext(~text_device("Click <col=ffb83f>Find</col> to find a PvP Arena group.<br><br>Once you've found a suitable group, <col=ffb83f>sign up</col> to be invited to its fights.", "Tap <col=ffb83f>Find</col> to find a PvP Arena group.<br><br>Once you've found a suitable group, <col=ffb83f>sign up</col> to be invited to its fights."));
 			return;
 		}
-		if (%varbit12164 = 3) {
-			$int8 = %varbit13989;
+		if (%clan_guest_affinitystatus = 3) {
+			$int8 = %pvpa_affinitystatus;
 		} else {
-			$int8 = %varbit12164;
+			$int8 = %clan_guest_affinitystatus;
 		}
 	case default :
-		if (%varbit12164 = 3) {
-			$int8 = %varbit13989;
+		if (%clan_guest_affinitystatus = 3) {
+			$int8 = %pvpa_affinitystatus;
 		} else {
-			$int8 = %varbit12164;
+			$int8 = %clan_guest_affinitystatus;
 		}
 }
 cc_settext(~script2357($int8));

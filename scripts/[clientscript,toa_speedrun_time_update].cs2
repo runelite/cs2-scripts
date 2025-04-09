@@ -6,9 +6,9 @@ if ($int0 = -1) {
 } else {
 	$int0 = calc($int0 * 30 - clientclock);
 	if ($int1 = 1) {
-		~toa_time_update_timer(toa_hud:raid_timer, $int0, %varbit11866, %varbit11890);
+		~toa_time_update_timer(toa_hud:raid_timer, $int0, %option_precise_timing, %option_separate_hours);
 		if_setontimer(null, toa_hud:raid_timer);
 	} else {
-		if_setontimer("toa_time_update_timer(toa_hud:raid_timer, $int0, %varbit11866, %varbit11890)", toa_hud:raid_timer);
+		if_setontimer("toa_time_update_timer(toa_hud:raid_timer, $int0, %option_precise_timing, %option_separate_hours)", toa_hud:raid_timer);
 	}
 }

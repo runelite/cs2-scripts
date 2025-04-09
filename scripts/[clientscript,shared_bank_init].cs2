@@ -3,10 +3,10 @@
 cc_deleteall($com_shared_bank_universe0);
 cc_deleteall($com_shared_bank_items7);
 def_int $int22 = ~steelborder($com_shared_bank_frame1, "", 1);
-def_int $int23 = %var261;
-def_int $int24 = %var262;
-def_int $int25 = %var263;
-def_int $int26 = %var264;
+def_int $int23 = %if1;
+def_int $int24 = %if2;
+def_int $int25 = %if3;
+def_int $int26 = %if4;
 cc_create($com_shared_bank_universe0, ^iftype_text, 0, false);
 cc_setposition(36, 9, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0xff891f);
@@ -48,13 +48,13 @@ while ($int27 < $int25) {
 ~scrollbar_vertical($com_shared_bank_scrollbar8, $com_shared_bank_items7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~shared_bank_update($com_shared_bank_universe0, $com_shared_bank_items7, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2);
 if_setoninvtransmit("shared_bank_update($com_shared_bank_universe0, event_com, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2){inv_group_temp}", $com_shared_bank_items7);
-if_setonvartransmit("shared_bank_update($com_shared_bank_universe0, event_com, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2){var1666, var304}", $com_shared_bank_items7);
+if_setonvartransmit("shared_bank_update($com_shared_bank_universe0, event_com, $com_shared_bank_scrollbar8, $int25, $com_shared_bank_frame1, $int22, $com_shared_bank_occupiedslots2){gargboss_perm_transmit, bankinsert}", $com_shared_bank_items7);
 ~bankmain_swapinsert($com_shared_bank_swap9, $com_shared_bank_insert10);
-if_setonvartransmit("bankmain_swapinsert($com_shared_bank_swap9, $com_shared_bank_insert10){var304}", $com_shared_bank_swap9);
+if_setonvartransmit("bankmain_swapinsert($com_shared_bank_swap9, $com_shared_bank_insert10){bankinsert}", $com_shared_bank_swap9);
 ~bankmain_itemnote($com_shared_bank_item11, $com_shared_bank_note12);
-if_setonvartransmit("bankmain_itemnote($com_shared_bank_item11, $com_shared_bank_note12){var115}", $com_shared_bank_item11);
+if_setonvartransmit("bankmain_itemnote($com_shared_bank_item11, $com_shared_bank_note12){bankcert}", $com_shared_bank_item11);
 ~bankmain_quantity_buttons($com_shared_bank_quantity114, $com_shared_bank_quantity515, $com_shared_bank_quantity1016, $com_shared_bank_quantityx17, $com_shared_bank_quantityall18);
-if_setonvartransmit("bankmain_quantity_buttons($com_shared_bank_quantity114, $com_shared_bank_quantity515, $com_shared_bank_quantity1016, $com_shared_bank_quantityx17, $com_shared_bank_quantityall18){var1666, var304}", $com_shared_bank_quantity_layer13);
+if_setonvartransmit("bankmain_quantity_buttons($com_shared_bank_quantity114, $com_shared_bank_quantity515, $com_shared_bank_quantity1016, $com_shared_bank_quantityx17, $com_shared_bank_quantityall18){gargboss_perm_transmit, bankinsert}", $com_shared_bank_quantity_layer13);
 ~options_bigbutton_init($com_shared_bank_save_button19, "Save", b12_full);
 if ($int26 = 1) {
 	~ge_offers_bigbutton($com_shared_bank_main_bank4, "Back to bank", 0);
@@ -62,4 +62,4 @@ if ($int26 = 1) {
 	if_clearops($com_shared_bank_main_bank4);
 }
 ~shared_bank_closebutton($com_shared_bank_close20);
-if_setonvartransmit("shared_bank_closebutton(event_com){var1293, var1224}", $com_shared_bank_close20);
+if_setonvartransmit("shared_bank_closebutton(event_com){deadman, sidestone_keybindings_1}", $com_shared_bank_close20);

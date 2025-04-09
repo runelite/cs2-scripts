@@ -1,6 +1,6 @@
 // 2770
 [proc,tol_pipe_setbuttons](component $com_tol_pipe_machine_tol_move_left_layer010, component $com_tol_pipe_machine_tol_move_right_layer011, component $com_tol_pipe_machine_tol_move_up_layer012, component $com_tol_pipe_machine_tol_move_down_layer013, component $com_tol_pipe_machine_tol_pipe_rotate_button_layer014)
-if (%varbit3341 = 1 | %varbit3342 = 1 | %varbit3343 = 1 | %varbit3344 = 1 | %varbit3345 = 1) {
+if (%tol_pipe_piece1_active = 1 | %tol_pipe_piece2_active = 1 | %tol_pipe_piece3_active = 1 | %tol_pipe_piece4_active = 1 | %tol_pipe_piece5_active = 1) {
 	if_setonop("tol_pressure_valveop(event_op, tol_move_pipe)", $com_tol_pipe_machine_tol_move_left_layer010);
 	if_setonop("tol_pressure_valveop(event_op, tol_move_pipe)", $com_tol_pipe_machine_tol_move_right_layer011);
 	if_setonop("tol_pressure_valveop(event_op, tol_move_pipe)", $com_tol_pipe_machine_tol_move_up_layer012);

@@ -46,7 +46,7 @@ if_setsize(calc($int9 * 2), 5734, ^setsize_minus, ^setsize_proportion, $componen
 if_setposition(0, $int9, ^setpos_proportion_centre, ^setpos_abs_bottom, $component4);
 if_setposition(0, $int16, ^setpos_proportion_centre, ^setpos_abs_top, fsw_sp_optout:optout_button_select);
 if_setposition(0, $int16, ^setpos_proportion_centre, ^setpos_abs_top, fsw_sp_optout:optout_button_cancel);
-if (%varbit14580 = 1) {
+if (%fsw_opting_out = 1) {
 	if_sethide(true, fsw_sp_optout:optout_button_select);
 	if_sethide(false, fsw_sp_optout:optout_button_cancel);
 } else {
@@ -87,7 +87,7 @@ cc_setcolour(^white);
 cc_settrans(235);
 def_string $string3 = "";
 def_int $int19 = 0;
-if (%varbit14580 = 0) {
+if (%fsw_opting_out = 0) {
 	if ($int0 = 0) {
 		cc_create($component4, ^iftype_text, $int19, false);
 		$int19 = calc($int19 + 1);

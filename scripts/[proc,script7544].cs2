@@ -3,7 +3,7 @@
 cc_deleteall(hiscores:hiscores_lookup_toggle);
 def_string $string0 = "";
 if_setonop("opsound(event_op, 2046)", hiscores:hiscores_lookup_toggle);
-if (%varbit11519 = 1) {
+if (%popout_hiscores_globalclick_enabled = 1) {
 	$string0 = "<col=ff981f>In-world lookup: </col><col=00ff00>Enabled</col>";
 	~stonebutton_draw(false, "<col=ff981f>In-world lookup: </col><col=00ff00>Enabled</col>", p12_full, -1, hiscores:hiscores_lookup_toggle);
 	if (~on_mobile = false) {

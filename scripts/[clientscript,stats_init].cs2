@@ -6,9 +6,9 @@ def_string $string0 = enum(int, string, enum_108, $int2);
 def_boolean $boolean6 = enum(stat, boolean, enum_1497, $stat4);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0, false);
-if (~league_world = 1 & %varbit10032 = 3) {
+if (~league_world = 1 & %league_type = 3) {
 	$int5 = ~script5830($stat4);
-	cc_setonvartransmit("stats_init($component0, $com_stats_tooltip1, $int2, $int3){var3278}");
+	cc_setonvartransmit("stats_init($component0, $com_stats_tooltip1, $int2, $int3){league_reusable_protected_1}");
 }
 cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
@@ -45,40 +45,40 @@ if (~on_mobile = true) {
 }
 if_setonstattransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $com_stats_tooltip1){$stat4, attack, strength, defence, ranged, magic}", $component0);
 if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $com_stats_tooltip1){
-	0 = var427, 
-	1 = var1588, 
-	2 = var1437, 
-	3 = var1438, 
-	4 = var1439, 
-	5 = var1436, 
-	6 = var1435, 
-	7 = var1440, 
-	8 = var1453, 
-	9 = var1447, 
-	10 = var1452, 
-	11 = var1443, 
-	12 = var1449, 
-	13 = var1441, 
-	14 = var1442, 
-	15 = var1444, 
-	16 = var1450, 
-	17 = var1457, 
-	18 = var1445, 
-	19 = var1446, 
-	20 = var1454, 
-	21 = var1455, 
-	22 = var1456, 
-	23 = var1451, 
-	24 = var1448
+	0 = option_aid, 
+	1 = deadman_xp_to_cap, 
+	2 = deadman_xp_ranged, 
+	3 = deadman_xp_magic, 
+	4 = deadman_xp_defence, 
+	5 = deadman_xp_strength, 
+	6 = deadman_xp_attack, 
+	7 = deadman_xp_hitpoints, 
+	8 = deadman_xp_fletching, 
+	9 = deadman_xp_mining, 
+	10 = deadman_xp_woodcutting, 
+	11 = deadman_xp_herblore, 
+	12 = deadman_xp_fishing, 
+	13 = deadman_xp_prayer, 
+	14 = deadman_xp_agility, 
+	15 = deadman_xp_thieving, 
+	16 = deadman_xp_cooking, 
+	17 = deadman_xp_hunter, 
+	18 = deadman_xp_crafting, 
+	19 = deadman_xp_runecraft, 
+	20 = deadman_xp_slayer, 
+	21 = deadman_xp_farming, 
+	22 = deadman_xp_construction, 
+	23 = deadman_xp_firemaking, 
+	24 = deadman_xp_smithing
 }", $component0);
 ~stats_setlevels($stat4, $component0, $string0, $com_stats_tooltip1);
 if (~league_world = 0 & ($boolean6 = false | map_members = true | %varcint103 = 1)) {
 	return;
 }
-if (%varbit10032 ! 3) {
+if (%league_type ! 3) {
 	return;
 }
-if (%varbit10032 = 3 & $int5 = 1) {
+if (%league_type = 3 & $int5 = 1) {
 	return;
 }
 cc_create($component0, ^iftype_graphic, 6, false);

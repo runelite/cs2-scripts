@@ -1,10 +1,10 @@
 // 2643
 [clientscript,equipment_icon_flash](component $com_wornitems_equipment_icon0)
-if (%var281 ! 400) {
-	if (%var2686 > 0 & %var2686 ! 400) {
+if (%tutorial ! 400) {
+	if (%tutorial_2 > 0 & %tutorial_2 ! 400) {
 		if_setgraphic("options_icons,16", $com_wornitems_equipment_icon0);
 		return;
-	} else if (%var2686 = 0) {
+	} else if (%tutorial_2 = 0) {
 		if_setgraphic("options_icons,16", $com_wornitems_equipment_icon0);
 		return;
 	}

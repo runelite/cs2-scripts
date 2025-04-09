@@ -2,7 +2,7 @@
 [proc,script852](component $component0)
 def_string $string0 = ",";
 if ($component0 = soul_wars_rewards:total_zeal) {
-	if_settext("Lifetime Zeal:<br> <col=ffffff><~tostring_spacer(%var2871, $string0)></col>", $component0);
+	if_settext("Lifetime Zeal:<br> <col=ffffff><~tostring_spacer(%soul_wars_zeal, $string0)></col>", $component0);
 } else if ($component0 = soul_wars_rewards:total_zeal_tokens) {
-	if_settext("Zeal Tokens:<br> <col=ffffff><~tostring_spacer(%var2876, $string0)></col>", $component0);
+	if_settext("Zeal Tokens:<br> <col=ffffff><~tostring_spacer(%soul_wars_zeal_tokens, $string0)></col>", $component0);
 }

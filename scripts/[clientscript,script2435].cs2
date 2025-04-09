@@ -1,6 +1,6 @@
 // 2435
 [clientscript,script2435](int $int0, component $com_league_tasks_tasks_list1, component $com_league_tasks_tasks_background2, component $com_league_tasks_tasks_name3, component $com_league_tasks_tasks_points4, component $com_league_tasks_tasks_type5, component $com_league_tasks_tasks_area6, component $com_league_tasks_tasks_description7, component $com_league_tasks_tasks_expand8, component $com_league_tasks_tasks_tier9, component $com_league_tasks_tasks_none10, component $com_league_tasks_tasks_scrollbar11, component $com_league_tasks_league_btn_menu12, component $com_league_tasks_league_menu_frame13, component $com_league_tasks_league_menu_overlay14, component $com_league_tasks_progress_bar15, component $com_league_tasks_tooltip16, component $com_league_tasks_searchbar_image17, component $com_league_tasks_search_text18, int $int19, int $int20)
-if ($int19 = %var2606 & $int19 = %var2805) {
+if ($int19 = %league_general & $int19 = %league_general_2) {
 	return;
 }
 if_setonvartransmit("script2435(
@@ -23,12 +23,12 @@ if_setonvartransmit("script2435(
 	16 = $com_league_tasks_tooltip16, 
 	17 = $com_league_tasks_searchbar_image17, 
 	18 = $com_league_tasks_search_text18, 
-	19 = %var2606, 
-	20 = %var2805
-){var2606, var2805}", $com_league_tasks_tasks_background2);
+	19 = %league_general, 
+	20 = %league_general_2
+){league_general, league_general_2}", $com_league_tasks_tasks_background2);
 ~chatdefault_restoreinput;
-%varbit17310 = 0;
-%varbit17311 = 0;
+%league_tasks_is_searching = 0;
+%league_tasks_search_listen_for_keyboard = 0;
 ~league_tasks_draw_list(
 	0 = $int0, 
 	1 = $com_league_tasks_tasks_list1, 

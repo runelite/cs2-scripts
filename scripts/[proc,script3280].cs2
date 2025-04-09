@@ -1,6 +1,6 @@
 // 3280
 [proc,script3280](component $com_bankmain_sideops_toggle0)
-if (%varbit10079 = 1) {
+if (%bank_hidesideops = 1) {
 	cc_setgraphic("options_radio_buttons,1");
 	if_setop(1, "Show", $com_bankmain_sideops_toggle0);
 } else {

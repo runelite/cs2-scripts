@@ -1,7 +1,7 @@
 // 1537
 [proc,script1537]
-def_string $string0 = ~string_prependzero(tostring(%varbit5426), 3);
-def_string $string1 = ~string_prependzero(tostring(%varbit5427), 4);
+def_string $string0 = ~string_prependzero(tostring(%raids_lobby_mincombat), 3);
+def_string $string1 = ~string_prependzero(tostring(%raids_lobby_minskilltotal), 4);
 def_int $int0 = 0;
 while ($int0 < %varcint178) {
 	if (cc_find(raids_lobby_partydetails:list, calc($int0 * 8 + 5)) = ^true & .cc_find(raids_lobby_partydetails:list, calc($int0 * 8 + 2)) = ^true) {

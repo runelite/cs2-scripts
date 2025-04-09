@@ -3,7 +3,7 @@
 if (calc(clientclock - %varcint76) <= 10) {
 	return(0);
 }
-if (~speedrunning_world = 1 & %varbit13627 <= 0) {
+if (~speedrunning_world = 1 & %current_speedrun <= 0) {
 	return(0);
 }
 return(1);

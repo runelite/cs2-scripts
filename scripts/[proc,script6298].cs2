@@ -1,7 +1,7 @@
 // 6298
 [proc,script6298]
 def_string $string0 = "";
-switch_int (%varbit14023) {
+switch_int (%pvpa_transmit_battletype) {
 	case 1001 :
 		$string0 = "1v1 Tournament (unranked)";
 	case 1002 :
@@ -16,7 +16,7 @@ switch_int (%varbit14023) {
 		return;
 }
 %varcint991 = ~max(0, %varcint991);
-def_int $int0 = calc(%varbit14015 * 30);
+def_int $int0 = calc(%pvpa_stagingarea_timeremaining * 30);
 if ($int0 > calc(%varcint991 + 300) | $int0 < calc(%varcint991 - 300)) {
 	%varcint991 = $int0;
 }

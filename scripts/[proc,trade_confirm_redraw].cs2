@@ -1,6 +1,6 @@
 // 768
 [proc,trade_confirm_redraw](int $int0, int $int1, int $int2, component $com_tradeconfirm_your_offer3, component $com_tradeconfirm_other_offer4, component $com_tradeconfirm_other_flashers5, component $com_tradeconfirm_removal_warning6)
-if (%varbit4375 = 1) {
+if (%trade_other_player_removed = 1) {
 	if_settext("Trade modified", $com_tradeconfirm_removal_warning6);
 } else {
 	if_settext("", $com_tradeconfirm_removal_warning6);

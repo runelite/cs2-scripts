@@ -23,6 +23,6 @@ if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", ge_price
 .cc_settext($string1);
 def_int $int2 = inv_size($inv0);
 if_setoninvtransmit("ge_pricelist_draw($inv0, $int2, cc_getid){$inv0}", ge_pricelist:universe);
-if_setonvartransmit("ge_pricelist_draw($inv0, $int2, cc_getid){var499}", ge_pricelist:universe);
+if_setonvartransmit("ge_pricelist_draw($inv0, $int2, cc_getid){magic_carpet_var}", ge_pricelist:universe);
 if_setonop("ge_pricelist_switchmode(event_op, $inv0, $int2, cc_getid)", ge_pricelist:displaymode);
 ~ge_pricelist_draw($inv0, $int2, cc_getid);

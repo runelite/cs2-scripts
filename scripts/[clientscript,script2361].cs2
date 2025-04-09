@@ -1,9 +1,9 @@
 // 2361
 [clientscript,script2361](component $drop0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, struct $struct7, component $drop8, int $dropsubid9, int $int10)
 def_int $int11 = 4;
-if (%varbit6670 = 2) {
+if (%poh_nexus_id = 2) {
 	$int11 = 8;
-} else if (%varbit6670 = 3) {
+} else if (%poh_nexus_id = 3) {
 	$int11 = 31;
 }
 if ($int10 < 0 | $int10 > $int11) {
@@ -22,6 +22,6 @@ if ($drop8 = $drop0) {
 	~telenexus_remove_tele(~telenexus_get_slot_value($int10));
 	~script2273($drop0, $component1, $component2, $component3, $component4, $component5, $component6, false);
 } else if ($drop8 = telenexus:left_click_layer) {
-	%varbit6669 = ~telenexus_get_slot_value($int10);
+	%poh_nexus_left_click_temp = ~telenexus_get_slot_value($int10);
 	~telenexus_left_click($drop8, telenexus:left_click_set, telenexus:left_click_options, telenexus:left_click_tick, telenexus:left_text);
 }

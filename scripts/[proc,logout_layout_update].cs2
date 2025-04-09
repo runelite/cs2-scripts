@@ -1,8 +1,8 @@
 // 2243
 [proc,logout_layout_update](component $com_logout_logout_buttons0, component $com_logout_satisfaction1, component $com_logout_satisfaction_text2, component $com_logout_satisfaction_binary3, component $com_logout_satisfaction_5scale4)
-if (%varbit6272 = 0 & (%varbit6273 = 1 | %varbit6273 = 2)) {
+if (%csat_hide = 0 & (%csat_type = 1 | %csat_type = 2)) {
 	if_sethide(false, $com_logout_satisfaction1);
-	if (%varbit6273 = 1) {
+	if (%csat_type = 1) {
 		if_settext("Did you enjoy playing<br>Old School RuneScape today?", $com_logout_satisfaction_text2);
 		if_sethide(false, $com_logout_satisfaction_binary3);
 		if_sethide(true, $com_logout_satisfaction_5scale4);

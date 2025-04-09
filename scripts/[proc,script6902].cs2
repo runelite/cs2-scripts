@@ -7,14 +7,14 @@ if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setonvartransmit("fishing_spot_indicator_vartransmit(
 		0 = $entityoverlay0, 
 		1 = $struct1, 
-		2 = %varbit12349, 
-		3 = %varbit12350, 
-		4 = %varbit12351, 
+		2 = %fishing_spot_indicator_disabled, 
+		3 = %fishing_spot_indicator_all_fish_disabled, 
+		4 = %fishing_spot_indicator_more_info_disabled, 
 		5 = $npc_uid2, 
 		6 = $int3, 
 		7 = $loc4, 
 		8 = $coord5
-	){var2856, var3074}");
+	){settings_varp_1, settings_varp_2}");
 	cc_setoninvtransmit("fishing_spot_indicator_invtransmit($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5){inv, worn}");
 	cc_setonstattransmit("fishing_spot_indicator_stattransmit($entityoverlay0, $struct1, stat(fishing), $npc_uid2, $int3, $loc4, $coord5){fishing, agility, strength}");
 }

@@ -1,12 +1,12 @@
 // 5909
 [proc,script5909](component $com_speedrunning_panel_unlocks0, component $com_speedrunning_panel_unlocks_content1, component $com_speedrunning_panel_items2, component $com_speedrunning_panel_items_content3, component $com_speedrunning_panel_main_content_inner4)
-if (%var3373 = null) {
+if (%latest_speedrun_panel = null) {
 	if_sethide(true, $com_speedrunning_panel_unlocks0);
 	if_sethide(true, $com_speedrunning_panel_items2);
 	if_setsize(0, 377, ^setsize_minus, ^setsize_abs, $com_speedrunning_panel_main_content_inner4);
 	return;
 }
-def_dbrow $dbrow5 = ~script4865(%var3373);
+def_dbrow $dbrow5 = ~script4865(%latest_speedrun_panel);
 if ($dbrow5 = null | db_getrowtable($dbrow5) ! speedrun) {
 	if_sethide(true, $com_speedrunning_panel_unlocks0);
 	if_sethide(true, $com_speedrunning_panel_items2);
@@ -31,11 +31,11 @@ def_int $int8 = -1;
 def_int $int9 = calc(if_getwidth($com_speedrunning_panel_unlocks_content1) - 2);
 def_int $int10 = 0;
 def_dbrow $dbrow11 = null;
-def_int $int12 = db_getfieldcount(%var3373, quest:requirement_quests);
+def_int $int12 = db_getfieldcount(%latest_speedrun_panel, quest:requirement_quests);
 def_int $int13 = 0;
 while ($int13 < $int12) {
 	$int10 = 1;
-	$dbrow11 = db_getfield(%var3373, quest:requirement_quests, $int13);
+	$dbrow11 = db_getfield(%latest_speedrun_panel, quest:requirement_quests, $int13);
 	$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, db_getfield($dbrow11, quest:displayname, 0));
 	$int13 = calc($int13 + 1);
 }
@@ -47,7 +47,7 @@ while ($int13 < $int12) {
 	$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, db_getfield($dbrow11, quest:displayname, 0));
 	$int13 = calc($int13 + 1);
 }
-def_int $int14 = ~max(db_getfield(%var3373, quest:requirement_combat, 0), db_getfield(%var3373, quest:recommended_combat, 0));
+def_int $int14 = ~max(db_getfield(%latest_speedrun_panel, quest:requirement_combat, 0), db_getfield(%latest_speedrun_panel, quest:recommended_combat, 0));
 def_int $int15 = ~minmax(3, 99, calc(scale(4, 5, $int14) + 15));
 if (db_getfield($dbrow5, speedrun:speedrun_combat_stats_unlock, 0) > 1) {
 	$int15 = db_getfield($dbrow5, speedrun:speedrun_combat_stats_unlock, 0);
@@ -65,21 +65,21 @@ if ($int14 > 3 | db_getfield($dbrow5, speedrun:speedrun_combat_stats_unlock, 0) 
 }
 def_stat $stat17 = null;
 def_int $int18 = 1;
-def_int $int19 = db_getfieldcount(%var3373, quest:requirement_stats);
+def_int $int19 = db_getfieldcount(%latest_speedrun_panel, quest:requirement_stats);
 $int13 = 0;
 while ($int13 < $int19) {
-	$stat17, $int18 = db_getfield(%var3373, quest:requirement_stats, $int13);
-	$stat17, $int18 = ~script5911(%var3373, $dbrow5, $stat17, $int18, $int15);
+	$stat17, $int18 = db_getfield(%latest_speedrun_panel, quest:requirement_stats, $int13);
+	$stat17, $int18 = ~script5911(%latest_speedrun_panel, $dbrow5, $stat17, $int18, $int15);
 	if ($stat17 ! null & $int18 > 1) {
 		$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
 	}
 	$int13 = calc($int13 + 1);
 }
-$int19 = db_getfieldcount(%var3373, quest:recommended_stats);
+$int19 = db_getfieldcount(%latest_speedrun_panel, quest:recommended_stats);
 $int13 = 0;
 while ($int13 < $int19) {
-	$stat17, $int18 = db_getfield(%var3373, quest:recommended_stats, $int13);
-	$stat17, $int18 = ~script5994(%var3373, $dbrow5, $stat17, $int18, $int15);
+	$stat17, $int18 = db_getfield(%latest_speedrun_panel, quest:recommended_stats, $int13);
+	$stat17, $int18 = ~script5994(%latest_speedrun_panel, $dbrow5, $stat17, $int18, $int15);
 	if ($stat17 ! null & $int18 > 1) {
 		$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
 	}
@@ -89,7 +89,7 @@ $int19 = db_getfieldcount($dbrow5, speedrun:speedrun_stat_unlocks);
 $int13 = 0;
 while ($int13 < $int19) {
 	$stat17, $int18 = db_getfield($dbrow5, speedrun:speedrun_stat_unlocks, $int13);
-	$stat17, $int18 = ~script6809(%var3373, $dbrow5, $stat17, $int18, $int15);
+	$stat17, $int18 = ~script6809(%latest_speedrun_panel, $dbrow5, $stat17, $int18, $int15);
 	if ($stat17 ! null & $int18 > 1) {
 		$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, "<tostring($int18)> <enum(stat, string, enum_680, $stat17)>");
 	}
@@ -101,7 +101,7 @@ if ($int15 > 1) {
 if (db_getfield($dbrow5, speedrun:speedrun_poh_location, 0) > 0) {
 	$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, "<enum(int, string, enum_252, db_getfield($dbrow5, speedrun:speedrun_poh_location, 0))> Player Owned House");
 }
-$int7, $int6 = ~speedrunning_misc_unlocks(%var3373, $com_speedrunning_panel_unlocks_content1, $int7, $int6);
+$int7, $int6 = ~speedrunning_misc_unlocks(%latest_speedrun_panel, $com_speedrunning_panel_unlocks_content1, $int7, $int6);
 if ($int10 = 1) {
 	$int7, $int6 = ~script5912($com_speedrunning_panel_unlocks_content1, $int7, $int6, "Any requirements for the other quests unlocked");
 }

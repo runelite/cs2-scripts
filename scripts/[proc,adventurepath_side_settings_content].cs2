@@ -40,10 +40,10 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
 	7 = "Task complete message", 
-	8 = %varbit9329, 
+	8 = %adventurepath_disable_task_message, 
 	9 = 0
 );
-cc_setonvartransmit("script3026($component3, calc($int7 - 2)){var2370}");
+cc_setonvartransmit("script3026($component3, calc($int7 - 2)){adventurepath_filters}");
 cc_setonop("script3027($component3, calc($int7 - 2))");
 $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
@@ -54,10 +54,10 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
 	7 = "Path complete message", 
-	8 = %varbit9330, 
+	8 = %adventurepath_disable_path_message, 
 	9 = 0
 );
-cc_setonvartransmit("script3028($component3, calc($int7 - 2)){var2370}");
+cc_setonvartransmit("script3028($component3, calc($int7 - 2)){adventurepath_filters}");
 cc_setonop("script3029($component3, calc($int7 - 2))");
 $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
@@ -68,10 +68,10 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
 	7 = "Task focus message", 
-	8 = %varbit9331, 
+	8 = %adventurepath_disable_task_focus_message, 
 	9 = 0
 );
-cc_setonvartransmit("script3030($component3, calc($int7 - 2)){var2370}");
+cc_setonvartransmit("script3030($component3, calc($int7 - 2)){adventurepath_filters}");
 cc_setonop("script3031($component3, calc($int7 - 2))");
 $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
@@ -82,10 +82,10 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
 	7 = "Path focus message", 
-	8 = %varbit9332, 
+	8 = %adventurepath_disable_path_focus_message, 
 	9 = 0
 );
-cc_setonvartransmit("script3032($component3, calc($int7 - 2)){var2370}");
+cc_setonvartransmit("script3032($component3, calc($int7 - 2)){adventurepath_filters}");
 cc_setonop("script3033($component3, calc($int7 - 2))");
 $int7, $int9 = ~adventurepath_side_create_toggle(
 	0 = $int7, 
@@ -96,10 +96,10 @@ $int7, $int9 = ~adventurepath_side_create_toggle(
 	5 = 0, 
 	6 = calc(15 * $int9 + $int9 * 34), 
 	7 = "Notifications", 
-	8 = %varbit10160, 
+	8 = %adventurepath_disable_notification, 
 	9 = 0
 );
-cc_setonvartransmit("script3341($component3, calc($int7 - 2)){var2370}");
+cc_setonvartransmit("script3341($component3, calc($int7 - 2)){adventurepath_filters}");
 cc_setonop("script3342($component3, calc($int7 - 2))");
 $int7 = 0;
 def_int $int12 = 5;

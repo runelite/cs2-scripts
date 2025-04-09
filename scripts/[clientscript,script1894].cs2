@@ -2,16 +2,16 @@
 [clientscript,script1894](component $component0, int $comsubid1, int $opindex2, inv $inv3, component $component4)
 def_obj $obj5 = inv_getobj($inv3, $comsubid1);
 if ($opindex2 = 1) {
-	if ($obj5 = %var856) {
-		%var856 = null;
+	if ($obj5 = %eyeglo_coin_selected) {
+		%eyeglo_coin_selected = null;
 	} else {
-		%var856 = $obj5;
+		%eyeglo_coin_selected = $obj5;
 	}
 	~pog_interface_inv_update($component4, $inv3);
 }
 if (cc_find($component0, $comsubid1) = ^true) {
 	cc_settrans(100);
-	if ($obj5 = %var856) {
+	if ($obj5 = %eyeglo_coin_selected) {
 		cc_setoutline(2);
 	} else {
 		cc_setoutline(1);

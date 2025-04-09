@@ -63,17 +63,17 @@ if_setonvartransmit("script2944(
 	25 = $com_adventurepath_extra_task_name24, 
 	26 = $com_adventurepath_extra_link25, 
 	27 = $com_adventurepath_task_focus26
-){var2360, var2357}", $com_adventurepath_paths2);
+){adventurepath_focus_trigger, adventurepath_selected_path}", $com_adventurepath_paths2);
 if ($int31 > if_getheight($com_adventurepath_paths2)) {
 	if_setscrollsize(0, $int31, $com_adventurepath_paths2);
 } else {
 	if_setscrollsize(0, 0, $com_adventurepath_paths2);
 }
 ~scrollbar_vertical($com_adventurepath_scrollbar_paths1, $com_adventurepath_paths2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if (%varbit9328 = 1) {
+if (%adventurepath_main_if_tab = 1) {
 	~adventurepath_task_init_op(
 		0 = $com_adventurepath_path_menu0, 
-		1 = %var2357, 
+		1 = %adventurepath_selected_path, 
 		2 = $com_adventurepath_paths2, 
 		3 = $com_adventurepath_task_list3, 
 		4 = $com_adventurepath_tasks4, 
@@ -99,13 +99,13 @@ if (%varbit9328 = 1) {
 		24 = $com_adventurepath_task_focus26
 	);
 	~adventurepath_change_page($com_adventurepath_path_menu0, $com_adventurepath_task_list3, $com_adventurepath_banner17, $com_adventurepath_extra_task_info19, 1);
-} else if (%varbit9328 = 2) {
-	$enum28 = enum(int, enum, enum_2620, %var2357);
+} else if (%adventurepath_main_if_tab = 2) {
+	$enum28 = enum(int, enum, enum_2620, %adventurepath_selected_path);
 	if ($enum28 ! null) {
 		$int30 = enum_getoutputcount($enum28);
 		while ($int29 < $int30) {
 			$struct27 = enum(int, struct, $enum28, $int29);
-			if ($struct27 ! null & struct_param($struct27, param_806) = %var2358) {
+			if ($struct27 ! null & struct_param($struct27, param_806) = %adventurepath_selected_task) {
 				$int29 = $int30;
 			}
 			$int29 = calc($int29 + 1);
@@ -113,7 +113,7 @@ if (%varbit9328 = 1) {
 		if ($struct27 ! null) {
 			~adventurepath_task_init_op(
 				0 = $com_adventurepath_path_menu0, 
-				1 = %var2357, 
+				1 = %adventurepath_selected_path, 
 				2 = $com_adventurepath_paths2, 
 				3 = $com_adventurepath_task_list3, 
 				4 = $com_adventurepath_tasks4, 
@@ -139,7 +139,7 @@ if (%varbit9328 = 1) {
 				24 = $com_adventurepath_task_focus26
 			);
 			~adventurepath_set_info(
-				0 = %var2358, 
+				0 = %adventurepath_selected_task, 
 				1 = $com_adventurepath_task_name7, 
 				2 = $com_adventurepath_task_description8, 
 				3 = $com_adventurepath_task_hint9, 

@@ -14,13 +14,13 @@ def_int $int2 = string_length(%varcstring335);
 def_string $string1 = escape(%varcstring335);
 def_string $string2 = "";
 def_int $int3 = 0;
-if (%varbit8119 = 1) {
+if (%has_displayname_transmitter = 1) {
 	if (~league_world = 1) {
 		$string2 = "<~script7776><chat_playername>";
 	} else if (~speedrunning_world = 1) {
 		$string2 = "<img=52><chat_playername>";
 	} else {
-		$string2 = "<enum(int, string, enum_1894, %varbit1777)><chat_playername>";
+		$string2 = "<enum(int, string, enum_1894, %ironman)><chat_playername>";
 	}
 	switch_int (%varcint945) {
 		case 1 :
@@ -60,7 +60,7 @@ if (%varbit8119 = 1) {
 	} else if (~speedrunning_world = 1) {
 		$string2 = "<img=52> You must set a name before you can chat.";
 	} else {
-		$string2 = "<enum(int, string, enum_1894, %varbit1777)> You must set a name before you can chat.";
+		$string2 = "<enum(int, string, enum_1894, %ironman)> You must set a name before you can chat.";
 	}
 	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, chatbox:input);
 	if_setop(10, "Configure", chatbox:input);

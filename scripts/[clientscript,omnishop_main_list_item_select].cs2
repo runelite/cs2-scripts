@@ -5,7 +5,7 @@ def_int $int5 = 53674014;
 if ($opindex3 = 1) {
 	sound_synth(interface_select1, 1, 0);
 	~omnishop_main_list_setup($dbrow0, $inv1, $int2, 0);
-	if (%var3871 = 0) {
+	if (%omnishop_view_expanded = 0) {
 		~omnishop_main_info_setup(
 			0 = $dbrow0, 
 			1 = $inv1, 
@@ -18,7 +18,7 @@ if ($opindex3 = 1) {
 			8 = true
 		);
 	} else {
-		if ($int2 ! %var3869) {
+		if ($int2 ! %omnishop_selected_id) {
 			~omnishop_main_info_setup(
 				0 = $dbrow0, 
 				1 = $inv1, 

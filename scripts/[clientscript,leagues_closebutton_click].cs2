@@ -1,7 +1,7 @@
 // 3692
 [clientscript,leagues_closebutton_click](boolean $boolean0)
 if (~in_league_tutorial = 1 & ~script7714 = true) {
-	if ($boolean0 = true & %varbit10037 < 9 & ~script3681(2) = 0) {
+	if ($boolean0 = true & %league_tutorial_completed < 9 & ~script3681(2) = 0) {
 		sound_synth(pillory_wrong, 1, 0);
 	}
 	return;

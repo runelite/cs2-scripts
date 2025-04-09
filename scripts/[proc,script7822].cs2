@@ -31,20 +31,20 @@ switch_int ($opindex0) {
 	case default :
 		if (friend_test($string1) = true) {
 			if ($opindex0 = 6 | $opindex0 = 7) {
-				if (%varbit8119 = 1) {
+				if (%has_displayname_transmitter = 1) {
 					~meslayer_mode6($string1);
 				} else {
 					mes("You must set a name before you can do that.");
 				}
 			}
 		} else if ($opindex0 = 6) {
-			if (%varbit8119 = 1) {
+			if (%has_displayname_transmitter = 1) {
 				friend_add($string1);
 			} else {
 				mes("You must set a name before you can do that.");
 			}
 		} else if ($opindex0 = 7) {
-			if (%varbit8119 = 1) {
+			if (%has_displayname_transmitter = 1) {
 				ignore_add($string1);
 			} else {
 				mes("You must set a name before you can do that.");

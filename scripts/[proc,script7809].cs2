@@ -166,9 +166,9 @@ if (cc_find($com_collection_overview_progress_bar4, 0) = ^false) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if ($struct43 = null) {
-		cc_settext("Collections Logged: <tostring(%var2943)>");
+		cc_settext("Collections Logged: <tostring(%collection_count)>");
 	} else {
-		cc_settext("Collections Logged: <tostring(~min(%var2943, $int45))>/<tostring($int45)>");
+		cc_settext("Collections Logged: <tostring(~min(%collection_count, $int45))>/<tostring($int45)>");
 	}
 	$int28 = calc($int28 + 1);
 	cc_create($com_collection_overview_progress_bar4, ^iftype_rectangle, $int28, false);
@@ -187,7 +187,7 @@ if (cc_find($com_collection_overview_progress_bar4, 0) = ^false) {
 def_int $int47 = calc($int46 - 4);
 $int46 = $int47;
 if ($int45 ! -1 & $int45 > 0) {
-	$int46 = scale(calc(%var2943 - $int44), calc($int45 - $int44), $int47);
+	$int46 = scale(calc(%collection_count - $int44), calc($int45 - $int44), $int47);
 }
 if ($int46 > $int47) {
 	$int46 = $int47;
@@ -257,29 +257,29 @@ $int35 = calc((if_getwidth($com_collection_overview_latest_items_data9) - 36 * $
 while ($int27 < $int26) {
 	switch_int ($int27) {
 		case 0 :
-			$obj48, $int49 = %var4623, %var4624;
+			$obj48, $int49 = %collection_overview_last_item0, %collection_overview_last_item0_date;
 		case 1 :
-			$obj48, $int49 = %var4625, %var4626;
+			$obj48, $int49 = %collection_overview_last_item1, %collection_overview_last_item1_date;
 		case 2 :
-			$obj48, $int49 = %var4627, %var4628;
+			$obj48, $int49 = %collection_overview_last_item2, %collection_overview_last_item2_date;
 		case 3 :
-			$obj48, $int49 = %var4629, %var4630;
+			$obj48, $int49 = %collection_overview_last_item3, %collection_overview_last_item3_date;
 		case 4 :
-			$obj48, $int49 = %var4631, %var4632;
+			$obj48, $int49 = %collection_overview_last_item4, %collection_overview_last_item4_date;
 		case 5 :
-			$obj48, $int49 = %var4633, %var4634;
+			$obj48, $int49 = %collection_overview_last_item5, %collection_overview_last_item5_date;
 		case 6 :
-			$obj48, $int49 = %var4635, %var4636;
+			$obj48, $int49 = %collection_overview_last_item6, %collection_overview_last_item6_date;
 		case 7 :
-			$obj48, $int49 = %var4637, %var4638;
+			$obj48, $int49 = %collection_overview_last_item7, %collection_overview_last_item7_date;
 		case 8 :
-			$obj48, $int49 = %var4639, %var4640;
+			$obj48, $int49 = %collection_overview_last_item8, %collection_overview_last_item8_date;
 		case 9 :
-			$obj48, $int49 = %var4641, %var4642;
+			$obj48, $int49 = %collection_overview_last_item9, %collection_overview_last_item9_date;
 		case 10 :
-			$obj48, $int49 = %var4643, %var4644;
+			$obj48, $int49 = %collection_overview_last_item10, %collection_overview_last_item10_date;
 		case 11 :
-			$obj48, $int49 = %var4645, %var4646;
+			$obj48, $int49 = %collection_overview_last_item11, %collection_overview_last_item11_date;
 		case default :
 			$obj48 = null;
 	}

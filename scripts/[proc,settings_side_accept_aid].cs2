@@ -1,6 +1,6 @@
 // 3919
 [proc,settings_side_accept_aid](component $com_settings_side_acceptaid0, component $com_settings_side_tooltip1)
 if_setonop("settings_accept_aid_op($com_settings_side_acceptaid0, $com_settings_side_tooltip1)", $com_settings_side_acceptaid0);
-if_setonvartransmit("settings_side_accept_aid_resynch($com_settings_side_acceptaid0, $com_settings_side_tooltip1){var427, var499}", $com_settings_side_acceptaid0);
+if_setonvartransmit("settings_side_accept_aid_resynch($com_settings_side_acceptaid0, $com_settings_side_tooltip1){option_aid, magic_carpet_var}", $com_settings_side_acceptaid0);
 if_setonmouseleave("deltooltip($com_settings_side_tooltip1)", $com_settings_side_acceptaid0);
 ~settings_side_accept_aid_create($com_settings_side_acceptaid0, $com_settings_side_tooltip1);

@@ -2,7 +2,7 @@
 [proc,loottools_size]
 if_sethide(true, loottools:loot_tracking_container);
 if_sethide(true, loottools:ground_items_container);
-switch_int (%varbit14883) {
+switch_int (%loottools_category_current) {
 	case 0 :
 		if_sethide(false, loottools:loot_tracking_container);
 		~script7135(if_getheight(loottools:loottracker_content_scroll_area_inner));

@@ -13,7 +13,7 @@ if ($key0 = ^key_escape) {
 		case 14, 17, 18, 11 :
 			return;
 		case default :
-			if (%varbit4681 = 1) {
+			if (%keybinding_esc_to_close = 1) {
 				$int3 = ~script1205;
 				if ($component6 ! null & if_hassub($component6) = true) {
 					return;
@@ -36,7 +36,7 @@ if ($key0 = ^key_escape) {
 	}
 }
 def_int $int7 = ~keybind_get_slot($key0);
-if ($int7 = -1 | $int7 = calc(%varbit3756 - 1)) {
+if ($int7 = -1 | $int7 = calc(%flashside - 1)) {
 	return;
 }
 def_component $component8 = enum(int, component, enum_1137, $int7);

@@ -1,7 +1,7 @@
 // 2771
 [clientscript,pest_rewards_init](component $com_pest_rewardshop_universe0, component $com_pest_rewardshop_total1, component $com_pest_rewardshop_options2, component $com_pest_rewardshop_scrollbar3, component $com_pest_rewardshop_confirm4, component $com_pest_rewardshop_buttongfx5)
 ~pest_rewards_showpoints($com_pest_rewardshop_total1);
-if_setonvartransmit("pest_rewards_showpoints($com_pest_rewardshop_total1){var261}", $com_pest_rewardshop_total1);
+if_setonvartransmit("pest_rewards_showpoints($com_pest_rewardshop_total1){if1}", $com_pest_rewardshop_total1);
 def_int $int6 = ~pest_rewards_draw(-1, $com_pest_rewardshop_universe0, $com_pest_rewardshop_options2, $com_pest_rewardshop_confirm4, $com_pest_rewardshop_buttongfx5);
 if_setscrollpos(0, 0, $com_pest_rewardshop_options2);
 if ($int6 >= if_getheight($com_pest_rewardshop_options2)) {

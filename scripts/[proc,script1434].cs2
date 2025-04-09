@@ -4,9 +4,9 @@ if_sethide($boolean0, pvp_icons:deadman_final);
 if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, pvp_icons:deadman_final);
 if_sethide($boolean2, pvp_icons:deadman_final_timer);
 if ($boolean2 = false) {
-	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){var1434, var1542, var1676, var1601, var1602}", pvp_icons:deadman_final_timer);
+	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){deadman2, deadman3, deadman_tournament_mode_pl, wildwars_temptransmit, wildwars_temptransmit2}", pvp_icons:deadman_final_timer);
 	~script1486(pvp_icons:deadman_currentlocation_status);
-	if_setonvartransmit("script1636(event_com){var1293, var1542, var1601, var1602}", pvp_icons:deadman_currentlocation_status);
+	if_setonvartransmit("script1636(event_com){deadman, deadman3, wildwars_temptransmit, wildwars_temptransmit2}", pvp_icons:deadman_currentlocation_status);
 } else {
 	if_setontimer(null, pvp_icons:deadman_final_timer);
 	if_setonvartransmit(null, pvp_icons:deadman_final_timer);
@@ -16,9 +16,9 @@ if ($boolean0 = true) {
 	return;
 }
 if (~wildwars_world = 1) {
-	if_setonvartransmit("wildwars_hudupdate{var1601, var1602}", pvp_icons:deadman_final_bg);
+	if_setonvartransmit("wildwars_hudupdate{wildwars_temptransmit, wildwars_temptransmit2}", pvp_icons:deadman_final_bg);
 	~wildwars_hudupdate;
 } else {
-	if_setonvartransmit("deadman_tournament_hudupdate{var1542, var1293}", pvp_icons:deadman_final_bg);
+	if_setonvartransmit("deadman_tournament_hudupdate{deadman3, deadman}", pvp_icons:deadman_final_bg);
 	~deadman_tournament_hudupdate;
 }

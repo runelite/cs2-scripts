@@ -9,13 +9,13 @@ cc_deleteall($com_league_info_league_general_content4);
 cc_deleteall($com_league_info_league_specific_content5);
 cc_deleteall($com_league_info_league_btn_menu8);
 cc_deleteall($com_league_info_league_menu_frame9);
-def_struct $struct16 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct16 = enum(int, struct, enum_2670, %league_type);
 if ($struct16 = null) {
 	return;
 }
-def_struct $struct17 = struct_param(enum(int, struct, enum_2670, %varbit10032), param_1434);
+def_struct $struct17 = struct_param(enum(int, struct, enum_2670, %league_type), param_1434);
 def_int $colour18 = 0xff981f;
-if (%varbit10032 = 3) {
+if (%league_type = 3) {
 	$colour18 = ^white;
 } else {
 	$colour18 = struct_param($struct16, param_1027);
@@ -63,7 +63,7 @@ def_enum $enum21 = struct_param($struct17, param_887);
 def_enum $enum22 = struct_param($struct16, param_888);
 def_enum $enum23 = struct_param($struct16, param_889);
 def_int $int24 = struct_param($struct16, param_872);
-def_int $int25 = calc(1 + ($int24 - %varbit9535));
+def_int $int25 = calc(1 + ($int24 - %current_runeday));
 def_graphic $graphic26 = p12_full;
 def_fontmetrics $fontmetrics27 = p12_full;
 def_int $int28 = ~on_ios;

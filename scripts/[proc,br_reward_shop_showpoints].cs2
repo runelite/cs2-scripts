@@ -1,8 +1,8 @@
 // 3084
 [proc,br_reward_shop_showpoints](component $com_br_reward_shop_total0)
 def_string $string0 = ",";
-if (%var262 < 32767) {
-	if_settext("Points: <col=ffffff><~tostring_spacer(%var261, $string0)></col><br>Wins: <col=ffffff><~tostring_spacer(%var262, $string0)></col>", $com_br_reward_shop_total0);
+if (%if2 < 32767) {
+	if_settext("Points: <col=ffffff><~tostring_spacer(%if1, $string0)></col><br>Wins: <col=ffffff><~tostring_spacer(%if2, $string0)></col>", $com_br_reward_shop_total0);
 } else {
-	if_settext("Points: <col=ffffff><~tostring_spacer(%var261, $string0)></col><br>Wins: <col=ffffff>Lots!</col>", $com_br_reward_shop_total0);
+	if_settext("Points: <col=ffffff><~tostring_spacer(%if1, $string0)></col><br>Wins: <col=ffffff>Lots!</col>", $com_br_reward_shop_total0);
 }

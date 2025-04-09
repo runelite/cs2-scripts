@@ -1,22 +1,22 @@
 // 7468
 [proc,script7468]
-minimenu_setorderedit(%varbit11521);
-gameoption_set(14, %varbit11523);
-if (%varbit11520 = 1) {
-	gameoption_set(13, calc(%varbit11522 + 1));
+minimenu_setorderedit(%settings_minimenu_reordering_toggle);
+gameoption_set(14, %settings_minimenu_spacing);
+if (%settings_minimenu_start_index_toggle = 1) {
+	gameoption_set(13, calc(%settings_minimenu_start_index + 1));
 } else {
 	gameoption_set(13, 0);
 }
-minimenu_setblockmode(0, calc(1 - %varbit11524));
-minimenu_setblockmode(1, calc(1 - %varbit11525));
-minimenu_setblockmode(2, calc(1 - %varbit11526));
-minimenu_setblockmode(3, calc(1 - %varbit11527));
-minimenu_setblockmode(4, calc(1 - %varbit11528));
-minimenu_setblockmode(5, calc(1 - %varbit11529));
-minimenu_setblockmode(6, calc(1 - %varbit11530));
-minimenu_setblockmode(7, calc(1 - %varbit11531));
-minimenu_setblockmode(8, calc(1 - %varbit11532));
-minimenu_setblockmode(9, calc(1 - %varbit11533));
-if (minimenu_getscroll = %varbit71) {
+minimenu_setblockmode(0, calc(1 - %settings_minimenu_filter_visual_feedback));
+minimenu_setblockmode(1, calc(1 - %settings_minimenu_filter_target));
+minimenu_setblockmode(2, calc(1 - %settings_minimenu_filter_entity));
+minimenu_setblockmode(3, calc(1 - %settings_minimenu_filter_interface));
+minimenu_setblockmode(4, calc(1 - %settings_minimenu_filter_walk));
+minimenu_setblockmode(5, calc(1 - %settings_minimenu_filter_global_click));
+minimenu_setblockmode(6, calc(1 - %settings_minimenu_filter_player));
+minimenu_setblockmode(7, calc(1 - %settings_minimenu_filter_use));
+minimenu_setblockmode(8, calc(1 - %settings_minimenu_filter_cancel));
+minimenu_setblockmode(9, calc(1 - %settings_minimenu_filter_examine));
+if (minimenu_getscroll = %settings_minimenu_scrollbar_toggle) {
 	minimenu_togglescroll;
 }

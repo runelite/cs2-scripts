@@ -25,7 +25,7 @@ if ($component3 ! null & $component2 ! null) {
 		%varcint1223 = 0;
 	}
 	if_sethide(false, popout:osm_buttons);
-	$struct8 = enum(int, struct, enum_4067, %varbit13090);
+	$struct8 = enum(int, struct, enum_4067, %popout_open);
 	if ($struct8 = null & %varcint1223 = 2) {
 		%varcint1223 = 0;
 	}
@@ -77,8 +77,8 @@ if ($component3 ! null & $component2 ! null) {
 			if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, popout:osm_button_frame);
 			if_setsize(58, 0, ^setsize_abs, ^setsize_minus, popout:osm_button_frame);
 	}
-	if (%varbit13090 ! 0) {
-		$struct8 = enum(int, struct, enum_4067, %varbit13090);
+	if (%popout_open ! 0) {
+		$struct8 = enum(int, struct, enum_4067, %popout_open);
 		if ($struct8 ! null) {
 			$graphic9 = struct_param($struct8, param_1412);
 		}

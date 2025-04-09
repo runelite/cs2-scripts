@@ -1,14 +1,14 @@
 // 5890
 [proc,speedrunning_trophies_update](component $com_speedrunning_panel_bronze0, component $com_speedrunning_panel_silver1, component $com_speedrunning_panel_gold2, component $com_speedrunning_panel_platinum3, component $com_speedrunning_panel_diamond4, component $com_speedrunning_panel_total_trophies5, component $com_speedrunning_panel_total_bronze6, component $com_speedrunning_panel_total_silver7, component $com_speedrunning_panel_total_gold8, component $com_speedrunning_panel_total_platinum9, component $com_speedrunning_panel_total_diamond10)
-~speedrunning_trophy_update($com_speedrunning_panel_bronze0, ~script6805(%var3373, 1), "speedrun_trophies,0", ~speedrunning_trophy_check(%var3373, 1));
-~speedrunning_trophy_update($com_speedrunning_panel_silver1, ~script6805(%var3373, 2), "speedrun_trophies,1", ~speedrunning_trophy_check(%var3373, 2));
-~speedrunning_trophy_update($com_speedrunning_panel_gold2, ~script6805(%var3373, 3), "speedrun_trophies,2", ~speedrunning_trophy_check(%var3373, 3));
-~speedrunning_trophy_update($com_speedrunning_panel_platinum3, ~script6805(%var3373, 4), "speedrun_trophies,3", ~speedrunning_trophy_check(%var3373, 4));
-~speedrunning_trophy_update($com_speedrunning_panel_diamond4, ~script6805(%var3373, 5), "speedrun_trophies,4", ~speedrunning_trophy_check(%var3373, 5));
+~speedrunning_trophy_update($com_speedrunning_panel_bronze0, ~script6805(%latest_speedrun_panel, 1), "speedrun_trophies,0", ~speedrunning_trophy_check(%latest_speedrun_panel, 1));
+~speedrunning_trophy_update($com_speedrunning_panel_silver1, ~script6805(%latest_speedrun_panel, 2), "speedrun_trophies,1", ~speedrunning_trophy_check(%latest_speedrun_panel, 2));
+~speedrunning_trophy_update($com_speedrunning_panel_gold2, ~script6805(%latest_speedrun_panel, 3), "speedrun_trophies,2", ~speedrunning_trophy_check(%latest_speedrun_panel, 3));
+~speedrunning_trophy_update($com_speedrunning_panel_platinum3, ~script6805(%latest_speedrun_panel, 4), "speedrun_trophies,3", ~speedrunning_trophy_check(%latest_speedrun_panel, 4));
+~speedrunning_trophy_update($com_speedrunning_panel_diamond4, ~script6805(%latest_speedrun_panel, 5), "speedrun_trophies,4", ~speedrunning_trophy_check(%latest_speedrun_panel, 5));
 def_string $string0 = ",";
 if_settext(~tostring_spacer(~speedrunning_total_trophies, $string0), $com_speedrunning_panel_total_trophies5);
-if_settext(~tostring_spacer(~min(%varbit13632, 60000), $string0), $com_speedrunning_panel_total_bronze6);
-if_settext(~tostring_spacer(~min(%varbit13633, 60000), $string0), $com_speedrunning_panel_total_silver7);
-if_settext(~tostring_spacer(~min(%varbit13634, 60000), $string0), $com_speedrunning_panel_total_gold8);
-if_settext(~tostring_spacer(~min(%varbit13635, 60000), $string0), $com_speedrunning_panel_total_platinum9);
-if_settext(~tostring_spacer(~min(%varbit6543, 60000), $string0), $com_speedrunning_panel_total_diamond10);
+if_settext(~tostring_spacer(~min(%speedrunning_bronze_trophies, 60000), $string0), $com_speedrunning_panel_total_bronze6);
+if_settext(~tostring_spacer(~min(%speedrunning_silver_trophies, 60000), $string0), $com_speedrunning_panel_total_silver7);
+if_settext(~tostring_spacer(~min(%speedrunning_gold_trophies, 60000), $string0), $com_speedrunning_panel_total_gold8);
+if_settext(~tostring_spacer(~min(%speedrunning_platinum_trophies, 60000), $string0), $com_speedrunning_panel_total_platinum9);
+if_settext(~tostring_spacer(~min(%speedrunning_diamond_trophies, 60000), $string0), $com_speedrunning_panel_total_diamond10);

@@ -1,9 +1,9 @@
 // 6177
 [clientscript,script6177](int $com_pvp_arena_legacyduel_confirm_universe0, component $com_pvp_arena_legacyduel_confirm_inv_button1, component $com_pvp_arena_legacyduel_confirm_worn_button2, component $com_pvp_arena_legacyduel_confirm_otherinv3, component $com_pvp_arena_legacyduel_confirm_otherworn4, component $com_pvp_arena_legacyduel_confirm_otherhidden5, component $com_pvp_arena_legacyduel_confirm_accept6, component $com_pvp_arena_legacyduel_confirm_decline7, component $com_pvp_arena_legacyduel_confirm_tooltip8)
 ~script6181($com_pvp_arena_legacyduel_confirm_inv_button1, $com_pvp_arena_legacyduel_confirm_worn_button2, $com_pvp_arena_legacyduel_confirm_otherinv3, $com_pvp_arena_legacyduel_confirm_otherworn4, $com_pvp_arena_legacyduel_confirm_otherhidden5);
-if_setonvartransmit("script6180($com_pvp_arena_legacyduel_confirm_inv_button1, $com_pvp_arena_legacyduel_confirm_worn_button2, $com_pvp_arena_legacyduel_confirm_otherinv3, $com_pvp_arena_legacyduel_confirm_otherworn4, event_com){var286}", $com_pvp_arena_legacyduel_confirm_otherhidden5);
+if_setonvartransmit("script6180($com_pvp_arena_legacyduel_confirm_inv_button1, $com_pvp_arena_legacyduel_confirm_worn_button2, $com_pvp_arena_legacyduel_confirm_otherinv3, $com_pvp_arena_legacyduel_confirm_otherworn4, event_com){dueloptions}", $com_pvp_arena_legacyduel_confirm_otherhidden5);
 ~script6186($com_pvp_arena_legacyduel_confirm_accept6);
-if_setonvartransmit("script6185(event_com){var3465}", $com_pvp_arena_legacyduel_confirm_accept6);
+if_setonvartransmit("script6185(event_com){pvpa_temp_transmit_1}", $com_pvp_arena_legacyduel_confirm_accept6);
 ~stonebutton_init("<col=ff0000>Decline</col>", $com_pvp_arena_legacyduel_confirm_decline7, p12_full, 0);
 if_setonop("closebutton_click", $com_pvp_arena_legacyduel_confirm_decline7);
 def_component $component9 = null;
@@ -30,6 +30,6 @@ while ($int11 > 0) {
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 		~script6192($int11, $com_pvp_arena_legacyduel_confirm_tooltip8);
-		cc_setonvartransmit("script6191(event_com, event_comsubid, $int11, $com_pvp_arena_legacyduel_confirm_tooltip8){var286}");
+		cc_setonvartransmit("script6191(event_com, event_comsubid, $int11, $com_pvp_arena_legacyduel_confirm_tooltip8){dueloptions}");
 	}
 }

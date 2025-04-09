@@ -7,7 +7,7 @@ def_string $string0 = "...";
 def_graphic $graphic9 = null;
 def_int $int10 = 0;
 def_int $int11 = -1;
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true | %clan_transmit_loadasguest = 0 & %clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true) {
 	$int7 = activeclansettings_getaffinedslot(removetags(chat_playername));
 	if (struct_param($struct5, param_1255) = true) {
 		$int6 = -1;

@@ -12,12 +12,12 @@ if (%varcint228 = true) {
 	return;
 }
 def_string $string0 = "Inbox: 0 unread messages";
-if (%var1781 > 9999) {
+if (%account_messages > 9999) {
 	$string0 = "Inbox: 9999+ unread messages";
-} else if (%var1781 = 1) {
+} else if (%account_messages = 1) {
 	$string0 = "Inbox: 1 unread message";
 } else {
-	$string0 = "Inbox: <tostring(%var1781)> unread messages";
+	$string0 = "Inbox: <tostring(%account_messages)> unread messages";
 }
 if_settext($string0, $component0);
 if_settext("View Inbox", $component1);

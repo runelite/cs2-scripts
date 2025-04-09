@@ -45,7 +45,7 @@ if ($boolean21 = false) {
 cc_create($com_settings_tooltip_inside_if5, ^iftype_text, $comsubid18, false);
 cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-if (%varbit9665 = 0) {
+if (%settings_disable_tooltip_in_interface = 0) {
 	cc_settext("Show <col=ffffff>less <col=ff981f>information");
 } else {
 	cc_settext("Show <col=ffffff>more <col=ff981f>information");
@@ -72,7 +72,7 @@ if_setonop("script3829(
 	14 = $com_settings_tooltip_inside_if_clickzone4
 )", $com_settings_tooltip_inside_if_clickzone4);
 if_setonvartransmit("script3830(
-	0 = %varbit9665, 
+	0 = %settings_disable_tooltip_in_interface, 
 	1 = $com_settings_tooltip_inside_if5, 
 	2 = $comsubid18, 
 	3 = $com_settings_settings6, 
@@ -88,6 +88,6 @@ if_setonvartransmit("script3830(
 	13 = $com_settings_settings_sliderzone16, 
 	14 = $com_settings_tooltip17, 
 	15 = $com_settings_tooltip_inside_if_clickzone4
-){var2856}", $com_settings_tooltip_inside_if_clickzone4);
+){settings_varp_1}", $com_settings_tooltip_inside_if_clickzone4);
 if_setontimer("settings_window_resize($com_settings_infinite0, $com_settings_universe1, $com_settings_scrollbar9, $com_settings_settings6, $int20, 0, 0)", $com_settings_universe1);
 if_setontimer("script3833($com_settings_infinite0, $com_settings_universe1, 0)", $com_settings_infinite0);

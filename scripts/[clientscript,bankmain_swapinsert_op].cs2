@@ -3,8 +3,8 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (%varbit3959 ! $int3) {
-	%varbit3959 = $int3;
+if (%bank_insertmode ! $int3) {
+	%bank_insertmode = $int3;
 	sound_synth(interface_select1, 1, 0);
 }
 ~bankmain_swapinsert($component1, $component2);

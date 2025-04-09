@@ -9,7 +9,7 @@ if (~on_mobile = true) {
 } else {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_pvp_arena_1v1_info_dodger1);
 	~pvpa_1v1_info_dodger($com_pvp_arena_1v1_info_dodger1);
-	if_setonvartransmit("pvpa_1v1_info_dodger($com_pvp_arena_1v1_info_dodger1){var3464, var1055, var1227}", $com_pvp_arena_1v1_info_universe0);
+	if_setonvartransmit("pvpa_1v1_info_dodger($com_pvp_arena_1v1_info_dodger1){pvpa_temp_transmit_0, chat_filter_assist, xpdrops_options}", $com_pvp_arena_1v1_info_universe0);
 }
 ~steelborder($com_pvp_arena_1v1_info_frame3, "1v1 Tournament", 11);
 if_setnoclickthrough(true, $com_pvp_arena_1v1_info_frame3);

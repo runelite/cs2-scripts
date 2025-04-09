@@ -1,7 +1,7 @@
 // 1333
 [clientscript,light_puzzle_init](component $com_light_puzzle_steel_border0, component $com_light_puzzle_lights1, component $com_light_puzzle_button12, component $com_light_puzzle_button23, component $com_light_puzzle_button34, component $com_light_puzzle_button45, component $com_light_puzzle_button56, component $com_light_puzzle_button67, component $com_light_puzzle_button78, component $com_light_puzzle_button89, component $com_light_puzzle_text110, component $com_light_puzzle_text211, component $com_light_puzzle_text312, component $com_light_puzzle_text413, component $com_light_puzzle_text514, component $com_light_puzzle_text615, component $com_light_puzzle_text716, component $com_light_puzzle_text817)
 ~steelborder($com_light_puzzle_steel_border0, "Light box", 0);
-if_setonvartransmit("light_puzzle_update($com_light_puzzle_lights1){var1356}", $com_light_puzzle_lights1);
+if_setonvartransmit("light_puzzle_update($com_light_puzzle_lights1){trail_lights}", $com_light_puzzle_lights1);
 ~light_puzzle_update($com_light_puzzle_lights1);
 ~light_puzzle_button_setup($com_light_puzzle_button12, $com_light_puzzle_text110, "A");
 ~light_puzzle_button_setup($com_light_puzzle_button23, $com_light_puzzle_text211, "B");

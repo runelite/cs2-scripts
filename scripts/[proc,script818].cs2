@@ -2,7 +2,7 @@
 [proc,script818](component $com_ge_offers_details_collect0)
 cc_clearops;
 .cc_clearops;
-def_inv $inv1 = enum(int, inv, enum_150, calc(%varbit4439 - 1));
+def_inv $inv1 = enum(int, inv, enum_150, calc(%ge_selectedslot - 1));
 if ($inv1 = null) {
 	cc_sethide(true);
 	.cc_sethide(true);

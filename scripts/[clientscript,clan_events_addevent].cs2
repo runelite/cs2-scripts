@@ -35,7 +35,7 @@ def_int $int20 = 1;
 def_component $component21 = if_getlayer(clans_events:universe);
 if (string_length($string0) > 0) {
 	if (cc_find(clans_events:list_contents, $int0) = ^true & .cc_find(clans_events:list_contents, calc($int0 + 10)) = ^true) {
-		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+		if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true | %clan_transmit_loadasguest = 0 & %clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true) {
 			$string12, $graphic19 = ~script4302($int2);
 		}
 		$int15 = cc_getwidth;
@@ -59,7 +59,7 @@ if (string_length($string0) > 0) {
 		} else {
 			cc_settrans(245);
 		}
-		if (%varbit12200 = 1 & ~on_mobile = false) {
+		if (%clan_editing_permitted = 1 & ~on_mobile = false) {
 			cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, cc_gettrans)");
 			cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, cc_gettrans)");
 		}

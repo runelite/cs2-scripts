@@ -58,7 +58,7 @@ if (map_members = true | %varcint103 = 1) {
 	$string1 = "Open Store";
 }
 ~membership_benefits_button_init($com_membership_benefits_store_button4, $string1);
-if (~on_mobile = true & ~bonds_hide = 1 & %varbit6713 = 0) {
+if (~on_mobile = true & ~bonds_hide = 1 & %has_bonds = 0) {
 	~membership_benefits_hide_bonds($com_membership_benefits_store_button4, $com_membership_benefits_bond_button5);
 } else {
 	~membership_benefits_button_init($com_membership_benefits_bond_button5, "Bond Pouch");

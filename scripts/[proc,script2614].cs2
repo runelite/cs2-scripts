@@ -12,75 +12,75 @@ if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 }
 switch_component ($component1) {
 	case magic_spellbook:vengeance, magic_spellbook:vengeance_other :
-		if (%varbit2451 = 1) {
+		if (%vengeance_timelimit = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:heal_group :
-		if (%varbit925 = 1) {
+		if (%heal_group_timelimit = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:magic_imbue :
-		if (%varbit5438 > 0) {
+		if (%magic_imbue_active > 0) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:low_alchemy :
-		if ((inv_total(inv, lumbridge_ring_easy_13125) > 0 | inv_total(inv, lumbridge_ring_medium_13126) > 0 | inv_total(inv, lumbridge_ring_hard_13127) > 0 | inv_total(worn, lumbridge_ring_easy_13125) > 0 | inv_total(worn, lumbridge_ring_medium_13126) > 0 | inv_total(worn, lumbridge_ring_hard_13127) > 0 | inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %varbit4554 < 30) {
+		if ((inv_total(inv, lumbridge_ring_easy_13125) > 0 | inv_total(inv, lumbridge_ring_medium_13126) > 0 | inv_total(inv, lumbridge_ring_hard_13127) > 0 | inv_total(worn, lumbridge_ring_easy_13125) > 0 | inv_total(worn, lumbridge_ring_medium_13126) > 0 | inv_total(worn, lumbridge_ring_hard_13127) > 0 | inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %lumbridge_free_alchs < 30) {
 			return(1, null);
 		}
 	case magic_spellbook:high_alchemy :
-		if ((inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %varbit4554 < 30) {
+		if ((inv_total(inv, lumbridge_ring_elite_13128) > 0 | inv_total(worn, lumbridge_ring_elite_13128) > 0) & map_members = true & %lumbridge_free_alchs < 30) {
 			return(1, null);
 		}
 	case magic_spellbook:lesser_corruption, magic_spellbook:greater_corruption :
-		if (%varbit12288 = 1) {
+		if (%arceuus_corruption_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:dark_lure :
-		if (%varbit12289 = 1) {
+		if (%arceuus_dark_lure_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:death_charge :
-		if (%varbit12138 = 1) {
+		if (%arceuus_death_charge_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:resurrect_lesser_ghost, magic_spellbook:resurrect_lesser_skeleton, magic_spellbook:resurrect_lesser_zombie, magic_spellbook:resurrect_superior_ghost, magic_spellbook:resurrect_superior_skeleton, magic_spellbook:resurrect_superior_zombie, magic_spellbook:resurrect_greater_ghost, magic_spellbook:resurrect_greater_skeleton, magic_spellbook:resurrect_greater_zombie :
-		if (%varbit12290 = 1) {
+		if (%arceuus_resurrection_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:shadow_veil :
-		if (%varbit12291 = 1) {
+		if (%arceuus_shadow_veil_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:vile_vigour :
-		if (%varbit12292 = 1) {
+		if (%arceuus_vile_vigour_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:ward_of_arceuus :
-		if (%varbit12293 = 1) {
+		if (%arceuus_ward_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
 	case magic_spellbook:demonic_offering, magic_spellbook:sinister_offering :
-		if (%varbit12423 = 1) {
+		if (%arceuus_offering_cooldown = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);

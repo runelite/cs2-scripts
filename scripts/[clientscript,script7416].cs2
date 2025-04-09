@@ -1,9 +1,9 @@
 // 7416
 [clientscript,script7416](int $int0)
-if ($int0 = %varbit11557) {
+if ($int0 = %osm_hide_hotkeys) {
 	return;
 }
-if (%varbit11557 = 1) {
+if (%osm_hide_hotkeys = 1) {
 	if_sethide(true, osm_hotkeys:content);
 } else {
 	if_sethide(false, osm_hotkeys:content);
@@ -11,4 +11,4 @@ if (%varbit11557 = 1) {
 }
 ~script7432(4);
 ~script7432(5);
-if_setonvartransmit("script7416(%varbit11557){var3053}", osm_hotkeys:hide_on_transmit);
+if_setonvartransmit("script7416(%osm_hide_hotkeys){chat_filter_assist_2}", osm_hotkeys:hide_on_transmit);

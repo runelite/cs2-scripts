@@ -1,17 +1,17 @@
 // 3060
 [proc,macro_beekeeper_update](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
-~macro_beekeeper_setcomponent($component2, %varbit10601);
-~macro_beekeeper_setcomponent($component3, %varbit10602);
-~macro_beekeeper_setcomponent($component4, %varbit10603);
-~macro_beekeeper_setcomponent($component5, %varbit10604);
-~macro_beekeeper_setcomponent($component6, %varbit10605);
-~macro_beekeeper_setcomponent($component7, %varbit10606);
-~macro_beekeeper_setcomponent($component8, %varbit10607);
-~macro_beekeeper_setcomponent($component9, %varbit10608);
+~macro_beekeeper_setcomponent($component2, %beekeeper_start_1);
+~macro_beekeeper_setcomponent($component3, %beekeeper_start_2);
+~macro_beekeeper_setcomponent($component4, %beekeeper_start_3);
+~macro_beekeeper_setcomponent($component5, %beekeeper_start_4);
+~macro_beekeeper_setcomponent($component6, %beekeeper_dest_1);
+~macro_beekeeper_setcomponent($component7, %beekeeper_dest_2);
+~macro_beekeeper_setcomponent($component8, %beekeeper_dest_3);
+~macro_beekeeper_setcomponent($component9, %beekeeper_dest_4);
 if ($int0 = 0) {
 	return;
 }
-if (%varbit10601 > 0) {
+if (%beekeeper_start_1 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -28,7 +28,7 @@ if (%varbit10601 > 0) {
 } else {
 	if_setondragcomplete(null, $component2);
 }
-if (%varbit10602 > 0) {
+if (%beekeeper_start_2 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -45,7 +45,7 @@ if (%varbit10602 > 0) {
 } else {
 	if_setondragcomplete(null, $component3);
 }
-if (%varbit10603 > 0) {
+if (%beekeeper_start_3 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -62,7 +62,7 @@ if (%varbit10603 > 0) {
 } else {
 	if_setondragcomplete(null, $component4);
 }
-if (%varbit10604 > 0) {
+if (%beekeeper_start_4 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -79,7 +79,7 @@ if (%varbit10604 > 0) {
 } else {
 	if_setondragcomplete(null, $component5);
 }
-if (%varbit10605 > 0) {
+if (%beekeeper_dest_1 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -96,7 +96,7 @@ if (%varbit10605 > 0) {
 } else {
 	if_setondragcomplete(null, $component6);
 }
-if (%varbit10606 > 0) {
+if (%beekeeper_dest_2 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -113,7 +113,7 @@ if (%varbit10606 > 0) {
 } else {
 	if_setondragcomplete(null, $component7);
 }
-if (%varbit10607 > 0) {
+if (%beekeeper_dest_3 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 
@@ -130,7 +130,7 @@ if (%varbit10607 > 0) {
 } else {
 	if_setondragcomplete(null, $component8);
 }
-if (%varbit10608 > 0) {
+if (%beekeeper_dest_4 > 0) {
 	if_setondragcomplete("macro_beekeeper_rearrange(
 		0 = event_com, 
 		1 = event_com2, 

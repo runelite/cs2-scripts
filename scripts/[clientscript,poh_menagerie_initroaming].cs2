@@ -16,5 +16,5 @@ cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $com_poh_menagerie_roaming0);
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $com_poh_menagerie_roaming0);
 ~poh_menagerie_setroaming($com_poh_menagerie_roaming0);
-if_setonvartransmit("poh_menagerie_setroaming(event_com, cc_getid, 0){var661}", $com_poh_menagerie_roaming0);
+if_setonvartransmit("poh_menagerie_setroaming(event_com, cc_getid, 0){slayer_killerwatt_var}", $com_poh_menagerie_roaming0);
 if_setonop("poh_menagerie_toggleroaming(event_op, event_com, cc_getid)", $com_poh_menagerie_roaming0);

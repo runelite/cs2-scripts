@@ -20,7 +20,7 @@ if ($obj10 = null) {
 	return;
 }
 def_obj $obj11 = inv_getobj(bank, $dropsubid3);
-if (%varbit3959 = 0 | $dropsubid3 = calc($comsubid1 + 1) | $dropsubid3 = calc($comsubid1 - 1) | $obj11 = null & $int9 = 0) {
+if (%bank_insertmode = 0 | $dropsubid3 = calc($comsubid1 + 1) | $dropsubid3 = calc($comsubid1 - 1) | $obj11 = null & $int9 = 0) {
 	if (cc_find($drop0, $dropsubid3) = ^true) {
 		~bankmain_drawitem($obj10, inv_getnum(bank, $comsubid1), $drop0, $component5, $drop6, $component7, $component8);
 	}

@@ -7,7 +7,7 @@ def_string $string3 = "";
 def_graphic $graphic1 = null;
 def_int $int2 = -1;
 def_int $int3 = 0;
-db_find(combat_interface_weapon_category:id, %varbit357);
+db_find(combat_interface_weapon_category:id, %combat_weapon_category);
 def_dbrow $dbrow4 = db_findnext;
 def_int $int5 = db_getfieldcount($dbrow4, combat_interface_weapon_category:button);
 while ($int3 < $int5) {

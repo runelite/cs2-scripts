@@ -8,8 +8,8 @@ if (~script6042($int8) <= 0 & $boolean9 = false | ~script6042($int8) >= 45 & $bo
 	sound_synth(synth_5598, 1, 0);
 	return;
 }
-%varbit13863 = ~minmax(0, 45, calc(%varbit13863 + $int5));
-%varbit13864 = ~minmax(0, 45, calc(%varbit13864 + $int6));
-%varbit13865 = ~minmax(0, 45, calc(%varbit13865 + $int7));
+%bcs_burner_1 = ~minmax(0, 45, calc(%bcs_burner_1 + $int5));
+%bcs_burner_2 = ~minmax(0, 45, calc(%bcs_burner_2 + $int6));
+%bcs_burner_3 = ~minmax(0, 45, calc(%bcs_burner_3 + $int7));
 sound_synth(bunsen_burner, 1, 0);
 ~script6044($com_bcs_burner_meter_10, $com_bcs_burner_meter_21, $com_bcs_burner_meter_32, $com_bcs_burner_result_meter3, $com_bcs_burner_fire4);

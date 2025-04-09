@@ -4,21 +4,21 @@ cc_deleteall_entityoverlay($entityoverlay0);
 if (if_find_entityoverlay($entityoverlay0) = ^true) {
 	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 }
-if (%varbit542 = 1) {
+if (%cutscene_status = 1) {
 	return;
 }
 def_fontmetrics $fontmetrics4 = null;
 def_graphic $graphic5 = null;
 def_int $colour6 = ^black;
-if (%varbit14168 = 1 & %varbit14169 > 0 & (highlight_group_get(~script6690($npc3), 6) = true | highlight_npc_get($npc_uid1, $int2, 6) = true)) {
-	if (%varbit14169 = 1) {
+if (%option_npc_indicators_enabled = 1 & %option_npc_indicators_name > 0 & (highlight_group_get(~script6690($npc3), 6) = true | highlight_npc_get($npc_uid1, $int2, 6) = true)) {
+	if (%option_npc_indicators_name = 1) {
 		$fontmetrics4, $graphic5 = p12_full, p12_full;
 	} else {
 		$fontmetrics4, $graphic5 = b12_full, b12_full;
 	}
 	$colour6 = ~settings_get_colour_or_default(263);
-} else if (%varbit14178 > 0) {
-	if (%varbit14178 = 1) {
+} else if (%option_npc_name_all > 0) {
+	if (%option_npc_name_all = 1) {
 		$fontmetrics4, $graphic5 = p12_full, p12_full;
 	} else {
 		$fontmetrics4, $graphic5 = b12_full, b12_full;

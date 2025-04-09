@@ -1,13 +1,13 @@
 // 6479
 [proc,script6479](int $int0)
-if (%var3546 = null | db_getrowtable(%var3546) ! cluehelper_clue_music | %varbit14182 = 0 | %varbit14186 = 0) {
+if (%cluehelper_infobox_clue = null | db_getrowtable(%cluehelper_infobox_clue) ! cluehelper_clue_music | %option_cluehelper_enabled = 0 | %option_cluehelper_menu_highlight_enabled = 0) {
 	cc_deleteall(music:overlay);
 	return;
 }
 def_int $int1 = -1;
 def_int $int2 = -1;
 def_int $int3 = 0;
-def_dbrow $dbrow4 = db_getfield(%var3546, cluehelper_clue_music:music, 0);
+def_dbrow $dbrow4 = db_getfield(%cluehelper_infobox_clue, cluehelper_clue_music:music, 0);
 def_int $comsubid5 = -1;
 def_int $int6 = db_find(music:hidden, false);
 while ($int3 < $int6 & $comsubid5 < 0) {

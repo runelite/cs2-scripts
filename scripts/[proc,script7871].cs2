@@ -1,6 +1,6 @@
 // 7871
 [proc,script7871](component $com_rune_pouch_frame0, int $comsubid1, component $com_rune_pouch_top2, int $comsubid3, int $comsubid4, component $com_rune_pouch_pouch5)
-def_int $int6 = max(0, min(calc(6 - 2), %var261));
+def_int $int6 = max(0, min(calc(6 - 2), %if1));
 def_int $int7 = $int6;
 if (~league_relic_active(superior_sorcerer_4723) = 1) {
 	$int7 = calc($int7 + 2);

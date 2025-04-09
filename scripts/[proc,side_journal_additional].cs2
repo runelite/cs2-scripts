@@ -4,8 +4,8 @@ def_int $int44 = 34;
 if (~script6790 = 1) {
 	if_clearops($com_side_journal_adventurepath_list5);
 	if_sethide(true, $com_side_journal_adventurepath_list5);
-	if (%varbit8168 = 3) {
-		%varbit8168 = 1;
+	if (%side_journal_tab = 3) {
+		%side_journal_tab = 1;
 	}
 	~side_journal_switchtab(
 		0 = $com_side_journal_tabs1, 
@@ -98,11 +98,11 @@ if (~script6790 = 1) {
 	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_quest_list2);
 	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_task_list3);
 	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_league_list6);
-} else if (~league_world = 1 & %varbit10037 >= 3) {
+} else if (~league_world = 1 & %league_tutorial_completed >= 3) {
 	if_clearops($com_side_journal_adventurepath_list5);
 	if_sethide(true, $com_side_journal_adventurepath_list5);
-	if (%varbit8168 = 3) {
-		%varbit8168 = 1;
+	if (%side_journal_tab = 3) {
+		%side_journal_tab = 1;
 	}
 	~side_journal_switchtab(
 		0 = $com_side_journal_tabs1, 
@@ -198,8 +198,8 @@ if (~script6790 = 1) {
 } else if (~deadman_world = 3) {
 	if_clearops($com_side_journal_adventurepath_list5);
 	if_sethide(true, $com_side_journal_adventurepath_list5);
-	if (%varbit8168 = 3) {
-		%varbit8168 = 1;
+	if (%side_journal_tab = 3) {
+		%side_journal_tab = 1;
 	}
 	~side_journal_switchtab(
 		0 = $com_side_journal_tabs1, 
@@ -292,11 +292,11 @@ if (~script6790 = 1) {
 	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_quest_list2);
 	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_task_list3);
 	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_side_journal_league_list6);
-} else if (%varbit9340 = 1 & ~league_world = 0) {
+} else if (%adventurepath_player_participating = 1 & ~league_world = 0) {
 	if_clearops($com_side_journal_league_list6);
 	if_sethide(true, $com_side_journal_league_list6);
-	if (%varbit8168 = 4) {
-		%varbit8168 = 1;
+	if (%side_journal_tab = 4) {
+		%side_journal_tab = 1;
 	}
 	~side_journal_switchtab(
 		0 = $com_side_journal_tabs1, 
@@ -395,8 +395,8 @@ if (~script6790 = 1) {
 	if_sethide(true, $com_side_journal_adventurepath_list5);
 	if_clearops($com_side_journal_league_list6);
 	if_sethide(true, $com_side_journal_league_list6);
-	if (%varbit8168 = 3 | %varbit8168 = 4) {
-		%varbit8168 = 0;
+	if (%side_journal_tab = 3 | %side_journal_tab = 4) {
+		%side_journal_tab = 0;
 	}
 	~side_journal_switchtab(
 		0 = $com_side_journal_tabs1, 

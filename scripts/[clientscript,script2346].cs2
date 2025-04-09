@@ -1,7 +1,7 @@
 // 2346
 [clientscript,script2346](component $com_tob_midway_stores_points_text0, component $com_tob_midway_stores_items1, component $com_tob_midway_stores_vampyre_note2)
-if_settext("Points Available: <col=ffffff><tostring(%varbit6460)></col>", $com_tob_midway_stores_points_text0);
-if_setonvartransmit("script2349($com_tob_midway_stores_points_text0){var1746}", $com_tob_midway_stores_points_text0);
+if_settext("Points Available: <col=ffffff><tostring(%tob_midwaychest_points)></col>", $com_tob_midway_stores_points_text0);
+if_setonvartransmit("script2349($com_tob_midway_stores_points_text0){tob_perm_transmit_1}", $com_tob_midway_stores_points_text0);
 if_setoninvtransmit("script2347($com_tob_midway_stores_vampyre_note2){tob_chests}", $com_tob_midway_stores_vampyre_note2);
 ~script2348($com_tob_midway_stores_vampyre_note2);
 cc_deleteall($com_tob_midway_stores_items1);
@@ -16,13 +16,13 @@ while ($int5 < $int6) {
 	$namedobj7 = enum(int, namedobj, enum_1952, $int5);
 	if ($namedobj7 = 4dosestamina_12625) {
 		cc_create($com_tob_midway_stores_items1, ^iftype_graphic, $int8, false);
-		cc_setonvartransmit("script4488($com_tob_midway_stores_items1, $int8, $namedobj7){var1746}");
+		cc_setonvartransmit("script4488($com_tob_midway_stores_items1, $int8, $namedobj7){tob_perm_transmit_1}");
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc($int5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 		$string0 = "<col=ff981f><oc_name($namedobj7)>";
-		cc_setobject_alwaysnum($namedobj7, %varbit12271);
-		if (%varbit12271 = 0) {
+		cc_setobject_alwaysnum($namedobj7, %tob_midwaychest_staminapot);
+		if (%tob_midwaychest_staminapot = 0) {
 			cc_settrans(128);
 		}
 		cc_setopbase($string0);
@@ -33,7 +33,7 @@ while ($int5 < $int6) {
 		cc_setoutline(1);
 	} else if ($namedobj7 ! null) {
 		cc_create($com_tob_midway_stores_items1, ^iftype_graphic, $int8, false);
-		cc_setonvartransmit("script4489($com_tob_midway_stores_items1, $int8, $namedobj7){var1746}");
+		cc_setonvartransmit("script4489($com_tob_midway_stores_items1, $int8, $namedobj7){tob_perm_transmit_1}");
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc($int5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
@@ -42,8 +42,8 @@ while ($int5 < $int6) {
 		cc_setopbase($string0);
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
-		if (%varbit12272 ! 0) {
-			cc_setop(3, "Buy-<tostring(%varbit12272)>");
+		if (%tob_midwaychest_last_x ! 0) {
+			cc_setop(3, "Buy-<tostring(%tob_midwaychest_last_x)>");
 		}
 		cc_setop(4, "Buy-All");
 		cc_setop(5, "Buy-X");

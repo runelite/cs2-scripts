@@ -1,6 +1,6 @@
 // 4014
 [proc,settings_loot_drop_notification]
-if (%varbit5399 = 0 & %varbit5400 <= 0) {
+if (%option_lootnotification_on = 0 & %option_lootnotification_value <= 0) {
 	return;
 }
-%varbit5399 = calc(1 - %varbit5399);
+%option_lootnotification_on = calc(1 - %option_lootnotification_on);

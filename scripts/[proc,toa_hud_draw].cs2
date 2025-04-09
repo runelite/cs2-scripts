@@ -1,15 +1,15 @@
 // 6579
 [proc,toa_hud_draw](component $com_toa_hud_content0, component $com_toa_hud_content_names1, component $com_toa_hud_raid_path_levels_path2, component $com_toa_hud_raid_path_levels_nexus3, component $com_toa_hud_raid_difficulty_gfx4, component $com_toa_hud_raid_level_txt5, component $com_toa_hud_paths_icon6, component $com_toa_hud_paths_level7, component $com_toa_hud_nexus_scabaras_level8, component $com_toa_hud_nexus_akkha_level9, component $com_toa_hud_nexus_apmekan_level10, component $com_toa_hud_nexus_crondis_level11, component $com_toa_hud_0_container12, component $com_toa_hud_0_filler13, component $com_toa_hud_1_container14, component $com_toa_hud_1_filler15, component $com_toa_hud_2_container16, component $com_toa_hud_2_filler17, component $com_toa_hud_3_container18, component $com_toa_hud_3_filler19, component $com_toa_hud_4_container20, component $com_toa_hud_4_filler21, component $com_toa_hud_5_container22, component $com_toa_hud_5_filler23, component $com_toa_hud_6_container24, component $com_toa_hud_6_filler25, component $com_toa_hud_7_container26, component $com_toa_hud_7_filler27, component $com_toa_hud_tooltip28, component $com_toa_hud_content_details29)
 def_int $int30 = 0;
-$int30 = calc($int30 + ~toa_hud_statusrefresh(0, %varbit14346, %varbit14362, %varcstring1099, $com_toa_hud_0_container12, $com_toa_hud_0_filler13, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(1, %varbit14347, %varbit14363, %varcstring1100, $com_toa_hud_1_container14, $com_toa_hud_1_filler15, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(2, %varbit14348, %varbit14364, %varcstring1101, $com_toa_hud_2_container16, $com_toa_hud_2_filler17, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(3, %varbit14349, %varbit14365, %varcstring1102, $com_toa_hud_3_container18, $com_toa_hud_3_filler19, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(4, %varbit14350, %varbit14366, %varcstring1103, $com_toa_hud_4_container20, $com_toa_hud_4_filler21, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(5, %varbit14351, %varbit14367, %varcstring1104, $com_toa_hud_5_container22, $com_toa_hud_5_filler23, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(6, %varbit14352, %varbit14368, %varcstring1105, $com_toa_hud_6_container24, $com_toa_hud_6_filler25, $com_toa_hud_tooltip28));
-$int30 = calc($int30 + ~toa_hud_statusrefresh(7, %varbit14353, %varbit14369, %varcstring1106, $com_toa_hud_7_container26, $com_toa_hud_7_filler27, $com_toa_hud_tooltip28));
-if (%varbit14355 = 1) {
+$int30 = calc($int30 + ~toa_hud_statusrefresh(0, %toa_client_p0, %toa_client_primary0, %varcstring1099, $com_toa_hud_0_container12, $com_toa_hud_0_filler13, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(1, %toa_client_p1, %toa_client_primary1, %varcstring1100, $com_toa_hud_1_container14, $com_toa_hud_1_filler15, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(2, %toa_client_p2, %toa_client_primary2, %varcstring1101, $com_toa_hud_2_container16, $com_toa_hud_2_filler17, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(3, %toa_client_p3, %toa_client_primary3, %varcstring1102, $com_toa_hud_3_container18, $com_toa_hud_3_filler19, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(4, %toa_client_p4, %toa_client_primary4, %varcstring1103, $com_toa_hud_4_container20, $com_toa_hud_4_filler21, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(5, %toa_client_p5, %toa_client_primary5, %varcstring1104, $com_toa_hud_5_container22, $com_toa_hud_5_filler23, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(6, %toa_client_p6, %toa_client_primary6, %varcstring1105, $com_toa_hud_6_container24, $com_toa_hud_6_filler25, $com_toa_hud_tooltip28));
+$int30 = calc($int30 + ~toa_hud_statusrefresh(7, %toa_client_p7, %toa_client_primary7, %varcstring1106, $com_toa_hud_7_container26, $com_toa_hud_7_filler27, $com_toa_hud_tooltip28));
+if (%toa_client_hideplayers = 1) {
 	if_sethide(true, $com_toa_hud_content_names1);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $com_toa_hud_content_names1);
 } else {
@@ -17,49 +17,49 @@ if (%varbit14355 = 1) {
 	$int30 = ~max(calc(($int30 * 10 / 2 + 5) / 10), 1);
 	if_setsize(69, calc($int30 * 34 + ($int30 - 1)), ^setsize_abs, ^setsize_abs, $com_toa_hud_content_names1);
 }
-if (%varbit14380 >= 300) {
+if (%toa_client_raid_level >= 300) {
 	if_setgraphic(graphic_4662, $com_toa_hud_raid_difficulty_gfx4);
-} else if (%varbit14380 >= 150) {
+} else if (%toa_client_raid_level >= 150) {
 	if_setgraphic(graphic_4661, $com_toa_hud_raid_difficulty_gfx4);
 } else {
 	if_setgraphic(graphic_4660, $com_toa_hud_raid_difficulty_gfx4);
 }
-if_settext("Level: <tostring(%varbit14380)>", $com_toa_hud_raid_level_txt5);
+if_settext("Level: <tostring(%toa_client_raid_level)>", $com_toa_hud_raid_level_txt5);
 def_int $int31 = 0;
-switch_int (%varbit14381) {
+switch_int (%toa_client_current_path) {
 	case 0 :
 		if_sethide(true, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(false, $com_toa_hud_raid_path_levels_nexus3);
-		if_settext(tostring(%varbit14377), $com_toa_hud_nexus_scabaras_level8);
-		if_settext(tostring(%varbit14378), $com_toa_hud_nexus_akkha_level9);
-		if_settext(tostring(%varbit14379), $com_toa_hud_nexus_apmekan_level10);
-		if_settext(tostring(%varbit14376), $com_toa_hud_nexus_crondis_level11);
+		if_settext(tostring(%toa_client_scabaras_level), $com_toa_hud_nexus_scabaras_level8);
+		if_settext(tostring(%toa_client_het_level), $com_toa_hud_nexus_akkha_level9);
+		if_settext(tostring(%toa_client_apmeken_level), $com_toa_hud_nexus_apmekan_level10);
+		if_settext(tostring(%toa_client_crondis_level), $com_toa_hud_nexus_crondis_level11);
 		$int31 = 1;
 	case 1 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
 		if_setgraphic(graphic_4635, $com_toa_hud_paths_icon6);
-		if_settext(tostring(%varbit14377), $com_toa_hud_paths_level7);
+		if_settext(tostring(%toa_client_scabaras_level), $com_toa_hud_paths_level7);
 	case 2 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
 		if_setgraphic(graphic_4636, $com_toa_hud_paths_icon6);
-		if_settext(tostring(%varbit14378), $com_toa_hud_paths_level7);
+		if_settext(tostring(%toa_client_het_level), $com_toa_hud_paths_level7);
 	case 3 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
 		if_setgraphic(graphic_4637, $com_toa_hud_paths_icon6);
-		if_settext(tostring(%varbit14379), $com_toa_hud_paths_level7);
+		if_settext(tostring(%toa_client_apmeken_level), $com_toa_hud_paths_level7);
 	case 4 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
 		if_setgraphic(graphic_4638, $com_toa_hud_paths_icon6);
-		if_settext(tostring(%varbit14376), $com_toa_hud_paths_level7);
+		if_settext(tostring(%toa_client_crondis_level), $com_toa_hud_paths_level7);
 	case 5, 6 :
 		if_sethide(true, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
 }
-if (%varbit14381 = 5 | %varbit14381 = 6) {
+if (%toa_client_current_path = 5 | %toa_client_current_path = 6) {
 	if_setsize(120, 43, ^setsize_abs, ^setsize_abs, $com_toa_hud_content_details29);
 } else if ($int31 = 0) {
 	if_setsize(120, 70, ^setsize_abs, ^setsize_abs, $com_toa_hud_content_details29);

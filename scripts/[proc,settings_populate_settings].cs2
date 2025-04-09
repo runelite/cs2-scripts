@@ -29,7 +29,7 @@ def_int $int31 = 0;
 def_int $int32 = 0;
 def_int $int33 = ^max_32bit_int;
 def_int $int34 = 0;
-def_int $int35 = %varbit16073;
+def_int $int35 = %floater_is_searching;
 def_string $string0 = %varcstring417;
 def_string $string1 = "null";
 def_int $int36 = 0;
@@ -127,10 +127,10 @@ while ($int17 < $int18) {
 					26 = $int37
 				);
 				if ($int1 = 1 & $int2 > 0) {
-					if (%varbit9665 = 0 & $int2 >= calc($int29 - $int31) & $int2 < calc($int28 - $int30)) {
+					if (%settings_disable_tooltip_in_interface = 0 & $int2 >= calc($int29 - $int31) & $int2 < calc($int28 - $int30)) {
 						$int1 = 0;
 						$int2 = $int29;
-					} else if (%varbit9665 = 1 & $int2 >= calc($int29 + $int31) & $int2 < calc($int28 + $int30)) {
+					} else if (%settings_disable_tooltip_in_interface = 1 & $int2 >= calc($int29 + $int31) & $int2 < calc($int28 + $int30)) {
 						$int1 = 0;
 						$int2 = $int29;
 					}

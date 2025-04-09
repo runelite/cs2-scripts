@@ -1,7 +1,7 @@
 // 4803
 [proc,ca_boss_disable_search]
-if (%varbit12884 = 1) {
+if (%ca_bosses_is_searching = 1) {
 	~chatdefault_restoreinput;
-	%varbit12884 = 0;
+	%ca_bosses_is_searching = 0;
 	~ca_searchbar_setup_op(ca_bosses:universe, ca_bosses:searchbar_image, ca_bosses:search_text, 0);
 }

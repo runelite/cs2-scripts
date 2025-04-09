@@ -2,13 +2,13 @@
 [proc,script1533](component $component0, string $string0)
 def_int $int1 = 0;
 if ($component0 = raids_lobby_partydetails:preferred_size) {
-	$int1 = %varbit5433;
+	$int1 = %raids_lobby_partysize;
 } else if ($component0 = raids_lobby_partydetails:preferred_comlevel) {
-	$int1 = %varbit5426;
+	$int1 = %raids_lobby_mincombat;
 } else if ($component0 = raids_lobby_partydetails:preferred_skilltotal) {
-	$int1 = %varbit5427;
+	$int1 = %raids_lobby_minskilltotal;
 } else if ($component0 = raids_lobby_partydetails:scaling_layer) {
-	$int1 = %varbit9539;
+	$int1 = %raids_scaling;
 }
 if ($int1 > 0) {
 	cc_settext("<$string0>: <col=ffffff><tostring($int1)></col>");

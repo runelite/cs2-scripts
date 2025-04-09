@@ -3,17 +3,17 @@
 if ($opindex12 ! 1) {
 	return;
 }
-if (%varbit4150 = 15 & $int13 = 15) {
-	$int13 = %varbit11033;
+if (%bank_currenttab = 15 & $int13 = 15) {
+	$int13 = %potionstore_previous_tab;
 }
 if ($int13 >= 0 & $int13 <= 9 | $int13 = 15) {
-	if ($int13 ! %varbit4150) {
+	if ($int13 ! %bank_currenttab) {
 		sound_synth(interface_select1, 1, 0);
 	}
 	if ($int13 = 15) {
-		%varbit11033 = %varbit4150;
+		%potionstore_previous_tab = %bank_currenttab;
 	}
-	%varbit4150 = $int13;
+	%bank_currenttab = $int13;
 	~bankmain_build(
 		0 = $component0, 
 		1 = $component1, 

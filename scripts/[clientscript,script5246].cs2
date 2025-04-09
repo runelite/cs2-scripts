@@ -15,7 +15,7 @@ switch_component ($drop1) {
 	case hotkey_settings_new:slot5_clickzone :
 		$int2 = 4;
 }
-def_struct $struct3 = enum(int, struct, enum_5607, ~script7445(%varbit11539, $int2));
+def_struct $struct3 = enum(int, struct, enum_5607, ~script7445(%osm_hotkey_settings_loadout_viewed, $int2));
 if (~script7444($struct3, 0) = 1) {
 	mes("You cannot remove the <struct_param($struct3, param_1991)> hotkey right now");
 	return;
@@ -24,7 +24,7 @@ if (~script7444($struct0, 1) = 1) {
 	mes("You cannot assign the <struct_param($struct0, param_1991)> hotkey right now");
 	return;
 }
-def_string $string0 = enum(int, string, enum_5612, %varbit11539);
+def_string $string0 = enum(int, string, enum_5612, %osm_hotkey_settings_loadout_viewed);
 def_int $int4 = struct_param($struct0, param_1986);
-~script7446(%varbit11539, $int2, $int4);
+~script7446(%osm_hotkey_settings_loadout_viewed, $int2, $int4);
 ~script2118;

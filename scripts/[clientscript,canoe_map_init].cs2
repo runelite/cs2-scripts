@@ -51,7 +51,7 @@ if ($int12 ! 1) {
 if ($int13 ! 1) {
 	~canoe_location_setup($com_canoe_map_sanctuary7, "Ferox <br> Enclave", false, model_12103, model_12104, "Travel to<col=ff9040> Ferox Enclave", -15, 35);
 }
-switch_int (%varbit1846) {
+switch_int (%canoe_startfrom) {
 	case 3 :
 		~canoe_location_you_are_here($com_canoe_map_barbarian4);
 	case 2 :

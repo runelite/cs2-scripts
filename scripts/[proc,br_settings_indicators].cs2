@@ -1,21 +1,21 @@
 // 6539
 [proc,br_settings_indicators](component $com_br_settings_stats0, int $comsubid1, int $comsubid2, int $comsubid3)
 if (cc_find($com_br_settings_stats0, $comsubid1) = ^true) {
-	if (%varbit14200 = 0) {
+	if (%br_preferred_build = 0) {
 		cc_setgraphic("options_radio_buttons,2");
 	} else {
 		cc_setgraphic("options_radio_buttons,0");
 	}
 }
 if (cc_find($com_br_settings_stats0, $comsubid2) = ^true) {
-	if (%varbit14200 = 1) {
+	if (%br_preferred_build = 1) {
 		cc_setgraphic("options_radio_buttons,2");
 	} else {
 		cc_setgraphic("options_radio_buttons,0");
 	}
 }
 if (cc_find($com_br_settings_stats0, $comsubid3) = ^true) {
-	if (%varbit14200 = 2) {
+	if (%br_preferred_build = 2) {
 		cc_setgraphic("options_radio_buttons,2");
 	} else {
 		cc_setgraphic("options_radio_buttons,0");

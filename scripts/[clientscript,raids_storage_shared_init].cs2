@@ -2,7 +2,7 @@
 [clientscript,raids_storage_shared_init](component $com_raids_storage_shared_universe0, component $com_raids_storage_shared_warning1, component $com_raids_storage_shared_items2, component $com_raids_storage_shared_scrollbar3, component $com_raids_storage_shared_occupiedslots4, component $com_raids_storage_shared_private5)
 ~raids_storage_drawbutton("Private", $com_raids_storage_shared_private5, p11_full);
 ~raids_storage_shared_warning($com_raids_storage_shared_warning1);
-if_setonvartransmit("raids_storage_shared_warning($com_raids_storage_shared_warning1){var499}", $com_raids_storage_shared_warning1);
+if_setonvartransmit("raids_storage_shared_warning($com_raids_storage_shared_warning1){magic_carpet_var}", $com_raids_storage_shared_warning1);
 ~scrollbar_vertical($com_raids_storage_shared_scrollbar3, $com_raids_storage_shared_items2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~raids_storage_shared_items($com_raids_storage_shared_items2, $com_raids_storage_shared_scrollbar3, $com_raids_storage_shared_occupiedslots4);
 if_setoninvtransmit("raids_storage_shared_items($com_raids_storage_shared_items2, $com_raids_storage_shared_scrollbar3, $com_raids_storage_shared_occupiedslots4){raids_sharedstorage}", $com_raids_storage_shared_universe0);

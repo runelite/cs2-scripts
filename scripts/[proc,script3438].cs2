@@ -1,10 +1,10 @@
 // 3438
 [proc,script3438](int $int0, int $int1)(int)
-%var2715 = clearbit(%var2715, $int0);
-%var2716 = clearbit(%var2716, $int0);
+%myq5_puzzle_tile_marked = clearbit(%myq5_puzzle_tile_marked, $int0);
+%myq5_puzzle_tile_flagged = clearbit(%myq5_puzzle_tile_flagged, $int0);
 if ($int1 = 2) {
-	%var2715 = setbit(%var2715, $int0);
+	%myq5_puzzle_tile_marked = setbit(%myq5_puzzle_tile_marked, $int0);
 } else if ($int1 = 1) {
-	%var2716 = setbit(%var2716, $int0);
+	%myq5_puzzle_tile_flagged = setbit(%myq5_puzzle_tile_flagged, $int0);
 }
 return($int1);

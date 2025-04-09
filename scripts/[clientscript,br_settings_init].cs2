@@ -64,7 +64,7 @@ if (cc_find($com_br_settings_stats3, 1) = ^true) {
 if (cc_find($com_br_settings_stats3, 2) = ^true) {
 	cc_setonop("br_settings_op(event_op, 2, $com_br_settings_stats3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2))");
 }
-if_setonvartransmit("br_settings_indicators($com_br_settings_stats3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2)){var1373}", $com_br_settings_stats3);
+if_setonvartransmit("br_settings_indicators($com_br_settings_stats3, $comsubidarray0(0), $comsubidarray0(1), $comsubidarray0(2)){br_main_1}", $com_br_settings_stats3);
 cc_deleteall($com_br_settings_content1);
 $string0 = "Last Man Standing may be played on <col=ffb83f>different builds</col>, with different <col=ffb83f>stats and items</col> available for each. A build will be chosen at the <col=ffb83f>start of each game</col>, influenced by the participants' preferences.<br>Choose your favourite:";
 def_int $int9 = calc(14 * paraheight($string0, if_getwidth($com_br_settings_content1), p12_full) + 2);

@@ -5,8 +5,8 @@ def_int $int3 = 0;
 def_int $int4 = calc($int2 / 3 + 95);
 def_int $int5 = calc($int2 / 2 - $int4 / 2);
 def_int $int6 = 0;
-def_obj $obj7 = %var2674;
-if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 = false | ~deadman_restricted_item($obj7) = 0)) {
+def_obj $obj7 = %ge_last_searched;
+if (($enum1 = null | enum(obj, boolean, $enum1, %ge_last_searched) = true) & ($boolean0 = false | ~deadman_restricted_item($obj7) = 0)) {
 	cc_create(chatbox:mes_layer_scrollcontents, ^iftype_rectangle, $int6, false);
 	$int6 = calc($int6 + 1);
 	cc_setonkey("meslayer_mode14_select($obj7, event_keycode)");

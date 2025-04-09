@@ -1,7 +1,7 @@
 // 6336
 [clientscript,pvpa_reward_shop_init](component $com_pvp_arena_rewards_universe0, component $com_pvp_arena_rewards_total1, component $com_pvp_arena_rewards_options2, component $com_pvp_arena_rewards_scrollbar3, component $com_pvp_arena_rewards_confirm4, component $com_pvp_arena_rewards_buttongfx5)
 ~pvpa_reward_shop_showpoints($com_pvp_arena_rewards_total1);
-if_setonvartransmit("pvpa_reward_shop_showpoints($com_pvp_arena_rewards_total1){var261, var1141}", $com_pvp_arena_rewards_total1);
+if_setonvartransmit("pvpa_reward_shop_showpoints($com_pvp_arena_rewards_total1){if1, item_redemption}", $com_pvp_arena_rewards_total1);
 def_int $int6 = ~pvpa_reward_shop_draw(-1, $com_pvp_arena_rewards_universe0, $com_pvp_arena_rewards_options2, $com_pvp_arena_rewards_confirm4, $com_pvp_arena_rewards_buttongfx5);
 if_setscrollpos(0, 0, $com_pvp_arena_rewards_options2);
 if ($int6 >= if_getheight($com_pvp_arena_rewards_options2)) {

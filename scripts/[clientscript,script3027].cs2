@@ -1,10 +1,10 @@
 // 3027
 [clientscript,script3027](component $component0, int $comsubid1)
 sound_synth(interface_select1, 1, 0);
-if (%varbit9329 = 0) {
+if (%adventurepath_disable_task_message = 0) {
 	~script3034($component0, $comsubid1, 1);
-	%varbit9329 = 1;
+	%adventurepath_disable_task_message = 1;
 } else {
 	~script3034($component0, $comsubid1, 0);
-	%varbit9329 = 0;
+	%adventurepath_disable_task_message = 0;
 }

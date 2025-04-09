@@ -2,7 +2,7 @@
 [proc,cluehelper_infobox_draw_content_music](dbrow $dbrow0)
 def_int $int1 = 0;
 $int1 = ~helper_generic_add_title("Music Clue", 1);
-if (%varbit14188 = 1) {
+if (%option_cluehelper_infobox_show_clue_text = 1) {
 	$int1 = ~helper_generic_add_text("Travel to the marked destination and near the NPC play the song in the music player.");
 }
 def_int $dbfield2 = ~script6657(db_getfield($dbrow0, cluehelper_clue_music:target, 0));

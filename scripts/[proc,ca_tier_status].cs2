@@ -2,17 +2,17 @@
 [proc,ca_tier_status](int $int0)(int)
 switch_int ($int0) {
 	case 1 :
-		return(%varbit12863);
+		return(%ca_tier_status_easy);
 	case 2 :
-		return(%varbit12864);
+		return(%ca_tier_status_medium);
 	case 3 :
-		return(%varbit12865);
+		return(%ca_tier_status_hard);
 	case 4 :
-		return(%varbit12866);
+		return(%ca_tier_status_elite);
 	case 5 :
-		return(%varbit12867);
+		return(%ca_tier_status_master);
 	case 6 :
-		return(%varbit12868);
+		return(%ca_tier_status_grandmaster);
 	case default :
 		return(-1);
 }

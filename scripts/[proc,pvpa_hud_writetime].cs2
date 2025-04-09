@@ -5,13 +5,13 @@ def_int $colour1 = ^red;
 def_int $int2 = 0;
 def_int $int3 = calc(150 * 30);
 %varcint991 = ~max(0, calc(%varcint991 - 1));
-def_int $int4 = calc(%varbit14016 * 30);
+def_int $int4 = calc(%pvpa_battlearea_timeremaining * 30);
 if ($int4 > calc(%varcint991 + 90) | $int4 < calc(%varcint991 - 90)) {
 	%varcint991 = $int4;
 }
 if (%varcint991 > $int3) {
 	$int0 = calc(%varcint991 - $int3);
-	if (%varbit14019 = 1) {
+	if (%pvpa_battlearea_longbattle = 1) {
 		$int2 = calc((2000 - 150) * 30);
 	} else {
 		$int2 = calc((800 - 150) * 30);

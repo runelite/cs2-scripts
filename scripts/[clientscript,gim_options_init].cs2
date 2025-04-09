@@ -2,7 +2,7 @@
 [clientscript,gim_options_init](component $com_gim_options_universe0, component $com_gim_options_frame1, component $com_gim_options_exit2, component $com_gim_options_left3, component $com_gim_options_index_contents4, component $com_gim_options_index_scrollbar5, component $com_gim_options_right6, component $com_gim_options_list_contents7, component $com_gim_options_list_scrollbar8)
 def_int $comsubid9 = ~steelborder($com_gim_options_frame1, "", 0);
 ~gim_options_settitle($com_gim_options_frame1, $comsubid9);
-if_setonvartransmit("gim_options_settitle($com_gim_options_frame1, $comsubid9){var3172}", $com_gim_options_frame1);
+if_setonvartransmit("gim_options_settitle($com_gim_options_frame1, $comsubid9){gim_temp_1}", $com_gim_options_frame1);
 if_setonclansettingstransmit("gim_options_settitle($com_gim_options_frame1, $comsubid9)", $com_gim_options_frame1);
 def_string $string0 = "<col=ff0000>Back</col>";
 def_int $int10 = ~max(70, calc(parawidth($string0, 512, p12_full) + 20));

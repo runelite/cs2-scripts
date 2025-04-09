@@ -7,4 +7,4 @@ def_int $int1 = db_getfield($dbrow0, quetzal:id, 0);
 if ($int1 > 30) {
 	return(false);
 }
-return(~int_to_bool(testbit(%var4182, $int1)));
+return(~int_to_bool(testbit(%quetzals_unlocked, $int1)));

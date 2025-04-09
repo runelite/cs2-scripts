@@ -5,9 +5,9 @@ if ($opindex0 ! 1 | $int1 < 0 | $int1 >= $int17) {
 	return;
 }
 if ($component2 = $com_clans_members_header113) {
-	%varbit12177 = $int1;
+	%clan_members_column_1 = $int1;
 } else if ($component2 = $com_clans_members_header215) {
-	%varbit12178 = ~modulo(calc($int1 - 1), $int17);
+	%clan_members_column_2 = ~modulo(calc($int1 - 1), $int17);
 }
 ~clan_members_draw(
 	0 = $com_clans_members_universe3, 

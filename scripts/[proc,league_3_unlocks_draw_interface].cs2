@@ -3,7 +3,7 @@
 cc_deleteall($com_league_3_unlocks_league_btn_menu0);
 cc_deleteall($com_league_3_unlocks_league_menu_frame1);
 cc_deleteall($com_league_3_unlocks_side_menu3);
-def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct5 = enum(int, struct, enum_2670, %league_type);
 if ($struct5 = null) {
 	return;
 }
@@ -34,7 +34,7 @@ $int6 = ~script5291(
 	12 = 36, 
 	13 = 0, 
 	14 = 0, 
-	15 = ~is_equal(0, %var3343)
+	15 = ~is_equal(0, %league_3_unlocks_current_tab)
 );
 $int6 = ~script5291(
 	0 = $com_league_3_unlocks_side_menu3, 
@@ -52,7 +52,7 @@ $int6 = ~script5291(
 	12 = 36, 
 	13 = 0, 
 	14 = 0, 
-	15 = ~is_equal(1, %var3343)
+	15 = ~is_equal(1, %league_3_unlocks_current_tab)
 );
 $int6 = ~script5291(
 	0 = $com_league_3_unlocks_side_menu3, 
@@ -70,5 +70,5 @@ $int6 = ~script5291(
 	12 = 36, 
 	13 = 0, 
 	14 = 0, 
-	15 = ~is_equal(2, %var3343)
+	15 = ~is_equal(2, %league_3_unlocks_current_tab)
 );

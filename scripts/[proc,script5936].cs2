@@ -27,7 +27,7 @@ if (calc($int4 % $int16) = 0) {
 		$int8 = cc_getgradientcolour;
 		$int6 = cc_getscrollwidth;
 		$int7 = cc_getscrollheight;
-		if (%varbit12393 = 1 & struct_param($struct0, param_1290) = true) {
+		if (%busy = 1 & struct_param($struct0, param_1290) = true) {
 			$int6 = calc($int6 + $int16);
 			$int15 = calc(~script5925($struct0) * 30 - $int4);
 			if ($int15 < 0) {

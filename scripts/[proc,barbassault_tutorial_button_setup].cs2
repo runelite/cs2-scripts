@@ -1,12 +1,12 @@
 // 485
 [proc,barbassault_tutorial_button_setup](component $component0, int $int1)
-if (%varbit3264 < $int1) {
+if (%barbassault_arenanewb < $int1) {
 	if_setcolour(^red, $component0);
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setonop(null, $component0);
 } else {
-	if (%varbit3264 = $int1) {
+	if (%barbassault_arenanewb = $int1) {
 		if_setcolour(^yellow, $component0);
 		if_setonmouseleave("text_colour_swapper($component0, ^yellow)", $component0);
 	} else {

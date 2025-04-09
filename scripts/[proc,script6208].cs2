@@ -126,7 +126,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
-cc_settext(enum(int, string, enum_4208, %varbit14031));
+cc_settext(enum(int, string, enum_4208, %pvpa_unrankedduel_transmit_opponentspellbook));
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_int $int21 = 0;
@@ -139,7 +139,7 @@ def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
 def_int $int30 = 0;
-$int23, $int24, $int25, $int26, $int27, $int28, $int29, $int30 = ~script6335(%varbit14024);
+$int23, $int24, $int25, $int26, $int27, $int28, $int29, $int30 = ~script6335(%pvpa_transmit_build);
 def_int $intarray0(calc(23 + 1));
 def_int $int31 = 23;
 while ($int31 > 0) {
@@ -194,15 +194,15 @@ while ($int11 > 0) {
 }
 def_int $int36 = 0;
 def_int $int37 = 0;
-if (%varbit14031 ! ~script6325(%varbit14024)) {
+if (%pvpa_unrankedduel_transmit_opponentspellbook ! ~script6325(%pvpa_transmit_build)) {
 	$int37 = 1;
-} else if (%var3533 ! ~script6432(%varbit14024) & inv_total(trail_puzzlehintinv, pvpa_rune_replacement_27086) > 0) {
+} else if (%pvpa_unrankedduel_transmit_opponentrunepouch ! ~script6432(%pvpa_transmit_build) & inv_total(trail_puzzlehintinv, pvpa_rune_replacement_27086) > 0) {
 	$int37 = 1;
 }
 $int11 = $int12;
 while ($int11 > 0) {
 	$int11 = calc($int11 - 1);
-	$int36 = ~script6322(%varbit14024, $int11);
+	$int36 = ~script6322(%pvpa_transmit_build, $int11);
 	$obj9 = enum(int, namedobj, enum_4390, $int36);
 	if ($obj9 ! null) {
 		if (oc_stackable($obj9) = true) {
@@ -273,7 +273,7 @@ while ($int11 > 0) {
 }
 $int11 = 0;
 while ($int11 < $int16) {
-	$int36 = ~script6321(%varbit14024, $int11);
+	$int36 = ~script6321(%pvpa_transmit_build, $int11);
 	$obj9 = enum(int, namedobj, enum_4390, $int36);
 	if ($obj9 ! null) {
 		if (oc_stackable($obj9) = true) {

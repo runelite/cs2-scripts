@@ -29,7 +29,7 @@ if (~on_mobile = false) {
 	if_setonmouseover("league_side_panel_button_hover($com_league_side_panel_areas_button3, 1)", $com_league_side_panel_areas_button3);
 }
 if_setonop("button_select_sound", $com_league_side_panel_areas_button3);
-def_struct $struct6 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct6 = enum(int, struct, enum_2670, %league_type);
 def_int $colour7 = 0xff981f;
 if ($struct6 ! null) {
 	if_setgraphic(struct_param($struct6, param_1024), league_side_panel:fill);
@@ -52,4 +52,4 @@ if (~on_mobile = false) {
 }
 if_setonop("script7753", $com_league_side_panel_info5);
 if_setopbase("<col=ff981f>League Info</col>", $com_league_side_panel_info5);
-~league_side_panel_update_bar(league_side_panel:fill, %var2615);
+~league_side_panel_update_bar(league_side_panel:fill, %league_points_claimed);

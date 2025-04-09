@@ -35,7 +35,7 @@ if (.cc_find($component8, $int12) = ^true) {
 		)");
 		~bankmain_tabicon_highlight($int12);
 	} else if ($int13 > 0) {
-		if (%varbit4170 = 1) {
+		if (%bank_tab_display = 1) {
 			$string0 = tostring($int12);
 			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1), false);
 			cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
@@ -67,7 +67,7 @@ if (.cc_find($component8, $int12) = ^true) {
 				17 = $component24
 			);
 			~bankmain_tabicon_highlight($int12);
-		} else if (%varbit4170 = 2) {
+		} else if (%bank_tab_display = 2) {
 			$string0 = enum(int, string, enum_207, $int12);
 			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1), false);
 			cc_setsize(41, 35, ^setsize_abs, ^setsize_abs);

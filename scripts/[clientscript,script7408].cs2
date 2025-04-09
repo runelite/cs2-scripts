@@ -1,16 +1,16 @@
 // 7408
 [clientscript,script7408]
 ~script7409;
-if_setonvartransmit("script7417(%varbit11534, %varbit11535, %varbit11536, %varbit11537, %varbit11538, ~popout_available(-1)){var1021, var3417, var3539, var4504, var4505}", osm_hotkeys:content);
-if_setonvartransmit("script7416(%varbit11557){var3053}", osm_hotkeys:hide_on_transmit);
-if (%varbit11557 = 1) {
+if_setonvartransmit("script7417(%osm_hotkey_0, %osm_hotkey_1, %osm_hotkey_2, %osm_hotkey_3, %osm_hotkey_4, ~popout_available(-1)){toplevel_temp, settings_varp_ehc_3, settings_varp_ehc_4, settings_varp_ehc_mobile_1, settings_varp_ehc_mobile_2}", osm_hotkeys:content);
+if_setonvartransmit("script7416(%osm_hide_hotkeys){chat_filter_assist_2}", osm_hotkeys:hide_on_transmit);
+if (%osm_hide_hotkeys = 1) {
 	if_sethide(true, osm_hotkeys:content);
 } else {
 	if_sethide(false, osm_hotkeys:content);
-	if (%varbit16112 = 0) {
+	if (%settings_mobile_tile_highlight_enabled = 0) {
 		%varcint1212 = -1;
 		%varcint1213 = -1;
 	}
-	%varbit11539 = 0;
+	%osm_hotkey_settings_loadout_viewed = 0;
 	~script7410;
 }

@@ -1,10 +1,10 @@
 // 430
 [proc,smithing_setup]
 def_int $int0 = 0;
-if (%var197 < 16) {
+if (%desertrescue < 16) {
 	$int0 = 1;
 }
-def_obj $obj1 = enum(int, obj, enum_1253, %varbit3216);
+def_obj $obj1 = enum(int, obj, enum_1253, %smithing_bar_type);
 switch_obj ($obj1) {
 	case bronze_bar_2349 :
 		~smithing_item(smithing:dagger, "Dagger", bronze_dagger_1205, 0, $obj1);
@@ -16,7 +16,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", bronze_mace_1422, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", bronze_warhammer_1337, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", bronze_battleaxe_1375, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", bronze_claws_3095, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);
@@ -54,7 +54,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", iron_mace_1420, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", iron_warhammer_1335, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", iron_battleaxe_1363, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", iron_claws_3096, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);
@@ -92,7 +92,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", steel_mace_1424, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", steel_warhammer_1339, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", steel_battleaxe_1365, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", steel_claws_3097, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);
@@ -130,7 +130,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", mithril_mace_1428, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", mithril_warhammer_1343, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", mithril_battleaxe_1369, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", mithril_claws_3099, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);
@@ -169,7 +169,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", adamant_mace_1430, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", adamnt_warhammer_1345, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", adamant_battleaxe_1371, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", adamant_claws_3100, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);
@@ -207,7 +207,7 @@ switch_obj ($obj1) {
 		~smithing_item(smithing:mace, "Mace", rune_mace_1432, 0, $obj1);
 		~smithing_item(smithing:warhammer, "Warhammer", rune_warhammer_1347, 0, $obj1);
 		~smithing_item(smithing:battleaxe, "Battle axe", rune_battleaxe_1373, 0, $obj1);
-		if (%var314 >= 80) {
+		if (%death_equiproom >= 80) {
 			~smithing_item(smithing:claws, "Claws", rune_claws_3101, 0, $obj1);
 		} else {
 			~smithing_item(smithing:claws, "", null, 0, $obj1);

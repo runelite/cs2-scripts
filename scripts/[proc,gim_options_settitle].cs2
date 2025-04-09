@@ -1,6 +1,6 @@
 // 5340
 [proc,gim_options_settitle](component $com_gim_options_frame0, int $comsubid1)
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit13060 = 3 & activeclansettings_find_affined(1) = true) {
+if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true | %clan_transmit_loadasguest = 0 & %gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 	if (cc_find($com_gim_options_frame0, $comsubid1) = ^true) {
 		cc_settext("<activeclansettings_getclanname>: Options");
 	}

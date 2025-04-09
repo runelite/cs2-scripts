@@ -3,12 +3,12 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (%varbit16110 = 1) {
+if (%option_camera_effect_atmospherics_disabled = 1) {
 	sound_synth(pillory_wrong, 1, 0);
 	mes("You have disabled all atmospheric camera effects in your settings. Turn them on to enable this button.");
 	~script1135($component2, $component3);
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-%varbit4814 = $int1;
+%trawler_camera_static = $int1;
 ~script1135($component2, $component3);

@@ -16,7 +16,7 @@ while ($int4 < $int1) {
 	cc_setgraphicshadow(0x333333);
 	cc_setopbase("<col=ff9040>Slot</col>");
 	cc_setoninvtransmit("script7785(event_com, event_comsubid, $int1){inv}");
-	cc_setonvartransmit("script7785(event_com, event_comsubid, $int1){var4611}");
+	cc_setonvartransmit("script7785(event_com, event_comsubid, $int1){bank_locked_slots}");
 	cc_setonop("script7787(event_op, event_com, event_comsubid, $int1)");
 	$int4 = calc($int4 + 1);
 }
@@ -76,7 +76,7 @@ $int8 = calc($int8 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 ~script7790;
-if_setonvartransmit("script7789(event_com, cc_getid){var4611}", bank_side_locks:ignorelocks);
+if_setonvartransmit("script7789(event_com, cc_getid){bank_locked_slots}", bank_side_locks:ignorelocks);
 if_setop(1, $string0, bank_side_locks:ignorelocks);
 if_setonop("script7788(event_op, event_com, cc_getid)", bank_side_locks:ignorelocks);
 cc_create(bank_side_locks:ignorelocks, ^iftype_text, $int8, false);
@@ -121,7 +121,7 @@ $int8 = calc($int8 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 ~script7793;
-if_setonvartransmit("script7792(event_com, cc_getid){var4611}", bank_side_locks:extraoptions);
+if_setonvartransmit("script7792(event_com, cc_getid){bank_locked_slots}", bank_side_locks:extraoptions);
 if_setop(1, $string0, bank_side_locks:extraoptions);
 if_setonop("script7791(event_op, event_com, cc_getid)", bank_side_locks:extraoptions);
 cc_create(bank_side_locks:extraoptions, ^iftype_text, $int8, false);

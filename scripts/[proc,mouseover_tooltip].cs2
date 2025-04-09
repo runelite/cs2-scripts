@@ -2,7 +2,7 @@
 [proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $int2, int $int3, enum $enum4)(int)
 def_int $int5 = 1;
 def_int $int6 = 1;
-if (%varbit12344 = 1 | enum(int, boolean, enum_3903, $int2) = false | ~on_mobile = true) {
+if (%mouseover_tooltips_disabled = 1 | enum(int, boolean, enum_3903, $int2) = false | ~on_mobile = true) {
 	$int5 = 0;
 } else if ($int2 = 7 & minimenu_findcomponent = true) {
 	switch_component (cc_getlayer) {
@@ -26,7 +26,7 @@ def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
-if (%varbit13133 = 0 & $int3 > 1 & $int5 = 1) {
+if (%mouseover_tooltips_hide_opcount = 0 & $int3 > 1 & $int5 = 1) {
 	$string1 = "+<tostring(calc($int3 - 1))> option";
 	if ($int3 > 2) {
 		$string1 = "<$string1>s";
@@ -228,7 +228,7 @@ if (string_length($string4) > 0) {
 	}
 	$int26 = calc($int26 + $int19 - 1);
 }
-if (%varbit13133 = 0 & $int3 > 1 & $int5 = 1) {
+if (%mouseover_tooltips_hide_opcount = 0 & $int3 > 1 & $int5 = 1) {
 	$int11 = calc($int25 + ($int24 - $int9));
 	cc_create($component1, ^iftype_rectangle, $int0, false);
 	cc_setposition($int11, $int26, ^setpos_abs_left, ^setpos_abs_top);

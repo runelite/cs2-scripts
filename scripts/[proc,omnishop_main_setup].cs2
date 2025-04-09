@@ -35,7 +35,7 @@ switch_int (%varcint988) {
 		$int21 = 64;
 }
 def_int $int23 = $int20;
-if (%var3871 = 1) {
+if (%omnishop_view_expanded = 1) {
 	$int23 = -6;
 }
 def_int $int24 = 1;
@@ -43,23 +43,23 @@ def_int $int25 = 0;
 if_setsize(calc($int23 + 18), 20, ^setsize_minus, ^setsize_abs, $component6);
 $int24, $int25 = ~script7152($dbrow0, $int20);
 ~script7153($dbrow0, $inv1);
-if (%var3871 = 1 & $int25 = 1) {
+if (%omnishop_view_expanded = 1 & $int25 = 1) {
 	if_sethide(false, $component17);
 	if_setsize(200, 20, ^setsize_abs, ^setsize_abs, $component18);
 } else {
 	if_sethide(true, $component17);
-	if (%var3871 = 1) {
+	if (%omnishop_view_expanded = 1) {
 		if_setsize(52, 20, ^setsize_minus, ^setsize_abs, $component18);
 	} else {
 		if_setsize(26, 20, ^setsize_minus, ^setsize_abs, $component18);
 	}
 }
 if_setsize(calc($int23 + 18), 38, ^setsize_minus, ^setsize_minus, $component7);
-~omnishop_main_list_setup($dbrow0, $inv1, %var3869, 1);
+~omnishop_main_list_setup($dbrow0, $inv1, %omnishop_selected_id, 1);
 def_int $int26 = 0;
 def_int $int27 = 0;
 cc_deleteall($component10);
-if (%var3871 = 0) {
+if (%omnishop_view_expanded = 0) {
 	if_sethide(false, $component8);
 	if_setposition(calc(if_getwidth($component3) - 12 - $int20), calc(if_gety($component5) + 6), ^setpos_abs_left, ^setpos_abs_top, $component8);
 	if_setsize($int20, calc(if_gety($component5) + 18), ^setsize_abs, ^setsize_minus, $component8);
@@ -67,7 +67,7 @@ if (%var3871 = 0) {
 	if_sethide(true, $component11);
 	if_sethide(true, $component19);
 } else {
-	if (%var3869 = -1) {
+	if (%omnishop_selected_id = -1) {
 		if_sethide(true, $component8);
 	} else {
 		if_sethide(false, $component8);

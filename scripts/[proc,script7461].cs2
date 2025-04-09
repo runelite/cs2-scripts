@@ -3,41 +3,41 @@
 def_int $int1 = 0;
 switch_int ($int0) {
 	case 0 :
-		%varbit11524 = calc(1 - %varbit11524);
-		$int1 = %varbit11524;
+		%settings_minimenu_filter_visual_feedback = calc(1 - %settings_minimenu_filter_visual_feedback);
+		$int1 = %settings_minimenu_filter_visual_feedback;
 	case 1 :
-		%varbit11525 = calc(1 - %varbit11525);
-		$int1 = %varbit11525;
+		%settings_minimenu_filter_target = calc(1 - %settings_minimenu_filter_target);
+		$int1 = %settings_minimenu_filter_target;
 	case 2 :
-		%varbit11526 = calc(1 - %varbit11526);
-		$int1 = %varbit11526;
+		%settings_minimenu_filter_entity = calc(1 - %settings_minimenu_filter_entity);
+		$int1 = %settings_minimenu_filter_entity;
 		if (~toplevel_getcomponents = enum_1745) {
 			~script7429(5);
 		}
 	case 3 :
-		%varbit11527 = calc(1 - %varbit11527);
-		$int1 = %varbit11527;
+		%settings_minimenu_filter_interface = calc(1 - %settings_minimenu_filter_interface);
+		$int1 = %settings_minimenu_filter_interface;
 	case 4 :
-		%varbit11528 = calc(1 - %varbit11528);
-		$int1 = %varbit11528;
+		%settings_minimenu_filter_walk = calc(1 - %settings_minimenu_filter_walk);
+		$int1 = %settings_minimenu_filter_walk;
 		if (~toplevel_getcomponents = enum_1745) {
 			~script7429(4);
 		}
 	case 5 :
-		%varbit11529 = calc(1 - %varbit11529);
-		$int1 = %varbit11529;
+		%settings_minimenu_filter_global_click = calc(1 - %settings_minimenu_filter_global_click);
+		$int1 = %settings_minimenu_filter_global_click;
 	case 6 :
-		%varbit11530 = calc(1 - %varbit11530);
-		$int1 = %varbit11530;
+		%settings_minimenu_filter_player = calc(1 - %settings_minimenu_filter_player);
+		$int1 = %settings_minimenu_filter_player;
 	case 7 :
-		%varbit11531 = calc(1 - %varbit11531);
-		$int1 = %varbit11531;
+		%settings_minimenu_filter_use = calc(1 - %settings_minimenu_filter_use);
+		$int1 = %settings_minimenu_filter_use;
 	case 8 :
-		%varbit11532 = calc(1 - %varbit11532);
-		$int1 = %varbit11532;
+		%settings_minimenu_filter_cancel = calc(1 - %settings_minimenu_filter_cancel);
+		$int1 = %settings_minimenu_filter_cancel;
 	case 9 :
-		%varbit11533 = calc(1 - %varbit11533);
-		$int1 = %varbit11533;
+		%settings_minimenu_filter_examine = calc(1 - %settings_minimenu_filter_examine);
+		$int1 = %settings_minimenu_filter_examine;
 }
 $int1 = calc(1 - $int1);
 minimenu_setblockmode($int0, $int1);

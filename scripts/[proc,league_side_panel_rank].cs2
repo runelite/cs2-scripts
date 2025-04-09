@@ -7,7 +7,7 @@ def_component $component5 = league_side_panel:rank_backing;
 if_setcolour($colour1, $component3);
 if_setop(1, "Show <col=ff9040>Ranks</col>", $component4);
 if_setgraphic(enum(int, graphic, enum_5199, ~league_current_rank), $component2);
-if_setonvartransmit("script2453($component2){var2614}", $component4);
+if_setonvartransmit("script2453($component2){league_points_completed}", $component4);
 if (~on_mobile = false) {
 	if_setonmouserepeat("script7702(true, $component3, $colour1)", $component4);
 	if_setonmouseleave("script7702(false, $component3, $colour1)", $component4);

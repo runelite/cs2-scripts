@@ -1,10 +1,10 @@
 // 6613
 [proc,toa_lobby_update_header](component $com_toa_lobby_names_header0)
-if (%varbit14345 = 2) {
+if (%toa_client_partystatus = 2) {
 	if_settext("Step Inside Now!", $com_toa_lobby_names_header0);
 	if_setcolour(~tob_hud_nameflasher, $com_toa_lobby_names_header0);
 	if_setontimer("toa_hud_nameflasher($com_toa_lobby_names_header0)", $com_toa_lobby_names_header0);
-} else if (%varbit14345 = 0) {
+} else if (%toa_client_partystatus = 0) {
 	if_settext("No Party", $com_toa_lobby_names_header0);
 	if_setcolour(0xff981f, $com_toa_lobby_names_header0);
 	if_setontimer(null, $com_toa_lobby_names_header0);

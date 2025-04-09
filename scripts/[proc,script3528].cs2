@@ -36,7 +36,7 @@ if (oc_members($namedobj10) = 1 & map_members = false) {
 	$string0 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("script3530($string0, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
-} else if (%var261 < $int14) {
+} else if (%if1 < $int14) {
 	cc_setcolour(0x9f9f9f);
 	$string0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
 	.cc_setonop("script3530($string0, $component4, $component5, $component6, $component7)");

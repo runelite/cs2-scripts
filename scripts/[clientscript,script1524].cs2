@@ -19,7 +19,7 @@ if (%varcint181 ! 0 & %varcint181 ! 1 & %varcint181 ! 2 & %varcint181 ! 3 & %var
 ~raids_partydetails_setsort(-1);
 ~raids_partydetails_closestats;
 ~script1537;
-if_setonvartransmit("script1536{var1430}", raids_lobby_partydetails:list);
+if_setonvartransmit("script1536{raids_temp_transmit1}", raids_lobby_partydetails:list);
 ~steelborder(raids_lobby_partydetails:frame, $string0, 0);
 def_string $string1 = "";
 if ($int0 = 2) {

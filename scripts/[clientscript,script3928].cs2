@@ -1,7 +1,7 @@
 // 3928
 [clientscript,script3928](component $com_settings_side_music_toggle0, component $com_settings_side_tooltip1)
 def_string $string0 = "Music unlock message (currently on)";
-if (%varbit10078 = 1) {
+if (%music_unlock_text_toggle = 1) {
 	$string0 = "Music unlock message (currently off)";
 }
 if (~on_mobile = false & cc_find($com_settings_side_music_toggle0, 0) = ^true) {

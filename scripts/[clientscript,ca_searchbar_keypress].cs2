@@ -12,7 +12,7 @@ def_component $component12 = ca_bosses:bosses_icon;
 def_component $component13 = ca_bosses:bosses_none;
 def_component $component14 = ca_bosses:bosses_scrollbar;
 def_component $component15 = ca_bosses:bosses_button_click_pause;
-if (%varbit12884 = 0) {
+if (%ca_bosses_is_searching = 0) {
 	return;
 }
 if ($key0 = ^key_control_left) {
@@ -64,7 +64,7 @@ if ($key0 = ^key_return) {
 	if (~on_mobile = true) {
 		~keyboard_hide;
 	}
-	if (%varbit12884 = 1) {
+	if (%ca_bosses_is_searching = 1) {
 		~ca_boss_disable_search;
 	}
 	return;

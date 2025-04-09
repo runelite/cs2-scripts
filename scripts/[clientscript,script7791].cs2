@@ -2,8 +2,8 @@
 [clientscript,script7791](int $opindex0, component $component1, int $comsubid2)
 if ($opindex0 = 1 & cc_find($component1, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
-	if (%varbit5450 = 0) {
-		%varbit15915 = calc(1 - %varbit15915);
+	if (%bank_side_slot_ignoreinvlocks = 0) {
+		%bank_side_slot_showop = calc(1 - %bank_side_slot_showop);
 	}
 	~script7793;
 }

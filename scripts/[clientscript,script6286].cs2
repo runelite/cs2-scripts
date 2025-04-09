@@ -4,7 +4,7 @@ def_int $comsubid11 = ~steelborder($com_pvp_arena_stagingarea_supplies_frame1, "
 if (cc_find($com_pvp_arena_stagingarea_supplies_frame1, $comsubid11) = ^true) {
 	~script6298;
 }
-if_setonvartransmit("script6297($com_pvp_arena_stagingarea_supplies_frame1, $comsubid11){var3464, var3465}", $com_pvp_arena_stagingarea_supplies_frame1);
+if_setonvartransmit("script6297($com_pvp_arena_stagingarea_supplies_frame1, $comsubid11){pvpa_temp_transmit_0, pvpa_temp_transmit_1}", $com_pvp_arena_stagingarea_supplies_frame1);
 cc_deleteall($com_pvp_arena_stagingarea_supplies_top2);
 def_string $string0 = "Are you ready to fight?";
 def_int $int12 = calc(parawidth($string0, if_getwidth($com_pvp_arena_stagingarea_supplies_top2), p12_full) + 3 + 17);
@@ -40,7 +40,7 @@ if_setonvartransmit("script6287(
 	9 = $com_pvp_arena_stagingarea_supplies_1equipment8, 
 	10 = $com_pvp_arena_stagingarea_supplies_tab_equipment29, 
 	11 = $com_pvp_arena_stagingarea_supplies_2equipment10
-){var3464, var3465}", $com_pvp_arena_stagingarea_supplies_top2);
+){pvpa_temp_transmit_0, pvpa_temp_transmit_1}", $com_pvp_arena_stagingarea_supplies_top2);
 ~script6288(
 	0 = $com_pvp_arena_stagingarea_supplies_top2, 
 	1 = cc_getid, 

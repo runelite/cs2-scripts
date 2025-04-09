@@ -5,10 +5,10 @@ if ($opindex0 ! 1) {
 }
 if (cc_find($component1, $comsubid2) = ^true) {
 	sound_synth(patterns_turncard, 1, 0);
-	if (testbit(%varbit9756, $int3) = ^true) {
-		%varbit9756 = clearbit(%varbit9756, $int3);
+	if (testbit(%pattern_card_overview, $int3) = ^true) {
+		%pattern_card_overview = clearbit(%pattern_card_overview, $int3);
 	} else {
-		%varbit9756 = setbit(%varbit9756, $int3);
+		%pattern_card_overview = setbit(%pattern_card_overview, $int3);
 	}
 	~pattern_cards_select_update($int3);
 }

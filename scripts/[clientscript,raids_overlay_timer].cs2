@@ -1,10 +1,10 @@
 // 2289
 [clientscript,raids_overlay_timer](component $com_raids_overlay_data0, int $comsubid1, int $comsubid2)
-if (%varbit5425 >= 5) {
+if (%raids_client_progress >= 5) {
 	return;
 }
 if (calc(clientclock % 30) = 0) {
-	%varbit6386 = calc(%varbit6386 + 1);
+	%raids_timer = calc(%raids_timer + 1);
 	if (cc_find($com_raids_overlay_data0, $comsubid1) = ^true & .cc_find($com_raids_overlay_data0, $comsubid2) = ^true) {
 		~raids_overlay_databox($com_raids_overlay_data0);
 	}

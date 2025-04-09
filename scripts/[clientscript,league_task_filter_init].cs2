@@ -1,7 +1,7 @@
 // 3207
 [clientscript,league_task_filter_init](enum $enum0, component $component1, component $component2, component $com_league_tasks_dropdown_container3, component $com_league_tasks_dropdown_box4)
 cc_deleteall($component2);
-def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct5 = enum(int, struct, enum_2670, %league_type);
 if ($struct5 = null) {
 	return;
 }
@@ -40,7 +40,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~league_task_updatetext($enum0);
-if_setonvartransmit("league_task_updatetext(event_com, $comsubid8, $enum0){var2606, var2805}", $component2);
+if_setonvartransmit("league_task_updatetext(event_com, $comsubid8, $enum0){league_general, league_general_2}", $component2);
 .cc_setonclick("league_task_filter_open($enum0, $component1, $component2, $comsubid8, $com_league_tasks_dropdown_container3, $com_league_tasks_dropdown_box4, $int6)");
 cc_create($component2, ^iftype_text, $int7, false);
 $int7 = calc($int7 + 1);

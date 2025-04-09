@@ -19,13 +19,13 @@ cc_settext("Music unlock message");
 cc_create($com_settings_side_music_toggle0, ^iftype_graphic, 1, false);
 cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc(if_getheight($com_settings_side_music_toggle0) / 2 - $int3 / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
-if (%varbit10078 = 0) {
+if (%music_unlock_text_toggle = 0) {
 	cc_setgraphic("options_radio_buttons,6");
 } else {
 	cc_setgraphic("options_radio_buttons,5");
 }
-if_setonop("script3930($com_settings_side_music_toggle0, %varbit10078, $com_settings_side_tooltip1)", $com_settings_side_music_toggle0);
-if_setonvartransmit("script3931($com_settings_side_music_toggle0, $com_settings_side_tooltip1){var19}", $com_settings_side_music_toggle0);
+if_setonop("script3930($com_settings_side_music_toggle0, %music_unlock_text_toggle, $com_settings_side_tooltip1)", $com_settings_side_music_toggle0);
+if_setonvartransmit("script3931($com_settings_side_music_toggle0, $com_settings_side_tooltip1){musicloop}", $com_settings_side_music_toggle0);
 if_setonmouseleave("script3929($com_settings_side_music_toggle0, $com_settings_side_tooltip1)", $com_settings_side_music_toggle0);
 if_setonmouserepeat("script3928($com_settings_side_music_toggle0, $com_settings_side_tooltip1)", $com_settings_side_music_toggle0);
 %varcint2 = 0;

@@ -1,6 +1,6 @@
 // 7417
 [clientscript,script7417](int $int0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5)
-if ($int0 = %varbit11534 & $int1 = %varbit11535 & $int2 = %varbit11536 & $int3 = %varbit11537 & $int4 = %varbit11538) {
+if ($int0 = %osm_hotkey_0 & $int1 = %osm_hotkey_1 & $int2 = %osm_hotkey_2 & $int3 = %osm_hotkey_3 & $int4 = %osm_hotkey_4) {
 	if ($boolean5 = true & ~popout_available(-1) = true) {
 		return;
 	} else if ($boolean5 = false & ~popout_available(-1) = false) {
@@ -8,4 +8,4 @@ if ($int0 = %varbit11534 & $int1 = %varbit11535 & $int2 = %varbit11536 & $int3 =
 	}
 }
 ~script7410;
-if_setonvartransmit("script7417(%varbit11534, %varbit11535, %varbit11536, %varbit11537, %varbit11538, ~popout_available(-1)){var1021, var3417, var3539, var4504, var4505}", osm_hotkeys:content);
+if_setonvartransmit("script7417(%osm_hotkey_0, %osm_hotkey_1, %osm_hotkey_2, %osm_hotkey_3, %osm_hotkey_4, ~popout_available(-1)){toplevel_temp, settings_varp_ehc_3, settings_varp_ehc_4, settings_varp_ehc_mobile_1, settings_varp_ehc_mobile_2}", osm_hotkeys:content);

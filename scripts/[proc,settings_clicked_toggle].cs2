@@ -1,6 +1,6 @@
 // 3965
 [proc,settings_clicked_toggle](int $int0)
-%varbit9657 = $int0;
+%settings_selected_setting = $int0;
 switch_int ($int0) {
 	case 7 :
 		~settings_toggle_roof;
@@ -39,7 +39,7 @@ switch_int ($int0) {
 	case 37 :
 		~settings_profanity_filter;
 	case 431 :
-		%varbit16118 = calc(1 - %varbit16118);
+		%clan_disable_lastseen = calc(1 - %clan_disable_lastseen);
 	case 38 :
 		~settings_loot_drop_notification;
 	case 40 :
@@ -51,41 +51,41 @@ switch_int ($int0) {
 	case 278 :
 		~script6714;
 	case 425 :
-		%varbit16106 = calc(1 - %varbit16106);
+		%option_camera_effect_combat_disabled = calc(1 - %option_camera_effect_combat_disabled);
 	case 426 :
-		%varbit16110 = calc(1 - %varbit16110);
+		%option_camera_effect_atmospherics_disabled = calc(1 - %option_camera_effect_atmospherics_disabled);
 	case 281 :
-		%varbit14197 = calc(1 - %varbit14197);
+		%option_camera_effect_baba_yaga_disabled = calc(1 - %option_camera_effect_baba_yaga_disabled);
 	case 282 :
-		%varbit4814 = calc(1 - %varbit4814);
+		%trawler_camera_static = calc(1 - %trawler_camera_static);
 	case 283 :
-		%varbit14198 = calc(1 - %varbit14198);
+		%option_camera_effect_barrows_disabled = calc(1 - %option_camera_effect_barrows_disabled);
 	case 305 :
-		%varbit5697 = calc(1 - %varbit5697);
+		%take_ammo_toggle = calc(1 - %take_ammo_toggle);
 	case 306 :
-		%varbit5698 = calc(1 - %varbit5698);
+		%take_runes_toggle = calc(1 - %take_runes_toggle);
 	case 354 :
-		%varbit15311 = calc(1 - %varbit15311);
+		%emptyondeath_runepouch = calc(1 - %emptyondeath_runepouch);
 	case 355 :
-		%varbit15312 = calc(1 - %varbit15312);
+		%emptyondeath_tacklebox = calc(1 - %emptyondeath_tacklebox);
 	case 356 :
-		%varbit15313 = calc(1 - %varbit15313);
+		%emptyondeath_boltpouch = calc(1 - %emptyondeath_boltpouch);
 	case 357 :
-		%varbit15314 = calc(1 - %varbit15314);
+		%emptyondeath_seedbox = calc(1 - %emptyondeath_seedbox);
 	case 358 :
-		%varbit15315 = calc(1 - %varbit15315);
+		%emptyondeath_essencepouch = calc(1 - %emptyondeath_essencepouch);
 	case 359 :
-		%varbit15316 = calc(1 - %varbit15316);
+		%emptyondeath_herbsack = calc(1 - %emptyondeath_herbsack);
 	case 46 :
 		~script3988;
 	case 313 :
-		%varbit8059 = calc(1 - %varbit8059);
+		%purgeignored_permbanned_disabled = calc(1 - %purgeignored_permbanned_disabled);
 	case 314 :
-		%varbit8060 = calc(1 - %varbit8060);
+		%purgeignored_permmuted_enabled = calc(1 - %purgeignored_permmuted_enabled);
 	case 312 :
-		%varbit6580 = calc(1 - %varbit6580);
+		%tradeoption_disabled = calc(1 - %tradeoption_disabled);
 	case 372 :
-		%varbit1334 = calc(1 - %varbit1334);
+		%rightclick_report_abuse_disabled = calc(1 - %rightclick_report_abuse_disabled);
 	case 47 :
 		~settings_store_button_mobile;
 	case 181 :
@@ -123,21 +123,21 @@ switch_int ($int0) {
 	case 64 :
 		~settings_warning_ghorrock_teleport;
 	case 253 :
-		%varbit13985 = calc(1 - %varbit13985);
+		%wilderness_lever_blockwarning_standard = calc(1 - %wilderness_lever_blockwarning_standard);
 	case 254 :
-		%varbit13986 = calc(1 - %varbit13986);
+		%wilderness_lever_blockwarning_highrisk = calc(1 - %wilderness_lever_blockwarning_highrisk);
 	case 255 :
-		%varbit10532 = calc(1 - %varbit10532);
+		%wildy_hub_warning = calc(1 - %wildy_hub_warning);
 	case 308 :
-		%varbit14803 = calc(1 - %varbit14803);
+		%wildy_hub_warning_highrisk = calc(1 - %wildy_hub_warning_highrisk);
 	case 256 :
-		%varbit13988 = calc(1 - %varbit13988);
+		%wildy_canoe_warning = calc(1 - %wildy_canoe_warning);
 	case 309 :
-		%varbit14804 = calc(1 - %varbit14804);
+		%wildy_canoe_warning_highrisk = calc(1 - %wildy_canoe_warning_highrisk);
 	case 65 :
 		~script4009;
 	case 432 :
-		%varbit2179 = calc(1 - %varbit2179);
+		%alchemy_warning_forinventory_disabled = calc(1 - %alchemy_warning_forinventory_disabled);
 	case 67 :
 		~settings_warning_ice_plateau_tablet;
 	case 68 :
@@ -153,11 +153,11 @@ switch_int ($int0) {
 	case 73 :
 		~settings_warning_ghorrock_tablet;
 	case 182 :
-		%varbit13039 = calc(1 - %varbit13039);
+		%iron_noloot_icon_disabled = calc(1 - %iron_noloot_icon_disabled);
 	case 183 :
-		%varbit13040 = calc(1 - %varbit13040);
+		%iron_noloot_message_disabled = calc(1 - %iron_noloot_message_disabled);
 	case 365 :
-		%varbit9597 = calc(1 - %varbit9597);
+		%crm_surprisepopup_blocked = calc(1 - %crm_surprisepopup_blocked);
 	case 82 :
 		~settings_precise_timing;
 	case 83 :
@@ -169,7 +169,7 @@ switch_int ($int0) {
 	case 112 :
 		~script4760;
 	case 410 :
-		~script7585(%varbit16112);
+		~script7585(%settings_mobile_tile_highlight_enabled);
 	case 409 :
 		~script7589;
 	case 114 :
@@ -311,7 +311,7 @@ switch_int ($int0) {
 	case 166 :
 		~settings_minimap_lock;
 	case 317 :
-		%varbit6254 = calc(1 - %varbit6254);
+		%osm_minimap_toggle = calc(1 - %osm_minimap_toggle);
 	case 85 :
 		~script5188;
 	case 171 :
@@ -336,27 +336,27 @@ switch_int ($int0) {
 		~script202;
 	case 201 :
 		if (~is_group_iron = 1) {
-			%varbit13122 = calc(1 - %varbit13122);
+			%option_gim_loot_broadcasts_disabled = calc(1 - %option_gim_loot_broadcasts_disabled);
 		} else {
-			%varbit13122 = 0;
+			%option_gim_loot_broadcasts_disabled = 0;
 		}
 	case 202 :
 		if (~is_group_iron = 1) {
-			%varbit13123 = calc(1 - %varbit13123);
+			%option_gim_levelup_broadcasts_disabled = calc(1 - %option_gim_levelup_broadcasts_disabled);
 		} else {
-			%varbit13123 = 0;
+			%option_gim_levelup_broadcasts_disabled = 0;
 		}
 	case 203 :
 		if (~is_group_iron = 1) {
-			%varbit13124 = calc(1 - %varbit13124);
+			%option_gim_quest_broadcasts_disabled = calc(1 - %option_gim_quest_broadcasts_disabled);
 		} else {
-			%varbit13124 = 0;
+			%option_gim_quest_broadcasts_disabled = 0;
 		}
 	case 204 :
 		if (~is_group_iron = 1) {
-			%varbit13125 = calc(1 - %varbit13125);
+			%option_gim_ca_broadcasts_disabled = calc(1 - %option_gim_ca_broadcasts_disabled);
 		} else {
-			%varbit13125 = 0;
+			%option_gim_ca_broadcasts_disabled = 0;
 		}
 	case 210 :
 		~script5520;
@@ -445,23 +445,23 @@ switch_int ($int0) {
 	case 295 :
 		~script6929;
 	case 347 :
-		%varbit4100 = calc(1 - %varbit4100);
+		%worldswitcher_disable_confirmation = calc(1 - %worldswitcher_disable_confirmation);
 	case 424 :
-		%varbit15958 = calc(1 - %varbit15958);
+		%bank_depositbox_oplocu_askquantity = calc(1 - %bank_depositbox_oplocu_askquantity);
 	case 370 :
-		%varbit9545 = calc(1 - %varbit9545);
+		%poison_karambwan_warning_disabled = calc(1 - %poison_karambwan_warning_disabled);
 	case 420 :
-		%varbit624 = calc(1 - %varbit624);
+		%dream_plankspell_plain = calc(1 - %dream_plankspell_plain);
 	case 421 :
-		%varbit2319 = calc(1 - %varbit2319);
+		%dream_plankspell_oak = calc(1 - %dream_plankspell_oak);
 	case 422 :
-		%varbit2320 = calc(1 - %varbit2320);
+		%dream_plankspell_teak = calc(1 - %dream_plankspell_teak);
 	case 423 :
-		%varbit3939 = calc(1 - %varbit3939);
+		%dream_plankspell_mahogany = calc(1 - %dream_plankspell_mahogany);
 	case 297 :
-		%varbit14700 = calc(1 - %varbit14700);
+		%option_ge_price_buy_warning_disabled = calc(1 - %option_ge_price_buy_warning_disabled);
 	case 298 :
-		%varbit14701 = calc(1 - %varbit14701);
+		%option_ge_price_sell_warning_disabled = calc(1 - %option_ge_price_sell_warning_disabled);
 	case 302 :
 		~script6911;
 	case 303 :
@@ -473,9 +473,9 @@ switch_int ($int0) {
 	case 311 :
 		~script7027;
 	case 315 :
-		%varbit9452 = calc(1 - %varbit9452);
+		%option_level_up_message = calc(1 - %option_level_up_message);
 	case 316 :
-		%varbit10971 = calc(1 - %varbit10971);
+		%option_fletch_dart_or_bolt_makex = calc(1 - %option_fletch_dart_or_bolt_makex);
 	case 320 :
 		~settings_popout_loottools;
 	case 321 :
@@ -487,26 +487,26 @@ switch_int ($int0) {
 	case 346 :
 		~settings_ground_items_show_price;
 	case 335 :
-		~script7114(calc(1 - %varbit14874));
+		~script7114(calc(1 - %ground_items_despawn_time_enabled_mobile));
 	case 337 :
-		~script7115(calc(1 - %varbit14876));
+		~script7115(calc(1 - %ground_items_visibility_time_enabled_mobile));
 	case 339 :
-		~settings_ground_items_edit_mode(calc(1 - %varbit14872));
+		~settings_ground_items_edit_mode(calc(1 - %ground_items_edit_mode_enabled_mobile));
 	case 343 :
 		~script7118;
 	case 344 :
 		~script7119;
 	case 348 :
-		%varbit4137 = calc(1 - %varbit4137);
+		%music_enableloop = calc(1 - %music_enableloop);
 	case 360 :
-		%varbit15321 = calc(1 - %varbit15321);
+		%option_skill_guide = calc(1 - %option_skill_guide);
 	case 352 :
-		%varbit6068 = calc(1 - %varbit6068);
+		%lootingbag_useallitems = calc(1 - %lootingbag_useallitems);
 	case 353 :
-		%varbit15310 = calc(1 - %varbit15310);
+		%lootingbag_ignore_food = calc(1 - %lootingbag_ignore_food);
 	case 386 :
-		if (%varbit1777 = 2) {
-			%varbit10987 = calc(1 - %varbit10987);
+		if (%ironman = 2) {
+			%death_waivecosmeticsprotection = calc(1 - %death_waivecosmeticsprotection);
 		}
 	case 363 :
 		~script724;

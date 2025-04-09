@@ -2,12 +2,12 @@
 [proc,script6543](entityoverlay $entityoverlay0, int $int1, npc_uid $npc_uid2, npc $npc3)
 switch_npc ($npc3) {
 	case elite_npc_1_6587, elite_npc_2_6588, trail_hard_2954, trail_hard2_2955, trail_zaros_wizard_7307, trail_cabbage_mage_7310 :
-		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 1, ~script6545(1), $npc3){var3543, var3546, var3547, var3548}");
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %option_cluehelper_overlay_enabled, %cluehelper_infobox_clue, 1, ~script6545(1), $npc3){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_current_clue, cluehelper_npc_id}");
 		~script6546($entityoverlay0, $npc_uid2, $int1, 1);
 	case trail_zaros_range_7308 :
-		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 2, ~script6545(2), $npc3){var3543, var3546, var3547, var3549}");
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %option_cluehelper_overlay_enabled, %cluehelper_infobox_clue, 2, ~script6545(2), $npc3){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_current_clue, cluehelper_npc_id2}");
 		~script6546($entityoverlay0, $npc_uid2, $int1, 2);
 	case trail_zaros_melee_7309 :
-		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %varbit14189, %var3546, 3, ~script6545(3), $npc3){var3543, var3546, var3547, var3550}");
+		cc_setonvartransmit("script6544($entityoverlay0, $int1, $npc_uid2, %option_cluehelper_overlay_enabled, %cluehelper_infobox_clue, 3, ~script6545(3), $npc3){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_current_clue, cluehelper_npc_id3}");
 		~script6546($entityoverlay0, $npc_uid2, $int1, 3);
 }

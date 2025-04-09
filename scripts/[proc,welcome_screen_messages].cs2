@@ -1,9 +1,9 @@
 // 2214
 [proc,welcome_screen_messages](component $com_welcome_screen_messages_area0, component $com_welcome_screen_messages1, component $com_welcome_screen_messages_highlight2)
-if (%var1781 = 1) {
+if (%account_messages = 1) {
 	if_settext("You have<br><col=00ff00>1</col> unread<br>message in<br>your inbox.", $com_welcome_screen_messages1);
-} else if (%var1781 > 0) {
-	if_settext("You have<br><col=00ff00><~tostring_spacer(%var1781, ",")></col> unread<br>messages in<br>your inbox.", $com_welcome_screen_messages1);
+} else if (%account_messages > 0) {
+	if_settext("You have<br><col=00ff00><~tostring_spacer(%account_messages, ",")></col> unread<br>messages in<br>your inbox.", $com_welcome_screen_messages1);
 } else {
 	if_settext("You have<br>0 unread<br>messages in<br>your inbox.", $com_welcome_screen_messages1);
 }

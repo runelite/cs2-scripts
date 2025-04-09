@@ -1,6 +1,6 @@
 // 6926
 [clientscript,script6926](component $com_poh_options_default_build_mode_on0, component $com_poh_options_default_build_mode_off1)
-if (%varbit14670 = 1) {
+if (%poh_teleport_building_mode = 1) {
 	if_setgraphic("options_radio_buttons,2", $com_poh_options_default_build_mode_on0);
 	if_setgraphic("options_radio_buttons,0", $com_poh_options_default_build_mode_off1);
 } else {

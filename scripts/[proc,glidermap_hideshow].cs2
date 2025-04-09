@@ -1,16 +1,16 @@
 // 1288
 [proc,glidermap_hideshow](component $com_glidermap_close0, component $com_glidermap_ogrearea_container1, component $com_glidermap_apeatoll_container2)
-if (%var153 ! null) {
+if (%pilot_journey ! null) {
 	if_sethide(true, $com_glidermap_close0);
 } else {
 	if_sethide(false, $com_glidermap_close0);
 }
-if (%var416 < 200) {
+if (%onesmallfavour < 200) {
 	if_sethide(true, $com_glidermap_ogrearea_container1);
 } else {
 	if_sethide(false, $com_glidermap_ogrearea_container1);
 }
-if (%varbit5027 < 195) {
+if (%mm2_progress < 195) {
 	if_sethide(true, $com_glidermap_apeatoll_container2);
 } else {
 	if_sethide(false, $com_glidermap_apeatoll_container2);

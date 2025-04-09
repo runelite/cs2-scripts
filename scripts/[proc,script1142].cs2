@@ -9,8 +9,8 @@ if (cc_find($component5, $int7) = ^true) {
 	cc_setobject_alwaysnum(coins_995, $int19);
 }
 def_int $int20 = 0;
-if (%var263 > 0) {
-	$int20 = calc($int19 / %var263);
+if (%if3 > 0) {
+	$int20 = calc($int19 / %if3);
 }
 def_int $int21 = min($int18, $int20);
 $int0 = max(0, min($int0, $int21));
@@ -37,7 +37,7 @@ if_setonvartransmit("script1141(
 	15 = $component15, 
 	16 = $component16, 
 	17 = $int17
-){var263}", $component5);
+){if3}", $component5);
 if_setoninvtransmit("script1141(
 	0 = $int0, 
 	1 = $component1, 
@@ -60,7 +60,7 @@ if_setoninvtransmit("script1141(
 ){inv}", $component5);
 if ($int0 > 0) {
 	if (cc_find($component5, $int9) = ^true) {
-		cc_settext("<~tostring_spacer(calc($int0 * %var263), ",")> coins");
+		cc_settext("<~tostring_spacer(calc($int0 * %if3), ",")> coins");
 	}
 	if_sethide(false, $component16);
 	if_setposition($int17, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component15);
@@ -119,7 +119,7 @@ if_setonop("script1140(
 	17 = $int17
 )", $component11);
 $int22 = calc($int0 + 1);
-if (%var263 <= 0) {
+if (%if3 <= 0) {
 	if_setonop("script1140(
 		0 = $int0, 
 		1 = $component1, 

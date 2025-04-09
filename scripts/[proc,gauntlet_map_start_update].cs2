@@ -1,10 +1,10 @@
 // 2910
 [proc,gauntlet_map_start_update]
 def_graphic $graphic0 = "gauntlet_map_icons,5";
-if (%varbit9292 = 1) {
+if (%gauntlet_corrupted = 1) {
 	$graphic0 = "gauntlet_map_icons,8";
 }
-switch_int (%varbit9291) {
+switch_int (%gauntlet_start) {
 	case 23 :
 		if_setgraphic($graphic0, gauntlet_map:d3);
 	case 25 :

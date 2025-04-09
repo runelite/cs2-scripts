@@ -1,71 +1,71 @@
 // 5831
 [proc,script5831](npc $npc0)(int)
-if (%varbit10032 ! 3) {
+if (%league_type ! 3) {
 	return(1);
 }
 def_int $int1 = 1;
 switch_npc ($npc0) {
 	case king_dragon_239 :
-		$int1 = %varbit13364;
+		$int1 = %league_3_lock_boss_king_dragon;
 	case mole_giant_5779 :
-		$int1 = %varbit13365;
+		$int1 = %league_3_lock_boss_mole;
 	case kalphite_queen_963 :
-		$int1 = %varbit13366;
+		$int1 = %league_3_lock_boss_kalphite_queen;
 	case hillgiant_boss_7416 :
-		$int1 = %varbit13367;
+		$int1 = %league_3_lock_boss_hillgiant;
 	case gb_mossgiant_8195 :
-		$int1 = %varbit13368;
+		$int1 = %league_3_lock_boss_mossgiant;
 	case gargboss_dusk_spawn_7849 :
-		$int1 = %varbit13369;
+		$int1 = %league_3_lock_boss_gargoyle;
 	case barrows_dharok_1673 :
-		$int1 = %varbit13370;
+		$int1 = %league_3_lock_boss_barrows;
 	case dagcave_ranged_boss_2265 :
-		$int1 = %varbit13371;
+		$int1 = %league_3_lock_boss_dagannoth;
 	case hespori_8583 :
-		$int1 = %varbit13372;
+		$int1 = %league_3_lock_boss_hespori;
 	case sarachnis_8713 :
-		$int1 = %varbit13373;
+		$int1 = %league_3_lock_boss_sarachnis;
 	case cata_boss_7286 :
-		$int1 = %varbit13374;
+		$int1 = %league_3_lock_boss_skotizo;
 	case zalcano_9049 :
-		$int1 = %varbit13375;
+		$int1 = %league_3_lock_boss_zalcano;
 	case slayer_kraken_boss_494 :
-		$int1 = %varbit13376;
+		$int1 = %league_3_lock_boss_kraken;
 	case crystal_hunllef_melee_9021 :
-		$int1 = %varbit13377;
+		$int1 = %league_3_lock_boss_gauntlet;
 	case smoke_devil_boss_499 :
-		$int1 = %varbit13378;
+		$int1 = %league_3_lock_boss_smokedevil;
 	case snakeboss_boss_ranged_2042 :
-		$int1 = %varbit13379;
+		$int1 = %league_3_lock_boss_zulrah;
 	case vorkath_8061 :
-		$int1 = %varbit13380;
+		$int1 = %league_3_lock_boss_vorkath;
 	case cerberus_sitting_5863 :
-		$int1 = %varbit13381;
+		$int1 = %league_3_lock_boss_cerberus;
 	case godwars_armadyl_avatar_3162 :
-		$int1 = %varbit13382;
+		$int1 = %league_3_lock_boss_armadyl;
 	case godwars_bandos_avatar_2215 :
-		$int1 = %varbit13383;
+		$int1 = %league_3_lock_boss_bandos;
 	case godwars_saradomin_avatar_2205 :
-		$int1 = %varbit13384;
+		$int1 = %league_3_lock_boss_saradomin;
 	case godwars_zamorak_avatar_3129 :
-		$int1 = %varbit13385;
+		$int1 = %league_3_lock_boss_zamorak;
 	case nightmare_entry_ready_9460 :
-		$int1 = %varbit13386;
+		$int1 = %league_3_lock_boss_nightmare;
 	case hydraboss_8615 :
-		$int1 = %varbit13387;
+		$int1 = %league_3_lock_boss_hydra;
 	case olm_head_7554 :
-		$int1 = %varbit13388;
+		$int1 = %league_3_lock_boss_cox;
 	case verzik_initial_8369 :
-		$int1 = %varbit13389;
+		$int1 = %league_3_lock_boss_tob;
 	case tempoross_boss_ready_10572 :
-		$int1 = %varbit13390;
+		$int1 = %league_3_lock_boss_tempoross;
 	case wint_wizard_7371 :
-		$int1 = %varbit13391;
+		$int1 = %league_3_lock_boss_wintertodt;
 	case corp_beast_319 :
-		$int1 = %varbit13392;
+		$int1 = %league_3_lock_boss_corp;
 	case abyssalsire_sire_stasis_stunned_5888 :
-		$int1 = %varbit13393;
+		$int1 = %league_3_lock_boss_abyssal_sire;
 	case nex_11278 :
-		$int1 = %varbit13394;
+		$int1 = %league_3_lock_boss_nex;
 }
 return($int1);

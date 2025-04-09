@@ -5,6 +5,6 @@ if ($opindex0 ! 1) {
 }
 if (cc_find($com_bankmain_sideops_toggle1, $comsubid2) = ^true) {
 	sound_synth(interface_select1, 1, 0);
-	%varbit10079 = calc(1 - %varbit10079);
+	%bank_hidesideops = calc(1 - %bank_hidesideops);
 	~script3280($com_bankmain_sideops_toggle1);
 }

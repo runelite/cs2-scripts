@@ -33,10 +33,10 @@ while ($int29 < enum_getoutputcount($enum27)) {
 	if (struct_param($struct25, param_807) = $int1) {
 		$graphic34 = struct_param($struct25, param_811);
 		$int32 = struct_param($struct25, param_806);
-		if (%var2358 = 0) {
-			%var2358 = $int32;
+		if (%adventurepath_selected_task = 0) {
+			%adventurepath_selected_task = $int32;
 		}
-		if ($int32 ! 0 & $int32 = %var2358) {
+		if ($int32 ! 0 & $int32 = %adventurepath_selected_task) {
 			$int33 = 1;
 		} else {
 			$int33 = 0;
@@ -225,7 +225,7 @@ while ($int29 < enum_getoutputcount($enum27)) {
 				27 = $component24
 			)");
 		}
-		if (%var2358 = $int32) {
+		if (%adventurepath_selected_task = $int32) {
 			~adventurepath_set_info(
 				0 = $int32, 
 				1 = $component7, 
@@ -275,8 +275,8 @@ if_setonmouseleave("adventurepath_mouseleave_path_reward($int1, $component13, $s
 cc_setop(1, "Show <col=ff9040>path reward");
 cc_setonop("button_select_sound");
 $int31 = 0;
-def_int $int37 = ~adventurepath_return_path_length(%var2357);
-def_int $int38 = ~adventurepath_return_path_tasks_done(%var2357);
+def_int $int37 = ~adventurepath_return_path_length(%adventurepath_selected_path);
+def_int $int38 = ~adventurepath_return_path_tasks_done(%adventurepath_selected_path);
 if ($int37 <= 0) {
 	return;
 }

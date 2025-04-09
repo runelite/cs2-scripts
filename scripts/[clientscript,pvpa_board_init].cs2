@@ -44,7 +44,7 @@ def_string $string2 = "View applications";
 def_int $int11 = calc(20 + ~max(parawidth($string1, 512, p12_full), parawidth($string2, 512, p12_full)));
 if_setsize($int11, 10, ^setsize_abs, ^setsize_minus, $com_pvp_arena_board_mygroup6);
 ~script6221($com_pvp_arena_board_universe0, $com_pvp_arena_board_mygroup6, enum_4404, $string1, $string2, $string0);
-if_setonvartransmit("script6220(event_com, $com_pvp_arena_board_mygroup6, enum_4404, $string1, $string2, $string0){var261}", $com_pvp_arena_board_universe0);
+if_setonvartransmit("script6220(event_com, $com_pvp_arena_board_mygroup6, enum_4404, $string1, $string2, $string0){if1}", $com_pvp_arena_board_universe0);
 $string1 = "<col=0dc10d>Refresh</col>";
 def_int $int12 = calc(20 + parawidth($string1, 512, p12_full));
 if_setsize($int12, 10, ^setsize_abs, ^setsize_minus, $com_pvp_arena_board_refresh7);

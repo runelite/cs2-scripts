@@ -3,8 +3,8 @@
 if (~on_enhanced_mobile = 0) {
 	return;
 }
-%varbit16115 = calc(1 - %varbit16115);
-if (%varbit16115 = 1 & %varbit16112 = 1) {
+%settings_mobile_tile_highlights_hidden = calc(1 - %settings_mobile_tile_highlights_hidden);
+if (%settings_mobile_tile_highlights_hidden = 1 & %settings_mobile_tile_highlight_enabled = 1) {
 	~script7586(0);
 }
 ~script7410;

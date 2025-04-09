@@ -9,15 +9,15 @@ if ($int1 < %varcint383) {
 if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_playerrelated) {
 	switch_int ($chattype0) {
 		case ^chattype_spam :
-			if (%varbit26 = 1) {
+			if (%game_filter = 1) {
 				return(0);
 			}
 		case ^chattype_dialogue :
-			if (%varbit14709 = 0) {
+			if (%show_dialogue_in_chatbox = 0) {
 				return(0);
 			}
 		case ^chattype_mesbox :
-			if (%varbit14710 = 0) {
+			if (%show_mesbox_in_chatbox = 0) {
 				return(0);
 			}
 	}
@@ -76,7 +76,7 @@ switch_int ($chattype0) {
 		if ($int3 = 2) {
 			return(0);
 		}
-		if (%var287 = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
+		if (%option_pm = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
 			return(0);
 		}
 		if (chat_getfilter_private = ^chatfilter_on) {
@@ -108,7 +108,7 @@ switch_int ($chattype0) {
 				return(0);
 			}
 		}
-		if (%var287 = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
+		if (%option_pm = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
 			return(0);
 		}
 		if (chat_getfilter_private ! ^chatfilter_off) {
@@ -125,10 +125,10 @@ switch_int ($chattype0) {
 		if ($int3 = 2) {
 			return(0);
 		}
-		if (%varbit928 = ^chatfilter_on) {
+		if (%chat_filter_friendschat = ^chatfilter_on) {
 			return(1);
 		}
-		if (%varbit928 = ^chatfilter_friends & $int3 = 1) {
+		if (%chat_filter_friendschat = ^chatfilter_friends & $int3 = 1) {
 			return(1);
 		}
 		return(0);
@@ -136,7 +136,7 @@ switch_int ($chattype0) {
 		if ($int1 < %varcint439) {
 			return(0);
 		}
-		if (%varbit928 ! ^chatfilter_off) {
+		if (%chat_filter_friendschat ! ^chatfilter_off) {
 			return(1);
 		}
 		return(0);
@@ -174,10 +174,10 @@ switch_int ($chattype0) {
 		if (compare($string3, removetags($string0)) = 0) {
 			return(1);
 		}
-		if (%varbit929 = ^chatfilter_on) {
+		if (%chat_filter_clanchat = ^chatfilter_on) {
 			return(1);
 		}
-		if (%varbit929 = ^chatfilter_friends & $int3 = 1) {
+		if (%chat_filter_clanchat = ^chatfilter_friends & $int3 = 1) {
 			return(1);
 		}
 		return(0);

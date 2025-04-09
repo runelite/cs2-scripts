@@ -2361,6 +2361,6 @@ switch_wma (worldmap_getcurrentmap) {
 }
 $int5 = ~worldmap_elements_marker(%varcint1078, clue_scroll_343, $component0, $int1, $int2, $int3, $int4, $int5);
 $int5 = ~worldmap_elements_marker(%varcint401, gravestone_317, $component0, $int1, $int2, $int3, $int4, $int5);
-if (testbit(%varbit5640, 0) = ^false) {
+if (testbit(%worldmap_toggles, 0) = ^false) {
 	$int5 = ~worldmap_elements_marker(%varcint188, your_position_1, $component0, $int1, $int2, $int3, $int4, $int5);
 }

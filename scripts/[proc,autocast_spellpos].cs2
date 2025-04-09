@@ -205,7 +205,7 @@ switch_obj ($obj1) {
 	case kodai_wand_21006 :
 		return(~arceuus_autocast_spellpos($int0));
 	case barrows_ahrim_weapon_4710 :
-		if (%varbit4070 = 3) {
+		if (%spellbook = 3) {
 			return(~arceuus_autocast_spellpos($int0));
 		}
 		switch_int ($int0) {
@@ -251,11 +251,11 @@ switch_obj ($obj1) {
 				return(60, 61);
 		}
 	case sos_skull_sceptre_imbued_21276 :
-		if (%varbit4070 = 0) {
+		if (%spellbook = 0) {
 			if ($int0 = 17) {
 				return(0, 0);
 			}
-		} else if (%varbit4070 = 3) {
+		} else if (%spellbook = 3) {
 			return(~arceuus_autocast_spellpos($int0));
 		}
 }

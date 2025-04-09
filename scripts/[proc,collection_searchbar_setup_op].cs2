@@ -6,7 +6,7 @@ def_component $component5 = collection:search_results;
 def_component $component6 = collection:search_scrollbar;
 def_component $component7 = collection:search_results_clickzone;
 def_int $int8 = 0;
-if (%varbit16073 = 0) {
+if (%floater_is_searching = 0) {
 	if_setop(1, "Search", $component3);
 	if_setonop("collection_searchbar_op($component1, $component2)", $component3);
 	if_setonmouseover("collection_searchbar_mouseover($component4)", $component4);

@@ -3,8 +3,8 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (%varbit6590 ! $int6) {
+if (%bank_quantity_type ! $int6) {
 	sound_synth(interface_select1, 1, 0);
 }
-%varbit6590 = $int6;
+%bank_quantity_type = $int6;
 ~bankmain_quantity_buttons($component1, $component2, $component3, $component4, $component5);

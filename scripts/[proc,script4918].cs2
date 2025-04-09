@@ -46,7 +46,7 @@ if ($boolean1 = true & ~on_mobile = false) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
-	cc_settext("Total value: <col=ffffff><~tostring_spacer(%var263, $string0)> GP</col>");
+	cc_settext("Total value: <col=ffffff><~tostring_spacer(%if3, $string0)> GP</col>");
 } else {
 	if (cc_find(colosseum_intermission:total_loot, $comsubid2) = ^true) {
 		cc_settrans(0);

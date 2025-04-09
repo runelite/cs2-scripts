@@ -1,6 +1,6 @@
 // 324
 [proc,combat_interface_setbuttons](graphic $graphic0, graphic $graphic1, graphic $graphic2, graphic $graphic3)
-if (%var43 = 0) {
+if (%com_mode = 0) {
 	if ($graphic0 ! null) {
 		~options_button_on(combat_interface:0_back, 0);
 	}
@@ -13,7 +13,7 @@ if (%var43 = 0) {
 	if ($graphic3 ! null) {
 		~options_button_off(combat_interface:3_back, 0);
 	}
-} else if (%var43 = 1) {
+} else if (%com_mode = 1) {
 	if ($graphic0 ! null) {
 		~options_button_off(combat_interface:0_back, 0);
 	}
@@ -26,7 +26,7 @@ if (%var43 = 0) {
 	if ($graphic3 ! null) {
 		~options_button_off(combat_interface:3_back, 0);
 	}
-} else if (%var43 = 2) {
+} else if (%com_mode = 2) {
 	if ($graphic0 ! null) {
 		~options_button_off(combat_interface:0_back, 0);
 	}
@@ -39,7 +39,7 @@ if (%var43 = 0) {
 	if ($graphic3 ! null) {
 		~options_button_off(combat_interface:3_back, 0);
 	}
-} else if (%var43 = 3) {
+} else if (%com_mode = 3) {
 	if ($graphic0 ! null) {
 		~options_button_off(combat_interface:0_back, 0);
 	}

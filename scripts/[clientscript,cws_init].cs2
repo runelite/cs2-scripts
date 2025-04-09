@@ -1,6 +1,6 @@
 // 1435
 [clientscript,cws_init](component $com_wilderness_warningscreen_universe0, component $com_wilderness_warningscreen_yes1, component $com_wilderness_warningscreen_no2, component $com_wilderness_warningscreen_toggle3, string $string0, string $string1)
-def_int $int4 = %varbit14801;
+def_int $int4 = %cws_warning_id;
 cc_deleteall($com_wilderness_warningscreen_universe0);
 cc_create($com_wilderness_warningscreen_universe0, ^iftype_rectangle, 0, false);
 .cc_create($com_wilderness_warningscreen_universe0, ^iftype_rectangle, 1, false);
@@ -30,4 +30,4 @@ if_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)", $com_wild
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $com_wilderness_warningscreen_toggle3);
 if_setsize(calc(parawidth($string2, if_getwidth($com_wilderness_warningscreen_universe0), p12_full) + 26), if_getheight($com_wilderness_warningscreen_toggle3), ^setsize_abs, ^setsize_abs, $com_wilderness_warningscreen_toggle3);
 ~cws_set_toggle($com_wilderness_warningscreen_toggle3, $int4, $int5, ~cws_cc_getvar($int4));
-if_setonvartransmit("cws_set_toggle($com_wilderness_warningscreen_toggle3, cc_getid, $int4, $int5){var1045, var1046, var1047, var2768}", $com_wilderness_warningscreen_toggle3);
+if_setonvartransmit("cws_set_toggle($com_wilderness_warningscreen_toggle3, cc_getid, $int4, $int5){cws_var, cws_var_2, cws_var_3, cws_var_4}", $com_wilderness_warningscreen_toggle3);

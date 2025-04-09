@@ -1,18 +1,18 @@
 // 6119
 [proc,giants_foundry_section_count]()(int)
-if (%varbit13938 >= 0 & %varbit13938 < 20) {
+if (%giants_foundry_preform_dificulty >= 0 & %giants_foundry_preform_dificulty < 20) {
 	return(3);
 }
-if (%varbit13938 >= 20 & %varbit13938 < 60) {
+if (%giants_foundry_preform_dificulty >= 20 & %giants_foundry_preform_dificulty < 60) {
 	return(4);
 }
-if (%varbit13938 >= 60 & %varbit13938 < 90) {
+if (%giants_foundry_preform_dificulty >= 60 & %giants_foundry_preform_dificulty < 90) {
 	return(5);
 }
-if (%varbit13938 >= 90 & %varbit13938 < 120) {
+if (%giants_foundry_preform_dificulty >= 90 & %giants_foundry_preform_dificulty < 120) {
 	return(6);
 }
-if (%varbit13938 >= 120) {
+if (%giants_foundry_preform_dificulty >= 120) {
 	return(7);
 }
 return(3);

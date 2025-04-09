@@ -81,13 +81,13 @@ if ($obj0 ! null) {
 			}
 	}
 	cc_setop(2, "Deposit-<~script2579>");
-	if (%varbit6590 ! 0) {
+	if (%bank_quantity_type ! 0) {
 		cc_setop(3, "Deposit-1");
 	}
 	cc_setop(4, "Deposit-5");
 	cc_setop(5, "Deposit-10");
-	if (%varbit3960 > 0) {
-		cc_setop(6, "Deposit-<tostring(%varbit3960)>");
+	if (%bank_requestedquantity > 0) {
+		cc_setop(6, "Deposit-<tostring(%bank_requestedquantity)>");
 	}
 	cc_setop(7, "Deposit-X");
 	cc_setop(8, "Deposit-All");

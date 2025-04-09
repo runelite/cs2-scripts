@@ -5,7 +5,7 @@ $int1 = ~helper_generic_add_title("Map Clue", 1);
 def_int $dbfield2 = ~script6657(db_getfield($dbrow0, cluehelper_clue_map:target, 0));
 def_dbrow $dbrow3 = db_getfield($dbrow0, cluehelper_clue_map:target, $dbfield2);
 def_int $int4 = ~cluehelper_is_dig($dbrow0, $dbrow3);
-if (%varbit14188 = 1) {
+if (%option_cluehelper_infobox_show_clue_text = 1) {
 	if ($int4 = 1) {
 		$int1 = ~helper_generic_add_text("Find the clue scroll indicator on your world map to see your destination. <br>Travel to the destination and dig at the marked location.");
 	} else {

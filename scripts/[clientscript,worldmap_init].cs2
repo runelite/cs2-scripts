@@ -241,7 +241,7 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(3, $com_worldmap_toggles10, $int
 $int25, $int38 = ~worldmap_toggles_enablebutton(4, $com_worldmap_toggles10, $int25, $int38, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay7, $com_worldmap_tooltip23);
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $com_worldmap_side5);
-~worldmap_key_toggle(%varbit10294, $int29, $com_worldmap_map_container3, $com_worldmap_side5, $com_worldmap_key_toggle9);
+~worldmap_key_toggle(%worldmap_disable_key, $int29, $com_worldmap_map_container3, $com_worldmap_side5, $com_worldmap_key_toggle9);
 if (if_find(worldmap:resize_indicator) = ^true & ~on_mobile = true) {
 	cc_sethide(true);
 }

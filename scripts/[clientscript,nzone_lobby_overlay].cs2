@@ -10,7 +10,7 @@ if_setontimer("nzone_lobby_hide(nzone_lobby:universe)", nzone_lobby:control);
 if ($boolean0 = true) {
 	if_setonvartransmit(null, nzone_lobby:control);
 } else {
-	if_setonvartransmit("nzone_lobby_partystatus(nzone_lobby:left_content, nzone_lobby:mid_content){var1065, var1058}", nzone_lobby:control);
+	if_setonvartransmit("nzone_lobby_partystatus(nzone_lobby:left_content, nzone_lobby:mid_content){nzone_controller_uid, nzone_perm_1}", nzone_lobby:control);
 }
 cc_create(nzone_lobby:right_content, ^iftype_rectangle, 0, false);
 cc_setsize(46, 55, ^setsize_abs, ^setsize_abs);
@@ -46,5 +46,5 @@ cc_setopbase("<col=ff9040>Coffer");
 .cc_setposition(8, 21, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setgraphicshadow(0x333333);
 .cc_setoutline(1);
-.cc_setonvartransmit("nzone_lobby_coffer(event_com, cc_getid, event_comsubid){var1058, var638}");
+.cc_setonvartransmit("nzone_lobby_coffer(event_com, cc_getid, event_comsubid){nzone_perm_1, swansong_temp}");
 ~nzone_lobby_coffer;

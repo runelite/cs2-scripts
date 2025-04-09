@@ -1,7 +1,7 @@
 // 3041
 [proc,league_create_dropdown](component $component0, component $component1, component $component2, int $int3, int $int4)
 def_int $colour5 = 0xff981f;
-def_struct $struct6 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct6 = enum(int, struct, enum_2670, %league_type);
 if ($struct6 = null) {
 	return;
 }
@@ -51,7 +51,7 @@ $int3 = ~script7743(
 );
 $int10 = calc($int10 + $int9);
 def_string $string0 = "Areas";
-if (%varbit10032 = 3) {
+if (%league_type = 3) {
 	$string0 = "Unlocks";
 }
 $int3 = ~script7743(
@@ -69,7 +69,7 @@ $int3 = ~script7743(
 );
 $int10 = calc($int10 + $int9);
 $string0 = "Relics";
-if (%varbit10032 = 3) {
+if (%league_type = 3) {
 	$string0 = "Fragments";
 }
 $int3 = ~script7743(

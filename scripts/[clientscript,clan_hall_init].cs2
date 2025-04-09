@@ -2,7 +2,7 @@
 [clientscript,clan_hall_init](component $com_clans_hall_frame0, component $com_clans_hall_container1, component $com_clans_hall_list2, component $com_clans_hall_radio_buttons3, component $com_clans_hall_number_fields4, int $com_clans_hall_drop_downs5, component $com_clans_hall_scrollbar6, component $com_clans_hall_save7, component $com_clans_hall_back8)
 def_int $int9 = ~steelborder($com_clans_hall_frame0, "Clan hall settings", 0);
 cc_deleteall($com_clans_hall_container1);
-if (%varbit12200 = 1) {
+if (%clan_editing_permitted = 1) {
 	~stonebutton_init("<col=0dc10d>Save</col>", $com_clans_hall_save7, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $com_clans_hall_save7);
 } else {

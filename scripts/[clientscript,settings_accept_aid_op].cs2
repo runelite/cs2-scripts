@@ -1,10 +1,10 @@
 // 3921
 [clientscript,settings_accept_aid_op](component $com_settings_side_acceptaid0, component $com_settings_side_tooltip1)
 sound_synth(interface_select1, 1, 0);
-if (%varbit4180 = 0 & %varbit1777 = 0) {
-	%varbit4180 = 1;
+if (%option_acceptaid = 0 & %ironman = 0) {
+	%option_acceptaid = 1;
 } else {
-	%varbit4180 = 0;
+	%option_acceptaid = 0;
 }
 %varcint2 = 0;
 ~settings_side_accept_aid_create($com_settings_side_acceptaid0, $com_settings_side_tooltip1);

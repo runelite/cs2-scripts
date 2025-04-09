@@ -3,10 +3,10 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (~on_enhanced_desktop = 1 & %varbit13982 = 1) {
+if (~on_enhanced_desktop = 1 & %popout_panel_desktop_disabled = 1) {
 	return;
 }
-if (~on_enhanced_mobile = 1 & %varbit13981 = 0) {
+if (~on_enhanced_mobile = 1 & %popout_panel_mobile_enabled = 0) {
 	return;
 }
-%varbit13089 = calc(1 - %varbit13089);
+%popout_xptracker_disabled = calc(1 - %popout_xptracker_disabled);

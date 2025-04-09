@@ -1,17 +1,17 @@
 // 1195
 [proc,hosidius_tithe_hud_update](component $com_hosidius_strip_farming_fruit0, component $com_hosidius_strip_farming_counter1, component $com_hosidius_strip_farming_points2)
-if (%varbit4901 = 1) {
+if (%hosidius_tithe_type = 1) {
 	if_setobject_nonum(hosidius_tithe_fruit_a_13426, 1, $com_hosidius_strip_farming_fruit0);
-} else if (%varbit4901 = 2) {
+} else if (%hosidius_tithe_type = 2) {
 	if_setobject_nonum(hosidius_tithe_fruit_b_13427, 1, $com_hosidius_strip_farming_fruit0);
-} else if (%varbit4901 = 3) {
+} else if (%hosidius_tithe_type = 3) {
 	if_setobject_nonum(hosidius_tithe_fruit_c_13428, 1, $com_hosidius_strip_farming_fruit0);
 } else {
 	if_setobject_nonum(cabbage_1965, 1, $com_hosidius_strip_farming_fruit0);
 }
 def_int $int3 = 100;
-if (%varbit4900 <= 100) {
-	$int3 = %varbit4900;
+if (%hosidius_tithe_score <= 100) {
+	$int3 = %hosidius_tithe_score;
 }
 if_settext(tostring($int3), $com_hosidius_strip_farming_counter1);
 def_int $int4 = interpolate(0, 75, 0, 100, 100);
@@ -22,8 +22,8 @@ if ($int3 < $int4) {
 	$int6 = interpolate(0, $int3, 0, $int4, 31);
 }
 if_setcolour(~rgb_to_hex(255, $int5, $int6), $com_hosidius_strip_farming_counter1);
-if_settext("Points: <~tostring_spacer(%varbit4893, ",")>", $com_hosidius_strip_farming_points2);
-if (%varbit4893 >= 1000) {
+if_settext("Points: <~tostring_spacer(%hosidius_tithe_rewardpoints, ",")>", $com_hosidius_strip_farming_points2);
+if (%hosidius_tithe_rewardpoints >= 1000) {
 	if_setcolour(^red, $com_hosidius_strip_farming_points2);
 } else {
 	if_setcolour(0xff981f, $com_hosidius_strip_farming_points2);

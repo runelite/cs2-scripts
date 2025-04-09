@@ -1,7 +1,7 @@
 // 1614
 [clientscript,raids_storage_side_init](component $com_raids_storage_side_universe0, component $com_raids_storage_side_warning1, component $com_raids_storage_side_text2, component $com_raids_storage_side_dismiss3, component $com_raids_storage_side_items4)
 ~raids_storage_side_setup($com_raids_storage_side_warning1, $com_raids_storage_side_text2, $com_raids_storage_side_dismiss3);
-if_setonvartransmit("raids_storage_side_setup($com_raids_storage_side_warning1, $com_raids_storage_side_text2, $com_raids_storage_side_dismiss3){var499, var1429, var115}", $com_raids_storage_side_items4);
+if_setonvartransmit("raids_storage_side_setup($com_raids_storage_side_warning1, $com_raids_storage_side_text2, $com_raids_storage_side_dismiss3){magic_carpet_var, raids_perm_transmit, bankcert}", $com_raids_storage_side_items4);
 cc_deleteall($com_raids_storage_side_items4);
 def_int $int5 = calc((42 - 36) * 3 - 2);
 def_int $int6 = calc((36 - 32) * 2);
@@ -17,4 +17,4 @@ while ($int7 < $int8) {
 }
 ~raids_storage_side_items($com_raids_storage_side_items4, $int7);
 if_setoninvtransmit("raids_storage_side_items($com_raids_storage_side_items4, $int7){inv}", $com_raids_storage_side_universe0);
-if_setonvartransmit("raids_storage_side_items($com_raids_storage_side_items4, $int7){var115}", $com_raids_storage_side_universe0);
+if_setonvartransmit("raids_storage_side_items($com_raids_storage_side_items4, $int7){bankcert}", $com_raids_storage_side_universe0);

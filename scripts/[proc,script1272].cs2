@@ -67,7 +67,7 @@ cc_setgraphic(graphic_2410);
 $string0 = "Deposit Lock Settings";
 if_setop(1, $string0, $component1);
 ~script4081(2, $component1);
-if_setonvartransmit("script4080(2, event_com){var4611}", $component1);
+if_setonvartransmit("script4080(2, event_com){bank_locked_slots}", $component1);
 $int6 = parawidth($string0, if_getwidth(if_getlayer($component1)), p12_full);
 cc_create($component1, ^iftype_text, $int5, false);
 cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);

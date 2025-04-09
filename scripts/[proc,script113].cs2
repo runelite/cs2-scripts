@@ -4,7 +4,7 @@ def_graphic $graphic0 = "report_button,0";
 def_int $int1 = 0;
 def_int $int2 = 0;
 ~toplevel_chatbox_background;
-if (%varbit542 = 1 & getwindowmode ! ^windowmode_fixed | ~toplevel_getcomponents = enum_1745 & (%varcint1220 = 1 & %varbit16116 = 0 | %varcint1221 = 1)) {
+if (%cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | ~toplevel_getcomponents = enum_1745 & (%varcint1220 = 1 & %settings_mobile_show_filter_stones_enabled = 0 | %varcint1221 = 1)) {
 	if_sethide(true, chatbox:controls);
 } else {
 	if_sethide(false, chatbox:controls);
@@ -73,12 +73,12 @@ while ($int6 >= 0) {
 	}
 	$int1, $int6 = calc($int1 + $int4), calc($int6 - 1);
 }
-if (%varbit10670 = 1 & if_hassub(chatbox:null) = true) {
+if (%chatmodal_unclamp = 1 & if_hassub(chatbox:null) = true) {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:null);
 } else {
 	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:null);
 }
-if (%varbit10689 = 1 & if_hassub(chatbox:null) = true) {
+if (%chatoverlay_unclamp = 1 & if_hassub(chatbox:null) = true) {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:null);
 } else {
 	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:null);

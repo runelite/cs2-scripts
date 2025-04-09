@@ -10,7 +10,7 @@ def_int $int7 = calc(($int2 - 36 * $int6) / ($int6 + 1));
 def_int $int8 = calc((if_getheight($com_light_puzzle_lights0) - 32 * $int6 - $int5) / ($int6 + 1));
 cc_deleteall($com_light_puzzle_lights0);
 while ($int1 < 25) {
-	if (testbit(%var1356, $int1) = ^true) {
+	if (testbit(%trail_lights, $int1) = ^true) {
 		$namedobj4 = trail_light_unlit_20356;
 	} else {
 		$namedobj4 = trail_light_lit_20357;

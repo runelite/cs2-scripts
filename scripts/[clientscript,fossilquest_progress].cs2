@@ -1,6 +1,6 @@
 // 1994
 [clientscript,fossilquest_progress](component $com_fossilquest_sailing_overlay_progress_filled0, component $com_fossilquest_sailing_overlay_progress_empty1, component $com_fossilquest_sailing_overlay_progress_bar2)
-def_int $int3 = interpolate(0, if_getwidth($com_fossilquest_sailing_overlay_progress_bar2), 0, 100, %varbit5798);
+def_int $int3 = interpolate(0, if_getwidth($com_fossilquest_sailing_overlay_progress_bar2), 0, 100, %fossilquest_sailing_progress);
 if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, $com_fossilquest_sailing_overlay_progress_filled0);
 if_setsize(calc(if_getwidth($com_fossilquest_sailing_overlay_progress_bar2) - $int3), 0, ^setsize_abs, ^setsize_minus, $com_fossilquest_sailing_overlay_progress_empty1);
 if ($int3 < calc(if_getwidth($com_fossilquest_sailing_overlay_progress_bar2) / 4)) {

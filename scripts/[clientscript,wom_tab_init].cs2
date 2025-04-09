@@ -28,7 +28,7 @@ while ($int3 <= $int9) {
 		if_setonmouseover("text_colour_swapper($component5, ^white)", $component4);
 		if_setonmouseleave("text_colour_swapper($component5, 0xff981f)", $component4);
 		if_setonop("wom_tab_highlight_onclick($int3, $com_wom_recycling_items_layer1, $com_wom_recycling_scroll_layer2)", $component4);
-		if_setonvartransmit("wom_tab_highlight($com_wom_recycling_items_layer1, $com_wom_recycling_scroll_layer2){var279}", $com_wom_recycling_tab_layer0);
+		if_setonvartransmit("wom_tab_highlight($com_wom_recycling_items_layer1, $com_wom_recycling_scroll_layer2){awarded_points}", $com_wom_recycling_tab_layer0);
 		if_setoninvtransmit("wom_item_update($com_wom_recycling_items_layer1, $com_wom_recycling_scroll_layer2){inv, worn, bank}", $com_wom_recycling_items_layer1);
 		if_sethide(false, $component4);
 		if_setsize($int7, 0, ^setsize_abs, ^setsize_minus, $component4);

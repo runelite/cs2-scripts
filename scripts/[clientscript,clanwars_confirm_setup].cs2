@@ -23,7 +23,7 @@ if ($int0 = 0) {
 	if_sethide(true, clanwars_confirm:button);
 	if_setontimer("clanwars_confirm_challenge_wait(event_com, clanwars_confirm:button, calc(clientclock + 150))", clanwars_confirm:universe);
 	~clanwars_confirm_challenge_redraw(clanwars_confirm:button);
-	if_setonvartransmit("clanwars_confirm_challenge_redraw(clanwars_confirm:button){var92, var375}", clanwars_confirm:universe);
+	if_setonvartransmit("clanwars_confirm_challenge_redraw(clanwars_confirm:button){prayer9, armourhitsound}", clanwars_confirm:universe);
 	if_setonop("clanwars_confirm_challenge_op(event_op, event_com)", clanwars_confirm:button);
 } else if ($int0 = 1) {
 	if_sethide(false, clanwars_confirm:button);

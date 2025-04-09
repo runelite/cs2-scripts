@@ -1,13 +1,13 @@
 // 6473
 [clientscript,script6473](coord $coord0, coord $coord1, int $int2, int $int3)
-def_dbrow $dbrow4 = %var3546;
+def_dbrow $dbrow4 = %cluehelper_infobox_clue;
 if ($dbrow4 = null) {
 	return;
 }
 if (db_getrowtable($dbrow4) ! cluehelper_clue_hotcold) {
 	return;
 }
-if ($coord0 = $coord1 & %varbit14190 = 1) {
+if ($coord0 = $coord1 & %cluehelper_hotcold_list_stored = 1) {
 	return;
 }
 def_component $component5 = helper_generic:listeners;
@@ -22,7 +22,7 @@ switch_int ($int6) {
 if ($dbrow4 = dbrow_2297) {
 	$int7 = enum_getoutputcount(enum_4816);
 }
-if (%varbit14190 = 0) {
+if (%cluehelper_hotcold_list_stored = 0) {
 	~script6474($component5, $int7);
 }
 def_int $int8 = 0;

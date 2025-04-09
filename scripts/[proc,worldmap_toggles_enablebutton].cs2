@@ -17,7 +17,7 @@ cc_setgraphic("clickcross,5");
 if (.cc_find($com_worldmap_toggles1, $int0) = ^true) {
 	.cc_setopbase("<col=ff9040><$string0></col>");
 	.cc_setonop("worldmap_toggles_op(event_op, $com_worldmap_toggles1, $int0, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6)");
-	.cc_setonvartransmit("worldmap_toggles_vartransmit($com_worldmap_toggles1, $int0, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6){var1568}");
+	.cc_setonvartransmit("worldmap_toggles_vartransmit($com_worldmap_toggles1, $int0, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6){worldmap_perm}");
 	~worldmap_toggles_set($com_worldmap_toggles1, $int0, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6);
 }
 $int2 = calc($int2 + 1);

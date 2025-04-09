@@ -1,9 +1,9 @@
 // 813
 [proc,ge_offers_checkavailable]()(int)
-def_int $int0 = inv_total(inv, %var1151);
+def_int $int0 = inv_total(inv, %tradingpost_search);
 def_int $int1 = 0;
-def_obj $obj2 = oc_cert(%var1151);
-if ($obj2 ! %var1151) {
+def_obj $obj2 = oc_cert(%tradingpost_search);
+if ($obj2 ! %tradingpost_search) {
 	$int1 = inv_total(inv, $obj2);
 	if (calc(^max_32bit_int - $int1) < $int0) {
 		$int0 = ^max_32bit_int;
@@ -11,8 +11,8 @@ if ($obj2 ! %var1151) {
 		$int0 = calc($int0 + $int1);
 	}
 } else {
-	$obj2 = oc_uncert(%var1151);
-	if ($obj2 ! %var1151) {
+	$obj2 = oc_uncert(%tradingpost_search);
+	if ($obj2 ! %tradingpost_search) {
 		$int1 = inv_total(inv, $obj2);
 		if (calc(^max_32bit_int - $int1) < $int0) {
 			$int0 = ^max_32bit_int;

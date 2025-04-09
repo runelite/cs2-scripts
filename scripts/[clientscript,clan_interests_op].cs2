@@ -9,10 +9,10 @@ if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 255, calc(clientclock + 20))");
 }
 if (cc_find($component1, $comsubid4) = ^true & .cc_find($component1, $comsubid5) = ^true) {
-	if (testbit(%var3023, $int3) = ^true) {
-		%var3023 = clearbit(%var3023, $int3);
+	if (testbit(%clan_editing_0, $int3) = ^true) {
+		%clan_editing_0 = clearbit(%clan_editing_0, $int3);
 	} else {
-		%var3023 = setbit(%var3023, $int3);
+		%clan_editing_0 = setbit(%clan_editing_0, $int3);
 	}
 	~clan_interests_synch($int3);
 }

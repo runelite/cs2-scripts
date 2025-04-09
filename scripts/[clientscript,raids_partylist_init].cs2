@@ -27,4 +27,4 @@ cc_create(raids_lobby_partylist:contents, ^iftype_rectangle, enum(component, int
 cc_sethide(true);
 ~script1558(raids_lobby_partylist:refresh, "Refresh", raids_lobby_partylist:contents, enum_1538, -1);
 ~raids_partylist_setpartybutton;
-if_setonvartransmit("raids_partylist_setpartybutton{var1427}", raids_lobby_partylist:myparty);
+if_setonvartransmit("raids_partylist_setpartybutton{raids_party_groupholder}", raids_lobby_partylist:myparty);

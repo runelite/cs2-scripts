@@ -1,9 +1,9 @@
 // 2954
 [clientscript,adventurepath_set_info_transmit](component $com_adventurepath_task_name0, component $com_adventurepath_task_description1, component $com_adventurepath_task_hint2, component $com_adventurepath_reward_list3, component $com_adventurepath_filters4, component $com_adventurepath_back5, component $com_adventurepath_task_list6, component $com_adventurepath_path_menu7, component $com_adventurepath_tasks8, component $com_adventurepath_path_reward9, component $com_adventurepath_tasks_done10, component $com_adventurepath_rewards_scrollbar11, component $com_adventurepath_banner12, component $com_adventurepath_extra_task_info13, component $com_adventurepath_extra_description14, component $com_adventurepath_extra_hint15, component $com_adventurepath_extra_image_text16, component $com_adventurepath_extra_image17, component $com_adventurepath_extra_task_name18, component $com_adventurepath_extra_link19, component $com_adventurepath_task_focus20)
-if (%var2358 = 0) {
+if (%adventurepath_selected_task = 0) {
 	return;
 }
-def_enum $enum21 = enum(int, enum, enum_2620, %var2357);
+def_enum $enum21 = enum(int, enum, enum_2620, %adventurepath_selected_path);
 if ($enum21 = null) {
 	return;
 }
@@ -12,7 +12,7 @@ def_struct $struct23 = null;
 def_int $int24 = struct_param($struct23, param_806);
 while ($int22 < enum_getoutputcount($enum21)) {
 	$struct23 = enum(int, struct, $enum21, $int22);
-	if ($struct23 ! null & $int24 = %var2358) {
+	if ($struct23 ! null & $int24 = %adventurepath_selected_task) {
 		~adventurepath_set_info(
 			0 = $int24, 
 			1 = $com_adventurepath_task_name0, 

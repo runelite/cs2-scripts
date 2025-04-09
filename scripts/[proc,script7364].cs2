@@ -14,12 +14,12 @@ if (~script7347($obj1, $int2, 1) = 1) {
 	$enum4, $int5, $int6 = ~script7370($obj1);
 	if (inv_total(prepot_device_inv, $obj1) > 0) {
 		$boolean7 = true;
-	} else if (%varbit4150 = 15 & ~script3750($enum4) > 0) {
+	} else if (%bank_currenttab = 15 & ~script3750($enum4) > 0) {
 		$boolean7 = true;
 	} else {
 		$int10 = 1;
 		while ($int10 <= $int6 & $boolean7 = false) {
-			if (%varbit4150 ! 15 & inv_total(bank, enum(int, namedobj, $enum4, $int10)) > 0) {
+			if (%bank_currenttab ! 15 & inv_total(bank, enum(int, namedobj, $enum4, $int10)) > 0) {
 				$boolean7 = true;
 			} else if (inv_total(inv, enum(int, namedobj, $enum4, $int10)) > 0) {
 				$boolean7 = true;

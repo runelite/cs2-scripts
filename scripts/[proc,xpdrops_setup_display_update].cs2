@@ -1,45 +1,45 @@
 // 1022
 [proc,xpdrops_setup_display_update](component $com_xpdrops_setup_position_display0, component $com_xpdrops_setup_size_display1, component $com_xpdrops_setup_duration_display2, component $com_xpdrops_setup_counter_display3, component $com_xpdrops_setup_progress_display4, component $com_xpdrops_setup_colour_display5, component $com_xpdrops_setup_grouping_display6, component $com_xpdrops_setup_speed_display7, component $com_xpdrops_setup_fakes_display8)
 if (cc_find($com_xpdrops_setup_position_display0, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1164, %varbit4692));
+	cc_settext(enum(int, string, enum_1164, %xpdrops_position));
 }
 if (cc_find($com_xpdrops_setup_size_display1, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1165, %varbit4693));
+	cc_settext(enum(int, string, enum_1165, %xpdrops_size));
 }
 if (cc_find($com_xpdrops_setup_duration_display2, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1166, %varbit4694));
+	cc_settext(enum(int, string, enum_1166, %xpdrops_duration));
 }
 if (cc_find($com_xpdrops_setup_counter_display3, 4) = ^true) {
-	if (%varbit4697 = 31) {
+	if (%xpdrops_counter_type = 31) {
 		cc_settext("Most recent");
-	} else if (%varbit4697 = 30) {
+	} else if (%xpdrops_counter_type = 30) {
 		cc_settext("Off");
-	} else if (enum(int, stat, enum_681, %varbit4697) ! null) {
-		cc_settext(enum(int, string, enum_108, %varbit4697));
+	} else if (enum(int, stat, enum_681, %xpdrops_counter_type) ! null) {
+		cc_settext(enum(int, string, enum_108, %xpdrops_counter_type));
 	} else {
 		cc_settext("Total XP");
 	}
 }
 if (cc_find($com_xpdrops_setup_progress_display4, 4) = ^true) {
-	if (%varbit4698 = 31) {
+	if (%xpdrops_progress_type = 31) {
 		cc_settext("Most recent");
-	} else if (%varbit4698 = 30) {
+	} else if (%xpdrops_progress_type = 30) {
 		cc_settext("Total XP goal");
-	} else if (enum(int, stat, enum_681, %varbit4698) ! null) {
-		cc_settext(enum(int, string, enum_108, %varbit4698));
+	} else if (enum(int, stat, enum_681, %xpdrops_progress_type) ! null) {
+		cc_settext(enum(int, string, enum_108, %xpdrops_progress_type));
 	} else {
 		cc_settext("Off");
 	}
 }
 if (cc_find($com_xpdrops_setup_colour_display5, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1168, %varbit4695));
+	cc_settext(enum(int, string, enum_1168, %xpdrops_colour));
 }
 if (cc_find($com_xpdrops_setup_grouping_display6, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1170, %varbit4696));
+	cc_settext(enum(int, string, enum_1170, %xpdrops_groupskills));
 }
 if (cc_find($com_xpdrops_setup_speed_display7, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1140, %varbit4722));
+	cc_settext(enum(int, string, enum_1140, %xpdrops_speed));
 }
 if (cc_find($com_xpdrops_setup_fakes_display8, 4) = ^true) {
-	cc_settext(enum(int, string, enum_1625, %varbit8120));
+	cc_settext(enum(int, string, enum_1625, %xpdrops_fakesoff));
 }

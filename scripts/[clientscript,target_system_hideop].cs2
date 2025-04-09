@@ -3,16 +3,16 @@
 if ($int1 = 1) {
 	switch_int ($opindex0) {
 		case 1 :
-			%varbit6704 = $int1;
+			%bh_target_minimised = $int1;
 		case 2, 3, 4 :
 			if (~on_mobile = false) {
-				%varbit6715 = $opindex0;
+				%bh_target_dock = $opindex0;
 			}
 		case default :
 			return;
 	}
 } else if ($opindex0 = 1) {
-	%varbit6704 = $int1;
+	%bh_target_minimised = $int1;
 } else {
 	return;
 }

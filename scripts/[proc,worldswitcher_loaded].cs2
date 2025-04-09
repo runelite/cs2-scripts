@@ -4,7 +4,7 @@ def_graphic $graphic19 = p12_full;
 def_fontmetrics $fontmetrics20 = p12_full;
 if ($com_worldswitcher_title1 ! null) {
 	~worldswitcher_settitle($com_worldswitcher_title1);
-	if_setonvartransmit("worldswitcher_settitle($com_worldswitcher_title1){var3014}", $com_worldswitcher_title1);
+	if_setonvartransmit("worldswitcher_settitle($com_worldswitcher_title1){clan_events_general_temp}", $com_worldswitcher_title1);
 	if_setonsubchange("worldswitcher_settitle($com_worldswitcher_title1)", $com_worldswitcher_title1);
 	$graphic19, $fontmetrics20 = p11_full, p11_full;
 }
@@ -52,7 +52,7 @@ if_setonvartransmit("worldswitcher_draw(
 	17 = $component16, 
 	18 = $component17, 
 	19 = $com_worldswitcher_tooltip18
-){var477, var735, var1575}", $component0);
+){keldagrim_train_var, royal_armod_uid, inferno_temp_noprotect_transmit}", $component0);
 if_setonstattransmit("worldswitcher_draw(
 	0 = $component0, 
 	1 = $component2, 

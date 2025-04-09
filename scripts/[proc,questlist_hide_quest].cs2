@@ -3,28 +3,28 @@
 if (db_getfield($dbrow0, quest:type, 0) = 1 & ~questlist_hide_miniquests = 1) {
 	return(1);
 }
-if (db_getfield($dbrow0, quest:type, 0) = 0 & %varbit13774 = 1) {
+if (db_getfield($dbrow0, quest:type, 0) = 0 & %questlist_hide_quests = 1) {
 	return(1);
 }
-if ($int4 = 1 & %varbit13890 = 1) {
+if ($int4 = 1 & %questlist_hide_unavailable = 1) {
 	return(1);
 }
 if (~quest_is_subquest($dbrow0) = 1) {
 	return(1);
 }
-if ($int1 = 0 & %varbit13775 = 1) {
+if ($int1 = 0 & %questlist_hide_in_progress = 1) {
 	return(1);
 }
-if ($int1 = 1 & %varbit13776 = 1) {
+if ($int1 = 1 & %questlist_hide_not_started = 1) {
 	return(1);
 }
-if ($int1 = 2 & %varbit13777 = 1) {
+if ($int1 = 2 & %questlist_hide_completed = 1) {
 	return(1);
 }
-if ($int1 = 1 & %varbit13778 = 2 & $int2 = 0) {
+if ($int1 = 1 & %questlist_hide_lackreqs = 2 & $int2 = 0) {
 	return(1);
 }
-if ($int1 = 1 & %varbit13779 = 2 & $int3 = 0) {
+if ($int1 = 1 & %questlist_hide_lackrecs = 2 & $int3 = 0) {
 	return(1);
 }
 return(0);

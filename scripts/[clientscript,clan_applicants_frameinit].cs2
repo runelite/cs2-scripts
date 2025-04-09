@@ -2,5 +2,5 @@
 [clientscript,clan_applicants_frameinit](component $com_clans_applicants_frame0)
 def_int $comsubid1 = ~steelborder($com_clans_applicants_frame0, "", 0);
 ~clan_applicants_framedraw($com_clans_applicants_frame0, $comsubid1);
-if_setonvartransmit("clan_applicants_framedraw($com_clans_applicants_frame0, $comsubid1){var3019}", $com_clans_applicants_frame0);
+if_setonvartransmit("clan_applicants_framedraw($com_clans_applicants_frame0, $comsubid1){clan_temp_transmit_0}", $com_clans_applicants_frame0);
 if_setonclansettingstransmit("clan_applicants_framedraw($com_clans_applicants_frame0, $comsubid1)", $com_clans_applicants_frame0);

@@ -7,24 +7,24 @@ if ($obj0 ! null) {
 		cc_settrans(0);
 		cc_setobject($obj0, $int1);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-		switch_int (%varbit16201) {
+		switch_int (%rune_pouch_selectedquantity) {
 			case default :
 				cc_setop(1, "Store-1");
 				cc_setop(3, "Store-5");
-				if (%varbit16206 > 0) {
-					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				if (%rune_pouch_customquantity > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%rune_pouch_customquantity, ",")>");
 				}
 				cc_setop(6, "Store-All");
 			case 1 :
 				cc_setop(1, "Store-5");
 				cc_setop(2, "Store-1");
-				if (%varbit16206 > 0) {
-					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				if (%rune_pouch_customquantity > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%rune_pouch_customquantity, ",")>");
 				}
 				cc_setop(6, "Store-All");
 			case 3 :
-				if (%varbit16206 > 0) {
-					cc_setop(1, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				if (%rune_pouch_customquantity > 0) {
+					cc_setop(1, "Store-<~tostring_spacer(%rune_pouch_customquantity, ",")>");
 				} else {
 					cc_setop(1, "Store-X");
 				}
@@ -35,8 +35,8 @@ if ($obj0 ! null) {
 				cc_setop(1, "Store-All");
 				cc_setop(2, "Store-1");
 				cc_setop(3, "Store-5");
-				if (%varbit16206 > 0) {
-					cc_setop(4, "Store-<~tostring_spacer(%varbit16206, ",")>");
+				if (%rune_pouch_customquantity > 0) {
+					cc_setop(4, "Store-<~tostring_spacer(%rune_pouch_customquantity, ",")>");
 				}
 		}
 		cc_setop(5, "Store-X");

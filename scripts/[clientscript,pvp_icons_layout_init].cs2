@@ -16,22 +16,22 @@ if_setontimer("pvp_icons_layout(false)", $com_pvp_icons_universe0);
 if_setonresize("pvp_icons_layout(true)", $com_pvp_icons_universe0);
 if_setonsubchange("pvp_icons_layout(true)", $com_pvp_icons_universe0);
 if_setonvartransmit("pvp_icons_layout(true){
-	0 = var1293, 
-	1 = var1434, 
-	2 = var1542, 
-	3 = var1676, 
-	4 = var1327, 
-	5 = var1377, 
-	6 = var1378, 
-	7 = var1601, 
-	8 = var1602, 
-	9 = var2741, 
-	10 = var1021, 
-	11 = var1697, 
-	12 = var2265, 
-	13 = var2084, 
-	14 = var1709, 
-	15 = var3464
+	0 = deadman, 
+	1 = deadman2, 
+	2 = deadman3, 
+	3 = deadman_tournament_mode_pl, 
+	4 = deadman_transmitting_perm, 
+	5 = br_temp_1, 
+	6 = br_temp_2, 
+	7 = wildwars_temptransmit, 
+	8 = wildwars_temptransmit2, 
+	9 = deadman_teleblock_transmit, 
+	10 = toplevel_temp, 
+	11 = gravestone_varp, 
+	12 = sote_pillars_light_level_1_a, 
+	13 = farming_tools2, 
+	14 = spectator_mode, 
+	15 = pvpa_temp_transmit_0
 }", $com_pvp_icons_universe0);
 if_setonmouseleave("deltooltip(pvp_icons:tooltip)", pvp_icons:pvp);
 cc_deleteall($com_pvp_icons_kd_container7);
@@ -43,6 +43,6 @@ cc_setcolour(^yellow);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(true);
-cc_setonvartransmit("kdr_update(event_com, event_comsubid){var1105, var1320, var718, var1327}");
+cc_setonvartransmit("kdr_update(event_com, event_comsubid){wilderness_statistics, zeah_temp_2, pest_instance, deadman_transmitting_perm}");
 ~kdr_update;
 ~pvp_icons_layout;

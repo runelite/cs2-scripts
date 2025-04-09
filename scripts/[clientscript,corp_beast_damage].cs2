@@ -1,7 +1,7 @@
 // 693
 [clientscript,corp_beast_damage](component $com_corp_beast_corp_damage0)
-if (%varbit999 >= 4000) {
+if (%corp_beast_damage >= 4000) {
 	if_settext("Damage: Lots!", $com_corp_beast_corp_damage0);
 } else {
-	if_settext("Damage: <~tostring_spacer(%varbit999, ",")>", $com_corp_beast_corp_damage0);
+	if_settext("Damage: <~tostring_spacer(%corp_beast_damage, ",")>", $com_corp_beast_corp_damage0);
 }

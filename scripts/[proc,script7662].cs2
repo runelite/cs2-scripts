@@ -1,6 +1,6 @@
 // 7662
 [proc,script7662](int $int0, int $int1)
-def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct2 = enum(int, struct, enum_2670, %league_type);
 def_int $int3 = 16750623;
 if ($struct2 ! null) {
 	$int3 = struct_param($struct2, param_1027);
@@ -79,7 +79,7 @@ switch_int (%varcint988) {
 ~script7670($component24, $component25);
 def_int $int32 = ~script7672($component13, $int3);
 def_int $int33 = 0;
-if ($int30 < $int1 & %varbit11596 = 0) {
+if ($int30 < $int1 & %league_combat_mastery_tab = 0) {
 	if_setsize(0, calc(17 + $int32), ^setsize_minus, ^setsize_minus, $component13);
 	if_setposition(0, $int32, ^setpos_abs_centre, ^setpos_abs_top, $component13);
 	$int33 = 1;
@@ -88,7 +88,7 @@ if ($int30 < $int1 & %varbit11596 = 0) {
 	if_setposition(0, $int32, ^setpos_abs_centre, ^setpos_abs_top, $component13);
 }
 ~script5288($component15, 0, 0, 0, if_getwidth($component13), if_getheight($component13), struct_3712, 0x726451);
-switch_int (%varbit11596) {
+switch_int (%league_combat_mastery_tab) {
 	case 0 :
 		~script7663(
 			0 = $component13, 

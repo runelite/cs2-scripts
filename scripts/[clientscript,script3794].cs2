@@ -1,23 +1,23 @@
 // 3794
 [clientscript,script3794](component $com_eyeglo_gnome_machine_unlocked_digit_bottom_tens0, component $com_eyeglo_gnome_machine_unlocked_digit_bottom_units1, component $com_eyeglo_gnome_machine_unlocked_arrow_3_up2, component $com_eyeglo_gnome_machine_unlocked_arrow_3_middle3, component $com_eyeglo_gnome_machine_unlocked_arrow_3_down4, component $com_eyeglo_gnome_machine_unlocked_coin_display3_15, component $com_eyeglo_gnome_machine_unlocked_coin_display3_26, component $com_eyeglo_gnome_machine_unlocked_coin_display3_37)
-if_setmodel(enum(int, model, enum_1551, calc(%varbit2513 / 10)), $com_eyeglo_gnome_machine_unlocked_digit_bottom_tens0);
-if_setmodel(enum(int, model, enum_1551, calc(%varbit2513 % 10)), $com_eyeglo_gnome_machine_unlocked_digit_bottom_units1);
-if_setobject_nonum(%var853, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_15);
-if_setobject_nonum(%var854, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_26);
-if_setobject_nonum(%var855, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_37);
-if (%varbit2542 = 0) {
+if_setmodel(enum(int, model, enum_1551, calc(%eyeglo_coin_value_4 / 10)), $com_eyeglo_gnome_machine_unlocked_digit_bottom_tens0);
+if_setmodel(enum(int, model, enum_1551, calc(%eyeglo_coin_value_4 % 10)), $com_eyeglo_gnome_machine_unlocked_digit_bottom_units1);
+if_setobject_nonum(%eyeglo_operate3_a, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_15);
+if_setobject_nonum(%eyeglo_operate3_b, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_26);
+if_setobject_nonum(%eyeglo_operate3_c, 1, $com_eyeglo_gnome_machine_unlocked_coin_display3_37);
+if (%eyeglo_operate3_val = 0) {
 	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_3_middle3);
 	if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_3_up2);
 	if_setmodel(null, $com_eyeglo_gnome_machine_unlocked_arrow_3_down4);
 	return;
 }
-if (%varbit2542 > %varbit2513) {
+if (%eyeglo_operate3_val > %eyeglo_coin_value_4) {
 	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_3_middle3);
 	if_setmodel(model_17221, $com_eyeglo_gnome_machine_unlocked_arrow_3_up2);
 	if_setmodel(model_17217, $com_eyeglo_gnome_machine_unlocked_arrow_3_down4);
 	return;
 }
-if (%varbit2542 < %varbit2513) {
+if (%eyeglo_operate3_val < %eyeglo_coin_value_4) {
 	if_setmodel(model_17219, $com_eyeglo_gnome_machine_unlocked_arrow_3_middle3);
 	if_setmodel(model_17220, $com_eyeglo_gnome_machine_unlocked_arrow_3_up2);
 	if_setmodel(model_17218, $com_eyeglo_gnome_machine_unlocked_arrow_3_down4);

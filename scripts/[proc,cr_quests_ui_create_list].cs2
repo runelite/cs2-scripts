@@ -54,9 +54,9 @@ while ($int14 < $int0) {
 %varcint1004 = -1;
 def_string $string0 = "null";
 if ($int10 <= 0) {
-	if (%varbit6347 >= %varbit11877) {
+	if (%quests_completed_count >= %quests_total_count) {
 		$string0 = "You've completed every quest! Congratulations!";
-	} else if (%varbit5367 = 0) {
+	} else if (%cr_quests_include_members = 0) {
 		$string0 = "No free quest suggestions available.<br>Check the <col=ffffff>All Quests</col> tab, <col=ffffff>Quest List</col> or <col=ffffff>Skill Guides</col> to find more goals.";
 	} else {
 		$string0 = "No quest suggestions available.<br>Check the <col=ffffff>Quest List</col> or <col=ffffff>Skill Guides</col> to find more goals.";

@@ -3,7 +3,7 @@
 cc_deleteall(bankmain:potionstore_items);
 cc_deleteall(bankmain:potionstore_scrollbar);
 cc_deleteall(bankmain:potionstore_background);
-if (%varbit4150 = 15) {
+if (%bank_currenttab = 15) {
 	if_sethide(false, bankmain:potionstore_container);
 	~create_graphic(
 		0 = bankmain:potionstore_background, 
@@ -41,35 +41,35 @@ if (%varbit4150 = 15) {
 	def_int $int18 = 0;
 	def_int $int19 = $int2;
 	def_int $int20 = $int3;
-	if (%var4278 ! null) {
+	if (%potionstore_favourite_1 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4279 ! null) {
+	if (%potionstore_favourite_2 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4280 ! null) {
+	if (%potionstore_favourite_3 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4281 ! null) {
+	if (%potionstore_favourite_4 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4282 ! null) {
+	if (%potionstore_favourite_5 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4283 ! null) {
+	if (%potionstore_favourite_6 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4284 ! null) {
+	if (%potionstore_favourite_7 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}
-	if (%var4285 ! null) {
+	if (%potionstore_favourite_8 ! null) {
 		$int2, $int3 = ~script6556($int2, $int3);
 		$int8 = 1;
 	}

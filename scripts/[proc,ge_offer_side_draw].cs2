@@ -1,11 +1,11 @@
 // 783
 [proc,ge_offer_side_draw](component $com_ge_offers_side_items0, component $com_ge_offers_side_glow1)
-def_int $int2 = calc(%varbit4439 - 1);
+def_int $int2 = calc(%ge_selectedslot - 1);
 def_int $int3 = 0;
 if (enum(int, inv, enum_150, $int2) = null) {
 	$int3 = 1;
 } else if (stockmarket_isofferempty($int2) = true) {
-	if (%varbit4397 = 1) {
+	if (%ge_newoffer_type = 1) {
 		$int3 = 1;
 	}
 } else {

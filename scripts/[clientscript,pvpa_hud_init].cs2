@@ -3,7 +3,7 @@
 ~script4729($com_pvp_arena_hud_timer_dodger1, $com_pvp_arena_hud_timer2, 65256, ^setpos_abs_centre, ^setpos_abs_top, true);
 ~script4729($com_pvp_arena_hud_info_dodger3, $com_pvp_arena_hud_info4, setbit(65256, 2), ^setpos_abs_right, ^setpos_abs_top, true);
 ~pvpa_hud_drawtimer($com_pvp_arena_hud_timer2);
-if_setonvartransmit("pvpa_hud_drawtimer(event_com){var3464}", $com_pvp_arena_hud_timer2);
+if_setonvartransmit("pvpa_hud_drawtimer(event_com){pvpa_temp_transmit_0}", $com_pvp_arena_hud_timer2);
 ~pvpa_hud_drawinfo($com_pvp_arena_hud_info4);
 if_setonsubchange("pvpa_hud_drawinfo(event_com)", $com_pvp_arena_hud_info4);
-if_setonvartransmit("pvpa_hud_drawinfo(event_com){var3464}", $com_pvp_arena_hud_info4);
+if_setonvartransmit("pvpa_hud_drawinfo(event_com){pvpa_temp_transmit_0}", $com_pvp_arena_hud_info4);

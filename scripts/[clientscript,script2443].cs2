@@ -3,10 +3,10 @@
 if (~keypress_permit(null, settings) = 0) {
 	return;
 }
-if (%varbit17311 = 0) {
+if (%league_tasks_search_listen_for_keyboard = 0) {
 	return;
 }
-if (%varbit17310 = 0) {
+if (%league_tasks_is_searching = 0) {
 	return;
 }
 if ($key0 = ^key_del) {
@@ -65,8 +65,8 @@ if ($key0 = ^key_return) {
 		return;
 	}
 	~chatdefault_restoreinput;
-	%varbit17310 = 0;
-	%varbit17311 = 0;
+	%league_tasks_is_searching = 0;
+	%league_tasks_search_listen_for_keyboard = 0;
 	if_settext(%varcstring1180, $component19);
 	~league_tasks_draw_list(
 		0 = -1, 

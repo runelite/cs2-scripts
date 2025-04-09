@@ -5,30 +5,30 @@ def_int $int2 = 999999;
 $int1 = oc_param($namedobj0, param_916);
 $int2 = oc_param($namedobj0, param_917);
 if (~league_world = 1) {
-	if ($int2 > %var2614) {
+	if ($int2 > %league_points_completed) {
 		return(0);
 	}
 	return(1);
 }
 switch_int ($int1) {
 	case 1 :
-		if ($int2 > %var2771) {
+		if ($int2 > %league_twisted_points) {
 			return(0);
 		}
 	case 2 :
-		if ($int2 > %var2772) {
+		if ($int2 > %league_trailblazer_points) {
 			return(0);
 		}
 	case 3 :
-		if ($int2 > %var3275) {
+		if ($int2 > %league_3_points) {
 			return(0);
 		}
 	case 4 :
-		if ($int2 > %var4032) {
+		if ($int2 > %league_trailblazer_reloaded_points) {
 			return(0);
 		}
 	case 5 :
-		if ($int2 > %var4556) {
+		if ($int2 > %league_5_points) {
 			return(0);
 		}
 }

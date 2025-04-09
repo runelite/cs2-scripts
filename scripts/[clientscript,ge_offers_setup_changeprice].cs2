@@ -1,39 +1,39 @@
 // 778
 [clientscript,ge_offers_setup_changeprice](boolean $boolean0, int $int1, int $opindex2, component $com_ge_offers_setup3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $com_ge_offers_setup_confirm16, int $comsubid17, int $comsubid18)
-if ($opindex2 ! 1 | %var1151 = null) {
+if ($opindex2 ! 1 | %tradingpost_search = null) {
 	return;
 }
 def_int $int19 = 0;
 if ($int1 = 1) {
-	if (%varbit4398 < ^max_32bit_int) {
-		%varbit4398 = calc(%varbit4398 + 1);
+	if (%ge_newoffer_price < ^max_32bit_int) {
+		%ge_newoffer_price = calc(%ge_newoffer_price + 1);
 	}
 	sound_synth(ge_up_amount, 1, 0);
 } else if ($int1 = -1) {
-	if (%varbit4398 > 1) {
-		%varbit4398 = calc(%varbit4398 - 1);
+	if (%ge_newoffer_price > 1) {
+		%ge_newoffer_price = calc(%ge_newoffer_price - 1);
 	}
 	sound_synth(ge_down_amount, 1, 0);
 } else if ($int1 = 5) {
-	$int19 = calc(%varbit4398 / 20);
+	$int19 = calc(%ge_newoffer_price / 20);
 	if ($int19 <= 0) {
 		$int19 = 1;
 	}
-	if (calc(^max_32bit_int - $int19) < %varbit4398) {
-		%varbit4398 = ^max_32bit_int;
+	if (calc(^max_32bit_int - $int19) < %ge_newoffer_price) {
+		%ge_newoffer_price = ^max_32bit_int;
 	} else {
-		%varbit4398 = calc(%varbit4398 + $int19);
+		%ge_newoffer_price = calc(%ge_newoffer_price + $int19);
 	}
 	sound_synth(ge_up_amount, 1, 0);
 } else if ($int1 = -5) {
-	$int19 = calc(%varbit4398 / 20);
+	$int19 = calc(%ge_newoffer_price / 20);
 	if ($int19 <= 0) {
 		$int19 = 1;
 	}
-	if ($int19 >= %varbit4398) {
-		%varbit4398 = 1;
+	if ($int19 >= %ge_newoffer_price) {
+		%ge_newoffer_price = 1;
 	} else {
-		%varbit4398 = calc(%varbit4398 - $int19);
+		%ge_newoffer_price = calc(%ge_newoffer_price - $int19);
 	}
 	sound_synth(ge_down_amount, 1, 0);
 }

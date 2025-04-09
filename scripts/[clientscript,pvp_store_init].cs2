@@ -75,7 +75,7 @@ while ($length10 < $length12) {
 	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($length10 % 9 * 50), calc($int13 + ($length10 / 9 + 1) * $int8 - 12), ^setpos_abs_left, ^setpos_abs_top);
 	~script24($intarray0($length10));
-	cc_setonvartransmit("script12(event_com, event_comsubid, $intarray0($length10)){var263}");
+	cc_setonvartransmit("script12(event_com, event_comsubid, $intarray0($length10)){if3}");
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
@@ -99,5 +99,5 @@ if ($boolean7 = true) {
 $int15 = ~steelborder($component4, "Bounty Hunter Shop", 0);
 if (cc_find($component4, $int15) = ^true) {
 	~script3364($enum5);
-	cc_setonvartransmit("script3363($enum5, event_com, event_comsubid){var262}");
+	cc_setonvartransmit("script3363($enum5, event_com, event_comsubid){if2}");
 }

@@ -1,11 +1,11 @@
 // 763
 [proc,trade_main_drawitems](int $int0, int $int1, component $com_trademain_your_offer2, component $com_trademain_your_removed3, component $com_trademain_other_offer4, component $com_trademain_other_removed5, component $com_trademain_accept_text6)
-if (%varbit4374 = 1) {
+if (%trade_this_player_removed = 1) {
 	if_settext("Trade modified", $com_trademain_your_removed3);
 } else {
 	if_settext("", $com_trademain_your_removed3);
 }
-if (%varbit4375 = 1) {
+if (%trade_other_player_removed = 1) {
 	if_settext("Trade modified", $com_trademain_other_removed5);
 } else {
 	if_settext("", $com_trademain_other_removed5);
@@ -145,8 +145,8 @@ while ($int16 < $int0) {
 	$int16 = calc($int16 + 1);
 }
 def_int $int17 = 0;
-if (%varbit13141 > 0) {
-	$int17 = ~min(3, ~time_convert_seconds(%varbit13141));
+if (%trade_accept_delay > 0) {
+	$int17 = ~min(3, ~time_convert_seconds(%trade_accept_delay));
 	if_settext("Check offer!<br><tostring($int17)>...", $com_trademain_accept_text6);
 	if_setcolour(0x666666, $com_trademain_accept_text6);
 } else {

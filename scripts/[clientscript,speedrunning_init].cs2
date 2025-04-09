@@ -1,11 +1,11 @@
 // 5886
 [clientscript,speedrunning_init](component $com_speedrunning_panel_list_layer0, component $com_speedrunning_panel_list_container1, component $com_speedrunning_panel_list_text_container2, component $com_speedrunning_panel_list_scrollbar3, component $com_speedrunning_panel_list4, component $com_speedrunning_panel_start_abandon_button5, component $com_speedrunning_panel_journal_button6, component $com_speedrunning_panel_info_button7, component $com_speedrunning_panel_stats_button8, component $com_speedrunning_panel_title9, component $com_speedrunning_panel_points10, component $com_speedrunning_panel_main_scrollbar11, component $com_speedrunning_panel_main_content12, component $com_speedrunning_panel_main_content_inner13, component $com_speedrunning_panel_bronze14, component $com_speedrunning_panel_silver15, component $com_speedrunning_panel_gold16, component $com_speedrunning_panel_platinum17, component $com_speedrunning_panel_diamond18, component $com_speedrunning_panel_unlocks19, component $com_speedrunning_panel_unlocks_content20, component $com_speedrunning_panel_items21, component $com_speedrunning_panel_items_content22, component $com_speedrunning_panel_info_overlay23, component $com_speedrunning_panel_info_overlay_close24, component $com_speedrunning_panel_info_overlay_scrollbar25, component $com_speedrunning_panel_info_overlay_text_layer26, component $com_speedrunning_panel_info_overlay_text27, component $com_speedrunning_panel_stats_overlay28, component $com_speedrunning_panel_stats_overlay_close29, component $com_speedrunning_panel_total_speedruns30, component $com_speedrunning_panel_total_points31, component $com_speedrunning_panel_total_trophies32, component $com_speedrunning_panel_total_bronze33, component $com_speedrunning_panel_total_silver34, component $com_speedrunning_panel_total_gold35, component $com_speedrunning_panel_total_platinum36, component $com_speedrunning_panel_total_diamond37)
 ~questlist_draw($com_speedrunning_panel_list_layer0, $com_speedrunning_panel_list_container1, $com_speedrunning_panel_list_text_container2, $com_speedrunning_panel_list_scrollbar3, $com_speedrunning_panel_list4, true);
-if (%var3373 ! null) {
-	if (~script6807(%var3373) = 1) {
-		if_settext("<~get_quest_name(%var3373)> (Beta)", $com_speedrunning_panel_title9);
+if (%latest_speedrun_panel ! null) {
+	if (~script6807(%latest_speedrun_panel) = 1) {
+		if_settext("<~get_quest_name(%latest_speedrun_panel)> (Beta)", $com_speedrunning_panel_title9);
 	} else {
-		if_settext(~get_quest_name(%var3373), $com_speedrunning_panel_title9);
+		if_settext(~get_quest_name(%latest_speedrun_panel), $com_speedrunning_panel_title9);
 	}
 }
 ~speedrunning_stats_update(
@@ -39,7 +39,7 @@ if_setonvartransmit("speedrunning_stats_update(
 	11 = $com_speedrunning_panel_total_gold35, 
 	12 = $com_speedrunning_panel_total_platinum36, 
 	13 = $com_speedrunning_panel_total_diamond37
-){var3365, var3366, var3367, var3368, var3369, var3766}", $com_speedrunning_panel_points10);
+){speedrun_points, speedrun_attempts, total_speedruns, speedrun_trophy_totals_1, speedrun_trophy_totals_2, speedrun_trophy_totals_3}", $com_speedrunning_panel_points10);
 ~script5909($com_speedrunning_panel_unlocks19, $com_speedrunning_panel_unlocks_content20, $com_speedrunning_panel_items21, $com_speedrunning_panel_items_content22, $com_speedrunning_panel_main_content_inner13);
 if_sethide(true, $com_speedrunning_panel_info_overlay23);
 if_sethide(true, $com_speedrunning_panel_stats_overlay28);

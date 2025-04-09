@@ -5,7 +5,7 @@ cc_deleteall($com_deadman_sigils_offered_display3);
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
-if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
+if (%if1 ! 0 | %if2 ! 0 | %if3 ! 0) {
 	if_sethide(false, $com_deadman_sigils_offered_container1);
 	$int16 = 3;
 	cc_create($com_deadman_sigils_offered_display3, ^iftype_text, $int15, false);
@@ -18,9 +18,9 @@ if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
 	cc_settextfont(p12_full);
 	cc_settext("First, choose a free sigil:");
 	$int16 = calc($int16 + 25);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var261, $com_deadman_sigils_choice05, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var262, $com_deadman_sigils_choice16, 255, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
-	$int15, $int16 = ~deadman_sigils_buildoffer(%var263, $com_deadman_sigils_choice27, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%if1, $com_deadman_sigils_choice05, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%if2, $com_deadman_sigils_choice16, 255, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
+	$int15, $int16 = ~deadman_sigils_buildoffer(%if3, $com_deadman_sigils_choice27, 235, $int14, $com_deadman_sigils_offered_display3, $int15, $int16);
 	$int16 = calc($int16 + 2);
 	if ($int16 > 160) {
 		$int17 = if_getscrolly($com_deadman_sigils_offered_scrolling2);
@@ -46,9 +46,9 @@ def_struct $struct22 = null;
 def_string $string0 = "<col=9f9f9f>Empty slot</col>";
 def_string $string1 = "<col=9f9f9f>Empty slot</col>";
 def_string $string2 = "<col=9f9f9f>Empty slot</col>";
-def_namedobj $namedobj23 = enum(int, namedobj, enum_4039, %varbit13019);
-def_namedobj $namedobj24 = enum(int, namedobj, enum_4039, %varbit13020);
-def_namedobj $namedobj25 = enum(int, namedobj, enum_4039, %varbit13021);
+def_namedobj $namedobj23 = enum(int, namedobj, enum_4039, %deadman_sigil_slot_0);
+def_namedobj $namedobj24 = enum(int, namedobj, enum_4039, %deadman_sigil_slot_1);
+def_namedobj $namedobj25 = enum(int, namedobj, enum_4039, %deadman_sigil_slot_2);
 if ($namedobj23 ! null) {
 	$struct20 = enum(int, struct, enum_4038, oc_param($namedobj23, param_1371));
 	if ($struct20 ! null) {

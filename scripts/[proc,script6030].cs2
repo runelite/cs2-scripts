@@ -1,12 +1,12 @@
 // 6030
 [proc,script6030](int $int0, component $com_bcs_pillar_emblem1)
 sound_synth(m2_fillcoal, 1, 0);
-def_int $int2 = calc(%varbit13849 + $int0);
+def_int $int2 = calc(%bcs_emblem_rotation + $int0);
 if ($int2 >= 32) {
-	%varbit13849 = 0;
+	%bcs_emblem_rotation = 0;
 } else if ($int2 < 0) {
-	%varbit13849 = 31;
+	%bcs_emblem_rotation = 31;
 } else {
-	%varbit13849 = $int2;
+	%bcs_emblem_rotation = $int2;
 }
 ~script6032($com_bcs_pillar_emblem1);

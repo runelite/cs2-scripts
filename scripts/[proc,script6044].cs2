@@ -1,25 +1,25 @@
 // 6044
 [proc,script6044](component $com_bcs_burner_meter_10, component $com_bcs_burner_meter_21, component $com_bcs_burner_meter_32, component $com_bcs_burner_result_meter3, component $com_bcs_burner_fire4)
 def_int $int5 = 0;
-if (%varbit13863 < 45) {
-	$int5 = scale(106, 45, ~minmax(0, 45, %varbit13863));
+if (%bcs_burner_1 < 45) {
+	$int5 = scale(106, 45, ~minmax(0, 45, %bcs_burner_1));
 } else {
 	$int5 = 106;
 }
 if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $com_bcs_burner_meter_10);
-if (%varbit13864 < 45) {
-	$int5 = scale(106, 45, ~minmax(0, 45, %varbit13864));
+if (%bcs_burner_2 < 45) {
+	$int5 = scale(106, 45, ~minmax(0, 45, %bcs_burner_2));
 } else {
 	$int5 = 106;
 }
 if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $com_bcs_burner_meter_21);
-if (%varbit13865 < 45) {
-	$int5 = scale(106, 45, ~minmax(0, 45, %varbit13865));
+if (%bcs_burner_3 < 45) {
+	$int5 = scale(106, 45, ~minmax(0, 45, %bcs_burner_3));
 } else {
 	$int5 = 106;
 }
 if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $com_bcs_burner_meter_32);
-def_int $int6 = calc((%varbit13863 + %varbit13864 + %varbit13865) / 3);
+def_int $int6 = calc((%bcs_burner_1 + %bcs_burner_2 + %bcs_burner_3) / 3);
 if ($int6 < 45) {
 	$int5 = scale(106, 45, ~minmax(0, 45, $int6));
 } else {

@@ -7,9 +7,9 @@ while ($int22 <= 23) {
 	}
 	$int22 = calc($int22 + 1);
 }
-def_stat $stat23 = enum(int, stat, enum_681, %varbit4703);
+def_stat $stat23 = enum(int, stat, enum_681, %xpdrops_setup_skill);
 if ($stat23 = null) {
-	if (%varbit4703 ! calc(23 + 1)) {
+	if (%xpdrops_setup_skill ! calc(23 + 1)) {
 		if_sethide(false, $component0);
 		if_sethide(false, $component1);
 		if_sethide(true, $component4);
@@ -41,7 +41,7 @@ if (cc_find($component4, 0) = ^true) {
 		cc_settext("Total XP");
 	}
 }
-if (%varbit4704 = 1) {
+if (%xpdrops_setup_type = 1) {
 	if (cc_find($component5, 0) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
@@ -114,9 +114,9 @@ if (%varbit4704 = 1) {
 		23 = $component21
 	)", $component7);
 	if ($stat23 ! null) {
-		if_settext(~xpdrops_tostring(%var261, 1), $component14);
+		if_settext(~xpdrops_tostring(%if1, 1), $component14);
 	} else {
-		if_settext(~xpdrops_tostring_thousands(%var261), $component14);
+		if_settext(~xpdrops_tostring_thousands(%if1), $component14);
 	}
 	if_settext("", $component15);
 	if_settext("", $component16);
@@ -132,7 +132,7 @@ if (%varbit4704 = 1) {
 	if_setonop("opsound(event_op, 1216)", $component11);
 	if_setonop(null, $component12);
 	if_setonop(null, $component13);
-} else if (%varbit4704 = 2) {
+} else if (%xpdrops_setup_type = 2) {
 	if (cc_find($component5, 0) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
@@ -206,11 +206,11 @@ if (%varbit4704 = 1) {
 	if_setonop(null, $component7);
 	if_settext("", $component14);
 	if ($stat23 ! null) {
-		if_settext(~xpdrops_tostring(%var261, 1), $component15);
-		if_settext(~xpdrops_tostring(%var262, 1), $component16);
+		if_settext(~xpdrops_tostring(%if1, 1), $component15);
+		if_settext(~xpdrops_tostring(%if2, 1), $component16);
 	} else {
-		if_settext(~xpdrops_tostring_thousands(%var261), $component15);
-		if_settext(~xpdrops_tostring_thousands(%var262), $component16);
+		if_settext(~xpdrops_tostring_thousands(%if1), $component15);
+		if_settext(~xpdrops_tostring_thousands(%if2), $component16);
 	}
 	if_setcolour(0x808080, $component17);
 	if_setcolour(0xff981f, $component18);

@@ -7,13 +7,13 @@ if ($opindex2 ! 2) {
 	return;
 }
 def_int $int19 = inv_total(inv, coins_995);
-if (%varbit4397 = 0 & %varbit4398 > 0) {
+if (%ge_newoffer_type = 0 & %ge_newoffer_price > 0) {
 	if ($int19 <= 0) {
-		%varbit4396 = 1;
+		%ge_newoffer_quantity = 1;
 	} else {
-		%varbit4396 = calc($int19 / %varbit4398);
-		if (%varbit4396 < 1) {
-			%varbit4396 = 1;
+		%ge_newoffer_quantity = calc($int19 / %ge_newoffer_price);
+		if (%ge_newoffer_quantity < 1) {
+			%ge_newoffer_quantity = 1;
 		}
 	}
 	sound_synth(ge_up_amount, 1, 0);

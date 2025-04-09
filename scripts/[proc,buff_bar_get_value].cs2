@@ -16,152 +16,152 @@ switch_struct ($struct0) {
 		}
 	case buff_imbued_heart_cooldown_3083 :
 		if (%varcint479 > 0) {
-			return(~script5942(%varcint479, %varbit5361, struct_param($struct0, param_1541)));
+			return(~script5942(%varcint479, %imbued_heart_timer, struct_param($struct0, param_1541)));
 		}
 	case buff_dragonfire_shield_special_cooldown_3082 :
 		if (%varcint480 > 0) {
-			return(~script5942(%varcint480, %varbit6539, 8));
+			return(~script5942(%varcint480, %dragonfire_shield_recharge, 8));
 		}
 	case buff_stamina_boost_3086 :
-		if (%varbit25 = 1) {
-			return(~script5942(%varcint481, calc(%varbit10385 + %varbit24), 10));
+		if (%stamina_active = 1) {
+			return(~script5942(%varcint481, calc(%stamina_duration_extra + %stamina_duration), 10));
 		}
 	case buff_prayer_enhance_4150 :
-		if (%varbit12397 = 1 & %varbit5417 > 0) {
-			return(~script5942(%varcint482, %varbit5417, %varbit5419));
+		if (%raids_prayer_enhance_tier = 1 & %raids_prayerenhance_timer > 0) {
+			return(~script5942(%varcint482, %raids_prayerenhance_timer, %raids_prayerenhance_rate));
 		}
 	case buff_prayer_enhance_3087 :
-		if (%varbit12397 = 2 & %varbit5417 > 0) {
-			return(~script5942(%varcint482, %varbit5417, %varbit5419));
+		if (%raids_prayer_enhance_tier = 2 & %raids_prayerenhance_timer > 0) {
+			return(~script5942(%varcint482, %raids_prayerenhance_timer, %raids_prayerenhance_rate));
 		}
 	case buff_prayer_enhance_4151 :
-		if (%varbit12397 = 3 & %varbit5417 > 0) {
-			return(~script5942(%varcint482, %varbit5417, %varbit5419));
+		if (%raids_prayer_enhance_tier = 3 & %raids_prayerenhance_timer > 0) {
+			return(~script5942(%varcint482, %raids_prayerenhance_timer, %raids_prayerenhance_rate));
 		}
 	case buff_overload_4152 :
-		if (%varbit5420 = 1 & %varcint483 > 0) {
-			return(~script5942(%varcint483, %varbit5418, 25));
+		if (%raids_overload_tier = 1 & %varcint483 > 0) {
+			return(~script5942(%varcint483, %raids_overload_timer, 25));
 		}
 	case buff_overload_3089 :
-		if (%varbit5420 = 2 & %varcint483 > 0) {
-			return(~script5942(%varcint483, %varbit5418, 25));
+		if (%raids_overload_tier = 2 & %varcint483 > 0) {
+			return(~script5942(%varcint483, %raids_overload_timer, 25));
 		}
 	case buff_overload_4153 :
-		if (%varbit5420 = 3 & %varcint483 > 0) {
-			return(~script5942(%varcint483, %varbit5418, 25));
+		if (%raids_overload_tier = 3 & %varcint483 > 0) {
+			return(~script5942(%varcint483, %raids_overload_timer, 25));
 		}
 	case buff_overload_3088 :
 		if (%varcint483 > 0) {
-			return(~script5942(%varcint483, %varbit3955, 25));
+			return(~script5942(%varcint483, %nzone_overload_potion_effects, 25));
 		}
 	case buff_antifire_3102 :
 		if (%varcint484 > 0) {
-			return(~script5942(%varcint484, %varbit3981, struct_param($struct0, param_1541)));
+			return(~script5942(%varcint484, %antifire_potion, struct_param($struct0, param_1541)));
 		}
 	case buff_superior_antifire_3103 :
 		if (%varcint485 > 0) {
-			return(~script5942(%varcint485, %varbit6101, struct_param($struct0, param_1541)));
+			return(~script5942(%varcint485, %super_antifire_potion, struct_param($struct0, param_1541)));
 		}
 	case buff_antipoison_3105 :
-		if (%var102 >= -38 & %var102 < 0) {
-			return(~script5942(%varcint486, calc(%var102 * -1), struct_param($struct0, param_1541)));
+		if (%poison >= -38 & %poison < 0) {
+			return(~script5942(%varcint486, calc(%poison * -1), struct_param($struct0, param_1541)));
 		}
 	case buff_anti_venom_3104 :
-		if (%var102 < -38) {
-			return(~script5942(%varcint486, calc((%var102 + 38) * -1), struct_param($struct0, param_1541)));
+		if (%poison < -38) {
+			return(~script5942(%varcint486, calc((%poison + 38) * -1), struct_param($struct0, param_1541)));
 		}
 	case buff_charge_3080 :
 		if (%varcint487 > 0) {
-			return(~script5942(%varcint487, %var272, 2));
+			return(~script5942(%varcint487, %magearena_charge, 2));
 		}
 	case buff_magic_imbue_3090 :
 		if (%varcint488 > 0) {
-			return(~script5942(%varcint488, %varbit5438, struct_param($struct0, param_1541)));
+			return(~script5942(%varcint488, %magic_imbue_active, struct_param($struct0, param_1541)));
 		}
 	case buff_godwars_altar_cooldown_3081 :
 		if (%varcint489 > 0) {
-			return(~script5942(%varcint489, %varbit4099, 100));
+			return(~script5942(%varcint489, %godwars_altar_delay, 100));
 		}
 	case buff_scurrius_food_pile_cooldown_776 :
 		if (%varcint1188 > 0) {
-			return(~script5942(%varcint1188, %varbit9581, 100));
+			return(~script5942(%varcint1188, %rat_boss_food_pile_player_eat_delay, 100));
 		}
 	case buff_home_teleport_cooldown_3077 :
-		if (%var892 > 0) {
-			return(~script5941(%var892, 30));
+		if (%aide_tele_timer > 0) {
+			return(~script5941(%aide_tele_timer, 30));
 		}
 	case buff_last_recall_cooldown_5894 :
 		$int1 = max(0, calc(6 - 1 * (~stat_totallevel / 300)));
-		if (%var4030 > 0 & $int1 > 0) {
-			return(~script5941(%var4030, $int1));
+		if (%league_last_recall_cooldown > 0 & $int1 > 0) {
+			return(~script5941(%league_last_recall_cooldown, $int1));
 		}
 	case buff_undying_retribution_cooldown_5895 :
 		if (%varcint1185 > 0) {
 			return(~script5940(%varcint1185, calc(%varcint1186 - 3)));
 		}
 	case buff_minigame_teleport_cooldown_3078 :
-		if (%var888 > 0) {
-			return(~script5941(%var888, 20));
+		if (%slug2_regionuid > 0) {
+			return(~script5941(%slug2_regionuid, 20));
 		}
 	case buff_teleport_block_3079 :
-		if (%varbit4163 > 0) {
-			return(calc(%varbit4163 - 100));
+		if (%teleblock_cycles > 0) {
+			return(calc(%teleblock_cycles - 100));
 		}
 	case buff_divine_attack_potion_3094 :
-		if (%varbit13663 = 0) {
-			return(%varbit8429);
+		if (%divinecombat_potion_time = 0) {
+			return(%divineattack_potion_time);
 		}
 	case buff_divine_strength_potion_3101 :
-		if (%varbit13663 = 0) {
-			return(%varbit8430);
+		if (%divinecombat_potion_time = 0) {
+			return(%divinestrength_potion_time);
 		}
 	case buff_divine_defence_potion_3098 :
-		if (%varbit13663 = 0 & %varbit13664 = 0 & %varbit13665 = 0 & %varbit10029 = 0) {
-			return(%varbit8431);
+		if (%divinecombat_potion_time = 0 & %divinebastion_potion_time = 0 & %divinebattlemage_potion_time = 0 & %moonlight_potion_time = 0) {
+			return(%divinedefence_potion_time);
 		}
 	case buff_moonlight_potion_912 :
-		if (%varbit10029 > 0) {
-			return(%varbit10029);
+		if (%moonlight_potion_time > 0) {
+			return(%moonlight_potion_time);
 		}
 	case buff_divine_magic_potion_3099 :
-		if (%varbit13665 = 0) {
-			return(%varbit8433);
+		if (%divinebattlemage_potion_time = 0) {
+			return(%divinemagic_potion_time);
 		}
 	case buff_divine_range_potion_3100 :
-		if (%varbit13664 = 0) {
-			return(%varbit8432);
+		if (%divinebastion_potion_time = 0) {
+			return(%divinerange_potion_time);
 		}
 	case buff_divine_bastion_potion_3095 :
-		if (%varbit13664 > 0) {
-			return(%varbit13664);
+		if (%divinebastion_potion_time > 0) {
+			return(%divinebastion_potion_time);
 		}
 	case buff_divine_battlemage_potion_3096 :
-		if (%varbit13665 > 0) {
-			return(%varbit13665);
+		if (%divinebattlemage_potion_time > 0) {
+			return(%divinebattlemage_potion_time);
 		}
 	case buff_divine_combat_potion_3097 :
-		if (%varbit13663 > 0) {
-			return(%varbit13663);
+		if (%divinecombat_potion_time > 0) {
+			return(%divinecombat_potion_time);
 		}
 	case buff_vengeance_active_3085 :
-		if (%varbit2450 > 0) {
-			return(%varbit2450);
+		if (%vengeance_rebound > 0) {
+			return(%vengeance_rebound);
 		}
 	case buff_vengeance_cast_cooldown_3084 :
 		if (%varcint478 > 0) {
-			return(~script5942(%varcint478, %varbit2451, 50));
+			return(~script5942(%varcint478, %vengeance_timelimit, 50));
 		}
 	case buff_lesser_corruption_3118 :
-		if (%varbit12136 = 1) {
+		if (%arceuus_corruption = 1) {
 			return(1);
 		}
 	case buff_greater_corruption_4156 :
-		if (%varbit12136 = 2) {
+		if (%arceuus_corruption = 2) {
 			return(1);
 		}
 	case buff_corruption_cooldown_3119 :
 		if (%varcint515 > 0) {
-			return(~script5942(%varcint515, %varbit12288, 50));
+			return(~script5942(%varcint515, %arceuus_corruption_cooldown, 50));
 		}
 	case buff_mark_of_darkness_3120 :
 		if (%varcint516 > 0) {
@@ -173,15 +173,15 @@ switch_struct ($struct0) {
 		}
 	case buff_shadow_veil_cooldown_3121 :
 		if (%varcint517 > 0) {
-			return(~script5942(%varcint517, %varbit12291, 50));
+			return(~script5942(%varcint517, %arceuus_shadow_veil_cooldown, 50));
 		}
 	case buff_death_charge_3124 :
 		if (%varcint520 > 0) {
-			return(~script5942(%varcint520, %varbit12411, 100));
+			return(~script5942(%varcint520, %arceuus_death_charge_active, 100));
 		}
 	case buff_death_charge_cooldown_3123 :
 		if (%varcint519 > 0) {
-			return(~script5942(%varcint519, %varbit12138, 100));
+			return(~script5942(%varcint519, %arceuus_death_charge_cooldown, 100));
 		}
 	case buff_ward_of_arceuus_3126 :
 		if (%varcint522 > 0) {
@@ -189,7 +189,7 @@ switch_struct ($struct0) {
 		}
 	case buff_ward_of_arceuus_cooldown_3125 :
 		if (%varcint521 > 0) {
-			return(~script5942(%varcint521, %varbit12293, 50));
+			return(~script5942(%varcint521, %arceuus_ward_cooldown, 50));
 		}
 	case buff_resurrection_3128 :
 		if (%varcint524 > 0) {
@@ -201,31 +201,31 @@ switch_struct ($struct0) {
 		}
 	case buff_resurrection_cooldown_3127 :
 		if (%varcint523 > 0) {
-			return(~script5942(%varcint523, %varbit12290, 17));
+			return(~script5942(%varcint523, %arceuus_resurrection_cooldown, 17));
 		}
 	case buff_ammo_remaining_3661 :
-		if (%var3160 ! null) {
-			return(%var3159);
+		if (%buff_bar_weapon ! null) {
+			return(%buff_bar_ammo_amount);
 		}
 	case buff_ammo_remaining_3659 :
-		if (%var3160 = null) {
-			return(%var3159);
+		if (%buff_bar_weapon = null) {
+			return(%buff_bar_ammo_amount);
 		}
 	case buff_time_till_next_poison_hit_3740 :
-		if (%var102 > 0 & %var102 < 1000000) {
+		if (%poison > 0 & %poison < 1000000) {
 			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
 	case buff_time_till_next_venom_hit_3741 :
-		if (%var102 >= 1000000) {
+		if (%poison >= 1000000) {
 			return(~script5940(%varcint983, struct_param($struct0, param_1541)));
 		}
 	case buff_burn_damage_accumulated_989 :
-		if (%varbit10964 > 0) {
-			return(%varbit10964);
+		if (%player_own_burn_damage_total > 0) {
+			return(%player_own_burn_damage_total);
 		}
 	case buff_desert_heat_timer_3763 :
 		if (%varcint947 > 0) {
-			return(~script5942(%varcint947, 1, %varbit13137));
+			return(~script5942(%varcint947, 1, %buff_bar_desert_heat_timer_iteration));
 		}
 	case buff_imprisoned_3765 :
 		if (%varcint950 > 0) {
@@ -240,24 +240,24 @@ switch_struct ($struct0) {
 			return(~script4678(%varcint952));
 		}
 	case buff_cannon_ammo_4158 :
-		if (%var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13671 = 0 & %varbit13672 = 0) {
-			return(%var3);
+		if (%dropcannon = 4 & calc(map_world % 128) = %mcannon_world & %mcannon_last_balltype = 0 & %mcannon_decayed = 0) {
+			return(%rockthrower);
 		}
 	case buff_cannon_ammo_granite_cannonball_4159 :
-		if (%var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13671 = 1 & %varbit13672 = 0) {
-			return(%var3);
+		if (%dropcannon = 4 & calc(map_world % 128) = %mcannon_world & %mcannon_last_balltype = 1 & %mcannon_decayed = 0) {
+			return(%rockthrower);
 		}
 	case buff_forinthry_surge_additional_15_accuracy_and_damage_to_the_revenants_4134 :
-		if (%var3347 > 0) {
-			return(calc(%var3347 - %var3078));
+		if (%revenant_reward_timed_buff_end > 0) {
+			return(calc(%revenant_reward_timed_buff_end - %date_minutes));
 		}
 	case buff_stat_renewal_4367 :
-		if (%varbit14448 > 0) {
-			return(~script5942(%varcint1088, %varbit14448, 25));
+		if (%statrenewal_potion_timer > 0) {
+			return(~script5942(%varcint1088, %statrenewal_potion_timer, 25));
 		}
 	case buff_prayer_regeneration_1014 :
-		if (%varbit11361 > 0) {
-			return(~script5942(%varcint1200, %varbit11361, 12));
+		if (%prayer_regeneration_potion_timer > 0) {
+			return(~script5942(%varcint1200, %prayer_regeneration_potion_timer, 12));
 		}
 	case buff_weapon_specialist_3773 :
 		if (~script2278(0) = 1) {
@@ -320,15 +320,15 @@ switch_struct ($struct0) {
 			return(1);
 		}
 	case struct_1112 :
-		if (~script7658 = true & %varbit11580 > 0) {
+		if (~script7658 = true & %league_combat_mastery_melee_progress > 0) {
 			return(1);
 		}
 	case struct_1113 :
-		if (~script7658 = true & %varbit11581 > 0) {
+		if (~script7658 = true & %league_combat_mastery_ranged_progress > 0) {
 			return(1);
 		}
 	case struct_1114 :
-		if (~script7658 = true & %varbit11582 > 0) {
+		if (~script7658 = true & %league_combat_mastery_magic_progress > 0) {
 			return(1);
 		}
 	case buff_twin_strikes_4099 :
@@ -396,11 +396,11 @@ switch_struct ($struct0) {
 			return(~script6662);
 		}
 	case buff_cannon_decay_341 :
-		if (%varcint1013 > 0 & %var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13672 = 0) {
+		if (%varcint1013 > 0 & %dropcannon = 4 & calc(map_world % 128) = %mcannon_world & %mcannon_decayed = 0) {
 			return(~script5940(%varcint1013, struct_param($struct0, param_1541)));
 		}
 	case buff_cannon_broken_342 :
-		if (%varcint1013 > 0 & %var2 = 4 & calc(map_world % 128) = %varbit1968 & %varbit13672 = 1) {
+		if (%varcint1013 > 0 & %dropcannon = 4 & calc(map_world % 128) = %mcannon_world & %mcannon_decayed = 1) {
 			return(~script5940(%varcint1013, struct_param($struct0, param_1541)));
 		}
 	case buff_apmekens_sight_4368 :
@@ -436,13 +436,13 @@ switch_struct ($struct0) {
 			return(~script4678(%varcint1097));
 		}
 	case buff_stat_boost_4376 :
-		if (%varbit14344 > 0) {
-			return(~script5942(%varcint1089, %varbit14344, 25));
+		if (%toa_midraidloot_stats_timer > 0) {
+			return(~script5942(%varcint1089, %toa_midraidloot_stats_timer, 25));
 		}
 	case buff_time_till_next_decay_hit_4457 :
 		if (%varcint1144 > 0) {
-			if (%varbit14692 < 5) {
-				return(~script5940(%varcint1144, calc(10 * (5 - %varbit14692))));
+			if (%wbr_decay_state < 5) {
+				return(~script5940(%varcint1144, calc(10 * (5 - %wbr_decay_state))));
 			}
 			return(~script5940(%varcint1144, 10));
 		}
@@ -454,54 +454,54 @@ switch_struct ($struct0) {
 		return(~script1784);
 	case buff_shooting_star_discovery_bonus_4695 :
 		if (%varcint1174 > 0) {
-			return(%varbit15351);
+			return(%star_bonus_dust);
 		}
 	case buff_doom_888 :
 		if (%varcint1192 > 0) {
-			return(%varbit9801);
+			return(%colosseum_doom_stacks_client);
 		}
 	case buff_curse_of_the_moons_889 :
 		if (%varcint1193 > 0) {
-			return(%varbit9853);
+			return(%pmoon_boss_condition);
 		}
 	case struct_4693 :
-		if (%var4007 = 96 & %varbit15348 > 0) {
-			return(%varbit15348);
+		if (%group_gathering_active_buff = 96 & %group_gathering_buff_value > 0) {
+			return(%group_gathering_buff_value);
 		}
 		return(0);
 	case struct_4694 :
-		if (%varbit15350 = 0 & ~axe_checker = null) {
+		if (%buff_woodcutting_leprechaun_rainbows_setting = 0 & ~axe_checker = null) {
 			return(0);
 		}
-		if (%varbit15344 >= 5) {
-			return(calc(%varbit15344 / 5));
+		if (%gathering_event_woodcutting_leprechaun_total_rainbows >= 5) {
+			return(calc(%gathering_event_woodcutting_leprechaun_total_rainbows / 5));
 		}
 		return(0);
 	case buff_dragonfire_ward_special_cooldown_839 :
 		if (%varcint1190 > 0) {
-			return(~script5942(%varcint1190, %varbit6540, 8));
+			return(~script5942(%varcint1190, %dragonfire_ward_recharge, 8));
 		}
 	case buff_ancient_wyvern_shield_special_cooldown_840 :
 		if (%varcint1191 > 0) {
 			return(~script4678(%varcint1191));
 		}
 	case buff_stone_of_jas_empowerment_964 :
-		return(%varbit10934);
+		return(%wgs_stone_of_jas_boost);
 	case buff_smouldering_heart_energy_965 :
-		if (%varbit10944 > 0) {
-			return(~script5942(%var4244, %varbit10944, struct_param($struct0, param_1541)));
+		if (%wgs_smouldering_heart_timer > 0) {
+			return(~script5942(%wgs_smouldering_heart_buff_start, %wgs_smouldering_heart_timer, struct_param($struct0, param_1541)));
 		}
 	case buff_smouldering_gland_blessing_966 :
-		if (%varbit10945 > 0) {
-			return(~script5942(%var4245, %varbit10945, struct_param($struct0, param_1541)));
+		if (%wgs_smouldering_gland_timer > 0) {
+			return(~script5942(%wgs_smouldering_gland_buff_start, %wgs_smouldering_gland_timer, struct_param($struct0, param_1541)));
 		}
 	case buff_deadman_blighted_overload_977 :
 		if (%varcint1197 > 0) {
-			return(~script5942(%varcint1197, %varbit10954, 25));
+			return(~script5942(%varcint1197, %deadman_overload_potion_effects, 25));
 		}
 	case buff_goading_potion_1023 :
-		if (%varbit11294 > 0) {
-			return(~script5942(%varcint1206, %varbit11294, 6));
+		if (%goading_potion_timer > 0) {
+			return(~script5942(%varcint1206, %goading_potion_timer, 6));
 		}
 }
 return(struct_param($struct0, param_1540));

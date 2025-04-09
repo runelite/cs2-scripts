@@ -8,7 +8,7 @@ cc_deleteall($com_gim_leaving_scrollbar10);
 if_setonop("gim_buttons_click($com_gim_leaving_text_container9, $com_gim_leaving_gim_button2, $com_gim_leaving_gim_competitive_button3, $com_gim_leaving_main_button4, 1)", $com_gim_leaving_gim_button2);
 if_setop(1, "Select", $com_gim_leaving_gim_button2);
 def_int $int11 = 0;
-if (%varbit1777 = 6) {
+if (%ironman = 6) {
 	if_sethide(true, $com_gim_leaving_option_gim_competitive6);
 	$int11 = calc(if_getwidth($com_gim_leaving_frame0) / 2);
 	if_setsize($int11, 0, ^setsize_abs, ^setsize_minus, $com_gim_leaving_option_gim5);

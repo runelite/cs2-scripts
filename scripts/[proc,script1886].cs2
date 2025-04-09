@@ -1,32 +1,32 @@
 // 1886
 [proc,script1886](component $com_pog_coin_machine_pog_coin_set_010, component $com_pog_coin_machine_pog_coin_set_021, component $com_pog_coin_machine_pog_coin_set_032)
 def_string $string0 = "Insert";
-if (%var3994 ! null) {
-	$string0 = "Replace <col=ff9040><oc_name(%var3994)></col>";
-	if (%var856 ! null) {
-		$string0 = "<$string0> with <col=ff9040><oc_name(%var856)></col>";
+if (%pog_coin_display1_obj ! null) {
+	$string0 = "Replace <col=ff9040><oc_name(%pog_coin_display1_obj)></col>";
+	if (%eyeglo_coin_selected ! null) {
+		$string0 = "<$string0> with <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 	}
-} else if (%var856 ! null) {
-	$string0 = "<$string0> <col=ff9040><oc_name(%var856)></col>";
+} else if (%eyeglo_coin_selected ! null) {
+	$string0 = "<$string0> <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 }
 if_setop(1, $string0, $com_pog_coin_machine_pog_coin_set_010);
 def_string $string1 = "Insert";
-if (%var3995 ! null) {
-	$string1 = "Replace <col=ff9040><oc_name(%var3995)></col>";
-	if (%var856 ! null) {
-		$string1 = "<$string1> with <col=ff9040><oc_name(%var856)></col>";
+if (%pog_coin_display2_1_obj ! null) {
+	$string1 = "Replace <col=ff9040><oc_name(%pog_coin_display2_1_obj)></col>";
+	if (%eyeglo_coin_selected ! null) {
+		$string1 = "<$string1> with <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 	}
-} else if (%var856 ! null) {
-	$string1 = "<$string1> <col=ff9040><oc_name(%var856)></col>";
+} else if (%eyeglo_coin_selected ! null) {
+	$string1 = "<$string1> <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 }
 if_setop(1, $string1, $com_pog_coin_machine_pog_coin_set_021);
 def_string $string2 = "Insert";
-if (%var3996 ! null) {
-	$string2 = "Replace <col=ff9040><oc_name(%var3996)></col>";
-	if (%var856 ! null) {
-		$string2 = "<$string2> with <col=ff9040><oc_name(%var856)></col>";
+if (%pog_coin_display2_2_obj ! null) {
+	$string2 = "Replace <col=ff9040><oc_name(%pog_coin_display2_2_obj)></col>";
+	if (%eyeglo_coin_selected ! null) {
+		$string2 = "<$string2> with <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 	}
-} else if (%var856 ! null) {
-	$string2 = "<$string2> <col=ff9040><oc_name(%var856)></col>";
+} else if (%eyeglo_coin_selected ! null) {
+	$string2 = "<$string2> <col=ff9040><oc_name(%eyeglo_coin_selected)></col>";
 }
 if_setop(1, $string2, $com_pog_coin_machine_pog_coin_set_032);

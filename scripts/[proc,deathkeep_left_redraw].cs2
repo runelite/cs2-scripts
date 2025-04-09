@@ -31,7 +31,7 @@ if ($int4 > 0) {
 	}
 }
 def_int $int20 = 500000;
-if (%varbit1777 ! 0) {
+if (%ironman ! 0) {
 	$int20 = calc($int20 / 2);
 }
 def_int $int21 = 0;
@@ -81,9 +81,9 @@ while ($int25 > 0) {
 }
 if (~script5027 = 1 | ~script5028(inv) = 1) {
 	if ($int0 = 1) {
-		$int14, $int15 = ~script4906(%var4142, %var4141, $int1, $int2, $int3, $int14, "Dizana's quiver");
+		$int14, $int15 = ~script4906(%dizanas_quiver_temp_ammo, %dizanas_quiver_temp_ammo_amount, $int1, $int2, $int3, $int14, "Dizana's quiver");
 	} else {
-		$int12, $int13 = ~script4905(%var4142, %var4141, $int1, $int2, $int3, $int12, "Dizana's quiver");
+		$int12, $int13 = ~script4905(%dizanas_quiver_temp_ammo, %dizanas_quiver_temp_ammo_amount, $int1, $int2, $int3, $int12, "Dizana's quiver");
 	}
 }
 cc_deleteall(deathkeep:items);
@@ -91,7 +91,7 @@ def_int $int26 = 0;
 def_int $int27 = 0;
 def_string $string0 = "";
 $int26, $int27 = ~deathkeep_left_setsection("Items that are <col=ffffff>KEPT</col>:", deathkeep:kept, $int9, $int10, $int26, $int27);
-if (%varbit1777 = 2) {
+if (%ironman = 2) {
 	$string0 = "Items <col=ff0000>DROPPED</col> near where you die:";
 } else if ($int22 > 1) {
 	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: <~tostring_spacer($int22, ",")> coins)</col>";
@@ -106,7 +106,7 @@ if ($int0 = 1) {
 } else {
 	$int26, $int27 = ~deathkeep_left_setsection("Items <col=ff0000>DROPPED</col> near where you die:", deathkeep:pker, $int14, $int15, $int26, $int27);
 }
-if (%varbit1777 = 2) {
+if (%ironman = 2) {
 	$string0 = "Items <col=ff0000>DROPPED</col> as coins:";
 } else {
 	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col> as coins:";

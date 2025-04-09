@@ -1,8 +1,8 @@
 // 3835
 [clientscript,settings_tab_op](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
 ~settings_op_sound(true);
-%varbit9656 = $int2;
-%varbit16073 = 0;
+%settings_category = $int2;
+%floater_is_searching = 0;
 ~searchbar_setup_op(
 	0 = $component0, 
 	1 = $component1, 
@@ -22,7 +22,7 @@
 	15 = $component13, 
 	16 = $component16
 );
-%varbit9657 = 0;
+%settings_selected_setting = 0;
 ~settings_create_tabs(
 	0 = $component0, 
 	1 = $component1, 

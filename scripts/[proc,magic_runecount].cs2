@@ -8,18 +8,18 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = ~league_relic_active(superior_sorcerer_4723);
 def_component $component10 = enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:mainmodal);
-if (%varbit14161 > 0 & if_hassub($component10) = true) {
+if (%pvpa_transmit_viewingrunepouch > 0 & if_hassub($component10) = true) {
 	$obj1 = $obj1;
 } else if (map_members = true) {
 	if (inv_total(inv, divine_rune_pouch_27281) > 0 | inv_total(inv, divine_rune_pouch_trouver_27509) > 0) {
-		$int3, $int4, $int5, $int6 = %varbit29, %varbit1622, %varbit1623, %varbit14285;
+		$int3, $int4, $int5, $int6 = %rune_pouch_type_1, %rune_pouch_type_2, %rune_pouch_type_3, %rune_pouch_type_4;
 		if ($int9 = 1) {
-			$int7, $int8 = %varbit15373, %varbit15374;
+			$int7, $int8 = %rune_pouch_type_5, %rune_pouch_type_6;
 		}
 	} else if (inv_total(inv, bh_rune_pouch_12791) > 0 | inv_total(inv, bh_rune_pouch_trouver_24416) > 0) {
-		$int3, $int4, $int5 = %varbit29, %varbit1622, %varbit1623;
+		$int3, $int4, $int5 = %rune_pouch_type_1, %rune_pouch_type_2, %rune_pouch_type_3;
 		if ($int9 = 1) {
-			$int7, $int8 = %varbit15373, %varbit15374;
+			$int7, $int8 = %rune_pouch_type_5, %rune_pouch_type_6;
 		}
 	}
 } else {
@@ -32,14 +32,14 @@ if (%varbit14161 > 0 & if_hassub($component10) = true) {
 }
 def_int $int11 = enum(obj, int, enum_55, $obj0);
 if ($int11 ! 0) {
-	if (%varbit14161 > 0 & if_hassub($component10) = true) {
-		if (~script6425(%var3450, $obj0, $int11) = 1) {
+	if (%pvpa_transmit_viewingrunepouch > 0 & if_hassub($component10) = true) {
+		if (~script6425(%pvpa_editing, $obj0, $int11) = 1) {
 			return(^max_32bit_int);
 		}
-	} else if (%varbit14017 = 1 & inv_total(inv, pvpa_rune_replacement_27086) > 0 & ~script6425(~script6432(%varbit14024), $obj0, $int11) = 1) {
+	} else if (%pvpa_battlearea_status = 1 & inv_total(inv, pvpa_rune_replacement_27086) > 0 & ~script6425(~script6432(%pvpa_transmit_build), $obj0, $int11) = 1) {
 		return(^max_32bit_int);
 	}
-	if (%varbit4145 = 1 & (map_members = true | oc_members($obj0) = 0)) {
+	if (%fountain_of_rune_active = 1 & (map_members = true | oc_members($obj0) = 0)) {
 		return(^max_32bit_int);
 	}
 }
@@ -63,22 +63,22 @@ switch_obj ($obj0) {
 			$int12 = ~add($int12, inv_total(inv, dustrune_4696));
 			$int12 = ~add($int12, inv_total(inv, nzone_airrune_11715));
 			if (enum(int, boolean, enum_983, $int3) = true) {
-				$int12 = ~add($int12, %varbit1624);
+				$int12 = ~add($int12, %rune_pouch_quantity_1);
 			}
 			if (enum(int, boolean, enum_983, $int4) = true) {
-				$int12 = ~add($int12, %varbit1625);
+				$int12 = ~add($int12, %rune_pouch_quantity_2);
 			}
 			if (enum(int, boolean, enum_983, $int5) = true) {
-				$int12 = ~add($int12, %varbit1626);
+				$int12 = ~add($int12, %rune_pouch_quantity_3);
 			}
 			if (enum(int, boolean, enum_983, $int6) = true) {
-				$int12 = ~add($int12, %varbit14286);
+				$int12 = ~add($int12, %rune_pouch_quantity_4);
 			}
 			if (enum(int, boolean, enum_983, $int7) = true) {
-				$int12 = ~add($int12, %varbit15375);
+				$int12 = ~add($int12, %rune_pouch_quantity_5);
 			}
 			if (enum(int, boolean, enum_983, $int8) = true) {
-				$int12 = ~add($int12, %varbit15376);
+				$int12 = ~add($int12, %rune_pouch_quantity_6);
 			}
 		}
 		return($int12);
@@ -102,22 +102,22 @@ switch_obj ($obj0) {
 			$int12 = ~add($int12, inv_total(inv, mudrune_4698));
 			$int12 = ~add($int12, inv_total(inv, nzone_waterrune_11716));
 			if (enum(int, boolean, enum_987, $int3) = true) {
-				$int12 = ~add($int12, %varbit1624);
+				$int12 = ~add($int12, %rune_pouch_quantity_1);
 			}
 			if (enum(int, boolean, enum_987, $int4) = true) {
-				$int12 = ~add($int12, %varbit1625);
+				$int12 = ~add($int12, %rune_pouch_quantity_2);
 			}
 			if (enum(int, boolean, enum_987, $int5) = true) {
-				$int12 = ~add($int12, %varbit1626);
+				$int12 = ~add($int12, %rune_pouch_quantity_3);
 			}
 			if (enum(int, boolean, enum_987, $int6) = true) {
-				$int12 = ~add($int12, %varbit14286);
+				$int12 = ~add($int12, %rune_pouch_quantity_4);
 			}
 			if (enum(int, boolean, enum_987, $int7) = true) {
-				$int12 = ~add($int12, %varbit15375);
+				$int12 = ~add($int12, %rune_pouch_quantity_5);
 			}
 			if (enum(int, boolean, enum_987, $int8) = true) {
-				$int12 = ~add($int12, %varbit15376);
+				$int12 = ~add($int12, %rune_pouch_quantity_6);
 			}
 		}
 		return($int12);
@@ -141,22 +141,22 @@ switch_obj ($obj0) {
 			$int12 = ~add($int12, inv_total(inv, mudrune_4698));
 			$int12 = ~add($int12, inv_total(inv, nzone_earthrune_11717));
 			if (enum(int, boolean, enum_993, $int3) = true) {
-				$int12 = ~add($int12, %varbit1624);
+				$int12 = ~add($int12, %rune_pouch_quantity_1);
 			}
 			if (enum(int, boolean, enum_993, $int4) = true) {
-				$int12 = ~add($int12, %varbit1625);
+				$int12 = ~add($int12, %rune_pouch_quantity_2);
 			}
 			if (enum(int, boolean, enum_993, $int5) = true) {
-				$int12 = ~add($int12, %varbit1626);
+				$int12 = ~add($int12, %rune_pouch_quantity_3);
 			}
 			if (enum(int, boolean, enum_993, $int6) = true) {
-				$int12 = ~add($int12, %varbit14286);
+				$int12 = ~add($int12, %rune_pouch_quantity_4);
 			}
 			if (enum(int, boolean, enum_993, $int7) = true) {
-				$int12 = ~add($int12, %varbit15375);
+				$int12 = ~add($int12, %rune_pouch_quantity_5);
 			}
 			if (enum(int, boolean, enum_993, $int8) = true) {
-				$int12 = ~add($int12, %varbit15376);
+				$int12 = ~add($int12, %rune_pouch_quantity_6);
 			}
 		}
 		return($int12);
@@ -181,22 +181,22 @@ switch_obj ($obj0) {
 			$int12 = ~add($int12, inv_total(inv, sunfirerune_28929));
 			$int12 = ~add($int12, inv_total(inv, nzone_firerune_11718));
 			if (enum(int, boolean, enum_994, $int3) = true) {
-				$int12 = ~add($int12, %varbit1624);
+				$int12 = ~add($int12, %rune_pouch_quantity_1);
 			}
 			if (enum(int, boolean, enum_994, $int4) = true) {
-				$int12 = ~add($int12, %varbit1625);
+				$int12 = ~add($int12, %rune_pouch_quantity_2);
 			}
 			if (enum(int, boolean, enum_994, $int5) = true) {
-				$int12 = ~add($int12, %varbit1626);
+				$int12 = ~add($int12, %rune_pouch_quantity_3);
 			}
 			if (enum(int, boolean, enum_994, $int6) = true) {
-				$int12 = ~add($int12, %varbit14286);
+				$int12 = ~add($int12, %rune_pouch_quantity_4);
 			}
 			if (enum(int, boolean, enum_994, $int7) = true) {
-				$int12 = ~add($int12, %varbit15375);
+				$int12 = ~add($int12, %rune_pouch_quantity_5);
 			}
 			if (enum(int, boolean, enum_994, $int8) = true) {
-				$int12 = ~add($int12, %varbit15376);
+				$int12 = ~add($int12, %rune_pouch_quantity_6);
 			}
 		}
 		return($int12);
@@ -210,22 +210,22 @@ switch_obj ($obj0) {
 		}
 		if (map_members = true) {
 			if (enum(int, namedobj, enum_982, $int3) = naturerune_561) {
-				$int12 = ~add($int12, %varbit1624);
+				$int12 = ~add($int12, %rune_pouch_quantity_1);
 			}
 			if (enum(int, namedobj, enum_982, $int4) = naturerune_561) {
-				$int12 = ~add($int12, %varbit1625);
+				$int12 = ~add($int12, %rune_pouch_quantity_2);
 			}
 			if (enum(int, namedobj, enum_982, $int5) = naturerune_561) {
-				$int12 = ~add($int12, %varbit1626);
+				$int12 = ~add($int12, %rune_pouch_quantity_3);
 			}
 			if (enum(int, namedobj, enum_982, $int6) = naturerune_561) {
-				$int12 = ~add($int12, %varbit14286);
+				$int12 = ~add($int12, %rune_pouch_quantity_4);
 			}
 			if (enum(int, namedobj, enum_982, $int7) = naturerune_561) {
-				$int12 = ~add($int12, %varbit15375);
+				$int12 = ~add($int12, %rune_pouch_quantity_5);
 			}
 			if (enum(int, namedobj, enum_982, $int8) = naturerune_561) {
-				$int12 = ~add($int12, %varbit15376);
+				$int12 = ~add($int12, %rune_pouch_quantity_6);
 			}
 		}
 	case pest_interface_staffs_8843 :
@@ -282,22 +282,22 @@ if (map_members = true) {
 		$int12 = ~add($int12, inv_total(inv, nzone_bloodrune_11714));
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int3)) {
-		$int12 = ~add($int12, %varbit1624);
+		$int12 = ~add($int12, %rune_pouch_quantity_1);
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int4)) {
-		$int12 = ~add($int12, %varbit1625);
+		$int12 = ~add($int12, %rune_pouch_quantity_2);
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int5)) {
-		$int12 = ~add($int12, %varbit1626);
+		$int12 = ~add($int12, %rune_pouch_quantity_3);
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int6)) {
-		$int12 = ~add($int12, %varbit14286);
+		$int12 = ~add($int12, %rune_pouch_quantity_4);
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int7)) {
-		$int12 = ~add($int12, %varbit15375);
+		$int12 = ~add($int12, %rune_pouch_quantity_5);
 	}
 	if ($obj0 = enum(int, namedobj, enum_982, $int8)) {
-		$int12 = ~add($int12, %varbit15376);
+		$int12 = ~add($int12, %rune_pouch_quantity_6);
 	}
 } else if (oc_members($obj0) = 0) {
 	$int12 = inv_total(inv, $obj0);

@@ -1,11 +1,11 @@
 // 1635
 [proc,motherlode_hud_update](component $com_motherlode_hud_pay_dirt0, component $com_motherlode_hud_deposits1)
-if_settext(tostring(%varbit5558), $com_motherlode_hud_pay_dirt0);
+if_settext(tostring(%motherlode_sack_transmit), $com_motherlode_hud_pay_dirt0);
 def_int $int2 = 108;
-if (%varbit5556 = 1) {
+if (%motherlode_biggersack = 1) {
 	$int2 = 189;
 }
-if (%varbit5558 >= $int2) {
+if (%motherlode_sack_transmit >= $int2) {
 	if_setcolour(^red, $com_motherlode_hud_pay_dirt0);
 } else {
 	if_setcolour(0xc8c8c8, $com_motherlode_hud_pay_dirt0);

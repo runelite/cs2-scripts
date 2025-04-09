@@ -13,7 +13,7 @@ cc_deleteall($com_league_relics_league_btn_menu12);
 cc_deleteall($com_league_relics_league_menu_frame13);
 cc_deleteall($com_league_relics_view_all_scrollbar8);
 cc_deleteall(league_relics:tutorial);
-def_struct $struct19 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct19 = enum(int, struct, enum_2670, %league_type);
 def_int $colour20 = 0xff981f;
 def_enum $enum21 = null;
 def_struct $struct22 = null;
@@ -114,7 +114,7 @@ while ($int45 < $int23) {
 			cc_settiling(true);
 			$int32, $string0, $int33, $int34, $int40, $colour36, $colour38 = 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
 		}
-	} else if ($int30 = 0 & $enum24 ! null & %var2615 >= struct_param($struct22, param_877)) {
+	} else if ($int30 = 0 & $enum24 ! null & %league_points_claimed >= struct_param($struct22, param_877)) {
 		cc_create($com_league_relics_backgrounds2, ^iftype_graphic, $int45, false);
 		cc_setsize($int26, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($int29, 0, ^setpos_abs_left, ^setpos_abs_top);

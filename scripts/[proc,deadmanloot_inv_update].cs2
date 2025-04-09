@@ -12,10 +12,10 @@ while ($int1 < 5) {
 	while ($int2 < 28) {
 		if (cc_find(deadmanloot:items, calc($int1 * 28 + $int2)) = ^true) {
 			$obj3 = inv_getobj($inv0, $int2);
-			if ($obj3 ! null & $int1 = %varbit4842) {
+			if ($obj3 ! null & $int1 = %deadman_loot_tab) {
 				cc_setobject($obj3, inv_getnum($inv0, $int2));
 				cc_setopbase("<col=ff981f><oc_name($obj3)>");
-				if ($int1 = %varbit4842) {
+				if ($int1 = %deadman_loot_tab) {
 					cc_sethide(false);
 				}
 				$boolean5 = true;
@@ -30,7 +30,7 @@ while ($int1 < 5) {
 	if ($boolean5 = true & cc_find(deadmanloot:tabs, $int1) = ^true & string_length(cc_getop(1)) = 0 & inv_total(inv, enum(int, namedobj, enum_1244, $int1)) > 0) {
 		$int6 = 1;
 	}
-	if ($int1 = %varbit4842) {
+	if ($int1 = %deadman_loot_tab) {
 		if_sethide($boolean5, deadmanloot:items_empty);
 		if_sethide($boolean5, deadmanloot:controls_greyout_layer);
 		if (cc_find(deadmanloot:tabs, calc(5 + $int1)) = ^true) {

@@ -2,7 +2,7 @@
 [proc,worldswitcher_settitle](component $com_worldswitcher_title0)
 def_enum $enum1 = null;
 def_component $component2 = null;
-if (%varbit14978 = 1) {
+if (%worldswitcher_optionsopen = 1) {
 	$enum1 = ~toplevel_getcomponents;
 	if ($enum1 ! null) {
 		$component2 = enum(component, component, $enum1, toplevel_osrs_stretch:mainmodal);

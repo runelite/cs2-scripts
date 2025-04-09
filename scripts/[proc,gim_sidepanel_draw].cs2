@@ -1,9 +1,9 @@
 // 5257
 [proc,gim_sidepanel_draw](component $com_gim_sidepanel_title0, int $comsubid1, int $comsubid2, component $com_gim_sidepanel_subtitle3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $com_gim_sidepanel_members8, component $com_gim_sidepanel_invite9, component $com_gim_sidepanel_settings10)
-if (%varbit13063 = 1) {
+if (%gim_invitationstatus = 1) {
 	~stonebutton_init("<col=0dc10d>Inviting</col>", $com_gim_sidepanel_invite9, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $com_gim_sidepanel_invite9);
-} else if (%varbit13063 = 2) {
+} else if (%gim_invitationstatus = 2) {
 	~stonebutton_init("<col=ff0000>Not inviting</col>", $com_gim_sidepanel_invite9, p12_full, 0);
 	if_setonop("opsound(event_op, 2)", $com_gim_sidepanel_invite9);
 } else {
@@ -32,7 +32,7 @@ def_int $int22 = -1;
 def_int $int23 = 0;
 def_string $string0 = "";
 def_int $int24 = 0;
-if (%varbit13060 = 3 & activeclansettings_find_affined(1) = true) {
+if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
 		$string0 = activeclansettings_getclanname;
 		cc_settext($string0);
@@ -203,13 +203,13 @@ if (%varbit13060 = 3 & activeclansettings_find_affined(1) = true) {
 	}
 } else {
 	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
-		cc_settext("<col=808080><enum(int, string, enum_3839, %varbit13071)></col>");
+		cc_settext("<col=808080><enum(int, string, enum_3839, %side_channels_tab_selected)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		.cc_setgraphic(null);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	}
 	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = ^true) {
-		cc_settext("<col=808080><~script2357(%varbit13060)></col>");
+		cc_settext("<col=808080><~script2357(%gim_affinitystatus)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		.cc_setgraphic(null);

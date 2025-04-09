@@ -7,8 +7,8 @@ if (~on_mobile = false) {
 	sound_synth(pillory_wrong, 1, 0);
 	return;
 }
-if (%varbit6348 ! $int6) {
-	%varbit6348 = $int6;
+if (%shop_quantity ! $int6) {
+	%shop_quantity = $int6;
 	sound_synth(interface_select1, 1, 0);
 }
 ~shop_quantity($component1, $component2, $component3, $component4, $component5, $component7);

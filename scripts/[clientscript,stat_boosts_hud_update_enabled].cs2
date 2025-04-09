@@ -1,7 +1,7 @@
 // 4513
 [clientscript,stat_boosts_hud_update_enabled](component $com_stat_boosts_hud_content0, component $com_stat_boosts_hud_tooltip1)
 def_boolean $boolean2 = false;
-if (%varbit12373 = 1) {
+if (%stat_boosts_hud_hidden = 1) {
 	$boolean2 = true;
 }
 if_sethide($boolean2, $com_stat_boosts_hud_content0);

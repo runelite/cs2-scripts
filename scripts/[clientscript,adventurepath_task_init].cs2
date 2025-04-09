@@ -4,10 +4,10 @@ sound_synth(interface_select1, 1, 0);
 if ($opindex15 ! 1) {
 	return;
 }
-if (%var2357 ! $int1) {
-	%var2358 = 0;
+if (%adventurepath_selected_path ! $int1) {
+	%adventurepath_selected_task = 0;
 }
-%var2357 = $int1;
+%adventurepath_selected_path = $int1;
 ~adventurepath_task_init_op(
 	0 = $com_adventurepath_path_menu0, 
 	1 = $int1, 

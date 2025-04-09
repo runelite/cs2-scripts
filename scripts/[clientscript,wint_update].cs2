@@ -7,12 +7,12 @@ if ($int1 = 0) {
 	if_setsize(interpolate(1, 16384, 0, 3500, $int1), 0, ^setsize_proportion, ^setsize_minus, wint_status:energy_bar);
 	if_settext("Wintertodt's Energy: <tostring(interpolate(1, 100, 0, 3500, $int1))>%", wint_status:energy_title);
 }
-if (%varbit11434 = 0) {
+if (%wint_warmth = 0) {
 	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, wint_status:warmth_bar);
 	if_settext("Your Warmth: 0%", wint_status:warmth_title);
-} else if (%varbit11434 ! -1) {
-	if_setsize(interpolate(1, 16384, 0, 1000, %varbit11434), 0, ^setsize_proportion, ^setsize_minus, wint_status:warmth_bar);
-	if_settext("Your Warmth: <tostring(interpolate(1, 100, 0, 1000, %varbit11434))>%", wint_status:warmth_title);
+} else if (%wint_warmth ! -1) {
+	if_setsize(interpolate(1, 16384, 0, 1000, %wint_warmth), 0, ^setsize_proportion, ^setsize_minus, wint_status:warmth_bar);
+	if_settext("Your Warmth: <tostring(interpolate(1, 100, 0, 1000, %wint_warmth))>%", wint_status:warmth_title);
 }
 if_settext("Points<br><tostring($int0)>", wint_status:points);
 if ($int0 < 500) {

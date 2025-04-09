@@ -3,7 +3,7 @@
 def_int $int1 = struct_param($struct0, param_1077);
 switch_int ($int1) {
 	case 87, 89, 92, 94, 97, 99, 101, 103, 105, 107, 196 :
-		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+		if (getwindowmode ! ^windowmode_fixed & %chatbox_transparency = 1) {
 			return(false);
 		}
 		return(true);
@@ -11,7 +11,7 @@ switch_int ($int1) {
 		if (~is_group_iron = 0) {
 			return(false);
 		}
-		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+		if (getwindowmode ! ^windowmode_fixed & %chatbox_transparency = 1) {
 			return(false);
 		}
 		return(true);
@@ -19,7 +19,7 @@ switch_int ($int1) {
 		if (~is_group_iron = 0) {
 			return(false);
 		}
-		if (getwindowmode = ^windowmode_fixed | %varbit4608 = 0) {
+		if (getwindowmode = ^windowmode_fixed | %chatbox_transparency = 0) {
 			return(false);
 		}
 		return(true);
@@ -28,23 +28,23 @@ switch_int ($int1) {
 			return(false);
 		}
 	case 191, 320 :
-		if (~on_enhanced_mobile = 1 & %varbit13981 = 1) {
+		if (~on_enhanced_mobile = 1 & %popout_panel_mobile_enabled = 1) {
 			return(true);
 		}
-		if (~on_enhanced_desktop = 1 & %varbit13982 = 0) {
+		if (~on_enhanced_desktop = 1 & %popout_panel_desktop_disabled = 0) {
 			return(true);
 		}
 		return(false);
 	case 296 :
-		if (%varbit4470 = 0) {
+		if (%wilderness_diary_any_complete = 0) {
 			return(false);
 		}
 	case 380 :
-		if (%var77 ! 2 & %var76 < 6) {
+		if (%barcrawl ! 2 & %scorpcatcher < 6) {
 			return(false);
 		}
 	case 381 :
-		if (%varbit9610 < 3) {
+		if (%brut_farming_smashing < 3) {
 			return(false);
 		}
 }

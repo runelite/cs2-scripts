@@ -3,7 +3,7 @@
 def_int $colour0 = ~league_get_league_colour(3);
 sound_synth(interface_select1, 1, 0);
 if_sethide(false, league_3_unlocks:info_overlay);
-def_struct $struct1 = enum(int, struct, enum_4131, calc(%var3344 - 1));
+def_struct $struct1 = enum(int, struct, enum_4131, calc(%league_3_unlocks_current_selection - 1));
 def_string $string0 = "";
 def_int $int2 = 0;
 $string0, $int2 = ~script5834($struct1);

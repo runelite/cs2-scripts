@@ -130,10 +130,10 @@ while ($int9 > 0) {
 		.cc_settextshadow(true);
 		.cc_settextfont(p11_full);
 		$int14 = enum(obj, int, enum_1780, $namedobj10);
-		if ($namedobj10 = fossil_mine_water_container_21539 & %varbit5959 = 1) {
+		if ($namedobj10 = fossil_mine_water_container_21539 & %fossil_mine_unlocked_morewater = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
-		} else if ($namedobj10 = fossil_mine_ultrasoil_book_21697 & %varbit5960 = 1) {
+		} else if ($namedobj10 = fossil_mine_ultrasoil_book_21697 & %fossil_mine_unlocked_ultrafertilesoil = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
 		} else if ($int14 > 1) {
@@ -148,4 +148,4 @@ while ($int9 > 0) {
 	}
 }
 ~fossil_volcanic_shop_points($com_fossil_volcanic_shop_points3, 0);
-if_setonvartransmit("fossil_volcanic_shop_points($com_fossil_volcanic_shop_points3){var261}", $com_fossil_volcanic_shop_points3);
+if_setonvartransmit("fossil_volcanic_shop_points($com_fossil_volcanic_shop_points3){if1}", $com_fossil_volcanic_shop_points3);

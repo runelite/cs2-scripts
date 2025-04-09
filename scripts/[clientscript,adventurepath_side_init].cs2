@@ -8,7 +8,7 @@ cc_deleteall($com_adventurepath_side_task_name5);
 cc_deleteall($com_adventurepath_side_progress_bar7);
 cc_deleteall($com_adventurepath_side_hint13);
 cc_deleteall($com_adventurepath_side_open_interface14);
-if (%varbit9327 = 1) {
+if (%adventurepath_settings_selected = 1) {
 	if_sethide(true, $com_adventurepath_side_main0);
 	if_sethide(false, $com_adventurepath_side_settings_tab8);
 } else {
@@ -16,8 +16,8 @@ if (%varbit9327 = 1) {
 	if_sethide(true, $com_adventurepath_side_settings_tab8);
 }
 ~adventurepath_side_info($com_adventurepath_side_path_name3, $com_adventurepath_side_path_icon4, $com_adventurepath_side_task_name5, $com_adventurepath_side_task_description6, $com_adventurepath_side_progress_bar7, $com_adventurepath_side_settings_back12, $com_adventurepath_side_hint13, $com_adventurepath_side_open_interface14);
-if_setonvartransmit("adventurepath_side_info_transmit($com_adventurepath_side_path_name3, $com_adventurepath_side_path_icon4, $com_adventurepath_side_task_name5, $com_adventurepath_side_task_description6, $com_adventurepath_side_progress_bar7, $com_adventurepath_side_settings_back12, $com_adventurepath_side_hint13, $com_adventurepath_side_open_interface14){var2359, var2358}", $com_adventurepath_side_universe1);
+if_setonvartransmit("adventurepath_side_info_transmit($com_adventurepath_side_path_name3, $com_adventurepath_side_path_icon4, $com_adventurepath_side_task_name5, $com_adventurepath_side_task_description6, $com_adventurepath_side_progress_bar7, $com_adventurepath_side_settings_back12, $com_adventurepath_side_hint13, $com_adventurepath_side_open_interface14){adventurepath_in_focus, adventurepath_selected_task}", $com_adventurepath_side_universe1);
 if_setonstattransmit("adventurepath_side_info_transmit($com_adventurepath_side_path_name3, $com_adventurepath_side_path_icon4, $com_adventurepath_side_task_name5, $com_adventurepath_side_task_description6, $com_adventurepath_side_progress_bar7, $com_adventurepath_side_settings_back12, $com_adventurepath_side_hint13, $com_adventurepath_side_open_interface14){attack, strength, defence, magic, ranged, mining, woodcutting, fishing}", $com_adventurepath_side_universe1);
-if_setonvartransmit("adventurepath_side_layer($com_adventurepath_side_main0, $com_adventurepath_side_settings_tab8){var2370}", $com_adventurepath_side_main0);
+if_setonvartransmit("adventurepath_side_layer($com_adventurepath_side_main0, $com_adventurepath_side_settings_tab8){adventurepath_filters}", $com_adventurepath_side_main0);
 ~adventurepath_side_settings($com_adventurepath_side_settings2, $com_adventurepath_side_main0, $com_adventurepath_side_settings_tab8);
 ~adventurepath_side_settings_content($com_adventurepath_side_main0, $com_adventurepath_side_settings_tab8, $com_adventurepath_side_settings_title9, $com_adventurepath_side_toggles10, $com_adventurepath_side_settings_scrollbar11, $com_adventurepath_side_settings_back12, 1);

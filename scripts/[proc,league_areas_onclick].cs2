@@ -1,7 +1,7 @@
 // 3662
 [proc,league_areas_onclick](int $int0, component $component1, component $component2, component $com_trailblazer_areas_league_area_details3, component $com_trailblazer_areas_name_shield4, component $com_trailblazer_areas_name_header5, component $com_trailblazer_areas_description6, component $com_trailblazer_areas_select_button7, component $com_trailblazer_areas_select_back8, component $com_trailblazer_areas_league_area_icon9, component $com_trailblazer_areas_loading10)
 def_string $string0 = ~script5484($int0);
-if ($int0 ! 2 & %varbit10037 < 9 & ~script3681(2) = 0) {
+if ($int0 ! 2 & %league_tutorial_completed < 9 & ~script3681(2) = 0) {
 	sound_synth(pillory_wrong, 1, 0);
 	return;
 }

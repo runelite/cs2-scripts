@@ -4,7 +4,7 @@ def_int $int1 = 0;
 def_int $int2 = ~cluehelper_clue_difficulty($dbrow0);
 $int1 = ~helper_generic_add_title("Skill Challenge", 1);
 $int1 = ~helper_generic_add_text(db_getfield($dbrow0, cluehelper_clue_skillchallenge:clue_text, 0));
-if (%varbit14188 = 1) {
+if (%option_cluehelper_infobox_show_clue_text = 1) {
 	switch_int ($int2) {
 		case 0 :
 			$int1 = ~helper_generic_add_text("Firstly, talk to Charlie, then bring the requested item.");

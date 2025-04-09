@@ -11,4 +11,4 @@ if_setposition(calc($int8 - ($int5 + 6) - $int7), if_gety($com_tradeconfirm_your
 def_int $int9 = inv_size(tradeoffer);
 ~trade_confirm_redraw($int9, $int5, $int7, $com_tradeconfirm_your_offer1, $com_tradeconfirm_other_offer2, $com_tradeconfirm_other_flashers3, $com_tradeconfirm_removal_warning4);
 if_setoninvtransmit("trade_confirm_redraw($int9, $int5, $int7, $com_tradeconfirm_your_offer1, $com_tradeconfirm_other_offer2, $com_tradeconfirm_other_flashers3, $com_tradeconfirm_removal_warning4){tradeoffer}", $com_tradeconfirm_title0);
-if_setonvartransmit("trade_confirm_redraw($int9, $int5, $int7, $com_tradeconfirm_your_offer1, $com_tradeconfirm_other_offer2, $com_tradeconfirm_other_flashers3, $com_tradeconfirm_removal_warning4){var1042}", $com_tradeconfirm_title0);
+if_setonvartransmit("trade_confirm_redraw($int9, $int5, $int7, $com_tradeconfirm_your_offer1, $com_tradeconfirm_other_offer2, $com_tradeconfirm_other_flashers3, $com_tradeconfirm_removal_warning4){traderemoved}", $com_tradeconfirm_title0);

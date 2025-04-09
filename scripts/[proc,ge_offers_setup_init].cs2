@@ -208,12 +208,12 @@ cc_setgraphic($graphic13);
 cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
 cc_setop(2, "Customise");
-if (%varbit4284 > 0) {
+if (%ge_price_custom > 0) {
 	cc_setop(1, "-<~script5130>");
 } else {
 	cc_setop(1, "");
 }
-cc_setonvartransmit("script5131($com_ge_offers_setup0, $comsubid30, true, "-"){var3750}");
+cc_setonvartransmit("script5131($com_ge_offers_setup0, $comsubid30, true, "-"){bank_extratab}");
 cc_setonop("script5154(event_op, false)");
 cc_create($com_ge_offers_setup0, ^iftype_graphic, $int15, false);
 def_int $comsubid31 = $int15;
@@ -228,12 +228,12 @@ cc_setgraphic($graphic13);
 cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic14, null)");
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic13, null)");
 cc_setop(2, "Customise");
-if (%varbit4284 > 0) {
+if (%ge_price_custom > 0) {
 	cc_setop(1, "+<~script5130>");
 } else {
 	cc_setop(1, "");
 }
-cc_setonvartransmit("script5131($com_ge_offers_setup0, $comsubid31, true, "+"){var3750}");
+cc_setonvartransmit("script5131($com_ge_offers_setup0, $comsubid31, true, "+"){bank_extratab}");
 cc_setonop("script5154(event_op, true)");
 def_int $comsubid32 = 0;
 def_int $comsubid33 = 0;
@@ -275,11 +275,11 @@ $int15 = ~ge_offers_setup_buttontext($com_ge_offers_setup0, $comsubid28, "...", 
 $int15 = ~ge_offers_setup_buttontext($com_ge_offers_setup0, $comsubid29, "+5%", $int15);
 $int15 = ~ge_offers_setup_buttontext($com_ge_offers_setup0, $comsubid30, "-<~script5130>", $int15);
 if (cc_find($com_ge_offers_setup0, calc($int15 - 1)) = ^true) {
-	cc_setonvartransmit("script5131($com_ge_offers_setup0, calc($int15 - 1), false, "-"){var3750}");
+	cc_setonvartransmit("script5131($com_ge_offers_setup0, calc($int15 - 1), false, "-"){bank_extratab}");
 }
 $int15 = ~ge_offers_setup_buttontext($com_ge_offers_setup0, $comsubid31, "+<~script5130>", $int15);
 if (cc_find($com_ge_offers_setup0, calc($int15 - 1)) = ^true) {
-	cc_setonvartransmit("script5131($com_ge_offers_setup0, calc($int15 - 1), false, "+"){var3750}");
+	cc_setonvartransmit("script5131($com_ge_offers_setup0, calc($int15 - 1), false, "+"){bank_extratab}");
 }
 cc_create($com_ge_offers_setup0, ^iftype_text, $int15, false);
 def_int $comsubid42 = $int15;
@@ -327,7 +327,7 @@ if_setonvartransmit("ge_offers_setup_draw(
 	14 = $com_ge_offers_setup_confirm2, 
 	15 = $comsubid42, 
 	16 = $comsubid23
-){var1151, var563, var1043, var375}", $com_ge_offers_setup0);
+){tradingpost_search, bankpin_2, traderemoved_other, armourhitsound}", $com_ge_offers_setup0);
 if_setoninvtransmit("ge_offers_setup_draw(
 	0 = $boolean3, 
 	1 = $com_ge_offers_setup0, 

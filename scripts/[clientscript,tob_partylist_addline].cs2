@@ -37,7 +37,7 @@ if (string_length($string0) > 0) {
 	$string11, $string0 = ~script632($string0);
 	$string12, $string0 = ~script632($string0);
 	$string14, $string0 = ~script632($string0);
-	if (%varbit12988 = 0 | compare($string2, chat_playername) = 0) {
+	if (%tob_lobby_friends_filter = 0 | compare($string2, chat_playername) = 0) {
 		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $string12, $string14);
 	} else if (~script5217($string2) = 1) {
 		~tob_partylist_fillline($component1, $int0, $string1, $string7, $string8, $string11, $string12, $string14);
@@ -98,7 +98,7 @@ if ($int0 >= calc($int7 - 1)) {
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		if (%varbit12988 = 0) {
+		if (%tob_lobby_friends_filter = 0) {
 			cc_settext("No parties are currently listed.");
 		} else {
 			cc_settext("You have no friends or clanmates in a party.");

@@ -11,20 +11,20 @@ cc_setposition(0, calc($int3 + 1), ^setpos_abs_centre, ^setpos_abs_top);
 cc_setonmouseover("diary_mouseover(event_com, event_comsubid, $int1, true)");
 cc_setonmouseleave("diary_mouseover(event_com, event_comsubid, $int1, false)");
 cc_setonvartransmit("update_diary_entry(event_com, event_comsubid, $int1){
-	0 = var1719, 
-	1 = var1720, 
-	2 = var1721, 
-	3 = var1722, 
-	4 = var1723, 
-	5 = var1724, 
-	6 = var1188, 
-	7 = var1189, 
-	8 = var1000, 
-	9 = var1001, 
-	10 = var1002, 
-	11 = var1200, 
-	12 = var1190, 
-	13 = var1191
+	0 = achievement_diary_taskcounts, 
+	1 = achievement_diary_taskcounts2, 
+	2 = achievement_diary_taskcounts3, 
+	3 = achievement_diary_taskcounts4, 
+	4 = achievement_diary_taskcounts5, 
+	5 = achievement_diary_taskcounts6, 
+	6 = achievement_diary, 
+	7 = achievement_diary2, 
+	8 = atjun_tasks_1, 
+	9 = atjun_tasks_2, 
+	10 = atjun_tasks_3, 
+	11 = atjun_tasks_4, 
+	12 = achievement_diary_rewards, 
+	13 = achievement_diary_rewards2
 }");
 cc_create($com_area_task_taskbox0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);

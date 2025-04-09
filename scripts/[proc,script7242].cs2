@@ -1,8 +1,8 @@
 // 7242
 [proc,script7242]()(boolean)
-def_int $int0 = %varbit14873;
+def_int $int0 = %ground_items_despawn_time_enabled_desktop;
 if (~on_mobile = true) {
-	$int0 = %varbit14874;
+	$int0 = %ground_items_despawn_time_enabled_mobile;
 }
 if ($int0 = 0) {
 	return(false);
@@ -10,7 +10,7 @@ if ($int0 = 0) {
 if ($int0 = 1) {
 	return(true);
 }
-if (keypressed(%varbit14877) = true | keyheld(%varbit14877) = true) {
+if (keypressed(%ground_items_modifier_key) = true | keyheld(%ground_items_modifier_key) = true) {
 	return(true);
 }
 return(false);

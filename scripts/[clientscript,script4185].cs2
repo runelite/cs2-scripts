@@ -2,7 +2,7 @@
 [clientscript,script4185](component $component0, int $int1)
 ~script4206(colour_pallet:clamp, colour_pallet:fader, colour_pallet:window, ^max_32bit_int, $component0);
 %varcint459 = $int1;
-def_struct $struct2 = enum(int, struct, enum_423, %varbit9656);
+def_struct $struct2 = enum(int, struct, enum_423, %settings_category);
 def_enum $enum3 = null;
 if ($struct2 = null) {
 	return;
@@ -25,7 +25,7 @@ while ($int5 < $int6) {
 		$int8 = struct_param($struct4, param_1078);
 		$int9 = struct_param($struct4, param_1077);
 		if ($int8 = 9) {
-			if ($int9 = %varbit9657) {
+			if ($int9 = %settings_selected_setting) {
 				$int6 = $int5;
 			} else {
 				$int7 = calc($int7 + 1);

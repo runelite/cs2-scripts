@@ -13,7 +13,7 @@ $graphic11 = "close_buttons,1";
 if_setonmouseover("script3440(event_com, cc_getid, $graphic11, null)", $com_csat_close1);
 if_setop(1, "Close", $com_csat_close1);
 if_setonop("closebutton_click_sound", $com_csat_close1);
-if (%varbit4681 = 1) {
+if (%keybinding_esc_to_close = 1) {
 	if_setopkey(1, ^key_escape, 0, $com_csat_close1);
 }
 if_setop(1, "1", $com_csat_15);

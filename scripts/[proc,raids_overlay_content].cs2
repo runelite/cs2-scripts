@@ -2,7 +2,7 @@
 [proc,raids_overlay_content](component $com_raids_overlay_data0)
 cc_deleteall($com_raids_overlay_data0);
 if_setonvartransmit(null, $com_raids_overlay_data0);
-if (~on_enhanced_any = 1 & %varbit12347 = 0) {
+if (~on_enhanced_any = 1 & %cox_helper_disabled = 0) {
 	return;
 }
 def_int $int1 = 0;
@@ -30,4 +30,4 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 .cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 ~raids_overlay_databox($com_raids_overlay_data0);
-if_setonvartransmit("raids_overlay_databox($com_raids_overlay_data0, cc_getid, .cc_getid){var1431, var1432, var1429}", $com_raids_overlay_data0);
+if_setonvartransmit("raids_overlay_databox($com_raids_overlay_data0, cc_getid, .cc_getid){raids_temp_transmit2, raids_temp_transmit3, raids_perm_transmit}", $com_raids_overlay_data0);

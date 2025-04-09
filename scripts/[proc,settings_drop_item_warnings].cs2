@@ -1,6 +1,6 @@
 // 4015
 [proc,settings_drop_item_warnings]
-if (%varbit5411 = 0 & %varbit5412 <= 0) {
+if (%option_dropwarning_on = 0 & %option_dropwarning_value <= 0) {
 	return;
 }
-%varbit5411 = calc(1 - %varbit5411);
+%option_dropwarning_on = calc(1 - %option_dropwarning_on);

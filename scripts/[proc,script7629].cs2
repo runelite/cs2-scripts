@@ -14,13 +14,13 @@ def_int $int7 = enum_getoutputcount(enum_681);
 def_int $int8 = 1;
 def_stat $stat9 = null;
 %varcint551 = 0;
-while ($int8 <= $int7 & ($int5 <= %varbit12375 | %varcint551 = 0)) {
+while ($int8 <= $int7 & ($int5 <= %stat_boosts_hud_num_displays | %varcint551 = 0)) {
 	$stat9 = enum(int, stat, enum_681, $int8);
 	if ($stat9 ! hitpoints & $stat9 ! prayer & stat($stat9) ! stat_base($stat9)) {
 		if (stat($stat9) > stat_base($stat9)) {
 			%varcint551 = 1;
 		}
-		if ($int5 <= %varbit12375) {
+		if ($int5 <= %stat_boosts_hud_num_displays) {
 			$int4 = ~script4515($component1, $component2, $stat9, $int5, $int6, $int4, $component3);
 			$int5 = calc($int5 + 1);
 		}

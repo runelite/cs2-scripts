@@ -1,23 +1,23 @@
 // 4162
 [clientscript,roguetrader_init](component $com_roguetrader_sudoku_runes0, component $com_roguetrader_sudoku_game_clickzones1, component $com_roguetrader_sudoku_btn_opencasket2, component $com_roguetrader_sudoku_game_frame3, component $com_roguetrader_sudoku_runes_frame4, component $com_roguetrader_sudoku_game_holder5, component $com_roguetrader_sudoku_runes_holder6, component $com_roguetrader_sudoku_game_runes7)
-def_int $int8 = %varbit12163;
-def_int $int9 = %varbit12161;
+def_int $int8 = %roguetrader_sudoku_game_difficulty;
+def_int $int9 = %roguetrader_sudoku_puzzleid;
 ~roguetrader_game_size($com_roguetrader_sudoku_runes_holder6, $com_roguetrader_sudoku_game_holder5, $int8);
 ~roguetrader_draw_frames($com_roguetrader_sudoku_btn_opencasket2, $com_roguetrader_sudoku_game_frame3, $com_roguetrader_sudoku_runes_frame4, $int8);
 ~roguetrader_draw_runes($int8, $com_roguetrader_sudoku_runes0);
 ~roguetrader_draw_game($int8, $int9, $com_roguetrader_sudoku_game_clickzones1, $com_roguetrader_sudoku_game_runes7);
-if_setonvartransmit("roguetrader_selectrune_transmit($int8, $com_roguetrader_sudoku_runes0){var540}", $com_roguetrader_sudoku_runes0);
+if_setonvartransmit("roguetrader_selectrune_transmit($int8, $com_roguetrader_sudoku_runes0){roguetrader_var}", $com_roguetrader_sudoku_runes0);
 if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $com_roguetrader_sudoku_game_clickzones1, $com_roguetrader_sudoku_game_runes7){
-	0 = var261, 
-	1 = var262, 
-	2 = var263, 
-	3 = var264, 
-	4 = var265, 
-	5 = var266, 
-	6 = var2980, 
-	7 = var2981, 
-	8 = var2982, 
-	9 = var2983, 
-	10 = var2984, 
-	11 = var540
+	0 = if1, 
+	1 = if2, 
+	2 = if3, 
+	3 = if4, 
+	4 = if5, 
+	5 = if6, 
+	6 = roguetrader_temp1, 
+	7 = roguetrader_temp2, 
+	8 = roguetrader_temp3, 
+	9 = roguetrader_temp4, 
+	10 = roguetrader_temp5, 
+	11 = roguetrader_var
 }", $com_roguetrader_sudoku_game_clickzones1);

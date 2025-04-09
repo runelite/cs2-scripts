@@ -1,11 +1,11 @@
 // 170
 [clientscript,kr_tumbler_height]
-if (%varbit3905 = 1) {
-	if_settext("<tostring(%varbit3901)>/5", kr_picklock:kr_tumbler_height);
-} else if (%varbit3905 = 2) {
-	if_settext("<tostring(%varbit3902)>/5", kr_picklock:kr_tumbler_height);
-} else if (%varbit3905 = 3) {
-	if_settext("<tostring(%varbit3903)>/5", kr_picklock:kr_tumbler_height);
-} else if (%varbit3905 = 4) {
-	if_settext("<tostring(%varbit3904)>/5", kr_picklock:kr_tumbler_height);
+if (%kr_tumb_current = 1) {
+	if_settext("<tostring(%kr_tumb1_curr_pos)>/5", kr_picklock:kr_tumbler_height);
+} else if (%kr_tumb_current = 2) {
+	if_settext("<tostring(%kr_tumb2_curr_pos)>/5", kr_picklock:kr_tumbler_height);
+} else if (%kr_tumb_current = 3) {
+	if_settext("<tostring(%kr_tumb3_curr_pos)>/5", kr_picklock:kr_tumbler_height);
+} else if (%kr_tumb_current = 4) {
+	if_settext("<tostring(%kr_tumb4_curr_pos)>/5", kr_picklock:kr_tumbler_height);
 }

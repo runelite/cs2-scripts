@@ -2,7 +2,7 @@
 [proc,wildwars_fogcolour]
 def_int $colour0 = if_getcolour(pvp_icons:deadman_fog);
 def_int $int1 = if_gettrans(pvp_icons:deadman_fog);
-if (%varbit5701 < 1) {
+if (%wildwars_mode_pl < 1) {
 	if ($colour0 ! 0xff7733) {
 		if_setcolour(0xff7733, pvp_icons:deadman_fog);
 	}
@@ -36,11 +36,11 @@ def_int $int20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
 $int20, $int21, $int22 = ~hex_to_rgb($colour0);
-if (%varbit5703 = 1) {
+if (%wildwars_forcefog = 1) {
 	$int5, $int6, $int7, $int19 = $int8, $int9, $int10, $int17;
-} else if (%varbit5703 = 2) {
+} else if (%wildwars_forcefog = 2) {
 	$int5, $int6, $int7, $int19 = $int11, $int12, $int13, $int17;
-} else if (%varbit5701 >= 2) {
+} else if (%wildwars_mode_pl >= 2) {
 	$int3 = invpow(pow(calc(coordx(coord) - coordx(0_49_57_29_25)), 2), 2);
 	$int4 = invpow(pow(calc(coordz(coord) - coordz(0_49_57_29_25)), 2), 2);
 	if ($int3 > $int4) {
@@ -48,7 +48,7 @@ if (%varbit5703 = 1) {
 	} else {
 		$int2 = $int4;
 	}
-	$int14 = %varbit5704;
+	$int14 = %wildwars_saferadius;
 	$int16 = calc((300 - 6) / 6);
 	$int15 = ~max(calc($int14 - $int16), 6);
 	if ($int2 < $int15 | $int2 < 6) {

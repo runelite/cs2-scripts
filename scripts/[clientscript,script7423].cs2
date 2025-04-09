@@ -39,7 +39,7 @@ switch_int ($int1) {
 		~script7433;
 	case 3 :
 		if ($opindex0 = 1) {
-			~script7585(%varbit16112);
+			~script7585(%settings_mobile_tile_highlight_enabled);
 		} else if ($opindex0 = 2) {
 			~script7589;
 		}
@@ -58,19 +58,19 @@ switch_int ($int1) {
 		if ($opindex0 = 2) {
 			return;
 		}
-		if (%varbit6254 = 0) {
+		if (%osm_minimap_toggle = 0) {
 			~script7556($opindex0, orbs_osm:prayer_indicator, orbs_osm:prayer_icon, orbs_osm:prayerbutton);
 		} else {
 			~script7556($opindex0, orbs_osm_nomap:prayer_indicator, orbs_osm_nomap:prayer_icon, orbs_osm_nomap:prayerbutton);
 		}
 	case 22 :
-		if (%varbit6254 = 0) {
+		if (%osm_minimap_toggle = 0) {
 			~script7557($opindex0, orbs_osm:runenergy_indicator, orbs_osm:runenergy_icon);
 		} else {
 			~script7557($opindex0, orbs_osm_nomap:runenergy_indicator, orbs_osm_nomap:runenergy_icon);
 		}
 	case 23 :
-		if (%varbit6254 = 0) {
+		if (%osm_minimap_toggle = 0) {
 			~script7558($opindex0, orbs_osm:orb_specenergy, orbs_osm:specenergy_text, orbs_osm:orb_specenergy_empty, orbs_osm:specenergy_indicator, orbs_osm:specenergy_backing, orbs_osm:specbutton);
 		} else {
 			~script7558($opindex0, orbs_osm_nomap:orb_specenergy, orbs_osm_nomap:specenergy_text, orbs_osm_nomap:orb_specenergy_empty, orbs_osm_nomap:specenergy_indicator, orbs_osm_nomap:specenergy_backing, orbs_osm_nomap:specbutton);

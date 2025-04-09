@@ -5,13 +5,13 @@ if ($component1 = $component5) {
 		sound_synth(interface_select1, 1, 0);
 		return;
 	}
-	if ($opindex0 = 1 & %varbit16206 > 0) {
+	if ($opindex0 = 1 & %rune_pouch_customquantity > 0) {
 		sound_synth(interface_select1, 1, 0);
-		%varbit16201 = $int2;
+		%rune_pouch_selectedquantity = $int2;
 		~script7875($component3, $component4, $component5, $component6);
 	}
 } else if ($opindex0 = 1) {
 	sound_synth(interface_select1, 1, 0);
-	%varbit16201 = $int2;
+	%rune_pouch_selectedquantity = $int2;
 	~script7875($component3, $component4, $component5, $component6);
 }

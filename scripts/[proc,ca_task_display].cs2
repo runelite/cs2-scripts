@@ -3,16 +3,16 @@
 if (~ca_task_is_disabled($struct0) = 1) {
 	return(0);
 }
-if (%varbit12858 ! 0 & %varbit12858 ! $int1) {
+if (%ca_task_filter_tier ! 0 & %ca_task_filter_tier ! $int1) {
 	return(0);
 }
-if (%varbit12859 ! 0 & %varbit12859 ! $int3) {
+if (%ca_task_filter_type ! 0 & %ca_task_filter_type ! $int3) {
 	return(0);
 }
-if (%varbit12860 ! 0 & %varbit12860 ! $int4) {
+if (%ca_task_filter_monster ! 0 & %ca_task_filter_monster ! $int4) {
 	return(0);
 }
-if (%varbit12861 ! 0 & calc(%varbit12861 - 1) ! $int2) {
+if (%ca_task_filter_completed ! 0 & calc(%ca_task_filter_completed - 1) ! $int2) {
 	return(0);
 }
 return(1);

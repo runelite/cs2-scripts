@@ -1,6 +1,6 @@
 // 7102
 [clientscript,script7102](component $component0)
-def_struct $struct1 = enum(int, struct, enum_423, %varbit9656);
+def_struct $struct1 = enum(int, struct, enum_423, %settings_category);
 if ($struct1 = null) {
 	return;
 }
@@ -19,7 +19,7 @@ while ($int7 < $int8) {
 	if ($struct4 ! null) {
 		$int5 = struct_param($struct4, param_1078);
 		$int6 = struct_param($struct4, param_1077);
-		if ($int5 = 10 & $int6 = %varbit9657) {
+		if ($int5 = 10 & $int6 = %settings_selected_setting) {
 			$struct3 = $struct4;
 			$int8 = $int7;
 		}

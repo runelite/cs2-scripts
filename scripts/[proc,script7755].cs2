@@ -2,46 +2,46 @@
 [proc,script7755](int $int0)(int)
 def_int $int1 = -1;
 def_int $int2 = -1;
-switch_dbrow (%var4559) {
+switch_dbrow (%toggle_list) {
 	case dbrow_4096 :
-		$int1 = %var4565;
-		$int2 = ~script7756(%var4564, $int1, $int0);
+		$int1 = %npc_contact_unlocks;
+		$int2 = ~script7756(%npc_contact_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
 			return($int2);
 		}
-		%var4564 = togglebit(%var4564, $int0);
-		~script7709(%var4564, $int1, %var4559);
+		%npc_contact_anim_toggles = togglebit(%npc_contact_anim_toggles, $int0);
+		~script7709(%npc_contact_anim_toggles, $int1, %toggle_list);
 	case dbrow_4092 :
 		$int1 = ~script7757;
-		$int2 = ~script7756(%var4561, $int1, $int0);
+		$int2 = ~script7756(%death_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
 			return($int2);
 		}
-		%var4561 = togglebit(%var4561, $int0);
-		~script7709(%var4561, $int1, %var4559);
+		%death_anim_toggles = togglebit(%death_anim_toggles, $int0);
+		~script7709(%death_anim_toggles, $int1, %toggle_list);
 	case dbrow_4093 :
 		$int1 = ~script7758;
-		$int2 = ~script7756(%var4560, $int1, $int0);
+		$int2 = ~script7756(%home_teleport_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
 			return($int2);
 		}
-		%var4560 = togglebit(%var4560, $int0);
-		~script7709(%var4560, $int1, %var4559);
+		%home_teleport_anim_toggles = togglebit(%home_teleport_anim_toggles, $int0);
+		~script7709(%home_teleport_anim_toggles, $int1, %toggle_list);
 	case dbrow_4094 :
 		$int1 = ~script7759;
-		$int2 = ~script7756(%var4562, $int1, $int0);
+		$int2 = ~script7756(%vengeance_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
 			return($int2);
 		}
-		%var4562 = togglebit(%var4562, $int0);
-		~script7709(%var4562, $int1, %var4559);
+		%vengeance_anim_toggles = togglebit(%vengeance_anim_toggles, $int0);
+		~script7709(%vengeance_anim_toggles, $int1, %toggle_list);
 	case dbrow_4095 :
 		$int1 = ~script7760;
-		$int2 = ~script7756(%var4563, $int1, $int0);
+		$int2 = ~script7756(%alchemy_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
 			return($int2);
 		}
-		%var4563 = togglebit(%var4563, $int0);
-		~script7709(%var4563, $int1, %var4559);
+		%alchemy_anim_toggles = togglebit(%alchemy_anim_toggles, $int0);
+		~script7709(%alchemy_anim_toggles, $int1, %toggle_list);
 }
 return(1);

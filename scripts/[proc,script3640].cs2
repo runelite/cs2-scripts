@@ -4,7 +4,7 @@ def_int $int6 = 0;
 while ($int6 < $int0) {
 	if (cc_find($com_rangingguild_ticketexchange_items1, $int6) = ^true) {
 		cc_clearops;
-		switch_int (%varbit6348) {
+		switch_int (%shop_quantity) {
 			case default :
 				cc_setop(1, "Value");
 				cc_setop(3, "Buy 1");
@@ -30,7 +30,7 @@ while ($int6 < $int0) {
 	}
 	$int6 = calc($int6 + 1);
 }
-switch_int (%varbit6348) {
+switch_int (%shop_quantity) {
 	case default :
 		~script3642(
 			0 = true, 

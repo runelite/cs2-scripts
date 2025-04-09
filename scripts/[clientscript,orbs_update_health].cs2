@@ -25,7 +25,7 @@ if ($component0 ! null) {
 		7 = $component7, 
 		8 = $component8, 
 		9 = $component9
-	){var102, var456, var2648, var2898, var1377}", $component0);
+	){poison, disease, nightmare_temp, worn_item_bonus2, br_temp_1}", $component0);
 	if_setonsubchange("orbs_update_health(
 		0 = null, 
 		1 = $component1, 
@@ -40,28 +40,28 @@ if ($component0 ! null) {
 	)", $component0);
 }
 def_int $int10 = stat_base(hitpoints);
-if (%varbit5314 = 1) {
+if (%br_ingame = 1) {
 	$int10 = 99;
 }
 ~orbs_update($component1, $component2, stat(hitpoints), $int10);
-if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
+if (%poison > 0 | %disease > 0 | %parasite > 0) {
 	if_settrans(100, $component3);
 } else {
 	if_settrans(0, $component3);
 }
-if (%varbit10151 > 0) {
+if (%parasite > 0) {
 	if_setgraphic("orb_filler,12", $component4);
-} else if (%var456 > 0) {
+} else if (%disease > 0) {
 	if_setgraphic("orb_filler,3", $component4);
-} else if (%var102 >= 1000000) {
+} else if (%poison >= 1000000) {
 	if_setgraphic("orb_filler,8", $component4);
-} else if (%var102 > 0) {
+} else if (%poison > 0) {
 	if_setgraphic("orb_filler,2", $component4);
 } else {
 	if_setgraphic("orb_filler,1", $component4);
 }
-if (%var102 > 0) {
-	if (%var102 >= 1000000) {
+if (%poison > 0) {
+	if (%poison >= 1000000) {
 		if_setgraphic("orb_filler,8", $component6);
 	} else {
 		if_setgraphic("orb_filler,2", $component6);
@@ -71,7 +71,7 @@ if (%var102 > 0) {
 	if_sethide(true, $component5);
 }
 def_graphic $graphic11 = ~graphic_device("orb_frame,1", graphic_5792);
-if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3) = true) {
+if ((%poison > 0 | %disease > 0 | %parasite > 0) & ~toplevel_check_sidepanel(3) = true) {
 	if_setonmouserepeat("graphic_swapper($component7, $graphic11)", $component8);
 	$graphic11 = ~graphic_device("orb_frame,0", graphic_5791);
 	if_setonmouseleave("graphic_swapper($component7, $graphic11)", $component8);

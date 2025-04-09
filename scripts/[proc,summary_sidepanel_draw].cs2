@@ -139,12 +139,12 @@ if (~speedrunning_world = 1) {
 		6 = "Speedrun Points:", 
 		7 = "Quest List", 
 		8 = "achievement_diary_icons,0", 
-		9 = "<col=0dc10d><~tostring_spacer(~min(%var3365, 800000), $string0)></col>", 
+		9 = "<col=0dc10d><~tostring_spacer(~min(%speedrun_points, 800000), $string0)></col>", 
 		10 = $int2, 
 		11 = $int3, 
 		12 = 0
 	);
-} else if (%var101 = %varbit1782) {
+} else if (%qp = %qp_max) {
 	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 		0 = $component0, 
 		1 = $component1, 
@@ -155,7 +155,7 @@ if (~speedrunning_world = 1) {
 		6 = "Quests Completed:", 
 		7 = "Quest List", 
 		8 = "achievement_diary_icons,0", 
-		9 = "<col=0dc10d><tostring(%varbit6347)>/<tostring(%varbit11877)></col>", 
+		9 = "<col=0dc10d><tostring(%quests_completed_count)>/<tostring(%quests_total_count)></col>", 
 		10 = $int2, 
 		11 = $int3, 
 		12 = 0
@@ -171,7 +171,7 @@ if (~speedrunning_world = 1) {
 		6 = "Quests Completed:", 
 		7 = "Quest List", 
 		8 = "achievement_diary_icons,0", 
-		9 = "<col=0dc10d><tostring(%varbit6347)>/<tostring(%varbit11877)></col>", 
+		9 = "<col=0dc10d><tostring(%quests_completed_count)>/<tostring(%quests_total_count)></col>", 
 		10 = $int2, 
 		11 = $int3, 
 		12 = 0
@@ -241,7 +241,7 @@ $int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 	6 = "Collections Logged:", 
 	7 = "Collection Log", 
 	8 = "account_icons,4", 
-	9 = "<col=0dc10d><tostring(%var4612)>/<tostring(%var2944)></col>", 
+	9 = "<col=0dc10d><tostring(%collection_count_highscores)>/<tostring(%collection_count_max)></col>", 
 	10 = $int2, 
 	11 = $int3, 
 	12 = 1
@@ -254,7 +254,7 @@ def_string $string1 = "Time Played:";
 if (~league_world = 1) {
 	$string1 = "Account Age:";
 }
-if (%varbit12933 = 1) {
+if (%account_summary_display_playtime = 1) {
 	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949(
 		0 = $component0, 
 		1 = $component1, 

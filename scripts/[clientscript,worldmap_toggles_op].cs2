@@ -5,10 +5,10 @@ if ($opindex0 ! 1 | $int2 < 0 | $int2 > 4) {
 }
 sound_synth(interface_select1, 1, 0);
 if (cc_find($com_worldmap_toggles1, $comsubid3) = ^true & .cc_find($com_worldmap_toggles1, $int2) = ^true) {
-	if (testbit(%varbit5640, $int2) = ^true) {
-		%varbit5640 = clearbit(%varbit5640, $int2);
+	if (testbit(%worldmap_toggles, $int2) = ^true) {
+		%worldmap_toggles = clearbit(%worldmap_toggles, $int2);
 	} else {
-		%varbit5640 = setbit(%varbit5640, $int2);
+		%worldmap_toggles = setbit(%worldmap_toggles, $int2);
 	}
 	~worldmap_toggles_set($com_worldmap_toggles1, $int2, $com_worldmap_map_overlay4, $com_worldmap_overview_overlay5, $com_worldmap_tooltip6);
 }

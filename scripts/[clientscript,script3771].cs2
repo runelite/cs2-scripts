@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(piratechest_turn, 1, 0);
-%varbit9593 = calc((%varbit9593 + $int1) % 4);
+%pirate_combilock_centre = calc((%pirate_combilock_centre + $int1) % 4);
 ~script3773(
 	0 = $com_pirate_combilock_left_top2, 
 	1 = $com_pirate_combilock_left_middle3, 

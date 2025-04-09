@@ -2,7 +2,7 @@
 [proc,script2259](obj $obj0)(int, namedobj)
 switch_obj ($obj0) {
 	case hunting_butterfly_net_10010 :
-		switch_int (%varbit11767) {
+		switch_int (%ii_stored_net) {
 			case 0 :
 				return(0, hunting_butterfly_net_10010);
 			case 1 :
@@ -11,8 +11,8 @@ switch_obj ($obj0) {
 				return(1, ii_magic_butterfly_net_11259);
 		}
 	case ii_imp_repellent_11262 :
-		return(%varbit11768, ii_imp_repellent_11262);
+		return(%ii_stored_repellent, ii_imp_repellent_11262);
 	case ii_impling_jar_11260 :
-		return(%varbit11770, ii_impling_jar_11260);
+		return(%ii_stored_impling_jars, ii_impling_jar_11260);
 }
 return(0, null);

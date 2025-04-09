@@ -5,17 +5,17 @@ def_int $int2 = coordx($coord1);
 def_int $int3 = coordz($coord1);
 switch_int ($int2) {
 	case 1 :
-		return(testbit(%var1365, $int3));
+		return(testbit(%hh_constructed_easy, $int3));
 	case 2 :
-		return(testbit(%var1366, $int3));
+		return(testbit(%hh_constructed_medium, $int3));
 	case 3 :
-		return(testbit(%var1367, $int3));
+		return(testbit(%hh_constructed_hard, $int3));
 	case 4 :
-		return(testbit(%var1368, $int3));
+		return(testbit(%hh_constructed_elite, $int3));
 	case 5 :
-		return(testbit(%var1369, $int3));
+		return(testbit(%hh_constructed_master, $int3));
 	case 6 :
-		return(testbit(%var2202, $int3));
+		return(testbit(%hh_constructed_beginner, $int3));
 	case default :
 		return(0);
 }

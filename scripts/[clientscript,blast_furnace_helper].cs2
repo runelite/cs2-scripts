@@ -6,74 +6,74 @@ def_int $int2 = 0;
 ~helper_generic_set_bit(0);
 $comsubid1 = ~helper_generic_add_title("Blast Furnace Info", 0);
 if (cc_find(helper_generic:content, $comsubid1) = ^true) {
-	cc_setonvartransmit("blast_furnace_helper($boolean0){var543, var795, var545, var546, var547, var548, var549}");
+	cc_setonvartransmit("blast_furnace_helper($boolean0){blast_furnace_readings, dttd_region, blast_furnace_1, blast_furnace_2, blast_furnace_3, blast_furnace_4, blast_furnace_5}");
 	cc_setoninvtransmit("blast_furnace_helper($boolean0){worn}");
 }
 if ($boolean0 = true) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Coffer:", ~tostring_spacer(%varbit5357, ","));
+	$comsubid1, $int2 = ~helper_generic_add_data("Coffer:", ~tostring_spacer(%blast_furnace_coffer, ","));
 }
 def_string $string0 = "<col=ff0000>Not ready</col>";
-if (inv_total(worn, ice_gloves_1580) > 0 & %varbit936 ! 0 | %varbit936 = 3) {
+if (inv_total(worn, ice_gloves_1580) > 0 & %blast_furnace_bars_hot ! 0 | %blast_furnace_bars_hot = 3) {
 	$string0 = "<col=00ff00>Ready</col>";
-} else if (%varbit936 = 2) {
+} else if (%blast_furnace_bars_hot = 2) {
 	$string0 = "<col=ff0000>Needs cooling</col>";
 }
 $comsubid1, $int2 = ~helper_generic_add_data("Collection:", $string0);
-if (%varbit949 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Coal:", tostring(%varbit949));
+if (%blast_furnace_coal > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Coal:", tostring(%blast_furnace_coal));
 }
-if (%varbit950 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Tin ore:", tostring(%varbit950));
+if (%blast_furnace_tin_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Tin ore:", tostring(%blast_furnace_tin_ore));
 }
-if (%varbit959 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Copper ore:", tostring(%varbit959));
+if (%blast_furnace_copper_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Copper ore:", tostring(%blast_furnace_copper_ore));
 }
-if (%varbit941 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Bronze bars:", tostring(%varbit941));
+if (%blast_furnace_bronze_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Bronze bars:", tostring(%blast_furnace_bronze_bars));
 }
-if (%varbit951 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Iron ore:", tostring(%varbit951));
+if (%blast_furnace_iron_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Iron ore:", tostring(%blast_furnace_iron_ore));
 }
-if (%varbit942 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Iron bars:", tostring(%varbit942));
+if (%blast_furnace_iron_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Iron bars:", tostring(%blast_furnace_iron_bars));
 }
-if (%varbit943 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Steel bars:", tostring(%varbit943));
+if (%blast_furnace_steel_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Steel bars:", tostring(%blast_furnace_steel_bars));
 }
-if (%varbit952 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Mithril ore:", tostring(%varbit952));
+if (%blast_furnace_mithril_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Mithril ore:", tostring(%blast_furnace_mithril_ore));
 }
-if (%varbit944 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Mithril bars:", tostring(%varbit944));
+if (%blast_furnace_mithril_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Mithril bars:", tostring(%blast_furnace_mithril_bars));
 }
-if (%varbit953 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Adamantite ore:", tostring(%varbit953));
+if (%blast_furnace_adamantite_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Adamantite ore:", tostring(%blast_furnace_adamantite_ore));
 }
-if (%varbit945 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Adamantite bars:", tostring(%varbit945));
+if (%blast_furnace_adamantite_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Adamantite bars:", tostring(%blast_furnace_adamantite_bars));
 }
-if (%varbit954 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Runite ore:", tostring(%varbit954));
+if (%blast_furnace_runite_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Runite ore:", tostring(%blast_furnace_runite_ore));
 }
-if (%varbit946 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Runite bars:", tostring(%varbit946));
+if (%blast_furnace_runite_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Runite bars:", tostring(%blast_furnace_runite_bars));
 }
-if (%varbit956 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Silver ore:", tostring(%varbit956));
+if (%blast_furnace_silver_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Silver ore:", tostring(%blast_furnace_silver_ore));
 }
-if (%varbit948 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Silver bars:", tostring(%varbit948));
+if (%blast_furnace_silver_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Silver bars:", tostring(%blast_furnace_silver_bars));
 }
-if (%varbit955 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Gold ore:", tostring(%varbit955));
+if (%blast_furnace_gold_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Gold ore:", tostring(%blast_furnace_gold_ore));
 }
-if (%varbit947 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Gold bars:", tostring(%varbit947));
+if (%blast_furnace_gold_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Gold bars:", tostring(%blast_furnace_gold_bars));
 }
-if (%varbit957 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Perfect gold ore:", tostring(%varbit957));
+if (%blast_furnace_perfect_gold_ore > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Perfect gold ore:", tostring(%blast_furnace_perfect_gold_ore));
 }
-if (%varbit958 > 0) {
-	$comsubid1, $int2 = ~helper_generic_add_data("Perfect gold bars:", tostring(%varbit958));
+if (%blast_furnace_perfect_gold_bars > 0) {
+	$comsubid1, $int2 = ~helper_generic_add_data("Perfect gold bars:", tostring(%blast_furnace_perfect_gold_bars));
 }
 ~helper_generic_build_ui;

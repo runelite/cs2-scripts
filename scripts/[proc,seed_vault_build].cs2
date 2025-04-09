@@ -30,16 +30,16 @@ while ($int8 < 93) {
 			cc_setop(9, "Remove-All-Placeholders");
 		} else {
 			cc_setobject($obj9, inv_total(seed_vault, $obj9));
-			if (%var2195 = ^max_32bit_int) {
+			if (%seed_vault_selected_qty = ^max_32bit_int) {
 				cc_setop(1, "Withdraw-All");
-			} else if (%var2195 > 1) {
-				cc_setop(1, "Withdraw-<tostring(%var2195)>");
+			} else if (%seed_vault_selected_qty > 1) {
+				cc_setop(1, "Withdraw-<tostring(%seed_vault_selected_qty)>");
 			}
 			cc_setop(2, "Withdraw-1");
 			cc_setop(3, "Withdraw-5");
 			cc_setop(4, "Withdraw-10");
-			if (%var3197 > 1) {
-				cc_setop(5, "Withdraw-<tostring(%var3197)>");
+			if (%seed_vault_requested_qty > 1) {
+				cc_setop(5, "Withdraw-<tostring(%seed_vault_requested_qty)>");
 			}
 			cc_setop(6, "Withdraw-X");
 			cc_setop(7, "Withdraw-All");
@@ -58,16 +58,16 @@ while ($int8 < 93) {
 			.cc_setop(8, "Remove-Placeholder");
 			.cc_setop(9, "Remove-All-Placeholders");
 		} else {
-			if (%var2195 = ^max_32bit_int) {
+			if (%seed_vault_selected_qty = ^max_32bit_int) {
 				.cc_setop(1, "Withdraw-All");
-			} else if (%var2195 > 1) {
-				.cc_setop(1, "Withdraw-<tostring(%var2195)>");
+			} else if (%seed_vault_selected_qty > 1) {
+				.cc_setop(1, "Withdraw-<tostring(%seed_vault_selected_qty)>");
 			}
 			.cc_setop(2, "Withdraw-1");
 			.cc_setop(3, "Withdraw-5");
 			.cc_setop(4, "Withdraw-10");
-			if (%var3197 > 1) {
-				.cc_setop(5, "Withdraw-<tostring(%var3197)>");
+			if (%seed_vault_requested_qty > 1) {
+				.cc_setop(5, "Withdraw-<tostring(%seed_vault_requested_qty)>");
 			}
 			.cc_setop(6, "Withdraw-X");
 			.cc_setop(7, "Withdraw-All");

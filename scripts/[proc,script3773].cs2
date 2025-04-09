@@ -1,11 +1,11 @@
 // 3773
 [proc,script3773](component $com_pirate_combilock_left_top0, component $com_pirate_combilock_left_middle1, component $com_pirate_combilock_left_bottom2, component $com_pirate_combilock_centre_top3, component $com_pirate_combilock_centre_middle4, component $com_pirate_combilock_centre_bottom5, component $com_pirate_combilock_right_top6, component $com_pirate_combilock_right_middle7, component $com_pirate_combilock_right_bottom8)
-if_setmodel(enum(int, model, enum_1546, %varbit9585), $com_pirate_combilock_left_middle1);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9585 + 1) % 4)), $com_pirate_combilock_left_bottom2);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9585 + 3) % 4)), $com_pirate_combilock_left_top0);
-if_setmodel(enum(int, model, enum_1546, %varbit9593), $com_pirate_combilock_centre_middle4);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9593 + 1) % 4)), $com_pirate_combilock_centre_bottom5);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9593 + 3) % 4)), $com_pirate_combilock_centre_top3);
-if_setmodel(enum(int, model, enum_1546, %varbit9594), $com_pirate_combilock_right_middle7);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9594 + 1) % 4)), $com_pirate_combilock_right_bottom8);
-if_setmodel(enum(int, model, enum_1546, calc((%varbit9594 + 3) % 4)), $com_pirate_combilock_right_top6);
+if_setmodel(enum(int, model, enum_1546, %pirate_combilock_left), $com_pirate_combilock_left_middle1);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_left + 1) % 4)), $com_pirate_combilock_left_bottom2);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_left + 3) % 4)), $com_pirate_combilock_left_top0);
+if_setmodel(enum(int, model, enum_1546, %pirate_combilock_centre), $com_pirate_combilock_centre_middle4);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_centre + 1) % 4)), $com_pirate_combilock_centre_bottom5);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_centre + 3) % 4)), $com_pirate_combilock_centre_top3);
+if_setmodel(enum(int, model, enum_1546, %pirate_combilock_right), $com_pirate_combilock_right_middle7);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_right + 1) % 4)), $com_pirate_combilock_right_bottom8);
+if_setmodel(enum(int, model, enum_1546, calc((%pirate_combilock_right + 3) % 4)), $com_pirate_combilock_right_top6);

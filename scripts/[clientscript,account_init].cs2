@@ -1,8 +1,8 @@
 // 2497
 [clientscript,account_init](component $com_account_universe0, component $com_account_tabs1)
-if_setonvartransmit("account_update_display{var1780, var1781, var1795, var1737, var375}", $com_account_universe0);
+if_setonvartransmit("account_update_display{account_credit, account_messages, mobile_options_transmit, tob_temp_transmit_2, armourhitsound}", $com_account_universe0);
 ~account_setup_tabs;
-if_setonvartransmit("account_update_tabs{var1666, var1055}", $com_account_tabs1);
-~account_update_tabs(%varbit10060);
+if_setonvartransmit("account_update_tabs{gargboss_perm_transmit, chat_filter_assist}", $com_account_tabs1);
+~account_update_tabs(%account_current_tab);
 ~account_update_display;
 ~script2833;

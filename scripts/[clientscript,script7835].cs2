@@ -2,21 +2,21 @@
 [clientscript,script7835](int $int0)
 switch_int (calc($int0 / 32)) {
 	case 0 :
-		%var805 = setbit(%var805, $int0);
+		%macro_bee_pos_1 = setbit(%macro_bee_pos_1, $int0);
 	case 1 :
-		%var261 = setbit(%var261, calc($int0 - 32));
+		%if1 = setbit(%if1, calc($int0 - 32));
 	case 2 :
-		%var262 = setbit(%var262, calc($int0 - 64));
+		%if2 = setbit(%if2, calc($int0 - 64));
 	case 3 :
-		%var263 = setbit(%var263, calc($int0 - 96));
+		%if3 = setbit(%if3, calc($int0 - 96));
 	case 4 :
-		%var264 = setbit(%var264, calc($int0 - 128));
+		%if4 = setbit(%if4, calc($int0 - 128));
 	case 5 :
-		%var265 = setbit(%var265, calc($int0 - 160));
+		%if5 = setbit(%if5, calc($int0 - 160));
 	case 6 :
-		%var266 = setbit(%var266, calc($int0 - 192));
+		%if6 = setbit(%if6, calc($int0 - 192));
 	case 7 :
-		%var1037 = setbit(%var1037, calc($int0 - 224));
+		%pattern_varp = setbit(%pattern_varp, calc($int0 - 224));
 	case default :
 		~script2075("Unsupported index: <tostring($int0)>");
 }

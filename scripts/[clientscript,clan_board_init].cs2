@@ -39,7 +39,7 @@ def_string $string1 = "<col=ff0000>De-list</col>";
 def_int $int11 = calc(20 + ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full)));
 if_setsize($int11, 10, ^setsize_abs, ^setsize_minus, $com_clans_board_myclan6);
 ~script4356($com_clans_board_universe0, $com_clans_board_myclan6, enum_3804, $string0, $string1);
-if_setonvartransmit("script4355(event_com, $com_clans_board_myclan6, enum_3804, $string0, $string1){var261}", $com_clans_board_universe0);
+if_setonvartransmit("script4355(event_com, $com_clans_board_myclan6, enum_3804, $string0, $string1){if1}", $com_clans_board_universe0);
 $string0 = "Applicants";
 def_int $int12 = calc(20 + parawidth($string0, 512, p12_full));
 if_setsize($int12, 10, ^setsize_abs, ^setsize_minus, $com_clans_board_applicants7);

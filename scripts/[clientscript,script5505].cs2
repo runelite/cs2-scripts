@@ -1,7 +1,7 @@
 // 5505
 [clientscript,script5505](component $com_gim_settings_quit0)
 cc_deleteall($com_gim_settings_quit0);
-if (%varbit13126 = 1) {
+if (%gim_pending_leave = 1) {
 	~stonebutton_init("<col=ff0000>Cancel Leave</col>", $com_gim_settings_quit0, p12_full, 0);
 } else {
 	~stonebutton_init("<col=ff0000>Leave Group</col>", $com_gim_settings_quit0, p12_full, 0);

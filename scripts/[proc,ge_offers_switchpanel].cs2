@@ -1,7 +1,7 @@
 // 806
 [proc,ge_offers_switchpanel](component $com_ge_offers_frame0, int $comsubid1, component $com_ge_offers_back2, component $com_ge_offers_index3, component $com_ge_offers_details4, component $com_ge_offers_setup5, component $com_ge_offers_tooltip6)
 ~deltooltip_action($com_ge_offers_tooltip6);
-def_int $int7 = calc(%varbit4439 - 1);
+def_int $int7 = calc(%ge_selectedslot - 1);
 def_inv $inv8 = enum(int, inv, enum_150, $int7);
 if ($inv8 = null) {
 	if_sethide(true, $com_ge_offers_back2);

@@ -2,7 +2,7 @@
 [clientscript,gravestone_retrieval_init](component $com_gravestone_retrieval_universe0, component $com_gravestone_retrieval_frame1, component $com_gravestone_retrieval_items2, component $com_gravestone_retrieval_scrollbar3, component $com_gravestone_retrieval_button4, component $com_gravestone_retrieval_button_gfx5, component $com_gravestone_retrieval_discard6, component $com_gravestone_retrieval_discard_gfx7, component $com_gravestone_retrieval_info8, component $com_gravestone_retrieval_fee9)
 def_int $comsubid10 = ~steelborder($com_gravestone_retrieval_frame1, "", 0);
 ~gravestone_retrieval_unlockstatus($com_gravestone_retrieval_frame1, $comsubid10, $com_gravestone_retrieval_button4, $com_gravestone_retrieval_button_gfx5, $com_gravestone_retrieval_info8, $com_gravestone_retrieval_fee9);
-if_setonvartransmit("gravestone_retrieval_unlockstatus($com_gravestone_retrieval_frame1, $comsubid10, $com_gravestone_retrieval_button4, $com_gravestone_retrieval_button_gfx5, $com_gravestone_retrieval_info8, $com_gravestone_retrieval_fee9){var261, var262}", $com_gravestone_retrieval_universe0);
+if_setonvartransmit("gravestone_retrieval_unlockstatus($com_gravestone_retrieval_frame1, $comsubid10, $com_gravestone_retrieval_button4, $com_gravestone_retrieval_button_gfx5, $com_gravestone_retrieval_info8, $com_gravestone_retrieval_fee9){if1, if2}", $com_gravestone_retrieval_universe0);
 if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_discard6);
 if_setop(1, "Discard-All", $com_gravestone_retrieval_discard6);
 if_setontimer(null, $com_gravestone_retrieval_discard6);

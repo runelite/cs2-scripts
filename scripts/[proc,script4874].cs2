@@ -3,7 +3,7 @@
 if (~script7327($dbrow0) = 1 | ~quest_is_subquest($dbrow0) = 1 | db_getfield($dbrow0, quest:in_prerelease, 0) = true | ~quest_status_get($dbrow0) ! 1) {
 	return;
 }
-if (%varbit9622 = 1 & ~quest_requirement_check($dbrow0) = 0) {
+if (%quest_start_highlight_filter_requirements = 1 & ~quest_requirement_check($dbrow0) = 0) {
 	return;
 }
 def_int $int1 = db_getfieldcount($dbrow0, quest:startnpc);

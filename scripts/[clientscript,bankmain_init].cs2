@@ -49,13 +49,13 @@ if_setonop("bankmain_search_toggle(
 cc_deleteall($com_bankmain_scrollbar8);
 ~scrollbar_vertical($com_bankmain_scrollbar8, $com_bankmain_items7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~bankmain_swapinsert($com_bankmain_swap10, $com_bankmain_insert11);
-if_setonvartransmit("bankmain_swapinsert($com_bankmain_swap10, $com_bankmain_insert11){var304}", $com_bankmain_swap10);
+if_setonvartransmit("bankmain_swapinsert($com_bankmain_swap10, $com_bankmain_insert11){bankinsert}", $com_bankmain_swap10);
 ~bankmain_toggleplaceholders($com_bankmain_placeholder12);
-if_setonvartransmit("bankmain_toggleplaceholders($com_bankmain_placeholder12){var1052}", $com_bankmain_placeholder12);
+if_setonvartransmit("bankmain_toggleplaceholders($com_bankmain_placeholder12){prayer25}", $com_bankmain_placeholder12);
 ~bankmain_itemnote($com_bankmain_item13, $com_bankmain_note14);
-if_setonvartransmit("bankmain_itemnote($com_bankmain_item13, $com_bankmain_note14){var115}", $com_bankmain_item13);
+if_setonvartransmit("bankmain_itemnote($com_bankmain_item13, $com_bankmain_note14){bankcert}", $com_bankmain_item13);
 ~bankmain_quantity_buttons($com_bankmain_quantity122, $com_bankmain_quantity523, $com_bankmain_quantity1024, $com_bankmain_quantityx25, $com_bankmain_quantityall26);
-if_setonvartransmit("bankmain_quantity_buttons($com_bankmain_quantity122, $com_bankmain_quantity523, $com_bankmain_quantity1024, $com_bankmain_quantityx25, $com_bankmain_quantityall26){var1666, var304}", $com_bankmain_quantity_layer27);
+if_setonvartransmit("bankmain_quantity_buttons($com_bankmain_quantity122, $com_bankmain_quantity523, $com_bankmain_quantity1024, $com_bankmain_quantityx25, $com_bankmain_quantityall26){gargboss_perm_transmit, bankinsert}", $com_bankmain_quantity_layer27);
 cc_deleteall($com_bankmain_items7);
 def_int $int35 = 0;
 def_int $int36 = 0;
@@ -186,7 +186,7 @@ if_setonvartransmit("bankmain_build(
 	14 = $com_bankmain_depositworn30, 
 	15 = $com_bankmain_depositworn_graphic31, 
 	16 = $com_bankmain_bank_tut32
-){var304, var115, var867, var1052, var1053, var1666, var1141}", $com_bankmain_items7);
+){bankinsert, bankcert, prayer23, prayer25, prayer26, gargboss_perm_transmit, item_redemption}", $com_bankmain_items7);
 %varcint51 = $int34;
 def_component $component38 = if_getlayer($com_bankmain_universe0);
 if ($component38 ! null) {
@@ -208,7 +208,7 @@ cc_setmodelangle(15, 300, 141, 220, 0, 3500);
 if_setonmouserepeat("script1312(true, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
 if_setonmouseleave("script1312(false, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
 ~script5300($com_bankmain_gim_storage33);
-if_setonvartransmit("script5299(event_com){var499}", $com_bankmain_gim_storage33);
+if_setonvartransmit("script5299(event_com){magic_carpet_var}", $com_bankmain_gim_storage33);
 if_setonop("bankmain_switchtab(
 	0 = $com_bankmain_universe0, 
 	1 = $com_bankmain_menu_button2, 

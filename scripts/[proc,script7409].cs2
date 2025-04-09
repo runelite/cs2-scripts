@@ -23,7 +23,7 @@ if_setop(2, "Customise", osm_hotkeys:master_toggle);
 if_setop(3, "Swap-to Loadout 1", osm_hotkeys:master_toggle);
 if_setop(4, "Swap-to Loadout 2", osm_hotkeys:master_toggle);
 if_setop(5, "Swap-to Loadout 3", osm_hotkeys:master_toggle);
-if (%varbit11555 = 1) {
+if (%osm_hotkey_accordion_locked = 1) {
 	if_setop(6, "Unlock", osm_hotkeys:master_toggle);
 } else {
 	if_setop(6, "Lock", osm_hotkeys:master_toggle);

@@ -1,7 +1,7 @@
 // 6801
 [proc,speedrunning_reward_shop_showpoints](component $com_speedrunning_rewards_universe0, component $com_speedrunning_rewards_rewards_text1, component $com_speedrunning_rewards_rewards_select_frame2, component $com_speedrunning_rewards_rewards_select3, component $com_speedrunning_rewards_rewards_graphics4, component $com_speedrunning_rewards_rewards_holder5, component $com_speedrunning_rewards_rewards_button6, component $com_speedrunning_rewards_rewards_btngfx7, component $com_speedrunning_rewards_confirm8, component $com_speedrunning_rewards_confirm_frame9, component $com_speedrunning_rewards_confirm_text10, component $com_speedrunning_rewards_confirm_button11, component $com_speedrunning_rewards_confirm_cancel12, component $com_speedrunning_rewards_rewards_scrollbar13)
 def_string $string0 = ",";
-if_settext("Speedrun Points: <col=ffffff><~tostring_spacer(%var3660, $string0)>", $com_speedrunning_rewards_rewards_text1);
+if_settext("Speedrun Points: <col=ffffff><~tostring_spacer(%speedrun_points_currency, $string0)>", $com_speedrunning_rewards_rewards_text1);
 if_settextfont(b12_full, $com_speedrunning_rewards_rewards_text1);
 if_settextshadow(true, $com_speedrunning_rewards_rewards_text1);
 if_settextalign(^settextalign_centre, ^settextalign_centre, 0, $com_speedrunning_rewards_rewards_text1);

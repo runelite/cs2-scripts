@@ -1,8 +1,8 @@
 // 2642
 [clientscript,equipment_icon_check](component $com_wornitems_equipment_icon0)
-if (%var281 = 400) {
+if (%tutorial = 400) {
 	if_setontimer("equipment_icon_flash($com_wornitems_equipment_icon0)", $com_wornitems_equipment_icon0);
-} else if (%var2686 = 400) {
+} else if (%tutorial_2 = 400) {
 	if_setontimer("equipment_icon_flash($com_wornitems_equipment_icon0)", $com_wornitems_equipment_icon0);
 } else {
 	if_setgraphic("options_icons,16", $com_wornitems_equipment_icon0);

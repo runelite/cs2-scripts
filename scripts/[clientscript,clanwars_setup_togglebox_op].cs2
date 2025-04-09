@@ -4,10 +4,10 @@ if ($opindex0 ! 1 | $int3 < 0 | $int3 >= 32) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (testbit(%var92, $int3) = ^true) {
-	%var92 = clearbit(%var92, $int3);
+if (testbit(%prayer9, $int3) = ^true) {
+	%prayer9 = clearbit(%prayer9, $int3);
 } else {
-	%var92 = setbit(%var92, $int3);
+	%prayer9 = setbit(%prayer9, $int3);
 }
 if (cc_find($com_clanwars_setup_other1, calc($comsubid2 + 1)) = ^true & .cc_find($com_clanwars_setup_other1, calc($comsubid2 + 2)) = ^true) {
 	~clanwars_setup_togglebox_update($com_clanwars_setup_other1, $int3);

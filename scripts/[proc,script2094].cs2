@@ -10,37 +10,37 @@ if (stat_base(fishing) < 15) {
 } else {
 	if_setmodel(model_16806, lunar_contact_npc:murphy_model);
 }
-if (%varbit1527 < 160) {
+if (%handsand_quest < 160) {
 	if_setmodel(model_16809, lunar_contact_npc:sandman_model);
 } else {
 	if_setmodel(model_16808, lunar_contact_npc:sandman_model);
 }
-if (%var359 < 100) {
+if (%misc_quest < 100) {
 	if_setmodel(model_16801, lunar_contact_npc:ghrim_model);
 } else {
 	if_setmodel(model_16800, lunar_contact_npc:ghrim_model);
 }
-if (%var492 < 4) {
+if (%abyssal_miniquest < 4) {
 	if_setmodel(model_16281, lunar_contact_npc:darkmage_model);
 } else {
 	if_setmodel(model_16280, lunar_contact_npc:darkmage_model);
 }
-if (%varbit3618 < 16 | %varbit9653 > 660) {
+if (%dream_prog < 16 | %wgs > 660) {
 	if_setmodel(model_24990, lunar_contact_npc:cyrisus_model);
 } else {
 	if_setmodel(cyrisus_24978, lunar_contact_npc:cyrisus_model);
 }
-if (%varbit4897 = 0) {
+if (%zeah_playerhasvisited = 0) {
 	if_setmodel(model_30952, lunar_contact_npc:smoggy_model);
 } else {
 	if_setmodel(smoggy_30953, lunar_contact_npc:smoggy_model);
 }
-if (%varbit3618 < 28) {
+if (%dream_prog < 28) {
 	if_setmodel(model_24992, lunar_contact_npc:random_model);
 } else {
 	if_setmodel(model_24991, lunar_contact_npc:random_model);
 }
-if (%varbit5037 = 1) {
+if (%mm2_slayer_master = 1) {
 	if_setop(1, "Steve", lunar_contact_npc:slayermaster6);
 	if_settext("Steve", lunar_contact_npc:slayermaster6_text);
 	if_setmodel(model_547, lunar_contact_npc:slayermaster6_model);
@@ -49,22 +49,22 @@ if (%varbit5037 = 1) {
 	if_settext("Nieve", lunar_contact_npc:slayermaster6_text);
 	if_setmodel(model_16282, lunar_contact_npc:slayermaster6_model);
 }
-if (%varbit5195 = 0) {
+if (%trail_watson_spoken = 0) {
 	if_setmodel(model_32306, lunar_contact_npc:watson_model);
 } else {
 	if_setmodel(watson_32305, lunar_contact_npc:watson_model);
 }
-if (%var77 ! 2 & %var76 < 6) {
+if (%barcrawl ! 2 & %scorpcatcher < 6) {
 	if_setmodel(model_33204, lunar_contact_npc:barbguard_model);
 } else {
 	if_setmodel(barbarian_guard_33203, lunar_contact_npc:barbguard_model);
 }
-if (%varbit10582 < 40) {
+if (%porcine < 40) {
 	if_setmodel(model_40888, lunar_contact_npc:slayermaster9_model);
 } else {
 	if_setmodel(model_40889, lunar_contact_npc:slayermaster9_model);
 }
-if (%varbit10782 ! 0) {
+if (%wgs_hero_part_1_vis ! 0) {
 	if_setop(1, "Aya", lunar_contact_npc:slayermaster1);
 	if_settext("Aya", lunar_contact_npc:slayermaster1_text);
 	if_setmodel(model_54028, lunar_contact_npc:slayermaster1_model);
@@ -79,7 +79,7 @@ if (%varbit10782 ! 0) {
 	if_settext("Duradel", lunar_contact_npc:slayermaster5_text);
 	if_setmodel(model_16817, lunar_contact_npc:slayermaster5_model);
 }
-if (%varbit10782 = 1) {
+if (%wgs_hero_part_1_vis = 1) {
 	if_setop(1, "Achtryn", lunar_contact_npc:slayermaster2);
 	if_settext("Achtryn", lunar_contact_npc:slayermaster2_text);
 	if_setmodel(model_54030, lunar_contact_npc:slayermaster2_model);
@@ -88,12 +88,12 @@ if (%varbit10782 = 1) {
 	if_settext("Mazchna", lunar_contact_npc:slayermaster2_text);
 	if_setmodel(model_16811, lunar_contact_npc:slayermaster2_model);
 }
-if (%varbit10562 = 0) {
+if (%con_contract_discussed = 0) {
 	if_setmodel(model_40851, lunar_contact_npc:con_contractor_amy_model);
 	if_setop(2, "", lunar_contact_npc:con_contractor_amy);
 } else {
 	if_setmodel(model_40852, lunar_contact_npc:con_contractor_amy_model);
-	switch_int (%var261) {
+	switch_int (%if1) {
 		case default :
 			if_setop(2, "", lunar_contact_npc:con_contractor_amy);
 		case 1 :

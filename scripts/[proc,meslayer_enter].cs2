@@ -27,7 +27,7 @@ if ($int1 > 0) {
 			} else if (%varcint5 = 3) {
 				friend_del(%varcstring359);
 			} else if (%varcint5 = 6) {
-				if (%varbit8119 = 0) {
+				if (%has_displayname_transmitter = 0) {
 					~meslayer_close(true, true, true);
 					mes("You must set a name before you can chat.");
 					return;
@@ -39,7 +39,7 @@ if ($int1 > 0) {
 					~rebuildchatbox($int0);
 					~rebuildpmbox($int0);
 				}
-				if (%varbit4394 = 1) {
+				if (%chat_stfu = 1) {
 					friend_del(%varcstring360);
 				} else {
 					chat_sendprivate(%varcstring360, %varcstring359);
@@ -76,7 +76,7 @@ if ($int1 > 0) {
 			resume_stringdialog(%varcstring359);
 			%varcint5 = 0;
 		case 10 :
-			if (%varbit8119 = 0) {
+			if (%has_displayname_transmitter = 0) {
 				~meslayer_close(true, true, true);
 				mes("You must set a name before you can chat.");
 				return;
@@ -92,7 +92,7 @@ if ($int1 > 0) {
 			chat_setmessagefilter(lowercase($string0));
 			~rebuildchatbox(~script553);
 		case 13 :
-			if (%varbit8119 = 0) {
+			if (%has_displayname_transmitter = 0) {
 				~meslayer_close(true, true, true);
 				mes("You must set a name before you can chat.");
 				return;

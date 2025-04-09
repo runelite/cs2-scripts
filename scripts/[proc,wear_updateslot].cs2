@@ -13,7 +13,7 @@ cc_sethide(false);
 .cc_sethide(true);
 cc_setobject($obj3, inv_getnum(worn, $int1));
 if_setopbase("<col=ff9040><~script1787($obj3)></col>", $component0);
-if (%varbit9800 = 1) {
+if (%colosseum_sol_grapple_pending = 1) {
 	if_setop(1, "Defend", $component0);
 	if_setoutline(2, $component0);
 } else {
@@ -32,14 +32,14 @@ if ($boolean2 = true) {
 		~script7777($component0, $obj3, 8);
 		switch_obj ($obj3) {
 			case camulet_6707 :
-				if (%varbit4525 = 1 | %varbit4526 = 1) {
+				if (%desert_hard_reward = 1 | %desert_elite_reward = 1) {
 					if_setop(3, "Temple", $component0);
 					if_setop(4, "Surface", $component0);
 				}
-				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var1190}", $component0);
+				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){achievement_diary_rewards}", $component0);
 			case tob_teleport_22517 :
 				if_setop(4, ~inventory_op_override($obj3, 3), $component0);
-				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var3150}", $component0);
+				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){nightmare_killtime_4}", $component0);
 			case default :
 				if_setonvartransmit(null, $component0);
 		}
@@ -50,6 +50,6 @@ if ($boolean2 = true) {
 	if_setonvartransmit(null, $component0);
 	if_setop(2, "Bank", $component0);
 }
-if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){var4128}", $component0);
+if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){colosseum_int_temp_transmit_2}", $component0);
 if_setop(10, "Examine", $component0);
 if_setonop("cc_settrans_temporarily($component0, cc_getid, 100, 0)", $component0);

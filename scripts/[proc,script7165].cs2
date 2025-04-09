@@ -19,8 +19,8 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 while (cc_find($component0, $int14) = ^true) {
 	$obj5, $int6, $int7, $int8, $int9, $int10, $int11 = ~script7173($component0, $int14);
-	if ($int11 = 0 | %varbit14880 = 1) {
-		if (%varbit14881 = 0) {
+	if ($int11 = 0 | %option_loottracker_display_ignored_entries = 1) {
+		if (%option_loottracker_display_value_mode = 0) {
 			$int15 = ~script1226($int15, $int10);
 		} else {
 			$int15 = ~script1226($int15, $int9);
@@ -33,7 +33,7 @@ if (cc_find($component1, 4) = ^true) {
 }
 def_int $int16 = if_getscrollwidth(loottools:loottracker_info_overview);
 def_int $int17 = if_getscrollheight(loottools:loottracker_info_overview);
-if (%varbit14881 = 0) {
+if (%option_loottracker_display_value_mode = 0) {
 	$int17 = ~script1226($int17, $int8);
 } else {
 	$int17 = ~script1226($int17, $int7);

@@ -24,11 +24,11 @@ if ($enum1 = enum_1745) {
 	~script7568($enum1);
 	~toplevel_side_customise($enum1);
 }
-if (%varbit4606 ! 0) {
-	if (%varbit4606 = 2) {
+if (%fov_clamp ! 0) {
+	if (%fov_clamp = 2) {
 		viewport_setfov(512, 220);
 		viewport_clampfov(0, 0, 0, 0);
-	} else if (%varbit4606 = 3) {
+	} else if (%fov_clamp = 3) {
 		viewport_setfov(256, 256);
 		if ($enum1 = enum_1129) {
 			viewport_clampfov(512, 512, 512, 512);
@@ -99,14 +99,14 @@ def_int $int20 = 0;
 def_int $int21 = 0;
 if ($component19 ! null) {
 	if (if_hassub(enum(component, component, $enum1, toplevel_osrs_stretch:xp_drops)) = true) {
-		if (%varbit4692 ! 0) {
+		if (%xpdrops_position ! 0) {
 			$int21 = 0;
 		} else {
 			$int21 = 38;
 		}
 	}
-	if (~on_mobile = true & %varbit542 = 0) {
-		if (%varbit6254 = 0) {
+	if (~on_mobile = true & %cutscene_status = 0) {
+		if (%osm_minimap_toggle = 0) {
 			$int20 = calc(181 + 4);
 		} else {
 			$int20 = calc(84 + 4);
@@ -120,7 +120,7 @@ $component19 = enum(component, component, $enum1, toplevel_osrs_stretch:xp_drops
 $int20 = 0;
 if ($component19 ! null) {
 	if (~on_mobile = true) {
-		if (%varbit6254 = 0) {
+		if (%osm_minimap_toggle = 0) {
 			$int20 = 181;
 		} else {
 			$int20 = 84;

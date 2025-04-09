@@ -3,13 +3,13 @@
 if ($obj0 = %varcint393) {
 	~magic_stop_flash($obj0);
 }
-def_int $int12 = %varbit9730;
+def_int $int12 = %spellbook_sublist;
 if ($obj0 = placeholder_blighted_sack_bind_24610) {
-	%varbit9730 = 0;
+	%spellbook_sublist = 0;
 } else if (oc_param($obj0, param_1883) ! 0) {
-	%varbit9730 = oc_param($obj0, param_1883);
+	%spellbook_sublist = oc_param($obj0, param_1883);
 }
-if (%varbit9730 ! $int12) {
+if (%spellbook_sublist ! $int12) {
 	~magic_spellbook_redraw(
 		0 = $com_magic_spellbook_spelllayer1, 
 		1 = $com_magic_spellbook_infolayer2, 

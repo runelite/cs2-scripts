@@ -1,7 +1,7 @@
 // 4835
 [clientscript,ca_boss_init](component $com_ca_boss_frame0, component $com_ca_boss_boss_name1, component $com_ca_boss_wiki2, component $com_ca_boss_wiki_click_layer3, component $com_ca_boss_map4, component $com_ca_boss_map_click_layer5, component $com_ca_boss_collection6, component $com_ca_boss_collection_click_layer7, component $com_ca_boss_ca_boss_information8, component $com_ca_boss_ca_boss_stats9, component $com_ca_boss_ca_boss_stats_click10, component $com_ca_boss_burger_btn_menu11, component $com_ca_boss_burger_menu_frame12, component $com_ca_boss_burger_menu_overlay13)
 ~script4767($com_ca_boss_burger_btn_menu11, $com_ca_boss_burger_menu_frame12, $com_ca_boss_burger_menu_overlay13, -1);
-def_struct $struct14 = enum(int, struct, enum_3987, %varbit12862);
+def_struct $struct14 = enum(int, struct, enum_3987, %ca_boss_selected);
 def_string $string0 = struct_param($struct14, param_1313);
 def_int $int15 = 0;
 if ($struct14 ! null) {

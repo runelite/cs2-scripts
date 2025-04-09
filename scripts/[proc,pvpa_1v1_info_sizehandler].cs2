@@ -2,7 +2,7 @@
 [proc,pvpa_1v1_info_sizehandler](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12, int $int13)
 def_int $int14 = if_getwidth($component0);
 def_int $int15 = calc(if_getheight($component0) - $int3);
-if ($int11 = $int14 & $int12 = $int15 & $int13 = %varbit14020) {
+if ($int11 = $int14 & $int12 = $int15 & $int13 = %pvpa_transmit_1v1roundcount) {
 	return;
 }
 if (calc(if_getx($component1) + if_getwidth($component1)) >= calc($int11 - 10)) {
@@ -46,5 +46,5 @@ if_setontimer("pvpa_1v1_info_sizehandler(
 	10 = $component10, 
 	11 = $int14, 
 	12 = $int15, 
-	13 = %varbit14020
+	13 = %pvpa_transmit_1v1roundcount
 )", $component0);

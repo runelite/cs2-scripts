@@ -2,7 +2,7 @@
 [proc,cluehelper_infobox_draw_content_emote](dbrow $dbrow0)
 def_int $int1 = 0;
 $int1 = ~helper_generic_add_title("Emote Clue", 1);
-if (%varbit14188 = 1) {
+if (%option_cluehelper_infobox_show_clue_text = 1) {
 	$int1 = ~helper_generic_add_text(db_getfield($dbrow0, cluehelper_clue_emote:clue_text, 0));
 }
 $int1 = ~helper_generic_add_title("Emotes", 0);
@@ -25,7 +25,7 @@ if ($loc6 ! null) {
 	$int1 = ~helper_generic_add_title("S.T.A.S.H", 0);
 	$int1 = ~helper_generic_add_text("...");
 	if (cc_find(helper_generic:content, $int1) = ^true) {
-		cc_setonvartransmit("script6624($int1, $loc6){var2855, var1365, var1366, var1367, var1368, var1369, var2202}");
+		cc_setonvartransmit("script6624($int1, $loc6){settings_tracking, hh_constructed_easy, hh_constructed_medium, hh_constructed_hard, hh_constructed_elite, hh_constructed_master, hh_constructed_beginner}");
 	}
 }
 def_dbrow $dbrow7 = db_getfield($dbrow0, cluehelper_clue_emote:outfit, 0);

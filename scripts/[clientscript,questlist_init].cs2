@@ -1,9 +1,9 @@
 // 1350
 [clientscript,questlist_init](component $com_questlist_container0, component $com_questlist_list_container1, component $com_questlist_text_container2, component $com_questlist_scrollbar3, component $com_questlist_questpoints4, component $com_questlist_completed5, component $com_questlist_list6, component $com_questlist_settings_button7)
 ~questlist_qp($com_questlist_questpoints4);
-if_setonvartransmit("questlist_qp($com_questlist_questpoints4){var101, var904, var3368, var3369, var3766}", $com_questlist_questpoints4);
+if_setonvartransmit("questlist_qp($com_questlist_questpoints4){qp, qp_total, speedrun_trophy_totals_1, speedrun_trophy_totals_2, speedrun_trophy_totals_3}", $com_questlist_questpoints4);
 ~questlist_completed($com_questlist_completed5);
-if_setonvartransmit("questlist_completed($com_questlist_completed5){var904, var2920, var3365}", $com_questlist_completed5);
+if_setonvartransmit("questlist_completed($com_questlist_completed5){qp_total, qp_total2, speedrun_points}", $com_questlist_completed5);
 cc_deleteall($com_questlist_container0);
 ~steelbox($com_questlist_container0, 0, false);
 ~questlist_draw($com_questlist_container0, $com_questlist_list_container1, $com_questlist_text_container2, $com_questlist_scrollbar3, $com_questlist_list6, false);

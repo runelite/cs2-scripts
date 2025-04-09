@@ -16,17 +16,17 @@ if (loc_find($coord3, $loc2) = true) {
 			3 = $loc2, 
 			4 = $coord3, 
 			5 = $obj4, 
-			6 = %varbit14189, 
-			7 = %varbit14164, 
-			8 = %varbit14184, 
-			9 = %varbit14182
-		){var3546, var3543, var2855}");
+			6 = %option_cluehelper_overlay_enabled, 
+			7 = %cluehelper_hideyhole_filled, 
+			8 = %option_cluehelper_target_highlight_enabled, 
+			9 = %option_cluehelper_enabled
+		){cluehelper_infobox_clue, option_cluehelper, settings_tracking}");
 	}
-	if (%varbit14182 = 0) {
+	if (%option_cluehelper_enabled = 0) {
 		highlight_loc_off($loc2, $coord3, 9, 1);
 		return;
 	}
-	if (%varbit14189 = 1) {
+	if (%option_cluehelper_overlay_enabled = 1) {
 		cc_create_entityoverlay($entityoverlay5, ^iftype_graphic, 0);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(5, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -37,12 +37,12 @@ if (loc_find($coord3, $loc2) = true) {
 		cc_setposition(-5, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic("side_icons,4");
 	}
-	if (%varbit14164 = 1 & ~script6472($loc2) = 1) {
+	if (%cluehelper_hideyhole_filled = 1 & ~script6472($loc2) = 1) {
 		highlight_loc_setup(9, ^green, 2, 30, 1);
 	} else {
 		highlight_loc_setup(9, ^red, 2, 30, 1);
 	}
-	if (%varbit14184 = 1) {
+	if (%option_cluehelper_target_highlight_enabled = 1) {
 		highlight_loc_on($loc2, $coord3, 9, 1);
 	}
 }
