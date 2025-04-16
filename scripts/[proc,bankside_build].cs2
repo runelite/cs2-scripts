@@ -92,6 +92,15 @@ while ($int12 > 0) {
 				.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
 				.cc_setgraphic("prayerglow,0");
 				.cc_settrans(180);
+			case default :
+				if (~script7349($obj11) = 1) {
+					.cc_create($component2, ^iftype_graphic, $int14, false);
+					$int14 = calc($int14 + 1);
+					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+					.cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
+					.cc_setgraphic("prayerglow,0");
+					.cc_settrans(180);
+				}
 		}
 	}
 }

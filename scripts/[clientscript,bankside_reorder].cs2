@@ -53,8 +53,16 @@ switch_obj ($obj12) {
 	case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 		cc_deleteall($component4);
 	case default :
-		switch_obj ($obj13) {
-			case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
-				cc_deleteall($component4);
+		if (~script7349($obj12) = 1) {
+			cc_deleteall($component4);
+		} else {
+			switch_obj ($obj13) {
+				case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
+					cc_deleteall($component4);
+				case default :
+					if (~script7349($obj13) = 1) {
+						cc_deleteall($component4);
+					}
+			}
 		}
 }
