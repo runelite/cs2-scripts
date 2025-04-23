@@ -14,7 +14,7 @@ if (%varcint41 = 3) {
 }
 def_int $colour3 = ^black;
 def_boolean $boolean4 = false;
-def_boolean $boolean5 = false;
+def_int $int5 = 0;
 def_string $string1 = "<col=004f00>";
 def_string $string2 = "<col=0000ff>";
 def_string $string3 = "<col=0000ff>";
@@ -31,8 +31,9 @@ def_string $string13 = "";
 def_string $string14 = "";
 def_string $string15 = "";
 def_string $string16 = "";
+def_string $string17 = "";
 if (~toplevel_chatbox_maketransparent = 1) {
-	$colour3, $boolean4, $boolean5 = ^white, true, true;
+	$colour3, $boolean4, $int5 = ^white, true, 1;
 	$string1, $string2, $string3 = "<col=30ff30>", "<col=9070ff>", "<col=9070ff>";
 	$string4 = ~script3739(struct_param(public_chat_2897, param_1230), "col");
 	$string5 = ~script3739(struct_param(private_chat_2899, param_1230), "col");
@@ -45,8 +46,9 @@ if (~toplevel_chatbox_maketransparent = 1) {
 	$string12 = ~script3739(struct_param(ironman_group_chat_3746, param_1230), "col");
 	$string13 = ~script3739(struct_param(clan_broadcasts_3748, param_1230), "col");
 	$string14 = ~script3739(struct_param(ironman_group_broadcasts_3750, param_1230), "col");
-	$string15 = "<col=ff8f3e>";
-	$string16 = "<col=12ea77>";
+	$string15 = ~script3739(struct_param(struct_4733, param_1230), "col");
+	$string16 = "<col=ff8f3e>";
+	$string17 = "<col=12ea77>";
 } else {
 	$string4 = ~script3739(struct_param(public_chat_2896, param_1230), "col");
 	$string5 = ~script3739(struct_param(private_chat_2898, param_1230), "col");
@@ -59,28 +61,16 @@ if (~toplevel_chatbox_maketransparent = 1) {
 	$string12 = ~script3739(struct_param(ironman_group_chat_3745, param_1230), "col");
 	$string13 = ~script3739(struct_param(clan_broadcasts_3747, param_1230), "col");
 	$string14 = ~script3739(struct_param(ironman_group_broadcasts_3749, param_1230), "col");
-	$string15 = "<col=93370c>";
-	$string16 = "<col=004a23>";
+	$string15 = ~script3739(struct_param(struct_4732, param_1230), "col");
+	$string16 = "<col=93370c>";
+	$string17 = "<col=004a23>";
 }
-def_string $string17 = ~script3739($colour3, "col");
+def_string $string18 = ~script3739($colour3, "col");
 
 	0 = $string4, 
 	1 = $string5, 
 	2 = $string6, 
-	3 = $string17, 
-	4 = $string7, 
-	5 = $string8, 
-	6 = $string9, 
-	7 = $string10, 
-	8 = $string11, 
-	9 = $string12, 
-	10 = $string13, 
-	11 = $string14
- = ~script4484(
-	0 = $string4, 
-	1 = $string5, 
-	2 = $string6, 
-	3 = $string17, 
+	3 = $string18, 
 	4 = $string7, 
 	5 = $string8, 
 	6 = $string9, 
@@ -89,7 +79,22 @@ def_string $string17 = ~script3739($colour3, "col");
 	9 = $string12, 
 	10 = $string13, 
 	11 = $string14, 
-	12 = $boolean5
+	12 = $string15
+ = ~script4484(
+	0 = $string4, 
+	1 = $string5, 
+	2 = $string6, 
+	3 = $string18, 
+	4 = $string7, 
+	5 = $string8, 
+	6 = $string9, 
+	7 = $string10, 
+	8 = $string11, 
+	9 = $string12, 
+	10 = $string13, 
+	11 = $string14, 
+	12 = $string15, 
+	13 = $int5
 );
 def_int $int6 = 0;
 def_int $int7 = 0;
@@ -121,14 +126,14 @@ if ((%varcint41 = 0 | %varcint41 = 2) & string_length(chat_getmessagefilter) > 0
 def_int $int10 = $int0;
 def_int $chattype11 = ^chattype_gamemessage;
 def_int $int12 = -1;
-def_string $string18 = "";
 def_string $string19 = "";
 def_string $string20 = "";
 def_string $string21 = "";
+def_string $string22 = "";
 def_int $int13 = -1;
 def_int $int14 = 0;
 def_int $int15 = 0;
-def_string $string22 = "";
+def_string $string23 = "";
 def_graphic $graphic16 = null;
 def_int $int17 = -1;
 def_int $int18 = -1;
@@ -141,18 +146,18 @@ if (activeclansettings_find_affined(0) = true & activeclanchannel_find_affined(0
 	}
 	$int19, $int20 = activeclanchannel_getrankkick, ~clan_permission_get(ban_from_chat_2956);
 }
-def_string $string23 = "";
-def_int $int21 = 0;
 def_string $string24 = "";
+def_int $int21 = 0;
+def_string $string25 = "";
 def_int $int22 = -1;
 while ($int10 ! -1 & $component9 ! null) {
-	$chattype11, $int12, $string18, $string19, $string20, $int15, $string23, $int21 = chat_gethistory_byuid($int10);
-	if (~panetest($chattype11, $string18, $int15, $string20) = 1 & ~filtertest($chattype11, $string18, ~affixtimestamp($string23, $string20, "null"), $string20, $int12, $int2, $string0, $int15) = 1) {
+	$chattype11, $int12, $string19, $string20, $string21, $int15, $string24, $int21 = chat_gethistory_byuid($int10);
+	if (~panetest($chattype11, $string19, $int15, $string21) = 1 & ~filtertest($chattype11, $string19, ~affixtimestamp($string24, $string21, "null"), $string21, $int12, $int2, $string0, $int15) = 1) {
 		switch_int ($chattype11) {
 			case ^chattype_publicchat, ^chattype_modchat :
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "<$string18>:", "null"), 
-					1 = "<$string4><$string20></col>", 
+					0 = ~affixtimestamp($string24, "<$string19>:", "null"), 
+					1 = "<$string4><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -167,8 +172,8 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_autotyper, ^chattype_modautotyper :
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "<$string18>:", "null"), 
-					1 = "<$string6><$string20></col>", 
+					0 = ~affixtimestamp($string24, "<$string19>:", "null"), 
+					1 = "<$string6><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -183,8 +188,8 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_privatechat, ^chattype_modprivatechat :
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "From <$string18>:", "null"), 
-					1 = "<$string5><$string20></col>", 
+					0 = ~affixtimestamp($string24, "From <$string19>:", "null"), 
+					1 = "<$string5><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -199,7 +204,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_tradereq :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<$string9><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<$string9><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -214,7 +219,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_loginlogoutnotification :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<$string5><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<$string5><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -233,8 +238,8 @@ while ($int10 ! -1 & $component9 ! null) {
 				}
 			case ^chattype_privatechatout :
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "To <$string18>:", "null"), 
-					1 = "<$string5><$string20></col>", 
+					0 = ~affixtimestamp($string24, "To <$string19>:", "null"), 
+					1 = "<$string5><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -249,7 +254,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat, ^chattype_chalreq_clanchat :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<$string10><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<$string10><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -264,7 +269,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_clancreationinvitation :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<col=1a31f2><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -279,8 +284,8 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case ^chattype_friendschat :
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "[<$string3><$string19></col>] <$string18>:", "null"), 
-					1 = "<$string7><$string20></col>", 
+					0 = ~affixtimestamp($string24, "[<$string3><$string20></col>] <$string19>:", "null"), 
+					1 = "<$string7><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -294,9 +299,9 @@ while ($int10 ! -1 & $component9 ! null) {
 					12 = $boolean4
 				);
 			case 111 :
-				$string24, $string20 = ~script632($string20);
+				$string25, $string21 = ~script632($string21);
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<col=1a31f2><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -310,9 +315,9 @@ while ($int10 ! -1 & $component9 ! null) {
 					11 = $boolean4
 				);
 			case 112 :
-				$string24, $string20 = ~script632($string20);
+				$string25, $string21 = ~script632($string21);
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<col=1a31f2><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<col=1a31f2><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -326,15 +331,15 @@ while ($int10 ! -1 & $component9 ! null) {
 					11 = $boolean4
 				);
 			case ^chattype_clanchat :
-				if (activeclansettings_find_affined(1) = true & activeclanchannel_find_affined(1) = true & ~script5501($string20) = 1) {
-					$string24, $string20 = ~script632($string20);
+				if (activeclansettings_find_affined(1) = true & activeclanchannel_find_affined(1) = true & ~script5501($string21) = 1) {
+					$string25, $string21 = ~script632($string21);
 					$int7 = ~script4483(
-						0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+						0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 						1 = null, 
 						2 = 0, 
 						3 = 0, 
-						4 = "<$string18>:", 
-						5 = "<$string12><$string20></col>", 
+						4 = "<$string19>:", 
+						5 = "<$string12><$string21></col>", 
 						6 = $int8, 
 						7 = $component9, 
 						8 = chatbox:scrollarea, 
@@ -348,17 +353,17 @@ while ($int10 ! -1 & $component9 ! null) {
 						16 = $boolean4
 					);
 				} else if (activeclansettings_find_affined(0) = true & activeclanchannel_find_affined(0) = true) {
-					$int17 = activeclansettings_getaffinedslot(removetags($string18));
+					$int17 = activeclansettings_getaffinedslot(removetags($string19));
 					if ($int17 ! -1) {
-						$string22, $graphic16 = ~script4302(activeclansettings_getaffinedrank($int17));
+						$string23, $graphic16 = ~script4302(activeclansettings_getaffinedrank($int17));
 						if ($graphic16 ! null) {
 							$int7 = ~script4483(
-								0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+								0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 								1 = $graphic16, 
 								2 = 13, 
 								3 = 13, 
-								4 = "<$string18>:", 
-								5 = "<$string8><$string20></col>", 
+								4 = "<$string19>:", 
+								5 = "<$string8><$string21></col>", 
 								6 = $int8, 
 								7 = $component9, 
 								8 = chatbox:scrollarea, 
@@ -373,12 +378,12 @@ while ($int10 ! -1 & $component9 ! null) {
 							);
 						} else {
 							$int7 = ~script4483(
-								0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+								0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 								1 = null, 
 								2 = 0, 
 								3 = 0, 
-								4 = "<$string2><$string22></col> <$string18>:", 
-								5 = "<$string8><$string20></col>", 
+								4 = "<$string2><$string23></col> <$string19>:", 
+								5 = "<$string8><$string21></col>", 
 								6 = $int8, 
 								7 = $component9, 
 								8 = chatbox:scrollarea, 
@@ -393,14 +398,14 @@ while ($int10 ! -1 & $component9 ! null) {
 							);
 						}
 					} else {
-						$string22, $graphic16 = ~script4302(-1);
+						$string23, $graphic16 = ~script4302(-1);
 						$int7 = ~script4483(
-							0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+							0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 							1 = $graphic16, 
 							2 = 13, 
 							3 = 13, 
-							4 = "<$string18>:", 
-							5 = "<$string8><$string20></col>", 
+							4 = "<$string19>:", 
+							5 = "<$string8><$string21></col>", 
 							6 = $int8, 
 							7 = $component9, 
 							8 = chatbox:scrollarea, 
@@ -416,12 +421,12 @@ while ($int10 ! -1 & $component9 ! null) {
 					}
 				} else {
 					$int7 = ~script4483(
-						0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+						0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 						1 = null, 
 						2 = 0, 
 						3 = 0, 
-						4 = "<$string18>:", 
-						5 = "<$string8><$string20></col>", 
+						4 = "<$string19>:", 
+						5 = "<$string8><$string21></col>", 
 						6 = $int8, 
 						7 = $component9, 
 						8 = chatbox:scrollarea, 
@@ -437,17 +442,17 @@ while ($int10 ! -1 & $component9 ! null) {
 				}
 			case ^chattype_clanguestchat :
 				if (activeclansettings_find_listened = true & activeclanchannel_find_listened = true) {
-					$int17 = activeclansettings_getaffinedslot(removetags($string18));
+					$int17 = activeclansettings_getaffinedslot(removetags($string19));
 					if ($int17 ! -1) {
-						$string22, $graphic16 = ~script4302(activeclansettings_getaffinedrank($int17));
+						$string23, $graphic16 = ~script4302(activeclansettings_getaffinedrank($int17));
 						if ($graphic16 ! null) {
 							$int7 = ~script4483(
-								0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+								0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 								1 = $graphic16, 
 								2 = 13, 
 								3 = 13, 
-								4 = "<$string18>:", 
-								5 = "<$string11><$string20></col>", 
+								4 = "<$string19>:", 
+								5 = "<$string11><$string21></col>", 
 								6 = $int8, 
 								7 = $component9, 
 								8 = chatbox:scrollarea, 
@@ -462,12 +467,12 @@ while ($int10 ! -1 & $component9 ! null) {
 							);
 						} else {
 							$int7 = ~script4483(
-								0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+								0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 								1 = null, 
 								2 = 0, 
 								3 = 0, 
-								4 = "<$string2><$string22></col> <$string18>:", 
-								5 = "<$string11><$string20></col>", 
+								4 = "<$string2><$string23></col> <$string19>:", 
+								5 = "<$string11><$string21></col>", 
 								6 = $int8, 
 								7 = $component9, 
 								8 = chatbox:scrollarea, 
@@ -482,14 +487,14 @@ while ($int10 ! -1 & $component9 ! null) {
 							);
 						}
 					} else {
-						$string22, $graphic16 = ~script4302(-1);
+						$string23, $graphic16 = ~script4302(-1);
 						$int7 = ~script4483(
-							0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+							0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 							1 = $graphic16, 
 							2 = 13, 
 							3 = 13, 
-							4 = "<$string18>:", 
-							5 = "<$string11><$string20></col>", 
+							4 = "<$string19>:", 
+							5 = "<$string11><$string21></col>", 
 							6 = $int8, 
 							7 = $component9, 
 							8 = chatbox:scrollarea, 
@@ -505,12 +510,12 @@ while ($int10 ! -1 & $component9 ! null) {
 					}
 				} else {
 					$int7 = ~script4483(
-						0 = ~affixtimestamp($string23, "[<$string2><$string19></col>]", "null"), 
+						0 = ~affixtimestamp($string24, "[<$string2><$string20></col>]", "null"), 
 						1 = null, 
 						2 = 0, 
 						3 = 0, 
-						4 = "<$string18>:", 
-						5 = "<$string11><$string20></col>", 
+						4 = "<$string19>:", 
+						5 = "<$string11><$string21></col>", 
 						6 = $int8, 
 						7 = $component9, 
 						8 = chatbox:scrollarea, 
@@ -525,16 +530,16 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				}
 			case ^chattype_clanmessage :
-				if (~gim_notification_message($string20) = 1) {
-					$string18, $string20 = ~script632($string20);
-					if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
-						$string24, $string20 = ~script632($string20);
+				if (~gim_notification_message($string21) = 1) {
+					$string19, $string21 = ~script632($string21);
+					if (string_length($string21) > 0 & string_indexof_string($string21, "|", 0) ! -1) {
+						$string25, $string21 = ~script632($string21);
 					}
-					$string20 = ~script3302($string20, "</col>", append("</col>", $string14));
+					$string21 = ~script3302($string21, "</col>", append("</col>", $string14));
 					if (activeclansettings_find_affined(1) = true) {
 						$int7 = ~script203(
-							0 = ~affixtimestamp($string23, "[<$string2><activeclansettings_getclanname></col>]", "null"), 
-							1 = "<$string14><$string20></col>", 
+							0 = ~affixtimestamp($string24, "[<$string2><activeclansettings_getclanname></col>]", "null"), 
+							1 = "<$string14><$string21></col>", 
 							2 = $int8, 
 							3 = $component9, 
 							4 = chatbox:scrollarea, 
@@ -549,8 +554,8 @@ while ($int10 ! -1 & $component9 ! null) {
 						);
 					} else {
 						$int7 = ~script203(
-							0 = ~affixtimestamp($string23, "", "null"), 
-							1 = "<$string14><$string20></col>", 
+							0 = ~affixtimestamp($string24, "", "null"), 
+							1 = "<$string14><$string21></col>", 
 							2 = $int8, 
 							3 = $component9, 
 							4 = chatbox:scrollarea, 
@@ -564,12 +569,12 @@ while ($int10 ! -1 & $component9 ! null) {
 							12 = $boolean4
 						);
 					}
-				} else if (~pvpa_notification_message($string20) = 1) {
-					$string18, $string20 = ~script632($string20);
+				} else if (~pvpa_notification_message($string21) = 1) {
+					$string19, $string21 = ~script632($string21);
 					if (activeclanchannel_find_affined(2) = true) {
 						$int7 = ~script203(
-							0 = ~affixtimestamp($string23, "[<$string2>PvP Arena</col>]", "null"), 
-							1 = $string20, 
+							0 = ~affixtimestamp($string24, "[<$string2>PvP Arena</col>]", "null"), 
+							1 = $string21, 
 							2 = $int8, 
 							3 = $component9, 
 							4 = chatbox:scrollarea, 
@@ -584,8 +589,8 @@ while ($int10 ! -1 & $component9 ! null) {
 						);
 					} else {
 						$int7 = ~script203(
-							0 = ~affixtimestamp($string23, "", "null"), 
-							1 = $string20, 
+							0 = ~affixtimestamp($string24, "", "null"), 
+							1 = $string21, 
 							2 = $int8, 
 							3 = $component9, 
 							4 = chatbox:scrollarea, 
@@ -600,18 +605,18 @@ while ($int10 ! -1 & $component9 ! null) {
 						);
 					}
 				} else {
-					$string20 = ~script3302($string20, "</col>", append("</col>", $string13));
-					if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
-						$string24, $string20 = ~script632($string20);
+					$string21 = ~script3302($string21, "</col>", append("</col>", $string13));
+					if (string_length($string21) > 0 & string_indexof_string($string21, "|", 0) ! -1) {
+						$string25, $string21 = ~script632($string21);
 					}
 					if (activeclanchannel_find_affined(0) = true) {
 						$int7 = ~script4483(
-							0 = ~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), 
+							0 = ~affixtimestamp($string24, "[<$string2><activeclanchannel_getclanname></col>]", "null"), 
 							1 = null, 
 							2 = 0, 
 							3 = 0, 
 							4 = "", 
-							5 = "<$string13><$string20></col>", 
+							5 = "<$string13><$string21></col>", 
 							6 = $int8, 
 							7 = $component9, 
 							8 = chatbox:scrollarea, 
@@ -626,12 +631,12 @@ while ($int10 ! -1 & $component9 ! null) {
 						);
 					} else {
 						$int7 = ~script4483(
-							0 = ~affixtimestamp($string23, "", "null"), 
+							0 = ~affixtimestamp($string24, "", "null"), 
 							1 = null, 
 							2 = 0, 
 							3 = 0, 
 							4 = "", 
-							5 = "<$string13><$string20></col>", 
+							5 = "<$string13><$string21></col>", 
 							6 = $int8, 
 							7 = $component9, 
 							8 = chatbox:scrollarea, 
@@ -649,12 +654,12 @@ while ($int10 ! -1 & $component9 ! null) {
 			case ^chattype_clanguestmessage :
 				if (activeclanchannel_find_listened = true) {
 					$int7 = ~script4483(
-						0 = ~affixtimestamp($string23, "[<$string2><activeclanchannel_getclanname></col>]", "null"), 
+						0 = ~affixtimestamp($string24, "[<$string2><activeclanchannel_getclanname></col>]", "null"), 
 						1 = null, 
 						2 = 0, 
 						3 = 0, 
 						4 = "", 
-						5 = $string20, 
+						5 = $string21, 
 						6 = $int8, 
 						7 = $component9, 
 						8 = chatbox:scrollarea, 
@@ -669,12 +674,12 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				} else {
 					$int7 = ~script4483(
-						0 = ~affixtimestamp($string23, "", "null"), 
+						0 = ~affixtimestamp($string24, "", "null"), 
 						1 = null, 
 						2 = 0, 
 						3 = 0, 
 						4 = "", 
-						5 = $string20, 
+						5 = $string21, 
 						6 = $int8, 
 						7 = $component9, 
 						8 = chatbox:scrollarea, 
@@ -689,10 +694,10 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				}
 			case ^chattype_broadcast :
-				$string20, $string21, $int13 = ~chat_broadcast_parseurl($string20);
+				$string21, $string22, $int13 = ~chat_broadcast_parseurl($string21);
 				$int7 = ~script203(
-					0 = ~affixtimestamp($string23, "<$string1>Broadcast:</col>", "null"), 
-					1 = "<$string17><$string20></col>", 
+					0 = ~affixtimestamp($string24, "<$string1>Broadcast:</col>", "null"), 
+					1 = "<$string18><$string21></col>", 
 					2 = $int8, 
 					3 = $component9, 
 					4 = chatbox:scrollarea, 
@@ -723,7 +728,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				} else {
 					$int7 = ~script199(
-						0 = ~affixtimestamp($string23, $string20, "null"), 
+						0 = ~affixtimestamp($string24, $string21, "null"), 
 						1 = $int8, 
 						2 = $component9, 
 						3 = chatbox:scrollarea, 
@@ -739,7 +744,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				}
 			case 113 :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, "<$string15><$string20></col>", "null"), 
+					0 = ~affixtimestamp($string24, "<$string16><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -753,11 +758,11 @@ while ($int10 ! -1 & $component9 ! null) {
 					11 = $boolean4
 				);
 			case ^chattype_dialogue :
-				$string18, $string20 = ~script632($string20);
-				if (string_length($string18) > 0) {
+				$string19, $string21 = ~script632($string21);
+				if (string_length($string19) > 0) {
 					$int7 = ~script203(
-						0 = ~affixtimestamp($string23, "<$string18>:", "null"), 
-						1 = "<$string16><$string20></col>", 
+						0 = ~affixtimestamp($string24, "<$string19>:", "null"), 
+						1 = "<$string17><$string21></col>", 
 						2 = $int8, 
 						3 = $component9, 
 						4 = chatbox:scrollarea, 
@@ -772,7 +777,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				} else {
 					$int7 = ~script199(
-						0 = ~affixtimestamp($string23, "<$string16><$string20></col>", "null"), 
+						0 = ~affixtimestamp($string24, "<$string17><$string21></col>", "null"), 
 						1 = $int8, 
 						2 = $component9, 
 						3 = chatbox:scrollarea, 
@@ -787,11 +792,11 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				}
 			case 116 :
-				$string18, $string20 = ~script632($string20);
-				if (string_length($string18) > 0) {
+				$string19, $string21 = ~script632($string21);
+				if (string_length($string19) > 0) {
 					$int7 = ~script203(
-						0 = ~affixtimestamp($string23, "<$string18>:", "null"), 
-						1 = "<$string4><$string20></col>", 
+						0 = ~affixtimestamp($string24, "<$string19>:", "null"), 
+						1 = "<$string4><$string21></col>", 
 						2 = $int8, 
 						3 = $component9, 
 						4 = chatbox:scrollarea, 
@@ -806,7 +811,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				} else {
 					$int7 = ~script199(
-						0 = ~affixtimestamp($string23, "<$string4><$string20></col>", "null"), 
+						0 = ~affixtimestamp($string24, "<$string4><$string21></col>", "null"), 
 						1 = $int8, 
 						2 = $component9, 
 						3 = chatbox:scrollarea, 
@@ -821,13 +826,28 @@ while ($int10 ! -1 & $component9 ! null) {
 					);
 				}
 			case ^chattype_gamemessage :
-				if (string_length($string20) > 0 & string_indexof_string($string20, "|", 0) ! -1) {
-					$string24, $string20 = ~script632($string20);
+				if (string_length($string21) > 0 & string_indexof_string($string21, "|", 0) ! -1) {
+					$string25, $string21 = ~script632($string21);
 				} else {
-					$string24 = "";
+					$string25 = "";
 				}
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, $string20, "null"), 
+					0 = ~affixtimestamp($string24, $string21, "null"), 
+					1 = $int8, 
+					2 = $component9, 
+					3 = chatbox:scrollarea, 
+					4 = $int1, 
+					5 = 3, 
+					6 = 14, 
+					7 = $int6, 
+					8 = ^setpos_abs_top, 
+					9 = 103, 
+					10 = $colour3, 
+					11 = $boolean4
+				);
+			case 117 :
+				$int7 = ~script199(
+					0 = ~affixtimestamp($string24, "<$string15><$string21></col>", "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -842,7 +862,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 			case default :
 				$int7 = ~script199(
-					0 = ~affixtimestamp($string23, $string20, "null"), 
+					0 = ~affixtimestamp($string24, $string21, "null"), 
 					1 = $int8, 
 					2 = $component9, 
 					3 = chatbox:scrollarea, 
@@ -859,14 +879,14 @@ while ($int10 ! -1 & $component9 ! null) {
 		if_clearops($component9);
 		switch_int ($chattype11) {
 			case ^chattype_modchat, ^chattype_publicchat, ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat, ^chattype_friendschat, ^chattype_autotyper, ^chattype_modautotyper, ^chattype_playerrelated, ^chattype_clanchat, ^chattype_clanguestchat :
-				if_setopbase("<col=ffffff><$string18></col>", $component9);
+				if_setopbase("<col=ffffff><$string19></col>", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
-				if ($chattype11 ! ^chattype_clanchat & ~script2759($string18) = 1) {
+				if ($chattype11 ! ^chattype_clanchat & ~script2759($string19) = 1) {
 					if_setop(10, "Crown Info", $component9);
 				}
-				if (compare($string0, removetags($string18)) ! 0) {
+				if (compare($string0, removetags($string19)) ! 0) {
 					if ($int15 = 1) {
 						if_setop(6, "Message", $component9);
 					} else {
@@ -879,7 +899,7 @@ while ($int10 ! -1 & $component9 ! null) {
 							if_setop(9, "Kick", $component9);
 						}
 					} else if ($chattype11 = ^chattype_clanchat & $int18 >= $int19 & activeclanchannel_find_affined(0) = true) {
-						$int17 = activeclanchannel_getuserslot(removetags($string18));
+						$int17 = activeclanchannel_getuserslot(removetags($string19));
 						if ($int17 = -1 | activeclanchannel_getuserrank($int17) <= -1) {
 							if_setop(9, "Kick", $component9);
 							if ($int18 >= $int20) {
@@ -889,17 +909,17 @@ while ($int10 ! -1 & $component9 ! null) {
 					}
 				}
 			case ^chattype_gamemessage :
-				if (string_length($string18) > 0 & compare($string0, removetags($string18)) ! 0) {
+				if (string_length($string19) > 0 & compare($string0, removetags($string19)) ! 0) {
 					if_setop(8, "Report", $component9);
-					if_setopbase("<col=ffffff><$string18></col>", $component9);
+					if_setopbase("<col=ffffff><$string19></col>", $component9);
 					if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 					if_setonmouseover(null, $component9);
 					if_setonmouseleave(null, $component9);
-				} else if (string_length($string24) ! 0) {
-					$int22 = string_indexof_string($string24, "CA_ID:", 0);
+				} else if (string_length($string25) ! 0) {
+					$int22 = string_indexof_string($string25, "CA_ID:", 0);
 					if ($int22 ! -1) {
-						$string24 = substring($string24, string_length("CA_ID:"), string_length($string24));
-						$int22 = ~string_to_int($string24);
+						$string25 = substring($string25, string_length("CA_ID:"), string_length($string25));
+						$int22 = ~string_to_int($string25);
 						if_setop(6, "View", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
 						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
@@ -917,7 +937,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setonmouseleave(null, $component9);
 				}
 			case ^chattype_tradereq :
-				if_setopbase("<col=ffffff><$string18></col>", $component9);
+				if_setopbase("<col=ffffff><$string19></col>", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
@@ -933,7 +953,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setop(7, "Add ignore", $component9);
 				}
 			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat, ^chattype_chalreq_clanchat :
-				if_setopbase("<col=ffffff><$string18></col>", $component9);
+				if_setopbase("<col=ffffff><$string19></col>", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
 				if_setonmouseleave(null, $component9);
@@ -945,7 +965,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setop(7, "Add ignore", $component9);
 				}
 			case ^chattype_broadcast :
-				if (string_length($string21) > 0 & $int13 ! -1) {
+				if (string_length($string22) > 0 & $int13 ! -1) {
 					if_setop(6, "Open", $component9);
 					if_setop(7, "Check", $component9);
 					if_setonmouseover("chat_recol(if_getlayer($component9), $int8, 0x3030ff)", $component9);
@@ -956,9 +976,9 @@ while ($int10 ! -1 & $component9 ! null) {
 				}
 				if_setop(9, "Clear history", $component9);
 				if_setopbase("<col=ff9040>Notification</col>", $component9);
-				if_setonop("chat_broadcast_op(event_op, 9, $string21, $int13)", $component9);
+				if_setonop("chat_broadcast_op(event_op, 9, $string22, $int13)", $component9);
 			case ^chattype_clancreationinvitation :
-				if_setopbase("<col=0xffffff><$string18></col>", $component9);
+				if_setopbase("<col=0xffffff><$string19></col>", $component9);
 				if_setop(2, "Form clan", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
@@ -970,7 +990,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setop(7, "Add ignore", $component9);
 				}
 			case 111 :
-				if_setopbase("<col=0xffffff><$string18></col>", $component9);
+				if_setopbase("<col=0xffffff><$string19></col>", $component9);
 				if_setop(2, "Form group", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
@@ -982,7 +1002,7 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setop(7, "Add ignore", $component9);
 				}
 			case 112 :
-				if_setopbase("<col=0xffffff><$string18></col>", $component9);
+				if_setopbase("<col=0xffffff><$string19></col>", $component9);
 				if_setop(2, "Group with", $component9);
 				if_setonop("chat_op(event_op, event_opbase, $chattype11)", $component9);
 				if_setonmouseover(null, $component9);
@@ -994,11 +1014,11 @@ while ($int10 ! -1 & $component9 ! null) {
 					if_setop(7, "Add ignore", $component9);
 				}
 			case ^chattype_clanmessage :
-				if (string_length($string24) ! 0) {
-					$int22 = string_indexof_string($string24, "CA_ID:", 0);
+				if (string_length($string25) ! 0) {
+					$int22 = string_indexof_string($string25, "CA_ID:", 0);
 					if ($int22 ! -1) {
-						$string24 = substring($string24, string_length("CA_ID:"), string_length($string24));
-						$int22 = ~string_to_int($string24);
+						$string25 = substring($string25, string_length("CA_ID:"), string_length($string25));
+						$int22 = ~string_to_int($string25);
 						if_setop(6, "View", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
 						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);

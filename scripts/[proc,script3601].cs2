@@ -1,5 +1,5 @@
 // 3601
-[proc,script3601](string $string0, component $component0, int $int1, int $int2, int $int3, int $setposh4, int $setposv5, int $settextalignv6, int $int7, int $int8)(int)
+[proc,script3601](string $string0, component $component0, int $int1, int $int2, int $int3, int $setposh4, int $setposv5, int $settextalignh6, int $int7, int $int8)(int)
 cc_create($component0, ^iftype_text, $int1, false);
 cc_setposition($int2, $int3, $setposh4, $setposv5);
 cc_setsize($int7, $int8, ^setsize_abs, ^setsize_abs);
@@ -7,5 +7,5 @@ cc_settext($string0);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
-cc_settextalign($settextalignv6, $settextalignv6, 0);
+cc_settextalign($settextalignh6, $settextalignh6, 0);
 return(calc($int1 + 1));

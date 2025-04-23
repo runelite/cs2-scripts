@@ -33,7 +33,9 @@ if_setonvartransmit("script924{
 	27 = option_chat_colour_clanbroadcast_transparent, 
 	28 = option_chat_colour_gimbroadcast_transparent, 
 	29 = option_chat_colour_private_split, 
-	30 = option_chat_colour_broadcast_split
+	30 = option_chat_colour_broadcast_split, 
+	31 = option_chat_colour_didyouknow_opaque, 
+	32 = option_chat_colour_didyouknow_transparent
 }", chatbox:universe);
 if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(chatbox:null), if_hassub(chatbox:null), ~toplevel_getcomponents)", chatbox:universe);
 if_setonchattransmit("chat_onchattransmit", chatbox:universe);

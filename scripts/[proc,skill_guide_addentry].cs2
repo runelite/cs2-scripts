@@ -39,7 +39,7 @@ if ($graphic14 ! null) {
 }
 switch_int (%skill_guide_skill) {
 	case 4 :
-		if ($int5 >= 0 & $int5 <= 3) {
+		if ($int5 >= 1 & $int5 <= 4 & $namedobj1 ! arceuus_tele_icon_13578 & $namedobj1 ! lunar_moonclan_liminal_staff_9084 & $namedobj1 ! staff_of_zaros_4675) {
 			cc_setop(1, "Check runes");
 			cc_setonop("skill_guide_magic_op($namedobj1)");
 		}

@@ -8,21 +8,17 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, bluewizhat_579, "Magic grants you access to a wide variety of spells. To cast each spell, you will need a specific set of runes. You can see the runes required by inspecting the spell in either the side panel, or in their tab in this skill guide.");
+				return(-1, bluewizhat_579, "Magic grants you access to a wide variety of spells. To cast each spell, you will need a specific set of runes. You can see the runes required by inspecting the spell in either the spellbook side-panel, or in their tab in this guide.");
 			case 1 :
-				return(-1, airrune_556, "You can use certain pieces of equipment to replace runes in order to cast spells. For instance, an equipped staff of air counts as an infinite supply of air runes.");
+				return(-1, blackwizhat_1017, ~text_device("Click the spells in this guide to see the required runes to cast each spell.<br><br>By opening the spellbook icon on the spellbook side-panel, you can see what each spell does by moving your mouse over its icon.", "Tap the spells in this guide to see the required runes to cast each spell.<br><br>By opening the spellbook icon on the spellbook side-panel, you can see what each spell does by activating the spellbook's Info mode, then tapping the spells."));
 			case 2 :
+				return(-1, airrune_556, "You can use certain pieces of equipment to replace runes in order to cast spells. For instance, an equipped Staff of Air counts as an infinite supply of air runes.");
+			case 3 :
 				return(-1, staff_of_fire_1387, "Staves can also be used to auto-cast certain offensive spells in combat; to enable this, equip your staff, go to the Combat Options side panel, and select one of the 'Spell' options.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				$string0 = "you can see what each spell does by moving your mouse over its icon.";
-				$string1 = "you can see what each spell does by activating the spellbook's Info mode, then tapping the spells.";
-				$string2 = "Click a spell icon below to see the required runes to cast each spell.<br><br>";
-				$string3 = "Tap a spell icon below to see the required runes to cast each spell.<br><br>";
-				return(-1, battlestaff_1391, "<~text_device($string2, $string3)>By opening the spellbook icon on the side interface, <~text_device($string0, $string1)>");
-			case 1 :
 				if (~league_world = 1 & %league_type = 1) {
 					return(-1, league_twisted_home_teleport_24369, "Home teleport (Kourend)");
 				}
@@ -30,143 +26,143 @@ switch_int ($int0) {
 					return(-1, league_3_home_teleport_26553, "Home teleport (Catherby)");
 				}
 				return(-1, 48_home_teleport_9712, "Home teleport (Lumbridge)");
-			case 2 :
+			case 1 :
 				return(1, 01_wind_strike_3273, "Wind Strike");
-			case 3 :
+			case 2 :
 				return(3, 03_confuse_3274, "Confuse");
-			case 4 :
+			case 3 :
 				return(5, 05_water_strike_3275, "Water Strike");
-			case 5 :
+			case 4 :
 				return(7, 07_enchant_amulet_lvl1_3276, "Level 1 enchant");
-			case 6 :
+			case 5 :
 				return(9, 09_earth_strike_3277, "Earth Strike");
-			case 7 :
+			case 6 :
 				return(11, 11_weaken_3278, "Weaken");
-			case 8 :
+			case 7 :
 				return(13, 13_fire_strike_3279, "Fire Strike");
-			case 9 :
+			case 8 :
 				return(15, 15_bones_bananas_3280, "Bones to bananas");
-			case 10 :
+			case 9 :
 				return(17, 17_wind_bolt_3281, "Wind Bolt");
-			case 11 :
+			case 10 :
 				return(19, 19_curse_3282, "Curse");
-			case 12 :
+			case 11 :
 				return(20, 20_bind_3283, "Bind");
-			case 13 :
+			case 12 :
 				return(21, 21_low_alchemy_3284, "Low level alchemy");
-			case 14 :
+			case 13 :
 				return(23, 23_water_bolt_3285, "Water Bolt");
-			case 15 :
+			case 14 :
 				return(25, 25_varrock_teleport_3286, "Varrock teleport");
-			case 16 :
+			case 15 :
 				return(27, 27_enchant_amulet_lvl2_3287, "Level 2 enchant");
-			case 17 :
+			case 16 :
 				return(29, 29_earth_bolt_3288, "Earth Bolt");
-			case 18 :
+			case 17 :
 				return(31, 31_lumbridge_teleport_3289, "Lumbridge teleport");
-			case 19 :
+			case 18 :
 				return(33, 33_tele_grab_3290, "Telekinetic grab");
-			case 20 :
+			case 19 :
 				return(35, 35_fire_bolt_3291, "Fire Bolt");
-			case 21 :
+			case 20 :
 				return(37, 37_falador_teleport_3292, "Falador teleport");
-			case 22 :
+			case 21 :
 				return(39, 39_crumble_undead_3293, "Crumble undead");
-			case 23 :
+			case 22 :
 				return(40, 67_house_teleport_8828, "Teleport to house");
-			case 24 :
+			case 23 :
 				return(41, 41_wind_blast_3294, "Wind Blast");
-			case 25 :
+			case 24 :
 				return(43, 43_superheat_item_3295, "Superheat item");
-			case 26 :
+			case 25 :
 				return(45, 45_camelot_teleport_3296, "Camelot teleport");
-			case 27 :
+			case 26 :
 				return(47, 47_water_blast_3297, "Water Blast");
-			case 28 :
+			case 27 :
 				return(48, cert_deadman_level99_lamp_21836, "Kourend Castle teleport<br>(after Client of Kourend)");
-			case 29 :
+			case 28 :
 				return(49, 49_enchant_amulet_lvl3_3298, "Level 3 enchant");
-			case 30 :
+			case 29 :
 				return(50, 50_iban_blast_3299, "Iban blast<br>(after Underground Pass)");
-			case 31 :
+			case 30 :
 				return(50, 50_snare_3300, "Snare");
-			case 32 :
+			case 31 :
 				return(50, 50_magic_dart_4176, "Magic dart<br>(with 55 Slayer)");
-			case 33 :
+			case 32 :
 				return(51, 51_ardougne_teleport_3301, "Ardougne teleport<br>(after Plague City)");
-			case 34 :
+			case 33 :
 				return(53, 53_earth_blast_3302, "Earth Blast");
-			case 35 :
+			case 34 :
 				return(54, placeholder_blighted_sack_snare_24612, "Civitas illa Fortis teleport<br>(after Twilight's Promise)");
-			case 36 :
+			case 35 :
 				return(55, 55_high_alchemy_3303, "High level alchemy");
-			case 37 :
+			case 36 :
 				return(56, 56_charge_water_orb_3304, "Charge water orb");
-			case 38 :
+			case 37 :
 				return(57, 57_enchant_amulet_lvl4_3305, "Level 4 enchant");
-			case 39 :
+			case 38 :
 				return(58, 58_watchtower_teleport_3306, "Watchtower teleport<br>(after Watchtower)");
-			case 40 :
+			case 39 :
 				return(59, 59_fire_blast_3307, "Fire Blast");
-			case 41 :
+			case 40 :
 				return(60, 60_charge_earth_orb_3308, "Charge earth orb");
-			case 42 :
+			case 41 :
 				return(60, 60_bones_peaches_6884, "Bones to peaches");
-			case 43 :
+			case 42 :
 				return(60, 60_claws_of_guthix_3309, "Claws of Guthix<br>(after Mage Arena)");
-			case 44 :
+			case 43 :
 				return(60, 60_flames_of_zamorak_3310, "Flames of Zamorak<br>(after Mage Arena)");
-			case 45 :
+			case 44 :
 				return(60, 60_saradomin_strike_3311, "Saradomin Strike<br>(after Mage Arena)");
-			case 46 :
+			case 45 :
 				return(61, 61_trollheim_teleport_3312, "Trollheim teleport<br>(after Eadgar's Ruse)");
-			case 47 :
+			case 46 :
 				return(62, 62_wind_wave_3313, "Wind Wave");
-			case 48 :
+			case 47 :
 				return(63, 63_charge_fire_orb_3314, "Charge fire orb");
-			case 49 :
+			case 48 :
 				return(64, 64_ape_atoll_teleport_7619, "Ape Atoll teleport<br>(after Recipe for Disaster)");
-			case 50 :
+			case 49 :
 				return(65, 65_water_wave_3315, "Water Wave");
-			case 51 :
+			case 50 :
 				return(66, 66_charge_air_orb_3316, "Charge air orb");
-			case 52 :
+			case 51 :
 				return(66, 66_vulnerability_3317, "Vulnerability");
-			case 53 :
+			case 52 :
 				return(68, 68_enchant_amulet_lvl5_3318, "Level 5 enchant");
-			case 54 :
+			case 53 :
 				return(70, 70_earth_wave_3319, "Earth Wave");
-			case 55 :
+			case 54 :
 				return(73, 73_enfeeble_3320, "Enfeeble");
-			case 56 :
+			case 55 :
 				return(74, 74_teleother_lumbridge_4553, "Teleother Lumbridge");
-			case 57 :
+			case 56 :
 				return(75, 75_fire_wave_3321, "Fire Wave");
-			case 58 :
+			case 57 :
 				return(79, 79_entangle_3322, "Entangle");
-			case 59 :
+			case 58 :
 				return(80, 80_stun_3324, "Stun");
-			case 60 :
+			case 59 :
 				return(80, 80_charge_3323, "Charge<br>(after Mage Arena)");
-			case 61 :
+			case 60 :
 				return(81, 81_wind_surge_21876, "Wind Surge");
-			case 62 :
+			case 61 :
 				return(82, 82_teleother_falador_4554, "Teleother Falador");
-			case 63 :
+			case 62 :
 				return(85, 85_water_surge_21877, "Water Surge");
-			case 64 :
+			case 63 :
 				return(85, 85_teleport_block_4555, "Tele block");
-			case 65 :
+			case 64 :
 				return(85, placeholder_caveorb4dot_17152, "Teleport to Target");
-			case 66 :
+			case 65 :
 				return(87, 87_enchant_amulet_lvl6_6567, "Level 6 enchant");
-			case 67 :
+			case 66 :
 				return(90, 90_earth_surge_21878, "Earth Surge");
-			case 68 :
+			case 67 :
 				return(90, 90_teleother_camelot_4556, "Teleother Camelot");
-			case 69 :
+			case 68 :
 				return(93, 93_enchant_amulet_lvl7_19475, "Level 7 enchant");
-			case 70 :
+			case 69 :
 				return(95, 95_fire_surge_21879, "Fire Surge");
 			case default :
 				return(-1, null, "");
@@ -174,7 +170,7 @@ switch_int ($int0) {
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, staff_of_zaros_4675, "Ancient magicks are available after<br>completing the Desert Treasure I quest.");
+				return(-1, staff_of_zaros_4675, "Ancient Magicks are available after<br>completing the Desert Treasure I quest.");
 			case 1 :
 				if (~league_world = 1 & %league_type = 3) {
 					return(-1, league_3_home_teleport_2_26563, "Home teleport (Catherby)");
