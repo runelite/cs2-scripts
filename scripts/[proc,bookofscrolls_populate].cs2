@@ -1,291 +1,307 @@
 // 1939
-[proc,bookofscrolls_populate](component $com_bookofscrolls_gfx_nardah0, component $com_bookofscrolls_gfx_digsite1, component $com_bookofscrolls_gfx_feldip2, component $com_bookofscrolls_gfx_lunarisle3, component $com_bookofscrolls_gfx_mortton4, component $com_bookofscrolls_gfx_pestcontrol5, component $com_bookofscrolls_gfx_piscatoris6, component $com_bookofscrolls_gfx_taibwo7, component $com_bookofscrolls_gfx_elf8, component $com_bookofscrolls_gfx_mosles9, component $com_bookofscrolls_gfx_lumberyard10, component $com_bookofscrolls_gfx_zulandra11, component $com_bookofscrolls_gfx_cerberus12, component $com_bookofscrolls_gfx_revenants13, component $com_bookofscrolls_gfx_watson14, component $com_bookofscrolls_gfx_guthixian_temple15, component $com_bookofscrolls_gfx_spidercave16, component $com_bookofscrolls_gfx_colossal_wyrm17, component $com_bookofscrolls_text_nardah18, component $com_bookofscrolls_text_digsite19, component $com_bookofscrolls_text_feldip20, component $com_bookofscrolls_text_lunarisle21, component $com_bookofscrolls_text_mortton22, component $com_bookofscrolls_text_pestcontrol23, component $com_bookofscrolls_text_piscatoris24, component $com_bookofscrolls_text_taibwo25, component $com_bookofscrolls_text_elf26, component $com_bookofscrolls_text_mosles27, component $com_bookofscrolls_text_lumberyard28, component $com_bookofscrolls_text_zulandra29, component $com_bookofscrolls_text_cerberus30, component $com_bookofscrolls_text_revenants31, component $com_bookofscrolls_text_watson32, component $com_bookofscrolls_text_guthixian_temple33, component $com_bookofscrolls_text_spidercave34, component $com_bookofscrolls_text_colossal_wyrm35)
-if_settext(tostring(%bookofscrolls_nardah), $com_bookofscrolls_text_nardah18);
+[proc,bookofscrolls_populate](component $com_bookofscrolls_gfx_nardah0, component $com_bookofscrolls_gfx_digsite1, component $com_bookofscrolls_gfx_feldip2, component $com_bookofscrolls_gfx_lunarisle3, component $com_bookofscrolls_gfx_mortton4, component $com_bookofscrolls_gfx_pestcontrol5, component $com_bookofscrolls_gfx_piscatoris6, component $com_bookofscrolls_gfx_taibwo7, component $com_bookofscrolls_gfx_elf8, component $com_bookofscrolls_gfx_mosles9, component $com_bookofscrolls_gfx_lumberyard10, component $com_bookofscrolls_gfx_zulandra11, component $com_bookofscrolls_gfx_cerberus12, component $com_bookofscrolls_gfx_revenants13, component $com_bookofscrolls_gfx_watson14, component $com_bookofscrolls_gfx_guthixian_temple15, component $com_bookofscrolls_gfx_spidercave16, component $com_bookofscrolls_gfx_colossal_wyrm17, component $com_bookofscrolls_gfx_chasmoffire18, component $com_bookofscrolls_text_nardah19, component $com_bookofscrolls_text_digsite20, component $com_bookofscrolls_text_feldip21, component $com_bookofscrolls_text_lunarisle22, component $com_bookofscrolls_text_mortton23, component $com_bookofscrolls_text_pestcontrol24, component $com_bookofscrolls_text_piscatoris25, component $com_bookofscrolls_text_taibwo26, component $com_bookofscrolls_text_elf27, component $com_bookofscrolls_text_mosles28, component $com_bookofscrolls_text_lumberyard29, component $com_bookofscrolls_text_zulandra30, component $com_bookofscrolls_text_cerberus31, component $com_bookofscrolls_text_revenants32, component $com_bookofscrolls_text_watson33, component $com_bookofscrolls_text_guthixian_temple34, component $com_bookofscrolls_text_spidercave35, component $com_bookofscrolls_text_colossal_wyrm36, component $com_bookofscrolls_text_chasmoffire37)
+if_settext(tostring(%bookofscrolls_nardah), $com_bookofscrolls_text_nardah19);
 if (%bookofscrolls_nardah > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_nardah18);
+	if_setcolour(^yellow, $com_bookofscrolls_text_nardah19);
 	if (~script5157 = 1) {
 		if_setobject_nonum(teleportscroll_nardah_selected_dummy_21374, 0, $com_bookofscrolls_gfx_nardah0);
 	} else {
 		if_setobject_nonum(teleportscroll_nardah_12402, 0, $com_bookofscrolls_gfx_nardah0);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_nardah18);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_nardah19);
 	if (~script5157 = 1) {
 		if_setobject_nonum(teleportscroll_nardah_selected_dummy_21374, 0, $com_bookofscrolls_gfx_nardah0);
 	} else {
 		if_setobject_nonum(teleportscroll_nardah_dummy_21361, 0, $com_bookofscrolls_gfx_nardah0);
 	}
 }
-if_settext(tostring(%bookofscrolls_digsite), $com_bookofscrolls_text_digsite19);
+if_settext(tostring(%bookofscrolls_digsite), $com_bookofscrolls_text_digsite20);
 if (%bookofscrolls_digsite > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_digsite19);
+	if_setcolour(^yellow, $com_bookofscrolls_text_digsite20);
 	if (~script5157 = 2) {
 		if_setobject_nonum(teleportscroll_digsite_selected_dummy_21375, 0, $com_bookofscrolls_gfx_digsite1);
 	} else {
 		if_setobject_nonum(teleportscroll_digsite_12403, 0, $com_bookofscrolls_gfx_digsite1);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_digsite19);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_digsite20);
 	if (~script5157 = 2) {
 		if_setobject_nonum(teleportscroll_digsite_selected_dummy_21375, 0, $com_bookofscrolls_gfx_digsite1);
 	} else {
 		if_setobject_nonum(teleportscroll_digsite_dummy_21362, 0, $com_bookofscrolls_gfx_digsite1);
 	}
 }
-if_settext(tostring(%bookofscrolls_feldip), $com_bookofscrolls_text_feldip20);
+if_settext(tostring(%bookofscrolls_feldip), $com_bookofscrolls_text_feldip21);
 if (%bookofscrolls_feldip > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_feldip20);
+	if_setcolour(^yellow, $com_bookofscrolls_text_feldip21);
 	if (~script5157 = 3) {
 		if_setobject_nonum(teleportscroll_feldip_selected_dummy_21376, 0, $com_bookofscrolls_gfx_feldip2);
 	} else {
 		if_setobject_nonum(teleportscroll_feldip_12404, 0, $com_bookofscrolls_gfx_feldip2);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_feldip20);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_feldip21);
 	if (~script5157 = 3) {
 		if_setobject_nonum(teleportscroll_feldip_selected_dummy_21376, 0, $com_bookofscrolls_gfx_feldip2);
 	} else {
 		if_setobject_nonum(teleportscroll_feldip_dummy_21363, 0, $com_bookofscrolls_gfx_feldip2);
 	}
 }
-if_settext(tostring(%bookofscrolls_lunarisle), $com_bookofscrolls_text_lunarisle21);
+if_settext(tostring(%bookofscrolls_lunarisle), $com_bookofscrolls_text_lunarisle22);
 if (%bookofscrolls_lunarisle > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_lunarisle21);
+	if_setcolour(^yellow, $com_bookofscrolls_text_lunarisle22);
 	if (~script5157 = 4) {
 		if_setobject_nonum(teleportscroll_lunarisle_selected_dummy_21377, 0, $com_bookofscrolls_gfx_lunarisle3);
 	} else {
 		if_setobject_nonum(teleportscroll_lunarisle_12405, 0, $com_bookofscrolls_gfx_lunarisle3);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_lunarisle21);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_lunarisle22);
 	if (~script5157 = 4) {
 		if_setobject_nonum(teleportscroll_lunarisle_selected_dummy_21377, 0, $com_bookofscrolls_gfx_lunarisle3);
 	} else {
 		if_setobject_nonum(teleportscroll_lunarisle_dummy_21364, 0, $com_bookofscrolls_gfx_lunarisle3);
 	}
 }
-if_settext(tostring(%bookofscrolls_mortton), $com_bookofscrolls_text_mortton22);
+if_settext(tostring(%bookofscrolls_mortton), $com_bookofscrolls_text_mortton23);
 if (%bookofscrolls_mortton > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_mortton22);
+	if_setcolour(^yellow, $com_bookofscrolls_text_mortton23);
 	if (~script5157 = 5) {
 		if_setobject_nonum(teleportscroll_mortton_selected_dummy_21378, 0, $com_bookofscrolls_gfx_mortton4);
 	} else {
 		if_setobject_nonum(teleportscroll_mortton_12406, 0, $com_bookofscrolls_gfx_mortton4);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_mortton22);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_mortton23);
 	if (~script5157 = 5) {
 		if_setobject_nonum(teleportscroll_mortton_selected_dummy_21378, 0, $com_bookofscrolls_gfx_mortton4);
 	} else {
 		if_setobject_nonum(teleportscroll_mortton_dummy_21365, 0, $com_bookofscrolls_gfx_mortton4);
 	}
 }
-if_settext(tostring(%bookofscrolls_pestcontrol), $com_bookofscrolls_text_pestcontrol23);
+if_settext(tostring(%bookofscrolls_pestcontrol), $com_bookofscrolls_text_pestcontrol24);
 if (%bookofscrolls_pestcontrol > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_pestcontrol23);
+	if_setcolour(^yellow, $com_bookofscrolls_text_pestcontrol24);
 	if (~script5157 = 6) {
 		if_setobject_nonum(teleportscroll_pestcontrol_selected_dummy_21379, 0, $com_bookofscrolls_gfx_pestcontrol5);
 	} else {
 		if_setobject_nonum(teleportscroll_pestcontrol_12407, 0, $com_bookofscrolls_gfx_pestcontrol5);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_pestcontrol23);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_pestcontrol24);
 	if (~script5157 = 6) {
 		if_setobject_nonum(teleportscroll_pestcontrol_selected_dummy_21379, 0, $com_bookofscrolls_gfx_pestcontrol5);
 	} else {
 		if_setobject_nonum(teleportscroll_pestcontrol_dummy_21366, 0, $com_bookofscrolls_gfx_pestcontrol5);
 	}
 }
-if_settext(tostring(%bookofscrolls_piscatoris), $com_bookofscrolls_text_piscatoris24);
+if_settext(tostring(%bookofscrolls_piscatoris), $com_bookofscrolls_text_piscatoris25);
 if (%bookofscrolls_piscatoris > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_piscatoris24);
+	if_setcolour(^yellow, $com_bookofscrolls_text_piscatoris25);
 	if (~script5157 = 7) {
 		if_setobject_nonum(teleportscroll_piscatoris_selected_dummy_21380, 0, $com_bookofscrolls_gfx_piscatoris6);
 	} else {
 		if_setobject_nonum(teleportscroll_piscatoris_12408, 0, $com_bookofscrolls_gfx_piscatoris6);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_piscatoris24);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_piscatoris25);
 	if (~script5157 = 7) {
 		if_setobject_nonum(teleportscroll_piscatoris_selected_dummy_21380, 0, $com_bookofscrolls_gfx_piscatoris6);
 	} else {
 		if_setobject_nonum(teleportscroll_piscatoris_dummy_21367, 0, $com_bookofscrolls_gfx_piscatoris6);
 	}
 }
-if_settext(tostring(%bookofscrolls_taibwo), $com_bookofscrolls_text_taibwo25);
+if_settext(tostring(%bookofscrolls_taibwo), $com_bookofscrolls_text_taibwo26);
 if (%bookofscrolls_taibwo > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_taibwo25);
+	if_setcolour(^yellow, $com_bookofscrolls_text_taibwo26);
 	if (~script5157 = 8) {
 		if_setobject_nonum(teleportscroll_taibwo_selected_dummy_21381, 0, $com_bookofscrolls_gfx_taibwo7);
 	} else {
 		if_setobject_nonum(teleportscroll_taibwo_12409, 0, $com_bookofscrolls_gfx_taibwo7);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_taibwo25);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_taibwo26);
 	if (~script5157 = 8) {
 		if_setobject_nonum(teleportscroll_taibwo_selected_dummy_21381, 0, $com_bookofscrolls_gfx_taibwo7);
 	} else {
 		if_setobject_nonum(teleportscroll_taibwo_dummy_21368, 0, $com_bookofscrolls_gfx_taibwo7);
 	}
 }
-if_settext(tostring(%bookofscrolls_elf), $com_bookofscrolls_text_elf26);
+if_settext(tostring(%bookofscrolls_elf), $com_bookofscrolls_text_elf27);
 if (%bookofscrolls_elf > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_elf26);
+	if_setcolour(^yellow, $com_bookofscrolls_text_elf27);
 	if (~script5157 = 9) {
 		if_setobject_nonum(teleportscroll_elf_selected_dummy_21382, 0, $com_bookofscrolls_gfx_elf8);
 	} else {
 		if_setobject_nonum(teleportscroll_elf_12410, 0, $com_bookofscrolls_gfx_elf8);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_elf26);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_elf27);
 	if (~script5157 = 9) {
 		if_setobject_nonum(teleportscroll_elf_selected_dummy_21382, 0, $com_bookofscrolls_gfx_elf8);
 	} else {
 		if_setobject_nonum(teleportscroll_elf_dummy_21369, 0, $com_bookofscrolls_gfx_elf8);
 	}
 }
-if_settext(tostring(%bookofscrolls_mosles), $com_bookofscrolls_text_mosles27);
+if_settext(tostring(%bookofscrolls_mosles), $com_bookofscrolls_text_mosles28);
 if (%bookofscrolls_mosles > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_mosles27);
+	if_setcolour(^yellow, $com_bookofscrolls_text_mosles28);
 	if (~script5157 = 10) {
 		if_setobject_nonum(teleportscroll_mosles_selected_dummy_21383, 0, $com_bookofscrolls_gfx_mosles9);
 	} else {
 		if_setobject_nonum(teleportscroll_mosles_12411, 0, $com_bookofscrolls_gfx_mosles9);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_mosles27);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_mosles28);
 	if (~script5157 = 10) {
 		if_setobject_nonum(teleportscroll_mosles_selected_dummy_21383, 0, $com_bookofscrolls_gfx_mosles9);
 	} else {
 		if_setobject_nonum(teleportscroll_mosles_dummy_21370, 0, $com_bookofscrolls_gfx_mosles9);
 	}
 }
-if_settext(tostring(%bookofscrolls_lumberyard), $com_bookofscrolls_text_lumberyard28);
+if_settext(tostring(%bookofscrolls_lumberyard), $com_bookofscrolls_text_lumberyard29);
 if (%bookofscrolls_lumberyard > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_lumberyard28);
+	if_setcolour(^yellow, $com_bookofscrolls_text_lumberyard29);
 	if (~script5157 = 11) {
 		if_setobject_nonum(teleportscroll_lumberyard_selected_dummy_21384, 0, $com_bookofscrolls_gfx_lumberyard10);
 	} else {
 		if_setobject_nonum(teleportscroll_lumberyard_12642, 0, $com_bookofscrolls_gfx_lumberyard10);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_lumberyard28);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_lumberyard29);
 	if (~script5157 = 11) {
 		if_setobject_nonum(teleportscroll_lumberyard_selected_dummy_21384, 0, $com_bookofscrolls_gfx_lumberyard10);
 	} else {
 		if_setobject_nonum(teleportscroll_lumberyard_dummy_21371, 0, $com_bookofscrolls_gfx_lumberyard10);
 	}
 }
-if_settext(tostring(%bookofscrolls_zulandra), $com_bookofscrolls_text_zulandra29);
+if_settext(tostring(%bookofscrolls_zulandra), $com_bookofscrolls_text_zulandra30);
 if (%bookofscrolls_zulandra > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_zulandra29);
+	if_setcolour(^yellow, $com_bookofscrolls_text_zulandra30);
 	if (~script5157 = 12) {
 		if_setobject_nonum(teleportscroll_zulandra_selected_dummy_21385, 0, $com_bookofscrolls_gfx_zulandra11);
 	} else {
 		if_setobject_nonum(teleportscroll_zulandra_12938, 0, $com_bookofscrolls_gfx_zulandra11);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_zulandra29);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_zulandra30);
 	if (~script5157 = 12) {
 		if_setobject_nonum(teleportscroll_zulandra_selected_dummy_21385, 0, $com_bookofscrolls_gfx_zulandra11);
 	} else {
 		if_setobject_nonum(teleportscroll_zulandra_dummy_21372, 0, $com_bookofscrolls_gfx_zulandra11);
 	}
 }
-if_settext(tostring(%bookofscrolls_cerberus), $com_bookofscrolls_text_cerberus30);
+if_settext(tostring(%bookofscrolls_cerberus), $com_bookofscrolls_text_cerberus31);
 if (%bookofscrolls_cerberus > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_cerberus30);
+	if_setcolour(^yellow, $com_bookofscrolls_text_cerberus31);
 	if (~script5157 = 13) {
 		if_setobject_nonum(teleportscroll_cerberus_selected_dummy_21386, 0, $com_bookofscrolls_gfx_cerberus12);
 	} else {
 		if_setobject_nonum(teleportscroll_cerberus_13249, 0, $com_bookofscrolls_gfx_cerberus12);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_cerberus30);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_cerberus31);
 	if (~script5157 = 13) {
 		if_setobject_nonum(teleportscroll_cerberus_selected_dummy_21386, 0, $com_bookofscrolls_gfx_cerberus12);
 	} else {
 		if_setobject_nonum(teleportscroll_cerberus_dummy_21373, 0, $com_bookofscrolls_gfx_cerberus12);
 	}
 }
-if_settext(tostring(%bookofscrolls_revenants), $com_bookofscrolls_text_revenants31);
+if_settext(tostring(%bookofscrolls_revenants), $com_bookofscrolls_text_revenants32);
 if (%bookofscrolls_revenants > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_revenants31);
+	if_setcolour(^yellow, $com_bookofscrolls_text_revenants32);
 	if (~script5157 = 14) {
 		if_setobject_nonum(teleportscroll_revenants_selected_dummy_21790, 0, $com_bookofscrolls_gfx_revenants13);
 	} else {
 		if_setobject_nonum(teleportscroll_revenants_21802, 0, $com_bookofscrolls_gfx_revenants13);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_revenants31);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_revenants32);
 	if (~script5157 = 14) {
 		if_setobject_nonum(teleportscroll_revenants_selected_dummy_21790, 0, $com_bookofscrolls_gfx_revenants13);
 	} else {
 		if_setobject_nonum(teleportscroll_revenants_dummy_21789, 0, $com_bookofscrolls_gfx_revenants13);
 	}
 }
-def_int $int36 = ~script2832;
-if_settext(tostring($int36), $com_bookofscrolls_text_watson32);
-if ($int36 > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_watson32);
+def_int $int38 = ~script2832;
+if_settext(tostring($int38), $com_bookofscrolls_text_watson33);
+if ($int38 > 0) {
+	if_setcolour(^yellow, $com_bookofscrolls_text_watson33);
 	if (~script5157 = 15) {
 		if_setobject_nonum(cert_poh_boxing_gloves_red_7672, 0, $com_bookofscrolls_gfx_watson14);
 	} else {
 		if_setobject_nonum(teleportscroll_watson_23387, 0, $com_bookofscrolls_gfx_watson14);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_watson32);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_watson33);
 	if (~script5157 = 15) {
 		if_setobject_nonum(cert_poh_boxing_gloves_red_7672, 0, $com_bookofscrolls_gfx_watson14);
 	} else {
 		if_setobject_nonum(cert_poh_boxing_gloves_blue_7674, 0, $com_bookofscrolls_gfx_watson14);
 	}
 }
-if_settext(tostring(%bookofscrolls_guthixian_temple), $com_bookofscrolls_text_guthixian_temple33);
+if_settext(tostring(%bookofscrolls_guthixian_temple), $com_bookofscrolls_text_guthixian_temple34);
 if (%bookofscrolls_guthixian_temple > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_guthixian_temple33);
+	if_setcolour(^yellow, $com_bookofscrolls_text_guthixian_temple34);
 	if (~script5157 = 16) {
 		if_setobject_nonum(teleportscroll_guthixian_temple_selected_dummy_29683, 0, $com_bookofscrolls_gfx_guthixian_temple15);
 	} else {
 		if_setobject_nonum(teleportscroll_guthixian_temple_29684, 0, $com_bookofscrolls_gfx_guthixian_temple15);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_guthixian_temple33);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_guthixian_temple34);
 	if (~script5157 = 16) {
 		if_setobject_nonum(teleportscroll_guthixian_temple_selected_dummy_29683, 0, $com_bookofscrolls_gfx_guthixian_temple15);
 	} else {
 		if_setobject_nonum(teleportscroll_guthixian_temple_dummy_29682, 0, $com_bookofscrolls_gfx_guthixian_temple15);
 	}
 }
-if_settext(tostring(%bookofscrolls_spidercave), $com_bookofscrolls_text_spidercave34);
+if_settext(tostring(%bookofscrolls_spidercave), $com_bookofscrolls_text_spidercave35);
 if (%bookofscrolls_spidercave > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_spidercave34);
+	if_setcolour(^yellow, $com_bookofscrolls_text_spidercave35);
 	if (~script5157 = 17) {
 		if_setobject_nonum(teleportscroll_spidercave_selected_dummy_29779, 0, $com_bookofscrolls_gfx_spidercave16);
 	} else {
 		if_setobject_nonum(teleportscroll_spidercave_29782, 0, $com_bookofscrolls_gfx_spidercave16);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_spidercave34);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_spidercave35);
 	if (~script5157 = 17) {
 		if_setobject_nonum(teleportscroll_spidercave_selected_dummy_29779, 0, $com_bookofscrolls_gfx_spidercave16);
 	} else {
 		if_setobject_nonum(teleportscroll_spidercave_dummy_29778, 0, $com_bookofscrolls_gfx_spidercave16);
 	}
 }
-if_settext(tostring(%bookofscrolls_colossal_wyrm), $com_bookofscrolls_text_colossal_wyrm35);
+if_settext(tostring(%bookofscrolls_colossal_wyrm), $com_bookofscrolls_text_colossal_wyrm36);
 if (%bookofscrolls_colossal_wyrm > 0) {
-	if_setcolour(^yellow, $com_bookofscrolls_text_colossal_wyrm35);
+	if_setcolour(^yellow, $com_bookofscrolls_text_colossal_wyrm36);
 	if (~script5157 = 18) {
 		if_setobject_nonum(teleportscroll_colossal_wyrm_selected_dummy_29866, 0, $com_bookofscrolls_gfx_colossal_wyrm17);
 	} else {
 		if_setobject_nonum(teleportscroll_colossal_wyrm_30040, 0, $com_bookofscrolls_gfx_colossal_wyrm17);
 	}
 } else {
-	if_setcolour(0xc80000, $com_bookofscrolls_text_colossal_wyrm35);
+	if_setcolour(0xc80000, $com_bookofscrolls_text_colossal_wyrm36);
 	if (~script5157 = 18) {
 		if_setobject_nonum(teleportscroll_colossal_wyrm_selected_dummy_29866, 0, $com_bookofscrolls_gfx_colossal_wyrm17);
 	} else {
 		if_setobject_nonum(teleportscroll_colossal_wyrm_dummy_29865, 0, $com_bookofscrolls_gfx_colossal_wyrm17);
+	}
+}
+if_settext(tostring(%bookofscrolls_chasmoffire), $com_bookofscrolls_text_chasmoffire37);
+if (%bookofscrolls_chasmoffire > 0) {
+	if_setcolour(^yellow, $com_bookofscrolls_text_chasmoffire37);
+	if (~script5157 = 19) {
+		if_setobject_nonum(teleportscroll_chasmoffire_selected_dummy_30743, 0, $com_bookofscrolls_gfx_chasmoffire18);
+	} else {
+		if_setobject_nonum(teleportscroll_chasmoffire_30775, 0, $com_bookofscrolls_gfx_chasmoffire18);
+	}
+} else {
+	if_setcolour(0xc80000, $com_bookofscrolls_text_chasmoffire37);
+	if (~script5157 = 19) {
+		if_setobject_nonum(teleportscroll_chasmoffire_selected_dummy_30743, 0, $com_bookofscrolls_gfx_chasmoffire18);
+	} else {
+		if_setobject_nonum(teleportscroll_chasmoffire_dummy_30742, 0, $com_bookofscrolls_gfx_chasmoffire18);
 	}
 }
