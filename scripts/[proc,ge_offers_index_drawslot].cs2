@@ -265,12 +265,14 @@ if (cc_find($component8, $comsubid12) = ^true) {
 		} else {
 			$string1 = "Selling: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 			cc_setop(2, "Abort offer");
+			cc_setop(3, "Modify offer");
 		}
 	} else if (stockmarket_isofferfinished($int9) = true) {
 		$string1 = "Bought: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 	} else {
 		$string1 = "Buying: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 		cc_setop(2, "Abort offer");
+		cc_setop(3, "Modify offer");
 	}
 	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_ge_offers_tooltip27, $string1, 25, 512)");
 }
