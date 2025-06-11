@@ -16,8 +16,8 @@ cc_settrans(255);
 .cc_settextshadow(false);
 .cc_settext("");
 .cc_setontimer("bankpin_button_addtextlater(event_com, event_comsubid, $int1, calc(clientclock + 5))");
-cc_setonmouserepeat("bankpin_button_mouseover(false, event_com, event_comsubid, .cc_getid)");
-cc_setonmouseleave("bankpin_button_mouseover(true, event_com, event_comsubid, .cc_getid)");
+cc_setonmouserepeat("bankpin_button_mouseover(0, event_com, event_comsubid, .cc_getid)");
+cc_setonmouseleave("bankpin_button_mouseover(1, event_com, event_comsubid, .cc_getid)");
 cc_setop(1, "Select");
 cc_setonop("bankpin_button_op(
 	0 = $int1, 

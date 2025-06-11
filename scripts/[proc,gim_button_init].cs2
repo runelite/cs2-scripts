@@ -1,7 +1,7 @@
 // 5254
-[proc,gim_button_init](component $component0, string $string0, int $int1, boolean $boolean2)
+[proc,gim_button_init](component $component0, string $string0, int $int1, int $int2)
 def_int $comsubid3 = 0;
-if ($boolean2 = false) {
+if ($int2 = 0) {
 	$comsubid3 = ~v2_stone_button_out_filled($component0);
 } else {
 	$comsubid3 = ~v2_stone_button_in_filled($component0);
@@ -15,6 +15,6 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext($string0);
 if (~on_mobile = false) {
-	if_setonmouseover("gim_button_init($component0, $string0, $int1, true)", $component0);
-	if_setonmouseleave("gim_button_init($component0, $string0, $int1, false)", $component0);
+	if_setonmouseover("gim_button_init($component0, $string0, $int1, 1)", $component0);
+	if_setonmouseleave("gim_button_init($component0, $string0, $int1, 0)", $component0);
 }

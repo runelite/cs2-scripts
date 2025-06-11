@@ -1,5 +1,5 @@
 // 6822
-[proc,questjournal_overview_setup](dbrow $dbrow0, string $string0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8)
+[proc,questjournal_overview_setup](dbrow $dbrow0, anyobj $anyobj0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8)
 %varcint52 = $int8;
 cc_deleteall($component2);
 def_string $string1 = "quest";
@@ -14,7 +14,7 @@ if ($int9 ! 1) {
 if (db_getfield($dbrow0, quest:in_prerelease, 0) = true) {
 	$string2 = "This <$string1> is coming soon...<br>When it releases, I can start it by ";
 }
-$string2 = "<$string2><$string0>";
+$string2 = "<$string2><$anyobj0>";
 def_string $string3 = enum(int, string, enum_2094, db_getfield($dbrow0, quest:difficulty, 0));
 def_string $string4 = enum(int, string, enum_2095, db_getfield($dbrow0, quest:length, 0));
 def_string $string5 = enum(int, string, enum_2097, db_getfield($dbrow0, quest:series, 0));

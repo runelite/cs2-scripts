@@ -5,7 +5,7 @@ def_component $component15 = makeover:infinity;
 def_enum $enum16 = null;
 def_enum $enum17 = null;
 def_enum $enum18 = null;
-def_boolean $boolean19 = false;
+def_int $int19 = 0;
 switch_int (%makeover_interface_type) {
 	case 0 :
 		$enum16 = enum_890;
@@ -32,12 +32,12 @@ switch_int (%makeover_interface_type) {
 		$enum16 = enum_5290;
 		$enum17 = enum_3315;
 		$enum18 = enum_5498;
-		$boolean19 = true;
+		$int19 = 1;
 	case 7 :
 		$enum16 = null;
 		$enum17 = null;
 		$enum18 = enum_5499;
-		$boolean19 = true;
+		$int19 = 1;
 }
 if ($component15 ! null) {
 	~makeover_size_check($component14, $component15, ^min_32bit_int, ^min_32bit_int, $com_makeover_scroll_bar9, $com_makeover_item_area2, $enum18);
@@ -57,7 +57,7 @@ if ($component15 ! null) {
 	10 = $enum16, 
 	11 = $enum17, 
 	12 = $enum18, 
-	13 = $boolean19
+	13 = $int19
 );
 %varcint1148 = %makeover_hair;
 %varcint1150 = 0;
@@ -80,6 +80,6 @@ if_setonvartransmit("makeover_redraw_content(
 	10 = $enum16, 
 	11 = $enum17, 
 	12 = $enum18, 
-	13 = $boolean19
+	13 = $int19
 ){makeover_temp, makeover_colour, makeover_hair}", $com_makeover_content1);
 ~script7083($com_makeover_burger_btn_menu10, $com_makeover_burger_menu_frame11, $com_makeover_burger_menu_overlay12, %makeover_interface_type);

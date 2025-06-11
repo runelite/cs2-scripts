@@ -7,7 +7,7 @@ def_int $int4 = -1;
 def_boolean $boolean5 = ~on_mobile;
 if ($component1 ! null) {
 	~popout_tooltip_clear;
-	if (~popout_available(-1) = true) {
+	if (~popout_available(-1) = 1) {
 		if_sethide(false, popout:universe);
 		if ($boolean5 = true) {
 			if (%cutscene_status = 1) {

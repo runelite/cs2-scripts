@@ -27,8 +27,8 @@ if ($int9 < 10) {
 .cc_setgraphic($graphic4);
 .cc_settiling(false);
 .cc_setdraggable($component0, 0);
-.cc_setondrag("scrollbar_vertical_drag($component0, $component1, event_mousey, false)");
-.cc_setondragcomplete("scrollbar_vertical_drag($component0, $component1, event_mousey, true)");
+.cc_setondrag("scrollbar_vertical_drag($component0, $component1, event_mousey, 0)");
+.cc_setondragcomplete("scrollbar_vertical_drag($component0, $component1, event_mousey, 1)");
 .cc_setdraggablebehavior(1);
 cc_create($component0, ^iftype_graphic, 2, false);
 cc_setposition(0, .cc_gety, ^setpos_abs_centre, ^setpos_abs_top);

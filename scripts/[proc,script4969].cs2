@@ -14,8 +14,8 @@ cc_create($component1, ^iftype_text, $comsubid7, false);
 if_setop(1, $string1, $component1);
 if_setopbase("<col=ff981f>Claim</col>", $component1);
 if ($boolean6 = false) {
-	if_setonmouseleave("script4915($component1, false, $string1, $colour5)", $component1);
-	if_setonmouserepeat("script4915($component1, true, $string1, $colour5)", $component1);
+	if_setonmouseleave("script4915($component1, 0, $string1, $colour5)", $component1);
+	if_setonmouserepeat("script4915($component1, 1, $string1, $colour5)", $component1);
 }
 if_setonop("script4971", $component1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -38,7 +38,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component2);
 if_setopbase("<col=ff981f>Claim</col>", $component2);
 if ($boolean6 = false) {
-	if_setonmouseleave("script4915($component2, false, $string1, $colour5)", $component2);
-	if_setonmouserepeat("script4915($component2, true, $string1, $colour5)", $component2);
+	if_setonmouseleave("script4915($component2, 0, $string1, $colour5)", $component2);
+	if_setonmouserepeat("script4915($component2, 1, $string1, $colour5)", $component2);
 }
 if_setonop("script4972($component4)", $component2);

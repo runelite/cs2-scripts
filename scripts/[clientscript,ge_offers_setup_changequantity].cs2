@@ -1,5 +1,5 @@
 // 777
-[clientscript,ge_offers_setup_changequantity](boolean $boolean0, int $int1, int $opindex2, component $com_ge_offers_setup3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $com_ge_offers_setup_confirm16, int $comsubid17, int $comsubid18)
+[clientscript,ge_offers_setup_changequantity](int $int0, int $int1, int $opindex2, component $com_ge_offers_setup3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $com_ge_offers_setup_confirm16, int $comsubid17, int $comsubid18)
 if ($opindex2 ! 1 | %tradingpost_search = null) {
 	return;
 }
@@ -54,7 +54,7 @@ if (%tradingpost_search = osrs_bond_13190) {
 	}
 }
 ~ge_offers_setup_draw(
-	0 = $boolean0, 
+	0 = $int0, 
 	1 = $com_ge_offers_setup3, 
 	2 = $comsubid4, 
 	3 = $comsubid5, 

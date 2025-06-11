@@ -1,27 +1,27 @@
 // 1063
-[proc,farming_tools_getstored](obj $obj0)(int, namedobj)
-switch_obj ($obj0) {
-	case rake_5341 :
+[proc,farming_tools_getstored](int $int0)(int, namedobj)
+switch_int ($int0) {
+	case 5341 :
 		return(calc(pow(2, 1) * %farming_tools_extrarakes + %farming_tools_rake), rake_5341);
-	case dibber_5343 :
+	case 5343 :
 		return(calc(pow(2, 1) * %farming_tools_extradibbers + %farming_tools_dibber), dibber_5343);
-	case spade_952 :
+	case 952 :
 		return(calc(pow(2, 1) * %farming_tools_extraspades + %farming_tools_spade), spade_952);
-	case secateurs_5329 :
+	case 5329 :
 		if (%farming_tools_fairysecateurs = 1) {
 			return(calc(pow(2, 1) * %farming_tools_extrasecateurs + %farming_tools_secateurs), fairy_enchanted_secateurs_7409);
 		}
 		return(calc(pow(2, 1) * %farming_tools_extrasecateurs + %farming_tools_secateurs), secateurs_5329);
-	case watering_can_dummy_6797 :
+	case 6797 :
 		if (%farming_tools_wateringcan <= 0) {
 			return(0, null);
 		}
 		return(1, enum(int, namedobj, enum_136, %farming_tools_wateringcan));
-	case gardening_trowel_5325 :
+	case 5325 :
 		return(calc(pow(2, 1) * %farming_tools_extratrowels + %farming_tools_trowel), gardening_trowel_5325);
-	case plant_cure_6036 :
+	case 6036 :
 		return(%farming_tools_plantcure, plant_cure_6036);
-	case bottomless_compost_bucket_22994 :
+	case 22994 :
 		if (%farming_tools_bottomless_bucket_type = 1) {
 			return(1, bottomless_compost_bucket_22994);
 		}
@@ -29,13 +29,13 @@ switch_obj ($obj0) {
 			return(1, bottomless_compost_bucket_filled_22997);
 		}
 		return(0, bottomless_compost_bucket_22994);
-	case bucket_empty_1925 :
+	case 1925 :
 		return(calc(pow(2, 8) * %farming_tools_extra2buckets + pow(2, 5) * %farming_tools_extrabuckets + %farming_tools_buckets), bucket_empty_1925);
-	case bucket_compost_6032 :
+	case 6032 :
 		return(calc(pow(2, 8) * %farming_tools_extracompost + %farming_tools_compost), bucket_compost_6032);
-	case bucket_supercompost_6034 :
+	case 6034 :
 		return(calc(pow(2, 8) * %farming_tools_extrasupercompost + %farming_tools_supercompost), bucket_supercompost_6034);
-	case bucket_ultracompost_21483 :
+	case 21483 :
 		return(%farming_tools_ultracompost, bucket_ultracompost_21483);
 	case default :
 		return(0, null);

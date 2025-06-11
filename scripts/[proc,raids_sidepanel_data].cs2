@@ -30,9 +30,9 @@ def_string $string1 = "Start raid";
 if (%raids_client_isleader = 1 & %raids_client_progress = 0) {
 	if_setsize(calc(parawidth($string1, 190, p12_full) + 20), if_getheight($com_raids_sidepanel_start1), ^setsize_abs, ^setsize_abs, $com_raids_sidepanel_start1);
 	if_sethide(false, $com_raids_sidepanel_start1);
-	~raids_sidepanel_drawbutton(false, $string1, $com_raids_sidepanel_start1);
-	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
-	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
+	~raids_sidepanel_drawbutton(0, $string1, $com_raids_sidepanel_start1);
+	if_setonmouserepeat("raids_sidepanel_drawbutton(1, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
+	if_setonmouseleave("raids_sidepanel_drawbutton(0, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
 	if_setonop("raids_sidepanel_opbutton(event_op, $string1, $com_raids_sidepanel_start1)", $com_raids_sidepanel_start1);
 	if_setontimer(null, $com_raids_sidepanel_start1);
 	if_setop(1, $string1, $com_raids_sidepanel_start1);

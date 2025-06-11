@@ -1,5 +1,5 @@
 // 6013
-[clientscript,inventory_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $comsubid4, boolean $boolean5)
+[clientscript,inventory_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $comsubid4, int $int5)
 def_int $int6 = $comsubid4;
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
@@ -29,8 +29,8 @@ if ($obj8 = null) {
 }
 if (cc_find($drop0, $dropsubid3) = ^true) {
 	$obj10, $int11 = cc_getinvobject, cc_getinvcount;
-	~inventory_drawitem($obj8, $int9, $drop0, $comsubid4, $boolean5, $boolean7);
+	~inventory_drawitem($obj8, $int9, $drop0, $comsubid4, $int5, $boolean7);
 }
 if (cc_find($drop0, $comsubid2) = ^true) {
-	~inventory_drawitem($obj10, $int11, $drop0, $comsubid4, $boolean5, $boolean7);
+	~inventory_drawitem($obj10, $int11, $drop0, $comsubid4, $int5, $boolean7);
 }

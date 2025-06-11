@@ -1,13 +1,13 @@
 // 1060
-[proc,farming_tools_main_update](component $component0, obj $obj1, string $string0, int $int2, int $int3)
+[proc,farming_tools_main_update](component $component0, int $int1, string $string0, int $int2, int $int3)
 def_int $int4 = 0;
 def_namedobj $namedobj5 = null;
-$int4, $namedobj5 = ~farming_tools_getstored($obj1);
+$int4, $namedobj5 = ~farming_tools_getstored($int1);
 def_int $colour6 = 0xbb0000;
 if ($int4 > 0) {
 	$colour6 = 0x20df20;
 }
-if ($obj1 = watering_can_dummy_6797) {
+if ($int1 = 6797) {
 	if ($namedobj5 = null) {
 		$namedobj5 = watering_can_dummy_6797;
 	}

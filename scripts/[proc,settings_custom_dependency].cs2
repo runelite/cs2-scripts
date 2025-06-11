@@ -1,51 +1,51 @@
 // 2520
-[proc,settings_custom_dependency](struct $struct0)(boolean)
+[proc,settings_custom_dependency](struct $struct0)(int)
 def_int $int1 = struct_param($struct0, param_1077);
 switch_int ($int1) {
 	case 87, 89, 92, 94, 97, 99, 101, 103, 105, 107, 196, 434 :
 		if (getwindowmode ! ^windowmode_fixed & %chatbox_transparency = 1) {
-			return(false);
+			return(0);
 		}
-		return(true);
+		return(1);
 	case 193, 198 :
 		if (~is_group_iron = 0) {
-			return(false);
+			return(0);
 		}
 		if (getwindowmode ! ^windowmode_fixed & %chatbox_transparency = 1) {
-			return(false);
+			return(0);
 		}
-		return(true);
+		return(1);
 	case 194, 199 :
 		if (~is_group_iron = 0) {
-			return(false);
+			return(0);
 		}
 		if (getwindowmode = ^windowmode_fixed | %chatbox_transparency = 0) {
-			return(false);
+			return(0);
 		}
-		return(true);
+		return(1);
 	case 206 :
 		if (~deadman_world ! 0) {
-			return(false);
+			return(0);
 		}
 	case 191, 320 :
 		if (~on_enhanced_mobile = 1 & %popout_panel_mobile_enabled = 1) {
-			return(true);
+			return(1);
 		}
 		if (~on_enhanced_desktop = 1 & %popout_panel_desktop_disabled = 0) {
-			return(true);
+			return(1);
 		}
-		return(false);
+		return(0);
 	case 296 :
 		if (%wilderness_diary_any_complete = 0) {
-			return(false);
+			return(0);
 		}
 	case 380 :
 		if (%barcrawl ! 2 & %scorpcatcher < 6) {
-			return(false);
+			return(0);
 		}
 	case 381 :
 		if (%brut_farming_smashing < 3) {
-			return(false);
+			return(0);
 		}
 }
-return(true);
+return(1);

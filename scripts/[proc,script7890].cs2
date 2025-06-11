@@ -1,0 +1,201 @@
+// 7890
+[proc,script7890](int $int0, int $int1)(int, namedobj, string)
+def_string $string0 = "";
+if (%option_skill_guide = 0) {
+	$string0 = "<col=6f0000>";
+} else {
+	$string0 = "<col=ffffff>";
+}
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, blankrune_1436, "Runecraft is the skill that allows you to convert essences into runes, which you can use to cast spells.");
+			case 1 :
+				return(-1, air_talisman_1438, "To create runes, you'll first need some essence and a talisman of the rune you want to make. You can use the talisman to both locate and access the runic altar, which is where the runes are crafted.");
+			case 2 :
+				return(-1, firerune_554, "Higher Runecraft levels will allow you to craft more kinds of runes. At higher levels, you'll also be able to make multiple runes per essence.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, airrune_556, "Air runes");
+			case 1 :
+				return(2, mindrune_558, "Mind runes");
+			case 2 :
+				return(5, waterrune_555, "Water runes");
+			case 3 :
+				return(6, mistrune_4695, "Members: Mist runes<br>Combination of Air and Water");
+			case 4 :
+				return(9, earthrune_557, "Earth runes");
+			case 5 :
+				return(10, dustrune_4696, "Members: Dust runes<br>Combination of Air and Earth");
+			case 6 :
+				return(13, mudrune_4698, "Members: Mud runes<br>Combination of Water and Earth");
+			case 7 :
+				return(14, firerune_554, "Fire runes");
+			case 8 :
+				return(15, smokerune_4697, "Members: Smoke runes<br>Combination of Air and Fire");
+			case 9 :
+				return(19, steamrune_4694, "Members: Steam runes<br>Combination of Water and Fire");
+			case 10 :
+				return(20, bodyrune_559, "Body runes");
+			case 11 :
+				return(23, lavarune_4699, "Members: Lava runes<br>Combination of Earth and Fire");
+			case 12 :
+				return(27, cosmicrune_564, "Members: Cosmic runes");
+			case 13 :
+				return(33, sunfirerune_28929, "Members: Sunfire runes");
+			case 14 :
+				return(35, chaosrune_562, "Members: Chaos runes");
+			case 15 :
+				return(40, astralrune_9075, "Members: Astral runes");
+			case 16 :
+				return(44, naturerune_561, "Members: Nature runes");
+			case 17 :
+				return(54, lawrune_563, "Members: Law runes");
+			case 18 :
+				return(65, deathrune_560, "Members: Death runes");
+			case 19 :
+				return(77, bloodrune_565, "Members: Blood runes");
+			case 20 :
+				return(90, soulrune_566, "Members: Soul runes");
+			case 21 :
+				return(95, wrathrune_21880, "Members: Wrath runes");
+			case default :
+				return(-1, null, "");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, invis_rod_7620, "As your Runecraft skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
+			case 1 :
+				return(11, airrune_556, "2 Air runes per essence");
+			case 2 :
+				return(14, mindrune_558, "2 Mind runes per essence");
+			case 3 :
+				return(19, waterrune_555, "2 Water runes per essence");
+			case 4 :
+				return(22, airrune_556, "3 Air runes per essence");
+			case 5 :
+				return(26, earthrune_557, "2 Earth runes per essence");
+			case 6 :
+				return(28, mindrune_558, "3 Mind runes per essence");
+			case 7 :
+				return(33, airrune_556, "4 Air runes per essence");
+			case 8 :
+				return(35, firerune_554, "2 Fire runes per essence");
+			case 9 :
+				return(38, waterrune_555, "3 Water runes per essence");
+			case 10 :
+				return(42, mindrune_558, "4 Mind runes per essence");
+			case 11 :
+				return(44, airrune_556, "5 Air runes per essence");
+			case 12 :
+				return(46, bodyrune_559, "2 Body runes per essence");
+			case 13 :
+				return(49, sunfirerune_28929, "2 Sunfire runes per essence");
+			case 14 :
+				return(52, earthrune_557, "3 Earth runes per essence");
+			case 15 :
+				return(55, airrune_556, "6 Air runes per essence");
+			case 16 :
+				return(56, mindrune_558, "5 Mind runes per essence");
+			case 17 :
+				return(57, waterrune_555, "4 Water runes per essence");
+			case 18 :
+				return(59, cosmicrune_564, "Members: 2 Cosmic runes per essence");
+			case 19 :
+				return(66, airrune_556, "7 Air runes per essence");
+			case 20 :
+				return(70, mindrune_558, "6 Mind runes per essence");
+			case 21 :
+				return(70, firerune_554, "3 Fire runes per essence");
+			case 22 :
+				return(74, chaosrune_562, "Members: 2 Chaos runes per essence");
+			case 23 :
+				return(76, waterrune_555, "5 Water runes per essence");
+			case 24 :
+				return(77, airrune_556, "8 Air runes per essence");
+			case 25 :
+				return(78, earthrune_557, "4 Earth runes per essence");
+			case 26 :
+				return(82, astralrune_9075, "Members: 2 Astral runes per essence");
+			case 27 :
+				return(84, mindrune_558, "7 Mind runes per essence");
+			case 28 :
+				return(88, airrune_556, "9 Air runes per essence");
+			case 29 :
+				return(91, naturerune_561, "Members: 2 Nature runes per essence");
+			case 30 :
+				return(92, bodyrune_559, "3 Body runes per essence");
+			case 31 :
+				return(95, waterrune_555, "6 Water runes per essence");
+			case 32 :
+				return(95, lawrune_563, "Members: 2 Law runes per essence");
+			case 33 :
+				return(98, mindrune_558, "8 Mind runes per essence");
+			case 34 :
+				return(98, sunfirerune_28929, "3 Sunfire runes per essence");
+			case 35 :
+				return(99, airrune_556, "10 Air runes per essence");
+			case 36 :
+				return(99, deathrune_560, "Members: 2 Death runes per essence");
+			case default :
+				return(-1, null, "");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, invis_rod_7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
+			case 1 :
+				return(1, rcu_pouch_small_5509, "Small pouch: Holds 3 extra essence");
+			case 2 :
+				return(25, rcu_pouch_medium_5510, "Medium pouch: Holds 6 extra essence");
+			case 3 :
+				return(25, rcu_pouch_colossal_26784, "Colossal pouch: Holds up to 40 essence, depending on your Runecraft level");
+			case 4 :
+				return(50, rcu_pouch_large_5512, "Large pouch: Holds 9 extra essence");
+			case 5 :
+				return(75, rcu_pouch_giant_5514, "Giant pouch: Holds 12 extra essence");
+			case default :
+				return(-1, null, "");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(42, swampbark_greaves_25395, "Swampbark boots and gauntlets");
+			case 1 :
+				return(46, swampbark_helm_25398, "Swampbark helm");
+			case 2 :
+				return(48, swampbark_body_25389, "Swampbark body and legs");
+			case 3 :
+				return(50, wint_burnt_page_20718, "Burnt page (via desiccated pages)");
+			case 4 :
+				return(50, soaked_page_25578, "Soaked page (via desiccated pages)");
+			case 5 :
+				return(50, soiled_page_30068, "Soiled page (via desiccated pages)");
+			case 6 :
+				return(60, eternal_boots_13235, "Eternal boots (with 60 Magic)");
+			case 7 :
+				return(60, pegasian_boots_13237, "Pegasian boots (with 60 Magic)");
+			case 8 :
+				return(60, primordial_boots_13239, "Primordial boots (with 60 Magic)");
+			case 9 :
+				return(77, bloodbark_greaves_25410, "Bloodbark boots and gauntlets");
+			case 10 :
+				return(79, bloodbark_helm_25413, "Bloodbark helm");
+			case 11 :
+				return(81, bloodbark_body_25404, "Bloodbark body and legs");
+			case default :
+				return(-1, null, "");
+		}
+	case 5 :
+		switch_int ($int1) {
+			case 0 :
+				return(27, tote_amulet_26903, "Guardians of the Rift<br>(after Temple of the Eye)");
+			case default :
+				return(-1, null, "");
+		}
+}
+return(-1, null, "");

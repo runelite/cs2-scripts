@@ -1,5 +1,5 @@
 // 546
-[proc,wear_updateslot](component $component0, int $int1, boolean $boolean2)
+[proc,wear_updateslot](component $component0, int $int1, int $int2)
 if_clearops($component0);
 def_obj $obj3 = inv_getobj(worn, $int1);
 if ($obj3 = null) {
@@ -22,7 +22,7 @@ if (%colosseum_sol_grapple_pending = 1) {
 	if_setop(1, "Remove", $component0);
 	if_setoutline(0, $component0);
 }
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	if (map_members = true | oc_members($obj3) = 0) {
 		~script7777($component0, $obj3, 1);
 		~script7777($component0, $obj3, 2);
@@ -38,10 +38,10 @@ if ($boolean2 = true) {
 					if_setop(3, "Temple", $component0);
 					if_setop(4, "Surface", $component0);
 				}
-				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){achievement_diary_rewards}", $component0);
+				if_setonvartransmit("wear_updateslot($component0, $int1, $int2, cc_getid, .cc_getid){achievement_diary_rewards}", $component0);
 			case tob_teleport_22517 :
 				if_setop(4, ~inventory_op_override($obj3, 3), $component0);
-				if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){nightmare_killtime_4}", $component0);
+				if_setonvartransmit("wear_updateslot($component0, $int1, $int2, cc_getid, .cc_getid){nightmare_killtime_4}", $component0);
 			case default :
 				if_setonvartransmit(null, $component0);
 		}
@@ -52,6 +52,6 @@ if ($boolean2 = true) {
 	if_setonvartransmit(null, $component0);
 	if_setop(2, "Bank", $component0);
 }
-if_setonvartransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){colosseum_int_temp_transmit_2}", $component0);
+if_setonvartransmit("wear_updateslot($component0, $int1, $int2, cc_getid, .cc_getid){colosseum_int_temp_transmit_2}", $component0);
 if_setop(10, "Examine", $component0);
 if_setonop("cc_settrans_temporarily($component0, cc_getid, 100, 0)", $component0);

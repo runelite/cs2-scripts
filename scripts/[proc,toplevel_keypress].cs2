@@ -1,5 +1,5 @@
 // 2068
-[proc,toplevel_keypress](int $key0, enum $enum1, boolean $boolean2)
+[proc,toplevel_keypress](int $key0, enum $enum1, int $int2)
 if (~keypress_permit(null, null) = 0) {
 	return;
 }
@@ -26,7 +26,7 @@ if ($key0 = ^key_escape) {
 				if ($component4 ! null & if_hassub($component5) = true & if_hassub($component4) = true) {
 					if_close;
 					return;
-				} else if (if_hassub(chatbox:null) = true) {
+				} else if (if_hassub(chatbox:chatmodal) = true) {
 					if_close;
 					return;
 				} else if ($int3 = 1) {
@@ -42,5 +42,5 @@ if ($int7 = -1 | $int7 = calc(%flashside - 1)) {
 def_component $component8 = enum(int, component, enum_1137, $int7);
 $component8 = enum(component, component, $enum1, $component8);
 if (if_hassub($component8) = true) {
-	~toplevel_sidebutton_op($enum1, $int7, $boolean2, 0);
+	~toplevel_sidebutton_op($enum1, $int7, $int2, 0);
 }

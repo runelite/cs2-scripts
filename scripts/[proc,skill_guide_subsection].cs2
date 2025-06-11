@@ -8,221 +8,37 @@ switch_int ($int0) {
 	case 5 :
 		return(~skill_guide_subsection_defence($int1));
 	case 3 :
-		switch_int ($int1) {
-			case 0 :
-				return("Ranged", 0);
-			case 1 :
-				return("Bows", 0);
-			case 2 :
-				return("Thrown", 1);
-			case 3 :
-				return("Crossbows", 0);
-			case 4 :
-				return("Armour", 0);
-			case 5 :
-				return("Miscellaneous", 1);
-			case 6 :
-				return("Shortcuts", 1);
-			case 7 :
-				return("Salamanders", 1);
-			case default :
-				return("", -1);
-		}
+		return(~script7901($int1));
 	case 7 :
 		return(~skill_guide_subsection_prayer($int1));
 	case 4 :
 		return(~skill_guide_subsection_magic($int1));
 	case 6 :
-		if ($int1 = 0) {
-			return("Hitpoints", 0);
-		}
-		if ($int1 = 1) {
-			return("Healing", 0);
-		}
-		if ($int1 = 2) {
-			return("Equipment", 1);
-		}
-		return("", -1);
+		return(~script7895($int1));
 	case 8 :
 		return(~skill_guide_subsection_agility($int1));
 	case 9 :
-		switch_int ($int1) {
-			case 0 :
-				return("Herblore", 1);
-			case 1 :
-				return("Potions", 1);
-			case 2 :
-				return("Herbs", 1);
-			case 3 :
-				return("Barbarian Potions", 1);
-			case 4 :
-				return("Raids", 1);
-			case 5 :
-				return("Other", 1);
-			case default :
-				return("", -1);
-		}
+		return(~script7885($int1));
 	case 10 :
 		return(~skill_guide_subsection_thieving($int1));
 	case 11 :
-		switch_int ($int1) {
-			case 0 :
-				return("Crafting", 1);
-			case 1 :
-				return("Weaving", 1);
-			case 2 :
-				return("Armour", 0);
-			case 3 :
-				return("Spinning", 0);
-			case 4 :
-				return("Pottery", 0);
-			case 5 :
-				return("Glass", 1);
-			case 6 :
-				return("Jewellery", 0);
-			case 7 :
-				return("Weaponry", 1);
-			case 8 :
-				return("Crystal", 1);
-			case 9 :
-				return("Other", 1);
-			case default :
-				return("", -1);
-		}
+		return(~skill_guide_subsection_thieving($int1));
 	case 19 :
-		switch_int ($int1) {
-			case 0 :
-				return("Fletching", 1);
-			case 1 :
-				return("Arrows", 1);
-			case 2 :
-				return("Bows", 1);
-			case 3 :
-				return("Bolts", 1);
-			case 4 :
-				return("Darts", 1);
-			case 5 :
-				return("Crossbows", 1);
-			case 6 :
-				return("Javelins", 1);
-			case 7 :
-				return("Shields", 1);
-			case 8 :
-				return("Other", 1);
-			case default :
-				return("", -1);
-		}
+		return(~script7134($int1));
 	case 13 :
-		switch_int ($int1) {
-			case 0 :
-				return("Mining", 0);
-			case 1 :
-				return("Rocks", 0);
-			case 2 :
-				return("Equipment", 0);
-			case 3 :
-				return("Areas", 0);
-			case 4 :
-				return("Shooting Stars", 0);
-			case default :
-				return("", -1);
-		}
+		return(~script7897($int1));
 	case 14 :
 		return(~skill_guide_subsection_smithing($int1));
 	case 15 :
-		switch_int ($int1) {
-			case 0 :
-				return("Fishing", 0);
-			case 1 :
-				return("Small Net", 0);
-			case 2 :
-				return("Big Net", 0);
-			case 3 :
-				return("Rod", 0);
-			case 4 :
-				return("Harpoon", 0);
-			case 5 :
-				return("Aerial", 1);
-			case 6 :
-				return("Cage", 0);
-			case 7 :
-				return("Barbarian", 1);
-			case 8 :
-				return("Equipment", 0);
-			case 9 :
-				return("Raids", 1);
-			case 10 :
-				return("Other", 1);
-			case default :
-				return("", -1);
-		}
+		return(~script7891($int1));
 	case 16 :
-		switch_int ($int1) {
-			case 0 :
-				return("Cooking", 0);
-			case 1 :
-				return("Meats", 0);
-			case 2 :
-				return("Bread", 0);
-			case 3 :
-				return("Pies", 0);
-			case 4 :
-				return("Stews", 0);
-			case 5 :
-				return("Pizzas", 0);
-			case 6 :
-				return("Cakes", 0);
-			case 7 :
-				return("Wine", 0);
-			case 8 :
-				return("Hot Drinks", 1);
-			case 9 :
-				return("Brewing", 1);
-			case 10 :
-				return("Vegetable", 1);
-			case 11 :
-				return("Dairy", 1);
-			case 12 :
-				return("Gnome", 1);
-			case 13 :
-				return("Other", 0);
-			case default :
-				return("", -1);
-		}
+		return(~script7893($int1));
 	case 17 :
 		return(~skill_guide_subsection_firemaking($int1));
 	case 18 :
-		switch_int ($int1) {
-			case 0 :
-				return("Woodcutting", 0);
-			case 1 :
-				return("Trees", 0);
-			case 2 :
-				return("Axes", 0);
-			case 3 :
-				return("Forestry", 0);
-			case 4 :
-				return("Other", 0);
-			case default :
-				return("", -1);
-		}
+		return(~script7887($int1));
 	case 12 :
-		switch_int ($int1) {
-			case 0 :
-				return("Runecraft", 0);
-			case 1 :
-				return("Runes", 0);
-			case 2 :
-				return("Multiple Runes", 0);
-			case 3 :
-				return("Rune Pouches", 1);
-			case 4 :
-				return("Infusing", 1);
-			case 5 :
-				return("Other", 1);
-			case default :
-				return("", -1);
-		}
+		return(~script7889($int1));
 	case 20 :
 		return(~skill_guide_subsection_slayer($int1));
 	case 21 :

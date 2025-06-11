@@ -1,7 +1,7 @@
 // 7844
-[clientscript,script7844](boolean $boolean0, component $component1, int $comsubid2)
+[clientscript,script7844](int $int0, component $component1, int $comsubid2)
 if (cc_find($component1, $comsubid2) = ^true) {
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		cc_settrans(20);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 70, calc(clientclock + 2))");
 	} else {

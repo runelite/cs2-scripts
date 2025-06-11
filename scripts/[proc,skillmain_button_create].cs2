@@ -17,14 +17,14 @@ if ($int1 = 0) {
 	$string0 = tostring($int1);
 }
 if ($int0 = 1) {
-	~skillmain_button_draw($component2, $string0, true, false);
+	~skillmain_button_draw($component2, $string0, 1, 0);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 	if_setonop("opsound(event_op, 2)", $component2);
 } else {
-	~skillmain_button_draw($component2, $string0, false, false);
-	if_setonmouserepeat("skillmain_button_draw($component2, $string0, false, true)", $component2);
-	if_setonmouseleave("skillmain_button_draw($component2, $string0, false, false)", $component2);
+	~skillmain_button_draw($component2, $string0, 0, 0);
+	if_setonmouserepeat("skillmain_button_draw($component2, $string0, 0, 1)", $component2);
+	if_setonmouseleave("skillmain_button_draw($component2, $string0, 0, 0)", $component2);
 	if_setonop("skillmain_setquantity(
 		0 = event_op, 
 		1 = $int1, 

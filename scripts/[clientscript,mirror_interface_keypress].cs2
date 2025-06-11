@@ -4,7 +4,7 @@ if ($keychar1 = null | ~keypress_permit(lighttemple_pillar, null) = 0) {
 	return;
 }
 if (string_indexof_char($string0, $keychar1) ! -1 | ($key0 = ^key_return | $key0 = ^key_space) & $com_lighttemple_pillar_rotate2 = $com_lighttemple_pillar_rotate3) {
-	~mirror_interface_button_draw($com_lighttemple_pillar_rotate2, $string1, true);
+	~mirror_interface_button_draw($com_lighttemple_pillar_rotate2, $string1, 1);
 	if_setonkey(null, $com_lighttemple_pillar_rotate2);
 	if_setontimer("mirror_interface_button_reset($com_lighttemple_pillar_rotate2, $string0, calc(clientclock + 40), $string1)", $com_lighttemple_pillar_rotate2);
 	if_resume_pausebutton($com_lighttemple_pillar_rotate2);

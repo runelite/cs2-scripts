@@ -1,6 +1,6 @@
 // 6414
-[clientscript,script6414](boolean $boolean0, boolean $boolean1, int $int2, int $comsubid3, int $comsubid4, int $int5, component $component6, component $component7, component $component8)
-if ($boolean1 = true) {
+[clientscript,script6414](int $int0, int $int1, int $int2, int $comsubid3, int $comsubid4, int $int5, component $component6, component $component7, component $component8)
+if ($int1 = 1) {
 	if (~on_mobile = false & cc_find($component8, $comsubid4) = ^true) {
 		cc_settrans(~script2478(15));
 	}
@@ -36,7 +36,7 @@ if ($boolean1 = true) {
 	}
 	return;
 }
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	if (~on_mobile = false & cc_find($component8, $comsubid4) = ^true) {
 		cc_settrans(~script2478(15));
 	}
@@ -74,8 +74,8 @@ if (cc_find($component8, $comsubid4) = ^true) {
 }
 if (~on_mobile = false & cc_find($component7, $comsubid3) = ^true) {
 	cc_setonmouserepeat("script6414(
-		0 = true, 
-		1 = false, 
+		0 = 1, 
+		1 = 0, 
 		2 = $int2, 
 		3 = cc_getid, 
 		4 = $comsubid4, 

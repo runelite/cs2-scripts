@@ -2,11 +2,11 @@
 [proc,ntk_layout](component $com_ntk_overlay_content0, component $com_ntk_overlay_dodger1)
 if (~toplevel_getcomponents = enum_1129) {
 	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $com_ntk_overlay_content0);
-	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 36582, ^setpos_abs_right, ^setpos_abs_top, true);
+	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 36582, ^setpos_abs_right, ^setpos_abs_top, 1);
 } else if (~on_mobile = true) {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $com_ntk_overlay_content0);
-	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 52968, ^setpos_abs_left, ^setpos_abs_top, 1);
 } else {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_ntk_overlay_content0);
-	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 52968, ^setpos_abs_centre, ^setpos_abs_top, true);
+	~script4729($com_ntk_overlay_dodger1, $com_ntk_overlay_content0, 52968, ^setpos_abs_centre, ^setpos_abs_top, 1);
 }

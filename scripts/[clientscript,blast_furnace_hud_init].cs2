@@ -1,6 +1,6 @@
 // 1422
 [clientscript,blast_furnace_hud_init](component $com_blast_furnace_hud_universe0, component $com_blast_furnace_hud_dodger1, component $com_blast_furnace_hud_display2)
-~script4729($com_blast_furnace_hud_dodger1, $com_blast_furnace_hud_display2, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
+~script4729($com_blast_furnace_hud_dodger1, $com_blast_furnace_hud_display2, 36582, ^setpos_abs_right, ^setpos_abs_top, 0);
 if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $com_blast_furnace_hud_display2);
 def_string $string0 = "Coffer";
 if_setsize(calc(parawidth($string0, 512, p12_full) + 10), 58, ^setsize_abs, ^setsize_abs, $com_blast_furnace_hud_display2);

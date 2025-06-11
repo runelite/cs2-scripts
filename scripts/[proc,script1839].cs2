@@ -1,5 +1,5 @@
 // 1839
-[proc,script1839](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, boolean $boolean6)
+[proc,script1839](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, int $int6)
 def_int $int7 = 0;
 if ($int1 = 0) {
 	if_settext("Healthy", dt2_infection:infection_percentage);
@@ -16,9 +16,9 @@ if ($int1 = 0) {
 		if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component3);
 	}
 	if_settext("Infection: <tostring(~max(scale($int1, $int0, 100), 1))>%", $component2);
-	if ($boolean6 = true) {
-		~script1841($boolean6, $component3, $int7, $component4, if_getwidth($component4), $component5);
+	if ($int6 = 1) {
+		~script1841($int6, $component3, $int7, $component4, if_getwidth($component4), $component5);
 	} else {
-		if_setontimer("script1840($boolean6, $component3, $int7, $component4, if_getwidth($component4), $component5)", $component3);
+		if_setontimer("script1840($int6, $component3, $int7, $component4, if_getwidth($component4), $component5)", $component3);
 	}
 }

@@ -1,8 +1,8 @@
 // 3578
-[proc,hallowed_tools_main_update](component $component0, obj $obj1, string $string0, int $int2, int $int3)
+[proc,hallowed_tools_main_update](component $component0, int $int1, string $string0, int $int2, int $int3)
 def_int $int4 = 0;
 def_namedobj $namedobj5 = null;
-$int4, $namedobj5 = ~hallowed_tools_getstored($obj1);
+$int4, $namedobj5 = ~hallowed_tools_getstored($int1);
 def_int $colour6 = 0xbb0000;
 if ($int4 > 0) {
 	$colour6 = 0x20df20;

@@ -37,13 +37,13 @@ if (%if5 = 1 | %ironman = 0 | ~is_group_iron = 1 | %ironman_downgradetype ! 0) {
 		} else {
 			cc_settext("Downgrade options are not available on this game world.");
 		}
-		~stonebutton_draw(true, "Downgrade", b12_full, 0, $com_ironman_setup_downgrade_cancel4);
+		~stonebutton_draw(1, "Downgrade", b12_full, 0, $com_ironman_setup_downgrade_cancel4);
 		if_setonmouseover(null, $com_ironman_setup_downgrade_cancel4);
 		if_setonmouserepeat(null, $com_ironman_setup_downgrade_cancel4);
 		if_setonmouseleave(null, $com_ironman_setup_downgrade_cancel4);
 		if_setontimer(null, $com_ironman_setup_downgrade_cancel4);
 		if_setop(1, "Downgrade", $com_ironman_setup_downgrade_cancel4);
-		if_setonop("settings_op_sound(false)", $com_ironman_setup_downgrade_cancel4);
+		if_setonop("settings_op_sound(0)", $com_ironman_setup_downgrade_cancel4);
 		return;
 	}
 	$int5 = ~thinstonebox($component1, $int5);

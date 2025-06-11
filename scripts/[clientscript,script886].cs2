@@ -50,8 +50,8 @@ while ($int14 <= $int9) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int5)");
-		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int5)");
+		cc_setonmouserepeat("league_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $int5)");
+		cc_setonmouseleave("league_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $int5)");
 	}
 	cc_setonop("script1108(event_op, $int14, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)");
 	cc_settext(struct_param(enum(int, struct, enum_2670, $int14), param_858));

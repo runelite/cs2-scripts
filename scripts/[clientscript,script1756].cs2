@@ -1,8 +1,8 @@
 // 1756
-[clientscript,script1756](int $opindex0, coord $coord1, boolean $boolean2)
+[clientscript,script1756](int $opindex0, coord $coord1, int $int2)
 if ($opindex0 = 1 & $coord1 ! null) {
 	sound_synth(interface_select1, 1, 0);
-	if ($boolean2 = false) {
+	if ($int2 = 0) {
 		worldmap_jumptosourcecoord($coord1);
 	} else {
 		worldmap_jumptodisplaycoord($coord1);

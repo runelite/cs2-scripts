@@ -10,7 +10,7 @@ if (%gim_invitationstatus = 1) {
 	if_setonmouserepeat(null, $com_gim_sidepanel_invite9);
 	if_setonmouseleave(null, $com_gim_sidepanel_invite9);
 	if_setontimer(null, $com_gim_sidepanel_invite9);
-	~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $com_gim_sidepanel_invite9);
+	~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $com_gim_sidepanel_invite9);
 	if_setop(1, "Invite", $com_gim_sidepanel_invite9);
 	if_setonop("opsound(0, 0)", $com_gim_sidepanel_invite9);
 }
@@ -96,9 +96,9 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 		cc_setop(1, "Details");
 		cc_setopbase("<col=ff9040><activeclansettings_getaffineddisplayname($int14)></col>");
 		if (~on_mobile = false) {
-			cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, 255)");
+			cc_setonmouserepeat("clan_members_hover(1, event_com, event_comsubid, 255)");
 		}
-		cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, 255)");
+		cc_setonmouseleave("clan_members_hover(0, event_com, event_comsubid, 255)");
 		$int14 = calc($int14 + 1);
 	}
 	$int21 = map_world;

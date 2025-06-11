@@ -1,5 +1,5 @@
 // 6909
-[proc,script6909](int $int0, component $component1, int $int2, int $int3, string $string0)
+[proc,script6909](int $int0, component $component1, int $int2, int $int3, anyobj $anyobj0)
 def_string $string1 = "Fresh Start Worlds";
 if ($int2 = 2) {
 	$string1 = "Old School Main";
@@ -63,8 +63,8 @@ cc_settext($string1);
 .cc_setonmouseleave("script6939($component1, .cc_getid, $colour10, $colour11)");
 if ($int3 = 1 | $int3 = 2) {
 	.cc_setop(1, "Back");
-	.cc_setonop("script6936($string0)");
+	.cc_setonop("script6936($anyobj0)");
 } else {
 	.cc_setop(1, "Confirm <col=ff981f><$string1></col>");
-	.cc_setonop("script6937($int2, $string0)");
+	.cc_setonop("script6937($int2, $anyobj0)");
 }

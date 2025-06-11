@@ -1,8 +1,8 @@
 // 3580
-[proc,hallowed_tools_side_update](component $component0, obj $obj1, string $string0, int $int2)
+[proc,hallowed_tools_side_update](component $component0, namedobj $namedobj1, string $string0, int $int2)
 def_int $int3 = 0;
 def_namedobj $namedobj4 = null;
-$int3, $namedobj4 = ~hallowed_tools_getcarried($obj1);
+$int3, $namedobj4 = ~hallowed_tools_getcarried($namedobj1);
 def_int $colour5 = 0xbb0000;
 if ($int3 > 0) {
 	$colour5 = 0x20df20;
@@ -19,7 +19,7 @@ if (cc_find($component0, calc($int2 + 2)) = ^true) {
 if_setopbase("<col=ff9040><oc_name($namedobj4)></col>", $component0);
 if_clearops($component0);
 if_setop(10, "Examine", $component0);
-def_int $int6 = enum(obj, int, enum_342, $obj1);
+def_int $int6 = enum(obj, int, enum_342, $namedobj1);
 if ($int6 <= 1) {
 	if_setop(1, "Store", $component0);
 } else {

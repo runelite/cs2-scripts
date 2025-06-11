@@ -1,7 +1,7 @@
 // 1725
 [clientscript,worldmap_zoom_scroll](int $mousey0, component $com_worldmap_zoom_out1, component $com_worldmap_zoom_in2)
 if ($mousey0 > 0) {
-	~worldmap_zoom_adjust(false, $com_worldmap_zoom_out1, $com_worldmap_zoom_in2);
+	~worldmap_zoom_adjust(0, $com_worldmap_zoom_out1, $com_worldmap_zoom_in2);
 } else if ($mousey0 < 0) {
-	~worldmap_zoom_adjust(true, $com_worldmap_zoom_out1, $com_worldmap_zoom_in2);
+	~worldmap_zoom_adjust(1, $com_worldmap_zoom_out1, $com_worldmap_zoom_in2);
 }

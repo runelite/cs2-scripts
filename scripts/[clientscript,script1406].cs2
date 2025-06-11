@@ -22,7 +22,7 @@ while ($int4 <= 31) {
 	$int4 = calc($int4 + 1);
 }
 if ($int2 > 1) {
-	~script1407(intarray0, 0, calc($int2 - 1));
+	~script1407($anyobj0, 0, calc($int2 - 1));
 }
 def_int $int5 = ^max_32bit_int;
 def_int $int6 = 0;
@@ -67,7 +67,7 @@ if ($int9 > if_getheight(poh_furniture_creation:list)) {
 }
 ~scrollbar_vertical(poh_furniture_creation:scrollbar, poh_furniture_creation:list, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (cc_find(poh_furniture_creation:scrollbar, 1) = ^true) {
-	~scrollbar_vertical_doscroll(poh_furniture_creation:scrollbar, poh_furniture_creation:list, %varcint58, true);
+	~scrollbar_vertical_doscroll(poh_furniture_creation:scrollbar, poh_furniture_creation:list, %varcint58, 1);
 }
 $int9 = $int6;
 while ($int10 < $int2) {

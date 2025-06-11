@@ -1,8 +1,8 @@
 // 1835
-[clientscript,script1835](component $com_dt2_infection_dodger0, component $com_dt2_infection_overlay1, boolean $boolean2)
+[clientscript,script1835](component $com_dt2_infection_dodger0, component $com_dt2_infection_overlay1, int $int2)
 def_component $component3 = dt2_infection:universe;
 if_setontimer("script6110($component3, -1)", $component3);
-if_setonresize("script1835($com_dt2_infection_dodger0, $com_dt2_infection_overlay1, false)", $component3);
+if_setonresize("script1835($com_dt2_infection_dodger0, $com_dt2_infection_overlay1, 0)", $component3);
 def_int $int4 = 135;
 switch_int (%varcint988) {
 	case 1 :
@@ -17,8 +17,8 @@ if ($int4 ! if_getwidth(dt2_infection:overlay)) {
 	$int5 = 1;
 }
 if_setsize($int4, 50, ^setsize_abs, ^setsize_abs, dt2_infection:overlay);
-~script4729($com_dt2_infection_dodger0, $com_dt2_infection_overlay1, setbit(setbit(52968, 12), 13), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($com_dt2_infection_dodger0, $com_dt2_infection_overlay1, setbit(setbit(52968, 12), 13), ^setpos_abs_left, ^setpos_abs_top, 1);
 if_setonvartransmit("script1836{stranglewood}", dt2_infection:infection_bar);
-if ($boolean2 = true | $int5 = 1) {
-	~script1839(100, %dt2_infection, dt2_infection:infection_percentage, dt2_infection:infection_bar_foreground, dt2_infection:infection_bar, dt2_infection:infection_icon, true);
+if ($int2 = 1 | $int5 = 1) {
+	~script1839(100, %dt2_infection, dt2_infection:infection_percentage, dt2_infection:infection_bar_foreground, dt2_infection:infection_bar, dt2_infection:infection_icon, 1);
 }

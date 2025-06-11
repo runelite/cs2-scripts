@@ -1,5 +1,5 @@
 // 3306
-[proc,wiki_icon_update](component $component0, component $component1, component $component2, boolean $boolean3)
+[proc,wiki_icon_update](component $component0, component $component1, component $component2, int $int3)
 def_enum $enum4 = ~toplevel_getcomponents;
 if ($enum4 = null) {
 	return;
@@ -16,12 +16,12 @@ if (%wiki_icon_disabled = 0) {
 		if_setsize(34, 34, ^setsize_abs, ^setsize_abs, $component1);
 	}
 	if ($enum4 = enum_1745) {
-		if ($boolean3 = false) {
+		if ($int3 = 0) {
 			if_setposition(5, 144, ^setpos_abs_right, ^setpos_abs_top, $component0);
 		} else {
 			if_setposition(28, 151, ^setpos_abs_right, ^setpos_abs_top, $component0);
 		}
-	} else if ($boolean3 = false) {
+	} else if ($int3 = 0) {
 		if (~show_storebutton = 0) {
 			if_setposition(62, 75, ^setpos_abs_right, ^setpos_abs_top, $component0);
 		} else {

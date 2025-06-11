@@ -1,8 +1,8 @@
 // 1724
-[proc,worldmap_zoombutton_draw](component $component0, boolean $boolean1, int $colour2, string $string0)
+[proc,worldmap_zoombutton_draw](component $component0, int $int1, int $colour2, string $string0)
 cc_deleteall($component0);
 def_int $int3 = 0;
-if ($boolean1 = true) {
+if ($int1 = 1) {
 	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component0);

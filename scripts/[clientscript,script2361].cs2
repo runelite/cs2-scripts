@@ -17,10 +17,10 @@ if ($drop8 = $drop0) {
 	$int12 = ~telenexus_get_slot_value($int10);
 	~telenexus_set_slot($int10, ~telenexus_get_slot_value($dropsubid9));
 	~telenexus_set_slot($dropsubid9, ~telenexus_get_slot_value($int12));
-	~script2273($drop0, $component1, $component2, $component3, $component4, $component5, $component6, false);
+	~script2273($drop0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
 } else if ($drop8 = telenexus:scrolling1) {
 	~telenexus_remove_tele(~telenexus_get_slot_value($int10));
-	~script2273($drop0, $component1, $component2, $component3, $component4, $component5, $component6, false);
+	~script2273($drop0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
 } else if ($drop8 = telenexus:left_click_layer) {
 	%poh_nexus_left_click_temp = ~telenexus_get_slot_value($int10);
 	~telenexus_left_click($drop8, telenexus:left_click_set, telenexus:left_click_options, telenexus:left_click_tick, telenexus:left_text);

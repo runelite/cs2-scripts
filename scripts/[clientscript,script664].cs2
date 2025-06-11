@@ -1,15 +1,15 @@
 // 664
-[clientscript,script664](boolean $boolean0)
+[clientscript,script664](int $int0)
 def_int $int1 = clientclock;
 def_int $int2 = -1;
-if ($boolean0 = true | $int1 = %varcint65 | calc($int1 % 25) = 0) {
+if ($int0 = 1 | $int1 = %varcint65 | calc($int1 % 25) = 0) {
 	$int2 = ~script553;
 	if ($int1 = %varcint65) {
 		~rebuildchatbox($int2);
 	}
 	~rebuildpmbox($int2);
 	if (%varcint65 > $int1 | reboottimer > 0 | %varcint55 > calc($int1 - 3000)) {
-		if_setontimer("script664(false)", chatbox:universe);
+		if_setontimer("script664(0)", chatbox:universe);
 	} else {
 		if_setontimer(null, chatbox:universe);
 	}

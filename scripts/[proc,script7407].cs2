@@ -3,7 +3,7 @@
 def_string $string0 = enum(int, string, enum_859, $int1);
 if (%ironman = $int1) {
 	.cc_setgraphic(tradebacking_light);
-	~stonebutton_draw(true, "<col=ffffff><$string0></col>", p12_full, 0, $component0);
+	~stonebutton_draw(1, "<col=ffffff><$string0></col>", p12_full, 0, $component0);
 	if_setonmouseover(null, $component0);
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
@@ -49,11 +49,11 @@ if ($int2 = 1) {
 	if_setonop("opsound(event_op, 2)", $component0);
 } else {
 	.cc_setgraphic(tradebacking_dark);
-	~stonebutton_draw(true, "<col=ff0000><$string0></col>", p12_full, 0, $component0);
+	~stonebutton_draw(1, "<col=ff0000><$string0></col>", p12_full, 0, $component0);
 	if_setonmouseover(null, $component0);
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setontimer(null, $component0);
 	if_setop(1, $string0, $component0);
-	if_setonop("settings_op_sound(false)", $component0);
+	if_setonop("settings_op_sound(0)", $component0);
 }

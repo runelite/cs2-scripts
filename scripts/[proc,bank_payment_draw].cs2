@@ -1,5 +1,5 @@
 // 1456
-[proc,bank_payment_draw](component $component0, int $int1, boolean $boolean2)
+[proc,bank_payment_draw](component $component0, int $int1, int $int2)
 def_int $int3 = if_getheight($component0);
 def_int $int4 = if_getwidth($component0);
 def_int $int5 = 44;
@@ -32,7 +32,7 @@ while ($int19 <= $int18) {
 		if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component8);
 		$namedobj16 = enum(int, namedobj, enum_982, $int19);
 		$int17 = ~script7878($namedobj16);
-		if ($boolean2 = false | $int17 >= 20) {
+		if ($int2 = 0 | $int17 >= 20) {
 			$int15 = 1;
 		} else {
 			$int15 = 0;
@@ -44,14 +44,14 @@ while ($int19 <= $int18) {
 			} else {
 				$comsubid14 = ~v2_stone_button_out_filled($component8);
 			}
-			if_setonmouseover("bank_payment_draw($component0, $int19, $boolean2)", $component8);
-			if_setonmouseleave("bank_payment_draw($component0, -1, $boolean2)", $component8);
+			if_setonmouseover("bank_payment_draw($component0, $int19, $int2)", $component8);
+			if_setonmouseleave("bank_payment_draw($component0, -1, $int2)", $component8);
 		} else {
 			$comsubid14 = ~v2_stone_button_filled($component8);
 		}
 		if_setopbase("<col=ff9040><oc_name($namedobj16)></col>", $component8);
 		if_setop(1, "Choose", $component8);
-		if_setonop("script1457($int19, $component0, $component8, $comsubid14, $boolean2)", $component8);
+		if_setonop("script1457($int19, $component0, $component8, $comsubid14, $int2)", $component8);
 		cc_create($component8, ^iftype_graphic, $comsubid14, false);
 		cc_setobject_alwaysnum($namedobj16, $int17);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

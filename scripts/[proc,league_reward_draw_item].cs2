@@ -1,5 +1,5 @@
 // 544
-[proc,league_reward_draw_item](int $int0, int $int1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, struct $struct22)(int, int)
+[proc,league_reward_draw_item](int $int0, int $int1, int $int2, struct $struct3, int $int4, int $int5, int $int6, int $int7, int $int8, component $component9, int $int10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, struct $struct22)(int, int)
 .cc_create($component11, ^iftype_rectangle, $int7, false);
 .cc_setsize($int2, 32, ^setsize_abs, ^setsize_abs);
 .cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
@@ -48,9 +48,9 @@ if ($int5 = $int4) {
 }
 .cc_setonop("league_reward_shop_select(
 	0 = $int4, 
-	1 = $component8, 
+	1 = $int8, 
 	2 = $component9, 
-	3 = $component10, 
+	3 = $int10, 
 	4 = $component11, 
 	5 = $component12, 
 	6 = $component13, 

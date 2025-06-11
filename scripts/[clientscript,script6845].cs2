@@ -15,5 +15,5 @@ if_setscrollsize(0, $int3, journalscroll:textlayer);
 if ($boolean0 = true) {
 	if_setscrollpos(0, 0, journalscroll:textlayer);
 } else if (cc_find(journalscroll:scrollbar, 1) = ^true) {
-	~scrollbar_vertical_doscroll(journalscroll:scrollbar, journalscroll:textlayer, $int3, true);
+	~scrollbar_vertical_doscroll(journalscroll:scrollbar, journalscroll:textlayer, $int3, 1);
 }

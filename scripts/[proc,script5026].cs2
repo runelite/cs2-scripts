@@ -14,7 +14,7 @@ if ($obj3 = null) {
 	cc_setgraphic(enum(int, graphic, enum_904, 13));
 	if_setop(2, "Fill", $component0);
 	if_setopbase("<col=ff9040>Dizana's quiver</col>", $component0);
-	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, false)", $component0);
+	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, 0)", $component0);
 } else {
 	cc_create($component0, ^iftype_graphic, 0, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -26,6 +26,6 @@ if ($obj3 = null) {
 	if_setop(1, "Quiver-Remove", $component0);
 	if_setop(2, "Swap", $component0);
 	if_setop(10, "Examine", $component0);
-	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, false)", $component0);
+	if_setonop("script4977($component0, min(200, calc($int4 + 100)), $int4, 0)", $component0);
 	if_setopbase("<col=ff9040><~script1787($obj3)></col>", $component0);
 }

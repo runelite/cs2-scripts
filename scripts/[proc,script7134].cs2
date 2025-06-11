@@ -1,10 +1,24 @@
 // 7134
-[proc,script7134](int $int0)(int)
+[proc,script7134](int $int0)(string, int)
 switch_int ($int0) {
-	case 13226 :
-		if (stat_base(herblore) < 58) {
-			mes("You need at least level 58 Herblore to purchase this.");
-			return(0);
-		}
+	case 0 :
+		return("Fletching", 1);
+	case 1 :
+		return("Arrows", 1);
+	case 2 :
+		return("Bows", 1);
+	case 3 :
+		return("Bolts", 1);
+	case 4 :
+		return("Darts", 1);
+	case 5 :
+		return("Crossbows", 1);
+	case 6 :
+		return("Javelins", 1);
+	case 7 :
+		return("Shields", 1);
+	case 8 :
+		return("Other", 1);
+	case default :
+		return("", -1);
 }
-return(1);

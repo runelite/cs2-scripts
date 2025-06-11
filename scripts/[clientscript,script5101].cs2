@@ -1,7 +1,7 @@
 // 5101
-[clientscript,script5101](component $component0, string $string0, boolean $boolean1)
-def_boolean $boolean2 = ~script5102($boolean1);
-if ($boolean1 = true) {
+[clientscript,script5101](component $component0, string $string0, int $int1)
+def_boolean $boolean2 = ~script5102($int1);
+if ($int1 = 1) {
 	sound_synth(interface_select1, 1, 0);
 	if ($boolean2 = true) {
 		%varcint140 = false;
@@ -16,4 +16,4 @@ if ($boolean1 = true) {
 		%varcint6 = true;
 	}
 }
-~script5098($component0, $string0, $boolean1);
+~script5098($component0, $string0, $int1);

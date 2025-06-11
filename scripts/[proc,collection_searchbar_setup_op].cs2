@@ -1,14 +1,14 @@
 // 4088
-[proc,collection_searchbar_setup_op](int $int0, component $component1, component $component2)
+[proc,collection_searchbar_setup_op](int $int0, int $int1, int $int2)
 def_component $component3 = collection:searchbar_image;
 def_component $component4 = collection:search_text;
-def_component $component5 = collection:search_results;
-def_component $component6 = collection:search_scrollbar;
-def_component $component7 = collection:search_results_clickzone;
+def_int $int5 = 40697941;
+def_int $int6 = 40697938;
+def_int $int7 = 40697942;
 def_int $int8 = 0;
 if (%floater_is_searching = 0) {
 	if_setop(1, "Search", $component3);
-	if_setonop("collection_searchbar_op($component1, $component2)", $component3);
+	if_setonop("collection_searchbar_op($int1, $int2)", $component3);
 	if_setonmouseover("collection_searchbar_mouseover($component4)", $component4);
 	if_setonmouseleave("collection_searchbar_mouseleave($component4)", $component4);
 	if_settext("*", $component4);
@@ -28,7 +28,7 @@ if (%floater_is_searching = 0) {
 	if_setonmouseover(null, $component4);
 	if_setonmouseleave(null, $component4);
 	if_settext(append(%varcstring417, "<col=f4f4f4>*</col>"), $component4);
-	if_setonkey("collection_searchbar_keypress(event_keycode, event_keychar, $component4, $component7, $component5, $component6, $component1, $component2)", $component4);
+	if_setonkey("collection_searchbar_keypress(event_keycode, event_keychar, $component4, $int7, $int5, $int6, $int1, $int2)", $component4);
 	~collection_search_keyboard_listener;
 }
 ~collection_populate_search_results(1);

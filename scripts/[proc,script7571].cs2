@@ -11,7 +11,7 @@ while ($int3 < $int1) {
 	$int0 = calc($int0 + 1);
 	cc_create(popout:osm_buttons, ^iftype_graphic, $int0, false);
 	$int0 = calc($int0 + 1);
-	if (~popout_available_inner($int3) = true) {
+	if (~popout_available_inner($int3) = 1) {
 		.cc_setsize(52, 40, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_bottom);
 		if (%popout_open = $int3) {

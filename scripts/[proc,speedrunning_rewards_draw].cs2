@@ -1,5 +1,5 @@
 // 6792
-[proc,speedrunning_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)
+[proc,speedrunning_rewards_draw](int $int0, int $int1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)
 cc_deleteall($component4);
 cc_deleteall($component5);
 cc_deleteall($component6);
@@ -31,9 +31,9 @@ while ($int19 < enum_getoutputcount($enum21)) {
 		5 = $int0, 
 		6 = $int22, 
 		7 = $int23, 
-		8 = $component1, 
+		8 = $int1, 
 		9 = $component2, 
-		10 = $component3, 
+		10 = $int3, 
 		11 = $component4, 
 		12 = $component5, 
 		13 = $component6, 
@@ -64,7 +64,7 @@ cc_deleteall($component13);
 if ($int0 ! -1) {
 	$string0, $string1, $int24, $int25 = ~script6797($int0);
 	%speedrunning_rewards_shopselection = $int0;
-	~pest_rewards_confirmdraw(false, $string0, $component8);
+	~pest_rewards_confirmdraw(0, $string0, $component8);
 	while ($int22 < $int0) {
 		cc_create($component7, ^iftype_rectangle, $int22, false);
 		cc_sethide(true);
@@ -77,8 +77,8 @@ if ($int0 ! -1) {
 	cc_setop(1, "Confirm");
 	cc_setopbase("<col=ff981f><$string0></col>");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("pest_rewards_confirmdraw(true, $string0, $component8)");
-		cc_setonmouseleave("pest_rewards_confirmdraw(false, $string0, $component8)");
+		cc_setonmouserepeat("pest_rewards_confirmdraw(1, $string0, $component8)");
+		cc_setonmouseleave("pest_rewards_confirmdraw(0, $string0, $component8)");
 	}
 	cc_setonop("speedrunning_reward_shop_confirmop(event_op, $component9)");
 	~steelborder($component10, $string0, 1);
@@ -99,14 +99,14 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if_setop(1, $string2, $component12);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component12, false, $string2, 0xff891f)", $component12);
-		if_setonmouseover("script7747($component12, true, $string2, 0xff891f)", $component12);
+		if_setonmouseleave("script7747($component12, 0, $string2, 0xff891f)", $component12);
+		if_setonmouseover("script7747($component12, 1, $string2, 0xff891f)", $component12);
 	}
 	if_setonop("speedrunning_reward_shop_buy(
 		0 = event_op, 
-		1 = $component1, 
+		1 = $int1, 
 		2 = $component2, 
-		3 = $component3, 
+		3 = $int3, 
 		4 = $component4, 
 		5 = $component5, 
 		6 = $component6, 
@@ -131,14 +131,14 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if_setop(1, $string2, $component13);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component13, false, $string2, 0xff891f)", $component13);
-		if_setonmouseover("script7747($component13, true, $string2, 0xff891f)", $component13);
+		if_setonmouseleave("script7747($component13, 0, $string2, 0xff891f)", $component13);
+		if_setonmouseover("script7747($component13, 1, $string2, 0xff891f)", $component13);
 	}
 	if_setonop("speedrunning_reward_confirm_back(
 		0 = $int0, 
-		1 = $component1, 
+		1 = $int1, 
 		2 = $component2, 
-		3 = $component3, 
+		3 = $int3, 
 		4 = $component4, 
 		5 = $component5, 
 		6 = $component6, 

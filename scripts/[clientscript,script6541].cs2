@@ -1,5 +1,5 @@
 // 6541
-[clientscript,script6541](string $string0)
+[clientscript,script6541](anyobj $anyobj0)
 def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 = null) {
 	return;
@@ -22,7 +22,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextfont(quill_oblique_large);
 cc_settextshadow(true);
-cc_settext("Mode: <col=ffffff><$string0></col>");
+cc_settext("Mode: <col=ffffff><$anyobj0></col>");
 cc_create($component1, ^iftype_graphic, 2, false);
 cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_proportion_top);

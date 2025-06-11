@@ -34,8 +34,8 @@ while ($int6 < enum_getoutputcount($enum1)) {
 	cc_setopbase("<col=ff9040><enum(int, string, $enum2, $int6)>");
 	cc_setonop("makeover_op_colour(event_com, event_comsubid)");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("makeover_hover_colour(event_com, event_comsubid, true)");
-		cc_setonmouseleave("makeover_hover_colour(event_com, event_comsubid, false)");
+		cc_setonmouserepeat("makeover_hover_colour(event_com, event_comsubid, 1)");
+		cc_setonmouseleave("makeover_hover_colour(event_com, event_comsubid, 0)");
 	}
 	$int5 = calc($int5 + 1);
 	cc_create($com_makeover_colours0, ^iftype_rectangle, $int5, false);

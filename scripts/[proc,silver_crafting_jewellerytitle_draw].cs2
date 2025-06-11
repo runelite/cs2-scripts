@@ -1,7 +1,7 @@
 // 2937
-[proc,silver_crafting_jewellerytitle_draw](component $component0, obj $obj1, string $string0, string $string1)
+[proc,silver_crafting_jewellerytitle_draw](component $component0, namedobj $namedobj1, string $string0, string $string1)
 cc_deleteall($component0);
-if (inv_total(inv, $obj1) > 0) {
+if (inv_total(inv, $namedobj1) > 0) {
 	return;
 }
 def_int $int2 = 0;
@@ -13,7 +13,7 @@ cc_setposition(4, 0, ^setpos_abs_left, ^setpos_abs_centre);
 $int3 = calc($int3 + 4 + 36 + 4);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
-cc_setobject_nonum($obj1, 1);
+cc_setobject_nonum($namedobj1, 1);
 cc_create($component0, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
 .cc_create($component0, ^iftype_text, $int2, false);

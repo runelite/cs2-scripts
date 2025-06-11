@@ -1,10 +1,10 @@
 // 3006
-[clientscript,adventurepath_say_item](obj $obj0, int $int1, boolean $boolean2)
+[clientscript,adventurepath_say_item](namedobj $namedobj0, int $int1, int $int2)
 sound_synth(interface_select1, 1, 0);
-if ($obj0 = bank_filler_20594) {
+if ($namedobj0 = bank_filler_20594) {
 	mes("There are no rewards of this type.");
-} else if ($boolean2 = true) {
-	mes("Members: <oc_name($obj0)> x<tostring($int1)>");
+} else if ($int2 = 1) {
+	mes("Members: <oc_name($namedobj0)> x<tostring($int1)>");
 } else {
-	mes("Non Members: <oc_name($obj0)> x<tostring($int1)>");
+	mes("Non Members: <oc_name($namedobj0)> x<tostring($int1)>");
 }

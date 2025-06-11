@@ -1,8 +1,8 @@
 // 3100
-[proc,canoe_location_setup](component $component0, string $string0, boolean $boolean1, model $model2, model $model3, string $string1, int $int4, int $int5)
+[proc,canoe_location_setup](component $component0, string $string0, int $int1, model $model2, model $model3, string $string1, int $int4, int $int5)
 def_int $int6 = 0;
 def_int $int7 = 0;
-if ($boolean1 = false) {
+if ($int1 = 0) {
 	$int7 = calc(if_getwidth($component0) / 2);
 } else {
 	$int7 = if_getwidth($component0);
@@ -13,8 +13,8 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(false);
 cc_settrans(255);
 if (~on_mobile = false) {
-	cc_setonmouserepeat("canoe_location_hover($boolean1, $model2, $model3, true, $component0)");
-	cc_setonmouseleave("canoe_location_hover($boolean1, $model2, $model3, false, $component0)");
+	cc_setonmouserepeat("canoe_location_hover($int1, $model2, $model3, 1, $component0)");
+	cc_setonmouseleave("canoe_location_hover($int1, $model2, $model3, 0, $component0)");
 }
 cc_setop(1, $string1);
 $int6 = calc($int6 + 1);
@@ -27,7 +27,7 @@ cc_settextfont(q8_full);
 cc_settext($string0);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 $int6 = calc($int6 + 1);
-if ($boolean1 = false & $model2 ! null & $model3 ! null) {
+if ($int1 = 0 & $model2 ! null & $model3 ! null) {
 	cc_create($component0, ^iftype_model, $int6, false);
 	cc_setsize($int7, 0, ^setsize_abs, ^setsize_minus);
 	cc_setposition($int5, 0, ^setpos_abs_right, ^setpos_abs_top);

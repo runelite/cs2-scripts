@@ -17,7 +17,7 @@ if_setscrollsize(0, $int5, $component1);
 ~scrollbar_vertical($component0, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 $int3 = ~minmax(0, $int5, $int3);
 if ($int3 > 0 & cc_find($component0, 1) = ^true) {
-	~scrollbar_vertical_doscroll($component0, $component1, $int3, true);
+	~scrollbar_vertical_doscroll($component0, $component1, $int3, 1);
 } else {
 	if_setscrollpos(0, 0, $component1);
 }

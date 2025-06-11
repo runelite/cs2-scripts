@@ -1,5 +1,5 @@
 // 4961
-[proc,script4961](component $component0, struct $struct1, int $int2, boolean $boolean3)
+[proc,script4961](component $component0, struct $struct1, int $int2, int $int3)
 def_string $string0 = struct_param($struct1, param_1896);
 def_string $string1 = ~script4920($struct1);
 def_int $int4 = struct_param($struct1, param_1903);
@@ -37,7 +37,7 @@ if (%varcint1194 = $int2) {
 	if_setonmouseleave(null, $component0);
 	if_setontimer(null, $component0);
 } else {
-	~script4963($component0, $int2, cc_getid, 255, 225, 200, $boolean3);
+	~script4963($component0, $int2, cc_getid, 255, 225, 200, $int3);
 }
 if_setop(1, "Set", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);

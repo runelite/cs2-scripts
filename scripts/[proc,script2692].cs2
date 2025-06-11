@@ -1,7 +1,7 @@
 // 2692
-[proc,script2692](boolean $boolean0, boolean $boolean1)
+[proc,script2692](int $int0, int $int1)
 def_int $comsubid2 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$comsubid2 = ~v2_stone_button_in_filled(tournament_supplies:loadout_apply);
 } else {
 	$comsubid2 = ~v2_stone_button_out_filled(tournament_supplies:loadout_apply);
@@ -12,7 +12,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if ($boolean1 = true) {
+if ($int1 = 1) {
 	cc_setcolour(^white);
 	cc_settext("...");
 	if_clearops(tournament_supplies:loadout_apply);

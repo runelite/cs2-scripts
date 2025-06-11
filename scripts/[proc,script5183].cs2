@@ -1,5 +1,5 @@
 // 5183
-[proc,script5183](component $component0, component $component1, int $int2)
+[proc,script5183](int $int0, component $component1, int $int2)
 def_component $component3 = gim_shared_bank_unlocks:index_contents;
 def_component $component4 = gim_shared_bank_unlocks:list_content;
 def_component $component5 = gim_shared_bank_unlocks:list_borders;
@@ -61,10 +61,10 @@ if_setop(1, "Toggle", $component8);
 if_setopbase("completed unlocks", $component8);
 if ($int2 = 1) {
 	cc_setgraphic("checkbox,2");
-	if_setonop("script4677($component0, $component1, 0)", $component8);
+	if_setonop("script4677($int0, $component1, 0)", $component8);
 } else {
 	cc_setgraphic("checkbox,1");
-	if_setonop("script4677($component0, $component1, 1)", $component8);
+	if_setonop("script4677($int0, $component1, 1)", $component8);
 }
 $int23 = calc($int23 + 1);
 cc_create($component8, ^iftype_text, $int23, false);

@@ -1,6 +1,6 @@
 // 2099
-[clientscript,hp_hud_init](component $com_hpbar_hud_universe0, component $com_hpbar_hud_hpdodgerside1, component $com_hpbar_hud_hpdodger2, component $com_hpbar_hud_hp3, component $com_hpbar_hud_name_area4, component $com_hpbar_hud_hp_bar5, component $com_hpbar_hud_hp_bar_text6, component $com_hpbar_hud_health_bar_back7, component $com_hpbar_hud_health_bar_sliding8, component $com_hpbar_hud_health_bar_remaining9, component $com_hpbar_hud_creature_name10, int $com_hpbar_hud_outer_border11, int $com_hpbar_hud_name_backing12, int $com_hpbar_hud_inner_border13, component $com_hpbar_hud_health_bar_lower_threshold14, component $com_hpbar_hud_health_bar_upper_threshold15, component $com_hpbar_hud_hp_bar_116, component $com_hpbar_hud_hp_bar_217, component $com_hpbar_hud_hpcontentside18)
-~script4729($com_hpbar_hud_hpdodgerside1, $com_hpbar_hud_hpcontentside18, setbit(65256, 17), ^setpos_abs_left, ^setpos_abs_top, true);
+[clientscript,hp_hud_init](component $com_hpbar_hud_universe0, component $com_hpbar_hud_hpdodgerside1, component $com_hpbar_hud_hpdodger2, component $com_hpbar_hud_hp3, component $com_hpbar_hud_name_area4, int $com_hpbar_hud_hp_bar5, component $com_hpbar_hud_hp_bar_text6, component $com_hpbar_hud_health_bar_back7, component $com_hpbar_hud_health_bar_sliding8, component $com_hpbar_hud_health_bar_remaining9, component $com_hpbar_hud_creature_name10, int $com_hpbar_hud_outer_border11, int $com_hpbar_hud_name_backing12, int $com_hpbar_hud_inner_border13, component $com_hpbar_hud_health_bar_lower_threshold14, component $com_hpbar_hud_health_bar_upper_threshold15, component $com_hpbar_hud_hp_bar_116, component $com_hpbar_hud_hp_bar_217, component $com_hpbar_hud_hpcontentside18)
+~script4729($com_hpbar_hud_hpdodgerside1, $com_hpbar_hud_hpcontentside18, setbit(65256, 17), ^setpos_abs_left, ^setpos_abs_top, 1);
 if_setonsubchange("hp_hud_pos(
 	0 = 0, 
 	1 = $com_hpbar_hud_universe0, 
@@ -33,5 +33,5 @@ if_setonvartransmit("hp_hud_update(
 	8 = $com_hpbar_hud_health_bar_upper_threshold15, 
 	9 = $com_hpbar_hud_hp_bar_116, 
 	10 = $com_hpbar_hud_hp_bar_217, 
-	11 = false
+	11 = 0
 ){hpbar_hud_info, hpbar_hud_npc}", $com_hpbar_hud_hp_bar_text6);

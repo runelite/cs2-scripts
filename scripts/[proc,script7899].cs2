@@ -1,0 +1,32 @@
+// 7899
+[proc,script7899](int $int0)(string, int)
+def_string $string0 = "";
+if (%option_skill_guide = 0) {
+	$string0 = "<col=6f0000>";
+} else {
+	$string0 = "<col=ffffff>";
+}
+switch_int ($int0) {
+	case 0 :
+		return("Crafting", 1);
+	case 1 :
+		return("Weaving", 1);
+	case 2 :
+		return("Armour", 0);
+	case 3 :
+		return("Spinning", 0);
+	case 4 :
+		return("Pottery", 0);
+	case 5 :
+		return("Glass", 1);
+	case 6 :
+		return("Jewellery", 0);
+	case 7 :
+		return("Weaponry", 1);
+	case 8 :
+		return("Crystal", 1);
+	case 9 :
+		return("Other", 1);
+	case default :
+		return("", -1);
+}

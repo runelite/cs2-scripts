@@ -1,5 +1,5 @@
 // 7072
-[proc,makeover_draw_items](component $com_makeover_item_area0, component $com_makeover_thinbox1, enum $enum2, boolean $boolean3)
+[proc,makeover_draw_items](component $com_makeover_item_area0, component $com_makeover_thinbox1, enum $enum2, int $int3)
 cc_deleteall($com_makeover_item_area0);
 def_int $int4 = 98;
 def_int $int5 = 90;
@@ -18,7 +18,7 @@ def_model $model16 = null;
 def_string $string0 = "";
 def_int $int17 = 3;
 def_string $string1 = "";
-if ($boolean3 = true) {
+if ($int3 = 1) {
 	$int4 = 146;
 	$int5 = 140;
 	$int6 = -82;
@@ -97,7 +97,7 @@ while ($int12 < $int14) {
 		5 = $model15, 
 		6 = $model16, 
 		7 = $string0, 
-		8 = $boolean3, 
+		8 = $int3, 
 		9 = $string1
 	);
 	$int10 = calc($int10 + 1);

@@ -1,6 +1,6 @@
 // 3058
-[clientscript,macro_beekeeper_confirmbutton](boolean $boolean0, component $com_beehive_confirm_text1, component $com_beehive_confirm_highlight2)
-if ($boolean0 = true) {
+[clientscript,macro_beekeeper_confirmbutton](int $int0, component $com_beehive_confirm_text1, component $com_beehive_confirm_highlight2)
+if ($int0 = 1) {
 	if_sethide(false, $com_beehive_confirm_highlight2);
 	if_setcolour(^white, $com_beehive_confirm_text1);
 } else {

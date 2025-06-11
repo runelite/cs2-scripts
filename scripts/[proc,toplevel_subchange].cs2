@@ -1,19 +1,19 @@
 // 908
 [proc,toplevel_subchange](component $component0, enum $enum1)
-if (if_hassub(chatbox:null) = true) {
-	if_sethide(false, chatbox:null);
-	if_sethide(true, chatbox:null);
-	if_sethide(true, chatbox:null);
+if (if_hassub(chatbox:chatmodal) = true) {
+	if_sethide(false, chatbox:chatmodal);
+	if_sethide(true, chatbox:chatoverlay);
+	if_sethide(true, chatbox:chatcrm);
 	if_sethide(true, chatbox:chatdisplay);
-} else if (if_hassub(chatbox:null) = true) {
-	if_sethide(true, chatbox:null);
-	if_sethide(false, chatbox:null);
-	if_sethide(true, chatbox:null);
+} else if (if_hassub(chatbox:chatoverlay) = true) {
+	if_sethide(true, chatbox:chatmodal);
+	if_sethide(false, chatbox:chatoverlay);
+	if_sethide(true, chatbox:chatcrm);
 	if_sethide(true, chatbox:chatdisplay);
 } else {
-	if_sethide(true, chatbox:null);
-	if_sethide(true, chatbox:null);
-	if_sethide(false, chatbox:null);
+	if_sethide(true, chatbox:chatmodal);
+	if_sethide(true, chatbox:chatoverlay);
+	if_sethide(false, chatbox:chatcrm);
 	if_sethide(false, chatbox:chatdisplay);
 }
 ~toplevel_sidebuttons_enable($enum1);

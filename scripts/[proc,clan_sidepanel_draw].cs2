@@ -1,5 +1,5 @@
 // 4397
-[proc,clan_sidepanel_draw](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $com_clans_guest_sidepanel_search6)
+[proc,clan_sidepanel_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $com_clans_guest_sidepanel_search6)
 cc_deleteall($component1);
 cc_deleteall($component4);
 cc_deleteall($component5);
@@ -24,7 +24,7 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_string $string2 = "";
 def_graphic $graphic20 = null;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$int7, $int8 = %clan_guest_affinitystatus, 2;
 	if ($int7 = 3 & activeclansettings_find_listened = true) {
 		switch_int (%varclansetting33) {
@@ -159,7 +159,7 @@ if ($boolean0 = true) {
 		}
 		if_sethide(false, $component3);
 		if ($int13 = 1) {
-			~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+			~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 			if_setonmouserepeat(null, $component4);
 			if_setonmouseleave(null, $component4);
 			if_clearops($component4);
@@ -167,7 +167,7 @@ if ($boolean0 = true) {
 			$string0 = "You have currently loaded a <col=ffb93f>PvP Arena</col> group.<br><br>You can see its details via the <col=ffb93f>Grouping</col> tab.";
 		} else if (activeclanchannel_find_listened = true) {
 			if (%clan_transmit_guest_timeout = 1) {
-				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+				~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -179,7 +179,7 @@ if ($boolean0 = true) {
 			}
 			$int9 = activeclanchannel_getusercount;
 			if ($int9 > 0) {
-				$int16, $int17 = ~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$int16, $int17 = ~clan_sidepanel_drawchannel($int0, $int9, $component2, $int10, $component3);
 				$string2, $graphic20 = ~script4302(-1);
 				$int18 = activeclansettings_getaffinedcount;
 				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
@@ -196,7 +196,7 @@ if ($boolean0 = true) {
 			$string0 = "No-one is currently chatting in this clan's channel.";
 		} else {
 			if (%clan_transmit_guest_timeout = 1) {
-				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+				~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -282,7 +282,7 @@ if ($boolean0 = true) {
 		if_sethide(false, $component3);
 		if (activeclanchannel_find_affined(0) = true) {
 			if (%clan_transmit_affined_timeout = 1) {
-				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+				~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -293,7 +293,7 @@ if ($boolean0 = true) {
 			}
 			$int9 = activeclanchannel_getusercount;
 			if ($int9 > 0) {
-				$int16, $int17 = ~clan_sidepanel_drawchannel($boolean0, $int9, $component2, $int10, $component3);
+				$int16, $int17 = ~clan_sidepanel_drawchannel($int0, $int9, $component2, $int10, $component3);
 				$string2, $graphic20 = ~script4302(-1);
 				$int18 = activeclansettings_getaffinedcount;
 				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
@@ -311,7 +311,7 @@ if ($boolean0 = true) {
 		} else {
 			$string0 = "You are not currently chatting in this clan's channel.";
 			if (%clan_transmit_affined_timeout = 1) {
-				~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+				~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 				if_setonmouserepeat(null, $component4);
 				if_setonmouseleave(null, $component4);
 				if_clearops($component4);
@@ -355,18 +355,18 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setcolour(0x808080);
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	if_sethide(false, $component4);
 	if_setposition(62, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component5);
 	if_setposition(1, 2, ^setpos_abs_right, ^setpos_abs_bottom, $com_clans_guest_sidepanel_search6);
 }
-~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
+~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component4);
 if_setonmouserepeat(null, $component4);
 if_setonmouseleave(null, $component4);
 if_clearops($component4);
 if_setonop(null, $component4);
 if_setontimer(null, $component4);
-~stonebutton_draw(true, "<col=9f9f9f>---</col>", p12_full, 0, $component5);
+~stonebutton_draw(1, "<col=9f9f9f>---</col>", p12_full, 0, $component5);
 if_setonmouserepeat(null, $component5);
 if_setonmouseleave(null, $component5);
 if_clearops($component5);

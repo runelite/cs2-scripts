@@ -13,7 +13,7 @@ while ($int4 < 15) {
 		} else if ($int3 = -1) {
 			$int3 = $int4;
 		} else {
-			~stonebutton_draw(true, "<col=9f9f9f>Too many cards!</col>", p11_full, 0, $com_pattern_cards_confirm0);
+			~stonebutton_draw(1, "<col=9f9f9f>Too many cards!</col>", p11_full, 0, $com_pattern_cards_confirm0);
 			if_setonmouserepeat(null, $com_pattern_cards_confirm0);
 			if_setonmouseleave(null, $com_pattern_cards_confirm0);
 			if_setonop(null, $com_pattern_cards_confirm0);
@@ -26,11 +26,11 @@ while ($int4 < 15) {
 }
 if ($int3 = -1) {
 	if ($int1 = -1) {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 3 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
+		~stonebutton_draw(1, "<col=9f9f9f>Select 3 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	} else if ($int2 = -1) {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 2 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
+		~stonebutton_draw(1, "<col=9f9f9f>Select 2 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	} else {
-		~stonebutton_draw(true, "<col=9f9f9f>Select 1 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
+		~stonebutton_draw(1, "<col=9f9f9f>Select 1 more</col>", p11_full, 0, $com_pattern_cards_confirm0);
 	}
 	if_setonmouserepeat(null, $com_pattern_cards_confirm0);
 	if_setonmouseleave(null, $com_pattern_cards_confirm0);

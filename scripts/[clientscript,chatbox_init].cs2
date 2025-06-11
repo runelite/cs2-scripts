@@ -37,12 +37,12 @@ if_setonvartransmit("script924{
 	31 = option_chat_colour_didyouknow_opaque, 
 	32 = option_chat_colour_didyouknow_transparent
 }", chatbox:universe);
-if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(chatbox:null), if_hassub(chatbox:null), ~toplevel_getcomponents)", chatbox:universe);
+if_setonsubchange("chat_onsubchange(event_com, getwindowmode, if_hassub(chatbox:chatmodal), if_hassub(chatbox:chatoverlay), ~toplevel_getcomponents)", chatbox:universe);
 if_setonchattransmit("chat_onchattransmit", chatbox:universe);
 if_setonfriendtransmit("chat_onchattransmit", chatbox:universe);
 if_setonclantransmit("rebuildchatbox", chatbox:universe);
 if_setonclansettingstransmit("rebuildchatbox", chatbox:universe);
-if_setonmisctransmit("script664(true)", chatbox:universe);
+if_setonmisctransmit("script664(1)", chatbox:universe);
 %varcstring335, %varcint42 = "", -1;
 if (%varcint41 >= 0 & %varcint41 <= 6 | %varcint41 = 1337) {
 	%varcint41 = %varcint41;
@@ -128,7 +128,7 @@ while ($int0 < $int2) {
 	$int0 = calc($int0 + 1);
 }
 if_setscrollpos(0, 0, chatbox:scrollarea);
-~scrollbar_vertical(chatbox:null, chatbox:scrollarea, null, null, null, null, null, null);
+~scrollbar_vertical(chatbox:chatscrollbar, chatbox:scrollarea, null, null, null, null, null, null);
 ~toplevel_chatbox_background;
 chat_setmessagefilter("");
 ~script223;

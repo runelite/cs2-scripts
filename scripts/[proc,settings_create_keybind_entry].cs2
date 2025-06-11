@@ -48,7 +48,7 @@ def_int $int26 = 44;
 def_int $int27 = calc($int23 / 3 - 10);
 def_int $int28 = calc($int22 + 33 + 20);
 def_boolean $boolean29 = struct_param($struct5, param_1085);
-def_boolean $boolean30 = ~script3957($struct5);
+def_int $int30 = ~script3957($struct5);
 cc_create($component7, ^iftype_rectangle, $int2, false);
 cc_setsize($int27, $int26, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int22 + 5), $int1, ^setpos_abs_left, ^setpos_abs_top);
@@ -95,7 +95,7 @@ $int2 = calc($int2 + 1);
 cc_setsize(calc($int24 + 6), 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int28 + 2), calc($int1 + ($int26 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
-if ($boolean30 = true) {
+if ($int30 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -131,7 +131,7 @@ cc_setonop("setting_show_dropdown(
 	16 = $boolean29
 )");
 cc_setop(1, "Select");
-if ($boolean30 = true) {
+if ($int30 = 1) {
 	cc_sethide(false);
 } else {
 	cc_sethide(true);
@@ -159,7 +159,7 @@ if ($boolean29 = true) {
 		12 = $component13
 	);
 }
-if ($boolean30 = true & $boolean17 = false) {
+if ($int30 = 1 & $boolean17 = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }

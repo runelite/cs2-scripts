@@ -130,47 +130,47 @@ if_setposition(calc(7 * $int20), $int21, ^setpos_abs_left, $setposv22, skillmult
 if_setposition(calc(8 * $int20), $int21, ^setpos_abs_left, $setposv22, skillmulti:i);
 if_setposition(calc(9 * $int20), $int21, ^setpos_abs_left, $setposv22, skillmulti:j);
 if_setsize(calc($int14 * $int16 + $int18 * $int17), 50, ^setsize_abs, ^setsize_minus, skillmulti:bottom);
-def_int $intarray0(10);
-$intarray0(0) = -1;
-$intarray0(1) = -1;
-$intarray0(2) = -1;
-$intarray0(3) = -1;
-$intarray0(4) = -1;
-$intarray0(5) = -1;
-$intarray0(6) = -1;
-$intarray0(7) = -1;
-$intarray0(8) = -1;
-$intarray0(9) = -1;
+def_int $intarray2(10);
+$intarray2(0) = -1;
+$intarray2(1) = -1;
+$intarray2(2) = -1;
+$intarray2(3) = -1;
+$intarray2(4) = -1;
+$intarray2(5) = -1;
+$intarray2(6) = -1;
+$intarray2(7) = -1;
+$intarray2(8) = -1;
+$intarray2(9) = -1;
 if ($int14 >= 1) {
-	$intarray0(%skillmulti_previousselection) = 83;
+	$intarray2(%skillmulti_previousselection) = 83;
 	$string1, $string0 = ~script632($string0);
-	~skillmulti_itembutton_init(0, $obj2, $string1, skillmulti:a, $intarray0(0), $int0, $int16, $int23);
+	~skillmulti_itembutton_init(0, $obj2, $string1, skillmulti:a, $intarray2(0), $int0, $int16, $int23);
 	if ($int14 >= 2) {
 		$string1, $string0 = ~script632($string0);
-		~skillmulti_itembutton_init(1, $obj3, $string1, skillmulti:b, $intarray0(1), $int0, $int16, $int23);
+		~skillmulti_itembutton_init(1, $obj3, $string1, skillmulti:b, $intarray2(1), $int0, $int16, $int23);
 		if ($int14 >= 3) {
 			$string1, $string0 = ~script632($string0);
-			~skillmulti_itembutton_init(2, $obj4, $string1, skillmulti:c, $intarray0(2), $int0, $int16, $int23);
+			~skillmulti_itembutton_init(2, $obj4, $string1, skillmulti:c, $intarray2(2), $int0, $int16, $int23);
 			if ($int14 >= 4) {
 				$string1, $string0 = ~script632($string0);
-				~skillmulti_itembutton_init(3, $obj5, $string1, skillmulti:d, $intarray0(3), $int0, $int16, $int23);
+				~skillmulti_itembutton_init(3, $obj5, $string1, skillmulti:d, $intarray2(3), $int0, $int16, $int23);
 				if ($int14 >= 5) {
 					$string1, $string0 = ~script632($string0);
-					~skillmulti_itembutton_init(4, $obj6, $string1, skillmulti:e, $intarray0(4), $int0, $int16, $int23);
+					~skillmulti_itembutton_init(4, $obj6, $string1, skillmulti:e, $intarray2(4), $int0, $int16, $int23);
 					if ($int14 >= 6) {
 						$string1, $string0 = ~script632($string0);
-						~skillmulti_itembutton_init(5, $obj7, $string1, skillmulti:f, $intarray0(5), $int0, $int16, $int23);
+						~skillmulti_itembutton_init(5, $obj7, $string1, skillmulti:f, $intarray2(5), $int0, $int16, $int23);
 						if ($int14 >= 7) {
 							$string1, $string0 = ~script632($string0);
-							~skillmulti_itembutton_init(6, $obj8, $string1, skillmulti:g, $intarray0(6), $int0, $int16, $int23);
+							~skillmulti_itembutton_init(6, $obj8, $string1, skillmulti:g, $intarray2(6), $int0, $int16, $int23);
 							if ($int14 >= 8) {
 								$string1, $string0 = ~script632($string0);
-								~skillmulti_itembutton_init(7, $obj9, $string1, skillmulti:h, $intarray0(7), $int0, $int16, $int23);
+								~skillmulti_itembutton_init(7, $obj9, $string1, skillmulti:h, $intarray2(7), $int0, $int16, $int23);
 								if ($int14 >= 9) {
 									$string1, $string0 = ~script632($string0);
-									~skillmulti_itembutton_init(8, $obj10, $string1, skillmulti:i, $intarray0(8), $int0, $int16, $int23);
+									~skillmulti_itembutton_init(8, $obj10, $string1, skillmulti:i, $intarray2(8), $int0, $int16, $int23);
 									if ($int14 >= 10) {
-										~skillmulti_itembutton_init(9, $obj11, $string0, skillmulti:j, $intarray0(9), $int0, $int16, $int23);
+										~skillmulti_itembutton_init(9, $obj11, $string0, skillmulti:j, $intarray2(9), $int0, $int16, $int23);
 									}
 								}
 							}

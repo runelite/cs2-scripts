@@ -20,7 +20,7 @@ cc_setsize(0, 14, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
-~raids_partydetails_entry_init(%varcint178, %varcint178, -1, false);
+~raids_partydetails_entry_init(%varcint178, %varcint178, -1, 0);
 def_string $string5 = removetags($string1);
 cc_setopbase("<col=ff9040><$string5></col>");
 cc_setonop("raids_partydetails_entry_op(event_op, %varcint178, $string5, $string0)");

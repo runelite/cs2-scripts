@@ -1,5 +1,5 @@
 // 4399
-[proc,clan_sidepanel_drawchannel](boolean $boolean0, int $int1, component $component2, int $int3, component $component4)(int, int)
+[proc,clan_sidepanel_drawchannel](int $int0, int $int1, component $component2, int $int3, component $component4)(int, int)
 def_int $int5 = activeclanchannel_getuserslot(removetags(chat_playername));
 def_int $int6 = -1;
 if ($int5 ! -1) {
@@ -138,7 +138,7 @@ while ($int21 < $int1) {
 				.cc_setop(5, "");
 			}
 			.cc_setopbase("<col=ff9040><$string0></col>");
-			.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $int24, $int9, $int17)");
+			.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $int0, $int24, $int9, $int17)");
 		}
 	} else if ($int5 ! $int24) {
 		if (friend_test($string1) = true) {
@@ -180,8 +180,8 @@ while ($int21 < $int1) {
 		}
 		.cc_setopbase("<col=ff9040><$string0></col>");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $int24, $int9, $int17)");
-		cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $boolean0, $int24, $int9, $int17)");
+		.cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $int0, $int24, $int9, $int17)");
+		cc_setonop("clan_sidepanel_op(event_opbase, event_op, $int16, $int0, $int24, $int9, $int17)");
 	}
 	$int21 = calc($int21 + 1);
 }

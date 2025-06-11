@@ -1,5 +1,5 @@
 // 1397
-[proc,poh_viewer_sideupdate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+[proc,poh_viewer_sideupdate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
 def_int $int15 = calc(pow(calc(7 + 2), 2) * 3);
 def_int $int16 = $int15;
 if (%poh_viewer_destination > $int15) {
@@ -174,7 +174,7 @@ if (%poh_viewer_destination > $int15) {
 		13 = $component11, 
 		14 = $component12, 
 		15 = $component13, 
-		16 = $component14
+		16 = $int14
 	);
 	~poh_viewer_disablebutton($component13, "Done", 0);
 	return;
@@ -201,7 +201,7 @@ if (%poh_viewer_enable_rot = 1) {
 		14 = $component11, 
 		15 = $component12, 
 		16 = $component13, 
-		17 = $component14
+		17 = $int14
 	);
 	~poh_viewer_enablerotate(
 		0 = $component10, 
@@ -221,7 +221,7 @@ if (%poh_viewer_enable_rot = 1) {
 		14 = $component11, 
 		15 = $component12, 
 		16 = $component13, 
-		17 = $component14
+		17 = $int14
 	);
 	~poh_viewer_disablebutton($component11, "Delete", 0);
 	~poh_viewer_enablebutton(
@@ -241,7 +241,7 @@ if (%poh_viewer_enable_rot = 1) {
 		13 = $component11, 
 		14 = $component12, 
 		15 = $component13, 
-		16 = $component14
+		16 = $int14
 	);
 	~poh_viewer_enablebutton(
 		0 = $component13, 
@@ -260,7 +260,7 @@ if (%poh_viewer_enable_rot = 1) {
 		13 = $component11, 
 		14 = $component12, 
 		15 = $component13, 
-		16 = $component14
+		16 = $int14
 	);
 	return;
 }
@@ -282,7 +282,7 @@ if_settext("Use the options to edit the room.", $component6);
 	13 = $component11, 
 	14 = $component12, 
 	15 = $component13, 
-	16 = $component14
+	16 = $int14
 );
 ~poh_viewer_enablebutton(
 	0 = $component8, 
@@ -301,7 +301,7 @@ if_settext("Use the options to edit the room.", $component6);
 	13 = $component11, 
 	14 = $component12, 
 	15 = $component13, 
-	16 = $component14
+	16 = $int14
 );
 ~poh_viewer_disablerotate($component9, "miscgraphics3,2");
 ~poh_viewer_disablerotate($component10, "miscgraphics3,3");
@@ -322,7 +322,7 @@ if_settext("Use the options to edit the room.", $component6);
 	13 = $component11, 
 	14 = $component12, 
 	15 = $component13, 
-	16 = $component14
+	16 = $int14
 );
 ~poh_viewer_disablebutton($component12, "Cancel", 0);
 ~poh_viewer_disablebutton($component13, "Done", 0);

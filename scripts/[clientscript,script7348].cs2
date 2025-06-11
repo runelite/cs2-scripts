@@ -1,7 +1,7 @@
 // 7348
-[clientscript,script7348](boolean $boolean0, component $component1, int $comsubid2, int $int3)
+[clientscript,script7348](int $int0, component $component1, int $comsubid2, int $int3)
 if (cc_find($component1, $comsubid2) = ^true) {
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		if ($int3 >= 200) {
 			cc_settrans(calc($int3 - 30));
 		} else {

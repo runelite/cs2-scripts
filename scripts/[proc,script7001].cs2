@@ -1,7 +1,7 @@
 // 7001
 [proc,script7001](component $component0, string $string0)
 sound_synth(synth_6652, 1, 0);
-~script6999($component0, null, $string0, true, 1);
+~script6999($component0, null, $string0, 1, 1);
 if_setonmouserepeat(null, $component0);
 if_setonmouseleave(null, $component0);
 if_setonop(null, $component0);
@@ -18,4 +18,4 @@ resume_countdialog(tostring(~script6961(
 	8 = %varcint1122, 
 	9 = %varcint1121
 )));
-if_setontimer("script7002($component0, $string0, calc(clientclock + 40), false)", $component0);
+if_setontimer("script7002($component0, $string0, calc(clientclock + 40), 0)", $component0);

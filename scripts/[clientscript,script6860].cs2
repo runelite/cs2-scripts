@@ -1,5 +1,5 @@
 // 6860
-[clientscript,script6860](boolean $boolean0, int $int1, int $int2, int $comsubid3, int $comsubid4, int $comsubid5, component $component6)
+[clientscript,script6860](int $int0, int $int1, int $int2, int $comsubid3, int $comsubid4, int $comsubid5, component $component6)
 if ($int1 = $int2) {
 	return;
 }
@@ -7,19 +7,19 @@ if (%varcint1110 ! -1) {
 	return;
 }
 def_int $colour7 = 0x726451;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$colour7 = ^white;
 }
 ~script6789($component6, $comsubid3, $colour7);
 if (cc_find($component6, $comsubid4) = ^true) {
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour(0xff981f);
 	}
 }
 if (cc_find($component6, $comsubid5) = ^true) {
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		cc_setoutline(2);
 	} else {
 		cc_setoutline(1);

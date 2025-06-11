@@ -15,19 +15,19 @@ def_obj $obj32 = oc_param($namedobj31, param_608);
 if ($obj32 = null) {
 	return;
 }
-def_boolean $boolean33 = false;
+def_int $int33 = 0;
 if (stat(magic) >= oc_param($obj32, spell_levelreq) & ~magic_spellbook_hasrunes($obj32, inv_getobj(worn, 3), inv_getobj(worn, 5)) = 1) {
-	$boolean33 = true;
+	$int33 = 1;
 }
 if (%tablet_to_make = $int1) {
-	~teletab_button_draw(true, $enum30, $string0, $int1, $component2, $boolean33);
+	~teletab_button_draw(1, $enum30, $string0, $int1, $component2, $int33);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 	if_setonop("opsound(event_op, 2)", $component2);
 } else {
-	~teletab_button_draw(false, $enum30, $string0, $int1, $component2, $boolean33);
-	if_setonmouserepeat("teletab_button_draw(true, $enum30, $string0, $int1, $component2, $boolean33)", $component2);
-	if_setonmouseleave("teletab_button_draw(false, $enum30, $string0, $int1, $component2, $boolean33)", $component2);
+	~teletab_button_draw(0, $enum30, $string0, $int1, $component2, $int33);
+	if_setonmouserepeat("teletab_button_draw(1, $enum30, $string0, $int1, $component2, $int33)", $component2);
+	if_setonmouseleave("teletab_button_draw(0, $enum30, $string0, $int1, $component2, $int33)", $component2);
 	if_setonop("teletab_button_op(
 		0 = $component0, 
 		1 = event_op, 

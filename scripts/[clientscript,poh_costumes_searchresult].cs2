@@ -1,15 +1,15 @@
 // 3562
-[clientscript,poh_costumes_searchresult](obj $obj0, enum $enum1, int $int2)
+[clientscript,poh_costumes_searchresult](namedobj $namedobj0, enum $enum1, int $int2)
 if ($int2 ! 84) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
 ~meslayer_close(true, true, true);
-resume_objdialog($obj0);
-if ($obj0 = null) {
+resume_objdialog($namedobj0);
+if ($namedobj0 = null) {
 	return;
 }
-def_string $string0 = enum(obj, string, enum_3302, $obj0);
+def_string $string0 = enum(obj, string, enum_3302, $namedobj0);
 def_int $int3 = calc(4 + 38);
 def_int $int4 = enum_getoutputcount($enum1);
 while ($int4 > 0) {

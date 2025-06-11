@@ -1,5 +1,5 @@
 // 3691
-[proc,leagues_close_button](component $component0, boolean $boolean1, int $int2)
+[proc,leagues_close_button](component $component0, int $int1, int $int2)
 def_graphic $graphic3 = "close_buttons,0";
 def_graphic $graphic4 = "close_buttons,1";
 def_int $int5 = 3;
@@ -33,7 +33,7 @@ cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic3, nul
 cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
 if_setop(1, "Close", $component0);
 if ($int2 = 0) {
-	if_setonop("leagues_closebutton_click($boolean1)", $component0);
+	if_setonop("leagues_closebutton_click($int1)", $component0);
 }
 if (~in_league_tutorial = 1) {
 	return;

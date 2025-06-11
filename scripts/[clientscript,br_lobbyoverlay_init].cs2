@@ -1,7 +1,7 @@
 // 2539
 [clientscript,br_lobbyoverlay_init](component $com_br_lobbyoverlay_dodger0, component $com_br_lobbyoverlay_content1, component $com_br_lobbyoverlay_settings2)
-~script4729($com_br_lobbyoverlay_dodger0, $com_br_lobbyoverlay_content1, 36582, ^setpos_abs_right, ^setpos_abs_top, false);
-~br_lobbyoverlay_drawsettings(false, $com_br_lobbyoverlay_settings2);
-if_setonmouserepeat("br_lobbyoverlay_drawsettings(true, event_com)", $com_br_lobbyoverlay_settings2);
-if_setonmouseleave("br_lobbyoverlay_drawsettings(false, event_com)", $com_br_lobbyoverlay_settings2);
+~script4729($com_br_lobbyoverlay_dodger0, $com_br_lobbyoverlay_content1, 36582, ^setpos_abs_right, ^setpos_abs_top, 0);
+~br_lobbyoverlay_drawsettings(0, $com_br_lobbyoverlay_settings2);
+if_setonmouserepeat("br_lobbyoverlay_drawsettings(1, event_com)", $com_br_lobbyoverlay_settings2);
+if_setonmouseleave("br_lobbyoverlay_drawsettings(0, event_com)", $com_br_lobbyoverlay_settings2);
 if_setonop("opsound(event_op, 2)", $com_br_lobbyoverlay_settings2);

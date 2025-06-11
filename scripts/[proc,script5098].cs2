@@ -1,5 +1,5 @@
 // 5098
-[proc,script5098](component $component0, string $string0, boolean $boolean1)
+[proc,script5098](component $component0, string $string0, int $int1)
 if_sethide(false, $component0);
 cc_deleteall($component0);
 def_int $int2 = 0;
@@ -11,10 +11,10 @@ cc_setcolour(^white);
 cc_settrans(255);
 if_setop(1, "Change", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
-if_setonop("script5101(event_com, $string0, $boolean1)", $component0);
+if_setonop("script5101(event_com, $string0, $int1)", $component0);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script5099(true, event_com, $int2)", $component0);
-	if_setonmouseleave("script5099(false, event_com, $int2)", $component0);
+	if_setonmouserepeat("script5099(1, event_com, $int2)", $component0);
+	if_setonmouseleave("script5099(0, event_com, $int2)", $component0);
 }
 if_setontimer(null, $component0);
 $int2 = calc($int2 + 1);
@@ -23,7 +23,7 @@ $int2 = calc($int2 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_settrans(50);
-if (~script5102($boolean1) = true) {
+if (~script5102($int1) = true) {
 	cc_setgraphic("options_radio_buttons,6");
 } else {
 	cc_setgraphic("options_radio_buttons,5");

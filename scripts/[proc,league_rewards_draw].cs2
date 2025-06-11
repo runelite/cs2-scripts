@@ -1,5 +1,5 @@
 // 503
-[proc,league_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)
+[proc,league_rewards_draw](int $int0, int $int1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)
 cc_deleteall($component4);
 cc_deleteall($component5);
 cc_deleteall($component6);
@@ -55,9 +55,9 @@ while ($int22 <= $int20) {
 				5 = $int0, 
 				6 = $int27, 
 				7 = $int28, 
-				8 = $component1, 
+				8 = $int1, 
 				9 = $component2, 
-				10 = $component3, 
+				10 = $int3, 
 				11 = $component4, 
 				12 = $component5, 
 				13 = $component6, 
@@ -94,7 +94,7 @@ cc_deleteall($component13);
 if ($int0 ! -1) {
 	$string0, $string1, $int30, $struct32 = ~script3286($int0);
 	%league_rewards_shopselection = $int0;
-	~league_rewards_confirmdraw(false, $string0, $component8);
+	~league_rewards_confirmdraw(0, $string0, $component8);
 	while ($int27 < $int0) {
 		cc_create($component7, ^iftype_rectangle, $int27, false);
 		cc_sethide(true);
@@ -111,8 +111,8 @@ if ($int0 ! -1) {
 	}
 	cc_setopbase("<col=ff981f><$string0></col>");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("league_rewards_confirmdraw(true, $string0, $component8)");
-		cc_setonmouseleave("league_rewards_confirmdraw(false, $string0, $component8)");
+		cc_setonmouserepeat("league_rewards_confirmdraw(1, $string0, $component8)");
+		cc_setonmouseleave("league_rewards_confirmdraw(0, $string0, $component8)");
 	}
 	cc_setonop("league_reward_shop_confirmop(event_op, $component9, $struct32)");
 	~script2285;
@@ -128,8 +128,8 @@ if ($int0 ! -1) {
 	if_setop(1, $string2, $component12);
 	if_setopbase("<col=ff981f>League reward</col>", $component12);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component12, false, $string2, ^white)", $component12);
-		if_setonmouseover("script7747($component12, true, $string2, 0xaaaaaa)", $component12);
+		if_setonmouseleave("script7747($component12, 0, $string2, ^white)", $component12);
+		if_setonmouseover("script7747($component12, 1, $string2, 0xaaaaaa)", $component12);
 	}
 	if_setonop("league_reward_shop_buy", $component12);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -155,14 +155,14 @@ if ($int0 ! -1) {
 	if_setop(1, $string2, $component13);
 	if_setopbase("<col=ff981f>League reward</col>", $component13);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component13, false, $string2, ^white)", $component13);
-		if_setonmouseover("script7747($component13, true, $string2, 0xaaaaaa)", $component13);
+		if_setonmouseleave("script7747($component13, 0, $string2, ^white)", $component13);
+		if_setonmouseover("script7747($component13, 1, $string2, 0xaaaaaa)", $component13);
 	}
 	if_setonop("league_reward_confirm_back(
 		0 = $int0, 
-		1 = $component1, 
+		1 = $int1, 
 		2 = $component2, 
-		3 = $component3, 
+		3 = $int3, 
 		4 = $component4, 
 		5 = $component5, 
 		6 = $component6, 

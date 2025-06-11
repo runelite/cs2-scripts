@@ -1,6 +1,6 @@
 // 2251
 [clientscript,chatbox_open_input]
-if (if_hassub(chatbox:null) = true | if_hassub(chatbox:null) = true | if_gethide(chatbox:mes_layer) = false) {
+if (if_hassub(chatbox:chatmodal) = true | if_hassub(chatbox:chatoverlay) = true | if_gethide(chatbox:mes_layer) = false) {
 	return;
 }
 if (%varcint1226 = 0) {

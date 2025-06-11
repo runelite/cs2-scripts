@@ -1,7 +1,7 @@
 // 2623
-[proc,magic_spellbook_settooltip](boolean $boolean0, obj $obj1, component $component2, int $comsubid3, component $component4, int $int5, obj $obj6, obj $obj7)
+[proc,magic_spellbook_settooltip](int $int0, obj $obj1, component $component2, int $comsubid3, component $component4, int $int5, obj $obj6, obj $obj7)
 cc_deleteall($component4);
-if ($boolean0 = false) {
+if ($int0 = 0) {
 	return;
 }
 def_int $int8 = oc_param($obj1, spell_levelreq);

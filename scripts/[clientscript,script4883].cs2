@@ -26,11 +26,11 @@ while ($int6 < 4) {
 	$int6 = calc($int6 + 1);
 }
 def_int $int7 = calc((32 + 1 - 13) / 2);
-~script4890(false, $component2);
+~script4890(0, $component2);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script4888(true, event_com)", $component2);
+	if_setonmouserepeat("script4888(1, event_com)", $component2);
 }
-if_setonmouseleave("script4888(false, event_com)", $component2);
+if_setonmouseleave("script4888(0, event_com)", $component2);
 if_setop(1, "Load", $component2);
 if_setonop("opsound(event_op, 2)", $component2);
 if_setontimer(null, $component2);

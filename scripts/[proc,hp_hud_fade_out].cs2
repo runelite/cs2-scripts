@@ -1,5 +1,5 @@
 // 2890
-[proc,hp_hud_fade_out](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
+[proc,hp_hud_fade_out](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
 if (%varcint394 = 1) {
 	$int14 = if_gettrans($component2);
 } else if ($int14 ! if_gettrans($component2)) {
@@ -25,8 +25,8 @@ if ($int14 >= 255) {
 	return;
 }
 if_setontimer("hp_hud_fade_out(
-	0 = $component0, 
-	1 = $component1, 
+	0 = $int0, 
+	1 = $int1, 
 	2 = $component2, 
 	3 = $component3, 
 	4 = $component4, 

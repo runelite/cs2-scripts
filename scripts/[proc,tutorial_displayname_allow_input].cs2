@@ -16,8 +16,8 @@ if ($boolean5 = true) {
 	if_setondialogabort(null, $component2);
 	if_sethide(true, $component3);
 	if (~on_mobile = false) {
-		if_setonmouserepeat("tutorial_displayname_input_mouseover($component3, true)", $component4);
-		if_setonmouseleave("tutorial_displayname_input_mouseover($component3, false)", $component4);
+		if_setonmouserepeat("tutorial_displayname_input_mouseover($component3, 1)", $component4);
+		if_setonmouseleave("tutorial_displayname_input_mouseover($component3, 0)", $component4);
 	} else {
 		~keyboard_hide;
 	}

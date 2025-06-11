@@ -1,0 +1,22 @@
+// 7901
+[proc,script7901](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Ranged", 0);
+	case 1 :
+		return("Bows", 0);
+	case 2 :
+		return("Thrown", 1);
+	case 3 :
+		return("Crossbows", 0);
+	case 4 :
+		return("Armour", 0);
+	case 5 :
+		return("Miscellaneous", 1);
+	case 6 :
+		return("Shortcuts", 1);
+	case 7 :
+		return("Salamanders", 1);
+	case default :
+		return("", -1);
+}

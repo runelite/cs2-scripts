@@ -1,11 +1,11 @@
 // 4445
-[clientscript,clan_create_side_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, string $string0)
+[clientscript,clan_create_side_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, anyobj $anyobj0)
 def_int $int9 = 0;
 if (%gim_i_am_leader = 1 | %gim_i_am_member = 1) {
 	$int9 = 1;
-	if_settext("<col=ff981f>Create a <$string0></col>", $component1);
+	if_settext("<col=ff981f>Create a <$anyobj0></col>", $component1);
 } else {
-	if_settext("<col=ff981f>Form a <$string0></col>", $component1);
+	if_settext("<col=ff981f>Form a <$anyobj0></col>", $component1);
 }
 cc_deleteall($component2);
 cc_create($component2, ^iftype_text, 0, false);
@@ -15,7 +15,7 @@ cc_setcolour(0xffb83f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext("<$string0> members");
+cc_settext("<$anyobj0> members");
 cc_deleteall($component0);
 def_enum $enum10 = enum_3824;
 def_int $int11 = 0;
@@ -27,11 +27,11 @@ cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $compone
 cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component5), false);
 cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component6), false);
 cc_create($component0, ^iftype_rectangle, enum(component, int, $enum10, $component7), false);
-def_string $string1 = "<col=ff981f><$string0> name</col>";
+def_string $string1 = "<col=ff981f><$anyobj0> name</col>";
 if (string_length(%varcstring458) > 0) {
 	$string1 = %varcstring458;
 }
-if_setop(1, "<$string0> name", $component4);
+if_setop(1, "<$anyobj0> name", $component4);
 if_setop(1, "Cancel", $component5);
 if_setop(1, "Invite", $component6);
 if_setop(1, "Confirm", $component7);
@@ -46,9 +46,9 @@ if (%gim_i_am_leader = 1 | %clan_i_am_founder = 1) {
 	} else {
 		if_setonop("clan_create_member_invite_group", $component6);
 	}
-	~stonebutton_draw(false, "<col=808080><$string0> name</col>", p12_full, 0, $component4);
+	~stonebutton_draw(0, "<col=808080><$anyobj0> name</col>", p12_full, 0, $component4);
 	~stonebutton_init("<col=ff0000>Cancel</col>", $component5, p12_full, 0);
-	~stonebutton_draw(false, "<col=808080>Invite</col>", p12_full, 0, $component6);
-	~stonebutton_draw(false, "<col=808080>Confirm</col>", p12_full, 0, $component7);
+	~stonebutton_draw(0, "<col=808080>Invite</col>", p12_full, 0, $component6);
+	~stonebutton_draw(0, "<col=808080>Confirm</col>", p12_full, 0, $component7);
 }
 ~clan_create_side_list_players($component3, "", "", "", "", "", "");

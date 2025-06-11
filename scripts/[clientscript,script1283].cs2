@@ -1,5 +1,5 @@
 // 1283
-[clientscript,script1283](boolean $boolean0)
+[clientscript,script1283](int $int0)
 def_component $component1 = forestry_kit_main:universe;
 def_component $component2 = forestry_kit_main:frame;
 def_component $component3 = forestry_kit_main:content;
@@ -26,5 +26,5 @@ if_setsize(calc($int4 + 18), 62, ^setsize_minus, ^setsize_minus, $component6);
 if_setsize(calc($int4 + 18), 44, ^setsize_minus, ^setsize_abs, $component8);
 if_setsize($int4, calc($int5 + 17), ^setsize_abs, ^setsize_minus, $component7);
 if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, $component9);
-~script1284(%forestry_kit_selected_item, $boolean0);
-~script1762(%forestry_kit_selected_item, $boolean0);
+~script1284(%forestry_kit_selected_item, $int0);
+~script1762(%forestry_kit_selected_item, $int0);

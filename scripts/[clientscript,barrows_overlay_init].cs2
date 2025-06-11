@@ -1,6 +1,6 @@
 // 132
 [clientscript,barrows_overlay_init](component $com_barrows_overlay_universe0, component $com_barrows_overlay_dodger1, component $com_barrows_overlay_content2, component $com_barrows_overlay_hud3, component $com_barrows_overlay_ahrim4, component $com_barrows_overlay_dharok5, component $com_barrows_overlay_guthan6, component $com_barrows_overlay_karil7, component $com_barrows_overlay_torag8, component $com_barrows_overlay_verac9, component $com_barrows_overlay_killcount10, component $com_barrows_overlay_brothers11)
-~script4729($com_barrows_overlay_dodger1, $com_barrows_overlay_content2, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
+~script4729($com_barrows_overlay_dodger1, $com_barrows_overlay_content2, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, 0);
 ~barrows_overlay_reward($com_barrows_overlay_killcount10);
 if_setonvartransmit("barrows_overlay_reward($com_barrows_overlay_killcount10){barrows_kills, gravestone_varp}", $com_barrows_overlay_universe0);
 cc_deleteall($com_barrows_overlay_brothers11);

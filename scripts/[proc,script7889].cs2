@@ -1,0 +1,18 @@
+// 7889
+[proc,script7889](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Runecraft", 0);
+	case 1 :
+		return("Runes", 0);
+	case 2 :
+		return("Multiple Runes", 0);
+	case 3 :
+		return("Rune Pouches", 1);
+	case 4 :
+		return("Infusing", 1);
+	case 5 :
+		return("Other", 1);
+	case default :
+		return("", -1);
+}

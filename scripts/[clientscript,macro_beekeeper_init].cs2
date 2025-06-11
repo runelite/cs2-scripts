@@ -1,8 +1,8 @@
 // 3056
 [clientscript,macro_beekeeper_init](component $com_beehive_universe0, component $com_beehive_start_11, component $com_beehive_start_22, component $com_beehive_start_33, component $com_beehive_start_44, component $com_beehive_dest_15, component $com_beehive_dest_26, component $com_beehive_dest_37, component $com_beehive_dest_48, component $com_beehive_confirm9, component $com_beehive_confirm_text10, component $com_beehive_confirm_highlight11)
 if (~on_mobile = false) {
-	if_setonmouseover("macro_beekeeper_confirmbutton(true, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
-	if_setonmouseleave("macro_beekeeper_confirmbutton(false, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
+	if_setonmouseover("macro_beekeeper_confirmbutton(1, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
+	if_setonmouseleave("macro_beekeeper_confirmbutton(0, $com_beehive_confirm_text10, $com_beehive_confirm_highlight11)", $com_beehive_confirm9);
 }
 %varcint404 = random(2048);
 %varcint407 = random(2048);

@@ -1,7 +1,7 @@
 // 593
 [clientscript,clanwars_hud_init](component $com_clanwars_hud_universe0, component $com_clanwars_hud_dodger_right1, component $com_clanwars_hud_dodger_middle2, component $com_clanwars_hud_info3, component $com_clanwars_hud_countdown4)
-~script4729($com_clanwars_hud_dodger_middle2, $com_clanwars_hud_countdown4, 52968, ^setpos_abs_centre, ^setpos_abs_top, false);
-~script4729($com_clanwars_hud_dodger_right1, $com_clanwars_hud_info3, 36580, ^setpos_abs_right, ^setpos_abs_top, false);
+~script4729($com_clanwars_hud_dodger_middle2, $com_clanwars_hud_countdown4, 52968, ^setpos_abs_centre, ^setpos_abs_top, 0);
+~script4729($com_clanwars_hud_dodger_right1, $com_clanwars_hud_info3, 36580, ^setpos_abs_right, ^setpos_abs_top, 0);
 cc_deleteall($com_clanwars_hud_info3);
 cc_create($com_clanwars_hud_info3, ^iftype_graphic, 0, false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

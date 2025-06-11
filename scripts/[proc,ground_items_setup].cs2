@@ -1,8 +1,8 @@
 // 7227
 [proc,ground_items_setup](coord $coord0)
 def_int $int1 = ~ground_items_edit_mode;
-def_boolean $boolean2 = ~script7242;
-def_boolean $boolean3 = ~script7243;
+def_int $int2 = ~script7242;
+def_int $int3 = ~script7243;
 def_int $int4 = objstack_size($coord0);
 def_int $int5 = %ground_items_max_lines;
 def_int $int6 = $int5;
@@ -141,8 +141,8 @@ if (%ground_items_enabled = 1) {
 					8 = $colour24, 
 					9 = $intarray2($int10), 
 					10 = $int1, 
-					11 = $boolean2, 
-					12 = $boolean3
+					11 = $int2, 
+					12 = $int3
 				);
 				$objarray0($int10) = null;
 				$int20 = calc($int20 + 1);

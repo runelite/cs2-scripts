@@ -28,7 +28,7 @@ while ($chattype5 <= 117) {
 			case ^chattype_broadcast :
 				if ($int0 ! -1 & $int1 >= %varcint202 & $int1 > calc(clientclock - 3000)) {
 					%varcint55 = $int1;
-					if_setontimer("script664(false)", chatbox:universe);
+					if_setontimer("script664(0)", chatbox:universe);
 				}
 		}
 	}

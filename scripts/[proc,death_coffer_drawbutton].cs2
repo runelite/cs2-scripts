@@ -1,7 +1,7 @@
 // 3489
-[proc,death_coffer_drawbutton](boolean $boolean0, boolean $boolean1, component $component2, string $string0, component $component3)
+[proc,death_coffer_drawbutton](int $int0, int $int1, component $component2, string $string0, component $component3)
 def_int $int4 = 0;
-if ($boolean0 = true & $boolean1 = false) {
+if ($int0 = 1 & $int1 = 0) {
 	$int4 = ~v2_stone_button_out_filled($component2);
 } else {
 	$int4 = ~v2_stone_button_in_filled($component2);
@@ -17,7 +17,7 @@ if ($component2 = $component3) {
 	.cc_settextshadow(true);
 	cc_settextfont(p12_full);
 	.cc_settextfont(p11_full);
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		cc_setcolour(^white);
 		.cc_setcolour(^white);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
@@ -36,7 +36,7 @@ if ($component2 = $component3) {
 	cc_create($component2, ^iftype_text, $int4, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	if ($boolean0 = true) {
+	if ($int0 = 1) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour(0x9f9f9f);

@@ -1,5 +1,5 @@
 // 4966
-[clientscript,script4966](int $opindex0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, boolean $boolean7)
+[clientscript,script4966](int $opindex0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -9,5 +9,5 @@ if ($int2 = %varcint1194) {
 	%varcint1194 = $int2;
 	sound_synth(interface_select1, 1, 0);
 }
-~script4960($boolean7);
-~script4962(colosseum_intermission:button_continue, colosseum_intermission:button_claim, $boolean7);
+~script4960($int7);
+~script4962(colosseum_intermission:button_continue, colosseum_intermission:button_claim, $int7);

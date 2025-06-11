@@ -8,11 +8,11 @@ if ($int1 = 1) {
 }
 ~script5106(reportabuse:next, "Next", p12_full, 15);
 if_setop(1, "Next", reportabuse:next);
-if_setonop("script5088(true)", reportabuse:next);
+if_setonop("script5088(1)", reportabuse:next);
 ~script5106(reportabuse:back, "Check Name", p12_full, 15);
 if_setop(1, "Check Name", reportabuse:back);
-if_setonop("script5088(false)", reportabuse:back);
-if_setonclick("script5088(false)", reportabuse:name2);
+if_setonop("script5088(0)", reportabuse:back);
+if_setonclick("script5088(0)", reportabuse:name2);
 ~script5106(reportabuse:illegal1, "Law-breaking content", p12_full, 13);
 if_setop(1, "Law-breaking content", reportabuse:illegal1);
 if_setonop("script5094", reportabuse:illegal1);
@@ -33,10 +33,10 @@ if (%varcint140 = true | %varcint140 = false) {
 	%varcint140 = true;
 }
 %varcint6 = false;
-~script5098(reportabuse:ignore, "Add player to Ignore list", true);
+~script5098(reportabuse:ignore, "Add player to Ignore list", 1);
 if (playermod = 1 | staffmodlevel > 0) {
 	if_setposition(5, 24, ^setpos_abs_left, ^setpos_abs_top, reportabuse:ignore);
-	~script5098(reportabuse:mute, "Mute player", false);
+	~script5098(reportabuse:mute, "Mute player", 0);
 } else {
 	if_setposition(5, 13, ^setpos_abs_left, ^setpos_abs_top, reportabuse:ignore);
 	if_sethide(true, reportabuse:mute);

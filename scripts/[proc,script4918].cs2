@@ -1,5 +1,5 @@
 // 4918
-[proc,script4918](component $component0, boolean $boolean1, int $comsubid2)
+[proc,script4918](int $int0, int $int1, int $comsubid2)
 cc_deleteall(colosseum_intermission:modifier_information);
 def_int $int3 = 0;
 def_int $int4 = inv_size(colosseum_rewards);
@@ -18,7 +18,7 @@ cc_setgraphic(tradebacking_dark);
 cc_settiling(true);
 $int11 = calc($int11 + 1);
 $int11 = ~thinbox(colosseum_intermission:modifier_information, $int11);
-if ($boolean1 = true & ~on_mobile = false) {
+if ($int1 = 1 & ~on_mobile = false) {
 	if (cc_find(colosseum_intermission:total_loot, $comsubid2) = ^true) {
 		cc_settrans(100);
 		cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_centre);

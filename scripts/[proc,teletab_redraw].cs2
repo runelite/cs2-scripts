@@ -694,16 +694,16 @@ if (string_length($string1) > 0) {
 	$string2 = "Create <col=ff9040><$string1></col>";
 }
 if ($obj35 = null) {
-	~teletab_confirm_draw(true, "<col=9f9f9f>---</col>", $component24);
+	~teletab_confirm_draw(1, "<col=9f9f9f>---</col>", $component24);
 	if_setonmouserepeat(null, $component24);
 	if_setonmouseleave(null, $component24);
 	if_setonop(null, $component24);
 	if_clearops($component24);
 	if_settext("Select a tablet", $component23);
 } else {
-	~teletab_confirm_draw(false, $string0, $component24);
-	if_setonmouserepeat("teletab_confirm_draw(true, $string0, $component24)", $component24);
-	if_setonmouseleave("teletab_confirm_draw(false, $string0, $component24)", $component24);
+	~teletab_confirm_draw(0, $string0, $component24);
+	if_setonmouserepeat("teletab_confirm_draw(1, $string0, $component24)", $component24);
+	if_setonmouseleave("teletab_confirm_draw(0, $string0, $component24)", $component24);
 	if_setonop("teletab_confirm_op(event_op, event_com, $string0)", $component24);
 	if_setop(1, $string2, $component24);
 	$int32 = oc_param($obj35, spell_levelreq);

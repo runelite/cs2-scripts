@@ -12,7 +12,7 @@ if (string_length($string0) > 0 & ~on_ios = 0) {
 	} else {
 		if_setop(1, "Open Link", welcome_screen:url);
 	}
-	if_setonop("openurl_raw($string0, true, true)", welcome_screen:url);
+	if_setonop("openurl_raw($string0, true, 1)", welcome_screen:url);
 } else {
 	if_sethide(true, welcome_screen:url);
 	if_setonmouseover(null, welcome_screen:url);

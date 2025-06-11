@@ -1,6 +1,6 @@
 // 7616
 [proc,script7616]()(int)
-if (if_hassub(chatbox:null) = true | if_hassub(chatbox:null) = true | if_gethide(chatbox:mes_layer) = false) {
+if (if_hassub(chatbox:chatoverlay) = true | if_hassub(chatbox:chatmodal) = true | if_gethide(chatbox:mes_layer) = false) {
 	return(0);
 }
 return(1);

@@ -1,6 +1,6 @@
 // 5120
-[proc,script5120](int $int0, string $string0, string $string1)(string)
+[proc,script5120](int $int0, anyobj $anyobj0, anyobj $anyobj1)(anyobj)
 if ($int0 ! 1) {
-	return("<~tostring_commas($int0)> <$string1>");
+	return("<~tostring_commas($int0)> <$anyobj1>");
 }
-return($string0);
+return($anyobj0);

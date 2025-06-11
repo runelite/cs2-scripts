@@ -112,10 +112,10 @@ if_setop(1, $string1, $component8);
 if ($int21 = 1) {
 	cc_setcolour(0x53d93c);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component8, false, $string1, 0x53d93c)", $component8);
-		if_setonmouserepeat("script7747($component8, true, $string1, 0xaaaaaa)", $component8);
+		if_setonmouseleave("script7747($component8, 0, $string1, 0x53d93c)", $component8);
+		if_setonmouserepeat("script7747($component8, 1, $string1, 0xaaaaaa)", $component8);
 	}
-	if_setonop("script7750($component10, $component8, false, $string1, 0x53d93c)", $component8);
+	if_setonop("script7750($component10, $component8, 0, $string1, 0x53d93c)", $component8);
 } else {
 	cc_setcolour(0xaaaaaa);
 	if_setonmouseleave(null, $component8);
@@ -134,8 +134,8 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component9);
 if (~on_mobile = false) {
-	if_setonmouseleave("script7747($component9, false, $string1, ^white)", $component9);
-	if_setonmouserepeat("script7747($component9, true, $string1, 0xaaaaaa)", $component9);
+	if_setonmouseleave("script7747($component9, 0, $string1, ^white)", $component9);
+	if_setonmouserepeat("script7747($component9, 1, $string1, 0xaaaaaa)", $component9);
 }
 if_setonop("script7677($component0, $component1, $component2, $component3)", $component9);
 def_int $comsubid28 = ~steelborder($component11, struct_param($struct17, param_2026), 1);
@@ -156,8 +156,8 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component13);
 if_setopbase("<col=ff981f>Selection</col>", $component13);
 if (~on_mobile = false) {
-	if_setonmouseleave("script7747($component13, false, $string1, ^white)", $component13);
-	if_setonmouserepeat("script7747($component13, true, $string1, 0xaaaaaa)", $component13);
+	if_setonmouseleave("script7747($component13, 0, $string1, ^white)", $component13);
+	if_setonmouserepeat("script7747($component13, 1, $string1, 0xaaaaaa)", $component13);
 }
 if_setonop("button_select_sound", $component13);
 $comsubid22 = ~v2_stone_button($component14);
@@ -172,7 +172,7 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component14);
 if (~on_mobile = false) {
-	if_setonmouseleave("script7747($component14, false, $string1, ^white)", $component14);
-	if_setonmouserepeat("script7747($component14, true, $string1, 0xaaaaaa)", $component14);
+	if_setonmouseleave("script7747($component14, 0, $string1, ^white)", $component14);
+	if_setonmouserepeat("script7747($component14, 1, $string1, 0xaaaaaa)", $component14);
 }
 if_setonop("script7749($component10)", $component14);

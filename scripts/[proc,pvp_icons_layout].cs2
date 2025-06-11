@@ -216,7 +216,7 @@ if (~pvp_world = 1) {
 			if_setgraphic("pvpw_icons,3", pvp_icons:pvp);
 			if_setop(1, "Show time remaining", pvp_icons:pvp);
 			if (%teleblock_tooltip = 0) {
-				if_setonop("teleblock_timer_tooltip(pvp_icons:pvp, pvp_icons:tooltip, true)", pvp_icons:pvp);
+				if_setonop("teleblock_timer_tooltip(pvp_icons:pvp, pvp_icons:tooltip, 1)", pvp_icons:pvp);
 			}
 		} else {
 			if_setgraphic("pvpw_icons,0", pvp_icons:pvp);

@@ -2,7 +2,7 @@
 [proc,rebuildchatbox](int $int0)
 if (%varcint1112 = clientclock) {
 	%varcint65 = calc(clientclock + 1);
-	if_setontimer("script664(false)", chatbox:universe);
+	if_setontimer("script664(0)", chatbox:universe);
 	return;
 }
 %varcint1112 = clientclock;
@@ -234,7 +234,7 @@ while ($int10 ! -1 & $component9 ! null) {
 				);
 				if (%loginlogout_permanent = 0) {
 					%varcint65 = calc($int12 + 500 + 1);
-					if_setontimer("script664(false)", chatbox:universe);
+					if_setontimer("script664(0)", chatbox:universe);
 				}
 			case ^chattype_privatechatout :
 				$int7 = ~script203(
@@ -1093,5 +1093,5 @@ while ($int8 > 0) {
 	}
 }
 if_setscrollsize(0, $int24, chatbox:scrollarea);
-~scrollbar_resize(chatbox:null, chatbox:scrollarea, calc(%varcint7 + ($int24 - %varcint8)));
+~scrollbar_resize(chatbox:chatscrollbar, chatbox:scrollarea, calc(%varcint7 + ($int24 - %varcint8)));
 %varcint7, %varcint8 = if_getscrolly(chatbox:scrollarea), $int24;

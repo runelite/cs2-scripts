@@ -1,7 +1,7 @@
 // 3636
-[proc,castlewars_catapult_hover](component $com_castlewars_catapult_fire_catapult_button0, boolean $boolean1)
+[proc,castlewars_catapult_hover](component $com_castlewars_catapult_fire_catapult_button0, int $int1)
 def_int $comsubid2 = 0;
-if ($boolean1 = true) {
+if ($int1 = 1) {
 	$comsubid2 = ~v2_stone_button_in_filled($com_castlewars_catapult_fire_catapult_button0);
 } else {
 	$comsubid2 = ~v2_stone_button_out_filled($com_castlewars_catapult_fire_catapult_button0);

@@ -12,7 +12,7 @@ if ($int0 ! -1) {
 	} else {
 		$string1 = oc_name(enum(int, namedobj, $enum5, $int0));
 	}
-	~soul_wars_rewards_confirmtext(false, $string1, $string0, $component4);
+	~soul_wars_rewards_confirmtext(0, $string1, $string0, $component4);
 	while ($int9 < $int0) {
 		cc_create($component3, ^iftype_rectangle, $int9, false);
 		cc_sethide(true);
@@ -25,8 +25,8 @@ if ($int0 ! -1) {
 	cc_setop(1, "Confirm");
 	cc_setopbase("<col=ff9040><$string1></col>");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script848(true, $string1, $string0, $component4)");
-		cc_setonmouseleave("script848(false, $string1, $string0, $component4)");
+		cc_setonmouserepeat("script848(1, $string1, $string0, $component4)");
+		cc_setonmouseleave("script848(0, $string1, $string0, $component4)");
 	}
 	cc_setonop("soul_wars_rewards_confirmop(event_op, $component2, $component3, $component4, $int6, $component7, $component8)");
 } else {

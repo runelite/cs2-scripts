@@ -46,6 +46,6 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_settrans(255);
 cc_setop(1, "Confirm");
-cc_setonop("slayer_rewards_confirm_back(true, event_op, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5)");
+cc_setonop("slayer_rewards_confirm_back(1, event_op, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5)");
 if_setop(1, "Back", $com_slayer_rewards_back_button5);
-if_setonop("slayer_rewards_confirm_back(false, event_op, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5)", $com_slayer_rewards_back_button5);
+if_setonop("slayer_rewards_confirm_back(0, event_op, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5)", $com_slayer_rewards_back_button5);

@@ -1,8 +1,8 @@
 // 6534
-[proc,br_lobbyoverlay_drawsettings](boolean $boolean0, component $component1)
+[proc,br_lobbyoverlay_drawsettings](int $int0, component $component1)
 cc_deleteall($component1);
 def_int $comsubid2 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$comsubid2 = ~v2_stone_button_in_filled($component1);
 	if_setontimer("script6535(calc(clientclock + 5), event_com)", $component1);
 } else {

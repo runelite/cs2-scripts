@@ -1,8 +1,8 @@
 // 3593
-[proc,teletab_button_draw](boolean $boolean0, enum $enum1, string $string0, int $int2, component $component3, boolean $boolean4)
+[proc,teletab_button_draw](int $int0, enum $enum1, string $string0, int $int2, component $component3, int $int4)
 cc_deleteall($component3);
 def_int $int5 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$int5 = ~v2_stone_button_in_filled($component3);
 } else {
 	$int5 = ~v2_stone_button_out_filled($component3);
@@ -19,7 +19,7 @@ $int5 = calc($int5 + 1);
 cc_setsize(calc(36 + 10), 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_settextfont(p11_full);
-if ($boolean4 = true) {
+if ($int4 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);

@@ -1,9 +1,9 @@
 // 4085
-[proc,collection_toggle_search](boolean $boolean0)
+[proc,collection_toggle_search](int $int0)
 def_component $component1 = collection:content;
 def_component $component2 = collection:content_search;
 def_component $component3 = collection:search_button;
-if (if_gethide($component2) = false | $boolean0 = true) {
+if (if_gethide($component2) = false | $int0 = 1) {
 	if_sethide(true, $component2);
 	if_sethide(true, $component3);
 	if_sethide(false, $component1);
@@ -23,5 +23,5 @@ if (if_gethide($component2) = false | $boolean0 = true) {
 	~collection_search_button(0);
 	%varcstring417 = "";
 	~collection_searchbar_set_text(collection:search_text);
-	~collection_searchbar_op(collection:search_container, collection:search_toggle);
+	~collection_searchbar_op(40697937, 40697932);
 }

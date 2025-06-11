@@ -1,16 +1,16 @@
 // 3642
-[proc,script3642](boolean $boolean0, boolean $boolean1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9)
+[proc,script3642](int $int0, int $int1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9)
 cc_deleteall($component2);
 def_int $comsubid10 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$comsubid10 = ~options_button_on($component2, 0);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 } else {
 	$comsubid10 = ~options_button_off($component2, 0);
 	if_setonmouserepeat("script3641(
-		0 = false, 
-		1 = true, 
+		0 = 0, 
+		1 = 1, 
 		2 = $component2, 
 		3 = $int3, 
 		4 = $int4, 
@@ -21,8 +21,8 @@ if ($boolean0 = true) {
 		9 = $component9
 	)", $component2);
 	if_setonmouseleave("script3641(
-		0 = false, 
-		1 = false, 
+		0 = 0, 
+		1 = 0, 
 		2 = $component2, 
 		3 = $int3, 
 		4 = $int4, 
@@ -37,7 +37,7 @@ if ($int3 ! -1) {
 	cc_create($component2, ^iftype_text, $comsubid10, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	if ($boolean0 = true | $boolean1 = true) {
+	if ($int0 = 1 | $int1 = 1) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour(0xff981f);

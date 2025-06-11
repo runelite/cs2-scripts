@@ -1,12 +1,12 @@
 // 7235
-[clientscript,ground_items_update_time_remaining](entityoverlay $entityoverlay0, int $comsubid1, int $int2, int $int3, int $int4, int $colour5, boolean $boolean6, boolean $boolean7, int $comsubid8, int $int9, int $int10)
+[clientscript,ground_items_update_time_remaining](entityoverlay $entityoverlay0, int $comsubid1, int $int2, int $int3, int $int4, int $colour5, int $int6, int $int7, int $comsubid8, int $int9, int $int10)
 def_int $int11 = calc(clientclock - $int2);
 def_int $int12 = 0;
 def_graphic $graphic13 = null;
 if (calc($int11 % 25) = 0) {
 	$int4 = calc($int4 - $int11);
 	$int3 = calc($int3 - $int11);
-	if ($boolean6 = true) {
+	if ($int6 = 1) {
 		if ($int4 > 0) {
 			$int12 = $int4;
 			$graphic13 = "ground_items_visibility,1";
@@ -14,11 +14,11 @@ if (calc($int11 % 25) = 0) {
 			$graphic13 = "ground_items_visibility,0";
 		}
 	}
-	if ($int12 <= 0 & $boolean7 = true) {
+	if ($int12 <= 0 & $int7 = 1) {
 		$int12 = $int3;
 	}
 	if ($int12 <= 0) {
-		if ($boolean7 = true) {
+		if ($int7 = 1) {
 			return;
 		} else if (cc_find_entityoverlay($entityoverlay0, $comsubid1) = ^true & .cc_find_entityoverlay($entityoverlay0, $comsubid8) = ^true) {
 			.cc_setgraphic($graphic13);

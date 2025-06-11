@@ -68,7 +68,7 @@ while ($length10 < $length9) {
 }
 def_int $int11 = 0;
 def_int $int12 = 0;
-def_string $string0 = ",";
+def_string $string1 = ",";
 def_int $int13 = $length10;
 $length10 = 0;
 while ($length10 < $length9) {
@@ -91,12 +91,12 @@ while ($length10 < $length9) {
 		}
 		if ($int11 > 1) {
 			if ($int12 >= 0 & $int12 < ^max_32bit_int) {
-				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($intarray0($length10), $string0)><br>= <~tostring_spacer($int12, $string0)>");
+				cc_settext("<~tostring_spacer($int11, $string1)> x <~tostring_spacer($intarray0($length10), $string1)><br>= <~tostring_spacer($int12, $string1)>");
 			} else {
-				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($intarray0($length10), $string0)>");
+				cc_settext("<~tostring_spacer($int11, $string1)> x <~tostring_spacer($intarray0($length10), $string1)>");
 			}
 		} else {
-			cc_settext(~tostring_spacer($intarray0($length10), $string0));
+			cc_settext(~tostring_spacer($intarray0($length10), $string1));
 		}
 	}
 	$length10 = calc($length10 + 1);

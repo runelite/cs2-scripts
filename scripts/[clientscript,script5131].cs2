@@ -1,8 +1,8 @@
 // 5131
-[clientscript,script5131](component $com_ge_offers_setup0, int $comsubid1, boolean $boolean2, string $string0)
+[clientscript,script5131](component $com_ge_offers_setup0, int $comsubid1, int $int2, string $string0)
 if (cc_find($com_ge_offers_setup0, $comsubid1) = ^true) {
 	cc_settext("<$string0><~script5130>");
-	if ($boolean2 = true) {
+	if ($int2 = 1) {
 		if (%ge_price_custom > 0) {
 			cc_setop(1, "<$string0><~script5130>");
 		} else {

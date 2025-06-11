@@ -1,5 +1,5 @@
 // 3820
-[proc,hauntedmine_controls_update](component $com_hauntedmine_controls_start0, component $com_hauntedmine_controls_a1, component $com_hauntedmine_controls_b2, component $com_hauntedmine_controls_c3, component $com_hauntedmine_controls_d4, component $com_hauntedmine_controls_e5, component $com_hauntedmine_controls_i6, component $com_hauntedmine_controls_j7, component $com_hauntedmine_controls_k8, component $com_hauntedmine_controls_null9, component $com_hauntedmine_controls_null10, component $com_hauntedmine_controls_null11, component $com_hauntedmine_controls_null12, component $com_hauntedmine_controls_null13, component $com_hauntedmine_controls_null14, component $com_hauntedmine_controls_null15, component $com_hauntedmine_controls_null16, component $com_hauntedmine_controls_null17)
+[proc,hauntedmine_controls_update](component $com_hauntedmine_controls_start0, component $com_hauntedmine_controls_a1, component $com_hauntedmine_controls_b2, component $com_hauntedmine_controls_c3, component $com_hauntedmine_controls_d4, component $com_hauntedmine_controls_e5, component $com_hauntedmine_controls_i6, component $com_hauntedmine_controls_j7, component $com_hauntedmine_controls_k8, component $com_hauntedmine_controls_cart_start_static9, component $com_hauntedmine_controls_cart_start_animated10, component $com_hauntedmine_controls_cart_success11, component $com_hauntedmine_controls_cart_38_4212, component $com_hauntedmine_controls_cart_38_4413, component $com_hauntedmine_controls_cart_37_4714, component $com_hauntedmine_controls_cart_39_5015, component $com_hauntedmine_controls_cart_35_5916, component $com_hauntedmine_controls_cart_returned17)
 if (%hauntedmine_lever_a = 1) {
 	if_setmodel(model_4912, $com_hauntedmine_controls_a1);
 } else {
@@ -43,73 +43,73 @@ if (%hauntedmine_lever_k = 1) {
 def_int $int18 = 0;
 if (%hauntedmine_animate_start = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null10);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null10);
-	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_null10);
+	if_sethide(false, $com_hauntedmine_controls_cart_start_animated10);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_start_animated10);
+	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_cart_start_animated10);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null10);
+	if_sethide(true, $com_hauntedmine_controls_cart_start_animated10);
 }
 if (%hauntedmine_animate_success = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null11);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null11);
-	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_null11);
+	if_sethide(false, $com_hauntedmine_controls_cart_success11);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_success11);
+	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_cart_success11);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null11);
+	if_sethide(true, $com_hauntedmine_controls_cart_success11);
 }
 if (%hauntedmine_animate_38_42 = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null12);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null12);
-	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_null12);
+	if_sethide(false, $com_hauntedmine_controls_cart_38_4212);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_38_4212);
+	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_cart_38_4212);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null12);
+	if_sethide(true, $com_hauntedmine_controls_cart_38_4212);
 }
 if (%hauntedmine_animate_38_44 = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null13);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null13);
-	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_null13);
+	if_sethide(false, $com_hauntedmine_controls_cart_38_4413);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_38_4413);
+	if_setmodelanim(hauntedmine_cartright_1456, $com_hauntedmine_controls_cart_38_4413);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null13);
+	if_sethide(true, $com_hauntedmine_controls_cart_38_4413);
 }
 if (%hauntedmine_animate_37_47 = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null14);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null14);
-	if_setmodelanim(hauntedmine_cartleft_1455, $com_hauntedmine_controls_null14);
+	if_sethide(false, $com_hauntedmine_controls_cart_37_4714);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_37_4714);
+	if_setmodelanim(hauntedmine_cartleft_1455, $com_hauntedmine_controls_cart_37_4714);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null14);
+	if_sethide(true, $com_hauntedmine_controls_cart_37_4714);
 }
 if (%hauntedmine_animate_39_50 = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null15);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null15);
-	if_setmodelanim(hauntedmine_cartleft_1455, $com_hauntedmine_controls_null15);
+	if_sethide(false, $com_hauntedmine_controls_cart_39_5015);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_39_5015);
+	if_setmodelanim(hauntedmine_cartleft_1455, $com_hauntedmine_controls_cart_39_5015);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null15);
+	if_sethide(true, $com_hauntedmine_controls_cart_39_5015);
 }
 if (%hauntedmine_animate_35_59 = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null16);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null16);
-	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_null16);
+	if_sethide(false, $com_hauntedmine_controls_cart_35_5916);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_35_5916);
+	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_cart_35_5916);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null16);
+	if_sethide(true, $com_hauntedmine_controls_cart_35_5916);
 }
 if (%hauntedmine_animate_returned = 1) {
 	$int18 = 1;
-	if_sethide(false, $com_hauntedmine_controls_null17);
-	if_setmodel(model_4910, $com_hauntedmine_controls_null17);
-	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_null17);
+	if_sethide(false, $com_hauntedmine_controls_cart_returned17);
+	if_setmodel(model_4910, $com_hauntedmine_controls_cart_returned17);
+	if_setmodelanim(hauntedmine_cart_travel_1453, $com_hauntedmine_controls_cart_returned17);
 } else {
-	if_sethide(true, $com_hauntedmine_controls_null17);
+	if_sethide(true, $com_hauntedmine_controls_cart_returned17);
 }
 if ($int18 = 1) {
-	if_sethide(true, $com_hauntedmine_controls_null9);
-	~script3822(true, null, $com_hauntedmine_controls_start0);
+	if_sethide(true, $com_hauntedmine_controls_cart_start_static9);
+	~script3822(1, -1, $com_hauntedmine_controls_start0);
 } else {
-	if_sethide(false, $com_hauntedmine_controls_null9);
-	~script3822(false, false, $com_hauntedmine_controls_start0);
+	if_sethide(false, $com_hauntedmine_controls_cart_start_static9);
+	~script3822(0, 0, $com_hauntedmine_controls_start0);
 }
 if_setontimer(null, $com_hauntedmine_controls_start0);

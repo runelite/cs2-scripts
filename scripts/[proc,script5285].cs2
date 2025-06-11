@@ -1,12 +1,12 @@
 // 5285
-[proc,script5285](component $component0, component $component1, int $int2)
+[proc,script5285](int $int0, component $component1, int $int2)
 def_int $int3 = calc($int2 % 3000 / 50);
 if ($int3 >= 10) {
 	cc_settext("<tostring(calc($int2 / 3000))>:<tostring($int3)>");
 } else {
 	cc_settext("<tostring(calc($int2 / 3000))>:0<tostring($int3)>");
 }
-if_setontimer("script5284($component0, $component1, cc_getid, $int2)", $component1);
+if_setontimer("script5284($int0, $component1, cc_getid, $int2)", $component1);
 if ($int2 > 500) {
 	$int2 = 500;
 }

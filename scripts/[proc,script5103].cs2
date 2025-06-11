@@ -15,10 +15,10 @@ cc_settrans($int5);
 cc_setop(1, "Report for");
 cc_setopbase("<col=ff9040><$string0></col>");
 if (~on_mobile = false) {
-	cc_setonmouserepeat("script5104(true, event_com, event_comsubid, $int5, 210)");
-	cc_setonmouseleave("script5104(false, event_com, event_comsubid, $int5, 210)");
+	cc_setonmouserepeat("script5104(1, event_com, event_comsubid, $int5, 210)");
+	cc_setonmouseleave("script5104(0, event_com, event_comsubid, $int5, 210)");
 }
-cc_setonop("script5105(true, null, "null", $int0)");
+cc_setonop("script5105(1, null, "null", $int0)");
 cc_create(reportabuse:rules, ^iftype_text, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(20, $int3, ^setsize_abs, ^setsize_abs);
@@ -39,7 +39,7 @@ cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(^white);
 cc_settrans(255);
-cc_setonkey("script5105(false, event_keychar, $string1, $int0)");
+cc_setonkey("script5105(0, event_keychar, $string1, $int0)");
 cc_create(reportabuse:rules, ^iftype_text, $int1, false);
 $int1 = calc($int1 + 1);
 cc_setsize(20, $int3, ^setsize_minus, ^setsize_abs);

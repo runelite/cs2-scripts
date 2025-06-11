@@ -1,6 +1,6 @@
 // 735
 [clientscript,inferno_hud_init](component $com_inferno_hp_hud_dodger0, component $com_inferno_hp_hud_hp1, component $com_inferno_hp_hud_name_area2, component $com_inferno_hp_hud_hp_bar_text3, component $com_inferno_hp_hud_health_bar_remaining4, component $com_inferno_hp_hud_creature_name5)
-~script4729($com_inferno_hp_hud_dodger0, $com_inferno_hp_hud_hp1, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($com_inferno_hp_hud_dodger0, $com_inferno_hp_hud_hp1, 52968, ^setpos_abs_left, ^setpos_abs_top, 1);
 if_setonvartransmit("inferno_hud_update($com_inferno_hp_hud_hp_bar_text3, $com_inferno_hp_hud_health_bar_remaining4){inferno_temp_noprotect_transmit}", $com_inferno_hp_hud_hp_bar_text3);
 ~inferno_hud_pos(0, $com_inferno_hp_hud_hp1, $com_inferno_hp_hud_name_area2, $com_inferno_hp_hud_creature_name5, $com_inferno_hp_hud_hp_bar_text3, $com_inferno_hp_hud_health_bar_remaining4);
 ~inferno_hud_update($com_inferno_hp_hud_hp_bar_text3, $com_inferno_hp_hud_health_bar_remaining4);

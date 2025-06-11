@@ -13,7 +13,7 @@ def_string $string3 = "";
 $string3, $string0 = ~script632($string0);
 if (cc_find(raids_sidepanel:list, calc($int0 * 7)) = ^true) {
 	cc_setopbase("<col=ff9040><$string2></col>");
-	~raids_sidepanel_entry_init($int0, false);
+	~raids_sidepanel_entry_init($int0, 0);
 	cc_setonop("raids_sidepanel_entry_op($string2)");
 }
 def_int $int1 = 0;

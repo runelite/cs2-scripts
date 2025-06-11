@@ -1,6 +1,6 @@
 // 275
-[proc,nzone_rewards_price](obj $obj0)(string)
-def_obj $obj1 = oc_uncert($obj0);
+[proc,nzone_rewards_price](namedobj $namedobj0)(string)
+def_obj $obj1 = oc_uncert($namedobj0);
 def_int $int2 = inv_total(ranging_guild_bowshop_skillcape_trimmed, $obj1);
 if ($int2 <= 0) {
 	if ($obj1 = zenyte_ring_enchanted_recoil_20655) {

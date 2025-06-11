@@ -34,7 +34,7 @@ $intarray0(27) = %varcint109;
 def_obj $obj2 = null;
 def_int $int3 = 0;
 def_int $int4 = 0;
-def_string $string0 = "Invalid item.";
+def_string $string1 = "Invalid item.";
 def_int $length5 = 0;
 while ($length5 < $length1) {
 	cc_create(wilderness_lootingbag:items, ^iftype_graphic, $length5, false);
@@ -56,7 +56,7 @@ while ($length5 < $length1) {
 				cc_settrans(0);
 				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
 				if ($intarray0($length5) <= -1) {
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, wilderness_lootingbag:tooltip, $string0, 25, 512)");
+					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, wilderness_lootingbag:tooltip, $string1, 25, 512)");
 					cc_setonmouseleave("deltooltip(wilderness_lootingbag:tooltip)");
 				} else {
 					~trade_tooltip($int3, $intarray0($length5), wilderness_lootingbag:tooltip);

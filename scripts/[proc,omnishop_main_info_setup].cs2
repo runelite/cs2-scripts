@@ -1,5 +1,5 @@
 // 7147
-[proc,omnishop_main_info_setup](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, dbrow $dbrow6, string $string0, boolean $boolean7)
+[proc,omnishop_main_info_setup](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, int $int6, string $string0, int $int7)
 def_component $component8 = omnishop_main:info;
 def_component $component9 = omnishop_main:info_scroller;
 def_int $int10 = 53673989;
@@ -12,9 +12,9 @@ if_setonresize("omnishop_main_info_setup(
 	3 = $int3, 
 	4 = $int4, 
 	5 = $int5, 
-	6 = $dbrow6, 
+	6 = $int6, 
 	7 = $string0, 
-	8 = $boolean7
+	8 = $int7
 )", $component8);
 cc_deleteall($component8);
 cc_deleteall($component11);
@@ -62,9 +62,9 @@ switch_int (%varcint988) {
 		$int18 = 16;
 		$int19 = 18;
 }
-def_obj $obj20 = null;
+def_namedobj $namedobj20 = null;
 if ($int2 ! -1) {
-	$obj20 = ~omnishop_get_obj($dbrow0, $inv1, $int2);
+	$namedobj20 = ~omnishop_get_obj($dbrow0, $inv1, $int2);
 }
 def_int $int21 = 0;
 def_int $int22 = 0;
@@ -90,9 +90,9 @@ if ($int2 ! -1 & string_length($string0) = 0) {
 def_string $string1 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_info_title, 0);
 def_int $int24 = 1;
 if ($int2 ! -1) {
-	$string1 = oc_param($obj20, param_1733);
+	$string1 = oc_param($namedobj20, param_1733);
 	if (string_length($string1) = 0) {
-		$string1 = oc_name($obj20);
+		$string1 = oc_name($namedobj20);
 	}
 	$int24 = db_getfield(db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_stock, $int2), omnishop_stock_data:omnishop_stock_transaction_multiplier, 0);
 	if ($int24 > 1) {
@@ -114,7 +114,7 @@ if ($int2 ! -1) {
 	cc_create($component8, ^iftype_graphic, $int21, false);
 	cc_setposition(calc($int23 / 2 - 36 / 2), $int22, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject($obj20, -1);
+	cc_setobject($namedobj20, -1);
 	cc_setoutline(1);
 	cc_setgraphicshadow(0x333333);
 	$int22 = calc($int22 + 32 + $int18 / 2);
@@ -217,7 +217,7 @@ cc_setcolour(0xff981f);
 cc_settext($string1);
 $int21 = calc($int21 + 1);
 $int22 = calc($int22 + $int25 + $int18);
-if ($boolean7 = true) {
+if ($int7 = 1) {
 	if_setscrollpos(0, 0, $component8);
 }
 if_setscrollsize(if_getwidth($component8), $int22, $component8);

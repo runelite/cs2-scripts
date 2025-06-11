@@ -35,9 +35,9 @@ if (~script7347($obj1, $int2, 1) = 1) {
 	} else {
 		cc_settrans(120);
 		if (~on_mobile = false) {
-			cc_setonmouserepeat("script7348(true, event_com, event_comsubid, 120)");
+			cc_setonmouserepeat("script7348(1, event_com, event_comsubid, 120)");
 		}
-		cc_setonmouseleave("script7348(false, event_com, event_comsubid, 120)");
+		cc_setonmouseleave("script7348(0, event_com, event_comsubid, 120)");
 	}
 	cc_setop(1, "Change");
 	cc_setop(2, "Clear");

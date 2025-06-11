@@ -19,7 +19,7 @@ if ($boolean2 = false) {
 }
 if ($int0 = 1) {
 	if_setop(1, "Search", $component3);
-	if_setonop("collection_toggle_search(false)", $component3);
+	if_setonop("collection_toggle_search(0)", $component3);
 	cc_create($component3, ^iftype_graphic, $int1, false);
 	cc_setgraphic("bankbuttons,2");
 	cc_setsize(16, 15, ^setsize_abs, ^setsize_abs);
@@ -33,11 +33,11 @@ if ($int0 = 1) {
 	cc_settext("<col=d6d6d6>Search");
 	if ($boolean2 = true) {
 		if_setop(1, "Search", $component4);
-		if_setonop("collection_toggle_search(false)", $component4);
+		if_setonop("collection_toggle_search(0)", $component4);
 	}
 } else {
 	if_setop(1, "Back", $component3);
-	if_setonop("collection_toggle_search(false)", $component3);
+	if_setonop("collection_toggle_search(0)", $component3);
 	cc_create($component3, ^iftype_text, $int1, false);
 	cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -46,6 +46,6 @@ if ($int0 = 1) {
 	cc_settext("<col=d6d6d6>Back");
 	if ($boolean2 = true) {
 		if_setop(1, "Back", $component4);
-		if_setonop("collection_toggle_search(false)", $component4);
+		if_setonop("collection_toggle_search(0)", $component4);
 	}
 }

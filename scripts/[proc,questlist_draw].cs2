@@ -1,5 +1,5 @@
 // 2633
-[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
+[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5)
 def_int $int6 = -3;
 if (%questlist_disable_headers = 1) {
 	$int6 = 2;
@@ -21,7 +21,7 @@ if (%questlist_larger_text = 1) {
 }
 def_int $intarray0($int7);
 def_dbrow $dbrow13 = null;
-def_string $string0 = "";
+def_string $string1 = "";
 def_int $int14 = 0;
 def_int $int15 = pow(2, 16);
 cc_deleteall($component4);
@@ -38,16 +38,16 @@ while ($int8 <= $int7) {
 		cc_settextshadow(true);
 	}
 	cc_settextalign(^settextalign_left, ^settextalign_centre, $int11);
-	$string0 = ~get_quest_name($dbrow13);
-	cc_setopbase("<col=ff9040><$string0></col>");
+	$string1 = ~get_quest_name($dbrow13);
+	cc_setopbase("<col=ff9040><$string1></col>");
 	if (~script4026($dbrow13, %questlist_sort_type) = 1) {
-		$string0 = "MQ: <$string0>";
+		$string1 = "MQ: <$string1>";
 	}
 	if (~speedrunning_world = 1 & ~script6807($dbrow13) = 1) {
-		$string0 = "<$string0> (Beta)";
+		$string1 = "<$string1> (Beta)";
 	}
-	cc_settext($string0);
-	cc_setsize(0, calc($int11 * paraheight($string0, cc_getwidth, $fontmetrics10) + $int12), ^setsize_minus, ^setsize_abs);
+	cc_settext($string1);
+	cc_setsize(0, calc($int11 * paraheight($string1, cc_getwidth, $fontmetrics10) + $int12), ^setsize_minus, ^setsize_abs);
 	if (~speedrunning_world = 1) {
 		cc_setop(1, "View info:");
 	} else {
@@ -72,7 +72,7 @@ while ($int8 <= $int7) {
 	$int8 = calc($int8 + 1);
 }
 if ($int7 > 1) {
-	~questlist_sort(intarray0, 0, calc($int7 - 1), %questlist_sort_type, $int15);
+	~questlist_sort($anyobj0, 0, calc($int7 - 1), %questlist_sort_type, $int15);
 }
 def_int $int16 = 0;
 def_int $int17 = 0;
@@ -80,20 +80,20 @@ def_int $int18 = 0;
 def_int $int19 = 1;
 def_int $int20 = 1;
 def_int $int21 = 0;
-def_string $string1 = "************";
 def_string $string2 = "************";
+def_string $string3 = "************";
 while ($int16 < $int7) {
 	$int17 = calc($intarray0($int16) % $int15);
 	$int14 = calc($intarray0($int16) / $int15);
 	$dbrow13 = ~script6154($int17);
 	$int19 = ~quest_requirement_check($dbrow13);
 	$int20 = ~script5990($dbrow13);
-	$string2 = ~script2265($dbrow13, $int14, %questlist_sort_type);
+	$string3 = ~script2265($dbrow13, $int14, %questlist_sort_type);
 	$int21 = ~script4028($dbrow13, $int14, $int19, $int20);
 	if (~questlist_hide_quest($dbrow13, $int14, $int19, $int20, $int21) = 0) {
-		if (compare($string2, $string1) ! 0 & %questlist_disable_headers = 0) {
-			$int8, $int6 = ~script1354($string2, $int8, $int6, $component4);
-			$string1 = $string2;
+		if (compare($string3, $string2) ! 0 & %questlist_disable_headers = 0) {
+			$int8, $int6 = ~script1354($string3, $int8, $int6, $component4);
+			$string2 = $string3;
 		}
 		if (cc_find($component4, $int17) = ^true) {
 			if (db_getfield($dbrow13, quest:parent_quest, 0) ! null) {
@@ -128,17 +128,17 @@ if ($int18 <= 0) {
 	if_sethide(false, $component3);
 }
 def_int $int22 = %varcint10;
-if ($boolean5 = true) {
+if ($int5 = 1) {
 	$int22 = %varcint972;
 }
 if ($int6 > if_getheight($component2)) {
 	if_setscrollsize(0, $int6, $component2);
 	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, $int22, true);
+		~scrollbar_vertical_doscroll($component3, $component2, $int22, 1);
 	}
 } else {
-	if ($boolean5 = true) {
+	if ($int5 = 1) {
 		%varcint972 = 0;
 	} else {
 		%varcint10 = 0;
@@ -146,7 +146,7 @@ if ($int6 > if_getheight($component2)) {
 	if_setscrollsize(0, 0, $component2);
 	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, 0, true);
+		~scrollbar_vertical_doscroll($component3, $component2, 0, 1);
 	}
 }
-~script4137($component0, $component1, $component2, $component3, $component4, $boolean5);
+~script4137($component0, $component1, $component2, $component3, $component4, $int5);

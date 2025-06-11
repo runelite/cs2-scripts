@@ -240,5 +240,5 @@ cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tick);
 ~poh_viewer_room_indicator($int0);
 if_setonvartransmit("poh_viewer_room_indicator(event_com, cc_getid, $int0){poh_debug}", $component5);
-if_setonmouserepeat("poh_viewer_room_hover(true, event_com, cc_getid, $string0)", $component5);
-if_setonmouseleave("poh_viewer_room_hover(false, event_com, cc_getid, $string0)", $component5);
+if_setonmouserepeat("poh_viewer_room_hover(1, event_com, cc_getid, $string0)", $component5);
+if_setonmouseleave("poh_viewer_room_hover(0, event_com, cc_getid, $string0)", $component5);

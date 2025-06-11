@@ -1,5 +1,5 @@
 // 6069
-[proc,script6069](component $component0, component $component1, int $int2)
+[proc,script6069](int $int0, component $component1, int $int2)
 def_component $component3 = gim_raffle:tabs;
 def_component $component4 = gim_raffle:tabs_clickzone;
 def_component $component5 = gim_raffle:scrollbar;
@@ -21,7 +21,7 @@ def_struct $struct13 = enum(int, struct, enum_4365, 1);
 ~steelborder(gim_raffle:frame, "Group Raffle - <struct_param($struct13, param_1614)>", 1);
 if ($int10 ! $int2) {
 	$int10, $int11, $int12 = ~raffle_tab_not_selected(
-		0 = $component0, 
+		0 = $int0, 
 		1 = $component1, 
 		2 = $int10, 
 		3 = $int11, 
@@ -36,7 +36,7 @@ if ($int10 ! $int2) {
 }
 if ($int10 ! $int2) {
 	$int10, $int11, $int12 = ~raffle_tab_not_selected(
-		0 = $component0, 
+		0 = $int0, 
 		1 = $component1, 
 		2 = $int10, 
 		3 = $int11, 

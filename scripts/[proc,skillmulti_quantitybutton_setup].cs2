@@ -8,11 +8,11 @@ if ($component2 ! skillmulti:all) {
 if ($int0 = 1) {
 	~skillmulti_wipebutton($component2);
 	$string0 = "<col=ffffff><$string0></col>";
-	~skillmulti_quantitybutton_draw(true, $string0, $component2);
+	~skillmulti_quantitybutton_draw(1, $string0, $component2);
 } else {
-	~skillmulti_quantitybutton_draw(false, $string0, $component2);
-	if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, $component2)", $component2);
-	if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, $component2)", $component2);
+	~skillmulti_quantitybutton_draw(0, $string0, $component2);
+	if_setonmouseover("skillmulti_quantitybutton_draw(1, $string0, $component2)", $component2);
+	if_setonmouseleave("skillmulti_quantitybutton_draw(0, $string0, $component2)", $component2);
 	if_setop(1, $string0, $component2);
 	if_setonop("skillmulti_quantitybutton_op(event_op, $int1, $int3, $int4)", $component2);
 	if_setontimer(null, $component2);

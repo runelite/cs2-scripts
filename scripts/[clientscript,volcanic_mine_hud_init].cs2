@@ -1,7 +1,7 @@
 // 2016
 [clientscript,volcanic_mine_hud_init](component $com_fossil_volcanic_mine_universe0, component $com_fossil_volcanic_mine_dodger_left1, component $com_fossil_volcanic_mine_dodger_right2, component $com_fossil_volcanic_mine_main_info3, component $com_fossil_volcanic_mine_vent_chambers_info4)
-~script4729($com_fossil_volcanic_mine_dodger_left1, $com_fossil_volcanic_mine_main_info3, setbit(setbit(52960, 12), 13), ^setpos_abs_left, ^setpos_abs_centre, true);
-~script4729($com_fossil_volcanic_mine_dodger_right2, $com_fossil_volcanic_mine_vent_chambers_info4, setbit(setbit(36578, 12), 13), ^setpos_abs_right, ^setpos_abs_centre, false);
+~script4729($com_fossil_volcanic_mine_dodger_left1, $com_fossil_volcanic_mine_main_info3, setbit(setbit(52960, 12), 13), ^setpos_abs_left, ^setpos_abs_centre, 1);
+~script4729($com_fossil_volcanic_mine_dodger_right2, $com_fossil_volcanic_mine_vent_chambers_info4, setbit(setbit(36578, 12), 13), ^setpos_abs_right, ^setpos_abs_centre, 0);
 ~volcanic_mine_set_venttext;
 ~volcanic_mine_set_chambertext;
 ~volcanic_mine_set_otherinfo;

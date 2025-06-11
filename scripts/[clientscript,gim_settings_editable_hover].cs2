@@ -1,6 +1,6 @@
 // 5513
-[clientscript,gim_settings_editable_hover](boolean $boolean0, component $component1, int $comsubid2, int $int3, int $int4)
-if ($boolean0 = true) {
+[clientscript,gim_settings_editable_hover](int $int0, component $component1, int $comsubid2, int $int3, int $int4)
+if ($int0 = 1) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_settrans($int3);
 	}

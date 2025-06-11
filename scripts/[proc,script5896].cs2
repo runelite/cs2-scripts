@@ -3,7 +3,7 @@
 def_int $int1 = db_getfield(%latest_speedrun_panel, quest:id, 0);
 if ($int1 <= 0 | $int1 ! %current_speedrun) {
 	if (%current_speedrun > 0) {
-		~speedrunning_button_draw($com_speedrunning_panel_start_abandon_button0, $string0, true, true);
+		~speedrunning_button_draw($com_speedrunning_panel_start_abandon_button0, $string0, 1, 1);
 	} else {
 		~speedrunning_button_init($com_speedrunning_panel_start_abandon_button0, $string0);
 	}

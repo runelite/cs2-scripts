@@ -1,10 +1,10 @@
 // 6041
-[clientscript,script6041](component $com_bcs_burner_meter_10, component $com_bcs_burner_meter_21, component $com_bcs_burner_meter_32, component $com_bcs_burner_result_meter3, component $com_bcs_burner_fire4, int $int5, int $int6, int $int7, int $int8, boolean $boolean9)
+[clientscript,script6041](component $com_bcs_burner_meter_10, component $com_bcs_burner_meter_21, component $com_bcs_burner_meter_32, component $com_bcs_burner_result_meter3, component $com_bcs_burner_fire4, int $int5, int $int6, int $int7, int $int8, int $int9)
 if (~script6045 = 1) {
 	~script6044($com_bcs_burner_meter_10, $com_bcs_burner_meter_21, $com_bcs_burner_meter_32, $com_bcs_burner_result_meter3, $com_bcs_burner_fire4);
 	return;
 }
-if (~script6042($int8) <= 0 & $boolean9 = false | ~script6042($int8) >= 45 & $boolean9 = true) {
+if (~script6042($int8) <= 0 & $int9 = 0 | ~script6042($int8) >= 45 & $int9 = 1) {
 	sound_synth(synth_5598, 1, 0);
 	return;
 }

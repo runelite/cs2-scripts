@@ -5,8 +5,8 @@ if (clientclock >= $int0 & cc_find($component1, $comsubid2) = ^true) {
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int3, calc(clientclock + 2))");
 	cc_settrans($int3);
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, $int3)");
+		cc_setonmouserepeat("clan_members_hover(1, event_com, event_comsubid, $int3)");
 	}
-	cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, $int3)");
+	cc_setonmouseleave("clan_members_hover(0, event_com, event_comsubid, $int3)");
 	cc_setonop("clan_members_op(event_op, event_com, event_comsubid, $int3, $int4, $string0)");
 }

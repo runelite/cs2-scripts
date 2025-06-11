@@ -1,6 +1,6 @@
 // 3188
 [clientscript,league_relics_init](component $com_league_relics_header0, component $com_league_relics_relic_available_header1, component $com_league_relics_backgrounds2, component $com_league_relics_icons3, component $com_league_relics_outlines4, component $com_league_relics_names5, component $com_league_relics_clickzones6, component $com_league_relics_view_all7, component $com_league_relics_view_all_scrollbar8, component $com_league_relics_view_one9, component $com_league_relics_confirm10, component $com_league_relics_loading11, component $com_league_relics_league_btn_menu12, component $com_league_relics_league_menu_frame13, component $com_league_relics_league_menu_overlay14, component $com_league_relics_progress_bar15, component $com_league_relics_tooltip16, component $com_league_relics_close_button17)
-~leagues_close_button($com_league_relics_close_button17, false, 0);
+~leagues_close_button($com_league_relics_close_button17, 0, 0);
 def_int $comsubid18 = ~steelborder(league_relics:frame, "Relics", 1);
 def_component $component19 = league_relics:infinity;
 if_setontimer("script6110($component19, -1)", $component19);

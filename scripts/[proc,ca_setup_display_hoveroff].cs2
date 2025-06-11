@@ -3,8 +3,8 @@
 if (cc_find($component0, 0) = ^true) {
 	cc_settrans(0);
 	if (~on_mobile = false) {
-		cc_setonmouseover("ca_setup_display_hover(true, $component0, $int1)");
-		cc_setonmouseleave("ca_setup_display_hover(false, $component0, $int1)");
+		cc_setonmouseover("ca_setup_display_hover(1, $component0, $int1)");
+		cc_setonmouseleave("ca_setup_display_hover(0, $component0, $int1)");
 	}
 }
 if (cc_find($component0, 3) = ^true) {

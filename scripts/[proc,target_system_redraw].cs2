@@ -1,5 +1,5 @@
 // 3144
-[proc,target_system_redraw](component $com_pvp_icons_target_system0, component $com_pvp_icons_target_hidden1, component $com_pvp_icons_target_visible2, component $com_pvp_icons_target_multiway3, component $com_pvp_icons_target_wildylevel4, component $com_pvp_icons_target_name5, component $com_pvp_icons_target_skip6, component $com_pvp_icons_target_hide7)
+[proc,target_system_redraw](component $com_pvp_icons_target_system0, component $com_pvp_icons_target_hidden1, component $com_pvp_icons_target_visible2, component $com_pvp_icons_target_multiway3, component $com_pvp_icons_target_wildylevel4, int $com_pvp_icons_target_name5, component $com_pvp_icons_target_skip6, component $com_pvp_icons_target_hide7)
 if (%bh_target_minimised = 1) {
 	if_sethide(true, $com_pvp_icons_target_visible2);
 	if_sethide(false, $com_pvp_icons_target_hidden1);
@@ -8,20 +8,20 @@ if (%bh_target_minimised = 1) {
 	if_sethide(true, $com_pvp_icons_target_hidden1);
 }
 if (~on_mobile = true) {
-	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(36580, 13), 12), ^setpos_abs_right, ^setpos_abs_top, false);
+	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(36580, 13), 12), ^setpos_abs_right, ^setpos_abs_top, 0);
 } else if (%bh_target_dock = 2) {
 	if (%kd_toggle = 1) {
 		if_setposition(106, 2, ^setpos_abs_left, ^setpos_abs_top, $com_pvp_icons_target_system0);
 	} else {
 		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_pvp_icons_target_system0);
 	}
-	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, 52968, ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, 52968, ^setpos_abs_left, ^setpos_abs_top, 0);
 } else if (%bh_target_dock = 3) {
 	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $com_pvp_icons_target_system0);
-	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
+	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, 0);
 } else {
 	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $com_pvp_icons_target_system0);
-	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(36578, 13), 12), ^setpos_abs_right, ^setpos_abs_top, true);
+	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(36578, 13), 12), ^setpos_abs_right, ^setpos_abs_top, 1);
 }
 if (%target_exists = 0) {
 	if_settext("---", $com_pvp_icons_target_wildylevel4);

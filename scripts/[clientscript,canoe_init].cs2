@@ -1,5 +1,5 @@
 // 3093
-[clientscript,canoe_init](component $com_canoeing_universe0, component $com_canoeing_close1, component $com_canoeing_question2, component $com_canoeing_log3, component $com_canoeing_log_model4, component $com_canoeing_dugout5, component $com_canoeing_dugout_model6, component $com_canoeing_stable_dugout7, component $com_canoeing_stable_dugout_model8, component $com_canoeing_waka9, component $com_canoeing_waka_model10)
+[clientscript,canoe_init](component $com_canoeing_universe0, component $com_canoeing_close1, component $com_canoeing_question2, component $com_canoeing_log3, int $com_canoeing_log_model4, component $com_canoeing_dugout5, component $com_canoeing_dugout_model6, component $com_canoeing_stable_dugout7, component $com_canoeing_stable_dugout_model8, component $com_canoeing_waka9, component $com_canoeing_waka_model10)
 cc_deleteall($com_canoeing_close1);
 cc_deleteall($com_canoeing_question2);
 def_int $int11 = 0;
@@ -15,8 +15,8 @@ cc_create($com_canoeing_close1, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,4");
-if_setonmouserepeat("close_mouse_interact($com_canoeing_close1, true, 0)", $com_canoeing_close1);
-if_setonmouseleave("close_mouse_interact($com_canoeing_close1, false, 0)", $com_canoeing_close1);
+if_setonmouserepeat("close_mouse_interact($com_canoeing_close1, 1, 0)", $com_canoeing_close1);
+if_setonmouseleave("close_mouse_interact($com_canoeing_close1, 0, 0)", $com_canoeing_close1);
 if_setop(1, "Close", $com_canoeing_close1);
 if_setonop("canoe_close", $com_canoeing_close1);
 ~canoe_setup($com_canoeing_log3, $com_canoeing_log_model4, $com_canoeing_dugout5, $com_canoeing_dugout_model6, $com_canoeing_stable_dugout7, $com_canoeing_stable_dugout_model8, $com_canoeing_waka9, $com_canoeing_waka_model10);

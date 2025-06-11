@@ -2,8 +2,8 @@
 [proc,script6779](component $component0)
 def_int $comsubid1 = ~v2_stone_button_out_filled($component0);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script6780(true, $component0)", $component0);
-	if_setonmouseleave("script6780(false, $component0)", $component0);
+	if_setonmouserepeat("script6780(1, $component0)", $component0);
+	if_setonmouseleave("script6780(0, $component0)", $component0);
 }
 cc_create($component0, ^iftype_text, $comsubid1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

@@ -1,5 +1,5 @@
 // 6755
-[proc,script6755](struct $struct0, int $int1, int $int2, int $int3)(boolean)
+[proc,script6755](struct $struct0, int $int1, int $int2, int $int3)(int)
 def_int $int4 = struct_param($struct0, param_1159);
 def_int $int5 = $int1;
 if ($int4 > 61) {
@@ -8,6 +8,6 @@ if ($int4 > 61) {
 	$int4, $int5 = calc($int4 - 31), $int2;
 }
 if (testbit($int5, $int4) = ^true) {
-	return(true);
+	return(1);
 }
-return(false);
+return(0);

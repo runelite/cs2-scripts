@@ -1,7 +1,7 @@
 // 1003
 [proc,xpdrops_setstatlistener](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9)
 if_setonstattransmit("xpdrops_stattransmit(
-	0 = false, 
+	0 = 0, 
 	1 = $component0, 
 	2 = $component1, 
 	3 = $component2, 
@@ -37,7 +37,7 @@ if_setonstattransmit("xpdrops_stattransmit(
 	33 = stat_xp(hunter)
 )", $component1);
 if_setontimer("xpdrops_stattransmit(
-	0 = true, 
+	0 = 1, 
 	1 = $component0, 
 	2 = $component1, 
 	3 = $component2, 

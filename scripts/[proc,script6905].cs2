@@ -1,10 +1,10 @@
 // 6905
-[proc,script6905](int $int0, string $string0)
+[proc,script6905](int $int0, anyobj $anyobj0)
 if ($int0 = 1) {
 	if_sethide(false, fsw_optin:info);
 	if_settext("What is a <col=ff981f>Fresh Start World</col>?", fsw_optin:i_title);
 	~script5288(fsw_optin:i_background_fill, 0, 0, 0, if_getwidth(fsw_optin:i_background_fill), if_getheight(fsw_optin:i_background_fill), struct_3712, 0xb69362);
-	~script6909(51642373, fsw_optin:i_back_container, 0, 2, $string0);
+	~script6909(51642373, fsw_optin:i_back_container, 0, 2, $anyobj0);
 	def_int $int1 = 10;
 	def_int $int2 = 6;
 	def_int $int3 = 13;
@@ -43,7 +43,7 @@ if ($int0 = 1) {
 	cc_create(fsw_optin:i_content, ^iftype_text, $int10, false);
 	$int10 = calc($int10 + 1);
 	cc_setposition($int1, calc($int9 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	$string4 = "There are <$string0> remaining before Fresh Start Worlds ends.";
+	$string4 = "There are <$anyobj0> remaining before Fresh Start Worlds ends.";
 	$int8 = calc(paraheight($string4, $int7, $fontmetrics5) * $int3);
 	cc_settextfont(p11_full);
 	cc_setcolour(^yellow);

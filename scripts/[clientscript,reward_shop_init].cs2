@@ -2,5 +2,5 @@
 [clientscript,reward_shop_init]
 def_component $component0 = giants_foundry_reward_shop:infinity;
 if_setontimer("script6110($component0, -1)", $component0);
-if_setonresize("script6083(true)", $component0);
-if_setonvartransmit("script6083(false){giants_foundry_reward_shop_points}", $component0);
+if_setonresize("script6083(1)", $component0);
+if_setonvartransmit("script6083(0){giants_foundry_reward_shop_points}", $component0);

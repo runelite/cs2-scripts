@@ -1,7 +1,7 @@
 // 7645
 [proc,script7645](int $int0, int $int1)
 def_component $component2 = trailblazer_areas:select_button;
-def_component $component3 = trailblazer_areas:confirm_button;
+def_int $int3 = 33554492;
 def_component $component4 = trailblazer_areas:echo_boss_map_button;
 def_int $int5 = 0;
 def_string $string0 = ~script5484($int1);
@@ -26,8 +26,8 @@ if (~in_league_tutorial = 1) {
 	if_setonop("script7649", $component4);
 } else {
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7647($component4, false)", $component4);
-		if_setonmouserepeat("script7647($component4, true)", $component4);
+		if_setonmouseleave("script7647($component4, 0)", $component4);
+		if_setonmouserepeat("script7647($component4, 1)", $component4);
 	}
-	if_setonop("script7646($component3, $component4, false)", $component4);
+	if_setonop("script7646($int3, $component4, 0)", $component4);
 }

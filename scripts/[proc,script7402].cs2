@@ -11,8 +11,8 @@ cc_setfill(true);
 cc_setcolour(^white);
 cc_settrans(245);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script7403(event_com, cc_getid, true, 220, 245)", $component1);
-	if_setonmouseleave("script7403(event_com, cc_getid, false, 220, 245)", $component1);
+	if_setonmouserepeat("script7403(event_com, cc_getid, 1, 220, 245)", $component1);
+	if_setonmouseleave("script7403(event_com, cc_getid, 0, 220, 245)", $component1);
 }
 $int3 = ~thinstonebox($component1, $int3);
 cc_create($component1, ^iftype_graphic, $int3, false);

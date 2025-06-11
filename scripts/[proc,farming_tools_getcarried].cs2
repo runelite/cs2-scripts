@@ -1,12 +1,12 @@
 // 1064
-[proc,farming_tools_getcarried](obj $obj0)(int, namedobj)
+[proc,farming_tools_getcarried](namedobj $namedobj0)(int, namedobj)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_namedobj $namedobj3 = null;
 def_int $int4 = 0;
 def_namedobj $namedobj5 = null;
 def_namedobj $namedobj6 = null;
-switch_obj ($obj0) {
+switch_namedobj ($namedobj0) {
 	case rake_5341 :
 		return(~script716(rake_5341), rake_5341);
 	case dibber_5343 :

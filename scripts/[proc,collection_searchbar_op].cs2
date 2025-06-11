@@ -1,6 +1,6 @@
 // 4091
-[proc,collection_searchbar_op](component $component0, component $component1)
-~settings_op_sound(true);
+[proc,collection_searchbar_op](int $int0, int $int1)
+~settings_op_sound(1);
 if (%floater_is_searching = 1) {
 	return;
 }
@@ -10,4 +10,4 @@ if (%floater_is_searching = 1) {
 if (~on_mobile = true) {
 	~keyboard_show(0, 50);
 }
-~collection_searchbar_setup_op(1, $component0, $component1);
+~collection_searchbar_setup_op(1, $int0, $int1);

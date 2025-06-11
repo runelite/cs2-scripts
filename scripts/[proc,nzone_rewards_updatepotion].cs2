@@ -1,12 +1,12 @@
 // 304
-[proc,nzone_rewards_updatepotion](obj $obj0)
-if ($obj0 = nzone1dose2rangerspotion_11725) {
+[proc,nzone_rewards_updatepotion](namedobj $namedobj0)
+if ($namedobj0 = nzone1dose2rangerspotion_11725) {
 	cc_settext("(<tostring(%nzone_potion_1)>)");
-} else if ($obj0 = nzone1dose2magicpotion_11729) {
+} else if ($namedobj0 = nzone1dose2magicpotion_11729) {
 	cc_settext("(<tostring(%nzone_potion_2)>)");
-} else if ($obj0 = nzone1doseoverloadpotion_11733) {
+} else if ($namedobj0 = nzone1doseoverloadpotion_11733) {
 	cc_settext("(<tostring(%nzone_potion_3)>)");
-} else if ($obj0 = nzone1doseabsorptionpotion_11737) {
+} else if ($namedobj0 = nzone1doseabsorptionpotion_11737) {
 	cc_settext("(<tostring(%nzone_potion_4)>)");
 } else {
 	cc_settext("");

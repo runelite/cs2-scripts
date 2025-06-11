@@ -1,8 +1,8 @@
 // 7073
-[proc,makeover_draw_item](component $com_makeover_item_area0, dbrow $dbrow1, int $int2, int $int3, int $int4, model $model5, model $model6, string $string0, boolean $boolean7, string $string1)(int)
+[proc,makeover_draw_item](component $com_makeover_item_area0, dbrow $dbrow1, int $int2, int $int3, int $int4, model $model5, model $model6, string $string0, int $int7, string $string1)(int)
 def_int $int8 = 91;
 def_int $int9 = 84;
-if ($boolean7 = true) {
+if ($int7 = 1) {
 	$int8 = 140;
 	$int9 = 135;
 }
@@ -36,8 +36,8 @@ if (%varcint1148 = $int2) {
 	);
 }
 if (~on_mobile = false) {
-	cc_setonmouserepeat("makeover_hover_item(event_com, event_comsubid, true)");
-	cc_setonmouseleave("makeover_hover_item(event_com, event_comsubid, false)");
+	cc_setonmouserepeat("makeover_hover_item(event_com, event_comsubid, 1)");
+	cc_setonmouseleave("makeover_hover_item(event_com, event_comsubid, 0)");
 }
 cc_setop(1, "Preview");
 cc_setopbase("<col=ff9040><$string1>");
@@ -53,8 +53,8 @@ if (%varcint1148 = calc($int2 - 1)) {
 	cc_setcolour(0x0e0e0c);
 }
 $int2 = calc($int2 + 1);
-$int2 = ~script5162($com_makeover_item_area0, $int2, $int3, $int4, $model5, $boolean7);
-$int2 = ~script5162($com_makeover_item_area0, $int2, $int3, $int4, $model6, $boolean7);
+$int2 = ~script5162($com_makeover_item_area0, $int2, $int3, $int4, $model5, $int7);
+$int2 = ~script5162($com_makeover_item_area0, $int2, $int3, $int4, $model6, $int7);
 cc_create($com_makeover_item_area0, ^iftype_text, $int2, false);
 cc_setsize(calc($int8 - 10), 30, ^setsize_abs, ^setsize_abs);
 cc_setposition($int3, calc($int4 + 2), ^setpos_abs_centre, ^setpos_abs_top);

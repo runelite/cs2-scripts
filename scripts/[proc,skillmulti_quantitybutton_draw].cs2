@@ -1,8 +1,8 @@
 // 2058
-[proc,skillmulti_quantitybutton_draw](boolean $boolean0, string $string0, component $component1)
+[proc,skillmulti_quantitybutton_draw](int $int0, string $string0, component $component1)
 cc_deleteall($component1);
 def_int $int2 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$int2 = ~beige_stone_button_in($component1, $int2);
 } else {
 	$int2 = ~beige_stone_button_out($component1, $int2);

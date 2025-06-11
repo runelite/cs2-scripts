@@ -2,11 +2,11 @@
 [proc,xpdrops_setposition](component $component0, component $component1)
 if (~on_mobile = true | %xpdrops_position = 0) {
 	if_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_top, $component0);
-	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_right, ^setpos_abs_top, false);
+	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_right, ^setpos_abs_top, 0);
 } else if (%xpdrops_position = 2) {
 	if_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_top, $component0);
-	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_left, ^setpos_abs_top, false);
+	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_left, ^setpos_abs_top, 0);
 } else {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_centre, ^setpos_abs_top, false);
+	~script4729($component1, $component0, setbit(setbit(0, 10), 17), ^setpos_abs_centre, ^setpos_abs_top, 0);
 }

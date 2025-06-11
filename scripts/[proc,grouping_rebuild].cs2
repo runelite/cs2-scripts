@@ -82,7 +82,7 @@ if (~on_mobile = true) {
 if (if_gethide(grouping:dropdown) = true) {
 	if_setgraphic("scrollbar_v2,1", grouping:arrow);
 	if_sethide(false, grouping:dropdown_hover);
-	if_setonclick("grouping_dropdown(true)", grouping:dropdown_hover);
+	if_setonclick("grouping_dropdown(1)", grouping:dropdown_hover);
 	if_setonclick(null, grouping:background);
 	$int5 = if_getwidth(grouping:playerlist);
 	if_sethide(false, grouping:playerlist_container);
@@ -188,7 +188,7 @@ if (if_gethide(grouping:dropdown) = true) {
 if_setgraphic("scrollbar_v2,0", grouping:arrow);
 if_sethide(true, grouping:dropdown_hover);
 if_setonclick(null, grouping:dropdown_hover);
-if_setonclick("grouping_dropdown(false)", grouping:background);
+if_setonclick("grouping_dropdown(0)", grouping:background);
 if_sethide(true, grouping:playerlist_container);
 $int5 = calc(if_getwidth(grouping:dropdown_contents) - 12);
 $int10 = 3;
@@ -217,8 +217,8 @@ while (string_length($string2) > 0) {
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
 		.cc_settext(enum(int, string, enum_848, $int3));
-		.cc_setonmouseover("grouping_mouseover(event_com, event_comsubid, cc_getid, true)");
-		.cc_setonmouseleave("grouping_mouseover(event_com, event_comsubid, cc_getid, false)");
+		.cc_setonmouseover("grouping_mouseover(event_com, event_comsubid, cc_getid, 1)");
+		.cc_setonmouseleave("grouping_mouseover(event_com, event_comsubid, cc_getid, 0)");
 		.cc_setop(1, "Select");
 		.cc_setonop("grouping_viewchannel($int3)");
 		$int10 = calc($int10 + $int11);
@@ -236,8 +236,8 @@ if (%varcint64 ! 0) {
 	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	.cc_settextshadow(true);
 	.cc_settext("(none)");
-	.cc_setonmouseover("grouping_mouseover(event_com, event_comsubid, cc_getid, true)");
-	.cc_setonmouseleave("grouping_mouseover(event_com, event_comsubid, cc_getid, false)");
+	.cc_setonmouseover("grouping_mouseover(event_com, event_comsubid, cc_getid, 1)");
+	.cc_setonmouseleave("grouping_mouseover(event_com, event_comsubid, cc_getid, 0)");
 	.cc_setop(1, "Select");
 	.cc_setonop("grouping_viewchannel(0)");
 	$int10 = calc($int10 + $int11);

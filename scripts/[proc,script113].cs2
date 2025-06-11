@@ -68,20 +68,20 @@ while ($int6 >= 0) {
 		if_setonmouseover(null, $component5);
 		if_setonmouseleave(null, $component5);
 	} else {
-		if_setonmouseover("chat_button_hover(true, $int6)", $component5);
-		if_setonmouseleave("chat_button_hover(false, $int6)", $component5);
+		if_setonmouseover("chat_button_hover(1, $int6)", $component5);
+		if_setonmouseleave("chat_button_hover(0, $int6)", $component5);
 	}
 	$int1, $int6 = calc($int1 + $int4), calc($int6 - 1);
 }
-if (%chatmodal_unclamp = 1 & if_hassub(chatbox:null) = true) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:null);
+if (%chatmodal_unclamp = 1 & if_hassub(chatbox:chatmodal) = true) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:chatmodal);
 } else {
-	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:null);
+	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:chatmodal);
 }
-if (%chatoverlay_unclamp = 1 & if_hassub(chatbox:null) = true) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:null);
+if (%chatoverlay_unclamp = 1 & if_hassub(chatbox:chatoverlay) = true) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:chatoverlay);
 } else {
-	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:null);
+	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, chatbox:chatoverlay);
 }
 ~redraw_chat_buttons;
 def_int $int7 = ~script553;

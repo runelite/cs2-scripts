@@ -1,8 +1,8 @@
 // 1964
-[proc,script1964](component $component0, string $string0, boolean $boolean1, boolean $boolean2)
+[proc,script1964](component $component0, string $string0, int $int1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
-if ($boolean1 = false) {
+if ($int1 = 0) {
 	$int3 = ~v2_stone_button_out_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_in_filled($component0);
@@ -12,7 +12,7 @@ cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(145, 0, ^setsize_abs, ^setsize_minus);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-if ($boolean1 = false) {
+if ($int1 = 0) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(^white);
@@ -23,7 +23,7 @@ $int3 = calc($int3 + 1);
 cc_create($component0, ^iftype_graphic, $int3, false);
 cc_setposition(12, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	cc_setgraphic("bankbuttons,0");
 } else {
 	cc_setgraphic("bankbuttons,4");

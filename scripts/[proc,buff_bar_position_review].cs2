@@ -1,5 +1,5 @@
 // 4672
-[proc,buff_bar_position_review](component $component0, component $component1, component $component2, component $component3, int $int4)
+[proc,buff_bar_position_review](component $component0, component $component1, component $component2, int $int3, int $int4)
 def_enum $enum5 = null;
 def_int $int6 = 0;
 def_int $int7 = 0;
@@ -18,7 +18,7 @@ if ($int4 ! %varcint384) {
 		$int9 = 249;
 		$setposh12 = ^setpos_abs_right;
 		$setposv13 = ^setpos_abs_bottom;
-		~script4729($component1, $component0, setbit(setbit(0, 1), 15), ^setpos_abs_right, ^setpos_abs_centre, false);
+		~script4729($component1, $component0, setbit(setbit(0, 1), 15), ^setpos_abs_right, ^setpos_abs_centre, 0);
 	} else if ($enum5 = enum_1130 | $enum5 = enum_1131) {
 		$int6 = 1;
 		$int7 = 1;
@@ -26,7 +26,7 @@ if ($int4 ! %varcint384) {
 		$int9 = 79;
 		$setposh12 = ^setpos_abs_left;
 		$setposv13 = ^setpos_abs_bottom;
-		~script4729($component1, $component0, 28672, ^setpos_abs_left, ^setpos_abs_bottom, false);
+		~script4729($component1, $component0, 28672, ^setpos_abs_left, ^setpos_abs_bottom, 0);
 	} else if ($enum5 = enum_1129) {
 		$int6 = 1;
 		$int7 = 1;
@@ -34,11 +34,11 @@ if ($int4 ! %varcint384) {
 		$int9 = 40;
 		$setposh12 = ^setpos_abs_left;
 		$setposv13 = ^setpos_abs_bottom;
-		~script4729($component1, $component0, 28672, ^setpos_abs_left, ^setpos_abs_bottom, false);
+		~script4729($component1, $component0, 28672, ^setpos_abs_left, ^setpos_abs_bottom, 0);
 	}
 	$int10 = if_getwidth($component0);
 	$int11 = if_getheight($component0);
 	if_setposition($int6, $int7, $setposh12, $setposv13, $component0);
 	if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, $component0);
-	if_setontimer("buff_bar_position_review($component0, $component1, $component2, $component3, %varcint384)", $component0);
+	if_setontimer("buff_bar_position_review($component0, $component1, $component2, $int3, %varcint384)", $component0);
 }

@@ -1,17 +1,17 @@
 // 1055
 [clientscript,farming_tools_main_init](int $com_farming_tools_universe0, component $com_farming_tools_rake1, component $com_farming_tools_dibber2, component $com_farming_tools_spade3, component $com_farming_tools_secateurs4, component $com_farming_tools_wateringcan5, component $com_farming_tools_trowel6, component $com_farming_tools_plantcure7, component $com_farming_tools_bucket8, component $com_farming_tools_compost9, component $com_farming_tools_supercompost10, component $com_farming_tools_ultracompost11, component $com_farming_tools_bottomless_bucket12, component $com_farming_tools_quantity_selection13)
-~farming_tools_main_create($com_farming_tools_rake1, rake_5341, "Farming rake", enum(obj, int, enum_2193, rake_5341));
-~farming_tools_main_create($com_farming_tools_dibber2, dibber_5343, "Seed dibber", enum(obj, int, enum_2193, dibber_5343));
-~farming_tools_main_create($com_farming_tools_spade3, spade_952, "Spade", enum(obj, int, enum_2193, spade_952));
-~farming_tools_main_create($com_farming_tools_secateurs4, secateurs_5329, "Secateurs", enum(obj, int, enum_2193, secateurs_5329));
-~farming_tools_main_create($com_farming_tools_wateringcan5, watering_can_dummy_6797, "Watering Can", enum(obj, int, enum_2193, watering_can_dummy_6797));
-~farming_tools_main_create($com_farming_tools_trowel6, gardening_trowel_5325, "Gardening trowel", enum(obj, int, enum_2193, gardening_trowel_5325));
-~farming_tools_main_create($com_farming_tools_plantcure7, plant_cure_6036, "Plant Cure", enum(obj, int, enum_2193, plant_cure_6036));
-~farming_tools_main_create($com_farming_tools_bottomless_bucket12, bottomless_compost_bucket_22994, "Bottomless bucket", enum(obj, int, enum_2193, bottomless_compost_bucket_22994));
-~farming_tools_main_create($com_farming_tools_bucket8, bucket_empty_1925, "Empty buckets", enum(obj, int, enum_2193, bucket_empty_1925));
-~farming_tools_main_create($com_farming_tools_compost9, bucket_compost_6032, "Normal Compost", enum(obj, int, enum_2193, bucket_compost_6032));
-~farming_tools_main_create($com_farming_tools_supercompost10, bucket_supercompost_6034, "Supercompost", enum(obj, int, enum_2193, bucket_supercompost_6034));
-~farming_tools_main_create($com_farming_tools_ultracompost11, bucket_ultracompost_21483, "Ultracompost", enum(obj, int, enum_2193, bucket_ultracompost_21483));
+~farming_tools_main_create($com_farming_tools_rake1, 5341, "Farming rake", enum(obj, int, enum_2193, rake_5341));
+~farming_tools_main_create($com_farming_tools_dibber2, 5343, "Seed dibber", enum(obj, int, enum_2193, dibber_5343));
+~farming_tools_main_create($com_farming_tools_spade3, 952, "Spade", enum(obj, int, enum_2193, spade_952));
+~farming_tools_main_create($com_farming_tools_secateurs4, 5329, "Secateurs", enum(obj, int, enum_2193, secateurs_5329));
+~farming_tools_main_create($com_farming_tools_wateringcan5, 6797, "Watering Can", enum(obj, int, enum_2193, watering_can_dummy_6797));
+~farming_tools_main_create($com_farming_tools_trowel6, 5325, "Gardening trowel", enum(obj, int, enum_2193, gardening_trowel_5325));
+~farming_tools_main_create($com_farming_tools_plantcure7, 6036, "Plant Cure", enum(obj, int, enum_2193, plant_cure_6036));
+~farming_tools_main_create($com_farming_tools_bottomless_bucket12, 22994, "Bottomless bucket", enum(obj, int, enum_2193, bottomless_compost_bucket_22994));
+~farming_tools_main_create($com_farming_tools_bucket8, 1925, "Empty buckets", enum(obj, int, enum_2193, bucket_empty_1925));
+~farming_tools_main_create($com_farming_tools_compost9, 6032, "Normal Compost", enum(obj, int, enum_2193, bucket_compost_6032));
+~farming_tools_main_create($com_farming_tools_supercompost10, 6034, "Supercompost", enum(obj, int, enum_2193, bucket_supercompost_6034));
+~farming_tools_main_create($com_farming_tools_ultracompost11, 21483, "Ultracompost", enum(obj, int, enum_2193, bucket_ultracompost_21483));
 cc_deleteall($com_farming_tools_quantity_selection13);
 def_int $int14 = 0;
 cc_create($com_farming_tools_quantity_selection13, ^iftype_graphic, $int14, false);

@@ -1,5 +1,5 @@
 // 6011
-[proc,inventory_drawitem](obj $obj0, int $int1, component $component2, int $int3, boolean $boolean4, boolean $boolean5)
+[proc,inventory_drawitem](obj $obj0, int $int1, component $component2, int $int3, int $int4, boolean $boolean5)
 cc_clearops;
 cc_settargetverb("");
 cc_setoppriority(-1);
@@ -10,7 +10,7 @@ def_int $int6 = -1;
 if ($obj0 ! null) {
 	cc_setobject($obj0, $int1);
 	cc_sethide(false);
-	if ($boolean4 = true) {
+	if ($int4 = 1) {
 		cc_settrans(0);
 		cc_settargetverb("Use");
 		cc_setontargetenter("settings_questlist_section_page(event_com, event_comsubid, 2)");
@@ -25,7 +25,7 @@ if ($obj0 ! null) {
 		~inventory_setophelds($obj0, $boolean5);
 		cc_setopbase("<col=ff9040><~script1787($obj0)></col>");
 		cc_setondrag("inventory_startdrag(event_com, $int3)");
-		cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $boolean4)");
+		cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $int4)");
 		cc_setonop("inventory_op(event_com, $obj0, event_comsubid, event_op)");
 		cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
 	} else {
@@ -34,7 +34,7 @@ if ($obj0 ! null) {
 			cc_setop(1, "Examine");
 			cc_setopbase("<col=ff9040><~script1787($obj0)></col>");
 			cc_setondrag("inventory_startdrag(event_com, $int3)");
-			cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $boolean4)");
+			cc_setondragcomplete("inventory_reorder(event_com, event_com2, event_comsubid, event_comsubid2, $int3, $int4)");
 			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 200, 150)");
 			cc_setonmouserepeat("inventory_antidrag_update(event_com, event_comsubid)");
 		} else {

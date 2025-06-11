@@ -1,13 +1,13 @@
 // 2206
-[proc,decant_button](component $component0, boolean $boolean1, obj $obj2, string $string0, string $string1)
+[proc,decant_button](component $component0, int $int1, obj $obj2, string $string0, string $string1)
 def_int $int3 = 0;
-if ($boolean1 = true) {
+if ($int1 = 1) {
 	$int3 = ~beige_stone_button_in($component0, $int3);
 } else {
 	$int3 = ~beige_stone_button_out($component0, $int3);
 }
-if_setonmouseover("decant_mouseover($component0, true, $obj2, $string0, $string1)", $component0);
-if_setonmouseleave("decant_mouseover($component0, false, $obj2, $string0, $string1)", $component0);
+if_setonmouseover("decant_mouseover($component0, 1, $obj2, $string0, $string1)", $component0);
+if_setonmouseleave("decant_mouseover($component0, 0, $obj2, $string0, $string1)", $component0);
 cc_create($component0, ^iftype_model, $int3, false);
 cc_setposition(0, -2, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(50, 44, ^setsize_abs, ^setsize_abs);

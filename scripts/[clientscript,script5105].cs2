@@ -1,6 +1,6 @@
 // 5105
-[clientscript,script5105](boolean $boolean0, char $char1, string $string0, int $int2)
-if ($boolean0 = false) {
+[clientscript,script5105](int $int0, char $char1, string $string0, int $int2)
+if ($int0 = 0) {
 	if ($char1 = null | ~keypress_permit(null, reportabuse) = 0) {
 		return;
 	} else if (string_indexof_char($string0, $char1) = -1 & string_indexof_char(lowercase($string0), $char1) = -1) {
@@ -12,13 +12,13 @@ if (string_length(%varcstring370) > 0) {
 	if (%varcint224 = 0) {
 		mes("System unavailable - apologies for the inconvenience.");
 	} else {
-		chat_sendabusereport(%varcstring370, $int2, ~script5102(false));
+		chat_sendabusereport(%varcstring370, $int2, ~script5102(0));
 	}
-	if (~script5102(true) = true) {
+	if (~script5102(1) = true) {
 		ignore_add(%varcstring370);
 	}
 	if_triggerop(reportabuse:close, -1, 1);
 } else {
 	~script5095(1);
-	~script5089(false);
+	~script5089(0);
 }

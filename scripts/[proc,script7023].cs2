@@ -1,5 +1,5 @@
 // 7023
-[proc,script7023](component $com_eaa_shameometer_bar_text0, component $com_eaa_shameometer_bar_back1, component $com_eaa_shameometer_bar_sliding2, component $com_eaa_shameometer_bar_progress3, boolean $boolean4)
+[proc,script7023](component $com_eaa_shameometer_bar_text0, component $com_eaa_shameometer_bar_back1, component $com_eaa_shameometer_bar_sliding2, component $com_eaa_shameometer_bar_progress3, int $int4)
 if_settext("<tostring(%eaa_shame)>%", $com_eaa_shameometer_bar_text0);
 def_int $int5 = if_getwidth($com_eaa_shameometer_bar_back1);
 def_int $int6 = scale(%eaa_shame, 100, $int5);
@@ -9,7 +9,7 @@ if ($int6 = 0 & %eaa_shame > 0) {
 if ($int6 = $int5 & %eaa_shame < 100) {
 	$int6 = calc($int6 - 1);
 }
-if ($boolean4 = true) {
+if ($int4 = 1) {
 	if_setsize($int6, if_getheight($com_eaa_shameometer_bar_progress3), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_sliding2);
 	if_setsize($int6, if_getheight($com_eaa_shameometer_bar_progress3), ^setsize_abs, ^setsize_abs, $com_eaa_shameometer_bar_progress3);
 	if_setontimer(null, $com_eaa_shameometer_bar_sliding2);

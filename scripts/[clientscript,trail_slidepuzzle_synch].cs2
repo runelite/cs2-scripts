@@ -1,7 +1,7 @@
 // 689
-[clientscript,trail_slidepuzzle_synch](boolean $boolean0, component $com_trail_slidepuzzle_pieces1, int $int2, int $int3, int $int4, int $int5, component $com_trail_slidepuzzle_grid_standard6, component $com_trail_slidepuzzle_grid_mm7, component $com_trail_slidepuzzle_grid_background8)
+[clientscript,trail_slidepuzzle_synch](int $int0, component $com_trail_slidepuzzle_pieces1, int $int2, int $int3, int $int4, int $int5, component $com_trail_slidepuzzle_grid_standard6, component $com_trail_slidepuzzle_grid_mm7, component $com_trail_slidepuzzle_grid_background8)
 def_int $int9 = calc(%varcint110 + 50);
-if ($boolean0 = true | clientclock <= $int9) {
+if ($int0 = 1 | clientclock <= $int9) {
 	if_setontimer(null, $com_trail_slidepuzzle_pieces1);
 	~trail_slidepuzzle_synch($com_trail_slidepuzzle_pieces1, $int2, $int3, $int4, $int5, $com_trail_slidepuzzle_grid_standard6, $com_trail_slidepuzzle_grid_mm7, $com_trail_slidepuzzle_grid_background8);
 } else {

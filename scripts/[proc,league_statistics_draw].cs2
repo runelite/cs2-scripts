@@ -1,5 +1,5 @@
 // 1111
-[proc,league_statistics_draw](component $component0, component $component1, component $component2, string $string0, int $int3, int $int4, int $int5, int $int6, int $int7)
+[proc,league_statistics_draw](component $component0, component $component1, component $component2, anyobj $anyobj0, int $int3, int $int4, int $int5, int $int6, int $int7)
 cc_deleteall($component1);
 cc_deleteall($component0);
 def_int $int8 = 0;
@@ -18,7 +18,7 @@ def_int $int19 = 15;
 cc_create($component0, ^iftype_text, $int8, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 1, ^setpos_proportion_centre, ^setpos_abs_top);
-cc_settext("League Statistics - <$string0>");
+cc_settext("League Statistics - <$anyobj0>");
 cc_settextfont(b12_full);
 cc_setcolour($colour16);
 cc_settextshadow(true);

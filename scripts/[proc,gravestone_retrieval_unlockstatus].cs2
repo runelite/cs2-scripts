@@ -34,14 +34,14 @@ if ($namedobj6 ! null & $int7 > 0) {
 	} else {
 		if_settext("Fee to unlock:<br><col=ffffff><oc_name($namedobj6)></col>", $com_gravestone_retrieval_fee5);
 	}
-	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info4, $com_gravestone_retrieval_fee5)", $com_gravestone_retrieval_button2);
-	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info4, $com_gravestone_retrieval_fee5)", $com_gravestone_retrieval_button2);
+	if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info4, $com_gravestone_retrieval_fee5)", $com_gravestone_retrieval_button2);
+	if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info4, $com_gravestone_retrieval_fee5)", $com_gravestone_retrieval_button2);
 	if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button2, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info4, $com_gravestone_retrieval_fee5)", $com_gravestone_retrieval_button2);
 } else {
 	if_setgraphic("bankbuttons,4", $com_gravestone_retrieval_button_gfx3);
 	if_setop(1, "Take-All", $com_gravestone_retrieval_button2);
 	if_settext("", $com_gravestone_retrieval_fee5);
-	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
-	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
+	if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
+	if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
 	if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button2, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
 }

@@ -30,8 +30,8 @@ while ($int11 < $int12) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string0);
 	cc_setop(1, "Select");
-	cc_setonmouseover("settings_side_dropdown_hover(true, event_com, event_comsubid, .cc_getid)");
-	cc_setonmouseleave("settings_side_dropdown_hover(false, event_com, event_comsubid, .cc_getid)");
+	cc_setonmouseover("settings_side_dropdown_hover(1, event_com, event_comsubid, .cc_getid)");
+	cc_setonmouseleave("settings_side_dropdown_hover(0, event_com, event_comsubid, .cc_getid)");
 	cc_setonop("settings_side_dropdown_op(event_op, event_com, event_comsubid, $component2, $component5, $component0, $enum7, $int8)");
 	$int10 = calc($int10 + 1);
 	$int11 = calc($int11 + 1);

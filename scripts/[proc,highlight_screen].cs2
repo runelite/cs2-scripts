@@ -1,5 +1,5 @@
 // 3410
-[proc,highlight_screen](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7, int $setposh8, int $setposv9, int $int10, int $int11, int $int12, boolean $boolean13)
+[proc,highlight_screen](component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7, int $setposh8, int $setposv9, int $int10, int $int11, int $int12, int $int13)
 def_int $int14 = if_getheight($component0);
 def_int $int15 = if_getwidth($component0);
 if ($int14 = $int11 & $int15 = $int12) {
@@ -55,7 +55,7 @@ if ($setposv9 = ^setpos_abs_bottom) {
 if_setsize(calc(6 + $int4), calc(6 + $int5), ^setsize_abs, ^setsize_abs, screenhighlight:background);
 if_setposition(calc($int6 - 3), calc($int7 - 3), $setposh8, $setposv9, screenhighlight:background);
 if_sethide(false, screenhighlight:black_border);
-if ($boolean13 = true) {
+if ($int13 = 1) {
 	if_sethide(true, screenhighlight:background);
 } else {
 	if_sethide(false, screenhighlight:background);
@@ -74,5 +74,5 @@ if_setontimer("highlight_resize(
 	10 = $int10, 
 	11 = $int14, 
 	12 = $int15, 
-	13 = $boolean13
+	13 = $int13
 )", screenhighlight:content);

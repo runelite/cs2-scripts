@@ -12,5 +12,5 @@ if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setontimer("clan_members_buttonreset(calc(clientclock + 20), event_com, event_comsubid, $int3, $int4, $string0)");
 }
 if ($int4 = 5) {
-	~openurl_raw(append("https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=", $string0), true, true);
+	~openurl_raw(append("https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=", $string0), true, 1);
 }

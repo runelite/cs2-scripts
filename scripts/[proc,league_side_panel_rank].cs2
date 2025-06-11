@@ -9,8 +9,8 @@ if_setop(1, "Show <col=ff9040>Ranks</col>", $component4);
 if_setgraphic(enum(int, graphic, enum_5199, ~league_current_rank), $component2);
 if_setonvartransmit("script2453($component2){league_points_completed}", $component4);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script7702(true, $component3, $colour1)", $component4);
-	if_setonmouseleave("script7702(false, $component3, $colour1)", $component4);
+	if_setonmouserepeat("script7702(1, $component3, $colour1)", $component4);
+	if_setonmouseleave("script7702(0, $component3, $colour1)", $component4);
 }
 def_string $string0 = "Open the rank interface";
 if (~on_mobile = false) {

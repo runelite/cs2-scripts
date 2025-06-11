@@ -1,9 +1,9 @@
 // 7417
-[clientscript,script7417](int $int0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5)
+[clientscript,script7417](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
 if ($int0 = %osm_hotkey_0 & $int1 = %osm_hotkey_1 & $int2 = %osm_hotkey_2 & $int3 = %osm_hotkey_3 & $int4 = %osm_hotkey_4) {
-	if ($boolean5 = true & ~popout_available(-1) = true) {
+	if ($int5 = 1 & ~popout_available(-1) = 1) {
 		return;
-	} else if ($boolean5 = false & ~popout_available(-1) = false) {
+	} else if ($int5 = 0 & ~popout_available(-1) = 0) {
 		return;
 	}
 }

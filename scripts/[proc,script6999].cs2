@@ -1,8 +1,8 @@
 // 6999
-[proc,script6999](component $component0, graphic $graphic1, string $string0, boolean $boolean2, int $int3)(int)
+[proc,script6999](component $component0, graphic $graphic1, string $string0, int $int2, int $int3)(int)
 cc_deleteall($component0);
 def_int $comsubid4 = 0;
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	$comsubid4 = ~v2_stone_button_in_filled($component0);
 } else {
 	$comsubid4 = ~v2_stone_button_out_filled($component0);

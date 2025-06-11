@@ -1,5 +1,5 @@
 // 6867
-[proc,script6867](int $int0, int $int1, string $string0)
+[proc,script6867](int $int0, int $int1, anyobj $anyobj0)
 if_settext("<col=ffffff>Opt Out from <col=ff981f>Fresh Start Worlds</col>", fsw_sp_optout:title);
 def_component $component2 = fsw_sp_optout:content_description;
 def_component $component3 = fsw_sp_optout:content_status_background;
@@ -138,7 +138,7 @@ if (%fsw_opting_out = 0) {
 		} else {
 			cc_settextfont(verdana_15pt_regular);
 		}
-		cc_settext("<col=ffff00>You have <$string0> remaining before opt out");
+		cc_settext("<col=ffff00>You have <$anyobj0> remaining before opt out");
 		cc_setposition(0, $int15, ^setpos_proportion_centre, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, 12);
 	} else {

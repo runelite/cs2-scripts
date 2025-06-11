@@ -1,7 +1,7 @@
 // 4252
-[proc,clan_members_search_drawbutton](boolean $boolean0, component $component1)(int)
+[proc,clan_members_search_drawbutton](int $int0, component $component1)(int)
 def_int $comsubid2 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$comsubid2 = ~v2_stone_button_in_filled($component1);
 } else {
 	$comsubid2 = ~v2_stone_button_filled($component1);

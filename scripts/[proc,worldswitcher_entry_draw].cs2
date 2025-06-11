@@ -29,12 +29,12 @@ if ($int21 = 0) {
 	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = ^true) {
 		.cc_sethide(false);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setonmouserepeat("script7274(true, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
-		.cc_setonmouseleave("script7274(false, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
+		.cc_setonmouserepeat("script7274(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
+		.cc_setonmouseleave("script7274(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
 		.cc_setonop("logout_op(event_op, 6, $int5)");
 	} else {
-		if_setonmouserepeat("script7274(true, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
-		if_setonmouseleave("script7274(false, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
+		if_setonmouserepeat("script7274(1, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
+		if_setonmouseleave("script7274(0, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
 		if_setonop("logout_op(event_op, 6, $int5)", $component3);
 	}
 } else {
@@ -47,12 +47,12 @@ if ($int21 = 0) {
 	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = ^true) {
 		.cc_sethide(false);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setonmouserepeat("script7274(true, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
-		.cc_setonmouseleave("script7274(false, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
+		.cc_setonmouserepeat("script7274(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
+		.cc_setonmouseleave("script7274(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
 		.cc_setonop(null);
 	} else {
-		if_setonmouserepeat("script7274(true, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
-		if_setonmouseleave("script7274(false, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
+		if_setonmouserepeat("script7274(1, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
+		if_setonmouseleave("script7274(0, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
 		if_setonop(null, $component3);
 	}
 }

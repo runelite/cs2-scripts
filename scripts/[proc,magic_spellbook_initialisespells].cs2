@@ -14,8 +14,8 @@ while ($obj14 ! null) {
 		if_setopbase("<col=00ff00><oc_param($obj14, spell_name)></col>", $component12);
 	}
 	if (if_gettargetmask($component12) ! 0) {
-		if_setontargetenter("magic_spellbook_targetmode(true, event_com, $obj14)", $component12);
-		if_setontargetleave("magic_spellbook_targetmode(false, event_com, $obj14)", $component12);
+		if_setontargetenter("magic_spellbook_targetmode(1, event_com, $obj14)", $component12);
+		if_setontargetleave("magic_spellbook_targetmode(0, event_com, $obj14)", $component12);
 	} else {
 		if_setonop("script4902(
 			0 = $obj14, 

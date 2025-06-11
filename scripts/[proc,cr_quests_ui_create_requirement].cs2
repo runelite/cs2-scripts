@@ -1,5 +1,5 @@
 // 6374
-[proc,cr_quests_ui_create_requirement](string $string0, int $int0, int $int1, string $string1, int $int2, graphic $graphic3, int $int4, int $int5, int $int6, boolean $boolean7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, component $component14)(int, int, int, int, int, int)
+[proc,cr_quests_ui_create_requirement](string $string0, int $int0, int $int1, string $string1, int $int2, graphic $graphic3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, component $component14)(int, int, int, int, int, int)
 def_int $int15 = $int8;
 def_int $int16 = $int12;
 if ($int9 = 1) {
@@ -7,7 +7,7 @@ if ($int9 = 1) {
 	$int16 = 0;
 	$int9 = 0;
 }
-if ($int15 >= 0 & $boolean7 = false) {
+if ($int15 >= 0 & $int7 = 0) {
 	return($int11, $int12, $int8, $int13, $int0, calc($int1 + 1));
 }
 if ($int0 = 1 & ~string_isnullorempty($string0) = 0) {
@@ -16,7 +16,7 @@ if ($int0 = 1 & ~string_isnullorempty($string0) = 0) {
 		1 = 0xff981f, 
 		2 = $int15, 
 		3 = 0, 
-		4 = $boolean7, 
+		4 = $int7, 
 		5 = $int11, 
 		6 = $int16, 
 		7 = $int13, 
@@ -63,7 +63,7 @@ if ($int6 = 0 & calc($int16 + $int25) > $int20) {
 		6 = $int4, 
 		7 = $int5, 
 		8 = $int6, 
-		9 = $boolean7, 
+		9 = $int7, 
 		10 = $int15, 
 		11 = $int9, 
 		12 = $int10, 
@@ -92,7 +92,7 @@ $int11, $int16, $int15, $int13 = ~script6409(
 	1 = ^white, 
 	2 = $int15, 
 	3 = $int26, 
-	4 = $boolean7, 
+	4 = $int7, 
 	5 = $int11, 
 	6 = $int16, 
 	7 = $int13, 
@@ -105,7 +105,7 @@ if ($int2 ! -1) {
 		1 = ^white, 
 		2 = $int15, 
 		3 = $int19, 
-		4 = $boolean7, 
+		4 = $int7, 
 		5 = $int11, 
 		6 = $int16, 
 		7 = $int13, 

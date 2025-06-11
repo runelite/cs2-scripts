@@ -205,8 +205,8 @@ cc_setmodelangle(15, 300, 141, 220, 0, 3500);
 .cc_setmodelangle(15, 300, 141, 220, 0, 3500);
 .cc_setmodelanim(blast_furnace_smoke_2439);
 .cc_sethide(true);
-if_setonmouserepeat("script1312(true, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
-if_setonmouseleave("script1312(false, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
+if_setonmouserepeat("script1312(1, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
+if_setonmouseleave("script1312(0, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
 ~script5300($com_bankmain_gim_storage33);
 if_setonvartransmit("script5299(event_com){magic_carpet_var}", $com_bankmain_gim_storage33);
 if_setonop("bankmain_switchtab(

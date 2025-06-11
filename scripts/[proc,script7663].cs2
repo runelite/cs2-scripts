@@ -110,13 +110,13 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 				if ($int18 = 74) {
 					if ($int45 = 1) {
 						cc_setgraphic(graphic_6288);
-						cc_setontimer("script7679($component5, $int33, true, 0)");
+						cc_setontimer("script7679($component5, $int33, 1, 0)");
 					} else {
 						cc_setgraphic(graphic_6286);
 					}
 				} else if ($int45 = 1) {
 					cc_setgraphic(graphic_6287);
-					cc_setontimer("script7679($component5, $int33, true, 0)");
+					cc_setontimer("script7679($component5, $int33, 1, 0)");
 				} else {
 					cc_setgraphic(graphic_6285);
 				}
@@ -170,8 +170,8 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 				~script7665($component9, $component10, $int25, $int26, $int28, $int30, $int33, struct_param($struct42, param_2026));
 				cc_setonop("script7666($component10, event_com, $component11, $int18, $struct42, $int45, $int33, $int32)");
 				if ($boolean44 = false) {
-					cc_setonmouserepeat("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, true, $int32)");
-					cc_setonmouseleave("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, false, $int32)");
+					cc_setonmouserepeat("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, 1, $int32)");
+					cc_setonmouseleave("script7667(event_com, $component11, $int18, $struct42, $int45, $int33, 0, $int32)");
 				}
 				if ($int45 = 2) {
 					$int38 = ~script7680($component7, $int38, calc($int28 + 3), calc($int30 + $int26 / 2 - 16), enum_5724);

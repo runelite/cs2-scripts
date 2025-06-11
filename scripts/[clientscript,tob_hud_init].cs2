@@ -1,9 +1,9 @@
 // 2087
 [clientscript,tob_hud_init](component $com_tob_hud_universe0, component $com_tob_hud_safezone1, component $com_tob_hud_hud2, component $com_tob_hud_left_dodger_names3, component $com_tob_hud_left_dodger_status4, component $com_tob_hud_middle_dodger5, component $com_tob_hud_names_container6, component $com_tob_hud_names_header7, component $com_tob_hud_progress_container8, component $com_tob_hud_progress_bar9, component $com_tob_hud_progress_text10, component $com_tob_hud_status_container11, component $com_tob_hud_0_container12, component $com_tob_hud_0_filler13, component $com_tob_hud_1_container14, component $com_tob_hud_1_filler15, component $com_tob_hud_2_container16, component $com_tob_hud_2_filler17, component $com_tob_hud_3_container18, component $com_tob_hud_3_filler19, component $com_tob_hud_4_container20, component $com_tob_hud_4_filler21, component $com_tob_hud_spectator_container22, component $com_tob_hud_tooltip23)
-~script4729($com_tob_hud_safezone1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-~script4729($com_tob_hud_left_dodger_names3, $com_tob_hud_names_container6, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
-~script4729($com_tob_hud_left_dodger_status4, $com_tob_hud_status_container11, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
-~script4729($com_tob_hud_middle_dodger5, $com_tob_hud_progress_container8, setbit(clearbit(clearbit(52968, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, false);
+~script4729($com_tob_hud_safezone1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
+~script4729($com_tob_hud_left_dodger_names3, $com_tob_hud_names_container6, 52968, ^setpos_abs_left, ^setpos_abs_top, 1);
+~script4729($com_tob_hud_left_dodger_status4, $com_tob_hud_status_container11, 52968, ^setpos_abs_left, ^setpos_abs_top, 1);
+~script4729($com_tob_hud_middle_dodger5, $com_tob_hud_progress_container8, setbit(clearbit(clearbit(52968, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, 0);
 cc_deleteall($com_tob_hud_progress_bar9);
 cc_create($com_tob_hud_progress_bar9, ^iftype_rectangle, 0, false);
 .cc_create($com_tob_hud_progress_bar9, ^iftype_rectangle, 1, false);
@@ -41,7 +41,7 @@ cc_setfill(true);
 	19 = $com_tob_hud_tooltip23
 );
 if_setonvartransmit("tob_hud_draw(
-	0 = true, 
+	0 = 1, 
 	1 = $com_tob_hud_universe0, 
 	2 = $com_tob_hud_hud2, 
 	3 = $com_tob_hud_names_container6, 
@@ -64,7 +64,7 @@ if_setonvartransmit("tob_hud_draw(
 	20 = $com_tob_hud_tooltip23
 ){tob_temp_transmit_1, tob_temp_transmit_2, xpdrops_options, chat_filter_assist}", $com_tob_hud_universe0);
 if_setonresize("tob_hud_draw(
-	0 = true, 
+	0 = 1, 
 	1 = $com_tob_hud_universe0, 
 	2 = $com_tob_hud_hud2, 
 	3 = $com_tob_hud_names_container6, 
@@ -87,7 +87,7 @@ if_setonresize("tob_hud_draw(
 	20 = $com_tob_hud_tooltip23
 )", $com_tob_hud_universe0);
 if_setonsubchange("tob_hud_draw(
-	0 = true, 
+	0 = 1, 
 	1 = $com_tob_hud_universe0, 
 	2 = $com_tob_hud_hud2, 
 	3 = $com_tob_hud_names_container6, 
@@ -110,7 +110,7 @@ if_setonsubchange("tob_hud_draw(
 	20 = $com_tob_hud_tooltip23
 )", $com_tob_hud_universe0);
 if_setontimer("tob_hud_draw(
-	0 = false, 
+	0 = 0, 
 	1 = $com_tob_hud_universe0, 
 	2 = $com_tob_hud_hud2, 
 	3 = $com_tob_hud_names_container6, 

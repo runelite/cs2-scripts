@@ -30,9 +30,9 @@ while ($int3 < $int0) {
 }
 def_int $comsubid4 = 0;
 if ($int2 = 1) {
-	~script2692(false, false);
-	if_setonmouserepeat("script2691(true, false)", tournament_supplies:loadout_apply);
-	if_setonmouseleave("script2691(false, false)", tournament_supplies:loadout_apply);
+	~script2692(0, 0);
+	if_setonmouserepeat("script2691(1, 0)", tournament_supplies:loadout_apply);
+	if_setonmouseleave("script2691(0, 0)", tournament_supplies:loadout_apply);
 	if_setonop("script2693(event_op)", tournament_supplies:loadout_apply);
 } else {
 	cc_deleteall(tournament_supplies:loadout_apply);

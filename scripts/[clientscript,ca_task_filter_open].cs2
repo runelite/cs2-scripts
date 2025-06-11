@@ -1,5 +1,5 @@
 // 4826
-[clientscript,ca_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $com_ca_tasks_dropdown_container4, component $com_ca_tasks_dropdown_box5, int $int6, component $com_ca_tasks_universe7, component $com_ca_tasks_dropdown_scrollbar8)
+[clientscript,ca_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $com_ca_tasks_dropdown_container4, component $com_ca_tasks_dropdown_box5, int $int6, int $com_ca_tasks_universe7, component $com_ca_tasks_dropdown_scrollbar8)
 sound_synth(interface_select1, 1, 0);
 ~ca_setup_display_hoverdisable($component2, $int6);
 if_sethide(false, $com_ca_tasks_dropdown_container4);
@@ -44,15 +44,15 @@ while ($int17 < $int12) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("ca_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
-		cc_setonmouseleave("ca_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
+		cc_setonmouserepeat("ca_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $int6)");
+		cc_setonmouseleave("ca_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $int6)");
 	}
 	cc_setonop("ca_task_filter_close(event_op, $int17, $enum0, $component2, $comsubid3, $com_ca_tasks_dropdown_container4, $int6)");
 	cc_settext(~script4783(enum(int, string, $enum0, $int17), calc(if_getwidth($component1) - 8), p11_full));
 	$int17, $int16 = calc($int17 + 1), calc($int16 + 1);
 }
 if ($enum0 = enum_3970 | $enum0 = enum_3968) {
-	~quicksort_intenum(intarray0, 1, calc($int12 - 1), $enum0);
+	~quicksort_intenum($anyobj0, 1, calc($int12 - 1), $enum0);
 	$int17 = 0;
 	while ($int17 < $int12) {
 		if (cc_find($component1, calc($intarray0($int17) + 1)) = ^true) {

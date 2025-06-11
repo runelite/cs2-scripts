@@ -1,7 +1,7 @@
 // 5089
-[proc,script5089](boolean $boolean0)
+[proc,script5089](int $int0)
 def_int $int1 = 0;
-if ($boolean0 = true) {
+if ($int0 = 1) {
 	$int1 = string_length(%varcstring370);
 	if ($int1 > 0) {
 		while ($int1 > 0 & compare(substring(%varcstring370, calc($int1 - 1), $int1), " ") = 0) {

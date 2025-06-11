@@ -1,7 +1,7 @@
 // 6248
 [clientscript,pvpa_hud_init](int $com_pvp_arena_hud_universe0, component $com_pvp_arena_hud_timer_dodger1, component $com_pvp_arena_hud_timer2, component $com_pvp_arena_hud_info_dodger3, component $com_pvp_arena_hud_info4)
-~script4729($com_pvp_arena_hud_timer_dodger1, $com_pvp_arena_hud_timer2, 65256, ^setpos_abs_centre, ^setpos_abs_top, true);
-~script4729($com_pvp_arena_hud_info_dodger3, $com_pvp_arena_hud_info4, setbit(65256, 2), ^setpos_abs_right, ^setpos_abs_top, true);
+~script4729($com_pvp_arena_hud_timer_dodger1, $com_pvp_arena_hud_timer2, 65256, ^setpos_abs_centre, ^setpos_abs_top, 1);
+~script4729($com_pvp_arena_hud_info_dodger3, $com_pvp_arena_hud_info4, setbit(65256, 2), ^setpos_abs_right, ^setpos_abs_top, 1);
 ~pvpa_hud_drawtimer($com_pvp_arena_hud_timer2);
 if_setonvartransmit("pvpa_hud_drawtimer(event_com){pvpa_temp_transmit_0}", $com_pvp_arena_hud_timer2);
 ~pvpa_hud_drawinfo($com_pvp_arena_hud_info4);

@@ -1,17 +1,17 @@
 // 3581
-[proc,hallowed_tools_getstored](obj $obj0)(int, namedobj)
-switch_obj ($obj0) {
-	case hallowed_token_24719 :
+[proc,hallowed_tools_getstored](int $int0)(int, namedobj)
+switch_int ($int0) {
+	case 24719 :
 		return(%hallowed_storage_token, hallowed_token_24719);
-	case hallowed_grapple_24721 :
+	case 24721 :
 		return(%hallowed_storage_grapple, hallowed_grapple_24721);
-	case hallowed_focus_24723 :
+	case 24723 :
 		return(%hallowed_storage_focus, hallowed_focus_24723);
-	case hallowed_symbol_24725 :
+	case 24725 :
 		return(%hallowed_storage_symbol, hallowed_symbol_24725);
-	case hallowed_hammer_24727 :
+	case 24727 :
 		return(%hallowed_storage_hammer, hallowed_hammer_24727);
-	case hallowed_ring_24731 :
+	case 24731 :
 		return(%hallowed_storage_ring, hallowed_ring_24731);
 	case default :
 		return(0, null);

@@ -1,9 +1,9 @@
 // 2751
-[proc,farming_tools_side_recreate](component $component0, obj $obj1, string $string0, boolean $boolean2)
+[proc,farming_tools_side_recreate](component $component0, namedobj $namedobj1, string $string0, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
 def_int $int4 = 0;
-if ($boolean2 = false) {
+if ($int2 = 0) {
 	$int3 = ~v2_stone_button_out_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_in_filled($component0);
@@ -30,5 +30,5 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 if_setonop("cc_settrans_temporarily(event_com, cc_getid, 125, 0)", $component0);
-~farming_tools_side_update($component0, $obj1, $string0, $int4);
-if_setoninvtransmit("farming_tools_side_update($component0, $obj1, $string0, $int4){inv}", $component0);
+~farming_tools_side_update($component0, $namedobj1, $string0, $int4);
+if_setoninvtransmit("farming_tools_side_update($component0, $namedobj1, $string0, $int4){inv}", $component0);

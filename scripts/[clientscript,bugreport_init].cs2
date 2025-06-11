@@ -5,19 +5,19 @@
 if_sethide(false, $com_bugreport_introduction1);
 if_sethide(true, $com_bugreport_form4);
 def_string $string0 = "Continue";
-~bugreport_drawbutton(false, $com_bugreport_continue2, $string0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_continue2);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_continue2);
+~bugreport_drawbutton(0, $com_bugreport_continue2, $string0);
+if_setonmouseover("bugreport_drawbutton(1, event_com, $string0)", $com_bugreport_continue2);
+if_setonmouseleave("bugreport_drawbutton(0, event_com, $string0)", $com_bugreport_continue2);
 if_setonclick("bugreport_continue($com_bugreport_introduction1, $com_bugreport_form4)", $com_bugreport_continue2);
 $string0 = "Back";
-~bugreport_drawbutton(false, $com_bugreport_home3, $string0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_home3);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_home3);
+~bugreport_drawbutton(0, $com_bugreport_home3, $string0);
+if_setonmouseover("bugreport_drawbutton(1, event_com, $string0)", $com_bugreport_home3);
+if_setonmouseleave("bugreport_drawbutton(0, event_com, $string0)", $com_bugreport_home3);
 if_setonclick("bugreport_home($com_bugreport_introduction1, $com_bugreport_form4)", $com_bugreport_home3);
 $string0 = "Submit";
-~bugreport_drawbutton(false, $com_bugreport_submit12, $string0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_submit12);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_submit12);
+~bugreport_drawbutton(0, $com_bugreport_submit12, $string0);
+if_setonmouseover("bugreport_drawbutton(1, event_com, $string0)", $com_bugreport_submit12);
+if_setonmouseleave("bugreport_drawbutton(0, event_com, $string0)", $com_bugreport_submit12);
 if_setonclick("bugreport_submit", $com_bugreport_submit12);
 if_clearops($com_bugreport_submit12);
 if_setonop(null, $com_bugreport_submit12);
@@ -27,9 +27,9 @@ if_setonop(null, $com_bugreport_submit12);
 ~bugreport_init_textinput($com_bugreport_reproduction_text9);
 ~bugreport_switch_textinput($com_bugreport_description_text5, $com_bugreport_description_scrollbar6, $com_bugreport_reproduction_text9, $com_bugreport_reproduction_scrollbar10, $com_bugreport_form4, $com_bugreport_description_text5, $com_bugreport_reproduction_text9, $com_bugreport_submit12);
 $string0 = "Next";
-~bugreport_drawbutton(false, $com_bugreport_next7, $string0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_next7);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_next7);
+~bugreport_drawbutton(0, $com_bugreport_next7, $string0);
+if_setonmouseover("bugreport_drawbutton(1, event_com, $string0)", $com_bugreport_next7);
+if_setonmouseleave("bugreport_drawbutton(0, event_com, $string0)", $com_bugreport_next7);
 if_setonclick("bugreport_next(
 	0 = $com_bugreport_form4, 
 	1 = $com_bugreport_form_repro8, 
@@ -45,9 +45,9 @@ if_setonclick("bugreport_next(
 if_clearops($com_bugreport_next7);
 if_setonop(null, $com_bugreport_next7);
 $string0 = "Back";
-~bugreport_drawbutton(false, $com_bugreport_back11, $string0);
-if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $com_bugreport_back11);
-if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $com_bugreport_back11);
+~bugreport_drawbutton(0, $com_bugreport_back11, $string0);
+if_setonmouseover("bugreport_drawbutton(1, event_com, $string0)", $com_bugreport_back11);
+if_setonmouseleave("bugreport_drawbutton(0, event_com, $string0)", $com_bugreport_back11);
 if_setonclick("bugreport_back(
 	0 = $com_bugreport_form4, 
 	1 = $com_bugreport_form_repro8, 

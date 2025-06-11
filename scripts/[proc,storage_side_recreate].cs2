@@ -1,9 +1,9 @@
 // 1961
-[proc,storage_side_recreate](enum $enum0, component $component1, obj $obj2, string $string0, boolean $boolean3)
+[proc,storage_side_recreate](enum $enum0, component $component1, namedobj $namedobj2, string $string0, int $int3)
 cc_deleteall($component1);
 def_int $int4 = 0;
 def_int $int5 = 0;
-if ($boolean3 = false) {
+if ($int3 = 0) {
 	$int4 = ~v2_stone_button_out_filled($component1);
 } else {
 	$int4 = ~v2_stone_button_in_filled($component1);
@@ -30,5 +30,5 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 if_setonop("cc_settrans_temporarily(event_com, cc_getid, 125, 0)", $component1);
-~storage_side_update($enum0, $component1, $obj2, $string0, $int5);
-if_setoninvtransmit("storage_side_update($enum0, $component1, $obj2, $string0, $int5){inv, worn}", $component1);
+~storage_side_update($enum0, $component1, $namedobj2, $string0, $int5);
+if_setoninvtransmit("storage_side_update($enum0, $component1, $namedobj2, $string0, $int5){inv, worn}", $component1);

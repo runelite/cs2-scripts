@@ -6,7 +6,7 @@ cc_deleteall($com_pvp_arena_sidepanel_right6);
 cc_deleteall($com_pvp_arena_sidepanel_playerlist2);
 if (%pvpa_affinitystatus = 3 & activeclansettings_find_affined(2) = true) {
 	~pvpa_sidepanel_writecontents(
-		0 = false, 
+		0 = 0, 
 		1 = $com_pvp_arena_sidepanel_header0, 
 		2 = $com_pvp_arena_sidepanel_groupname1, 
 		3 = $com_pvp_arena_sidepanel_playerlist2, 
@@ -22,7 +22,7 @@ if (%clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true) {
 	switch_int (%varclansetting33) {
 		case 1001, 1002, 1003, 1004, 1005, 1006 :
 			~pvpa_sidepanel_writecontents(
-				0 = true, 
+				0 = 1, 
 				1 = $com_pvp_arena_sidepanel_header0, 
 				2 = $com_pvp_arena_sidepanel_groupname1, 
 				3 = $com_pvp_arena_sidepanel_playerlist2, 

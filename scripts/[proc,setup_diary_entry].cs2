@@ -8,8 +8,8 @@ cc_setcolour(^white);
 cc_settrans(255);
 cc_setsize(16, 27, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, calc($int3 + 1), ^setpos_abs_centre, ^setpos_abs_top);
-cc_setonmouseover("diary_mouseover(event_com, event_comsubid, $int1, true)");
-cc_setonmouseleave("diary_mouseover(event_com, event_comsubid, $int1, false)");
+cc_setonmouseover("diary_mouseover(event_com, event_comsubid, $int1, 1)");
+cc_setonmouseleave("diary_mouseover(event_com, event_comsubid, $int1, 0)");
 cc_setonvartransmit("update_diary_entry(event_com, event_comsubid, $int1){
 	0 = achievement_diary_taskcounts, 
 	1 = achievement_diary_taskcounts2, 

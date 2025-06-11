@@ -1,6 +1,6 @@
 // 4241
-[clientscript,clan_members_filter_hover](boolean $boolean0, component $component1, int $comsubid2, int $int3, int $int4)
-if ($boolean0 = true) {
+[clientscript,clan_members_filter_hover](int $int0, component $component1, int $comsubid2, int $int3, int $int4)
+if ($int0 = 1) {
 	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_settrans($int4);
 	}

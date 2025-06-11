@@ -6,8 +6,8 @@ if_setonvartransmit("gravestone_retrieval_unlockstatus($com_gravestone_retrieval
 if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_discard6);
 if_setop(1, "Discard-All", $com_gravestone_retrieval_discard6);
 if_setontimer(null, $com_gravestone_retrieval_discard6);
-if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
-if_setonmouseleave("gravestone_retrieval_buttonhover(false, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
+if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
+if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
 if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_discard6, $com_gravestone_retrieval_discard_gfx7, null, null)", $com_gravestone_retrieval_discard6);
 def_int $int11 = calc(36 + 10);
 def_int $int12 = calc(32 + 8);

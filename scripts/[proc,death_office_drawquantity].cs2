@@ -1,7 +1,7 @@
 // 3498
-[proc,death_office_drawquantity](string $string0, component $component0, boolean $boolean1, boolean $boolean2)
+[proc,death_office_drawquantity](string $string0, component $component0, int $int1, int $int2)
 def_int $comsubid3 = 0;
-if ($boolean1 = true | $boolean2 = true) {
+if ($int1 = 1 | $int2 = 1) {
 	$comsubid3 = ~v2_stone_button_in_filled($component0);
 } else {
 	$comsubid3 = ~v2_stone_button_filled($component0);
@@ -13,7 +13,7 @@ cc_settextshadow(true);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext($string0);
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	cc_setcolour(^white);
 } else {
 	cc_setcolour(0xdfdfdf);

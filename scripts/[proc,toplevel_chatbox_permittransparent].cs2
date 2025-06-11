@@ -3,7 +3,7 @@
 if (getwindowmode = ^windowmode_fixed) {
 	return(0);
 }
-if (if_hassub(chatbox:null) = true | if_hassub(chatbox:null) = true) {
+if (if_hassub(chatbox:chatmodal) = true | if_hassub(chatbox:chatoverlay) = true) {
 	return(0);
 }
 if (if_gethide(chatbox:mes_layer) = false) {

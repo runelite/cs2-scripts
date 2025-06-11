@@ -7,7 +7,7 @@ if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $int3) = ^t
 	.cc_settrans($int4);
 	cc_setontimer(null);
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("clan_permissions_buttonhover(true, event_com, event_comsubid, $int3, $int4, $int5)");
+		cc_setonmouserepeat("clan_permissions_buttonhover(1, event_com, event_comsubid, $int3, $int4, $int5)");
 	}
-	cc_setonmouseleave("clan_permissions_buttonhover(false, event_com, event_comsubid, $int3, $int4, $int5)");
+	cc_setonmouseleave("clan_permissions_buttonhover(0, event_com, event_comsubid, $int3, $int4, $int5)");
 }

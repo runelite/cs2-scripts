@@ -1,7 +1,7 @@
 // 2297
 [proc,tob_hud_draw](component $com_tob_hud_universe0, component $com_tob_hud_hud1, component $com_tob_hud_names_container2, component $com_tob_hud_names_header3, component $com_tob_hud_progress_container4, component $com_tob_hud_progress_bar5, component $com_tob_hud_progress_text6, component $com_tob_hud_status_container7, component $com_tob_hud_0_container8, component $com_tob_hud_0_filler9, component $com_tob_hud_1_container10, component $com_tob_hud_1_filler11, component $com_tob_hud_2_container12, component $com_tob_hud_2_filler13, component $com_tob_hud_3_container14, component $com_tob_hud_3_filler15, component $com_tob_hud_4_container16, component $com_tob_hud_4_filler17, component $com_tob_hud_spectator_container18, component $com_tob_hud_tooltip19)
 %varcint219 = calc(clientclock + 30);
-~script4729($com_tob_hud_hud1, null, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($com_tob_hud_hud1, null, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, 0);
 if (~inzone(0_56_50_56_2, 1_57_50_36_36, coord) = 1) {
 	if (%tob_client_partystatus ! 3) {
 		if_sethide(false, $com_tob_hud_names_container2);

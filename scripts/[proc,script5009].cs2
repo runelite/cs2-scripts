@@ -5,13 +5,13 @@ if ($coord8 = null) {
 	return($int2);
 }
 def_model $model9 = db_getfield($dbrow1, quetzal:if_model, 0);
-def_boolean $boolean10 = false;
+def_int $int10 = 0;
 if (~script5015($dbrow1) = true) {
-	$boolean10 = true;
+	$int10 = 1;
 }
-def_boolean $boolean11 = false;
+def_int $int11 = 0;
 if (~coord_distance(coord, $coord8) <= 10) {
-	$boolean11 = true;
+	$int11 = 1;
 }
 def_int $int12 = db_getfield($dbrow1, quetzal:if_x_pos, 0);
 def_int $int13 = db_getfield($dbrow1, quetzal:if_y_pos, 0);
@@ -28,13 +28,13 @@ cc_setonmouserepeat("script5011(
 	1 = event_comsubid, 
 	2 = $int12, 
 	3 = $int13, 
-	4 = $boolean10, 
+	4 = $int10, 
 	5 = $com_quetzal_menu_selected_back4, 
 	6 = $com_quetzal_menu_selected_front5, 
 	7 = $com_quetzal_menu_selected_locked6, 
 	8 = $com_quetzal_menu_selected_current7, 
 	9 = $model9, 
-	10 = $boolean11
+	10 = $int11
 )");
 if (~on_mobile = false) {
 	cc_setonmouseover("sound_synth(synth_8021, 1, 0)");
@@ -44,28 +44,28 @@ cc_setonmouseleave("script5012(
 	1 = event_comsubid, 
 	2 = $int12, 
 	3 = $int13, 
-	4 = $boolean10, 
+	4 = $int10, 
 	5 = $com_quetzal_menu_selected_back4, 
 	6 = $com_quetzal_menu_selected_front5, 
 	7 = $com_quetzal_menu_selected_locked6, 
 	8 = $com_quetzal_menu_selected_current7, 
 	9 = $model9, 
-	10 = $boolean11
+	10 = $int11
 )");
 cc_setonop("script5013(
 	0 = event_com, 
 	1 = event_comsubid, 
 	2 = $int12, 
 	3 = $int13, 
-	4 = $boolean10, 
+	4 = $int10, 
 	5 = $com_quetzal_menu_selected_back4, 
 	6 = $com_quetzal_menu_selected_front5, 
 	7 = $com_quetzal_menu_selected_locked6, 
 	8 = $com_quetzal_menu_selected_current7, 
 	9 = $model9, 
-	10 = $boolean11
+	10 = $int11
 )");
-if ($boolean11 = true) {
+if ($int11 = 1) {
 	if_setposition(calc(46 + $int12), calc(33 + $int13), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_current3);
 	if_sethide(false, $com_quetzal_menu_current3);
 }

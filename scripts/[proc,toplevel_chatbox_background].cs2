@@ -14,10 +14,10 @@ if (%varcint41 = 1337 | %cutscene_status = 1 & getwindowmode ! ^windowmode_fixed
 if_sethide($boolean0, chatbox:chatarea);
 if (%chatbox_scrollbarside = 1 & getwindowmode ! ^windowmode_fixed) {
 	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, chatbox:scrollarea);
-	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, chatbox:null);
+	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, chatbox:chatscrollbar);
 } else {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, chatbox:scrollarea);
-	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, chatbox:null);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, chatbox:chatscrollbar);
 }
 if (~script7616 = 1 & $enum1 = enum_1745) {
 	if_setsize(calc(519 - 58), 0, ^setsize_abs, ^setsize_minus, chatbox:chat_background);
@@ -49,7 +49,7 @@ if (~toplevel_chatbox_maketransparent = 0) {
 		cc_setfill(true);
 	}
 	~scrollbar_vertical_repaint(
-		0 = chatbox:null, 
+		0 = chatbox:chatscrollbar, 
 		1 = "scrollbar_dragger_v2,3", 
 		2 = "scrollbar_dragger_v2,0", 
 		3 = "scrollbar_dragger_v2,1", 
@@ -142,7 +142,7 @@ if (~on_mobile = true) {
 	$int16 = 130;
 }
 ~scrollbar_vertical_repaint(
-	0 = chatbox:null, 
+	0 = chatbox:chatscrollbar, 
 	1 = "scrollbar_trans_dragger,3", 
 	2 = "scrollbar_trans_dragger,0", 
 	3 = "scrollbar_trans_dragger,1", 

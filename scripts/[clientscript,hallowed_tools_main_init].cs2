@@ -1,12 +1,12 @@
 // 3531
 [clientscript,hallowed_tools_main_init](int $com_hallowed_tools_universe0, component $com_hallowed_tools_token1, component $com_hallowed_tools_grapple2, component $com_hallowed_tools_focus3, component $com_hallowed_tools_symbol4, component $com_hallowed_tools_hammer5, component $com_hallowed_tools_ring6, component $com_hallowed_tools_withdrawal_all7, component $com_hallowed_tools_quantity_selection8)
-~hallowed_tools_main_create($com_hallowed_tools_token1, hallowed_token_24719, "Token", enum(obj, int, enum_342, hallowed_token_24719));
-~hallowed_tools_main_create($com_hallowed_tools_grapple2, hallowed_grapple_24721, "Grapple", enum(obj, int, enum_342, hallowed_grapple_24721));
-~hallowed_tools_main_create($com_hallowed_tools_focus3, hallowed_focus_24723, "Focus", enum(obj, int, enum_342, hallowed_focus_24723));
-~hallowed_tools_main_create($com_hallowed_tools_symbol4, hallowed_symbol_24725, "Symbol", enum(obj, int, enum_342, hallowed_symbol_24725));
-~hallowed_tools_main_create($com_hallowed_tools_hammer5, hallowed_hammer_24727, "Hammer", enum(obj, int, enum_342, hallowed_hammer_24727));
-~hallowed_tools_main_create($com_hallowed_tools_ring6, hallowed_ring_24731, "Ring", enum(obj, int, enum_342, hallowed_ring_24731));
-~script3574($com_hallowed_tools_withdrawal_all7, "Withdraw", false);
+~hallowed_tools_main_create($com_hallowed_tools_token1, 24719, "Token", enum(obj, int, enum_342, hallowed_token_24719));
+~hallowed_tools_main_create($com_hallowed_tools_grapple2, 24721, "Grapple", enum(obj, int, enum_342, hallowed_grapple_24721));
+~hallowed_tools_main_create($com_hallowed_tools_focus3, 24723, "Focus", enum(obj, int, enum_342, hallowed_focus_24723));
+~hallowed_tools_main_create($com_hallowed_tools_symbol4, 24725, "Symbol", enum(obj, int, enum_342, hallowed_symbol_24725));
+~hallowed_tools_main_create($com_hallowed_tools_hammer5, 24727, "Hammer", enum(obj, int, enum_342, hallowed_hammer_24727));
+~hallowed_tools_main_create($com_hallowed_tools_ring6, 24731, "Ring", enum(obj, int, enum_342, hallowed_ring_24731));
+~script3574($com_hallowed_tools_withdrawal_all7, "Withdraw", 0);
 cc_deleteall($com_hallowed_tools_quantity_selection8);
 def_int $int9 = 0;
 cc_create($com_hallowed_tools_quantity_selection8, ^iftype_graphic, $int9, false);

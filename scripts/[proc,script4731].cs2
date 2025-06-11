@@ -1,5 +1,5 @@
 // 4731
-[proc,script4731](component $component0, component $component1, int $int2, int $setposh3, int $setposv4, boolean $boolean5, int $int6, int $int7, int $int8, int $int9, int $int10)
+[proc,script4731](component $component0, component $component1, int $int2, int $setposh3, int $setposv4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10)
 def_int $int11 = if_getwidth($component0);
 def_int $int12 = if_getheight($component0);
 def_component $component13 = if_getlayer($component0);
@@ -113,7 +113,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 			2 = $int2, 
 			3 = $setposh3, 
 			4 = $setposv4, 
-			5 = $boolean5, 
+			5 = $int5, 
 			6 = $int11, 
 			7 = $int12, 
 			8 = %varcint381, 
@@ -126,7 +126,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 			2 = $int2, 
 			3 = $setposh3, 
 			4 = $setposv4, 
-			5 = $boolean5, 
+			5 = $int5, 
 			6 = $int11, 
 			7 = $int12, 
 			8 = %varcint381, 
@@ -139,7 +139,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 			2 = $int2, 
 			3 = $setposh3, 
 			4 = $setposv4, 
-			5 = $boolean5, 
+			5 = $int5, 
 			6 = $int11, 
 			7 = $int12, 
 			8 = %varcint381, 
@@ -152,7 +152,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 			2 = $int2, 
 			3 = $setposh3, 
 			4 = $setposv4, 
-			5 = $boolean5, 
+			5 = $int5, 
 			6 = $int11, 
 			7 = $int12, 
 			8 = %varcint381, 
@@ -185,7 +185,7 @@ if ($boolean23 = true & $enum25 = enum_1745) {
 		} else {
 			$int36 = calc($int36 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:side_container)) - enum(enum, int, enum_1135, $enum25))));
 		}
-	} else if ($boolean5 = true) {
+	} else if ($int5 = 1) {
 		if ($int30 = 2) {
 			$int37 = calc($int37 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) - enum(enum, int, enum_1135, $enum25))));
 		} else if ($int30 = 3 | $int30 = 4) {
@@ -198,7 +198,7 @@ if ($boolean23 = true & $enum25 = enum_1745) {
 		} else {
 			$int36 = ~max($int36, 84);
 		}
-	} else if ($boolean5 = true) {
+	} else if ($int5 = 1) {
 		if (%osm_minimap_toggle = 0) {
 			$int37 = ~max($int37, 181);
 		} else {
@@ -413,7 +413,7 @@ if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = ^tr
 		$int20 = calc($int20 + 2);
 	}
 }
-if ($boolean5 = true & $component1 ! null & $setposh27 ! ^setpos_abs_right) {
+if ($int5 = 1 & $component1 ! null & $setposh27 ! ^setpos_abs_right) {
 	$int36 = if_getwidth($component1);
 	$int37 = if_getheight($component1);
 	$int14 = calc($int14 + ~script2250($int2, $int40, $enum25, $setposh27, $component1, $int14));
@@ -439,7 +439,7 @@ if_setonvartransmit("script4730(
 	2 = $int2, 
 	3 = $setposh3, 
 	4 = $setposv4, 
-	5 = $boolean5, 
+	5 = $int5, 
 	6 = $int11, 
 	7 = $int12, 
 	8 = %varcint381, 
@@ -452,7 +452,7 @@ if_setonsubchange("script4730(
 	2 = $int2, 
 	3 = $setposh3, 
 	4 = $setposv4, 
-	5 = $boolean5, 
+	5 = $int5, 
 	6 = $int11, 
 	7 = $int12, 
 	8 = %varcint381, 
@@ -465,7 +465,7 @@ if_setontimer("script4730(
 	2 = $int2, 
 	3 = $setposh3, 
 	4 = $setposv4, 
-	5 = $boolean5, 
+	5 = $int5, 
 	6 = $int11, 
 	7 = $int12, 
 	8 = %varcint381, 
@@ -478,7 +478,7 @@ if_setonresize("script4730(
 	2 = $int2, 
 	3 = $setposh3, 
 	4 = $setposv4, 
-	5 = $boolean5, 
+	5 = $int5, 
 	6 = $int11, 
 	7 = $int12, 
 	8 = %varcint381, 

@@ -1,5 +1,5 @@
 // 3669
-[proc,league_areas_show_detailed](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12, int $int13, component $component14, int $int15, int $int16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22)
+[proc,league_areas_show_detailed](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12, int $int13, component $component14, int $int15, int $int16, component $component17, component $component18, component $component19, component $component20, component $component21, int $int22)
 cc_deleteall($component9);
 cc_deleteall($component8);
 def_struct $struct23 = enum(int, struct, enum_2670, %league_type);
@@ -49,10 +49,10 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if ($int11 = 2) {
 	cc_setcolour(0x53d93c);
 	if (~on_mobile = false) {
-		if_setonmouseleave("league_area_button_hover($component8, false, $string1, 0x53d93c)", $component8);
-		if_setonmouserepeat("league_area_button_hover($component8, true, $string1, 0xaaaaaa)", $component8);
+		if_setonmouseleave("league_area_button_hover($component8, 0, $string1, 0x53d93c)", $component8);
+		if_setonmouserepeat("league_area_button_hover($component8, 1, $string1, 0xaaaaaa)", $component8);
 	}
-	if_setonop("league_area_confirm($component14, $component8, false, $string1, 0x53d93c)", $component8);
+	if_setonop("league_area_confirm($component14, $component8, 0, $string1, 0x53d93c)", $component8);
 } else if ($int11 = 1) {
 	if (~in_league_tutorial = 1) {
 		cc_setcolour(0xaaaaaa);
@@ -62,10 +62,10 @@ if ($int11 = 2) {
 	} else {
 		cc_setcolour(0x53d93c);
 		if (~on_mobile = false) {
-			if_setonmouseleave("league_area_button_hover($component8, false, $string1, 0x53d93c)", $component8);
-			if_setonmouserepeat("league_area_button_hover($component8, true, $string1, 0xaaaaaa)", $component8);
+			if_setonmouseleave("league_area_button_hover($component8, 0, $string1, 0x53d93c)", $component8);
+			if_setonmouserepeat("league_area_button_hover($component8, 1, $string1, 0xaaaaaa)", $component8);
 		}
-		if_setonop("league_area_teleport($component8, false, $string1, 0x53d93c)", $component8);
+		if_setonop("league_area_teleport($component8, 0, $string1, 0x53d93c)", $component8);
 	}
 } else {
 	cc_setcolour(0xaaaaaa);
@@ -85,10 +85,10 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component9);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component9, false, $string1, ^white)", $component9);
-	if_setonmouserepeat("league_area_button_hover($component9, true, $string1, 0xaaaaaa)", $component9);
+	if_setonmouseleave("league_area_button_hover($component9, 0, $string1, ^white)", $component9);
+	if_setonmouserepeat("league_area_button_hover($component9, 1, $string1, 0xaaaaaa)", $component9);
 }
-if_setonop("league_area_back($component1, $component2, $component3, $component4, $component10, $component22)", $component9);
+if_setonop("league_area_back($component1, $component2, $component3, $component4, $component10, $int22)", $component9);
 %varcint1239 = 0;
 %varcint1240 = 0;
 ~script7630;
@@ -114,8 +114,8 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component19);
 if_setopbase("<col=ff981f>Selection</col>", $component19);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component19, false, $string1, ^white)", $component19);
-	if_setonmouserepeat("league_area_button_hover($component19, true, $string1, 0xaaaaaa)", $component19);
+	if_setonmouseleave("league_area_button_hover($component19, 0, $string1, ^white)", $component19);
+	if_setonmouserepeat("league_area_button_hover($component19, 1, $string1, 0xaaaaaa)", $component19);
 }
 if_setonop("league_area_confirm_selection", $component19);
 $comsubid24 = ~v2_stone_button($component20);
@@ -130,7 +130,7 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component20);
 if (~on_mobile = false) {
-	if_setonmouseleave("league_area_button_hover($component20, false, $string1, ^white)", $component20);
-	if_setonmouserepeat("league_area_button_hover($component20, true, $string1, 0xaaaaaa)", $component20);
+	if_setonmouseleave("league_area_button_hover($component20, 0, $string1, ^white)", $component20);
+	if_setonmouserepeat("league_area_button_hover($component20, 1, $string1, 0xaaaaaa)", $component20);
 }
 if_setonop("league_area_confirm_back($component14)", $component20);

@@ -16,7 +16,7 @@ if ($int0 < 32 & testbit(%slayer_rewards_unlocks, $int0) = ^true | $int0 >= 32 &
 			if (enum(int, boolean, enum_854, $int0) = true) {
 				.cc_setop(1, "Disable");
 				.cc_setonop("slayer_rewards_unlock_confirm(
-					0 = false, 
+					0 = 0, 
 					1 = $int0, 
 					2 = $string0, 
 					3 = $com_slayer_rewards_main1, 
@@ -35,7 +35,7 @@ if ($int0 < 32 & testbit(%slayer_rewards_unlocks, $int0) = ^true | $int0 >= 32 &
 	cc_setgraphic("options_radio_buttons,4");
 	.cc_setop(1, "Unlock");
 	.cc_setonop("slayer_rewards_unlock_confirm(
-		0 = true, 
+		0 = 1, 
 		1 = $int0, 
 		2 = $string0, 
 		3 = $com_slayer_rewards_main1, 

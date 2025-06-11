@@ -1,12 +1,12 @@
 // 3131
-[clientscript,screen_glow_fadeout](int $int0, int $int1, int $int2, int $int3, int $colour4, component $component5, boolean $boolean6)
+[clientscript,screen_glow_fadeout](int $int0, int $int1, int $int2, int $int3, int $colour4, component $component5, int $int6)
 if (cc_find($component5, 0) = ^true) {
 	if (clientclock < $int0) {
 		return;
 	}
 	if (clientclock >= $int1) {
 		cc_setontimer(null);
-		if ($boolean6 = true) {
+		if ($int6 = 1) {
 			cc_delete;
 		}
 		return;

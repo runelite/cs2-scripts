@@ -1,5 +1,5 @@
 // 158
-[clientscript,interface_invother_init](component $component0, inv $inv1, int $int2, int $int3, int $int4, component $component5, boolean $boolean6, string $string0, string $string1, string $string2, string $string3, string $string4)
+[clientscript,interface_invother_init](component $component0, inv $inv1, int $int2, int $int3, int $int4, component $component5, int $int6, string $string0, string $string1, string $string2, string $string3, string $string4)
 def_string $string5 = "";
 ~interface_invother_update_big(
 	0 = $component0, 
@@ -17,7 +17,7 @@ def_string $string5 = "";
 	12 = $string5, 
 	13 = $string5, 
 	14 = $string5, 
-	15 = $boolean6
+	15 = $int6
 );
 if_setoninvtransmit("interface_invother_update_big(
 	0 = $component0, 
@@ -35,5 +35,5 @@ if_setoninvtransmit("interface_invother_update_big(
 	12 = $string5, 
 	13 = $string5, 
 	14 = $string5, 
-	15 = $boolean6
+	15 = $int6
 ){$inv1}", $component0);

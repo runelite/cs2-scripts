@@ -1,8 +1,8 @@
 // 3454
-[proc,deathkeep_right_drawbutton](component $component0, int $int1, string $string0, boolean $boolean2, int $int3)(int)
+[proc,deathkeep_right_drawbutton](component $component0, int $int1, string $string0, int $int2, int $int3)(int)
 if_setontimer(null, $component0);
 def_int $int4 = 0;
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	$int4 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int4 = ~v2_stone_button_out_filled($component0);
@@ -11,7 +11,7 @@ cc_create($component0, ^iftype_graphic, $int4, false);
 $int4 = calc($int4 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_centre);
-if ($boolean2 = true) {
+if ($int2 = 1) {
 	cc_setgraphic("options_radio_buttons,2");
 } else {
 	cc_setgraphic("options_radio_buttons,1");

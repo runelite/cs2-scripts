@@ -5,7 +5,7 @@ if (~keypress_permit(decant, null) = 1) {
 		if_close;
 		return;
 	} else if ($keychar1 ! null & string_length($string0) > 0 & string_indexof_char($string0, $keychar1) ! -1) {
-		~decant_mouseover($component0, true, $obj3, $string1, $string0);
+		~decant_mouseover($component0, 1, $obj3, $string1, $string0);
 		if_resume_pausebutton($component0);
 	}
 }

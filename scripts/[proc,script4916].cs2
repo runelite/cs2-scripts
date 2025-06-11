@@ -1,6 +1,6 @@
 // 4916
-[proc,script4916](component $component0, boolean $boolean1, string $string0, int $colour2)
-if ($boolean1 = true & ~on_mobile = false) {
+[proc,script4916](component $component0, int $int1, string $string0, int $colour2)
+if ($int1 = 1 & ~on_mobile = false) {
 	~v2_stone_button_in($component0);
 	cc_create($component0, ^iftype_text, 9, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

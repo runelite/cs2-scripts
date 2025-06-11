@@ -1,5 +1,5 @@
 // 6908
-[proc,script6908](component $component0, string $string0, int $int1, int $int2, int $int3, string $string1)
+[proc,script6908](component $component0, string $string0, int $int1, int $int2, int $int3, anyobj $anyobj1)
 def_int $int4 = 0;
 def_int $int5 = if_getwidth($component0);
 def_int $int6 = if_getheight($component0);
@@ -32,7 +32,7 @@ cc_settext($string0);
 if ($int1 = 0 & $int3 = 0) {
 	.cc_setonmouserepeat("script6938($component0, .cc_getid, 0x0dc10d)");
 	.cc_setonmouseleave("script6939($component0, .cc_getid, 0xff981f, ^white)");
-	.cc_setonop("script6940($int2, $string1)");
+	.cc_setonop("script6940($int2, $anyobj1)");
 	.cc_setopbase("<col=ff981f><$string0></col>");
 	.cc_setop(1, "Select");
 }

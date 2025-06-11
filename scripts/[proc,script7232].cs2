@@ -1,5 +1,5 @@
 // 7232
-[proc,script7232](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3, int $int4, obj $obj5, int $int6, int $int7, int $colour8, int $int9, int $int10, boolean $boolean11, boolean $boolean12)(int)
+[proc,script7232](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3, int $int4, obj $obj5, int $int6, int $int7, int $colour8, int $int9, int $int10, int $int11, int $int12)(int)
 def_int $int13 = calc(($int4 - $int2 - 1) * 17);
 cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 $int3 = calc($int3 + 1);
@@ -71,13 +71,13 @@ def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
 if (obj_findbyindex($coord1, $int9) = true) {
-	if ($boolean11 = true) {
+	if ($int11 = 1) {
 		$int17 = calc(30 * obj_despawntime);
 	}
-	if ($boolean12 = true) {
+	if ($int12 = 1) {
 		$int18 = calc(30 * obj_revealtime);
 	}
-	if ($int17 > 0 | $int18 > 0 | $boolean12 = true) {
+	if ($int17 > 0 | $int18 > 0 | $int12 = 1) {
 		cc_create_entityoverlay($entityoverlay0, ^iftype_text, $int3);
 		cc_setsize(34, 17, ^setsize_abs, ^setsize_abs);
 		$int19 = calc(0 - $int14 / 2 - 34 / 2);
@@ -101,7 +101,7 @@ if (obj_findbyindex($coord1, $int9) = true) {
 			} else {
 				.cc_setposition(calc(0 - $int14 / 2 - 10), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 			}
-			if ($boolean12 = true) {
+			if ($int12 = 1) {
 				.cc_setgraphic("ground_items_visibility,0");
 			}
 		}
@@ -112,8 +112,8 @@ if (obj_findbyindex($coord1, $int9) = true) {
 			3 = $int17, 
 			4 = $int18, 
 			5 = $colour8, 
-			6 = $boolean12, 
-			7 = $boolean11, 
+			6 = $int12, 
+			7 = $int11, 
 			8 = calc($int3 - 1), 
 			9 = $int14, 
 			10 = $int13

@@ -1,57 +1,57 @@
 // 7856
-[proc,helper_agility_requirements](loc $loc0, coord $coord1)(boolean, string)
+[proc,helper_agility_requirements](loc $loc0, coord $coord1)(int, string)
 def_string $string0 = "";
-def_boolean $boolean2 = true;
+def_int $int2 = 1;
 switch_loc ($loc0) {
 	case qip_sheep_shearer_fullstyle_12982, farming_style_7527 :
 		if (%peng_transmog = 1) {
 			$string0 = "<col=ff0000>No penguin suit";
-			$boolean2 = false;
+			$int2 = 0;
 		}
 	case xbows_raft_br_17068, xbows_rock_hilltop_grappled_17043, xbows_rock_hilltop_basic_17042, xbows_yanille_castlewall_17047, xbows_jungletree_karamja_basic_17074, xbows_fai_falador_castle_walls_hillskew_17049, xbows_fai_falador_castle_arches_hillskew_17050, xbows_beach_to_island_tree_grappled_17063 :
 		if (enum(obj, int, enum_4082, inv_getobj(worn, 3)) = 0) {
 			$string0 = "<col=ff0000>Crossbow";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Crossbow";
 		}
 		if (inv_total(worn, xbows_grapple_tip_bolt_mithril_rope_9419) <= 0) {
 			$string0 = append($string0, "<br><col=ff0000>Mithril grapple");
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = append($string0, "<br><col=00ff00>Mithril grapple");
 		}
 	case ds2_corsair_shortcut_bottom_31758 :
 		if (%corsair_cove_resource_entry = 0) {
 			$string0 = "<col=ff0000>Corsair Cove resource area";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Corsair Cove resource area";
 		}
 	case qip_obs_door_left_25526, qip_obs_door_right_25527 :
 		if (%observatory_shortcut_rope = 0) {
 			$string0 = "<col=ff0000>Used shortcut from below first";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Used shortcut from below first";
 		}
 	case xbows_rope_diagonal_obs_31849, xbows_rock_hilltop_obs_31852 :
 		if (%itgronigen < 7) {
 			$string0 = "<col=ff0000>Observatory quest";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Observatory quest";
 		}
 		if (%observatory_shortcut_rope = 0) {
 			if (enum(obj, int, enum_4082, inv_getobj(worn, 3)) = 0) {
 				$string0 = append($string0, "<br><col=ff0000>Crossbow");
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = append($string0, "<br><col=00ff00>Crossbow");
 			}
 			if (inv_total(worn, xbows_grapple_tip_bolt_mithril_rope_9419) <= 0) {
 				$string0 = append($string0, "<br><col=ff0000>Mithril grapple");
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = append($string0, "<br><col=00ff00>Mithril grapple");
 			}
@@ -59,14 +59,14 @@ switch_loc ($loc0) {
 	case gnome_stronghold_sc_rock_top_16534, gnome_stronghold_sc_rock_bottom_16535 :
 		if (%grandtree < 160) {
 			$string0 = "<col=ff0000>The Grand Tree";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>The Grand Tree";
 		}
 	case fairy_island_nature_grotto_shortcut_13504, morytania_railing_sc_fence_1_16552, morytania_railing_sc_fence_2_17000, morytania_climbingrocks_sc_top_16998, morytania_climbingrocks_sc_bottom_16999 :
 		if (%priestperil < 61) {
 			$string0 = "<col=ff0000>Priest in peril";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Priest in peril";
 		}
@@ -74,7 +74,7 @@ switch_loc ($loc0) {
 		if ($coord1 = 0_58_88_48_38 | $coord1 = 0_58_88_52_39) {
 			if (%falador_medium_reward = 0) {
 				$string0 = "<col=ff0000>Claimed Falador medium diary reward";
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = "<col=00ff00>Claimed Falador medium diary reward";
 			}
@@ -82,14 +82,14 @@ switch_loc ($loc0) {
 	case darkm_outer_wall_2h_shortcut_39542, darkm_outer_wall_3h_shortcut_39541 :
 		if (%myq5 < 138) {
 			$string0 = "<col=ff0000>Sins of the Father";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Sins of the Father";
 		}
 		if (%darkm_shortcut_inner = 0) {
 			if (inv_total(inv, long_rope_24790) <= 0) {
 				$string0 = append($string0, "<br><col=ff0000>Long rope");
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = append($string0, "<br><col=00ff00>Long rope");
 			}
@@ -97,7 +97,7 @@ switch_loc ($loc0) {
 	case heroes_guild_shortcut_to_fountain_9739, heroes_guild_shortcut_from_fountain_9740 :
 		if (%falador_hard_reward = 0) {
 			$string0 = "<col=ff0000>Claimed Falador hard diary reward";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Claimed Falador hard diary reward";
 		}
@@ -105,7 +105,7 @@ switch_loc ($loc0) {
 		if (%godwars_saradomin_rope1 = 0) {
 			if (inv_total(inv, rope_954) <= 0) {
 				$string0 = "<col=ff0000>Rope";
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = "<col=00ff00>Rope";
 			}
@@ -114,7 +114,7 @@ switch_loc ($loc0) {
 		if (%godwars_saradomin_rope2 = 0) {
 			if (inv_total(inv, rope_954) <= 0) {
 				$string0 = "<col=ff0000>Rope";
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = "<col=00ff00>Rope";
 			}
@@ -122,56 +122,56 @@ switch_loc ($loc0) {
 	case kharid_bigwindow_33348, kharid_poshwall_topless_33344 :
 		if (%princequest < 110) {
 			$string0 = "<col=ff0000>Prince Ali Rescue";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Prince Ali Rescue";
 		}
 	case gutanoth_wall_shortcut_40355, gutanoth_rock_shortcut_40356 :
 		if (%itwatchtower < 13) {
 			$string0 = "<col=ff0000>Watchtower";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Watchtower";
 		}
 	case diary_troll_climbingrocks_16464 :
 		if (%myarm < 310) {
 			$string0 = "<col=ff0000>My Arm's Big Adventure";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>My Arm's Big Adventure";
 		}
 	case snakeboss_steppingstone_10663 :
 		if (%fairyring_use < 1 | %fairyring_permission < 2) {
 			$string0 = "<col=ff0000>Use of fairy rings";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Use of fairy rings";
 		}
 	case kharazi_shortcut_vine_diag1_26886, kharazi_shortcut_vine_end_26884 :
 		if (%legendsquest < 50) {
 			$string0 = "<col=ff0000>Legends' Quest";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Legends' Quest";
 		}
 	case kalphite_wall_shortcut_16465 :
 		if (%desert_elite_reward = 0) {
 			$string0 = "<col=ff0000>Claimed Desert elite diary reward";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Claimed Desert elite diary reward";
 		}
 	case viyeldi_shortcut_rock_multi_40960, viyeldi_shortcut_rope_base_multi_40962 :
 		if (%legendsquest < 50) {
 			$string0 = "<col=ff0000>Legends' Quest";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Legends' Quest";
 		}
 		if (%viyeldi_shortcut = 0) {
 			if (inv_total(inv, long_rope_24790) <= 0) {
 				$string0 = append($string0, "<br><col=ff0000>Long rope");
-				$boolean2 = false;
+				$int2 = 0;
 			} else {
 				$string0 = append($string0, "<br><col=00ff00>Long rope");
 			}
@@ -179,16 +179,16 @@ switch_loc ($loc0) {
 	case necropolis_stepping_stone_1_43989, necropolis_stepping_stone_2_43990 :
 		if (%bcs < 12) {
 			$string0 = "<col=ff0000>Beneath Cursed Sands: Investigating the Excavation";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Beneath Cursed Sands: Investigating the Excavation";
 		}
 	case garden_trellis_concave_shortcut_2149 :
 		if (%garden_quest < 60) {
 			$string0 = "<col=ff0000>Garden of Tranquillity";
-			$boolean2 = false;
+			$int2 = 0;
 		} else {
 			$string0 = "<col=00ff00>Garden of Tranquillity";
 		}
 }
-return($boolean2, $string0);
+return($int2, $string0);

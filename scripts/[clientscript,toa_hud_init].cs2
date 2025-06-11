@@ -1,6 +1,6 @@
 // 6576
 [clientscript,toa_hud_init](component $com_toa_hud_universe0, component $com_toa_hud_content1, component $com_toa_hud_raid_path_levels_path2, component $com_toa_hud_raid_path_levels_nexus3, component $com_toa_hud_raid_difficulty_gfx4, component $com_toa_hud_raid_level_txt5, component $com_toa_hud_paths_icon6, component $com_toa_hud_paths_level7, component $com_toa_hud_nexus_scabaras_level8, component $com_toa_hud_nexus_akkha_level9, component $com_toa_hud_nexus_apmekan_level10, component $com_toa_hud_nexus_crondis_level11, component $com_toa_hud_dodger12, component $com_toa_hud_content_names13, component $com_toa_hud_0_container14, component $com_toa_hud_0_filler15, component $com_toa_hud_1_container16, component $com_toa_hud_1_filler17, component $com_toa_hud_2_container18, component $com_toa_hud_2_filler19, component $com_toa_hud_3_container20, component $com_toa_hud_3_filler21, component $com_toa_hud_4_container22, component $com_toa_hud_4_filler23, component $com_toa_hud_5_container24, component $com_toa_hud_5_filler25, component $com_toa_hud_6_container26, component $com_toa_hud_6_filler27, component $com_toa_hud_7_container28, component $com_toa_hud_7_filler29, component $com_toa_hud_tooltip30, component $com_toa_hud_content_details31)
-~script4729($com_toa_hud_dodger12, $com_toa_hud_content1, 65256, ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($com_toa_hud_dodger12, $com_toa_hud_content1, 65256, ^setpos_abs_left, ^setpos_abs_top, 0);
 ~toa_hud_status_init($com_toa_hud_0_container14, $com_toa_hud_0_filler15);
 ~toa_hud_status_init($com_toa_hud_1_container16, $com_toa_hud_1_filler17);
 ~toa_hud_status_init($com_toa_hud_2_container18, $com_toa_hud_2_filler19);
@@ -42,7 +42,7 @@
 	29 = $com_toa_hud_content_details31
 );
 if_setontimer("toa_hud_draw(
-	0 = false, 
+	0 = 0, 
 	1 = $com_toa_hud_content1, 
 	2 = $com_toa_hud_content_names13, 
 	3 = $com_toa_hud_raid_path_levels_path2, 
@@ -75,7 +75,7 @@ if_setontimer("toa_hud_draw(
 	30 = $com_toa_hud_content_details31
 )", $com_toa_hud_universe0);
 if_setonvartransmit("toa_hud_draw(
-	0 = true, 
+	0 = 1, 
 	1 = $com_toa_hud_content1, 
 	2 = $com_toa_hud_content_names13, 
 	3 = $com_toa_hud_raid_path_levels_path2, 
@@ -108,7 +108,7 @@ if_setonvartransmit("toa_hud_draw(
 	30 = $com_toa_hud_content_details31
 ){toa_temp_transmit_1, toa_temp_transmit_2, toa_temp_transmit_3, toa_temp_transmit_5}", $com_toa_hud_universe0);
 if_setonstattransmit("toa_hud_draw(
-	0 = true, 
+	0 = 1, 
 	1 = $com_toa_hud_content1, 
 	2 = $com_toa_hud_content_names13, 
 	3 = $com_toa_hud_raid_path_levels_path2, 

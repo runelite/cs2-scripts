@@ -32,8 +32,8 @@ while ($int7 < 5) {
 	cc_setop(1, "View");
 	cc_setopbase("<col=ff9040>Benefits</col>");
 	cc_setonop("membership_benefits_view($int7)");
-	cc_setonmouserepeat("membership_benefits_hover(event_comsubid, $int6, true)");
-	cc_setonmouseleave("membership_benefits_hover(event_comsubid, $int6, false)");
+	cc_setonmouserepeat("membership_benefits_hover(event_comsubid, $int6, 1)");
+	cc_setonmouseleave("membership_benefits_hover(event_comsubid, $int6, 0)");
 	cc_create($com_membership_benefits_text1, ^iftype_text, $int7, false);
 	cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
 	cc_setposition(62, $int6, ^setpos_abs_centre, ^setpos_abs_top);

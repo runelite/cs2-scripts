@@ -14,14 +14,14 @@ while ($int2 = 0 & $int1 < $int0) {
 		$int2 = 1;
 	}
 }
-def_string $string0 = "";
+def_string $string1 = "";
 if ($int1 >= 2) {
 	if (%varcint181 = 2 | %varcint181 = 3) {
-		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 5);
+		~raids_sidepanel_sort($anyobj0, 0, calc($int1 - 1), 5);
 	} else if (%varcint181 = 4 | %varcint181 = 5) {
-		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 6);
+		~raids_sidepanel_sort($anyobj0, 0, calc($int1 - 1), 6);
 	} else {
-		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 4);
+		~raids_sidepanel_sort($anyobj0, 0, calc($int1 - 1), 4);
 	}
 }
 def_int $int3 = 0;
@@ -32,7 +32,7 @@ if (%varcint181 = 3 | %varcint181 = 5 | %varcint181 = 1) {
 		$int3 = calc($int3 - 1);
 		if (cc_find(raids_sidepanel:list, calc($intarray0($int3) * 7)) = ^true) {
 			cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
-			~raids_sidepanel_entry_init($int3, true);
+			~raids_sidepanel_entry_init($int3, 1);
 		}
 		if (cc_find(raids_sidepanel:list, calc($intarray0($int3) * 7 + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
@@ -49,7 +49,7 @@ if (%varcint181 = 3 | %varcint181 = 5 | %varcint181 = 1) {
 	while ($int3 < $int1) {
 		if (cc_find(raids_sidepanel:list, calc($intarray0($int3) * 7)) = ^true) {
 			cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
-			~raids_sidepanel_entry_init($int3, true);
+			~raids_sidepanel_entry_init($int3, 1);
 		}
 		if (cc_find(raids_sidepanel:list, calc($intarray0($int3) * 7 + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);

@@ -2,7 +2,7 @@
 [proc,script6757](int $int0, int $int1, int $int2)(string, string)
 def_int $int3 = 0;
 def_struct $struct4 = null;
-def_boolean $boolean5 = false;
+def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = enum_getoutputcount(enum_4664);
@@ -27,10 +27,10 @@ def_string $string3 = "Special Attacks:";
 def_int $int23 = 0;
 while ($int3 < $int8) {
 	$struct4 = enum(int, struct, enum_4664, $int3);
-	$boolean5 = ~script6755($struct4, $int0, $int1, $int2);
+	$int5 = ~script6755($struct4, $int0, $int1, $int2);
 	$int6 = struct_param($struct4, param_1161);
 	$int7 = struct_param($struct4, param_1299);
-	if ($boolean5 = true) {
+	if ($int5 = 1) {
 		switch_int ($int6) {
 			case 3 :
 				$int9 = ~max($int9, $int7);
@@ -149,7 +149,7 @@ if ($int16 > 0) {
 	$string11 = "<$string11> Default";
 }
 $int17 = calc(100 - $int17);
-def_string $string12 = "Prayer Effectiveness: <tostring($int17)>%";
+def_anyobj $anyobj12 = "Prayer Effectiveness: <tostring($int17)>%";
 def_string $string13 = "Akkha:";
 if ($int18 = 1) {
 	$string13 = "<$string13> <tostring($int18)> Modifier";
@@ -180,10 +180,10 @@ if ($int22 = 1) {
 } else {
 	$string17 = "<$string17> <tostring($int22)> Modifiers";
 }
-def_string $string18 = "<col=ffffff>Raid Modifiers:</col><br><br><$string4><br><$string5><br><$string6><br><$string7><br><$string0>";
-def_string $string19 = "<col=ffffff>Stat Modifiers:</col><br><br><$string8><br><$string9><br><$string10><br><$string11><br><$string12>";
-def_string $string20 = "<col=ffffff>Combat Restrictions:</col><br><br><$string1><br><$string2><br><$string3>";
-def_string $string21 = "<col=ffffff>Room Modifiers:</col><br><br><$string13><br><$string14><br><$string15><br><$string16><br><$string17>";
-def_string $string22 = "<$string18><br><br><$string21><br><br>";
-def_string $string23 = "<$string19><br><br><$string20>";
+def_anyobj $anyobj18 = "<col=ffffff>Raid Modifiers:</col><br><br><$string4><br><$string5><br><$string6><br><$string7><br><$string0>";
+def_anyobj $anyobj19 = "<col=ffffff>Stat Modifiers:</col><br><br><$string8><br><$string9><br><$string10><br><$string11><br><$anyobj12>";
+def_anyobj $anyobj20 = "<col=ffffff>Combat Restrictions:</col><br><br><$string1><br><$string2><br><$string3>";
+def_anyobj $anyobj21 = "<col=ffffff>Room Modifiers:</col><br><br><$string13><br><$string14><br><$string15><br><$string16><br><$string17>";
+def_string $string22 = "<$anyobj18><br><br><$anyobj21><br><br>";
+def_string $string23 = "<$anyobj19><br><br><$anyobj20>";
 return($string22, $string23);

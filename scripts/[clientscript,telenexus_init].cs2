@@ -35,7 +35,7 @@ if_setonvartransmit("telenexus_done_text($com_telenexus_button_text5){
 	11 = $com_telenexus_drag_handles217, 
 	12 = $com_telenexus_slotted_list18, 
 	13 = $com_telenexus_slots_text13, 
-	14 = true
+	14 = 1
 );
 if_setonvartransmit("script2270(
 	0 = $com_telenexus_list17, 
@@ -52,10 +52,10 @@ if_setonvartransmit("script2270(
 	11 = $com_telenexus_drag_handles217, 
 	12 = $com_telenexus_slotted_list18, 
 	13 = $com_telenexus_slots_text13, 
-	14 = false
+	14 = 0
 ){poh_nexus_temp, poh_nexus_teleport1_temp, poh_nexus_teleport2_temp, poh_nexus_teleport3_temp, poh_nexus_teleport4_temp, poh_nexus_teleport5_temp, poh_nexus_teleport6_temp, poh_nexus_teleport7_temp}", $com_telenexus_list17);
-~script2273($com_telenexus_list214, $com_telenexus_scrolling215, $com_telenexus_scrollbar219, $com_telenexus_rows216, $com_telenexus_drag_handles217, $com_telenexus_slotted_list18, $com_telenexus_slots_text13, true);
-if_setonvartransmit("script2272($com_telenexus_list214, $com_telenexus_scrolling215, $com_telenexus_scrollbar219, $com_telenexus_rows216, $com_telenexus_drag_handles217, $com_telenexus_slotted_list18, $com_telenexus_slots_text13, false){poh_nexus_temp, poh_nexus_teleport1_temp, poh_nexus_teleport2_temp, poh_nexus_teleport3_temp, poh_nexus_teleport4_temp, poh_nexus_teleport5_temp, poh_nexus_teleport6_temp, poh_nexus_teleport7_temp}", $com_telenexus_list214);
+~script2273($com_telenexus_list214, $com_telenexus_scrolling215, $com_telenexus_scrollbar219, $com_telenexus_rows216, $com_telenexus_drag_handles217, $com_telenexus_slotted_list18, $com_telenexus_slots_text13, 1);
+if_setonvartransmit("script2272($com_telenexus_list214, $com_telenexus_scrolling215, $com_telenexus_scrollbar219, $com_telenexus_rows216, $com_telenexus_drag_handles217, $com_telenexus_slotted_list18, $com_telenexus_slots_text13, 0){poh_nexus_temp, poh_nexus_teleport1_temp, poh_nexus_teleport2_temp, poh_nexus_teleport3_temp, poh_nexus_teleport4_temp, poh_nexus_teleport5_temp, poh_nexus_teleport6_temp, poh_nexus_teleport7_temp}", $com_telenexus_list214);
 if_setonop("telenexus_okbutton_click", $com_telenexus_telenexus_donebutton4);
 if_setonop("telenexus_cancel($com_telenexus_confirm22)", $com_telenexus_telenexus_cancel25);
 ~poh_nexus_model($com_telenexus_portal_model3);

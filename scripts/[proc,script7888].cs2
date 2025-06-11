@@ -1,0 +1,146 @@
+// 7888
+[proc,script7888](int $int0, int $int1)(int, namedobj, string)
+def_string $string0 = "";
+if (%option_skill_guide = 0) {
+	$string0 = "<col=6f0000>";
+} else {
+	$string0 = "<col=ffffff>";
+}
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, poh_tree_3_8175, "Woodcutting allows you to chop down trees to obtain logs. Most trees in the game can be chopped down with an axe.");
+			case 1 :
+				return(-1, logs_1511, "Increasing your Woodcutting level will give you a higher chance of successfully chopping a tree. You'll also gain access to more trees to cut down.");
+			case 2 :
+				return(-1, rune_axe_1359, "In addition to this, higher Woodcutting levels grant access to more powerful axes, which also increase the chance of chopping trees. Note that you can still use an axe in your inventory if you have the Woodcutting level for it, even if you don't have the Attack level to equip it.");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, logs_1511, "Normal trees");
+			case 1 :
+				return(1, achey_tree_logs_2862, "Members: Achey trees");
+			case 2 :
+				return(10, thatching_spar_light_6281, "Members: Light jungle");
+			case 3 :
+				return(15, oak_logs_1521, "Oak trees");
+			case 4 :
+				return(20, thatching_spar_med_6283, "Members: Medium jungle");
+			case 5 :
+				return(30, willow_logs_1519, "Willow trees");
+			case 6 :
+				return(35, thatching_spar_dense_6285, "Members: Dense jungle");
+			case 7 :
+				return(35, teak_logs_6333, "Members: Teak trees");
+			case 8 :
+				return(42, juniper_logs_13355, "Members: Juniper trees");
+			case 9 :
+				return(45, maple_logs_1517, "Maple trees");
+			case 10 :
+				return(45, hollow_bark_3239, "Members: Hollow trees");
+			case 11 :
+				return(50, mahogany_logs_6332, "Members: Mahogany trees");
+			case 12 :
+				return(54, arctic_pine_log_10810, "Members: Arctic pine trees");
+			case 13 :
+				return(60, yew_logs_1515, "Yew trees");
+			case 14 :
+				return(62, blisterwood_logs_24691, "Members: Blisterwood tree");
+			case 15 :
+				return(65, fossil_sulliuscep_cap_21626, "Members: Sulliuscep mushroom trees");
+			case 16 :
+				return(75, magic_logs_1513, "Members: Magic trees");
+			case 17 :
+				return(90, redwood_logs_19669, "Members: Redwood trees");
+			case default :
+				return(-1, null, "");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, bronze_axe_1351, "Bronze axe");
+			case 1 :
+				return(1, bronze_axe_2h_28196, "Members: Bronze felling axe");
+			case 2 :
+				return(1, iron_axe_1349, "Iron axe");
+			case 3 :
+				return(1, iron_axe_2h_28199, "Members: Iron felling axe");
+			case 4 :
+				return(6, steel_axe_1353, "Steel axe");
+			case 5 :
+				return(6, steel_axe_2h_28202, "Members: Steel felling axe");
+			case 6 :
+				return(11, black_axe_1361, "Black axe");
+			case 7 :
+				return(11, black_axe_2h_28205, "Members: Black felling axe");
+			case 8 :
+				return(21, mithril_axe_1355, "Mithril axe");
+			case 9 :
+				return(21, mithril_axe_2h_28208, "Members: Mithril felling axe");
+			case 10 :
+				return(31, adamant_axe_1357, "Adamant axe");
+			case 11 :
+				return(31, adamant_axe_2h_28211, "Members: Adamant felling axe");
+			case 12 :
+				return(41, rune_axe_1359, "Rune axe");
+			case 13 :
+				return(41, rune_axe_2h_28214, "Members: Rune felling axe");
+			case 14 :
+				return(41, trail_gilded_axe_23279, "Gilded axe");
+			case 15 :
+				return(61, dragon_axe_6739, "Members: Dragon axe");
+			case 16 :
+				return(61, dragon_axe_2h_28217, "Members: Dragon felling axe");
+			case 17 :
+				return(61, 3a_axe_20011, "Members: 3rd age axe");
+			case 18 :
+				return(61, 3a_axe_2h_28226, "Members: 3rd age felling axe");
+			case 19 :
+				return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
+			case 20 :
+				return(71, crystal_axe_23673, "Members: Crystal axe<br>(after Song of the Elves)");
+			case 21 :
+				return(71, crystal_axe_2h_28220, "Members: Crystal felling axe<br>(after Song of the Elves)");
+			case default :
+				return(-1, null, "");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, forestry_kit_28136, "Forestry kit");
+			case 1 :
+				return(35, forestry_ration_28157, "Members: Forester's ration<br>(with 35 Cooking)");
+			case 2 :
+				return(35, forestry_secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Smithing)");
+			case 3 :
+				return(50, forestry_clothes_pouch_28163, "Members: Clothes Pouch<br>(with 50 Crafting)");
+			case 4 :
+				return(68, nature_offerings_28152, "Members: Nature Offerings<br>(with 50 Farming)");
+			case 5 :
+				return(75, forestry_sturdy_harness_28149, "Members: Sturdy Harness<br>(with 75 Smithing)");
+			case default :
+				return(-1, null, "");
+		}
+	case 4 :
+		switch_int ($int1) {
+			case 0 :
+				return(12, canoeing_paddle_7414, "Log canoe");
+			case 1 :
+				return(27, canoeing_paddle_7414, "Dugout canoe");
+			case 2 :
+				return(42, canoeing_paddle_7414, "Stable dugout canoe");
+			case 3 :
+				return(44, ramble_lumberjack_top_10939, "Members: Lumberjack and Forestry outfit.");
+			case 4 :
+				return(56, fremmenik_round_shield_10826, "Members: Fremennik round shield");
+			case 5 :
+				return(56, arctic_pine_split_10812, "Members: Split arctic pine logs");
+			case 6 :
+				return(57, canoeing_paddle_7414, "Waka canoe");
+			case default :
+				return(-1, null, "");
+		}
+}
+return(-1, null, "");

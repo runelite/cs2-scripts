@@ -55,9 +55,9 @@ if ($boolean2 = true) {
 	if ($int1 > 2) {
 		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, skillmulti:x);
 		$int3 = calc($int3 + if_getwidth(skillmulti:x) + 5);
-		~skillmulti_quantitybutton_draw(false, $string0, skillmulti:x);
-		if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, event_com)", skillmulti:x);
-		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, event_com)", skillmulti:x);
+		~skillmulti_quantitybutton_draw(0, $string0, skillmulti:x);
+		if_setonmouseover("skillmulti_quantitybutton_draw(1, $string0, event_com)", skillmulti:x);
+		if_setonmouseleave("skillmulti_quantitybutton_draw(0, $string0, event_com)", skillmulti:x);
 		if_setop(1, "Other quantity", skillmulti:x);
 		if_setonop("skillmulti_quantitybutton_x_start(event_op, $int0, $int1)", skillmulti:x);
 		if_setontimer(null, skillmulti:x);

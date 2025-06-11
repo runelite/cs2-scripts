@@ -1,5 +1,5 @@
 // 779
-[proc,ge_offers_setup_draw](boolean $boolean0, component $com_ge_offers_setup1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, component $com_ge_offers_setup_confirm14, int $comsubid15, int $comsubid16)
+[proc,ge_offers_setup_draw](int $int0, component $com_ge_offers_setup1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, component $com_ge_offers_setup_confirm14, int $comsubid15, int $comsubid16)
 if (%ge_newoffer_type = 1) {
 	if (cc_find($com_ge_offers_setup1, $comsubid2) = ^true) {
 		cc_sethide(true);
@@ -26,7 +26,7 @@ if (%ge_newoffer_type = 1) {
 	if (cc_find($com_ge_offers_setup1, $comsubid16) = ^true) {
 		cc_setop(2, "");
 	}
-} else if ($boolean0 = true) {
+} else if ($int0 = 1) {
 	if (cc_find($com_ge_offers_setup1, $comsubid2) = ^true) {
 		cc_sethide(true);
 	}

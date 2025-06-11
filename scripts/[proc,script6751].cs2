@@ -1,14 +1,14 @@
 // 6751
-[proc,script6751](struct $struct0, boolean $boolean1, int $int2, int $int3, int $comsubid4, int $int5, component $component6, component $component7)
+[proc,script6751](struct $struct0, int $int1, int $int2, int $int3, int $comsubid4, int $int5, component $component6, component $component7)
 if (~on_mobile = false) {
-	cc_setonmouserepeat("script6752($struct0, $boolean1, $int2, $comsubid4, $int5, $component6, $component7, clientclock)");
-	cc_setonmouseleave("script6753($struct0, $boolean1, $int2, $comsubid4, $int5, $component6, $component7, clientclock)");
+	cc_setonmouserepeat("script6752($struct0, $int1, $int2, $comsubid4, $int5, $component6, $component7, clientclock)");
+	cc_setonmouseleave("script6753($struct0, $int1, $int2, $comsubid4, $int5, $component6, $component7, clientclock)");
 } else {
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 }
 if ($int2 = 2) {
-	if ($boolean1 = false) {
+	if ($int1 = 0) {
 		cc_setop(1, "Activate");
 	} else {
 		cc_setop(1, "Deactivate");
@@ -17,7 +17,7 @@ if ($int2 = 2) {
 	cc_setonop("script6754(
 		0 = event_op, 
 		1 = $struct0, 
-		2 = $boolean1, 
+		2 = $int1, 
 		3 = $int2, 
 		4 = $int3, 
 		5 = $comsubid4, 

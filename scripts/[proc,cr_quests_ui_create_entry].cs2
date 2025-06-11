@@ -1,5 +1,5 @@
 // 6373
-[proc,cr_quests_ui_create_entry](int $int0, int $int1, int $int2, int $int3, dbrow $dbrow4, int $int5, boolean $boolean6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12)(int, int)
+[proc,cr_quests_ui_create_entry](int $int0, int $int1, int $int2, int $int3, dbrow $dbrow4, int $int5, int $int6, int $int7, int $int8, component $component9, component $component10, component $component11, component $component12)(int, int)
 def_int $int13 = 0;
 def_int $int14 = 0;
 def_int $int15 = 0;
@@ -10,7 +10,7 @@ def_string $string1 = ~get_quest_name($dbrow4);
 def_int $int18 = 0;
 def_int $comsubid19 = 0;
 def_int $comsubid20 = 0;
-$int7, $comsubid19, $comsubid20, $int15 = ~cr_ui_create_list_entry($int1, $boolean6, $int7, $int8, $component9);
+$int7, $comsubid19, $comsubid20, $int15 = ~cr_ui_create_list_entry($int1, $int6, $int7, $int8, $component9);
 cc_create($component9, ^iftype_graphic, $int7, false);
 $int7 = calc($int7 + 1);
 cc_setgraphic("achievement_diary_icons,0");
@@ -69,7 +69,7 @@ if ($int3 = 2) {
 				6 = 13, 
 				7 = 13, 
 				8 = 0, 
-				9 = $boolean6, 
+				9 = $int6, 
 				10 = $int21, 
 				11 = $int30, 
 				12 = $int8, 
@@ -95,7 +95,7 @@ if ($int3 = 2) {
 			6 = 18, 
 			7 = 18, 
 			8 = 0, 
-			9 = $boolean6, 
+			9 = $int6, 
 			10 = $int21, 
 			11 = $int30, 
 			12 = $int8, 
@@ -119,7 +119,7 @@ if ($int3 = 2) {
 			6 = 13, 
 			7 = 13, 
 			8 = 0, 
-			9 = $boolean6, 
+			9 = $int6, 
 			10 = $int21, 
 			11 = $int30, 
 			12 = $int8, 
@@ -156,7 +156,7 @@ if ($int3 = 2) {
 			6 = 13, 
 			7 = 13, 
 			8 = 0, 
-			9 = $boolean6, 
+			9 = $int6, 
 			10 = $int21, 
 			11 = $int30, 
 			12 = $int8, 
@@ -191,7 +191,7 @@ if ($int3 = 2) {
 				6 = 13, 
 				7 = 13, 
 				8 = 0, 
-				9 = $boolean6, 
+				9 = $int6, 
 				10 = $int21, 
 				11 = $int30, 
 				12 = $int8, 
@@ -220,7 +220,7 @@ if ($int3 = 2) {
 			6 = 18, 
 			7 = 18, 
 			8 = 0, 
-			9 = $boolean6, 
+			9 = $int6, 
 			10 = $int21, 
 			11 = $int30, 
 			12 = $int8, 
@@ -249,7 +249,7 @@ if ($int3 = 2) {
 			6 = 0, 
 			7 = 0, 
 			8 = 1, 
-			9 = $boolean6, 
+			9 = $int6, 
 			10 = $int21, 
 			11 = $int30, 
 			12 = $int8, 
@@ -285,7 +285,7 @@ if ($int3 = 2) {
 			1 = ^white, 
 			2 = $int21, 
 			3 = 0, 
-			4 = $boolean6, 
+			4 = $int6, 
 			5 = $int7, 
 			6 = $int15, 
 			7 = $int18, 
@@ -303,7 +303,7 @@ $int7, $int15, $int21, $int18 = ~script6409(
 	1 = ^white, 
 	2 = $int21, 
 	3 = 0, 
-	4 = $boolean6, 
+	4 = $int6, 
 	5 = $int7, 
 	6 = $int15, 
 	7 = $int18, 
@@ -312,13 +312,13 @@ $int7, $int15, $int21, $int18 = ~script6409(
 );
 $int21 = calc($int21 + 1);
 $int15 = 0;
-if ($boolean6 = true) {
+if ($int6 = 1) {
 	$int7, $int15, $int21, $int18 = ~script6409(
 		0 = "<$string2>Location: </col><enum(int, string, enum_2096, db_getfield($dbrow4, quest:location, 0))>", 
 		1 = ^white, 
 		2 = $int21, 
 		3 = 0, 
-		4 = $boolean6, 
+		4 = $int6, 
 		5 = $int7, 
 		6 = $int15, 
 		7 = $int18, 
@@ -335,7 +335,7 @@ if ($boolean6 = true) {
 			1 = ^white, 
 			2 = $int21, 
 			3 = 0, 
-			4 = $boolean6, 
+			4 = $int6, 
 			5 = $int7, 
 			6 = $int15, 
 			7 = $int18, 
@@ -354,14 +354,14 @@ def_int $int34 = -1;
 $int7, $int31, $comsubid32, $int33, $int34 = ~script6410(
 	0 = $int1, 
 	1 = $string1, 
-	2 = $boolean6, 
+	2 = $int6, 
 	3 = $int7, 
 	4 = $int8, 
 	5 = $int18, 
 	6 = $comsubid19, 
 	7 = $comsubid20, 
 	8 = $component9, 
-	9 = $boolean6, 
+	9 = $int6, 
 	10 = "View journal", 
 	11 = $int33, 
 	12 = $component10, 
@@ -369,14 +369,14 @@ $int7, $int31, $comsubid32, $int33, $int34 = ~script6410(
 	14 = $component12
 );
 if (cc_find($component9, $comsubid32) = ^true) {
-	if ($boolean6 = true) {
+	if ($int6 = 1) {
 		cc_setonop("script6376($int2, $int0, false)");
 	} else {
 		cc_setonop("script6376($int2, $int0, true)");
 	}
 }
 if (cc_find($component10, $int33) = ^true) {
-	if ($boolean6 = true) {
+	if ($int6 = 1) {
 		cc_sethide(false);
 		cc_setop(1, "View journal <col=ff981f><~get_quest_name($dbrow4)></col>");
 		cc_setonop("script6375($dbrow4, cc_getid, $component10)");

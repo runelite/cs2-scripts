@@ -11,8 +11,8 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setop(1, "Select");
 if (~on_mobile = false) {
-	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $colour2)");
-	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $colour2)");
+	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $colour2)");
+	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $colour2)");
 }
 cc_setonop("xpdrops_setup_display_dropdown_op(
 	0 = event_op, 

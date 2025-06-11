@@ -30,7 +30,7 @@ if (string_length($string0) <= 0) {
 	}
 	cc_setop(1, "Continue");
 	cc_setonop("objbox_listener(
-		0 = true, 
+		0 = 1, 
 		1 = -1, 
 		2 = null, 
 		3 = 83, 
@@ -43,7 +43,7 @@ if (string_length($string0) <= 0) {
 		10 = 0
 	)");
 	cc_setonkey("objbox_listener(
-		0 = false, 
+		0 = 0, 
 		1 = event_keycode, 
 		2 = event_keychar, 
 		3 = 83, 
@@ -57,7 +57,7 @@ if (string_length($string0) <= 0) {
 	)");
 	if ($component0 ! null) {
 		if_setonclick("objbox_listener(
-			0 = true, 
+			0 = 1, 
 			1 = -1, 
 			2 = null, 
 			3 = 83, 
@@ -91,7 +91,7 @@ if (string_length($string0) <= 0) {
 	.cc_setop(1, $string0);
 	$string1 = "1";
 	cc_setonop("objbox_listener(
-		0 = true, 
+		0 = 1, 
 		1 = -1, 
 		2 = null, 
 		3 = 13, 
@@ -104,7 +104,7 @@ if (string_length($string0) <= 0) {
 		10 = 0
 	)");
 	cc_setonkey("objbox_listener(
-		0 = false, 
+		0 = 0, 
 		1 = event_keycode, 
 		2 = event_keychar, 
 		3 = 13, 
@@ -118,7 +118,7 @@ if (string_length($string0) <= 0) {
 	)");
 	$string1 = "2";
 	.cc_setonop("objbox_listener(
-		0 = true, 
+		0 = 1, 
 		1 = -1, 
 		2 = null, 
 		3 = 83, 
@@ -131,7 +131,7 @@ if (string_length($string0) <= 0) {
 		10 = 0
 	)");
 	.cc_setonkey("objbox_listener(
-		0 = false, 
+		0 = 0, 
 		1 = event_keycode, 
 		2 = event_keychar, 
 		3 = 83, 

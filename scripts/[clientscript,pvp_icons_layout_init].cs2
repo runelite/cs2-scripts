@@ -1,21 +1,21 @@
 // 865
 [clientscript,pvp_icons_layout_init](component $com_pvp_icons_universe0, component $com_pvp_icons_safezone1, component $com_pvp_icons_hud_container2, component $com_pvp_icons_deadman_dodger3, component $com_pvp_icons_kd_dodger4, component $com_pvp_icons_icons_dodger5, component $com_pvp_icons_chestannounce_dodger6, component $com_pvp_icons_kd_container7)
-~script4729($com_pvp_icons_safezone1, $com_pvp_icons_universe0, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
-~script4729($com_pvp_icons_hud_container2, $com_pvp_icons_universe0, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, false);
-~script4729($com_pvp_icons_chestannounce_dodger6, pvp_icons:deadman_chestannounce_boundinglayer, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
-~script4729($com_pvp_icons_deadman_dodger3, pvp_icons:deadman_final, clearbit(clearbit(36582, 12), 13), ^setpos_abs_right, ^setpos_abs_top, false);
-~script4729($com_pvp_icons_kd_dodger4, $com_pvp_icons_kd_container7, 52968, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($com_pvp_icons_safezone1, $com_pvp_icons_universe0, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
+~script4729($com_pvp_icons_hud_container2, $com_pvp_icons_universe0, setbit(0, 12), ^setpos_abs_left, ^setpos_abs_top, 0);
+~script4729($com_pvp_icons_chestannounce_dodger6, pvp_icons:deadman_chestannounce_boundinglayer, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, 0);
+~script4729($com_pvp_icons_deadman_dodger3, pvp_icons:deadman_final, clearbit(clearbit(36582, 12), 13), ^setpos_abs_right, ^setpos_abs_top, 0);
+~script4729($com_pvp_icons_kd_dodger4, $com_pvp_icons_kd_container7, 52968, ^setpos_abs_left, ^setpos_abs_top, 1);
 if (~on_mobile = true) {
-	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, setbit(36578, 12), ^setpos_abs_right, ^setpos_abs_bottom, false);
+	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, setbit(36578, 12), ^setpos_abs_right, ^setpos_abs_bottom, 0);
 } else if (getwindowmode = ^windowmode_fixed) {
-	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, 36578, ^setpos_abs_right, ^setpos_abs_bottom, false);
+	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, 36578, ^setpos_abs_right, ^setpos_abs_bottom, 0);
 } else {
-	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, clearbit(36578, 7), ^setpos_abs_right, ^setpos_abs_bottom, false);
+	~script4729($com_pvp_icons_icons_dodger5, pvp_icons:icons, clearbit(36578, 7), ^setpos_abs_right, ^setpos_abs_bottom, 0);
 }
-if_setontimer("pvp_icons_layout(false)", $com_pvp_icons_universe0);
-if_setonresize("pvp_icons_layout(true)", $com_pvp_icons_universe0);
-if_setonsubchange("pvp_icons_layout(true)", $com_pvp_icons_universe0);
-if_setonvartransmit("pvp_icons_layout(true){
+if_setontimer("pvp_icons_layout(0)", $com_pvp_icons_universe0);
+if_setonresize("pvp_icons_layout(1)", $com_pvp_icons_universe0);
+if_setonsubchange("pvp_icons_layout(1)", $com_pvp_icons_universe0);
+if_setonvartransmit("pvp_icons_layout(1){
 	0 = deadman, 
 	1 = deadman2, 
 	2 = deadman3, 
