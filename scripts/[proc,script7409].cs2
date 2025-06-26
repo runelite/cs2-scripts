@@ -11,11 +11,11 @@ if (%varcint1224 ! 1 & %varcint1224 ! 0) {
 	%varcint1224 = 0;
 }
 if (%varcint1224 = 1) {
-	cc_setgraphic(graphic_5782);
+	cc_setgraphic("tli_button01_accordion_58x43,0");
 	.cc_setgraphic("side_icons,49");
 	if_setop(1, "Show", osm_hotkeys:master_toggle);
 } else {
-	cc_setgraphic(graphic_5783);
+	cc_setgraphic("tli_button01_accordion_58x43,1");
 	.cc_setgraphic("side_icons,48");
 	if_setop(1, "Hide", osm_hotkeys:master_toggle);
 }

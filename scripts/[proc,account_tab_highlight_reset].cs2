@@ -2,9 +2,9 @@
 [proc,account_tab_highlight_reset](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
 if (%account_current_tab = $int6) {
 	if (%side_transparency = 0) {
-		if_setgraphic(graphic_6325, $component0);
-		if_setgraphic(graphic_6326, $component1);
-		if_setgraphic(graphic_6325, $component2);
+		if_setgraphic("tabs_tall,8", $component0);
+		if_setgraphic("tabs_tall,9", $component1);
+		if_setgraphic("tabs_tall,8", $component2);
 		if_sethide(true, $component3);
 		if_sethide(true, $component4);
 		if_sethide(true, $component5);
@@ -14,15 +14,15 @@ if (%account_current_tab = $int6) {
 		if_setgraphic("tabs_tall,0", $component2);
 	}
 } else if (%side_transparency = 0) {
-	if_setgraphic(graphic_6327, $component0);
-	if_setgraphic(graphic_6328, $component1);
-	if_setgraphic(graphic_6327, $component2);
+	if_setgraphic("tabs_tall,10", $component0);
+	if_setgraphic("tabs_tall,11", $component1);
+	if_setgraphic("tabs_tall,10", $component2);
 	if_sethide(false, $component3);
 	if_sethide(false, $component4);
 	if_sethide(false, $component5);
-	if_setgraphic(graphic_6329, $component3);
-	if_setgraphic(graphic_6330, $component4);
-	if_setgraphic(graphic_6329, $component5);
+	if_setgraphic("tabs_tall,12", $component3);
+	if_setgraphic("tabs_tall,13", $component4);
+	if_setgraphic("tabs_tall,12", $component5);
 	if_settrans(200, $component3);
 	if_settrans(200, $component4);
 	if_settrans(200, $component5);

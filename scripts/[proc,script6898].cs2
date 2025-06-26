@@ -63,14 +63,14 @@ if (%varcint988 >= 2) {
 }
 switch_int (%varcint988) {
 	case 1 :
-		if_setgraphic(graphic_4673, fsw_optin:fs_graphic);
-		if_setgraphic(graphic_4676, fsw_optin:ns_graphic);
+		if_setgraphic(fsw_banner_medium01, fsw_optin:fs_graphic);
+		if_setgraphic(osm_banner_medium01, fsw_optin:ns_graphic);
 	case 2, 3 :
-		if_setgraphic(graphic_4672, fsw_optin:fs_graphic);
-		if_setgraphic(graphic_4675, fsw_optin:ns_graphic);
+		if_setgraphic(fsw_banner_large01, fsw_optin:fs_graphic);
+		if_setgraphic(osm_banner_large01, fsw_optin:ns_graphic);
 	case default :
-		if_setgraphic(graphic_4674, fsw_optin:fs_graphic);
-		if_setgraphic(graphic_4677, fsw_optin:ns_graphic);
+		if_setgraphic(fsw_banner_small01, fsw_optin:fs_graphic);
+		if_setgraphic(osm_banner_small01, fsw_optin:ns_graphic);
 }
 ~script6899(fsw_optin:fs_info_background, ^black, 0);
 ~script6899(fsw_optin:ns_info_background, ^black, 0);

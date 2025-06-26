@@ -22,7 +22,7 @@ def_int $comsubid16 = $int15;
 $int15 = calc($int15 + 1);
 cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int5 + 55), 31, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(graphic_1121);
+cc_setgraphic("ge_itembackdrop,1");
 cc_setop(1, "Choose item");
 cc_setonop("opsound(event_op, 2)");
 cc_create($com_ge_offers_setup0, ^iftype_graphic, $int15, false);

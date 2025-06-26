@@ -16,10 +16,10 @@ while ($int3 < $int1) {
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_bottom);
 		if (%popout_open = $int3) {
 			.cc_setop(1, "Close");
-			.cc_setgraphic(graphic_5777);
+			.cc_setgraphic("tli_button01_rectangle_52x40,1");
 		} else {
 			.cc_setop(1, "Open");
-			.cc_setgraphic(graphic_5776);
+			.cc_setgraphic("tli_button01_rectangle_52x40,0");
 		}
 		.cc_setnoclickthrough(true);
 		$struct4 = enum(int, struct, enum_4067, $int3);

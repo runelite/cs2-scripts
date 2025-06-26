@@ -18,11 +18,11 @@ if (%toa_client_hideplayers = 1) {
 	if_setsize(69, calc($int30 * 34 + ($int30 - 1)), ^setsize_abs, ^setsize_abs, $com_toa_hud_content_names1);
 }
 if (%toa_client_raid_level >= 300) {
-	if_setgraphic(graphic_4662, $com_toa_hud_raid_difficulty_gfx4);
+	if_setgraphic("toa_difficulty_icons,2", $com_toa_hud_raid_difficulty_gfx4);
 } else if (%toa_client_raid_level >= 150) {
-	if_setgraphic(graphic_4661, $com_toa_hud_raid_difficulty_gfx4);
+	if_setgraphic("toa_difficulty_icons,1", $com_toa_hud_raid_difficulty_gfx4);
 } else {
-	if_setgraphic(graphic_4660, $com_toa_hud_raid_difficulty_gfx4);
+	if_setgraphic("toa_difficulty_icons,0", $com_toa_hud_raid_difficulty_gfx4);
 }
 if_settext("Level: <tostring(%toa_client_raid_level)>", $com_toa_hud_raid_level_txt5);
 def_int $int31 = 0;
@@ -38,22 +38,22 @@ switch_int (%toa_client_current_path) {
 	case 1 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
-		if_setgraphic(graphic_4635, $com_toa_hud_paths_icon6);
+		if_setgraphic("toa_invocation_icons_small,4", $com_toa_hud_paths_icon6);
 		if_settext(tostring(%toa_client_scabaras_level), $com_toa_hud_paths_level7);
 	case 2 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
-		if_setgraphic(graphic_4636, $com_toa_hud_paths_icon6);
+		if_setgraphic("toa_invocation_icons_small,5", $com_toa_hud_paths_icon6);
 		if_settext(tostring(%toa_client_het_level), $com_toa_hud_paths_level7);
 	case 3 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
-		if_setgraphic(graphic_4637, $com_toa_hud_paths_icon6);
+		if_setgraphic("toa_invocation_icons_small,6", $com_toa_hud_paths_icon6);
 		if_settext(tostring(%toa_client_apmeken_level), $com_toa_hud_paths_level7);
 	case 4 :
 		if_sethide(false, $com_toa_hud_raid_path_levels_path2);
 		if_sethide(true, $com_toa_hud_raid_path_levels_nexus3);
-		if_setgraphic(graphic_4638, $com_toa_hud_paths_icon6);
+		if_setgraphic("toa_invocation_icons_small,7", $com_toa_hud_paths_icon6);
 		if_settext(tostring(%toa_client_crondis_level), $com_toa_hud_paths_level7);
 	case 5, 6 :
 		if_sethide(true, $com_toa_hud_raid_path_levels_path2);

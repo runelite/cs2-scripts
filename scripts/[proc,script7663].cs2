@@ -1,13 +1,13 @@
 // 7663
 [proc,script7663](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19)
 def_int $int20 = 49;
-def_graphic $graphic21 = graphic_6283;
+def_graphic $graphic21 = league_5_combat_mastery_icon_medium;
 def_int $int22 = 50;
 def_int $int23 = 44;
 switch_int (%varcint988) {
 	case 2, 3 :
 		$int20 = 96;
-		$graphic21 = graphic_6284;
+		$graphic21 = league_5_combat_mastery_icon_large;
 		$int23, $int22 = 78, 96;
 }
 def_int $int24 = calc($int20 + 4);
@@ -109,16 +109,16 @@ while ($int31 < enum_getoutputcount(enum_5690)) {
 				cc_setposition(calc($int28 + $int25 / 2 - $int18 / 2 - 2), calc($int30 + $int26 / 2 - $int18 / 2 - 2), ^setpos_abs_left, ^setpos_abs_top);
 				if ($int18 = 74) {
 					if ($int45 = 1) {
-						cc_setgraphic(graphic_6288);
+						cc_setgraphic(league_5_combat_mastery_highlight_medium_glow);
 						cc_setontimer("script7679($component5, $int33, 1, 0)");
 					} else {
-						cc_setgraphic(graphic_6286);
+						cc_setgraphic(league_5_combat_mastery_highlight_medium);
 					}
 				} else if ($int45 = 1) {
-					cc_setgraphic(graphic_6287);
+					cc_setgraphic(league_5_combat_mastery_highlight_small_glow);
 					cc_setontimer("script7679($component5, $int33, 1, 0)");
 				} else {
-					cc_setgraphic(graphic_6285);
+					cc_setgraphic(league_5_combat_mastery_highlight_small);
 				}
 				if ($int45 = 2) {
 					cc_settrans(127);
@@ -262,10 +262,10 @@ if ($int16 = 1) {
 	~scrollbar_horizontal(
 		0 = $component12, 
 		1 = $component13, 
-		2 = graphic_4538, 
-		3 = graphic_4537, 
-		4 = graphic_4536, 
-		5 = graphic_4535, 
+		2 = "scrollbar_dragger_horizontal_v2,3", 
+		3 = "scrollbar_dragger_horizontal_v2,2", 
+		4 = "scrollbar_dragger_horizontal_v2,1", 
+		5 = "scrollbar_dragger_horizontal_v2,0", 
 		6 = "scrollbar_v2,2", 
 		7 = "scrollbar_v2,3", 
 		8 = 1

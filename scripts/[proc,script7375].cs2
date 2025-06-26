@@ -3,31 +3,31 @@
 cc_create($component4, ^iftype_graphic, $int0, false);
 cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
-def_graphic $graphic11 = graphic_5652;
-def_graphic $graphic12 = graphic_5651;
+def_graphic $graphic11 = "number_pad_buttons,1";
+def_graphic $graphic12 = "number_pad_buttons,0";
 def_int $int13 = 0;
 if ($int10 = 1) {
 	if ($int1 = $int6 | $int1 = $int7 | $int1 = $int8 | $int1 = $int9) {
-		$graphic11 = graphic_5656;
-		$graphic12 = graphic_5655;
+		$graphic11 = "number_pad_buttons,5";
+		$graphic12 = "number_pad_buttons,4";
 		$int13 = 30;
 	}
 } else if ($int10 = 2) {
 	if ($int1 = $int6) {
-		$graphic11 = graphic_5660;
-		$graphic12 = graphic_5659;
+		$graphic11 = "number_pad_buttons,9";
+		$graphic12 = "number_pad_buttons,8";
 		$int13 = 60;
 	} else if ($int1 = $int7) {
-		$graphic11 = graphic_5658;
-		$graphic12 = graphic_5657;
+		$graphic11 = "number_pad_buttons,7";
+		$graphic12 = "number_pad_buttons,6";
 		$int13 = 45;
 	} else if ($int1 = $int8) {
-		$graphic11 = graphic_5656;
-		$graphic12 = graphic_5655;
+		$graphic11 = "number_pad_buttons,5";
+		$graphic12 = "number_pad_buttons,4";
 		$int13 = 30;
 	} else if ($int1 = $int9) {
-		$graphic11 = graphic_5654;
-		$graphic12 = graphic_5653;
+		$graphic11 = "number_pad_buttons,3";
+		$graphic12 = "number_pad_buttons,2";
 		$int13 = 15;
 	}
 }

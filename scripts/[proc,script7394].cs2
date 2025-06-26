@@ -3,9 +3,9 @@
 sound_synth(synth_6652, 1, 0);
 if (cc_find($component0, 0) = ^true) {
 	if ($int1 = 0) {
-		cc_setgraphic(graphic_5652);
+		cc_setgraphic("number_pad_buttons,1");
 	} else {
-		cc_setgraphic(graphic_5651);
+		cc_setgraphic("number_pad_buttons,0");
 	}
 }
 if_setonmouserepeat(null, $component0);

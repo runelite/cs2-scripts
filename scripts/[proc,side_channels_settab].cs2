@@ -17,7 +17,7 @@ if (%side_channels_tab_selected = $int0) {
 		~side_channels_drawtab($component1, "tabs_short,0", "tabs_short,1", null, null);
 		$colour12 = 0x5d5848;
 	} else {
-		~side_channels_drawtab($component1, graphic_6317, graphic_6318, null, null);
+		~side_channels_drawtab($component1, "tabs_short,8", "tabs_short,9", null, null);
 		$colour12 = 0x28251e;
 	}
 	if_setonmouserepeat(null, $component1);
@@ -53,16 +53,16 @@ if (%side_channels_tab_selected = $int0) {
 		$graphic8, $graphic9 = "tabs_short,2", "tabs_short,3";
 		~side_channels_drawtab($component1, $graphic8, $graphic9, null, null);
 	} else {
-		$graphic8, $graphic9 = graphic_6319, graphic_6320;
-		$graphic10, $graphic11 = graphic_6321, graphic_6322;
+		$graphic8, $graphic9 = "tabs_short,10", "tabs_short,11";
+		$graphic10, $graphic11 = "tabs_short,12", "tabs_short,13";
 		~side_channels_drawtab($component1, $graphic8, $graphic9, $graphic10, $graphic11);
 	}
 	if_setonmouseleave("side_channels_drawtab($component1, $graphic8, $graphic9, $graphic10, $graphic11)", $component1);
 	if (%side_transparency = 1) {
 		$graphic8, $graphic9 = "tabs_short,4", "tabs_short,5";
 	} else {
-		$graphic8, $graphic9 = graphic_6319, graphic_6320;
-		$graphic10, $graphic11 = graphic_6323, graphic_6324;
+		$graphic8, $graphic9 = "tabs_short,10", "tabs_short,11";
+		$graphic10, $graphic11 = "tabs_short,14", "tabs_short,15";
 	}
 	if_setonmouserepeat("side_channels_drawtab($component1, $graphic8, $graphic9, $graphic10, $graphic11)", $component1);
 	if_setonop("side_channels_optab(event_op, $int0, $component2, $component3, $component4, $component5, $component6, $component7)", $component1);

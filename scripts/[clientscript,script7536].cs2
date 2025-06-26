@@ -4,7 +4,7 @@ def_int $comsubid2 = ~v2_stone_button_filled($com_hiscores_settings_open0);
 cc_create($com_hiscores_settings_open0, ^iftype_graphic, $comsubid2, false);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic(graphic_2410);
+cc_setgraphic("acc_man_icons,7");
 if (~on_mobile = false) {
 	if_setonmouserepeat("script7537($com_hiscores_settings_open0, $com_hiscores_tooltip1)", $com_hiscores_settings_open0);
 	if_setonmouseleave("script7538($com_hiscores_settings_open0, $com_hiscores_tooltip1)", $com_hiscores_settings_open0);

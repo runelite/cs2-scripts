@@ -14,11 +14,11 @@ def_int $int12 = 1;
 while ($int12 <= 3) {
 	switch_int ($int12) {
 		case 1 :
-			$graphic11, $int10, $string0 = graphic_5666, %mm_available_mox, "Mox reagent";
+			$graphic11, $int10, $string0 = "icon_alchemy_chemicals01_20x20,0", %mm_available_mox, "Mox reagent";
 		case 2 :
-			$graphic11, $int10, $string0 = graphic_5667, %mm_available_aga, "Aga reagent";
+			$graphic11, $int10, $string0 = "icon_alchemy_chemicals01_20x20,1", %mm_available_aga, "Aga reagent";
 		case 3 :
-			$graphic11, $int10, $string0 = graphic_5668, %mm_available_lye, "Lye reagent";
+			$graphic11, $int10, $string0 = "icon_alchemy_chemicals01_20x20,2", %mm_available_lye, "Lye reagent";
 	}
 	if ($graphic11 ! null) {
 		cc_create($com_mm_overlay_content0, ^iftype_graphic, $int1, false);

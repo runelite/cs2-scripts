@@ -7,7 +7,7 @@ cc_create($com_bond_management_top2, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(128, 64, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
-cc_setgraphic(graphic_5256);
+cc_setgraphic(bond_graphic_128x64);
 cc_create($com_bond_management_top2, ^iftype_text, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(128, 0, ^setsize_minus, ^setsize_minus);
@@ -72,17 +72,17 @@ cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(80 + $int24), 0, ^setpos_abs_left, ^setpos_abs_centre);
-cc_setgraphic(graphic_5258);
+cc_setgraphic("icon_bonds_30x30,1");
 cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(5 + 36 + 5 + $int24), 0, ^setpos_abs_right, ^setpos_abs_centre);
-cc_setgraphic(graphic_5257);
+cc_setgraphic("icon_bonds_30x30,0");
 cc_create($com_bond_management_bonds_header3, ^iftype_graphic, $int16, false);
 $int16 = calc($int16 + 1);
 cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(5 + $int24), 0, ^setpos_abs_right, ^setpos_abs_centre);
-cc_setgraphic(graphic_5259);
+cc_setgraphic("icon_bonds_30x30,2");
 ~script1930(
 	0 = $com_bond_management_bonds_tradeable4, 
 	1 = $com_bond_management_tradeable_inv6, 

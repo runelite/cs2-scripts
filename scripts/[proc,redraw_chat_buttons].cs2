@@ -7,10 +7,10 @@ def_component $component3 = null;
 if (~on_mobile = true & %varcint1220 = 1 & %settings_mobile_show_filter_stones_enabled = 0) {
 	if (calc(~chat_alert_get(73) / 25 % 2) = 1) {
 		if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
-			cc_setgraphic(graphic_5775);
+			cc_setgraphic("tli_button01_rectangle_58x40,2");
 		}
 	} else if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
-		cc_setgraphic(graphic_5773);
+		cc_setgraphic("tli_button01_rectangle_58x40,0");
 	}
 	return;
 }
@@ -23,7 +23,7 @@ while ($int1 <= 6) {
 	}
 	if (%varcint41 = $int1) {
 		if ($enum2 = enum_1745) {
-			$graphic0 = graphic_5780;
+			$graphic0 = "tli_button01_rectangle_58x24,1";
 		} else if (%varcint42 = $int1) {
 			$graphic0 = "chat_tab_button,3";
 		} else {
@@ -31,18 +31,18 @@ while ($int1 <= 6) {
 		}
 	} else if (%varcint42 = $int1) {
 		if ($enum2 = enum_1745) {
-			$graphic0 = graphic_5780;
+			$graphic0 = "tli_button01_rectangle_58x24,1";
 		} else {
 			$graphic0 = "chat_tab_button,1";
 		}
 	} else if (calc(~chat_alert_get($int1) / 25 % 2) = 1) {
 		if ($enum2 = enum_1745) {
-			$graphic0 = graphic_5781;
+			$graphic0 = "tli_button01_rectangle_58x24,2";
 		} else {
 			$graphic0 = "chat_tab_button,4";
 		}
 	} else if ($enum2 = enum_1745) {
-		$graphic0 = graphic_5779;
+		$graphic0 = "tli_button01_rectangle_58x24,0";
 	} else {
 		$graphic0 = "chat_tab_button,0";
 	}

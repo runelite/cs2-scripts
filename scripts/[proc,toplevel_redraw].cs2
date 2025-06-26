@@ -164,16 +164,16 @@ if ($component7 ! null) {
 		if_setgraphic(overlay_multiway, $component7);
 		if_sethide(false, $component7);
 	} else if (%singleway_plus_indicator = 1 & %cutscene_status = 0) {
-		if_setgraphic(graphic_2518, $component7);
+		if_setgraphic(overlay_singleway_plus, $component7);
 		if_sethide(false, $component7);
 	} else if (%td_multiway_indicator > 0 & %cutscene_status = 0) {
 		switch_int (%td_multiway_indicator) {
 			case 1 :
-				if_setgraphic(graphic_5641, $component7);
+				if_setgraphic("overlay_td_multiway,0", $component7);
 			case 2 :
-				if_setgraphic(graphic_5642, $component7);
+				if_setgraphic("overlay_td_multiway,1", $component7);
 			case 3 :
-				if_setgraphic(graphic_5643, $component7);
+				if_setgraphic("overlay_td_multiway,2", $component7);
 		}
 		if_sethide(false, $component7);
 	} else {

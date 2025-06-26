@@ -3,22 +3,22 @@
 switch_int ($int0) {
 	case 20 :
 		if (%poison > 0 | %disease > 0 | %parasite > 0) {
-			cc_setgraphic(graphic_5767);
+			cc_setgraphic("tli_button01_square_40x40,0");
 		} else {
-			cc_setgraphic(graphic_5772);
+			cc_setgraphic("tli_button01_square_40x40,5");
 		}
 	case 23 :
 		if (map_members = false & %br_ingame = 0 | ~script3648(inv_getobj(worn, 3)) <= 0) {
-			cc_setgraphic(graphic_5772);
+			cc_setgraphic("tli_button01_square_40x40,5");
 		} else if (%sa_attack > 0) {
-			cc_setgraphic(graphic_5771);
+			cc_setgraphic("tli_button01_square_40x40,4");
 		} else {
-			cc_setgraphic(graphic_5770);
+			cc_setgraphic("tli_button01_square_40x40,3");
 		}
 	case default :
 		if ($int1 = 1) {
-			cc_setgraphic(graphic_5769);
+			cc_setgraphic("tli_button01_square_40x40,2");
 		} else {
-			cc_setgraphic(graphic_5767);
+			cc_setgraphic("tli_button01_square_40x40,0");
 		}
 }

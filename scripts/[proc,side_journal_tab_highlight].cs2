@@ -4,15 +4,15 @@ if (%side_journal_tab = $int6) {
 	return;
 }
 if (%side_transparency = 0) {
-	if_setgraphic(graphic_6319, $component0);
-	if_setgraphic(graphic_6320, $component1);
-	if_setgraphic(graphic_6319, $component2);
+	if_setgraphic("tabs_short,10", $component0);
+	if_setgraphic("tabs_short,11", $component1);
+	if_setgraphic("tabs_short,10", $component2);
 	if_sethide(false, $component3);
 	if_sethide(false, $component4);
 	if_sethide(false, $component5);
-	if_setgraphic(graphic_6323, $component3);
-	if_setgraphic(graphic_6324, $component4);
-	if_setgraphic(graphic_6323, $component5);
+	if_setgraphic("tabs_short,14", $component3);
+	if_setgraphic("tabs_short,15", $component4);
+	if_setgraphic("tabs_short,14", $component5);
 	if_settrans(200, $component3);
 	if_settrans(200, $component4);
 	if_settrans(200, $component5);

@@ -1,20 +1,20 @@
 // 2416
 [proc,script2416](int $int0, int $int1, component $component2)
-def_graphic $graphic3 = graphic_5260;
+def_graphic $graphic3 = "icon_arrow_32x16,0";
 def_int $comsubid4 = 0;
 if ($int0 = 1) {
 	$comsubid4 = ~v2_stone_button_in_filled($component2);
 	if ($int1 = 1) {
-		$graphic3 = graphic_5263;
+		$graphic3 = "icon_arrow_32x16,3";
 	} else {
-		$graphic3 = graphic_5262;
+		$graphic3 = "icon_arrow_32x16,2";
 	}
 } else {
 	$comsubid4 = ~v2_stone_button_filled($component2);
 	if ($int1 = 1) {
-		$graphic3 = graphic_5261;
+		$graphic3 = "icon_arrow_32x16,1";
 	} else {
-		$graphic3 = graphic_5260;
+		$graphic3 = "icon_arrow_32x16,0";
 	}
 }
 cc_create($component2, ^iftype_graphic, $comsubid4, false);

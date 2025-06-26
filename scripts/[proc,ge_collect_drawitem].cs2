@@ -1,7 +1,7 @@
 // 792
 [proc,ge_collect_drawitem](int $int0, inv $inv1, component $component2, int $comsubid3, component $com_ge_collect_collect_inv4, component $com_ge_collect_collect_bank5)
-def_graphic $graphic6 = graphic_1120;
-def_graphic $graphic7 = graphic_1121;
+def_graphic $graphic6 = "ge_itembackdrop,0";
+def_graphic $graphic7 = "ge_itembackdrop,1";
 if (.cc_find($component2, $comsubid3) = ^true) {
 	.cc_setgraphic($graphic6);
 }

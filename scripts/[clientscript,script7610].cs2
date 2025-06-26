@@ -5,7 +5,7 @@ switch_int ($opindex0) {
 		if (%varcint1220 = 1) {
 			%varcint1220 = 0;
 			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
-				cc_setgraphic(graphic_5774);
+				cc_setgraphic("tli_button01_rectangle_58x40,1");
 			}
 			if_sethide(false, toplevel_osm:chatting_button);
 			if_sethide(false, toplevel_osm:chat_filter_toggle);
@@ -16,7 +16,7 @@ switch_int ($opindex0) {
 		} else {
 			%varcint1220 = 1;
 			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
-				cc_setgraphic(graphic_5773);
+				cc_setgraphic("tli_button01_rectangle_58x40,0");
 			}
 			if_sethide(true, toplevel_osm:chatting_button);
 			if_sethide(true, toplevel_osm:chat_filter_toggle);
