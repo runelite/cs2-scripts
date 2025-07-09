@@ -1,0 +1,10 @@
+// 7905
+[clientscript,script7905](component $com_settings_side_renderer0, component $com_settings_side_tooltip1)
+def_string $string0 = "Use new renderer (currently off)<br>When active, the new renderer will be used.";
+if (%settings_hd_new_renderer_toggle = 1) {
+	$string0 = "Use new renderer (currently on)<br>When active, the new renderer will be used.";
+}
+if (~on_mobile = false & cc_find($com_settings_side_renderer0, 0) = ^true) {
+	cc_setcolour(^white);
+}
+~tooltip_mouserepeat($com_settings_side_renderer0, -1, $com_settings_side_tooltip1, $string0, 25, 190);

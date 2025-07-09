@@ -1,21 +1,21 @@
 // 4566
-[clientscript,settings_fps_limit](component $com_settings_side_fps_limit0, component $com_settings_side_fps_limit_buttons1, component $com_settings_side_dropdown_container2, component $com_settings_side_dropdown_panel3, component $com_settings_side_dropdown_scrollbar4, component $com_settings_side_tooltip5, component $com_settings_side_universe6)
+[clientscript,settings_fps_limit](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if (~on_mobile = true) {
-	if_setposition(0, 77, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_side_fps_limit0);
+	if_setposition(0, 77, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 } else if (~on_enhanced_desktop = 1) {
-	if_setposition(0, 118, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_side_fps_limit0);
+	if_setposition(0, 118, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 } else {
-	if_sethide(true, $com_settings_side_fps_limit0);
+	if_sethide(true, $component0);
 	return;
 }
 ~settings_side_dropdown_create(
-	0 = $com_settings_side_fps_limit0, 
-	1 = $com_settings_side_fps_limit_buttons1, 
-	2 = $com_settings_side_dropdown_container2, 
-	3 = $com_settings_side_dropdown_panel3, 
-	4 = $com_settings_side_dropdown_scrollbar4, 
-	5 = $com_settings_side_tooltip5, 
-	6 = $com_settings_side_universe6, 
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
 	7 = "Limit Framerate", 
 	8 = limit_framerate_3008
 );
