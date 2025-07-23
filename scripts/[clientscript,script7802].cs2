@@ -35,9 +35,9 @@ if (%varcint1245 ! 1) {
 	%varcint1245 = 1;
 }
 if (~on_mobile = true) {
-	if_setontimer("script3833($component16, $component17, 0)", $component16);
+	if_setontimer("script7923($component16, $component17, 0)", $component16);
 } else {
-	if (%varcint1247 = 0 & %varcint1248 = 0) {
+	if (%varcint1247 < 0 | %varcint1248 < 0) {
 		%varcint1247 = if_getx($component20);
 		%varcint1248 = if_gety($component20);
 	}

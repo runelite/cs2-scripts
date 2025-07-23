@@ -1,6 +1,9 @@
 // 3238
-[proc,questlist_hide_quest](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4)(int)
-if (db_getfield($dbrow0, quest:type, 0) = 1 & ~questlist_hide_miniquests = 1) {
+[proc,questlist_hide_quest](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
+if (db_getfield($dbrow0, quest:release_type, 0) = 0) {
+	return(1);
+}
+if (db_getfield($dbrow0, quest:type, 0) = 1 & $int7 = 1) {
 	return(1);
 }
 if (db_getfield($dbrow0, quest:type, 0) = 0 & %questlist_hide_quests = 1) {
@@ -9,7 +12,7 @@ if (db_getfield($dbrow0, quest:type, 0) = 0 & %questlist_hide_quests = 1) {
 if ($int4 = 1 & %questlist_hide_unavailable = 1) {
 	return(1);
 }
-if (~quest_is_subquest($dbrow0) = 1) {
+if ($int6 = 1) {
 	return(1);
 }
 if ($int1 = 0 & %questlist_hide_in_progress = 1) {

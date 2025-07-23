@@ -1,32 +1,36 @@
 // 6819
-[clientscript,questjournal_init](component $com_questjournal_universe0, component $com_questjournal_title1, component $com_questjournal_back2, component $com_questjournal_switch3, component $com_questjournal_close4, component $com_questjournal_inner5, component $com_questjournal_container6, component $com_questjournal_scroll7, component $com_questjournal_scrollbar8, component $com_questjournal_textlayer9)
-def_int $int10 = 0;
+[clientscript,questjournal_init](component $com_questjournal_infinity0, component $com_questjournal_universe1, component $com_questjournal_title2, component $com_questjournal_back3, component $com_questjournal_switch4, component $com_questjournal_close5, component $com_questjournal_inner6, component $com_questjournal_container7, component $com_questjournal_scroll8, component $com_questjournal_scrollbar9, component $com_questjournal_textlayer10)
+def_int $int11 = 0;
 if (~speedrunning_world = 1) {
-	$int10 = 1;
+	$int11 = 1;
 }
-if ($int10 = 1) {
-	if_sethide(false, $com_questjournal_back2);
-} else {
-	if_sethide(true, $com_questjournal_back2);
-}
-def_int $int11 = 1;
 if ($int11 = 1) {
-	if_sethide(false, $com_questjournal_switch3);
+	if_sethide(false, $com_questjournal_back3);
 } else {
-	if_sethide(true, $com_questjournal_switch3);
+	if_sethide(true, $com_questjournal_back3);
 }
-if ($int10 = 1) {
-	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_switch3);
+def_int $int12 = 1;
+if ($int12 = 1) {
+	if_sethide(false, $com_questjournal_switch4);
 } else {
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_switch3);
+	if_sethide(true, $com_questjournal_switch4);
 }
-if_setopkey(1, ^key_escape, 0, $com_questjournal_close4);
-if ($int10 = 1 & $int11 = 1) {
-	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title1);
-} else if ($int10 = 1 | $int11 = 1) {
-	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title1);
+if ($int11 = 1) {
+	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_switch4);
 } else {
-	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title1);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_switch4);
 }
-~script6924($com_questjournal_universe0, $com_questjournal_inner5, $com_questjournal_container6, $com_questjournal_scroll7, $com_questjournal_scrollbar8, $com_questjournal_textlayer9);
-if_setontimer("script6923($com_questjournal_universe0, $com_questjournal_inner5, $com_questjournal_container6, $com_questjournal_scroll7, $com_questjournal_scrollbar8, $com_questjournal_textlayer9)", $com_questjournal_universe0);
+if_setopkey(1, ^key_escape, 0, $com_questjournal_close5);
+if ($int11 = 1 & $int12 = 1) {
+	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title2);
+} else if ($int11 = 1 | $int12 = 1) {
+	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title2);
+} else {
+	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title2);
+}
+~script7926($com_questjournal_universe1);
+~script6924($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10, 1);
+if_setontimer("script6923($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10)", $com_questjournal_universe1);
+if (~on_mobile = true) {
+	if_setontimer("script7923($com_questjournal_infinity0, $com_questjournal_universe1, 0)", $com_questjournal_infinity0);
+}

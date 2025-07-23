@@ -1,16 +1,16 @@
 // 4028
-[proc,script4028](dbrow $dbrow0, int $int1, int $int2, int $int3)(int)
-if (db_getfield($dbrow0, quest:in_prerelease, 0) = true) {
+[proc,script4028](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
+if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
 	return(1);
 }
-def_enum $enum4 = null;
-if (~league_world = 1) {
-	$enum4 = struct_param(enum(int, struct, enum_2670, %league_type), param_890);
-	if ($enum4 ! null & enum(dbrow, boolean, $enum4, $dbrow0) = false) {
+def_enum $enum6 = null;
+if ($int5 = 1) {
+	$enum6 = struct_param(enum(int, struct, enum_2670, %league_type), param_890);
+	if ($enum6 ! null & enum(dbrow, boolean, $enum6, $dbrow0) = false) {
 		return(1);
 	}
 }
-if (~speedrunning_world = 1 & ~speedrunning_quest_enabled($dbrow0) = 0) {
+if ($int4 = 1 & ~speedrunning_quest_enabled($dbrow0) = 0) {
 	return(1);
 }
 if ($int1 = 1 & %questlist_hide_lackreqs = 1 & $int2 = 0) {

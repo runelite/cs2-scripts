@@ -5,5 +5,9 @@ switch_dbrow ($dbrow0) {
 		if (%hw17_jarvis_dead = 1) {
 			return(1);
 		}
+	case dbrow_1521 :
+		if (~quest_is_complete(dbrow_37) = 1) {
+			return(1);
+		}
 }
 return(0);

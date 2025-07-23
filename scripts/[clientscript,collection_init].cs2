@@ -37,9 +37,9 @@ if (%varcint1245 ! 1) {
 	%varcint1245 = 1;
 }
 if (~on_mobile = true) {
-	if_setontimer("script3833($component4, $component5, 0)", $component4);
+	if_setontimer("script7923($component4, $component5, 0)", $component4);
 } else {
-	if (%varcint1243 = 0 & %varcint1244 = 0 & %varcint1241 = 0 & %varcint1242 = 0) {
+	if (%varcint1243 < 0 | %varcint1244 < 0 | %varcint1241 <= 0 | %varcint1242 <= 0) {
 		%varcint1241 = if_getwidth($component8);
 		%varcint1242 = if_getheight($component8);
 		%varcint1243 = if_getx($component8);

@@ -1,0 +1,12 @@
+// 7925
+[proc,script7925]()(int)
+if (getwindowmode = ^windowmode_fixed) {
+	return(0);
+}
+if (~on_mobile = true) {
+	return(0);
+}
+if (%settings_interface_resizing = 0) {
+	return(0);
+}
+return(1);

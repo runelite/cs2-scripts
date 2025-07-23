@@ -1,34 +1,38 @@
 // 6820
-[clientscript,questjournal_overview_init](component $com_questjournal_overview_universe0, component $com_questjournal_overview_title1, component $com_questjournal_overview_back2, component $com_questjournal_overview_switch3, component $com_questjournal_overview_close4, component $com_questjournal_overview_content_outer5, int $com_questjournal_overview_content_inner6, component $com_questjournal_overview_scrollbar7, component $com_questjournal_overview_inner8, component $com_questjournal_overview_container9, component $com_questjournal_overview_scroll10)
-def_int $int11 = 0;
-if (~speedrunning_world = 1) {
-	$int11 = 1;
-}
-if ($int11 = 1) {
-	if_sethide(false, $com_questjournal_overview_back2);
-} else {
-	if_sethide(true, $com_questjournal_overview_back2);
-}
+[clientscript,questjournal_overview_init](component $com_questjournal_overview_infinity0, component $com_questjournal_overview_universe1, component $com_questjournal_overview_title2, component $com_questjournal_overview_back3, component $com_questjournal_overview_switch4, component $com_questjournal_overview_close5, component $com_questjournal_overview_content_outer6, int $com_questjournal_overview_content_inner7, component $com_questjournal_overview_scrollbar8, component $com_questjournal_overview_inner9, component $com_questjournal_overview_container10, component $com_questjournal_overview_scroll11)
 def_int $int12 = 0;
-if (~quest_status_get(%latest_quest_journal) ! 1) {
+if (~speedrunning_world = 1) {
 	$int12 = 1;
 }
 if ($int12 = 1) {
-	if_sethide(false, $com_questjournal_overview_switch3);
+	if_sethide(false, $com_questjournal_overview_back3);
 } else {
-	if_sethide(true, $com_questjournal_overview_switch3);
+	if_sethide(true, $com_questjournal_overview_back3);
 }
-if ($int11 = 1) {
-	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch3);
+def_int $int13 = 0;
+if (~quest_status_get(%latest_quest_journal) ! 1) {
+	$int13 = 1;
+}
+if ($int13 = 1) {
+	if_sethide(false, $com_questjournal_overview_switch4);
 } else {
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch3);
+	if_sethide(true, $com_questjournal_overview_switch4);
 }
-if_setopkey(1, ^key_escape, 0, $com_questjournal_overview_close4);
-if ($int11 = 1 & $int12 = 1) {
-	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
-} else if ($int11 = 1 | $int12 = 1) {
-	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
+if ($int12 = 1) {
+	if_setposition(29, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch4);
 } else {
-	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title1);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_switch4);
 }
-~script6924($com_questjournal_overview_universe0, $com_questjournal_overview_inner8, $com_questjournal_overview_container9, $com_questjournal_overview_scroll10, $com_questjournal_overview_scrollbar7, $com_questjournal_overview_content_outer5);
+if_setopkey(1, ^key_escape, 0, $com_questjournal_overview_close5);
+if ($int12 = 1 & $int13 = 1) {
+	if_setposition(63, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title2);
+} else if ($int12 = 1 | $int13 = 1) {
+	if_setposition(34, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title2);
+} else {
+	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_overview_title2);
+}
+~script7926($com_questjournal_overview_universe1);
+~script6924($com_questjournal_overview_universe1, $com_questjournal_overview_inner9, $com_questjournal_overview_container10, $com_questjournal_overview_scroll11, $com_questjournal_overview_scrollbar8, $com_questjournal_overview_content_outer6, 1);
+if (~on_mobile = true) {
+	if_setontimer("script7923($com_questjournal_overview_infinity0, $com_questjournal_overview_universe1, 0)", $com_questjournal_overview_infinity0);
+}

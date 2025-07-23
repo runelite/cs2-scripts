@@ -1,0 +1,48 @@
+java.lang.IllegalStateException: Opcode 2929 in script 7969 not implemented
+
+.id                       7969
+.int_arg_count            3
+.obj_arg_count            0
+   iconst                 0
+   istore                 3
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL8
+   jump                   LABEL38
+LABEL8:
+   cc_getmodelangle_z    
+   iconst                 256
+   add                   
+   istore                 3
+   iload                  3
+   iconst                 2048
+   if_icmpge              LABEL16
+   jump                   LABEL18
+LABEL16:
+   iconst                 0
+   istore                 3
+LABEL18:
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iload                  3
+   iload                  2
+   cc_setmodelangle      
+   iconst                 -1829057600
+   iconst                 60424199
+   iload                  1
+   iload                  1
+   cc_getx               
+   cc_gety               
+   iload                  3
+   sconst                 "iiii"
+   2929                  
+   iconst                 10603
+   iconst                 1
+   iconst                 0
+   sound_synth           
+LABEL38:
+   return                

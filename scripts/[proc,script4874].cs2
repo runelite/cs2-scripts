@@ -1,6 +1,6 @@
 // 4874
 [proc,script4874](dbrow $dbrow0)
-if (~script7327($dbrow0) = 1 | ~quest_is_subquest($dbrow0) = 1 | db_getfield($dbrow0, quest:in_prerelease, 0) = true | ~quest_status_get($dbrow0) ! 1) {
+if (~script7327($dbrow0) = 1 | ~quest_is_subquest($dbrow0) = 1 | db_getfield($dbrow0, quest:release_type, 0) ! 2 | ~quest_status_get($dbrow0) ! 1) {
 	return;
 }
 if (%quest_start_highlight_filter_requirements = 1 & ~quest_requirement_check($dbrow0) = 0) {

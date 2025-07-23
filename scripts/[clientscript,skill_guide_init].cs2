@@ -15,9 +15,9 @@
 def_enum $enum11 = ~toplevel_getcomponents;
 def_component $component12 = enum(component, component, $enum11, toplevel_osrs_stretch:mainmodal);
 if (~on_mobile = true) {
-	if_setontimer("script3833($com_skill_guide_infinity10, $com_skill_guide_universe0, 0)", $com_skill_guide_infinity10);
+	if_setontimer("script7923($com_skill_guide_infinity10, $com_skill_guide_universe0, 0)", $com_skill_guide_infinity10);
 } else {
-	if (%varcint1170 = 0 & %varcint1171 = 0 & %varcint1168 = 0 & %varcint1169 = 0) {
+	if (%varcint1170 < 0 | %varcint1171 < 0 | %varcint1168 <= 0 | %varcint1169 <= 0) {
 		%varcint1168 = if_getwidth($component12);
 		%varcint1169 = if_getheight($component12);
 		%varcint1170 = if_getx($component12);
