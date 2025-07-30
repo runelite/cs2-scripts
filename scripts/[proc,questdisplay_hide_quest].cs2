@@ -3,4 +3,7 @@
 if (~quest_is_subquest($dbrow0) = 1) {
 	return(1);
 }
+if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
+	return(1);
+}
 return(0);
