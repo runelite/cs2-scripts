@@ -1,16 +1,10 @@
-// 1404
-[clientscript,script1404](int $int0, obj $obj1, int $int2, string $string0, boolean $boolean3)
+// 7988
+[clientscript,script7988](int $int0, obj $obj1, int $int2, int $int3, string $string0)
 def_component $component4 = enum(int, component, enum_1461, $int0);
 if ($component4 = null) {
 	return;
 }
 cc_deleteall($component4);
-if ($int2 < 0) {
-	if_clearops($component4);
-	if_setonop(null, $component4);
-	if_setonkey(null, $component4);
-	return;
-}
 cc_create($component4, ^iftype_text, 0, false);
 cc_sethide(true);
 cc_settextfont(p11_full);
@@ -44,18 +38,18 @@ cc_settext($string0);
 cc_create($component4, ^iftype_graphic, 4, false);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setobject_nonum(db_getfield($obj1, furniture:model_obj, 0), 1);
+cc_setobject_nonum($obj1, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 if_setop(1, "Build", $component4);
 if_setop(10, "Examine", $component4);
-if_setopbase("<col=ff9040><db_getfield($obj1, furniture:name, 0)></col>", $component4);
-if_setonop("script1405(event_op, $int0, $obj1, event_com, cc_getid)", $component4);
+if_setopbase("<col=ff9040><oc_name($obj1)></col>", $component4);
+if_setonop("script7987(event_op, $int0, $obj1, event_com, cc_getid)", $component4);
 cc_create($component4, ^iftype_graphic, 5, false);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 cc_setposition(12, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("cross_interface,5");
-if ($boolean3 = true) {
+if ($int3 = 1) {
 	cc_sethide(true);
 	cc_create($component4, ^iftype_text, 6, false);
 	cc_setsize(56, 32, ^setsize_abs, ^setsize_abs);

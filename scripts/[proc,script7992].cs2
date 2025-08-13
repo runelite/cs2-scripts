@@ -1,0 +1,17 @@
+// 7992
+[proc,script7992](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+if (~on_mobile = true) {
+	if_sethide(true, $component0);
+	return;
+}
+~settings_side_dropdown_create(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = "Game client layout", 
+	8 = game_client_layout_2732
+);
