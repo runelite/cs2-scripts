@@ -1,53 +1,22 @@
 // 3830
-[clientscript,script3830](int $int0, component $com_settings_tooltip_inside_if1, int $comsubid2, component $com_settings_settings3, component $com_settings_settings_clickzone4, component $com_settings_settings_content5, component $com_settings_scrollbar6, component $com_settings_dropdown_panel7, component $com_settings_dropdown_close8, component $com_settings_dropdown_buttons9, component $com_settings_dropdown_scrollbar10, component $com_settings_dropdown_container11, component $com_settings_settings_sliderclickzone12, component $com_settings_settings_sliderzone13, component $com_settings_tooltip14, component $com_settings_tooltip_inside_if_clickzone15)
+[clientscript,script3830](int $int0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
 if ($int0 = %settings_disable_tooltip_in_interface) {
 	return;
 }
-if_setonop(null, $com_settings_dropdown_close8);
-if_sethide(true, $com_settings_dropdown_container11);
-cc_deleteall($com_settings_dropdown_scrollbar10);
-cc_deleteall($com_settings_dropdown_buttons9);
-if (cc_find($com_settings_tooltip_inside_if1, $comsubid2) = ^true) {
-	if (%settings_disable_tooltip_in_interface = 0) {
-		cc_settext("Show <col=ffffff>less <col=ff981f>information");
-	} else {
-		cc_settext("Show <col=ffffff>more <col=ff981f>information");
-	}
-}
-~settings_populate_settings(
-	0 = 1, 
-	1 = 1, 
-	2 = if_getscrolly($com_settings_settings3), 
-	3 = 0, 
-	4 = $com_settings_settings_clickzone4, 
-	5 = $com_settings_settings_content5, 
-	6 = $com_settings_scrollbar6, 
-	7 = %settings_category, 
-	8 = $com_settings_settings3, 
-	9 = $com_settings_dropdown_panel7, 
-	10 = $com_settings_dropdown_close8, 
-	11 = $com_settings_dropdown_buttons9, 
-	12 = $com_settings_dropdown_scrollbar10, 
-	13 = $com_settings_dropdown_container11, 
-	14 = $com_settings_settings_sliderclickzone12, 
-	15 = $com_settings_settings_sliderzone13, 
-	16 = $com_settings_tooltip14
+~script7904(
+	0 = $component1, 
+	1 = $int2, 
+	2 = $component3, 
+	3 = $component4, 
+	4 = $component5, 
+	5 = $component6, 
+	6 = $component7, 
+	7 = $component8, 
+	8 = $component9, 
+	9 = $component10, 
+	10 = $component11, 
+	11 = $component12, 
+	12 = $component13, 
+	13 = $component14, 
+	14 = $component15
 );
-if_setonvartransmit("script3830(
-	0 = %settings_disable_tooltip_in_interface, 
-	1 = $com_settings_tooltip_inside_if1, 
-	2 = $comsubid2, 
-	3 = $com_settings_settings3, 
-	4 = $com_settings_settings_clickzone4, 
-	5 = $com_settings_settings_content5, 
-	6 = $com_settings_scrollbar6, 
-	7 = $com_settings_dropdown_panel7, 
-	8 = $com_settings_dropdown_close8, 
-	9 = $com_settings_dropdown_buttons9, 
-	10 = $com_settings_dropdown_scrollbar10, 
-	11 = $com_settings_dropdown_container11, 
-	12 = $com_settings_settings_sliderclickzone12, 
-	13 = $com_settings_settings_sliderzone13, 
-	14 = $com_settings_tooltip14, 
-	15 = $com_settings_tooltip_inside_if_clickzone15
-){settings_varp_1}", $com_settings_tooltip_inside_if_clickzone15);

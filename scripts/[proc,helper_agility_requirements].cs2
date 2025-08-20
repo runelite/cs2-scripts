@@ -204,5 +204,18 @@ switch_loc ($loc0) {
 		} else {
 			$string0 = "<col=00ff00>Shadows of Custodia";
 		}
+	case hidey_unbuilt_rock_master_shortcut_57664, hidey_rock_master_shortcut_57665, hh_master005_29044, darkm_wall_rock_shortcut_57666 :
+		if (%myq5 < 138) {
+			$string0 = "<col=ff0000>Sins of the Father";
+			$int2 = 0;
+		} else {
+			$string0 = "<col=00ff00>Sins of the Father";
+		}
+		if (%darkm_shortcut_inner = 0 & %darkm_shortcut_outer = 0) {
+			$string0 = "<col=ff0000>Climbed the wall with a long rope";
+			$int2 = 0;
+		} else {
+			$string0 = "<col=00ff00>Climbed the wall with a long rope";
+		}
 }
 return($int2, $string0);

@@ -1,0 +1,50 @@
+// 7904
+[proc,script7904](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+if_setonop(null, $component7);
+if_sethide(true, $component10);
+cc_deleteall($component9);
+cc_deleteall($component8);
+if (cc_find($component0, $int1) = ^true) {
+	if (%settings_disable_tooltip_in_interface = 0) {
+		cc_settext("<col=ffffff>Less <col=ff981f>info");
+	} else {
+		cc_settext("<col=ffffff>More <col=ff981f>info");
+	}
+}
+~settings_populate_settings(
+	0 = 1, 
+	1 = 1, 
+	2 = if_getscrolly($component2), 
+	3 = 0, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = %settings_category, 
+	8 = $component2, 
+	9 = $component6, 
+	10 = $component7, 
+	11 = $component8, 
+	12 = $component9, 
+	13 = $component10, 
+	14 = $component11, 
+	15 = $component12, 
+	16 = $component13
+);
+if_setonvartransmit("script3830(
+	0 = %settings_disable_tooltip_in_interface, 
+	1 = $component0, 
+	2 = $int1, 
+	3 = $component2, 
+	4 = $component3, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
+	9 = $component8, 
+	10 = $component9, 
+	11 = $component10, 
+	12 = $component11, 
+	13 = $component12, 
+	14 = $component13, 
+	15 = $component14
+){settings_varp_1}", $component14);

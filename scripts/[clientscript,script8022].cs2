@@ -1,0 +1,10 @@
+// 8022
+[clientscript,script8022](component $com_itemsets_itemlist0, component $com_itemsets_scrollbar1, int $int2, component $com_itemsets_itemlist_no_items3, component $com_itemsets_filter_button4, int $comsubid5)
+if (cc_find($com_itemsets_filter_button4, $comsubid5) = ^true) {
+	if (%itemsets_show_only_craftable = 0) {
+		cc_settext("Show <col=ffffff>craftable <col=ff981f>sets");
+	} else {
+		cc_settext("Show <col=ffffff>all <col=ff981f>sets");
+	}
+}
+~script8024($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $int2, $com_itemsets_itemlist_no_items3);

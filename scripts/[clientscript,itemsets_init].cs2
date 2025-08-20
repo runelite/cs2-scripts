@@ -1,39 +1,26 @@
 // 822
-[clientscript,itemsets_init](component $com_itemsets_itemlist0, component $com_itemsets_scrollbar1)
+[clientscript,itemsets_init](component $com_itemsets_itemlist0, component $com_itemsets_scrollbar1, component $com_itemsets_filter_button2, component $com_itemsets_itemlist_no_items3)
 cc_deleteall($com_itemsets_itemlist0);
 cc_deleteall($com_itemsets_scrollbar1);
-def_int $int2 = calc((if_getwidth($com_itemsets_itemlist0) - 36 * 8) / 7 + 36);
-def_int $int3 = 0;
-def_namedobj $namedobj4 = null;
-def_int $int5 = 0;
-def_enum $enum6 = enum(int, enum, enum_1033, $int5);
-while ($enum6 ! null) {
-	$namedobj4 = enum(int, namedobj, $enum6, -1);
-	cc_create($com_itemsets_itemlist0, ^iftype_graphic, $int5, false);
-	if ($namedobj4 ! null) {
-		cc_sethide(false);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int3 = calc($int5 / 8 * 48);
-		cc_setposition(calc($int5 % 8 * $int2), $int3, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setobject_nonum($namedobj4, 1);
-		cc_setopbase("<col=ff9040><oc_name($namedobj4)></col>");
-		cc_setgraphicshadow(0x333333);
-		cc_setoutline(1);
-		~itemsets_redraw($enum6);
-		cc_setoninvtransmit("itemsets_redraw(event_com, event_comsubid, $enum6){inv}");
-	} else {
-		cc_sethide(true);
-	}
-	$int5 = calc($int5 + 1);
-	$enum6 = enum(int, enum, enum_1033, $int5);
+def_int $int4 = ~script8020($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $com_itemsets_itemlist_no_items3);
+if_setop(1, "Filter", $com_itemsets_filter_button2);
+def_int $comsubid5 = ~v2_stone_button_filled($com_itemsets_filter_button2);
+if (~on_mobile = false) {
+	if_setonmouseover("v2_stone_button_change_in($com_itemsets_filter_button2, 0)", $com_itemsets_filter_button2);
+	if_setonmouseleave("v2_stone_button_change_out($com_itemsets_filter_button2, 0)", $com_itemsets_filter_button2);
 }
-if ($int3 > 0) {
-	$int3 = calc($int3 + 32);
-}
-if_setscrollpos(0, 0, $com_itemsets_itemlist0);
-if ($int3 > if_getheight($com_itemsets_itemlist0)) {
-	if_setscrollsize(0, $int3, $com_itemsets_itemlist0);
+cc_create($com_itemsets_filter_button2, ^iftype_text, $comsubid5, false);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%itemsets_show_only_craftable = 0) {
+	cc_settext("Show <col=ffffff>craftable <col=ff981f>sets");
 } else {
-	if_setscrollsize(0, 0, $com_itemsets_itemlist0);
+	cc_settext("Show <col=ffffff>all <col=ff981f>sets");
 }
-~scrollbar_vertical($com_itemsets_scrollbar1, $com_itemsets_itemlist0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setonop("script8021($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $int4, $com_itemsets_itemlist_no_items3, $com_itemsets_filter_button2, $comsubid5)", $com_itemsets_filter_button2);
+if_setonvartransmit("script8022($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $int4, $com_itemsets_itemlist_no_items3, $com_itemsets_filter_button2, $comsubid5){divine_potion_4}", $com_itemsets_filter_button2);
+if_setoninvtransmit("script5914($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $com_itemsets_itemlist_no_items3){inv}", $com_itemsets_itemlist0);

@@ -1,23 +1,23 @@
 // 3828
-[proc,settings_window_setup](component $com_settings_infinite0, component $com_settings_universe1, component $com_settings_frame2, component $com_settings_close3, component $com_settings_tooltip_inside_if_clickzone4, component $com_settings_tooltip_inside_if5, component $com_settings_settings6, component $com_settings_settings_clickzone7, component $com_settings_settings_content8, component $com_settings_scrollbar9, component $com_settings_dropdown_panel10, component $com_settings_dropdown_close11, component $com_settings_dropdown_buttons12, component $com_settings_dropdown_scrollbar13, component $com_settings_dropdown_container14, component $com_settings_settings_sliderclickzone15, component $com_settings_settings_sliderzone16, component $com_settings_tooltip17)
+[proc,settings_window_setup](component $com_settings_infinite0, component $com_settings_universe1, component $com_settings_frame2, component $com_settings_close3, component $com_settings_tooltip_inside_if_clickzone4, component $com_settings_tooltip_inside_if5, component $com_settings_declutter_button_clickzone6, component $com_settings_declutter_button7, component $com_settings_settings8, component $com_settings_settings_clickzone9, component $com_settings_settings_content10, component $com_settings_scrollbar11, component $com_settings_dropdown_panel12, component $com_settings_dropdown_close13, component $com_settings_dropdown_buttons14, component $com_settings_dropdown_scrollbar15, component $com_settings_dropdown_container16, component $com_settings_settings_sliderclickzone17, component $com_settings_settings_sliderzone18, component $com_settings_tooltip19)
 cc_deleteall($com_settings_frame2);
-def_int $comsubid18 = ~steelborder($com_settings_frame2, "Settings", 1);
-def_graphic $graphic19 = null;
-def_int $int20 = 0;
-def_boolean $boolean21 = ~on_mobile;
-if ($boolean21 = true) {
+def_int $int20 = ~steelborder($com_settings_frame2, "Settings", 1);
+def_graphic $graphic21 = null;
+def_int $int22 = 0;
+def_boolean $boolean23 = ~on_mobile;
+if ($boolean23 = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_settings_close3);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
 	if_setgraphic("steelborder_close_button,0", $com_settings_close3);
-	$int20 = calc(165 - (20 + 30));
+	$int22 = calc(165 - (20 + 30));
 } else {
 	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_settings_close3);
 	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
-	$graphic19 = "close_buttons,0";
-	if_setgraphic($graphic19, $com_settings_close3);
-	if_setonmouseleave("graphic_swapper(event_com, $graphic19)", $com_settings_close3);
-	$graphic19 = "close_buttons,1";
-	if_setonmouseover("graphic_swapper(event_com, $graphic19)", $com_settings_close3);
+	$graphic21 = "close_buttons,0";
+	if_setgraphic($graphic21, $com_settings_close3);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic21)", $com_settings_close3);
+	$graphic21 = "close_buttons,1";
+	if_setonmouseover("graphic_swapper(event_com, $graphic21)", $com_settings_close3);
 }
 if_setop(1, "Close", $com_settings_close3);
 if_setonop("opsound(event_op, 2)", $com_settings_close3);
@@ -26,29 +26,38 @@ if_setop(2, "", $com_settings_close3);
 cc_deleteall($com_settings_tooltip_inside_if5);
 cc_deleteall($com_settings_tooltip_inside_if_clickzone4);
 if_setop(1, "Toggle", $com_settings_tooltip_inside_if_clickzone4);
-if ($boolean21 = true) {
-	if_setsize(150, 35, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
+if ($boolean23 = true) {
+	if_setsize(80, 35, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
 	if_setposition(7, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if_clickzone4);
 	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_tooltip_inside_if5);
 	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_tooltip_inside_if5);
+	if_setsize(80, 35, ^setsize_abs, ^setsize_abs, $com_settings_declutter_button_clickzone6);
+	if_setposition(90, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_declutter_button_clickzone6);
+	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_declutter_button7);
+	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_declutter_button7);
 } else {
-	if_setsize(150, 21, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
+	if_setsize(80, 21, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
 	if_setposition(7, 7, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if_clickzone4);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_settings_tooltip_inside_if5);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if5);
+	if_setsize(80, 21, ^setsize_abs, ^setsize_abs, $com_settings_declutter_button_clickzone6);
+	if_setposition(90, 7, ^setpos_abs_left, ^setpos_abs_top, $com_settings_declutter_button_clickzone6);
+	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_declutter_button7);
 }
-$comsubid18 = ~v2_stone_button_filled($com_settings_tooltip_inside_if5);
-if ($boolean21 = false) {
+$int20 = ~v2_stone_button_filled($com_settings_tooltip_inside_if5);
+if ($boolean23 = false) {
 	if_setonmouseover("v2_stone_button_change_in($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
 	if_setonmouseleave("v2_stone_button_change_out($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
+	if_setonmouseover("v2_stone_button_change_in($com_settings_declutter_button7, 0)", $com_settings_declutter_button7);
+	if_setonmouseleave("v2_stone_button_change_out($com_settings_declutter_button7, 0)", $com_settings_declutter_button7);
 }
-cc_create($com_settings_tooltip_inside_if5, ^iftype_text, $comsubid18, false);
+cc_create($com_settings_tooltip_inside_if5, ^iftype_text, $int20, false);
 cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if (%settings_disable_tooltip_in_interface = 0) {
-	cc_settext("Show <col=ffffff>less <col=ff981f>information");
+	cc_settext("<col=ffffff>Less <col=ff981f>info");
 } else {
-	cc_settext("Show <col=ffffff>more <col=ff981f>information");
+	cc_settext("<col=ffffff>More <col=ff981f>info");
 }
 cc_settextfont(p12_full);
 cc_settextshadow(true);
@@ -56,38 +65,89 @@ cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setonop("script3829(
 	0 = $com_settings_tooltip_inside_if5, 
-	1 = $comsubid18, 
-	2 = $com_settings_settings6, 
-	3 = $com_settings_settings_clickzone7, 
-	4 = $com_settings_settings_content8, 
-	5 = $com_settings_scrollbar9, 
-	6 = $com_settings_dropdown_panel10, 
-	7 = $com_settings_dropdown_close11, 
-	8 = $com_settings_dropdown_buttons12, 
-	9 = $com_settings_dropdown_scrollbar13, 
-	10 = $com_settings_dropdown_container14, 
-	11 = $com_settings_settings_sliderclickzone15, 
-	12 = $com_settings_settings_sliderzone16, 
-	13 = $com_settings_tooltip17, 
+	1 = $int20, 
+	2 = $com_settings_settings8, 
+	3 = $com_settings_settings_clickzone9, 
+	4 = $com_settings_settings_content10, 
+	5 = $com_settings_scrollbar11, 
+	6 = $com_settings_dropdown_panel12, 
+	7 = $com_settings_dropdown_close13, 
+	8 = $com_settings_dropdown_buttons14, 
+	9 = $com_settings_dropdown_scrollbar15, 
+	10 = $com_settings_dropdown_container16, 
+	11 = $com_settings_settings_sliderclickzone17, 
+	12 = $com_settings_settings_sliderzone18, 
+	13 = $com_settings_tooltip19, 
 	14 = $com_settings_tooltip_inside_if_clickzone4
 )", $com_settings_tooltip_inside_if_clickzone4);
 if_setonvartransmit("script3830(
 	0 = %settings_disable_tooltip_in_interface, 
 	1 = $com_settings_tooltip_inside_if5, 
-	2 = $comsubid18, 
-	3 = $com_settings_settings6, 
-	4 = $com_settings_settings_clickzone7, 
-	5 = $com_settings_settings_content8, 
-	6 = $com_settings_scrollbar9, 
-	7 = $com_settings_dropdown_panel10, 
-	8 = $com_settings_dropdown_close11, 
-	9 = $com_settings_dropdown_buttons12, 
-	10 = $com_settings_dropdown_scrollbar13, 
-	11 = $com_settings_dropdown_container14, 
-	12 = $com_settings_settings_sliderclickzone15, 
-	13 = $com_settings_settings_sliderzone16, 
-	14 = $com_settings_tooltip17, 
+	2 = $int20, 
+	3 = $com_settings_settings8, 
+	4 = $com_settings_settings_clickzone9, 
+	5 = $com_settings_settings_content10, 
+	6 = $com_settings_scrollbar11, 
+	7 = $com_settings_dropdown_panel12, 
+	8 = $com_settings_dropdown_close13, 
+	9 = $com_settings_dropdown_buttons14, 
+	10 = $com_settings_dropdown_scrollbar15, 
+	11 = $com_settings_dropdown_container16, 
+	12 = $com_settings_settings_sliderclickzone17, 
+	13 = $com_settings_settings_sliderzone18, 
+	14 = $com_settings_tooltip19, 
 	15 = $com_settings_tooltip_inside_if_clickzone4
 ){settings_varp_1}", $com_settings_tooltip_inside_if_clickzone4);
-if_setontimer("settings_window_resize($com_settings_infinite0, $com_settings_universe1, $com_settings_scrollbar9, $com_settings_settings6, $int20, 0, 0)", $com_settings_universe1);
+cc_deleteall($com_settings_declutter_button7);
+cc_deleteall($com_settings_declutter_button_clickzone6);
+if_setop(1, "Toggle", $com_settings_declutter_button_clickzone6);
+$int20 = ~v2_stone_button_filled($com_settings_declutter_button7);
+cc_create($com_settings_declutter_button7, ^iftype_text, $int20, false);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%option_settings_declutter = 0) {
+	cc_settext("<col=ffffff>Hide<col=ff981f> locked");
+} else {
+	cc_settext("<col=ffffff>Show<col=ff981f> locked");
+}
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setonop("script7995(
+	0 = $com_settings_declutter_button7, 
+	1 = $int20, 
+	2 = $com_settings_settings8, 
+	3 = $com_settings_settings_clickzone9, 
+	4 = $com_settings_settings_content10, 
+	5 = $com_settings_scrollbar11, 
+	6 = $com_settings_dropdown_panel12, 
+	7 = $com_settings_dropdown_close13, 
+	8 = $com_settings_dropdown_buttons14, 
+	9 = $com_settings_dropdown_scrollbar15, 
+	10 = $com_settings_dropdown_container16, 
+	11 = $com_settings_settings_sliderclickzone17, 
+	12 = $com_settings_settings_sliderzone18, 
+	13 = $com_settings_tooltip19, 
+	14 = $com_settings_declutter_button_clickzone6
+)", $com_settings_declutter_button_clickzone6);
+if_setonvartransmit("script7996(
+	0 = %settings_disable_tooltip_in_interface, 
+	1 = $com_settings_declutter_button7, 
+	2 = $int20, 
+	3 = $com_settings_settings8, 
+	4 = $com_settings_settings_clickzone9, 
+	5 = $com_settings_settings_content10, 
+	6 = $com_settings_scrollbar11, 
+	7 = $com_settings_dropdown_panel12, 
+	8 = $com_settings_dropdown_close13, 
+	9 = $com_settings_dropdown_buttons14, 
+	10 = $com_settings_dropdown_scrollbar15, 
+	11 = $com_settings_dropdown_container16, 
+	12 = $com_settings_settings_sliderclickzone17, 
+	13 = $com_settings_settings_sliderzone18, 
+	14 = $com_settings_tooltip19, 
+	15 = $com_settings_declutter_button_clickzone6
+){options_varp}", $com_settings_declutter_button_clickzone6);
+if_setontimer("settings_window_resize($com_settings_infinite0, $com_settings_universe1, $com_settings_scrollbar11, $com_settings_settings8, $int22, 0, 0)", $com_settings_universe1);
 if_setontimer("script7923($com_settings_infinite0, $com_settings_universe1, 0)", $com_settings_infinite0);

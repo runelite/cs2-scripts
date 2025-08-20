@@ -9,6 +9,9 @@ def_int $int6 = ~speedrunning_world;
 def_int $int7 = ~script403;
 def_int $int8 = ~pvpa_world;
 def_int $int9 = ~deadman_world;
+if (%varcint103 = 0 & struct_param($struct0, param_2314) = true) {
+	$int1 = 1;
+}
 if ($boolean2 = true & struct_param($struct0, param_739) = true) {
 	$int1 = 1;
 }
@@ -22,6 +25,10 @@ if ($int4 = 1 & struct_param($struct0, param_1408) = true) {
 	$int1 = 1;
 }
 if ($int3 = 0 & struct_param($struct0, param_1157) = true) {
+	$int1 = 1;
+}
+if (%option_settings_declutter = 1 & ~script4566($struct0) = 1) {
+	~debug_mes("This setting <tostring(struct_param($struct0, param_1077))> - <struct_param($struct0, param_1086)> is getting culled by my setting.");
 	$int1 = 1;
 }
 if (struct_param($struct0, param_741) = true & %ironman ! 0) {
