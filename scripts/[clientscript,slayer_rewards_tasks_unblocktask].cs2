@@ -6,7 +6,7 @@ if_sethide(false, $com_slayer_rewards_confirm3);
 cc_deleteall($com_slayer_rewards_confirm_button5);
 if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $com_slayer_rewards_back_button6);
 if_sethide(false, $com_slayer_rewards_confirm_button5);
-if_settext("<u=ff981f><enum(int, string, enum_693, $int0)></u><br><br>Slayer Masters will once again be able to assign you this creature.<br><br>You will not get your points back.", $com_slayer_rewards_confirm_info4);
+if_settext("<u=ff981f><~script8056($int0, -1, 1)></u><br><br>Slayer Masters will once again be able to assign you this creature.<br><br>You will not get your points back.", $com_slayer_rewards_confirm_info4);
 def_int $comsubid7 = 0;
 while ($comsubid7 < $comsubid1) {
 	cc_create($com_slayer_rewards_confirm_button5, ^iftype_rectangle, $comsubid7, false);

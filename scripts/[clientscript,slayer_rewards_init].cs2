@@ -1,5 +1,16 @@
 // 405
 [clientscript,slayer_rewards_init](int $com_slayer_rewards_universe0, component $com_slayer_rewards_tabs1, component $com_slayer_rewards_unlock2, component $com_slayer_rewards_extend3, component $com_slayer_rewards_buy4, component $com_slayer_rewards_tasks5, component $com_slayer_rewards_main6, component $com_slayer_rewards_confirm7)
-~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_unlock2);
+switch_int (%varcint1260) {
+	case 0 :
+		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_unlock2);
+	case 1 :
+		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_extend3);
+	case 2 :
+		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_buy4);
+	case 3 :
+		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_tasks5);
+	case default :
+		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_unlock2);
+}
 if_sethide(false, $com_slayer_rewards_main6);
 if_sethide(true, $com_slayer_rewards_confirm7);
