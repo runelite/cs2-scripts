@@ -4,8 +4,29 @@ java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: Index 4 ou
 .int_arg_count            1
 .obj_arg_count            0
    iload                  0
+   iconst                 0
+   if_icmple              LABEL4
+   jump                   LABEL6
+LABEL4:
+   sconst                 "Somewhere."
+   return                
+LABEL6:
+   iload                  0
    invoke                 8054
    istore                 1
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL13
+   jump                   LABEL20
+LABEL13:
+   sconst                 "Unimplemented area dbrow for area_id "
+   iload                  0
+   tostring              
+   join_string            2
+   invoke                 2075
+   sconst                 "Somewhere."
+   return                
+LABEL20:
    iload                  1
    iconst                 471104
    iconst                 0
