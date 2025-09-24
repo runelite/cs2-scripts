@@ -1,5 +1,5 @@
 // 274
-[clientscript,bankmain_init](component $com_bankmain_universe0, component $com_bankmain_frame1, component $com_bankmain_menu_button2, component $com_bankmain_wornitems_button3, component $com_bankmain_items_container4, component $com_bankmain_wornitems_container5, component $com_bankmain_menu_container6, component $com_bankmain_items7, component $com_bankmain_scrollbar8, component $com_bankmain_bottom9, component $com_bankmain_swap10, component $com_bankmain_insert11, component $com_bankmain_placeholder12, component $com_bankmain_item13, component $com_bankmain_note14, component $com_bankmain_search15, component $com_bankmain_title16, component $com_bankmain_occupiedslots17, component $com_bankmain_tabs18, component $com_bankmain_incinerator_target19, component $com_bankmain_incinerator_confirm20, component $com_bankmain_tooltip21, component $com_bankmain_quantity122, component $com_bankmain_quantity523, component $com_bankmain_quantity1024, component $com_bankmain_quantityx25, component $com_bankmain_quantityall26, component $com_bankmain_quantity_layer27, component $com_bankmain_depositinv28, component $com_bankmain_depositinv_graphic29, component $com_bankmain_depositworn30, component $com_bankmain_depositworn_graphic31, component $com_bankmain_bank_tut32, component $com_bankmain_gim_storage33)
+[clientscript,bankmain_init](component $com_bankmain_universe0, component $com_bankmain_frame1, component $com_bankmain_wornitems_button2, component $com_bankmain_bank_highlight3, component $com_bankmain_items_container4, component $com_bankmain_com_805, component $com_bankmain_menu_container6, component $com_bankmain_items7, component $com_bankmain_scrollbar8, component $com_bankmain_bottom9, component $com_bankmain_swap10, component $com_bankmain_insert11, component $com_bankmain_placeholder12, component $com_bankmain_item13, component $com_bankmain_note14, component $com_bankmain_search15, component $com_bankmain_title16, component $com_bankmain_occupiedslots17, component $com_bankmain_tabs18, component $com_bankmain_incinerator_target19, component $com_bankmain_incinerator_confirm20, component $com_bankmain_com_13021, component $com_bankmain_quantity122, component $com_bankmain_quantity523, component $com_bankmain_quantity1024, component $com_bankmain_quantityx25, component $com_bankmain_quantityall26, component $com_bankmain_quantity_layer27, component $com_bankmain_depositinv28, component $com_bankmain_depositinv_graphic29, component $com_bankmain_depositworn30, component $com_bankmain_depositworn_graphic31, component $com_bankmain_bank_tut32, component $com_bankmain_gim_storage33)
 ~steelborder($com_bankmain_frame1, "", 0);
 def_int $int34 = %varcint51;
 if (~bankmain_searching = 1) {
@@ -9,7 +9,7 @@ if (~bankmain_searching = 1) {
 }
 ~bankmain_search_setbutton(
 	0 = $com_bankmain_universe0, 
-	1 = $com_bankmain_menu_button2, 
+	1 = $com_bankmain_wornitems_button2, 
 	2 = $com_bankmain_items7, 
 	3 = $com_bankmain_scrollbar8, 
 	4 = $com_bankmain_bottom9, 
@@ -19,7 +19,7 @@ if (~bankmain_searching = 1) {
 	8 = $com_bankmain_tabs18, 
 	9 = $com_bankmain_incinerator_target19, 
 	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
+	11 = $com_bankmain_com_13021, 
 	12 = $com_bankmain_depositinv28, 
 	13 = $com_bankmain_depositinv_graphic29, 
 	14 = $com_bankmain_depositworn30, 
@@ -29,7 +29,7 @@ if (~bankmain_searching = 1) {
 if_setonop("bankmain_search_toggle(
 	0 = event_op, 
 	1 = $com_bankmain_universe0, 
-	2 = $com_bankmain_menu_button2, 
+	2 = $com_bankmain_wornitems_button2, 
 	3 = $com_bankmain_items7, 
 	4 = $com_bankmain_scrollbar8, 
 	5 = $com_bankmain_bottom9, 
@@ -39,7 +39,7 @@ if_setonop("bankmain_search_toggle(
 	9 = $com_bankmain_tabs18, 
 	10 = $com_bankmain_incinerator_target19, 
 	11 = $com_bankmain_incinerator_confirm20, 
-	12 = $com_bankmain_tooltip21, 
+	12 = $com_bankmain_com_13021, 
 	13 = $com_bankmain_depositinv28, 
 	14 = $com_bankmain_depositinv_graphic29, 
 	15 = $com_bankmain_depositworn30, 
@@ -95,7 +95,7 @@ while ($int36 <= 9) {
 	cc_setopbase("<col=ff9040><tostring($int36)></col>");
 	cc_setonop("bankmain_switchtab(
 		0 = $com_bankmain_universe0, 
-		1 = $com_bankmain_menu_button2, 
+		1 = $com_bankmain_wornitems_button2, 
 		2 = $com_bankmain_items7, 
 		3 = $com_bankmain_scrollbar8, 
 		4 = $com_bankmain_bottom9, 
@@ -105,7 +105,7 @@ while ($int36 <= 9) {
 		8 = $com_bankmain_tabs18, 
 		9 = $com_bankmain_incinerator_target19, 
 		10 = $com_bankmain_incinerator_confirm20, 
-		11 = $com_bankmain_tooltip21, 
+		11 = $com_bankmain_com_13021, 
 		12 = event_op, 
 		13 = $int36, 
 		14 = $com_bankmain_depositinv28, 
@@ -128,8 +128,8 @@ while ($int36 <= 9) {
 ~bankmain_viewbuttons(
 	0 = $com_bankmain_items_container4, 
 	1 = $com_bankmain_universe0, 
-	2 = $com_bankmain_menu_button2, 
-	3 = $com_bankmain_wornitems_button3, 
+	2 = $com_bankmain_wornitems_button2, 
+	3 = $com_bankmain_bank_highlight3, 
 	4 = $com_bankmain_items7, 
 	5 = $com_bankmain_scrollbar8, 
 	6 = $com_bankmain_bottom9, 
@@ -139,9 +139,9 @@ while ($int36 <= 9) {
 	10 = $com_bankmain_tabs18, 
 	11 = $com_bankmain_incinerator_target19, 
 	12 = $com_bankmain_incinerator_confirm20, 
-	13 = $com_bankmain_tooltip21, 
+	13 = $com_bankmain_com_13021, 
 	14 = $com_bankmain_items_container4, 
-	15 = $com_bankmain_wornitems_container5, 
+	15 = $com_bankmain_com_805, 
 	16 = $com_bankmain_menu_container6, 
 	17 = $com_bankmain_depositinv28, 
 	18 = $com_bankmain_depositinv_graphic29, 
@@ -151,7 +151,7 @@ while ($int36 <= 9) {
 );
 if_setoninvtransmit("bankmain_build(
 	0 = $com_bankmain_universe0, 
-	1 = $com_bankmain_menu_button2, 
+	1 = $com_bankmain_wornitems_button2, 
 	2 = $com_bankmain_items7, 
 	3 = $com_bankmain_scrollbar8, 
 	4 = $com_bankmain_bottom9, 
@@ -161,7 +161,7 @@ if_setoninvtransmit("bankmain_build(
 	8 = $com_bankmain_tabs18, 
 	9 = $com_bankmain_incinerator_target19, 
 	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
+	11 = $com_bankmain_com_13021, 
 	12 = $com_bankmain_depositinv28, 
 	13 = $com_bankmain_depositinv_graphic29, 
 	14 = $com_bankmain_depositworn30, 
@@ -170,7 +170,7 @@ if_setoninvtransmit("bankmain_build(
 ){bank}", $com_bankmain_items7);
 if_setonvartransmit("bankmain_build(
 	0 = $com_bankmain_universe0, 
-	1 = $com_bankmain_menu_button2, 
+	1 = $com_bankmain_wornitems_button2, 
 	2 = $com_bankmain_items7, 
 	3 = $com_bankmain_scrollbar8, 
 	4 = $com_bankmain_bottom9, 
@@ -180,7 +180,7 @@ if_setonvartransmit("bankmain_build(
 	8 = $com_bankmain_tabs18, 
 	9 = $com_bankmain_incinerator_target19, 
 	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
+	11 = $com_bankmain_com_13021, 
 	12 = $com_bankmain_depositinv28, 
 	13 = $com_bankmain_depositinv_graphic29, 
 	14 = $com_bankmain_depositworn30, 
@@ -205,13 +205,13 @@ cc_setmodelangle(15, 300, 141, 220, 0, 3500);
 .cc_setmodelangle(15, 300, 141, 220, 0, 3500);
 .cc_setmodelanim(blast_furnace_smoke_2439);
 .cc_sethide(true);
-if_setonmouserepeat("script1312(1, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
-if_setonmouseleave("script1312(0, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
+if_setonmouserepeat("script1312(1, $com_bankmain_incinerator_target19, $com_bankmain_com_13021)", $com_bankmain_incinerator_target19);
+if_setonmouseleave("script1312(0, $com_bankmain_incinerator_target19, $com_bankmain_com_13021)", $com_bankmain_incinerator_target19);
 ~script5300($com_bankmain_gim_storage33);
 if_setonvartransmit("script5299(event_com){magic_carpet_var}", $com_bankmain_gim_storage33);
 if_setonop("bankmain_switchtab(
 	0 = $com_bankmain_universe0, 
-	1 = $com_bankmain_menu_button2, 
+	1 = $com_bankmain_wornitems_button2, 
 	2 = $com_bankmain_items7, 
 	3 = $com_bankmain_scrollbar8, 
 	4 = $com_bankmain_bottom9, 
@@ -221,7 +221,7 @@ if_setonop("bankmain_switchtab(
 	8 = $com_bankmain_tabs18, 
 	9 = $com_bankmain_incinerator_target19, 
 	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
+	11 = $com_bankmain_com_13021, 
 	12 = event_op, 
 	13 = 15, 
 	14 = $com_bankmain_depositinv28, 

@@ -1,0 +1,10 @@
+// 8072
+[clientscript,script8072](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	%bank_chugging_fill_open = calc(1 - %bank_chugging_fill_open);
+	~script1323($component1);
+}
