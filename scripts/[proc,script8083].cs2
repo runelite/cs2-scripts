@@ -1,0 +1,11 @@
+// 8083
+[proc,script8083](component $com_fairyrings_log_contents0, component $com_fairyrings_log_scrollbar1, component $com_fairyrings_log_divider2, component $com_fairyrings_log_faves3, component $com_fairyrings_log_com_74)
+if (~script8078 = 1) {
+	if (%varcint5 = 28) {
+		if_setontimer("script8084($com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, $com_fairyrings_log_divider2, $com_fairyrings_log_faves3, $com_fairyrings_log_com_74)", $com_fairyrings_log_com_74);
+	} else {
+		if_setontimer(null, $com_fairyrings_log_com_74);
+	}
+} else {
+	if_setontimer(null, $com_fairyrings_log_com_74);
+}

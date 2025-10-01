@@ -1,16 +1,16 @@
 // 1987
-[proc,gravestone_retrieval_unlockstatus](component $com_gravestone_retrieval_frame0, int $comsubid1, component $com_gravestone_retrieval_button2, component $com_gravestone_retrieval_button_gfx3, component $com_gravestone_retrieval_discard4, component $com_gravestone_retrieval_discard_gfx5, component $com_gravestone_retrieval_null6, component $com_gravestone_retrieval_null7)
+[proc,gravestone_retrieval_unlockstatus](component $com_gravestone_retrieval_frame0, int $comsubid1, component $com_gravestone_retrieval_button2, component $com_gravestone_retrieval_button_gfx3, component $com_gravestone_retrieval_button_bank4, component $com_gravestone_retrieval_button_bank_gfx5, component $com_gravestone_retrieval_info6, component $com_gravestone_retrieval_fee7)
 if (cc_find($com_gravestone_retrieval_frame0, $comsubid1) = ^true) {
 	cc_settext(enum(int, string, enum_1753, %if1));
 }
-if_sethide(false, $com_gravestone_retrieval_null6);
-if_sethide(true, $com_gravestone_retrieval_null7);
+if_sethide(false, $com_gravestone_retrieval_info6);
+if_sethide(true, $com_gravestone_retrieval_fee7);
 if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_button2);
-if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_discard4);
+if_setgraphic("miscgraphics,0", $com_gravestone_retrieval_button_bank4);
 if_setontimer(null, $com_gravestone_retrieval_button2);
-if_sethide(true, $com_gravestone_retrieval_discard4);
-if_sethide(true, $com_gravestone_retrieval_discard_gfx5);
-if_setsize(80, 0, ^setsize_minus, ^setsize_minus, $com_gravestone_retrieval_null6);
+if_sethide(true, $com_gravestone_retrieval_button_bank4);
+if_sethide(true, $com_gravestone_retrieval_button_bank_gfx5);
+if_setsize(80, 0, ^setsize_minus, ^setsize_minus, $com_gravestone_retrieval_info6);
 def_string $string0 = "";
 def_namedobj $namedobj8 = enum(int, namedobj, enum_1756, %if1);
 def_int $int9 = enum(int, int, enum_1757, %if1);
@@ -29,34 +29,34 @@ if ($namedobj8 ! null & $int9 > 0) {
 			$string0 = "Death's Coffer: <col=ffffff>Empty</col>";
 		}
 		if ($int9 > 1) {
-			if_settext("Fee to unlock: <col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_null7);
+			if_settext("Fee to unlock: <col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_fee7);
 		} else {
-			if_settext("Fee to unlock: <col=ffffff><oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_null7);
+			if_settext("Fee to unlock: <col=ffffff><oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_fee7);
 		}
 	} else if ($int9 > 1) {
-		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col>", $com_gravestone_retrieval_null7);
+		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col>", $com_gravestone_retrieval_fee7);
 	} else {
-		if_settext("Fee to unlock:<br><col=ffffff><oc_name($namedobj8)></col>", $com_gravestone_retrieval_null7);
+		if_settext("Fee to unlock:<br><col=ffffff><oc_name($namedobj8)></col>", $com_gravestone_retrieval_fee7);
 	}
-	if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_null6, $com_gravestone_retrieval_null7)", $com_gravestone_retrieval_button2);
-	if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_null6, $com_gravestone_retrieval_null7)", $com_gravestone_retrieval_button2);
-	if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button2, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_null6, $com_gravestone_retrieval_null7)", $com_gravestone_retrieval_button2);
+	if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info6, $com_gravestone_retrieval_fee7)", $com_gravestone_retrieval_button2);
+	if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info6, $com_gravestone_retrieval_fee7)", $com_gravestone_retrieval_button2);
+	if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button2, $com_gravestone_retrieval_button_gfx3, $com_gravestone_retrieval_info6, $com_gravestone_retrieval_fee7)", $com_gravestone_retrieval_button2);
 } else {
 	if_setgraphic("bankbuttons,4", $com_gravestone_retrieval_button_gfx3);
 	if_setop(1, "Take-All", $com_gravestone_retrieval_button2);
-	if_settext("", $com_gravestone_retrieval_null7);
+	if_settext("", $com_gravestone_retrieval_fee7);
 	if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
 	if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
 	if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button2, $com_gravestone_retrieval_button_gfx3, null, null)", $com_gravestone_retrieval_button2);
 	if (%if3 = 1) {
-		if_sethide(false, $com_gravestone_retrieval_discard4);
-		if_sethide(false, $com_gravestone_retrieval_discard_gfx5);
-		if_setsize(120, 0, ^setsize_minus, ^setsize_minus, $com_gravestone_retrieval_null6);
-		if_setgraphic("bankbuttons,5", $com_gravestone_retrieval_discard_gfx5);
-		if_setop(1, "Bank-All", $com_gravestone_retrieval_discard4);
-		if_settext("", $com_gravestone_retrieval_null7);
-		if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_discard_gfx5, null, null)", $com_gravestone_retrieval_discard4);
-		if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_discard_gfx5, null, null)", $com_gravestone_retrieval_discard4);
-		if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_discard4, $com_gravestone_retrieval_discard_gfx5, null, null)", $com_gravestone_retrieval_discard4);
+		if_sethide(false, $com_gravestone_retrieval_button_bank4);
+		if_sethide(false, $com_gravestone_retrieval_button_bank_gfx5);
+		if_setsize(120, 0, ^setsize_minus, ^setsize_minus, $com_gravestone_retrieval_info6);
+		if_setgraphic("bankbuttons,5", $com_gravestone_retrieval_button_bank_gfx5);
+		if_setop(1, "Bank-All", $com_gravestone_retrieval_button_bank4);
+		if_settext("", $com_gravestone_retrieval_fee7);
+		if_setonmouserepeat("gravestone_retrieval_buttonhover(1, $com_gravestone_retrieval_button_bank_gfx5, null, null)", $com_gravestone_retrieval_button_bank4);
+		if_setonmouseleave("gravestone_retrieval_buttonhover(0, $com_gravestone_retrieval_button_bank_gfx5, null, null)", $com_gravestone_retrieval_button_bank4);
+		if_setonop("gravestone_retrieval_buttonop(event_op, $com_gravestone_retrieval_button_bank4, $com_gravestone_retrieval_button_bank_gfx5, null, null)", $com_gravestone_retrieval_button_bank4);
 	}
 }

@@ -1,0 +1,9 @@
+// 8084
+[clientscript,script8084](component $com_fairyrings_log_contents0, component $com_fairyrings_log_scrollbar1, component $com_fairyrings_log_divider2, component $com_fairyrings_log_faves3, component $com_fairyrings_log_com_74)
+if (%varcint5 ! 28) {
+	~script8080($com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, 1, $com_fairyrings_log_divider2, $com_fairyrings_log_faves3, 0);
+	return;
+}
+if (calc(clientclock % 20) = 0) {
+	~script8080($com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, 1, $com_fairyrings_log_divider2, $com_fairyrings_log_faves3, 1);
+}

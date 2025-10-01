@@ -13,5 +13,6 @@ cc_deleteall($com_ca_rewards_tiers_content_scrollbar8);
 	5 = $com_ca_rewards_tiers_content6, 
 	6 = $com_ca_rewards_tiers_content_borders7, 
 	7 = $com_ca_rewards_tiers_content_scrollbar8, 
-	8 = enum(int, struct, enum_3980, 0)
+	8 = enum(int, struct, enum_3980, ~minmax(0, calc(enum_getoutputcount(enum_3980) - 1), %ca_last_reward_tier_selected))
 );
+if_setonvartransmit("script8076($com_ca_rewards_universe0, $com_ca_rewards_tiers_click2, $com_ca_rewards_tiers_tabs3, $com_ca_rewards_rewards_content4, $com_ca_rewards_tiers_content_frame5, $com_ca_rewards_tiers_content6, $com_ca_rewards_tiers_content_borders7, $com_ca_rewards_tiers_content_scrollbar8){ca_general_tasks2}", $com_ca_rewards_universe0);

@@ -1,0 +1,11 @@
+// 8086
+[clientscript,script8086](component $com_bankside_runepouch_loadout_container0, component $com_bankside_runepouch_loadout_j1, component $com_bankside_runepouch_loadout_scrollbar2)
+def_int $int3 = calc(if_gety($com_bankside_runepouch_loadout_j1) + if_getheight($com_bankside_runepouch_loadout_j1));
+cc_deleteall($com_bankside_runepouch_loadout_scrollbar2);
+if ($int3 > if_getheight($com_bankside_runepouch_loadout_container0)) {
+	if_setscrollsize(0, $int3, $com_bankside_runepouch_loadout_container0);
+} else {
+	if_setscrollsize(0, 0, $com_bankside_runepouch_loadout_container0);
+}
+if_setscrollpos(0, 0, $com_bankside_runepouch_loadout_container0);
+~scrollbar_vertical($com_bankside_runepouch_loadout_scrollbar2, $com_bankside_runepouch_loadout_container0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

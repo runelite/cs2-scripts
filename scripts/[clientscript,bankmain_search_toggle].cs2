@@ -1,5 +1,5 @@
 // 281
-[clientscript,bankmain_search_toggle](int $opindex0, component $com_bankmain_universe1, component $com_bankmain_wornitems_button2, component $com_bankmain_items3, component $com_bankmain_scrollbar4, component $com_bankmain_bottom5, component $com_bankmain_title6, component $com_bankmain_occupiedslots7, component $com_bankmain_search8, component $com_bankmain_tabs9, component $com_bankmain_incinerator_target10, component $com_bankmain_incinerator_confirm11, component $com_bankmain_com_13012, component $com_bankmain_depositinv13, component $com_bankmain_depositinv_graphic14, component $com_bankmain_depositworn15, component $com_bankmain_depositworn_graphic16, component $com_bankmain_bank_tut17)
+[clientscript,bankmain_search_toggle](int $opindex0, component $com_bankmain_universe1, component $com_bankmain_menu_button2, component $com_bankmain_items3, component $com_bankmain_scrollbar4, component $com_bankmain_bottom5, component $com_bankmain_title6, component $com_bankmain_occupiedslots7, component $com_bankmain_search8, component $com_bankmain_tabs9, component $com_bankmain_incinerator_target10, component $com_bankmain_incinerator_confirm11, component $com_bankmain_tooltip12, component $com_bankmain_depositinv13, component $com_bankmain_depositinv_graphic14, component $com_bankmain_depositworn15, component $com_bankmain_depositworn_graphic16, component $com_bankmain_bank_tut17)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -8,7 +8,7 @@ if (~bankmain_searching = 1) {
 	~meslayer_close(true, true, true);
 	~bankmain_search_setbutton(
 		0 = $com_bankmain_universe1, 
-		1 = $com_bankmain_wornitems_button2, 
+		1 = $com_bankmain_menu_button2, 
 		2 = $com_bankmain_items3, 
 		3 = $com_bankmain_scrollbar4, 
 		4 = $com_bankmain_bottom5, 
@@ -18,7 +18,7 @@ if (~bankmain_searching = 1) {
 		8 = $com_bankmain_tabs9, 
 		9 = $com_bankmain_incinerator_target10, 
 		10 = $com_bankmain_incinerator_confirm11, 
-		11 = $com_bankmain_com_13012, 
+		11 = $com_bankmain_tooltip12, 
 		12 = $com_bankmain_depositinv13, 
 		13 = $com_bankmain_depositinv_graphic14, 
 		14 = $com_bankmain_depositworn15, 
@@ -27,7 +27,7 @@ if (~bankmain_searching = 1) {
 	);
 	~bankmain_build(
 		0 = $com_bankmain_universe1, 
-		1 = $com_bankmain_wornitems_button2, 
+		1 = $com_bankmain_menu_button2, 
 		2 = $com_bankmain_items3, 
 		3 = $com_bankmain_scrollbar4, 
 		4 = $com_bankmain_bottom5, 
@@ -37,7 +37,7 @@ if (~bankmain_searching = 1) {
 		8 = $com_bankmain_tabs9, 
 		9 = $com_bankmain_incinerator_target10, 
 		10 = $com_bankmain_incinerator_confirm11, 
-		11 = $com_bankmain_com_13012, 
+		11 = $com_bankmain_tooltip12, 
 		12 = $com_bankmain_depositinv13, 
 		13 = $com_bankmain_depositinv_graphic14, 
 		14 = $com_bankmain_depositworn15, 
@@ -49,7 +49,7 @@ if (~bankmain_searching = 1) {
 ~meslayer_mode11;
 ~bankmain_search_setbutton(
 	0 = $com_bankmain_universe1, 
-	1 = $com_bankmain_wornitems_button2, 
+	1 = $com_bankmain_menu_button2, 
 	2 = $com_bankmain_items3, 
 	3 = $com_bankmain_scrollbar4, 
 	4 = $com_bankmain_bottom5, 
@@ -59,7 +59,7 @@ if (~bankmain_searching = 1) {
 	8 = $com_bankmain_tabs9, 
 	9 = $com_bankmain_incinerator_target10, 
 	10 = $com_bankmain_incinerator_confirm11, 
-	11 = $com_bankmain_com_13012, 
+	11 = $com_bankmain_tooltip12, 
 	12 = $com_bankmain_depositinv13, 
 	13 = $com_bankmain_depositinv_graphic14, 
 	14 = $com_bankmain_depositworn15, 

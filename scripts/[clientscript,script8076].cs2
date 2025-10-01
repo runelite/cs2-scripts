@@ -1,0 +1,13 @@
+// 8076
+[clientscript,script8076](component $com_ca_rewards_universe0, component $com_ca_rewards_tiers_click1, component $com_ca_rewards_tiers_tabs2, component $com_ca_rewards_rewards_content3, component $com_ca_rewards_tiers_content_frame4, component $com_ca_rewards_tiers_content5, component $com_ca_rewards_tiers_content_borders6, component $com_ca_rewards_tiers_content_scrollbar7)
+~ca_rewards_tiers_init(
+	0 = $com_ca_rewards_universe0, 
+	1 = $com_ca_rewards_tiers_click1, 
+	2 = $com_ca_rewards_tiers_tabs2, 
+	3 = $com_ca_rewards_rewards_content3, 
+	4 = $com_ca_rewards_tiers_content_frame4, 
+	5 = $com_ca_rewards_tiers_content5, 
+	6 = $com_ca_rewards_tiers_content_borders6, 
+	7 = $com_ca_rewards_tiers_content_scrollbar7, 
+	8 = enum(int, struct, enum_3980, ~minmax(0, calc(enum_getoutputcount(enum_3980) - 1), %ca_last_reward_tier_selected))
+);
