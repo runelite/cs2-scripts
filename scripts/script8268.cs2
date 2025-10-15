@@ -1,0 +1,79 @@
+java.lang.IllegalStateException: Opcode 8022 in script 8268 not implemented
+
+.id                       8268
+.int_arg_count            2
+.obj_arg_count            0
+   iconst                 105
+   iconst                 0
+   iconst                 7
+   8022                  
+   ostore                 0
+   iconst                 0
+   istore                 2
+   iload                  0
+   invoke                 8250
+   switch                
+      1: LABEL11
+      2: LABEL16
+      3: LABEL21
+      4: LABEL26
+      5: LABEL31
+   jump                   LABEL56
+LABEL11:
+   oload                  0
+   iconst                 3
+   iload                  1
+   invoke                 8269
+   jump                   LABEL56
+LABEL16:
+   oload                  0
+   iconst                 4
+   iload                  1
+   invoke                 8269
+   jump                   LABEL56
+LABEL21:
+   oload                  0
+   iconst                 5
+   iload                  1
+   invoke                 8269
+   jump                   LABEL56
+LABEL26:
+   oload                  0
+   iconst                 7
+   iload                  1
+   invoke                 8269
+   jump                   LABEL56
+LABEL31:
+   iconst                 7
+   invoke                 8262
+   istore                 2
+   iload                  1
+   iload                  2
+   if_icmplt              LABEL38
+   jump                   LABEL43
+LABEL38:
+   oload                  0
+   iconst                 7
+   iload                  1
+   invoke                 8269
+   jump                   LABEL56
+LABEL43:
+   iload                  1
+   iload                  2
+   iconst                 7
+   invoke                 8261
+   add                   
+   if_icmplt              LABEL50
+   jump                   LABEL56
+LABEL50:
+   oload                  0
+   iload                  1
+   iload                  2
+   sub                   
+   iconst                 0
+   8024                  
+LABEL56:
+   oload                  0
+   return                
+   push_null             
+   return                

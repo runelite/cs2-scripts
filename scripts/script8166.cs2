@@ -1,0 +1,370 @@
+java.lang.IllegalStateException: Opcode 8024 in script 8166 not implemented
+
+.id                       8166
+.int_arg_count            2
+.obj_arg_count            1
+   iload                  0
+   iconst                 0
+   oc_param              
+   istore                 2
+   iload                  0
+   iconst                 1
+   oc_param              
+   istore                 3
+   iload                  0
+   iconst                 2
+   oc_param              
+   istore                 4
+   iload                  0
+   iconst                 3
+   oc_param              
+   istore                 5
+   iload                  0
+   iconst                 4
+   oc_param              
+   istore                 6
+   iload                  0
+   iconst                 5
+   oc_param              
+   istore                 7
+   iload                  0
+   iconst                 6
+   oc_param              
+   istore                 8
+   iload                  0
+   iconst                 7
+   oc_param              
+   istore                 9
+   iload                  0
+   iconst                 8
+   oc_param              
+   istore                 10
+   iload                  0
+   iconst                 9
+   oc_param              
+   istore                 11
+   iload                  0
+   iconst                 10
+   oc_param              
+   istore                 12
+   iload                  0
+   iconst                 189
+   oc_param              
+   istore                 13
+   iload                  0
+   iconst                 299
+   oc_param              
+   istore                 14
+   iload                  14
+   iconst                 0
+   if_icmpgt              LABEL56
+   jump                   LABEL60
+LABEL56:
+   iload                  14
+   iconst                 10
+   div                   
+   istore                 14
+LABEL60:
+   iload                  0
+   iconst                 11
+   oc_param              
+   istore                 15
+   iload                  0
+   iconst                 14
+   oc_param              
+   istore                 16
+   iconst                 1
+   iload                  0
+   iconst                 13
+   oc_param              
+   4017                  
+   istore                 17
+   sconst                 ""
+   ostore                 1
+   iload                  2
+   iconst                 0
+   if_icmpne              LABEL92
+   iload                  3
+   iconst                 0
+   if_icmpne              LABEL92
+   iload                  4
+   iconst                 0
+   if_icmpne              LABEL92
+   iload                  5
+   iconst                 0
+   if_icmpne              LABEL92
+   iload                  6
+   iconst                 0
+   if_icmpne              LABEL92
+   jump                   LABEL155
+LABEL92:
+   oload                  0
+   sconst                 ""
+   iconst                 2
+   8024                  
+   oload                  0
+   sconst                 "Attack Bonuses"
+   iconst                 2
+   8024                  
+   iload                  2
+   iconst                 0
+   if_icmpne              LABEL104
+   jump                   LABEL111
+LABEL104:
+   oload                  0
+   sconst                 "Stab: "
+   iload                  2
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL111:
+   iload                  3
+   iconst                 0
+   if_icmpne              LABEL115
+   jump                   LABEL122
+LABEL115:
+   oload                  0
+   sconst                 "Slash: "
+   iload                  3
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL122:
+   iload                  4
+   iconst                 0
+   if_icmpne              LABEL126
+   jump                   LABEL133
+LABEL126:
+   oload                  0
+   sconst                 "Crush: "
+   iload                  4
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL133:
+   iload                  5
+   iconst                 0
+   if_icmpne              LABEL137
+   jump                   LABEL144
+LABEL137:
+   oload                  0
+   sconst                 "Magic: "
+   iload                  5
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL144:
+   iload                  6
+   iconst                 0
+   if_icmpne              LABEL148
+   jump                   LABEL155
+LABEL148:
+   oload                  0
+   sconst                 "Range: "
+   iload                  6
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL155:
+   iload                  7
+   iconst                 0
+   if_icmpne              LABEL171
+   iload                  8
+   iconst                 0
+   if_icmpne              LABEL171
+   iload                  9
+   iconst                 0
+   if_icmpne              LABEL171
+   iload                  10
+   iconst                 0
+   if_icmpne              LABEL171
+   iload                  11
+   iconst                 0
+   if_icmpne              LABEL171
+   jump                   LABEL234
+LABEL171:
+   oload                  0
+   sconst                 ""
+   iconst                 2
+   8024                  
+   oload                  0
+   sconst                 "Defence Bonuses"
+   iconst                 2
+   8024                  
+   iload                  7
+   iconst                 0
+   if_icmpne              LABEL183
+   jump                   LABEL190
+LABEL183:
+   oload                  0
+   sconst                 "Stab: "
+   iload                  7
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL190:
+   iload                  8
+   iconst                 0
+   if_icmpne              LABEL194
+   jump                   LABEL201
+LABEL194:
+   oload                  0
+   sconst                 "Slash: "
+   iload                  8
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL201:
+   iload                  9
+   iconst                 0
+   if_icmpne              LABEL205
+   jump                   LABEL212
+LABEL205:
+   oload                  0
+   sconst                 "Crush: "
+   iload                  9
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL212:
+   iload                  10
+   iconst                 0
+   if_icmpne              LABEL216
+   jump                   LABEL223
+LABEL216:
+   oload                  0
+   sconst                 "Magic: "
+   iload                  10
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL223:
+   iload                  11
+   iconst                 0
+   if_icmpne              LABEL227
+   jump                   LABEL234
+LABEL227:
+   oload                  0
+   sconst                 "Range: "
+   iload                  11
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL234:
+   iload                  12
+   iconst                 0
+   if_icmpne              LABEL250
+   iload                  13
+   iconst                 0
+   if_icmpne              LABEL250
+   iload                  14
+   iconst                 0
+   if_icmpne              LABEL250
+   iload                  15
+   iconst                 0
+   if_icmpne              LABEL250
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL250
+   jump                   LABEL329
+LABEL250:
+   oload                  0
+   sconst                 ""
+   iconst                 2
+   8024                  
+   oload                  0
+   sconst                 "Other Stats"
+   iconst                 2
+   8024                  
+   iload                  12
+   iconst                 0
+   if_icmpne              LABEL262
+   jump                   LABEL269
+LABEL262:
+   oload                  0
+   sconst                 "Melee Str: "
+   iload                  12
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL269:
+   iload                  13
+   iconst                 0
+   if_icmpne              LABEL273
+   jump                   LABEL280
+LABEL273:
+   oload                  0
+   sconst                 "Range Str: "
+   iload                  13
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL280:
+   iload                  14
+   iconst                 0
+   if_icmpne              LABEL284
+   jump                   LABEL292
+LABEL284:
+   oload                  0
+   sconst                 "Magic Str: "
+   iload                  14
+   invoke                 7643
+   sconst                 "%"
+   join_string            3
+   iconst                 2
+   8024                  
+LABEL292:
+   iload                  15
+   iconst                 0
+   if_icmpne              LABEL296
+   jump                   LABEL303
+LABEL296:
+   oload                  0
+   sconst                 "Prayer: "
+   iload                  15
+   invoke                 7643
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL303:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL307
+   jump                   LABEL329
+LABEL307:
+   oload                  0
+   sconst                 "Attack Speed: "
+   iload                  16
+   tostring              
+   sconst                 " ticks (0.6s per)"
+   join_string            3
+   iconst                 2
+   8024                  
+   iload                  17
+   sconst                 "tile"
+   sconst                 "tiles"
+   invoke                 1881
+   ostore                 1
+   oload                  0
+   sconst                 "Attack Range: "
+   iload                  17
+   tostring              
+   sconst                 " "
+   oload                  1
+   join_string            4
+   iconst                 2
+   8024                  
+LABEL329:
+   return                

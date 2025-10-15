@@ -1,0 +1,299 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8157 not implemented
+
+.id                       8157
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 60686346
+   istore                 1
+   iconst                 0
+   istore                 2
+   iconst                 0
+   istore                 3
+   sconst                 ""
+   ostore                 0
+   sconst                 "Next Step"
+   ostore                 1
+   iload                  1
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL272
+LABEL15:
+   iconst                 2322
+   1703                  
+   istore                 2
+   iload                  1
+   cc_deleteall          
+   iload                  2
+   switch                
+      0: LABEL23
+      1: LABEL40
+      2: LABEL89
+   jump                   LABEL117
+LABEL23:
+   sconst                 "Welcome to the Grid Master interface."
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "Here you can view all the Grid Master challenges, just like our central challenge "
+   sconst                 "<col=ffffff>"
+   iconst                 6810
+   iconst                 483328
+   iconst                 0
+   db_getfield           
+   sconst                 "</col>"
+   sconst                 "."
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "Selecting a challenge will show you any relevant information about it, what it'll reward you with and how many grid points you'll receive."
+   join_string            11
+   ostore                 0
+   jump                   LABEL117
+LABEL40:
+   sconst                 "To view a challenge's rewards you can either:"
+   sconst                 "<br>"
+   sconst                 " - Select a challenge then select its specific rewards (like the icon below)."
+   sconst                 "<br>"
+   sconst                 " - Toggle the "
+   sconst                 "<col=ffffff>"
+   sconst                 "R"
+   sconst                 "</col>"
+   sconst                 " button to flip all the tiles over, showing their reward side."
+   join_string            9
+   ostore                 0
+   invoke                 1972
+   iconst                 0
+   if_icmpeq              LABEL55
+   jump                   LABEL71
+LABEL55:
+   sconst                 "To view a challenge's rewards you can either:"
+   sconst                 "<br>"
+   sconst                 " - Select a challenge then select its specific rewards (like the icon below)."
+   sconst                 "<br>"
+   sconst                 " - Toggle the "
+   sconst                 "<col=ffffff>"
+   sconst                 "R"
+   sconst                 "</col>"
+   sconst                 " button, or hold the "
+   sconst                 "<col=ffffff>"
+   sconst                 "CTRL"
+   sconst                 "</col>"
+   sconst                 " key to flip all the tiles over, showing their reward side."
+   join_string            13
+   ostore                 0
+   jump                   LABEL82
+LABEL71:
+   sconst                 "To view a challenge's rewards you can either:"
+   sconst                 "<br>"
+   sconst                 " - Select a challenge then select its specific rewards (like the icon below)."
+   sconst                 "<br>"
+   sconst                 " - Toggle the "
+   sconst                 "<col=ffffff>"
+   sconst                 "R"
+   sconst                 "</col>"
+   sconst                 " button to flip all the tiles over, showing their reward side."
+   join_string            9
+   ostore                 0
+LABEL82:
+   oload                  0
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "The rewards at the edges of the grid are obtainable after completing the row / column they're attached to."
+   join_string            4
+   ostore                 0
+   jump                   LABEL117
+LABEL89:
+   invoke                 1972
+   iconst                 0
+   if_icmpeq              LABEL93
+   jump                   LABEL99
+LABEL93:
+   sconst                 "This interface is fully resizable and movable, it will also scale to the size you select."
+   sconst                 "<br>"
+   sconst                 "It will also stay open while playing the game, so you can keep it open for reference."
+   join_string            3
+   ostore                 0
+   jump                   LABEL101
+LABEL99:
+   sconst                 "This interface will stay open while playing the game, so you can keep it open for reference."
+   ostore                 0
+LABEL101:
+   oload                  0
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "To start you off in Grid Master, we've given you some initial Powerups, Auto-Completed a chunk of quests automatically for you and given you a Dramen staff to get started with."
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "<col=ffffff>"
+   sconst                 "Don't forget to claim your central tile reward for completing the Grid Master Tutorial!"
+   sconst                 "</col>"
+   join_string            12
+   ostore                 0
+   sconst                 "Complete Tutorial"
+   ostore                 1
+LABEL117:
+   iload                  1
+   iconst                 4
+   iload                  3
+   iconst                 0
+   cc_create             
+   iconst                 273
+   iconst                 100
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 0
+   iconst                 10
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 16750623
+   cc_setcolour          
+   oload                  0
+   cc_settext            
+   iconst                 1
+   iconst                 0
+   iconst                 13
+   cc_settextalign       
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   iload                  1
+   iload                  3
+   iconst                 17
+   iconst                 17
+   iconst                 2
+   iconst                 2
+   iconst                 120
+   iconst                 35
+   iconst                 0
+   iconst                 0
+   iconst                 6265
+   oload                  1
+   invoke                 8185
+   istore                 3
+   iconst                 8159
+   iload                  1
+   iload                  2
+   sconst                 "ii"
+   cc_setonop            
+   iconst                 1
+   oload                  1
+   cc_setop              
+   iload                  2
+   iconst                 0
+   if_icmpgt              LABEL174
+   jump                   LABEL196
+LABEL174:
+   iload                  1
+   iload                  3
+   iconst                 17
+   iconst                 17
+   iconst                 0
+   iconst                 2
+   iconst                 120
+   iconst                 35
+   iconst                 0
+   iconst                 0
+   iconst                 6265
+   sconst                 "Back"
+   invoke                 8185
+   istore                 3
+   iconst                 8158
+   iload                  1
+   iload                  2
+   sconst                 "ii"
+   cc_setonop            
+   iconst                 1
+   sconst                 "Back"
+   cc_setop              
+LABEL196:
+   iload                  2
+   switch                
+      0: LABEL199
+      1: LABEL236
+   jump                   LABEL272
+LABEL199:
+   iload                  1
+   iload                  3
+   iconst                 0
+   iconst                 60
+   iconst                 1
+   iconst                 2
+   iconst                 80
+   iconst                 80
+   iconst                 0
+   iconst                 0
+   iconst                 6284
+   sconst                 ""
+   invoke                 8185
+   istore                 3
+   iconst                 0
+   iconst                 1
+   invoke                 8190
+   iconst                 5
+   iload                  3
+   106                   
+   iconst                 10
+   iconst                 10
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 6764
+   cc_setgraphic         
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL272
+LABEL236:
+   iload                  1
+   iload                  3
+   iconst                 0
+   iconst                 60
+   iconst                 1
+   iconst                 2
+   iconst                 80
+   iconst                 80
+   iconst                 0
+   iconst                 0
+   iconst                 6299
+   sconst                 ""
+   invoke                 8185
+   istore                 3
+   iconst                 0
+   iconst                 1
+   invoke                 8190
+   iconst                 5
+   iload                  3
+   106                   
+   iconst                 10
+   iconst                 10
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 6675
+   cc_setgraphic         
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+LABEL272:
+   return                

@@ -1,0 +1,203 @@
+java.lang.IllegalStateException: Opcode 8024 in script 8167 not implemented
+
+.id                       8167
+.int_arg_count            2
+.obj_arg_count            1
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   sconst                 "<col=ffffff>"
+   ostore                 1
+   sconst                 "<col=9f9f9f>"
+   ostore                 2
+   oload                  2
+   iconst                 0
+   iconst                 1
+   substring             
+   sconst                 "str"
+   oload                  2
+   iconst                 4
+   oload                  2
+   string_length         
+   substring             
+   join_string            3
+   ostore                 3
+   sconst                 ""
+   ostore                 4
+   iload                  0
+   switch                
+      3: LABEL25
+      4: LABEL32
+      5: LABEL39
+      -1: LABEL46
+   jump                   LABEL56
+LABEL25:
+   iconst                 5691
+   istore                 2
+   get_varbit             11580
+   istore                 3
+   sconst                 "Melee Mastery"
+   ostore                 4
+   jump                   LABEL56
+LABEL32:
+   iconst                 5692
+   istore                 2
+   get_varbit             11581
+   istore                 3
+   sconst                 "Ranged Mastery"
+   ostore                 4
+   jump                   LABEL56
+LABEL39:
+   iconst                 5693
+   istore                 2
+   get_varbit             11582
+   istore                 3
+   sconst                 "Magic Mastery"
+   ostore                 4
+   jump                   LABEL56
+LABEL46:
+   iconst                 5694
+   istore                 2
+   get_varbit             11580
+   get_varbit             11581
+   4017                  
+   get_varbit             11582
+   4017                  
+   istore                 3
+   sconst                 "Passive Buff"
+   ostore                 4
+LABEL56:
+   iload                  2
+   enum_getoutputcount   
+   istore                 4
+   iload                  3
+   iload                  4
+   4016                  
+   istore                 3
+   iload                  3
+   iload                  1
+   add                   
+   iload                  4
+   4016                  
+   istore                 5
+   iload                  5
+   iload                  3
+   sub                   
+   istore                 1
+   oload                  0
+   sconst                 ""
+   iconst                 2
+   8024                  
+   iload                  1
+   iconst                 0
+   if_icmpeq              LABEL81
+   jump                   LABEL93
+LABEL81:
+   oload                  0
+   oload                  4
+   sconst                 ": "
+   iload                  3
+   tostring              
+   sconst                 "/"
+   iload                  4
+   tostring              
+   join_string            5
+   iconst                 2
+   8024                  
+   jump                   LABEL103
+LABEL93:
+   oload                  0
+   oload                  4
+   sconst                 ": "
+   oload                  1
+   sconst                 "+"
+   iload                  1
+   tostring              
+   join_string            5
+   iconst                 2
+   8024                  
+LABEL103:
+   iconst                 -1
+   istore                 6
+   iconst                 0
+   istore                 7
+   sconst                 ""
+   ostore                 5
+   sconst                 ""
+   ostore                 6
+LABEL111:
+   iload                  7
+   iload                  4
+   if_icmplt              LABEL115
+   jump                   LABEL172
+LABEL115:
+   iconst                 105
+   iconst                 74
+   iload                  2
+   iload                  7
+   iconst                 1
+   add                   
+   enum                  
+   istore                 6
+   iload                  6
+   iconst                 -1
+   if_icmpne              LABEL127
+   jump                   LABEL167
+LABEL127:
+   iload                  7
+   iload                  3
+   if_icmplt              LABEL131
+   jump                   LABEL134
+LABEL131:
+   sconst                 ""
+   ostore                 5
+   jump                   LABEL149
+LABEL134:
+   iload                  7
+   iload                  3
+   iload                  1
+   add                   
+   if_icmplt              LABEL140
+   jump                   LABEL145
+LABEL140:
+   oload                  1
+   sconst                 "(NEW) "
+   join_string            2
+   ostore                 5
+   jump                   LABEL149
+LABEL145:
+   oload                  2
+   oload                  3
+   join_string            2
+   ostore                 5
+LABEL149:
+   iload                  6
+   iconst                 2028
+   struct_param          
+   sconst                 "<br>"
+   sconst                 " "
+   invoke                 3302
+   removetags            
+   ostore                 6
+   oload                  0
+   sconst                 ""
+   iconst                 2
+   8024                  
+   oload                  0
+   oload                  5
+   oload                  6
+   join_string            2
+   iconst                 2
+   8024                  
+LABEL167:
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL111
+LABEL172:
+   iload                  5
+   return                
+   iconst                 0
+   return                

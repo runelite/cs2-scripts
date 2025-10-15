@@ -1,0 +1,9 @@
+// 8114
+[proc,script8114](component $component0)
+if (if_gethide($component0) = true) {
+	if (%varcint1265 = false & keyheld(^key_control_left) = false) {
+		if_sethide(false, $component0);
+	}
+} else if (%varcint1265 = true | keyheld(^key_control_left) = true) {
+	if_sethide(true, $component0);
+}

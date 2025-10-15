@@ -1,0 +1,129 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8300 not implemented
+
+.id                       8300
+.int_arg_count            0
+.obj_arg_count            1
+   iconst                 0
+   istore                 0
+   iconst                 0
+   istore                 1
+   iconst                 0
+   istore                 2
+   iconst                 -1
+   istore                 3
+   iconst                 0
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 -1
+   istore                 6
+   oload                  0
+   8003                  
+   istore                 2
+   iconst                 0
+   istore                 0
+LABEL19:
+   iload                  0
+   iload                  2
+   if_icmplt              LABEL23
+   jump                   LABEL104
+LABEL23:
+   iload                  0
+   get_array_int         
+   istore                 3
+   iload                  3
+   iconst                 400
+   db_getfieldcount      
+   istore                 4
+   iconst                 0
+   istore                 5
+LABEL32:
+   iload                  5
+   iload                  4
+   if_icmplt              LABEL36
+   jump                   LABEL63
+LABEL36:
+   iload                  3
+   iconst                 400
+   iload                  5
+   db_getfield           
+   istore                 6
+   iload                  6
+   iconst                 -1
+   if_icmpne              LABEL45
+   jump                   LABEL58
+LABEL45:
+   oload                  0
+   iload                  6
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   iconst                 -1
+   if_icmpeq              LABEL54
+   jump                   LABEL58
+LABEL54:
+   oload                  0
+   iload                  6
+   iconst                 0
+   8024                  
+LABEL58:
+   iload                  5
+   iconst                 1
+   add                   
+   istore                 5
+   jump                   LABEL32
+LABEL63:
+   iload                  3
+   switch                
+      13: LABEL66
+      96: LABEL80
+   jump                   LABEL94
+LABEL66:
+   oload                  0
+   iconst                 162
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   iconst                 -1
+   if_icmpeq              LABEL75
+   jump                   LABEL79
+LABEL75:
+   oload                  0
+   iconst                 162
+   iconst                 0
+   8024                  
+LABEL79:
+   jump                   LABEL96
+LABEL80:
+   oload                  0
+   iconst                 2315
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   iconst                 -1
+   if_icmpeq              LABEL89
+   jump                   LABEL93
+LABEL89:
+   oload                  0
+   iconst                 2315
+   iconst                 0
+   8024                  
+LABEL93:
+   jump                   LABEL96
+LABEL94:
+   iconst                 -1
+   istore                 6
+LABEL96:
+   iload                  0
+   iconst                 1
+   add                   
+   istore                 0
+   oload                  0
+   8003                  
+   istore                 2
+   jump                   LABEL19
+LABEL104:
+   return                

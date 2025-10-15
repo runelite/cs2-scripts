@@ -1,0 +1,325 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8203 not implemented
+
+.id                       8203
+.int_arg_count            11
+.obj_arg_count            0
+   iconst                 0
+   istore                 11
+   iconst                 0
+   istore                 12
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL8
+   jump                   LABEL12
+LABEL8:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL18
+LABEL12:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL18
+   jump                   LABEL72
+LABEL18:
+   iload                  4
+   iconst                 -1
+   if_icmpeq              LABEL22
+   jump                   LABEL26
+LABEL22:
+   iload                  3
+   if_find                1
+   iconst                 1
+   if_icmpeq              LABEL32
+LABEL26:
+   iload                  3
+   iload                  4
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL32
+   jump                   LABEL72
+LABEL32:
+   cc_getscrollheight     1
+   istore                 11
+   iload                  11
+   iconst                 0
+   if_icmple              LABEL38
+   jump                   LABEL40
+LABEL38:
+   cc_getheight           1
+   istore                 11
+LABEL40:
+   iload                  11
+   iconst                 0
+   if_icmpgt              LABEL44
+   jump                   LABEL53
+LABEL44:
+   cc_getheight          
+   iconst                 32
+   sub                   
+   cc_getheight           1
+   multiply              
+   iload                  11
+   div                   
+   istore                 12
+   jump                   LABEL57
+LABEL53:
+   cc_getheight          
+   iconst                 32
+   sub                   
+   istore                 12
+LABEL57:
+   iload                  12
+   iconst                 10
+   if_icmplt              LABEL61
+   jump                   LABEL63
+LABEL61:
+   iconst                 10
+   istore                 12
+LABEL63:
+   iconst                 8209
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 -2147483646
+   sconst                 "iiiii"
+   cc_setonscrollwheel    1
+   jump                   LABEL74
+LABEL72:
+   iload                  2
+   return                
+LABEL74:
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL78
+   jump                   LABEL82
+LABEL78:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL88
+LABEL82:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL88
+   jump                   LABEL294
+LABEL88:
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL92
+   jump                   LABEL96
+LABEL92:
+   iload                  0
+   if_find                1
+   iconst                 1
+   if_icmpeq              LABEL102
+LABEL96:
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL102
+   jump                   LABEL294
+LABEL102:
+   iconst                 5
+   iload                  2
+   106                   
+   iconst                 2351
+   iload                  2
+   iconst                 0
+   1704                   1
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 0
+   iconst                 32
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iload                  5
+   cc_setgraphic         
+   iconst                 0
+   cc_settiling          
+   iconst                 8207
+   iload                  0
+   iload                  1
+   sconst                 "ii"
+   cc_setonclick         
+   iconst                 8209
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 -2147483646
+   sconst                 "iiiii"
+   cc_setonscrollwheel   
+   iconst                 1
+   cc_setnoclickthrough  
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   iconst                 5
+   iload                  2
+   106                    1
+   iconst                 0
+   iconst                 16
+   iconst                 1
+   iconst                 0
+   cc_setposition         1
+   iconst                 0
+   iload                  12
+   iconst                 1
+   iconst                 0
+   cc_setsize             1
+   iload                  7
+   cc_setgraphic          1
+   iconst                 0
+   cc_settiling           1
+   iload                  0
+   cc_getid              
+   cc_setdraggable        1
+   iconst                 8208
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 -2147483646
+   iconst                 0
+   sconst                 "iiiiii"
+   cc_setondrag           1
+   iconst                 8208
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 -2147483646
+   iconst                 1
+   sconst                 "iiiiii"
+   cc_setondragcomplete   1
+   iconst                 1
+   cc_setdraggablebehavior 1
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   iconst                 5
+   iload                  2
+   107                   
+   iconst                 0
+   cc_gety                1
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 5
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  6
+   cc_setgraphic         
+   iconst                 0
+   cc_settiling          
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   iconst                 5
+   iload                  2
+   107                   
+   iconst                 0
+   cc_gety                1
+   cc_getheight           1
+   add                   
+   iconst                 5
+   sub                   
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 5
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  8
+   cc_setgraphic         
+   iconst                 0
+   cc_settiling          
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   iconst                 5
+   iload                  2
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 16
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  9
+   cc_setgraphic         
+   iconst                 0
+   cc_settiling          
+   iconst                 8205
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 -4
+   sconst                 "iiiii"
+   cc_setonhold          
+   iconst                 1
+   cc_setnoclickthrough  
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   iconst                 5
+   iload                  2
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 2
+   cc_setposition        
+   iconst                 0
+   iconst                 16
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  10
+   cc_setgraphic         
+   iconst                 0
+   cc_settiling          
+   iconst                 8205
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 4
+   sconst                 "iiiii"
+   cc_setonhold          
+   iconst                 1
+   cc_setnoclickthrough  
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+LABEL294:
+   iload                  2
+   return                
+   iconst                 0
+   return                

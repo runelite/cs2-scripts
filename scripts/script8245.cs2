@@ -1,0 +1,52 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8245 not implemented
+
+.id                       8245
+.int_arg_count            0
+.obj_arg_count            1
+   oload                  0
+   8003                  
+   istore                 0
+   iconst                 115
+   iconst                 0
+   iload                  0
+   8022                  
+   ostore                 1
+   iconst                 0
+   istore                 1
+   sconst                 ""
+   ostore                 2
+LABEL12:
+   iload                  1
+   iload                  0
+   if_icmplt              LABEL16
+   jump                   LABEL38
+LABEL16:
+   iload                  1
+   get_array_int         
+   oc_name               
+   ostore                 2
+   oload                  1
+   oload                  2
+   iconst                 0
+   iconst                 -1
+   iconst                 2
+   8005                  
+   iconst                 -1
+   if_icmpeq              LABEL29
+   jump                   LABEL33
+LABEL29:
+   oload                  1
+   oload                  2
+   iconst                 2
+   8024                  
+LABEL33:
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   jump                   LABEL12
+LABEL38:
+   oload                  1
+   return                
+   push_null             
+   return                

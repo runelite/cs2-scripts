@@ -1,0 +1,54 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       8236
+.int_arg_count            5
+.obj_arg_count            0
+   iconst                 0
+   istore                 5
+   iconst                 0
+   istore                 6
+   iload                  4
+   iconst                 8
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL10
+   jump                   LABEL42
+LABEL10:
+   iload                  0
+   iload                  1
+   iconst                 0
+   iconst                 0
+   cc_setposition         1
+   iload                  2
+   iload                  3
+   iconst                 0
+   iconst                 0
+   cc_setsize             1
+   iconst                 0
+   cc_sethide             1
+   208                    1
+   istore                 5
+LABEL24:
+   iload                  6
+   iload                  5
+   if_icmplt              LABEL28
+   jump                   LABEL42
+LABEL28:
+   iload                  6
+   iconst                 1
+   add                   
+   istore                 6
+   iload                  4
+   iconst                 8
+   iload                  6
+   add                   
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL40
+   jump                   LABEL41
+LABEL40:
+   cc_callonresize        1
+LABEL41:
+   jump                   LABEL24
+LABEL42:
+   return                

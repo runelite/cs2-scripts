@@ -1,0 +1,108 @@
+java.lang.IllegalStateException: Opcode 8022 in script 8153 not implemented
+
+.id                       8153
+.int_arg_count            6
+.obj_arg_count            0
+   iconst                 0
+   istore                 6
+   iload                  4
+   enum_getoutputcount   
+   iload                  3
+   4016                  
+   istore                 3
+   sconst                 "Combat Mastery"
+   ostore                 0
+   iload                  4
+   switch                
+      5691: LABEL12
+      5692: LABEL15
+      5693: LABEL18
+   jump                   LABEL20
+LABEL12:
+   sconst                 "Melee Mastery"
+   ostore                 0
+   jump                   LABEL20
+LABEL15:
+   sconst                 "Ranged Mastery"
+   ostore                 0
+   jump                   LABEL20
+LABEL18:
+   sconst                 "Magic Mastery"
+   ostore                 0
+LABEL20:
+   iconst                 115
+   iload                  3
+   iconst                 -1
+   8022                  
+   ostore                 1
+   iconst                 -1
+   istore                 7
+   sconst                 ""
+   ostore                 2
+LABEL29:
+   iload                  6
+   iload                  3
+   if_icmplt              LABEL33
+   jump                   LABEL63
+LABEL33:
+   iconst                 105
+   iconst                 74
+   iload                  4
+   iload                  6
+   iconst                 1
+   add                   
+   enum                  
+   istore                 7
+   iload                  7
+   iconst                 -1
+   if_icmpne              LABEL45
+   jump                   LABEL58
+LABEL45:
+   iload                  7
+   iconst                 2028
+   struct_param          
+   sconst                 "<br>"
+   sconst                 " "
+   invoke                 3302
+   removetags            
+   ostore                 2
+   iload                  6
+   sconst                 "- "
+   oload                  2
+   join_string            2
+   set_array_int          1
+LABEL58:
+   iload                  6
+   iconst                 1
+   add                   
+   istore                 6
+   jump                   LABEL29
+LABEL63:
+   iload                  0
+   iload                  1
+   iload                  2
+   oload                  0
+   iload                  3
+   tostring              
+   iload                  5
+   oload                  1
+   sconst                 "<br>"
+   sconst                 "<br>"
+   join_string            2
+   8019                  
+   iconst                 6977
+   oload                  0
+   sconst                 ":"
+   join_string            2
+   invoke                 8151
+   istore                 2
+   istore                 1
+   istore                 0
+   iload                  0
+   iload                  1
+   iload                  2
+   return                
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   return                

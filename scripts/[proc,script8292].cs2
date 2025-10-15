@@ -1,0 +1,10 @@
+// 8292
+[proc,script8292](dbrow $dbrow0, int $dbfield1)(dbrow)
+def_dbrow $dbrow2 = null;
+if ($dbfield1 < 0) {
+	return($dbrow2);
+}
+if ($dbrow0 ! null & $dbfield1 < db_getfieldcount($dbrow0, reward_selection:reward)) {
+	$dbrow2 = db_getfield($dbrow0, reward_selection:reward, $dbfield1);
+}
+return($dbrow2);

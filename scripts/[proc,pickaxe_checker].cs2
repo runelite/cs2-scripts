@@ -2,10 +2,11 @@
 [proc,pickaxe_checker]()(int)
 def_int $int0 = stat(mining);
 def_obj $obj1 = inv_getobj(worn, 3);
+if ($int0 >= oc_param(league_trailblazer_pickaxe_25112, levelrequire) & ($obj1 = league_trailblazer_pickaxe_25112 | inv_total(inv, league_trailblazer_pickaxe_25112) > 0)) {
+	return(25112);
+}
 if (map_members = true) {
-	if ($int0 >= oc_param(league_trailblazer_pickaxe_25112, levelrequire) & ($obj1 = league_trailblazer_pickaxe_25112 | inv_total(inv, league_trailblazer_pickaxe_25112) > 0)) {
-		return(25112);
-	} else if ($int0 >= oc_param(crystal_pickaxe_23680, levelrequire) & ($obj1 = crystal_pickaxe_23680 | inv_total(inv, crystal_pickaxe_23680) > 0)) {
+	if ($int0 >= oc_param(crystal_pickaxe_23680, levelrequire) & ($obj1 = crystal_pickaxe_23680 | inv_total(inv, crystal_pickaxe_23680) > 0)) {
 		return(23680);
 	} else if ($int0 >= oc_param(trailblazer_pickaxe_25063, levelrequire) & ($obj1 = trailblazer_pickaxe_25063 | inv_total(inv, trailblazer_pickaxe_25063) > 0)) {
 		return(25063);

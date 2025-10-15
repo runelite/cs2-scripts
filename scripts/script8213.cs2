@@ -1,0 +1,39 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8213 not implemented
+
+.id                       8213
+.int_arg_count            1
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL4
+   jump                   LABEL27
+LABEL4:
+   iload                  0
+   iconst                 -1
+   if_icmpne              LABEL8
+   jump                   LABEL27
+LABEL8:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL13
+   jump                   LABEL27
+LABEL13:
+   iconst                 2355
+   1703                  
+   iconst                 -1
+   if_icmpne              LABEL18
+   jump                   LABEL27
+LABEL18:
+   clientclock           
+   iconst                 2355
+   1703                  
+   sub                   
+   iconst                 1
+   if_icmpgt              LABEL25
+   jump                   LABEL27
+LABEL25:
+   iload                  0
+   invoke                 41
+LABEL27:
+   return                

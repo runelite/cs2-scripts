@@ -1,0 +1,197 @@
+// 8169
+[proc,script8169](int $int0, int $int1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+def_int $int16 = 0;
+def_int $int17 = 7;
+def_int $int18 = calc(if_getwidth($component6) / 2);
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = ~script8296(%map_flags_cached);
+def_dbrow $dbrow23 = dbrow_6926;
+if ($dbrow23 = null) {
+	return;
+}
+%league_rewards_shopselection = -1;
+cc_create($component5, ^iftype_text, $int20, false);
+cc_settext(db_getfield($dbrow23, bingo_events:event_name, 0));
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff891f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(if_getwidth($component6), 13, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = calc($int17 + 13);
+$int20 = calc($int20 + 1);
+$int17, $int20 = ~pest_rewards_divider(5, $component5, $int17, $int20);
+def_int $int24 = db_getfieldcount($dbrow23, bingo_events:event_maingame_reward);
+def_string $string0 = "";
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_namedobj $namedobj27 = null;
+while ($int19 < $int24) {
+	$namedobj27, $int26, $int25 = ~script8293($int19);
+	if (calc($int19 % 2) = 0) {
+		$int16 = 0;
+	} else {
+		$int16 = calc($int18 - 1);
+	}
+	$int16 = calc($int16 + 4);
+	if ($int19 ! 0 & calc($int19 % 2) = 0) {
+		$int17 = calc($int17 + 32 + 8);
+	}
+	$int20, $int21 = ~script8170(
+		0 = $int16, 
+		1 = $int17, 
+		2 = $int18, 
+		3 = $namedobj27, 
+		4 = $int26, 
+		5 = $int25, 
+		6 = $int19, 
+		7 = $int0, 
+		8 = $int20, 
+		9 = $int21, 
+		10 = $int1, 
+		11 = $component2, 
+		12 = $int3, 
+		13 = $component4, 
+		14 = $component5, 
+		15 = $component6, 
+		16 = $component7, 
+		17 = $component8, 
+		18 = $component9, 
+		19 = $component10, 
+		20 = $component11, 
+		21 = $component12, 
+		22 = $component13, 
+		23 = $component14
+	);
+	$int19 = calc($int19 + 1);
+}
+$int17 = calc($int17 + 32 + 10);
+$int20 = 0;
+def_int $colour28 = ^white;
+def_string $string1 = "";
+def_string $string2 = ",";
+def_int $int29 = -1;
+cc_deleteall($component7);
+cc_deleteall($component10);
+cc_deleteall($component12);
+cc_deleteall($component13);
+if ($int0 ! -1) {
+	$namedobj27, $int26, $int25 = ~script8293($int0);
+	$string0 = oc_name($namedobj27);
+	%league_rewards_shopselection = $int0;
+	~script8172(0, $string0, $component8);
+	while ($int20 < $int0) {
+		cc_create($component7, ^iftype_rectangle, $int20, false);
+		cc_sethide(true);
+		$int20 = calc($int20 + 1);
+	}
+	cc_create($component7, ^iftype_rectangle, $int20, false);
+	cc_sethide(false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	if ($int22 = 1) {
+		cc_setop(1, "Info");
+	} else {
+		cc_setop(1, "Confirm");
+	}
+	cc_setopbase("<col=ff981f><$string0></col>");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("script8171(1, $string0, $component8)");
+		cc_setonmouseleave("script8171(0, $string0, $component8)");
+	}
+	cc_setonop("script8176(event_op, $component9)");
+	~script8178;
+	~steelborder($component10, $string0, 1);
+	if ($int22 = 1) {
+		if_settext("<br><col=ffffff><$string0></col><br><br>It will cost <col=ffffff><~tostring_spacer($int25, $string2)></col> points.", $component11);
+	} else {
+		if_settext("<col=ffffff><$string0></col><br><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int25, $string2)></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
+	}
+	$int20 = ~v2_stone_button($component12);
+	cc_create($component12, ^iftype_text, $int20, false);
+	$string1 = "Confirm";
+	if_setop(1, $string1, $component12);
+	if_setopbase("<col=ff981f>Event reward</col>", $component12);
+	if (~on_mobile = false) {
+		if_setonmouseleave("script7747($component12, 0, $string1, ^white)", $component12);
+		if_setonmouseover("script7747($component12, 1, $string1, 0xaaaaaa)", $component12);
+	}
+	if_setonop("script8177", $component12);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext($string1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour($colour28);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	$int20 = ~v2_stone_button($component13);
+	cc_create($component13, ^iftype_text, $int20, false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	$string1 = "Cancel";
+	if ($int22 = 1) {
+		$string1 = "Back";
+	}
+	cc_settext($string1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	if_setop(1, $string1, $component13);
+	if_setopbase("<col=ff981f>Event reward</col>", $component13);
+	if (~on_mobile = false) {
+		if_setonmouseleave("script7747($component13, 0, $string1, ^white)", $component13);
+		if_setonmouseover("script7747($component13, 1, $string1, 0xaaaaaa)", $component13);
+	}
+	if_setonop("script8180(
+		0 = $int0, 
+		1 = $int1, 
+		2 = $component2, 
+		3 = $int3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14
+	)", $component13);
+} else {
+	$int20 = ~v2_stone_button_in_filled($component8);
+	cc_create($component8, ^iftype_text, $int20, false);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	if ($int22 = 1) {
+		cc_settext("Info");
+	} else {
+		cc_settext("Confirm");
+	}
+}
+cc_deleteall($component14);
+~scrollbar_vertical($component14, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($int17 > if_getheight($component6)) {
+	if_setscrollsize(0, $int17, $component6);
+} else {
+	if_setscrollsize(0, 0, $component6);
+}
+if_setscrollpos(0, $int15, $component6);
+~scrollbar_vertical_rebuild($component14, $component6);
+if ($int22 = 1) {
+	if_sethide(true, event_rewards:confirm_button);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, event_rewards:confirm_cancel);
+	if_settext("You can purchase these rewards on a Main-Profile world.", event_rewards:rewards_text);
+	if_setsize(220, if_getheight(event_rewards:rewards_text), ^setsize_abs, ^setsize_abs, event_rewards:rewards_text);
+}

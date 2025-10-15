@@ -1,0 +1,6 @@
+// 8184
+[clientscript,script8184](int $key0, component $component1, int $comsubid2, int $int3)
+def_int $int4 = ~script8183($key0);
+if ($int4 = 0 & $key0 = ^key_escape & %keybinding_esc_to_close = 1) {
+	if_triggerop($component1, $comsubid2, $int3);
+}

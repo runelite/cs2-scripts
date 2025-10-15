@@ -1,0 +1,13 @@
+// 8191
+[clientscript,script8191](component $component0, int $comsubid1, int $int2)
+if (~on_mobile = true) {
+	return;
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	if ($int2 = 0) {
+		cc_sethide(false);
+		sound_synth(interface_select1, 1, 0);
+	} else {
+		sound_synth(pillory_wrong, 1, 0);
+	}
+}

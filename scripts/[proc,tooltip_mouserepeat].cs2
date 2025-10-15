@@ -1,16 +1,114 @@
-// 837
-[proc,tooltip_mouserepeat](component $component0, int $int1, component $component2, string $string0, int $int3, int $int4)
-if (~on_enhanced_mobile = 1) {
-	return;
-}
-if (~on_enhanced_any = 0 & %varcint1 < calc(clientclock + $int3)) {
-	if (%varcint1 < clientclock) {
-		%varcint1 = clientclock;
-	}
-	%varcint1 = calc(%varcint1 + 2);
-	return;
-}
-%varcint1 = calc(clientclock + $int3 + 10);
-if (%varcint2 = 0 & if_gethide($component2) = false) {
-	~tooltip_build($component0, $int1, $component2, $string0, $int4);
-}
+java.lang.IllegalStateException: Opcode 1704 in script 837 not implemented
+
+.id                       837
+.int_arg_count            5
+.obj_arg_count            1
+   invoke                 2476
+   iconst                 1
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL9
+   jump                   LABEL50
+LABEL9:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL13
+   jump                   LABEL50
+LABEL13:
+   iload                  2
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL18
+   jump                   LABEL50
+LABEL18:
+   iconst                 2355
+   clientclock           
+   iconst                 0
+   1704                  
+   iconst                 2352
+   1703                  
+   iconst                 -1
+   if_icmpne              LABEL27
+   jump                   LABEL50
+LABEL27:
+   iconst                 2353
+   1703                  
+   iload                  1
+   if_icmpne              LABEL48
+   iconst                 2352
+   1703                  
+   iload                  0
+   if_icmpne              LABEL48
+   iconst                 2354
+   1703                  
+   string_length         
+   oload                  0
+   string_length         
+   if_icmpne              LABEL48
+   iconst                 2354
+   1703                  
+   oload                  0
+   compare               
+   iconst                 0
+   if_icmpne              LABEL48
+   jump                   LABEL50
+LABEL48:
+   iload                  2
+   invoke                 41
+LABEL50:
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL54
+   jump                   LABEL71
+LABEL54:
+   get_varc_int           1
+   clientclock           
+   iload                  3
+   add                   
+   if_icmplt              LABEL60
+   jump                   LABEL71
+LABEL60:
+   get_varc_int           1
+   clientclock           
+   if_icmplt              LABEL64
+   jump                   LABEL66
+LABEL64:
+   clientclock           
+   set_varc_int           1
+LABEL66:
+   get_varc_int           1
+   iconst                 2
+   add                   
+   set_varc_int           1
+   return                
+LABEL71:
+   clientclock           
+   iload                  3
+   add                   
+   iconst                 10
+   add                   
+   set_varc_int           1
+   get_varc_int           2
+   iconst                 0
+   if_icmpeq              LABEL81
+   jump                   LABEL92
+LABEL81:
+   iload                  2
+   if_gethide            
+   iconst                 0
+   if_icmpeq              LABEL86
+   jump                   LABEL92
+LABEL86:
+   iload                  0
+   iload                  1
+   iload                  2
+   oload                  0
+   iload                  4
+   invoke                 2701
+LABEL92:
+   return                

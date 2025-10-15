@@ -1,0 +1,60 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       8140
+.int_arg_count            2
+.obj_arg_count            0
+   iload                  0
+   iload                  1
+   invoke                 8271
+   ostore                 0
+   sconst                 "Invalid reward!"
+   ostore                 1
+   oload                  0
+   8003                  
+   istore                 2
+   iload                  2
+   iconst                 0
+   if_icmpeq              LABEL13
+   jump                   LABEL16
+LABEL13:
+   oload                  1
+   return                
+   jump                   LABEL18
+LABEL16:
+   sconst                 ""
+   ostore                 1
+LABEL18:
+   iconst                 0
+   istore                 3
+LABEL20:
+   iload                  3
+   iload                  2
+   if_icmplt              LABEL24
+   jump                   LABEL37
+LABEL24:
+   oload                  1
+   iload                  3
+   get_array_int         
+   tostring              
+   sconst                 ","
+   join_string            2
+   append                
+   ostore                 1
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL20
+LABEL37:
+   oload                  1
+   iconst                 0
+   oload                  1
+   string_length         
+   iconst                 1
+   sub                   
+   substring             
+   ostore                 1
+   oload                  1
+   return                
+   sconst                 ""
+   return                

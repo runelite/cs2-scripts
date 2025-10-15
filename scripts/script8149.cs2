@@ -1,0 +1,781 @@
+java.lang.IllegalArgumentException: Failed requirement.
+
+.id                       8149
+.int_arg_count            10
+.obj_arg_count            0
+   iload                  3
+   iconst                 6
+   add                   
+   istore                 10
+   iconst                 0
+   istore                 11
+   iload                  6
+   iconst                 487456
+   iconst                 0
+   db_getfield           
+   istore                 12
+   sconst                 ""
+   ostore                 0
+   invoke                 8248
+   istore                 13
+   iconst                 0
+   istore                 14
+   iconst                 0
+   istore                 15
+   iload                  12
+   iconst                 -1
+   if_icmpne              LABEL26
+   iload                  13
+   iconst                 2
+   if_icmplt              LABEL26
+   jump                   LABEL114
+LABEL26:
+   iload                  0
+   iload                  1
+   iload                  2
+   iconst                 6
+   add                   
+   iload                  10
+   iload                  4
+   iconst                 2
+   iconst                 6
+   multiply              
+   sub                   
+   iconst                 23
+   iconst                 0
+   iconst                 0
+   invoke                 4216
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 "Event Details"
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+   iload                  13
+   iconst                 2
+   if_icmplt              LABEL60
+   jump                   LABEL79
+LABEL60:
+   get_varc_int           1261
+   invoke                 8251
+   istore                 15
+   istore                 14
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 "Grid Points"
+   iload                  14
+   tostring              
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+LABEL79:
+   iload                  12
+   iconst                 -1
+   if_icmpne              LABEL83
+   jump                   LABEL100
+LABEL83:
+   iload                  12
+   fromdate              
+   ostore                 0
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 "End Date"
+   oload                  0
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+LABEL100:
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 ""
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+LABEL114:
+   get_varc_int           1267
+   iconst                 1
+   if_icmpeq              LABEL118
+   jump                   LABEL227
+LABEL118:
+   iload                  0
+   iload                  1
+   iload                  2
+   iconst                 6
+   add                   
+   iload                  10
+   iload                  4
+   iconst                 2
+   iconst                 6
+   multiply              
+   sub                   
+   iconst                 23
+   iconst                 0
+   iconst                 0
+   invoke                 4216
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 "Selected Tile"
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+   iload                  0
+   iconst                 3
+   iload                  1
+   iconst                 0
+   cc_create             
+   iload                  4
+   iconst                 6
+   iconst                 2
+   multiply              
+   sub                   
+   iconst                 260
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  2
+   iconst                 6
+   add                   
+   iload                  10
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iload                  11
+   iconst                 1
+   if_icmpeq              LABEL177
+   jump                   LABEL180
+LABEL177:
+   iconst                 220
+   cc_settrans           
+   jump                   LABEL182
+LABEL180:
+   iconst                 200
+   cc_settrans           
+LABEL182:
+   iconst                 1
+   iload                  11
+   sub                   
+   istore                 11
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   get_varc_int           1261
+   iconst                 -1
+   if_icmpgt              LABEL194
+   jump                   LABEL209
+LABEL194:
+   get_varc_int           1262
+   iconst                 -1
+   if_icmpgt              LABEL198
+   jump                   LABEL209
+LABEL198:
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   get_varc_int           1261
+   get_varc_int           1262
+   iload                  7
+   iload                  8
+   iload                  9
+   invoke                 8135
+   istore                 1
+LABEL209:
+   iload                  10
+   iconst                 260
+   add                   
+   istore                 10
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 ""
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+LABEL227:
+   iload                  0
+   iload                  1
+   iload                  2
+   iconst                 6
+   add                   
+   iload                  10
+   iload                  4
+   iconst                 2
+   iconst                 6
+   multiply              
+   sub                   
+   iconst                 23
+   iconst                 0
+   iconst                 0
+   invoke                 4216
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  10
+   iload                  4
+   iload                  11
+   sconst                 "Bonus Effects"
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8150
+   istore                 11
+   istore                 10
+   istore                 1
+   iconst                 -1
+   istore                 16
+   iconst                 -1
+   istore                 17
+   iload                  0
+   iload                  1
+   iload                  2
+   iconst                 6
+   add                   
+   iload                  10
+   iconst                 0
+   iconst                 0
+   iload                  4
+   iconst                 6
+   iconst                 2
+   multiply              
+   sub                   
+   iload                  5
+   iload                  10
+   iconst                 6
+   add                   
+   sub                   
+   iconst                 0
+   iconst                 0
+   invoke                 8199
+   istore                 16
+   istore                 17
+   istore                 1
+   iconst                 0
+   istore                 18
+   cc_getheight          
+   istore                 19
+   iconst                 4
+   iload                  1
+   106                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   iconst                 0
+   istore                 20
+   iconst                 0
+   istore                 21
+   sconst                 ""
+   ostore                 1
+   iconst                 0
+   istore                 22
+LABEL309:
+   iload                  20
+   iconst                 23
+   if_icmple              LABEL313
+   jump                   LABEL359
+LABEL313:
+   iload                  20
+   invoke                 8287
+   istore                 21
+   iload                  21
+   iconst                 0
+   if_icmpgt              LABEL320
+   jump                   LABEL354
+LABEL320:
+   iconst                 1
+   istore                 22
+   iload                  20
+   iconst                 0
+   if_icmpeq              LABEL326
+   jump                   LABEL329
+LABEL326:
+   sconst                 "All Skills XP"
+   ostore                 1
+   jump                   LABEL337
+LABEL329:
+   iconst                 105
+   iconst                 115
+   iconst                 108
+   iload                  20
+   enum                  
+   sconst                 " XP"
+   join_string            2
+   ostore                 1
+LABEL337:
+   iload                  1
+   iload                  18
+   iload                  11
+   oload                  1
+   sconst                 "+"
+   iload                  21
+   tostring              
+   sconst                 "%"
+   join_string            3
+   iconst                 -1
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL354:
+   iload                  20
+   iconst                 1
+   add                   
+   istore                 20
+   jump                   LABEL309
+LABEL359:
+   iload                  22
+   iconst                 0
+   if_icmpeq              LABEL363
+   jump                   LABEL376
+LABEL363:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "All Skills XP"
+   sconst                 "+0%"
+   iconst                 -1
+   sconst                 ""
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL376:
+   iconst                 8
+   iconst                 1
+   sub                   
+   iconst                 0
+   if_icmpne              LABEL382
+   jump                   LABEL398
+LABEL382:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Drop Rate"
+   sconst                 "x"
+   iconst                 8
+   tostring              
+   join_string            2
+   iload                  9
+   sconst                 "Various rare items have their chance to drop increased."
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL398:
+   iconst                 4
+   iconst                 1
+   sub                   
+   iconst                 0
+   if_icmpne              LABEL404
+   jump                   LABEL420
+LABEL404:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Minigame Points"
+   sconst                 "x"
+   iconst                 4
+   tostring              
+   join_string            2
+   iload                  9
+   sconst                 "How many points you obtain from various minigames has been increased."
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL420:
+   iconst                 5
+   iconst                 1
+   sub                   
+   iconst                 0
+   if_icmpne              LABEL426
+   jump                   LABEL442
+LABEL426:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Farming Tickrate"
+   sconst                 "x"
+   iconst                 5
+   tostring              
+   join_string            2
+   iload                  9
+   sconst                 "How fast farming crops grow has been sped up."
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL442:
+   iconst                 5
+   iconst                 1
+   sub                   
+   iconst                 0
+   if_icmpne              LABEL448
+   jump                   LABEL464
+LABEL448:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Slayer Points"
+   sconst                 "x"
+   iconst                 5
+   tostring              
+   join_string            2
+   iload                  9
+   sconst                 "How many slayer points you obtain from slayer tasks has been increased."
+   iconst                 -1
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL464:
+   get_varbit             18089
+   iconst                 1
+   if_icmpeq              LABEL468
+   jump                   LABEL481
+LABEL468:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Combatant"
+   get_varbit             18092
+   get_varbit             18093
+   get_varbit             18094
+   iload                  9
+   iconst                 6972
+   invoke                 8154
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL481:
+   get_varbit             18090
+   iconst                 1
+   if_icmpeq              LABEL485
+   jump                   LABEL498
+LABEL485:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Craftsman"
+   get_varbit             18095
+   get_varbit             18096
+   get_varbit             18097
+   iload                  9
+   iconst                 6971
+   invoke                 8154
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL498:
+   get_varbit             18091
+   iconst                 1
+   if_icmpeq              LABEL502
+   jump                   LABEL515
+LABEL502:
+   iload                  1
+   iload                  18
+   iload                  11
+   sconst                 "Gatherer"
+   get_varbit             18098
+   get_varbit             18099
+   get_varbit             18100
+   iload                  9
+   iconst                 6970
+   invoke                 8154
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL515:
+   get_varbit             11580
+   iconst                 0
+   if_icmpgt              LABEL519
+   jump                   LABEL529
+LABEL519:
+   iload                  1
+   iload                  18
+   iload                  11
+   get_varbit             11580
+   iconst                 5691
+   iload                  9
+   invoke                 8153
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL529:
+   get_varbit             11581
+   iconst                 0
+   if_icmpgt              LABEL533
+   jump                   LABEL543
+LABEL533:
+   iload                  1
+   iload                  18
+   iload                  11
+   get_varbit             11581
+   iconst                 5692
+   iload                  9
+   invoke                 8153
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL543:
+   get_varbit             11582
+   iconst                 0
+   if_icmpgt              LABEL547
+   jump                   LABEL557
+LABEL547:
+   iload                  1
+   iload                  18
+   iload                  11
+   get_varbit             11582
+   iconst                 5693
+   iload                  9
+   invoke                 8153
+   istore                 11
+   istore                 18
+   istore                 1
+LABEL557:
+   push_null             
+   ostore                 2
+   get_varp               4910
+   iconst                 -1
+   if_icmpne              LABEL563
+   jump                   LABEL567
+LABEL563:
+   iconst                 74
+   get_varp               4910
+   8020                  
+   ostore                 2
+LABEL567:
+   iconst                 -1
+   istore                 23
+   iconst                 0
+   istore                 24
+   iconst                 0
+   istore                 25
+   iconst                 0
+   istore                 26
+   push_null             
+   ostore                 3
+   push_null             
+   ostore                 4
+   iconst                 0
+   istore                 27
+   iconst                 -1
+   istore                 28
+   oload                  2
+   8002                  
+   iconst                 0
+   if_icmpeq              LABEL588
+   jump                   LABEL702
+LABEL588:
+   oload                  2
+   8003                  
+   iconst                 0
+   if_icmpgt              LABEL593
+   jump                   LABEL702
+LABEL593:
+   oload                  2
+   8003                  
+   istore                 25
+   iconst                 115
+   iconst                 0
+   iload                  25
+   8022                  
+   ostore                 3
+   iconst                 74
+   iconst                 0
+   iload                  25
+   8022                  
+   ostore                 4
+LABEL606:
+   iload                  24
+   iload                  25
+   if_icmplt              LABEL610
+   jump                   LABEL640
+LABEL610:
+   iload                  24
+   get_array_int          2
+   istore                 23
+   iload                  23
+   iconst                 -1
+   if_icmpne              LABEL617
+   jump                   LABEL635
+LABEL617:
+   iload                  23
+   invoke                 3697
+   invoke                 633
+   istore                 26
+   iload                  26
+   iconst                 1
+   if_icmpeq              LABEL625
+   jump                   LABEL635
+LABEL625:
+   oload                  3
+   iload                  23
+   iconst                 879
+   struct_param          
+   iconst                 2
+   8024                  
+   oload                  4
+   iload                  23
+   iconst                 0
+   8024                  
+LABEL635:
+   iload                  24
+   iconst                 1
+   add                   
+   istore                 24
+   jump                   LABEL606
+LABEL640:
+   oload                  3
+   8003                  
+   istore                 25
+   iload                  25
+   iconst                 0
+   if_icmpgt              LABEL647
+   jump                   LABEL702
+LABEL647:
+   oload                  3
+   oload                  4
+   8000                  
+   iconst                 0
+   istore                 24
+   sconst                 "On"
+   ostore                 1
+LABEL654:
+   iload                  24
+   iload                  25
+   if_icmplt              LABEL658
+   jump                   LABEL702
+LABEL658:
+   iload                  24
+   get_array_int          4
+   istore                 23
+   iconst                 499904
+   iload                  23
+   iconst                 0
+   db_find_with_count    
+   istore                 27
+   iload                  27
+   iconst                 0
+   if_icmpeq              LABEL670
+   jump                   LABEL673
+LABEL670:
+   iconst                 -1
+   istore                 28
+   jump                   LABEL681
+LABEL673:
+   iload                  27
+   iconst                 1
+   if_icmpgt              LABEL677
+   jump                   LABEL679
+LABEL677:
+   sconst                 "Ambiguous relic to reward link for bonus effects"
+   invoke                 5129
+LABEL679:
+   db_findnext           
+   istore                 28
+LABEL681:
+   iload                  1
+   iload                  18
+   iload                  11
+   iload                  24
+   get_array_int          3
+   oload                  1
+   iload                  9
+   iload                  23
+   iconst                 880
+   struct_param          
+   iload                  28
+   sconst                 ""
+   invoke                 8151
+   istore                 11
+   istore                 18
+   istore                 1
+   iload                  24
+   iconst                 1
+   add                   
+   istore                 24
+   jump                   LABEL654
+LABEL702:
+   iload                  0
+   iload                  16
+   iload                  17
+   iload                  19
+   iload                  18
+   iconst                 -1
+   invoke                 8138
+   iload                  1
+   return                
+   iconst                 0
+   return                

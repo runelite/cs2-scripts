@@ -1,0 +1,121 @@
+java.lang.IllegalStateException: Opcode 209 in script 8217 not implemented
+
+.id                       8217
+.int_arg_count            2
+.obj_arg_count            0
+   iconst                 0
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   iconst                 0
+   istore                 5
+   iload                  0
+   iconst                 -1
+   if_icmpne              LABEL12
+   jump                   LABEL93
+LABEL12:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL26
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL21
+   jump                   LABEL93
+LABEL21:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL26
+   jump                   LABEL93
+LABEL26:
+   cc_getx               
+   istore                 2
+   cc_gety               
+   istore                 3
+   iload                  2
+   cc_getwidth           
+   add                   
+   istore                 4
+   iload                  3
+   cc_getheight          
+   add                   
+   istore                 5
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL42
+   jump                   LABEL60
+LABEL42:
+   iload                  0
+   209                   
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL48
+   jump                   LABEL59
+LABEL48:
+   iload                  2
+   iload                  4
+   iload                  3
+   iload                  5
+   invoke                 8218
+   istore                 0
+   istore                 5
+   istore                 3
+   istore                 4
+   istore                 2
+   jump                   LABEL42
+LABEL59:
+   jump                   LABEL63
+LABEL60:
+   iload                  0
+   if_getlayer           
+   istore                 0
+LABEL63:
+   iload                  0
+   iconst                 -1
+   if_icmpne              LABEL67
+   jump                   LABEL83
+LABEL67:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL72
+   jump                   LABEL83
+LABEL72:
+   iload                  2
+   iload                  4
+   iload                  3
+   iload                  5
+   invoke                 8218
+   istore                 0
+   istore                 5
+   istore                 3
+   istore                 4
+   istore                 2
+   jump                   LABEL63
+LABEL83:
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  2
+   sub                   
+   iload                  5
+   iload                  3
+   sub                   
+   return                
+   jump                   LABEL98
+LABEL93:
+   iconst                 -1
+   iconst                 -1
+   iconst                 -1
+   iconst                 -1
+   return                
+LABEL98:
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   return                

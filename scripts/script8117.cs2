@@ -1,0 +1,320 @@
+java.lang.IllegalArgumentException: Failed requirement.
+
+.id                       8117
+.int_arg_count            18
+.obj_arg_count            0
+   iconst                 -1
+   istore                 18
+   iconst                 0
+   istore                 19
+   iload                  2
+   iload                  3
+   invoke                 8277
+   istore                 19
+   istore                 18
+   iload                  19
+   iconst                 3
+   4016                  
+   istore                 19
+   iload                  2
+   iload                  3
+   invoke                 8273
+   istore                 20
+   iload                  19
+   iconst                 0
+   if_icmple              LABEL24
+   iload                  20
+   iconst                 0
+   if_icmplt              LABEL24
+   jump                   LABEL27
+LABEL24:
+   iload                  1
+   iconst                 0
+   return                
+LABEL27:
+   push_null             
+   ostore                 0
+   push_null             
+   ostore                 1
+   push_null             
+   ostore                 2
+   iload                  2
+   iload                  3
+   invoke                 8120
+   ostore                 2
+   ostore                 1
+   ostore                 0
+   oload                  2
+   sconst                 "<br>"
+   sconst                 "or"
+   sconst                 "<br>"
+   join_string            3
+   8019                  
+   ostore                 3
+   iconst                 6299
+   istore                 21
+   iconst                 0
+   istore                 22
+   iload                  20
+   iconst                 0
+   if_icmpgt              LABEL54
+   jump                   LABEL57
+LABEL54:
+   iconst                 6283
+   istore                 21
+   jump                   LABEL67
+LABEL57:
+   iload                  2
+   iload                  3
+   invoke                 8272
+   iconst                 1
+   if_icmpeq              LABEL63
+   jump                   LABEL67
+LABEL63:
+   iconst                 6279
+   istore                 21
+   iconst                 1
+   istore                 22
+LABEL67:
+   iload                  0
+   iload                  1
+   iload                  9
+   iload                  10
+   iload                  11
+   iload                  12
+   iload                  13
+   iload                  14
+   iload                  15
+   iload                  16
+   iload                  21
+   sconst                 ""
+   invoke                 8185
+   istore                 1
+   cc_getwidth           
+   cc_getheight          
+   4016                  
+   iconst                 8
+   sub                   
+   istore                 23
+   iconst                 -1
+   istore                 24
+   iload                  20
+   iconst                 0
+   if_icmpgt              LABEL93
+   jump                   LABEL130
+LABEL93:
+   sconst                 "You already claimed this reward."
+   sconst                 "<br>"
+   sconst                 "<br>"
+   iload                  20
+   iconst                 1
+   sub                   
+   get_array_int          2
+   join_string            4
+   ostore                 3
+   iload                  20
+   iconst                 1
+   sub                   
+   istore                 24
+   iconst                 2320
+   iload                  18
+   iconst                 495616
+   iload                  24
+   db_getfield           
+   iconst                 0
+   1704                  
+   iconst                 8122
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iconst                 0
+   iload                  24
+   iconst                 1
+   iload                  6
+   iload                  7
+   iload                  8
+   sconst                 "iiiiiiiiii"
+   cc_setonop            
+   iconst                 1
+   sconst                 "Review"
+   cc_setop              
+   jump                   LABEL205
+LABEL130:
+   iload                  22
+   iconst                 1
+   if_icmpeq              LABEL134
+   jump                   LABEL172
+LABEL134:
+   iload                  19
+   iconst                 1
+   if_icmpgt              LABEL138
+   jump                   LABEL145
+LABEL138:
+   sconst                 "Claim a reward!"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   oload                  3
+   join_string            4
+   ostore                 3
+   jump                   LABEL151
+LABEL145:
+   sconst                 "Claim the reward!"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   oload                  3
+   join_string            4
+   ostore                 3
+LABEL151:
+   iconst                 1
+   invoke                 8194
+   iconst                 4320000
+   invoke                 8195
+   iconst                 8122
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iconst                 1
+   iconst                 -1
+   iconst                 1
+   iload                  6
+   iload                  7
+   iload                  8
+   sconst                 "iiiiiiiiii"
+   cc_setonop            
+   iconst                 1
+   sconst                 "Select"
+   cc_setop              
+   jump                   LABEL205
+LABEL172:
+   iload                  4
+   iconst                 -1
+   if_icmpeq              LABEL176
+   jump                   LABEL183
+LABEL176:
+   sconst                 "Complete more tiles to unlock this!"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   oload                  3
+   join_string            4
+   ostore                 3
+   jump                   LABEL189
+LABEL183:
+   sconst                 "Complete the tile to unlock this!"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   oload                  3
+   join_string            4
+   ostore                 3
+LABEL189:
+   iconst                 8122
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iconst                 0
+   iconst                 -1
+   iconst                 1
+   iload                  6
+   iload                  7
+   iload                  8
+   sconst                 "iiiiiiiiii"
+   cc_setonop            
+   iconst                 1
+   sconst                 "View"
+   cc_setop              
+LABEL205:
+   iconst                 8118
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  0
+   cc_getid              
+   iload                  8
+   oload                  3
+   iconst                 25
+   iconst                 512
+   iload                  17
+   sconst                 "iiiiiisiii"
+   cc_setonmouserepeat   
+   oload                  0
+   8003                  
+   istore                 25
+   iconst                 0
+   istore                 26
+   iconst                 1
+   istore                 27
+   iconst                 1
+   istore                 28
+LABEL227:
+   iload                  25
+   iconst                 0
+   if_icmpgt              LABEL231
+   jump                   LABEL282
+LABEL231:
+   iload                  25
+   iconst                 1
+   sub                   
+   istore                 25
+   iconst                 0
+   istore                 26
+   iload                  27
+   iconst                 1
+   if_icmpeq              LABEL241
+   jump                   LABEL247
+LABEL241:
+   iconst                 5
+   iload                  1
+   106                   
+   iconst                 0
+   istore                 27
+   jump                   LABEL250
+LABEL247:
+   iconst                 5
+   iload                  1
+   107                   
+LABEL250:
+   iload                  25
+   get_array_int         
+   iconst                 -1
+   if_icmpne              LABEL255
+   jump                   LABEL259
+LABEL255:
+   iload                  25
+   get_array_int         
+   cc_setgraphic         
+   jump                   LABEL272
+LABEL259:
+   iload                  25
+   get_array_int          1
+   iconst                 -1
+   if_icmpne              LABEL264
+   jump                   LABEL272
+LABEL264:
+   iconst                 1
+   istore                 26
+   iload                  25
+   get_array_int          1
+   iconst                 -1
+   cc_setobject          
+   iconst                 2500134
+   cc_setgraphicshadow   
+LABEL272:
+   iload                  28
+   iload                  25
+   iload                  23
+   iload                  26
+   invoke                 8119
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   jump                   LABEL227
+LABEL282:
+   iload                  1
+   iload                  22
+   return                
+   iconst                 0
+   iconst                 -1
+   return                

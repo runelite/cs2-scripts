@@ -1,5 +1,5 @@
 // 6377
-[clientscript,cr_ui_init](component $com_cr_ui_universe0, component $com_cr_ui_window1, component $com_cr_ui_frame2, component $com_cr_ui_btn_close3, component $com_cr_ui_tabs_container4, component $com_cr_ui_module_content_container5, component $com_cr_ui_resize_preview6)
+[clientscript,cr_ui_init](component $com_cr_ui_universe0, component $com_cr_ui_window1, component $com_cr_ui_frame2, component $com_cr_ui_btn_close3, component $com_cr_ui_tabs_container4, component $com_cr_ui_module_content_container5, int $com_cr_ui_resize_preview6)
 %varcint1007 = 1;
 if (~script6391 = 0) {
 	if_sethide(true, $com_cr_ui_tabs_container4);
@@ -13,50 +13,9 @@ if_setop(2, "", $com_cr_ui_btn_close3);
 if_setopkey(2, ^key_escape, 0, $com_cr_ui_btn_close3);
 def_int $int7 = calc((if_gety(if_getlayer($com_cr_ui_module_content_container5)) - if_getheight($com_cr_ui_btn_close3)) / 2);
 if_setposition($int7, $int7, ^setpos_abs_right, ^setpos_abs_top, $com_cr_ui_btn_close3);
-cc_deleteall($com_cr_ui_universe0);
-def_int $int8 = 0;
-while ($int8 < 8) {
-	cc_create($com_cr_ui_universe0, ^iftype_graphic, $int8, false);
-	cc_settiling(true);
-	cc_settrans(255);
-	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
-	cc_setdraggable($com_cr_ui_universe0, -1);
-	cc_setdragdeadzone(1);
-	cc_setdragdeadtime(5);
-	$int8 = calc($int8 + 1);
-}
-cc_deleteall($com_cr_ui_resize_preview6);
-$int8 = 0;
-while ($int8 < 4) {
-	cc_create($com_cr_ui_resize_preview6, ^iftype_rectangle, $int8, false);
-	cc_setsize(calc($int8 * 2), calc($int8 * 2), ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setcolour(0x9f9f9f);
-	cc_setfill(false);
-	cc_settrans(calc(100 + $int8 * 10));
-	$int8 = calc($int8 + 1);
-}
-def_int $int9 = 0;
-if (~on_mobile = true) {
-	$int9 = calc(165 - (20 + 30));
-}
-if (%varcint1011 < ~cr_ui_min_width) {
-	%varcint1011 = ~cr_ui_default_width;
-}
-if (%varcint1012 < ~cr_ui_min_height) {
-	%varcint1012 = ~cr_ui_default_height;
-}
-if (%varcint1009 < 0) {
-	%varcint1009 = calc((if_getwidth($com_cr_ui_universe0) - %varcint1011) / 2);
-}
-if (%varcint1010 < $int9) {
-	%varcint1010 = ~max($int9, calc((if_getheight($com_cr_ui_universe0) - %varcint1012) / 2));
-}
-~cr_ui_rebuild_window(1, $int9, $com_cr_ui_universe0, $com_cr_ui_window1, $com_cr_ui_resize_preview6);
-~cr_ui_size_handler(1, $int9, ^min_32bit_int, ^min_32bit_int, $com_cr_ui_universe0, $com_cr_ui_window1, $com_cr_ui_resize_preview6);
 if (%varcint1008 = null) {
 	%varcint1008 = enum(int, dbrow, enum_4593, 0);
 }
 ~cr_ui_activate_module(%varcint1008, $com_cr_ui_tabs_container4);
 ~script2482;
+~script8233(0, $com_cr_ui_universe0, $com_cr_ui_window1);

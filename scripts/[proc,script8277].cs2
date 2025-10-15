@@ -1,0 +1,17 @@
+// 8277
+[proc,script8277](int $dbfield0, int $dbfield1)(dbrow, int)
+def_dbrow $dbrow2 = dbrow_6928;
+def_int $int3 = 0;
+if ($dbfield0 < 0 | $dbfield1 < 0) {
+	return($dbrow2, $int3);
+}
+def_dbrow $dbrow4 = ~script8247;
+if ($dbrow4 = null) {
+	return($dbrow2, $int3);
+}
+def_dbrow $dbrow5 = db_getfield($dbrow4, bingo_events:grid, $dbfield0);
+if ($dbrow5 ! null & $dbfield1 < db_getfieldcount($dbrow5, bingo_grids:reward_selection)) {
+	$dbrow2 = db_getfield($dbrow5, bingo_grids:reward_selection, $dbfield1);
+	$int3 = db_getfieldcount($dbrow2, reward_selection:reward);
+}
+return($dbrow2, $int3);

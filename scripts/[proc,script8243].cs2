@@ -1,0 +1,128 @@
+// 8243
+[proc,script8243](dbrow $dbrow0)(graphic, obj)
+def_graphic $graphic1 = db_getfield($dbrow0, action:action_display_graphic, 0);
+def_obj $obj2 = db_getfield($dbrow0, action:action_display_object, 0);
+if ($graphic1 ! null) {
+	return($graphic1, null);
+}
+if ($obj2 ! null) {
+	return(null, $obj2);
+}
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $dbfield5 = 0;
+def_obj $obj6 = null;
+def_dbrow $dbrow7 = null;
+def_namedobj $namedobj8 = null;
+def_struct $struct9 = null;
+def_enum $enum10 = null;
+def_stat $stat11 = null;
+def_int $int12 = 0;
+def_int $dbfield13 = 0;
+$dbfield5 = db_getfieldcount($dbrow0, action:total_level);
+if ($dbfield5 > 0 & db_getfield($dbrow0, action:total_level, 0) > 0) {
+	$int3 = calc($int3 + 1);
+	$graphic1 = "staticons2,7";
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:level);
+if ($dbfield5 = 1) {
+	$stat11, $int12 = db_getfield($dbrow0, action:level, 0);
+	if ($int12 > 0) {
+		$int3 = calc($int3 + 1);
+		$graphic1 = enum(stat, graphic, enum_255, $stat11);
+	}
+} else if ($dbfield5 > 1) {
+	$int3 = calc($int3 + 1);
+	$graphic1 = null;
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:equip_item);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:equip_item, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:collection_generic);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:collection_generic, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:collection_specific);
+if ($dbfield5 > 0) {
+	$dbfield13 = 0;
+	while ($dbfield13 < $dbfield5) {
+		$struct9 = db_getfield($dbrow0, action:collection_specific, $dbfield13);
+		if ($struct9 ! null) {
+			$enum10 = struct_param($struct9, param_690);
+			if ($enum10 ! null) {
+				$namedobj8 = enum(int, namedobj, $enum10, 0);
+				if ($namedobj8 ! null) {
+					$int4 = calc($int4 + 1);
+					$obj2 = oc_uncert(oc_cert($namedobj8));
+					$dbfield13 = $dbfield5;
+				}
+			}
+		}
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:loot_drop);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:loot_drop, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:mine_ore);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:mine_ore, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:poh_build);
+if ($dbfield5 > 0) {
+	$dbrow7 = db_getfield($dbrow0, action:poh_build, 0);
+	$obj6 = db_getfield($dbrow7, furniture:model_obj, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:create_item);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:create_item, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:chop_logs);
+if ($dbfield5 > 0) {
+	$obj6 = db_getfield($dbrow0, action:chop_logs, 0);
+	if ($obj6 ! null) {
+		$int4 = calc($int4 + 1);
+		$obj2 = $obj6;
+	}
+}
+$dbfield5 = db_getfieldcount($dbrow0, action:poh_set_portal);
+if ($dbfield5 > 0) {
+	$int4 = calc($int4 + 1);
+	$obj2 = poh_teleport_centrepiece_1_8331;
+}
+if (db_getfieldcount($dbrow0, action:npc_kill_slayer_category) > 0 | db_getfieldcount($dbrow0, action:npc_kill_category) > 0 | db_getfieldcount($dbrow0, action:npc_kill) > 0) {
+	$int3 = calc($int3 + 1);
+	$graphic1 = "ap_path_icon,1";
+}
+if ($int3 = 1) {
+	return($graphic1, null);
+}
+if ($int4 = 1) {
+	return(null, $obj2);
+}
+return("question_button,1", null);

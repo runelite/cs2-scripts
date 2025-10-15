@@ -1,0 +1,199 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8190 not implemented
+
+.id                       8190
+.int_arg_count            2
+.obj_arg_count            0
+   cc_getlayer           
+   istore                 2
+   cc_getid              
+   istore                 3
+   iconst                 2343
+   1703                  
+   istore                 4
+   iconst                 2344
+   1703                  
+   istore                 5
+   iconst                 2345
+   1703                  
+   istore                 6
+   iconst                 2342
+   1703                  
+   istore                 7
+   iload                  7
+   iconst                 -1
+   if_icmpeq              LABEL20
+   jump                   LABEL21
+LABEL20:
+   return                
+LABEL21:
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL25
+   jump                   LABEL35
+LABEL25:
+   iload                  7
+   iconst                 2328
+   struct_param          
+   iconst                 -1
+   if_icmpne              LABEL31
+   jump                   LABEL35
+LABEL31:
+   iload                  7
+   iconst                 2328
+   struct_param          
+   istore                 7
+LABEL35:
+   iload                  7
+   iconst                 2327
+   struct_param          
+   istore                 8
+   iload                  2
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL45
+   jump                   LABEL49
+LABEL45:
+   iload                  7
+   iconst                 2323
+   struct_param          
+   invoke                 8193
+LABEL49:
+   iload                  2
+   iload                  5
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL55
+   jump                   LABEL59
+LABEL55:
+   iload                  7
+   iconst                 2324
+   struct_param          
+   invoke                 8193
+LABEL59:
+   iload                  2
+   iload                  6
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL65
+   jump                   LABEL69
+LABEL65:
+   iload                  7
+   iconst                 2325
+   struct_param          
+   invoke                 8193
+LABEL69:
+   iload                  2
+   iload                  5
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL75
+   jump                   LABEL109
+LABEL75:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL79
+   jump                   LABEL81
+LABEL79:
+   iconst                 1
+   cc_sethide            
+LABEL81:
+   iload                  2
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL87
+   jump                   LABEL109
+LABEL87:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL91
+   jump                   LABEL98
+LABEL91:
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseover     
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   jump                   LABEL109
+LABEL98:
+   iconst                 5842
+   iconst                 0
+   iload                  2
+   iload                  5
+   sconst                 "iii"
+   cc_setonmouseover     
+   iconst                 8192
+   iload                  2
+   iload                  5
+   sconst                 "ii"
+   cc_setonmouseleave    
+LABEL109:
+   iload                  2
+   iload                  6
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL115
+   jump                   LABEL161
+LABEL115:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL119
+   jump                   LABEL121
+LABEL119:
+   iconst                 1
+   cc_sethide            
+LABEL121:
+   iload                  2
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL127
+   jump                   LABEL161
+LABEL127:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL131
+   jump                   LABEL149
+LABEL131:
+   iload                  8
+   iconst                 1
+   if_icmpeq              LABEL135
+   jump                   LABEL142
+LABEL135:
+   iconst                 8191
+   iload                  2
+   iload                  6
+   iload                  1
+   sconst                 "iii"
+   cc_setonclick         
+   jump                   LABEL145
+LABEL142:
+   iconst                 -1
+   sconst                 ""
+   cc_setonclick         
+LABEL145:
+   iconst                 -1
+   sconst                 ""
+   cc_setonrelease       
+   jump                   LABEL161
+LABEL149:
+   iconst                 8191
+   iload                  2
+   iload                  6
+   iload                  1
+   sconst                 "iii"
+   cc_setonclick         
+   iconst                 8212
+   iconst                 1
+   iload                  2
+   iload                  6
+   sconst                 "iii"
+   cc_setonrelease       
+LABEL161:
+   iload                  2
+   iload                  3
+   cc_find               
+   pop_int               
+   return                

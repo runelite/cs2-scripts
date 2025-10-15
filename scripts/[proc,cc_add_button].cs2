@@ -1,0 +1,158 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8185 not implemented
+
+.id                       8185
+.int_arg_count            11
+.obj_arg_count            1
+   iload                  1
+   istore                 11
+   iload                  10
+   iconst                 -1
+   if_icmpeq              LABEL6
+   jump                   LABEL8
+LABEL6:
+   iconst                 6265
+   istore                 10
+LABEL8:
+   iload                  0
+   iconst                 0
+   iload                  1
+   iconst                 0
+   cc_create             
+   iconst                 2342
+   iload                  10
+   iconst                 0
+   1704                  
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   cc_setposition        
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   cc_setsize            
+   iconst                 1
+   cc_setnoclickthrough  
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   iconst                 -1
+   istore                 12
+   iload                  1
+   iload                  10
+   iconst                 2323
+   struct_param          
+   invoke                 8188
+   istore                 12
+   istore                 1
+   iconst                 2343
+   iload                  12
+   iconst                 0
+   1704                  
+   iconst                 -1
+   istore                 13
+   iload                  1
+   iload                  10
+   iconst                 2324
+   struct_param          
+   invoke                 8188
+   istore                 13
+   istore                 1
+   iconst                 2344
+   iload                  13
+   iconst                 0
+   1704                  
+   iload                  0
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL65
+   jump                   LABEL67
+LABEL65:
+   iconst                 1
+   cc_sethide            
+LABEL67:
+   iload                  0
+   iload                  11
+   cc_find               
+   pop_int               
+   iconst                 -1
+   istore                 14
+   iload                  1
+   iload                  10
+   iconst                 2325
+   struct_param          
+   invoke                 8188
+   istore                 14
+   istore                 1
+   iconst                 2345
+   iload                  14
+   iconst                 0
+   1704                  
+   iload                  0
+   iload                  14
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL90
+   jump                   LABEL92
+LABEL90:
+   iconst                 1
+   cc_sethide            
+LABEL92:
+   iload                  0
+   iload                  11
+   cc_find               
+   pop_int               
+   iconst                 0
+   iconst                 0
+   invoke                 8190
+   oload                  0
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL104
+   jump                   LABEL137
+LABEL104:
+   iload                  0
+   iload                  11
+   cc_find               
+   pop_int               
+   iconst                 4
+   iload                  1
+   106                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   oload                  0
+   cc_settext            
+   iconst                 16750623
+   cc_setcolour          
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+LABEL137:
+   iload                  0
+   iload                  11
+   cc_find               
+   pop_int               
+   iload                  1
+   return                
+   iconst                 0
+   return                

@@ -1,0 +1,40 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8195 not implemented
+
+.id                       8195
+.int_arg_count            1
+.obj_arg_count            0
+   cc_getlayer           
+   istore                 1
+   cc_getid              
+   istore                 2
+   iconst                 2344
+   1703                  
+   istore                 3
+   iload                  1
+   iload                  3
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL13
+   jump                   LABEL28
+LABEL13:
+   iconst                 0
+   cc_sethide            
+   iconst                 2349
+   clientclock           
+   iload                  0
+   iconst                 0
+   4017                  
+   add                   
+   iconst                 0
+   1704                  
+   iconst                 8196
+   iconst                 -2147483645
+   iconst                 -2147483643
+   sconst                 "ii"
+   cc_setontimer         
+LABEL28:
+   iload                  1
+   iload                  2
+   cc_find               
+   pop_int               
+   return                

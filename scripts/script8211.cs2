@@ -1,0 +1,134 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8211 not implemented
+
+.id                       8211
+.int_arg_count            4
+.obj_arg_count            0
+   cc_getheight          
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   iconst                 0
+   istore                 8
+   iconst                 0
+   istore                 9
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL16
+   jump                   LABEL20
+LABEL16:
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL26
+LABEL20:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL26
+   jump                   LABEL52
+LABEL26:
+   iload                  3
+   iconst                 -1
+   if_icmpeq              LABEL30
+   jump                   LABEL34
+LABEL30:
+   iload                  2
+   if_find                1
+   iconst                 1
+   if_icmpeq              LABEL40
+LABEL34:
+   iload                  2
+   iload                  3
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL40
+   jump                   LABEL52
+LABEL40:
+   iconst                 2351
+   1703                  
+   istore                 5
+   cc_getheight          
+   istore                 6
+   cc_getscrollheight     1
+   istore                 7
+   cc_getheight           1
+   istore                 8
+   cc_getscrolly          1
+   istore                 9
+   jump                   LABEL53
+LABEL52:
+   return                
+LABEL53:
+   iload                  7
+   iload                  8
+   sub                   
+   iconst                 1
+   invoke                 1045
+   istore                 10
+   iload                  6
+   iconst                 32
+   sub                   
+   iload                  4
+   sub                   
+   istore                 11
+   iload                  0
+   iload                  5
+   iconst                 1
+   add                   
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL73
+   jump                   LABEL84
+LABEL73:
+   iconst                 0
+   iconst                 16
+   iload                  11
+   iload                  9
+   multiply              
+   iload                  10
+   div                   
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+LABEL84:
+   iload                  0
+   iload                  5
+   iconst                 2
+   add                   
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL92
+   jump                   LABEL97
+LABEL92:
+   iconst                 0
+   cc_gety               
+   iconst                 1
+   iconst                 0
+   cc_setposition         1
+LABEL97:
+   iload                  0
+   iload                  5
+   iconst                 3
+   add                   
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL105
+   jump                   LABEL114
+LABEL105:
+   iconst                 0
+   cc_gety               
+   cc_getheight          
+   add                   
+   iconst                 5
+   sub                   
+   iconst                 1
+   iconst                 0
+   cc_setposition         1
+LABEL114:
+   return                

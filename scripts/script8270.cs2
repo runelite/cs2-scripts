@@ -1,0 +1,124 @@
+java.lang.IllegalStateException: Opcode 8024 in script 8270 not implemented
+
+.id                       8270
+.int_arg_count            3
+.obj_arg_count            1
+   iload                  0
+   iconst                 2
+   if_icmplt              LABEL10
+   iload                  2
+   iconst                 0
+   if_icmplt              LABEL10
+   iload                  0
+   iload                  2
+   if_icmple              LABEL10
+   jump                   LABEL13
+LABEL10:
+   sconst                 "inserting failed due to invalid square parameters"
+   invoke                 2075
+   return                
+LABEL13:
+   iconst                 0
+   istore                 3
+   iload                  1
+   switch                
+      0: LABEL18
+      1: LABEL36
+      2: LABEL54
+   jump                   LABEL99
+LABEL18:
+   iload                  3
+   iload                  0
+   if_icmplt              LABEL22
+   jump                   LABEL35
+LABEL22:
+   oload                  0
+   iload                  2
+   iload                  0
+   multiply              
+   iload                  3
+   add                   
+   iconst                 0
+   8024                  
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL18
+LABEL35:
+   jump                   LABEL99
+LABEL36:
+   iload                  3
+   iload                  0
+   if_icmplt              LABEL40
+   jump                   LABEL53
+LABEL40:
+   oload                  0
+   iload                  3
+   iload                  0
+   multiply              
+   iload                  2
+   add                   
+   iconst                 0
+   8024                  
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL36
+LABEL53:
+   jump                   LABEL99
+LABEL54:
+   iload                  2
+   iconst                 0
+   if_icmpeq              LABEL58
+   jump                   LABEL78
+LABEL58:
+   iload                  3
+   iload                  0
+   if_icmplt              LABEL62
+   jump                   LABEL77
+LABEL62:
+   oload                  0
+   iload                  3
+   iconst                 1
+   add                   
+   iload                  0
+   iconst                 1
+   sub                   
+   multiply              
+   iconst                 0
+   8024                  
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL58
+LABEL77:
+   jump                   LABEL99
+LABEL78:
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL82
+   jump                   LABEL99
+LABEL82:
+   iload                  3
+   iload                  0
+   if_icmplt              LABEL86
+   jump                   LABEL99
+LABEL86:
+   oload                  0
+   iload                  3
+   iload                  0
+   iconst                 1
+   add                   
+   multiply              
+   iconst                 0
+   8024                  
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL82
+LABEL99:
+   return                

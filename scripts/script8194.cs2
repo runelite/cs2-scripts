@@ -1,0 +1,69 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8194 not implemented
+
+.id                       8194
+.int_arg_count            1
+.obj_arg_count            0
+   cc_getlayer           
+   istore                 1
+   cc_getid              
+   istore                 2
+   iconst                 2344
+   1703                  
+   istore                 3
+   iload                  1
+   iload                  3
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL13
+   jump                   LABEL50
+LABEL13:
+   iload                  0
+   iconst                 0
+   if_icmpgt              LABEL17
+   jump                   LABEL36
+LABEL17:
+   iconst                 8186
+   iconst                 -2147483645
+   iconst                 -2147483643
+   sconst                 "ii"
+   cc_setonmouserepeat   
+   iconst                 1
+   212                   
+   pop_int               
+LABEL25:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL29
+   jump                   LABEL35
+LABEL29:
+   iconst                 8187
+   cc_getlayer           
+   cc_getid              
+   sconst                 "ii"
+   cc_setontimer         
+   jump                   LABEL25
+LABEL35:
+   jump                   LABEL50
+LABEL36:
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 1
+   212                   
+   pop_int               
+LABEL42:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL46
+   jump                   LABEL50
+LABEL46:
+   iconst                 -1
+   sconst                 ""
+   cc_setontimer         
+   jump                   LABEL42
+LABEL50:
+   iload                  1
+   iload                  2
+   cc_find               
+   pop_int               
+   return                

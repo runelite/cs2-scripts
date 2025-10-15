@@ -1,0 +1,109 @@
+java.lang.IllegalStateException: Opcode 8022 in script 8120 not implemented
+
+.id                       8120
+.int_arg_count            2
+.obj_arg_count            0
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iload                  0
+   iload                  1
+   invoke                 8277
+   istore                 3
+   istore                 2
+   iconst                 0
+   istore                 4
+   iconst                 -1
+   istore                 5
+   iconst                 -1
+   istore                 6
+   sconst                 ""
+   ostore                 0
+   iconst                 115
+   iload                  3
+   iconst                 -1
+   8022                  
+   ostore                 1
+   iconst                 100
+   iload                  3
+   iconst                 -1
+   8022                  
+   ostore                 2
+   iconst                 111
+   iload                  3
+   iconst                 -1
+   8022                  
+   ostore                 3
+LABEL32:
+   iload                  4
+   iload                  3
+   if_icmplt              LABEL36
+   jump                   LABEL56
+LABEL36:
+   iload                  2
+   iload                  4
+   invoke                 8161
+   ostore                 0
+   istore                 6
+   istore                 5
+   iload                  4
+   oload                  0
+   set_array_int          1
+   iload                  4
+   iload                  5
+   set_array_int          2
+   iload                  4
+   iload                  6
+   set_array_int          3
+   iload                  4
+   iconst                 1
+   add                   
+   istore                 4
+   jump                   LABEL32
+LABEL56:
+   iload                  2
+   iconst                 495632
+   iconst                 0
+   db_getfield           
+   iconst                 -1
+   if_icmpne              LABEL69
+   iload                  2
+   iconst                 495648
+   iconst                 0
+   db_getfield           
+   iconst                 -1
+   if_icmpne              LABEL69
+   jump                   LABEL91
+LABEL69:
+   iconst                 100
+   iconst                 1
+   iconst                 -1
+   8022                  
+   ostore                 2
+   iconst                 111
+   iconst                 1
+   iconst                 -1
+   8022                  
+   ostore                 3
+   iconst                 0
+   iload                  2
+   iconst                 495632
+   iconst                 0
+   db_getfield           
+   set_array_int          2
+   iconst                 0
+   iload                  2
+   iconst                 495648
+   iconst                 0
+   db_getfield           
+   set_array_int          3
+LABEL91:
+   oload                  2
+   oload                  3
+   oload                  1
+   return                
+   push_null             
+   push_null             
+   push_null             
+   return                

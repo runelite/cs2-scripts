@@ -1,0 +1,25 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8186 not implemented
+
+.id                       8186
+.int_arg_count            2
+.obj_arg_count            0
+   invoke                 1972
+   iconst                 1
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL11
+   jump                   LABEL15
+LABEL11:
+   iconst                 2350
+   clientclock           
+   iconst                 0
+   1704                  
+LABEL15:
+   return                

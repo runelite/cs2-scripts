@@ -1,0 +1,72 @@
+// 8170
+[proc,script8170](int $int0, int $int1, int $int2, namedobj $namedobj3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, component $component11, int $int12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)(int, int)
+.cc_create($component13, ^iftype_rectangle, $int9, false);
+.cc_setsize($int2, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+.cc_setop(1, "Select <col=ff891f><oc_name($namedobj3)>");
+$int9 = calc($int9 + 1);
+if ($namedobj3 = null) {
+	return($int8, $int9);
+}
+cc_create($component14, ^iftype_graphic, $int8, false);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int0 + (40 - 36) / 2), $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject_nonum($namedobj3, 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+def_int $int24 = calc($int2 - 40);
+$int0 = calc($int0 + 40);
+$int8 = calc($int8 + 1);
+cc_create($component14, ^iftype_text, $int8, false);
+cc_setsize($int24, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+def_string $string0 = "";
+def_string $string1 = ",";
+def_int $int25 = ~script8296(%map_flags_cached);
+def_int $colour26 = ^white;
+def_string $string2 = "<col=ffffff>";
+if ($int7 = $int6) {
+	$colour26, $string2 = ^white, "<col=ffffff>";
+	.cc_setonmouserepeat(null);
+	.cc_setonmouseleave(null);
+} else if (oc_members($namedobj3) = 1 & map_members = false) {
+	$colour26, $string2 = 0x9f9f9f, "<col=9f9f9f>";
+} else if (%event_points_currency < $int5 & $int25 = 0) {
+	$colour26, $string2 = 0x9f9f9f, "<col=9f9f9f>";
+} else if ($int25 = 1) {
+	$colour26, $string2 = 0x9f9f9f, "<col=9f9f9f>";
+} else {
+	$colour26, $string2 = 0x0dc10d, "<col=ff891f>";
+}
+.cc_setonop("script8174(
+	0 = $int6, 
+	1 = $int10, 
+	2 = $component11, 
+	3 = $int12, 
+	4 = $component13, 
+	5 = $component14, 
+	6 = $component15, 
+	7 = $component16, 
+	8 = $component17, 
+	9 = $component18, 
+	10 = $component19, 
+	11 = $component20, 
+	12 = $component21, 
+	13 = $component22, 
+	14 = $component23
+)");
+cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+cc_setcolour($colour26);
+if ($int5 = 1) {
+	cc_settext("<oc_name($namedobj3)><br>  <$string2><~tostring_spacer($int5, $string1)> point</col>");
+} else {
+	cc_settext("<oc_name($namedobj3)><br>  <$string2><~tostring_spacer($int5, $string1)> points</col>");
+}
+$int8 = calc($int8 + 1);
+return($int8, $int9);
