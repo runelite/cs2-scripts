@@ -1,0 +1,101 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8388 not implemented
+
+.id                       8388
+.int_arg_count            1
+.obj_arg_count            0
+   cc_getlayer           
+   istore                 1
+   cc_getid              
+   istore                 2
+   iconst                 0
+   istore                 3
+   iload                  1
+   iload                  2
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL12
+   jump                   LABEL63
+LABEL12:
+   get_varbit             11576
+   iconst                 0
+   if_icmpeq              LABEL16
+   jump                   LABEL40
+LABEL16:
+   iconst                 2369
+   1703                  
+   switch                
+      1: LABEL20
+      2: LABEL24
+      3: LABEL28
+      4: LABEL32
+      5: LABEL36
+   jump                   LABEL39
+LABEL20:
+   iload                  0
+   invoke                 8346
+   istore                 3
+   jump                   LABEL39
+LABEL24:
+   iload                  0
+   invoke                 8347
+   istore                 3
+   jump                   LABEL39
+LABEL28:
+   iload                  0
+   invoke                 8362
+   istore                 3
+   jump                   LABEL39
+LABEL32:
+   iload                  0
+   invoke                 8354
+   istore                 3
+   jump                   LABEL39
+LABEL36:
+   iload                  0
+   invoke                 8360
+   istore                 3
+LABEL39:
+   jump                   LABEL63
+LABEL40:
+   iconst                 2369
+   1703                  
+   switch                
+      1: LABEL44
+      2: LABEL48
+      3: LABEL52
+      4: LABEL56
+      5: LABEL60
+   jump                   LABEL63
+LABEL44:
+   iload                  0
+   invoke                 8407
+   istore                 3
+   jump                   LABEL63
+LABEL48:
+   iload                  0
+   invoke                 8408
+   istore                 3
+   jump                   LABEL63
+LABEL52:
+   iload                  0
+   invoke                 8443
+   istore                 3
+   jump                   LABEL63
+LABEL56:
+   iload                  0
+   invoke                 8425
+   istore                 3
+   jump                   LABEL63
+LABEL60:
+   iload                  0
+   invoke                 8434
+   istore                 3
+LABEL63:
+   iload                  1
+   iload                  2
+   cc_find               
+   pop_int               
+   iload                  3
+   return                
+   iconst                 0
+   return                

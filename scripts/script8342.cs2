@@ -1,0 +1,201 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8342 not implemented
+
+.id                       8342
+.int_arg_count            6
+.obj_arg_count            3
+   iconst                 0
+   istore                 6
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL6
+   jump                   LABEL10
+LABEL6:
+   iload                  6
+   iconst                 1
+   setbit                
+   istore                 6
+LABEL10:
+   oload                  0
+   8003                  
+   istore                 7
+   iload                  7
+   define_array           196713
+   iconst                 60817423
+   iconst                 2365
+   iconst                 200
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL26
+   jump                   LABEL44
+LABEL26:
+   iconst                 2369
+   iconst                 1
+   iconst                 0
+   1704                  
+   iconst                 2362
+   iload                  6
+   iconst                 0
+   1704                  
+   iload                  0
+   iload                  1
+   oload                  0
+   oload                  1
+   oload                  2
+   iload                  2
+   iload                  3
+   oload                  3
+   iload                  4
+   invoke                 8344
+LABEL44:
+   iconst                 0
+   istore                 8
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL50
+   jump                   LABEL182
+LABEL50:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL54
+   jump                   LABEL182
+LABEL54:
+   iload                  7
+   iconst                 2
+   if_icmpeq              LABEL58
+   jump                   LABEL182
+LABEL58:
+   iconst                 0
+   get_array_int          2
+   iload                  5
+   iconst                 10
+   multiply              
+   if_icmpge              LABEL65
+   jump                   LABEL182
+LABEL65:
+   sconst                 "yes"
+   lowercase             
+   iconst                 0
+   get_array_int         
+   lowercase             
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL74
+   jump                   LABEL182
+LABEL74:
+   sconst                 "no"
+   lowercase             
+   iconst                 1
+   get_array_int         
+   lowercase             
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL83
+   jump                   LABEL182
+LABEL83:
+   iconst                 2363
+   iconst                 60817422
+   iconst                 -1
+   2703                  
+   istore                 8
+   iconst                 60817422
+   iconst                 0
+   iload                  8
+   iconst                 0
+   cc_create             
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   iconst                 2365
+   iconst                 214
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 0
+   cc_sethide            
+   iconst                 3
+   iload                  8
+   106                   
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 2162464
+   cc_setcolour          
+   iconst                 220
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   iconst                 3
+   iload                  8
+   107                   
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 3682339
+   cc_setcolour          
+   iconst                 0
+   cc_settrans           
+   iconst                 0
+   cc_setfill            
+   iconst                 3
+   iload                  8
+   107                   
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   iconst                 2
+   iconst                 2
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 5919301
+   cc_setcolour          
+   iconst                 0
+   cc_settrans           
+   iconst                 0
+   cc_setfill            
+   iconst                 2363
+   iload                  8
+   iconst                 60817422
+   iconst                 -1
+   iconst                 0
+   2704                  
+LABEL182:
+   iload                  0
+   invoke                 8384
+   return                

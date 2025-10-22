@@ -1,7 +1,15 @@
 // 98
-[proc,create_graphic](component $component0, int $comsubid1, graphic $graphic2, int $int3, int $int4, int $setposh5, int $setposv6, int $int7, int $int8, int $setsize9, int $setsize10)
-cc_create($component0, ^iftype_graphic, $comsubid1, false);
-cc_setposition($int3, $int4, $setposh5, $setposv6);
-cc_setsize($int7, $int8, $setsize9, $setsize10);
-cc_setgraphic($graphic2);
-cc_settiling(true);
+[proc,create_graphic](component $component0, int $int1, graphic $graphic2, int $int3, int $int4, int $setposh5, int $setposv6, int $int7, int $int8, int $setsize9, int $setsize10)(int)
+cc_create($component0, ^iftype_graphic, $int1, false);
+~script6388(
+	0 = $graphic2, 
+	1 = $int3, 
+	2 = $int4, 
+	3 = $setposh5, 
+	4 = $setposv6, 
+	5 = $int7, 
+	6 = $int8, 
+	7 = $setsize9, 
+	8 = $setsize10
+);
+return(calc($int1 + 1));

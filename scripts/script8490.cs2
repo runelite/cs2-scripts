@@ -1,0 +1,54 @@
+java.lang.IllegalStateException: Opcode 211 in script 8490 not implemented
+
+.id                       8490
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 0
+   istore                 1
+   iconst                 0
+   iload                  0
+   iconst                 -1
+   211                   
+   pop_int               
+   214                   
+   istore                 2
+   iload                  2
+   iconst                 -1
+   if_icmpeq              LABEL16
+   iload                  2
+   iconst                 0
+   if_icmplt              LABEL16
+   jump                   LABEL18
+LABEL16:
+   iload                  1
+   return                
+LABEL18:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL22
+   jump                   LABEL37
+LABEL22:
+   iload                  2
+   iload                  1
+   sub                   
+   iconst                 1
+   if_icmpgt              LABEL28
+   jump                   LABEL32
+LABEL28:
+   iload                  1
+   iconst                 1
+   add                   
+   return                
+LABEL32:
+   iload                  2
+   istore                 1
+   214                   
+   istore                 2
+   jump                   LABEL18
+LABEL37:
+   iload                  1
+   iconst                 1
+   add                   
+   return                
+   iconst                 0
+   return                

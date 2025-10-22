@@ -1,0 +1,128 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       8322
+.int_arg_count            3
+.obj_arg_count            1
+   iload                  1
+   get_array_int         
+   ostore                 1
+   oload                  0
+   8003                  
+   istore                 3
+   iload                  0
+   cc_deleteall          
+   iconst                 0
+   istore                 4
+   iload                  0
+   iload                  4
+   iconst                 297
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   invoke                 98
+   pop_int               
+   iload                  4
+   iconst                 1
+   add                   
+   istore                 4
+   iload                  0
+   iload                  4
+   invoke                 715
+   istore                 4
+   iload                  0
+   iload                  4
+   iconst                 788
+   iload                  0
+   if_getheight          
+   iconst                 16
+   sub                   
+   iconst                 2
+   div                   
+   iload                  0
+   if_getheight          
+   iconst                 16
+   sub                   
+   iconst                 2
+   div                   
+   iconst                 2
+   iconst                 0
+   iconst                 16
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   invoke                 98
+   pop_int               
+   iload                  3
+   iconst                 0
+   if_icmpgt              LABEL58
+   jump                   LABEL83
+LABEL58:
+   invoke                 1972
+   iconst                 0
+   if_icmpeq              LABEL62
+   jump                   LABEL78
+LABEL62:
+   iconst                 244
+   iload                  0
+   iload                  4
+   iconst                 125
+   iconst                 -1
+   sconst                 "iiii"
+   iload                  0
+   if_setonmouseover     
+   iconst                 244
+   iload                  0
+   iload                  4
+   iconst                 0
+   iconst                 -1
+   sconst                 "iiii"
+   iload                  0
+   if_setonmouseleave    
+LABEL78:
+   iconst                 1
+   sconst                 "Expand"
+   iload                  0
+   if_setop              
+   jump                   LABEL85
+LABEL83:
+   iconst                 125
+   cc_settrans           
+LABEL85:
+   iload                  4
+   iconst                 1
+   add                   
+   istore                 4
+   iload                  0
+   iconst                 4
+   iload                  4
+   iconst                 0
+   cc_create             
+   iconst                 2
+   iconst                 2
+   iconst                 0
+   iconst                 2
+   cc_setposition        
+   iload                  0
+   if_getheight          
+   iconst                 4
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 494
+   cc_settextfont        
+   iload                  2
+   cc_setcolour          
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   oload                  1
+   cc_settext            
+   return                

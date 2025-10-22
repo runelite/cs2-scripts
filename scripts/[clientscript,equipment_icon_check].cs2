@@ -1,10 +1,11 @@
 // 2642
-[clientscript,equipment_icon_check](component $com_wornitems_equipment_icon0)
+[clientscript,equipment_icon_check](component $com_wornitems_equipment_icon0, component $com_wornitems_equipment1)
 if (%tutorial = 400) {
-	if_setontimer("equipment_icon_flash($com_wornitems_equipment_icon0)", $com_wornitems_equipment_icon0);
+	~script8477(3, 2, $com_wornitems_equipment1, -1, 7034, 0);
 } else if (%tutorial_2 = 400) {
 	if_setontimer("equipment_icon_flash($com_wornitems_equipment_icon0)", $com_wornitems_equipment_icon0);
 } else {
 	if_setgraphic("options_icons,16", $com_wornitems_equipment_icon0);
 	if_setontimer(null, $com_wornitems_equipment_icon0);
+	~script8483(3, 2);
 }

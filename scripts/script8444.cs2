@@ -1,0 +1,33 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8444 not implemented
+
+.id                       8444
+.int_arg_count            3
+.obj_arg_count            0
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL6
+   jump                   LABEL23
+LABEL6:
+   1624                   1
+   iconst                 1
+   if_icmpeq              LABEL10
+   jump                   LABEL23
+LABEL10:
+   iload                  0
+   iload                  2
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL16
+   jump                   LABEL23
+LABEL16:
+   iconst                 2362
+   iconst                 2362
+   1703                  
+   iconst                 4
+   setbit                
+   iconst                 0
+   1704                  
+LABEL23:
+   return                

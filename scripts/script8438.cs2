@@ -1,0 +1,81 @@
+java.lang.IllegalArgumentException: Failed requirement.
+
+.id                       8438
+.int_arg_count            3
+.obj_arg_count            0
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL6
+   jump                   LABEL66
+LABEL6:
+   get_varbit             18126
+   iconst                 3
+   if_icmpne              LABEL10
+   jump                   LABEL19
+LABEL10:
+   get_varbit             18126
+   iconst                 4
+   if_icmpne              LABEL14
+   jump                   LABEL19
+LABEL14:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL66
+LABEL19:
+   invoke                 8417
+   iconst                 0
+   if_icmpeq              LABEL23
+   jump                   LABEL31
+LABEL23:
+   iconst                 1137418264
+   iconst                 60817433
+   iconst                 -1
+   iload                  2
+   push_null             
+   sconst                 "i*"
+   2929                  
+   jump                   LABEL66
+LABEL31:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   iconst                 220
+   cc_settrans           
+   iconst                 488
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 255
+   clientclock           
+   iconst                 25
+   add                   
+   sconst                 "iiii"
+   cc_setontimer         
+   invoke                 8418
+   iconst                 0
+   if_icmpeq              LABEL50
+   jump                   LABEL58
+LABEL50:
+   iconst                 1137418264
+   iconst                 60817433
+   iconst                 -1
+   iload                  2
+   push_null             
+   sconst                 "i*"
+   2929                  
+   jump                   LABEL66
+LABEL58:
+   iconst                 1137418264
+   iconst                 60817433
+   iconst                 -1
+   iload                  2
+   iload                  2
+   invoke                 8437
+   sconst                 "i*"
+   2929                  
+LABEL66:
+   return                

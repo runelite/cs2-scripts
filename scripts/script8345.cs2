@@ -1,0 +1,202 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8345 not implemented
+
+.id                       8345
+.int_arg_count            4
+.obj_arg_count            1
+   iconst                 0
+   invoke                 8363
+   106                   
+   iconst                 2365
+   iconst                 350
+   iconst                 0
+   1704                  
+   iconst                 4
+   invoke                 8363
+   106                   
+   iconst                 100
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iload                  3
+   cc_setcolour          
+   iconst                 0
+   iconst                 1
+   iconst                 13
+   cc_settextalign       
+   oload                  0
+   cc_settext            
+   iconst                 494
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 4
+   invoke                 8363
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 2
+   iconst                 1
+   cc_setposition        
+   iconst                 100
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setsize            
+   iload                  3
+   cc_setcolour          
+   iconst                 1
+   iconst                 1
+   iconst                 13
+   cc_settextalign       
+   iconst                 494
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iload                  0
+   iconst                 0
+   if_icmpeq              LABEL59
+   jump                   LABEL62
+LABEL59:
+   sconst                 "-"
+   cc_settext            
+   jump                   LABEL88
+LABEL62:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL66
+   jump                   LABEL82
+LABEL66:
+   iload                  2
+   iconst                 10
+   div                   
+   tostring              
+   sconst                 "."
+   iload                  2
+   iconst                 10
+   mod                   
+   tostring              
+   sconst                 "% ("
+   iload                  1
+   invoke                 7019
+   sconst                 ")"
+   join_string            6
+   cc_settext            
+   jump                   LABEL88
+LABEL82:
+   sconst                 "("
+   iload                  1
+   invoke                 7019
+   sconst                 ")"
+   join_string            3
+   cc_settext            
+LABEL88:
+   iload                  2
+   iconst                 -1
+   if_icmpeq              LABEL95
+   iload                  0
+   iconst                 0
+   if_icmpeq              LABEL95
+   jump                   LABEL100
+LABEL95:
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+   return                
+LABEL100:
+   iconst                 0
+   invoke                 8363
+   107                   
+   iconst                 4
+   iconst                 100
+   add                   
+   istore                 4
+   iload                  4
+   iconst                 0
+   iconst                 2
+   iconst                 1
+   cc_setposition        
+   iconst                 0
+   iconst                 16384
+   iconst                 0
+   iconst                 1000
+   iload                  2
+   interpolate           
+   istore                 5
+   iconst                 5
+   invoke                 8363
+   106                   
+   iload                  5
+   iconst                 0
+   iconst                 2
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 297
+   cc_setgraphic         
+   iconst                 1
+   cc_settiling          
+   iconst                 0
+   cc_settrans           
+   iconst                 3
+   invoke                 8363
+   107                   
+   iload                  5
+   iconst                 0
+   iconst                 2
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 200
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   iconst                 3
+   invoke                 8363
+   107                   
+   iload                  5
+   iconst                 0
+   iconst                 2
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 3682339
+   cc_setcolour          
+   iconst                 0
+   cc_settrans           
+   iconst                 0
+   cc_setfill            
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+   iconst                 2362
+   iconst                 2362
+   1703                  
+   iconst                 0
+   setbit                
+   iconst                 0
+   1704                  
+   204                   
+   pop_int               
+   return                

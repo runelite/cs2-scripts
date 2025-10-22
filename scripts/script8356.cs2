@@ -1,0 +1,150 @@
+java.lang.IllegalStateException: Opcode 210 in script 8356 not implemented
+
+.id                       8356
+.int_arg_count            6
+.obj_arg_count            4
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   iconst                 0
+   istore                 8
+   iconst                 80
+   istore                 9
+   iconst                 -1
+   istore                 10
+   iconst                 60817423
+   iconst                 2365
+   iconst                 200
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL21
+   jump                   LABEL126
+LABEL21:
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL25
+   jump                   LABEL29
+LABEL25:
+   iload                  6
+   iconst                 1
+   setbit                
+   istore                 6
+LABEL29:
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL33
+   jump                   LABEL37
+LABEL33:
+   iload                  6
+   iconst                 3
+   setbit                
+   istore                 6
+LABEL37:
+   iconst                 2369
+   iconst                 5
+   iconst                 0
+   1704                  
+   iconst                 2362
+   iload                  6
+   iconst                 0
+   1704                  
+   oload                  0
+   8003                  
+   oload                  1
+   8003                  
+   oload                  2
+   8003                  
+   oload                  3
+   8003                  
+   4016                  
+   4016                  
+   4016                  
+   istore                 7
+   iload                  2
+   iconst                 0
+   if_icmpeq              LABEL61
+   jump                   LABEL83
+LABEL61:
+   iload                  8
+   iload                  7
+   if_icmplt              LABEL65
+   jump                   LABEL81
+LABEL65:
+   iload                  9
+   iload                  8
+   iload                  8
+   get_array_int         
+   iload                  1
+   invoke                 8357
+   iconst                 512
+   iconst                 495
+   parawidth             
+   4017                  
+   istore                 9
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   jump                   LABEL61
+LABEL81:
+   iconst                 0
+   istore                 8
+LABEL83:
+   iload                  8
+   iload                  7
+   if_icmplt              LABEL87
+   jump                   LABEL107
+LABEL87:
+   iload                  8
+   iload                  1
+   iload                  2
+   iload                  9
+   iload                  7
+   iload                  8
+   get_array_int         
+   oload                  1
+   oload                  2
+   iload                  4
+   iload                  8
+   testbit               
+   iload                  8
+   get_array_int          3
+   invoke                 8358
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   jump                   LABEL83
+LABEL107:
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL111
+   jump                   LABEL126
+LABEL111:
+   iload                  5
+   iconst                 1
+   if_icmpeq              LABEL115
+   jump                   LABEL118
+LABEL115:
+   iconst                 16777215
+   istore                 10
+   jump                   LABEL120
+LABEL118:
+   iconst                 11513775
+   istore                 10
+LABEL120:
+   iload                  1
+   sconst                 "Skip question"
+   iload                  3
+   iconst                 -1
+   iload                  10
+   invoke                 8345
+LABEL126:
+   iload                  0
+   invoke                 8384
+   return                

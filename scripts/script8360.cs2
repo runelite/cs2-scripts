@@ -1,0 +1,87 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8360 not implemented
+
+.id                       8360
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 2368
+   1703                  
+   istore                 1
+   iconst                 24
+   istore                 2
+   iconst                 2362
+   1703                  
+   iconst                 3
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL12
+   jump                   LABEL14
+LABEL12:
+   iconst                 33
+   istore                 2
+LABEL14:
+   iconst                 1
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 600
+   iconst                 0
+   216                   
+   istore                 3
+   iload                  3
+   iload                  2
+   multiply              
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 2362
+   1703                  
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL35
+   jump                   LABEL71
+LABEL35:
+   iload                  4
+   iconst                 4
+   add                   
+   istore                 4
+   iconst                 1
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 350
+   iconst                 0
+   216                   
+   pop_int               
+LABEL47:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL51
+   jump                   LABEL69
+LABEL51:
+   iload                  0
+   invoke                 8416
+   istore                 5
+   iconst                 0
+   iload                  4
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iload                  5
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  4
+   iload                  5
+   add                   
+   istore                 4
+   jump                   LABEL47
+LABEL69:
+   204                   
+   pop_int               
+LABEL71:
+   iload                  4
+   return                
+   iconst                 0
+   return                

@@ -1,0 +1,32 @@
+java.lang.IllegalStateException: Opcode 2506 in script 8307 not implemented
+
+.id                       8307
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   2506                  
+   istore                 1
+LABEL3:
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL7
+   jump                   LABEL18
+LABEL7:
+   iload                  1
+   if_gethide            
+   iconst                 1
+   if_icmpeq              LABEL12
+   jump                   LABEL14
+LABEL12:
+   iconst                 1
+   return                
+LABEL14:
+   iload                  1
+   2506                  
+   istore                 1
+   jump                   LABEL3
+LABEL18:
+   iconst                 0
+   return                
+   iconst                 -1
+   return                

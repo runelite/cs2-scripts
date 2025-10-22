@@ -1,0 +1,50 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       8460
+.int_arg_count            3
+.obj_arg_count            0
+   iload                  0
+   iconst                 -1
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   invoke                 8468
+   ostore                 0
+   oload                  0
+   iload                  0
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   istore                 3
+   iload                  3
+   iconst                 -1
+   if_icmpeq              LABEL18
+   jump                   LABEL33
+LABEL18:
+   oload                  0
+   iconst                 -1
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   istore                 3
+   iload                  3
+   iconst                 -1
+   if_icmpeq              LABEL29
+   jump                   LABEL33
+LABEL29:
+   sconst                 "IH"
+   sconst                 "Max number of items already highlighted. Consider adding more vars or disabling other highlights."
+   invoke                 638
+   return                
+LABEL33:
+   iload                  3
+   iload                  0
+   iload                  1
+   iload                  2
+   invoke                 8470
+   invoke                 8466
+   return                

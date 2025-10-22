@@ -1,0 +1,190 @@
+java.lang.IllegalStateException: Opcode 2703 in script 8337 not implemented
+
+.id                       8337
+.int_arg_count            1
+.obj_arg_count            1
+   iconst                 507920
+   iload                  0
+   iconst                 0
+   db_find_with_count    
+   pop_int               
+   iconst                 507904
+   iconst                 1
+   iconst                 0
+   db_find_filter_with_count
+   pop_int               
+   db_findnext           
+   istore                 1
+   iconst                 -1
+   istore                 2
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL18
+   jump                   LABEL23
+LABEL18:
+   iload                  1
+   iconst                 507952
+   iconst                 0
+   db_getfield           
+   istore                 2
+LABEL23:
+   iconst                 -100
+   iconst                 101
+   invoke                 8368
+   istore                 3
+   cc_getlayer           
+   istore                 4
+   iconst                 0
+   istore                 5
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL35
+   jump                   LABEL39
+LABEL35:
+   iconst                 30
+   iconst                 12
+   add                   
+   istore                 5
+LABEL39:
+   iconst                 4
+   invoke                 8363
+   106                   
+   iload                  5
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iconst                 16750623
+   cc_setcolour          
+   iconst                 0
+   iconst                 0
+   iconst                 16
+   cc_settextalign       
+   oload                  0
+   cc_settext            
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 -1
+   istore                 6
+   sconst                 ""
+   ostore                 1
+   sconst                 "<col=0dc10d>"
+   sconst                 "Close"
+   sconst                 "</col>"
+   join_string            3
+   ostore                 2
+   sconst                 ""
+   ostore                 3
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL79
+   jump                   LABEL173
+LABEL79:
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 30
+   iconst                 35
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  2
+   cc_setgraphic         
+   iconst                 2362
+   iload                  4
+   iload                  3
+   2703                  
+   iconst                 1
+   setbit                
+   istore                 6
+   iconst                 2362
+   iload                  6
+   iload                  4
+   iload                  3
+   iconst                 0
+   2704                  
+   iload                  1
+   iconst                 507968
+   iconst                 0
+   db_getfield           
+   ostore                 1
+   oload                  1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL117
+   jump                   LABEL173
+LABEL117:
+   iconst                 3
+   invoke                 8363
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 30
+   iconst                 35
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 255
+   cc_settrans           
+   iconst                 1
+   sconst                 "Info:"
+   cc_setop              
+   sconst                 "<col=ff9040>"
+   iload                  1
+   iconst                 507936
+   iconst                 0
+   db_getfield           
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   invoke                 1972
+   iconst                 0
+   if_icmpeq              LABEL151
+   jump                   LABEL165
+LABEL151:
+   iconst                 244
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 210
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseover     
+   iconst                 244
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 255
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseleave    
+LABEL165:
+   iconst                 8391
+   oload                  1
+   iconst                 -1
+   iconst                 -1
+   oload                  2
+   oload                  3
+   sconst                 "siiss"
+   cc_setonop            
+LABEL173:
+   iload                  3
+   invoke                 8369
+   return                

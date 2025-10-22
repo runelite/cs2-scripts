@@ -1,0 +1,101 @@
+java.lang.IllegalArgumentException: Failed requirement.
+
+.id                       8436
+.int_arg_count            6
+.obj_arg_count            0
+   iconst                 -1
+   istore                 6
+   push_null             
+   ostore                 0
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL10
+   jump                   LABEL86
+LABEL10:
+   get_varbit             18126
+   iconst                 3
+   if_icmpne              LABEL14
+   jump                   LABEL23
+LABEL14:
+   get_varbit             18126
+   iconst                 4
+   if_icmpne              LABEL18
+   jump                   LABEL23
+LABEL18:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL86
+LABEL23:
+   invoke                 8417
+   iconst                 0
+   if_icmpeq              LABEL27
+   jump                   LABEL35
+LABEL27:
+   iconst                 1137418264
+   iconst                 60817433
+   iconst                 -1
+   iload                  2
+   push_null             
+   sconst                 "i*"
+   2929                  
+   jump                   LABEL86
+LABEL35:
+   iload                  5
+   iload                  3
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL46
+   iload                  5
+   iload                  4
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL46
+   jump                   LABEL51
+LABEL46:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL86
+LABEL51:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   iconst                 220
+   cc_settrans           
+   iconst                 488
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 255
+   clientclock           
+   iconst                 25
+   add                   
+   sconst                 "iiii"
+   cc_setontimer         
+   iload                  2
+   invoke                 8437
+   ostore                 0
+   iload                  3
+   get_array_int         
+   istore                 6
+   iload                  3
+   iload                  4
+   get_array_int         
+   set_array_int         
+   iload                  4
+   iload                  6
+   set_array_int         
+   iconst                 1137418264
+   iconst                 60817433
+   iconst                 -1
+   iload                  2
+   oload                  0
+   sconst                 "i*"
+   2929                  
+LABEL86:
+   return                

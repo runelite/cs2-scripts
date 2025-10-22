@@ -1,20 +1,20 @@
 // 4913
 [proc,script4913](int $int0, component $component1, int $int2, graphic $graphic3, int $int4, int $int5)
-def_int $comsubid6 = 0;
+def_int $int6 = 0;
 if (testbit($int2, 0) = ^true) {
 	if ($int0 = 1) {
-		$comsubid6 = ~v2_stone_button_in_filled($component1);
+		$int6 = ~v2_stone_button_in_filled($component1);
 	} else {
-		$comsubid6 = ~v2_stone_button_filled($component1);
+		$int6 = ~v2_stone_button_filled($component1);
 	}
 } else if ($int0 = 1) {
-	$comsubid6 = ~v2_stone_button_in($component1);
+	$int6 = ~v2_stone_button_in($component1);
 } else {
-	$comsubid6 = ~v2_stone_button($component1);
+	$int6 = ~v2_stone_button($component1);
 }
 ~create_graphic(
 	0 = $component1, 
-	1 = $comsubid6, 
+	1 = $int6, 
 	2 = $graphic3, 
 	3 = 0, 
 	4 = 0, 

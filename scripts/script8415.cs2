@@ -1,0 +1,84 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8415 not implemented
+
+.id                       8415
+.int_arg_count            2
+.obj_arg_count            1
+   iconst                 16750623
+   istore                 2
+   iload                  0
+   iconst                 0
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL8
+   jump                   LABEL11
+LABEL8:
+   iconst                 8421504
+   istore                 2
+   jump                   LABEL17
+LABEL11:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL17
+LABEL15:
+   iconst                 11513775
+   istore                 2
+LABEL17:
+   iconst                 4
+   invoke                 8363
+   106                   
+   iconst                 21
+   iconst                 2
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 21
+   iconst                 2
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 16
+   cc_settextalign       
+   oload                  0
+   cc_settext            
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iload                  2
+   cc_setcolour          
+   iconst                 2361
+   iload                  2
+   iconst                 0
+   1704                  
+   cc_getid              
+   istore                 3
+   204                   
+   pop_int               
+   iload                  0
+   invoke                 8414
+   sconst                 "<col=ff9040>"
+   oload                  0
+   removetags            
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iconst                 2359
+   iload                  3
+   iconst                 0
+   1704                  
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 16777215
+   sconst                 "iii"
+   cc_setonmouserepeat   
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 -1
+   sconst                 "iii"
+   cc_setonmouseleave    
+   return                

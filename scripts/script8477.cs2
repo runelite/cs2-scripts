@@ -1,0 +1,171 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8477 not implemented
+
+.id                       8477
+.int_arg_count            6
+.obj_arg_count            0
+   invoke                 8488
+   istore                 6
+   iload                  6
+   iconst                 -1
+   if_icmpeq              LABEL6
+   jump                   LABEL7
+LABEL6:
+   return                
+LABEL7:
+   iconst                 0
+   istore                 7
+   iload                  0
+   iload                  1
+   invoke                 8489
+   istore                 8
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL17
+   jump                   LABEL30
+LABEL17:
+   iload                  6
+   iload                  8
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL23
+   jump                   LABEL30
+LABEL23:
+   iconst                 2377
+   1703                  
+   iload                  4
+   if_icmpne              LABEL28
+   jump                   LABEL29
+LABEL28:
+   cc_delete             
+LABEL29:
+   jump                   LABEL33
+LABEL30:
+   iload                  6
+   invoke                 8490
+   istore                 8
+LABEL33:
+   iload                  6
+   iload                  8
+   cc_find               
+   iconst                 0
+   if_icmpeq              LABEL39
+   jump                   LABEL117
+LABEL39:
+   iload                  6
+   iconst                 0
+   iload                  8
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 2372
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 2373
+   iload                  1
+   iconst                 0
+   1704                  
+   iconst                 2377
+   iload                  4
+   iconst                 0
+   1704                  
+   iconst                 2378
+   clientclock           
+   iconst                 0
+   1704                  
+   iconst                 8479
+   iload                  0
+   iload                  1
+   iload                  6
+   iload                  8
+   sconst                 "iiii"
+   cc_setontimer         
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL76
+   jump                   LABEL85
+LABEL76:
+   iload                  3
+   iconst                 0
+   if_icmpge              LABEL80
+   jump                   LABEL85
+LABEL80:
+   iload                  2
+   iload                  3
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL90
+LABEL85:
+   iload                  2
+   if_find                1
+   iconst                 1
+   if_icmpeq              LABEL90
+   jump                   LABEL117
+LABEL90:
+   iconst                 2374
+   iload                  6
+   invoke                 8490
+   iconst                 0
+   1704                  
+   iconst                 0
+   iconst                 2374
+   1703                  
+   106                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  4
+   cc_getlayer           
+   cc_getid              
+   iload                  6
+   iload                  8
+   iload                  2
+   iload                  3
+   invoke                 8473
+LABEL117:
+   iload                  6
+   iload                  8
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL123
+   jump                   LABEL148
+LABEL123:
+   iconst                 2380
+   iconst                 0
+   iconst                 0
+   1704                  
+   iconst                 2375
+   iload                  2
+   iconst                 0
+   1704                  
+   iconst                 2376
+   iload                  3
+   iconst                 0
+   1704                  
+   iconst                 2379
+   1703                  
+   iload                  5
+   if_icmpne              LABEL140
+   jump                   LABEL148
+LABEL140:
+   iconst                 2378
+   clientclock           
+   iconst                 0
+   1704                  
+   iconst                 2379
+   iload                  5
+   iconst                 0
+   1704                  
+LABEL148:
+   return                

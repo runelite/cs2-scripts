@@ -194,11 +194,11 @@ if (~on_mobile = true) {
 	$int10 = 33;
 	$int11 = 33;
 }
-def_int $comsubid12 = 11;
+def_int $int12 = 11;
 if (testbit($int1, 0) = ^false) {
 	~create_graphic(
 		0 = $component0, 
-		1 = $comsubid12, 
+		1 = $int12, 
 		2 = $graphic6, 
 		3 = $int8, 
 		4 = $int9, 
@@ -209,17 +209,17 @@ if (testbit($int1, 0) = ^false) {
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
+	$int12 = calc($int12 + 1);
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
 	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic7, null)");
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click");
 	cc_setonkey("script8184(event_keycode, event_com, event_comsubid, 1)");
-	$comsubid12 = 12;
 }
 if (testbit($int1, 1) = ^true) {
 	~create_graphic(
 		0 = $component0, 
-		1 = $comsubid12, 
+		1 = $int12, 
 		2 = map_resize, 
 		3 = 0, 
 		4 = 0, 
@@ -230,5 +230,7 @@ if (testbit($int1, 1) = ^true) {
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs
 	);
+	$int12 = calc($int12 + 1);
 }
+~script8303($component0, $int12);
 return($int5);

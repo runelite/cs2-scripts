@@ -1,0 +1,389 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8424 not implemented
+
+.id                       8424
+.int_arg_count            7
+.obj_arg_count            3
+   iload                  4
+   oload                  1
+   8003                  
+   iload                  5
+   iload                  6
+   invoke                 8389
+   ostore                 3
+   invoke                 8390
+   iconst                 2
+   mod                   
+   istore                 7
+   iconst                 16750623
+   istore                 8
+   iconst                 11513775
+   istore                 9
+   iconst                 0
+   iconst                 0
+   setbit                
+   istore                 10
+   iload                  10
+   iconst                 1
+   setbit                
+   istore                 11
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL29
+   jump                   LABEL42
+LABEL29:
+   iload                  10
+   iconst                 0
+   clearbit              
+   istore                 10
+   iload                  11
+   iconst                 0
+   clearbit              
+   istore                 11
+   iconst                 8421504
+   iconst                 8421504
+   istore                 9
+   istore                 8
+   jump                   LABEL60
+LABEL42:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL48
+   jump                   LABEL60
+LABEL48:
+   iload                  10
+   iconst                 0
+   clearbit              
+   istore                 10
+   iload                  11
+   iconst                 2
+   setbit                
+   istore                 11
+   iconst                 8421504
+   iconst                 8421504
+   istore                 9
+   istore                 8
+LABEL60:
+   oload                  1
+   8003                  
+   istore                 12
+   oload                  2
+   8003                  
+   istore                 13
+   iconst                 -1
+   istore                 14
+   iconst                 0
+   istore                 15
+   iload                  13
+   iconst                 1
+   add                   
+   define_array           262249
+LABEL74:
+   iload                  15
+   iload                  13
+   if_icmplt              LABEL78
+   jump                   LABEL114
+LABEL78:
+   iload                  7
+   iconst                 1
+   if_icmpeq              LABEL82
+   jump                   LABEL89
+LABEL82:
+   iload                  13
+   iload                  15
+   iconst                 1
+   add                   
+   sub                   
+   istore                 14
+   jump                   LABEL91
+LABEL89:
+   iload                  15
+   istore                 14
+LABEL91:
+   iconst                 500
+   iconst                 150
+   invoke                 8352
+   iload                  14
+   get_array_int          2
+   iconst                 1
+   iconst                 2
+   iload                  8
+   iconst                 494
+   iconst                 13
+   invoke                 8353
+   iload                  14
+   cc_getid              
+   set_array_int          4
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+   iload                  15
+   iconst                 1
+   add                   
+   istore                 15
+   jump                   LABEL74
+LABEL114:
+   iload                  2
+   iconst                 0
+   if_icmpne              LABEL118
+   jump                   LABEL135
+LABEL118:
+   iconst                 500
+   iconst                 150
+   invoke                 8352
+   sconst                 "Skip"
+   iconst                 1
+   iconst                 2
+   iload                  9
+   iconst                 494
+   iconst                 13
+   invoke                 8353
+   iload                  15
+   cc_getid              
+   set_array_int          4
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+LABEL135:
+   iconst                 -1
+   istore                 16
+   iconst                 -1
+   istore                 17
+   iconst                 -1
+   istore                 18
+   iconst                 0
+   istore                 19
+LABEL143:
+   iload                  19
+   iload                  12
+   if_icmplt              LABEL147
+   jump                   LABEL319
+LABEL147:
+   iload                  19
+   get_array_int          3
+   istore                 18
+   iconst                 502
+   iconst                 150
+   invoke                 8352
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   1704                  
+   iload                  18
+   get_array_int          1
+   iconst                 2
+   iconst                 1
+   iload                  8
+   iconst                 494
+   iconst                 15
+   invoke                 8353
+   cc_getid              
+   istore                 17
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+   iconst                 0
+   istore                 15
+LABEL173:
+   iload                  15
+   iload                  13
+   if_icmplt              LABEL177
+   jump                   LABEL252
+LABEL177:
+   iload                  7
+   iconst                 1
+   if_icmpeq              LABEL181
+   jump                   LABEL188
+LABEL181:
+   iload                  13
+   iload                  15
+   iconst                 1
+   add                   
+   sub                   
+   istore                 14
+   jump                   LABEL190
+LABEL188:
+   iload                  15
+   istore                 14
+LABEL190:
+   iload                  10
+   istore                 16
+   iload                  18
+   get_array_int         
+   iload                  14
+   if_icmpeq              LABEL197
+   jump                   LABEL201
+LABEL197:
+   iload                  10
+   iconst                 2
+   setbit                
+   istore                 16
+LABEL201:
+   iconst                 504
+   iconst                 215
+   invoke                 8352
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   1704                  
+   iconst                 2371
+   iload                  14
+   iconst                 0
+   1704                  
+   iconst                 2363
+   iload                  19
+   iconst                 0
+   1704                  
+   iload                  16
+   iload                  17
+   iload                  14
+   get_array_int          4
+   invoke                 8428
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   1704                  
+   iconst                 2371
+   iload                  14
+   iconst                 0
+   1704                  
+   iconst                 8426
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   iload                  18
+   iload                  14
+   sconst                 "iiiii"
+   cc_setonop            
+   sconst                 "<col=ff9040>"
+   iload                  14
+   get_array_int          2
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+   iload                  15
+   iconst                 1
+   add                   
+   istore                 15
+   jump                   LABEL173
+LABEL252:
+   iload                  2
+   iload                  18
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL258
+   jump                   LABEL314
+LABEL258:
+   iload                  10
+   istore                 16
+   iload                  18
+   get_array_int         
+   iconst                 -1
+   if_icmpeq              LABEL265
+   jump                   LABEL269
+LABEL265:
+   iload                  10
+   iconst                 2
+   setbit                
+   istore                 16
+LABEL269:
+   iconst                 504
+   iconst                 215
+   invoke                 8352
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   1704                  
+   iconst                 2371
+   iconst                 -1
+   iconst                 0
+   1704                  
+   iconst                 2363
+   iload                  19
+   iconst                 0
+   1704                  
+   iload                  16
+   iload                  17
+   iload                  15
+   get_array_int          4
+   invoke                 8428
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   1704                  
+   iconst                 2371
+   iconst                 -1
+   iconst                 0
+   1704                  
+   iconst                 8426
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   iload                  18
+   iconst                 -1
+   sconst                 "iiiii"
+   cc_setonop            
+   sconst                 "<col=ff9040>"
+   sconst                 "Skip"
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   204                   
+   pop_int               
+   204                   
+   pop_int               
+LABEL314:
+   iload                  19
+   iconst                 1
+   add                   
+   istore                 19
+   jump                   LABEL143
+LABEL319:
+   iload                  3
+   iconst                 1
+   if_icmpeq              LABEL323
+   jump                   LABEL354
+LABEL323:
+   iconst                 0
+   invoke                 8363
+   106                   
+   iconst                 2365
+   iconst                 201
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iload                  11
+   sconst                 "Skip question"
+   iconst                 1
+   invoke                 8415
+   iconst                 2365
+   iconst                 202
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 8426
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   iconst                 -1
+   iconst                 -1
+   sconst                 "iiiii"
+   cc_setonop            
+LABEL354:
+   return                

@@ -33,6 +33,8 @@ switch_int ($int2) {
 		return(tostring($int5));
 	case 1 :
 		return(substring(db_getfield($dbrow0, quest:sortname, 0), 0, 1));
+	case 11 :
+		return(enum(int, string, enum_5763, db_getfield($dbrow0, quest:ftue_starter, 0)));
 	case default :
 		return("");
 }

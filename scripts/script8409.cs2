@@ -1,0 +1,58 @@
+java.lang.IllegalStateException: Opcode 212 in script 8409 not implemented
+
+.id                       8409
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 0
+   istore                 1
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 2
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 300
+   iconst                 0
+   216                   
+   pop_int               
+LABEL14:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL18
+   jump                   LABEL44
+LABEL18:
+   iload                  1
+   iconst                 0
+   if_icmpgt              LABEL22
+   jump                   LABEL26
+LABEL22:
+   iload                  1
+   iconst                 4
+   add                   
+   istore                 1
+LABEL26:
+   iload                  0
+   invoke                 8416
+   istore                 2
+   iconst                 0
+   iload                  1
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iload                  2
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  1
+   iload                  2
+   add                   
+   istore                 1
+   jump                   LABEL14
+LABEL44:
+   iload                  1
+   return                
+   iconst                 0
+   return                

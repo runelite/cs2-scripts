@@ -1,0 +1,208 @@
+java.lang.IllegalStateException: Opcode 211 in script 8367 not implemented
+
+.id                       8367
+.int_arg_count            1
+.obj_arg_count            0
+   cc_getwidth           
+   istore                 1
+   iconst                 0
+   iload                  0
+   iconst                 -1
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 100
+   iconst                 0
+   216                   
+   istore                 2
+   215                   
+   ostore                 0
+   iconst                 0
+   istore                 3
+   iconst                 -1
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 -1
+   istore                 7
+   iconst                 -1
+   istore                 8
+   iconst                 -1
+   istore                 9
+   iconst                 0
+   istore                 10
+LABEL30:
+   iload                  10
+   iload                  2
+   if_icmplt              LABEL34
+   jump                   LABEL175
+LABEL34:
+   iload                  3
+   iload                  5
+   add                   
+   istore                 3
+   iload                  0
+   iload                  10
+   get_array_int         
+   cc_find               
+   pop_int               
+   iconst                 2367
+   1703                  
+   istore                 7
+   iload                  7
+   switch                
+      -100: LABEL49
+      -101: LABEL49
+      104: LABEL49
+      102: LABEL55
+      101: LABEL60
+      103: LABEL65
+      -1: LABEL70
+   jump                   LABEL141
+LABEL49:
+   iload                  1
+   iload                  7
+   invoke                 8371
+   istore                 5
+   istore                 4
+   jump                   LABEL145
+LABEL55:
+   iload                  1
+   invoke                 8373
+   istore                 5
+   istore                 4
+   jump                   LABEL145
+LABEL60:
+   iload                  1
+   invoke                 8376
+   istore                 5
+   istore                 4
+   jump                   LABEL145
+LABEL65:
+   iload                  1
+   invoke                 8381
+   istore                 5
+   istore                 4
+   jump                   LABEL145
+LABEL70:
+   iconst                 2368
+   1703                  
+   istore                 9
+   iload                  8
+   iconst                 -1
+   if_icmpeq              LABEL77
+   jump                   LABEL101
+LABEL77:
+   iload                  7
+   iload                  8
+   if_icmpeq              LABEL81
+   jump                   LABEL101
+LABEL81:
+   iload                  0
+   iconst                 2365
+   iconst                 213
+   iconst                 2368
+   iload                  9
+   iconst                 0
+   iconst                 0
+   210                    1
+   iconst                 1
+   if_icmpeq              LABEL92
+   jump                   LABEL101
+LABEL92:
+   iconst                 0
+   iload                  3
+   iconst                 1
+   iconst                 0
+   cc_setposition         1
+   iload                  3
+   iconst                 12
+   add                   
+   istore                 3
+LABEL101:
+   iload                  1
+   invoke                 8385
+   istore                 5
+   istore                 4
+   iload                  0
+   iconst                 60817423
+   if_icmpeq              LABEL109
+   jump                   LABEL140
+LABEL109:
+   iconst                 60817422
+   iconst                 2365
+   iconst                 214
+   iconst                 2368
+   iload                  9
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL120
+   jump                   LABEL140
+LABEL120:
+   iconst                 0
+   iload                  3
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iload                  3
+   iconst                 4
+   add                   
+   iconst                 4
+   istore                 6
+   istore                 3
+   iconst                 0
+   iload                  4
+   iconst                 4
+   iconst                 2
+   multiply              
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+LABEL140:
+   jump                   LABEL145
+LABEL141:
+   iconst                 50
+   iconst                 0
+   istore                 5
+   istore                 4
+LABEL145:
+   iload                  0
+   iload                  10
+   get_array_int         
+   cc_find               
+   pop_int               
+   iconst                 0
+   iload                  3
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iload                  4
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  3
+   iload                  4
+   add                   
+   iload                  6
+   add                   
+   iload                  10
+   iconst                 1
+   add                   
+   iconst                 0
+   iload                  7
+   istore                 8
+   istore                 6
+   istore                 10
+   istore                 3
+   jump                   LABEL30
+LABEL175:
+   iload                  3
+   return                
+   iconst                 0
+   return                

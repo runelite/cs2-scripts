@@ -1,0 +1,168 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8440 not implemented
+
+.id                       8440
+.int_arg_count            2
+.obj_arg_count            1
+   cc_getlayer           
+   istore                 2
+   cc_getid              
+   istore                 3
+   iconst                 2362
+   1703                  
+   iconst                 1
+   testbit               
+   invoke                 633
+   istore                 4
+   iconst                 0
+   iconst                 0
+   setbit                
+   istore                 5
+   iconst                 1
+   istore                 6
+   iload                  0
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL22
+   jump                   LABEL29
+LABEL22:
+   iconst                 0
+   iload                  5
+   iconst                 0
+   clearbit              
+   istore                 5
+   istore                 6
+   jump                   LABEL37
+LABEL29:
+   iload                  0
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL35
+   jump                   LABEL37
+LABEL35:
+   iconst                 0
+   istore                 6
+LABEL37:
+   iconst                 2
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 608
+   iconst                 0
+   216                   
+   pop_int               
+LABEL45:
+   213                    1
+   iconst                 1
+   if_icmpeq              LABEL49
+   jump                   LABEL54
+LABEL49:
+   iconst                 2357
+   iload                  5
+   iconst                 0
+   1704                   1
+   jump                   LABEL45
+LABEL54:
+   iconst                 2
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 600
+   iconst                 0
+   216                   
+   istore                 7
+   215                   
+   ostore                 1
+   iconst                 0
+   istore                 8
+   iconst                 -1
+   istore                 9
+LABEL68:
+   iload                  8
+   oload                  1
+   8003                  
+   if_icmplt              LABEL73
+   jump                   LABEL101
+LABEL73:
+   iload                  2
+   iload                  8
+   get_array_int          1
+   cc_find               
+   pop_int               
+   iconst                 2370
+   1703                  
+   get_array_int         
+   istore                 9
+   iconst                 2363
+   iload                  9
+   iconst                 0
+   1704                  
+   iload                  8
+   iload                  7
+   iconst                 2364
+   iload                  2
+   iload                  9
+   get_array_int          1
+   2703                  
+   iload                  6
+   iload                  1
+   invoke                 8435
+   iload                  8
+   iconst                 1
+   add                   
+   istore                 8
+   jump                   LABEL68
+LABEL101:
+   iconst                 0
+   iconst                 1
+   setbit                
+   istore                 10
+   iconst                 2368
+   iload                  2
+   iload                  3
+   2703                  
+   istore                 11
+   iload                  2
+   iconst                 2365
+   iconst                 202
+   iconst                 2368
+   iload                  11
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL121
+   jump                   LABEL146
+LABEL121:
+   iload                  0
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL127
+   jump                   LABEL131
+LABEL127:
+   iload                  10
+   iconst                 0
+   setbit                
+   istore                 10
+LABEL131:
+   iload                  0
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL137
+   jump                   LABEL141
+LABEL137:
+   iload                  10
+   iconst                 2
+   setbit                
+   istore                 10
+LABEL141:
+   iconst                 2357
+   iload                  10
+   iconst                 0
+   1704                  
+   invoke                 8420
+LABEL146:
+   return                

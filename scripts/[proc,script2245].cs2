@@ -55,10 +55,16 @@ switch_int ($int2) {
 		return("<tostring($int5)><tostring($int4)><tostring($int3)>");
 	case 1 :
 		return(db_getfield($dbrow0, quest:sortname, 0));
-	case 11 :
-		return("<tostring(calc(10000 + db_getfield($dbrow0, quest:seriesno, 0)))><db_getfield($dbrow0, quest:sortname, 0)>");
 	case 12 :
+		return("<tostring(calc(10000 + db_getfield($dbrow0, quest:seriesno, 0)))><db_getfield($dbrow0, quest:sortname, 0)>");
+	case 13 :
 		return(tostring(calc(10000 + db_getfield($dbrow0, quest:id, 0))));
+	case 11 :
+		$int3 = db_getfield($dbrow0, quest:ftue_starter, 0);
+		if ($int3 < 0) {
+			return("**********");
+		}
+		return(tostring($int3));
 	case default :
 		return("");
 }

@@ -1,0 +1,141 @@
+java.lang.IllegalStateException: Opcode 210 in script 8427 not implemented
+
+.id                       8427
+.int_arg_count            2
+.obj_arg_count            1
+   iconst                 0
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 60817427
+   iconst                 2365
+   iconst                 200
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL117
+LABEL15:
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL21
+   jump                   LABEL31
+LABEL21:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL27
+   jump                   LABEL31
+LABEL27:
+   iload                  2
+   iconst                 0
+   setbit                
+   istore                 2
+LABEL31:
+   iload                  2
+   iconst                 2
+   setbit                
+   istore                 3
+   iconst                 2
+   212                   
+   pop_int               
+   iconst                 2365
+   iconst                 506
+   iconst                 0
+   216                   
+   pop_int               
+LABEL43:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL47
+   jump                   LABEL77
+LABEL47:
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL53
+   jump                   LABEL71
+LABEL53:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL59
+   jump                   LABEL71
+LABEL59:
+   iconst                 2370
+   1703                  
+   get_array_int         
+   iconst                 2371
+   1703                  
+   if_icmpeq              LABEL66
+   jump                   LABEL71
+LABEL66:
+   iconst                 2357
+   iload                  3
+   iconst                 0
+   1704                  
+   jump                   LABEL75
+LABEL71:
+   iconst                 2357
+   iload                  2
+   iconst                 0
+   1704                  
+LABEL75:
+   invoke                 8420
+   jump                   LABEL43
+LABEL77:
+   iconst                 0
+   iconst                 1
+   setbit                
+   istore                 2
+   iconst                 60817427
+   iconst                 2365
+   iconst                 202
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL92
+   jump                   LABEL117
+LABEL92:
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL98
+   jump                   LABEL102
+LABEL98:
+   iload                  2
+   iconst                 0
+   setbit                
+   istore                 2
+LABEL102:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL108
+   jump                   LABEL112
+LABEL108:
+   iload                  2
+   iconst                 2
+   setbit                
+   istore                 2
+LABEL112:
+   iconst                 2357
+   iload                  2
+   iconst                 0
+   1704                  
+   invoke                 8420
+LABEL117:
+   return                

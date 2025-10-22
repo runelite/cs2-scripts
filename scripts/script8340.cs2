@@ -1,0 +1,66 @@
+java.lang.IllegalStateException: Opcode 2929 in script 8340 not implemented
+
+.id                       8340
+.int_arg_count            0
+.obj_arg_count            0
+   get_varbit             18126
+   iconst                 5
+   if_icmpeq              LABEL4
+   jump                   LABEL9
+LABEL4:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL55
+LABEL9:
+   get_varbit             18126
+   iconst                 4
+   if_icmpeq              LABEL13
+   jump                   LABEL46
+LABEL13:
+   sconst                 "Your vote has not yet been submitted!"
+   sconst                 "<br>"
+   sconst                 "Are you sure you wish to leave?"
+   sconst                 "<br>"
+   sconst                 "<br>"
+   sconst                 "Your choices will be lost if you "
+   sconst                 "<col=ffffff>"
+   sconst                 "leave"
+   sconst                 "</col>"
+   sconst                 "<br>"
+   sconst                 "or "
+   sconst                 "<col=ffffff>"
+   sconst                 "log out"
+   sconst                 "</col>"
+   sconst                 " before submitting them."
+   join_string            15
+   iconst                 -1
+   iconst                 -1
+   sconst                 "<col=0dc10d>"
+   sconst                 "Stay"
+   sconst                 "</col>"
+   join_string            3
+   sconst                 "<col=ff0000>"
+   sconst                 "Leave"
+   sconst                 "</col>"
+   join_string            3
+   invoke                 8392
+   pop_int               
+   iconst                 8341
+   sconst                 ""
+   iconst                 60817442
+   if_setonop            
+   jump                   LABEL55
+LABEL46:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   iconst                 1086024184
+   iconst                 60817425
+   iconst                 -1
+   sconst                 ""
+   2929                  
+LABEL55:
+   return                

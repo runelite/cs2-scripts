@@ -1,0 +1,227 @@
+// 8326
+[clientscript,script8326](dbrow $dbrow0, int $setposh1, int $int2, int $int3, int $int4)
+def_int $comsubid5 = %varcint43;
+cc_create(ballot:list_filters, 0, ~script8363, false);
+cc_setsize($int2, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(calc($int3 * ($int2 + 5)), 0, $setposh1, ^setpos_abs_centre);
+cc_setopbase("<col=ff9040><db_getfield($dbrow0, poll_filters:opbase, 0)></col>");
+cc_setonop("script8327(event_com, event_comsubid, %varcint43, $dbrow0, $int4)");
+if ($int4 = 1) {
+	cc_setop(1, "Show");
+	~script8397(
+		0 = miscgraphics_buttontile_nw_red, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_nc_red, 
+		1 = 6, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 12, 
+		6 = 6, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_ne_red, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_cw_red, 
+		1 = 0, 
+		2 = 6, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 12, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_cc_red, 
+		1 = 6, 
+		2 = 6, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 12, 
+		6 = 12, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_ce_red, 
+		1 = 0, 
+		2 = 6, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 12, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_sw_red, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_bottom, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_sc_red, 
+		1 = 6, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_bottom, 
+		5 = 12, 
+		6 = 6, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_se_red, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_bottom, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+} else {
+	cc_setop(1, "Hide");
+	~script8397(
+		0 = miscgraphics_buttontile_nw_grey, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_nc_grey, 
+		1 = 6, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 12, 
+		6 = 6, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_ne_grey, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_cw_grey, 
+		1 = 0, 
+		2 = 6, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 12, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_cc_grey, 
+		1 = 6, 
+		2 = 6, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_top, 
+		5 = 12, 
+		6 = 12, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_ce_grey, 
+		1 = 0, 
+		2 = 6, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_top, 
+		5 = 6, 
+		6 = 12, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_minus
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_sw_grey, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_bottom, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_sc_grey, 
+		1 = 6, 
+		2 = 0, 
+		3 = ^setpos_abs_left, 
+		4 = ^setpos_abs_bottom, 
+		5 = 12, 
+		6 = 6, 
+		7 = ^setsize_minus, 
+		8 = ^setsize_abs
+	);
+	~script8398(
+		0 = miscgraphics_buttontile_se_grey, 
+		1 = 0, 
+		2 = 0, 
+		3 = ^setpos_abs_right, 
+		4 = ^setpos_abs_bottom, 
+		5 = 6, 
+		6 = 6, 
+		7 = ^setsize_abs, 
+		8 = ^setsize_abs
+	);
+}
+~script8398(
+	0 = db_getfield($dbrow0, poll_filters:icon, 0), 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_centre, 
+	4 = ^setpos_abs_centre, 
+	5 = 30, 
+	6 = 35, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_abs
+);
+cc_settrans(0);
+if (~on_mobile = false & .cc_find(ballot:list_filters, $comsubid5) = ^true) {
+	.cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 100, null)");
+	.cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
+}

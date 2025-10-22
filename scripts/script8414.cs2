@@ -1,0 +1,61 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8414 not implemented
+
+.id                       8414
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 5
+   invoke                 8363
+   106                   
+   iload                  0
+   iconst                 3
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL9
+   jump                   LABEL14
+LABEL9:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+LABEL14:
+   iload                  0
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL20
+   jump                   LABEL26
+LABEL20:
+   iconst                 16
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   jump                   LABEL31
+LABEL26:
+   iconst                 17
+   iconst                 17
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+LABEL31:
+   iconst                 3
+   invoke                 8363
+   107                   
+   iconst                 255
+   cc_settrans           
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 2357
+   iload                  0
+   iconst                 0
+   1704                  
+   invoke                 8420
+   return                

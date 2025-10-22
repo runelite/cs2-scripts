@@ -1,0 +1,298 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8354 not implemented
+
+.id                       8354
+.int_arg_count            1
+.obj_arg_count            0
+   cc_getlayer           
+   istore                 1
+   cc_getid              
+   istore                 2
+   iconst                 2362
+   1703                  
+   istore                 3
+   iload                  3
+   iconst                 0
+   testbit               
+   invoke                 633
+   istore                 4
+   iload                  0
+   iconst                 100
+   iconst                 100
+   iconst                 35
+   sub                   
+   scale                 
+   istore                 5
+   iconst                 2
+   iload                  1
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 500
+   iconst                 0
+   216                   
+   istore                 6
+   iload                  5
+   iload                  6
+   div                   
+   istore                 7
+   iload                  7
+   iconst                 1
+   sub                   
+   istore                 8
+   iload                  8
+   iconst                 2
+   iconst                 2
+   multiply              
+   sub                   
+   istore                 9
+   iload                  0
+   iload                  7
+   iload                  6
+   multiply              
+   sub                   
+   istore                 10
+   iload                  10
+   iconst                 2
+   iconst                 2
+   multiply              
+   sub                   
+   istore                 11
+   iconst                 1
+   istore                 12
+LABEL57:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL61
+   jump                   LABEL69
+LABEL61:
+   iload                  12
+   invoke                 8355
+   iload                  9
+   iconst                 494
+   paraheight            
+   4017                  
+   istore                 12
+   jump                   LABEL57
+LABEL69:
+   iload                  12
+   iconst                 13
+   multiply              
+   istore                 13
+   iload                  13
+   iconst                 2
+   iconst                 2
+   multiply              
+   add                   
+   istore                 14
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 15
+   iconst                 2
+   iload                  1
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 500
+   iconst                 0
+   216                   
+   pop_int               
+LABEL93:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL97
+   jump                   LABEL112
+LABEL97:
+   iload                  15
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  8
+   iload                  14
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  15
+   iload                  7
+   add                   
+   istore                 15
+   jump                   LABEL93
+LABEL112:
+   iconst                 2
+   iload                  1
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 502
+   iconst                 0
+   216                   
+   pop_int               
+   215                   
+   ostore                 0
+   iconst                 1
+   istore                 16
+   iload                  4
+   iconst                 1
+   if_icmpeq              LABEL130
+   jump                   LABEL132
+LABEL130:
+   iconst                 2
+   istore                 16
+LABEL132:
+   iload                  14
+   istore                 17
+   iconst                 0
+   istore                 18
+   iconst                 -1
+   istore                 19
+LABEL138:
+   iload                  18
+   oload                  0
+   8003                  
+   if_icmplt              LABEL143
+   jump                   LABEL226
+LABEL143:
+   iload                  17
+   iconst                 1
+   add                   
+   istore                 17
+   iload                  1
+   iload                  18
+   get_array_int         
+   cc_find               
+   pop_int               
+   iload                  16
+   invoke                 8355
+   iload                  11
+   iconst                 494
+   paraheight            
+   4017                  
+   istore                 19
+   iload                  19
+   iconst                 15
+   multiply              
+   istore                 13
+   iload                  13
+   iconst                 2
+   iconst                 2
+   multiply              
+   add                   
+   istore                 14
+   iconst                 0
+   iload                  17
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  10
+   iload                  14
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 2
+   iload                  1
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 504
+   iconst                 0
+   216                   
+   pop_int               
+   iconst                 2370
+   iload                  18
+   iconst                 0
+   216                   
+   pop_int               
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 15
+LABEL198:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL202
+   jump                   LABEL217
+LABEL202:
+   iload                  15
+   iload                  17
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  8
+   iload                  14
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  15
+   iload                  7
+   add                   
+   istore                 15
+   jump                   LABEL198
+LABEL217:
+   iload                  17
+   iload                  14
+   add                   
+   iload                  18
+   iconst                 1
+   add                   
+   istore                 18
+   istore                 17
+   jump                   LABEL138
+LABEL226:
+   iload                  3
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL232
+   jump                   LABEL270
+LABEL232:
+   iload                  17
+   iconst                 4
+   add                   
+   istore                 17
+   iconst                 1
+   iload                  1
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 350
+   iconst                 0
+   216                   
+   pop_int               
+LABEL246:
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL250
+   jump                   LABEL268
+LABEL250:
+   iload                  0
+   invoke                 8416
+   istore                 14
+   iconst                 0
+   iload                  17
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iload                  14
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  17
+   iload                  14
+   add                   
+   istore                 17
+   jump                   LABEL246
+LABEL268:
+   204                   
+   pop_int               
+LABEL270:
+   iload                  17
+   return                
+   iconst                 0
+   return                

@@ -1,0 +1,29 @@
+java.lang.IllegalStateException: Opcode 8011 in script 8389 not implemented
+
+.id                       8389
+.int_arg_count            4
+.obj_arg_count            0
+   iload                  0
+   iconst                 0
+   if_icmpne              LABEL4
+   jump                   LABEL11
+LABEL4:
+   iload                  0
+   invoke                 8390
+   iload                  1
+   iload                  2
+   iload                  3
+   invoke                 8564
+   return                
+LABEL11:
+   iload                  1
+   define_array           105
+   oload                  0
+   iconst                 0
+   iconst                 0
+   iconst                 -1
+   8011                  
+   oload                  0
+   return                
+   push_null             
+   return                

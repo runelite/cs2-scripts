@@ -1,0 +1,45 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8447 not implemented
+
+.id                       8447
+.int_arg_count            0
+.obj_arg_count            0
+   iconst                 2368
+   1703                  
+   istore                 0
+   iconst                 2362
+   1703                  
+   iconst                 4
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL10
+   jump                   LABEL36
+LABEL10:
+   iconst                 2362
+   iconst                 2362
+   1703                  
+   iconst                 4
+   clearbit              
+   iconst                 0
+   1704                  
+   cc_getlayer           
+   iconst                 2365
+   iconst                 400
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL28
+   jump                   LABEL36
+LABEL28:
+   iconst                 -880770536
+   iconst                 60817431
+   iconst                 -1
+   iload                  0
+   iconst                 0
+   cc_gettext            
+   sconst                 "iis"
+   2929                  
+LABEL36:
+   return                

@@ -1,0 +1,17 @@
+// 8469
+[proc,script8469](int $int0)(obj, int, int)
+switch_int ($int0) {
+	case 0 :
+		return(%varcint1277, %varcint1278, %varcint1279);
+	case 1 :
+		return(%varcint1280, %varcint1281, %varcint1282);
+	case 2 :
+		return(%varcint1283, %varcint1284, %varcint1285);
+	case 3 :
+		return(%varcint1286, %varcint1287, %varcint1288);
+	case 4 :
+		return(%varcint1289, %varcint1290, %varcint1291);
+	case default :
+		~debug_mes_error("IH", "Invalid index passed to inv_highlight_get_tracked_item_data: <tostring($int0)>");
+		return(null, -1, 0);
+}

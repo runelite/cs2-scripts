@@ -350,9 +350,9 @@ if (testbit($int2, 15) = ^true & $int24 = 1 & $component39 ! null & if_hassub($c
 		$int17 = calc($int17 + 35);
 	} else if ($setposh27 = ^setpos_abs_centre) {
 		if ($setposv4 = ^setpos_abs_bottom) {
-			$int31 = ~script4738($component1, $int15, calc(0 - $int17), stat_boosts_hud:content, ~script4735($component39));
+			$int31 = ~script4738($component1, $int15, calc(0 - $int17), stat_boosts_hud:content, ~script8452($component39));
 		} else {
-			$int31 = ~script4738($component1, $int15, $int14, stat_boosts_hud:content, ~script4735($component39));
+			$int31 = ~script4738($component1, $int15, $int14, stat_boosts_hud:content, ~script8452($component39));
 		}
 		if ($int31 = 1) {
 			$int17 = calc($int17 + 35);
@@ -396,7 +396,7 @@ if (testbit($int2, 11) = ^true & $component39 ! null & if_hassub($component39) =
 if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = ^true & if_gethide(%varcint490) = false) {
 	$int40 = setbit($int40, 17);
 	$int41 = if_getheight(%varcint490);
-	$int37 = ~script2372(%varcint490);
+	$int37 = ~script8451(%varcint490);
 	if (%varcint525 = ^setpos_abs_left & $setposh27 = ^setpos_abs_left | %varcint525 = ^setpos_abs_right & $setposh27 = ^setpos_abs_right | %varcint525 = ^setpos_abs_centre & $setposh27 = ^setpos_abs_centre) {
 		$int14 = calc($int14 + $int41);
 		$int14 = calc($int14 + 2);

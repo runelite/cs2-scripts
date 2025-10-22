@@ -1,0 +1,61 @@
+java.lang.IllegalStateException: Opcode 210 in script 8350 not implemented
+
+.id                       8350
+.int_arg_count            4
+.obj_arg_count            5
+   iconst                 0
+   istore                 4
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL6
+   jump                   LABEL10
+LABEL6:
+   iload                  4
+   iconst                 1
+   setbit                
+   istore                 4
+LABEL10:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL14
+   jump                   LABEL18
+LABEL14:
+   iload                  4
+   iconst                 0
+   setbit                
+   istore                 4
+LABEL18:
+   iconst                 60817423
+   iconst                 2365
+   iconst                 200
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   iconst                 0
+   210                   
+   iconst                 1
+   if_icmpeq              LABEL29
+   jump                   LABEL47
+LABEL29:
+   iconst                 2369
+   iconst                 4
+   iconst                 0
+   1704                  
+   iconst                 2362
+   iload                  4
+   iconst                 0
+   1704                  
+   iload                  0
+   iload                  1
+   oload                  0
+   oload                  1
+   oload                  2
+   oload                  3
+   iload                  2
+   oload                  4
+   iload                  3
+   invoke                 8351
+LABEL47:
+   iload                  0
+   invoke                 8384
+   return                

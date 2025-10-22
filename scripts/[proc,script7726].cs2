@@ -1,6 +1,6 @@
 // 7726
 [proc,script7726](component $component0, int $int1, graphic $graphic2, int $int3, int $int4, int $int5, string $string0)(int)
-$int1 = ~script7773(
+$int1 = ~create_graphic(
 	0 = $component0, 
 	1 = $int1, 
 	2 = $graphic2, 
@@ -15,7 +15,7 @@ $int1 = ~script7773(
 );
 if ($int5 > 0) {
 	~script7739("<$string0> mastery progress: <tostring($int5)>");
-	$int1 = ~script7773(
+	$int1 = ~create_graphic(
 		0 = $component0, 
 		1 = $int1, 
 		2 = enum(int, graphic, enum_5696, $int5), 

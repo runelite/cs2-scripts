@@ -1,0 +1,267 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8420 not implemented
+
+.id                       8420
+.int_arg_count            0
+.obj_arg_count            0
+   iconst                 0
+   istore                 0
+   iconst                 16750623
+   istore                 1
+   iconst                 16750623
+   istore                 2
+   iconst                 2365
+   1703                  
+   switch                
+      202: LABEL10
+      301: LABEL31
+      506: LABEL71
+   jump                   LABEL117
+LABEL10:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL17
+   jump                   LABEL24
+LABEL17:
+   iconst                 1
+   iconst                 11513775
+   iconst                 11513775
+   istore                 2
+   istore                 1
+   istore                 0
+   jump                   LABEL30
+LABEL24:
+   iconst                 1
+   iconst                 8421504
+   iconst                 8421504
+   istore                 2
+   istore                 1
+   istore                 0
+LABEL30:
+   jump                   LABEL117
+LABEL31:
+   iconst                 2370
+   1703                  
+   iconst                 -1
+   if_icmpeq              LABEL36
+   jump                   LABEL57
+LABEL36:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL43
+   jump                   LABEL50
+LABEL43:
+   iconst                 1
+   iconst                 11513775
+   iconst                 11513775
+   istore                 2
+   istore                 1
+   istore                 0
+   jump                   LABEL56
+LABEL50:
+   iconst                 1
+   iconst                 8421504
+   iconst                 8421504
+   istore                 2
+   istore                 1
+   istore                 0
+LABEL56:
+   jump                   LABEL70
+LABEL57:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL64
+   jump                   LABEL70
+LABEL64:
+   iconst                 0
+   iconst                 8421504
+   iconst                 8421504
+   istore                 2
+   istore                 1
+   istore                 0
+LABEL70:
+   jump                   LABEL117
+LABEL71:
+   iconst                 2371
+   1703                  
+   iconst                 -1
+   if_icmpeq              LABEL76
+   jump                   LABEL97
+LABEL76:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL83
+   jump                   LABEL90
+LABEL83:
+   iconst                 1
+   iconst                 16750623
+   iconst                 11513775
+   istore                 2
+   istore                 1
+   istore                 0
+   jump                   LABEL96
+LABEL90:
+   iconst                 1
+   iconst                 8421504
+   iconst                 8421504
+   istore                 2
+   istore                 1
+   istore                 0
+LABEL96:
+   jump                   LABEL117
+LABEL97:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL104
+   jump                   LABEL111
+LABEL104:
+   iconst                 0
+   iconst                 16750623
+   iconst                 16750623
+   istore                 2
+   istore                 1
+   istore                 0
+   jump                   LABEL117
+LABEL111:
+   iconst                 0
+   iconst                 8421504
+   iconst                 8421504
+   istore                 2
+   istore                 1
+   istore                 0
+LABEL117:
+   iconst                 2357
+   1703                  
+   istore                 3
+   cc_getlayer           
+   cc_getid              
+   iconst                 1
+   sub                   
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL128
+   jump                   LABEL179
+LABEL128:
+   iload                  3
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL134
+   jump                   LABEL165
+LABEL134:
+   iload                  3
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL140
+   jump                   LABEL159
+LABEL140:
+   iconst                 1220
+   cc_setgraphic          1
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL146
+   jump                   LABEL155
+LABEL146:
+   iconst                 2365
+   1703                  
+   iconst                 202
+   if_icmpne              LABEL151
+   jump                   LABEL155
+LABEL151:
+   iconst                 1
+   sconst                 "Select"
+   cc_setop              
+   jump                   LABEL158
+LABEL155:
+   iconst                 1
+   sconst                 "De-select"
+   cc_setop              
+LABEL158:
+   jump                   LABEL164
+LABEL159:
+   iconst                 1218
+   cc_setgraphic          1
+   iconst                 1
+   sconst                 "Select"
+   cc_setop              
+LABEL164:
+   jump                   LABEL179
+LABEL165:
+   iload                  3
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL171
+   jump                   LABEL174
+LABEL171:
+   iconst                 1213
+   cc_setgraphic          1
+   jump                   LABEL176
+LABEL174:
+   iconst                 1211
+   cc_setgraphic          1
+LABEL176:
+   iconst                 1
+   sconst                 "Select"
+   cc_setop              
+LABEL179:
+   iconst                 2359
+   1703                  
+   istore                 4
+   iload                  4
+   iconst                 -1
+   if_icmpne              LABEL186
+   jump                   LABEL198
+LABEL186:
+   cc_getlayer           
+   iload                  4
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL192
+   jump                   LABEL198
+LABEL192:
+   iload                  1
+   cc_setcolour           1
+   iconst                 2361
+   iload                  1
+   iconst                 0
+   1704                   1
+LABEL198:
+   iconst                 2360
+   1703                  
+   istore                 4
+   iload                  4
+   iconst                 -1
+   if_icmpne              LABEL205
+   jump                   LABEL217
+LABEL205:
+   cc_getlayer           
+   iload                  4
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL211
+   jump                   LABEL217
+LABEL211:
+   iload                  2
+   cc_setcolour           1
+   iconst                 2361
+   iload                  2
+   iconst                 0
+   1704                   1
+LABEL217:
+   return                

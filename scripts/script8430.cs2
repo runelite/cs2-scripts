@@ -1,0 +1,611 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8430 not implemented
+
+.id                       8430
+.int_arg_count            4
+.obj_arg_count            2
+   cc_getid              
+   istore                 4
+   oload                  0
+   8003                  
+   istore                 5
+   iconst                 1
+   istore                 6
+   iconst                 0
+   iconst                 0
+   setbit                
+   istore                 7
+   iload                  7
+   iconst                 1
+   setbit                
+   istore                 8
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL21
+   jump                   LABEL32
+LABEL21:
+   iconst                 0
+   istore                 6
+   iload                  7
+   iconst                 0
+   clearbit              
+   istore                 7
+   iload                  8
+   iconst                 0
+   clearbit              
+   istore                 8
+   jump                   LABEL48
+LABEL32:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL38
+   jump                   LABEL48
+LABEL38:
+   iconst                 0
+   istore                 6
+   iload                  7
+   iconst                 0
+   clearbit              
+   istore                 7
+   iload                  8
+   iconst                 2
+   setbit                
+   istore                 8
+LABEL48:
+   iconst                 -1
+   istore                 9
+   iconst                 0
+   istore                 10
+   iconst                 -1
+   istore                 11
+   iconst                 0
+   istore                 12
+LABEL56:
+   iload                  10
+   iload                  5
+   if_icmplt              LABEL60
+   jump                   LABEL442
+LABEL60:
+   iconst                 0
+   invoke                 8363
+   106                   
+   iconst                 0
+   iconst                 24
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 2365
+   iconst                 600
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 2364
+   iload                  10
+   get_array_int          1
+   iconst                 2
+   1704                  
+   iconst                 2363
+   iload                  10
+   get_array_int         
+   iconst                 0
+   1704                  
+   iconst                 3
+   invoke                 8363
+   106                   
+   iconst                 2365
+   iconst                 605
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 2363
+   iload                  10
+   get_array_int         
+   iconst                 0
+   1704                  
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 7496785
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 4
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 601
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 5
+   iconst                 7
+   add                   
+   iconst                 5
+   add                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 5
+   iconst                 3
+   multiply              
+   iconst                 24
+   iconst                 2
+   multiply              
+   add                   
+   iconst                 7
+   add                   
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 1
+   iconst                 24
+   cc_settextalign       
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   cc_getid              
+   istore                 11
+   iload                  2
+   iload                  10
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL160
+   jump                   LABEL179
+LABEL160:
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 5
+   iconst                 1
+   sub                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 7
+   iconst                 11
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 2148
+   cc_setgraphic         
+   iconst                 0
+   cc_settrans           
+LABEL179:
+   iload                  10
+   iconst                 0
+   if_icmpgt              LABEL183
+   jump                   LABEL269
+LABEL183:
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 602
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 24
+   iconst                 4
+   add                   
+   iconst                 4
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iconst                 16
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 4734
+   cc_setgraphic         
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 604
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 24
+   iconst                 0
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iconst                 24
+   iconst                 24
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 255
+   cc_settrans           
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 2357
+   iload                  7
+   iconst                 0
+   1704                  
+   iconst                 2359
+   iload                  11
+   iconst                 0
+   1704                  
+   iconst                 1
+   sconst                 "Move up"
+   cc_setop              
+   iconst                 8436
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   iload                  10
+   iconst                 1
+   sub                   
+   iload                  10
+   iload                  2
+   sconst                 "iiiiii"
+   cc_setonop            
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 16777215
+   sconst                 "iii"
+   cc_setonmouserepeat   
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 -1
+   sconst                 "iii"
+   cc_setonmouseleave    
+LABEL269:
+   iload                  10
+   iload                  5
+   iconst                 1
+   sub                   
+   if_icmplt              LABEL275
+   jump                   LABEL359
+LABEL275:
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 603
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 4
+   iconst                 4
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iconst                 16
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 4736
+   cc_setgraphic         
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 604
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 0
+   iconst                 0
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iconst                 24
+   iconst                 24
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 255
+   cc_settrans           
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 2357
+   iload                  7
+   iconst                 0
+   1704                  
+   iconst                 2359
+   iload                  11
+   iconst                 0
+   1704                  
+   iconst                 1
+   sconst                 "Move down"
+   cc_setop              
+   iconst                 8436
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   iload                  10
+   iload                  10
+   iconst                 1
+   add                   
+   iload                  2
+   sconst                 "iiiiii"
+   cc_setonop            
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 16777215
+   sconst                 "iii"
+   cc_setonmouserepeat   
+   iconst                 8421
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 -1
+   sconst                 "iii"
+   cc_setonmouseleave    
+LABEL359:
+   204                   
+   pop_int               
+   iload                  10
+   iload                  5
+   iload                  10
+   get_array_int         
+   get_array_int          1
+   iload                  6
+   iload                  2
+   invoke                 8435
+   204                   
+   pop_int               
+   iload                  2
+   iload                  10
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL377
+   jump                   LABEL437
+LABEL377:
+   iconst                 3
+   invoke                 8363
+   106                   
+   iconst                 0
+   iload                  10
+   iconst                 24
+   multiply              
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 24
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 255
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   cc_getlayer           
+   iload                  4
+   cc_setdraggable       
+   iconst                 1
+   cc_setdraggablebehavior
+   iconst                 5
+   cc_setdragdeadzone    
+   iconst                 5
+   cc_setdragdeadtime    
+   iconst                 8431
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 -2147483647
+   iconst                 -2147483646
+   cc_gety               
+   iconst                 0
+   iload                  10
+   iload                  0
+   iload                  2
+   sconst                 "iiiiiiiii"
+   cc_setondrag          
+   iconst                 2365
+   iconst                 608
+   iconst                 0
+   1704                  
+   iconst                 2370
+   iload                  10
+   iconst                 0
+   1704                  
+   iconst                 2359
+   iload                  11
+   iconst                 0
+   1704                  
+   iconst                 2357
+   iload                  7
+   iconst                 0
+   1704                  
+   204                   
+   pop_int               
+LABEL437:
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL56
+LABEL442:
+   iconst                 0
+   invoke                 8363
+   106                   
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 24
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 2365
+   iconst                 606
+   iconst                 0
+   1704                  
+   iconst                 5
+   invoke                 8363
+   106                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 297
+   cc_setgraphic         
+   iconst                 1
+   cc_settiling          
+   iconst                 0
+   cc_settrans           
+   iconst                 3
+   invoke                 8363
+   107                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 7496785
+   cc_setcolour          
+   iconst                 170
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   iconst                 4
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 601
+   iconst                 0
+   1704                  
+   iconst                 5
+   iconst                 7
+   add                   
+   iconst                 5
+   add                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 5
+   iconst                 3
+   multiply              
+   iconst                 24
+   iconst                 2
+   multiply              
+   add                   
+   iconst                 7
+   add                   
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 1
+   iconst                 24
+   cc_settextalign       
+   iconst                 495
+   cc_settextfont        
+   iconst                 16750623
+   cc_setcolour          
+   iconst                 1
+   cc_settextshadow      
+   iconst                 2365
+   iconst                 607
+   iconst                 0
+   1704                  
+   iconst                 5
+   invoke                 8363
+   107                   
+   iconst                 5
+   iconst                 1
+   sub                   
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   cc_setposition        
+   iconst                 7
+   iconst                 11
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 2148
+   cc_setgraphic         
+   iconst                 100
+   cc_settrans           
+   204                   
+   pop_int               
+   iconst                 1
+   cc_sethide            
+   204                   
+   pop_int               
+   iload                  3
+   iconst                 1
+   if_icmpeq              LABEL559
+   jump                   LABEL588
+LABEL559:
+   iconst                 0
+   invoke                 8363
+   106                   
+   iconst                 2365
+   iconst                 201
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iload                  8
+   sconst                 "Skip question"
+   iconst                 1
+   invoke                 8415
+   iconst                 2365
+   iconst                 202
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 8438
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   sconst                 "iii"
+   cc_setonop            
+LABEL588:
+   return                

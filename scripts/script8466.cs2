@@ -1,0 +1,184 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       8466
+.int_arg_count            0
+.obj_arg_count            0
+   invoke                 8468
+   ostore                 0
+   oload                  0
+   8003                  
+   oload                  0
+   iconst                 -1
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8007                  
+   sub                   
+   istore                 0
+   iconst                 5
+   define_array           65585
+   iconst                 -1
+   istore                 1
+   iconst                 -1
+   istore                 2
+   iconst                 -1
+   istore                 3
+   iconst                 93
+   inv_size              
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 -1
+   istore                 6
+   iconst                 -1
+   istore                 7
+   iconst                 9764864
+   istore                 8
+   iconst                 5570560
+   iconst                 10551370
+   invoke                 8305
+   iconst                 1
+   if_icmpeq              LABEL37
+   jump                   LABEL44
+LABEL37:
+   iconst                 5570560
+   invoke                 8307
+   iconst                 0
+   if_icmpeq              LABEL42
+   jump                   LABEL44
+LABEL42:
+   iconst                 5570560
+   istore                 8
+LABEL44:
+   iload                  5
+   iload                  4
+   if_icmplt              LABEL48
+   jump                   LABEL90
+LABEL48:
+   iconst                 93
+   iload                  5
+   inv_getobj            
+   istore                 6
+   iload                  6
+   iconst                 -1
+   if_icmpne              LABEL56
+   jump                   LABEL85
+LABEL56:
+   oload                  0
+   iload                  6
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   8005                  
+   istore                 7
+   iload                  7
+   iconst                 -1
+   if_icmpne              LABEL67
+   jump                   LABEL85
+LABEL67:
+   iload                  7
+   iconst                 -1
+   set_array_int         
+   iload                  7
+   iconst                 1
+   set_array_int          1
+   iload                  7
+   invoke                 8469
+   istore                 3
+   istore                 2
+   istore                 1
+   iconst                 1
+   iload                  7
+   iload                  8
+   iload                  5
+   iload                  2
+   iload                  3
+   invoke                 8477
+LABEL85:
+   iload                  5
+   iconst                 1
+   add                   
+   istore                 5
+   jump                   LABEL44
+LABEL90:
+   iconst                 0
+   istore                 7
+LABEL92:
+   iload                  7
+   iconst                 5
+   if_icmplt              LABEL96
+   jump                   LABEL107
+LABEL96:
+   iconst                 1
+   iload                  7
+   iload                  7
+   get_array_int          1
+   invoke                 7983
+   invoke                 8480
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL92
+LABEL107:
+   invoke                 8488
+   istore                 9
+   iload                  9
+   iconst                 -1
+   if_icmpne              LABEL113
+   jump                   LABEL158
+LABEL113:
+   iload                  0
+   iconst                 0
+   if_icmpgt              LABEL117
+   jump                   LABEL145
+LABEL117:
+   get_varc_int           1276
+   iconst                 0
+   if_icmplt              LABEL121
+   jump                   LABEL144
+LABEL121:
+   iload                  9
+   iconst                 3
+   iload                  9
+   invoke                 8490
+   iconst                 0
+   cc_create             
+   cc_getid              
+   set_varc_int           1276
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 255
+   cc_settrans           
+   iconst                 8467
+   iconst                 93
+   iconst                 1
+   sconst                 "Y"
+   cc_setoninvtransmit   
+   iconst                 8467
+   sconst                 ""
+   cc_setonsubchange     
+LABEL144:
+   jump                   LABEL158
+LABEL145:
+   get_varc_int           1276
+   iconst                 0
+   if_icmpge              LABEL149
+   jump                   LABEL158
+LABEL149:
+   iload                  9
+   get_varc_int           1276
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL155
+   jump                   LABEL156
+LABEL155:
+   cc_delete             
+LABEL156:
+   iconst                 -1
+   set_varc_int           1276
+LABEL158:
+   return                

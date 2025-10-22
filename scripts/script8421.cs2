@@ -1,0 +1,75 @@
+java.lang.IllegalStateException: Opcode 1703 in script 8421 not implemented
+
+.id                       8421
+.int_arg_count            3
+.obj_arg_count            0
+   iconst                 -1
+   istore                 3
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL8
+   jump                   LABEL57
+LABEL8:
+   iconst                 2357
+   1703                  
+   iconst                 0
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL57
+LABEL15:
+   iconst                 2359
+   1703                  
+   istore                 3
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL22
+   jump                   LABEL36
+LABEL22:
+   iload                  0
+   iload                  3
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL28
+   jump                   LABEL36
+LABEL28:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL32
+   jump                   LABEL35
+LABEL32:
+   iload                  2
+   cc_setcolour           1
+   jump                   LABEL36
+LABEL35:
+   invoke                 8422
+LABEL36:
+   iconst                 2360
+   1703                  
+   istore                 3
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL43
+   jump                   LABEL57
+LABEL43:
+   iload                  0
+   iload                  3
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL49
+   jump                   LABEL57
+LABEL49:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL53
+   jump                   LABEL56
+LABEL53:
+   iload                  2
+   cc_setcolour           1
+   jump                   LABEL57
+LABEL56:
+   invoke                 8422
+LABEL57:
+   return                

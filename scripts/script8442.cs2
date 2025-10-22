@@ -1,0 +1,204 @@
+java.lang.IllegalStateException: Opcode 1704 in script 8442 not implemented
+
+.id                       8442
+.int_arg_count            5
+.obj_arg_count            1
+   cc_getid              
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL10
+   jump                   LABEL21
+LABEL10:
+   iconst                 21
+   sconst                 "Skip"
+   iconst                 100
+   iconst                 495
+   parawidth             
+   add                   
+   istore                 6
+   iconst                 12
+   iload                  6
+   add                   
+   istore                 7
+LABEL21:
+   iconst                 3
+   invoke                 8363
+   106                   
+   iload                  7
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 1
+   cc_setfill            
+   iconst                 3616290
+   cc_setcolour          
+   iconst                 12
+   invoke                 8363
+   107                   
+   iconst                 2365
+   iconst                 400
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 4
+   iconst                 4
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 4
+   iconst                 2
+   multiply              
+   iload                  7
+   add                   
+   iconst                 4
+   iconst                 2
+   multiply              
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 16
+   cc_settextalign       
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 0
+   1133                  
+   iconst                 16777215
+   1134                  
+   iload                  3
+   1139                  
+   iload                  4
+   iconst                 1
+   if_icmpeq              LABEL80
+   jump                   LABEL83
+LABEL80:
+   iconst                 0
+   1145                  
+   jump                   LABEL85
+LABEL83:
+   iconst                 1
+   1145                  
+LABEL85:
+   oload                  0
+   cc_settext            
+   iconst                 8316
+   sconst                 ""
+   1438                  
+   iconst                 8444
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  5
+   sconst                 "iii"
+   1439                  
+   iconst                 8445
+   iconst                 -2147483645
+   iload                  5
+   sconst                 "ii"
+   1436                  
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL116
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL110
+   jump                   LABEL122
+LABEL110:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL116
+   jump                   LABEL122
+LABEL116:
+   iconst                 0
+   iload                  0
+   iload                  1
+   cc_getlayer           
+   cc_getid              
+   invoke                 8450
+LABEL122:
+   iconst                 0
+   iconst                 1
+   setbit                
+   istore                 8
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL130
+   jump                   LABEL184
+LABEL130:
+   iconst                 0
+   invoke                 8363
+   107                   
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL139
+   jump                   LABEL143
+LABEL139:
+   iload                  8
+   iconst                 0
+   setbit                
+   istore                 8
+LABEL143:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL149
+   jump                   LABEL153
+LABEL149:
+   iload                  8
+   iconst                 2
+   setbit                
+   istore                 8
+LABEL153:
+   iload                  8
+   sconst                 "Skip"
+   iconst                 1
+   invoke                 8415
+   iconst                 2365
+   iconst                 202
+   iconst                 0
+   1704                  
+   iconst                 2368
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 8446
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   sconst                 "iii"
+   cc_setonop            
+   204                   
+   pop_int               
+   iconst                 0
+   iconst                 0
+   iconst                 2
+   iconst                 0
+   cc_setposition        
+   iload                  6
+   iload                  6
+   invoke                 8416
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+LABEL184:
+   return                

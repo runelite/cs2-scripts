@@ -1,0 +1,89 @@
+java.lang.IllegalStateException: Opcode 211 in script 8449 not implemented
+
+.id                       8449
+.int_arg_count            2
+.obj_arg_count            1
+   cc_getid              
+   istore                 2
+   iconst                 1
+   istore                 3
+   iconst                 0
+   iconst                 1
+   setbit                
+   istore                 4
+   iload                  1
+   iconst                 2
+   testbit               
+   iconst                 0
+   if_icmpeq              LABEL14
+   jump                   LABEL19
+LABEL14:
+   iload                  4
+   iconst                 0
+   setbit                
+   istore                 4
+   jump                   LABEL21
+LABEL19:
+   iconst                 0
+   istore                 3
+LABEL21:
+   iload                  1
+   iconst                 1
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL27
+   jump                   LABEL33
+LABEL27:
+   iload                  4
+   iconst                 2
+   setbit                
+   istore                 4
+   iconst                 0
+   istore                 3
+LABEL33:
+   iconst                 2
+   cc_getlayer           
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 400
+   iconst                 0
+   216                   
+   pop_int               
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL47
+   jump                   LABEL55
+LABEL47:
+   oload                  0
+   cc_settext            
+   iload                  3
+   iload                  0
+   iload                  1
+   cc_getlayer           
+   cc_getid              
+   invoke                 8450
+LABEL55:
+   iconst                 2
+   cc_getlayer           
+   iload                  2
+   211                   
+   pop_int               
+   iconst                 2365
+   iconst                 202
+   iconst                 0
+   216                   
+   pop_int               
+   213                   
+   iconst                 1
+   if_icmpeq              LABEL69
+   jump                   LABEL74
+LABEL69:
+   iconst                 2357
+   iload                  4
+   iconst                 0
+   1704                  
+   invoke                 8420
+LABEL74:
+   return                

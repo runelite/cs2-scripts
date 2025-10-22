@@ -1,0 +1,89 @@
+java.lang.IllegalStateException: Opcode 8003 in script 8344 not implemented
+
+.id                       8344
+.int_arg_count            5
+.obj_arg_count            4
+   oload                  0
+   8003                  
+   istore                 5
+   iconst                 16750623
+   istore                 6
+   iconst                 0
+   istore                 7
+LABEL7:
+   iload                  7
+   iload                  5
+   if_icmplt              LABEL11
+   jump                   LABEL49
+LABEL11:
+   iload                  4
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL18
+LABEL15:
+   iconst                 16750623
+   istore                 6
+   jump                   LABEL35
+LABEL18:
+   iload                  3
+   iload                  7
+   if_icmpeq              LABEL22
+   jump                   LABEL25
+LABEL22:
+   iconst                 16777215
+   istore                 6
+   jump                   LABEL35
+LABEL25:
+   iload                  7
+   get_array_int          3
+   iconst                 1
+   if_icmpeq              LABEL30
+   jump                   LABEL33
+LABEL30:
+   iconst                 16777215
+   istore                 6
+   jump                   LABEL35
+LABEL33:
+   iconst                 16750623
+   istore                 6
+LABEL35:
+   iload                  1
+   iload                  7
+   get_array_int         
+   iload                  7
+   get_array_int          1
+   iload                  7
+   get_array_int          2
+   iload                  6
+   invoke                 8345
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL7
+LABEL49:
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL53
+   jump                   LABEL68
+LABEL53:
+   iload                  4
+   iconst                 1
+   if_icmpeq              LABEL57
+   jump                   LABEL60
+LABEL57:
+   iconst                 16777215
+   istore                 6
+   jump                   LABEL62
+LABEL60:
+   iconst                 11513775
+   istore                 6
+LABEL62:
+   iload                  1
+   sconst                 "Skip question"
+   iload                  2
+   iconst                 -1
+   iload                  6
+   invoke                 8345
+LABEL68:
+   return                
