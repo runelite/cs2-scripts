@@ -32,7 +32,7 @@ if (~pvp_world = 1) {
 	if_setsize(78, 73, ^setsize_abs, ^setsize_abs, pvp_icons:icons);
 	if (%br_safecoord_x > 0 & %br_safecoord_z > 0) {
 		if_sethide(false, br_overlay:deadman_fog);
-		if_setgradientmode(2, br_overlay:deadman_fog);
+		if_setblendmode(2, br_overlay:deadman_fog);
 		if_setontimer("br_fogcolour", br_overlay:deadman_fog);
 		~br_fogcolour;
 	} else {
@@ -75,7 +75,7 @@ if (~pvp_world = 1) {
 			if_sethide(false, pvp_icons:deadman_finallocation);
 		}
 		if_sethide(false, pvp_icons:deadman_fog);
-		if_setgradientmode(2, pvp_icons:deadman_fog);
+		if_setblendmode(2, pvp_icons:deadman_fog);
 		if_setontimer("deadman_tournament_fogcolour", pvp_icons:deadman_fog);
 		~deadman_tournament_fogcolour;
 	} else {
@@ -146,7 +146,7 @@ if (~pvp_world = 1) {
 			if_setgraphic(overlay_duel, pvp_icons:pvp);
 		}
 		if_sethide(false, pvp_icons:deadman_fog);
-		if_setgradientmode(2, pvp_icons:deadman_fog);
+		if_setblendmode(2, pvp_icons:deadman_fog);
 		~script6247(pvp_icons:deadman_fog);
 		if_setontimer("script6246(event_com)", pvp_icons:deadman_fog);
 	} else {
@@ -178,7 +178,7 @@ if (~pvp_world = 1) {
 			if_sethide(false, pvp_icons:deadman_finallocation);
 		}
 		if_sethide(false, pvp_icons:deadman_fog);
-		if_setgradientmode(2, pvp_icons:deadman_fog);
+		if_setblendmode(2, pvp_icons:deadman_fog);
 		if_setontimer("wildwars_fogcolour", pvp_icons:deadman_fog);
 		~wildwars_fogcolour;
 	} else {

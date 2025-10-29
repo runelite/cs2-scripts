@@ -1,0 +1,22 @@
+// 8436
+[clientscript,script8436](component $component0, int $comsubid1, int $int2, int $int3, int $int4, int $int5)
+def_int $int6 = -1;
+def_anyobj $anyobj0 = "null";
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%poll_vote_status ! 3 & %poll_vote_status ! 4) {
+		sound_synth(pillory_wrong, 1, 0);
+	} else if (~script8417 = false) {
+		if_runscript(1137418264, ballot:ranked, -1, $int2, "null");
+	} else if (testbit($int5, $int3) = ^true | testbit($int5, $int4) = ^true) {
+		sound_synth(pillory_wrong, 1, 0);
+	} else {
+		sound_synth(interface_select1, 1, 0);
+		cc_settrans(220);
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 255, calc(clientclock + 25))");
+		$anyobj0 = ~script8437($int2);
+		$int6 = $intarray0($int3);
+		$intarray0($int3) = $intarray0($int4);
+		$intarray0($int4) = $int6;
+		if_runscript(1137418264, ballot:ranked, -1, $int2, $anyobj0);
+	}
+}

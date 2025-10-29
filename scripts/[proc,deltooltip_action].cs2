@@ -1,59 +1,24 @@
-java.lang.IllegalStateException: Opcode 1704 in script 41 not implemented
-
-.id                       41
-.int_arg_count            1
-.obj_arg_count            0
-   invoke                 100
-   iconst                 0
-   if_icmpeq              LABEL4
-   jump                   LABEL28
-LABEL4:
-   iload                  0
-   iconst                 -1
-   if_icmpne              LABEL8
-   jump                   LABEL28
-LABEL8:
-   iload                  0
-   if_find               
-   iconst                 1
-   if_icmpeq              LABEL13
-   jump                   LABEL28
-LABEL13:
-   iconst                 2352
-   iconst                 -1
-   iconst                 0
-   1704                  
-   iconst                 2353
-   iconst                 -1
-   iconst                 0
-   1704                  
-   iconst                 2354
-   sconst                 ""
-   iconst                 2
-   1704                  
-   iconst                 -1
-   sconst                 ""
-   cc_setontimer         
-LABEL28:
-   iload                  0
-   cc_deleteall          
-   iconst                 0
-   set_varc_int           2
-   invoke                 100
-   iconst                 1
-   if_icmpeq              LABEL36
-   jump                   LABEL47
-LABEL36:
-   sconst                 ""
-   sconst                 ""
-   iconst                 -1
-   iconst                 -1
-   iload                  0
-   iconst                 -1
-   iconst                 -1
-   iconst                 0
-   iconst                 0
-   iconst                 1
-   invoke                 6663
-LABEL47:
-   return                
+// 41
+[proc,deltooltip_action](component $component0)
+if (~on_enhanced_any = 0 & $component0 ! null & if_find($component0) = ^true) {
+	cc_setparam(param_2352, -1, int);
+	cc_setparam(param_2353, -1, int);
+	cc_setparam(param_2354, "", obj);
+	cc_setontimer(null);
+}
+cc_deleteall($component0);
+%varcint2 = 0;
+if (~on_enhanced_any = 1) {
+	~mouseover_tooltip_setup(
+		0 = "", 
+		1 = "", 
+		2 = -1, 
+		3 = -1, 
+		4 = $component0, 
+		5 = null, 
+		6 = -1, 
+		7 = 0, 
+		8 = 0, 
+		9 = 1
+	);
+}

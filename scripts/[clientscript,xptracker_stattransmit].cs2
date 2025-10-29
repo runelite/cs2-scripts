@@ -19,7 +19,7 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int0 <= 23) {
 	$stat2 = enum(int, stat, enum_681, $int0);
-	$int1 = stat_xp($stat2);
+	$int1 = stat_visible_xp($stat2);
 	$int3 = ~xptracker_get_lastxp($stat2);
 	if ($int1 < $int3) {
 		~xptracker_close_stat($stat2);

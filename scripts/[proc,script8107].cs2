@@ -1,5 +1,5 @@
 // 8107
-[proc,script8107](component $component0, component $component1)
+[proc,script8107](component $component0, component $com_bingo_overlay_tooltip1)
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = ~script8248;
@@ -29,7 +29,7 @@ $string1 = "Grid <$string0><tostring(calc(%varcint1261 + 1))></col> of <tostring
 if (cc_find($component0, 0) = ^true) {
 	cc_sethide($boolean8);
 	if (string_length($string3) > 0) {
-		cc_setonmouserepeat("tooltip_mouserepeat($component0, cc_getid, $component1, $string3, 25, 512)");
+		cc_setonmouserepeat("tooltip_mouserepeat($component0, cc_getid, $com_bingo_overlay_tooltip1, $string3, 25, 512)");
 	} else {
 		cc_setonmouserepeat(null);
 	}

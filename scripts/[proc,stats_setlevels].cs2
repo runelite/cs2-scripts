@@ -4,7 +4,7 @@ def_boolean $boolean3 = enum(stat, boolean, enum_1497, $stat0);
 cc_settext(tostring(stat($stat0)));
 def_int $int4 = stat_base($stat0);
 .cc_settext(tostring($int4));
-def_int $int5 = stat_xp($stat0);
+def_int $int5 = stat_visible_xp($stat0);
 def_string $string1 = ",";
 def_string $string2 = "<$string0> XP:";
 def_string $string3 = ~tostring_spacer($int5, $string1);

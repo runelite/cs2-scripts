@@ -27,7 +27,7 @@ $int10 = ~max(10, $int10);
 .cc_setdraggable($component0, 0);
 .cc_setondrag("scrollbar_horizontal_drag($component0, $component1, event_mousex, 0)");
 .cc_setondragcomplete("scrollbar_horizontal_drag($component0, $component1, event_mousex, 1)");
-.cc_setdraggablebehavior(1);
+.cc_setdragrenderbehaviour(1);
 cc_create($component0, ^iftype_graphic, 2, false);
 cc_setposition(.cc_getx, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(5, 0, ^setsize_abs, ^setsize_minus);

@@ -9,7 +9,7 @@ if (%wildwars_mode_pl < 1) {
 	if ($int1 ! 255) {
 		if_settrans(255, pvp_icons:deadman_fog);
 	}
-	if_setgradienttrans(255, pvp_icons:deadman_fog);
+	if_setblendtrans(255, pvp_icons:deadman_fog);
 	return;
 }
 def_int $int2 = 0;
@@ -81,4 +81,4 @@ if ($int1 < $int19) {
 	$int1 = calc($int1 - 1);
 }
 if_settrans($int1, pvp_icons:deadman_fog);
-if_setgradienttrans(255, pvp_icons:deadman_fog);
+if_setblendtrans(255, pvp_icons:deadman_fog);

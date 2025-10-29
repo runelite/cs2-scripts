@@ -20,7 +20,7 @@ def_string $string2 = "null";
 def_int $int8 = 0;
 switch_int ($opindex0) {
 	case 1 :
-		if_setgradientcolour(calc(1 - if_getgradientcolour($component4)), $component4);
+		if_setblendcolour(calc(1 - if_getblendcolour($component4)), $component4);
 		~script7133;
 	case 2 :
 		$int5 = 0;
@@ -33,7 +33,7 @@ switch_int ($opindex0) {
 			if ($component6 = null) {
 				$intarray0($int5) = 1;
 			} else {
-				$intarray0($int5) = if_getgradientcolour($component6);
+				$intarray0($int5) = if_getblendcolour($component6);
 			}
 			$int5 = calc($int5 + 1);
 		}
@@ -56,7 +56,7 @@ switch_int ($opindex0) {
 			if ($intarray0($int5) = -1) {
 				$intarray0($int5) = 0;
 			}
-			if_setgradientcolour($intarray0($int5), $component6);
+			if_setblendcolour($intarray0($int5), $component6);
 			$int5 = calc($int5 + 1);
 		}
 		~script7133;

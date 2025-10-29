@@ -1,0 +1,134 @@
+// 8370
+[proc,script8370](int $int0, int $int1, string $string0, string $string1)
+def_int $int2 = ~script8368($int0, $int1);
+cc_setparam(param_2364, $string0, obj);
+cc_createchild(0, ~script8363);
+cc_setparam(param_2365, 301, int);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+def_int $int3 = %varcint43;
+if (~on_mobile = false) {
+	cc_setonmouseover("v2_stone_button_change_in(event_com, $int3)");
+	cc_setonmouseleave("v2_stone_button_change_out(event_com, $int3)");
+}
+cc_setop(1, $string1);
+def_int $comsubid4 = cc_getid;
+~script8397(
+	0 = tradebacking, 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_centre, 
+	4 = ^setpos_abs_centre, 
+	5 = 2, 
+	6 = 2, 
+	7 = ^setsize_minus, 
+	8 = ^setsize_minus
+);
+~script8398(
+	0 = "v2_stone_button,0", 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_left, 
+	4 = ^setpos_abs_top, 
+	5 = 9, 
+	6 = 9, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_abs
+);
+~script8398(
+	0 = "v2_stone_button,1", 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_right, 
+	4 = ^setpos_abs_top, 
+	5 = 9, 
+	6 = 9, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_abs
+);
+~script8398(
+	0 = "v2_stone_button,2", 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_left, 
+	4 = ^setpos_abs_bottom, 
+	5 = 9, 
+	6 = 9, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_abs
+);
+~script8398(
+	0 = "v2_stone_button,3", 
+	1 = 0, 
+	2 = 0, 
+	3 = ^setpos_abs_right, 
+	4 = ^setpos_abs_bottom, 
+	5 = 9, 
+	6 = 9, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_abs
+);
+~script8398(
+	0 = "v2_stone_button,4", 
+	1 = 0, 
+	2 = 9, 
+	3 = ^setpos_abs_left, 
+	4 = ^setpos_abs_top, 
+	5 = 9, 
+	6 = 18, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_minus
+);
+~script8398(
+	0 = "v2_stone_button,5", 
+	1 = 9, 
+	2 = 0, 
+	3 = ^setpos_abs_left, 
+	4 = ^setpos_abs_top, 
+	5 = 18, 
+	6 = 9, 
+	7 = ^setsize_minus, 
+	8 = ^setsize_abs
+);
+~script8398(
+	0 = "v2_stone_button,6", 
+	1 = 0, 
+	2 = 9, 
+	3 = ^setpos_abs_right, 
+	4 = ^setpos_abs_top, 
+	5 = 9, 
+	6 = 18, 
+	7 = ^setsize_abs, 
+	8 = ^setsize_minus
+);
+~script8398(
+	0 = "v2_stone_button,7", 
+	1 = 9, 
+	2 = 0, 
+	3 = ^setpos_abs_left, 
+	4 = ^setpos_abs_bottom, 
+	5 = 18, 
+	6 = 9, 
+	7 = ^setsize_minus, 
+	8 = ^setsize_abs
+);
+if ($int1 = 104) {
+	cc_createsibling(^iftype_graphic, ~script8363);
+	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic(mapfunction_infoicon);
+}
+cc_createsibling(^iftype_text, ~script8363);
+if ($int1 = 104) {
+	cc_setsize(calc(10 * 2 + 15 + 4), 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(10, 0, ^setpos_abs_right, ^setpos_abs_centre);
+} else {
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+}
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 13);
+cc_settextshadow(true);
+cc_settext($string0);
+~script8369($int2);
+cc_find(cc_getlayer, $comsubid4);

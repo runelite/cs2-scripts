@@ -35,7 +35,7 @@ if ($stat7 ! null) {
 	$boolean9 = true;
 	if_setgraphic(enum(stat, graphic, enum_255, $stat7), $component1);
 	$int10, $int11 = ~xpdrops_data_get($stat7);
-	$int12 = stat_xp($stat7);
+	$int12 = stat_visible_xp($stat7);
 	if ($int11 = -1) {
 		$int15 = calc($int12 - $int10);
 		if ($int15 >= 0) {
@@ -117,7 +117,7 @@ def_int $int25 = 0;
 def_int $int26 = 0;
 if ($stat8 ! null) {
 	$boolean20 = true;
-	$int12 = stat_xp($stat8);
+	$int12 = stat_visible_xp($stat8);
 	$int10, $int11 = ~xpdrops_data_get($stat8);
 	if ($int11 ! -1 & $int11 > $int10) {
 		$int21 = ~xpdrops_setbar_progress($component4, $int10, $int12, $int11, 1);

@@ -15,7 +15,7 @@ switch_int (~script5534($stat0)) {
 	case 3 :
 		$int4 = 200000000;
 }
-def_int $int6 = calc(stat_xp($stat0) - $int3);
+def_int $int6 = calc(stat_visible_xp($stat0) - $int3);
 def_int $int7 = scale($int6, calc($int4 - $int3), 10000);
 def_string $string0 = tostring($int7);
 switch_int (string_length($string0)) {

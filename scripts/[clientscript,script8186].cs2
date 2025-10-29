@@ -1,0 +1,8 @@
+// 8186
+[clientscript,script8186](component $component0, int $comsubid1)
+if (~on_mobile = true) {
+	return;
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setparam(param_2350, clientclock, int);
+}

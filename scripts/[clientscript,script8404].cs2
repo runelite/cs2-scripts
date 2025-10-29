@@ -1,0 +1,22 @@
+// 8404
+[clientscript,script8404](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, anyobj $anyobj0)
+def_int $int7 = 0;
+if ($int3 = 1) {
+	$int7 = setbit($int7, 1);
+}
+if (if_find_child(ballot:voting, param_2365, 200, param_2368, $int0) = true) {
+	cc_setparam(param_2369, 1, int);
+	cc_setparam(param_2362, $int7, int);
+	~script8406(
+		0 = 0, 
+		1 = $int0, 
+		2 = $int1, 
+		3 = $int2, 
+		4 = $anyobj0, 
+		5 = $int3, 
+		6 = $int4, 
+		7 = $int5, 
+		8 = $int6
+	);
+}
+~script8384($int0);

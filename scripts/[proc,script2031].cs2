@@ -1,19 +1,19 @@
 // 2031
 [proc,script2031](int $int0)(int)
 def_int $int1 = %deadman_xp_to_cap;
-def_int $int2 = calc(~max(calc(10 * stat_xp(attack)), %deadman_xp_attack) - %deadman_xp_reward_attack);
+def_int $int2 = calc(~max(calc(10 * stat_visible_xp(attack)), %deadman_xp_attack) - %deadman_xp_reward_attack);
 $int2 = calc(~min($int2, calc(%deadman_xp_to_cap / 2)) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max(calc(10 * stat_xp(strength)), %deadman_xp_strength) - %deadman_xp_reward_strength);
+$int2 = calc(~max(calc(10 * stat_visible_xp(strength)), %deadman_xp_strength) - %deadman_xp_reward_strength);
 $int2 = calc(~min($int2, calc(%deadman_xp_to_cap / 2)) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max(calc(10 * stat_xp(defence)), %deadman_xp_defence) - %deadman_xp_reward_defence);
+$int2 = calc(~max(calc(10 * stat_visible_xp(defence)), %deadman_xp_defence) - %deadman_xp_reward_defence);
 $int2 = calc(~min($int2, calc(%deadman_xp_to_cap / 4)) * 4);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max(calc(10 * stat_xp(ranged)), %deadman_xp_ranged) - %deadman_xp_reward_ranged);
+$int2 = calc(~max(calc(10 * stat_visible_xp(ranged)), %deadman_xp_ranged) - %deadman_xp_reward_ranged);
 $int2 = calc(~min($int2, calc(%deadman_xp_to_cap / 3)) * 3);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max(calc(10 * stat_xp(magic)), %deadman_xp_magic) - %deadman_xp_reward_magic);
+$int2 = calc(~max(calc(10 * stat_visible_xp(magic)), %deadman_xp_magic) - %deadman_xp_reward_magic);
 $int2 = calc(~min($int2, calc(%deadman_xp_to_cap / 2)) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
 return(calc($int1 / $int0));

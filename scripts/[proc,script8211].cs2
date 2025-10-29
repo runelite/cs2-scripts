@@ -1,0 +1,27 @@
+// 8211
+[proc,script8211](component $component0, int $comsubid1, component $component2, int $comsubid3)
+def_int $int4 = cc_getheight;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+if (($comsubid1 = -1 & if_find($component0) = ^true | cc_find($component0, $comsubid1) = ^true) & ($comsubid3 = -1 & .if_find($component2) = ^true | .cc_find($component2, $comsubid3) = ^true)) {
+	$int5 = cc_param(param_2351);
+	$int6 = cc_getheight;
+	$int7 = .cc_getscrollheight;
+	$int8 = .cc_getheight;
+	$int9 = .cc_getscrolly;
+	def_int $int10 = ~max(calc($int7 - $int8), 1);
+	def_int $int11 = calc($int6 - 32 - $int4);
+	if (cc_find($component0, calc($int5 + 1)) = ^true) {
+		cc_setposition(0, calc(16 + $int11 * $int9 / $int10), ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	if (.cc_find($component0, calc($int5 + 2)) = ^true) {
+		.cc_setposition(0, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	if (.cc_find($component0, calc($int5 + 3)) = ^true) {
+		.cc_setposition(0, calc(cc_gety + cc_getheight - 5), ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	return;
+}

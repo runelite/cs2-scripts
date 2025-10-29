@@ -1,0 +1,68 @@
+// 8420
+[proc,script8420]
+def_int $int0 = 0;
+def_int $int1 = 16750623;
+def_int $int2 = 16750623;
+switch_int (cc_param(param_2365)) {
+	case 202 :
+		if (testbit(cc_param(param_2357), 0) = ^true) {
+			$int0, $int1, $int2 = 1, 11513775, 11513775;
+		} else {
+			$int0, $int1, $int2 = 1, 8421504, 8421504;
+		}
+	case 301 :
+		if (cc_param(param_2370) = -1) {
+			if (testbit(cc_param(param_2357), 0) = ^true) {
+				$int0, $int1, $int2 = 1, 11513775, 11513775;
+			} else {
+				$int0, $int1, $int2 = 1, 8421504, 8421504;
+			}
+		} else if (testbit(cc_param(param_2357), 0) = ^false) {
+			$int0, $int1, $int2 = 0, 8421504, 8421504;
+		}
+	case 506 :
+		if (cc_param(param_2371) = -1) {
+			if (testbit(cc_param(param_2357), 0) = ^true) {
+				$int0, $int1, $int2 = 1, 16750623, 11513775;
+			} else {
+				$int0, $int1, $int2 = 1, 8421504, 8421504;
+			}
+		} else if (testbit(cc_param(param_2357), 0) = ^true) {
+			$int0, $int1, $int2 = 0, 16750623, 16750623;
+		} else {
+			$int0, $int1, $int2 = 0, 8421504, 8421504;
+		}
+}
+def_int $int3 = cc_param(param_2357);
+if (.cc_find(cc_getlayer, calc(cc_getid - 1)) = ^true) {
+	if (testbit($int3, 1) = ^true) {
+		if (testbit($int3, 2) = ^true) {
+			.cc_setgraphic("checkbox,5");
+			if ($int0 = 1 & cc_param(param_2365) ! 202) {
+				cc_setop(1, "Select");
+			} else {
+				cc_setop(1, "De-select");
+			}
+		} else {
+			.cc_setgraphic("checkbox,3");
+			cc_setop(1, "Select");
+		}
+	} else {
+		if (testbit($int3, 2) = ^true) {
+			.cc_setgraphic("options_radio_buttons,6");
+		} else {
+			.cc_setgraphic("options_radio_buttons,4");
+		}
+		cc_setop(1, "Select");
+	}
+}
+def_int $comsubid4 = cc_param(param_2359);
+if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = ^true) {
+	.cc_setcolour($int1);
+	.cc_setparam(param_2361, $int1, int);
+}
+$comsubid4 = cc_param(param_2360);
+if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = ^true) {
+	.cc_setcolour($int2);
+	.cc_setparam(param_2361, $int2, int);
+}

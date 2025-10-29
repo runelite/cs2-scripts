@@ -1,0 +1,161 @@
+// 8093
+[clientscript,script8093](component $com_bingo_overlay_universe0, component $com_bingo_overlay_window1, component $com_bingo_overlay_frame2, component $com_bingo_overlay_separators3, component $com_bingo_overlay_content4, component $com_bingo_overlay_event_selection5, component $com_bingo_overlay_details6, component $com_bingo_overlay_event_container7, component $com_bingo_overlay_grid_selection8, component $com_bingo_overlay_grid_container9, int $com_bingo_overlay_grid_rewards10, component $com_bingo_overlay_grid_tiles11, component $com_bingo_overlay_grid_buttons12, component $com_bingo_overlay_info13, component $com_bingo_overlay_inner_overlay14, component $com_bingo_overlay_tooltip15, component $com_bingo_overlay_tutorial_layer16)
+def_dbrow $dbrow17 = ~script8247;
+if ($dbrow17 = null) {
+	cc_deleteall($com_bingo_overlay_frame2);
+	cc_create($com_bingo_overlay_frame2, ^iftype_rectangle, 0, false);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setfill(true);
+	cc_setcolour(^red);
+	cc_settrans(192);
+	cc_setop(1, "Close");
+	cc_triggerop(1);
+	cc_setontimer("script8094(event_com, event_comsubid)");
+	return;
+}
+~script8105(%varcint1261);
+%varcint1265 = false;
+%varcstring1264 = "";
+def_int $int18 = ~script8263(%varcint1261);
+if ($int18 = 0) {
+	%varcint1262 = -1;
+}
+if (%varcint1262 < 0 | %varcint1262 >= $int18) {
+	if (calc($int18 % 2) = 1) {
+		%varcint1262 = calc($int18 / 2);
+	} else {
+		%varcint1262 = 0;
+	}
+}
+def_string $string0 = db_getfield($dbrow17, bingo_events:event_name, 0);
+if (~on_mobile = false) {
+	~steelborder($com_bingo_overlay_frame2, $string0, 2);
+	if (cc_find($com_bingo_overlay_frame2, 11) = ^true) {
+		cc_setonclick("opsound(1, -1)");
+		cc_setonop(null);
+	}
+} else {
+	~steelborder($com_bingo_overlay_frame2, $string0, 0);
+	if (cc_find($com_bingo_overlay_frame2, 11) = ^true) {
+		cc_setonop(null);
+	}
+}
+if (~script8248 > 1) {
+	~script8103($com_bingo_overlay_grid_selection8, $com_bingo_overlay_grid_tiles11, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_grid_buttons12, $com_bingo_overlay_tooltip15, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_info13);
+}
+if (~on_mobile = false) {
+	~script8233(1, $com_bingo_overlay_universe0, $com_bingo_overlay_window1);
+} else {
+	~script8230(1, 16, 16, 326, 331);
+	~script8237(1, $com_bingo_overlay_universe0, $com_bingo_overlay_window1);
+	~script8242(^min_32bit_int, ^min_32bit_int, 1, $com_bingo_overlay_universe0, $com_bingo_overlay_window1);
+}
+~script8101(
+	0 = $com_bingo_overlay_content4, 
+	1 = $com_bingo_overlay_separators3, 
+	2 = $com_bingo_overlay_event_selection5, 
+	3 = $com_bingo_overlay_details6, 
+	4 = $com_bingo_overlay_event_container7, 
+	5 = $com_bingo_overlay_grid_selection8, 
+	6 = $com_bingo_overlay_grid_container9, 
+	7 = $com_bingo_overlay_grid_tiles11, 
+	8 = $com_bingo_overlay_grid_rewards10, 
+	9 = $com_bingo_overlay_grid_buttons12, 
+	10 = $com_bingo_overlay_info13
+);
+if_setonresize("script8100(
+	0 = $com_bingo_overlay_content4, 
+	1 = $com_bingo_overlay_separators3, 
+	2 = $com_bingo_overlay_event_selection5, 
+	3 = $com_bingo_overlay_details6, 
+	4 = $com_bingo_overlay_event_container7, 
+	5 = $com_bingo_overlay_grid_selection8, 
+	6 = $com_bingo_overlay_grid_container9, 
+	7 = $com_bingo_overlay_grid_tiles11, 
+	8 = $com_bingo_overlay_grid_rewards10, 
+	9 = $com_bingo_overlay_grid_buttons12, 
+	10 = $com_bingo_overlay_info13
+)", $com_bingo_overlay_content4);
+~script8109($com_bingo_overlay_grid_tiles11, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_grid_buttons12, $com_bingo_overlay_tooltip15, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_info13);
+if_setonvartransmit("script8108($com_bingo_overlay_grid_tiles11, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_grid_buttons12, $com_bingo_overlay_tooltip15, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_info13){
+	0 = bingo_rewards_perm_0, 
+	1 = bingo_rewards_perm_1, 
+	2 = bingo_rewards_perm_2, 
+	3 = bingo_rewards_perm_3, 
+	4 = bingo_rewards_perm_4, 
+	5 = bingo_rewards_perm_5, 
+	6 = bingo_challenge_parent_0, 
+	7 = bingo_challenge_parent_1, 
+	8 = bingo_challenge_parent_2, 
+	9 = bingo_challenge_parent_3, 
+	10 = bingo_challenge_parent_4, 
+	11 = bingo_challenge_parent_5, 
+	12 = bingo_challenge_parent_6, 
+	13 = bingo_challenge_parent_7, 
+	14 = bingo_challenge_parent_8, 
+	15 = bingo_challenge_parent_9, 
+	16 = bingo_challenge_parent_10, 
+	17 = bingo_challenge_parent_11, 
+	18 = bingo_challenge_parent_12, 
+	19 = bingo_challenge_parent_13, 
+	20 = bingo_challenge_complete_var_0, 
+	21 = bingo_challenge_complete_var_1
+}", $com_bingo_overlay_grid_container9);
+if_setonresize("script8108($com_bingo_overlay_grid_tiles11, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_grid_buttons12, $com_bingo_overlay_tooltip15, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_info13)", $com_bingo_overlay_grid_container9);
+if_setparam(param_2321, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_content4, -1, int);
+~script8148($com_bingo_overlay_info13, $dbrow17, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_tooltip15);
+if_setonvartransmit("script8147($com_bingo_overlay_info13, $dbrow17, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_tooltip15){
+	0 = event_league_relics, 
+	1 = event_rewards_temp_0, 
+	2 = event_rewards_temp_1, 
+	3 = event_rewards_temp_2, 
+	4 = event_rewards_temp_3, 
+	5 = event_rewards_temp_4, 
+	6 = event_rewards_temp_5, 
+	7 = event_rewards_temp_6, 
+	8 = event_rewards_temp_7, 
+	9 = event_rewards_temp_8, 
+	10 = event_rewards_temp_9, 
+	11 = event_rewards_temp_10, 
+	12 = event_rewards_xp_sharer_varp1, 
+	13 = event_rewards_xp_sharer_varp2, 
+	14 = league_combat_mastery_paths, 
+	15 = bingo_rewards_perm_0, 
+	16 = bingo_rewards_perm_1, 
+	17 = bingo_rewards_perm_2, 
+	18 = bingo_rewards_perm_3, 
+	19 = bingo_rewards_perm_4, 
+	20 = bingo_rewards_perm_5, 
+	21 = bingo_challenge_parent_0, 
+	22 = bingo_challenge_parent_1, 
+	23 = bingo_challenge_parent_2, 
+	24 = bingo_challenge_parent_3, 
+	25 = bingo_challenge_parent_4, 
+	26 = bingo_challenge_parent_5, 
+	27 = bingo_challenge_parent_6, 
+	28 = bingo_challenge_parent_7, 
+	29 = bingo_challenge_parent_8, 
+	30 = bingo_challenge_parent_9, 
+	31 = bingo_challenge_parent_10, 
+	32 = bingo_challenge_parent_11, 
+	33 = bingo_challenge_parent_12, 
+	34 = bingo_challenge_parent_13, 
+	35 = bingo_challenge_complete_var_0, 
+	36 = bingo_challenge_complete_var_1
+}", $com_bingo_overlay_info13);
+if_setonresize("script8147($com_bingo_overlay_info13, $dbrow17, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_tooltip15)", $com_bingo_overlay_info13);
+if_setontimer("script8099(if_getwidth($com_bingo_overlay_window1), if_getheight($com_bingo_overlay_window1), event_com, $com_bingo_overlay_content4, $com_bingo_overlay_grid_container9, $com_bingo_overlay_info13, $com_bingo_overlay_inner_overlay14)", $com_bingo_overlay_window1);
+cc_deleteall($com_bingo_overlay_window1);
+cc_create($com_bingo_overlay_window1, ^iftype_graphic, 0, false);
+cc_setposition(-1, -1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+cc_setop(1, "Redraw");
+cc_setonop("script8099(if_getwidth($com_bingo_overlay_window1), if_getheight($com_bingo_overlay_window1), event_com, $com_bingo_overlay_content4, $com_bingo_overlay_grid_container9, $com_bingo_overlay_info13, $com_bingo_overlay_inner_overlay14)");
+if (%bingo_tutorial <= 3) {
+	~script8157($com_bingo_overlay_tutorial_layer16);
+	if_setonresize("script8160($com_bingo_overlay_tutorial_layer16)", $com_bingo_overlay_tutorial_layer16);
+	if_sethide(false, $com_bingo_overlay_tutorial_layer16);
+} else if (%bingo_tutorial >= 4) {
+	if_sethide(true, $com_bingo_overlay_tutorial_layer16);
+}

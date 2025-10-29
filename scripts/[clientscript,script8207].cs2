@@ -1,0 +1,10 @@
+// 8207
+[clientscript,script8207](component $component0, int $comsubid1)
+def_int $int2 = 0;
+if ($comsubid1 = -1 & if_find($component0) = ^true | cc_find($component0, $comsubid1) = ^true) {
+	$int2 = cc_param(param_2351);
+	if (cc_find($component0, calc($int2 + 1)) = ^true) {
+		cc_dragpickup(0, calc(cc_getheight / 2));
+	}
+	return;
+}

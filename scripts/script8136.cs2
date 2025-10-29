@@ -1,0 +1,53 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 1
+
+.id                       8136
+.int_arg_count            0
+.obj_arg_count            1
+   map_members           
+   iconst                 1
+   if_icmpeq              LABEL4
+   jump                   LABEL6
+LABEL4:
+   oload                  0
+   return                
+LABEL6:
+   sconst                 " (Members)"
+   ostore                 1
+   oload                  1
+   string_length         
+   istore                 0
+   oload                  0
+   string_length         
+   istore                 1
+   iload                  1
+   iload                  0
+   if_icmplt              LABEL18
+   jump                   LABEL20
+LABEL18:
+   oload                  0
+   return                
+LABEL20:
+   oload                  0
+   oload                  1
+   iload                  1
+   iload                  0
+   sub                   
+   string_indexof_string 
+   istore                 2
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL31
+   jump                   LABEL37
+LABEL31:
+   oload                  0
+   iconst                 0
+   iload                  2
+   substring             
+   return                
+   jump                   LABEL39
+LABEL37:
+   oload                  0
+   return                
+LABEL39:
+   sconst                 ""
+   return                

@@ -1,0 +1,15 @@
+// 8132
+[clientscript,script8132](component $component0, int $comsubid1, int $int2, int $int3, component $component4, component $component5, component $component6)
+if (%varcint1267 = 1) {
+	if (%varcint1262 > -1 & if_find_child($component0, param_2319, %varcint1262) = true) {
+		~script8131(0, $int2, %varcint1262, $component4, $component5, $component6);
+	}
+	if (cc_find($component0, $comsubid1) = ^true) {
+		~script8131(1, $int2, $int3, $component4, $component5, $component6);
+	}
+}
+%varcint1262 = $int3;
+~script8134($int2, $int3, $component4, $component5, $component6);
+if (%varcint1267 = 1) {
+	~script8129($component5);
+}

@@ -1,0 +1,22 @@
+// 8343
+[clientscript,script8343](int $int0, int $int1, int $int2, int $int3, anyobj $anyobj0, anyobj $anyobj1, anyobj $anyobj2, anyobj $anyobj3)
+def_int $int4 = 0;
+if ($int2 ! -1) {
+	$int4 = setbit($int4, 1);
+}
+if (if_find_child(ballot:overview_contents, param_2365, 200, param_2368, $int0) = true) {
+	cc_setparam(param_2369, 2, int);
+	cc_setparam(param_2362, $int4, int);
+	~script8344(
+		0 = $int0, 
+		1 = $int1, 
+		2 = $anyobj0, 
+		3 = $anyobj1, 
+		4 = $anyobj2, 
+		5 = $int2, 
+		6 = -1, 
+		7 = $anyobj3, 
+		8 = $int3
+	);
+}
+~script8384($int0);

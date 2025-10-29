@@ -16,7 +16,7 @@ switch_int ($int6) {
 	case 3 :
 		$int4 = 200000000;
 }
-def_int $int7 = calc(stat_xp($stat0) - $int3);
+def_int $int7 = calc(stat_visible_xp($stat0) - $int3);
 def_int $int8 = scale($int7, calc($int4 - $int3), 16384);
 if (cc_find(xptracker:tracker_progress, $comsubid1) = ^true) {
 	if ($int5 = 1) {

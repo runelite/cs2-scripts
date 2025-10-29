@@ -1,14 +1,14 @@
 // 8103
-[proc,script8103](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, component $component6)
+[proc,script8103](component $com_bingo_overlay_grid_selection0, component $com_bingo_overlay_grid_tiles1, int $com_bingo_overlay_grid_rewards2, component $com_bingo_overlay_grid_buttons3, component $com_bingo_overlay_tooltip4, component $com_bingo_overlay_inner_overlay5, component $com_bingo_overlay_info6)
 def_int $int7 = 0;
-cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, $int7, false);
+cc_deleteall($com_bingo_overlay_grid_selection0);
+cc_create($com_bingo_overlay_grid_selection0, ^iftype_graphic, $int7, false);
 cc_setsize(19, 19, ^setsize_abs, ^setsize_abs);
 cc_setposition(32, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic("warning_icons,0");
-cc_setonmouseleave("deltooltip($component4)");
+cc_setonmouseleave("deltooltip($com_bingo_overlay_tooltip4)");
 $int7 = calc($int7 + 1);
-cc_create($component0, ^iftype_text, $int7, false);
+cc_create($com_bingo_overlay_grid_selection0, ^iftype_text, $int7, false);
 cc_setsize(64, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(32, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
@@ -16,7 +16,7 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 $int7 = calc($int7 + 1);
-cc_create($component0, ^iftype_text, $int7, false);
+cc_create($com_bingo_overlay_grid_selection0, ^iftype_text, $int7, false);
 cc_setsize(87, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(32, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_settextfont(p12_full);
@@ -24,10 +24,10 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 $int7 = calc($int7 + 1);
-~script8107($component0, $component4);
-if_setonvartransmit("script8106($component0, $component4){bingo_challenge_complete_var_0, bingo_challenge_complete_var_1}", $component0);
+~script8107($com_bingo_overlay_grid_selection0, $com_bingo_overlay_tooltip4);
+if_setonvartransmit("script8106($com_bingo_overlay_grid_selection0, $com_bingo_overlay_tooltip4){bingo_challenge_complete_var_0, bingo_challenge_complete_var_1}", $com_bingo_overlay_grid_selection0);
 $int7 = ~cc_add_button(
-	0 = $component0, 
+	0 = $com_bingo_overlay_grid_selection0, 
 	1 = $int7, 
 	2 = 4, 
 	3 = 4, 
@@ -35,15 +35,15 @@ $int7 = ~cc_add_button(
 	5 = ^setpos_abs_top, 
 	6 = 22, 
 	7 = 8, 
-	8 = 0, 
-	9 = 1, 
-	10 = 6272, 
+	8 = ^setsize_abs, 
+	9 = ^setsize_minus, 
+	10 = struct_6272, 
 	11 = ""
 );
 cc_setop(1, "Previous Grid");
-cc_setonop("script8104(-1, event_com, $component1, $component2, $component3, $component4, $int5, $component6)");
+cc_setonop("script8104(-1, event_com, $com_bingo_overlay_grid_tiles1, $com_bingo_overlay_grid_rewards2, $com_bingo_overlay_grid_buttons3, $com_bingo_overlay_tooltip4, $com_bingo_overlay_inner_overlay5, $com_bingo_overlay_info6)");
 $int7 = ~cc_add_button(
-	0 = $component0, 
+	0 = $com_bingo_overlay_grid_selection0, 
 	1 = $int7, 
 	2 = 4, 
 	3 = 4, 
@@ -51,10 +51,10 @@ $int7 = ~cc_add_button(
 	5 = ^setpos_abs_top, 
 	6 = 22, 
 	7 = 8, 
-	8 = 0, 
-	9 = 1, 
-	10 = 6272, 
+	8 = ^setsize_abs, 
+	9 = ^setsize_minus, 
+	10 = struct_6272, 
 	11 = ""
 );
 cc_setop(1, "Next Grid");
-cc_setonop("script8104(1, event_com, $component1, $component2, $component3, $component4, $int5, $component6)");
+cc_setonop("script8104(1, event_com, $com_bingo_overlay_grid_tiles1, $com_bingo_overlay_grid_rewards2, $com_bingo_overlay_grid_buttons3, $com_bingo_overlay_tooltip4, $com_bingo_overlay_inner_overlay5, $com_bingo_overlay_info6)");

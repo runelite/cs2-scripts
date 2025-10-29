@@ -1,0 +1,24 @@
+// 8272
+[proc,script8272](int $int0, int $int1)(int)
+def_anyobj $anyobj0 = ~script8271($int0, $int1);
+def_int $int2 = array_size($anyobj0);
+def_int $int3 = 0;
+def_int $int4 = 1;
+def_int $int5 = 0;
+while ($int5 < $int2) {
+	if ($intarray0($int5) ! -1) {
+		$int3 = 1;
+		if (~script8281($intarray0($int5)) = false) {
+			$int4 = 0;
+		}
+	}
+	if ($int4 = 0) {
+		$int5 = $int2;
+	} else {
+		$int5 = calc($int5 + 1);
+	}
+}
+if ($int3 = 1) {
+	return($int4);
+}
+return(0);
