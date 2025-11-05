@@ -1,0 +1,8 @@
+// 9036
+[proc,script9036](int $int0)(namedobj)
+def_dbrow $dbrow1 = ~script9035($int0);
+def_namedobj $namedobj2 = null;
+if ($dbrow1 ! null) {
+	$namedobj2 = db_getfield($dbrow1, sailing_combat_facility_ammunition:ammunition_obj, 0);
+}
+return($namedobj2);

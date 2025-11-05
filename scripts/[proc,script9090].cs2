@@ -1,0 +1,10 @@
+// 9090
+[proc,script9090](dbrow $dbrow0, int $int1, int $int2, int $int3)(int)
+def_int $int4 = db_getfield($dbrow0, sailing_boat:retrieval_cost, 0);
+if ($int2 = 1) {
+	$int4 = scale($int4, 100, 150);
+}
+if ($int3 = 1) {
+	$int4 = scale($int4, 100, 300);
+}
+return($int4);

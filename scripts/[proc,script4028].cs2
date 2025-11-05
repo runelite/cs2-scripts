@@ -1,5 +1,8 @@
 // 4028
 [proc,script4028](dbrow $dbrow0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
+if (~script8943($dbrow0) = 1) {
+	return(1);
+}
 if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
 	return(1);
 }

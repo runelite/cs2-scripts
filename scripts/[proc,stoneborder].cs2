@@ -14,7 +14,8 @@ def_int $int3 = if_getheight($component0);
 	7 = calc($int2 - 2), 
 	8 = calc($int3 - 2), 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 cc_create($component0, ^iftype_text, 1, false);
 cc_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top);
@@ -38,7 +39,8 @@ def_int $int6 = calc($int3 - 32);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -51,7 +53,8 @@ def_int $int6 = calc($int3 - 32);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -64,7 +67,8 @@ def_int $int6 = calc($int3 - 32);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -77,7 +81,8 @@ def_int $int6 = calc($int3 - 32);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 def_int $int7 = calc($int2 - 64);
 ~create_graphic(
@@ -91,7 +96,8 @@ def_int $int7 = calc($int2 - 64);
 	7 = $int7, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -104,7 +110,8 @@ def_int $int7 = calc($int2 - 64);
 	7 = $int7, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 def_int $int8 = calc($int3 - 64);
 ~create_graphic(
@@ -118,7 +125,8 @@ def_int $int8 = calc($int3 - 64);
 	7 = 32, 
 	8 = $int8, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -131,7 +139,8 @@ def_int $int8 = calc($int3 - 64);
 	7 = 32, 
 	8 = $int8, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -144,7 +153,8 @@ def_int $int8 = calc($int3 - 64);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -157,7 +167,8 @@ def_int $int8 = calc($int3 - 64);
 	7 = 32, 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -170,7 +181,8 @@ def_int $int8 = calc($int3 - 64);
 	7 = calc($int2 - 22), 
 	8 = 32, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 def_graphic $graphic9 = "v2_stone_close_button,0";
 def_graphic $graphic10 = "v2_stone_close_button,1";
@@ -198,7 +210,8 @@ if (testbit($int1, 0) = ^false) {
 		7 = $int13, 
 		8 = $int14, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
 	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");

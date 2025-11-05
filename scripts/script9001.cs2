@@ -1,0 +1,72 @@
+java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "net.runelite.cache.util.ScriptVarType.getKeyChar()" because "svt" is null
+
+.id                       9001
+.int_arg_count            1
+.obj_arg_count            0
+   iconst                 1
+   istore                 1
+   iconst                 1
+   istore                 2
+   iload                  0
+   iconst                 630848
+   iconst                 0
+   db_getfield           
+   switch                
+      158: LABEL10
+      157: LABEL13
+      160: LABEL16
+      159: LABEL19
+   jump                   LABEL21
+LABEL10:
+   iconst                 12
+   istore                 1
+   jump                   LABEL21
+LABEL13:
+   iconst                 22
+   istore                 1
+   jump                   LABEL21
+LABEL16:
+   iconst                 38
+   istore                 1
+   jump                   LABEL21
+LABEL19:
+   iconst                 57
+   istore                 1
+LABEL21:
+   iload                  0
+   iconst                 630864
+   iconst                 0
+   db_getfield           
+   switch                
+      9270: LABEL27
+      9271: LABEL30
+      9273: LABEL33
+      9276: LABEL36
+      9277: LABEL39
+   jump                   LABEL41
+LABEL27:
+   iconst                 24
+   istore                 2
+   jump                   LABEL41
+LABEL30:
+   iconst                 40
+   istore                 2
+   jump                   LABEL41
+LABEL33:
+   iconst                 66
+   istore                 2
+   jump                   LABEL41
+LABEL36:
+   iconst                 72
+   istore                 2
+   jump                   LABEL41
+LABEL39:
+   iconst                 78
+   istore                 2
+LABEL41:
+   iload                  1
+   iload                  2
+   4017                  
+   return                
+   iconst                 0
+   return                

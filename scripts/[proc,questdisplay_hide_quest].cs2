@@ -1,5 +1,8 @@
 // 6155
 [proc,questdisplay_hide_quest](dbrow $dbrow0)(int)
+if (~script8943($dbrow0) = 1) {
+	return(1);
+}
 if (~quest_is_subquest($dbrow0) = 1) {
 	return(1);
 }

@@ -1,160 +1,607 @@
-// 2633
-[proc,questlist_draw](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5)
-def_int $int6 = -3;
-if (%questlist_disable_headers = 1) {
-	$int6 = 2;
-}
-def_int $int7 = db_listall(quest);
-def_boolean $boolean8 = ~on_mobile;
-def_int $int9 = 1;
-def_graphic $graphic10 = p11_full;
-def_fontmetrics $fontmetrics11 = p11_full;
-def_int $int12 = 11;
-def_int $int13 = 5;
-if ($boolean8 = true) {
-	$int13 = 11;
-}
-if (%questlist_larger_text = 1) {
-	$graphic10 = p12_full;
-	$fontmetrics11 = p12_full;
-	$int12 = 13;
-	$int13 = calc($int13 + 2);
-}
-def_int $intarray0($int7);
-def_dbrow $dbrow14 = null;
-def_string $string1 = "";
-def_int $int15 = 0;
-def_int $int16 = pow(2, 16);
-def_int $int17 = ~speedrunning_world;
-def_int $int18 = ~league_world;
-def_boolean $boolean19 = ~script7983(~int_to_bool(%questlist_disable_text_shadow));
-cc_deleteall($component4);
-cc_create($component4, ^iftype_rectangle, 0, false);
-cc_sethide(true);
-while ($int9 <= $int7) {
-	$dbrow14 = ~script6154($int9);
-	cc_create($component4, ^iftype_text, $int9, false);
-	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
-	cc_settextfont($graphic10);
-	cc_settextshadow($boolean19);
-	cc_settextalign(^settextalign_left, ^settextalign_centre, $int12);
-	$string1 = ~get_quest_name($dbrow14);
-	cc_setopbase("<col=ff9040><$string1></col>");
-	if (~script4026($dbrow14, %questlist_sort_type) = 1) {
-		$string1 = "MQ: <$string1>";
-	}
-	if ($int17 = 1 & ~script6807($dbrow14) = 1) {
-		$string1 = "<$string1> (Beta)";
-	}
-	cc_settext($string1);
-	cc_setsize(0, calc($int12 * paraheight($string1, cc_getwidth, $fontmetrics11) + $int13), ^setsize_minus, ^setsize_abs);
-	if ($int17 = 1) {
-		cc_setop(1, "View info:");
-	} else {
-		cc_setop(1, "");
-	}
-	cc_setop(2, "Read journal:");
-	if (db_getfield($dbrow14, quest:startcoord, 0) ! null & db_getfield($dbrow14, quest:startcoord, 0) ! 0_0_0_0_0) {
-		cc_setop(3, "Show on map:");
-	} else {
-		cc_setop(3, "");
-	}
-	if (db_getfield($dbrow14, quest:release_type, 0) = 2) {
-		cc_setop(4, "Open wiki guide:");
-		cc_setop(5, "Open wiki quick guide:");
-	} else {
-		cc_setop(4, "");
-		cc_setop(5, "");
-	}
-	cc_setop(6, "Pin journal:");
-	$int15 = ~quest_status_get($dbrow14);
-	$intarray0(calc($int9 - 1)) = calc($int15 * $int16 + $int9);
-	cc_sethide(true);
-	$int9 = calc($int9 + 1);
-}
-if ($int7 > 1) {
-	~questlist_sort($anyobj0, 0, calc($int7 - 1), %questlist_sort_type, $int16);
-}
-def_int $int20 = 0;
-def_int $int21 = 0;
-def_int $int22 = 0;
-def_int $int23 = 1;
-def_int $int24 = 1;
-def_int $int25 = 0;
-def_string $string2 = "************";
-def_string $string3 = "************";
-def_int $colour26 = ~settings_get_colour_or_default(227);
-def_int $colour27 = ~settings_get_colour_or_default(224);
-def_int $colour28 = ~settings_get_colour_or_default(225);
-def_int $colour29 = ~settings_get_colour_or_default(226);
-def_int $int30 = 0;
-def_int $int31 = ~questlist_hide_miniquests($int17);
-while ($int20 < $int7) {
-	$int21 = calc($intarray0($int20) % $int16);
-	$int15 = calc($intarray0($int20) / $int16);
-	$dbrow14 = ~script6154($int21);
-	$int23 = ~quest_requirement_check($dbrow14);
-	$int24 = ~script5990($dbrow14);
-	$string3 = ~script2265($dbrow14, $int15, %questlist_sort_type);
-	$int25 = ~script4028($dbrow14, $int15, $int23, $int24, $int17, $int18);
-	$int30 = ~quest_is_subquest($dbrow14);
-	if (~questlist_hide_quest($dbrow14, $int15, $int23, $int24, $int25, $int17, $int30, $int31) = 0) {
-		if (compare($string3, $string2) ! 0 & %questlist_disable_headers = 0) {
-			$int9, $int6 = ~script1354($string3, $int9, $int6, $component4);
-			$string2 = $string3;
-		}
-		if (cc_find($component4, $int21) = ^true) {
-			if ($int30 = 1) {
-				cc_sethide(true);
-			} else {
-				cc_sethide(false);
-				cc_setposition(0, $int6, ^setpos_abs_centre, ^setpos_abs_top);
-				~questlist_setcolour($int15, $int25, $int17, $colour26, $colour27, $colour28, $colour29, $boolean8);
-				$int22 = calc($int22 + 1);
-				$int12 = cc_getheight;
-			}
-		}
-		$int20, $int6 = calc($int20 + 1), calc($int6 + $int12);
-	} else {
-		$int20 = calc($int20 + 1);
-	}
-}
-$int6 = calc($int6 + 2);
-if_setsize(0, $int6, ^setsize_minus, ^setsize_abs, $component4);
-cc_deleteall($component1);
-if ($int22 <= 0) {
-	if_sethide(true, $component3);
-	cc_create($component1, ^iftype_text, 0, false);
-	cc_setsize(40, calc(16384 / 2), ^setsize_minus, ^setsize_proportion);
-	cc_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top);
-	cc_setcolour(0xff981f);
-	cc_settextfont(p12_full);
-	cc_settextshadow(true);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
-	cc_settext("There are no quests available that match your current filters.");
-} else {
-	if_sethide(false, $component3);
-}
-def_int $int32 = %varcint10;
-if ($int5 = 1) {
-	$int32 = %varcint972;
-}
-if ($int6 > if_getheight($component2)) {
-	if_setscrollsize(0, $int6, $component2);
-	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, $int32, 1);
-	}
-} else {
-	if ($int5 = 1) {
-		%varcint972 = 0;
-	} else {
-		%varcint10 = 0;
-	}
-	if_setscrollsize(0, 0, $component2);
-	~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	if (cc_find($component3, 1) = ^true) {
-		~scrollbar_vertical_doscroll($component3, $component2, 0, 1);
-	}
-}
-~script4137($component0, $component1, $component2, $component3, $component4, $int5);
+java.lang.IllegalStateException: Check failed.
+
+.id                       2633
+.int_arg_count            6
+.obj_arg_count            0
+   iconst                 -3
+   istore                 6
+   get_varbit             13889
+   iconst                 1
+   if_icmpeq              LABEL6
+   jump                   LABEL8
+LABEL6:
+   iconst                 2
+   istore                 6
+LABEL8:
+   iconst                 0
+   db_findall_with_count 
+   istore                 7
+   invoke                 1972
+   istore                 8
+   iconst                 1
+   istore                 9
+   iconst                 494
+   istore                 10
+   iconst                 494
+   istore                 11
+   iconst                 11
+   istore                 12
+   iconst                 5
+   istore                 13
+   iload                  8
+   iconst                 1
+   if_icmpeq              LABEL27
+   jump                   LABEL29
+LABEL27:
+   iconst                 11
+   istore                 13
+LABEL29:
+   get_varbit             13780
+   iconst                 1
+   if_icmpeq              LABEL33
+   jump                   LABEL43
+LABEL33:
+   iconst                 495
+   istore                 10
+   iconst                 495
+   istore                 11
+   iconst                 13
+   istore                 12
+   iload                  13
+   iconst                 2
+   add                   
+   istore                 13
+LABEL43:
+   sconst                 ""
+   ostore                 0
+   iload                  7
+   define_array           65651
+   iload                  7
+   define_array           131177
+   get_varbit             13772
+   invoke                 1411
+   istore                 14
+   sconst                 ""
+   ostore                 3
+   sconst                 ""
+   ostore                 4
+   iconst                 -1
+   istore                 15
+   sconst                 ""
+   ostore                 5
+   iconst                 0
+   istore                 16
+   iconst                 2
+   iconst                 16
+   pow                   
+   istore                 17
+   invoke                 5849
+   istore                 18
+   invoke                 3160
+   istore                 19
+   get_varbit             13781
+   invoke                 633
+   invoke                 7983
+   istore                 20
+   iload                  4
+   cc_deleteall          
+   iload                  4
+   iconst                 3
+   iconst                 0
+   iconst                 0
+   cc_create             
+   iconst                 1
+   cc_sethide            
+LABEL83:
+   iload                  9
+   iload                  7
+   if_icmple              LABEL87
+   jump                   LABEL256
+LABEL87:
+   iload                  9
+   invoke                 6154
+   istore                 15
+   iload                  4
+   iconst                 4
+   iload                  9
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iload                  12
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  10
+   cc_settextfont        
+   iload                  20
+   cc_settextshadow      
+   iconst                 0
+   iconst                 1
+   iload                  12
+   cc_settextalign       
+   iload                  15
+   invoke                 3742
+   ostore                 5
+   sconst                 "<col=ff9040>"
+   oload                  5
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iload                  15
+   get_varbit             13772
+   invoke                 4026
+   iconst                 1
+   if_icmpeq              LABEL122
+   jump                   LABEL126
+LABEL122:
+   sconst                 "MQ: "
+   oload                  5
+   join_string            2
+   ostore                 5
+LABEL126:
+   iload                  18
+   iconst                 1
+   if_icmpeq              LABEL130
+   jump                   LABEL139
+LABEL130:
+   iload                  15
+   invoke                 6807
+   iconst                 1
+   if_icmpeq              LABEL135
+   jump                   LABEL139
+LABEL135:
+   oload                  5
+   sconst                 " (Beta)"
+   join_string            2
+   ostore                 5
+LABEL139:
+   oload                  5
+   cc_settext            
+   iconst                 0
+   iload                  12
+   oload                  5
+   cc_getwidth           
+   iload                  11
+   paraheight            
+   multiply              
+   iload                  13
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iload                  18
+   iconst                 1
+   if_icmpeq              LABEL157
+   jump                   LABEL161
+LABEL157:
+   iconst                 1
+   sconst                 "View info:"
+   cc_setop              
+   jump                   LABEL164
+LABEL161:
+   iconst                 1
+   sconst                 ""
+   cc_setop              
+LABEL164:
+   iconst                 2
+   sconst                 "Read journal:"
+   cc_setop              
+   iload                  15
+   iconst                 208
+   iconst                 0
+   db_getfield           
+   iconst                 -1
+   if_icmpne              LABEL174
+   jump                   LABEL185
+LABEL174:
+   iload                  15
+   iconst                 208
+   iconst                 0
+   db_getfield           
+   iconst                 0
+   if_icmpne              LABEL181
+   jump                   LABEL185
+LABEL181:
+   iconst                 3
+   sconst                 "Show on map:"
+   cc_setop              
+   jump                   LABEL188
+LABEL185:
+   iconst                 3
+   sconst                 ""
+   cc_setop              
+LABEL188:
+   iload                  15
+   iconst                 48
+   iconst                 0
+   db_getfield           
+   iconst                 2
+   if_icmpeq              LABEL195
+   jump                   LABEL202
+LABEL195:
+   iconst                 4
+   sconst                 "Open wiki guide:"
+   cc_setop              
+   iconst                 5
+   sconst                 "Open wiki quick guide:"
+   cc_setop              
+   jump                   LABEL208
+LABEL202:
+   iconst                 4
+   sconst                 ""
+   cc_setop              
+   iconst                 5
+   sconst                 ""
+   cc_setop              
+LABEL208:
+   iconst                 6
+   sconst                 "Pin journal:"
+   cc_setop              
+   iload                  15
+   invoke                 4029
+   istore                 16
+   iload                  9
+   iconst                 1
+   sub                   
+   iload                  16
+   iload                  17
+   multiply              
+   iload                  9
+   add                   
+   set_array_int          2
+   iload                  15
+   iload                  16
+   get_varbit             13772
+   invoke                 2245
+   ostore                 3
+   iload                  14
+   iconst                 -1
+   if_icmpne              LABEL232
+   jump                   LABEL238
+LABEL232:
+   iload                  15
+   iload                  16
+   iload                  14
+   invoke                 2245
+   ostore                 4
+   jump                   LABEL240
+LABEL238:
+   sconst                 ""
+   ostore                 4
+LABEL240:
+   oload                  3
+   oload                  4
+   join_string            2
+   ostore                 0
+   iload                  9
+   iconst                 1
+   sub                   
+   oload                  0
+   set_array_int          1
+   iconst                 1
+   cc_sethide            
+   iload                  9
+   iconst                 1
+   add                   
+   istore                 9
+   jump                   LABEL83
+LABEL256:
+   iload                  7
+   iconst                 1
+   if_icmpgt              LABEL260
+   jump                   LABEL263
+LABEL260:
+   oload                  1
+   oload                  2
+   8000                  
+LABEL263:
+   iconst                 0
+   istore                 21
+   iconst                 0
+   istore                 22
+   iconst                 0
+   istore                 23
+   iconst                 1
+   istore                 24
+   iconst                 1
+   istore                 25
+   iconst                 0
+   istore                 26
+   sconst                 "************"
+   ostore                 6
+   sconst                 "************"
+   ostore                 7
+   iconst                 227
+   invoke                 5329
+   istore                 27
+   iconst                 224
+   invoke                 5329
+   istore                 28
+   iconst                 225
+   invoke                 5329
+   istore                 29
+   iconst                 226
+   invoke                 5329
+   istore                 30
+   iconst                 0
+   istore                 31
+   iload                  18
+   invoke                 4025
+   istore                 32
+LABEL296:
+   iload                  21
+   iload                  7
+   if_icmplt              LABEL300
+   jump                   LABEL415
+LABEL300:
+   iload                  21
+   get_array_int          2
+   iload                  17
+   mod                   
+   istore                 22
+   iload                  21
+   get_array_int          2
+   iload                  17
+   div                   
+   istore                 16
+   iload                  22
+   invoke                 6154
+   istore                 15
+   iload                  15
+   invoke                 5989
+   istore                 24
+   iload                  15
+   invoke                 5990
+   istore                 25
+   iload                  15
+   iload                  16
+   get_varbit             13772
+   invoke                 2265
+   ostore                 7
+   iload                  15
+   iload                  16
+   iload                  24
+   iload                  25
+   iload                  18
+   iload                  19
+   invoke                 4028
+   istore                 26
+   iload                  15
+   invoke                 6153
+   istore                 31
+   iload                  15
+   iload                  16
+   iload                  24
+   iload                  25
+   iload                  26
+   iload                  18
+   iload                  31
+   iload                  32
+   invoke                 3238
+   iconst                 0
+   if_icmpeq              LABEL347
+   jump                   LABEL410
+LABEL347:
+   oload                  7
+   oload                  6
+   compare               
+   iconst                 0
+   if_icmpne              LABEL353
+   jump                   LABEL366
+LABEL353:
+   get_varbit             13889
+   iconst                 0
+   if_icmpeq              LABEL357
+   jump                   LABEL366
+LABEL357:
+   oload                  7
+   iload                  9
+   iload                  6
+   iload                  4
+   invoke                 1354
+   istore                 6
+   istore                 9
+   oload                  7
+   ostore                 6
+LABEL366:
+   iload                  4
+   iload                  22
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL372
+   jump                   LABEL401
+LABEL372:
+   iload                  31
+   iconst                 1
+   if_icmpeq              LABEL376
+   jump                   LABEL379
+LABEL376:
+   iconst                 1
+   cc_sethide            
+   jump                   LABEL401
+LABEL379:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   iload                  6
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iload                  16
+   iload                  26
+   iload                  18
+   iload                  27
+   iload                  28
+   iload                  29
+   iload                  30
+   iload                  8
+   invoke                 4027
+   iload                  23
+   iconst                 1
+   add                   
+   istore                 23
+   cc_getheight          
+   istore                 12
+LABEL401:
+   iload                  21
+   iconst                 1
+   add                   
+   iload                  6
+   iload                  12
+   add                   
+   istore                 6
+   istore                 21
+   jump                   LABEL414
+LABEL410:
+   iload                  21
+   iconst                 1
+   add                   
+   istore                 21
+LABEL414:
+   jump                   LABEL296
+LABEL415:
+   iload                  6
+   iconst                 2
+   add                   
+   istore                 6
+   iconst                 0
+   iload                  6
+   iconst                 1
+   iconst                 0
+   iload                  4
+   if_setsize            
+   iload                  1
+   cc_deleteall          
+   iload                  23
+   iconst                 0
+   if_icmple              LABEL431
+   jump                   LABEL464
+LABEL431:
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iload                  1
+   iconst                 4
+   iconst                 0
+   iconst                 0
+   cc_create             
+   iconst                 40
+   iconst                 16384
+   iconst                 2
+   div                   
+   iconst                 1
+   iconst                 2
+   cc_setsize            
+   iconst                 0
+   iconst                 8
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 16750623
+   cc_setcolour          
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 14
+   cc_settextalign       
+   sconst                 "There are no quests available that match your current filters."
+   cc_settext            
+   jump                   LABEL467
+LABEL464:
+   iconst                 0
+   iload                  3
+   if_sethide            
+LABEL467:
+   get_varc_int           10
+   istore                 33
+   iload                  5
+   iconst                 1
+   if_icmpeq              LABEL473
+   jump                   LABEL475
+LABEL473:
+   get_varc_int           972
+   istore                 33
+LABEL475:
+   iload                  6
+   iload                  2
+   if_getheight          
+   if_icmpgt              LABEL480
+   jump                   LABEL505
+LABEL480:
+   iconst                 0
+   iload                  6
+   iload                  2
+   if_setscrollsize      
+   iload                  3
+   iload                  2
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+   iload                  3
+   iconst                 1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL499
+   jump                   LABEL504
+LABEL499:
+   iload                  3
+   iload                  2
+   iload                  33
+   iconst                 1
+   invoke                 37
+LABEL504:
+   jump                   LABEL538
+LABEL505:
+   iload                  5
+   iconst                 1
+   if_icmpeq              LABEL509
+   jump                   LABEL512
+LABEL509:
+   iconst                 0
+   set_varc_int           972
+   jump                   LABEL514
+LABEL512:
+   iconst                 0
+   set_varc_int           10
+LABEL514:
+   iconst                 0
+   iconst                 0
+   iload                  2
+   if_setscrollsize      
+   iload                  3
+   iload                  2
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+   iload                  3
+   iconst                 1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL533
+   jump                   LABEL538
+LABEL533:
+   iload                  3
+   iload                  2
+   iconst                 0
+   iconst                 1
+   invoke                 37
+LABEL538:
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   invoke                 4137
+   return                

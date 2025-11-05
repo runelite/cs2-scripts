@@ -1,0 +1,7 @@
+// 8614
+[clientscript,script8614](component $com_sailing_bt_selection_frame0, component $com_sailing_bt_selection_content_left1, component $com_sailing_bt_selection_content_right2, component $com_sailing_bt_selection_click_layer3, component $com_sailing_bt_selection_reward_click_layer4)
+if (%sailing_bt_trial_data_if = null) {
+	return;
+}
+~steelborder($com_sailing_bt_selection_frame0, "The <db_getfield(%sailing_bt_trial_data_if, sailing_bt_trial_core:trial_name, 0)>", 0);
+~script8615(%sailing_bt_trial_data_if, $com_sailing_bt_selection_frame0, $com_sailing_bt_selection_content_left1, $com_sailing_bt_selection_content_right2, $com_sailing_bt_selection_click_layer3, $com_sailing_bt_selection_reward_click_layer4);

@@ -1,0 +1,115 @@
+// 9104
+[proc,script9104](dbrow $dbrow0, dbrow $dbrow1)(int)
+if (~script8943($dbrow0) = 1) {
+	return(0);
+}
+if (~script8943($dbrow1) = 1) {
+	return(0);
+}
+switch_dbrow ($dbrow1) {
+	case dbrow_4147 :
+		if ($dbrow0 = dbrow_4151) {
+			return(0);
+		} else if ($dbrow0 = dbrow_9448) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4158) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4159) {
+			return(0);
+		}
+	case dbrow_4150 :
+		if (%fever_quest < 140 | %priestperil < 61) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4153) {
+			return(0);
+		}
+	case dbrow_4151 :
+		if ($dbrow0 = dbrow_4147) {
+			return(0);
+		} else if ($dbrow0 = dbrow_9448) {
+			return(0);
+		}
+	case dbrow_4153 :
+		if (%priestperil < 61) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4150) {
+			return(0);
+		}
+	case dbrow_4154 :
+		if (%mm_main < 2 | %grandtree < 160) {
+			return(0);
+		}
+	case dbrow_4155 :
+		if (%regicide_quest < 15) {
+			return(0);
+		}
+	case dbrow_4157 :
+		if (%sote < 200) {
+			return(0);
+		}
+	case dbrow_4158 :
+		if (%zeah_playerhasvisited = 0) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4147) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4159) {
+			return(0);
+		}
+	case dbrow_4159 :
+		if (%zeah_playerhasvisited = 0) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4147) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4158) {
+			return(0);
+		}
+	case dbrow_4160 :
+		if (%varlamore_visited = 0) {
+			return(0);
+		}
+	case dbrow_4161 :
+		if (%varlamore_visited = 0) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4162) {
+			return(0);
+		}
+	case dbrow_4162 :
+		if (%varlamore_visited = 0) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4161) {
+			return(0);
+		}
+	case dbrow_4163 :
+		return(0);
+	case dbrow_4164 :
+		if (%dragonquest < 2 | %dragonquest > 9) {
+			return(0);
+		}
+	case dbrow_9448 :
+		if (%sailing_intro < 16) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4147) {
+			return(0);
+		} else if ($dbrow0 = dbrow_4151) {
+			return(0);
+		}
+	case dbrow_9449 :
+		if (%tt < 12) {
+			return(0);
+		}
+	case dbrow_9450 :
+		if (%trr < 12) {
+			return(0);
+		}
+	case dbrow_9451 :
+		return(0);
+	case dbrow_9452 :
+		if (%deepfin_point_visited = 0) {
+			return(0);
+		}
+	case dbrow_9453 :
+		if (%port_roberts_visited = 0) {
+			return(0);
+		}
+}
+return(1);

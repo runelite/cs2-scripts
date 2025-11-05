@@ -1,0 +1,28 @@
+// 8566
+[proc,skill_guide_subsection_sailing](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Sailing", 1);
+	case 1 :
+		return("Boats", 1);
+	case 2 :
+		return("Ports", 1);
+	case 3 :
+		return("Mooring Points", 1);
+	case 4 :
+		return("Port Tasks", 1);
+	case 5 :
+		return("Sea Charting", 1);
+	case 6 :
+		return("Shipwreck Salvaging", 1);
+	case 7 :
+		return("Barracuda Trials", 1);
+	case 8 :
+		return("Core Boat Parts", 1);
+	case 9 :
+		return("Boat Facilities", 1);
+	case 10 :
+		return("Crewmates", 1);
+	case default :
+		return("", -1);
+}

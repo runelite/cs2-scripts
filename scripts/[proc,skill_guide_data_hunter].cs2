@@ -197,6 +197,18 @@ if ($int0 = 8) {
 if ($int0 = 9) {
 	switch_int ($int1) {
 		case 0 :
+			return(21, red_crab_31671, "Red crabs<br>(with <tostring(10)> Construction)");
+		case 1 :
+			return(48, blue_crab_31674, "Blue crabs<br>(with <tostring(10)> Construction)");
+		case 2 :
+			return(77, rainbow_crab_a_31677, "Rainbow crabs<br>(with <tostring(10)> Construction)");
+		case default :
+			return(-1, null, "");
+	}
+}
+if ($int0 = 10) {
+	switch_int ($int1) {
+		case 0 :
 			return(35, aerial_fishing_bluegill_22826, "Bluegill<br>(With 43 fishing)");
 		case 1 :
 			return(43, huntguide_speedy_beast_9960, "Spotted kebbits (woodland)");
@@ -214,73 +226,7 @@ if ($int0 = 9) {
 			return(-1, null, "");
 	}
 }
-if ($int0 = 10) {
-	switch_int ($int1) {
-		case 0 :
-			return(1, hunting_icon_9951, "Lay 1 trap at a time");
-		case 1 :
-			return(1, hunting_ojibway_bird_snare_10006, "Set a bird trap");
-		case 2 :
-			return(1, noose_wand_10150, "Use a noose wand in tracking");
-		case 3 :
-			return(15, hunting_butterfly_net_10010, "Net butterflies");
-		case 4 :
-			return(20, hunting_icon_9951, "Lay up to 2 traps at a time");
-		case 5 :
-			return(23, logs_1511, "Set a deadfall trap (limit of 1)");
-		case 6 :
-			return(27, hunting_box_trap_10008, "Set a box trap<br>(After Eagles' Peak quest)");
-		case 7 :
-			return(27, hunting_snare_10031, "Set a rabbit snare");
-		case 8 :
-			return(29, net_303, "Set a net trap");
-		case 9 :
-			return(31, hunting_teasing_stick_10029, "Set a pitfall trap");
-		case 10 :
-			return(39, torch_lit_594, "Use smoke to mask the scent on a trap");
-		case 11 :
-			return(40, hunting_icon_9951, "Lay up to 3 traps at a time");
-		case 12 :
-			return(43, falcon_gloves_10023, "Hunt with a falcon");
-		case 13 :
-			return(60, hunting_icon_9951, "Lay up to 4 traps at a time");
-		case 14 :
-			return(71, magic_imp_box_10025, "Set an imp trap");
-		case 15 :
-			return(80, hunting_icon_9951, "Lay up to 5 traps at a time");
-		case default :
-			return(-1, null, "");
-	}
-}
 if ($int0 = 11) {
-	switch_int ($int1) {
-		case 0 :
-			return(1, hunting_camoflauge_robe_polar_10065, "Polar kebbit fur clothing (snow)");
-		case 1 :
-			return(1, hunting_camoflauge_robe_wood_10053, "Common kebbit fur clothing (woodland)");
-		case 2 :
-			return(4, hunting_camoflauge_robe_jungle_10057, "Feldip weasel fur clothing (jungle)");
-		case 3 :
-			return(10, hunting_camoflauge_robe_desert_10061, "Desert devil fur clothing (desert)");
-		case 4 :
-			return(24, hunting_strung_rabbit_foot_10132, "Lucky rabbit's foot");
-		case 5 :
-			return(28, hunting_hat_jaguar_10045, "Larupia fur clothing");
-		case 6 :
-			return(38, hunting_hat_leopard_10051, "Graahk hide clothing");
-		case 7 :
-			return(40, hunting_light_cape_10069, "Spotted capes");
-		case 8 :
-			return(52, hunting_hat_tiger_10039, "Kyatt fur clothing");
-		case 9 :
-			return(54, hunting_silent_gloves_10075, "Gloves of silence");
-		case 10 :
-			return(66, hunting_lighter_cape_10071, "Spottier capes");
-		case default :
-			return(-1, null, "");
-	}
-}
-if ($int0 = 12) {
 	switch_int ($int1) {
 		case 0 :
 			return(5, birdhouse_normal_21512, "Normal Birdhouse Trap");
@@ -304,45 +250,109 @@ if ($int0 = 12) {
 			return(-1, null, "");
 	}
 }
+if ($int0 = 12) {
+	switch_int ($int1) {
+		case 0 :
+			return(1, hunting_icon_9951, "Lay 1 trap at a time");
+		case 1 :
+			return(1, hunting_ojibway_bird_snare_10006, "Set a bird trap");
+		case 2 :
+			return(1, noose_wand_10150, "Use a noose wand in tracking");
+		case 3 :
+			return(15, hunting_butterfly_net_10010, "Net butterflies");
+		case 4 :
+			return(20, hunting_icon_9951, "Lay up to 2 traps at a time");
+		case 5 :
+			return(21, bucket_empty_1925, "Set a crab trap");
+		case 6 :
+			return(23, logs_1511, "Set a deadfall trap (limit of 1)");
+		case 7 :
+			return(27, hunting_box_trap_10008, "Set a box trap<br>(After Eagles' Peak quest)");
+		case 8 :
+			return(27, hunting_snare_10031, "Set a rabbit snare");
+		case 9 :
+			return(29, net_303, "Set a net trap");
+		case 10 :
+			return(31, hunting_teasing_stick_10029, "Set a pitfall trap");
+		case 11 :
+			return(39, torch_lit_594, "Use smoke to mask the scent on a trap");
+		case 12 :
+			return(40, hunting_icon_9951, "Lay up to 3 traps at a time");
+		case 13 :
+			return(43, falcon_gloves_10023, "Hunt with a falcon");
+		case 14 :
+			return(60, hunting_icon_9951, "Lay up to 4 traps at a time");
+		case 15 :
+			return(71, magic_imp_box_10025, "Set an imp trap");
+		case 16 :
+			return(80, hunting_icon_9951, "Lay up to 5 traps at a time");
+		case default :
+			return(-1, null, "");
+	}
+}
 if ($int0 = 13) {
 	switch_int ($int1) {
 		case 0 :
 			return(1, raids_bat0_raw_20870, "Chambers of Xeric - Guanic bat");
 		case 1 :
-			return(15, piscarilius_sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
+			return(1, hunting_camoflauge_robe_polar_10065, "Polar kebbit fur clothing (snow)");
 		case 2 :
-			return(15, raids_bat1_raw_20872, "Chambers of Xeric - Prael bat");
+			return(1, hunting_camoflauge_robe_wood_10053, "Common kebbit fur clothing (woodland)");
 		case 3 :
-			return(20, raw_lizard_29076, "Mossy Lizards traps (Neypotzli)");
+			return(4, hunting_camoflauge_robe_jungle_10057, "Feldip weasel fur clothing (jungle)");
 		case 4 :
-			return(27, huntguide_giant_eagle_9974, "Giant eagles(various)");
+			return(10, hunting_camoflauge_robe_desert_10061, "Desert devil fur clothing (desert)");
 		case 5 :
-			return(27, huntguide_rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
+			return(15, piscarilius_sandworms_13431, "Dig for sandworms (Piscarillius Beach)");
 		case 6 :
-			return(30, raids_bat2_raw_20874, "Chambers of Xeric - Giral bat");
+			return(15, raids_bat1_raw_20872, "Chambers of Xeric - Prael bat");
 		case 7 :
-			return(44, fossil_puffer_fish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
+			return(20, raw_lizard_29076, "Mossy Lizards traps (Neypotzli)");
 		case 8 :
-			return(45, raids_bat3_raw_20876, "Chambers of Xeric - Phluxia bat");
+			return(24, hunting_strung_rabbit_foot_10132, "Lucky rabbit's foot");
 		case 9 :
-			return(46, hunting_icon_9951, "Access to the Hunter Guild & Basic Hunters' Rumours");
+			return(27, huntguide_giant_eagle_9974, "Giant eagles(various)");
 		case 10 :
-			return(50, hunting_crossbow_sunlight_28869, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+			return(27, huntguide_rabbit_9975, "White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole");
 		case 11 :
-			return(57, hunting_icon_9951, "Adept Hunters' Rumours");
+			return(28, hunting_hat_jaguar_10045, "Larupia fur clothing");
 		case 12 :
-			return(60, raids_bat4_raw_20878, "Chambers of Xeric - Kryket bat");
+			return(30, raids_bat2_raw_20874, "Chambers of Xeric - Giral bat");
 		case 13 :
-			return(71, huntguide_imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+			return(38, hunting_hat_leopard_10051, "Graahk hide clothing");
 		case 14 :
-			return(72, hunting_icon_9951, "Expert Hunters' Rumours");
+			return(40, hunting_light_cape_10069, "Spotted capes");
 		case 15 :
-			return(75, raids_bat5_raw_20880, "Chambers of Xeric - Murng bat");
+			return(44, fossil_puffer_fish_21655, "Accessing drift net fishing on Fossil Island (with 47 Fishing)");
 		case 16 :
-			return(90, raids_bat6_raw_20882, "Chambers of Xeric - Psykk bat");
+			return(45, raids_bat3_raw_20876, "Chambers of Xeric - Phluxia bat");
 		case 17 :
-			return(91, hunting_icon_9951, "Master Hunters' Rumours");
+			return(46, hunting_icon_9951, "Access to the Hunter Guild & Basic Hunters' Rumours");
 		case 18 :
+			return(50, hunting_crossbow_sunlight_28869, "Equip the Sunlight hunters' crossbow (with 66 Ranged)");
+		case 19 :
+			return(50, horn_of_plenty_31241, "Horn of Plenty");
+		case 20 :
+			return(52, hunting_hat_tiger_10039, "Kyatt fur clothing");
+		case 21 :
+			return(54, hunting_silent_gloves_10075, "Gloves of silence");
+		case 22 :
+			return(57, hunting_icon_9951, "Adept Hunters' Rumours");
+		case 23 :
+			return(60, raids_bat4_raw_20878, "Chambers of Xeric - Kryket bat");
+		case 24 :
+			return(66, hunting_lighter_cape_10071, "Spottier capes");
+		case 25 :
+			return(71, huntguide_imp_9952, "Imps (worldwide)<br>Preferred bait: Magical beads");
+		case 26 :
+			return(72, hunting_icon_9951, "Expert Hunters' Rumours");
+		case 27 :
+			return(75, raids_bat5_raw_20880, "Chambers of Xeric - Murng bat");
+		case 28 :
+			return(90, raids_bat6_raw_20882, "Chambers of Xeric - Psykk bat");
+		case 29 :
+			return(91, hunting_icon_9951, "Master Hunters' Rumours");
+		case 30 :
 			return(99, raids_bat6_raw_20882, "Chambers of Xeric - Barehanded bat-catching");
 		case default :
 			return(-1, null, "");

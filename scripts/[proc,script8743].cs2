@@ -1,0 +1,14 @@
+// 8743
+[proc,script8743](int $int0, component $component1, dbrow $dbrow2)
+if ($dbrow2 = dbrow_8136) {
+	$int0 = calc($int0 - 2);
+	if (cc_find($component1, $int0) = ^true) {
+		cc_setontimer("script8744($int0, $component1, 0)");
+	}
+} else if ($dbrow2 = dbrow_8129 & cc_find($component1, calc($int0 - 1)) = ^true) {
+	if (%sailing_sidepanel_repairkits >= 16383) {
+		cc_settext("Repairs:<br>Lots!");
+	} else {
+		cc_settext("Repairs:<br><~tostring_spacer(%sailing_sidepanel_repairkits, ",")> HP");
+	}
+}

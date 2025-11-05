@@ -1,0 +1,172 @@
+// 8781
+[clientscript,script8781](component $com_sailing_crew_universe0, component $com_sailing_crew_crew_container1, component $com_sailing_crew_crew_body2, component $com_sailing_crew_crew_list3, component $com_sailing_crew_crew_scrollbar4, component $com_sailing_crew_recruits_container5, component $com_sailing_crew_recruits_body6, component $com_sailing_crew_recruits_list7, component $com_sailing_crew_recruits_scrollbar8, component $com_sailing_crew_middle_container9, component $com_sailing_crew_comparison_container10, component $com_sailing_crew_assign11, component $com_sailing_crew_clear12, component $com_sailing_crew_bottom13)
+~script8782("Current Crew", $com_sailing_crew_crew_container1, $com_sailing_crew_crew_body2, $com_sailing_crew_crew_list3, $com_sailing_crew_crew_scrollbar4);
+~script8782("All Recruits", $com_sailing_crew_recruits_container5, $com_sailing_crew_recruits_body6, $com_sailing_crew_recruits_list7, $com_sailing_crew_recruits_scrollbar8);
+def_string $string0 = "Select which of your recruits will serve as crew on your boats whenever there is space for them.";
+def_int $int14 = if_getwidth($com_sailing_crew_middle_container9);
+def_int $int15 = calc(paraheight($string0, $int14, p12_full) * 14 + 3 + 5);
+cc_deleteall($com_sailing_crew_middle_container9);
+cc_create($com_sailing_crew_middle_container9, ^iftype_text, 0, false);
+cc_setsize(0, $int15, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setposition(0, 60, ^setpos_abs_centre, ^setpos_abs_bottom, $com_sailing_crew_comparison_container10);
+if_setsize(0, calc($int15 + 60), ^setsize_minus, ^setsize_minus, $com_sailing_crew_comparison_container10);
+cc_deleteall($com_sailing_crew_comparison_container10);
+def_int $int16 = 0;
+cc_create($com_sailing_crew_comparison_container10, ^iftype_graphic, $int16, false);
+$int16 = calc($int16 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+cc_settrans(0);
+$int16 = ~thinbox($com_sailing_crew_comparison_container10, $int16);
+cc_create($com_sailing_crew_comparison_container10, ^iftype_text, $int16, false);
+$int16 = calc($int16 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settext(" <br> <br> <br> <br><col=ffb83f>Helmsmanship</col><br><col=ffb83f>Privateering</col><br><col=ffb83f>Deckhandiness</col>");
+cc_create($com_sailing_crew_comparison_container10, ^iftype_text, $int16, false);
+def_int $comsubid17 = $int16;
+$int16 = calc($int16 + 1);
+cc_setsize(scale(47, 100, 16384), 0, ^setsize_proportion, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_create($com_sailing_crew_comparison_container10, ^iftype_text, $int16, false);
+def_int $comsubid18 = $int16;
+$int16 = calc($int16 + 1);
+cc_setsize(scale(47, 100, 16384), 0, ^setsize_proportion, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_deleteall($com_sailing_crew_bottom13);
+$int16 = 0;
+cc_create($com_sailing_crew_bottom13, ^iftype_graphic, $int16, false);
+$int16 = calc($int16 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+cc_settrans(0);
+$int16 = ~thinbox($com_sailing_crew_bottom13, $int16);
+cc_create($com_sailing_crew_bottom13, ^iftype_text, $int16, false);
+$int16 = calc($int16 + 1);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settext("<col=ffb83f>Helmsmanship:</col> Crew can navigate larger boats.<br><col=ffb83f>Privateering:</col> Crew can fire more powerful cannons and deal more damage.<br><col=ffb83f>Deckhandiness:</col> Crew can operate superior facilities, help more with cargo, and more.");
+cc_deleteall($com_sailing_crew_crew_list3);
+$int16 = 0;
+while ($int16 <= 4) {
+	cc_create($com_sailing_crew_crew_list3, ^iftype_rectangle, $int16, false);
+	cc_setsize(0, 52, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($int16 * 52), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_setop(1, "Select");
+	cc_setopbase("<col=ff9040>Crew slot <tostring(calc($int16 + 1))></col>");
+	cc_setonop("script8785(event_op, event_com, $int16, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18, $com_sailing_crew_assign11, $com_sailing_crew_clear12)");
+	$int16 = calc($int16 + 1);
+}
+def_int $int19 = 0;
+while ($int19 <= 4) {
+	cc_create($com_sailing_crew_crew_list3, ^iftype_model, $int16, false);
+	$int16 = calc($int16 + 1);
+	cc_setsize(45, 52, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc($int19 * 52), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setmodelangle(0, 10, 0, 0, 0, 2350);
+	.cc_create($com_sailing_crew_crew_list3, ^iftype_text, $int16, false);
+	$int16 = calc($int16 + 1);
+	.cc_setsize(45, 52, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, calc($int19 * 52), ^setpos_abs_right, ^setpos_abs_top);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+	.cc_settextfont(p12_full);
+	.cc_settextshadow(true);
+	$int19 = calc($int19 + 1);
+}
+$int15 = calc(52 * $int19);
+~script8789($com_sailing_crew_crew_list3, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18, $com_sailing_crew_assign11, $com_sailing_crew_clear12);
+if_setonstattransmit("script8786(event_com, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18, $com_sailing_crew_assign11, $com_sailing_crew_clear12){_23}", $com_sailing_crew_crew_list3);
+if_setonvartransmit("script8786(event_com, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18, $com_sailing_crew_assign11, $com_sailing_crew_clear12){sailing_crew_perm_1, sailing_crew_perm_2}", $com_sailing_crew_crew_list3);
+if_setonvartransmit("script8787($com_sailing_crew_crew_list3, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18, $com_sailing_crew_assign11, $com_sailing_crew_clear12){sote_light_level_0_g}", $com_sailing_crew_crew_scrollbar4);
+def_int $int20 = db_listall(sailing_crew);
+def_npc $npcarray1(calc($int20 + 1));
+def_dbrow $dbrow21 = null;
+cc_deleteall($com_sailing_crew_recruits_list7);
+$int16, $int19 = 0, 1;
+while ($int19 <= $int20) {
+	cc_create($com_sailing_crew_recruits_list7, ^iftype_rectangle, $int16, false);
+	cc_setsize(0, 44, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($int16 * 44), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_setop(1, "Select");
+	db_find(sailing_crew:unique_id, $int19);
+	$dbrow21 = db_findnext;
+	if ($dbrow21 ! null) {
+		$npcarray1($int19) = db_getfield($dbrow21, sailing_crew:cargo_npc, 0);
+		cc_setopbase("<col=ff9040><nc_name($npcarray1($int19))></col>");
+	} else {
+		cc_setopbase("<col=ff9040>Crew</col>");
+	}
+	cc_setonop("script8790(event_op, event_com, $int19, $int20, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18)");
+	$int16, $int19 = calc($int16 + 1), calc($int19 + 1);
+}
+$int19 = 1;
+while ($int19 <= $int20) {
+	cc_create($com_sailing_crew_recruits_list7, ^iftype_model, $int16, false);
+	$int16 = calc($int16 + 1);
+	cc_setsize(35, 44, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc(($int19 - 1) * 44), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setmodelangle(0, 10, 0, 0, 0, 2800);
+	if ($npcarray1($int19) ! null) {
+		cc_setnpchead($npcarray1($int19));
+	} else {
+		cc_setnpchead(sailing_crew_locked_dummy_15350);
+	}
+	.cc_create($com_sailing_crew_recruits_list7, ^iftype_text, $int16, false);
+	$int16 = calc($int16 + 1);
+	.cc_setsize(35, 44, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, calc(($int19 - 1) * 44), ^setpos_abs_right, ^setpos_abs_top);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+	.cc_settextfont(p12_full);
+	.cc_settextshadow(true);
+	$int19 = calc($int19 + 1);
+}
+def_int $int22 = calc(44 * $int20);
+~script8794($com_sailing_crew_recruits_list7, $int20, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18);
+if_setonvartransmit("script8791(event_com, $int20, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18){sailing_crew_unlocks_1}", $com_sailing_crew_recruits_list7);
+if_setonvartransmit("script8792($com_sailing_crew_recruits_list7, $int20, $com_sailing_crew_comparison_container10, $comsubid17, $comsubid18){sote_light_level_0_g}", $com_sailing_crew_recruits_scrollbar8);
+def_int $int23 = min(calc(334 + 60), calc(50 + 22 + 2 + min($int15, $int22) + 2 + 2 + if_getheight($com_sailing_crew_bottom13)));
+def_component $component24 = if_getlayer($com_sailing_crew_universe0);
+if ($component24 ! null) {
+	~script8784(
+		0 = if_getheight($component24), 
+		1 = $com_sailing_crew_universe0, 
+		2 = $component24, 
+		3 = $int23, 
+		4 = $com_sailing_crew_crew_list3, 
+		5 = $com_sailing_crew_crew_scrollbar4, 
+		6 = $com_sailing_crew_recruits_list7, 
+		7 = $com_sailing_crew_recruits_scrollbar8, 
+		8 = $int15, 
+		9 = $int22
+	);
+}

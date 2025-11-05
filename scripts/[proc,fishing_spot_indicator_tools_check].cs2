@@ -13,6 +13,10 @@ switch_namedobj ($namedobj0) {
 		}
 	case harpoon_311 :
 		$int1 = ~script4558;
+	case candle_lantern_lit_4531 :
+		if (inv_total(inv, candle_lantern_lit_4531) > 0 | inv_total(inv, oil_lantern_lit_4539) > 0 | inv_total(inv, bullseye_lantern_lit_4550) > 0) {
+			$int1 = 1;
+		}
 	case fishing_rod_307 :
 		if ($boolean2 = true & (inv_total(inv, fishingrod_pearl_22846) > 0 | inv_total(worn, fishingrod_pearl_22846) > 0)) {
 			$int1 = 1;

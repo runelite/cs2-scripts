@@ -1,0 +1,12 @@
+// 8890
+[proc,script8890](component $com_sailing_boat_cargohold_side_warning0, component $com_sailing_boat_cargohold_side_text1, component $com_sailing_boat_cargohold_side_dismiss2)
+~script8898($com_sailing_boat_cargohold_side_text1);
+cc_deleteall($com_sailing_boat_cargohold_side_dismiss2);
+if (%sailing_boat_cargohold_warning_dismissed = 1) {
+	if_sethide(true, $com_sailing_boat_cargohold_side_warning0);
+	if_setonop(null, $com_sailing_boat_cargohold_side_dismiss2);
+	if_setontimer(null, $com_sailing_boat_cargohold_side_dismiss2);
+	return;
+}
+if_sethide(false, $com_sailing_boat_cargohold_side_warning0);
+~script8891($com_sailing_boat_cargohold_side_dismiss2);

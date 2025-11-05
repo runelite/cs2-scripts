@@ -1,0 +1,20 @@
+// 8897
+[clientscript,script8897](component $component0, int $comsubid1, int $dropsubid2)
+def_int $comsubid3 = inv_size(inv);
+if ($comsubid1 < 0 | $comsubid1 >= $comsubid3) {
+	return;
+}
+if ($dropsubid2 < 0 | $dropsubid2 >= $comsubid3) {
+	return;
+}
+def_obj $obj4 = inv_getobj(inv, $comsubid1);
+if ($obj4 = null) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $dropsubid2);
+if (cc_find($component0, $dropsubid2) = ^true) {
+	~script8896($obj4, inv_getnum(inv, $comsubid1), $comsubid1);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	~script8896($obj5, inv_getnum(inv, $dropsubid2), $dropsubid2);
+}

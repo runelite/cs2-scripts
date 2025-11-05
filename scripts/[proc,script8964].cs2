@@ -1,0 +1,14 @@
+// 8964
+[proc,script8964](int $int0, dbrow $dbrow1)(int)
+if ($dbrow1 = null | $int0 <= 0) {
+	return(0);
+}
+def_int $int2 = db_getfieldcount($dbrow1, music_area_group:area);
+def_int $int3 = 0;
+while ($int3 < $int2) {
+	if (db_getfield($dbrow1, music_area_group:area, $int3) = $int0) {
+		return(1);
+	}
+	$int3 = calc($int3 + 1);
+}
+return(0);

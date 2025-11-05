@@ -1,0 +1,28 @@
+// 8813
+[proc,script8813](component $component0, int $int1, int $int2, string $string0, graphic $graphic3, int $length4, int $int5)(int)
+def_int $int6 = ~script8860;
+$int1 = ~script5291(
+	0 = $component0, 
+	1 = $int1, 
+	2 = $int2, 
+	3 = $int6, 
+	4 = 1, 
+	5 = 0x726451, 
+	6 = $string0, 
+	7 = p12_full, 
+	8 = 0xff981f, 
+	9 = 5, 
+	10 = $graphic3, 
+	11 = 16, 
+	12 = 16, 
+	13 = 3, 
+	14 = 0, 
+	15 = ~is_equal(%varcint1314, $length4)
+);
+cc_setop(1, "View");
+cc_setopbase("<col=ff981f><$string0> options</col>");
+cc_setonop("script8814($length4)");
+if (cc_find($component0, calc($int1 - 2)) = ^true) {
+	cc_settiling(false);
+}
+return($int1);

@@ -1,0 +1,11 @@
+// 8691
+[clientscript,script8691](component $component0, component $component1, component $component2, component $component3, int $int4, int $colour5, int $colour6, anyobj $anyobj0)
+sound_synth(interface_select1, 1, 0);
+~script8697($component0, $component1, $component2, $component3, $int4, $anyobj0, $colour5, $colour6);
+def_int $int7 = 0;
+while ($int7 < $int4) {
+	if (cc_find($component1, calc(1 + $int7 * 2)) = ^true) {
+		cc_setonop("script8692($component0, $component3, $int4, $intarray0($int7), $colour5)");
+	}
+	$int7 = calc($int7 + 1);
+}

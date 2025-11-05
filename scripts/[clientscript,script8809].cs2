@@ -1,0 +1,16 @@
+// 8809
+[clientscript,script8809]
+def_component $component0 = sailing_customisation:infinity;
+def_component $component1 = sailing_customisation:frame;
+if_setontimer("script6110($component0, -1)", $component0);
+if_setonresize("script8810", $component0);
+if_setonstattransmit("script8810{_23, construction}", $component0);
+if_setoninvtransmit("script8810{inv}", $component0);
+if (%varcint1317 ! %sailing_boat_customisation_type | %varcint1318 ! %sailing_boat_customisation_hotspot_id) {
+	%varcint1314 = 0;
+	%varcint1315 = 0;
+	%varcint1317 = %sailing_boat_customisation_type;
+	%varcint1318 = %sailing_boat_customisation_hotspot_id;
+}
+~steelborder($component1, "Boat Customisation", 0);
+~script8811;

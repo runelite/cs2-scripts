@@ -1,5 +1,5 @@
 // 657
-[proc,skill_guide_addentry](int $int0, namedobj $namedobj1, string $string0, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7)(int)
+[proc,skill_guide_addentry](int $int0, obj $obj1, string $string0, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7)(int)
 cc_create($component2, ^iftype_text, calc($int6 * 2), false);
 cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
@@ -20,10 +20,10 @@ def_int $int11 = 0;
 def_int $int12 = 1;
 def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
-if (oc_param($namedobj1, param_1757) ! null) {
-	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = oc_param($namedobj1, param_1757), 30, 30, 3, 0, 0, ^black;
+if (oc_param($obj1, param_1757) ! null) {
+	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = oc_param($obj1, param_1757), 30, 30, 3, 0, 0, ^black;
 } else if (%skill_guide_skill = 4) {
-	$graphic14 = oc_param($namedobj1, spell_graphic1_on);
+	$graphic14 = oc_param($obj1, spell_graphic1_on);
 	if ($graphic14 ! null) {
 		$int8, $int9, $int10, $int11, $int12, $colour13 = 24, 24, 6, 0, 0, ^black;
 	}
@@ -35,21 +35,25 @@ cc_setgraphicshadow($colour13);
 if ($graphic14 ! null) {
 	cc_setgraphic($graphic14);
 } else {
-	cc_setobject($namedobj1, -1);
+	cc_setobject($obj1, -1);
 }
 switch_int (%skill_guide_skill) {
 	case 4 :
-		if ($int5 >= 1 & $int5 <= 4 & $namedobj1 ! arceuus_tele_icon_13578 & $namedobj1 ! lunar_moonclan_liminal_staff_9084 & $namedobj1 ! staff_of_zaros_4675) {
+		if ($int5 >= 1 & $int5 <= 4 & $obj1 ! arceuus_tele_icon_13578 & $obj1 ! lunar_moonclan_liminal_staff_9084 & $obj1 ! staff_of_zaros_4675) {
 			cc_setop(1, "Check runes");
-			cc_setonop("skill_guide_magic_op($namedobj1)");
+			cc_setonop("skill_guide_magic_op($obj1)");
 		}
 	case 22 :
-		if ($int5 >= 1 & $int5 <= 11) {
+		if ($int5 >= 1 & $int5 <= 11 | $int5 = 14) {
+			cc_setop(1, "Check materials");
+		}
+	case 24 :
+		if ($int5 = 8 | $int5 = 9) {
 			cc_setop(1, "Check materials");
 		}
 }
 cc_create($component2, ^iftype_text, calc($int6 * 2 + 1), false);
-if ($int0 < 0 & $namedobj1 = invis_rod_7620) {
+if ($int0 < 0 & $obj1 = invis_rod_7620) {
 	$int4 = calc($int4 + 36 + 25);
 }
 $int9 = max(max(calc(paraheight($string0, $int4, p12_full) * 12 + 5), $int9), 32);

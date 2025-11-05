@@ -47,6 +47,8 @@ switch_stat ($stat0) {
 		return(~xptracker_get_woodcutting_xp($int1));
 	case farming :
 		return(~xptracker_get_farming_xp($int1));
+	case _23 :
+		return(~script8938($int1));
 	case default :
 		return(0);
 }

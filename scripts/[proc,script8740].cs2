@@ -1,0 +1,39 @@
+// 8740
+[proc,script8740](int $int0, int $int1, component $component2, int $int3, int $int4, dbrow $dbrow5, component $component6, int $int7, int $dbfield8)(int, int, int)
+def_graphic $graphic9 = null;
+def_int $int10 = 0;
+def_int $dbfield11 = db_getfieldcount($dbrow5, sailing_sidepanel_widget_graphic:graphic);
+if ($dbfield8 < $dbfield11) {
+	$graphic9, $int10 = db_getfield($dbrow5, sailing_sidepanel_widget_graphic:graphic, $dbfield8);
+} else {
+	$graphic9, $int10 = db_getfield($dbrow5, sailing_sidepanel_widget_graphic:graphic, 0);
+}
+if ($graphic9 = null) {
+	return($int0, $int1, $int3);
+}
+def_int $int12 = calc($int3 + (30 / 2 - $int10 / 2));
+def_int $int13 = calc($int4 + (30 / 2 - $int10 / 2));
+$int0 = ~create_graphic(
+	0 = $component6, 
+	1 = $int0, 
+	2 = $graphic9, 
+	3 = $int12, 
+	4 = $int13, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $int10, 
+	8 = $int10, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+if ($int7 = 1) {
+	cc_settrans(128);
+} else {
+	cc_settrans(0);
+}
+cc_create($component2, ^iftype_rectangle, $int1, false);
+$int1 = calc($int1 + 1);
+cc_sethide(true);
+$int3 = calc($int3 + 30 + 8);
+return($int0, $int1, $int3);

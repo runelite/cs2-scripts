@@ -7,6 +7,7 @@ def_int $int9 = calc(if_getwidth(bankmain:potionstore_items) / 2);
 def_int $int10 = 36;
 def_int $int11 = 1;
 def_int $int12 = 0;
+def_string $string0 = ",";
 if ($int1 = 1 & calc(if_getwidth(bankmain:potionstore_items) % 2) > 0) {
 	$int12 = calc($int9 + 1);
 }
@@ -43,7 +44,8 @@ if (calc($int5 / 2 % 2) = 0) {
 	7 = $int9, 
 	8 = $int10, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 cc_setop(1, "Withdraw-<~script2579>");
 if (%bank_quantity_type ! 0) {
@@ -63,7 +65,9 @@ cc_setposition(calc($int12 + $int11), calc($int2 * $int10 + 2), ^setpos_abs_left
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setobject($namedobj8, -1);
 cc_setnoclickthrough(true);
-cc_setopbase(oc_name($namedobj8));
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setopbase("<col=ff9040><oc_name($namedobj8)></col>");
 if (enum(int, namedobj, $enum3, 2) ! null) {
 	cc_setop(6, "1 Dose");
 }
@@ -85,25 +89,25 @@ cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-def_string $string0 = enum(enum, string, enum_4827, $enum3);
-if (string_length($string0) = 0) {
-	$string0 = oc_name($namedobj8);
+def_string $string1 = enum(enum, string, enum_4827, $enum3);
+if (string_length($string1) = 0) {
+	$string1 = oc_name($namedobj8);
 } else {
-	$string0 = "<$string0>(<tostring($int7)>)";
+	$string1 = "<$string1>(<tostring($int7)>)";
 }
-cc_settext($string0);
+cc_settext($string1);
 $int0 = calc($int0 + 1);
 cc_create(bankmain:potionstore_items, ^iftype_text, $int0, false);
 cc_setposition(calc($int12 + 36 + $int11 + $int11), calc($int2 * $int10 + $int10 / 2 + 3), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p11_full);
-cc_setcolour(0xff981f);
+cc_setcolour(^white);
 cc_settextshadow(true);
-$string0 = "Doses:";
+$string1 = "Doses:";
 if (enum(int, namedobj, $enum3, 2) = null) {
-	$string0 = "Quantity:";
+	$string1 = "Quantity:";
 }
-cc_settext("<$string0> <tostring($int6)>");
+cc_settext("<$string1> <~tostring_spacer($int6, $string0)>");
 $int0 = calc($int0 + 1);
 if ($int4 = 1) {
 	~create_graphic(
@@ -117,7 +121,8 @@ if ($int4 = 1) {
 		7 = 13, 
 		8 = 12, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	cc_setop(1, "Remove Favourite");
 } else {
@@ -132,7 +137,8 @@ if ($int4 = 1) {
 		7 = 13, 
 		8 = 12, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	cc_setop(1, "Add Favourite");
 	if (~script6075 = 8) {

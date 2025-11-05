@@ -1,8 +1,8 @@
 // 315
-[clientscript,music_optionbuttons_setmode](int $opindex0, int $int1, component $com_music_manual_background2, component $com_music_area_background3, component $com_music_random_background4)
-if ($opindex0 ! 1) {
+[clientscript,music_optionbuttons_setmode](int $int0, int $int1, component $component2, component $component3, component $component4)
+if ($int0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
 %musicplay = $int1;
-~music_optionbuttons($com_music_manual_background2, $com_music_area_background3, $com_music_random_background4);
+~music_optionbuttons($component2, $component3, $component4);

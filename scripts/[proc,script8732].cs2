@@ -1,0 +1,174 @@
+// 8732
+[proc,script8732](dbrow $dbrow0, dbrow $dbrow1, int $int2, dbrow $dbrow3)(int, int, int, namedobj)
+def_int $int4 = 1;
+def_int $int5 = 0;
+def_int $int6 = 0;
+if (%sailing_sidepanel_player_role = 10) {
+	$int5 = 1;
+} else if (%sailing_sidepanel_player_role = 6) {
+	$int6 = 1;
+}
+if ($int2 >= 0) {
+	if (db_getfield($dbrow0, sailing_sidepanel_facility:facility_can_lock_in, 0) = true) {
+		if (%sailing_facility_hotspot_number > 0 & calc(%sailing_facility_hotspot_number - 1) = $int2) {
+			$int4 = 0;
+		}
+		if ($int5 = 1 & $dbrow3 ! null) {
+			$int4 = 0;
+		}
+	} else if ($int5 = 1) {
+		$int4 = 0;
+	}
+}
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_namedobj $namedobj9 = null;
+def_int $int10 = 0;
+switch_dbrow ($dbrow0) {
+	case dbrow_8120 :
+		if (~script9044 = 1) {
+			$int4 = 0;
+		}
+		if ($int5 = 1 & $dbrow3 ! null) {
+			$int4 = 0;
+		}
+		if ($dbrow1 = dbrow_8121) {
+			if (%sailing_sidepanel_sail_button_toggled = 1 & $int4 = 0) {
+				$int4 = 2;
+			}
+			$int7 = %sailing_sidepanel_boat_move_mode;
+		}
+		if ($dbrow1 = dbrow_8122 | $dbrow1 = dbrow_8123) {
+			$int7 = %sailing_sidepanel_boat_move_mode;
+		}
+	case dbrow_8124 :
+		if (~script9043 = 1) {
+			$int4 = 0;
+		}
+		if ($int5 = 1 & $dbrow3 ! null) {
+			$int4 = 0;
+		}
+		if ($dbrow1 = dbrow_8125 | $dbrow1 = dbrow_8126) {
+			if (%sailing_sidepanel_helm_status = 0) {
+				$int4 = 1;
+			}
+			$int7 = %sailing_sidepanel_helm_status;
+		}
+	case dbrow_8127 :
+		if ($dbrow1 = dbrow_8129 & %sailing_sidepanel_repairkits > 0) {
+			$int8, $int4 = 1, 0;
+		}
+	case dbrow_8143, dbrow_8144, dbrow_8145 :
+		if ($int2 = %sailing_sidepanel_boat_trawling_net_0_hotspot_id) {
+			$int7 = %sailing_sidepanel_boat_trawling_net_0_depth;
+		} else if ($int2 = %sailing_sidepanel_boat_trawling_net_1_hotspot_id) {
+			$int7 = %sailing_sidepanel_boat_trawling_net_1_depth;
+		}
+	case dbrow_8134, dbrow_8135 :
+		if ($int6 = 1) {
+			$int4 = 0;
+		}
+		if ($dbrow1 = dbrow_8136) {
+			if (%sailing_sidepanel_boat_wind_charges >= 1) {
+				$int7 = 1;
+			}
+			if (%sailing_sidepanel_boat_wind_catcher_enabled = 1) {
+				$int8 = 1;
+			}
+		} else if ($dbrow1 = dbrow_8137) {
+			if (%sailing_sidepanel_boat_wind_charges >= 2) {
+				$int7 = 1;
+			}
+		} else if ($dbrow1 = dbrow_8138 & %sailing_sidepanel_boat_wind_charges >= 3) {
+			$int7 = 1;
+		}
+	case dbrow_8133 :
+		if ($dbrow1 = dbrow_8130) {
+			switch_int ($int2) {
+				case 0 :
+					$int7 = %sailing_sidepanel_ammunition_count_0;
+					if (%sailing_sidepanel_ammunition_tier_0 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_0);
+					}
+				case 1 :
+					$int7 = %sailing_sidepanel_ammunition_count_1;
+					if (%sailing_sidepanel_ammunition_tier_1 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_1);
+					}
+				case 2 :
+					$int7 = %sailing_sidepanel_ammunition_count_2;
+					if (%sailing_sidepanel_ammunition_tier_2 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_2);
+					}
+				case 3 :
+					$int7 = %sailing_sidepanel_ammunition_count_3;
+					if (%sailing_sidepanel_ammunition_tier_3 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_3);
+					}
+				case 4 :
+					$int7 = %sailing_sidepanel_ammunition_count_4;
+					if (%sailing_sidepanel_ammunition_tier_4 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_4);
+					}
+				case 5 :
+					$int7 = %sailing_sidepanel_ammunition_count_5;
+					if (%sailing_sidepanel_ammunition_tier_5 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_5);
+					}
+				case 6 :
+					$int7 = %sailing_sidepanel_ammunition_count_6;
+					if (%sailing_sidepanel_ammunition_tier_6 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_6);
+					}
+				case 7 :
+					$int7 = %sailing_sidepanel_ammunition_count_7;
+					if (%sailing_sidepanel_ammunition_tier_7 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_7);
+					}
+				case 8 :
+					$int7 = %sailing_sidepanel_ammunition_count_8;
+					if (%sailing_sidepanel_ammunition_tier_8 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_8);
+					}
+				case 9 :
+					$int7 = %sailing_sidepanel_ammunition_count_9;
+					if (%sailing_sidepanel_ammunition_tier_9 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_9);
+					}
+				case 10 :
+					$int7 = %sailing_sidepanel_ammunition_count_10;
+					if (%sailing_sidepanel_ammunition_tier_10 ! 0) {
+						$namedobj9 = ~script9036(%sailing_sidepanel_ammunition_tier_10);
+					}
+			}
+		} else if ($dbrow1 = dbrow_8131) {
+			if ($int5 = 1 & $dbrow3 ! null & $int4 = 0) {
+				if (~script9053($int2) = 1) {
+					$int4 = 0;
+				} else {
+					$int4 = 2;
+				}
+			} else {
+				$int4 = 1;
+			}
+		} else if ($dbrow1 = dbrow_8132) {
+			if (~script9054($int2) = 0) {
+				if ($int5 = 1 & $dbrow3 ! null & $int4 = 0) {
+					$int4 = 2;
+				} else {
+					$int4 = 1;
+				}
+				$int7 = 1;
+			} else if ($int4 = 0) {
+				if ($int5 = 1 & $dbrow3 ! null) {
+					$int4 = 0;
+				} else {
+					$int4 = 1;
+				}
+				$int7 = 0;
+			}
+		}
+	case dbrow_8141 :
+		$int4 = 0;
+}
+return($int4, $int7, $int8, $namedobj9);

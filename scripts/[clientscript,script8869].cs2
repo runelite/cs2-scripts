@@ -1,0 +1,38 @@
+// 8869
+[clientscript,script8869](component $com_sailing_boat_cargohold_universe0, component $com_sailing_boat_cargohold_warning1, component $com_sailing_boat_cargohold_items2, component $com_sailing_boat_cargohold_scrollbar3, component $com_sailing_boat_cargohold_occupiedslots4, component $com_sailing_boat_cargohold_15, component $com_sailing_boat_cargohold_56, component $com_sailing_boat_cargohold_107, component $com_sailing_boat_cargohold_x8, component $com_sailing_boat_cargohold_all9, component $com_sailing_boat_cargohold_tools_container10, component $com_sailing_boat_cargohold_tools11, component $com_sailing_boat_cargohold_depositall_cargo12, component $com_sailing_boat_cargohold_depositall_salvage13, component $com_sailing_boat_cargohold_depositall_inventory14)
+~script8898($com_sailing_boat_cargohold_warning1);
+~scrollbar_vertical($com_sailing_boat_cargohold_scrollbar3, $com_sailing_boat_cargohold_items2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script8882($com_sailing_boat_cargohold_15, $com_sailing_boat_cargohold_56, $com_sailing_boat_cargohold_107, $com_sailing_boat_cargohold_x8, $com_sailing_boat_cargohold_all9);
+if_setonvartransmit("script8881($com_sailing_boat_cargohold_15, $com_sailing_boat_cargohold_56, $com_sailing_boat_cargohold_107, $com_sailing_boat_cargohold_x8, $com_sailing_boat_cargohold_all9){prayer23}", $com_sailing_boat_cargohold_15);
+def_int $int15 = calc(if_getwidth($com_sailing_boat_cargohold_items2) - 9 * 36);
+def_int $int16 = calc($int15 / (9 + 1));
+def_int $int17 = calc($int15 - $int16 * (9 - 1));
+$int17 = calc(($int17 + 1) / 2);
+~script8871($com_sailing_boat_cargohold_items2, $com_sailing_boat_cargohold_scrollbar3, $com_sailing_boat_cargohold_occupiedslots4, $int17, $int16);
+if_setoninvtransmit("script8870($com_sailing_boat_cargohold_items2, $com_sailing_boat_cargohold_scrollbar3, $com_sailing_boat_cargohold_occupiedslots4, $int17, $int16){%sailing_boat_cargohold_inv}", $com_sailing_boat_cargohold_universe0);
+if_setonvartransmit("script8870($com_sailing_boat_cargohold_items2, $com_sailing_boat_cargohold_scrollbar3, $com_sailing_boat_cargohold_occupiedslots4, $int17, $int16){prayer23}", $com_sailing_boat_cargohold_universe0);
+cc_deleteall($com_sailing_boat_cargohold_tools_container10);
+def_int $int18 = 0;
+$int18 = ~thinbox($com_sailing_boat_cargohold_tools_container10, $int18);
+def_string $string0 = "Tools:";
+def_int $int19 = parawidth($string0, 512, p12_full);
+$int17 = 7;
+cc_create($com_sailing_boat_cargohold_tools_container10, ^iftype_text, $int18, false);
+cc_setsize($int19, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition($int17, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setposition($int17, 0, ^setpos_abs_right, ^setpos_abs_centre, $com_sailing_boat_cargohold_tools11);
+$int15 = calc($int17 * 2 + $int19 + 5);
+if_setsize($int15, 0, ^setsize_minus, ^setsize_minus, $com_sailing_boat_cargohold_tools11);
+$int18 = db_listall(sailing_charting_tool_recovery);
+~script8877($com_sailing_boat_cargohold_tools_container10, $com_sailing_boat_cargohold_tools11, $int15, $int18);
+if_setoninvtransmit("script8876($com_sailing_boat_cargohold_tools_container10, $com_sailing_boat_cargohold_tools11, $int15, $int18){inv}", $com_sailing_boat_cargohold_tools_container10);
+if_setonvartransmit("script8876($com_sailing_boat_cargohold_tools_container10, $com_sailing_boat_cargohold_tools11, $int15, $int18){current_affairs_main, pry_main, 100_pirate_quest}", $com_sailing_boat_cargohold_tools_container10);
+~script8878($com_sailing_boat_cargohold_depositall_cargo12, "Cargo", cargo_interface_dummy_32874, null, null);
+~script8878($com_sailing_boat_cargohold_depositall_salvage13, "Salvage", salvage_interface_dummy_32875, null, null);
+~script8878($com_sailing_boat_cargohold_depositall_inventory14, "Inventory", null, "sideicons_new,3", 0_0_0_33_36);
+~script8885($com_sailing_boat_cargohold_items2, $com_sailing_boat_cargohold_scrollbar3, $com_sailing_boat_cargohold_occupiedslots4);

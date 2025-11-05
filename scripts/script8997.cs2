@@ -1,0 +1,345 @@
+java.util.NoSuchElementException: Key 8 is missing in the map.
+
+.id                       8997
+.int_arg_count            2
+.obj_arg_count            1
+   iload                  1
+   invoke                 9016
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   iload                  2
+   switch                
+      255: LABEL10
+      254: LABEL47
+      253: LABEL71
+   jump                   LABEL94
+LABEL10:
+   invoke                 8989
+   iconst                 1
+   if_icmpeq              LABEL14
+   jump                   LABEL44
+LABEL14:
+   get_varbit             18553
+   iconst                 12
+   if_icmpeq              LABEL18
+   jump                   LABEL31
+LABEL18:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it is already "
+   sconst                 "<col=ffffff>"
+   sconst                 "bottled"
+   sconst                 "<col=ff981f>"
+   sconst                 "."
+   join_string            8
+   return                
+   jump                   LABEL43
+LABEL31:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it is "
+   sconst                 "<col=ffffff>"
+   sconst                 "bottled"
+   sconst                 "<col=ff981f>"
+   sconst                 ". You'll need to unbottle or recover it first."
+   join_string            8
+   return                
+LABEL43:
+   jump                   LABEL46
+LABEL44:
+   iconst                 1
+   istore                 3
+LABEL46:
+   jump                   LABEL94
+LABEL47:
+   invoke                 8990
+   iconst                 1
+   if_icmpeq              LABEL51
+   jump                   LABEL68
+LABEL51:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it has "
+   sconst                 "<col=ffffff>"
+   sconst                 "capsized"
+   sconst                 "<col=ff981f>"
+   sconst                 ". You'll need to speak to a "
+   sconst                 "<col=ffffff>"
+   sconst                 "shipwright"
+   sconst                 "<col=ff981f>"
+   sconst                 " to recover it."
+   join_string            12
+   return                
+   jump                   LABEL70
+LABEL68:
+   iconst                 1
+   istore                 3
+LABEL70:
+   jump                   LABEL94
+LABEL71:
+   invoke                 8991
+   iconst                 1
+   if_icmpeq              LABEL75
+   jump                   LABEL92
+LABEL75:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it is "
+   sconst                 "<col=ffffff>"
+   sconst                 "lost at sea"
+   sconst                 "<col=ff981f>"
+   sconst                 ". You'll need to speak to a "
+   sconst                 "<col=ffffff>"
+   sconst                 "shipwright"
+   sconst                 "<col=ff981f>"
+   sconst                 " to recover it."
+   join_string            12
+   return                
+   jump                   LABEL94
+LABEL92:
+   iconst                 1
+   istore                 3
+LABEL94:
+   iconst                 -1
+   istore                 5
+   iload                  3
+   iconst                 0
+   if_icmpeq              LABEL100
+   jump                   LABEL138
+LABEL100:
+   iload                  2
+   invoke                 9094
+   istore                 5
+   iload                  5
+   iconst                 -1
+   if_icmpeq              LABEL110
+   get_varp               5005
+   iconst                 -1
+   if_icmpeq              LABEL110
+   jump                   LABEL116
+LABEL110:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't choose that boat at the moment."
+   join_string            2
+   return                
+LABEL116:
+   invoke                 8992
+   iconst                 1
+   if_icmpeq              LABEL120
+   jump                   LABEL138
+LABEL120:
+   iload                  5
+   get_varp               5005
+   if_icmpne              LABEL124
+   jump                   LABEL138
+LABEL124:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it is currently docked at "
+   sconst                 "<col=ffffff>"
+   iload                  1
+   iconst                 1
+   invoke                 8973
+   sconst                 "<col=ff981f>"
+   sconst                 "."
+   join_string            8
+   return                
+LABEL138:
+   invoke                 8986
+   iconst                 1
+   if_icmpeq              LABEL142
+   jump                   LABEL184
+LABEL142:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL146
+   jump                   LABEL156
+LABEL146:
+   iload                  5
+   get_varp               5005
+   if_icmpeq              LABEL150
+   jump                   LABEL156
+LABEL150:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "That boat is already at the nearby dock. There's no need to recover it."
+   join_string            2
+   return                
+LABEL156:
+   iload                  0
+   iload                  1
+   invoke                 8979
+   istore                 4
+   iconst                 93
+   iconst                 995
+   inv_total             
+   iconst                 95
+   iconst                 995
+   inv_total             
+   iconst                 2147483647
+   invoke                 7986
+   iload                  4
+   if_icmplt              LABEL171
+   jump                   LABEL184
+LABEL171:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You need "
+   sconst                 "<col=ffffff>"
+   iload                  4
+   sconst                 ","
+   invoke                 46
+   sconst                 " coins"
+   sconst                 "<col=ff981f>"
+   sconst                 " to do that."
+   join_string            7
+   return                
+LABEL184:
+   iload                  1
+   invoke                 9081
+   istore                 6
+   invoke                 8993
+   istore                 7
+   invoke                 8994
+   istore                 8
+   get_varp               5006
+   iconst                 -1
+   if_icmpne              LABEL195
+   jump                   LABEL215
+LABEL195:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL199
+   jump                   LABEL215
+LABEL199:
+   get_varp               5006
+   iload                  5
+   if_icmpeq              LABEL203
+   jump                   LABEL215
+LABEL203:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "That boat is already docked at "
+   sconst                 "<col=ffffff>"
+   iload                  5
+   iconst                 1
+   invoke                 8974
+   sconst                 "<col=ff981f>"
+   sconst                 "."
+   join_string            6
+   return                
+LABEL215:
+   iload                  7
+   iconst                 1
+   if_icmpeq              LABEL219
+   jump                   LABEL235
+LABEL219:
+   iload                  6
+   iconst                 0
+   if_icmpeq              LABEL223
+   jump                   LABEL235
+LABEL223:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You need to build a "
+   sconst                 "<col=ffffff>"
+   iconst                 59715
+   6809                  
+   lowercase             
+   sconst                 "<col=ff981f>"
+   sconst                 " on that boat to be able to teleport it."
+   join_string            6
+   return                
+LABEL235:
+   iload                  8
+   iconst                 1
+   if_icmpeq              LABEL239
+   jump                   LABEL255
+LABEL239:
+   iload                  6
+   iconst                 2
+   if_icmplt              LABEL243
+   jump                   LABEL255
+LABEL243:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You need to build a "
+   sconst                 "<col=ffffff>"
+   iconst                 59716
+   6809                  
+   lowercase             
+   sconst                 "<col=ff981f>"
+   sconst                 " on that boat to be able to teleport it."
+   join_string            6
+   return                
+LABEL255:
+   invoke                 8995
+   istore                 9
+   iload                  1
+   invoke                 9018
+   istore                 10
+   iload                  9
+   iconst                 1
+   if_icmpeq              LABEL264
+   jump                   LABEL288
+LABEL264:
+   iload                  10
+   iconst                 -1
+   if_icmpne              LABEL268
+   jump                   LABEL288
+LABEL268:
+   iload                  10
+   inv_size              
+   iload                  10
+   iload                  10
+   inv_size              
+   invoke                 3505
+   if_icmpne              LABEL276
+   jump                   LABEL288
+LABEL276:
+   iconst                 0
+   sconst                 "Boat Unavailable"
+   sconst                 "<col=ff981f>"
+   sconst                 "You can't "
+   oload                  0
+   sconst                 " that boat as it has items in the "
+   sconst                 "<col=ffffff>"
+   sconst                 "cargo hold"
+   sconst                 "<col=ff981f>"
+   sconst                 ". You'll need to empty it first."
+   join_string            8
+   return                
+LABEL288:
+   iconst                 1
+   sconst                 ""
+   sconst                 ""
+   return                
+   iconst                 -1
+   sconst                 ""
+   sconst                 ""
+   return                

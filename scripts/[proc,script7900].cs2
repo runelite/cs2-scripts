@@ -15,11 +15,17 @@ switch_int ($int0) {
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(21, sack_empty_5418, "Vegetable sack");
+				return(12, bolt_of_linen_31472, "Members: Bolt of linen");
 			case 1 :
-				return(26, fossil_drift_net_21652, "Drift net");
+				return(21, sack_empty_5418, "Members: Vegetable sack");
 			case 2 :
-				return(36, basket_empty_5376, "Fruit basket");
+				return(26, fossil_drift_net_21652, "Members: Drift net");
+			case 3 :
+				return(36, basket_empty_5376, "Members: Fruit basket");
+			case 4 :
+				return(39, bolt_of_canvas_31475, "Members: Bolt of canvas");
+			case 5 :
+				return(73, bolt_of_cotton_31478, "Members: Bolt of cotton");
 			case default :
 				return(-1, null, "");
 		}
@@ -157,9 +163,15 @@ switch_int ($int0) {
 			case 2 :
 				return(10, xbows_crossbow_string_9438, "Members: Sinew into crossbow strings");
 			case 3 :
-				return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
+				return(12, linen_yarn_31463, "Members: Flax into linen yarn");
 			case 4 :
+				return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
+			case 5 :
 				return(30, rope_954, "Members: Yak hair into rope");
+			case 6 :
+				return(39, hemp_yarn_31466, "Members: Hemp into hemp yarn");
+			case 7 :
+				return(73, cotton_yarn_31469, "Members: Cotton boll into cotton yarn");
 			case default :
 				return(-1, null, "");
 		}
@@ -439,18 +451,22 @@ switch_int ($int0) {
 			case 11 :
 				return(50, hg_furpouch_med_29301, "Craft medium hunters' pouches");
 			case 12 :
-				return(52, dorgesh_light_bulb_10973, "Replace Dorgeshuun light orbs");
+				return(51, narwhal_horn_knife_31957, "Craft a knife from a narwhal horn.");
 			case 13 :
-				return(56, rcu_pouch_colossal_26784, "Craft a colossal pouch from essence pouches");
+				return(52, dorgesh_light_bulb_10973, "Replace Dorgeshuun light orbs");
 			case 14 :
-				return(60, birdhouse_yew_22198, "Craft a birdhouse trap from yew logs");
+				return(56, rcu_pouch_colossal_26784, "Craft a colossal pouch from essence pouches");
 			case 15 :
-				return(65, hg_furpouch_large_29303, "Craft large hunters' pouches");
+				return(60, birdhouse_yew_22198, "Craft a birdhouse trap from yew logs");
 			case 16 :
-				return(75, birdhouse_magic_22201, "Craft a birdhouse trap from magic logs");
+				return(62, camphor_crate_32364, "Craft a crate from camphor logs.");
 			case 17 :
-				return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+				return(65, hg_furpouch_large_29303, "Craft large hunters' pouches");
 			case 18 :
+				return(75, birdhouse_magic_22201, "Craft a birdhouse trap from magic logs");
+			case 19 :
+				return(75, divine_rune_pouch_27281, "Craft a divine rune pouch from a Thread of Elidinis.");
+			case 20 :
 				return(90, birdhouse_redwood_22204, "Craft a birdhouse trap from redwood logs");
 			case default :
 				return(-1, null, "");

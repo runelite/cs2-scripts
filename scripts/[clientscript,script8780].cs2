@@ -1,0 +1,32 @@
+// 8780
+[clientscript,script8780](component $component0, int $int1, component $component2, int $int3)
+if ($int3 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	if (cc_find($component2, 0) = ^true) {
+		cc_setonmouseleave(null);
+		cc_setonmouseover(null);
+	}
+} else if (cc_find($component2, 0) = ^true) {
+	if (~on_mobile = false) {
+		cc_setonmouseover("script8755($component0, $int1, 0x9f9f9f)");
+	}
+	cc_setonmouseleave("script8751($component0, $int1, ^white)");
+}
+~script8748(
+	0 = $component0, 
+	1 = null, 
+	2 = $int1, 
+	3 = 0, 
+	4 = 120, 
+	5 = 30, 
+	6 = 30, 
+	7 = 80, 
+	8 = "Edit navigator", 
+	9 = null, 
+	10 = 0, 
+	11 = 16777215, 
+	12 = 0x9f9f9f, 
+	13 = $int3, 
+	14 = 0, 
+	15 = 0
+);

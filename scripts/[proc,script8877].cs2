@@ -1,0 +1,81 @@
+// 8877
+[proc,script8877](component $com_sailing_boat_cargohold_tools_container0, component $com_sailing_boat_cargohold_tools1, int $int2, int $int3)
+cc_deleteall($com_sailing_boat_cargohold_tools1);
+def_int $int4 = 0;
+def_dbrow $dbrow5 = null;
+def_int $int6 = 0;
+def_namedobj $namedobj7 = null;
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_namedobj $namedobj12 = null;
+while ($int4 < $int3) {
+	cc_create($com_sailing_boat_cargohold_tools1, ^iftype_graphic, $int4, false);
+	db_find(sailing_charting_tool_recovery:unique_id, $int4);
+	$dbrow5 = db_findnext;
+	if ($dbrow5 ! null) {
+		$int6 = 1;
+		switch_dbrow ($dbrow5) {
+			case dbrow_8010 :
+				if (%sailing_intro < 50) {
+					$int6 = 0;
+				}
+			case dbrow_8011 :
+				if (%sailing_intro < 50 | %current_affairs < 40) {
+					$int6 = 0;
+				}
+			case dbrow_8012 :
+				if (%sailing_intro < 50 | %quest_pry < 20) {
+					$int6 = 0;
+				}
+			case dbrow_8013 :
+				if (%sailing_intro < 50 | ~quest_is_complete(dbrow_2310) = 0) {
+					$int6 = 0;
+				}
+		}
+		if ($int6 = 1) {
+			cc_sethide(false);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setoutline(1);
+			cc_settrans(0);
+			cc_setgraphicshadow(0x333333);
+			cc_setposition(calc($int9 * (36 + 5)), 0, ^setpos_abs_left, ^setpos_abs_centre);
+			$int10, $int11, $namedobj7, $namedobj8 = 0, db_getfieldcount($dbrow5, sailing_charting_tool_recovery:tool), null, null;
+			while ($namedobj8 = null & $int10 < $int11) {
+				$namedobj12 = db_getfield($dbrow5, sailing_charting_tool_recovery:tool, $int10);
+				if ($namedobj12 = sailing_log_31986 & %sailing_intro < 46) {
+					$namedobj12 = sailing_log_initial_31985;
+				}
+				if ($namedobj12 ! null) {
+					if ($namedobj7 = null) {
+						$namedobj7 = $namedobj12;
+					}
+					if (inv_total(inv, $namedobj12) <= 0 & inv_total(worn, $namedobj12) <= 0) {
+						$namedobj8 = $namedobj12;
+					}
+				}
+				$int10 = calc($int10 + 1);
+			}
+			if ($namedobj8 ! null) {
+				cc_setobject_nonum($namedobj8, 1);
+				cc_settrans(0);
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+			} else {
+				cc_setobject_nonum($namedobj7, 1);
+				cc_settrans(150);
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 200, 150)");
+			}
+			cc_setop(1, "Take");
+			cc_setopbase("<col=ff9040><db_getfield($dbrow5, sailing_charting_tool_recovery:name, 0)></col>");
+			$int9 = calc($int9 + 1);
+		} else {
+			cc_sethide(true);
+		}
+	} else {
+		cc_sethide(true);
+	}
+	$int4 = calc($int4 + 1);
+}
+def_int $int13 = calc($int9 * 36 + ($int9 - 1) * 5);
+if_setsize(calc($int2 + $int13), if_getheight($com_sailing_boat_cargohold_tools_container0), ^setsize_abs, ^setsize_abs, $com_sailing_boat_cargohold_tools_container0);

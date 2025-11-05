@@ -11,10 +11,10 @@ def_int $int10 = 0;
 def_int $int11 = if_getheight($component3);
 if ($int9 > $int8) {
 	$int9 = $int8;
-	$int11 = 0;
-	if (~on_mobile = false) {
-		$int10 = 1;
-	}
+}
+$int11 = 0;
+if (~on_mobile = false) {
+	$int10 = 1;
 }
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -64,7 +64,8 @@ if (~on_mobile = true & calc($int7 * enum_getoutputcount($enum4)) > if_getheight
 	7 = 0, 
 	8 = 0, 
 	9 = ^setsize_minus, 
-	10 = ^setsize_minus
+	10 = ^setsize_minus, 
+	11 = true
 );
 $int18 = calc($int18 + 1);
 $int17 = ~thinbox_specific($component0, $int17, 0, $int16, if_getwidth($component0), $int9, ^setpos_abs_left, ^setpos_abs_top);
@@ -121,7 +122,8 @@ if ($int15 = 1) {
 			7 = 16, 
 			8 = 16, 
 			9 = ^setsize_abs, 
-			10 = ^setsize_abs
+			10 = ^setsize_abs, 
+			11 = true
 		);
 		$int17 = calc($int17 + 1);
 		~create_graphic(
@@ -135,7 +137,8 @@ if ($int15 = 1) {
 			7 = 16, 
 			8 = 16, 
 			9 = ^setsize_abs, 
-			10 = ^setsize_abs
+			10 = ^setsize_abs, 
+			11 = true
 		);
 	} else {
 		~create_graphic(
@@ -149,7 +152,8 @@ if ($int15 = 1) {
 			7 = 16, 
 			8 = 16, 
 			9 = ^setsize_abs, 
-			10 = ^setsize_abs
+			10 = ^setsize_abs, 
+			11 = true
 		);
 		$int17 = calc($int17 + 1);
 		~create_graphic(
@@ -163,7 +167,8 @@ if ($int15 = 1) {
 			7 = 16, 
 			8 = 16, 
 			9 = ^setsize_abs, 
-			10 = ^setsize_abs
+			10 = ^setsize_abs, 
+			11 = true
 		);
 	}
 } else if (~on_mobile = true) {
@@ -178,7 +183,8 @@ if ($int15 = 1) {
 		7 = 16, 
 		8 = 16, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	$int17 = calc($int17 + 1);
 	~create_graphic(
@@ -192,7 +198,8 @@ if ($int15 = 1) {
 		7 = 16, 
 		8 = 16, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 } else {
 	~create_graphic(
@@ -206,7 +213,8 @@ if ($int15 = 1) {
 		7 = 16, 
 		8 = 16, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	$int17 = calc($int17 + 1);
 	~create_graphic(
@@ -220,7 +228,8 @@ if ($int15 = 1) {
 		7 = 16, 
 		8 = 16, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 }
 if (~on_mobile = false & cc_find($component0, calc($int17 - 2)) = ^true) {

@@ -1,0 +1,33 @@
+// 8806
+[proc,script8806](dbtable $dbtable0, dbrow $dbrow1, stat $stat2, int $int3)(int)
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+if ($stat2 = construction) {
+	$int4 = stat(construction);
+	$int5 = ~script9056($dbtable0, $dbrow1);
+	if ($int4 = -1 | $int5 = -1) {
+		return(0);
+	}
+	if (~script8584 = 9625) {
+		$int4 = calc($int4 + 3);
+	}
+	if ($int4 < $int5) {
+		return(0);
+	}
+	return(1);
+}
+if ($stat2 = _23) {
+	$int6 = ~script9055($dbtable0, $dbrow1);
+	if ($int6 = -1) {
+		return(0);
+	}
+	if (stat(_23) < $int6) {
+		return(0);
+	}
+	return(1);
+}
+if (stat($stat2) < $int3) {
+	return(0);
+}
+return(1);

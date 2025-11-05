@@ -1,0 +1,60 @@
+// 8627
+[proc,script8627](component $component0, int $int1, int $int2, int $int3)(int)
+if (%sailing_last_personal_boat_boarded < 1) {
+	return(0);
+}
+def_component $component4 = sailing_boat_selection:boats_container_recent;
+cc_deleteall($component4);
+def_int $int5 = ~script9015(%sailing_last_personal_boat_boarded);
+def_int $int6 = 0;
+def_int $comsubid7 = $int6;
+if ($int5 = -1) {
+	return(0);
+}
+def_int $int8 = db_find(sailing_boat:type_id, $int5);
+if ($int8 < 0) {
+	return(0);
+}
+def_dbrow $dbrow9 = db_findnext;
+cc_create($component4, ^iftype_text, $int6, false);
+cc_settext("Recent Boat");
+cc_setsize(0, 12, ^setsize_minus, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+$int1 = calc($int1 + 17);
+$int6 = calc($int6 + 1);
+def_int $int10 = $int1;
+$int6, $int1 = ~script8628(
+	0 = $component4, 
+	1 = $component0, 
+	2 = $int6, 
+	3 = %sailing_last_personal_boat_boarded, 
+	4 = $int1, 
+	5 = $int5, 
+	6 = $dbrow9, 
+	7 = $int2, 
+	8 = 1, 
+	9 = $int3
+);
+def_int $int11 = calc($int1 - $int10);
+$int6 = ~script7770(
+	0 = $component4, 
+	1 = $int6, 
+	2 = 0, 
+	3 = $int10, 
+	4 = if_getwidth($component4), 
+	5 = $int11, 
+	6 = ^setpos_abs_centre, 
+	7 = ^setpos_abs_top, 
+	8 = 0x2e2b23, 
+	9 = 0x726451
+);
+$int1 = calc($int1 + 5);
+cc_copy($component4, $comsubid7, $int6);
+cc_settext("Other Boats");
+cc_setposition(5, $int1, ^setpos_abs_left, ^setpos_abs_top);
+$int1 = calc($int1 + 15);
+return($int1);

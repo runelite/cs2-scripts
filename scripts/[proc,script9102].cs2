@@ -1,0 +1,14 @@
+// 9102
+[proc,script9102](dbrow $dbrow0)(int, string)
+def_int $int1 = ~script9100($dbrow0);
+def_int $int2 = 0;
+def_string $string0 = "";
+def_int $int3 = 0;
+while ($int3 < $int1) {
+	$int2, $string0 = ~script8942(~script9101($dbrow0, $int3));
+	if ($int2 = 1) {
+		return(1, $string0);
+	}
+	$int3 = calc($int3 + 1);
+}
+return(0, "");

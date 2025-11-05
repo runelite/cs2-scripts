@@ -319,9 +319,9 @@ if_setonvartransmit("xpdrops_setup_display_update(
 	8 = $com_xpdrops_setup_fakes_display24
 ){xpdrops_options, item_redemption}", $com_xpdrops_setup_universe0);
 cc_deleteall($com_xpdrops_setup_skilllist27);
-def_stat $statarray0(23);
+def_stat $statarray0(24);
 def_int $int48 = 0;
-while ($int48 <= 23) {
+while ($int48 <= 24) {
 	cc_create($com_xpdrops_setup_skilllist27, ^iftype_rectangle, $int48, false);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, calc($int48 * 25), ^setpos_abs_centre, ^setpos_abs_top);
@@ -343,7 +343,7 @@ while ($int48 <= 23) {
 		}
 	}
 	cc_setop(1, "Configure");
-	if ($int48 < 23) {
+	if ($int48 < 24) {
 		$statarray0($int48) = enum(int, stat, enum_681, calc($int48 + 1));
 		cc_setopbase("<col=ff9040><enum(stat, string, enum_680, $statarray0($int48))></col>");
 		cc_setonop("script1023(
@@ -407,13 +407,13 @@ while ($int48 <= 23) {
 }
 %varcint49 = 0;
 def_int $int49 = 0;
-while ($int49 <= 23) {
+while ($int49 <= 24) {
 	%varcint49 = calc($int49 * 25);
 	cc_create($com_xpdrops_setup_skilllist27, ^iftype_graphic, $int48, false);
 	$int48 = calc($int48 + 1);
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
-	if ($int49 < 23) {
+	if ($int49 < 24) {
 		cc_setgraphic(enum(stat, graphic, enum_255, $statarray0($int49)));
 	} else {
 		cc_setgraphic("staticons2,7");
@@ -426,7 +426,7 @@ while ($int49 <= 23) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	if ($int49 < 23) {
+	if ($int49 < 24) {
 		cc_settext(enum(stat, string, enum_680, $statarray0($int49)));
 	} else {
 		cc_settext("Total XP");
@@ -443,7 +443,7 @@ while ($int49 <= 23) {
 }
 cc_deleteall($com_xpdrops_setup_skillscrollbar28);
 if_setscrollpos(0, 0, $com_xpdrops_setup_skilllist27);
-%varcint49 = calc(25 * (23 + 1));
+%varcint49 = calc(25 * (24 + 1));
 if (%varcint49 > if_getheight($com_xpdrops_setup_skilllist27)) {
 	if_setscrollsize(0, %varcint49, $com_xpdrops_setup_skilllist27);
 } else {
@@ -580,28 +580,30 @@ if_setonvartransmit("script1025(
 	24 = xpdrops_farming_start, 
 	25 = xpdrops_construction_start, 
 	26 = xpdrops_hunter_start, 
-	27 = xpdrops_total_end, 
-	28 = xpdrops_attack_end, 
-	29 = xpdrops_strength_end, 
-	30 = xpdrops_ranged_end, 
-	31 = xpdrops_magic_end, 
-	32 = xpdrops_defence_end, 
-	33 = xpdrops_hitpoints_end, 
-	34 = xpdrops_prayer_end, 
-	35 = xpdrops_agility_end, 
-	36 = xpdrops_herblore_end, 
-	37 = xpdrops_thieving_end, 
-	38 = xpdrops_crafting_end, 
-	39 = xpdrops_runecraft_end, 
-	40 = xpdrops_mining_end, 
-	41 = xpdrops_smithing_end, 
-	42 = xpdrops_fishing_end, 
-	43 = xpdrops_cooking_end, 
-	44 = xpdrops_firemaking_end, 
-	45 = xpdrops_woodcutting_end, 
-	46 = xpdrops_fletching_end, 
-	47 = xpdrops_slayer_end, 
-	48 = xpdrops_farming_end, 
-	49 = xpdrops_construction_end, 
-	50 = xpdrops_hunter_end
+	27 = xpdrops_hunter_end, 
+	28 = xpdrops_total_end, 
+	29 = xpdrops_attack_end, 
+	30 = xpdrops_strength_end, 
+	31 = xpdrops_ranged_end, 
+	32 = xpdrops_magic_end, 
+	33 = xpdrops_defence_end, 
+	34 = xpdrops_hitpoints_end, 
+	35 = xpdrops_prayer_end, 
+	36 = xpdrops_agility_end, 
+	37 = xpdrops_herblore_end, 
+	38 = xpdrops_thieving_end, 
+	39 = xpdrops_crafting_end, 
+	40 = xpdrops_runecraft_end, 
+	41 = xpdrops_mining_end, 
+	42 = xpdrops_smithing_end, 
+	43 = xpdrops_fishing_end, 
+	44 = xpdrops_cooking_end, 
+	45 = xpdrops_firemaking_end, 
+	46 = xpdrops_woodcutting_end, 
+	47 = xpdrops_fletching_end, 
+	48 = xpdrops_slayer_end, 
+	49 = xpdrops_farming_end, 
+	50 = xpdrops_construction_end, 
+	51 = xpdrops_hunter_end, 
+	52 = xpdrops_sailing_end
 }", $com_xpdrops_setup_main2);

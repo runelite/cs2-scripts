@@ -1,0 +1,9 @@
+// 8906
+[proc,script8906](dbrow $dbrow0)(int)
+if ($dbrow0 = null) {
+	return(1);
+}
+if (db_getfield($dbrow0, port_task:cancellable, 0) = false) {
+	return(1);
+}
+return(0);

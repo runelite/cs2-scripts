@@ -1,8 +1,9 @@
 // 396
-[clientscript,stats_skilltotal](component $com_stats_com_270, component $com_stats_tooltip1)
+[clientscript,stats_skilltotal](component $com_stats_com_320, component $com_stats_tooltip1)
 def_int $int2 = ~stat_totallevel;
-if_settext("Total level:<br><tostring($int2)>", $com_stats_com_270);
-if_clearops($com_stats_com_270);
+if_setonvartransmit("stats_skilltotal($com_stats_com_320, $com_stats_tooltip1){league_reusable_protected_1, content_restriction_temp_1}", $com_stats_com_320);
+if_settext("Total level: <tostring($int2)>", $com_stats_com_320);
+if_clearops($com_stats_com_320);
 def_string $string0 = "";
 def_string $string1 = "";
 if (map_members = true | %varcint103 = 1) {
@@ -17,13 +18,13 @@ if (~league_relic_active(equilibrium_1736) = 1) {
 	$string1 = append($string1, "|<~tostring_spacer(~script7698(null), ",")>");
 }
 if (~on_mobile = true) {
-	if_setop(1, "Toggle Total XP", $com_stats_com_270);
-	if_setonop("stats_op(event_op, event_com, -1, $com_stats_tooltip1, $string0, $string1, p12_full)", $com_stats_com_270);
-	if (%varcint218 = $com_stats_com_270 & %varcint217 = -1) {
-		~script2344($com_stats_com_270, -1, $com_stats_tooltip1, $string0, $string1, p12_full);
+	if_setop(1, "Toggle Total XP", $com_stats_com_320);
+	if_setonop("stats_op(event_op, event_com, -1, $com_stats_tooltip1, $string0, $string1, p12_full)", $com_stats_com_320);
+	if (%varcint218 = $com_stats_com_320 & %varcint217 = -1) {
+		~script2344($com_stats_com_320, -1, $com_stats_tooltip1, $string0, $string1, p12_full);
 	}
 } else {
-	if_setonmouserepeat("script992(event_com, -1, $com_stats_tooltip1, $string0, $string1, p12_full, calc(25 / 5))", $com_stats_com_270);
-	if_setonmouseleave("deltooltip($com_stats_tooltip1)", $com_stats_com_270);
+	if_setonmouserepeat("script992(event_com, -1, $com_stats_tooltip1, $string0, $string1, p12_full, calc(25 / 5))", $com_stats_com_320);
+	if_setonmouseleave("deltooltip($com_stats_tooltip1)", $com_stats_com_320);
 	%varcint2 = 0;
 }

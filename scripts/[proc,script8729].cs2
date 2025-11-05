@@ -1,0 +1,284 @@
+// 8729
+[proc,script8729](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (%sailing_sidepanel_tabs ! 0) {
+	return;
+}
+cc_deleteall($component2);
+if_setonvartransmit("script8728($component0, $component1, $component2, $component3, $component4){
+	0 = sailing_sidepanel_0, 
+	1 = sailing_sidepanel_1, 
+	2 = sailing_sidepanel_2, 
+	3 = sailing_sidepanel_3, 
+	4 = sailing_sidepanel_facility_states_0, 
+	5 = sailing_sidepanel_facility_states_1, 
+	6 = sailing_sidepanel_facility_states_2, 
+	7 = sailing_sidepanel_boat_information, 
+	8 = sailing_sidepanel_crew_0, 
+	9 = sailing_sidepanel_crew_1, 
+	10 = sailing_sidepanel_facility_states_2, 
+	11 = sailing_sidepanel_facility_states_3, 
+	12 = sailing_sidepanel_facility_states_4, 
+	13 = sailing_sidepanel_facility_states_5, 
+	14 = sailing_sidepanel_ammunition_count_0, 
+	15 = sailing_sidepanel_ammunition_count_1, 
+	16 = sailing_sidepanel_ammunition_count_2, 
+	17 = sailing_sidepanel_ammunition_count_3, 
+	18 = sailing_sidepanel_ammunition_count_4, 
+	19 = sailing_sidepanel_ammunition_count_5, 
+	20 = sailing_sidepanel_ammunition_count_6, 
+	21 = sailing_sidepanel_ammunition_count_7, 
+	22 = sailing_sidepanel_ammunition_count_8, 
+	23 = sailing_sidepanel_ammunition_count_9, 
+	24 = sailing_crew_perm_unprotected_2, 
+	25 = sailing_crew_temp_1
+}", $component2);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 2;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_boolean $boolean10 = ~script9033;
+$int5, $int6, $int7, $int8, $int9 = ~script8730(
+	0 = $int5, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = %sailing_sidepanel_facility_sail, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $int8, 
+	8 = $int9, 
+	9 = 1, 
+	10 = -1, 
+	11 = $boolean10
+);
+$int5, $int6, $int7, $int8, $int9 = ~script8730(
+	0 = $int5, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = %sailing_sidepanel_facility_helm, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $int8, 
+	8 = $int9, 
+	9 = 2, 
+	10 = -1, 
+	11 = $boolean10
+);
+$int5, $int6, $int7, $int8, $int9 = ~script8730(
+	0 = $int5, 
+	1 = $int6, 
+	2 = $int7, 
+	3 = %sailing_sidepanel_facility_hull, 
+	4 = $component2, 
+	5 = $component3, 
+	6 = $component4, 
+	7 = $int8, 
+	8 = $int9, 
+	9 = 3, 
+	10 = -1, 
+	11 = $boolean10
+);
+if (%sailing_sidepanel_facility_hotspot0 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot0, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 0, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot1 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 1, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot2 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot2, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 2, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot3 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot3, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 3, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot4 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot4, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 4, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot5 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot5, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 5, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot6 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot6, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 6, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot7 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot7, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 7, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot8 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot8, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 8, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if (%sailing_sidepanel_facility_hotspot9 ! 0) {
+	$int5, $int6, $int7, $int8, $int9 = ~script8730(
+		0 = $int5, 
+		1 = $int6, 
+		2 = $int7, 
+		3 = %sailing_sidepanel_facility_hotspot9, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = 0, 
+		10 = 9, 
+		11 = $boolean10
+	);
+} else {
+	$int6 = ~script8731($int6, $component3);
+}
+if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component2);
+if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component3);
+if_setsize(0, $int7, ^setsize_minus, ^setsize_abs, $component4);
+def_int $int11 = %varcint1313;
+if ($int11 = -1) {
+	$int11 = if_getscrolly($component1);
+}
+if ($int7 > if_getheight($component1)) {
+	if_setscrollsize(0, $int7, $component1);
+	~scrollbar_resize($component0, $component1, $int11);
+} else {
+	%varcint1313 = 0;
+	if_setscrollsize(0, 0, $component1);
+	~scrollbar_resize($component0, $component1, 0);
+	if ($int8 = 1) {
+		cc_create($component2, ^iftype_rectangle, $int5, false);
+		cc_setsize(0, $int7, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(true);
+		cc_setcolour(0x4e453a);
+	}
+}

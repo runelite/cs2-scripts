@@ -31,7 +31,8 @@ cc_deleteall($component0);
 	7 = 2, 
 	8 = 2, 
 	9 = ^setsize_minus, 
-	10 = ^setsize_minus
+	10 = ^setsize_minus, 
+	11 = true
 );
 if (testbit($int1, 3) = ^true) {
 	cc_settrans(120);
@@ -58,7 +59,8 @@ def_int $int5 = cc_getid;
 	7 = 25, 
 	8 = 30, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -71,7 +73,8 @@ def_int $int5 = cc_getid;
 	7 = 25, 
 	8 = 30, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -84,7 +87,8 @@ def_int $int5 = cc_getid;
 	7 = 25, 
 	8 = 30, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -97,7 +101,8 @@ def_int $int5 = cc_getid;
 	7 = 25, 
 	8 = 30, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -110,7 +115,8 @@ def_int $int5 = cc_getid;
 	7 = 36, 
 	8 = 60, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_minus
+	10 = ^setsize_minus, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -123,7 +129,8 @@ def_int $int5 = cc_getid;
 	7 = 36, 
 	8 = 60, 
 	9 = ^setsize_abs, 
-	10 = ^setsize_minus
+	10 = ^setsize_minus, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -136,7 +143,8 @@ def_int $int5 = cc_getid;
 	7 = 50, 
 	8 = 36, 
 	9 = ^setsize_minus, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 ~create_graphic(
 	0 = $component0, 
@@ -149,7 +157,8 @@ def_int $int5 = cc_getid;
 	7 = 50, 
 	8 = 36, 
 	9 = ^setsize_minus, 
-	10 = ^setsize_abs
+	10 = ^setsize_abs, 
+	11 = true
 );
 if (testbit($int1, 2) = ^false) {
 	~create_graphic(
@@ -163,7 +172,8 @@ if (testbit($int1, 2) = ^false) {
 		7 = 10, 
 		8 = 26, 
 		9 = ^setsize_minus, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 } else {
 	~create_graphic(
@@ -177,7 +187,8 @@ if (testbit($int1, 2) = ^false) {
 		7 = 0, 
 		8 = 0, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 }
 def_graphic $graphic6 = "close_buttons,0";
@@ -207,7 +218,8 @@ if (testbit($int1, 0) = ^false) {
 		7 = $int10, 
 		8 = $int11, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	$int12 = calc($int12 + 1);
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
@@ -228,7 +240,8 @@ if (testbit($int1, 1) = ^true) {
 		7 = 8, 
 		8 = 8, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	$int12 = calc($int12 + 1);
 }

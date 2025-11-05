@@ -1,0 +1,16 @@
+// 8652
+[clientscript,script8652](component $component0, int $int1, int $comsubid2, int $int3, int $colour4, int $colour5)
+if (cc_find($component0, $int1) = ^true) {
+	if ($int3 = 1) {
+		~v2_stone_button_change_in($component0, $int1);
+	} else {
+		~v2_stone_button_change_out($component0, $int1);
+	}
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	if ($int3 = 1) {
+		cc_setcolour($colour5);
+	} else {
+		cc_setcolour($colour4);
+	}
+}

@@ -1,0 +1,63 @@
+// 8591
+[clientscript,script8591](component $com_fletching_table_category_list0, component $com_fletching_table_category_backgrounds1, component $com_fletching_table_category_headers2, component $com_fletching_table_list3, component $com_fletching_table_right_scroll4, component $com_fletching_table_left_list5, component $com_fletching_table_left_scroll6, component $com_fletching_table_frame7, component $com_fletching_table_universe8, component $com_fletching_table_infinity9)
+cc_deleteall($com_fletching_table_category_list0);
+cc_deleteall($com_fletching_table_category_backgrounds1);
+cc_deleteall($com_fletching_table_left_scroll6);
+~script8598(
+	0 = $com_fletching_table_universe8, 
+	1 = $com_fletching_table_infinity9, 
+	2 = ^min_32bit_int, 
+	3 = ^min_32bit_int, 
+	4 = $com_fletching_table_list3, 
+	5 = $com_fletching_table_right_scroll4, 
+	6 = $com_fletching_table_left_list5, 
+	7 = $com_fletching_table_left_scroll6, 
+	8 = $com_fletching_table_frame7, 
+	9 = %fletching_table_opened
+);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = enum_getoutputcount(enum_5840);
+def_int $int13 = 0;
+def_int $int14 = 0;
+if (~on_mobile = true) {
+	$int13 = 20;
+}
+while ($int11 < $int12) {
+	$int10 = enum(int, int, enum_5840, $int11);
+	cc_create($com_fletching_table_category_list0, ^iftype_text, $int11, false);
+	cc_setsize(5, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settext(enum(int, string, enum_5841, $int10));
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setonmouseover("cc_colour_swapper($com_fletching_table_category_list0, $int11, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($com_fletching_table_category_list0, $int11, 0xff981f)");
+	cc_setonop("script8592($com_fletching_table_category_headers2, $int10, $com_fletching_table_list3, $com_fletching_table_right_scroll4)");
+	cc_setop(1, "Select");
+	.cc_create($com_fletching_table_category_backgrounds1, ^iftype_rectangle, $int11, false);
+	.cc_setsize(0, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setfill(true);
+	if (calc($int11 % 2) = 0) {
+		.cc_setcolour(^white);
+		.cc_settrans(255);
+	} else {
+		.cc_setcolour(^black);
+		.cc_settrans(225);
+	}
+	$int14 = calc(cc_gety + cc_getheight);
+	$int11 = calc($int11 + 1);
+}
+def_int $int15 = 0;
+if ($int14 > if_getheight($com_fletching_table_left_list5)) {
+	$int15 = if_getscrolly($com_fletching_table_left_list5);
+	if_setscrollsize(0, $int14, $com_fletching_table_left_list5);
+} else {
+	if_setscrollsize(0, 0, $com_fletching_table_left_list5);
+	$int15 = 0;
+}
+~scrollbar_vertical($com_fletching_table_left_scroll6, $com_fletching_table_left_list5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($com_fletching_table_left_scroll6, $com_fletching_table_left_list5, $int15);

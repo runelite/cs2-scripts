@@ -1,0 +1,29 @@
+// 8631
+[proc,script8631](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $colour6)(int)
+def_int $int7 = 50;
+def_string $string0 = "<col=ff981f>Location:</col> <~script8973($int2, 0)>";
+cc_create($component0, ^iftype_text, $int1, false);
+cc_settext($string0);
+cc_setsize(parawidth($string0, if_getwidth($component0), p11_full), calc($int4 - 10), ^setsize_abs, ^setsize_abs);
+cc_setposition($int7, calc($int3 + ($int4 - 27)), ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour($colour6);
+$int7 = calc($int7 + parawidth($string0, if_getwidth($component0), p11_full) + 5);
+$int1 = calc($int1 + 1);
+$int1 = ~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ~script8975($int2), 
+	3 = $int7, 
+	4 = calc($int3 + ($int4 + 7 - 27)), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 18, 
+	8 = 18, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = false
+);
+return($int1);

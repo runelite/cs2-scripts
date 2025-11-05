@@ -59,7 +59,7 @@ if_setonvartransmit("bankmain_quantity_buttons($com_bankmain_quantity122, $com_b
 cc_deleteall($com_bankmain_items7);
 def_int $int35 = 0;
 def_int $int36 = 0;
-while ($int36 < 1220) {
+while ($int36 < 1410) {
 	cc_create($com_bankmain_items7, ^iftype_graphic, $int35, false);
 	$int35 = calc($int35 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -230,3 +230,4 @@ if_setonop("bankmain_switchtab(
 	17 = $com_bankmain_depositworn_graphic31, 
 	18 = $com_bankmain_bank_tut32
 )", bankmain:potionstore_button);
+~script3369($com_bankmain_bank_tut32);

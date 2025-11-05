@@ -16,7 +16,10 @@ switch_int ($int0) {
 	case 79 :
 		return(%option_interface_scaling);
 	case 168 :
-		return(interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, deviceoption_get(^deviceoption_draw_distance)));
+		if (%varcint1292 < 25 | %varcint1292 > 90) {
+			%varcint1292 = ~minmax(25, 90, deviceoption_get(^deviceoption_draw_distance));
+		}
+		return(~minmax(0, 32, interpolate(0, struct_param(view_distance_3656, param_1101), 25, 90, %varcint1292)));
 	case 393 :
 		return(%settings_minimenu_spacing);
 	case default :

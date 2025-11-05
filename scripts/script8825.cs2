@@ -1,0 +1,99 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       8825
+.int_arg_count            6
+.obj_arg_count            0
+   invoke                 8866
+   istore                 6
+   iload                  0
+   iconst                 3
+   iload                  1
+   iconst                 0
+   cc_create             
+   iconst                 5
+   iconst                 5
+   iload                  2
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   cc_setcolour          
+   iconst                 1
+   cc_setfill            
+   iconst                 60
+   iload                  6
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 150
+   cc_settrans           
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   iload                  0
+   iload                  1
+   iconst                 5
+   iconst                 5
+   iload                  2
+   add                   
+   iconst                 60
+   iload                  6
+   iconst                 0
+   iconst                 0
+   invoke                 4216
+   istore                 1
+   iload                  0
+   iconst                 6
+   iload                  1
+   iconst                 0
+   cc_create             
+   iconst                 60
+   iload                  6
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 5
+   iconst                 5
+   iload                  2
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  4
+   iconst                 1
+   if_icmpeq              LABEL62
+   jump                   LABEL74
+LABEL62:
+   iload                  3
+   invoke                 9075
+   1214                  
+   iload                  3
+   invoke                 9077
+   cc_setmodelanim       
+   iload                  3
+   get_varp               5190
+   iconst                 0
+   invoke                 9076
+   cc_setmodelangle      
+   jump                   LABEL83
+LABEL74:
+   iconst                 57767
+   cc_setmodel           
+   iconst                 0
+   iconst                 0
+   iconst                 500
+   iconst                 2047
+   iconst                 0
+   iconst                 1300
+   cc_setmodelangle      
+LABEL83:
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   iload                  1
+   return                
+   iconst                 0
+   return                

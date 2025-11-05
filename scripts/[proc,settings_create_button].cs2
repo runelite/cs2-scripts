@@ -1,9 +1,8 @@
 // 3865
-[proc,settings_create_button](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, int $int8)(int, int, int, int, int)
-def_int $int9 = $int1;
+[proc,settings_create_button](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, int $int8, boolean $boolean9)(int, int, int, int, int)
+def_int $int10 = $int1;
 def_string $string0 = struct_param($struct5, param_1086);
-def_boolean $boolean10 = ~on_mobile;
-if ($boolean10 = true & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean9 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_int $int11 = calc(if_getwidth($component7) / 3);
@@ -66,7 +65,8 @@ if ($int17 = 1) {
 		7 = $int11, 
 		8 = $int13, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -79,7 +79,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -92,7 +93,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -105,7 +107,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -118,7 +121,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -131,7 +135,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = $int22, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -144,7 +149,8 @@ if ($int17 = 1) {
 		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -157,7 +163,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = $int22, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -170,7 +177,8 @@ if ($int17 = 1) {
 		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 } else {
 	~create_graphic(
@@ -184,7 +192,8 @@ if ($int17 = 1) {
 		7 = $int11, 
 		8 = $int13, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -197,7 +206,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -210,7 +220,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -223,7 +234,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -236,7 +248,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -249,7 +262,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = $int22, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -262,7 +276,8 @@ if ($int17 = 1) {
 		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -275,7 +290,8 @@ if ($int17 = 1) {
 		7 = 9, 
 		8 = $int22, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 	~create_graphic(
 		0 = $component7, 
@@ -288,7 +304,8 @@ if ($int17 = 1) {
 		7 = $int21, 
 		8 = 9, 
 		9 = ^setsize_abs, 
-		10 = ^setsize_abs
+		10 = ^setsize_abs, 
+		11 = true
 	);
 }
 $int2 = calc($int2 + 9);
@@ -327,4 +344,4 @@ if ($int0 = 2 | struct_param($struct5, param_1094) = true) {
 	$int0 = ^max_32bit_int;
 	return($int1, $int2, $int3, $int0, 0);
 }
-return($int9, $int2, $int3, $int0, $int1);
+return($int10, $int2, $int3, $int0, $int1);

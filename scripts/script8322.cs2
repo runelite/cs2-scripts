@@ -24,6 +24,7 @@ java.lang.IllegalStateException: Check failed.
    iconst                 0
    iconst                 1
    iconst                 1
+   iconst                 1
    invoke                 98
    pop_int               
    iload                  4
@@ -55,18 +56,19 @@ java.lang.IllegalStateException: Check failed.
    iconst                 16
    iconst                 0
    iconst                 0
+   iconst                 1
    invoke                 98
    pop_int               
    iload                  3
    iconst                 0
-   if_icmpgt              LABEL58
-   jump                   LABEL83
-LABEL58:
+   if_icmpgt              LABEL60
+   jump                   LABEL85
+LABEL60:
    invoke                 1972
    iconst                 0
-   if_icmpeq              LABEL62
-   jump                   LABEL78
-LABEL62:
+   if_icmpeq              LABEL64
+   jump                   LABEL80
+LABEL64:
    iconst                 244
    iload                  0
    iload                  4
@@ -83,16 +85,16 @@ LABEL62:
    sconst                 "iiii"
    iload                  0
    if_setonmouseleave    
-LABEL78:
+LABEL80:
    iconst                 1
    sconst                 "Expand"
    iload                  0
    if_setop              
-   jump                   LABEL85
-LABEL83:
+   jump                   LABEL87
+LABEL85:
    iconst                 125
    cc_settrans           
-LABEL85:
+LABEL87:
    iload                  4
    iconst                 1
    add                   

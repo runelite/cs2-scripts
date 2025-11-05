@@ -79,10 +79,28 @@ switch_int ($int0) {
 			case 8 :
 				return(53, raw_lava_eel_2148, "Members: Lava eel - Oily fishing rod & Fishing bait");
 			case 9 :
-				return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
+				return(64, raw_giant_krill_32309, "Members: Shimmering shoal - Fishing rod & fish offcuts");
 			case 10 :
-				return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
+				return(64, raw_giant_krill_32309, "Members: Giant krill shoal - Fishing rod & fish offcuts");
 			case 11 :
+				return(68, raw_haddock_32317, "Members: Haddock shoal - Fishing rod & fish offcuts");
+			case 12 :
+				return(71, raw_yellowfin_32325, "Members: Glistening shoal - Fishing rod & fine fish offcuts");
+			case 13 :
+				return(74, raw_yellowfin_32325, "Members: Yellowfin shoal - Fishing rod & fine fish offcuts");
+			case 14 :
+				return(78, raw_halibut_32333, "Members: Halibut shoal - Fishing rod & fine fish offcuts");
+			case 15 :
+				return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
+			case 16 :
+				return(81, raw_bluefin_32341, "Members: Vibrant shoal - Fishing rod & fine fish offcuts");
+			case 17 :
+				return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
+			case 18 :
+				return(82, raw_bluefin_32341, "Members: Bluefin shoal - Fishing rod & fine fish offcuts");
+			case 19 :
+				return(86, raw_marlin_32349, "Members: Marlin shoal - Fishing rod & fine fish offcuts");
+			case 20 :
 				return(87, snakeboss_eel_13339, "Members: Sacred eel - Fishing rod & Fishing bait");
 			case default :
 				return(-1, null, "");
@@ -94,6 +112,10 @@ switch_int ($int0) {
 			case 1 :
 				return(50, raw_swordfish_371, "Swordfish - Harpoon");
 			case 2 :
+				return(52, raw_swordtip_squid_31553, "Members: Swordtip squid - Harpoon & Lantern");
+			case 3 :
+				return(69, raw_jumbo_squid_31561, "Members: Jumbo squid - Harpoon & Lantern");
+			case 4 :
 				return(76, raw_shark_383, "Members: Shark - Harpoon");
 			case default :
 				return(-1, null, "");
@@ -123,6 +145,31 @@ switch_int ($int0) {
 	case 7 :
 		switch_int ($int1) {
 			case 0 :
+				return(-1, invis_rod_7620, "Deep Sea Trawling is a Fishing method that takes place out at sea. Because of this, you need to be an experienced sailor with your own boat. For more information, you should speak to Netmaster Kellan in the Rolling Tide pub in Port Roberts.");
+			case 1 :
+				return(64, raw_giant_krill_32309, "Shimmering shoal - Fish offcuts<br>(Shallow)");
+			case 2 :
+				return(64, raw_giant_krill_32309, "Giant krill shoal - Fish offcuts<br>(Shallow)");
+			case 3 :
+				return(68, raw_haddock_32317, "Haddock shoal - Fish offcuts<br>(Shallow)");
+			case 4 :
+				return(71, raw_yellowfin_32325, "Glistening shoal - Fine fish offcuts<br>(Shallow & moderate)");
+			case 5 :
+				return(74, raw_yellowfin_32325, "Yellowfin shoal - Fish offcuts<br>(Shallow & moderate)");
+			case 6 :
+				return(78, raw_halibut_32333, "Halibut shoal - Fine fish offcuts<br>(Shallow & moderate)");
+			case 7 :
+				return(81, raw_bluefin_32341, "Vibrant shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+			case 8 :
+				return(82, raw_bluefin_32341, "Bluefin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+			case 9 :
+				return(86, raw_marlin_32349, "Marlin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+			case default :
+				return(-1, null, "");
+		}
+	case 8 :
+		switch_int ($int1) {
+			case 0 :
 				return(-1, invis_rod_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
 			case 1 :
 				return(48, brut_spawning_trout_11328, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
@@ -141,7 +188,7 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
-	case 8 :
+	case 9 :
 		switch_int ($int1) {
 			case 0 :
 				return(1, net_303, "Small fishing net");
@@ -172,7 +219,7 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
-	case 9 :
+	case 10 :
 		switch_int ($int1) {
 			case 0 :
 				return(1, raids_fish0_raw_20855, "Pysk fish");
@@ -191,7 +238,7 @@ switch_int ($int0) {
 			case default :
 				return(-1, null, "");
 		}
-	case 10 :
+	case 11 :
 		switch_int ($int1) {
 			case 0 :
 				return(35, tempoross_harpoonfish_25565, "Members: Fighting Tempoross");

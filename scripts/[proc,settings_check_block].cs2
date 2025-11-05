@@ -28,7 +28,6 @@ if ($int3 = 0 & struct_param($struct0, param_1157) = true) {
 	$int1 = 1;
 }
 if (%option_settings_declutter = 1 & ~script4566($struct0) = 1) {
-	~debug_mes("This setting <tostring(struct_param($struct0, param_1077))> - <struct_param($struct0, param_1086)> is getting culled by my setting.");
 	$int1 = 1;
 }
 if (struct_param($struct0, param_741) = true & %ironman ! 0) {
@@ -79,7 +78,7 @@ if (struct_param($struct0, param_474) = true & %setting_hd_beta_flag = 0) {
 if (struct_param($struct0, param_1995) = true & %tutorial < 1000 & %tutorial_2 < 1000) {
 	$int1 = 1;
 }
-if (~on_enhanced_any = 1) {
+if ($int3 = 1) {
 	if (struct_param($struct0, param_2277) = true & (%settings_sd_beta_enabled = 0 | deviceoption_get(25) = 1)) {
 		$int1 = 1;
 	}

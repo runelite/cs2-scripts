@@ -1,0 +1,27 @@
+// 8661
+[proc,script8661]
+def_dbrow $dbrow0 = null;
+def_dbrow $dbrow1 = null;
+$dbrow0, $dbrow1 = ~script8662;
+def_int $int2 = -1;
+def_int $int3 = -1;
+if ($dbrow0 ! null) {
+	$int2 = db_getfield($dbrow0, sailing_sea:unique_id, 0);
+}
+if ($dbrow1 ! null) {
+	$int3 = db_getfield($dbrow1, sailing_sea:unique_id, 0);
+}
+if (%varcint1298 = -2) {
+	if ($int3 ! -1) {
+		%varcint1300 = $int3;
+	} else {
+		%varcint1300 = -1;
+	}
+}
+if (%varcint1299 = -2) {
+	if ($int2 ! -1) {
+		%varcint1301 = $int2;
+	} else {
+		%varcint1301 = -1;
+	}
+}

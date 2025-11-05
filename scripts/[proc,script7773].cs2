@@ -1,0 +1,16 @@
+// 7773
+[proc,script7773](component $com_sailing_intro_hud_universe0, component $com_sailing_intro_hud_dodger_hints1, component $com_sailing_intro_hud_hint_layer2)
+if (getwindowmode = ^windowmode_fixed | ~on_mobile = true) {
+	if (~on_mobile = true) {
+		if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_bottom, $com_sailing_intro_hud_hint_layer2);
+	} else {
+		if_setposition(0, 4, ^setpos_abs_centre, ^setpos_abs_bottom, $com_sailing_intro_hud_hint_layer2);
+	}
+	~script4729($com_sailing_intro_hud_dodger_hints1, $com_sailing_intro_hud_hint_layer2, 52960, ^setpos_abs_centre, ^setpos_abs_bottom, 1);
+} else if (if_getwidth($com_sailing_intro_hud_universe0) <= 600 | if_getheight($com_sailing_intro_hud_universe0) <= 400) {
+	if_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top, $com_sailing_intro_hud_hint_layer2);
+	~script4729($com_sailing_intro_hud_dodger_hints1, $com_sailing_intro_hud_hint_layer2, 52968, ^setpos_abs_left, ^setpos_abs_bottom, 1);
+} else {
+	if_setposition(0, 4, ^setpos_abs_centre, ^setpos_abs_top, $com_sailing_intro_hud_hint_layer2);
+	~script4729($com_sailing_intro_hud_dodger_hints1, $com_sailing_intro_hud_hint_layer2, 52968, ^setpos_abs_centre, ^setpos_abs_top, 1);
+}

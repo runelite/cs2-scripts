@@ -1,0 +1,9 @@
+// 615
+[clientscript,script615](int $opindex0, int $int1, string $string0, component $component2, graphic $graphic3, int $int4)
+if ($opindex0 = -1 | testbit($int1, $opindex0) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	~stonebutton_draw(1, $string0, $graphic3, $int4, $component2);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setontimer("script616(calc(clientclock + 20), $string0, event_com, $graphic3, $int4)", $component2);
+}

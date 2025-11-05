@@ -1,0 +1,17 @@
+// 8587
+[clientscript,script8587](component $com_fletching_table_obj_list0, component $com_fletching_table_text_list1, component $com_fletching_table_category_headers2, component $com_fletching_table_category_lines3, component $com_fletching_table_list4, component $com_fletching_table_right_scroll5, int $com_fletching_table_frame6)
+def_int $int7 = %varcint1294;
+~scrollbar_vertical($com_fletching_table_right_scroll5, $com_fletching_table_list4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script8589($com_fletching_table_obj_list0, $com_fletching_table_text_list1, $com_fletching_table_category_headers2, $com_fletching_table_category_lines3, $com_fletching_table_list4, $com_fletching_table_right_scroll5);
+if_setonvartransmit("script8588($com_fletching_table_obj_list0, $com_fletching_table_text_list1, $com_fletching_table_category_headers2, $com_fletching_table_category_lines3, $com_fletching_table_list4, $com_fletching_table_right_scroll5){
+	0 = fletching_table_general, 
+	1 = fletching_table_fave_1, 
+	2 = fletching_table_fave_2, 
+	3 = fletching_table_fave_3, 
+	4 = fletching_table_fave_4, 
+	5 = fletching_table_fave_5, 
+	6 = fletching_table_fave_6, 
+	7 = fletching_table_fave_7, 
+	8 = fletching_table_fave_8
+}", $com_fletching_table_list4);
+%varcint1294 = $int7;

@@ -1,0 +1,26 @@
+// 8638
+[proc,script8638](component $component0, int $comsubid1)
+if (.cc_find($component0, $comsubid1) = ^true) {
+	.cc_setcolour(^white);
+	.cc_settrans(180);
+}
+cc_setonop(null);
+cc_setonkey(null);
+sound_synth(interface_select1, 1, 0);
+if_sethide(false, sailing_boat_selection:loading);
+cc_resume_pausebutton;
+~script7137(
+	0 = sailing_boat_selection:loading, 
+	1 = null, 
+	2 = enum_3787, 
+	3 = 10, 
+	4 = 1000, 
+	5 = 3000, 
+	6 = 512, 
+	7 = 1024, 
+	8 = 0, 
+	9 = 3, 
+	10 = "", 
+	11 = 0, 
+	12 = 0
+);

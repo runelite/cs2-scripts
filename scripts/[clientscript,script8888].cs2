@@ -1,0 +1,20 @@
+// 8888
+[clientscript,script8888](component $com_sailing_boat_cargohold_side_universe0, component $com_sailing_boat_cargohold_side_warning1, component $com_sailing_boat_cargohold_side_text2, component $com_sailing_boat_cargohold_side_dismiss3, component $com_sailing_boat_cargohold_side_items4)
+~script8890($com_sailing_boat_cargohold_side_warning1, $com_sailing_boat_cargohold_side_text2, $com_sailing_boat_cargohold_side_dismiss3);
+if_setonvartransmit("script8889($com_sailing_boat_cargohold_side_warning1, $com_sailing_boat_cargohold_side_text2, $com_sailing_boat_cargohold_side_dismiss3){sailing_perm_transmit_no_protect_1}", $com_sailing_boat_cargohold_side_items4);
+cc_deleteall($com_sailing_boat_cargohold_side_items4);
+def_int $int5 = calc((42 - 36) * 3 - 2);
+def_int $int6 = calc((36 - 32) * 2);
+def_int $int7 = 0;
+def_int $int8 = inv_size(inv);
+while ($int7 < $int8) {
+	cc_create($com_sailing_boat_cargohold_side_items4, ^iftype_graphic, $int7, false);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + $int7 % 4 * 42), calc($int6 + $int7 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$int7 = calc($int7 + 1);
+}
+~script8895($com_sailing_boat_cargohold_side_items4, $int7);
+if_setoninvtransmit("script8894($com_sailing_boat_cargohold_side_items4, $int7){inv}", $com_sailing_boat_cargohold_side_universe0);
+if_setonvartransmit("script8894($com_sailing_boat_cargohold_side_items4, $int7){prayer23, sailing_boat_cargohold_side_whitelist}", $com_sailing_boat_cargohold_side_universe0);

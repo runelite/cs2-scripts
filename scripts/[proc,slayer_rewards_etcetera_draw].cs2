@@ -14,7 +14,7 @@ if (~league_relic_active(struct_1129) = 1) {
 	$int11 = 1;
 }
 while ($dbrow10 ! null) {
-	if (~script8048(db_getfield($dbrow10, slayer_unlock:bit, 0)) = 0 & ~script3689(%league_type, db_getfield($dbrow10, slayer_unlock:bit, 0)) = 0) {
+	if (~script8048(db_getfield($dbrow10, slayer_unlock:bit, 0)) = 0 & ~script8935($dbrow10, db_getfield($dbrow10, slayer_unlock:bit, 0)) = 0) {
 		$int6, $int7 = calc($int6 + 1), calc($int7 + db_getfield($dbrow10, slayer_unlock:cost, 0));
 	}
 	$dbrow10 = db_findnext;
@@ -50,7 +50,7 @@ if ($int6 > 0 & $int7 > 0) {
 	if_setop(1, "Extend", $com_slayer_rewards_extend_etcetera0);
 	if_setonop("slayer_rewards_unlock_confirm(
 		0 = -1, 
-		1 = calc(57 + 9), 
+		1 = calc(61 + 9), 
 		2 = $string1, 
 		3 = $com_slayer_rewards_main1, 
 		4 = $com_slayer_rewards_confirm2, 

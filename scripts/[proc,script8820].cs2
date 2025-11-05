@@ -1,0 +1,39 @@
+// 8820
+[proc,script8820](component $component0, int $int1, int $int2, int $int3, int $int4, dbrow $dbrow5, dbrow $dbrow6)(int, int, int)
+def_int $int7 = 69;
+def_int $int8 = ~script8865;
+def_int $int9 = 30;
+def_int $int10 = 100;
+def_int $int11 = ~script9062(db_getrowtable($dbrow5), $dbrow5);
+def_int $int12 = 0;
+def_boolean $boolean13 = ~script9078($dbrow5);
+def_int $int14 = ~script8835($dbrow5, $dbrow6);
+def_int $int15 = 1;
+if ($boolean13 = false | $int11 <= 0) {
+	$int8 = calc($int8 - (32 + 5) - 3);
+}
+$int1, $int15 = ~script8826($component0, $int1, $int3, $int10, $int9, $dbrow5, $boolean13);
+$int1, $int12 = ~script8822($component0, $int1, $int7, $int3, $dbrow5, $boolean13, $int15, $int11);
+$int8 = calc($int8 + $int12);
+$int2 = ~script8821($int2, $int8, $int3, $int4, $dbrow5, $dbrow6, $int14);
+$int1 = ~script8825($component0, $int1, $int3, $dbrow5, $boolean13, $int12);
+if ($boolean13 = true) {
+	$int1 = ~script8827($component0, $int1, calc($int3 + $int8 - (32 + 5)), $dbrow5, $int11, $int4);
+}
+if ($boolean13 = true) {
+	$int1 = ~script8831(
+		0 = $component0, 
+		1 = $int1, 
+		2 = $int3, 
+		3 = $int10, 
+		4 = $int9, 
+		5 = $int8, 
+		6 = $dbrow5, 
+		7 = $dbrow6, 
+		8 = $boolean13, 
+		9 = $int4, 
+		10 = $int14
+	);
+}
+$int3 = calc($int3 + $int8);
+return($int1, $int2, $int3);

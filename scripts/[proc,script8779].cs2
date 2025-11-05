@@ -1,0 +1,46 @@
+// 8779
+[proc,script8779](component $component0, int $int1, component $component2, int $int3)
+cc_deleteall($component2);
+if (~script9022 = 1 & %sailing_sidepanel_player_role = 10) {
+	~script8748(
+		0 = $component0, 
+		1 = $component2, 
+		2 = $int1, 
+		3 = 0, 
+		4 = 120, 
+		5 = 30, 
+		6 = 30, 
+		7 = 80, 
+		8 = "Edit navigator", 
+		9 = null, 
+		10 = 0, 
+		11 = 16777215, 
+		12 = 0x9f9f9f, 
+		13 = $int3, 
+		14 = 0, 
+		15 = 0
+	);
+	cc_settargetverb("Edit-navigator");
+	cc_setoppriority(-1);
+	cc_setontargetenter("script8780($component0, $int1, $component2, 1)");
+	cc_setontargetleave("script8780($component0, $int1, $component2, 0)");
+} else {
+	~script8748(
+		0 = $component0, 
+		1 = $component2, 
+		2 = $int1, 
+		3 = 0, 
+		4 = 120, 
+		5 = 30, 
+		6 = 30, 
+		7 = 80, 
+		8 = "Edit navigator", 
+		9 = null, 
+		10 = 0, 
+		11 = 16777215, 
+		12 = 0x9f9f9f, 
+		13 = $int3, 
+		14 = 1, 
+		15 = 0
+	);
+}

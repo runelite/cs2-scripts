@@ -1,0 +1,29 @@
+// 9078
+[proc,script9078](dbrow $dbrow0)(boolean)
+if ($dbrow0 = null) {
+	return(true);
+}
+switch_dbrow ($dbrow0) {
+	case dbrow_8495, dbrow_8496, dbrow_8497 :
+		return(~int_to_bool(%lost_schematic_salvaging_station));
+	case dbrow_8517 :
+		return(~int_to_bool(%lost_schematic_gale_catcher));
+	case dbrow_8523, dbrow_8524, dbrow_8525 :
+		return(~int_to_bool(%lost_schematic_eternal_brazier));
+	case dbrow_8447, dbrow_8440 :
+		return(~int_to_bool(%lost_schematic_dragon_salvaging_hook));
+	case dbrow_8468, dbrow_8475, dbrow_8482 :
+		return(~int_to_bool(%lost_schematic_rosewood_cargo_hold));
+	case dbrow_8433 :
+		return(~int_to_bool(%lost_schematic_dragon_cannon));
+	case dbrow_8277, dbrow_8284, dbrow_8270 :
+		return(~int_to_bool(%lost_schematic_rosewood_hull));
+	case dbrow_8305, dbrow_8312, dbrow_8319 :
+		return(~int_to_bool(%lost_schematic_rosewood_sail));
+	case dbrow_8326, dbrow_8333, dbrow_8340 :
+		return(~int_to_bool(%lost_schematic_dragon_tiller));
+	case dbrow_8291, dbrow_8298 :
+		return(~int_to_bool(%lost_schematic_dragon_keel));
+	case default :
+		return(true);
+}

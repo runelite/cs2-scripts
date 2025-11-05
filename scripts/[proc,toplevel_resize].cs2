@@ -60,7 +60,7 @@ if (%fov_clamp ! 0) {
 	}
 } else {
 	viewport_clampfov(0, 0, 0, 0);
-	if (%varcint73 >= 128 & %varcint73 <= 896 & %varcint74 >= 128 & %varcint74 <= 896) {
+	if (%varcint73 >= %varcint1338 & %varcint73 <= %varcint1339 & %varcint74 >= %varcint1340 & %varcint74 <= %varcint1341) {
 		~camera_do_zoom(%varcint73, %varcint74);
 	} else {
 		~camera_do_zoom(512, 512);

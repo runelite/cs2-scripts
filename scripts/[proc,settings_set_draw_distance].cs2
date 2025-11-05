@@ -1,6 +1,13 @@
 // 5193
-[proc,settings_set_draw_distance](int $int0)
+[proc,settings_set_draw_distance]
 if (~on_enhanced_any = 0) {
 	return;
+}
+if (%varcint1292 < 25 | %varcint1292 > 90) {
+	%varcint1292 = ~minmax(25, 90, deviceoption_get(^deviceoption_draw_distance));
+}
+def_int $int0 = %varcint1292;
+if (%draw_distance_max_override = 1) {
+	$int0 = 90;
 }
 deviceoption_set(^deviceoption_draw_distance, $int0);

@@ -1,0 +1,8 @@
+// 8790
+[clientscript,script8790](int $opindex0, component $component1, int $int2, int $int3, component $com_sailing_crew_comparison_container4, int $comsubid5, int $comsubid6)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%sailing_crew_selected_crew_id = $int2;
+~script8794($component1, $int3, $com_sailing_crew_comparison_container4, $comsubid5, $comsubid6);

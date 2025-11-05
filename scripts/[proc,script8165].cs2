@@ -78,10 +78,10 @@ $int3 = 0;
 def_namedobj $namedobj15 = null;
 def_int $int16 = 0;
 def_string $string2 = "<col=ffffff>";
-def_boolean $boolean17 = false;
+def_int $int17 = 0;
 while ($int3 < $int2) {
 	$namedobj15, $int16 = db_getfield($dbrow0, reward:object, $int3);
-	$boolean17 = false;
+	$int17 = 0;
 	if ($int16 = 1) {
 		array_push($anyobj0, "Item: <$string2><oc_name(oc_uncert(oc_cert($namedobj15)))>", obj);
 	} else {
@@ -96,11 +96,11 @@ while ($int3 < $int2) {
 			array_push($anyobj0, "", obj);
 			array_push($anyobj0, "<$string2>Special Attack</col>: <$string1>", obj);
 		}
-		$boolean17 = ~script7983(oc_param($namedobj15, param_2061));
+		$int17 = ~script7983(oc_param($namedobj15, param_2061));
 	} else if (oc_param($namedobj15, loadout_iteminfo) = 3 | oc_param($namedobj15, param_13) ! 0 | oc_param($namedobj15, param_14) ! 4) {
-		$boolean17 = true;
+		$int17 = 1;
 	}
-	~script8166($anyobj0, $namedobj15, $boolean17);
+	~script8166($anyobj0, $namedobj15, $int17);
 	array_push($anyobj0, "", obj);
 	$int3 = calc($int3 + 1);
 }

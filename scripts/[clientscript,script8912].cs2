@@ -1,0 +1,52 @@
+// 8912
+[clientscript,script8912](dbrow $dbrow0, dbrow $dbrow1, dbrow $dbrow2, dbrow $dbrow3, dbrow $dbrow4, dbrow $dbrow5, dbrow $dbrow6, dbrow $dbrow7)
+def_int $int8 = random(1);
+def_int $int9 = db_find(task_board_layout:layout_id, $int8);
+if ($int9 <= 0) {
+	~debug_mes("ERROR: Attempting to build task board with layout ID = <tostring($int8)>, but we have no matching ID.");
+	return;
+}
+if ($int9 > 1) {
+	~debug_mes("ERROR: Attempting to build task board with layout ID = <tostring($int8)>, but we found multiple layouts with that ID.");
+	return;
+}
+def_dbrow $dbrow10 = db_findnext;
+def_component $component11 = port_task_board:infinity;
+def_component $component12 = port_task_board:universe;
+def_component $component13 = port_task_board:frame;
+def_component $component14 = port_task_board:container;
+def_component $component15 = port_task_board:popup;
+def_component $component16 = port_task_board:close;
+if_setontimer("script6110($component11, -1)", $component11);
+if_setonresize("script8913(
+	0 = $component12, 
+	1 = $component13, 
+	2 = $component14, 
+	3 = $component15, 
+	4 = $component16, 
+	5 = $dbrow10, 
+	6 = $dbrow0, 
+	7 = $dbrow1, 
+	8 = $dbrow2, 
+	9 = $dbrow3, 
+	10 = $dbrow4, 
+	11 = $dbrow5, 
+	12 = $dbrow6, 
+	13 = $dbrow7
+)", $component11);
+~script8914(
+	0 = $component12, 
+	1 = $component13, 
+	2 = $component14, 
+	3 = $component15, 
+	4 = $component16, 
+	5 = $dbrow10, 
+	6 = $dbrow0, 
+	7 = $dbrow1, 
+	8 = $dbrow2, 
+	9 = $dbrow3, 
+	10 = $dbrow4, 
+	11 = $dbrow5, 
+	12 = $dbrow6, 
+	13 = $dbrow7
+);

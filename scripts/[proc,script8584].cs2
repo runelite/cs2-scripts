@@ -1,0 +1,12 @@
+// 8584
+[proc,script8584]()(int)
+if (inv_total(inv, eyeglo_crystal_saw_9625) > 0) {
+	return(9625);
+}
+if (inv_getobj(worn, 3) = wearable_saw_24880 | inv_getobj(worn, 5) = wearable_saw_24880 | inv_total(inv, wearable_saw_24880) > 0) {
+	return(24880);
+}
+if (inv_total(inv, poh_saw_8794) > 0) {
+	return(8794);
+}
+return(-1);

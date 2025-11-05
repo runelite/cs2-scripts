@@ -1,0 +1,40 @@
+// 8617
+[proc,script8617](component $com_sailing_bt_selection_content_left0, int $int1, int $int2, graphic $graphic3, int $int4)(int)
+$int1 = ~create_graphic(
+	0 = $com_sailing_bt_selection_content_left0, 
+	1 = $int1, 
+	2 = $graphic3, 
+	3 = 5, 
+	4 = $int2, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 32, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = false
+);
+def_string $string0 = "-";
+if ($int4 > 0) {
+	$string0 = append("Best Time: ", ~script4159(calc($int4 * 60 / 100), 0));
+}
+$int1 = ~create_text(
+	0 = $com_sailing_bt_selection_content_left0, 
+	1 = $int1, 
+	2 = p11_full, 
+	3 = 42, 
+	4 = calc($int2 + 6), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 90, 
+	8 = 20, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = $string0, 
+	12 = true, 
+	13 = ^white, 
+	14 = ^settextalign_centre, 
+	15 = ^settextalign_centre, 
+	16 = 0
+);
+return($int1);

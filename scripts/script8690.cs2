@@ -1,0 +1,96 @@
+java.util.NoSuchElementException: Key 87 is missing in the map.
+
+.id                       8690
+.int_arg_count            3
+.obj_arg_count            0
+   iconst                 61276195
+   istore                 3
+   iconst                 201
+   db_findall_with_count 
+   istore                 4
+   iload                  4
+   istore                 5
+   iload                  4
+   iconst                 2
+   add                   
+   istore                 4
+   iload                  4
+   define_array           105
+   iconst                 0
+   iconst                 -1
+   set_array_int         
+   iconst                 1
+   iconst                 -2
+   set_array_int         
+   iconst                 2
+   istore                 6
+   iconst                 0
+   istore                 7
+   iconst                 -1
+   istore                 8
+LABEL25:
+   iload                  7
+   iload                  5
+   if_icmplt              LABEL29
+   jump                   LABEL67
+LABEL29:
+   iconst                 823296
+   iload                  7
+   iconst                 0
+   db_find_with_count    
+   pop_int               
+   db_findnext           
+   istore                 8
+   iload                  8
+   iconst                 823360
+   iconst                 0
+   db_getfield           
+   istore                 8
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL45
+   jump                   LABEL62
+LABEL45:
+   invoke                 8688
+   iload                  8
+   iconst                 823296
+   iconst                 0
+   db_getfield           
+   if_icmpeq              LABEL55
+   invoke                 8688
+   iconst                 -1
+   if_icmpeq              LABEL55
+   jump                   LABEL62
+LABEL55:
+   iload                  6
+   iload                  7
+   set_array_int         
+   iload                  6
+   iconst                 1
+   add                   
+   istore                 6
+LABEL62:
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL25
+LABEL67:
+   iload                  3
+   iload                  6
+   get_varc_int           1299
+   iconst                 16750623
+   invoke                 8695
+   iconst                 8691
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  6
+   oload                  0
+   iconst                 16750623
+   iconst                 16777215
+   sconst                 "iiiiiWii"
+   iload                  3
+   if_setonop            
+   return                

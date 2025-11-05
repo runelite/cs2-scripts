@@ -1,0 +1,10 @@
+// 8671
+[clientscript,script8671](int $int0, int $int1, int $int2, int $int3, int $int4)
+if (clientclock < $int0) {
+	return;
+}
+%varcint1306, %varcint1307 = $int1, $int2;
+%varcint1308, %varcint1309 = $int3, $int4;
+def_component $component5 = sailing_log:infinity;
+if_callonresize($component5);
+%varcint1310 = 1;

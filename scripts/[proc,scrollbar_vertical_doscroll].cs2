@@ -44,6 +44,8 @@ switch_component ($component1) {
 		%varcint182 = if_getscrolly($component1);
 	case seed_vault:list :
 		%varcint376 = if_getscrolly($component1);
+	case fletching_table:list :
+		%varcint1294 = if_getscrolly($component1);
 	case poh_board:scroll_bar :
 		%varcint378 = if_getscrolly($component1);
 	case ca_bosses:bosses_list :
@@ -70,6 +72,14 @@ switch_component ($component1) {
 		%varcint1256 = if_getscrolly($component1);
 	case xptracker:tracker_container :
 		%varcint1255 = if_getscrolly($component1);
+	case sailing_log:list :
+		%varcint1305 = if_getscrolly($component1);
+	case sailing_sidepanel:facilities_scrollable :
+		%varcint1313 = if_getscrolly($component1);
+	case sailing_boat_selection:boats_container :
+		%varcint1297 = if_getscrolly($component1);
+	case sailing_customisation:facility_content :
+		%varcint1315 = if_getscrolly($component1);
 }
 if ($int3 = 1) {
 	~scrollbar_vertical_setdragger($component0, $component1);

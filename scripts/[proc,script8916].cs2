@@ -1,0 +1,185 @@
+// 8916
+[proc,script8916](component $component0, dbrow $dbrow1, int $int2, dbrow $dbrow3, dbrow $dbrow4, dbrow $dbrow5, dbrow $dbrow6, dbrow $dbrow7, dbrow $dbrow8, dbrow $dbrow9, dbrow $dbrow10)
+def_int $int11 = 0;
+if ($component0 = sailing_log:tasks_content) {
+	$int11 = 1;
+}
+def_graphic $graphic12 = p11_full;
+def_int $int13 = 0;
+def_int $int14 = 14;
+def_int $int15 = 120;
+if ($int2 = 1) {
+	$graphic12, $int13, $int14, $int15 = ~script8924;
+}
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 105;
+def_int $int19 = 57;
+def_int $int20 = 105;
+if ($int11 = 0) {
+	$int18, $int19 = ~script8920;
+	$int20 = $int18;
+} else {
+	$int18, $int19, $int20 = 43, 6, 92;
+}
+def_int $int21 = 0;
+cc_deleteall($component0);
+if ($dbrow3 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow3, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = -1
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow4 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow4, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = 7
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow5 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow5, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = 28
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow6 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow6, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = 56
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow7 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow7, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = 84
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow8 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow8, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = -1
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow9 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow9, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = -1
+	);
+	$int21 = calc($int21 + 1);
+}
+if ($dbrow10 ! null) {
+	$int16, $int17, $int18, $int19 = ~script8917(
+		0 = $component0, 
+		1 = $dbrow10, 
+		2 = $dbrow1, 
+		3 = $int2, 
+		4 = $int21, 
+		5 = $int16, 
+		6 = $int17, 
+		7 = $int18, 
+		8 = $int20, 
+		9 = $int19, 
+		10 = $graphic12, 
+		11 = $int13, 
+		12 = $int14, 
+		13 = $int15, 
+		14 = -1
+	);
+}

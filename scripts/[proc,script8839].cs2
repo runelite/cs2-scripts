@@ -1,0 +1,24 @@
+// 8839
+[proc,script8839](dbrow $dbrow0)(int)
+def_namedobj $namedobj1 = null;
+def_int $int2 = -1;
+def_dbtable $dbtable3 = db_getrowtable($dbrow0);
+def_int $int4 = ~script9062($dbtable3, $dbrow0);
+if ($int4 = -1) {
+	return(0);
+}
+if (staffmodlevel >= 2 & inv_total(inv, rotten_potato_5733) > 0) {
+	return(1);
+}
+if (%sailing_intro = 28 & $dbrow0 = dbrow_8462) {
+	return(1);
+}
+def_int $int5 = 0;
+while ($int5 < $int4) {
+	$namedobj1, $int2 = ~script9063($dbtable3, $dbrow0, $int5);
+	if (inv_total(inv, $namedobj1) < $int2) {
+		return(0);
+	}
+	$int5 = calc($int5 + 1);
+}
+return(1);

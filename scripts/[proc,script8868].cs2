@@ -1,0 +1,12 @@
+// 8868
+[proc,script8868]()(int)
+if (inv_total(worn, medallion_of_the_deep_32386) > 0 | inv_total(inv, medallion_of_the_deep_32386) > 0) {
+	return(1);
+}
+if (inv_total(worn, hundred_pirate_diving_helmet_7534) <= 0 & inv_total(inv, hundred_pirate_diving_helmet_7534) <= 0 & inv_total(worn, upgraded_diving_helmet_31298) <= 0 & inv_total(inv, upgraded_diving_helmet_31298) <= 0) {
+	return(0);
+}
+if (inv_total(worn, hundred_pirate_diving_backpack_7535) <= 0 & inv_total(inv, hundred_pirate_diving_backpack_7535) <= 0 & inv_total(worn, upgraded_diving_backpack_31300) <= 0 & inv_total(inv, upgraded_diving_backpack_31300) <= 0) {
+	return(0);
+}
+return(1);

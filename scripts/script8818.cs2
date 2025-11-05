@@ -1,0 +1,296 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       8818
+.int_arg_count            0
+.obj_arg_count            0
+   iconst                 61538316
+   istore                 0
+   iconst                 61538319
+   istore                 1
+   iconst                 61538324
+   istore                 2
+   iconst                 61538318
+   istore                 3
+   iload                  1
+   cc_deleteall          
+   iload                  0
+   cc_deleteall          
+   iload                  2
+   cc_deleteall          
+   iload                  3
+   cc_deleteall          
+   iconst                 0
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 -1
+   istore                 7
+   iconst                 0
+   istore                 8
+   iconst                 0
+   istore                 9
+   iconst                 0
+   istore                 10
+   iconst                 -1
+   istore                 11
+   sconst                 ""
+   ostore                 0
+   iconst                 -1
+   istore                 12
+   iconst                 -1
+   istore                 13
+   iconst                 -1
+   istore                 14
+   get_varp               5190
+   istore                 15
+   get_varc_int           1314
+   invoke                 8840
+   istore                 12
+   ostore                 0
+   istore                 11
+   istore                 7
+   iload                  11
+   iconst                 -1
+   if_icmpne              LABEL52
+   jump                   LABEL67
+LABEL52:
+   oload                  0
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL57
+   jump                   LABEL67
+LABEL57:
+   iload                  1
+   iload                  5
+   iload                  6
+   iload                  4
+   oload                  0
+   iload                  11
+   invoke                 8819
+   istore                 4
+   istore                 6
+   istore                 5
+LABEL67:
+   get_varbit             19525
+   iload                  15
+   iload                  7
+   get_varbit             19524
+   invoke                 9067
+   istore                 14
+   get_varbit             19523
+   iconst                 1
+   if_icmpeq              LABEL77
+   jump                   LABEL82
+LABEL77:
+   iload                  12
+   iload                  15
+   invoke                 8815
+   istore                 8
+   jump                   LABEL91
+LABEL82:
+   get_varbit             19523
+   iconst                 0
+   if_icmpeq              LABEL86
+   jump                   LABEL91
+LABEL86:
+   iload                  15
+   iload                  7
+   iconst                 0
+   invoke                 9064
+   istore                 8
+LABEL91:
+   iload                  8
+   iconst                 0
+   if_icmple              LABEL95
+   jump                   LABEL98
+LABEL95:
+   sconst                 "Amount of facilities to draw was 0."
+   invoke                 608
+   return                
+LABEL98:
+   iconst                 0
+   istore                 16
+   iconst                 100
+   istore                 17
+   sconst                 ""
+   ostore                 1
+   iload                  8
+   define_array           131280
+   iload                  8
+   define_array           196723
+   sconst                 ""
+   ostore                 4
+LABEL110:
+   iload                  9
+   iload                  8
+   if_icmplt              LABEL114
+   jump                   LABEL197
+LABEL114:
+   get_varbit             19523
+   iconst                 0
+   if_icmpeq              LABEL118
+   jump                   LABEL125
+LABEL118:
+   iload                  15
+   iload                  7
+   iconst                 0
+   iload                  9
+   invoke                 9069
+   istore                 13
+   jump                   LABEL134
+LABEL125:
+   get_varbit             19523
+   iconst                 1
+   if_icmpeq              LABEL129
+   jump                   LABEL134
+LABEL129:
+   iload                  12
+   iload                  15
+   iload                  9
+   invoke                 8816
+   istore                 13
+LABEL134:
+   iload                  13
+   iconst                 -1
+   if_icmpne              LABEL138
+   jump                   LABEL192
+LABEL138:
+   iload                  13
+   db_getrowtable        
+   iload                  13
+   invoke                 9055
+   istore                 16
+   iload                  13
+   invoke                 9073
+   istore                 17
+   iload                  13
+   invoke                 9070
+   ostore                 1
+   iload                  14
+   iload                  13
+   if_icmpeq              LABEL153
+   jump                   LABEL158
+LABEL153:
+   sconst                 "000"
+   oload                  1
+   join_string            2
+   ostore                 4
+   jump                   LABEL186
+LABEL158:
+   iload                  17
+   iconst                 100
+   if_icmplt              LABEL162
+   jump                   LABEL169
+LABEL162:
+   sconst                 "00"
+   iload                  17
+   tostring              
+   oload                  1
+   join_string            3
+   ostore                 4
+   jump                   LABEL186
+LABEL169:
+   iload                  16
+   iconst                 10
+   if_icmplt              LABEL173
+   jump                   LABEL180
+LABEL173:
+   sconst                 "1000"
+   iload                  16
+   tostring              
+   oload                  1
+   join_string            3
+   ostore                 4
+   jump                   LABEL186
+LABEL180:
+   sconst                 "100"
+   iload                  16
+   tostring              
+   oload                  1
+   join_string            3
+   ostore                 4
+LABEL186:
+   iload                  9
+   iload                  13
+   set_array_int          2
+   iload                  9
+   oload                  4
+   set_array_int          3
+LABEL192:
+   iload                  9
+   iconst                 1
+   add                   
+   istore                 9
+   jump                   LABEL110
+LABEL197:
+   oload                  3
+   oload                  2
+   8000                  
+   iconst                 0
+   istore                 9
+LABEL202:
+   iload                  9
+   iload                  8
+   if_icmplt              LABEL206
+   jump                   LABEL238
+LABEL206:
+   iload                  9
+   get_array_int          2
+   istore                 13
+   iload                  13
+   iconst                 -1
+   if_icmpne              LABEL213
+   jump                   LABEL233
+LABEL213:
+   iload                  13
+   invoke                 8867
+   iconst                 1
+   if_icmpeq              LABEL218
+   jump                   LABEL233
+LABEL218:
+   iload                  1
+   iload                  5
+   iload                  6
+   iload                  4
+   iload                  10
+   iload                  13
+   iload                  14
+   invoke                 8820
+   istore                 4
+   istore                 6
+   istore                 5
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+LABEL233:
+   iload                  9
+   iconst                 1
+   add                   
+   istore                 9
+   jump                   LABEL202
+LABEL238:
+   iload                  4
+   iload                  1
+   if_getheight          
+   if_icmplt              LABEL243
+   jump                   LABEL255
+LABEL243:
+   iload                  6
+   iload                  1
+   if_getheight          
+   iload                  4
+   sub                   
+   iload                  4
+   iload                  10
+   iconst                 -1
+   iconst                 -1
+   iconst                 0
+   invoke                 8821
+   istore                 6
+LABEL255:
+   iload                  4
+   invoke                 8841
+   return                

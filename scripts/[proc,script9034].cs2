@@ -1,0 +1,99 @@
+// 9034
+[proc,script9034](int $int0)(string, string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Movement", "", 1);
+	case 1 :
+		if (calc(%sailing_sidepanel_boat_basespeed % 128) = 64) {
+			return("Base speed", "<tostring(calc(%sailing_sidepanel_boat_basespeed / 128))>.5", 0);
+		}
+		return("Base speed", "<tostring(calc(%sailing_sidepanel_boat_basespeed / 128))>.0", 0);
+	case 2 :
+		if (calc(%sailing_sidepanel_boat_speedcap % 128) = 64) {
+			return("Speed cap", "<tostring(calc(%sailing_sidepanel_boat_speedcap / 128))>.5", 0);
+		}
+		return("Speed cap", "<tostring(calc(%sailing_sidepanel_boat_speedcap / 128))>.0", 0);
+	case 3 :
+		if (calc(%sailing_sidepanel_boat_acceleration % 128) = 64) {
+			return("Acceleration", "<tostring(calc(%sailing_sidepanel_boat_acceleration / 128))>.5", 0);
+		}
+		return("Acceleration", "<tostring(calc(%sailing_sidepanel_boat_acceleration / 128))>.0", 0);
+	case 4 :
+		return("Speed boost duration", tostring(%sailing_sidepanel_boat_speedboost_duration), 0);
+	case 5 :
+		return("Combat: Overall", "", 1);
+	case 6 :
+		return("Max hitpoints", tostring(%sailing_sidepanel_boat_hp_max), 0);
+	case 7 :
+		return("Defence", tostring(%sailing_sidepanel_boat_defence), 0);
+	case 8 :
+		return("Armour", tostring(%sailing_sidepanel_boat_armour), 0);
+	case 9 :
+		return("Combat: Melee", "", 1);
+	case 10 :
+		return("Stab defence", tostring(%sailing_sidepanel_boatstat_total_stabdef), 0);
+	case 11 :
+		return("Slash defence", tostring(%sailing_sidepanel_boatstat_total_slashdef), 0);
+	case 12 :
+		return("Crush defence", tostring(%sailing_sidepanel_boatstat_total_crushdef), 0);
+	case 13 :
+		return("Stab armour", tostring(%sailing_sidepanel_boat_armour_melee_stab), 0);
+	case 14 :
+		return("Slash armour", tostring(%sailing_sidepanel_boat_armour_melee_slash), 0);
+	case 15 :
+		return("Crush armour", tostring(%sailing_sidepanel_boat_armour_melee_crush), 0);
+	case 16 :
+		return("Combat: Ranged", "", 1);
+	case 17 :
+		return("Light ranged defence", tostring(%sailing_sidepanel_boatstat_total_lightrangeddef), 0);
+	case 18 :
+		return("Standard ranged defence", tostring(%sailing_sidepanel_boatstat_total_standardrangeddef), 0);
+	case 19 :
+		return("Heavy ranged defence", tostring(%sailing_sidepanel_boatstat_total_heavyrangeddef), 0);
+	case 20 :
+		return("Light ranged armour", tostring(%sailing_sidepanel_boat_armour_ranged_light), 0);
+	case 21 :
+		return("Standard ranged armour", tostring(%sailing_sidepanel_boat_armour_ranged_standard), 0);
+	case 22 :
+		return("Heavy ranged armour", tostring(%sailing_sidepanel_boat_armour_ranged_heavy), 0);
+	case 23 :
+		return("Combat: Magic", "", 1);
+	case 24 :
+		return("Magic defence", tostring(%sailing_sidepanel_boatstat_total_magicdef), 0);
+	case 25 :
+		return("Air magic armour", tostring(%sailing_sidepanel_boat_armour_magic_air), 0);
+	case 26 :
+		return("Water magic armour", tostring(%sailing_sidepanel_boat_armour_magic_water), 0);
+	case 27 :
+		return("Earth magic armour", tostring(%sailing_sidepanel_boat_armour_magic_earth), 0);
+	case 28 :
+		return("Fire magic armour", tostring(%sailing_sidepanel_boat_armour_magic_fire), 0);
+	case 29 :
+		return("Resistance", "", 1);
+	case 30 :
+		return("Rapid resistance", tostring(%sailing_sidepanel_boat_rapidresistance), 0);
+	case 31 :
+		return("Storm resistance", tostring(%sailing_sidepanel_boat_stormresistance), 0);
+	case 32 :
+		if (%sailing_sidepanel_boat_fetidwater_resistant >= 1) {
+			return("Fetid water resistant", "Yes", 0);
+		}
+		return("Fetid water resistant", "No", 0);
+	case 33 :
+		if (%sailing_sidepanel_boat_crystalflecked_resistant >= 1) {
+			return("Crystal resistant", "Yes", 0);
+		}
+		return("Crystal resistant", "No", 0);
+	case 34 :
+		if (%sailing_sidepanel_boat_tangledkelp_resistant >= 1) {
+			return("Tangled kelp resistant", "Yes", 0);
+		}
+		return("Tangled kelp resistant", "No", 0);
+	case 35 :
+		if (%sailing_sidepanel_boat_icyseas_resistant >= 1) {
+			return("Ice resistant", "Yes", 0);
+		}
+		return("Ice resistant", "No", 0);
+	case default :
+		return("", "null", -1);
+}

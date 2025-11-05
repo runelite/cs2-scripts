@@ -1,0 +1,27 @@
+// 8703
+[proc,script8703](int $int0, int $int1, int $int2, dbrow $dbrow3)(int)
+if ($int0 = -1) {
+	~error("Invalid chartable object ID input");
+	return(0);
+}
+if ($dbrow3 = null | db_getrowtable($dbrow3) ! sailing_charting_core) {
+	~error("Invalid $charting_core_dbrow input.");
+	return(0);
+}
+def_int $int4 = 0;
+if (%varcint1302 ! 0) {
+	$int4 = ~script9004($int0);
+	if (%varcint1302 = 1 & $int4 = 1 | %varcint1302 = 2 & $int4 = 0) {
+		return(0);
+	}
+}
+if (%varcint1303 = 0 & stat(_23) < ~script9001($dbrow3)) {
+	return(0);
+}
+if (~script8688 ! -1 & ~script8688 ! $int2) {
+	return(0);
+}
+if (~script8694 ! -1 & ~script8694 ! $int1) {
+	return(0);
+}
+return(1);
