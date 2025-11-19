@@ -47,9 +47,9 @@ switch_int (%varcint988) {
 }
 def_int $int12 = calc(if_getwidth($component1) - $int4 * 2);
 def_int $int13 = 0;
-def_int $int14 = db_getfieldcount(dbrow_170, fsw_info_fresh_table:info);
+def_int $int14 = db_getfieldcount(fsw_info_fresh, fsw_info_fresh_table:info);
 while ($int13 < $int14) {
-	$string0, $string1, $string2 = db_getfield(dbrow_170, fsw_info_fresh_table:info, $int13);
+	$string0, $string1, $string2 = db_getfield(fsw_info_fresh, fsw_info_fresh_table:info, $int13);
 	$int10 = calc(paraheight($string2, $int12, $fontmetrics9) * $int6);
 	cc_create($component1, ^iftype_text, $int3, false);
 	$int3 = calc($int3 + 1);

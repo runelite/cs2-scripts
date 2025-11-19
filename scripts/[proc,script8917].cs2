@@ -36,7 +36,7 @@ if ($component21 = null) {
 	cc_setsize($int18, $int19, ^setsize_abs, ^setsize_abs);
 	cc_settrans(255);
 	cc_setop(1, "Select");
-	if ($dbrow1 ! dbrow_9264 & $dbrow1 ! dbrow_9265) {
+	if ($dbrow1 ! port_task_blank & $dbrow1 ! port_task_locked) {
 		cc_setopbase("<col=ff9040><$string0></col>");
 	}
 	cc_setonop("script8927($dbrow1, $int14)");
@@ -50,7 +50,7 @@ def_graphic $graphic27 = null;
 def_int $int28 = 37;
 def_int $int29 = db_getfield($dbrow1, port_task:level_required, 0);
 if ($component0 = sailing_log:tasks_content) {
-	if ($dbrow1 = dbrow_9265) {
+	if ($dbrow1 = port_task_locked) {
 		$int5 = calc($int5 + 1);
 		cc_create($component0, ^iftype_model, $int5, false);
 		cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
@@ -126,7 +126,7 @@ if ($component0 = sailing_log:tasks_content) {
 if ($int3 = 1) {
 	$int36, $int37, $int38, $int34, $int35 = ~script8929;
 }
-if ($dbrow1 = dbrow_9264 | $dbrow1 = dbrow_9265) {
+if ($dbrow1 = port_task_blank | $dbrow1 = port_task_locked) {
 	$model33, $int36, $int37, $int34, $int35, $int38 = model_16238, 0, 0, 0, 0, 1500;
 } else if ($int22 = 1) {
 	$model33 = ~script8928(db_getfield($dbrow1, port_task:starting_port, 0));

@@ -6,35 +6,35 @@ def_dbrow $dbrow2 = ~script9095(%port_task_slot_2_id);
 def_dbrow $dbrow3 = ~script9095(%port_task_slot_3_id);
 def_dbrow $dbrow4 = ~script9095(%port_task_slot_4_id);
 if (%port_task_extra_slots_unlocked < 4) {
-	$dbrow4 = dbrow_9265;
+	$dbrow4 = port_task_locked;
 	if (%port_task_extra_slots_unlocked < 3) {
-		$dbrow3 = dbrow_9265;
+		$dbrow3 = port_task_locked;
 		if (%port_task_extra_slots_unlocked < 2) {
-			$dbrow2 = dbrow_9265;
+			$dbrow2 = port_task_locked;
 			if (%port_task_extra_slots_unlocked < 1) {
-				$dbrow1 = dbrow_9265;
+				$dbrow1 = port_task_locked;
 			}
 		}
 	}
 }
 if ($dbrow0 = null) {
-	$dbrow0 = dbrow_9264;
+	$dbrow0 = port_task_blank;
 }
 if ($dbrow1 = null) {
-	$dbrow1 = dbrow_9264;
+	$dbrow1 = port_task_blank;
 }
 if ($dbrow2 = null) {
-	$dbrow2 = dbrow_9264;
+	$dbrow2 = port_task_blank;
 }
 if ($dbrow3 = null) {
-	$dbrow3 = dbrow_9264;
+	$dbrow3 = port_task_blank;
 }
 if ($dbrow4 = null) {
-	$dbrow4 = dbrow_9264;
+	$dbrow4 = port_task_blank;
 }
 ~script8916(
 	0 = sailing_log:tasks_content, 
-	1 = dbrow_9267, 
+	1 = captains_log_tasks_layout, 
 	2 = 0, 
 	3 = $dbrow0, 
 	4 = $dbrow1, 

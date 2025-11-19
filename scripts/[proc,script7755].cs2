@@ -3,7 +3,7 @@
 def_int $int1 = -1;
 def_int $int2 = -1;
 switch_dbrow (%toggle_list) {
-	case dbrow_4096 :
+	case npc_contact_anim_toggle_list :
 		$int1 = %npc_contact_unlocks;
 		$int2 = ~script7756(%npc_contact_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
@@ -11,7 +11,7 @@ switch_dbrow (%toggle_list) {
 		}
 		%npc_contact_anim_toggles = togglebit(%npc_contact_anim_toggles, $int0);
 		~script7709(%npc_contact_anim_toggles, $int1, %toggle_list);
-	case dbrow_4092 :
+	case death_anim_toggle_list :
 		$int1 = ~script7757;
 		$int2 = ~script7756(%death_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
@@ -19,7 +19,7 @@ switch_dbrow (%toggle_list) {
 		}
 		%death_anim_toggles = togglebit(%death_anim_toggles, $int0);
 		~script7709(%death_anim_toggles, $int1, %toggle_list);
-	case dbrow_4093 :
+	case home_tele_anim_toggle_list :
 		$int1 = ~script7758;
 		$int2 = ~script7756(%home_teleport_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
@@ -27,7 +27,7 @@ switch_dbrow (%toggle_list) {
 		}
 		%home_teleport_anim_toggles = togglebit(%home_teleport_anim_toggles, $int0);
 		~script7709(%home_teleport_anim_toggles, $int1, %toggle_list);
-	case dbrow_4094 :
+	case vengeance_anim_toggle_list :
 		$int1 = ~script7759;
 		$int2 = ~script7756(%vengeance_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {
@@ -35,7 +35,7 @@ switch_dbrow (%toggle_list) {
 		}
 		%vengeance_anim_toggles = togglebit(%vengeance_anim_toggles, $int0);
 		~script7709(%vengeance_anim_toggles, $int1, %toggle_list);
-	case dbrow_4095 :
+	case alchemy_anim_toggle_list :
 		$int1 = ~script7760;
 		$int2 = ~script7756(%alchemy_anim_toggles, $int1, $int0);
 		if ($int2 ! 1) {

@@ -10,7 +10,7 @@ if (if_find($component1) = ^true) {
 	cc_deleteall($component1);
 	switch_int ($int2) {
 		case 0 :
-			$string0 = "Welcome to the Grid Master interface.<br><br>Here you can view all the Grid Master challenges, just like our central challenge <col=ffffff><db_getfield(dbrow_6810, action:action_name, 0)></col>.<br><br>Selecting a challenge will show you any relevant information about it, what it'll reward you with and how many grid points you'll receive.";
+			$string0 = "Welcome to the Grid Master interface.<br><br>Here you can view all the Grid Master challenges, just like our central challenge <col=ffffff><db_getfield(action_bingo_tutorial, action:action_name, 0)></col>.<br><br>Selecting a challenge will show you any relevant information about it, what it'll reward you with and how many grid points you'll receive.";
 		case 1 :
 			$string0 = "To view a challenge's rewards you can either:<br> - Select a challenge then select its specific rewards (like the icon below).<br> - Toggle the <col=ffffff>R</col> button to flip all the tiles over, showing their reward side.";
 			if (~on_mobile = false) {

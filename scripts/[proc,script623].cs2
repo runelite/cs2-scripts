@@ -1,11 +1,16 @@
 // 623
-[proc,script623](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)(int)
-def_int $int10 = 4;
-def_int $int11 = 8;
-def_int $int12 = calc($int4 - $int10 + $int2);
-def_int $int13 = calc($int5 - $int10 + $int3);
-def_int $int14 = calc($int4 - $int11);
-def_int $int15 = calc($int5 - $int11);
+[proc,script623](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10)(int)
+def_int $int11 = 4;
+def_int $int12 = 8;
+def_int $int13 = calc($int4 - $int11 + $int2);
+def_int $int14 = calc($int5 - $int11 + $int3);
+def_int $int15 = calc($int4 - $int12);
+def_int $int16 = calc($int5 - $int12);
+def_int $int17 = calc($int10 - $int8);
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 2;
+if_setontimer(null, $component0);
 if ($int8 > 0 & $int8 >= $int9) {
 	$int1 = ~script624(
 		0 = $component0, 
@@ -28,8 +33,8 @@ if ($int8 > 0 & $int8 >= $int9) {
 		4 = $int3, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int10, 
+		7 = $int11, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -38,12 +43,12 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 1), 
 		2 = "healthbar_bold_4x4,4", 
-		3 = calc($int10 + $int2), 
+		3 = calc($int11 + $int2), 
 		4 = $int3, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int10, 
+		7 = $int15, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -52,12 +57,12 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 2), 
 		2 = "healthbar_bold_4x4,5", 
-		3 = $int12, 
+		3 = $int13, 
 		4 = $int3, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int10, 
+		7 = $int11, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -67,11 +72,11 @@ if ($int8 > 0 & $int8 >= $int9) {
 		1 = calc($int1 + 3), 
 		2 = "healthbar_bold_4x4,9", 
 		3 = $int2, 
-		4 = calc($int10 + $int3), 
+		4 = calc($int11 + $int3), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int15, 
+		7 = $int11, 
+		8 = $int16, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -80,12 +85,12 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 4), 
 		2 = "healthbar_bold_4x4,10", 
-		3 = calc($int10 + $int2), 
-		4 = calc($int10 + $int3), 
+		3 = calc($int11 + $int2), 
+		4 = calc($int11 + $int3), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int15, 
+		7 = $int15, 
+		8 = $int16, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -94,12 +99,12 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 5), 
 		2 = "healthbar_bold_4x4,11", 
-		3 = $int12, 
-		4 = calc($int10 + $int3), 
+		3 = $int13, 
+		4 = calc($int11 + $int3), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int15, 
+		7 = $int11, 
+		8 = $int16, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -109,11 +114,11 @@ if ($int8 > 0 & $int8 >= $int9) {
 		1 = calc($int1 + 6), 
 		2 = "healthbar_bold_4x4,15", 
 		3 = $int2, 
-		4 = $int13, 
+		4 = $int14, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int10, 
+		7 = $int11, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -122,12 +127,12 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 7), 
 		2 = "healthbar_bold_4x4,16", 
-		3 = calc($int10 + $int2), 
-		4 = $int13, 
+		3 = calc($int11 + $int2), 
+		4 = $int14, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int10, 
+		7 = $int15, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -136,18 +141,122 @@ if ($int8 > 0 & $int8 >= $int9) {
 		0 = $component0, 
 		1 = calc($int1 + 8), 
 		2 = "healthbar_bold_4x4,17", 
-		3 = $int12, 
-		4 = $int13, 
+		3 = $int13, 
+		4 = $int14, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int10, 
-		8 = $int10, 
+		7 = $int11, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
 	);
 	if ($int8 <= 0) {
-		$int1 = calc($int1 + 9);
+		if ($int17 > 0) {
+			$int15 = scale($int17, $int9, calc($int4 - 4));
+			if ($int15 > 0) {
+				if (cc_find($component0, $int1) = ^true) {
+					~script6388(
+						0 = "healthbar_bold_4x4,18", 
+						1 = $int2, 
+						2 = $int3, 
+						3 = ^setpos_abs_left, 
+						4 = ^setpos_abs_top, 
+						5 = $int11, 
+						6 = $int11, 
+						7 = ^setsize_abs, 
+						8 = ^setsize_abs, 
+						9 = true
+					);
+				}
+				if (cc_find($component0, calc($int1 + 3)) = ^true) {
+					~script6388(
+						0 = "healthbar_bold_4x4,24", 
+						1 = $int2, 
+						2 = calc($int11 + $int3), 
+						3 = ^setpos_abs_left, 
+						4 = ^setpos_abs_top, 
+						5 = $int11, 
+						6 = $int16, 
+						7 = ^setsize_abs, 
+						8 = ^setsize_abs, 
+						9 = true
+					);
+				}
+				if (cc_find($component0, calc($int1 + 6)) = ^true) {
+					~script6388(
+						0 = "healthbar_bold_4x4,30", 
+						1 = $int2, 
+						2 = $int14, 
+						3 = ^setpos_abs_left, 
+						4 = ^setpos_abs_top, 
+						5 = $int11, 
+						6 = $int11, 
+						7 = ^setsize_abs, 
+						8 = ^setsize_abs, 
+						9 = true
+					);
+				}
+				~create_graphic(
+					0 = $component0, 
+					1 = calc($int1 + 9), 
+					2 = "healthbar_bold_4x4,19", 
+					3 = calc(2 + $int2), 
+					4 = $int3, 
+					5 = ^setpos_abs_left, 
+					6 = ^setpos_abs_top, 
+					7 = $int15, 
+					8 = $int11, 
+					9 = ^setsize_abs, 
+					10 = ^setsize_abs, 
+					11 = true
+				);
+				~create_graphic(
+					0 = $component0, 
+					1 = calc($int1 + 10), 
+					2 = "healthbar_bold_4x4,25", 
+					3 = calc(2 + $int2), 
+					4 = calc($int11 + $int3), 
+					5 = ^setpos_abs_left, 
+					6 = ^setpos_abs_top, 
+					7 = $int15, 
+					8 = $int16, 
+					9 = ^setsize_abs, 
+					10 = ^setsize_abs, 
+					11 = true
+				);
+				~create_graphic(
+					0 = $component0, 
+					1 = calc($int1 + 11), 
+					2 = "healthbar_bold_4x4,31", 
+					3 = calc(2 + $int2), 
+					4 = $int14, 
+					5 = ^setpos_abs_left, 
+					6 = ^setpos_abs_top, 
+					7 = $int15, 
+					8 = $int11, 
+					9 = ^setsize_abs, 
+					10 = ^setsize_abs, 
+					11 = true
+				);
+				if_setontimer("script7331(
+					0 = $component0, 
+					1 = clientclock, 
+					2 = calc($int1 + 9), 
+					3 = calc($int1 + 10), 
+					4 = calc($int1 + 11), 
+					5 = $int1, 
+					6 = calc($int1 + 3), 
+					7 = calc($int1 + 6), 
+					8 = $int20
+				)", $component0);
+				$int1 = calc($int1 + 12);
+			} else {
+				$int1 = calc($int1 + 9);
+			}
+		} else {
+			$int1 = calc($int1 + 9);
+		}
 		$int1 = ~create_text(
 			0 = $component0, 
 			1 = $int1, 
@@ -176,8 +285,8 @@ if ($int8 > 0 & $int8 >= $int9) {
 			2 = $int3, 
 			3 = ^setpos_abs_left, 
 			4 = ^setpos_abs_top, 
-			5 = $int10, 
-			6 = $int10, 
+			5 = $int11, 
+			6 = $int11, 
 			7 = ^setsize_abs, 
 			8 = ^setsize_abs, 
 			9 = true
@@ -187,11 +296,11 @@ if ($int8 > 0 & $int8 >= $int9) {
 		~script6388(
 			0 = "healthbar_bold_4x4,6", 
 			1 = $int2, 
-			2 = calc($int10 + $int3), 
+			2 = calc($int11 + $int3), 
 			3 = ^setpos_abs_left, 
 			4 = ^setpos_abs_top, 
-			5 = $int10, 
-			6 = $int15, 
+			5 = $int11, 
+			6 = $int16, 
 			7 = ^setsize_abs, 
 			8 = ^setsize_abs, 
 			9 = true
@@ -201,17 +310,17 @@ if ($int8 > 0 & $int8 >= $int9) {
 		~script6388(
 			0 = "healthbar_bold_4x4,12", 
 			1 = $int2, 
-			2 = $int13, 
+			2 = $int14, 
 			3 = ^setpos_abs_left, 
 			4 = ^setpos_abs_top, 
-			5 = $int10, 
-			6 = $int10, 
+			5 = $int11, 
+			6 = $int11, 
 			7 = ^setsize_abs, 
 			8 = ^setsize_abs, 
 			9 = true
 		);
 	}
-	$int14 = scale($int8, $int9, calc($int4 - 4));
+	$int15 = scale($int8, $int9, calc($int4 - 4));
 	~create_graphic(
 		0 = $component0, 
 		1 = calc($int1 + 9), 
@@ -220,8 +329,8 @@ if ($int8 > 0 & $int8 >= $int9) {
 		4 = $int3, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int10, 
+		7 = $int15, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -231,11 +340,11 @@ if ($int8 > 0 & $int8 >= $int9) {
 		1 = calc($int1 + 10), 
 		2 = "healthbar_bold_4x4,7", 
 		3 = calc(2 + $int2), 
-		4 = calc($int10 + $int3), 
+		4 = calc($int11 + $int3), 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int15, 
+		7 = $int15, 
+		8 = $int16, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
@@ -245,16 +354,142 @@ if ($int8 > 0 & $int8 >= $int9) {
 		1 = calc($int1 + 11), 
 		2 = "healthbar_bold_4x4,13", 
 		3 = calc(2 + $int2), 
-		4 = $int13, 
+		4 = $int14, 
 		5 = ^setpos_abs_left, 
 		6 = ^setpos_abs_top, 
-		7 = $int14, 
-		8 = $int10, 
+		7 = $int15, 
+		8 = $int11, 
 		9 = ^setsize_abs, 
 		10 = ^setsize_abs, 
 		11 = true
 	);
-	$int1 = calc($int1 + 12);
+	if ($int17 > 0) {
+		$int18 = scale($int10, $int9, calc($int4 - 4));
+		if ($int18 > 0 & $int18 > $int15) {
+			$int18 = calc($int18 - $int15);
+			$int19 = calc(2 + $int2 + $int15);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 12), 
+				2 = "healthbar_bold_4x4,19", 
+				3 = $int19, 
+				4 = $int3, 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int11, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 13), 
+				2 = "healthbar_bold_4x4,25", 
+				3 = $int19, 
+				4 = calc($int11 + $int3), 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int16, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 14), 
+				2 = "healthbar_bold_4x4,31", 
+				3 = $int19, 
+				4 = $int14, 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int11, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			if_setontimer("script2255($component0, clientclock, calc($int1 + 12), calc($int1 + 13), calc($int1 + 14), $int20)", $component0);
+			$int1 = calc($int1 + 15);
+		} else {
+			$int1 = calc($int1 + 12);
+		}
+	} else if ($int17 < 0) {
+		$int17 = calc(0 - $int17);
+		$int18 = scale($int10, $int9, calc($int4 - 4));
+		if ($int18 > 0 & $int18 < $int15) {
+			if (cc_find($component0, calc($int1 + 9)) = ^true) {
+				cc_setsize($int18, cc_getheight, ^setsize_abs, ^setsize_abs);
+			}
+			if (cc_find($component0, calc($int1 + 10)) = ^true) {
+				cc_setsize($int18, cc_getheight, ^setsize_abs, ^setsize_abs);
+			}
+			if (cc_find($component0, calc($int1 + 11)) = ^true) {
+				cc_setsize($int18, cc_getheight, ^setsize_abs, ^setsize_abs);
+			}
+			$int19 = calc(2 + $int2 + $int18);
+			$int18 = calc($int15 - $int18);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 12), 
+				2 = "healthbar_bold_4x4,22", 
+				3 = $int19, 
+				4 = $int3, 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int11, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 13), 
+				2 = "healthbar_bold_4x4,28", 
+				3 = $int19, 
+				4 = calc($int11 + $int3), 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int16, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			~create_graphic(
+				0 = $component0, 
+				1 = calc($int1 + 14), 
+				2 = "healthbar_bold_4x4,34", 
+				3 = $int19, 
+				4 = $int14, 
+				5 = ^setpos_abs_left, 
+				6 = ^setpos_abs_top, 
+				7 = $int18, 
+				8 = $int11, 
+				9 = ^setsize_abs, 
+				10 = ^setsize_abs, 
+				11 = true
+			);
+			if_setontimer("script7332(
+				0 = $component0, 
+				1 = clientclock, 
+				2 = calc($int1 + 12), 
+				3 = calc($int1 + 13), 
+				4 = calc($int1 + 14), 
+				5 = calc($int1 + 9), 
+				6 = calc($int1 + 10), 
+				7 = calc($int1 + 11), 
+				8 = $int20
+			)", $component0);
+			$int1 = calc($int1 + 15);
+		} else {
+			$int1 = calc($int1 + 12);
+		}
+	} else {
+		$int1 = calc($int1 + 12);
+	}
 }
 $int1 = ~create_text(
 	0 = $component0, 

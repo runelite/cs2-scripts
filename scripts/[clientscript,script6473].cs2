@@ -15,11 +15,11 @@ def_int $int6 = db_getfield($dbrow4, cluehelper_clue_hotcold:difficulty, 0);
 def_int $int7 = 0;
 switch_int ($int6) {
 	case 0 :
-		$int7 = db_getfieldcount(dbrow_684, cluehelper_cluetype:beginner_clues);
+		$int7 = db_getfieldcount(cluehelper_cluetype_hotcold, cluehelper_cluetype:beginner_clues);
 	case 5 :
-		$int7 = db_getfieldcount(dbrow_684, cluehelper_cluetype:master_clues);
+		$int7 = db_getfieldcount(cluehelper_cluetype_hotcold, cluehelper_cluetype:master_clues);
 }
-if ($dbrow4 = dbrow_2297) {
+if ($dbrow4 = cluehelper_hotcold_cluequest_3) {
 	$int7 = enum_getoutputcount(enum_4816);
 }
 if (%cluehelper_hotcold_list_stored = 0) {
@@ -40,11 +40,11 @@ while ($int8 < $int7) {
 	if (cc_find($component5, $int8) = ^true & cc_getcolour = ^black) {
 		switch_int ($int6) {
 			case 0 :
-				$dbrow9 = db_getfield(dbrow_684, cluehelper_cluetype:beginner_clues, $int8);
+				$dbrow9 = db_getfield(cluehelper_cluetype_hotcold, cluehelper_cluetype:beginner_clues, $int8);
 			case 5 :
-				$dbrow9 = db_getfield(dbrow_684, cluehelper_cluetype:master_clues, $int8);
+				$dbrow9 = db_getfield(cluehelper_cluetype_hotcold, cluehelper_cluetype:master_clues, $int8);
 		}
-		if ($dbrow4 = dbrow_2297) {
+		if ($dbrow4 = cluehelper_hotcold_cluequest_3) {
 			$dbrow9 = enum(int, dbrow, enum_4816, $int8);
 		}
 		$coord10 = ~script6653(~cluehelper_clue_target($dbrow9));

@@ -11,7 +11,7 @@ if ($dbrow4 ! null) {
 }
 $dbrow3 = ~script9094($int2);
 if ($dbrow3 = null) {
-	return(db_getfield(dbrow_7308, boat_location_sprite_data:name, 0));
+	return(db_getfield(sailing_boat_location_default_sprite, boat_location_sprite_data:name, 0));
 }
 if ($int1 = 1) {
 	$string0 = db_getfield($dbrow3, sailing_dock:inline_name, 0);

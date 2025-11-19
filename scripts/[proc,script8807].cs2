@@ -1,6 +1,6 @@
 // 8807
 [proc,script8807](dbrow $dbrow0, dbrow $dbrow1)(int, string)
-if (~script9022 = 0 & $dbrow0 ! dbrow_8462) {
+if (~script9022 = 0 & $dbrow0 ! sailing_boat_facility_cargo_hold_regular_raft) {
 	return(0, "You cannot build that at the moment.");
 }
 def_dbtable $dbtable2 = db_getrowtable($dbrow0);

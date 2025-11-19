@@ -17,20 +17,20 @@ while ($int4 < $int3) {
 	if ($dbrow5 ! null) {
 		$int6 = 1;
 		switch_dbrow ($dbrow5) {
-			case dbrow_8010 :
+			case sailing_charting_tool_recovery_spyglass :
 				if (%sailing_intro < 50) {
 					$int6 = 0;
 				}
-			case dbrow_8011 :
+			case sailing_charting_tool_recovery_current_duck :
 				if (%sailing_intro < 50 | %current_affairs < 40) {
 					$int6 = 0;
 				}
-			case dbrow_8012 :
+			case sailing_charting_tool_recovery_crowbar :
 				if (%sailing_intro < 50 | %quest_pry < 20) {
 					$int6 = 0;
 				}
-			case dbrow_8013 :
-				if (%sailing_intro < 50 | ~quest_is_complete(dbrow_2310) = 0) {
+			case sailing_charting_tool_recovery_diving_gear :
+				if (%sailing_intro < 50 | ~quest_is_complete(subquest_rfd_pirate) = 0) {
 					$int6 = 0;
 				}
 		}

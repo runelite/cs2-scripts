@@ -1,7 +1,7 @@
 // 1377
 [proc,poh_viewer_roomtooltip](string $string0, int $int0, int $dbfield1, dbrow $dbrow2, int $int3)(string, int)
 def_dbrow $dbrow4 = db_getfield($dbrow2, poh_room:hotspot, $dbfield1);
-if ($dbrow4 = dbrow_6029) {
+if ($dbrow4 = null_hotspot) {
 	return($string0, $int3);
 }
 if ($int0 = 0) {

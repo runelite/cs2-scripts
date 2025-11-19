@@ -95,7 +95,7 @@ def_string $string2 = "";
 def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = 0;
-def_int $int21 = db_getfieldcount(dbrow_3417, fsw_points_info_table:info);
+def_int $int21 = db_getfieldcount(deadman_points_info, fsw_points_info_table:info);
 def_int $int22 = 0;
 def_int $int23 = 18;
 def_int $int24 = calc($int5 + $int23);
@@ -105,7 +105,7 @@ def_int $int27 = 0;
 def_int $int28 = 0;
 def_int $int29 = 0;
 while ($int22 < $int21) {
-	$graphic14, $int15, $int16, $int17, $string0, $string1, $string2 = db_getfield(dbrow_3417, fsw_points_info_table:info, $int22);
+	$graphic14, $int15, $int16, $int17, $string0, $string1, $string2 = db_getfield(deadman_points_info, fsw_points_info_table:info, $int22);
 	$int20 = calc(paraheight($string0, $int3, $fontmetrics2) * $int6 + $int23);
 	$int18 = calc(paraheight($string1, $int4, $fontmetrics2) * $int6 + $int23);
 	$int19 = calc(paraheight($string2, calc($int10 - $int23), $fontmetrics2) * $int6 + $int23);

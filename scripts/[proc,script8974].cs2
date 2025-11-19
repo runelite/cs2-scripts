@@ -2,7 +2,7 @@
 [proc,script8974](dbrow $dbrow0, int $int1)(string)
 def_string $string0 = "";
 if ($dbrow0 = null) {
-	return(db_getfield(dbrow_7308, boat_location_sprite_data:name, 0));
+	return(db_getfield(sailing_boat_location_default_sprite, boat_location_sprite_data:name, 0));
 }
 if ($int1 = 1) {
 	$string0 = db_getfield($dbrow0, sailing_dock:inline_name, 0);

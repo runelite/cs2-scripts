@@ -4,25 +4,25 @@ if ($dbrow0 = null) {
 	return(true);
 }
 switch_dbrow ($dbrow0) {
-	case dbrow_8495, dbrow_8496, dbrow_8497 :
+	case sailing_boat_facility_salvaging_station_2x5a, sailing_boat_facility_salvaging_station_2x5b, sailing_boat_facility_salvaging_station_3x8 :
 		return(~int_to_bool(%lost_schematic_salvaging_station));
-	case dbrow_8517 :
+	case sailing_boat_facility_gale_catcher :
 		return(~int_to_bool(%lost_schematic_gale_catcher));
-	case dbrow_8523, dbrow_8524, dbrow_8525 :
+	case sailing_boat_facility_1x3_eternal_brazier, sailing_boat_facility_2x5_eternal_brazier, sailing_boat_facility_3x8_eternal_brazier :
 		return(~int_to_bool(%lost_schematic_eternal_brazier));
-	case dbrow_8447, dbrow_8440 :
+	case sailing_boat_facility_salvaging_hook_dragon, sailing_boat_facility_salvaging_hook_dragon_raft :
 		return(~int_to_bool(%lost_schematic_dragon_salvaging_hook));
-	case dbrow_8468, dbrow_8475, dbrow_8482 :
+	case sailing_boat_facility_cargo_hold_rosewood_raft, sailing_boat_facility_cargo_hold_rosewood_2x5, sailing_boat_facility_cargo_hold_rosewood_large :
 		return(~int_to_bool(%lost_schematic_rosewood_cargo_hold));
-	case dbrow_8433 :
+	case sailing_boat_facility_dragon_cannon :
 		return(~int_to_bool(%lost_schematic_dragon_cannon));
-	case dbrow_8277, dbrow_8284, dbrow_8270 :
+	case sailing_boat_rosewood_hull_2x5, sailing_boat_rosewood_hull_large, sailing_boat_rosewood_raft_base :
 		return(~int_to_bool(%lost_schematic_rosewood_hull));
-	case dbrow_8305, dbrow_8312, dbrow_8319 :
+	case sailing_boat_rosewood_mast_raft, sailing_boat_rosewood_mast_2x5, sailing_boat_rosewood_mast_large :
 		return(~int_to_bool(%lost_schematic_rosewood_sail));
-	case dbrow_8326, dbrow_8333, dbrow_8340 :
+	case sailing_boat_dragon_steering_raft, sailing_boat_dragon_steering_2x5, sailing_boat_dragon_steering_large :
 		return(~int_to_bool(%lost_schematic_dragon_tiller));
-	case dbrow_8291, dbrow_8298 :
+	case sailing_boat_dragon_keel_2x5, sailing_boat_dragon_keel_large :
 		return(~int_to_bool(%lost_schematic_dragon_keel));
 	case default :
 		return(true);

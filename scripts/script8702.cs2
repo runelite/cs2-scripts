@@ -3,9 +3,9 @@ java.lang.IllegalStateException: Check failed.
 .id                       8702
 .int_arg_count            1
 .obj_arg_count            0
-   iconst                 61276207
+   iconst                 61276206
    istore                 1
-   iconst                 61276208
+   iconst                 61276207
    istore                 2
    iconst                 495
    istore                 3
@@ -38,8 +38,16 @@ java.lang.IllegalStateException: Check failed.
    istore                 15
    iconst                 -1
    istore                 16
-   invoke                 1972
+   iconst                 -1
    istore                 17
+   iconst                 -1
+   istore                 18
+   iconst                 -1
+   istore                 19
+   iconst                 -1
+   istore                 20
+   invoke                 1972
+   istore                 21
    iload                  1
    cc_deleteall          
    iload                  2
@@ -50,12 +58,12 @@ java.lang.IllegalStateException: Check failed.
    define_array           131280
    iconst                 0
    istore                 10
-LABEL47:
+LABEL55:
    iload                  11
    iconst                 -1
-   if_icmpne              LABEL51
-   jump                   LABEL112
-LABEL51:
+   if_icmpne              LABEL59
+   jump                   LABEL168
+LABEL59:
    iload                  11
    iconst                 630816
    iconst                 0
@@ -66,22 +74,76 @@ LABEL51:
    iconst                 0
    db_getfield           
    istore                 13
+   iload                  11
+   iconst                 630832
+   iconst                 0
+   db_getfield           
+   istore                 14
+   iload                  14
+   iconst                 -1
+   if_icmpne              LABEL78
+   jump                   LABEL84
+LABEL78:
+   iload                  14
+   iconst                 823360
+   iconst                 0
+   db_getfield           
+   istore                 15
+   jump                   LABEL86
+LABEL84:
+   iconst                 -1
+   istore                 15
+LABEL86:
    iload                  12
    iconst                 823296
    iconst                 0
    db_getfield           
-   istore                 14
+   istore                 16
    iload                  13
    iconst                 -1
-   if_icmpne              LABEL70
-   jump                   LABEL75
-LABEL70:
+   if_icmpne              LABEL95
+   jump                   LABEL101
+LABEL95:
    iload                  13
    iconst                 823296
    iconst                 0
    db_getfield           
-   istore                 15
-LABEL75:
+   istore                 17
+   jump                   LABEL103
+LABEL101:
+   iconst                 0
+   istore                 17
+LABEL103:
+   iload                  14
+   iconst                 -1
+   if_icmpne              LABEL107
+   jump                   LABEL113
+LABEL107:
+   iload                  14
+   iconst                 823296
+   iconst                 0
+   db_getfield           
+   istore                 18
+   jump                   LABEL115
+LABEL113:
+   iload                  16
+   istore                 18
+LABEL115:
+   iload                  15
+   iconst                 -1
+   if_icmpne              LABEL119
+   jump                   LABEL125
+LABEL119:
+   iload                  15
+   iconst                 823296
+   iconst                 0
+   db_getfield           
+   istore                 19
+   jump                   LABEL127
+LABEL125:
+   iload                  17
+   istore                 19
+LABEL127:
    iload                  11
    iconst                 630800
    iconst                 0
@@ -91,26 +153,30 @@ LABEL75:
    iconst                 630784
    iconst                 0
    db_getfield           
-   istore                 16
+   istore                 20
    iload                  10
    iload                  11
    set_array_int          2
    iload                  10
+   iconst                 10000
+   iload                  19
+   add                   
+   tostring              
+   iconst                 10000
+   iload                  18
+   add                   
+   tostring              
    iconst                 10000
    iload                  11
    invoke                 9001
    add                   
    tostring              
    iconst                 10000
-   iload                  14
-   add                   
-   tostring              
-   iconst                 10000
-   iload                  14
+   iload                  16
    add                   
    tostring              
    oload                  0
-   join_string            4
+   join_string            5
    set_array_int          1
    iload                  10
    iconst                 1
@@ -118,26 +184,26 @@ LABEL75:
    istore                 10
    db_findnext           
    istore                 11
-   jump                   LABEL47
-LABEL112:
+   jump                   LABEL55
+LABEL168:
    iload                  10
    iconst                 1
-   if_icmpgt              LABEL116
-   jump                   LABEL119
-LABEL116:
+   if_icmpgt              LABEL172
+   jump                   LABEL175
+LABEL172:
    oload                  1
    oload                  2
    8000                  
-LABEL119:
+LABEL175:
    iconst                 0
-   istore                 18
-LABEL121:
-   iload                  18
+   istore                 22
+LABEL177:
+   iload                  22
    iload                  10
-   if_icmplt              LABEL125
-   jump                   LABEL324
-LABEL125:
-   iload                  18
+   if_icmplt              LABEL181
+   jump                   LABEL426
+LABEL181:
+   iload                  22
    get_array_int          2
    istore                 11
    iload                  11
@@ -150,22 +216,76 @@ LABEL125:
    iconst                 0
    db_getfield           
    istore                 13
+   iload                  11
+   iconst                 630832
+   iconst                 0
+   db_getfield           
+   istore                 14
+   iload                  14
+   iconst                 -1
+   if_icmpne              LABEL203
+   jump                   LABEL209
+LABEL203:
+   iload                  14
+   iconst                 823360
+   iconst                 0
+   db_getfield           
+   istore                 15
+   jump                   LABEL211
+LABEL209:
+   iconst                 -1
+   istore                 15
+LABEL211:
    iload                  12
    iconst                 823296
    iconst                 0
    db_getfield           
-   istore                 14
+   istore                 16
    iload                  13
    iconst                 -1
-   if_icmpne              LABEL147
-   jump                   LABEL152
-LABEL147:
+   if_icmpne              LABEL220
+   jump                   LABEL226
+LABEL220:
    iload                  13
    iconst                 823296
    iconst                 0
    db_getfield           
-   istore                 15
-LABEL152:
+   istore                 17
+   jump                   LABEL228
+LABEL226:
+   iconst                 -1
+   istore                 17
+LABEL228:
+   iload                  14
+   iconst                 -1
+   if_icmpne              LABEL232
+   jump                   LABEL238
+LABEL232:
+   iload                  14
+   iconst                 823296
+   iconst                 0
+   db_getfield           
+   istore                 18
+   jump                   LABEL240
+LABEL238:
+   iconst                 -1
+   istore                 18
+LABEL240:
+   iload                  15
+   iconst                 -1
+   if_icmpne              LABEL244
+   jump                   LABEL250
+LABEL244:
+   iload                  15
+   iconst                 823296
+   iconst                 0
+   db_getfield           
+   istore                 19
+   jump                   LABEL252
+LABEL250:
+   iconst                 -1
+   istore                 19
+LABEL252:
    iload                  11
    iconst                 630800
    iconst                 0
@@ -175,23 +295,25 @@ LABEL152:
    iconst                 630784
    iconst                 0
    db_getfield           
-   istore                 16
+   istore                 20
+   iload                  20
    iload                  16
-   iload                  14
-   iload                  15
+   iload                  18
+   iload                  17
+   iload                  19
    iload                  11
    invoke                 8703
    iconst                 1
-   if_icmpeq              LABEL170
-   jump                   LABEL319
-LABEL170:
+   if_icmpeq              LABEL272
+   jump                   LABEL421
+LABEL272:
    sconst                 ""
    oload                  0
    compare               
    iconst                 0
-   if_icmpne              LABEL176
-   jump                   LABEL319
-LABEL176:
+   if_icmpne              LABEL278
+   jump                   LABEL421
+LABEL278:
    iload                  1
    iconst                 3
    iload                  9
@@ -211,85 +333,85 @@ LABEL176:
    cc_setcolour          
    iconst                 1
    cc_setfill            
-   iload                  17
+   iload                  21
    iconst                 0
-   if_icmpeq              LABEL199
-   jump                   LABEL205
-LABEL199:
+   if_icmpeq              LABEL301
+   jump                   LABEL307
+LABEL301:
    iconst                 8704
    iconst                 -2147483643
    iload                  1
    iconst                 170
    sconst                 "iii"
    cc_setonmouserepeat   
-LABEL205:
+LABEL307:
    get_varc_int           1304
-   iload                  16
-   if_icmpeq              LABEL209
-   jump                   LABEL222
-LABEL209:
+   iload                  20
+   if_icmpeq              LABEL311
+   jump                   LABEL324
+LABEL311:
    iconst                 200
    istore                 8
-   iload                  17
+   iload                  21
    iconst                 0
-   if_icmpeq              LABEL215
-   jump                   LABEL221
-LABEL215:
+   if_icmpeq              LABEL317
+   jump                   LABEL323
+LABEL317:
    iconst                 8704
    iconst                 -2147483643
    iload                  1
    iconst                 200
    sconst                 "iii"
    cc_setonmouseleave    
-LABEL221:
-   jump                   LABEL255
-LABEL222:
+LABEL323:
+   jump                   LABEL357
+LABEL324:
    iload                  9
    iconst                 2
    div                   
    iconst                 2
    mod                   
    iconst                 1
-   if_icmpeq              LABEL230
-   jump                   LABEL243
-LABEL230:
+   if_icmpeq              LABEL332
+   jump                   LABEL345
+LABEL332:
    iconst                 230
    istore                 8
-   iload                  17
+   iload                  21
    iconst                 0
-   if_icmpeq              LABEL236
-   jump                   LABEL242
-LABEL236:
+   if_icmpeq              LABEL338
+   jump                   LABEL344
+LABEL338:
    iconst                 8704
    iconst                 -2147483643
    iload                  1
    iconst                 230
    sconst                 "iii"
    cc_setonmouseleave    
-LABEL242:
-   jump                   LABEL255
-LABEL243:
+LABEL344:
+   jump                   LABEL357
+LABEL345:
    iconst                 245
    istore                 8
-   iload                  17
+   iload                  21
    iconst                 0
-   if_icmpeq              LABEL249
-   jump                   LABEL255
-LABEL249:
+   if_icmpeq              LABEL351
+   jump                   LABEL357
+LABEL351:
    iconst                 8704
    iconst                 -2147483643
    iload                  1
    iconst                 245
    sconst                 "iii"
    cc_setonmouseleave    
-LABEL255:
+LABEL357:
    iload                  8
    cc_settrans           
    iconst                 1
    sconst                 "More Info"
    cc_setop              
    iconst                 8705
-   iload                  16
+   iload                  20
    sconst                 "i"
    cc_setonop            
    iconst                 1
@@ -311,26 +433,26 @@ LABEL255:
    iconst                 0
    iconst                 0
    cc_setposition        
-   iload                  16
+   iload                  20
    invoke                 9004
    iconst                 1
-   if_icmpeq              LABEL288
-   jump                   LABEL293
-LABEL288:
-   sconst                 "<col=00d800>"
+   if_icmpeq              LABEL390
+   jump                   LABEL395
+LABEL390:
+   sconst                 "<col=0dc10d>"
    oload                  0
    join_string            2
    ostore                 0
-   jump                   LABEL299
-LABEL293:
+   jump                   LABEL401
+LABEL395:
    get_varbit             18138
    iconst                 0
-   if_icmpeq              LABEL297
-   jump                   LABEL299
-LABEL297:
+   if_icmpeq              LABEL399
+   jump                   LABEL401
+LABEL399:
    sconst                 "???"
    ostore                 0
-LABEL299:
+LABEL401:
    oload                  0
    cc_settext            
    iload                  3
@@ -351,18 +473,18 @@ LABEL299:
    iload                  9
    add                   
    istore                 9
-LABEL319:
-   iload                  18
+LABEL421:
+   iload                  22
    iconst                 1
    add                   
-   istore                 18
-   jump                   LABEL121
-LABEL324:
+   istore                 22
+   jump                   LABEL177
+LABEL426:
    iload                  9
    iconst                 0
-   if_icmpeq              LABEL328
-   jump                   LABEL380
-LABEL328:
+   if_icmpeq              LABEL430
+   jump                   LABEL482
+LABEL430:
    iload                  1
    iconst                 3
    iload                  9
@@ -415,19 +537,19 @@ LABEL328:
    cc_settextalign       
    iconst                 1
    cc_settextshadow      
-LABEL380:
+LABEL482:
    iconst                 0
    iload                  7
    iload                  1
    if_setscrollsize      
    iload                  0
    iconst                 1
-   if_icmpeq              LABEL388
-   jump                   LABEL390
-LABEL388:
+   if_icmpeq              LABEL490
+   jump                   LABEL492
+LABEL490:
    iconst                 0
    set_varc_int           1305
-LABEL390:
+LABEL492:
    iconst                 0
    get_varc_int           1305
    iload                  1

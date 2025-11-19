@@ -19,9 +19,9 @@ if ($int0 = 1) {
 	def_string $string3 = "";
 	def_string $string4 = "";
 	def_int $int10 = 0;
-	def_int $int11 = db_getfieldcount(dbrow_170, fsw_info_fresh_table:info);
+	def_int $int11 = db_getfieldcount(fsw_info_fresh, fsw_info_fresh_table:info);
 	while ($int6 < $int11) {
-		$string1, $string2, $string3 = db_getfield(dbrow_170, fsw_info_fresh_table:info, $int6);
+		$string1, $string2, $string3 = db_getfield(fsw_info_fresh, fsw_info_fresh_table:info, $int6);
 		$string4 = $string3;
 		$int8 = calc(paraheight($string4, $int7, $fontmetrics5) * $int3);
 		cc_create(fsw_optin:i_content, ^iftype_text, $int10, false);

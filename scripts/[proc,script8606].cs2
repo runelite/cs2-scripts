@@ -53,7 +53,7 @@ if ($dbrow0 ! null) {
 	$string1 = db_getfield($dbrow0, sailing_bt_trial_core:trial_name, 0);
 	if ($int4 = 1) {
 		$graphic21 = db_getfield($dbrow0, sailing_bt_trial_core:tracker_icon4, 0);
-		if ($dbrow0 = dbrow_7244) {
+		if ($dbrow0 = sailing_bt_jubbly_jive) {
 			$string4 = tostring($int2);
 		}
 	} else {
@@ -105,10 +105,10 @@ if ($dbrow0 ! null) {
 		if_sethide(true, sailing_bt_hud:bt_partial_gfx);
 	}
 	if_settext($string4, sailing_bt_hud:bt_partial_text);
-	if ($dbrow0 = dbrow_7244) {
+	if ($dbrow0 = sailing_bt_jubbly_jive) {
 		~script8610(sailing_bt_hud:bt_middle_content, $string0);
 		$int24 = 1;
-	} else if ($dbrow0 = dbrow_7245) {
+	} else if ($dbrow0 = sailing_bt_gwenith_glide) {
 		~script8612(sailing_bt_hud:bt_middle_content, $string0, $int7);
 		$int24 = 1;
 	}

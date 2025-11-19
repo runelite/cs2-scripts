@@ -3,9 +3,6 @@
 if (~quest_is_valid($dbrow0) = 0) {
 	return(1);
 }
-if (~script8943($dbrow0) = 1) {
-	return(1);
-}
 if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
 	return(1);
 }

@@ -2,7 +2,7 @@
 [proc,script7864](dbrow $dbrow0)
 def_string $string0 = "€No parent directory.";
 if ($dbrow0 = null) {
-	$dbrow0 = dbrow_4365;
+	$dbrow0 = synth_synth;
 }
 def_dbrow $dbrow1 = db_getfield($dbrow0, synth:parent_directory, 0);
 if ($dbrow1 ! null) {

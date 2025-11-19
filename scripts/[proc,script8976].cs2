@@ -8,6 +8,6 @@ if ($graphic2 ! null) {
 db_find(boat_facilities_default_sprite_data:facility_subtype, $int1);
 def_dbrow $dbrow3 = db_findnext;
 if ($dbrow3 = null) {
-	return(db_getfield(dbrow_7304, boat_facilities_default_sprite_data:sprite, 0));
+	return(db_getfield(sailing_facility_sprite_default, boat_facilities_default_sprite_data:sprite, 0));
 }
 return(db_getfield($dbrow3, boat_facilities_default_sprite_data:sprite, 0));
