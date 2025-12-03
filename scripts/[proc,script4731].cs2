@@ -10,16 +10,20 @@ if ($component13 ! null) {
 if (%varcint222 = $int9 & $int10 = %varcint384 & %varcint381 = $int8 & $int11 = $int6 & $int12 = $int7 & calc(clientclock % 40) ! 0) {
 	return;
 }
-def_int $int14 = 2;
+def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
-def_int $int20 = 2;
+def_int $int20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
 def_boolean $boolean23 = ~on_mobile;
+if ($boolean23 = true) {
+	$int14 = calc($int14 + 2);
+	$int20 = calc($int20 + 2);
+}
 def_int $int24 = ~on_enhanced_any;
 def_enum $enum25 = ~toplevel_getcomponents;
 def_int $int26 = 0;
@@ -227,8 +231,12 @@ if (testbit($int2, 12) = ^true & $component13 ! null & $enum25 ! null) {
 	$int17 = calc($int17 + enum(enum, int, enum_1136, $enum25));
 	$int21 = calc($int21 + enum(enum, int, enum_1136, $enum25));
 }
-if (testbit($int2, 10) = ^true & $boolean23 = false & ($setposh27 = ^setpos_abs_left | $setposh27 = ^setpos_abs_centre) & ($int24 = 0 | %mouseover_text_enabled = 1)) {
-	$int14 = calc($int14 + 23);
+if (testbit($int2, 10) = ^true & $boolean23 = false & ($setposh27 = ^setpos_abs_left | $setposh27 = ^setpos_abs_centre)) {
+	if ($int24 = 0 | %mouseover_text_enabled = 1) {
+		$int14 = calc($int14 + 23);
+	} else {
+		$int14 = calc($int14 + 2);
+	}
 }
 if (testbit($int2, 16) = ^true & $component1 ! null) {
 	%varcint490 = $component1;

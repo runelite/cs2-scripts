@@ -1,0 +1,30 @@
+java.util.NoSuchElementException: Key 88 is missing in the map.
+
+.id                       9130
+.int_arg_count            1
+.obj_arg_count            1
+   iconst                 9129
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  0
+   oload                  0
+   sconst                 "iiiX"
+   cc_setonop            
+   iload                  0
+   iconst                 0
+   if_icmplt              LABEL15
+   iload                  0
+   oload                  0
+   8003                  
+   if_icmpge              LABEL15
+   jump                   LABEL18
+LABEL15:
+   sconst                 "Out of range!"
+   invoke                 9121
+   jump                   LABEL21
+LABEL18:
+   iload                  0
+   get_array_int         
+   invoke                 9121
+LABEL21:
+   return                

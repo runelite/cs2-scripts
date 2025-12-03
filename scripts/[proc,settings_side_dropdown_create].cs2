@@ -31,7 +31,8 @@ cc_setonclick("settings_side_dropdown_open(
 	5 = $component5, 
 	6 = $component6, 
 	7 = $enum8, 
-	8 = $int9
+	8 = $int9, 
+	9 = $struct7
 )");
 cc_create($component0, ^iftype_rectangle, $int10, false);
 $int10 = calc($int10 + 1);
@@ -56,7 +57,7 @@ cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-~settings_side_dropdown_update($component0, $enum8, $int9);
+~settings_side_dropdown_update($component0, $enum8, $int9, $struct7);
 cc_create($component0, ^iftype_text, $int10, false);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
@@ -69,9 +70,9 @@ cc_settext($string0);
 ~xpdrops_setup_display_hoveroff($component0);
 switch_int ($int9) {
 	case 55 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){option_attackpriority}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9, $struct7){option_attackpriority}", $component0);
 	case 56 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){option_attackpriority_npc}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9, $struct7){option_attackpriority_npc}", $component0);
 	case 12 :
-		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){settings_tracking}", $component0);
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9, $struct7){settings_tracking}", $component0);
 }

@@ -1,0 +1,10 @@
+// 9129
+[clientscript,script9129](component $component0, int $comsubid1, int $int2, anyobj $anyobj0)
+if ($int2 < 0) {
+	$int2 = 0;
+}
+$int2 = calc(($int2 + 1) % array_size($anyobj0));
+if (cc_find($component0, $comsubid1) = ^true) {
+	~script9130($int2, $anyobj0);
+	~script9124;
+}

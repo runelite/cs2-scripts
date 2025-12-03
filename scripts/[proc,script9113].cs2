@@ -1,0 +1,23 @@
+// 9113
+[proc,script9113](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6)
+if (cc_find($component5, $comsubid6) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, $comsubid3) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour(0x0e0e0c);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_setgraphic("scrollbar_v2,1");
+	cc_clearops;
+	cc_setonop(null);
+}
+if (cc_find($component0, $comsubid4) = ^true) {
+	cc_input_setonsubmit(null);
+	cc_input_setonchange(null);
+	cc_input_setonfocuschanged(null);
+	cc_settext("");
+	cc_input_setfocus(false);
+}

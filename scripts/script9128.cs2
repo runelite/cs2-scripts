@@ -1,0 +1,390 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9128
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL5
+   jump                   LABEL7
+LABEL5:
+   iconst                 1
+   cc_setnoclickthrough  
+LABEL7:
+   iload                  0
+   iconst                 65280
+   sconst                 ""
+   invoke                 9133
+   istore                 1
+   iconst                 8
+   istore                 2
+   iload                  2
+   istore                 3
+   iload                  2
+   istore                 4
+   iconst                 48
+   istore                 5
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  5
+   iload                  2
+   add                   
+   iconst                 0
+   multiply              
+   add                   
+   iload                  4
+   iload                  5
+   iload                  5
+   sconst                 "Default"
+   invoke                 9131
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  5
+   iload                  2
+   add                   
+   iconst                 1
+   multiply              
+   add                   
+   iload                  4
+   iload                  5
+   iload                  5
+   sconst                 "Toggled"
+   sconst                 "<br>"
+   sconst                 " "
+   join_string            3
+   invoke                 9131
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  5
+   iload                  2
+   add                   
+   iconst                 2
+   multiply              
+   add                   
+   iload                  4
+   iload                  5
+   iload                  5
+   sconst                 " "
+   sconst                 "<br>"
+   sconst                 "Disabled"
+   join_string            3
+   invoke                 9131
+   istore                 1
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  5
+   iload                  2
+   add                   
+   iconst                 3
+   multiply              
+   add                   
+   iload                  4
+   iload                  5
+   iload                  5
+   sconst                 "Toggled"
+   sconst                 "<br>"
+   sconst                 "Disabled"
+   join_string            3
+   invoke                 9131
+   istore                 1
+   iload                  4
+   iload                  5
+   add                   
+   iload                  2
+   add                   
+   istore                 4
+   iload                  1
+   iconst                 1
+   add                   
+   istore                 1
+   iconst                 -1
+   istore                 6
+   iconst                 0
+   istore                 7
+   iconst                 4965
+   istore                 8
+   iload                  8
+   iconst                 311296
+   db_getfieldcount      
+   istore                 9
+   iconst                 0
+   istore                 10
+   iconst                 1
+   istore                 11
+   iconst                 0
+   istore                 12
+   iconst                 0
+   istore                 13
+   sconst                 ""
+   ostore                 0
+   iconst                 0
+   istore                 14
+   sconst                 ""
+   ostore                 1
+LABEL123:
+   iload                  7
+   iload                  9
+   if_icmplt              LABEL127
+   jump                   LABEL292
+LABEL127:
+   iload                  2
+   istore                 3
+   iconst                 0
+   istore                 10
+   iload                  8
+   iconst                 311296
+   iload                  7
+   db_getfield           
+   istore                 14
+   ostore                 0
+   istore                 5
+   istore                 5
+   istore                 6
+   iload                  6
+   iconst                 6374
+   if_icmpeq              LABEL144
+   jump                   LABEL157
+LABEL144:
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 400
+   iconst                 24
+   sconst                 "<col=ffffff>"
+   oload                  0
+   sconst                 "</col>"
+   join_string            3
+   invoke                 9131
+   istore                 1
+   jump                   LABEL281
+LABEL157:
+   iload                  10
+   iconst                 4
+   if_icmplt              LABEL161
+   jump                   LABEL258
+LABEL161:
+   iconst                 0
+   istore                 11
+   iload                  10
+   switch                
+      0: LABEL166
+      1: LABEL173
+      2: LABEL190
+      3: LABEL197
+   jump                   LABEL209
+LABEL166:
+   iconst                 1
+   iconst                 0
+   iconst                 0
+   istore                 13
+   istore                 12
+   istore                 11
+   jump                   LABEL209
+LABEL173:
+   iload                  14
+   iconst                 0
+   if_icmpeq              LABEL177
+   jump                   LABEL189
+LABEL177:
+   iload                  6
+   iconst                 2328
+   struct_param          
+   iconst                 -1
+   if_icmpne              LABEL183
+   jump                   LABEL189
+LABEL183:
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   istore                 13
+   istore                 12
+   istore                 11
+LABEL189:
+   jump                   LABEL209
+LABEL190:
+   iconst                 1
+   iconst                 0
+   iconst                 1
+   istore                 13
+   istore                 12
+   istore                 11
+   jump                   LABEL209
+LABEL197:
+   iload                  6
+   iconst                 2328
+   struct_param          
+   iconst                 -1
+   if_icmpne              LABEL203
+   jump                   LABEL209
+LABEL203:
+   iconst                 1
+   iconst                 1
+   iconst                 1
+   istore                 13
+   istore                 12
+   istore                 11
+LABEL209:
+   iload                  11
+   iconst                 1
+   if_icmpeq              LABEL213
+   jump                   LABEL247
+LABEL213:
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 0
+   iconst                 0
+   iload                  5
+   iload                  5
+   iconst                 0
+   iconst                 0
+   iload                  6
+   oload                  0
+   invoke                 8185
+   istore                 1
+   iload                  12
+   iload                  13
+   invoke                 8190
+   iload                  12
+   iconst                 1
+   if_icmpeq              LABEL234
+   jump                   LABEL247
+LABEL234:
+   iload                  13
+   iconst                 0
+   if_icmpeq              LABEL238
+   jump                   LABEL247
+LABEL238:
+   iconst                 1
+   sconst                 "Toggle"
+   cc_setop              
+   iconst                 9122
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 0
+   sconst                 "iii"
+   cc_setonop            
+LABEL247:
+   iload                  3
+   cc_getwidth           
+   add                   
+   iload                  2
+   add                   
+   istore                 3
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL157
+LABEL258:
+   sconst                 "~cc_add_button($com,$id,$x,$y,^setpos_abs_left,^setpos_abs_top,$width,$height,^setsize_abs,^setsize_abs,"
+   iload                  6
+   iconst                 2516
+   struct_param          
+   sconst                 ",$text);"
+   sconst                 "<br>"
+   sconst                 "~cc_set_button_states($toggled,$disabled);"
+   sconst                 "<br>"
+   join_string            6
+   ostore                 1
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 0
+   iconst                 0
+   iconst                 1000
+   iload                  5
+   iconst                 0
+   iconst                 0
+   oload                  1
+   invoke                 9132
+   istore                 1
+LABEL281:
+   iload                  4
+   cc_getheight          
+   add                   
+   iload                  2
+   add                   
+   istore                 4
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL123
+LABEL292:
+   iload                  2
+   istore                 3
+   iconst                 48
+   istore                 5
+   iload                  0
+   iload                  1
+   iload                  3
+   iload                  4
+   iconst                 0
+   iconst                 0
+   iconst                 4
+   iload                  5
+   multiply              
+   iload                  5
+   iconst                 0
+   iconst                 0
+   iconst                 6265
+   sconst                 "Button Text"
+   invoke                 8185
+   istore                 1
+   iconst                 1
+   sconst                 "Press"
+   cc_setop              
+   iconst                 115
+   iconst                 4
+   iconst                 -1
+   8022                  
+   ostore                 2
+   iconst                 0
+   sconst                 "Option:"
+   sconst                 "<br>"
+   sconst                 "<col=ff0000>"
+   sconst                 "First"
+   join_string            4
+   set_array_int          2
+   iconst                 1
+   sconst                 "Option:"
+   sconst                 "<br>"
+   sconst                 "<col=ffff00>"
+   sconst                 "Second"
+   join_string            4
+   set_array_int          2
+   iconst                 2
+   sconst                 "Option:"
+   sconst                 "<br>"
+   sconst                 "<col=00ff00>"
+   sconst                 "Third"
+   join_string            4
+   set_array_int          2
+   iconst                 3
+   sconst                 "Option:"
+   sconst                 "<br>"
+   sconst                 "<col=0000ff>"
+   sconst                 "Fourth"
+   join_string            4
+   set_array_int          2
+   iconst                 0
+   oload                  2
+   invoke                 9130
+   iload                  4
+   cc_getheight          
+   add                   
+   iload                  2
+   add                   
+   istore                 4
+   return                

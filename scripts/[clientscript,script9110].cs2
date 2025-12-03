@@ -1,0 +1,18 @@
+// 9110
+[clientscript,script9110](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6, enum $enum7, struct $struct8)
+def_int $int9 = struct_param($struct8, param_1077);
+def_string $string0 = "";
+def_int $int10 = -1;
+if (cc_find($component0, $comsubid4) = ^true) {
+	$string0 = cc_gettext;
+	if (string_length($string0) > 0) {
+		$int10 = ~string_to_int($string0);
+	}
+	~settings_set_dropdown($int9, -1, $int10);
+}
+def_int $int11 = 0;
+if (cc_find($component0, $comsubid3) = ^true) {
+	$string0, $int11 = ~script9115($enum7, -1, $struct8);
+	cc_settext($string0);
+}
+~script9113($component0, $comsubid1, $comsubid2, $comsubid3, $comsubid4, $component5, $comsubid6);

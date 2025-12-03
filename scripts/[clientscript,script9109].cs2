@@ -1,0 +1,70 @@
+// 9109
+[clientscript,script9109](int $opindex0, int $comsubid1, int $comsubid2, component $component3, int $comsubid4, int $int5, struct $struct6, component $component7, int $comsubid8, enum $enum9, int $int10, int $int11, int $int12, int $int13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, int $comsubid20, boolean $boolean21)
+def_int $int22 = struct_param($struct6, param_1077);
+if ($opindex0 = 2) {
+	if (cc_find($component3, $comsubid4) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component7, $comsubid8) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component7, $comsubid1) = ^true) {
+		cc_setcolour(^white);
+	}
+	if (cc_find($component7, $comsubid20) = ^true) {
+		cc_setgraphic("scrollbar_v2,3");
+		cc_setop(1, "Submit");
+		cc_setonop("script9110(
+			0 = $component7, 
+			1 = $comsubid1, 
+			2 = $comsubid20, 
+			3 = $comsubid8, 
+			4 = $comsubid2, 
+			5 = $component3, 
+			6 = $comsubid4, 
+			7 = $enum9, 
+			8 = $struct6
+		)");
+	}
+	if (cc_find($component7, $comsubid2) = ^true) {
+		cc_settext("");
+		cc_input_setcaret(0);
+		cc_input_setfocus(true);
+		cc_input_setonchange("script9112(event_com, event_comsubid, $int22)");
+		cc_input_setonsubmit("script9110(
+			0 = $component7, 
+			1 = $comsubid1, 
+			2 = $comsubid20, 
+			3 = $comsubid8, 
+			4 = $comsubid2, 
+			5 = $component3, 
+			6 = $comsubid4, 
+			7 = $enum9, 
+			8 = $struct6
+		)");
+		cc_input_setonfocuschanged("script9111($component7, $comsubid1, $comsubid20, $comsubid8, $comsubid2, $component3, $comsubid4)");
+	}
+	return;
+}
+if ($opindex0 ! 1) {
+	return;
+}
+~script9114(
+	0 = $int5, 
+	1 = $struct6, 
+	2 = $component7, 
+	3 = $comsubid8, 
+	4 = $enum9, 
+	5 = $int10, 
+	6 = $int11, 
+	7 = $int12, 
+	8 = $int13, 
+	9 = $component14, 
+	10 = $component15, 
+	11 = $component16, 
+	12 = $component17, 
+	13 = $component18, 
+	14 = $component19, 
+	15 = $comsubid20, 
+	16 = $boolean21
+);
