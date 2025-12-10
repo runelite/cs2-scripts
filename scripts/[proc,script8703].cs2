@@ -22,7 +22,7 @@ if (%varcint1302 ! 0) {
 	}
 }
 def_int $int7 = db_getfield(db_getfield($dbrow5, sailing_charting_core:sailing_sea, 0), sailing_sea:required_level, 0);
-if (%varcint1303 = 0 & stat(_23) < ~script9001($dbrow5)) {
+if (%varcint1303 = 0 & (stat(_23) < ~script9001($dbrow5) | ~script9137($dbrow5) = 0)) {
 	return(0);
 }
 if (~script8688 ! -1 & ~script8688 ! $int3 & ~script8688 ! $int4) {

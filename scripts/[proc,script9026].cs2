@@ -15,7 +15,7 @@ switch_int ($int1) {
 		if ($dbrow4 ! null) {
 			$dbfield5 = calc($int0 - 1);
 			if ($dbfield5 = -1) {
-				%sailing_likely_botter_identified = 1;
+				%sailing_unexpected_input_logged = 1;
 			} else {
 				$dbrow3 = db_getfield($dbrow4, sailing_boat_hotspot:option, $dbfield5);
 			}

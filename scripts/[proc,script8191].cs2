@@ -1,0 +1,12 @@
+// 8191
+[proc,script8191](int $int0, component $com_fairyrings_log_contents1, component $com_fairyrings_log_scrollbar2, component $com_fairyrings_log_divider3, component $com_fairyrings_log_faves4, component $com_fairyrings_log_search5, int $int6)
+if ($int0 ! 1) {
+	return;
+}
+if (~script8078 = 1) {
+	~meslayer_close(false, true, true);
+	~script8080($com_fairyrings_log_contents1, $com_fairyrings_log_scrollbar2, $int6, 1, $com_fairyrings_log_divider3, $com_fairyrings_log_faves4);
+	return;
+}
+~script8077("Search for destination:", %varcstring1344);
+~script8083($com_fairyrings_log_contents1, $com_fairyrings_log_scrollbar2, $com_fairyrings_log_divider3, $com_fairyrings_log_faves4, $com_fairyrings_log_search5);
