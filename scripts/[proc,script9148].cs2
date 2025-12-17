@@ -1,0 +1,15 @@
+// 9148
+[proc,script9148]()(int)
+if (~script6790 = 1) {
+	return(2);
+}
+if (~league_world = 1 & %league_tutorial_completed >= 3) {
+	return(1);
+}
+if (~deadman_world = 3) {
+	return(3);
+}
+if (%adventurepath_player_participating = 1 & ~league_world = 0) {
+	return(0);
+}
+return(-1);

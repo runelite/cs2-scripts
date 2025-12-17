@@ -36,11 +36,15 @@ if_setonop("opsound(event_op, 2)", $component2);
 if_setontimer(null, $component2);
 def_int $int10 = calc(if_getwidth($component1) - (if_getx($component2) + if_getwidth($component2) + 4));
 ~script4885($int0, $component1, $int10, $int9, $com_bankside_runepouch_select_container3, $com_bankside_runepouch_select_list4);
-~script8087($component5, $int0);
-if (~on_mobile = false) {
-	if_setonmouserepeat("cc_graphic_swapper($component5, 0, tradebacking_dark, null)", $component5);
+~script9147;
+if (%settings_runepouch_loadout_names_disabled = 0) {
+	~script8087($component5, $int0);
 }
-if_setonmouseleave("cc_graphic_swapper($component5, 0, tradebacking, null)", $component5);
+~script9146(bankside:runepouch_loadout_container, bankside:runepouch_loadout_j, bankside:runepouch_loadout_scrollbar);
+if (~on_mobile = false) {
+	if_setonmouserepeat("cc_colour_swapper($component5, 1, ^white)", $component5);
+}
+if_setonmouseleave("cc_colour_swapper($component5, 1, 0xff981f)", $component5);
 if_setop(1, "Change loadout name", $component5);
 if_setonop("script8089($com_bankside_runepouch_name_select_container6, $int0)", $component5);
 if_setonvartransmit("script4884($int0, event_com, $int10, $int9, $com_bankside_runepouch_select_container3, $com_bankside_runepouch_select_list4){

@@ -1,0 +1,10 @@
+// 9140
+[clientscript,script9140](dbrow $dbrow0, component $com_patchy_info_contents1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, component $com_patchy_list8)
+if ($dbrow0 ! null) {
+	sound_synth(interface_select1, 1, 0);
+	%if1 = db_getfield($dbrow0, patchy_data:id, 0);
+	~script9139($com_patchy_info_contents1, $comsubid2, $comsubid3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $com_patchy_list8);
+	if_runscript(-1263177550, patchy:list, -1, %if1);
+} else {
+	if_runscript(-1263177550, patchy:list, -1, -1);
+}

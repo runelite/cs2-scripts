@@ -75,25 +75,27 @@ switch_int ($int0) {
 	case 31 :
 		return("Storm resistance", tostring(%sailing_sidepanel_boat_stormresistance), 0);
 	case 32 :
+		return("Crystal helm resistance", tostring(%sailing_sidepanel_boat_crystalhelm_resistance), 0);
+	case 33 :
 		if (%sailing_sidepanel_boat_fetidwater_resistant >= 1) {
 			return("Fetid water resistant", "Yes", 0);
 		}
 		return("Fetid water resistant", "No", 0);
-	case 33 :
-		if (%sailing_sidepanel_boat_crystalflecked_resistant >= 1) {
-			return("Crystal resistant", "Yes", 0);
-		}
-		return("Crystal resistant", "No", 0);
 	case 34 :
+		if (%sailing_sidepanel_boat_crystalflecked_resistant >= 1) {
+			return("Crystal sea resistant", "Yes", 0);
+		}
+		return("Crystal sea resistant", "No", 0);
+	case 35 :
 		if (%sailing_sidepanel_boat_tangledkelp_resistant >= 1) {
 			return("Tangled kelp resistant", "Yes", 0);
 		}
 		return("Tangled kelp resistant", "No", 0);
-	case 35 :
+	case 36 :
 		if (%sailing_sidepanel_boat_icyseas_resistant >= 1) {
-			return("Ice resistant", "Yes", 0);
+			return("Icy seas resistant", "Yes", 0);
 		}
-		return("Ice resistant", "No", 0);
+		return("Icy seas resistant", "No", 0);
 	case default :
 		return("", "null", -1);
 }
