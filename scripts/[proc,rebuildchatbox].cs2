@@ -918,13 +918,9 @@ while ($int10 ! -1 & $component9 ! null) {
 				} else if (string_length($string25) ! 0) {
 					$int22 = string_indexof_string($string25, "CA_ID:", 0);
 					if ($int22 ! -1) {
-						$string25 = substring($string25, string_length("CA_ID:"), string_length($string25));
+						$string25 = substring($string25, calc($int22 + string_length("CA_ID:")), string_length($string25));
 						$int22 = ~string_to_int($string25);
 						if_setop(6, "View", $component9);
-						if_setopbase("<col=ffffff>Task</col>", $component9);
-						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
-						if_setonmouseover(null, $component9);
-						if_setonmouseleave(null, $component9);
 						if_setop(7, "Open", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
 						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
@@ -1017,13 +1013,9 @@ while ($int10 ! -1 & $component9 ! null) {
 				if (string_length($string25) ! 0) {
 					$int22 = string_indexof_string($string25, "CA_ID:", 0);
 					if ($int22 ! -1) {
-						$string25 = substring($string25, string_length("CA_ID:"), string_length($string25));
+						$string25 = substring($string25, calc($int22 + string_length("CA_ID:")), string_length($string25));
 						$int22 = ~string_to_int($string25);
 						if_setop(6, "View", $component9);
-						if_setopbase("<col=ffffff>Task</col>", $component9);
-						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
-						if_setonmouseover(null, $component9);
-						if_setonmouseleave(null, $component9);
 						if_setop(7, "Open", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
 						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);

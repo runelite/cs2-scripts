@@ -494,12 +494,12 @@ LABEL417:
    iconst                 0
    iconst                 62062593
    if_setsize            
-   jump                   LABEL524
+   jump                   LABEL515
 LABEL450:
    iload                  15
    iload                  7
    if_icmple              LABEL454
-   jump                   LABEL524
+   jump                   LABEL515
 LABEL454:
    iload                  15
    iload                  21
@@ -554,15 +554,6 @@ LABEL485:
    iconst                 62062593
    if_setsize            
 LABEL503:
-   sconst                 "if_getheight(menu_new:content_scroll) = "
-   iconst                 62062599
-   if_getheight          
-   tostring              
-   sconst                 " and $lowest_y = "
-   iload                  23
-   tostring              
-   join_string            4
-   mes                   
    iconst                 0
    iconst                 0
    iconst                 1
@@ -575,7 +566,7 @@ LABEL503:
    iconst                 1
    iconst                 62062599
    if_setsize            
-LABEL524:
+LABEL515:
    iload                  15
    iconst                 0
    iconst                 62062599
@@ -586,9 +577,9 @@ LABEL524:
    if_setscrollpos       
    iload                  15
    iload                  7
-   if_icmpgt              LABEL536
-   jump                   LABEL549
-LABEL536:
+   if_icmpgt              LABEL527
+   jump                   LABEL540
+LABEL527:
    iload                  8
    iconst                 62062599
    iconst                 4538
@@ -602,5 +593,5 @@ LABEL536:
    iload                  8
    iconst                 62062599
    invoke                 6157
-LABEL549:
+LABEL540:
    return                
