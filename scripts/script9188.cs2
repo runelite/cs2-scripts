@@ -1,0 +1,488 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9188
+.int_arg_count            1
+.obj_arg_count            1
+   oload                  0
+   sconst                 "::"
+   8018                  
+   ostore                 1
+   sconst                 ""
+   ostore                 2
+   oload                  1
+   8003                  
+   iconst                 2
+   if_icmpeq              LABEL11
+   jump                   LABEL74
+LABEL11:
+   iconst                 1
+   get_array_int          1
+   ostore                 2
+   oload                  2
+   sconst                 "br"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL20
+   jump                   LABEL26
+LABEL20:
+   iload                  0
+   iconst                 16
+   invoke                 9192
+   pop_int               
+   pop_int               
+   jump                   LABEL73
+LABEL26:
+   oload                  2
+   sconst                 "p"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL32
+   jump                   LABEL42
+LABEL32:
+   iload                  0
+   iconst                 16
+   iconst                 16
+   iconst                 2
+   div                   
+   add                   
+   invoke                 9192
+   pop_int               
+   pop_int               
+   jump                   LABEL73
+LABEL42:
+   oload                  2
+   sconst                 "hl"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL48
+   jump                   LABEL55
+LABEL48:
+   iconst                 2526
+   iconst                 16777215
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+   jump                   LABEL73
+LABEL55:
+   oload                  2
+   sconst                 "/hl"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL61
+   jump                   LABEL68
+LABEL61:
+   iconst                 2526
+   iconst                 16750623
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+   jump                   LABEL73
+LABEL68:
+   sconst                 "SG2"
+   sconst                 "Invalid custom tag: "
+   oload                  2
+   join_string            2
+   invoke                 638
+LABEL73:
+   return                
+LABEL74:
+   sconst                 ""
+   ostore                 3
+   sconst                 ""
+   ostore                 4
+   iconst                 -1
+   istore                 1
+   iconst                 -1
+   istore                 2
+   sconst                 ""
+   ostore                 5
+   iconst                 1
+   get_array_int          1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL90
+   jump                   LABEL99
+LABEL90:
+   iconst                 856064
+   iconst                 1
+   get_array_int          1
+   4036                  
+   iconst                 0
+   db_find_with_count    
+   pop_int               
+   db_findnext           
+   istore                 2
+LABEL99:
+   iconst                 2
+   get_array_int          1
+   ostore                 2
+   oload                  1
+   8003                  
+   iconst                 4
+   if_icmpge              LABEL107
+   jump                   LABEL110
+LABEL107:
+   iconst                 3
+   get_array_int          1
+   ostore                 5
+LABEL110:
+   iconst                 0
+   get_array_int          1
+   ostore                 3
+   oload                  3
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL118
+   jump                   LABEL129
+LABEL118:
+   oload                  3
+   sconst                 ":"
+   8018                  
+   ostore                 1
+   iconst                 0
+   get_array_int          1
+   ostore                 4
+   iconst                 1
+   get_array_int          1
+   4036                  
+   istore                 1
+LABEL129:
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   oload                  2
+   oload                  5
+   join_string            2
+   iload                  0
+   if_getwidth           
+   iconst                 495
+   parawidth             
+   istore                 8
+   iload                  8
+   istore                 9
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL153
+   jump                   LABEL166
+LABEL153:
+   iload                  9
+   iload                  2
+   iconst                 856097
+   iconst                 0
+   db_getfield           
+   add                   
+   iload                  2
+   iconst                 856128
+   iconst                 0
+   db_getfield           
+   add                   
+   add                   
+   istore                 9
+LABEL166:
+   iload                  0
+   iconst                 16
+   iload                  9
+   invoke                 9193
+   pop_int               
+   pop_int               
+   iconst                 2525
+   iload                  0
+   iconst                 -1
+   2703                  
+   istore                 10
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL181
+   jump                   LABEL251
+LABEL181:
+   iload                  0
+   iconst                 5
+   iload                  0
+   invoke                 8302
+   iconst                 0
+   cc_create             
+   iload                  2
+   iconst                 856080
+   iconst                 0
+   db_getfield           
+   cc_setgraphic         
+   iload                  2
+   iconst                 856096
+   iconst                 0
+   db_getfield           
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  2
+   iconst                 856098
+   iconst                 0
+   db_getfield           
+   istore                 3
+   iload                  2
+   iconst                 856112
+   iconst                 0
+   db_getfield           
+   istore                 5
+   istore                 4
+   iload                  2
+   iconst                 856128
+   iconst                 0
+   db_getfield           
+   istore                 7
+   istore                 6
+   iconst                 2525
+   iload                  0
+   iconst                 -1
+   2703                  
+   iload                  4
+   add                   
+   iload                  6
+   add                   
+   iconst                 2524
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 16
+   iload                  3
+   sub                   
+   iconst                 2
+   div                   
+   add                   
+   iload                  5
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 2525
+   cc_getx               
+   cc_getwidth           
+   add                   
+   iconst                 1
+   add                   
+   iload                  7
+   add                   
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+LABEL251:
+   iload                  0
+   iconst                 4
+   iload                  0
+   invoke                 8302
+   iconst                 0
+   cc_create             
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL265
+   jump                   LABEL298
+LABEL265:
+   oload                  4
+   sconst                 "quest"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL271
+   jump                   LABEL289
+LABEL271:
+   iload                  1
+   invoke                 6154
+   invoke                 4136
+   iconst                 1
+   if_icmpeq              LABEL277
+   jump                   LABEL289
+LABEL277:
+   iconst                 226
+   invoke                 5329
+   cc_setcolour          
+   cc_getcolour          
+   sconst                 "u"
+   invoke                 3739
+   oload                  2
+   sconst                 "</u>"
+   oload                  5
+   join_string            4
+   cc_settext            
+   jump                   LABEL297
+LABEL289:
+   iconst                 16776960
+   cc_setcolour          
+   sconst                 "<u=ffff00>"
+   oload                  2
+   sconst                 "</u>"
+   oload                  5
+   join_string            4
+   cc_settext            
+LABEL297:
+   jump                   LABEL307
+LABEL298:
+   iconst                 2526
+   iload                  0
+   iconst                 -1
+   2703                  
+   cc_setcolour          
+   oload                  2
+   oload                  5
+   join_string            2
+   cc_settext            
+LABEL307:
+   iload                  8
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 2525
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 2524
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 2525
+   cc_getx               
+   cc_getwidth           
+   add                   
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL335
+   jump                   LABEL444
+LABEL335:
+   iload                  0
+   iconst                 3
+   iload                  0
+   invoke                 8302
+   iconst                 0
+   cc_create             
+   iconst                 255
+   cc_settrans           
+   iload                  9
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  10
+   iconst                 2524
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   oload                  4
+   sconst                 "skill"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL362
+   jump                   LABEL379
+LABEL362:
+   iconst                 1
+   sconst                 "View "
+   sconst                 "<col=ff9040>"
+   iconst                 105
+   iconst                 115
+   iconst                 108
+   iload                  1
+   enum                  
+   sconst                 "</col>"
+   sconst                 " guide"
+   join_string            5
+   cc_setop              
+   iconst                 9190
+   iload                  1
+   sconst                 "i"
+   cc_setonop            
+   jump                   LABEL444
+LABEL379:
+   oload                  4
+   sconst                 "quest"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL385
+   jump                   LABEL398
+LABEL385:
+   sconst                 "<col=ff9040>"
+   oload                  2
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iconst                 1
+   sconst                 "View-journal"
+   cc_setop              
+   iconst                 9189
+   iload                  1
+   sconst                 "i"
+   cc_setonop            
+   jump                   LABEL444
+LABEL398:
+   oload                  4
+   sconst                 "tab"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL404
+   jump                   LABEL417
+LABEL404:
+   sconst                 "<col=ff9040>"
+   oload                  2
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iconst                 1
+   sconst                 "View"
+   cc_setop              
+   iconst                 1906
+   iload                  1
+   sconst                 "i"
+   cc_setonop            
+   jump                   LABEL444
+LABEL417:
+   oload                  4
+   sconst                 "side_panel"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL423
+   jump                   LABEL436
+LABEL423:
+   sconst                 "<col=ff9040>"
+   oload                  2
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iconst                 1
+   sconst                 "View"
+   cc_setop              
+   iconst                 915
+   iload                  1
+   sconst                 "i"
+   cc_setonop            
+   jump                   LABEL444
+LABEL436:
+   sconst                 "SG"
+   sconst                 "Invalid link type '"
+   oload                  4
+   sconst                 "' in block '"
+   oload                  0
+   sconst                 "'"
+   join_string            5
+   invoke                 6151
+LABEL444:
+   return                

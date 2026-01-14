@@ -1,134 +1,134 @@
 // 4904
-[proc,skill_guide_data_strength](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_strength](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, iron_warhammer_1335, "Your Strength level determines your max hit in combat. Whenever you hit your opponent, you will deal a random amount of damage up to your max hit.");
+				return(-1, iron_warhammer_1335, null, "Your Strength level determines your max hit in combat. Whenever you hit your opponent, you will deal a random amount of damage up to your max hit.");
 			case 1 :
-				return(-1, dragon_halberd_3204, "Most weapons have a Strength bonus that will also increase your max hit. You can view your Strength bonus (and all of your equipment's stats) by selecting 'View equipment stats' under the Worn Equipment side panel.");
+				return(-1, dragon_halberd_3204, null, "Most weapons have a Strength bonus that will also increase your max hit. You can view your Strength bonus (and all of your equipment's stats) by selecting 'View equipment stats' under the Worn Equipment side panel.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_warhammer_1337, "Bronze warhammer");
+				return(1, bronze_warhammer_1337, null, "Bronze warhammer");
 			case 1 :
-				return(1, iron_warhammer_1335, "Iron warhammer");
+				return(1, iron_warhammer_1335, null, "Iron warhammer");
 			case 2 :
-				return(5, steel_warhammer_1339, "Steel warhammer");
+				return(5, steel_warhammer_1339, null, "Steel warhammer");
 			case 3 :
-				return(5, black_halberd_3196, "Members: Black halberd<br> (with 10 Attack)");
+				return(5, black_halberd_3196, null, "Members: Black halberd<br> (with 10 Attack)");
 			case 4 :
-				return(5, white_halberd_6599, "Members: White halberd<br> (with 10 Attack)");
+				return(5, white_halberd_6599, null, "Members: White halberd<br> (with 10 Attack)");
 			case 5 :
-				return(10, black_warhammer_1341, "Black warhammer");
+				return(10, black_warhammer_1341, null, "Black warhammer");
 			case 6 :
-				return(10, white_warhammer_6613, "Members: White warhammer<br> (with 10 Prayer)");
+				return(10, white_warhammer_6613, null, "Members: White warhammer<br> (with 10 Prayer)");
 			case 7 :
-				return(10, mithril_halberd_3198, "Members: Mithril halberd<br> (with 20 Attack)");
+				return(10, mithril_halberd_3198, null, "Members: Mithril halberd<br> (with 20 Attack)");
 			case 8 :
-				return(15, adamant_halberd_3200, "Members: Adamant halberd<br> (with 30 Attack)");
+				return(15, adamant_halberd_3200, null, "Members: Adamant halberd<br> (with 30 Attack)");
 			case 9 :
-				return(20, mithril_warhammer_1343, "Mithril warhammer");
+				return(20, mithril_warhammer_1343, null, "Mithril warhammer");
 			case 10 :
-				return(20, rune_halberd_3202, "Members: Rune halberd<br> (with 40 Attack)");
+				return(20, rune_halberd_3202, null, "Members: Rune halberd<br> (with 40 Attack)");
 			case 11 :
-				return(30, adamnt_warhammer_1345, "Adamant warhammer");
+				return(30, adamnt_warhammer_1345, null, "Adamant warhammer");
 			case 12 :
-				return(30, hg_hunter_spear_29305, "Members: Hunter's spears<br> (with 55 Ranged)");
+				return(30, hg_hunter_spear_29305, null, "Members: Hunter's spears<br> (with 55 Ranged)");
 			case 13 :
-				return(30, dragon_halberd_3204, "Members: Dragon halberd<br> (with 60 Attack)");
+				return(30, dragon_halberd_3204, null, "Members: Dragon halberd<br> (with 60 Attack)");
 			case 14 :
-				return(40, rune_warhammer_1347, "Rune warhammer");
+				return(40, rune_warhammer_1347, null, "Rune warhammer");
 			case 15 :
-				return(40, brain_anchor_10887, "Members: Barrelchest Anchor<br> (with 60 Attack)");
+				return(40, brain_anchor_10887, null, "Members: Barrelchest Anchor<br> (with 60 Attack)");
 			case 16 :
-				return(42, pest_void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, pest_void_knight_mace_8841, null, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 17 :
-				return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Attack)");
+				return(50, granite_maul_4153, null, "Members: Granite maul<br> (with 50 Attack)");
 			case 18 :
-				return(50, granite_longsword_21646, "Members: Granite longsword<br> (with 50 Attack)");
+				return(50, granite_longsword_21646, null, "Members: Granite longsword<br> (with 50 Attack)");
 			case 19 :
-				return(60, tzhaar_maul_6528, "Members: TzHaar-Ket-Om");
+				return(60, tzhaar_maul_6528, null, "Members: TzHaar-Ket-Om");
 			case 20 :
-				return(60, dragon_warhammer_13576, "Members: Dragon warhammer");
+				return(60, dragon_warhammer_13576, null, "Members: Dragon warhammer");
 			case 21 :
-				return(60, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 70 Magic)");
+				return(60, ancient_sceptre_27624, null, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 70 Magic)");
 			case 22 :
-				return(70, barrows_dharok_weapon_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
+				return(70, barrows_dharok_weapon_4718, null, "Members: Dharok's greataxe<br> (with 70 Attack)");
 			case 23 :
-				return(70, barrows_torag_weapon_4747, "Members: Torag's hammers<br> (with 70 Attack)");
+				return(70, barrows_torag_weapon_4747, null, "Members: Torag's hammers<br> (with 70 Attack)");
 			case 24 :
-				return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
+				return(70, abyssal_bludgeon_13263, null, "Members: Abyssal bludgeon<br> (with 70 Attack)");
 			case 25 :
-				return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
+				return(75, elder_maul_21003, null, "Members: Elder maul<br> (with 75 Attack)");
 			case 26 :
-				return(75, dual_macuahuitl_28997, "Members: Dual Macuahuitl<br> (with 70 Attack)");
+				return(75, dual_macuahuitl_28997, null, "Members: Dual Macuahuitl<br> (with 70 Attack)");
 			case 27 :
-				return(80, soulreaper_28338, "Members: Soulreaper axe<br> (with 80 Attack)");
+				return(80, soulreaper_28338, null, "Members: Soulreaper axe<br> (with 80 Attack)");
 			case 28 :
-				return(90, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 80 Attack)");
+				return(90, scythe_of_vitur_22325, null, "Members: Scythe of Vitur<br> (with 80 Attack)");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(42, pest_void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, pest_void_knight_top_8839, null, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 1 :
-				return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
+				return(50, granite_helm_10589, null, "Granite armour<br> (with 50 Defence)");
 			case 2 :
-				return(50, zombie_helmet_30321, "Members: Zombie helmet<br> (with 50 Defence)");
+				return(50, zombie_helmet_30321, null, "Members: Zombie helmet<br> (with 50 Defence)");
 			case 3 :
-				return(70, inquisitors_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
+				return(70, inquisitors_helm_24419, null, "Members: Inquisitor's armour<br> (with 30 Defence)");
 			case 4 :
-				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Defence)");
+				return(75, primordial_boots_13239, null, "Members: Primordial boots<br> (with 75 Defence)");
 			case 5 :
-				return(75, blood_moon_helm_29028, "Members: Bloodrager set<br> (with 50 Defence)");
+				return(75, blood_moon_helm_29028, null, "Members: Bloodrager set<br> (with 50 Defence)");
 			case 6 :
-				return(80, avernic_treads_31088, "Members: Avernic treads<br> (with 80 Ranged, 80 Magic and 80 Defence)");
+				return(80, avernic_treads_31088, null, "Members: Avernic treads<br> (with 80 Ranged, 80 Magic and 80 Defence)");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(19, agility_balance_6515, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
+				return(19, agility_balance_6515, null, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
 			case 1 :
-				return(21, agility_balance_6515, "Karamja<br> (with 53 Agility and 42 Ranged)");
+				return(21, agility_balance_6515, null, "Karamja<br> (with 53 Agility and 42 Ranged)");
 			case 2 :
-				return(22, agility_balance_6515, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
+				return(22, agility_balance_6515, null, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
 			case 3 :
-				return(28, agility_balance_6515, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
+				return(28, agility_balance_6515, null, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
 			case 4 :
-				return(35, agility_climb_6517, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
+				return(35, agility_climb_6517, null, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
 			case 5 :
-				return(37, agility_climb_6517, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
+				return(37, agility_climb_6517, null, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
 			case 6 :
-				return(38, agility_climb_6517, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
+				return(38, agility_climb_6517, null, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
 			case 7 :
-				return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
+				return(70, agility_balance_6515, null, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
 		}
 	case 4 :
 		if ($int1 = 0) {
-			return(60, agility_strength_11793, "Access the God Wars Dungeon via the Strength route");
+			return(60, agility_strength_11793, null, "Access the God Wars Dungeon via the Strength route");
 		} else if ($int1 = 1) {
-			return(70, agility_strength_11793, "Enter the Bandos area of the God Wars Dungeon");
+			return(70, agility_strength_11793, null, "Enter the Bandos area of the God Wars Dungeon");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, invis_rod_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+				return(-1, invis_rod_7620, null, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
 			case 1 :
-				return(15, brut_spawning_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
+				return(15, brut_spawning_trout_11328, null, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
 			case 2 :
-				return(30, brut_spawning_salmon_11330, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
+				return(30, brut_spawning_salmon_11330, null, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
 			case 3 :
-				return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
+				return(35, raw_tuna_359, null, "Tuna<br> (with 55 Fishing)");
 			case 4 :
-				return(35, tempoross_raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
+				return(35, tempoross_raw_harpoonfish_25564, null, "Harpoonfish<br> (with 55 Fishing)");
 			case 5 :
-				return(45, brut_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
+				return(45, brut_sturgeon_11332, null, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
 			case 6 :
-				return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
+				return(50, raw_swordfish_371, null, "Swordfish<br> (with 70 Fishing)");
 			case 7 :
-				return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
+				return(76, raw_shark_383, null, "Shark<br> (with 96 Fishing)");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

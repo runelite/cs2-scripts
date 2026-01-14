@@ -1,0 +1,10 @@
+// 9141
+[clientscript,script9141](component $component0, int $int1, int $int2, component $com_ballot_dodger3, int $int4, int $int5, component $com_ballot_content6)
+def_int $int7 = if_getwidth($com_ballot_content6);
+def_int $int8 = if_getheight($com_ballot_content6);
+def_int $int9 = if_getwidth($com_ballot_dodger3);
+def_int $int10 = if_getheight($com_ballot_dodger3);
+if ($int1 ! $int7 | $int2 ! $int8 | $int4 ! $int9 | $int5 ! $int10) {
+	~script8229(2, $com_ballot_content6);
+	if_setontimer("script9141(event_com, $int7, $int8, $com_ballot_dodger3, $int9, $int10, $com_ballot_content6)", $component0);
+}

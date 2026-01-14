@@ -1,0 +1,7 @@
+// 9191
+[proc,script9191](dbrow $dbrow0)(anyobj)
+def_string $string0 = "quest";
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
+	$string0 = "miniquest";
+}
+return("||quest:<tostring(db_getfield($dbrow0, quest:id, 0))>::303::<db_getfield($dbrow0, quest:displayname, 0)> <$string0>||");

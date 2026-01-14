@@ -1,0 +1,81 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9156
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Your Defence level unlocks the ability to equip increasingly powerful armour and determines how likely you are to block enemy attacks, negating the damage you would have taken. Use the tabs on the left to see what level is required to equip certain equipment."
+   sconst                 "||::p||"
+   sconst                 "To level your Defence skill, attack enemies with a melee, ranged or magic weapon that has a Defensive, Controlled or Longrange attack style. Attack styles can be selected in the ||side_panel:0::"
+   sconst                 "300"
+   sconst                 "::Combat Options panel||. The tooltip for each attack style shows the style name, type of damage and the skill XP attacking with that style gives."
+   join_string            5
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, equip a weapon, select a Defensive, Controlled or Longrange attack style from the ||side_panel:0::"
+   sconst                 "300"
+   sconst                 "::Combat Options panel|| then attack some enemies! Cows and Goblins east of Lumbridge are a good place to start."
+   sconst                 "||::p||"
+   sconst                 "Certain armour can be purchased from various shops around Gielinor, such as the ||::"
+   sconst                 "124"
+   sconst                 "::Platebody Shop|| in Varrock and the ||::"
+   sconst                 "125"
+   sconst                 "::Platelegs Shop|| in Al Kharid."
+   join_string            9
+   invoke                 9182
+   iconst                 115
+   iconst                 5
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||skill:"
+   sconst                 "4"
+   sconst                 "::"
+   sconst                 "6"
+   sconst                 "::Magic:::|| Works alongside Defence to reduce your chance of taking magic damage."
+   join_string            5
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "6"
+   sconst                 "::"
+   sconst                 "8"
+   sconst                 "::Hitpoints:::|| Attacking enemies also grants Hitpoints XP."
+   join_string            5
+   set_array_int         
+   iconst                 2
+   sconst                 "||skill:"
+   sconst                 "20"
+   sconst                 "::"
+   sconst                 "20"
+   sconst                 "::Slayer:::|| Higher combat skills aid in fighting harder Slayer monsters."
+   join_string            5
+   set_array_int         
+   iconst                 3
+   sconst                 "||skill:"
+   sconst                 "7"
+   sconst                 "::"
+   sconst                 "5"
+   sconst                 "::Prayer:::|| Some prayers apply a bonus to your Defence level."
+   join_string            5
+   set_array_int         
+   iconst                 4
+   sconst                 "||skill:"
+   sconst                 "14"
+   sconst                 "::"
+   sconst                 "15"
+   sconst                 "::Smithing:::|| Weapons and armour crafted with the Smithing skill provide boosts to combat skills."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   return                

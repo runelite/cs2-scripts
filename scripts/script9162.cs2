@@ -1,0 +1,130 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9162
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Your Hitpoints level determines how much damage you can take before you die and have to respawn. Level up your Hitpoints to withstand stronger attacks."
+   sconst                 "||::p||"
+   sconst                 "To level your Hitpoints skill, simply attack enemies with any combat style."
+   sconst                 "||::p||"
+   sconst                 "||::hl||"
+   sconst                 "To restore Hitpoints in combat"
+   sconst                 "||::/hl||"
+   sconst                 ", simply eat food and drink certain potions. Select the ||tab:1::::Healing tab|| on the left to see how many Hitpoints each food restores."
+   join_string            8
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, attack some enemies! Cows and Goblins east of Lumbridge are a good place to start."
+   invoke                 9182
+   iconst                 115
+   iconst                 4
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||skill:"
+   sconst                 "16"
+   sconst                 "::"
+   sconst                 "17"
+   sconst                 "::Cooking:::|| Food cooked with the Cooking skill can be eaten to recover Hitpoints during combat."
+   join_string            5
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "5"
+   sconst                 "::"
+   sconst                 "3"
+   sconst                 "::Defence:::|| Reduces your chance of taking any damage."
+   join_string            5
+   set_array_int         
+   iconst                 2
+   sconst                 "||skill:"
+   sconst                 "4"
+   sconst                 "::"
+   sconst                 "6"
+   sconst                 "::Magic:::|| Works alongside Defence to reduce your chance of taking magic damage."
+   join_string            5
+   set_array_int         
+   iconst                 3
+   sconst                 "||skill:"
+   sconst                 "20"
+   sconst                 "::"
+   sconst                 "20"
+   sconst                 "::Slayer:::|| Higher combat skills aid in fighting harder Slayer monsters."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   iload                  0
+   sconst                 "Damage Hitsplats"
+   sconst                 "During combat, you will see coloured \"hitsplats\" on yourself and the enemy. The number indicates the amount of Hitpoints damage dealt while the colour indicates the type of damage."
+   sconst                 "||::br||"
+   sconst                 "The following are some common damage hitsplats, select the ||tab:3::::Hitsplats tab|| to see a full list."
+   sconst                 "||::p||"
+   join_string            4
+   invoke                 9182
+   oload                  0
+   iconst                 8
+   8023                  
+   iconst                 0
+   sconst                 "||::"
+   sconst                 "200"
+   sconst                 "::Miss/block - no damage dealt||"
+   join_string            3
+   set_array_int         
+   iconst                 1
+   sconst                 "||::"
+   sconst                 "201"
+   sconst                 "::Normal damage||"
+   join_string            3
+   set_array_int         
+   iconst                 2
+   sconst                 "||::"
+   sconst                 "204"
+   sconst                 "::Poison damage||"
+   join_string            3
+   set_array_int         
+   iconst                 3
+   sconst                 "||::"
+   sconst                 "207"
+   sconst                 "::Venom damage||"
+   join_string            3
+   set_array_int         
+   iconst                 4
+   sconst                 "||::"
+   sconst                 "205"
+   sconst                 "::Disease damage||"
+   join_string            3
+   set_array_int         
+   iconst                 5
+   sconst                 "||::"
+   sconst                 "212"
+   sconst                 "::Corruption damage||"
+   join_string            3
+   set_array_int         
+   iconst                 6
+   sconst                 "||::"
+   sconst                 "218"
+   sconst                 "::Bleed damage||"
+   join_string            3
+   set_array_int         
+   iconst                 7
+   sconst                 "||::"
+   sconst                 "222"
+   sconst                 "::Burn damage||"
+   join_string            3
+   set_array_int         
+   iload                  0
+   oload                  0
+   iconst                 9
+   invoke                 9184
+   return                

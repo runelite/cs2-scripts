@@ -1,5 +1,5 @@
 // 7898
-[proc,script7898](int $int0, int $int1)(int, namedobj, string)
+[proc,script7898](int $int0, int $int1)(int, namedobj, dbrow, string)
 def_string $string0 = "";
 if (%option_skill_guide = 0) {
 	$string0 = "<col=6f0000>";
@@ -10,165 +10,165 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, iron_pickaxe_1267, "Mining allows you to get various minerals from the world, for use in other skills; primarily Smithing.");
+				return(-1, iron_pickaxe_1267, null, "Mining allows you to get various minerals from the world, for use in other skills; primarily Smithing.");
 			case 1 :
-				return(-1, iron_ore_440, "To mine a rock, simply interact with it while holding a pickaxe you have the level to use and you'll start mining it. Eventually, you'll collect the ore and the rock will deplete. Low level rocks will replenish themselves fairly quickly, but higher level ones will take longer and longer to come back.");
+				return(-1, iron_ore_440, null, "To mine a rock, simply interact with it while holding a pickaxe you have the level to use and you'll start mining it. Eventually, you'll collect the ore and the rock will deplete. Low level rocks will replenish themselves fairly quickly, but higher level ones will take longer and longer to come back.");
 			case 2 :
-				return(-1, rune_pickaxe_1275, "At higher mining levels, you'll have an increased chance of successfully mining a rock. You'll also be able to use more powerful pickaxes, which decrease the amount of time between mining attempts.");
+				return(-1, rune_pickaxe_1275, null, "At higher mining levels, you'll have an increased chance of successfully mining a rock. You'll also be able to use more powerful pickaxes, which decrease the amount of time between mining attempts.");
 			case 3 :
-				return(-1, gold_ore_444, "Note that while most pickaxes have an Attack level requirement to equip them, you're still able to use them from within your inventory if you have the required Mining level.");
+				return(-1, gold_ore_444, null, "Note that while most pickaxes have an Attack level requirement to equip them, you're still able to use them from within your inventory if you have the required Mining level.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, blankrune_1436, "Rune essence<br>(after Rune Mysteries)");
+				return(1, blankrune_1436, null, "Rune essence<br>(after Rune Mysteries)");
 			case 1 :
-				return(1, clay_434, "Clay");
+				return(1, clay_434, null, "Clay");
 			case 2 :
-				return(1, copper_ore_436, "Copper ore");
+				return(1, copper_ore_436, null, "Copper ore");
 			case 3 :
-				return(1, tin_ore_438, "Tin ore");
+				return(1, tin_ore_438, null, "Tin ore");
 			case 4 :
-				return(10, blurite_ore_668, "Blurite ore");
+				return(10, blurite_ore_668, null, "Blurite ore");
 			case 5 :
-				return(10, limestone_3211, "Members: Limestone");
+				return(10, limestone_3211, null, "Members: Limestone");
 			case 6 :
-				return(14, camdozaal_barronite_shard_25676, "Barronite<br>(after Below Ice Mountain)");
+				return(14, camdozaal_barronite_shard_25676, null, "Barronite<br>(after Below Ice Mountain)");
 			case 7 :
-				return(15, iron_ore_440, "Iron ore");
+				return(15, iron_ore_440, null, "Iron ore");
 			case 8 :
-				return(20, silver_ore_442, "Silver ore");
+				return(20, silver_ore_442, null, "Silver ore");
 			case 9 :
-				return(22, fossil_volcanic_ash_21622, "Members: Volcanic ash");
+				return(22, fossil_volcanic_ash_21622, null, "Members: Volcanic ash");
 			case 10 :
-				return(25, lead_ore_31716, "Members: Lead ore");
+				return(25, lead_ore_31716, null, "Members: Lead ore");
 			case 11 :
-				return(30, coal_453, "Coal");
+				return(30, coal_453, null, "Coal");
 			case 12 :
-				return(30, blankrune_high_7936, "Members: Pure essence<br>(after Rune Mysteries)");
+				return(30, blankrune_high_7936, null, "Members: Pure essence<br>(after Rune Mysteries)");
 			case 13 :
-				return(30, paydirt_12011, "Members: Motherlode mine (lower level)");
+				return(30, paydirt_12011, null, "Members: Motherlode mine (lower level)");
 			case 14 :
-				return(35, enakh_sandstone_large_6977, "Members: Sandstone");
+				return(35, enakh_sandstone_large_6977, null, "Members: Sandstone");
 			case 15 :
-				return(38, arceuus_essence_block_13445, "Members: Dense essence<br>(with 38 Crafting)");
+				return(38, arceuus_essence_block_13445, null, "Members: Dense essence<br>(with 38 Crafting)");
 			case 16 :
-				return(40, gold_ore_444, "Gold");
+				return(40, gold_ore_444, null, "Gold");
 			case 17 :
-				return(40, uncut_red_topaz_1629, "Members: Gem rocks");
+				return(40, uncut_red_topaz_1629, null, "Members: Gem rocks");
 			case 18 :
-				return(41, calcified_deposit_29088, "Members: Calcified rocks");
+				return(41, calcified_deposit_29088, null, "Members: Calcified rocks");
 			case 19 :
-				return(42, lovakengj_sulphur_13571, "Members: Volcanic sulphur");
+				return(42, lovakengj_sulphur_13571, null, "Members: Volcanic sulphur");
 			case 20 :
-				return(43, lovakengj_dynamite_fused_13573, "Members: Lovakengj Blast Mine");
+				return(43, lovakengj_dynamite_fused_13573, null, "Members: Lovakengj Blast Mine");
 			case 21 :
-				return(45, enakh_granite_medium_6983, "Members: Granite");
+				return(45, enakh_granite_medium_6983, null, "Members: Granite");
 			case 22 :
-				return(50, fossil_mine_fragment_iron_21532, "Members: Volcanic Mine");
+				return(50, fossil_mine_fragment_iron_21532, null, "Members: Volcanic Mine");
 			case 23 :
-				return(55, mithril_ore_447, "Mithril ore");
+				return(55, mithril_ore_447, null, "Mithril ore");
 			case 24 :
-				return(57, paydirt_12011, "Members: Motherlode mine (upper level)");
+				return(57, paydirt_12011, null, "Members: Motherlode mine (upper level)");
 			case 25 :
-				return(60, blankrune_daeyalt_24704, "Members: Daeyalt essence<br>(after Sins of the Father)");
+				return(60, blankrune_daeyalt_24704, null, "Members: Daeyalt essence<br>(after Sins of the Father)");
 			case 26 :
-				return(64, scar_tainted_essence_28591, "Members: Tainted essence chunk");
+				return(64, scar_tainted_essence_28591, null, "Members: Tainted essence chunk");
 			case 27 :
-				return(65, lovakite_ore_13356, "Members: Lovakite ore");
+				return(65, lovakite_ore_13356, null, "Members: Lovakite ore");
 			case 28 :
-				return(70, adamantite_ore_449, "Adamantite ore");
+				return(70, adamantite_ore_449, null, "Adamantite ore");
 			case 29 :
-				return(70, softclay_1761, "Members: Soft clay");
+				return(70, softclay_1761, null, "Members: Soft clay");
 			case 30 :
-				return(72, red_salt_22593, "Members: Te Salt");
+				return(72, red_salt_22593, null, "Members: Te Salt");
 			case 31 :
-				return(72, blue_salt_22595, "Members: Efh Salt");
+				return(72, blue_salt_22595, null, "Members: Efh Salt");
 			case 32 :
-				return(72, green_salt_22597, "Members: Urt Salt");
+				return(72, green_salt_22597, null, "Members: Urt Salt");
 			case 33 :
-				return(72, basalt_22603, "Members: Basalt");
+				return(72, basalt_22603, null, "Members: Basalt");
 			case 34 :
-				return(74, nickel_ore_31719, "Members: Nickel ore");
+				return(74, nickel_ore_31719, null, "Members: Nickel ore");
 			case 35 :
-				return(75, ancient_essence_inv03_27619, "Members: Ancient essence<br>(after Secrets of the North)");
+				return(75, ancient_essence_inv03_27619, null, "Members: Ancient essence<br>(after Secrets of the North)");
 			case 36 :
-				return(78, infernal_shale_30846, "Members: Infernal shale<br>");
+				return(78, infernal_shale_30846, null, "Members: Infernal shale<br>");
 			case 37 :
-				return(85, runite_ore_451, "Runite ore");
+				return(85, runite_ore_451, null, "Runite ore");
 			case 38 :
-				return(92, amethyst_21347, "Members: Amethyst");
+				return(92, amethyst_21347, null, "Members: Amethyst");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_pickaxe_1265, "Bronze pickaxe");
+				return(1, bronze_pickaxe_1265, null, "Bronze pickaxe");
 			case 1 :
-				return(1, iron_pickaxe_1267, "Iron pickaxe");
+				return(1, iron_pickaxe_1267, null, "Iron pickaxe");
 			case 2 :
-				return(6, steel_pickaxe_1269, "Steel pickaxe");
+				return(6, steel_pickaxe_1269, null, "Steel pickaxe");
 			case 3 :
-				return(11, black_pickaxe_12297, "Black pickaxe");
+				return(11, black_pickaxe_12297, null, "Black pickaxe");
 			case 4 :
-				return(20, mguild_gloves_21343, "Members: Mining gloves");
+				return(20, mguild_gloves_21343, null, "Members: Mining gloves");
 			case 5 :
-				return(21, mithril_pickaxe_1273, "Mithril pickaxe");
+				return(21, mithril_pickaxe_1273, null, "Mithril pickaxe");
 			case 6 :
-				return(31, adamant_pickaxe_1271, "Adamant pickaxe");
+				return(31, adamant_pickaxe_1271, null, "Adamant pickaxe");
 			case 7 :
-				return(41, rune_pickaxe_1275, "Rune pickaxe");
+				return(41, rune_pickaxe_1275, null, "Rune pickaxe");
 			case 8 :
-				return(41, trail_gilded_pickaxe_23276, "Gilded pickaxe");
+				return(41, trail_gilded_pickaxe_23276, null, "Gilded pickaxe");
 			case 9 :
-				return(55, mguild_gloves_superior_21345, "Members: Superior mining gloves");
+				return(55, mguild_gloves_superior_21345, null, "Members: Superior mining gloves");
 			case 10 :
-				return(61, dragon_pickaxe_11920, "Members: Dragon pickaxe");
+				return(61, dragon_pickaxe_11920, null, "Members: Dragon pickaxe");
 			case 11 :
-				return(61, 3a_pickaxe_20014, "Members: 3rd age pickaxe");
+				return(61, 3a_pickaxe_20014, null, "Members: 3rd age pickaxe");
 			case 12 :
-				return(61, infernal_pickaxe_13243, "Members: Infernal pickaxe<br>(with 85 Smithing)");
+				return(61, infernal_pickaxe_13243, null, "Members: Infernal pickaxe<br>(with 85 Smithing)");
 			case 13 :
-				return(70, mguild_gloves_expert_21392, "Members: Expert mining gloves");
+				return(70, mguild_gloves_expert_21392, null, "Members: Expert mining gloves");
 			case 14 :
-				return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
+				return(71, crystal_pickaxe_23680, null, "Members: Crystal pickaxe<br>(after Song of the Elves)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(30, paydirt_12011, "Members: Motherlode Mine");
+				return(30, paydirt_12011, null, "Members: Motherlode Mine");
 			case 1 :
-				return(57, paydirt_12011, "Members: Motherlode Mine upper area");
+				return(57, paydirt_12011, null, "Members: Motherlode Mine upper area");
 			case 2 :
-				return(60, mithril_ore_447, "Mining Guild");
+				return(60, mithril_ore_447, null, "Mining Guild");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(10, star_dust_175_25532, "Size-1 stars");
+				return(10, star_dust_175_25532, null, "Size-1 stars");
 			case 1 :
-				return(20, star_dust_175_25532, "Size-2 stars");
+				return(20, star_dust_175_25532, null, "Size-2 stars");
 			case 2 :
-				return(30, star_dust_175_25532, "Size-3 stars");
+				return(30, star_dust_175_25532, null, "Size-3 stars");
 			case 3 :
-				return(40, star_dust_175_25532, "Size-4 stars");
+				return(40, star_dust_175_25532, null, "Size-4 stars");
 			case 4 :
-				return(50, star_dust_175_25532, "Size-5 stars");
+				return(50, star_dust_175_25532, null, "Size-5 stars");
 			case 5 :
-				return(60, star_dust_175_25532, "Size-6 stars");
+				return(60, star_dust_175_25532, null, "Size-6 stars");
 			case 6 :
-				return(70, star_dust_175_25532, "Size-7 stars");
+				return(70, star_dust_175_25532, null, "Size-7 stars");
 			case 7 :
-				return(80, star_dust_175_25532, "Size-8 stars");
+				return(80, star_dust_175_25532, null, "Size-8 stars");
 			case 8 :
-				return(90, star_dust_175_25532, "Size-9 stars");
+				return(90, star_dust_175_25532, null, "Size-9 stars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

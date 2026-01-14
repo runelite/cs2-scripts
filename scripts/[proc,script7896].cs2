@@ -1,5 +1,5 @@
 // 7896
-[proc,script7896](int $int0, int $int1)(int, namedobj, string)
+[proc,script7896](int $int0, int $int1)(int, namedobj, dbrow, string)
 def_string $string0 = "";
 if (%option_skill_guide = 0) {
 	$string0 = "<col=6f0000>";
@@ -10,175 +10,236 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, heartcrystal_744, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
+				return(-1, heartcrystal_744, null, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
 			case 1 :
-				return(-1, lobster_379, "As with any skill, you will restore 1 missing Hitpoint every minute, but the best way of recovering Hitpoints is by eating food.");
+				return(-1, lobster_379, null, "As with any skill, you will restore 1 missing Hitpoint every minute, but the best way of recovering Hitpoints is by eating food.");
 			case 2 :
-				return(-1, invis_rod_7620, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
+				return(-1, invis_rod_7620, null, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
 			case 3 :
-				return(-1, invis_rod_7620, "Blue hit splats mean no damage has been dealt.");
+				return(-1, invis_rod_7620, null, "Blue hit splats mean no damage has been dealt.");
 			case 4 :
-				return(-1, invis_rod_7620, "Green hit splats are poison damage.");
+				return(-1, invis_rod_7620, null, "Green hit splats are poison damage.");
 			case 5 :
-				return(-1, invis_rod_7620, "Teal hit splats are venom damage. (Members)");
+				return(-1, invis_rod_7620, null, "Teal hit splats are venom damage. (Members)");
 			case 6 :
-				return(-1, invis_rod_7620, "Orange hit splats are disease damage. (Members)");
+				return(-1, invis_rod_7620, null, "Orange hit splats are disease damage. (Members)");
 			case 7 :
-				return(-1, invis_rod_7620, "Dark purple hit splats are corruption damage. (Members)");
+				return(-1, invis_rod_7620, null, "Dark purple hit splats are corruption damage. (Members)");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, trail_sweets_10476, "Purple Sweets: Restores 1-3 Hitpoints<br>(Members)");
+				return(-1, trail_sweets_10476, null, "Purple Sweets: Restores 1-3 Hitpoints<br>(Members)");
 			case 1 :
-				return(-1, anchovies_319, "Anchovies: Restores 1 Hitpoint");
+				return(-1, anchovies_319, null, "Anchovies: Restores 1 Hitpoint");
 			case 2 :
-				return(-1, shrimp_315, "Shrimp: Restores 3 Hitpoints");
+				return(-1, shrimp_315, null, "Shrimp: Restores 3 Hitpoints");
 			case 3 :
-				return(-1, cooked_chicken_2140, "Cooked chicken: Restores 3 Hitpoints");
+				return(-1, cooked_chicken_2140, null, "Cooked chicken: Restores 3 Hitpoints");
 			case 4 :
-				return(-1, sardine_325, "Sardine: Restores 3 Hitpoints");
+				return(-1, sardine_325, null, "Sardine: Restores 3 Hitpoints");
 			case 5 :
-				return(-1, cooked_meat_2142, "Cooked meat: Restores 3 Hitpoints");
+				return(-1, cooked_meat_2142, null, "Cooked meat: Restores 3 Hitpoints");
 			case 6 :
-				return(-1, cooked_mystery_meat_24785, "Cooked mystery meat: Restores 5 Hitpoints");
+				return(-1, cooked_mystery_meat_24785, null, "Cooked mystery meat: Restores 5 Hitpoints");
 			case 7 :
-				return(-1, bread_2309, "Bread: Restores 5 Hitpoints");
+				return(-1, bread_2309, null, "Bread: Restores 5 Hitpoints");
 			case 8 :
-				return(-1, herring_347, "Herring: Restores 5 Hitpoints");
+				return(-1, herring_347, null, "Herring: Restores 5 Hitpoints");
 			case 9 :
-				return(-1, cooked_rabbit_3228, "Cooked Rabbit: Restores 5 Hitpoints<br>(Members)");
+				return(-1, cooked_rabbit_3228, null, "Cooked Rabbit: Restores 5 Hitpoints<br>(Members)");
 			case 10 :
-				return(-1, bim_steak_sandwich_25631, "Steak Sandwich: Restores 6 Hitpoints");
+				return(-1, bim_steak_sandwich_25631, null, "Steak Sandwich: Restores 6 Hitpoints");
 			case 11 :
-				return(-1, mackerel_355, "Mackerel: Restores 6 Hitpoints<br>(Members)");
+				return(-1, mackerel_355, null, "Mackerel: Restores 6 Hitpoints<br>(Members)");
 			case 12 :
-				return(-1, botanical_pie_19662, "Botanical Pie: Restores 6 Hitpoints<br>(Members)");
+				return(-1, botanical_pie_19662, null, "Botanical Pie: Restores 6 Hitpoints<br>(Members)");
 			case 13 :
-				return(-1, mort_slimey_eel_cooked_3381, "Slimy Eel: Restores 6-10 Hitpoints<br>(Members)");
+				return(-1, mort_slimey_eel_cooked_3381, null, "Slimy Eel: Restores 6-10 Hitpoints<br>(Members)");
 			case 14 :
-				return(-1, trout_333, "Trout: Restores 7 Hitpoints");
+				return(-1, trout_333, null, "Trout: Restores 7 Hitpoints");
 			case 15 :
-				return(-1, cod_339, "Cod: Restores 7 Hitpoints<br>(Members)");
+				return(-1, cod_339, null, "Cod: Restores 7 Hitpoints<br>(Members)");
 			case 16 :
-				return(-1, spit_roasted_rabbit_meat_7223, "Roast Rabbit: Restores 7 Hitpoints<br>(Members)");
+				return(-1, spit_roasted_rabbit_meat_7223, null, "Roast Rabbit: Restores 7 Hitpoints<br>(Members)");
 			case 17 :
-				return(-1, cave_eel_5003, "Cave Eel: Restores 7-11 Hitpoints<br>(Members)");
+				return(-1, cave_eel_5003, null, "Cave Eel: Restores 7-11 Hitpoints<br>(Members)");
 			case 18 :
-				return(-1, pike_351, "Pike: Restores 8 Hitpoints");
+				return(-1, pike_351, null, "Pike: Restores 8 Hitpoints");
 			case 19 :
-				return(-1, wildkebbit_cooked_29128, "Wild kebbit: Restores 8 Hitpoints<br>(Members)");
+				return(-1, wildkebbit_cooked_29128, null, "Wild kebbit: Restores 8 Hitpoints<br>(Members)");
 			case 20 :
-				return(-1, salmon_329, "Salmon: Restores 9 Hitpoints");
+				return(-1, salmon_329, null, "Salmon: Restores 9 Hitpoints");
 			case 21 :
-				return(-1, redberry_pie_2325, "Redberry pie: Restores 9 Hitpoints");
+				return(-1, redberry_pie_2325, null, "Redberry pie: Restores 9 Hitpoints");
 			case 22 :
-				return(-1, tuna_361, "Tuna: Restores 10 Hitpoints");
+				return(-1, tuna_361, null, "Tuna: Restores 10 Hitpoints");
 			case 23 :
-				return(-1, hundred_pirate_giant_crab_meat_7518, "Crab meat: Restores 10 Hitpoints<br>(Members)");
+				return(-1, hundred_pirate_giant_crab_meat_7518, null, "Crab meat: Restores 10 Hitpoints<br>(Members)");
 			case 24 :
-				return(-1, hundred_pirate_fishcake_7530, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
+				return(-1, hundred_pirate_fishcake_7530, null, "Cooked fishcake: Restores 11 Hitpoints<br>(Members)");
 			case 25 :
-				return(-1, jug_wine_1993, "Jug of wine: Restores 11 Hitpoints");
+				return(-1, jug_wine_1993, null, "Jug of wine: Restores 11 Hitpoints");
 			case 26 :
-				return(-1, meat_pie_2327, "Meat pie: Restores 11 Hitpoints");
+				return(-1, meat_pie_2327, null, "Meat pie: Restores 11 Hitpoints");
 			case 27 :
-				return(-1, lava_eel_2149, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
+				return(-1, lava_eel_2149, null, "Lava Eel: Restores 11 Hitpoints<br>(Members)");
 			case 28 :
-				return(-1, larupia_cooked_29146, "Larupia: Restores 11 Hitpoints<br>(Members)");
+				return(-1, larupia_cooked_29146, null, "Larupia: Restores 11 Hitpoints<br>(Members)");
 			case 29 :
-				return(-1, garden_pie_7178, "Garden pie: Restores 12 Hitpoints<br>(Members)");
+				return(-1, garden_pie_7178, null, "Garden pie: Restores 12 Hitpoints<br>(Members)");
 			case 30 :
-				return(-1, fish_pie_7188, "Fish pie: Restores 12 Hitpoints<br>(Members)");
+				return(-1, fish_pie_7188, null, "Fish pie: Restores 12 Hitpoints<br>(Members)");
 			case 31 :
-				return(-1, cake_1891, "Cake: Restores 12 Hitpoints");
+				return(-1, cake_1891, null, "Cake: Restores 12 Hitpoints");
 			case 32 :
-				return(-1, lobster_379, "Lobster: Restores 12 Hitpoints");
+				return(-1, lobster_379, null, "Lobster: Restores 12 Hitpoints");
 			case 33 :
-				return(-1, barbkebbit_cooked_29131, "Barb-tailed kebbit: Restores 12 Hitpoints<br>(Members)");
+				return(-1, barbkebbit_cooked_29131, null, "Barb-tailed kebbit: Restores 12 Hitpoints<br>(Members)");
 			case 34 :
-				return(-1, bass_365, "Bass: Restores 13 Hitpoints<br>(Members)");
+				return(-1, bass_365, null, "Bass: Restores 13 Hitpoints<br>(Members)");
 			case 35 :
-				return(-1, swordfish_373, "Swordfish: Restores 14 Hitpoints");
+				return(-1, swordfish_373, null, "Swordfish: Restores 14 Hitpoints");
 			case 36 :
-				return(-1, plain_pizza_2289, "Plain pizza: Restores 14 Hitpoints");
+				return(-1, plain_pizza_2289, null, "Plain pizza: Restores 14 Hitpoints");
 			case 37 :
-				return(-1, apple_pie_2323, "Apple pie: Restores 14 Hitpoints");
+				return(-1, apple_pie_2323, null, "Apple pie: Restores 14 Hitpoints");
 			case 38 :
-				return(-1, potato_butter_6703, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
+				return(-1, potato_butter_6703, null, "Potato with butter: Restores 14 Hitpoints<br>(Members)");
 			case 39 :
-				return(-1, potato_chilli+carne_7054, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
+				return(-1, potato_chilli+carne_7054, null, "Chilli Potato: Restores 14 Hitpoints<br>(Members)");
 			case 40 :
-				return(-1, graahk_cooked_29149, "Graahk: Restores 14 Hitpoints<br>(Members)");
+				return(-1, graahk_cooked_29149, null, "Graahk: Restores 14 Hitpoints<br>(Members)");
 			case 41 :
-				return(-1, chocolate_cake_1897, "Chocolate Cake: Restores 15 Hitpoints");
+				return(-1, chocolate_cake_1897, null, "Chocolate Cake: Restores 15 Hitpoints");
 			case 42 :
-				return(-1, monkfish_7946, "Monkfish: Restores 16 Hitpoints<br>(Members)");
+				return(-1, monkfish_7946, null, "Monkfish: Restores 16 Hitpoints<br>(Members)");
 			case 43 :
-				return(-1, admiral_pie_7198, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
+				return(-1, admiral_pie_7198, null, "Admiral pie: Restores 16 Hitpoints<br>(Members)");
 			case 44 :
-				return(-1, meat_pizza_2293, "Meat pizza: Restores 16 Hitpoints");
+				return(-1, meat_pizza_2293, null, "Meat pizza: Restores 16 Hitpoints");
 			case 45 :
-				return(-1, potato_cheese_6705, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
+				return(-1, potato_cheese_6705, null, "Potato with cheese: Restores 16 Hitpoints<br>(Members)");
 			case 46 :
-				return(-1, potato_egg+tomato_7056, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
+				return(-1, potato_egg+tomato_7056, null, "Egg Potato: Restores 16 Hitpoints<br>(Members)");
 			case 47 :
-				return(-1, kyatt_cooked_29152, "Kyatt: Restores 17 Hitpoints<br>(Members)");
+				return(-1, kyatt_cooked_29152, null, "Kyatt: Restores 17 Hitpoints<br>(Members)");
 			case 48 :
-				return(-1, tbwt_cooked_karambwan_3144, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
+				return(-1, tbwt_cooked_karambwan_3144, null, "Cooked karambwan: Restores 18 Hitpoints<br>(Members)");
 			case 49 :
-				return(-1, anchovie_pizza_2297, "Anchovy pizza: Restores 18 Hitpoints");
+				return(-1, anchovie_pizza_2297, null, "Anchovy pizza: Restores 18 Hitpoints");
 			case 50 :
-				return(-1, ugthanki_kebab_1885, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
+				return(-1, ugthanki_kebab_1885, null, "Ugthanki kebab: Restores 19 Hitpoints<br>(Members)");
 			case 51 :
-				return(-1, fennecfox_cooked_29137, "Pyre fox: Restores 19 Hitpoints<br>(Members)");
+				return(-1, fennecfox_cooked_29137, null, "Pyre fox: Restores 19 Hitpoints<br>(Members)");
 			case 52 :
-				return(-1, shark_385, "Shark: Restores 20 Hitpoints<br>(Members)");
+				return(-1, shark_385, null, "Shark: Restores 20 Hitpoints<br>(Members)");
 			case 53 :
-				return(-1, potato_mushroom+onion_7058, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
+				return(-1, potato_mushroom+onion_7058, null, "Mushroom Potato: Restores 20 Hitpoints<br>(Members)");
 			case 54 :
-				return(-1, seaturtle_397, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
+				return(-1, seaturtle_397, null, "Sea Turtle: Restores 21 Hitpoints<br>(Members)");
 			case 55 :
-				return(-1, antelopesun_cooked_29140, "Sunlight antelope: Restores 21 Hitpoints<br>(Members)");
+				return(-1, antelopesun_cooked_29140, null, "Sunlight antelope: Restores 21 Hitpoints<br>(Members)");
 			case 56 :
-				return(-1, mantaray_391, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
+				return(-1, mantaray_391, null, "Manta Ray: Restores 22 Hitpoints<br>(Members)");
 			case 57 :
-				return(-1, dark_crab_11936, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
+				return(-1, dark_crab_11936, null, "Dark Crab: Restores 22 Hitpoints<br>(Members)");
 			case 58 :
-				return(-1, potato_tuna+sweetcorn_7060, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
+				return(-1, potato_tuna+sweetcorn_7060, null, "Tuna Potato: Restores 22 Hitpoints<br>(Members)");
 			case 59 :
-				return(-1, wild_pie_7208, "Wild pie: Restores 22 Hitpoints<br>(Members)");
+				return(-1, wild_pie_7208, null, "Wild pie: Restores 22 Hitpoints<br>(Members)");
 			case 60 :
-				return(-1, summer_pie_7218, "Summer pie: Restores 22 Hitpoints<br>(Members)");
+				return(-1, summer_pie_7218, null, "Summer pie: Restores 22 Hitpoints<br>(Members)");
 			case 61 :
-				return(-1, pineapple_pizza_2301, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
+				return(-1, pineapple_pizza_2301, null, "Pineapple pizza: Restores 22 Hitpoints<br>(Members)");
 			case 62 :
-				return(-1, dashingkebbit_cooked_29134, "Dashing kebbit: Restores 23 Hitpoints and 10 Run Energy<br>(Members)");
+				return(-1, dashingkebbit_cooked_29134, null, "Dashing kebbit: Restores 23 Hitpoints and 10 Run Energy<br>(Members)");
 			case 63 :
-				return(-1, antelopemoon_cooked_29143, "Moonlight antelope: Restores 26 Hitpoints and cures 1 level of poison<br>(Members)");
+				return(-1, antelopemoon_cooked_29143, null, "Moonlight antelope: Restores 26 Hitpoints and cures 1 level of poison<br>(Members)");
 			case 64 :
-				return(-1, anglerfish_13441, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
+				return(-1, anglerfish_13441, null, "Anglerfish: Restores Hitpoints based on your Hitpoints level up to a maximum of 22 - can boost beyond your level<br>(Members)");
 			case 65 :
-				return(-1, 3dosepotionofsaradomin_6687, "Saradomin brew: Restores 15% of your Hitpoints level plus 2 - can boost beyond your level<br>(Members)");
+				return(-1, 3dosepotionofsaradomin_6687, null, "Saradomin brew: Restores 15% of your Hitpoints level plus 2 - can boost beyond your level<br>(Members)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(42, pest_void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, pest_void_knight_top_8839, null, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 1 :
-				return(50, nightmare_staff_24422, "Nightmare Staff (without orb)<br> (with <tostring(72)> Magic)");
+				return(50, nightmare_staff_24422, null, "Nightmare Staff (without orb)<br> (with <tostring(72)> Magic)");
 			case 2 :
-				return(50, nightmare_staff_harmonised_24423, "Nightmare Staff (with orb)<br> (with <tostring(82)> Magic)");
+				return(50, nightmare_staff_harmonised_24423, null, "Nightmare Staff (with orb)<br> (with <tostring(82)> Magic)");
 			case 3 :
-				return(75, zenyte_ring_enchanted_19550, "Enchanted zenyte jewellery");
+				return(75, zenyte_ring_enchanted_19550, null, "Enchanted zenyte jewellery");
 			case 4 :
-				return(90, amulet_of_rancour_29801, "Amulet of Rancour");
+				return(90, amulet_of_rancour_29801, null, "Amulet of Rancour");
 			case 5 :
-				return(90, confliction_gauntlets_31106, "Confliction gauntlets");
+				return(90, confliction_gauntlets_31106, null, "Confliction gauntlets");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(-1, invis_rod_7620, null, "Standard Damage");
+			case 1 :
+				return(-1, null, skill_guide_v2_icon_hitmark_damage, "Regular damage from most sources.");
+			case 2 :
+				return(-1, null, skill_guide_v2_icon_hitmark_maxhit, "Regular damage variant shown when you deal your maximum damage.<br>Most damage hitsplats have a highlighted max hit version.");
+			case 3 :
+				return(-1, null, skill_guide_v2_icon_hitmark_miss, "Miss/block - No damage dealt.");
+			case 4 :
+				return(-1, null, skill_guide_v2_icon_hitmark_boat, "Boat damage - Shows damage to a boat.");
+			case 5 :
+				return(-1, null, skill_guide_v2_icon_hitmark_shield, "Shield damage - Shows damage to a boss' shield or that a player was protected from an attack.<br>Example: The Hueycoatl's tail shield.");
+			case 6 :
+				return(-1, null, skill_guide_v2_icon_hitmark_armour, "Armour damage - Shows damage to a boss' armour.<br>Example: Zalcano's armour.");
+			case 7 :
+				return(-1, null, skill_guide_v2_icon_hitmark_poise, "Poise damage - Shows damage to a boss' poise, usually used to transition a boss to another phase.<br>Example: The Wardens in the Tombs of Amascut.");
+			case 8 :
+				return(-1, null, skill_guide_v2_icon_hitmark_corrosion, "Corrosion damage - Deals damage reduced by armour. May also apply a corrosion status effect, dealing damage in regular intervals.<br>Example: Shellbane gryphon.");
+			case 9 :
+				return(-1, invis_rod_7620, null, "Status Effects");
+			case 10 :
+				return(-1, null, skill_guide_v2_icon_hitmark_poison, "Poison - Hitpoint damage dealt in regular intervals, decreasing in potency over time.<br>Can be cured with an anti-poison effect.");
+			case 11 :
+				return(-1, null, skill_guide_v2_icon_hitmark_venom, "Venom - A more powerful form of Poison.<br>Can be cured with mutliple anti-poison effects or a single anti-venom effect.");
+			case 12 :
+				return(-1, null, skill_guide_v2_icon_hitmark_bleed, "Bleed damage - Hitpoint damage dealt in regular intervals. Some types of bleed are more potent while moving.<br>Can be cured with an anti-bleed effect.<br>Example: Custodian Stalkers.");
+			case 13 :
+				return(-1, null, skill_guide_v2_icon_hitmark_burn, "Burn damage - Hitpoint damage dealt in regular intervals. Stacks up to 5.<br>Example: Burning Claws special attack.");
+			case 14 :
+				return(-1, null, skill_guide_v2_icon_hitmark_disease_stat, "Disease stat drain - Drains a stat in regular intervals.<br>Can be reduced/cured with a cure disease effect.<br>Example: Zogres in Jiggig.");
+			case 15 :
+				return(-1, null, skill_guide_v2_icon_hitmark_disease_health, "Disease damage - If the stat being drained by an active Disease reaches 1, you start taking Hitpoint damage instead.<br>Can be reduced/cured with a cure disease effect.");
+			case 16 :
+				return(-1, null, skill_guide_v2_icon_hitmark_doom, "Doom - Shows amount of Doom stacks. A certain amount instantly kills the player.<br>Example: The Fortis Colosseum Doom modifier.");
+			case 17 :
+				return(-1, invis_rod_7620, null, "Drains and Restores");
+			case 18 :
+				return(-1, null, skill_guide_v2_icon_hitmark_heal, "Healing from certain sources.<br>Example: The Blood Moon in Neypotzli.");
+			case 19 :
+				return(-1, null, skill_guide_v2_icon_hitmark_prayer_drain, "Prayer drain - Shows drain to a player's Prayer.<br>Example: Frost Nagua in the Ruins of Tapoyauik.");
+			case 20 :
+				return(-1, null, skill_guide_v2_icon_hitmark_corruption, "Corruption - Drains Prayer points over time.<br>Examples: Corruption spells and the Phantom Muspah encounter.");
+			case 21 :
+				return(-1, null, skill_guide_v2_icon_hitmark_cold, "Cold - Drains warmth.<br>Example: The cold in the Wintertodt encounter.");
+			case 22 :
+				return(-1, null, skill_guide_v2_icon_hitmark_charge, "Charge - Shows something is being charged.<br>Example: Totems in The Nightmare of Ashihama encounter.");
+			case 23 :
+				return(-1, null, skill_guide_v2_icon_hitmark_uncharge, "Uncharge - Shows charge is being removed from something.<br>Example: Totems in The Nightmare of Ashihama encounter.");
+			case 24 :
+				return(-1, null, skill_guide_v2_icon_hitmark_charge_blue, "Alternate charge - Shows something is being charged.<br>Example: Kephri's shield restore in the Tombs of Amascut.");
+			case 25 :
+				return(-1, null, skill_guide_v2_icon_hitmark_uncharge_blue, "Alternate uncharge - Shows charge is being removed from something.<br>Example: Crocodiles draining the Palm of Resourcefulness in the Tombs of Amascut.");
+			case 26 :
+				return(-1, null, skill_guide_v2_icon_hitmark_sanity_lose, "Sanity drain - Shows sanity lost form certain sources.<br>Example: Lost Souls in the Whisperer encounter.");
+			case 27 :
+				return(-1, null, skill_guide_v2_icon_hitmark_sanity_gain, "Sanity Gain - Shows sanity gained form certain sources.<br>Example: Corrupted Seeds in the Whisperer encounter.");
+			case default :
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

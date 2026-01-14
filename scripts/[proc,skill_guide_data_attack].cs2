@@ -1,173 +1,173 @@
 // 6550
-[proc,skill_guide_data_attack](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_attack](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, iron_sword_1279, "Your Attack level is used to determine how likely you are to hit your target in melee combat. A higher Attack level will give you a better chance to hit.");
+				return(-1, iron_sword_1279, null, "Your Attack level is used to determine how likely you are to hit your target in melee combat. A higher Attack level will give you a better chance to hit.");
 			case 1 :
-				return(-1, rune_scimitar_1333, "Additionally, a higher Attack level will allow you to wield more powerful weapons. A weapon with a higher Attack bonus will give you more accuracy in combat.");
+				return(-1, rune_scimitar_1333, null, "Additionally, a higher Attack level will allow you to wield more powerful weapons. A weapon with a higher Attack bonus will give you more accuracy in combat.");
 			case 2 :
-				return(-1, dragon_dagger_1215, "You can select your Attack style from the Combat Options side panel. Different enemies are weaker or stronger against different Attack styles, so choose carefully.");
+				return(-1, dragon_dagger_1215, null, "You can select your Attack style from the Combat Options side panel. Different enemies are weaker or stronger against different Attack styles, so choose carefully.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_dagger_1205, "Bronze");
+				return(1, bronze_dagger_1205, null, "Bronze");
 			case 1 :
-				return(1, iron_dagger_1203, "Iron");
+				return(1, iron_dagger_1203, null, "Iron");
 			case 2 :
-				return(5, steel_dagger_1207, "Steel");
+				return(5, steel_dagger_1207, null, "Steel");
 			case 3 :
-				return(10, black_dagger_1217, "Black");
+				return(10, black_dagger_1217, null, "Black");
 			case 4 :
-				return(10, white_dagger_6591, "Members: White");
+				return(10, white_dagger_6591, null, "Members: White");
 			case 5 :
-				return(20, mithril_dagger_1209, "Mithril");
+				return(20, mithril_dagger_1209, null, "Mithril");
 			case 6 :
-				return(30, adamant_dagger_1211, "Adamant");
+				return(30, adamant_dagger_1211, null, "Adamant");
 			case 7 :
-				return(30, battlestaff_1391, "Members: Battlestaves (with 30 Magic)");
+				return(30, battlestaff_1391, null, "Members: Battlestaves (with 30 Magic)");
 			case 8 :
-				return(40, rune_dagger_1213, "Rune");
+				return(40, rune_dagger_1213, null, "Rune");
 			case 9 :
-				return(40, barronite_mace_25641, "Barronite mace (requires Below Ice Mountain)");
+				return(40, barronite_mace_25641, null, "Barronite mace (requires Below Ice Mountain)");
 			case 10 :
-				return(40, olaf2_brine_sabre_11037, "Members: Brine sabre");
+				return(40, olaf2_brine_sabre_11037, null, "Members: Brine sabre");
 			case 11 :
-				return(40, ivandis_flail_22398, "Members: Ivandis Flail<br>(requires A Taste of Hope)");
+				return(40, ivandis_flail_22398, null, "Members: Ivandis Flail<br>(requires A Taste of Hope)");
 			case 12 :
-				return(40, mystic_air_staff_1405, "Members: Mystic staves (with 40 Magic)");
+				return(40, mystic_air_staff_1405, null, "Members: Mystic staves (with 40 Magic)");
 			case 13 :
-				return(42, pest_void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, pest_void_knight_mace_8841, null, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 14 :
-				return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Strength)");
+				return(50, granite_maul_4153, null, "Members: Granite maul<br> (with 50 Strength)");
 			case 15 :
-				return(50, granite_longsword_21646, "Members: Granite longsword<br> (with 50 Strength)");
+				return(50, granite_longsword_21646, null, "Members: Granite longsword<br> (with 50 Strength)");
 			case 16 :
-				return(50, blisterwood_flail_24699, "Members: Blisterwood<br>(requires Sins of the Father)");
+				return(50, blisterwood_flail_24699, null, "Members: Blisterwood<br>(requires Sins of the Father)");
 			case 17 :
-				return(50, contact_keris_10581, "Members: Keris dagger<br>(requires Contact!)");
+				return(50, contact_keris_10581, null, "Members: Keris dagger<br>(requires Contact!)");
 			case 18 :
-				return(50, staff_of_zaros_4675, "Members: Ancient staff<br> (requires Desert Treasure I and 50 Magic)");
+				return(50, staff_of_zaros_4675, null, "Members: Ancient staff<br> (requires Desert Treasure I and 50 Magic)");
 			case 19 :
-				return(50, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 60 Strength and 70 Magic)");
+				return(50, ancient_sceptre_27624, null, "Members: Ancient sceptre<br> (requires Secrets of the North, 60 Strength and 70 Magic)");
 			case 20 :
-				return(50, purging_staff_29594, "Members: Purging staves<br> (with 77 Magic)");
+				return(50, purging_staff_29594, null, "Members: Purging staves<br> (with 77 Magic)");
 			case 21 :
-				return(50, rat_bone_mace_28792, "Members: Bone mace");
+				return(50, rat_bone_mace_28792, null, "Members: Bone mace");
 			case 22 :
-				return(55, sulphur_blades_29084, "Members: Sulphur blades");
+				return(55, sulphur_blades_29084, null, "Members: Sulphur blades");
 			case 23 :
-				return(55, glacial_temotli_29889, "Members: Glacial temotli");
+				return(55, glacial_temotli_29889, null, "Members: Glacial temotli");
 			case 24 :
-				return(55, earthbound_tecpatl_30957, "Members: Earthbound tecpatl");
+				return(55, earthbound_tecpatl_30957, null, "Members: Earthbound tecpatl");
 			case 25 :
-				return(60, dragon_dagger_1215, "Members: Dragon");
+				return(60, dragon_dagger_1215, null, "Members: Dragon");
 			case 26 :
-				return(60, arkan_blade_30955, "Members: Arkan blade<br>(requires The Final Dawn)");
+				return(60, arkan_blade_30955, null, "Members: Arkan blade<br>(requires The Final Dawn)");
 			case 27 :
-				return(60, bone_claws_29577, "Members: Burning claws");
+				return(60, bone_claws_29577, null, "Members: Burning claws");
 			case 28 :
-				return(60, brain_anchor_10887, "Members: Barrelchest Anchor<br> (with 40 Strength)");
+				return(60, brain_anchor_10887, null, "Members: Barrelchest Anchor<br> (with 40 Strength)");
 			case 29 :
-				return(60, tzhaar_splitsword_6523, "Members: Obsidian weapons");
+				return(60, tzhaar_splitsword_6523, null, "Members: Obsidian weapons");
 			case 30 :
-				return(60, wild_cave_chainmace_charged_22545, "Members: Viggora's Chainmace");
+				return(60, wild_cave_chainmace_charged_22545, null, "Members: Viggora's Chainmace");
 			case 31 :
-				return(60, giants_foundry_colossal_blade_27021, "Members: Colossal Blade");
+				return(60, giants_foundry_colossal_blade_27021, null, "Members: Colossal Blade");
 			case 32 :
-				return(65, trail_fighter_sword_12426, "Members: 3rd age weapons");
+				return(65, trail_fighter_sword_12426, null, "Members: 3rd age weapons");
 			case 33 :
-				return(65, sarachnis_cudgel_23528, "Members: Sarachnis cudgel");
+				return(65, sarachnis_cudgel_23528, null, "Members: Sarachnis cudgel");
 			case 34 :
-				return(65, zombie_axe_28810, "Members: Zombie axe");
+				return(65, zombie_axe_28810, null, "Members: Zombie axe");
 			case 35 :
-				return(65, belles_folly_31248, "Members: Belle's Folly");
+				return(65, belles_folly_31248, null, "Members: Belle's Folly");
 			case 36 :
-				return(65, keris_partisan_25979, "Members: Keris partisan<br>(requires Beneath Cursed Sands)");
+				return(65, keris_partisan_25979, null, "Members: Keris partisan<br>(requires Beneath Cursed Sands)");
 			case 37 :
-				return(70, crystal_halberd_23987, "Members: Crystal weaponry<br> (with 50 Agility)");
+				return(70, crystal_halberd_23987, null, "Members: Crystal weaponry<br> (with 50 Agility)");
 			case 38 :
-				return(70, saradomin_sword_11838, "Members: Saradomin sword");
+				return(70, saradomin_sword_11838, null, "Members: Saradomin sword");
 			case 39 :
-				return(70, zamorak_spear_11824, "Members: Zamorakian spear");
+				return(70, zamorak_spear_11824, null, "Members: Zamorakian spear");
 			case 40 :
-				return(70, abyssal_whip_4151, "Members: Abyssal whip & dagger");
+				return(70, abyssal_whip_4151, null, "Members: Abyssal whip & dagger");
 			case 41 :
-				return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Strength)");
+				return(70, abyssal_bludgeon_13263, null, "Members: Abyssal bludgeon<br> (with 70 Strength)");
 			case 42 :
-				return(70, barrows_ahrim_weapon_4710, "Members: Ahrim's staff<br> (with 70 Magic)");
+				return(70, barrows_ahrim_weapon_4710, null, "Members: Ahrim's staff<br> (with 70 Magic)");
 			case 43 :
-				return(70, barrows_dharok_weapon_4718, "Members: Dharok's greataxe<br> (with 70 Strength)");
+				return(70, barrows_dharok_weapon_4718, null, "Members: Dharok's greataxe<br> (with 70 Strength)");
 			case 44 :
-				return(70, barrows_torag_weapon_4747, "Members: Torag's hammers<br> (with 70 Strength)");
+				return(70, barrows_torag_weapon_4747, null, "Members: Torag's hammers<br> (with 70 Strength)");
 			case 45 :
-				return(70, barrows_verac_weapon_4755, "Members: Verac's flail");
+				return(70, barrows_verac_weapon_4755, null, "Members: Verac's flail");
 			case 46 :
-				return(70, barrows_guthan_weapon_4726, "Members: Guthan's warspear");
+				return(70, barrows_guthan_weapon_4726, null, "Members: Guthan's warspear");
 			case 47 :
-				return(70, wild_cave_ursine_charged_27660, "Members: Ursine Chainmace");
+				return(70, wild_cave_ursine_charged_27660, null, "Members: Ursine Chainmace");
 			case 48 :
-				return(70, infernal_defender_22322, "Members: Avernic defender<br> (with 70 Defence)");
+				return(70, infernal_defender_22322, null, "Members: Avernic defender<br> (with 70 Defence)");
 			case 49 :
-				return(70, dual_macuahuitl_28997, "Members: Dual Macuahuitl<br> (with 75 Strength)");
+				return(70, dual_macuahuitl_28997, null, "Members: Dual Macuahuitl<br> (with 75 Strength)");
 			case 50 :
-				return(70, frostmoon_spear_28988, "Members: Blue moon spear (with 75 Magic)");
+				return(70, frostmoon_spear_28988, null, "Members: Blue moon spear (with 75 Magic)");
 			case 51 :
-				return(75, arclight_19675, "Members: Arclight");
+				return(75, arclight_19675, null, "Members: Arclight");
 			case 52 :
-				return(75, zgs_11808, "Members: Godswords");
+				return(75, zgs_11808, null, "Members: Godswords");
 			case 53 :
-				return(75, sotd_11791, "Members: Staff of the Dead<br> (with 75 Magic)");
+				return(75, sotd_11791, null, "Members: Staff of the Dead<br> (with 75 Magic)");
 			case 54 :
-				return(75, staff_of_light_22296, "Members: Staff of Light<br> (with 75 Magic)");
+				return(75, staff_of_light_22296, null, "Members: Staff of Light<br> (with 75 Magic)");
 			case 55 :
-				return(75, staff_of_balance_24144, "Members: Staff of Balance<br> (with 75 Magic)");
+				return(75, staff_of_balance_24144, null, "Members: Staff of Balance<br> (with 75 Magic)");
 			case 56 :
-				return(75, abyssal_tentacle_12006, "Members: Abyssal tentacle");
+				return(75, abyssal_tentacle_12006, null, "Members: Abyssal tentacle");
 			case 57 :
-				return(75, blessed_saradomin_sword_12808, "Members: Blessed Saradomin sword");
+				return(75, blessed_saradomin_sword_12808, null, "Members: Blessed Saradomin sword");
 			case 58 :
-				return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Strength)");
+				return(75, elder_maul_21003, null, "Members: Elder maul<br> (with 75 Strength)");
 			case 59 :
-				return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
+				return(75, dinhs_bulwark_21015, null, "Members: Dinh's bulwark<br> (with 75 Defence)");
 			case 60 :
-				return(75, bh_vestas_longsword_24617, "Members: Vesta's blighted longsword");
+				return(75, bh_vestas_longsword_24617, null, "Members: Vesta's blighted longsword");
 			case 61 :
-				return(75, voidwaker_27690, "Members: Voidwaker");
+				return(75, voidwaker_27690, null, "Members: Voidwaker");
 			case 62 :
-				return(77, emberlight_29589, "Members: Emberlight");
+				return(77, emberlight_29589, null, "Members: Emberlight");
 			case 63 :
-				return(78, dragonhunter_lance_22978, "Members: Dragon hunter lance");
+				return(78, dragonhunter_lance_22978, null, "Members: Dragon hunter lance");
 			case 64 :
-				return(80, ghrazi_rapier_22324, "Members: Ghrazi rapier");
+				return(80, ghrazi_rapier_22324, null, "Members: Ghrazi rapier");
 			case 65 :
-				return(80, inquisitors_mace_24417, "Members: Inquisitor's mace");
+				return(80, inquisitors_mace_24417, null, "Members: Inquisitor's mace");
 			case 66 :
-				return(80, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+				return(80, blade_of_saeldor_23995, null, "Members: Blade of Saeldor");
 			case 67 :
-				return(80, noxious_halberd_29796, "Members: Noxious Halberd");
+				return(80, noxious_halberd_29796, null, "Members: Noxious Halberd");
 			case 68 :
-				return(80, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 90 Strength)");
+				return(80, scythe_of_vitur_22325, null, "Members: Scythe of Vitur<br> (with 90 Strength)");
 			case 69 :
-				return(80, soulreaper_28338, "Members: Soulreaper axe<br> (with 80 Strength)");
+				return(80, soulreaper_28338, null, "Members: Soulreaper axe<br> (with 80 Strength)");
 			case 70 :
-				return(80, keris_partisan_corruption_27287, "Members: Variants of Keris partisan<br>(requires Beneath Cursed Sands)");
+				return(80, keris_partisan_corruption_27287, null, "Members: Variants of Keris partisan<br>(requires Beneath Cursed Sands)");
 			case 71 :
-				return(82, osmumtens_fang_26219, "Members: Osmumten's Fang");
+				return(82, osmumtens_fang_26219, null, "Members: Osmumten's Fang");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		if ($int1 = 0) {
-			return(42, pest_void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+			return(42, pest_void_knight_top_8839, null, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 		}
 		if ($int1 = 1) {
-			return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Defence)");
+			return(80, ferocious_gloves_22981, null, "Members: Ferocious Gloves<br> (with 80 Defence)");
 		}
-		return(-1, null, "");
+		return(-1, null, null, "");
 	case 3 :
 		return(~skill_guide_salamanders($int1));
 }
-return(-1, null, "");
+return(-1, null, null, "");

@@ -1,0 +1,84 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9154
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Cooking is a skill about turning raw ingredients into delicious food that can restore Hitpoints and provide other useful benefits. Use the tabs on the left to see what types of food can be cooked, the Cooking level required and instructions on how to make them."
+   sconst                 "||::p||"
+   sconst                 "To level your Cooking, simply cook items shown in the tabs on the left. As well as unlocking more recipes, increasing your Cooking level reduces your chance to burn food."
+   sconst                 "||::p||"
+   sconst                 "Most types of recipes require a heat source. This can be a fire created with the ||skill:"
+   sconst                 "17"
+   sconst                 "::"
+   sconst                 "18"
+   sconst                 "::Firemaking skill|| or a ||::"
+   sconst                 "107"
+   sconst                 "::Range||, such as the one in Lumbridge Castle. Some recipes, such as pies, can only be cooked on a Range."
+   sconst                 "||::p||"
+   sconst                 "Many types of food have a chance to be burnt when cooking them. This chance decreases as your Cooking level increases, and cooking on a ||::"
+   sconst                 "107"
+   sconst                 "::Range|| also decreases your chance to burn food."
+   join_string            15
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, complete the "
+   iconst                 17
+   invoke                 9191
+   sconst                 " to learn how to bake a cake and gain the ability to use the ||::"
+   sconst                 "107"
+   sconst                 "::Range|| in Lumbridge Castle."
+   sconst                 "||::p||"
+   sconst                 "You can also gather some raw fish with the ||skill:"
+   sconst                 "15"
+   sconst                 "::"
+   sconst                 "16"
+   sconst                 "::Fishing skill|| and cook them on a fire created with the ||skill:"
+   sconst                 "17"
+   sconst                 "::"
+   sconst                 "18"
+   sconst                 "::Firemaking skill|| or on a ||::"
+   sconst                 "107"
+   sconst                 "::Range||, such as the one in Lumbridge Castle."
+   join_string            17
+   invoke                 9182
+   iconst                 115
+   iconst                 3
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||skill:"
+   sconst                 "6"
+   sconst                 "::"
+   sconst                 "8"
+   sconst                 "::Hitpoints:::|| Cooked food can be eaten to recover Hitpoints during combat."
+   join_string            5
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "15"
+   sconst                 "::"
+   sconst                 "16"
+   sconst                 "::Fishing:::|| Fish caught with the Fishing skill can be cooked with the Cooking skill."
+   join_string            5
+   set_array_int         
+   iconst                 2
+   sconst                 "||skill:"
+   sconst                 "23"
+   sconst                 "::"
+   sconst                 "23"
+   sconst                 "::Hunter:::|| Raw meat gathered with the Hunter skill can be cooked with the Cooking skill."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   return                

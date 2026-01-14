@@ -1,0 +1,47 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9183
+.int_arg_count            1
+.obj_arg_count            1
+   oload                  0
+   sconst                 "||"
+   8018                  
+   ostore                 1
+   oload                  1
+   8003                  
+   istore                 1
+   iconst                 0
+   istore                 2
+LABEL9:
+   iload                  2
+   iload                  1
+   if_icmplt              LABEL13
+   jump                   LABEL35
+LABEL13:
+   iload                  2
+   get_array_int          1
+   sconst                 "::"
+   iconst                 0
+   string_indexof_string 
+   iconst                 -1
+   if_icmpgt              LABEL21
+   jump                   LABEL26
+LABEL21:
+   iload                  0
+   iload                  2
+   get_array_int          1
+   invoke                 9188
+   jump                   LABEL30
+LABEL26:
+   iload                  0
+   iload                  2
+   get_array_int          1
+   invoke                 9187
+LABEL30:
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   jump                   LABEL9
+LABEL35:
+   return                

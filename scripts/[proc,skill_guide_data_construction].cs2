@@ -1,1302 +1,1302 @@
 // 659
-[proc,skill_guide_data_construction](int $int0, int $int1)(int, obj, string)
+[proc,skill_guide_data_construction](int $int0, int $int1)(int, obj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, poh_saw_8794, "Construction gives you access to your very owned Player-Owned House. To get started, you'll need to buy a house from an Estate agent.");
+				return(-1, poh_saw_8794, null, "Construction gives you access to your very owned Player-Owned House. To get started, you'll need to buy a house from an Estate agent.");
 			case 1 :
-				return(-1, woodplank_960, "Once you have a house, you'll need to build furniture. Most furniture can be built with planks, which can be obtained via taking logs to a sawmill.");
+				return(-1, woodplank_960, null, "Once you have a house, you'll need to build furniture. Most furniture can be built with planks, which can be obtained via taking logs to a sawmill.");
 			case 2 :
-				return(-1, hammer_2347, "To build furniture, grab a hammer and a saw, enter your house in build mode, select a hotspot and select the furniture you want to build.");
+				return(-1, hammer_2347, null, "To build furniture, grab a hammer and a saw, enter your house in build mode, select a hotspot and select the furniture you want to build.");
 			case 3 :
-				return(-1, poh_treasure_mahogany_8151, "As your Construction level increases, you'll be able to build bigger houses, gain access to more kinds of room in your house, and be able to build fancier furniture.");
+				return(-1, poh_treasure_mahogany_8151, null, "As your Construction level increases, you'll be able to build bigger houses, gain access to more kinds of room in your house, and be able to build fancier furniture.");
 			case 4 :
-				return(-1, grandtree_warship_795, "You'll also become able to build better facilities for boats.");
+				return(-1, grandtree_warship_795, null, "You'll also become able to build better facilities for boats.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, poh_garden_centrepiece_3_8170, "Garden");
+				return(1, poh_garden_centrepiece_3_8170, null, "Garden");
 			case 1 :
-				return(1, poh_armchair_7_8315, "Parlour");
+				return(1, poh_armchair_7_8315, null, "Parlour");
 			case 2 :
-				return(5, poh_stove_7_8222, "Kitchen");
+				return(5, poh_stove_7_8222, null, "Kitchen");
 			case 3 :
-				return(10, poh_dining_table_7_8121, "Dining room");
+				return(10, poh_dining_table_7_8121, null, "Dining room");
 			case 4 :
-				return(15, poh_workbench_5_8379, "Workshop");
+				return(15, poh_workbench_5_8379, null, "Workshop");
 			case 5 :
-				return(20, poh_bed_7_8037, "Bedroom");
+				return(20, poh_bed_7_8037, null, "Bedroom");
 			case 6 :
-				return(25, poh_stairs_marble_8255, "Hall (skill trophies)");
+				return(25, poh_stairs_marble_8255, null, "Hall (skill trophies)");
 			case 7 :
-				return(27, poh_leaguehall_trophy_pedestal_simple_25351, "League hall");
+				return(27, poh_leaguehall_trophy_pedestal_simple_25351, null, "League hall");
 			case 8 :
-				return(30, poh_ranging_game_2_8163, "Games room");
+				return(30, poh_ranging_game_2_8163, null, "Games room");
 			case 9 :
-				return(32, poh_combat_ring_5_8027, "Combat room");
+				return(32, poh_combat_ring_5_8027, null, "Combat room");
 			case 10 :
-				return(35, poh_spiralstairs_marble_8259, "Hall (quest trophies)");
+				return(35, poh_spiralstairs_marble_8259, null, "Hall (quest trophies)");
 			case 11 :
-				return(37, poh_menagerie_pethouse_3_12706, "Menagerie");
+				return(37, poh_menagerie_pethouse_3_12706, null, "Menagerie");
 			case 12 :
-				return(40, poh_lectern_7_8340, "Study");
+				return(40, poh_lectern_7_8340, null, "Study");
 			case 13 :
-				return(42, poh_cos_room_cape_rack_magic_stone_9822, "Costume room");
+				return(42, poh_cos_room_cape_rack_magic_stone_9822, null, "Costume room");
 			case 14 :
-				return(45, poh_altar_marble+gilt_8068, "Chapel");
+				return(45, poh_altar_marble+gilt_8068, null, "Chapel");
 			case 15 :
-				return(50, poh_teleport_centrepiece_3_8333, "Portal chamber");
+				return(50, poh_teleport_centrepiece_3_8333, null, "Portal chamber");
 			case 16 :
-				return(50, poh_board_24235, "Use the Advertisement noticeboard");
+				return(50, poh_board_24235, null, "Use the Advertisement noticeboard");
 			case 17 :
-				return(55, poh_formal_garden_centrepiece_5_8195, "Formal garden");
+				return(55, poh_formal_garden_centrepiece_5_8195, null, "Formal garden");
 			case 18 :
-				return(60, poh_throne_7_8363, "Throne room");
+				return(60, poh_throne_7_8363, null, "Throne room");
 			case 19 :
-				return(65, poh_oubliette_spikes_8302, "Oubliette");
+				return(65, poh_oubliette_spikes_8302, null, "Oubliette");
 			case 20 :
-				return(65, poh_dummy_superior_garden_20653, "Superior garden");
+				return(65, poh_dummy_superior_garden_20653, null, "Superior garden");
 			case 21 :
-				return(70, poh_dungeon_door_steel_8123, "Dungeon");
+				return(70, poh_dungeon_door_steel_8123, null, "Dungeon");
 			case 22 :
-				return(72, poh_portal_nexus_1_22705, "Portal nexus");
+				return(72, poh_portal_nexus_1_22705, null, "Portal nexus");
 			case 23 :
-				return(75, poh_treasure_mahogany_8151, "Treasure room");
+				return(75, poh_treasure_mahogany_8151, null, "Treasure room");
 			case 24 :
-				return(80, poh_achievementgallery_adventurelog_3_20625, "Achievement Gallery");
+				return(80, poh_achievementgallery_adventurelog_3_20625, null, "Achievement Gallery");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(3, poh_fireplace_1_8325, "Clay fireplace");
+				return(3, poh_fireplace_1_8325, null, "Clay fireplace");
 			case 1 :
-				return(5, poh_stove_1_8216, "Firepit");
+				return(5, poh_stove_1_8216, null, "Firepit");
 			case 2 :
-				return(7, poh_sink_1_8230, "Pump and drain");
+				return(7, poh_sink_1_8230, null, "Pump and drain");
 			case 3 :
-				return(11, poh_stove_2_8217, "Firepit with hook");
+				return(11, poh_stove_2_8217, null, "Firepit with hook");
 			case 4 :
-				return(15, poh_repair_bench_1_8389, "Repair bench");
+				return(15, poh_repair_bench_1_8389, null, "Repair bench");
 			case 5 :
-				return(16, poh_heraldry_bench_1_8392, "Pluming stand");
+				return(16, poh_heraldry_bench_1_8392, null, "Pluming stand");
 			case 6 :
-				return(16, poh_crafting_table_1_8380, "Crafting table 1");
+				return(16, poh_crafting_table_1_8380, null, "Crafting table 1");
 			case 7 :
-				return(17, poh_stove_3_8218, "Firepit with pot");
+				return(17, poh_stove_3_8218, null, "Firepit with pot");
 			case 8 :
-				return(17, poh_workbench_1_8375, "Wooden workbench");
+				return(17, poh_workbench_1_8375, null, "Wooden workbench");
 			case 9 :
-				return(24, poh_stove_4_8219, "Small oven");
+				return(24, poh_stove_4_8219, null, "Small oven");
 			case 10 :
-				return(25, poh_crafting_table_2_8381, "Crafting table 2");
+				return(25, poh_crafting_table_2_8381, null, "Crafting table 2");
 			case 11 :
-				return(27, poh_sink_2_8231, "Pump and tub");
+				return(27, poh_sink_2_8231, null, "Pump and tub");
 			case 12 :
-				return(29, poh_stove_5_8220, "Large oven");
+				return(29, poh_stove_5_8220, null, "Large oven");
 			case 13 :
-				return(32, poh_workbench_2_8376, "Oak workbench");
+				return(32, poh_workbench_2_8376, null, "Oak workbench");
 			case 14 :
-				return(33, poh_fireplace_2_8326, "Stone fireplace");
+				return(33, poh_fireplace_2_8326, null, "Stone fireplace");
 			case 15 :
-				return(34, poh_crafting_table_3_8382, "Crafting table 3");
+				return(34, poh_crafting_table_3_8382, null, "Crafting table 3");
 			case 16 :
-				return(34, poh_stove_6_8221, "Steel range");
+				return(34, poh_stove_6_8221, null, "Steel range");
 			case 17 :
-				return(35, poh_repair_bench_2_8390, "Whetstone");
+				return(35, poh_repair_bench_2_8390, null, "Whetstone");
 			case 18 :
-				return(41, poh_heraldry_bench_2_8393, "Shield easel");
+				return(41, poh_heraldry_bench_2_8393, null, "Shield easel");
 			case 19 :
-				return(42, poh_stove_7_8222, "Fancy range");
+				return(42, poh_stove_7_8222, null, "Fancy range");
 			case 20 :
-				return(42, poh_crafting_table_4_8383, "Crafting table 4");
+				return(42, poh_crafting_table_4_8383, null, "Crafting table 4");
 			case 21 :
-				return(46, poh_workbench_3_8377, "Steel framed workbench");
+				return(46, poh_workbench_3_8377, null, "Steel framed workbench");
 			case 22 :
-				return(47, poh_sink_3_8232, "Sink");
+				return(47, poh_sink_3_8232, null, "Sink");
 			case 23 :
-				return(47, poh_sink_4_26269, "Gold Sink");
+				return(47, poh_sink_4_26269, null, "Gold Sink");
 			case 24 :
-				return(55, poh_repair_bench_3_8391, "Armour stand");
+				return(55, poh_repair_bench_3_8391, null, "Armour stand");
 			case 25 :
-				return(62, poh_workbench_4_8378, "Workbench with vice");
+				return(62, poh_workbench_4_8378, null, "Workbench with vice");
 			case 26 :
-				return(63, poh_fireplace_3_8327, "Marble fireplace");
+				return(63, poh_fireplace_3_8327, null, "Marble fireplace");
 			case 27 :
-				return(66, poh_heraldry_bench_3_8394, "Banner easel");
+				return(66, poh_heraldry_bench_3_8394, null, "Banner easel");
 			case 28 :
-				return(77, poh_workbench_5_8379, "Workbench with lathe");
+				return(77, poh_workbench_5_8379, null, "Workbench with lathe");
 			case 29 :
-				return(80, poh_achievementgallery_altar_ancient_20617, "Ancient altar");
+				return(80, poh_achievementgallery_altar_ancient_20617, null, "Ancient altar");
 			case 30 :
-				return(80, poh_achievementgallery_altar_lunar_20618, "Lunar altar");
+				return(80, poh_achievementgallery_altar_lunar_20618, null, "Lunar altar");
 			case 31 :
-				return(80, poh_achievementgallery_altar_arceuus_20619, "Dark altar");
+				return(80, poh_achievementgallery_altar_arceuus_20619, null, "Dark altar");
 			case 32 :
-				return(90, poh_achievementgallery_altar_ecumenical_fromancient_20620, "Occult altar<br> (upgrade from Ancient)");
+				return(90, poh_achievementgallery_altar_ecumenical_fromancient_20620, null, "Occult altar<br> (upgrade from Ancient)");
 			case 33 :
-				return(90, poh_achievementgallery_altar_ecumenical_fromlunar_20621, "Occult altar<br> (upgrade from Lunar)");
+				return(90, poh_achievementgallery_altar_ecumenical_fromlunar_20621, null, "Occult altar<br> (upgrade from Lunar)");
 			case 34 :
-				return(90, poh_achievementgallery_altar_ecumenical_fromarceuus_20622, "Occult altar<br> (upgrade from Dark)");
+				return(90, poh_achievementgallery_altar_ecumenical_fromarceuus_20622, null, "Occult altar<br> (upgrade from Dark)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, poh_armchair_1_8309, "Crude wooden chair");
+				return(1, poh_armchair_1_8309, null, "Crude wooden chair");
 			case 1 :
-				return(8, poh_armchair_2_8310, "Wooden chair");
+				return(8, poh_armchair_2_8310, null, "Wooden chair");
 			case 2 :
-				return(10, poh_dining_table_1_8115, "Wooden dining table");
+				return(10, poh_dining_table_1_8115, null, "Wooden dining table");
 			case 3 :
-				return(10, poh_dining_chairs_1_8108, "Wooden dining bench");
+				return(10, poh_dining_chairs_1_8108, null, "Wooden dining bench");
 			case 4 :
-				return(12, poh_kitchentable_1_8246, "Wooden kitchen table");
+				return(12, poh_kitchentable_1_8246, null, "Wooden kitchen table");
 			case 5 :
-				return(14, poh_armchair_3_8311, "Rocking chair");
+				return(14, poh_armchair_3_8311, null, "Rocking chair");
 			case 6 :
-				return(19, poh_armchair_4_8312, "Oak chair");
+				return(19, poh_armchair_4_8312, null, "Oak chair");
 			case 7 :
-				return(20, poh_bed_1_8031, "Wooden bed");
+				return(20, poh_bed_1_8031, null, "Wooden bed");
 			case 8 :
-				return(22, poh_dining_table_2_8116, "Oak dining table");
+				return(22, poh_dining_table_2_8116, null, "Oak dining table");
 			case 9 :
-				return(22, poh_dining_chairs_2_8109, "Oak dining bench");
+				return(22, poh_dining_chairs_2_8109, null, "Oak dining bench");
 			case 10 :
-				return(26, poh_armchair_5_8313, "Oak armchair");
+				return(26, poh_armchair_5_8313, null, "Oak armchair");
 			case 11 :
-				return(30, poh_bed_2_8032, "Oak bed");
+				return(30, poh_bed_2_8032, null, "Oak bed");
 			case 12 :
-				return(31, poh_dining_table_3_8117, "Carved oak dining table");
+				return(31, poh_dining_table_3_8117, null, "Carved oak dining table");
 			case 13 :
-				return(31, poh_dining_chairs_3_8110, "Carved oak dining bench");
+				return(31, poh_dining_chairs_3_8110, null, "Carved oak dining bench");
 			case 14 :
-				return(32, poh_kitchentable_2_8247, "Oak kitchen table");
+				return(32, poh_kitchentable_2_8247, null, "Oak kitchen table");
 			case 15 :
-				return(34, poh_bed_3_8033, "Large oak bed");
+				return(34, poh_bed_3_8033, null, "Large oak bed");
 			case 16 :
-				return(35, poh_armchair_6_8314, "Teak armchair");
+				return(35, poh_armchair_6_8314, null, "Teak armchair");
 			case 17 :
-				return(38, poh_dining_table_4_8118, "Teak dining table");
+				return(38, poh_dining_table_4_8118, null, "Teak dining table");
 			case 18 :
-				return(38, poh_dining_chairs_4_8111, "Teak dining bench");
+				return(38, poh_dining_chairs_4_8111, null, "Teak dining bench");
 			case 19 :
-				return(40, poh_bed_4_8034, "Teak bed");
+				return(40, poh_bed_4_8034, null, "Teak bed");
 			case 20 :
-				return(44, poh_dining_chairs_5_8112, "Carved teak dining bench");
+				return(44, poh_dining_chairs_5_8112, null, "Carved teak dining bench");
 			case 21 :
-				return(45, poh_dining_table_5_8119, "Carved teak dining table");
+				return(45, poh_dining_table_5_8119, null, "Carved teak dining table");
 			case 22 :
-				return(45, poh_bed_5_8035, "Large teak bed");
+				return(45, poh_bed_5_8035, null, "Large teak bed");
 			case 23 :
-				return(50, poh_armchair_7_8315, "Mahogany armchair");
+				return(50, poh_armchair_7_8315, null, "Mahogany armchair");
 			case 24 :
-				return(52, poh_dining_table_6_8120, "Mahogany dining table");
+				return(52, poh_dining_table_6_8120, null, "Mahogany dining table");
 			case 25 :
-				return(52, poh_dining_chairs_6_8113, "Mahogany dining bench");
+				return(52, poh_dining_chairs_6_8113, null, "Mahogany dining bench");
 			case 26 :
-				return(52, poh_kitchentable_3_8248, "Teak kitchen table");
+				return(52, poh_kitchentable_3_8248, null, "Teak kitchen table");
 			case 27 :
-				return(53, poh_bed_6_8036, "Mahogany four-poster bed");
+				return(53, poh_bed_6_8036, null, "Mahogany four-poster bed");
 			case 28 :
-				return(60, poh_throne_1_8357, "Oak throne");
+				return(60, poh_throne_1_8357, null, "Oak throne");
 			case 29 :
-				return(60, poh_bed_7_8037, "Gilded mahogany four-poster bed");
+				return(60, poh_bed_7_8037, null, "Gilded mahogany four-poster bed");
 			case 30 :
-				return(61, poh_dining_chairs_7_8114, "Gilded mahogany dining bench");
+				return(61, poh_dining_chairs_7_8114, null, "Gilded mahogany dining bench");
 			case 31 :
-				return(67, poh_throne_2_8358, "Teak throne");
+				return(67, poh_throne_2_8358, null, "Teak throne");
 			case 32 :
-				return(72, poh_dining_table_7_8121, "Gilded mahogany and marble table");
+				return(72, poh_dining_table_7_8121, null, "Gilded mahogany and marble table");
 			case 33 :
-				return(74, poh_throne_3_8359, "Mahogany throne");
+				return(74, poh_throne_3_8359, null, "Mahogany throne");
 			case 34 :
-				return(81, poh_throne_4_8360, "Gilded mahogany throne");
+				return(81, poh_throne_4_8360, null, "Gilded mahogany throne");
 			case 35 :
-				return(88, poh_throne_5_8361, "Skeleton throne");
+				return(88, poh_throne_5_8361, null, "Skeleton throne");
 			case 36 :
-				return(95, poh_throne_6_8362, "Crystal throne");
+				return(95, poh_throne_6_8362, null, "Crystal throne");
 			case 37 :
-				return(99, poh_throne_7_8363, "Demonic throne");
+				return(99, poh_throne_7_8363, null, "Demonic throne");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(4, poh_bookcase_1_8319, "Wooden bookcase");
+				return(4, poh_bookcase_1_8319, null, "Wooden bookcase");
 			case 1 :
-				return(6, poh_kitchen_shelves_1_8223, "Wooden shelves 1");
+				return(6, poh_kitchen_shelves_1_8223, null, "Wooden shelves 1");
 			case 2 :
-				return(7, poh_barrel_1_8239, "Beer barrel");
+				return(7, poh_barrel_1_8239, null, "Beer barrel");
 			case 3 :
-				return(9, poh_larder_1_8233, "Wooden larder");
+				return(9, poh_larder_1_8233, null, "Wooden larder");
 			case 4 :
-				return(12, poh_barrel_2_8240, "Cider barrel");
+				return(12, poh_barrel_2_8240, null, "Cider barrel");
 			case 5 :
-				return(12, poh_kitchen_shelves_2_8224, "Wooden shelves 2");
+				return(12, poh_kitchen_shelves_2_8224, null, "Wooden shelves 2");
 			case 6 :
-				return(15, poh_tool_store_1_8384, "Tool store 1");
+				return(15, poh_tool_store_1_8384, null, "Tool store 1");
 			case 7 :
-				return(18, poh_barrel_3_8241, "Asgarnian Ale barrel");
+				return(18, poh_barrel_3_8241, null, "Asgarnian Ale barrel");
 			case 8 :
-				return(20, poh_wardrobe_1_8038, "Shoe box");
+				return(20, poh_wardrobe_1_8038, null, "Shoe box");
 			case 9 :
-				return(21, poh_mirror_1_8045, "Wooden shaving stand");
+				return(21, poh_mirror_1_8045, null, "Wooden shaving stand");
 			case 10 :
-				return(23, poh_kitchen_shelves_3_8225, "Wooden shelves 3");
+				return(23, poh_kitchen_shelves_3_8225, null, "Wooden shelves 3");
 			case 11 :
-				return(25, poh_tool_store_2_8385, "Tool store 2");
+				return(25, poh_tool_store_2_8385, null, "Tool store 2");
 			case 12 :
-				return(26, poh_barrel_4_8242, "Greenman's Ale barrel");
+				return(26, poh_barrel_4_8242, null, "Greenman's Ale barrel");
 			case 13 :
-				return(27, poh_wardrobe_2_8039, "Oak chest of drawers");
+				return(27, poh_wardrobe_2_8039, null, "Oak chest of drawers");
 			case 14 :
-				return(29, poh_bookcase_2_8320, "Oak bookcase");
+				return(29, poh_bookcase_2_8320, null, "Oak bookcase");
 			case 15 :
-				return(29, poh_mirror_2_8046, "Oak shaving stand");
+				return(29, poh_mirror_2_8046, null, "Oak shaving stand");
 			case 16 :
-				return(33, poh_larder_2_8234, "Oak larder");
+				return(33, poh_larder_2_8234, null, "Oak larder");
 			case 17 :
-				return(34, poh_kitchen_shelves_4_8226, "Oak shelves 1");
+				return(34, poh_kitchen_shelves_4_8226, null, "Oak shelves 1");
 			case 18 :
-				return(35, poh_tool_store_3_8386, "Tool store 3");
+				return(35, poh_tool_store_3_8386, null, "Tool store 3");
 			case 19 :
-				return(36, poh_barrel_5_8243, "Dragon Bitter barrel");
+				return(36, poh_barrel_5_8243, null, "Dragon Bitter barrel");
 			case 20 :
-				return(37, poh_menagerie_pethouse_1_12704, "Oak pet house (3 pets)");
+				return(37, poh_menagerie_pethouse_1_12704, null, "Oak pet house (3 pets)");
 			case 21 :
-				return(37, poh_mirror_3_8047, "Oak dresser");
+				return(37, poh_mirror_3_8047, null, "Oak dresser");
 			case 22 :
-				return(39, poh_wardrobe_3_8040, "Oak wardrobe (bedroom)");
+				return(39, poh_wardrobe_3_8040, null, "Oak wardrobe (bedroom)");
 			case 23 :
-				return(40, poh_bookcase_3_8321, "Mahogany bookcase");
+				return(40, poh_bookcase_3_8321, null, "Mahogany bookcase");
 			case 24 :
-				return(42, poh_cos_room_magic_wardrobe_oak_9829, "Oak wardrobe (costume room)");
+				return(42, poh_cos_room_magic_wardrobe_oak_9829, null, "Oak wardrobe (costume room)");
 			case 25 :
-				return(43, poh_larder_3_8235, "Teak larder");
+				return(43, poh_larder_3_8235, null, "Teak larder");
 			case 26 :
-				return(44, poh_cos_room_fancy_dress_box_oak_9823, "Oak fancy dress box");
+				return(44, poh_cos_room_fancy_dress_box_oak_9823, null, "Oak fancy dress box");
 			case 27 :
-				return(44, poh_tool_store_4_8387, "Tool store 4");
+				return(44, poh_tool_store_4_8387, null, "Tool store 4");
 			case 28 :
-				return(45, poh_kitchen_shelves_5_8227, "Oak shelves 2");
+				return(45, poh_kitchen_shelves_5_8227, null, "Oak shelves 2");
 			case 29 :
-				return(46, poh_cos_room_armour_case_oak_9826, "Oak armour case");
+				return(46, poh_cos_room_armour_case_oak_9826, null, "Oak armour case");
 			case 30 :
-				return(46, poh_mirror_4_8048, "Teak dresser");
+				return(46, poh_mirror_4_8048, null, "Teak dresser");
 			case 31 :
-				return(48, poh_barrel_6_8244, "Chef's Delight barrel");
+				return(48, poh_barrel_6_8244, null, "Chef's Delight barrel");
 			case 32 :
-				return(48, poh_cos_room_treasure_chest_oak_9839, "Oak treasure chest");
+				return(48, poh_cos_room_treasure_chest_oak_9839, null, "Oak treasure chest");
 			case 33 :
-				return(48, poh_menagerie_pethouse_2_12705, "Teak pet house (5 pets)");
+				return(48, poh_menagerie_pethouse_2_12705, null, "Teak pet house (5 pets)");
 			case 34 :
-				return(50, poh_cos_room_toy_box_oak_9836, "Oak toy box");
+				return(50, poh_cos_room_toy_box_oak_9836, null, "Oak toy box");
 			case 35 :
-				return(51, poh_cos_room_magic_wardrobe_carved_oak_9830, "Carved oak wardrobe (costume room)");
+				return(51, poh_cos_room_magic_wardrobe_carved_oak_9830, null, "Carved oak wardrobe (costume room)");
 			case 36 :
-				return(51, poh_wardrobe_4_8041, "Teak chest of drawers");
+				return(51, poh_wardrobe_4_8041, null, "Teak chest of drawers");
 			case 37 :
-				return(54, poh_cos_room_cape_rack_oak_9817, "Oak cape rack");
+				return(54, poh_cos_room_cape_rack_oak_9817, null, "Oak cape rack");
 			case 38 :
-				return(55, poh_tool_store_5_8388, "Tool store 5");
+				return(55, poh_tool_store_5_8388, null, "Tool store 5");
 			case 39 :
-				return(56, poh_kitchen_shelves_6_8228, "Teak shelves 1");
+				return(56, poh_kitchen_shelves_6_8228, null, "Teak shelves 1");
 			case 40 :
-				return(56, poh_mirror_5_8049, "Fancy teak dresser");
+				return(56, poh_mirror_5_8049, null, "Fancy teak dresser");
 			case 41 :
-				return(58, poh_servant_moneybag_21213, "Servant's money bag");
+				return(58, poh_servant_moneybag_21213, null, "Servant's money bag");
 			case 42 :
-				return(59, poh_menagerie_pethouse_3_12706, "Mahogany pet house (7 pets)");
+				return(59, poh_menagerie_pethouse_3_12706, null, "Mahogany pet house (7 pets)");
 			case 43 :
-				return(60, poh_cos_room_magic_wardrobe_teak_9831, "Teak wardrobe (costume room)");
+				return(60, poh_cos_room_magic_wardrobe_teak_9831, null, "Teak wardrobe (costume room)");
 			case 44 :
-				return(60, poh_kitchen_rack_1_24479, "Spice Rack");
+				return(60, poh_kitchen_rack_1_24479, null, "Spice Rack");
 			case 45 :
-				return(62, poh_cos_room_fancy_dress_box_teak_9824, "Teak fancy dress box");
+				return(62, poh_cos_room_fancy_dress_box_teak_9824, null, "Teak fancy dress box");
 			case 46 :
-				return(63, poh_cos_room_cape_rack_teak_9818, "Teak cape rack");
+				return(63, poh_cos_room_cape_rack_teak_9818, null, "Teak cape rack");
 			case 47 :
-				return(63, poh_wardrobe_5_8042, "Teak wardrobe (bedroom)");
+				return(63, poh_wardrobe_5_8042, null, "Teak wardrobe (bedroom)");
 			case 48 :
-				return(64, poh_cos_room_armour_case_teak_9827, "Teak armour case");
+				return(64, poh_cos_room_armour_case_teak_9827, null, "Teak armour case");
 			case 49 :
-				return(64, poh_mirror_6_8050, "Mahogany dresser");
+				return(64, poh_mirror_6_8050, null, "Mahogany dresser");
 			case 50 :
-				return(66, poh_cos_room_treasure_chest_teak_9840, "Teak treasure chest");
+				return(66, poh_cos_room_treasure_chest_teak_9840, null, "Teak treasure chest");
 			case 51 :
-				return(67, poh_kitchen_shelves_7_8229, "Teak shelves 2");
+				return(67, poh_kitchen_shelves_7_8229, null, "Teak shelves 2");
 			case 52 :
-				return(68, poh_cos_room_toy_box_teak_9837, "Teak toy box");
+				return(68, poh_cos_room_toy_box_teak_9837, null, "Teak toy box");
 			case 53 :
-				return(69, poh_cos_room_magic_wardrobe_teak_carved_9832, "Carved teak wardrobe (costume room)");
+				return(69, poh_cos_room_magic_wardrobe_teak_carved_9832, null, "Carved teak wardrobe (costume room)");
 			case 54 :
-				return(70, poh_menagerie_pethouse_4_12707, "Consecrated pet house (9 pets)");
+				return(70, poh_menagerie_pethouse_4_12707, null, "Consecrated pet house (9 pets)");
 			case 55 :
-				return(72, poh_cos_room_cape_rack_mahogany_9819, "Mahogany cape rack");
+				return(72, poh_cos_room_cape_rack_mahogany_9819, null, "Mahogany cape rack");
 			case 56 :
-				return(74, poh_mirror_7_8051, "Gilded Mahogany dresser");
+				return(74, poh_mirror_7_8051, null, "Gilded Mahogany dresser");
 			case 57 :
-				return(75, poh_wardrobe_6_8043, "Mahogany wardrobe (bedroom)");
+				return(75, poh_wardrobe_6_8043, null, "Mahogany wardrobe (bedroom)");
 			case 58 :
-				return(78, poh_cos_room_magic_wardrobe_mahogany_9833, "Mahogany wardrobe (costume room)");
+				return(78, poh_cos_room_magic_wardrobe_mahogany_9833, null, "Mahogany wardrobe (costume room)");
 			case 59 :
-				return(80, poh_cos_room_fancy_dress_box_mahogany_9825, "Mahogany fancy dress box");
+				return(80, poh_cos_room_fancy_dress_box_mahogany_9825, null, "Mahogany fancy dress box");
 			case 60 :
-				return(81, poh_achievementgallery_jewellerybox_1_20626, "Basic jewellery box");
+				return(81, poh_achievementgallery_jewellerybox_1_20626, null, "Basic jewellery box");
 			case 61 :
-				return(81, poh_cos_room_cape_rack_mahogany_gilded_9820, "Gilded mahogany cape rack");
+				return(81, poh_cos_room_cape_rack_mahogany_gilded_9820, null, "Gilded mahogany cape rack");
 			case 62 :
-				return(81, poh_menagerie_pethouse_5_12708, "Desecrated pet house (12 pets)");
+				return(81, poh_menagerie_pethouse_5_12708, null, "Desecrated pet house (12 pets)");
 			case 63 :
-				return(82, poh_cos_room_armour_case_mahogany_9828, "Mahogany armour case");
+				return(82, poh_cos_room_armour_case_mahogany_9828, null, "Mahogany armour case");
 			case 64 :
-				return(84, poh_cos_room_treasure_chest_mahogany_9841, "Mahogany treasure chest");
+				return(84, poh_cos_room_treasure_chest_mahogany_9841, null, "Mahogany treasure chest");
 			case 65 :
-				return(86, poh_achievementgallery_jewellerybox_2_20627, "Fancy jewellery box");
+				return(86, poh_achievementgallery_jewellerybox_2_20627, null, "Fancy jewellery box");
 			case 66 :
-				return(86, poh_cos_room_toy_box_mahogany_9838, "Mahogany toy box");
+				return(86, poh_cos_room_toy_box_mahogany_9838, null, "Mahogany toy box");
 			case 67 :
-				return(87, poh_cos_room_magic_wardrobe_mahogany_gilded_9834, "Gilded mahogany wardrobe (costume room)");
+				return(87, poh_cos_room_magic_wardrobe_mahogany_gilded_9834, null, "Gilded mahogany wardrobe (costume room)");
 			case 68 :
-				return(87, poh_wardrobe_7_8044, "Gilded mahogany wardrobe (bedroom)");
+				return(87, poh_wardrobe_7_8044, null, "Gilded mahogany wardrobe (bedroom)");
 			case 69 :
-				return(90, poh_cos_room_cape_rack_marble_9821, "Marble cape rack");
+				return(90, poh_cos_room_cape_rack_marble_9821, null, "Marble cape rack");
 			case 70 :
-				return(91, poh_achievementgallery_jewellerybox_3_20628, "Ornate jewellery box");
+				return(91, poh_achievementgallery_jewellerybox_3_20628, null, "Ornate jewellery box");
 			case 71 :
-				return(92, poh_menagerie_pethouse_6_12709, "Natural pet house (many pets)");
+				return(92, poh_menagerie_pethouse_6_12709, null, "Natural pet house (many pets)");
 			case 72 :
-				return(96, poh_cos_room_magic_wardrobe_marble_9835, "Marble wardrobe (costume room)");
+				return(96, poh_cos_room_magic_wardrobe_marble_9835, null, "Marble wardrobe (costume room)");
 			case 73 :
-				return(99, poh_cos_room_cape_rack_magic_stone_9822, "Magic stone cape rack");
+				return(99, poh_cos_room_cape_rack_magic_stone_9822, null, "Magic stone cape rack");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(2, poh_rug_1_8316, "Brown rug");
+				return(2, poh_rug_1_8316, null, "Brown rug");
 			case 1 :
-				return(2, poh_curtains_1_8322, "Torn curtains");
+				return(2, poh_curtains_1_8322, null, "Torn curtains");
 			case 2 :
-				return(13, poh_rug_2_8317, "Rug");
+				return(13, poh_rug_2_8317, null, "Rug");
 			case 3 :
-				return(18, poh_curtains_2_8323, "Curtains");
+				return(18, poh_curtains_2_8323, null, "Curtains");
 			case 4 :
-				return(25, poh_clock_1_8052, "Oak clock");
+				return(25, poh_clock_1_8052, null, "Oak clock");
 			case 5 :
-				return(28, poh_rug_deadman_29598, "Deadman rug");
+				return(28, poh_rug_deadman_29598, null, "Deadman rug");
 			case 6 :
-				return(40, poh_lectern_1_8334, "Oak lectern");
+				return(40, poh_lectern_1_8334, null, "Oak lectern");
 			case 7 :
-				return(40, poh_curtains_3_8324, "Opulent curtains");
+				return(40, poh_curtains_3_8324, null, "Opulent curtains");
 			case 8 :
-				return(40, poh_wallchart_4_25611, "S.T.A.S.H chart");
+				return(40, poh_wallchart_4_25611, null, "S.T.A.S.H chart");
 			case 9 :
-				return(41, poh_globe_1_8341, "Globe");
+				return(41, poh_globe_1_8341, null, "Globe");
 			case 10 :
-				return(43, poh_wallchart_1_8354, "Alchemical chart");
+				return(43, poh_wallchart_1_8354, null, "Alchemical chart");
 			case 11 :
-				return(44, poh_telescope_1_8348, "Oak telescope");
+				return(44, poh_telescope_1_8348, null, "Oak telescope");
 			case 12 :
-				return(47, poh_lectern_2_8335, "Oak eagle lectern");
+				return(47, poh_lectern_2_8335, null, "Oak eagle lectern");
 			case 13 :
-				return(47, poh_lectern_3_8336, "Oak demon lectern");
+				return(47, poh_lectern_3_8336, null, "Oak demon lectern");
 			case 14 :
-				return(50, poh_globe_2_8342, "Ornamental globe");
+				return(50, poh_globe_2_8342, null, "Ornamental globe");
 			case 15 :
-				return(55, poh_clock_2_8053, "Teak clock");
+				return(55, poh_clock_2_8053, null, "Teak clock");
 			case 16 :
-				return(57, poh_lectern_4_8337, "Teak eagle lectern");
+				return(57, poh_lectern_4_8337, null, "Teak eagle lectern");
 			case 17 :
-				return(57, poh_lectern_5_8338, "Teak demon lectern");
+				return(57, poh_lectern_5_8338, null, "Teak demon lectern");
 			case 18 :
-				return(59, poh_globe_3_8343, "Lunar globe");
+				return(59, poh_globe_3_8343, null, "Lunar globe");
 			case 19 :
-				return(63, poh_wallchart_2_8355, "Astronomical chart");
+				return(63, poh_wallchart_2_8355, null, "Astronomical chart");
 			case 20 :
-				return(64, poh_telescope_2_8349, "Teak telescope");
+				return(64, poh_telescope_2_8349, null, "Teak telescope");
 			case 21 :
-				return(65, poh_rug_3_8318, "Opulent rug");
+				return(65, poh_rug_3_8318, null, "Opulent rug");
 			case 22 :
-				return(67, poh_lectern_6_8339, "Mahogany eagle lectern");
+				return(67, poh_lectern_6_8339, null, "Mahogany eagle lectern");
 			case 23 :
-				return(67, poh_lectern_7_8340, "Mahogany demon lectern");
+				return(67, poh_lectern_7_8340, null, "Mahogany demon lectern");
 			case 24 :
-				return(68, poh_globe_4_8344, "Celestial globe");
+				return(68, poh_globe_4_8344, null, "Celestial globe");
 			case 25 :
-				return(72, poh_dungeon_candle_8128, "Dungeon candles");
+				return(72, poh_dungeon_candle_8128, null, "Dungeon candles");
 			case 26 :
-				return(72, poh_dungeon_bloodstain_8125, "Decorative dungeon bloodstain");
+				return(72, poh_dungeon_bloodstain_8125, null, "Decorative dungeon bloodstain");
 			case 27 :
-				return(73, poh_rug_league_5_30501, "Raging Echoes rug");
+				return(73, poh_rug_league_5_30501, null, "Raging Echoes rug");
 			case 28 :
-				return(77, poh_globe_5_8345, "Armillary sphere");
+				return(77, poh_globe_5_8345, null, "Armillary sphere");
 			case 29 :
-				return(77, poh_lectern_8_24132, "Marble lectern");
+				return(77, poh_lectern_8_24132, null, "Marble lectern");
 			case 30 :
-				return(83, poh_wallchart_3_8356, "Infernal chart");
+				return(83, poh_wallchart_3_8356, null, "Infernal chart");
 			case 31 :
-				return(83, poh_dungeon_pipe_8126, "Decorative dungeon pipe");
+				return(83, poh_dungeon_pipe_8126, null, "Decorative dungeon pipe");
 			case 32 :
-				return(84, poh_dungeon_torch_8129, "Dungeon torches");
+				return(84, poh_dungeon_torch_8129, null, "Dungeon torches");
 			case 33 :
-				return(84, poh_telescope_3_8350, "Mahogany 'scope");
+				return(84, poh_telescope_3_8350, null, "Mahogany 'scope");
 			case 34 :
-				return(85, poh_clock_3_8054, "Gilded mahogany clock");
+				return(85, poh_clock_3_8054, null, "Gilded mahogany clock");
 			case 35 :
-				return(86, poh_globe_6_8346, "Small orrery");
+				return(86, poh_globe_6_8346, null, "Small orrery");
 			case 36 :
-				return(94, poh_dungeon_skeleton_decorative_8127, "Hanging dungeon skeleton");
+				return(94, poh_dungeon_skeleton_decorative_8127, null, "Hanging dungeon skeleton");
 			case 37 :
-				return(94, poh_dungeon_skulltorch_8130, "Dungeon skull torches");
+				return(94, poh_dungeon_skulltorch_8130, null, "Dungeon skull torches");
 			case 38 :
-				return(95, poh_globe_7_8347, "Large orrery");
+				return(95, poh_globe_7_8347, null, "Large orrery");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(16, poh_wall_crest_1_8102, "Oak wall decoration");
+				return(16, poh_wall_crest_1_8102, null, "Oak wall decoration");
 			case 1 :
-				return(27, poh_leaguehall_trophy_pedestal_simple_25351, "Trophy pedestal");
+				return(27, poh_leaguehall_trophy_pedestal_simple_25351, null, "Trophy pedestal");
 			case 2 :
-				return(28, poh_leaguehall_rug_simple_25362, "Rug (League hall)");
+				return(28, poh_leaguehall_rug_simple_25362, null, "Rug (League hall)");
 			case 3 :
-				return(28, poh_leaguehall_rug_trailblazer_25364, "Trailblazer rug");
+				return(28, poh_leaguehall_rug_trailblazer_25364, null, "Trailblazer rug");
 			case 4 :
-				return(28, poh_guide_armour_8085, "Suit of armour");
+				return(28, poh_guide_armour_8085, null, "Suit of armour");
 			case 5 :
-				return(30, poh_leaguehall_bannerstand_simple_25355, "Banner stand");
+				return(30, poh_leaguehall_bannerstand_simple_25355, null, "Banner stand");
 			case 6 :
-				return(32, poh_leaguehall_statue_simple_25359, "League statue");
+				return(32, poh_leaguehall_statue_simple_25359, null, "League statue");
 			case 7 :
-				return(32, poh_leaguehall_statue_trailblazer_25361, "Trailblazer globe");
+				return(32, poh_leaguehall_statue_trailblazer_25361, null, "Trailblazer globe");
 			case 8 :
-				return(34, poh_leaguehall_outfitstand_oak_25357, "Oak outfit stand");
+				return(34, poh_leaguehall_outfitstand_oak_25357, null, "Oak outfit stand");
 			case 9 :
-				return(35, poh_guide_portrait1_8086, "Small portrait");
+				return(35, poh_guide_portrait1_8086, null, "Small portrait");
 			case 10 :
-				return(36, poh_leaguehall_trophycase_oak_25353, "Oak trophy case");
+				return(36, poh_leaguehall_trophycase_oak_25353, null, "Oak trophy case");
 			case 11 :
-				return(36, pattern_bass_dummy_11599, "Oak mounted fish display");
+				return(36, pattern_bass_dummy_11599, null, "Oak mounted fish display");
 			case 12 :
-				return(36, poh_wall_crest_2_8103, "Teak wall decoration");
+				return(36, poh_wall_crest_2_8103, null, "Teak wall decoration");
 			case 13 :
-				return(38, poh_guide_head1_8087, "Teak mounted head display");
+				return(38, poh_guide_head1_8087, null, "Teak mounted head display");
 			case 14 :
-				return(38, poh_map_1_8294, "Small map");
+				return(38, poh_map_1_8294, null, "Small map");
 			case 15 :
-				return(41, poh_guide_runecase_8095, "Rune display cases");
+				return(41, poh_guide_runecase_8095, null, "Rune display cases");
 			case 16 :
-				return(42, poh_guide_sword_8090, "Mounted sword");
+				return(42, poh_guide_sword_8090, null, "Mounted sword");
 			case 17 :
-				return(44, poh_guide_landscape1_8091, "Small landscape");
+				return(44, poh_guide_landscape1_8091, null, "Small landscape");
 			case 18 :
-				return(47, poh_trophy_antidragonbreath_8282, "Mounted Anti-Dragon Shield");
+				return(47, poh_trophy_antidragonbreath_8282, null, "Mounted Anti-Dragon Shield");
 			case 19 :
-				return(47, poh_trophy_amuletofglory_8283, "Mounted Amulet of Glory");
+				return(47, poh_trophy_amuletofglory_8283, null, "Mounted Amulet of Glory");
 			case 20 :
-				return(47, poh_trophy_legendscape_8284, "Mounted Cape of Legends");
+				return(47, poh_trophy_legendscape_8284, null, "Mounted Cape of Legends");
 			case 21 :
-				return(47, poh_trophy_mythical_cape_21913, "Mounted Mythical Cape");
+				return(47, poh_trophy_mythical_cape_21913, null, "Mounted Mythical Cape");
 			case 22 :
-				return(48, poh_leaguehall_accomplishment_scroll_25365, "Leagues accomplishment scroll");
+				return(48, poh_leaguehall_accomplishment_scroll_25365, null, "Leagues accomplishment scroll");
 			case 23 :
-				return(55, poh_guide_portrait2_8093, "Large portrait");
+				return(55, poh_guide_portrait2_8093, null, "Large portrait");
 			case 24 :
-				return(56, poh_wall_crest_3_8104, "Gilded mahogany wall decoration");
+				return(56, poh_wall_crest_3_8104, null, "Gilded mahogany wall decoration");
 			case 25 :
-				return(56, pattern_swordfish_dummy_11603, "Teak mounted fish display");
+				return(56, pattern_swordfish_dummy_11603, null, "Teak mounted fish display");
 			case 26 :
-				return(58, poh_map_2_8295, "Medium map");
+				return(58, poh_map_2_8295, null, "Medium map");
 			case 27 :
-				return(58, poh_guide_head2_8088, "Mahogany mounted head display");
+				return(58, poh_guide_head2_8088, null, "Mahogany mounted head display");
 			case 28 :
-				return(64, poh_leaguehall_trophy_pedestal_decorative_25352, "Ornate trophy pedestal");
+				return(64, poh_leaguehall_trophy_pedestal_decorative_25352, null, "Ornate trophy pedestal");
 			case 29 :
-				return(64, pattern_salmon_dummy_11574, "Mounted giant blue krill");
+				return(64, pattern_salmon_dummy_11574, null, "Mounted giant blue krill");
 			case 30 :
-				return(65, poh_leaguehall_rug_decorative_25363, "Opulent rug (League hall)");
+				return(65, poh_leaguehall_rug_decorative_25363, null, "Opulent rug (League hall)");
 			case 31 :
-				return(65, poh_guide_landscape2_8094, "Large landscape");
+				return(65, poh_guide_landscape2_8094, null, "Large landscape");
 			case 32 :
-				return(66, pattern_harpoon_dummy_11578, "Mounted Harpoonfish");
+				return(66, pattern_harpoon_dummy_11578, null, "Mounted Harpoonfish");
 			case 33 :
-				return(66, poh_leaguehall_bannerstand_decorative_25356, "Ornate banner stand");
+				return(66, poh_leaguehall_bannerstand_decorative_25356, null, "Ornate banner stand");
 			case 34 :
-				return(66, poh_wall_crest_4_8105, "Round wall-mounted shield");
+				return(66, poh_wall_crest_4_8105, null, "Round wall-mounted shield");
 			case 35 :
-				return(68, poh_leaguehall_statue_decorative_25360, "Ornate league statue");
+				return(68, poh_leaguehall_statue_decorative_25360, null, "Ornate league statue");
 			case 36 :
-				return(68, pattern_trout_dummy_11580, "Mounted golden haddock");
+				return(68, pattern_trout_dummy_11580, null, "Mounted golden haddock");
 			case 37 :
-				return(72, poh_amulet_xeric_22708, "Mounted Xeric's Talisman");
+				return(72, poh_amulet_xeric_22708, null, "Mounted Xeric's Talisman");
 			case 38 :
-				return(74, poh_leaguehall_outfitstand_mahogany_25358, "Mahogany outfit stand");
+				return(74, poh_leaguehall_outfitstand_mahogany_25358, null, "Mahogany outfit stand");
 			case 39 :
-				return(74, pattern_pike_dummy_11600, "Mounted orangefin");
+				return(74, pattern_pike_dummy_11600, null, "Mounted orangefin");
 			case 40 :
-				return(76, pattern_shark_dummy_11601, "Mahogany mounted fish display");
+				return(76, pattern_shark_dummy_11601, null, "Mahogany mounted fish display");
 			case 41 :
-				return(76, poh_wall_crest_5_8106, "Square wall-mounted shield");
+				return(76, poh_wall_crest_5_8106, null, "Square wall-mounted shield");
 			case 42 :
-				return(78, poh_leaguehall_trophycase_mahogany_25354, "Mahogany trophy case");
+				return(78, poh_leaguehall_trophycase_mahogany_25354, null, "Mahogany trophy case");
 			case 43 :
-				return(78, poh_guide_head3_8089, "Gilded mounted head display");
+				return(78, poh_guide_head3_8089, null, "Gilded mounted head display");
 			case 44 :
-				return(78, poh_map_3_8296, "Large map");
+				return(78, poh_map_3_8296, null, "Large map");
 			case 45 :
-				return(78, pattern_herring_dummy_11604, "Mounted huge halibut");
+				return(78, pattern_herring_dummy_11604, null, "Mounted huge halibut");
 			case 46 :
-				return(80, poh_achievementgallery_questlist_20633, "Quest list");
+				return(80, poh_achievementgallery_questlist_20633, null, "Quest list");
 			case 47 :
-				return(80, poh_achievementgallery_mounteddisplay_emblem_20630, "Mounted emblem");
+				return(80, poh_achievementgallery_mounteddisplay_emblem_20630, null, "Mounted emblem");
 			case 48 :
-				return(80, poh_achievementgallery_mounteddisplay_coins_20631, "Mounted coins");
+				return(80, poh_achievementgallery_mounteddisplay_coins_20631, null, "Mounted coins");
 			case 49 :
-				return(80, poh_achievementgallery_mounteddisplay_capestand_20632, "Cape hanger");
+				return(80, poh_achievementgallery_mounteddisplay_capestand_20632, null, "Cape hanger");
 			case 50 :
-				return(82, poh_amulet_digsite_22709, "Mounted Digsite Pendant");
+				return(82, poh_amulet_digsite_22709, null, "Mounted Digsite Pendant");
 			case 51 :
-				return(82, poh_trophy_vorkath_21912, "Mounted Vorkath head");
+				return(82, poh_trophy_vorkath_21912, null, "Mounted Vorkath head");
 			case 52 :
-				return(82, poh_trophy_alchemical_hydra_head_23081, "Mounted Alchemical Hydra head");
+				return(82, poh_trophy_alchemical_hydra_head_23081, null, "Mounted Alchemical Hydra head");
 			case 53 :
-				return(82, pattern_sardine_dummy_11605, "Mounted purplefin");
+				return(82, pattern_sardine_dummy_11605, null, "Mounted purplefin");
 			case 54 :
-				return(83, poh_achievementgallery_adventurelog_1_20623, "Mahogany adventure log");
+				return(83, poh_achievementgallery_adventurelog_1_20623, null, "Mahogany adventure log");
 			case 55 :
-				return(86, poh_wall_crest_6_8107, "Wall-mounted kiteshield");
+				return(86, poh_wall_crest_6_8107, null, "Wall-mounted kiteshield");
 			case 56 :
-				return(86, pattern_cod_dummy_11606, "Mounted swift marlin");
+				return(86, pattern_cod_dummy_11606, null, "Mounted swift marlin");
 			case 57 :
-				return(87, poh_achievementgallery_bosslair_blank_20629, "Boss lair display");
+				return(87, poh_achievementgallery_bosslair_blank_20629, null, "Boss lair display");
 			case 58 :
-				return(88, poh_achievementgallery_adventurelog_2_20624, "Gilded adventure log");
+				return(88, poh_achievementgallery_adventurelog_2_20624, null, "Gilded adventure log");
 			case 59 :
-				return(93, poh_achievementgallery_adventurelog_3_20625, "Marble adventure log");
+				return(93, poh_achievementgallery_adventurelog_3_20625, null, "Marble adventure log");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 7 :
 		switch_int ($int1) {
 			case 0 :
-				return(30, poh_ranging_game_1_8162, "Hoop-and-stick game");
+				return(30, poh_ranging_game_1_8162, null, "Hoop-and-stick game");
 			case 1 :
-				return(32, poh_combat_ring_1_8023, "Boxing ring");
+				return(32, poh_combat_ring_1_8023, null, "Boxing ring");
 			case 2 :
-				return(34, poh_weapon_rack_1_8028, "Boxing glove rack");
+				return(34, poh_weapon_rack_1_8028, null, "Boxing glove rack");
 			case 3 :
-				return(34, poh_prize_chest_1_8165, "Oak prize chest");
+				return(34, poh_prize_chest_1_8165, null, "Oak prize chest");
 			case 4 :
-				return(37, poh_elemental_balance_1_8156, "Lesser magical balance");
+				return(37, poh_elemental_balance_1_8156, null, "Lesser magical balance");
 			case 5 :
-				return(39, poh_party_game_1_8159, "Jester game");
+				return(39, poh_party_game_1_8159, null, "Jester game");
 			case 6 :
-				return(39, poh_attack_stone_1_8153, "Clay attack stone");
+				return(39, poh_attack_stone_1_8153, null, "Clay attack stone");
 			case 7 :
-				return(41, poh_combat_ring_2_8024, "Fencing ring");
+				return(41, poh_combat_ring_2_8024, null, "Fencing ring");
 			case 8 :
-				return(44, poh_weapon_rack_2_8029, "Weapons rack");
+				return(44, poh_weapon_rack_2_8029, null, "Weapons rack");
 			case 9 :
-				return(44, poh_prize_chest_2_8166, "Teak prize chest");
+				return(44, poh_prize_chest_2_8166, null, "Teak prize chest");
 			case 10 :
-				return(48, poh_combat_dummy_20745, "Combat dummy");
+				return(48, poh_combat_dummy_20745, null, "Combat dummy");
 			case 11 :
-				return(49, poh_party_game_2_8160, "Treasure hunt fairy house");
+				return(49, poh_party_game_2_8160, null, "Treasure hunt fairy house");
 			case 12 :
-				return(51, poh_combat_ring_3_8025, "Combat ring");
+				return(51, poh_combat_ring_3_8025, null, "Combat ring");
 			case 13 :
-				return(53, poh_combat_dummy_undeadslayer_20746, "Combat dummy (Undead and slayer)");
+				return(53, poh_combat_dummy_undeadslayer_20746, null, "Combat dummy (Undead and slayer)");
 			case 14 :
-				return(54, poh_ranging_game_2_8163, "Dartboard");
+				return(54, poh_ranging_game_2_8163, null, "Dartboard");
 			case 15 :
-				return(54, poh_weapon_rack_3_8030, "Extra weapons rack");
+				return(54, poh_weapon_rack_3_8030, null, "Extra weapons rack");
 			case 16 :
-				return(54, poh_prize_chest_3_8167, "Mahogany prize chest");
+				return(54, poh_prize_chest_3_8167, null, "Mahogany prize chest");
 			case 17 :
-				return(57, poh_elemental_balance_2_8157, "Medium balance");
+				return(57, poh_elemental_balance_2_8157, null, "Medium balance");
 			case 18 :
-				return(58, poh_combat_dummy_upgraded_1_undead_25154, "Ornate combat dummy (Undead and slayer)");
+				return(58, poh_combat_dummy_upgraded_1_undead_25154, null, "Ornate combat dummy (Undead and slayer)");
 			case 19 :
-				return(59, poh_attack_stone_2_8154, "Limestone attack stone");
+				return(59, poh_attack_stone_2_8154, null, "Limestone attack stone");
 			case 20 :
-				return(59, poh_party_game_3_8161, "Hangman game");
+				return(59, poh_party_game_3_8161, null, "Hangman game");
 			case 21 :
-				return(63, poh_menagerie_combatring_1_12718, "Simple pet arena");
+				return(63, poh_menagerie_combatring_1_12718, null, "Simple pet arena");
 			case 22 :
-				return(71, poh_combat_ring_4_8026, "Ranging pedestals");
+				return(71, poh_combat_ring_4_8026, null, "Ranging pedestals");
 			case 23 :
-				return(73, poh_menagerie_combatring_2_12719, "Advanced pet arena");
+				return(73, poh_menagerie_combatring_2_12719, null, "Advanced pet arena");
 			case 24 :
-				return(77, poh_elemental_balance_3_8158, "Greater magical balance");
+				return(77, poh_elemental_balance_3_8158, null, "Greater magical balance");
 			case 25 :
-				return(79, poh_attack_stone_3_8155, "Marble attack stone");
+				return(79, poh_attack_stone_3_8155, null, "Marble attack stone");
 			case 26 :
-				return(81, poh_ranging_game_3_8164, "Archery target");
+				return(81, poh_ranging_game_3_8164, null, "Archery target");
 			case 27 :
-				return(81, poh_combat_ring_5_8027, "Balance beam");
+				return(81, poh_combat_ring_5_8027, null, "Balance beam");
 			case 28 :
-				return(83, poh_menagerie_combatring_3_12720, "Glorious pet arena");
+				return(83, poh_menagerie_combatring_3_12720, null, "Glorious pet arena");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 8 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, poh_garden_centrepiece_1_8168, "Exit portal");
+				return(1, poh_garden_centrepiece_1_8168, null, "Exit portal");
 			case 1 :
-				return(1, poh_guide_plant_1_8096, "Low-level plants");
+				return(1, poh_guide_plant_1_8096, null, "Low-level plants");
 			case 2 :
-				return(5, poh_garden_centrepiece_2_8169, "Decorative rock");
+				return(5, poh_garden_centrepiece_2_8169, null, "Decorative rock");
 			case 3 :
-				return(5, poh_tree_1_8173, "Tree");
+				return(5, poh_tree_1_8173, null, "Tree");
 			case 4 :
-				return(6, poh_guide_plant_2_8097, "Mid-level plants");
+				return(6, poh_guide_plant_2_8097, null, "Mid-level plants");
 			case 5 :
-				return(10, poh_garden_centrepiece_3_8170, "Pond");
+				return(10, poh_garden_centrepiece_3_8170, null, "Pond");
 			case 6 :
-				return(10, poh_tree_2_8174, "Nice tree");
+				return(10, poh_tree_2_8174, null, "Nice tree");
 			case 7 :
-				return(12, poh_guide_plant_3_8098, "High-level plants");
+				return(12, poh_guide_plant_3_8098, null, "High-level plants");
 			case 8 :
-				return(15, poh_garden_centrepiece_4_8171, "Imp statue");
+				return(15, poh_garden_centrepiece_4_8171, null, "Imp statue");
 			case 9 :
-				return(15, poh_tree_3_8175, "Oak tree");
+				return(15, poh_tree_3_8175, null, "Oak tree");
 			case 10 :
-				return(30, poh_tree_4_8176, "Willow tree");
+				return(30, poh_tree_4_8176, null, "Willow tree");
 			case 11 :
-				return(37, poh_menagerie_habitat_1_12710, "Grassland pet habitat");
+				return(37, poh_menagerie_habitat_1_12710, null, "Grassland pet habitat");
 			case 12 :
-				return(40, poh_tipjar_20634, "Tip jar");
+				return(40, poh_tipjar_20634, null, "Tip jar");
 			case 13 :
-				return(45, poh_tree_5_8177, "Maple tree");
+				return(45, poh_tree_5_8177, null, "Maple tree");
 			case 14 :
-				return(47, poh_menagerie_habitat_2_12711, "Forest pet habitat");
+				return(47, poh_menagerie_habitat_2_12711, null, "Forest pet habitat");
 			case 15 :
-				return(55, poh_fencing1_8196, "Boundary stones");
+				return(55, poh_fencing1_8196, null, "Boundary stones");
 			case 16 :
-				return(56, poh_hedge1_8203, "Thorny hedge");
+				return(56, poh_hedge1_8203, null, "Thorny hedge");
 			case 17 :
-				return(57, poh_menagerie_habitat_3_12712, "Desert pet habitat");
+				return(57, poh_menagerie_habitat_3_12712, null, "Desert pet habitat");
 			case 18 :
-				return(59, poh_fencing2_8197, "Wooden fence");
+				return(59, poh_fencing2_8197, null, "Wooden fence");
 			case 19 :
-				return(60, poh_hedge2_8204, "Nice hedge");
+				return(60, poh_hedge2_8204, null, "Nice hedge");
 			case 20 :
-				return(60, poh_tree_6_8178, "Yew tree");
+				return(60, poh_tree_6_8178, null, "Yew tree");
 			case 21 :
-				return(63, poh_fencing3_8198, "Stone wall");
+				return(63, poh_fencing3_8198, null, "Stone wall");
 			case 22 :
-				return(64, poh_hedge3_8205, "Small box hedge");
+				return(64, poh_hedge3_8205, null, "Small box hedge");
 			case 23 :
-				return(65, poh_formal_garden_centrepiece_2_8192, "Gazebo");
+				return(65, poh_formal_garden_centrepiece_2_8192, null, "Gazebo");
 			case 24 :
-				return(65, poh_superior_garden_pool_restoration_20639, "Restoration pool");
+				return(65, poh_superior_garden_pool_restoration_20639, null, "Restoration pool");
 			case 25 :
-				return(65, poh_superior_garden_theme_zen_20644, "Zen theme");
+				return(65, poh_superior_garden_theme_zen_20644, null, "Zen theme");
 			case 26 :
-				return(65, poh_superior_garden_topiary_20638, "Topiary bush");
+				return(65, poh_superior_garden_topiary_20638, null, "Topiary bush");
 			case 27 :
-				return(66, poh_flowera1_8213, "Sunflower");
+				return(66, poh_flowera1_8213, null, "Sunflower");
 			case 28 :
-				return(66, poh_flowerb1_8210, "Rosemary");
+				return(66, poh_flowerb1_8210, null, "Rosemary");
 			case 29 :
-				return(66, poh_superior_garden_bench_teak_20649, "Teak garden bench");
+				return(66, poh_superior_garden_bench_teak_20649, null, "Teak garden bench");
 			case 30 :
-				return(67, poh_fencing4_8199, "Iron railings");
+				return(67, poh_fencing4_8199, null, "Iron railings");
 			case 31 :
-				return(67, poh_menagerie_habitat_4_12713, "Polar pet habitat");
+				return(67, poh_menagerie_habitat_4_12713, null, "Polar pet habitat");
 			case 32 :
-				return(68, poh_hedge4_8206, "Topiary hedge");
+				return(68, poh_hedge4_8206, null, "Topiary hedge");
 			case 33 :
-				return(70, poh_garden_centrepiece_5_8172, "Dungeon entrance");
+				return(70, poh_garden_centrepiece_5_8172, null, "Dungeon entrance");
 			case 34 :
-				return(70, poh_superior_garden_pool_revitalisation_20640, "Revitalisation pool");
+				return(70, poh_superior_garden_pool_revitalisation_20640, null, "Revitalisation pool");
 			case 35 :
-				return(71, poh_flowera2_8214, "Marigolds");
+				return(71, poh_flowera2_8214, null, "Marigolds");
 			case 36 :
-				return(71, poh_flowerb2_8211, "Daffodils");
+				return(71, poh_flowerb2_8211, null, "Daffodils");
 			case 37 :
-				return(71, poh_fencing5_8200, "Picket fence");
+				return(71, poh_fencing5_8200, null, "Picket fence");
 			case 38 :
-				return(71, poh_formal_garden_centrepiece_3_8193, "Small fountain");
+				return(71, poh_formal_garden_centrepiece_3_8193, null, "Small fountain");
 			case 39 :
-				return(72, poh_hedge5_8207, "Fancy hedge");
+				return(72, poh_hedge5_8207, null, "Fancy hedge");
 			case 40 :
-				return(75, poh_tree_7_8179, "Magic tree");
+				return(75, poh_tree_7_8179, null, "Magic tree");
 			case 41 :
-				return(75, poh_superior_garden_theme_zanaris_20645, "Otherworldly theme");
+				return(75, poh_superior_garden_theme_zanaris_20645, null, "Otherworldly theme");
 			case 42 :
-				return(75, poh_superior_garden_teleport_tree_20635, "Spirit tree");
+				return(75, poh_superior_garden_teleport_tree_20635, null, "Spirit tree");
 			case 43 :
-				return(75, poh_formal_garden_centrepiece_4_8194, "Large fountain");
+				return(75, poh_formal_garden_centrepiece_4_8194, null, "Large fountain");
 			case 44 :
-				return(75, poh_fencing6_8201, "Garden fence");
+				return(75, poh_fencing6_8201, null, "Garden fence");
 			case 45 :
-				return(75, poh_superior_garden_redwood_fence_20647, "Redwood fence");
+				return(75, poh_superior_garden_redwood_fence_20647, null, "Redwood fence");
 			case 46 :
-				return(76, poh_hedge6_8208, "Tall fancy hedge");
+				return(76, poh_hedge6_8208, null, "Tall fancy hedge");
 			case 47 :
-				return(76, poh_flowera3_8215, "Roses");
+				return(76, poh_flowera3_8215, null, "Roses");
 			case 48 :
-				return(76, poh_flowerb3_8212, "Bluebells");
+				return(76, poh_flowerb3_8212, null, "Bluebells");
 			case 49 :
-				return(77, poh_menagerie_habitat_5_12714, "Volcanic pet habitat");
+				return(77, poh_menagerie_habitat_5_12714, null, "Volcanic pet habitat");
 			case 50 :
-				return(77, poh_superior_garden_bench_mahogany_20650, "Gnome bench");
+				return(77, poh_superior_garden_bench_mahogany_20650, null, "Gnome bench");
 			case 51 :
-				return(79, poh_fencing7_8202, "Marble wall");
+				return(79, poh_fencing7_8202, null, "Marble wall");
 			case 52 :
-				return(80, poh_superior_garden_wilderness_obelisk_21788, "Obelisk");
+				return(80, poh_superior_garden_wilderness_obelisk_21788, null, "Obelisk");
 			case 53 :
-				return(80, poh_superior_garden_pool_rejuvenation_20641, "Rejuvenation pool");
+				return(80, poh_superior_garden_pool_rejuvenation_20641, null, "Rejuvenation pool");
 			case 54 :
-				return(80, poh_hedge7_8209, "Tall box hedge");
+				return(80, poh_hedge7_8209, null, "Tall box hedge");
 			case 55 :
-				return(81, poh_formal_garden_centrepiece_5_8195, "Posh fountain");
+				return(81, poh_formal_garden_centrepiece_5_8195, null, "Posh fountain");
 			case 56 :
-				return(83, poh_superior_garden_obsidian_fence_20648, "Obsidian fence");
+				return(83, poh_superior_garden_obsidian_fence_20648, null, "Obsidian fence");
 			case 57 :
-				return(85, poh_superior_garden_teleport_ring_20636, "Fairy ring");
+				return(85, poh_superior_garden_teleport_ring_20636, null, "Fairy ring");
 			case 58 :
-				return(85, poh_superior_garden_pool_recovery_20642, "Fancy rejuvenation pool");
+				return(85, poh_superior_garden_pool_recovery_20642, null, "Fancy rejuvenation pool");
 			case 59 :
-				return(85, poh_superior_garden_theme_tzhaar_20646, "Volcanic theme");
+				return(85, poh_superior_garden_theme_tzhaar_20646, null, "Volcanic theme");
 			case 60 :
-				return(88, poh_superior_garden_bench_marble_20651, "Marble garden bench<br> (decoration only)");
+				return(88, poh_superior_garden_bench_marble_20651, null, "Marble garden bench<br> (decoration only)");
 			case 61 :
-				return(90, poh_superior_garden_pool_regeneration_20643, "Ornate rejuvenation pool");
+				return(90, poh_superior_garden_pool_regeneration_20643, null, "Ornate rejuvenation pool");
 			case 62 :
-				return(95, poh_superior_garden_teleport_treering_20637, "Spirit tree & fairy ring");
+				return(95, poh_superior_garden_teleport_treering_20637, null, "Spirit tree & fairy ring");
 			case 63 :
-				return(98, poh_superior_garden_bench_obsidian_20652, "Obsidian garden bench<br> (decoration only)");
+				return(98, poh_superior_garden_bench_obsidian_20652, null, "Obsidian garden bench<br> (decoration only)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
-				return(61, poh_throne_room_cage_1_8370, "Throne room floor decoration");
+				return(61, poh_throne_room_cage_1_8370, null, "Throne room floor decoration");
 			case 1 :
-				return(65, poh_cage_dungeon_oak_8297, "Oak cage");
+				return(65, poh_cage_dungeon_oak_8297, null, "Oak cage");
 			case 2 :
-				return(65, poh_oubliette_spikes_8302, "Oubliette spikes");
+				return(65, poh_oubliette_spikes_8302, null, "Oubliette spikes");
 			case 3 :
-				return(68, poh_throne_room_cage_2_8371, "Steel cage");
+				return(68, poh_throne_room_cage_2_8371, null, "Steel cage");
 			case 4 :
-				return(70, poh_cage_dungeon_oak+steel_8298, "Oak and steel cage");
+				return(70, poh_cage_dungeon_oak+steel_8298, null, "Oak and steel cage");
 			case 5 :
-				return(70, poh_skeleton_guard_8131, "Skeleton guard");
+				return(70, poh_skeleton_guard_8131, null, "Skeleton guard");
 			case 6 :
-				return(71, poh_oubliette_pool_8303, "Tentacle pool");
+				return(71, poh_oubliette_pool_8303, null, "Tentacle pool");
 			case 7 :
-				return(72, poh_spike_trap_8143, "Spike trap");
+				return(72, poh_spike_trap_8143, null, "Spike trap");
 			case 8 :
-				return(74, poh_throne_room_cage_3_8372, "Large trapdoor");
+				return(74, poh_throne_room_cage_3_8372, null, "Large trapdoor");
 			case 9 :
-				return(74, poh_dungeon_door_oak_8122, "Oak dungeon door");
+				return(74, poh_dungeon_door_oak_8122, null, "Oak dungeon door");
 			case 10 :
-				return(74, poh_guard_dog_8132, "Guard dog");
+				return(74, poh_guard_dog_8132, null, "Guard dog");
 			case 11 :
-				return(75, poh_treasure_wood_8148, "Wooden dungeon treasure crate");
+				return(75, poh_treasure_wood_8148, null, "Wooden dungeon treasure crate");
 			case 12 :
-				return(75, poh_demon_8138, "Demon");
+				return(75, poh_demon_8138, null, "Demon");
 			case 13 :
-				return(75, poh_cage_dungeon_steel_8299, "Steel cage");
+				return(75, poh_cage_dungeon_steel_8299, null, "Steel cage");
 			case 14 :
-				return(76, poh_man_trap_8144, "Man trap");
+				return(76, poh_man_trap_8144, null, "Man trap");
 			case 15 :
-				return(77, poh_oubliette_fire_8304, "Oubliette flame pit");
+				return(77, poh_oubliette_fire_8304, null, "Oubliette flame pit");
 			case 16 :
-				return(78, poh_hobgoblin_8133, "Hobgoblin guard");
+				return(78, poh_hobgoblin_8133, null, "Hobgoblin guard");
 			case 17 :
-				return(79, poh_treasure_oak_8149, "Oak dungeon treasure chest");
+				return(79, poh_treasure_oak_8149, null, "Oak dungeon treasure chest");
 			case 18 :
-				return(80, poh_cage_dungeon_steel+spikes_8300, "Spiked cage");
+				return(80, poh_cage_dungeon_steel+spikes_8300, null, "Spiked cage");
 			case 19 :
-				return(80, poh_vine_trap_8145, "Tangle vine");
+				return(80, poh_vine_trap_8145, null, "Tangle vine");
 			case 20 :
-				return(80, poh_kalphite_soldier_8139, "Kalphite soldier");
+				return(80, poh_kalphite_soldier_8139, null, "Kalphite soldier");
 			case 21 :
-				return(82, poh_throne_room_cage_4_8373, "Lesser magic cage");
+				return(82, poh_throne_room_cage_4_8373, null, "Lesser magic cage");
 			case 22 :
-				return(82, poh_dragon_8134, "Baby red dragon");
+				return(82, poh_dragon_8134, null, "Baby red dragon");
 			case 23 :
-				return(83, poh_treasure_teak_8150, "Teak dungeon treasure chest");
+				return(83, poh_treasure_teak_8150, null, "Teak dungeon treasure chest");
 			case 24 :
-				return(83, poh_oub_monster1_8305, "Rocnar");
+				return(83, poh_oub_monster1_8305, null, "Rocnar");
 			case 25 :
-				return(84, poh_dungeon_door_steel_8123, "Steel-plated oak door");
+				return(84, poh_dungeon_door_steel_8123, null, "Steel-plated oak door");
 			case 26 :
-				return(84, poh_marble_trap_8146, "Marble trap");
+				return(84, poh_marble_trap_8146, null, "Marble trap");
 			case 27 :
-				return(85, poh_tok_xil_8140, "Tok-Xil");
+				return(85, poh_tok_xil_8140, null, "Tok-Xil");
 			case 28 :
-				return(85, poh_cage_dungeon_bones_8301, "Bone cage");
+				return(85, poh_cage_dungeon_bones_8301, null, "Bone cage");
 			case 29 :
-				return(86, poh_spider_8135, "Huge spider");
+				return(86, poh_spider_8135, null, "Huge spider");
 			case 30 :
-				return(87, poh_treasure_mahogany_8151, "Mahogany dungeon treasure chest");
+				return(87, poh_treasure_mahogany_8151, null, "Mahogany dungeon treasure chest");
 			case 31 :
-				return(88, poh_teleport_trap_8147, "Teleport trap");
+				return(88, poh_teleport_trap_8147, null, "Teleport trap");
 			case 32 :
-				return(89, poh_throne_room_cage_5_8374, "Greater magic cage");
+				return(89, poh_throne_room_cage_5_8374, null, "Greater magic cage");
 			case 33 :
-				return(90, poh_troll_8136, "Troll guard");
+				return(90, poh_troll_8136, null, "Troll guard");
 			case 34 :
-				return(90, poh_dagganoth_8141, "Dagannoth");
+				return(90, poh_dagganoth_8141, null, "Dagannoth");
 			case 35 :
-				return(91, poh_treasure_magic_8152, "Magic dungeon treasure chest");
+				return(91, poh_treasure_magic_8152, null, "Magic dungeon treasure chest");
 			case 36 :
-				return(94, poh_dungeon_door_marble_8124, "Marble dungeon door");
+				return(94, poh_dungeon_door_marble_8124, null, "Marble dungeon door");
 			case 37 :
-				return(94, poh_hellhound_8137, "Hellhound");
+				return(94, poh_hellhound_8137, null, "Hellhound");
 			case 38 :
-				return(95, poh_steel_dragon_8142, "Steel dragon");
+				return(95, poh_steel_dragon_8142, null, "Steel dragon");
 			case 39 :
-				return(99, poh_rune_dragon_21911, "Rune dragon<br>(after Dragon Slayer II)");
+				return(99, poh_rune_dragon_21911, null, "Rune dragon<br>(after Dragon Slayer II)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 10 :
 		switch_int ($int1) {
 			case 0 :
-				return(45, poh_altar_oak_8062, "Oak altar");
+				return(45, poh_altar_oak_8062, null, "Oak altar");
 			case 1 :
-				return(45, poh_torches_steel_8070, "Steel torches (chapel)");
+				return(45, poh_torches_steel_8070, null, "Steel torches (chapel)");
 			case 2 :
-				return(45, poh_icon_gnomechild_25319, "Icon of Gnome Child");
+				return(45, poh_icon_gnomechild_25319, null, "Icon of Gnome Child");
 			case 3 :
-				return(48, poh_symbol_saradomin_8055, "Symbol of Saradomin");
+				return(48, poh_symbol_saradomin_8055, null, "Symbol of Saradomin");
 			case 4 :
-				return(48, poh_symbol_guthix_8057, "Symbol of Guthix");
+				return(48, poh_symbol_guthix_8057, null, "Symbol of Guthix");
 			case 5 :
-				return(48, poh_symbol_zamorak_8056, "Symbol of Zamorak");
+				return(48, poh_symbol_zamorak_8056, null, "Symbol of Zamorak");
 			case 6 :
-				return(49, poh_torches_wooden_8069, "Wooden torches (chapel)");
+				return(49, poh_torches_wooden_8069, null, "Wooden torches (chapel)");
 			case 7 :
-				return(49, poh_windchimes_8079, "Chapel windchimes");
+				return(49, poh_windchimes_8079, null, "Chapel windchimes");
 			case 8 :
-				return(49, poh_statue_saint_8082, "Small chapel statue");
+				return(49, poh_statue_saint_8082, null, "Small chapel statue");
 			case 9 :
-				return(49, poh_chapel_window_shutters_8076, "Shuttered chapel window");
+				return(49, poh_chapel_window_shutters_8076, null, "Shuttered chapel window");
 			case 10 :
-				return(50, poh_altar_teak_8063, "Teak altar");
+				return(50, poh_altar_teak_8063, null, "Teak altar");
 			case 11 :
-				return(53, poh_candlesticks_steel_8071, "Steel candlesticks");
+				return(53, poh_candlesticks_steel_8071, null, "Steel candlesticks");
 			case 12 :
-				return(56, poh_altar_teak_cloth_8064, "Cloth-covered teak altar");
+				return(56, poh_altar_teak_cloth_8064, null, "Cloth-covered teak altar");
 			case 13 :
-				return(57, poh_candlesticks_gilt_8072, "Gold candlesticks");
+				return(57, poh_candlesticks_gilt_8072, null, "Gold candlesticks");
 			case 14 :
-				return(58, poh_bells_8080, "Chapel bells");
+				return(58, poh_bells_8080, null, "Chapel bells");
 			case 15 :
-				return(59, poh_icon_saradomin_8058, "Icon of Saradomin");
+				return(59, poh_icon_saradomin_8058, null, "Icon of Saradomin");
 			case 16 :
-				return(59, poh_icon_guthix_8060, "Icon of Guthix");
+				return(59, poh_icon_guthix_8060, null, "Icon of Guthix");
 			case 17 :
-				return(59, poh_icon_zamorak_8059, "Icon of Zamorak");
+				return(59, poh_icon_zamorak_8059, null, "Icon of Zamorak");
 			case 18 :
-				return(60, poh_altar_mahogany_8065, "Cloth-covered mahogany altar");
+				return(60, poh_altar_mahogany_8065, null, "Cloth-covered mahogany altar");
 			case 19 :
-				return(61, poh_incense_burner_oak_8073, "Oak incense burners");
+				return(61, poh_incense_burner_oak_8073, null, "Oak incense burners");
 			case 20 :
-				return(64, poh_altar_limestone_8066, "Limestone altar");
+				return(64, poh_altar_limestone_8066, null, "Limestone altar");
 			case 21 :
-				return(65, poh_incense_burner_mahogany_8074, "Mahogany incense burners");
+				return(65, poh_incense_burner_mahogany_8074, null, "Mahogany incense burners");
 			case 22 :
-				return(69, poh_statue_angel_8083, "Medium chapel statue");
+				return(69, poh_statue_angel_8083, null, "Medium chapel statue");
 			case 23 :
-				return(69, poh_organ_8081, "Chapel organ");
+				return(69, poh_organ_8081, null, "Chapel organ");
 			case 24 :
-				return(69, poh_chapel_window_decorative_8077, "Decorative chapel window");
+				return(69, poh_chapel_window_decorative_8077, null, "Decorative chapel window");
 			case 25 :
-				return(69, poh_incense_burner_marble_8075, "Marble incense burner");
+				return(69, poh_incense_burner_marble_8075, null, "Marble incense burner");
 			case 26 :
-				return(70, poh_altar_marble_8067, "Marble altar");
+				return(70, poh_altar_marble_8067, null, "Marble altar");
 			case 27 :
-				return(71, poh_icon_bob_8061, "Icon of Bob the Cat");
+				return(71, poh_icon_bob_8061, null, "Icon of Bob the Cat");
 			case 28 :
-				return(75, poh_altar_marble+gilt_8068, "Gilded marble altar");
+				return(75, poh_altar_marble+gilt_8068, null, "Gilded marble altar");
 			case 29 :
-				return(89, poh_statue_god_8084, "Large chapel statue");
+				return(89, poh_statue_god_8084, null, "Large chapel statue");
 			case 30 :
-				return(89, poh_chapel_window_stainedglass_8078, "Stained-glass chapel window");
+				return(89, poh_chapel_window_stainedglass_8078, null, "Stained-glass chapel window");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 11 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, cup_of_tea_1978, "Mahogany Homes (beginner)");
+				return(1, cup_of_tea_1978, null, "Mahogany Homes (beginner)");
 			case 1 :
-				return(5, poh_cat_basket_1_8236, "Cat blanket");
+				return(5, poh_cat_basket_1_8236, null, "Cat blanket");
 			case 2 :
-				return(10, red_crab_31671, "Crab traps<br>(with 21 Hunter)");
+				return(10, red_crab_31671, null, "Crab traps<br>(with 21 Hunter)");
 			case 3 :
-				return(12, hh_dummy_hideyhole_beginner_23416, "STASH units (beginner)");
+				return(12, hh_dummy_hideyhole_beginner_23416, null, "STASH units (beginner)");
 			case 4 :
-				return(17, db_getfield(amenity_water_pump, amenity:dummyobj, 0), db_getfield(amenity_water_pump, amenity:print_name, 0));
+				return(17, db_getfield(amenity_water_pump, amenity:dummyobj, 0), null, db_getfield(amenity_water_pump, amenity:print_name, 0));
 			case 5 :
-				return(19, poh_cat_basket_2_8237, "Cat basket");
+				return(19, poh_cat_basket_2_8237, null, "Cat basket");
 			case 6 :
-				return(19, db_getfield(amenity_cooking_pot, amenity:dummyobj, 0), db_getfield(amenity_cooking_pot, amenity:print_name, 0));
+				return(19, db_getfield(amenity_cooking_pot, amenity:dummyobj, 0), null, db_getfield(amenity_cooking_pot, amenity:print_name, 0));
 			case 7 :
-				return(20, poh_claycup_tea_7730, "Mahogany Homes (novice)");
+				return(20, poh_claycup_tea_7730, null, "Mahogany Homes (novice)");
 			case 8 :
-				return(24, db_getfield(amenity_spinning_wheel, amenity:dummyobj, 0), db_getfield(amenity_spinning_wheel, amenity:print_name, 0));
+				return(24, db_getfield(amenity_spinning_wheel, amenity:dummyobj, 0), null, db_getfield(amenity_spinning_wheel, amenity:print_name, 0));
 			case 9 :
-				return(24, db_getfield(amenity_pottery_wheel, amenity:dummyobj, 0), db_getfield(amenity_pottery_wheel, amenity:print_name, 0));
+				return(24, db_getfield(amenity_pottery_wheel, amenity:dummyobj, 0), null, db_getfield(amenity_pottery_wheel, amenity:print_name, 0));
 			case 10 :
-				return(26, poh_bellpull_1_8099, "Rope bell pull");
+				return(26, poh_bellpull_1_8099, null, "Rope bell pull");
 			case 11 :
-				return(27, poh_stairs_oak_8249, "Oak staircase");
+				return(27, poh_stairs_oak_8249, null, "Oak staircase");
 			case 12 :
-				return(27, hh_dummy_hideyhole_easy_20532, "STASH units (easy)");
+				return(27, hh_dummy_hideyhole_easy_20532, null, "STASH units (easy)");
 			case 13 :
-				return(30, hammer_2347, "Repair Piscarilius fishing cranes<br>(with 30 Crafting)");
+				return(30, hammer_2347, null, "Repair Piscarilius fishing cranes<br>(with 30 Crafting)");
 			case 14 :
-				return(30, raids_storage_1_21037, "Chambers of Xeric - Small storage unit");
+				return(30, raids_storage_1_21037, null, "Chambers of Xeric - Small storage unit");
 			case 15 :
-				return(31, db_getfield(amenity_loom, amenity:dummyobj, 0), db_getfield(amenity_loom, amenity:print_name, 0));
+				return(31, db_getfield(amenity_loom, amenity:dummyobj, 0), null, db_getfield(amenity_loom, amenity:print_name, 0));
 			case 16 :
-				return(33, poh_cat_basket_3_8238, "Cushioned cat basket");
+				return(33, poh_cat_basket_3_8238, null, "Cushioned cat basket");
 			case 17 :
-				return(35, my2arm_dummy_fire_light_22606, "Fire of Eternal Light<br>(with 66 Firemaking)");
+				return(35, my2arm_dummy_fire_light_22606, null, "Fire of Eternal Light<br>(with 66 Firemaking)");
 			case 18 :
-				return(35, my2arm_dummy_fire_herb_22608, "Fire of Nourishment<br>(with 66 Firemaking)");
+				return(35, my2arm_dummy_fire_herb_22608, null, "Fire of Nourishment<br>(with 66 Firemaking)");
 			case 19 :
-				return(37, poh_bellpull_2_8100, "Teak bell pull");
+				return(37, poh_bellpull_2_8100, null, "Teak bell pull");
 			case 20 :
-				return(37, poh_menagerie_petfeeder_1_12722, "Oak pet feeder");
+				return(37, poh_menagerie_petfeeder_1_12722, null, "Oak pet feeder");
 			case 21 :
-				return(37, db_getfield(amenity_pottery_oven, amenity:dummyobj, 0), db_getfield(amenity_pottery_oven, amenity:print_name, 0));
+				return(37, db_getfield(amenity_pottery_oven, amenity:dummyobj, 0), null, db_getfield(amenity_pottery_oven, amenity:print_name, 0));
 			case 22 :
-				return(38, poh_menagerie_petlist_1_12721, "Pet list (for one-off pets)");
+				return(38, poh_menagerie_petlist_1_12721, null, "Pet list (for one-off pets)");
 			case 23 :
-				return(39, poh_menagerie_scratchingpost_1_12715, "Oak pet scratching post");
+				return(39, poh_menagerie_scratchingpost_1_12715, null, "Oak pet scratching post");
 			case 24 :
-				return(42, poh_crystalball_1_8351, "Crystal ball");
+				return(42, poh_crystalball_1_8351, null, "Crystal ball");
 			case 25 :
-				return(42, hh_dummy_hideyhole_medium_20533, "STASH units (medium)");
+				return(42, hh_dummy_hideyhole_medium_20533, null, "STASH units (medium)");
 			case 26 :
-				return(43, db_getfield(amenity_anvil, amenity:dummyobj, 0), db_getfield(amenity_anvil, amenity:print_name, 0));
+				return(43, db_getfield(amenity_anvil, amenity:dummyobj, 0), null, db_getfield(amenity_anvil, amenity:print_name, 0));
 			case 27 :
-				return(48, poh_stairs_teak_8252, "Teak staircase");
+				return(48, poh_stairs_teak_8252, null, "Teak staircase");
 			case 28 :
-				return(48, poh_menagerie_petfeeder_2_12723, "Teak pet feeder");
+				return(48, poh_menagerie_petfeeder_2_12723, null, "Teak pet feeder");
 			case 29 :
-				return(49, poh_menagerie_scratchingpost_2_12716, "Teak pet scratching post");
+				return(49, poh_menagerie_scratchingpost_2_12716, null, "Teak pet scratching post");
 			case 30 :
-				return(50, poh_portal_frame_1_8328, "Teak portal frame");
+				return(50, poh_portal_frame_1_8328, null, "Teak portal frame");
 			case 31 :
-				return(50, poh_teleport_centrepiece_1_8331, "Teleport focus");
+				return(50, poh_teleport_centrepiece_1_8331, null, "Teleport focus");
 			case 32 :
-				return(50, my2arm_dummy_fire_ghast_22607, "Fire of Dehumidification<br>(with 66 Firemaking)");
+				return(50, my2arm_dummy_fire_ghast_22607, null, "Fire of Dehumidification<br>(with 66 Firemaking)");
 			case 33 :
-				return(50, db_getfield(amenity_rowboat, amenity:dummyobj, 0), db_getfield(amenity_rowboat, amenity:print_name, 0));
+				return(50, db_getfield(amenity_rowboat, amenity:dummyobj, 0), null, db_getfield(amenity_rowboat, amenity:print_name, 0));
 			case 34 :
-				return(50, poh_chinacup_tea_7733, "Mahogany Homes (adept)");
+				return(50, poh_chinacup_tea_7733, null, "Mahogany Homes (adept)");
 			case 35 :
-				return(54, poh_crystalball_2_8352, "Elemental sphere");
+				return(54, poh_crystalball_2_8352, null, "Elemental sphere");
 			case 36 :
-				return(55, hh_dummy_hideyhole_hard_20534, "STASH units (hard)");
+				return(55, hh_dummy_hideyhole_hard_20534, null, "STASH units (hard)");
 			case 37 :
-				return(56, hallowed_token_24719, "Hallowed Sepulchre - Repair bridge");
+				return(56, hallowed_token_24719, null, "Hallowed Sepulchre - Repair bridge");
 			case 38 :
-				return(56, db_getfield(amenity_furnace, amenity:dummyobj, 0), db_getfield(amenity_furnace, amenity:print_name, 0));
+				return(56, db_getfield(amenity_furnace, amenity:dummyobj, 0), null, db_getfield(amenity_furnace, amenity:print_name, 0));
 			case 39 :
-				return(59, pattern_pineapple_chunks_dummy_11527, "Mausoleum - Repair bridge");
+				return(59, pattern_pineapple_chunks_dummy_11527, null, "Mausoleum - Repair bridge");
 			case 40 :
-				return(59, poh_menagerie_petfeeder_3_12724, "Mahogany pet feeder");
+				return(59, poh_menagerie_petfeeder_3_12724, null, "Mahogany pet feeder");
 			case 41 :
-				return(59, poh_menagerie_scratchingpost_3_12717, "Mahogany pet scratching post");
+				return(59, poh_menagerie_scratchingpost_3_12717, null, "Mahogany pet scratching post");
 			case 42 :
-				return(60, poh_bellpull_3_8101, "Gilded teak bell pull");
+				return(60, poh_bellpull_3_8101, null, "Gilded teak bell pull");
 			case 43 :
-				return(60, my2arm_dummy_fire_gwd_22609, "Fire of Unseasonal Warmth<br>(with 66 Firemaking)");
+				return(60, my2arm_dummy_fire_gwd_22609, null, "Fire of Unseasonal Warmth<br>(with 66 Firemaking)");
 			case 44 :
-				return(60, raids_storage_2_21038, "Chambers of Xeric - Medium storage unit");
+				return(60, raids_storage_2_21038, null, "Chambers of Xeric - Medium storage unit");
 			case 45 :
-				return(65, poh_teleport_centrepiece_2_8332, "Greater teleport focus");
+				return(65, poh_teleport_centrepiece_2_8332, null, "Greater teleport focus");
 			case 46 :
-				return(65, poh_portal_frame_2_8329, "Mahogany portal frame");
+				return(65, poh_portal_frame_2_8329, null, "Mahogany portal frame");
 			case 47 :
-				return(66, poh_crystalball_3_8353, "Crystal of power");
+				return(66, poh_crystalball_3_8353, null, "Crystal of power");
 			case 48 :
-				return(67, poh_spiralstairs_limestone_8258, "Limestone spiral staircase");
+				return(67, poh_spiralstairs_limestone_8258, null, "Limestone spiral staircase");
 			case 49 :
-				return(68, poh_dungeon_ladder_oak_8306, "Oak oubliette ladder");
+				return(68, poh_dungeon_ladder_oak_8306, null, "Oak oubliette ladder");
 			case 50 :
-				return(68, poh_lever_oak_8364, "Oak lever");
+				return(68, poh_lever_oak_8364, null, "Oak lever");
 			case 51 :
-				return(70, poh_giltchinacup_tea_7736, "Mahogany Homes (expert)");
+				return(70, poh_giltchinacup_tea_7736, null, "Mahogany Homes (expert)");
 			case 52 :
-				return(70, db_getfield(amenity_bankchest, amenity:dummyobj, 0), db_getfield(amenity_bankchest, amenity:print_name, 0));
+				return(70, db_getfield(amenity_bankchest, amenity:dummyobj, 0), null, db_getfield(amenity_bankchest, amenity:print_name, 0));
 			case 53 :
-				return(72, poh_portal_nexus_1_22705, "Marble portal nexus");
+				return(72, poh_portal_nexus_1_22705, null, "Marble portal nexus");
 			case 54 :
-				return(77, hh_dummy_hideyhole_elite_20535, "STASH units (elite)");
+				return(77, hh_dummy_hideyhole_elite_20535, null, "STASH units (elite)");
 			case 55 :
-				return(78, poh_dungeon_ladder_teak_8307, "Teak oubliette ladder");
+				return(78, poh_dungeon_ladder_teak_8307, null, "Teak oubliette ladder");
 			case 56 :
-				return(78, poh_lever_teak_8365, "Teak lever");
+				return(78, poh_lever_teak_8365, null, "Teak lever");
 			case 57 :
-				return(80, poh_portal_frame_3_8330, "Marble portal frame");
+				return(80, poh_portal_frame_3_8330, null, "Marble portal frame");
 			case 58 :
-				return(80, poh_teleport_centrepiece_3_8333, "Scrying pool");
+				return(80, poh_teleport_centrepiece_3_8333, null, "Scrying pool");
 			case 59 :
-				return(82, poh_stairs_marble_8255, "Marble staircase");
+				return(82, poh_stairs_marble_8255, null, "Marble staircase");
 			case 60 :
-				return(82, poh_portal_nexus_2_22706, "Gilded portal nexus");
+				return(82, poh_portal_nexus_2_22706, null, "Gilded portal nexus");
 			case 61 :
-				return(88, poh_dungeon_ladder_mag_8308, "Mahogany oubliette ladder");
+				return(88, poh_dungeon_ladder_mag_8308, null, "Mahogany oubliette ladder");
 			case 62 :
-				return(88, poh_lever_mag_8366, "Mahogany lever");
+				return(88, poh_lever_mag_8366, null, "Mahogany lever");
 			case 63 :
-				return(88, hh_dummy_hideyhole_master_20536, "STASH units (master)");
+				return(88, hh_dummy_hideyhole_master_20536, null, "STASH units (master)");
 			case 64 :
-				return(90, raids_storage_3_21039, "Chambers of Xeric - Large storage unit");
+				return(90, raids_storage_3_21039, null, "Chambers of Xeric - Large storage unit");
 			case 65 :
-				return(92, poh_portal_nexus_3_22707, "Crystalline portal nexus");
+				return(92, poh_portal_nexus_3_22707, null, "Crystalline portal nexus");
 			case 66 :
-				return(97, poh_spiralstairs_marble_8259, "Marble spiral");
+				return(97, poh_spiralstairs_marble_8259, null, "Marble spiral");
 			case 67 :
-				return(99, raids_storage_4_24660, "Chambers of Xeric - Massive storage unit");
+				return(99, raids_storage_4_24660, null, "Chambers of Xeric - Massive storage unit");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 12 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, invis_rod_7620, "Servants can be hired at the Ardougne Domestic Service Agency.");
+				return(-1, invis_rod_7620, null, "Servants can be hired at the Ardougne Domestic Service Agency.");
 			case 1 :
-				return(20, grail_bell_17, "Rick");
+				return(20, grail_bell_17, null, "Rick");
 			case 2 :
-				return(25, grail_bell_17, "Maid");
+				return(25, grail_bell_17, null, "Maid");
 			case 3 :
-				return(30, grail_bell_17, "Cook");
+				return(30, grail_bell_17, null, "Cook");
 			case 4 :
-				return(40, grail_bell_17, "Butler");
+				return(40, grail_bell_17, null, "Butler");
 			case 5 :
-				return(50, grail_bell_17, "Demon butler");
+				return(50, grail_bell_17, null, "Demon butler");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 13 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, hammer_2347, "Maximum rooms: <tostring(~script7833(1))>");
+				return(1, hammer_2347, null, "Maximum rooms: <tostring(~script7833(1))>");
 			case 1 :
-				return(1, poh_saw_8794, "Maximum dimensions: 3x3");
+				return(1, poh_saw_8794, null, "Maximum dimensions: 3x3");
 			case 2 :
-				return(15, poh_saw_8794, "Maximum dimensions: 4x4");
+				return(15, poh_saw_8794, null, "Maximum dimensions: 4x4");
 			case 3 :
-				return(26, hammer_2347, "Maximum rooms: <tostring(~script7833(26))>");
+				return(26, hammer_2347, null, "Maximum rooms: <tostring(~script7833(26))>");
 			case 4 :
-				return(30, poh_saw_8794, "Maximum dimensions: 5x5");
+				return(30, poh_saw_8794, null, "Maximum dimensions: 5x5");
 			case 5 :
-				return(32, hammer_2347, "Maximum rooms: <tostring(~script7833(32))>");
+				return(32, hammer_2347, null, "Maximum rooms: <tostring(~script7833(32))>");
 			case 6 :
-				return(38, hammer_2347, "Maximum rooms: <tostring(~script7833(38))>");
+				return(38, hammer_2347, null, "Maximum rooms: <tostring(~script7833(38))>");
 			case 7 :
-				return(44, hammer_2347, "Maximum rooms: <tostring(~script7833(44))>");
+				return(44, hammer_2347, null, "Maximum rooms: <tostring(~script7833(44))>");
 			case 8 :
-				return(45, poh_saw_8794, "Maximum dimensions: 6x6");
+				return(45, poh_saw_8794, null, "Maximum dimensions: 6x6");
 			case 9 :
-				return(50, hammer_2347, "Maximum rooms: <tostring(~script7833(50))>");
+				return(50, hammer_2347, null, "Maximum rooms: <tostring(~script7833(50))>");
 			case 10 :
-				return(56, hammer_2347, "Maximum rooms: <tostring(~script7833(56))>");
+				return(56, hammer_2347, null, "Maximum rooms: <tostring(~script7833(56))>");
 			case 11 :
-				return(60, poh_saw_8794, "Maximum dimensions: 7x7");
+				return(60, poh_saw_8794, null, "Maximum dimensions: 7x7");
 			case 12 :
-				return(62, hammer_2347, "Maximum rooms: <tostring(~script7833(62))>");
+				return(62, hammer_2347, null, "Maximum rooms: <tostring(~script7833(62))>");
 			case 13 :
-				return(68, hammer_2347, "Maximum rooms: <tostring(~script7833(68))>");
+				return(68, hammer_2347, null, "Maximum rooms: <tostring(~script7833(68))>");
 			case 14 :
-				return(74, hammer_2347, "Maximum rooms: <tostring(~script7833(74))>");
+				return(74, hammer_2347, null, "Maximum rooms: <tostring(~script7833(74))>");
 			case 15 :
-				return(80, hammer_2347, "Maximum rooms: <tostring(~script7833(80))>");
+				return(80, hammer_2347, null, "Maximum rooms: <tostring(~script7833(80))>");
 			case 16 :
-				return(86, hammer_2347, "Maximum rooms: <tostring(~script7833(86))>");
+				return(86, hammer_2347, null, "Maximum rooms: <tostring(~script7833(86))>");
 			case 17 :
-				return(92, hammer_2347, "Maximum rooms: <tostring(~script7833(92))>");
+				return(92, hammer_2347, null, "Maximum rooms: <tostring(~script7833(92))>");
 			case 18 :
-				return(96, hammer_2347, "Maximum rooms: <tostring(~script7833(96))>");
+				return(96, hammer_2347, null, "Maximum rooms: <tostring(~script7833(96))>");
 			case 19 :
-				return(99, hammer_2347, "Maximum rooms: <tostring(~script7833(99))>");
+				return(99, hammer_2347, null, "Maximum rooms: <tostring(~script7833(99))>");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 14 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, sailing_skillguide_regular_hull_32118, "Wooden hull and hull parts");
+				return(1, sailing_skillguide_regular_hull_32118, null, "Wooden hull and hull parts");
 			case 1 :
-				return(1, sailing_skillguide_mast_wooden_32160, "Wooden mast and linen sail");
+				return(1, sailing_skillguide_mast_wooden_32160, null, "Wooden mast and linen sail");
 			case 2 :
-				return(1, sailing_skillguide_helm_bronze_32139, "Bronze helm");
+				return(1, sailing_skillguide_helm_bronze_32139, null, "Bronze helm");
 			case 3 :
-				return(1, sailing_skillguide_keel_bronze_32181, "Bronze keel");
+				return(1, sailing_skillguide_keel_bronze_32181, null, "Bronze keel");
 			case 4 :
-				return(1, sailing_skillguide_boat_cargo_hold_regular_32213, "Wooden cargo hold");
+				return(1, sailing_skillguide_boat_cargo_hold_regular_32213, null, "Wooden cargo hold");
 			case 5 :
-				return(1, sailing_skillguide_salvaging_hook_bronze_32206, "Bronze salvaging hook");
+				return(1, sailing_skillguide_salvaging_hook_bronze_32206, null, "Bronze salvaging hook");
 			case 6 :
-				return(1, sailing_skillguide_boat_repair_kit_32300, "Wooden repair kit");
+				return(1, sailing_skillguide_boat_repair_kit_32300, null, "Wooden repair kit");
 			case 7 :
-				return(6, sailing_skillguide_range_32230, "Range");
+				return(6, sailing_skillguide_range_32230, null, "Range");
 			case 8 :
-				return(8, sailing_skillguide_oak_hull_32121, "Oak hull and hull parts");
+				return(8, sailing_skillguide_oak_hull_32121, null, "Oak hull and hull parts");
 			case 9 :
-				return(9, sailing_skillguide_salvaging_hook_iron_32207, "Iron salvaging hook");
+				return(9, sailing_skillguide_salvaging_hook_iron_32207, null, "Iron salvaging hook");
 			case 10 :
-				return(11, sailing_skillguide_mast_oak_32163, "Oak mast and linen sail");
+				return(11, sailing_skillguide_mast_oak_32163, null, "Oak mast and linen sail");
 			case 11 :
-				return(11, sailing_skillguide_boat_cargo_hold_oak_32214, "Oak cargo hold");
+				return(11, sailing_skillguide_boat_cargo_hold_oak_32214, null, "Oak cargo hold");
 			case 12 :
-				return(14, sailing_skillguide_helm_iron_32142, "Iron helm");
+				return(14, sailing_skillguide_helm_iron_32142, null, "Iron helm");
 			case 13 :
-				return(17, sailing_skillguide_keel_iron_32183, "Iron keel");
+				return(17, sailing_skillguide_keel_iron_32183, null, "Iron keel");
 			case 14 :
-				return(18, sailing_skillguide_salvaging_hook_steel_32208, "Steel salvaging hook");
+				return(18, sailing_skillguide_salvaging_hook_steel_32208, null, "Steel salvaging hook");
 			case 15 :
-				return(19, sailing_skillguide_boat_repair_kit_oak_32301, "Oak repair kit");
+				return(19, sailing_skillguide_boat_repair_kit_oak_32301, null, "Oak repair kit");
 			case 16 :
-				return(20, sailing_skillguide_flag_tempor_32196, "Flag");
+				return(20, sailing_skillguide_flag_tempor_32196, null, "Flag");
 			case 17 :
-				return(20, sailing_skillguide_boat_trim_32299, "Trim");
+				return(20, sailing_skillguide_boat_trim_32299, null, "Trim");
 			case 18 :
-				return(21, sailing_skillguide_boat_cargo_hold_teak_32215, "Teak cargo hold");
+				return(21, sailing_skillguide_boat_cargo_hold_teak_32215, null, "Teak cargo hold");
 			case 19 :
-				return(21, sailing_skillguide_bronze_cannon_32199, "Bronze cannon");
+				return(21, sailing_skillguide_bronze_cannon_32199, null, "Bronze cannon");
 			case 20 :
-				return(23, sailing_skillguide_teak_hull_32124, "Teak hull and hull parts");
+				return(23, sailing_skillguide_teak_hull_32124, null, "Teak hull and hull parts");
 			case 21 :
-				return(25, sailing_skillguide_keg_32231, "Keg");
+				return(25, sailing_skillguide_keg_32231, null, "Keg");
 			case 22 :
-				return(26, sailing_skillguide_mast_teak_32166, "Teak mast and canvas sail");
+				return(26, sailing_skillguide_mast_teak_32166, null, "Teak mast and canvas sail");
 			case 23 :
-				return(28, sailing_skillguide_iron_cannon_32200, "Iron cannon");
+				return(28, sailing_skillguide_iron_cannon_32200, null, "Iron cannon");
 			case 24 :
-				return(29, sailing_skillguide_anchor_32232, "Anchor");
+				return(29, sailing_skillguide_anchor_32232, null, "Anchor");
 			case 25 :
-				return(30, sailing_skillguide_helm_steel_32145, "Steel helm");
+				return(30, sailing_skillguide_helm_steel_32145, null, "Steel helm");
 			case 26 :
-				return(30, sailing_skillguide_salvaging_hook_mithril_32209, "Mithril salvaging hook");
+				return(30, sailing_skillguide_salvaging_hook_mithril_32209, null, "Mithril salvaging hook");
 			case 27 :
-				return(30, sailing_skillguide_boat_repair_kit_teak_32302, "Teak repair kit");
+				return(30, sailing_skillguide_boat_repair_kit_teak_32302, null, "Teak repair kit");
 			case 28 :
-				return(32, sailing_skillguide_keel_steel_32185, "Steel keel");
+				return(32, sailing_skillguide_keel_steel_32185, null, "Steel keel");
 			case 29 :
-				return(34, sailing_skillguide_salvaging_station_32224, "Salvaging station");
+				return(34, sailing_skillguide_salvaging_station_32224, null, "Salvaging station");
 			case 30 :
-				return(37, sailing_skillguide_facility_inoculation_station_32236, "Inoculation station");
+				return(37, sailing_skillguide_facility_inoculation_station_32236, null, "Inoculation station");
 			case 31 :
-				return(39, sailing_skillguide_steel_cannon_32201, "Steel cannon");
+				return(39, sailing_skillguide_steel_cannon_32201, null, "Steel cannon");
 			case 32 :
-				return(41, sailing_skillguide_mahogany_hull_32127, "Mahogany hull and hull parts");
+				return(41, sailing_skillguide_mahogany_hull_32127, null, "Mahogany hull and hull parts");
 			case 33 :
-				return(41, sailing_skillguide_boat_cargo_hold_mahogany_32216, "Mahogany cargo hold");
+				return(41, sailing_skillguide_boat_cargo_hold_mahogany_32216, null, "Mahogany cargo hold");
 			case 34 :
-				return(45, sailing_skillguide_mast_mahogany_32169, "Mahogany mast and canvas sail");
+				return(45, sailing_skillguide_mast_mahogany_32169, null, "Mahogany mast and canvas sail");
 			case 35 :
-				return(45, sailing_skillguide_rope_trawling_net_32220, "Rope trawling net");
+				return(45, sailing_skillguide_rope_trawling_net_32220, null, "Rope trawling net");
 			case 36 :
-				return(45, sailing_skillguide_chum_station_32225, "Chum station");
+				return(45, sailing_skillguide_chum_station_32225, null, "Chum station");
 			case 37 :
-				return(47, sailing_skillguide_helm_mithril_32148, "Mithril helm");
+				return(47, sailing_skillguide_helm_mithril_32148, null, "Mithril helm");
 			case 38 :
-				return(47, sailing_skillguide_wind_catcher_32233, "Wind catcher");
+				return(47, sailing_skillguide_wind_catcher_32233, null, "Wind catcher");
 			case 39 :
-				return(47, sailing_skillguide_boat_repair_kit_mahogany_32303, "Mahogany repair kit");
+				return(47, sailing_skillguide_boat_repair_kit_mahogany_32303, null, "Mahogany repair kit");
 			case 40 :
-				return(49, sailing_skillguide_teleportation_focus_32237, "Teleport focus");
+				return(49, sailing_skillguide_teleportation_focus_32237, null, "Teleport focus");
 			case 41 :
-				return(50, sailing_skillguide_keel_mithril_32187, "Mithril keel");
+				return(50, sailing_skillguide_keel_mithril_32187, null, "Mithril keel");
 			case 42 :
-				return(50, sailing_skillguide_mithril_cannon_32202, "Mithril cannon");
+				return(50, sailing_skillguide_mithril_cannon_32202, null, "Mithril cannon");
 			case 43 :
-				return(52, sailing_skillguide_salvaging_hook_adamant_32210, "Adamant salvaging hook");
+				return(52, sailing_skillguide_salvaging_hook_adamant_32210, null, "Adamant salvaging hook");
 			case 44 :
-				return(53, sailing_skillguide_boat_cargo_hold_camphor_32217, "Camphor cargo hold");
+				return(53, sailing_skillguide_boat_cargo_hold_camphor_32217, null, "Camphor cargo hold");
 			case 45 :
-				return(59, sailing_skillguide_helm_adamant_32151, "Adamant helm");
+				return(59, sailing_skillguide_helm_adamant_32151, null, "Adamant helm");
 			case 46 :
-				return(59, sailing_skillguide_camphor_hull_32130, "Camphor hull and hull parts");
+				return(59, sailing_skillguide_camphor_hull_32130, null, "Camphor hull and hull parts");
 			case 47 :
-				return(60, sailing_skillguide_mast_camphor_32172, "Camphor mast and canvas sail");
+				return(60, sailing_skillguide_mast_camphor_32172, null, "Camphor mast and canvas sail");
 			case 48 :
-				return(61, sailing_skillguide_linen_trawling_net_32221, "Linen trawling net");
+				return(61, sailing_skillguide_linen_trawling_net_32221, null, "Linen trawling net");
 			case 49 :
-				return(61, sailing_skillguide_chum_station_advanced_32226, "Advanced chum station");
+				return(61, sailing_skillguide_chum_station_advanced_32226, null, "Advanced chum station");
 			case 50 :
-				return(61, sailing_skillguide_adamant_cannon_32203, "Adamant cannon");
+				return(61, sailing_skillguide_adamant_cannon_32203, null, "Adamant cannon");
 			case 51 :
-				return(62, sailing_skillguide_keel_adamant_32189, "Adamant keel");
+				return(62, sailing_skillguide_keel_adamant_32189, null, "Adamant keel");
 			case 52 :
-				return(62, sailing_skillguide_fathom_stone_32228, "Fathom stone");
+				return(62, sailing_skillguide_fathom_stone_32228, null, "Fathom stone");
 			case 53 :
-				return(65, sailing_skillguide_hemp_trawling_net_32222, "Hemp trawling net");
+				return(65, sailing_skillguide_hemp_trawling_net_32222, null, "Hemp trawling net");
 			case 54 :
-				return(66, sailing_skillguide_salvaging_hook_rune_32211, "Rune salvaging hook");
+				return(66, sailing_skillguide_salvaging_hook_rune_32211, null, "Rune salvaging hook");
 			case 55 :
-				return(66, sailing_skillguide_boat_repair_kit_camphor_32304, "Camphor repair kit");
+				return(66, sailing_skillguide_boat_repair_kit_camphor_32304, null, "Camphor repair kit");
 			case 56 :
-				return(67, sailing_skillguide_crystal_extractor_32235, "Crystal extractor");
+				return(67, sailing_skillguide_crystal_extractor_32235, null, "Crystal extractor");
 			case 57 :
-				return(69, sailing_skillguide_teleportation_focus_greater_32238, "Greater teleport focus");
+				return(69, sailing_skillguide_teleportation_focus_greater_32238, null, "Greater teleport focus");
 			case 58 :
-				return(70, sailing_skillguide_gale_catcher_32234, "Gale catcher");
+				return(70, sailing_skillguide_gale_catcher_32234, null, "Gale catcher");
 			case 59 :
-				return(72, sailing_skillguide_boat_eternal_brazier_32195, "Eternal brazier");
+				return(72, sailing_skillguide_boat_eternal_brazier_32195, null, "Eternal brazier");
 			case 60 :
-				return(73, sailing_skillguide_cotton_trawling_net_32223, "Cotton trawling net");
+				return(73, sailing_skillguide_cotton_trawling_net_32223, null, "Cotton trawling net");
 			case 61 :
-				return(74, sailing_skillguide_chum_spreader_32227, "Chum spreader");
+				return(74, sailing_skillguide_chum_spreader_32227, null, "Chum spreader");
 			case 62 :
-				return(75, sailing_skillguide_ironwood_hull_32133, "Ironwood hull and hull parts");
+				return(75, sailing_skillguide_ironwood_hull_32133, null, "Ironwood hull and hull parts");
 			case 63 :
-				return(76, sailing_skillguide_rune_cannon_32204, "Rune cannon");
+				return(76, sailing_skillguide_rune_cannon_32204, null, "Rune cannon");
 			case 64 :
-				return(77, sailing_skillguide_boat_cargo_hold_ironwood_32218, "Ironwood cargo hold");
+				return(77, sailing_skillguide_boat_cargo_hold_ironwood_32218, null, "Ironwood cargo hold");
 			case 65 :
-				return(77, sailing_skillguide_mast_ironwood_32175, "Ironwood mast and cotton sail");
+				return(77, sailing_skillguide_mast_ironwood_32175, null, "Ironwood mast and cotton sail");
 			case 66 :
-				return(78, sailing_skillguide_keel_rune_32191, "Rune keel");
+				return(78, sailing_skillguide_keel_rune_32191, null, "Rune keel");
 			case 67 :
-				return(78, sailing_skillguide_salvaging_hook_dragon_32212, "Dragon salvaging hook");
+				return(78, sailing_skillguide_salvaging_hook_dragon_32212, null, "Dragon salvaging hook");
 			case 68 :
-				return(80, sailing_skillguide_boat_repair_kit_ironwood_32305, "Ironwood repair kit");
+				return(80, sailing_skillguide_boat_repair_kit_ironwood_32305, null, "Ironwood repair kit");
 			case 69 :
-				return(81, sailing_skillguide_helm_rune_32154, "Rune helm");
+				return(81, sailing_skillguide_helm_rune_32154, null, "Rune helm");
 			case 70 :
-				return(83, sailing_skillguide_fathom_pearl_32229, "Fathom pearl");
+				return(83, sailing_skillguide_fathom_pearl_32229, null, "Fathom pearl");
 			case 71 :
-				return(84, sailing_skillguide_rosewood_hull_32136, "Rosewood hull and hull parts");
+				return(84, sailing_skillguide_rosewood_hull_32136, null, "Rosewood hull and hull parts");
 			case 72 :
-				return(84, sailing_skillguide_boat_cargo_hold_rosewood_32219, "Rosewood cargo hold");
+				return(84, sailing_skillguide_boat_cargo_hold_rosewood_32219, null, "Rosewood cargo hold");
 			case 73 :
-				return(84, sailing_skillguide_dragon_cannon_32205, "Dragon cannon");
+				return(84, sailing_skillguide_dragon_cannon_32205, null, "Dragon cannon");
 			case 74 :
-				return(85, sailing_skillguide_mast_rosewood_32178, "Rosewood mast and cotton sail");
+				return(85, sailing_skillguide_mast_rosewood_32178, null, "Rosewood mast and cotton sail");
 			case 75 :
-				return(86, sailing_skillguide_helm_dragon_32157, "Dragon helm");
+				return(86, sailing_skillguide_helm_dragon_32157, null, "Dragon helm");
 			case 76 :
-				return(87, sailing_skillguide_keel_dragon_32193, "Dragon keel");
+				return(87, sailing_skillguide_keel_dragon_32193, null, "Dragon keel");
 			case 77 :
-				return(92, sailing_skillguide_boat_repair_kit_rosewood_32306, "Rosewood repair kit");
+				return(92, sailing_skillguide_boat_repair_kit_rosewood_32306, null, "Rosewood repair kit");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

@@ -1,155 +1,155 @@
 // 2499
-[proc,skill_guide_data_prayer](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_prayer](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, cert_pickpocket_guide_gnome_3258, "Prayer allows you to access different prayers, available from the Prayer side panel. Each prayer offers a different powerful benefit.");
+				return(-1, cert_pickpocket_guide_gnome_3258, null, "Prayer allows you to access different prayers, available from the Prayer side panel. Each prayer offers a different powerful benefit.");
 			case 1 :
-				return(-1, placeholder_xmas16_ball_inflated_red_20803, "Using prayers will drain your prayer points over time. Once you run out of prayer points, you will be unable to use any prayers. You can restore your prayer points by praying at an altar.");
+				return(-1, placeholder_xmas16_ball_inflated_red_20803, null, "Using prayers will drain your prayer points over time. Once you run out of prayer points, you will be unable to use any prayers. You can restore your prayer points by praying at an altar.");
 			case 2 :
-				return(-1, monkrobetop_544, "Some pieces of equipment will grant you a Prayer bonus, which will reduce the rate at which your prayer points are drained.");
+				return(-1, monkrobetop_544, null, "Some pieces of equipment will grant you a Prayer bonus, which will reduce the rate at which your prayer points are drained.");
 			case 3 :
-				return(-1, bones_526, "The most common way to increase your Prayer level is to offer the remains of the enemies you kill. Burying their bones and scattering their ashes will award you Prayer experience.");
+				return(-1, bones_526, null, "The most common way to increase your Prayer level is to offer the remains of the enemies you kill. Burying their bones and scattering their ashes will award you Prayer experience.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(oc_param(placeholder_xmas16_ball_inflated_red_20803, param_1753), placeholder_xmas16_ball_inflated_red_20803, "Thick Skin");
+				return(oc_param(placeholder_xmas16_ball_inflated_red_20803, param_1753), placeholder_xmas16_ball_inflated_red_20803, null, "Thick Skin");
 			case 1 :
-				return(oc_param(xmas16_ball_inflated_green_20804, param_1753), xmas16_ball_inflated_green_20804, "Burst of Strength");
+				return(oc_param(xmas16_ball_inflated_green_20804, param_1753), xmas16_ball_inflated_green_20804, null, "Burst of Strength");
 			case 2 :
-				return(oc_param(placeholder_xmas16_ball_inflated_green_20805, param_1753), placeholder_xmas16_ball_inflated_green_20805, "Clarity of Thought");
+				return(oc_param(placeholder_xmas16_ball_inflated_green_20805, param_1753), placeholder_xmas16_ball_inflated_green_20805, null, "Clarity of Thought");
 			case 3 :
-				return(oc_param(placeholder_xmas16_marionette_red_20821, param_1753), placeholder_xmas16_marionette_red_20821, "Sharp Eye");
+				return(oc_param(placeholder_xmas16_marionette_red_20821, param_1753), placeholder_xmas16_marionette_red_20821, null, "Sharp Eye");
 			case 4 :
-				return(oc_param(xmas16_blank_partyhat_20822, param_1753), xmas16_blank_partyhat_20822, "Mystic Will");
+				return(oc_param(xmas16_blank_partyhat_20822, param_1753), xmas16_blank_partyhat_20822, null, "Mystic Will");
 			case 5 :
-				return(oc_param(xmas16_ball_inflated_blue_20806, param_1753), xmas16_ball_inflated_blue_20806, "Rock Skin");
+				return(oc_param(xmas16_ball_inflated_blue_20806, param_1753), xmas16_ball_inflated_blue_20806, null, "Rock Skin");
 			case 6 :
-				return(oc_param(placeholder_xmas16_ball_inflated_blue_20807, param_1753), placeholder_xmas16_ball_inflated_blue_20807, "Superhuman Strength");
+				return(oc_param(placeholder_xmas16_ball_inflated_blue_20807, param_1753), placeholder_xmas16_ball_inflated_blue_20807, null, "Superhuman Strength");
 			case 7 :
-				return(oc_param(xmas16_ball_deflated_red_20808, param_1753), xmas16_ball_deflated_red_20808, "Improved Reflexes");
+				return(oc_param(xmas16_ball_deflated_red_20808, param_1753), xmas16_ball_deflated_red_20808, null, "Improved Reflexes");
 			case 8 :
-				return(oc_param(placeholder_xmas16_ball_deflated_red_20809, param_1753), placeholder_xmas16_ball_deflated_red_20809, "Rapid Restore");
+				return(oc_param(placeholder_xmas16_ball_deflated_red_20809, param_1753), placeholder_xmas16_ball_deflated_red_20809, null, "Rapid Restore");
 			case 9 :
-				return(oc_param(xmas16_ball_deflated_green_20810, param_1753), xmas16_ball_deflated_green_20810, "Rapid Heal");
+				return(oc_param(xmas16_ball_deflated_green_20810, param_1753), xmas16_ball_deflated_green_20810, null, "Rapid Heal");
 			case 10 :
-				return(oc_param(placeholder_xmas16_ball_deflated_green_20811, param_1753), placeholder_xmas16_ball_deflated_green_20811, "Protect Item");
+				return(oc_param(placeholder_xmas16_ball_deflated_green_20811, param_1753), placeholder_xmas16_ball_deflated_green_20811, null, "Protect Item");
 			case 11 :
-				return(oc_param(placeholder_xmas16_blank_partyhat_20823, param_1753), placeholder_xmas16_blank_partyhat_20823, "Hawk Eye");
+				return(oc_param(placeholder_xmas16_blank_partyhat_20823, param_1753), placeholder_xmas16_blank_partyhat_20823, null, "Hawk Eye");
 			case 12 :
-				return(oc_param(xmas16_red_partyhat_20824, param_1753), xmas16_red_partyhat_20824, "Mystic Lore");
+				return(oc_param(xmas16_red_partyhat_20824, param_1753), xmas16_red_partyhat_20824, null, "Mystic Lore");
 			case 13 :
-				return(oc_param(xmas16_ball_deflated_blue_20812, param_1753), xmas16_ball_deflated_blue_20812, "Steel Skin");
+				return(oc_param(xmas16_ball_deflated_blue_20812, param_1753), xmas16_ball_deflated_blue_20812, null, "Steel Skin");
 			case 14 :
-				return(oc_param(placeholder_xmas16_ball_deflated_blue_20813, param_1753), placeholder_xmas16_ball_deflated_blue_20813, "Ultimate Strength");
+				return(oc_param(placeholder_xmas16_ball_deflated_blue_20813, param_1753), placeholder_xmas16_ball_deflated_blue_20813, null, "Ultimate Strength");
 			case 15 :
-				return(oc_param(xmas16_marionette_unpainted_20814, param_1753), xmas16_marionette_unpainted_20814, "Incredible Reflexes");
+				return(oc_param(xmas16_marionette_unpainted_20814, param_1753), xmas16_marionette_unpainted_20814, null, "Incredible Reflexes");
 			case 16 :
-				return(oc_param(placeholder_xmas16_marionette_unpainted_20815, param_1753), placeholder_xmas16_marionette_unpainted_20815, "Protect from Magic");
+				return(oc_param(placeholder_xmas16_marionette_unpainted_20815, param_1753), placeholder_xmas16_marionette_unpainted_20815, null, "Protect from Magic");
 			case 17 :
-				return(oc_param(xmas16_marionette_blue_20816, param_1753), xmas16_marionette_blue_20816, "Protect from Missiles");
+				return(oc_param(xmas16_marionette_blue_20816, param_1753), xmas16_marionette_blue_20816, null, "Protect from Missiles");
 			case 18 :
-				return(oc_param(placeholder_xmas16_marionette_blue_20817, param_1753), placeholder_xmas16_marionette_blue_20817, "Protect from Melee");
+				return(oc_param(placeholder_xmas16_marionette_blue_20817, param_1753), placeholder_xmas16_marionette_blue_20817, null, "Protect from Melee");
 			case 19 :
-				return(oc_param(placeholder_xmas16_red_partyhat_20825, param_1753), placeholder_xmas16_red_partyhat_20825, "Eagle Eye");
+				return(oc_param(placeholder_xmas16_red_partyhat_20825, param_1753), placeholder_xmas16_red_partyhat_20825, null, "Eagle Eye");
 			case 20 :
-				return(oc_param(xmas16_green_partyhat_20826, param_1753), xmas16_green_partyhat_20826, "Mystic Might");
+				return(oc_param(xmas16_green_partyhat_20826, param_1753), xmas16_green_partyhat_20826, null, "Mystic Might");
 			case 21 :
-				return(oc_param(xmas16_marionette_green_20818, param_1753), xmas16_marionette_green_20818, "Members: Retribution");
+				return(oc_param(xmas16_marionette_green_20818, param_1753), xmas16_marionette_green_20818, null, "Members: Retribution");
 			case 22 :
-				return(oc_param(placeholder_xmas16_marionette_green_20819, param_1753), placeholder_xmas16_marionette_green_20819, "Members: Redemption");
+				return(oc_param(placeholder_xmas16_marionette_green_20819, param_1753), placeholder_xmas16_marionette_green_20819, null, "Members: Redemption");
 			case 23 :
-				return(oc_param(xmas16_marionette_red_20820, param_1753), xmas16_marionette_red_20820, "Members: Smite");
+				return(oc_param(xmas16_marionette_red_20820, param_1753), xmas16_marionette_red_20820, null, "Members: Smite");
 			case 24 :
-				return(oc_param(placeholder_xmas16_teddy_20831, param_1753), placeholder_xmas16_teddy_20831, "Members: Preserve");
+				return(oc_param(placeholder_xmas16_teddy_20831, param_1753), placeholder_xmas16_teddy_20831, null, "Members: Preserve");
 			case 25 :
-				return(oc_param(xmas16_blue_partyhat_20828, param_1753), xmas16_blue_partyhat_20828, "Members: Chivalry<br> (with 65 Defence, after King's Ransom)");
+				return(oc_param(xmas16_blue_partyhat_20828, param_1753), xmas16_blue_partyhat_20828, null, "Members: Chivalry<br> (with 65 Defence, after King's Ransom)");
 			case 26 :
-				return(oc_param(cert_ca_teleport_anim_offhand_easy_25939, param_1753), cert_ca_teleport_anim_offhand_easy_25939, "Members: Deadeye<br>(from the Royal Titans)");
+				return(oc_param(cert_ca_teleport_anim_offhand_easy_25939, param_1753), cert_ca_teleport_anim_offhand_easy_25939, null, "Members: Deadeye<br>(from the Royal Titans)");
 			case 27 :
-				return(oc_param(placeholder_giants_foundry_tester_27034, param_1753), placeholder_giants_foundry_tester_27034, "Members: Mystic Vigour<br>(from the Royal Titans)");
+				return(oc_param(placeholder_giants_foundry_tester_27034, param_1753), placeholder_giants_foundry_tester_27034, null, "Members: Mystic Vigour<br>(from the Royal Titans)");
 			case 28 :
-				return(oc_param(placeholder_xmas16_blue_partyhat_20829, param_1753), placeholder_xmas16_blue_partyhat_20829, "Members: Piety<br> (with 70 Defence, after King's Ransom)");
+				return(oc_param(placeholder_xmas16_blue_partyhat_20829, param_1753), placeholder_xmas16_blue_partyhat_20829, null, "Members: Piety<br> (with 70 Defence, after King's Ransom)");
 			case 29 :
-				return(oc_param(placeholder_xmas16_green_partyhat_20827, param_1753), placeholder_xmas16_green_partyhat_20827, "Members: Rigour<br> (with 70 Defence, from Chambers of Xeric)");
+				return(oc_param(placeholder_xmas16_green_partyhat_20827, param_1753), placeholder_xmas16_green_partyhat_20827, null, "Members: Rigour<br> (with 70 Defence, from Chambers of Xeric)");
 			case 30 :
-				return(oc_param(xmas16_teddy_20830, param_1753), xmas16_teddy_20830, "Members: Augury<br> (with 70 Defence, from Chambers of Xeric)");
+				return(oc_param(xmas16_teddy_20830, param_1753), xmas16_teddy_20830, null, "Members: Augury<br> (with 70 Defence, from Chambers of Xeric)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(10, basic_tk_helm_5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
+				return(10, basic_tk_helm_5574, null, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
 			case 1 :
-				return(20, basic_tk_rank2_helm_9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
+				return(20, basic_tk_rank2_helm_9672, null, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
 			case 2 :
-				return(20, trail_saradomin_robe_t_10458, "Vestment robe top");
+				return(20, trail_saradomin_robe_t_10458, null, "Vestment robe top");
 			case 3 :
-				return(20, trail_saradomin_robe_l_10464, "Vestment robe legs");
+				return(20, trail_saradomin_robe_l_10464, null, "Vestment robe legs");
 			case 4 :
-				return(22, pest_void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats)");
+				return(22, pest_void_knight_top_8839, null, "Void Knight equipment<br>(with 42 combat stats)");
 			case 5 :
-				return(31, holy_wraps_19997, "Holy wraps");
+				return(31, holy_wraps_19997, null, "Holy wraps");
 			case 6 :
-				return(31, holy_sandals_12598, "Holy sandals");
+				return(31, holy_sandals_12598, null, "Holy sandals");
 			case 7 :
-				return(40, trail_saradomin_cloak_10446, "Vestment cloak");
+				return(40, trail_saradomin_cloak_10446, null, "Vestment cloak");
 			case 8 :
-				return(40, trail_saradomin_mitre_10452, "Vestment mitre");
+				return(40, trail_saradomin_mitre_10452, null, "Vestment mitre");
 			case 9 :
-				return(40, soul_wars_ectoplasmator_25340, "Ectoplasmator");
+				return(40, soul_wars_ectoplasmator_25340, null, "Ectoplasmator");
 			case 10 :
-				return(50, stringstar_1716, "Use completed prayer books<br>to bless holy and unholy symbols.");
+				return(50, stringstar_1716, null, "Use completed prayer books<br>to bless holy and unholy symbols.");
 			case 11 :
-				return(50, grape_blessing_20747, "Use Bologa's grape blessings.");
+				return(50, grape_blessing_20747, null, "Use Bologa's grape blessings.");
 			case 12 :
-				return(50, custodian_antler_guard_31081, "Antler Guard");
+				return(50, custodian_antler_guard_31081, null, "Antler Guard");
 			case 13 :
-				return(55, spirit_shield_12829, "Spirit Shield<br>(with 45 Defence)");
+				return(55, spirit_shield_12829, null, "Spirit Shield<br>(with 45 Defence)");
 			case 14 :
-				return(60, trail_saradomin_scarf_10470, "Vestment stole");
+				return(60, trail_saradomin_scarf_10470, null, "Vestment stole");
 			case 15 :
-				return(60, trail_saradomin_staff_10440, "Crozier");
+				return(60, trail_saradomin_staff_10440, null, "Crozier");
 			case 16 :
-				return(60, blessed_spirit_shield_12831, "Blessed spirit shield<br>(with 70 Defence)");
+				return(60, blessed_spirit_shield_12831, null, "Blessed spirit shield<br>(with 70 Defence)");
 			case 17 :
-				return(60, devout_boots_22954, "Devout boots");
+				return(60, devout_boots_22954, null, "Devout boots");
 			case 18 :
-				return(60, sunfire_body_28936, "Sunfire Fanatic armour<br>(with <tostring(40)> Defence)");
+				return(60, sunfire_body_28936, null, "Sunfire Fanatic armour<br>(with <tostring(40)> Defence)");
 			case 19 :
-				return(65, 3a_druidic_top_23336, "3rd age Druidic robes");
+				return(65, 3a_druidic_top_23336, null, "3rd age Druidic robes");
 			case 20 :
-				return(65, 3a_druidic_staff_23342, "3rd Age Druidic staff<br>(with 65 attack)");
+				return(65, 3a_druidic_staff_23342, null, "3rd Age Druidic staff<br>(with 65 attack)");
 			case 21 :
-				return(70, arcane_12825, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
+				return(70, arcane_12825, null, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
 			case 22 :
-				return(70, soul_cape_blue_25346, "Soul cape");
+				return(70, soul_cape_blue_25346, null, "Soul cape");
 			case 23 :
-				return(70, dragonbone_necklace_22111, "Dragonbone necklace");
+				return(70, dragonbone_necklace_22111, null, "Dragonbone necklace");
 			case 24 :
-				return(70, bonecrusher_necklace_22986, "Bonecrusher necklace");
+				return(70, bonecrusher_necklace_22986, null, "Bonecrusher necklace");
 			case 25 :
-				return(75, elysian_12817, "Elysian spirit shield<br>(with 75 Defence)");
+				return(75, elysian_12817, null, "Elysian spirit shield<br>(with 75 Defence)");
 			case 26 :
-				return(80, elidinis_ward_25985, "Elidinis' Ward<br>(with 80 Magic and 80 Defence)");
+				return(80, elidinis_ward_25985, null, "Elidinis' Ward<br>(with 80 Magic and 80 Defence)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(30, jug_sunfire_wine_blessed_29384, "Ralos' Rise sacrifices");
+				return(30, jug_sunfire_wine_blessed_29384, null, "Ralos' Rise sacrifices");
 			case 1 :
-				return(54, hallowed_token_24719, "Hallowed Sepulchre - Portal sacrifice");
+				return(54, hallowed_token_24719, null, "Hallowed Sepulchre - Portal sacrifice");
 			case 2 :
-				return(70, dragon_bones_superior_22124, "Use superior dragon bones");
+				return(70, dragon_bones_superior_22124, null, "Use superior dragon bones");
 			case 3 :
-				return(90, elidinis_ward_fortified_27251, "Fortify Elidinis' Ward (with 90 Smithing)");
+				return(90, elidinis_ward_fortified_27251, null, "Fortify Elidinis' Ward (with 90 Smithing)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

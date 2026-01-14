@@ -1,13 +1,26 @@
 // 8311
-[clientscript,script8311](component $com_ballot_universe0, component $com_ballot_content1, component $com_ballot_frame2, component $com_ballot_close3)
-def_int $int4 = ~steelborder($com_ballot_frame2, "", 3);
-if_setparam(param_2363, $int4, $com_ballot_frame2, -1, int);
+[clientscript,script8311](component $com_ballot_universe0, component $com_ballot_dodger1, component $com_ballot_content2, component $com_ballot_frame3, component $com_ballot_close4)
+def_int $int5 = 0;
+def_int $int6 = 3;
+if (~toplevel_getcomponents = enum_1132) {
+	$int5, $int6 = 1, 1;
+	~script4729($com_ballot_dodger1, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_top, 0);
+}
+def_int $int7 = ~steelborder($com_ballot_frame3, "", $int6);
+if_setparam(param_2363, $int7, $com_ballot_frame3, -1, int);
 ~script8314("Loading...");
-~script4215($com_ballot_close3, "Close");
-if_setonop("script8312", $com_ballot_close3);
-if_setopkey(1, ^key_escape, 0, $com_ballot_close3);
-def_int $int5 = ~script8231;
-def_int $int6 = calc(512 - 50);
-def_int $int7 = calc(334 - max(60, $int5));
-~script8228($int6, $int7, calc(512 - 10), calc(334 - $int5));
-~script8233(2, $com_ballot_universe0, $com_ballot_content1);
+~script4215($com_ballot_close4, "Close");
+if_setonop("script8312", $com_ballot_close4);
+if_setopkey(1, ^key_escape, 0, $com_ballot_close4);
+if ($int5 = 1) {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_ballot_content2);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_ballot_content2);
+	~script8229(2, $com_ballot_content2);
+	if_setontimer("script9141(event_com, if_getwidth($com_ballot_content2), if_getheight($com_ballot_content2), $com_ballot_dodger1, if_getwidth($com_ballot_dodger1), if_getheight($com_ballot_dodger1), $com_ballot_content2)", $com_ballot_universe0);
+	return;
+}
+def_int $int8 = ~script8231;
+def_int $int9 = calc(512 - 50);
+def_int $int10 = calc(334 - max(60, $int8));
+~script8228($int9, $int10, calc(512 - 10), calc(334 - $int8));
+~script8233(2, $com_ballot_universe0, $com_ballot_content2);

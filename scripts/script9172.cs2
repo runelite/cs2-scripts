@@ -1,0 +1,77 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9172
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Your Strength level determines your maximum damage with melee weapons. Level up your Strength to increase your damage and unlock the ability to equip certain weapons and armour. Use the tabs on the left to see what level is required to equip certain equipment."
+   sconst                 "||::p||"
+   sconst                 "To level your Strength skill, attack enemies with a melee weapon that has an Aggressive or Controlled attack style. Attack styles can be selected in the ||side_panel:0::"
+   sconst                 "300"
+   sconst                 "::Combat Options panel||. The tooltip for each attack style shows the style name, type of damage and the skill XP attacking with that style gives."
+   sconst                 "||::p||"
+   sconst                 "Melee Attack Styles deal either Stab, Slash or Crush damage as shown in the tooltip. Enemies have different defence stats for each of these damage types, so attack with a style the enemy has low defence in to increase your chance to hit them. Enemy stats can be viewed using the Monster Inspect spell or looked up on the Wiki."
+   join_string            7
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, equip a melee weapon, select an Aggressive or Controlled attack style from the ||side_panel:0::"
+   sconst                 "300"
+   sconst                 "::Combat Options panel|| then attack some enemies! Cows and Goblins east of Lumbridge are a good place to start."
+   join_string            3
+   invoke                 9182
+   iconst                 115
+   iconst                 5
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||skill:"
+   sconst                 "1"
+   sconst                 "::"
+   sconst                 "1"
+   sconst                 "::Attack:::|| While Strength increases your damage, Attack increases your accuracy."
+   join_string            5
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "6"
+   sconst                 "::"
+   sconst                 "8"
+   sconst                 "::Hitpoints:::|| Attacking enemies also grants Hitpoints XP."
+   join_string            5
+   set_array_int         
+   iconst                 2
+   sconst                 "||skill:"
+   sconst                 "20"
+   sconst                 "::"
+   sconst                 "20"
+   sconst                 "::Slayer:::|| Higher combat skills aid in fighting harder Slayer monsters."
+   join_string            5
+   set_array_int         
+   iconst                 3
+   sconst                 "||skill:"
+   sconst                 "7"
+   sconst                 "::"
+   sconst                 "5"
+   sconst                 "::Prayer:::|| Some prayers apply a bonus to your Strength level and bones dropped by defeated enemies can be buried for Prayer XP."
+   join_string            5
+   set_array_int         
+   iconst                 4
+   sconst                 "||skill:"
+   sconst                 "14"
+   sconst                 "::"
+   sconst                 "15"
+   sconst                 "::Smithing:::|| Weapons and armour crafted with the Smithing skill provide boosts to combat skills."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   return                

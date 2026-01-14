@@ -1,0 +1,59 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9158
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Firemaking is a skill used to light fires and light sources. Use the tabs on the left to see what types of logs and light sources can be lit and the Firemaking level required to light them."
+   sconst                 "||::p||"
+   sconst                 "To level your Firemaking, simply make fires from logs. Increasing your Firemaking level increases the speed at which you light logs."
+   sconst                 "||::p||"
+   sconst                 "||::hl||"
+   sconst                 "To light a fire"
+   sconst                 "||::/hl||"
+   sconst                 ", use a Tinderbox on some logs gathered with the ||skill:"
+   sconst                 "18"
+   sconst                 "::"
+   sconst                 "19"
+   sconst                 ":: Woodcutting skill||. Tinderboxes can be purchased from ||::"
+   sconst                 "115"
+   sconst                 "::General Stores||, such as the one in Lumbridge."
+   sconst                 "||::p||"
+   sconst                 "Logs can also be added to an existing fire by using a log on the fire. This burns logs at a slower rate but the logs are added automatically."
+   join_string            16
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, gather some basic logs from normal trees and light them with a Tinderbox. You can continue to light individual fires for faster XP or add more logs to a single fire which requires less attention but provides slower XP."
+   invoke                 9182
+   iconst                 115
+   iconst                 2
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||skill:"
+   sconst                 "18"
+   sconst                 "::"
+   sconst                 "19"
+   sconst                 "::Woodcutting:::|| Logs cut with the Woodcutting skill can be lit with the Firemaking skill."
+   join_string            5
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "16"
+   sconst                 "::"
+   sconst                 "17"
+   sconst                 "::Cooking:::|| Fires lit with the Firemaking skill can be used to cook food with the Cooking skill."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   return                

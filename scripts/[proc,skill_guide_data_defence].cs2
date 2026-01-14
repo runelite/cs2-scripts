@@ -1,194 +1,194 @@
 // 2582
-[proc,skill_guide_data_defence](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_defence](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, iron_kiteshield_1191, "Your Defence level determines how likely you are to block enemy attacks. The chances of this happening increase with your level, but be careful; you are never guaranteed to block every attack!");
+				return(-1, iron_kiteshield_1191, null, "Your Defence level determines how likely you are to block enemy attacks. The chances of this happening increase with your level, but be careful; you are never guaranteed to block every attack!");
 			case 1 :
-				return(-1, rune_med_helm_1147, "Additionally, a higher Defence level will allow you to equip more powerful shields and armour. As well as giving you better defensive stats, some armour will also increase your Attack or Strength bonuses as well.");
+				return(-1, rune_med_helm_1147, null, "Additionally, a higher Defence level will allow you to equip more powerful shields and armour. As well as giving you better defensive stats, some armour will also increase your Attack or Strength bonuses as well.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_med_helm_1139, "Bronze");
+				return(1, bronze_med_helm_1139, null, "Bronze");
 			case 1 :
-				return(1, iron_med_helm_1137, "Iron");
+				return(1, iron_med_helm_1137, null, "Iron");
 			case 2 :
-				return(5, steel_med_helm_1141, "Steel");
+				return(5, steel_med_helm_1141, null, "Steel");
 			case 3 :
-				return(10, black_med_helm_1151, "Black");
+				return(10, black_med_helm_1151, null, "Black");
 			case 4 :
-				return(10, white_med_helm_6621, "Members: White");
+				return(10, white_med_helm_6621, null, "Members: White");
 			case 5 :
-				return(10, slayer_helm_11864, "Members: Slayer helm");
+				return(10, slayer_helm_11864, null, "Members: Slayer helm");
 			case 6 :
-				return(10, xeric_hat_13385, "Members: Xerician armour<br> (with 20 Magic)");
+				return(10, xeric_hat_13385, null, "Members: Xerician armour<br> (with 20 Magic)");
 			case 7 :
-				return(20, mithril_med_helm_1143, "Mithril");
+				return(20, mithril_med_helm_1143, null, "Mithril");
 			case 8 :
-				return(20, yak_hide_armour_body_10822, "Members: Yak-hide");
+				return(20, yak_hide_armour_body_10822, null, "Members: Yak-hide");
 			case 9 :
-				return(20, basic_tk_helm_5574, "Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)");
+				return(20, basic_tk_helm_5574, null, "Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)");
 			case 10 :
-				return(20, shayzien_helm_5_13379, "Members: Shayzien armour");
+				return(20, shayzien_helm_5_13379, null, "Members: Shayzien armour");
 			case 11 :
-				return(30, adamant_med_helm_1145, "Adamantite");
+				return(30, adamant_med_helm_1145, null, "Adamantite");
 			case 12 :
-				return(30, inquisitors_helm_24419, "Members: Inquisitor's armour<br> (with 70 Strength)");
+				return(30, inquisitors_helm_24419, null, "Members: Inquisitor's armour<br> (with 70 Strength)");
 			case 13 :
-				return(30, basic_tk_rank2_helm_9672, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
+				return(30, basic_tk_rank2_helm_9672, null, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
 			case 14 :
-				return(30, masori_body_27229, "Members: Masori armour<br> (With 80 Ranged)");
+				return(30, masori_body_27229, null, "Members: Masori armour<br> (With 80 Ranged)");
 			case 15 :
-				return(35, samurai_hat_20035, "Members: Samurai armour");
+				return(35, samurai_hat_20035, null, "Members: Samurai armour");
 			case 16 :
-				return(40, rune_med_helm_1147, "Rune");
+				return(40, rune_med_helm_1147, null, "Rune");
 			case 17 :
-				return(40, dagganoth_melee_helm_6128, "Members: Rock-shell armour<br> (after Fremennik Trials)");
+				return(40, dagganoth_melee_helm_6128, null, "Members: Rock-shell armour<br> (after Fremennik Trials)");
 			case 18 :
-				return(40, dagonhai_robe_top_24291, "Members: Dagon'hai robes<br> (with 70 Magic)");
+				return(40, dagonhai_robe_top_24291, null, "Members: Dagon'hai robes<br> (with 70 Magic)");
 			case 19 :
-				return(40, sunfire_body_28936, "Members: Sunfire Fanatic armour<br> (with <tostring(60)> Prayer)");
+				return(40, sunfire_body_28936, null, "Members: Sunfire Fanatic armour<br> (with <tostring(60)> Prayer)");
 			case 20 :
-				return(42, pest_void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, pest_void_knight_top_8839, null, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 21 :
-				return(45, viking_helmet_crush_3751, "Members: Fremennik helmets<br> (after Fremennik Trials)");
+				return(45, viking_helmet_crush_3751, null, "Members: Fremennik helmets<br> (after Fremennik Trials)");
 			case 22 :
-				return(45, zaryte_vambraces_26235, "Members: Zaryte vambraces<br> (with 80 Ranged)");
+				return(45, zaryte_vambraces_26235, null, "Members: Zaryte vambraces<br> (with 80 Ranged)");
 			case 23 :
-				return(50, granite_shield_3122, "Members: Granite<br> (with 50 Strength)");
+				return(50, granite_shield_3122, null, "Members: Granite<br> (with 50 Strength)");
 			case 24 :
-				return(50, zombie_helmet_30321, "Members: Zombie helmet<br> (with 50 Strength)");
+				return(50, zombie_helmet_30321, null, "Members: Zombie helmet<br> (with 50 Strength)");
 			case 25 :
-				return(50, hide_top_29280, "Members: Mixed Hide body, cape, and boots<br> (with 60 Ranged)");
+				return(50, hide_top_29280, null, "Members: Mixed Hide body, cape, and boots<br> (with 60 Ranged)");
 			case 26 :
-				return(50, blood_moon_helm_29028, "Members: Bloodrager set<br> (with 75 Strength)");
+				return(50, blood_moon_helm_29028, null, "Members: Bloodrager set<br> (with 75 Strength)");
 			case 27 :
-				return(50, frost_moon_helm_29019, "Members: Frostmoon set<br> (with 75 Magic)");
+				return(50, frost_moon_helm_29019, null, "Members: Frostmoon set<br> (with 75 Magic)");
 			case 28 :
-				return(50, eclipse_moon_helm_29010, "Members: Eclipse set<br> (with 75 Ranged)");
+				return(50, eclipse_moon_helm_29010, null, "Members: Eclipse set<br> (with 75 Ranged)");
 			case 29 :
-				return(55, fris_kingly_helm_10828, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
+				return(55, fris_kingly_helm_10828, null, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
 			case 30 :
-				return(60, dragon_med_helm_1149, "Members: Dragon");
+				return(60, dragon_med_helm_1149, null, "Members: Dragon");
 			case 31 :
-				return(60, obsidian_platebody_21301, "Members: Obsidian armour");
+				return(60, obsidian_platebody_21301, null, "Members: Obsidian armour");
 			case 32 :
-				return(65, bandos_chestplate_11832, "Members: Bandos armour");
+				return(65, bandos_chestplate_11832, null, "Members: Bandos armour");
 			case 33 :
-				return(65, trail_fighter_helm_10350, "Members: 3rd age fighter armour");
+				return(65, trail_fighter_helm_10350, null, "Members: 3rd age fighter armour");
 			case 34 :
-				return(65, ancestral_robe_top_21021, "Members: Ancestral robes<br> (with 75 Magic)");
+				return(65, ancestral_robe_top_21021, null, "Members: Ancestral robes<br> (with 75 Magic)");
 			case 35 :
-				return(70, infernal_defender_22322, "Members: Avernic defender<br> (with 70 Attack)");
+				return(70, infernal_defender_22322, null, "Members: Avernic defender<br> (with 70 Attack)");
 			case 36 :
-				return(70, barrows_torag_head_4745, "Members: Barrows armour");
+				return(70, barrows_torag_head_4745, null, "Members: Barrows armour");
 			case 37 :
-				return(70, armadyl_helmet_11826, "Members: Armadyl armour (with 70 Ranged)");
+				return(70, armadyl_helmet_11826, null, "Members: Armadyl armour (with 70 Ranged)");
 			case 38 :
-				return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
+				return(70, boots_of_brimstone_22951, null, "Members: Boots of brimstone (with 70 Ranged and Magic)");
 			case 39 :
-				return(70, crystal_helmet_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
+				return(70, crystal_helmet_23971, null, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
 			case 40 :
-				return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
+				return(70, neitiznot_faceguard_24271, null, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
 			case 41 :
-				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
+				return(75, justiciar_faceguard_22326, null, "Members: Justiciar armour");
 			case 42 :
-				return(75, serpentine_helm_charged_12931, "Members: Serpentine helm");
+				return(75, serpentine_helm_charged_12931, null, "Members: Serpentine helm");
 			case 43 :
-				return(75, guardian_boots_21733, "Members: Guardian boots");
+				return(75, guardian_boots_21733, null, "Members: Guardian boots");
 			case 44 :
-				return(75, echo_boots_28945, "Members: Echo boots");
+				return(75, echo_boots_28945, null, "Members: Echo boots");
 			case 45 :
-				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
+				return(75, primordial_boots_13239, null, "Members: Primordial boots<br> (with 75 Strength)");
 			case 46 :
-				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
+				return(75, eternal_boots_13235, null, "Members: Eternal boots<br> (with 75 Magic)");
 			case 47 :
-				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+				return(75, pegasian_boots_13237, null, "Members: Pegasian boots<br> (with 75 Ranged)");
 			case 48 :
-				return(75, virtus_mask_26241, "Members: Virtus robes<br> (with 78 Magic)");
+				return(75, virtus_mask_26241, null, "Members: Virtus robes<br> (with 78 Magic)");
 			case 49 :
-				return(78, oathplate_helm_30750, "Members: Oathplate armour");
+				return(78, oathplate_helm_30750, null, "Members: Oathplate armour");
 			case 50 :
-				return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
+				return(80, ferocious_gloves_22981, null, "Members: Ferocious Gloves<br> (with 80 Attack)");
 			case 51 :
-				return(80, torva_helm_26382, "Members: Torva armour");
+				return(80, torva_helm_26382, null, "Members: Torva armour");
 			case 52 :
-				return(80, masori_body_fortified_27238, "Members: Fortified Masori armour (with 80 Ranged)");
+				return(80, masori_body_fortified_27238, null, "Members: Fortified Masori armour (with 80 Ranged)");
 			case 53 :
-				return(80, avernic_treads_31088, "Members: Avernic treads<br> (with 80 Strength, 80 Ranged and 80 Magic)");
+				return(80, avernic_treads_31088, null, "Members: Avernic treads<br> (with 80 Strength, 80 Ranged and 80 Magic)");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(40, barbassault_penance_fighter_torso_10551, "Fighter torso");
+				return(40, barbassault_penance_fighter_torso_10551, null, "Fighter torso");
 			case 1 :
-				return(40, barbassault_penance_runner_boots_10552, "Runner boots");
+				return(40, barbassault_penance_runner_boots_10552, null, "Runner boots");
 			case 2 :
-				return(40, barbassault_penance_gloves_10553, "Penance gloves");
+				return(40, barbassault_penance_gloves_10553, null, "Penance gloves");
 			case 3 :
-				return(40, barbassault_penance_ranger_legs_10555, "Penance skirt<br> (with 60 Ranged)");
+				return(40, barbassault_penance_ranger_legs_10555, null, "Penance skirt<br> (with 60 Ranged)");
 			case 4 :
-				return(45, barbassault_penance_fighter_hat_10548, "Fighter hat");
+				return(45, barbassault_penance_fighter_hat_10548, null, "Fighter hat");
 			case 5 :
-				return(45, barbassault_penance_ranger_hat_10550, "Ranger hat");
+				return(45, barbassault_penance_ranger_hat_10550, null, "Ranger hat");
 			case 6 :
-				return(45, barbassault_penance_healer_hat_10547, "Healer hat");
+				return(45, barbassault_penance_healer_hat_10547, null, "Healer hat");
 			case 7 :
-				return(45, barbassault_penance_runner_hat_10549, "Runner hat");
+				return(45, barbassault_penance_runner_hat_10549, null, "Runner hat");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(65, xmas16_blue_partyhat_20828, "Chivalry<br> (with 60 Prayer, after King's Ransom)");
+				return(65, xmas16_blue_partyhat_20828, null, "Chivalry<br> (with 60 Prayer, after King's Ransom)");
 			case 1 :
-				return(70, placeholder_xmas16_blue_partyhat_20829, "Piety<br> (with 70 Prayer, after King's Ransom)");
+				return(70, placeholder_xmas16_blue_partyhat_20829, null, "Piety<br> (with 70 Prayer, after King's Ransom)");
 			case 2 :
-				return(70, placeholder_xmas16_green_partyhat_20827, "Rigour<br> (with 74 Prayer, from Chambers of Xeric)");
+				return(70, placeholder_xmas16_green_partyhat_20827, null, "Rigour<br> (with 74 Prayer, from Chambers of Xeric)");
 			case 3 :
-				return(70, xmas16_teddy_20830, "Augury<br> (with 77 Prayer, from Chambers of Xeric)");
+				return(70, xmas16_teddy_20830, null, "Augury<br> (with 77 Prayer, from Chambers of Xeric)");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(10, oak_shield_22251, "Members: Oak shield");
+				return(10, oak_shield_22251, null, "Members: Oak shield");
 			case 1 :
-				return(30, willow_shield_22254, "Members: Willow shield");
+				return(30, willow_shield_22254, null, "Members: Willow shield");
 			case 2 :
-				return(40, maple_shield_22257, "Members: Maple shield");
+				return(40, maple_shield_22257, null, "Members: Maple shield");
 			case 3 :
-				return(40, yew_shield_22260, "Members: Yew shield");
+				return(40, yew_shield_22260, null, "Members: Yew shield");
 			case 4 :
-				return(40, magic_shield_22263, "Members: Magic shield");
+				return(40, magic_shield_22263, null, "Members: Magic shield");
 			case 5 :
-				return(40, redwood_shield_22266, "Members: Redwood shield");
+				return(40, redwood_shield_22266, null, "Members: Redwood shield");
 			case 6 :
-				return(45, spirit_shield_12829, "Members: Spirit shield<br>(with 55 Prayer)");
+				return(45, spirit_shield_12829, null, "Members: Spirit shield<br>(with 55 Prayer)");
 			case 7 :
-				return(60, tzhaar_spikeshield_6524, "Members: Toktz-Ket-Xil");
+				return(60, tzhaar_spikeshield_6524, null, "Members: Toktz-Ket-Xil");
 			case 8 :
-				return(60, odium_ward_11926, "Members: Odium & Malediction wards");
+				return(60, odium_ward_11926, null, "Members: Odium & Malediction wards");
 			case 9 :
-				return(70, crystal_shield_23991, "Members: Elf crystal (with 50 Agility)");
+				return(70, crystal_shield_23991, null, "Members: Elf crystal (with 50 Agility)");
 			case 10 :
-				return(70, blessed_spirit_shield_12831, "Members: Blessed spirit shield<br>(with 60 Prayer)");
+				return(70, blessed_spirit_shield_12831, null, "Members: Blessed spirit shield<br>(with 60 Prayer)");
 			case 11 :
-				return(75, dragonfire_shield_11283, "Members: Dragonfire shield");
+				return(75, dragonfire_shield_11283, null, "Members: Dragonfire shield");
 			case 12 :
-				return(75, dragonfire_ward_22002, "Members: Dragonfire ward<br>(with 70 Ranged)");
+				return(75, dragonfire_ward_22002, null, "Members: Dragonfire ward<br>(with 70 Ranged)");
 			case 13 :
-				return(75, wyvern_shield_21633, "Members: Ancient Wyvern shield<br>(with 70 Magic)");
+				return(75, wyvern_shield_21633, null, "Members: Ancient Wyvern shield<br>(with 70 Magic)");
 			case 14 :
-				return(75, elysian_12817, "Members: Elysian spirit shield<br>(with 75 Prayer)");
+				return(75, elysian_12817, null, "Members: Elysian spirit shield<br>(with 75 Prayer)");
 			case 15 :
-				return(75, arcane_12825, "Members: Arcane & Spectral spirit shields<br>(with 70 Prayer and 65 Magic)");
+				return(75, arcane_12825, null, "Members: Arcane & Spectral spirit shields<br>(with 70 Prayer and 65 Magic)");
 			case 16 :
-				return(75, twisted_buckler_21000, "Members: Twisted buckler<br> (with 75 Ranged)");
+				return(75, twisted_buckler_21000, null, "Members: Twisted buckler<br> (with 75 Ranged)");
 			case 17 :
-				return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Attack)");
+				return(75, dinhs_bulwark_21015, null, "Members: Dinh's bulwark<br> (with 75 Attack)");
 			case 18 :
-				return(80, elidinis_ward_25985, "Members: Elidinis' Ward<br> (with 80 Prayer and 80 Magic)");
+				return(80, elidinis_ward_25985, null, "Members: Elidinis' Ward<br> (with 80 Prayer and 80 Magic)");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

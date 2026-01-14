@@ -1,0 +1,62 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9161
+.int_arg_count            1
+.obj_arg_count            0
+   iload                  0
+   sconst                 ""
+   sconst                 "Herblore is a skill about brewing potions that provide skill boosts and other powerful effects. Use the tabs on the left to see what level is required to brew a certain potion and what ingredients it requires."
+   sconst                 "||::p||"
+   sconst                 "||::hl||"
+   sconst                 "To brew a potion"
+   sconst                 "||::/hl||"
+   sconst                 ", you first need to clean a grimy herb of the desired type then combine it with a vial of water to make an unfinished potion. You can then add the secondary ingredient(s) to complete the potion."
+   sconst                 "||::p||"
+   sconst                 "Basic supplies, including vials, can be purchased from ||::"
+   sconst                 "118"
+   sconst                 "::Herbalists|| around Gielinor, such as Jatix in Taverley."
+   join_string            10
+   invoke                 9182
+   iload                  0
+   sconst                 "Getting Started"
+   sconst                 "To get started, first complete the "
+   iconst                 34
+   invoke                 9191
+   sconst                 " to unlock the ability to brew potions. Then collect herbs and secondary ingredients for the potion you want to make by growing them with the ||skill:"
+   sconst                 "21"
+   sconst                 "::"
+   sconst                 "21"
+   sconst                 "::Farming skill||, purchasing them or defeating enemies that drop them. For example, an Attack Potion requires a Guam Leaf, which can be grown with the Farming skill or obtained by defeating Men and Women, and an Eye of Newt, which can be purchased from ||::"
+   sconst                 "118"
+   sconst                 "::Jatix|| in Taverley."
+   join_string            9
+   invoke                 9182
+   iconst                 115
+   iconst                 2
+   iconst                 -1
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "||::hl||"
+   sconst                 "All"
+   sconst                 "||::/hl||"
+   sconst                 ": Created potions can be used to aid many other skills and activities."
+   join_string            4
+   set_array_int         
+   iconst                 1
+   sconst                 "||skill:"
+   sconst                 "21"
+   sconst                 "::"
+   sconst                 "21"
+   sconst                 "::Farming:::|| Many key potion ingredients can be grown with the Farming skill."
+   join_string            5
+   set_array_int         
+   iload                  0
+   sconst                 "Skill Interactions"
+   sconst                 ""
+   invoke                 9182
+   iload                  0
+   oload                  0
+   iconst                 2
+   invoke                 9184
+   return                

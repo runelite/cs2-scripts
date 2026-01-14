@@ -1,590 +1,590 @@
 // 6554
-[proc,skill_guide_data_smithing](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_smithing](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, anvil_icon_dummy_5086, "Smithing lets you convert raw ores into useful metals, then use those metals to make your own weapons and armour.");
+				return(-1, anvil_icon_dummy_5086, null, "Smithing lets you convert raw ores into useful metals, then use those metals to make your own weapons and armour.");
 			case 1 :
-				return(-1, iron_ore_440, "To smelt ores, simply take the mix of ores you need to any furnace and you'll be able to convert them into bars.");
+				return(-1, iron_ore_440, null, "To smelt ores, simply take the mix of ores you need to any furnace and you'll be able to convert them into bars.");
 			case 2 :
-				return(-1, hammer_2347, "Once you have your bars, grab a hammer and take them to an anvil. Bigger items will need more bars to make.");
+				return(-1, hammer_2347, null, "Once you have your bars, grab a hammer and take them to an anvil. Bigger items will need more bars to make.");
 			case 3 :
-				return(-1, rune_platebody_1127, "As you advance your Smithing level, you'll be able to make make more gear out of higher quality metals.");
+				return(-1, rune_platebody_1127, null, "As you advance your Smithing level, you'll be able to make make more gear out of higher quality metals.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_bar_2349, "Bronze<br>1 tin ore & 1 copper ore");
+				return(1, bronze_bar_2349, null, "Bronze<br>1 tin ore & 1 copper ore");
 			case 1 :
-				return(13, blurite_bar_9467, "Members: Blurite<br>(after The Knight's Sword quest)");
+				return(13, blurite_bar_9467, null, "Members: Blurite<br>(after The Knight's Sword quest)");
 			case 2 :
-				return(15, iron_bar_2351, "Iron<br>50% chance of success");
+				return(15, iron_bar_2351, null, "Iron<br>50% chance of success");
 			case 3 :
-				return(20, silver_bar_2355, "Silver");
+				return(20, silver_bar_2355, null, "Silver");
 			case 4 :
-				return(25, lead_bar_32889, "Members: Lead<br>2 lead ore");
+				return(25, lead_bar_32889, null, "Members: Lead<br>2 lead ore");
 			case 5 :
-				return(30, steel_bar_2353, "Steel<br>2 coal & 1 iron ore");
+				return(30, steel_bar_2353, null, "Steel<br>2 coal & 1 iron ore");
 			case 6 :
-				return(40, gold_bar_2357, "Gold");
+				return(40, gold_bar_2357, null, "Gold");
 			case 7 :
-				return(45, lovakite_bar_13354, "Members: Lovakite<br>2 coal & 1 lovakite ore");
+				return(45, lovakite_bar_13354, null, "Members: Lovakite<br>2 coal & 1 lovakite ore");
 			case 8 :
-				return(50, mithril_bar_2359, "Mithril<br>4 coal & 1 mithril ore");
+				return(50, mithril_bar_2359, null, "Mithril<br>4 coal & 1 mithril ore");
 			case 9 :
-				return(70, adamantite_bar_2361, "Adamant<br>6 coal & 1 adamantite ore");
+				return(70, adamantite_bar_2361, null, "Adamant<br>6 coal & 1 adamantite ore");
 			case 10 :
-				return(74, cupronickel_bar_32892, "Members: Cupronickel<br>2 copper ore & 1 nickel ore");
+				return(74, cupronickel_bar_32892, null, "Members: Cupronickel<br>2 copper ore & 1 nickel ore");
 			case 11 :
-				return(85, runite_bar_2363, "Runite<br>8 coal & 1 runite ore");
+				return(85, runite_bar_2363, null, "Runite<br>8 coal & 1 runite ore");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, bronze_dagger_1205, "Bronze daggers<br>1 bar");
+				return(1, bronze_dagger_1205, null, "Bronze daggers<br>1 bar");
 			case 1 :
-				return(1, bronze_axe_1351, "Bronze axes<br>1 bar");
+				return(1, bronze_axe_1351, null, "Bronze axes<br>1 bar");
 			case 2 :
-				return(1, bronze_axe_2h_28196, "Members: Convert bronze felling axes");
+				return(1, bronze_axe_2h_28196, null, "Members: Convert bronze felling axes");
 			case 3 :
-				return(2, bronze_mace_1422, "Bronze maces<br>1 bar");
+				return(2, bronze_mace_1422, null, "Bronze maces<br>1 bar");
 			case 4 :
-				return(3, bronze_med_helm_1139, "Bronze medium helms<br>1 bar");
+				return(3, bronze_med_helm_1139, null, "Bronze medium helms<br>1 bar");
 			case 5 :
-				return(3, xbows_crossbow_bolts_bronze_unfeathered_9375, "Members: Bronze crossbow bolts<br>1 bar makes 10");
+				return(3, xbows_crossbow_bolts_bronze_unfeathered_9375, null, "Members: Bronze crossbow bolts<br>1 bar makes 10");
 			case 6 :
-				return(4, bronze_sword_1277, "Bronze swords<br>1 bar");
+				return(4, bronze_sword_1277, null, "Bronze swords<br>1 bar");
 			case 7 :
-				return(4, bronze_dart_tip_819, "Members: Bronze dart tips<br>1 bar makes 10");
+				return(4, bronze_dart_tip_819, null, "Members: Bronze dart tips<br>1 bar makes 10");
 			case 8 :
-				return(4, bronzecraftwire_1794, "Members: Bronze wire<br>1 bar");
+				return(4, bronzecraftwire_1794, null, "Members: Bronze wire<br>1 bar");
 			case 9 :
-				return(4, nails_bronze_4819, "Members: Bronze nails<br>1 bar makes 15");
+				return(4, nails_bronze_4819, null, "Members: Bronze nails<br>1 bar makes 15");
 			case 10 :
-				return(5, bronze_scimitar_1321, "Bronze scimitars<br>2 bars");
+				return(5, bronze_scimitar_1321, null, "Bronze scimitars<br>2 bars");
 			case 11 :
-				return(5, bronze_spear_1237, "Members: Bronze spears<br>1 bar, 1 log");
+				return(5, bronze_spear_1237, null, "Members: Bronze spears<br>1 bar, 1 log");
 			case 12 :
-				return(5, brut_bronze_spear_11367, "Members: Bronze hastae<br>1 bar, 1 log");
+				return(5, brut_bronze_spear_11367, null, "Members: Bronze hastae<br>1 bar, 1 log");
 			case 13 :
-				return(5, bronze_arrowheads_39, "Members: Bronze arrowheads<br>1 bar makes 15");
+				return(5, bronze_arrowheads_39, null, "Members: Bronze arrowheads<br>1 bar makes 15");
 			case 14 :
-				return(5, bronze_cannonball_31906, "Members: Bronze cannonballs<br>1 bar makes 4");
+				return(5, bronze_cannonball_31906, null, "Members: Bronze cannonballs<br>1 bar makes 4");
 			case 15 :
-				return(6, xbows_crossbow_limbs_bronze_9420, "Members: Bronze crossbow limbs<br>1 bar");
+				return(6, xbows_crossbow_limbs_bronze_9420, null, "Members: Bronze crossbow limbs<br>1 bar");
 			case 16 :
-				return(6, bronze_longsword_1291, "Bronze longswords<br>2 bars");
+				return(6, bronze_longsword_1291, null, "Bronze longswords<br>2 bars");
 			case 17 :
-				return(6, cert_macro_cube_bluesquare_3072, "Members: Bronze javelin tips<br>1 bar makes 5");
+				return(6, cert_macro_cube_bluesquare_3072, null, "Members: Bronze javelin tips<br>1 bar makes 5");
 			case 18 :
-				return(7, bronze_full_helm_1155, "Bronze full helms<br>2 bars");
+				return(7, bronze_full_helm_1155, null, "Bronze full helms<br>2 bars");
 			case 19 :
-				return(7, bronze_knife_864, "Members: Bronze throwing knives<br>1 bar makes 5");
+				return(7, bronze_knife_864, null, "Members: Bronze throwing knives<br>1 bar makes 5");
 			case 20 :
-				return(8, bronze_sq_shield_1173, "Bronze square shields<br>2 bars");
+				return(8, bronze_sq_shield_1173, null, "Bronze square shields<br>2 bars");
 			case 21 :
-				return(9, bronze_warhammer_1337, "Bronze warhammers<br>3 bars");
+				return(9, bronze_warhammer_1337, null, "Bronze warhammers<br>3 bars");
 			case 22 :
-				return(10, bronze_battleaxe_1375, "Bronze battleaxes<br>3 bars");
+				return(10, bronze_battleaxe_1375, null, "Bronze battleaxes<br>3 bars");
 			case 23 :
-				return(10, sailing_boat_keel_part_bronze_31999, "Members: Bronze keel parts<br>5 bars");
+				return(10, sailing_boat_keel_part_bronze_31999, null, "Members: Bronze keel parts<br>5 bars");
 			case 24 :
-				return(11, bronze_chainbody_1103, "Bronze chainbodies<br>3 bars");
+				return(11, bronze_chainbody_1103, null, "Bronze chainbodies<br>3 bars");
 			case 25 :
-				return(12, bronze_kiteshield_1189, "Bronze kiteshields<br>3 bars");
+				return(12, bronze_kiteshield_1189, null, "Bronze kiteshields<br>3 bars");
 			case 26 :
-				return(13, bronze_claws_3095, "Members: Bronze claws<br>2 bars");
+				return(13, bronze_claws_3095, null, "Members: Bronze claws<br>2 bars");
 			case 27 :
-				return(14, bronze_2h_sword_1307, "Bronze two-handed swords<br>3 bars");
+				return(14, bronze_2h_sword_1307, null, "Bronze two-handed swords<br>3 bars");
 			case 28 :
-				return(16, bronze_platelegs_1075, "Bronze platelegs<br>3 bars");
+				return(16, bronze_platelegs_1075, null, "Bronze platelegs<br>3 bars");
 			case 29 :
-				return(16, bronze_plateskirt_1087, "Bronze plateskirts<br>3 bars");
+				return(16, bronze_plateskirt_1087, null, "Bronze plateskirts<br>3 bars");
 			case 30 :
-				return(18, bronze_platebody_1117, "Bronze platebodies<br>5 bars");
+				return(18, bronze_platebody_1117, null, "Bronze platebodies<br>5 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, iron_axe_2h_28199, "Members: Convert iron felling axes");
+				return(1, iron_axe_2h_28199, null, "Members: Convert iron felling axes");
 			case 1 :
-				return(15, iron_dagger_1203, "Iron daggers<br>1 bar");
+				return(15, iron_dagger_1203, null, "Iron daggers<br>1 bar");
 			case 2 :
-				return(16, iron_axe_1349, "Iron axes<br>1 bar");
+				return(16, iron_axe_1349, null, "Iron axes<br>1 bar");
 			case 3 :
-				return(17, iron_mace_1420, "Iron maces<br>1 bar");
+				return(17, iron_mace_1420, null, "Iron maces<br>1 bar");
 			case 4 :
-				return(17, spit_iron_7225, "Members: Iron spits<br>1 bar");
+				return(17, spit_iron_7225, null, "Members: Iron spits<br>1 bar");
 			case 5 :
-				return(18, iron_med_helm_1137, "Iron medium helms<br>1 bar");
+				return(18, iron_med_helm_1137, null, "Iron medium helms<br>1 bar");
 			case 6 :
-				return(18, xbows_crossbow_bolts_iron_unfeathered_9377, "Members: Iron crossbow bolts<br>1 bar makes 10");
+				return(18, xbows_crossbow_bolts_iron_unfeathered_9377, null, "Members: Iron crossbow bolts<br>1 bar makes 10");
 			case 7 :
-				return(19, iron_sword_1279, "Iron swords<br>1 bar");
+				return(19, iron_sword_1279, null, "Iron swords<br>1 bar");
 			case 8 :
-				return(19, iron_dart_tip_820, "Members: Iron dart tips<br>1 bar makes 10");
+				return(19, iron_dart_tip_820, null, "Members: Iron dart tips<br>1 bar makes 10");
 			case 9 :
-				return(19, nails_iron_4820, "Members: Iron nails<br>1 bar makes 15");
+				return(19, nails_iron_4820, null, "Members: Iron nails<br>1 bar makes 15");
 			case 10 :
-				return(20, iron_scimitar_1323, "Iron scimitars<br>2 bars");
+				return(20, iron_scimitar_1323, null, "Iron scimitars<br>2 bars");
 			case 11 :
-				return(20, iron_spear_1239, "Members: Iron spears<br>1 bar, 1 oak log");
+				return(20, iron_spear_1239, null, "Members: Iron spears<br>1 bar, 1 oak log");
 			case 12 :
-				return(20, brut_iron_spear_11369, "Members: Iron hastae<br>1 bar, 1 oak log");
+				return(20, brut_iron_spear_11369, null, "Members: Iron hastae<br>1 bar, 1 oak log");
 			case 13 :
-				return(20, iron_arrowheads_40, "Members: Iron arrowheads<br>1 bar makes 15");
+				return(20, iron_arrowheads_40, null, "Members: Iron arrowheads<br>1 bar makes 15");
 			case 14 :
-				return(20, iron_cannonball_31908, "Members: Iron cannonballs<br>1 bar makes 4");
+				return(20, iron_cannonball_31908, null, "Members: Iron cannonballs<br>1 bar makes 4");
 			case 15 :
-				return(21, iron_longsword_1293, "Iron longswords<br>2 bars");
+				return(21, iron_longsword_1293, null, "Iron longswords<br>2 bars");
 			case 16 :
-				return(21, cert_macro_cube_redstar_3082, "Members: Iron javelin tips<br>1 bar makes 5");
+				return(21, cert_macro_cube_redstar_3082, null, "Members: Iron javelin tips<br>1 bar makes 5");
 			case 17 :
-				return(22, iron_full_helm_1153, "Iron full helms<br>2 bars");
+				return(22, iron_full_helm_1153, null, "Iron full helms<br>2 bars");
 			case 18 :
-				return(22, iron_knife_863, "Members: Iron throwing knives<br>1 bar makes 5");
+				return(22, iron_knife_863, null, "Members: Iron throwing knives<br>1 bar makes 5");
 			case 19 :
-				return(22, sailing_boat_keel_part_iron_32002, "Members: Iron keel parts<br>5 bars");
+				return(22, sailing_boat_keel_part_iron_32002, null, "Members: Iron keel parts<br>5 bars");
 			case 20 :
-				return(23, iron_sq_shield_1175, "Iron square shields<br>2 bars");
+				return(23, iron_sq_shield_1175, null, "Iron square shields<br>2 bars");
 			case 21 :
-				return(23, xbows_crossbow_limbs_iron_9423, "Members: Iron crossbow limbs<br>1 bar");
+				return(23, xbows_crossbow_limbs_iron_9423, null, "Members: Iron crossbow limbs<br>1 bar");
 			case 22 :
-				return(24, iron_warhammer_1335, "Iron warhammers<br>3 bars");
+				return(24, iron_warhammer_1335, null, "Iron warhammers<br>3 bars");
 			case 23 :
-				return(25, iron_battleaxe_1363, "Iron battleaxes<br>3 bars");
+				return(25, iron_battleaxe_1363, null, "Iron battleaxes<br>3 bars");
 			case 24 :
-				return(26, iron_chainbody_1101, "Iron chainbodies<br>3 bars");
+				return(26, iron_chainbody_1101, null, "Iron chainbodies<br>3 bars");
 			case 25 :
-				return(26, oil_lantern_frame_4540, "Members: Oil lantern frames<br>1 bar");
+				return(26, oil_lantern_frame_4540, null, "Members: Oil lantern frames<br>1 bar");
 			case 26 :
-				return(27, iron_kiteshield_1191, "Iron kiteshields<br>3 bars");
+				return(27, iron_kiteshield_1191, null, "Iron kiteshields<br>3 bars");
 			case 27 :
-				return(28, iron_claws_3096, "Members: Iron claws<br>2 bars");
+				return(28, iron_claws_3096, null, "Members: Iron claws<br>2 bars");
 			case 28 :
-				return(29, iron_2h_sword_1309, "Iron two-handed swords<br>3 bars");
+				return(29, iron_2h_sword_1309, null, "Iron two-handed swords<br>3 bars");
 			case 29 :
-				return(31, iron_platelegs_1067, "Iron platelegs<br>3 bars");
+				return(31, iron_platelegs_1067, null, "Iron platelegs<br>3 bars");
 			case 30 :
-				return(31, iron_plateskirt_1081, "Iron plateskirts<br>3 bars");
+				return(31, iron_plateskirt_1081, null, "Iron plateskirts<br>3 bars");
 			case 31 :
-				return(33, iron_platebody_1115, "Iron platebodies<br>5 bars");
+				return(33, iron_platebody_1115, null, "Iron platebodies<br>5 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(6, steel_axe_2h_28202, "Members: Convert steel felling axes");
+				return(6, steel_axe_2h_28202, null, "Members: Convert steel felling axes");
 			case 1 :
-				return(30, steel_dagger_1207, "Steel daggers<br>1 bar");
+				return(30, steel_dagger_1207, null, "Steel daggers<br>1 bar");
 			case 2 :
-				return(31, steel_axe_1353, "Steel axes<br>1 bar");
+				return(31, steel_axe_1353, null, "Steel axes<br>1 bar");
 			case 3 :
-				return(32, steel_mace_1424, "Steel maces<br>1 bar");
+				return(32, steel_mace_1424, null, "Steel maces<br>1 bar");
 			case 4 :
-				return(33, steel_med_helm_1141, "Steel medium helms<br>1 bar");
+				return(33, steel_med_helm_1141, null, "Steel medium helms<br>1 bar");
 			case 5 :
-				return(33, xbows_crossbow_bolts_steel_unfeathered_9378, "Members: Steel crossbow bolts<br>1 bar makes 10");
+				return(33, xbows_crossbow_bolts_steel_unfeathered_9378, null, "Members: Steel crossbow bolts<br>1 bar makes 10");
 			case 6 :
-				return(34, steel_sword_1281, "Steel swords<br>1 bar");
+				return(34, steel_sword_1281, null, "Steel swords<br>1 bar");
 			case 7 :
-				return(34, nails_1539, "Steel nails<br>1 bar makes 15");
+				return(34, nails_1539, null, "Steel nails<br>1 bar makes 15");
 			case 8 :
-				return(34, steel_dart_tip_821, "Members: Steel dart tips<br>1 bar makes 10");
+				return(34, steel_dart_tip_821, null, "Members: Steel dart tips<br>1 bar makes 10");
 			case 9 :
-				return(34, chain_32886, "Members: Chain<br>1 bar");
+				return(34, chain_32886, null, "Members: Chain<br>1 bar");
 			case 10 :
-				return(35, steel_scimitar_1325, "Steel scimitars<br>2 bars");
+				return(35, steel_scimitar_1325, null, "Steel scimitars<br>2 bars");
 			case 11 :
-				return(35, steel_spear_1241, "Members: Steel spears<br>1 bar, 1 willow log");
+				return(35, steel_spear_1241, null, "Members: Steel spears<br>1 bar, 1 willow log");
 			case 12 :
-				return(35, brut_steel_spear_11371, "Members: Steel hastae<br>1 bar, 1 willow log");
+				return(35, brut_steel_spear_11371, null, "Members: Steel hastae<br>1 bar, 1 willow log");
 			case 13 :
-				return(35, steel_arrowheads_41, "Members: Steel arrowheads<br>1 bar makes 15");
+				return(35, steel_arrowheads_41, null, "Members: Steel arrowheads<br>1 bar makes 15");
 			case 14 :
-				return(35, mcannonball_2, "Members: Steel cannonballs<br>1 bar makes 4");
+				return(35, mcannonball_2, null, "Members: Steel cannonballs<br>1 bar makes 4");
 			case 15 :
-				return(36, xbows_crossbow_limbs_steel_9425, "Members: Steel crossbow limbs<br>1 bar");
+				return(36, xbows_crossbow_limbs_steel_9425, null, "Members: Steel crossbow limbs<br>1 bar");
 			case 16 :
-				return(36, steel_longsword_1295, "Steel longswords<br>2 bars");
+				return(36, steel_longsword_1295, null, "Steel longswords<br>2 bars");
 			case 17 :
-				return(36, cert_macro_cube_bluehalfmoon_3090, "Members: Steel javelin tips<br>1 bar makes 5");
+				return(36, cert_macro_cube_bluehalfmoon_3090, null, "Members: Steel javelin tips<br>1 bar makes 5");
 			case 18 :
-				return(36, studs_2370, "Members: Steel studs<br>1 bar");
+				return(36, studs_2370, null, "Members: Steel studs<br>1 bar");
 			case 19 :
-				return(37, steel_full_helm_1157, "Steel full helms<br>2 bars");
+				return(37, steel_full_helm_1157, null, "Steel full helms<br>2 bars");
 			case 20 :
-				return(37, steel_knife_865, "Members: Steel throwing knives<br>1 bar makes 5");
+				return(37, steel_knife_865, null, "Members: Steel throwing knives<br>1 bar makes 5");
 			case 21 :
-				return(38, steel_sq_shield_1177, "Steel square shields<br>2 bars");
+				return(38, steel_sq_shield_1177, null, "Steel square shields<br>2 bars");
 			case 22 :
-				return(38, sailing_boat_keel_part_steel_32005, "Members: Steel keel parts<br>5 bars");
+				return(38, sailing_boat_keel_part_steel_32005, null, "Members: Steel keel parts<br>5 bars");
 			case 23 :
-				return(39, steel_warhammer_1339, "Steel warhammers<br>3 bars");
+				return(39, steel_warhammer_1339, null, "Steel warhammers<br>3 bars");
 			case 24 :
-				return(40, steel_battleaxe_1365, "Steel battleaxes<br>3 bars");
+				return(40, steel_battleaxe_1365, null, "Steel battleaxes<br>3 bars");
 			case 25 :
-				return(41, steel_chainbody_1105, "Steel chainbodies<br>3 bars");
+				return(41, steel_chainbody_1105, null, "Steel chainbodies<br>3 bars");
 			case 26 :
-				return(42, steel_kiteshield_1193, "Steel kiteshields<br>3 bars");
+				return(42, steel_kiteshield_1193, null, "Steel kiteshields<br>3 bars");
 			case 27 :
-				return(43, steel_claws_3097, "Members: Steel claws<br>2 bars");
+				return(43, steel_claws_3097, null, "Members: Steel claws<br>2 bars");
 			case 28 :
-				return(44, steel_2h_sword_1311, "Steel two-handed swords<br>3 bars");
+				return(44, steel_2h_sword_1311, null, "Steel two-handed swords<br>3 bars");
 			case 29 :
-				return(46, steel_platelegs_1069, "Steel platelegs<br>3 bars");
+				return(46, steel_platelegs_1069, null, "Steel platelegs<br>3 bars");
 			case 30 :
-				return(46, steel_plateskirt_1083, "Steel plateskirts<br>3 bars");
+				return(46, steel_plateskirt_1083, null, "Steel plateskirts<br>3 bars");
 			case 31 :
-				return(48, steel_platebody_1119, "Steel platebodies<br>5 bars");
+				return(48, steel_platebody_1119, null, "Steel platebodies<br>5 bars");
 			case 32 :
-				return(49, bullseye_lantern_nolens_4544, "Members: Bullseye lantern frames<br>1 bar");
+				return(49, bullseye_lantern_nolens_4544, null, "Members: Bullseye lantern frames<br>1 bar");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(21, mithril_axe_2h_28208, "Members: Convert mithril felling axes");
+				return(21, mithril_axe_2h_28208, null, "Members: Convert mithril felling axes");
 			case 1 :
-				return(50, mithril_dagger_1209, "Mithril daggers<br>1 bar");
+				return(50, mithril_dagger_1209, null, "Mithril daggers<br>1 bar");
 			case 2 :
-				return(51, mithril_axe_1355, "Mithril axes<br>1 bar");
+				return(51, mithril_axe_1355, null, "Mithril axes<br>1 bar");
 			case 3 :
-				return(52, mithril_mace_1428, "Mithril maces<br>1 bar");
+				return(52, mithril_mace_1428, null, "Mithril maces<br>1 bar");
 			case 4 :
-				return(53, mithril_med_helm_1143, "Mithril medium helms<br>1 bar");
+				return(53, mithril_med_helm_1143, null, "Mithril medium helms<br>1 bar");
 			case 5 :
-				return(53, xbows_crossbow_bolts_mithril_unfeathered_9379, "Members: Mithril crossbow bolts<br>1 bar makes 10");
+				return(53, xbows_crossbow_bolts_mithril_unfeathered_9379, null, "Members: Mithril crossbow bolts<br>1 bar makes 10");
 			case 6 :
-				return(54, mithril_sword_1285, "Mithril swords<br>1 bar");
+				return(54, mithril_sword_1285, null, "Mithril swords<br>1 bar");
 			case 7 :
-				return(54, mithril_dart_tip_822, "Members: Mithril dart tips<br>1 bar makes 10");
+				return(54, mithril_dart_tip_822, null, "Members: Mithril dart tips<br>1 bar makes 10");
 			case 8 :
-				return(54, nails_mithril_4822, "Members: Mithril nails<br>1 bar Makes 15");
+				return(54, nails_mithril_4822, null, "Members: Mithril nails<br>1 bar Makes 15");
 			case 9 :
-				return(55, mithril_scimitar_1329, "Mithril scimitars<br>2 bars");
+				return(55, mithril_scimitar_1329, null, "Mithril scimitars<br>2 bars");
 			case 10 :
-				return(55, mithril_spear_1243, "Members: Mithril spears<br>1 bar, 1 maple log");
+				return(55, mithril_spear_1243, null, "Members: Mithril spears<br>1 bar, 1 maple log");
 			case 11 :
-				return(55, brut_mithril_spear_11373, "Members: Mithril hastae<br>1 bar, 1 maple log");
+				return(55, brut_mithril_spear_11373, null, "Members: Mithril hastae<br>1 bar, 1 maple log");
 			case 12 :
-				return(55, mithril_arrowheads_42, "Members: Mithril arrowheads<br>1 bar makes 15");
+				return(55, mithril_arrowheads_42, null, "Members: Mithril arrowheads<br>1 bar makes 15");
 			case 13 :
-				return(55, mithril_cannonball_31910, "Members: Mithril cannonballs<br>1 bar makes 4");
+				return(55, mithril_cannonball_31910, null, "Members: Mithril cannonballs<br>1 bar makes 4");
 			case 14 :
-				return(56, xbows_crossbow_limbs_mithril_9427, "Members: Mithril crossbow limbs<br>1 bar");
+				return(56, xbows_crossbow_limbs_mithril_9427, null, "Members: Mithril crossbow limbs<br>1 bar");
 			case 15 :
-				return(56, mithril_longsword_1299, "Mithril longswords<br>2 bars");
+				return(56, mithril_longsword_1299, null, "Mithril longswords<br>2 bars");
 			case 16 :
-				return(56, cert_pickpocket_guide_warrior_3246, "Members: Mithril javelin tips<br>1 bar makes 5");
+				return(56, cert_pickpocket_guide_warrior_3246, null, "Members: Mithril javelin tips<br>1 bar makes 5");
 			case 17 :
-				return(56, sailing_boat_keel_part_mithril_32008, "Members: Mithril keel parts<br>5 bars");
+				return(56, sailing_boat_keel_part_mithril_32008, null, "Members: Mithril keel parts<br>5 bars");
 			case 18 :
-				return(57, mithril_full_helm_1159, "Mithril full helms<br>2 bars");
+				return(57, mithril_full_helm_1159, null, "Mithril full helms<br>2 bars");
 			case 19 :
-				return(57, mithril_knife_866, "Members: Mithril throwing knives<br>1 bar makes 5");
+				return(57, mithril_knife_866, null, "Members: Mithril throwing knives<br>1 bar makes 5");
 			case 20 :
-				return(58, mithril_sq_shield_1181, "Mithril square shields<br>2 bars");
+				return(58, mithril_sq_shield_1181, null, "Mithril square shields<br>2 bars");
 			case 21 :
-				return(59, mithril_warhammer_1343, "Mithril warhammers<br>3 bars");
+				return(59, mithril_warhammer_1343, null, "Mithril warhammers<br>3 bars");
 			case 22 :
-				return(59, xbows_grapple_tip_mithril_9416, "Members: Mithril crossbow grapple tips<br>1 bar");
+				return(59, xbows_grapple_tip_mithril_9416, null, "Members: Mithril crossbow grapple tips<br>1 bar");
 			case 23 :
-				return(60, mithril_battleaxe_1369, "Mithril battleaxes<br>3 bars");
+				return(60, mithril_battleaxe_1369, null, "Mithril battleaxes<br>3 bars");
 			case 24 :
-				return(61, mithril_chainbody_1109, "Mithril chainbodies<br>3 bars");
+				return(61, mithril_chainbody_1109, null, "Mithril chainbodies<br>3 bars");
 			case 25 :
-				return(62, mithril_kiteshield_1197, "Mithril kiteshields<br>3 bars");
+				return(62, mithril_kiteshield_1197, null, "Mithril kiteshields<br>3 bars");
 			case 26 :
-				return(63, mithril_claws_3099, "Members: Mithril claws<br>2 bars");
+				return(63, mithril_claws_3099, null, "Members: Mithril claws<br>2 bars");
 			case 27 :
-				return(64, mithril_2h_sword_1315, "Mithril two-handed swords<br>3 bars");
+				return(64, mithril_2h_sword_1315, null, "Mithril two-handed swords<br>3 bars");
 			case 28 :
-				return(66, mithril_platelegs_1071, "Mithril platelegs<br>3 bars");
+				return(66, mithril_platelegs_1071, null, "Mithril platelegs<br>3 bars");
 			case 29 :
-				return(66, mithril_plateskirt_1085, "Mithril plateskirts<br>3 bars");
+				return(66, mithril_plateskirt_1085, null, "Mithril plateskirts<br>3 bars");
 			case 30 :
-				return(68, mithril_platebody_1121, "Mithril platebodies<br>5 bars");
+				return(68, mithril_platebody_1121, null, "Mithril platebodies<br>5 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(31, adamant_axe_2h_28211, "Members: Convert adamant felling axes");
+				return(31, adamant_axe_2h_28211, null, "Members: Convert adamant felling axes");
 			case 1 :
-				return(70, adamant_dagger_1211, "Adamant daggers<br>1 bar");
+				return(70, adamant_dagger_1211, null, "Adamant daggers<br>1 bar");
 			case 2 :
-				return(71, adamant_axe_1357, "Adamant axes<br>1 bar");
+				return(71, adamant_axe_1357, null, "Adamant axes<br>1 bar");
 			case 3 :
-				return(72, adamant_mace_1430, "Adamant maces<br>1 bar");
+				return(72, adamant_mace_1430, null, "Adamant maces<br>1 bar");
 			case 4 :
-				return(73, adamant_med_helm_1145, "Adamant medium helms<br>1 bar");
+				return(73, adamant_med_helm_1145, null, "Adamant medium helms<br>1 bar");
 			case 5 :
-				return(73, xbows_crossbow_bolts_adamantite_unfeathered_9380, "Members: Adamant crossbow bolts<br>1 bar makes 10");
+				return(73, xbows_crossbow_bolts_adamantite_unfeathered_9380, null, "Members: Adamant crossbow bolts<br>1 bar makes 10");
 			case 6 :
-				return(74, adamant_sword_1287, "Adamant swords<br>1 bar");
+				return(74, adamant_sword_1287, null, "Adamant swords<br>1 bar");
 			case 7 :
-				return(74, adamant_dart_tip_823, "Members: Adamant dart tips<br>1 bar makes 10");
+				return(74, adamant_dart_tip_823, null, "Members: Adamant dart tips<br>1 bar makes 10");
 			case 8 :
-				return(74, nails_adamant_4823, "Members: Adamant nails<br>1 bar makes 15");
+				return(74, nails_adamant_4823, null, "Members: Adamant nails<br>1 bar makes 15");
 			case 9 :
-				return(74, sailing_boat_keel_part_adamant_32011, "Members: Adamant keel parts<br>5 bars");
+				return(74, sailing_boat_keel_part_adamant_32011, null, "Members: Adamant keel parts<br>5 bars");
 			case 10 :
-				return(75, adamant_scimitar_1331, "Adamant scimitars<br>2 bars");
+				return(75, adamant_scimitar_1331, null, "Adamant scimitars<br>2 bars");
 			case 11 :
-				return(75, adamant_spear_1245, "Members: Adamant spears<br>1 bar, 1 yew log");
+				return(75, adamant_spear_1245, null, "Members: Adamant spears<br>1 bar, 1 yew log");
 			case 12 :
-				return(75, brut_adamant_spear_11375, "Members: Adamant hastae<br>1 bar, 1 yew log");
+				return(75, brut_adamant_spear_11375, null, "Members: Adamant hastae<br>1 bar, 1 yew log");
 			case 13 :
-				return(75, adamant_arrowheads_43, "Members: Adamant arrowheads<br>1 bar makes 15");
+				return(75, adamant_arrowheads_43, null, "Members: Adamant arrowheads<br>1 bar makes 15");
 			case 14 :
-				return(75, adamant_cannonball_31912, "Members: Adamant cannonballs<br>1 bar makes 4");
+				return(75, adamant_cannonball_31912, null, "Members: Adamant cannonballs<br>1 bar makes 4");
 			case 15 :
-				return(76, xbows_crossbow_limbs_adamantite_9429, "Members: Adamant crossbow limbs<br>1 bar");
+				return(76, xbows_crossbow_limbs_adamantite_9429, null, "Members: Adamant crossbow limbs<br>1 bar");
 			case 16 :
-				return(76, adamant_longsword_1301, "Adamant longswords<br>2 bars");
+				return(76, adamant_longsword_1301, null, "Adamant longswords<br>2 bars");
 			case 17 :
-				return(76, cert_reinitialisation_03_3909, "Members: Adamant javelin tips<br>1 bar makes 5");
+				return(76, cert_reinitialisation_03_3909, null, "Members: Adamant javelin tips<br>1 bar makes 5");
 			case 18 :
-				return(77, adamant_full_helm_1161, "Adamant full helms<br>2 bars");
+				return(77, adamant_full_helm_1161, null, "Adamant full helms<br>2 bars");
 			case 19 :
-				return(77, adamant_knife_867, "Members: Adamant throwing knives<br>1 bar makes 5");
+				return(77, adamant_knife_867, null, "Members: Adamant throwing knives<br>1 bar makes 5");
 			case 20 :
-				return(78, adamant_sq_shield_1183, "Adamant square shields<br>2 bars");
+				return(78, adamant_sq_shield_1183, null, "Adamant square shields<br>2 bars");
 			case 21 :
-				return(79, adamnt_warhammer_1345, "Adamant warhammers<br>3 bars");
+				return(79, adamnt_warhammer_1345, null, "Adamant warhammers<br>3 bars");
 			case 22 :
-				return(80, adamant_battleaxe_1371, "Adamant battleaxes<br>3 bars");
+				return(80, adamant_battleaxe_1371, null, "Adamant battleaxes<br>3 bars");
 			case 23 :
-				return(81, adamant_chainbody_1111, "Adamant chainbodies<br>3 bars");
+				return(81, adamant_chainbody_1111, null, "Adamant chainbodies<br>3 bars");
 			case 24 :
-				return(82, adamant_kiteshield_1199, "Adamant kiteshields<br>3 bars");
+				return(82, adamant_kiteshield_1199, null, "Adamant kiteshields<br>3 bars");
 			case 25 :
-				return(83, adamant_claws_3100, "Members: Adamant claws<br>2 bars");
+				return(83, adamant_claws_3100, null, "Members: Adamant claws<br>2 bars");
 			case 26 :
-				return(84, adamant_2h_sword_1317, "Adamant two-handed swords<br>3 bars");
+				return(84, adamant_2h_sword_1317, null, "Adamant two-handed swords<br>3 bars");
 			case 27 :
-				return(86, adamant_platelegs_1073, "Adamant platelegs<br>3 bars");
+				return(86, adamant_platelegs_1073, null, "Adamant platelegs<br>3 bars");
 			case 28 :
-				return(86, adamant_plateskirt_1091, "Adamant plateskirts<br>3 bars");
+				return(86, adamant_plateskirt_1091, null, "Adamant plateskirts<br>3 bars");
 			case 29 :
-				return(88, adamant_platebody_1123, "Adamant platebodies<br>5 bars");
+				return(88, adamant_platebody_1123, null, "Adamant platebodies<br>5 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 7 :
 		switch_int ($int1) {
 			case 0 :
-				return(41, rune_axe_2h_28214, "Members: Convert rune felling axes");
+				return(41, rune_axe_2h_28214, null, "Members: Convert rune felling axes");
 			case 1 :
-				return(85, rune_dagger_1213, "Rune daggers<br>1 bar");
+				return(85, rune_dagger_1213, null, "Rune daggers<br>1 bar");
 			case 2 :
-				return(86, rune_axe_1359, "Rune axes<br>1 bar");
+				return(86, rune_axe_1359, null, "Rune axes<br>1 bar");
 			case 3 :
-				return(86, sailing_boat_keel_part_rune_32014, "Members: Rune keel parts<br>5 bars");
+				return(86, sailing_boat_keel_part_rune_32014, null, "Members: Rune keel parts<br>5 bars");
 			case 4 :
-				return(87, rune_mace_1432, "Rune maces<br>1 bar");
+				return(87, rune_mace_1432, null, "Rune maces<br>1 bar");
 			case 5 :
-				return(88, rune_med_helm_1147, "Rune medium helms<br>1 bar");
+				return(88, rune_med_helm_1147, null, "Rune medium helms<br>1 bar");
 			case 6 :
-				return(88, xbows_crossbow_bolts_runite_unfeathered_9381, "Members: Rune crossbow bolts<br>1 bar makes 10");
+				return(88, xbows_crossbow_bolts_runite_unfeathered_9381, null, "Members: Rune crossbow bolts<br>1 bar makes 10");
 			case 7 :
-				return(89, rune_sword_1289, "Rune swords<br>1 bar");
+				return(89, rune_sword_1289, null, "Rune swords<br>1 bar");
 			case 8 :
-				return(89, rune_dart_tip_824, "Members: Rune dart tips<br>1 bar makes 10");
+				return(89, rune_dart_tip_824, null, "Members: Rune dart tips<br>1 bar makes 10");
 			case 9 :
-				return(89, nails_rune_4824, "Members: Rune nails<br>1 bar makes 15");
+				return(89, nails_rune_4824, null, "Members: Rune nails<br>1 bar makes 15");
 			case 10 :
-				return(90, rune_scimitar_1333, "Rune scimitars<br>2 bars");
+				return(90, rune_scimitar_1333, null, "Rune scimitars<br>2 bars");
 			case 11 :
-				return(90, rune_spear_1247, "Members: Rune spears<br>1 bar, 1 magic log");
+				return(90, rune_spear_1247, null, "Members: Rune spears<br>1 bar, 1 magic log");
 			case 12 :
-				return(90, brut_rune_spear_11377, "Members: Rune hastae<br>1 bar, 1 magic log");
+				return(90, brut_rune_spear_11377, null, "Members: Rune hastae<br>1 bar, 1 magic log");
 			case 13 :
-				return(90, rune_arrowheads_44, "Members: Rune arrowheads<br>1 bar makes 15");
+				return(90, rune_arrowheads_44, null, "Members: Rune arrowheads<br>1 bar makes 15");
 			case 14 :
-				return(90, rune_cannonball_31914, "Members: Rune cannonballs<br>1 bar makes 4");
+				return(90, rune_cannonball_31914, null, "Members: Rune cannonballs<br>1 bar makes 4");
 			case 15 :
-				return(91, xbows_crossbow_limbs_runite_9431, "Members: Rune crossbow limbs<br>1 bar");
+				return(91, xbows_crossbow_limbs_runite_9431, null, "Members: Rune crossbow limbs<br>1 bar");
 			case 16 :
-				return(91, rune_longsword_1303, "Rune longswords<br>2 bars");
+				return(91, rune_longsword_1303, null, "Rune longswords<br>2 bars");
 			case 17 :
-				return(91, cert_reinitialisation_07_3917, "Members: Rune javelin tips<br>1 bar makes 5");
+				return(91, cert_reinitialisation_07_3917, null, "Members: Rune javelin tips<br>1 bar makes 5");
 			case 18 :
-				return(92, rune_full_helm_1163, "Rune full helms<br>2 bars");
+				return(92, rune_full_helm_1163, null, "Rune full helms<br>2 bars");
 			case 19 :
-				return(92, rune_knife_868, "Members: Rune throwing knives<br>1 bar makes 5");
+				return(92, rune_knife_868, null, "Members: Rune throwing knives<br>1 bar makes 5");
 			case 20 :
-				return(93, rune_sq_shield_1185, "Rune square shields<br>2 bars");
+				return(93, rune_sq_shield_1185, null, "Rune square shields<br>2 bars");
 			case 21 :
-				return(94, rune_warhammer_1347, "Rune warhammers<br>3 bars");
+				return(94, rune_warhammer_1347, null, "Rune warhammers<br>3 bars");
 			case 22 :
-				return(95, rune_battleaxe_1373, "Rune battleaxes<br>3 bars");
+				return(95, rune_battleaxe_1373, null, "Rune battleaxes<br>3 bars");
 			case 23 :
-				return(96, rune_chainbody_1113, "Rune chainbodies<br>3 bars");
+				return(96, rune_chainbody_1113, null, "Rune chainbodies<br>3 bars");
 			case 24 :
-				return(97, rune_kiteshield_1201, "Rune kiteshields<br>3 bars");
+				return(97, rune_kiteshield_1201, null, "Rune kiteshields<br>3 bars");
 			case 25 :
-				return(98, rune_claws_3101, "Members: Rune claws<br>2 bars");
+				return(98, rune_claws_3101, null, "Members: Rune claws<br>2 bars");
 			case 26 :
-				return(99, rune_2h_sword_1319, "Rune two-handed swords<br>3 bars");
+				return(99, rune_2h_sword_1319, null, "Rune two-handed swords<br>3 bars");
 			case 27 :
-				return(99, rune_platelegs_1079, "Rune platelegs<br>3 bars");
+				return(99, rune_platelegs_1079, null, "Rune platelegs<br>3 bars");
 			case 28 :
-				return(99, rune_plateskirt_1093, "Rune plateskirts<br>3 bars");
+				return(99, rune_plateskirt_1093, null, "Rune plateskirts<br>3 bars");
 			case 29 :
-				return(99, rune_platebody_1127, "Rune platebodies<br>5 bars");
+				return(99, rune_platebody_1127, null, "Rune platebodies<br>5 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 8 :
 		switch_int ($int1) {
 			case 0 :
-				return(45, shayzien_gloves_1_13357, "Shayzien gloves (1)<br>1 bar");
+				return(45, shayzien_gloves_1_13357, null, "Shayzien gloves (1)<br>1 bar");
 			case 1 :
-				return(47, shayzien_boots_1_13358, "Shayzien boots (1)<br>1 bar");
+				return(47, shayzien_boots_1_13358, null, "Shayzien boots (1)<br>1 bar");
 			case 2 :
-				return(49, shayzien_helm_1_13359, "Shayzien helm (1)<br>2 bars");
+				return(49, shayzien_helm_1_13359, null, "Shayzien helm (1)<br>2 bars");
 			case 3 :
-				return(51, shayzien_legs_1_13360, "Shayzien greaves (1)<br>3 bars");
+				return(51, shayzien_legs_1_13360, null, "Shayzien greaves (1)<br>3 bars");
 			case 4 :
-				return(53, shayzien_body_1_13361, "Shayzien platebody (1)<br>4 bars");
+				return(53, shayzien_body_1_13361, null, "Shayzien platebody (1)<br>4 bars");
 			case 5 :
-				return(55, shayzien_gloves_2_13362, "Shayzien gloves (2)<br>1 bar");
+				return(55, shayzien_gloves_2_13362, null, "Shayzien gloves (2)<br>1 bar");
 			case 6 :
-				return(57, shayzien_boots_2_13363, "Shayzien boots (2)<br>1 bar");
+				return(57, shayzien_boots_2_13363, null, "Shayzien boots (2)<br>1 bar");
 			case 7 :
-				return(59, shayzien_helm_2_13364, "Shayzien helm (2)<br>2 bars");
+				return(59, shayzien_helm_2_13364, null, "Shayzien helm (2)<br>2 bars");
 			case 8 :
-				return(61, shayzien_legs_2_13365, "Shayzien greaves (2)<br>3 bars");
+				return(61, shayzien_legs_2_13365, null, "Shayzien greaves (2)<br>3 bars");
 			case 9 :
-				return(63, shayzien_body_2_13366, "Shayzien platebody (2)<br>4 bars");
+				return(63, shayzien_body_2_13366, null, "Shayzien platebody (2)<br>4 bars");
 			case 10 :
-				return(65, shayzien_gloves_3_13367, "Shayzien gloves (3)<br>1 bar");
+				return(65, shayzien_gloves_3_13367, null, "Shayzien gloves (3)<br>1 bar");
 			case 11 :
-				return(67, shayzien_boots_3_13368, "Shayzien boots (3)<br>1 bar");
+				return(67, shayzien_boots_3_13368, null, "Shayzien boots (3)<br>1 bar");
 			case 12 :
-				return(69, shayzien_helm_3_13369, "Shayzien helm (3)<br>2 bars");
+				return(69, shayzien_helm_3_13369, null, "Shayzien helm (3)<br>2 bars");
 			case 13 :
-				return(71, shayzien_legs_3_13370, "Shayzien greaves (3)<br>3 bars");
+				return(71, shayzien_legs_3_13370, null, "Shayzien greaves (3)<br>3 bars");
 			case 14 :
-				return(73, shayzien_body_3_13371, "Shayzien platebody (3)<br>4 bars");
+				return(73, shayzien_body_3_13371, null, "Shayzien platebody (3)<br>4 bars");
 			case 15 :
-				return(75, shayzien_gloves_4_13372, "Shayzien gloves (4)<br>1 bar");
+				return(75, shayzien_gloves_4_13372, null, "Shayzien gloves (4)<br>1 bar");
 			case 16 :
-				return(77, shayzien_boots_4_13373, "Shayzien boots (4)<br>1 bar");
+				return(77, shayzien_boots_4_13373, null, "Shayzien boots (4)<br>1 bar");
 			case 17 :
-				return(79, shayzien_helm_4_13374, "Shayzien helm (4)<br>2 bars");
+				return(79, shayzien_helm_4_13374, null, "Shayzien helm (4)<br>2 bars");
 			case 18 :
-				return(81, shayzien_legs_4_13375, "Shayzien greaves (4)<br>3 bars");
+				return(81, shayzien_legs_4_13375, null, "Shayzien greaves (4)<br>3 bars");
 			case 19 :
-				return(83, shayzien_body_4_13376, "Shayzien platebody (4)<br>4 bars");
+				return(83, shayzien_body_4_13376, null, "Shayzien platebody (4)<br>4 bars");
 			case 20 :
-				return(85, shayzien_gloves_5_13377, "Shayzien gloves (5)<br>1 bar");
+				return(85, shayzien_gloves_5_13377, null, "Shayzien gloves (5)<br>1 bar");
 			case 21 :
-				return(87, shayzien_boots_5_13378, "Shayzien boots (5)<br>1 bar");
+				return(87, shayzien_boots_5_13378, null, "Shayzien boots (5)<br>1 bar");
 			case 22 :
-				return(89, shayzien_helm_5_13379, "Shayzien helm (5)<br>2 bars");
+				return(89, shayzien_helm_5_13379, null, "Shayzien helm (5)<br>2 bars");
 			case 23 :
-				return(91, shayzien_legs_5_13380, "Shayzien greaves (5)<br>3 bars");
+				return(91, shayzien_legs_5_13380, null, "Shayzien greaves (5)<br>3 bars");
 			case 24 :
-				return(93, shayzien_body_5_13381, "Shayzien platebody (5)<br>4 bars");
+				return(93, shayzien_body_5_13381, null, "Shayzien platebody (5)<br>4 bars");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
-				return(70, celestial_signet_charged_25545, "Celestial signet<br>(with 70 Crafting)");
+				return(70, celestial_signet_charged_25545, null, "Celestial signet<br>(with 70 Crafting)");
 			case 1 :
-				return(70, crystal_helmet_23971, "Crystal helm<br>(with 70 Crafting)");
+				return(70, crystal_helmet_23971, null, "Crystal helm<br>(with 70 Crafting)");
 			case 2 :
-				return(71, crystal_axe_2h_28220, "Reshape crystal felling axes");
+				return(71, crystal_axe_2h_28220, null, "Reshape crystal felling axes");
 			case 3 :
-				return(72, crystal_platelegs_23979, "Crystal legs<br>(with 72 Crafting)");
+				return(72, crystal_platelegs_23979, null, "Crystal legs<br>(with 72 Crafting)");
 			case 4 :
-				return(74, crystal_chestplate_23975, "Crystal body<br>(with 74 Crafting)");
+				return(74, crystal_chestplate_23975, null, "Crystal body<br>(with 74 Crafting)");
 			case 5 :
-				return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Crafting)");
+				return(76, crystal_pickaxe_23680, null, "Crystal pickaxe<br>(with 76 Crafting)");
 			case 6 :
-				return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Crafting)");
+				return(76, crystal_axe_23673, null, "Crystal axe<br>(with 76 Crafting)");
 			case 7 :
-				return(76, crystal_axe_2h_28220, "Crystal felling axe<br>(with 76 Crafting)");
+				return(76, crystal_axe_2h_28220, null, "Crystal felling axe<br>(with 76 Crafting)");
 			case 8 :
-				return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Crafting)");
+				return(76, crystal_harpoon_23762, null, "Crystal harpoon<br>(with 76 Crafting)");
 			case 9 :
-				return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Crafting)");
+				return(78, crystal_bow_23983, null, "Crystal bow<br>(with 78 Crafting)");
 			case 10 :
-				return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Crafting)");
+				return(78, crystal_halberd_23987, null, "Crystal halberd<br>(with 78 Crafting)");
 			case 11 :
-				return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Crafting)");
+				return(78, crystal_shield_23991, null, "Crystal shield<br>(with 78 Crafting)");
 			case 12 :
-				return(80, prif_crystal_key_23951, "Enhanced crystal key<br>(with 80 Crafting)");
+				return(80, prif_crystal_key_23951, null, "Enhanced crystal key<br>(with 80 Crafting)");
 			case 13 :
-				return(80, prif_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Crafting)");
+				return(80, prif_teleport_crystal_23946, null, "Eternal teleport crystal<br>(with 80 Crafting)");
 			case 14 :
-				return(82, blade_of_saeldor_23995, "Blade of Saeldor<br>(with 82 Crafting)");
+				return(82, blade_of_saeldor_23995, null, "Blade of Saeldor<br>(with 82 Crafting)");
 			case 15 :
-				return(82, blade_of_saeldor_infinite_24551, "Blade of Saeldor (c)<br>(with 82 Crafting)");
+				return(82, blade_of_saeldor_infinite_24551, null, "Blade of Saeldor (c)<br>(with 82 Crafting)");
 			case 16 :
-				return(82, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br>(with 82 Crafting)");
+				return(82, bow_of_faerdhinen_25865, null, "Bow of Faerdhinen<br>(with 82 Crafting)");
 			case 17 :
-				return(82, bow_of_faerdhinen_infinite_25867, "Bow of Faerdhinen (c)<br>(with 82 Crafting)");
+				return(82, bow_of_faerdhinen_infinite_25867, null, "Bow of Faerdhinen (c)<br>(with 82 Crafting)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 10 :
 		switch_int ($int1) {
 			case 0 :
-				return(8, xbows_crossbow_bolts_blurite_unfeathered_9376, "Members: Blurite crossbow bolts<br>(after The Knight's Sword)");
+				return(8, xbows_crossbow_bolts_blurite_unfeathered_9376, null, "Members: Blurite crossbow bolts<br>(after The Knight's Sword)");
 			case 1 :
-				return(11, black_axe_2h_28205, "Members: Convert black felling axes");
+				return(11, black_axe_2h_28205, null, "Members: Convert black felling axes");
 			case 2 :
-				return(13, xbows_crossbow_limbs_blurite_9422, "Members: Blurite crossbow limbs<br>(after The Knight's Sword)");
+				return(13, xbows_crossbow_limbs_blurite_9422, null, "Members: Blurite crossbow limbs<br>(after The Knight's Sword)");
 			case 3 :
-				return(14, camdozaal_barronite_deposit_25684, "Crush barronite deposits<br>(after Below Ice Mountain)");
+				return(14, camdozaal_barronite_deposit_25684, null, "Crush barronite deposits<br>(after Below Ice Mountain)");
 			case 4 :
-				return(35, forestry_secateurs_attachment_28161, "Members: Secateurs Attachment<br>(with 35 Woodcutting)");
+				return(35, forestry_secateurs_attachment_28161, null, "Members: Secateurs Attachment<br>(with 35 Woodcutting)");
 			case 5 :
-				return(35, rat_bone_mace_28792, "Members: Bone mace");
+				return(35, rat_bone_mace_28792, null, "Members: Bone mace");
 			case 6 :
-				return(60, dragon_sq_shield_1187, "Members: Dragon square shield");
+				return(60, dragon_sq_shield_1187, null, "Members: Dragon square shield");
 			case 7 :
-				return(60, aquanite_hopper_32879, "Members: Aquanite hoppers");
+				return(60, aquanite_hopper_32879, null, "Members: Aquanite hoppers");
 			case 8 :
-				return(61, dragon_axe_2h_28217, "Members: Convert dragon felling axes");
+				return(61, dragon_axe_2h_28217, null, "Members: Convert dragon felling axes");
 			case 9 :
-				return(61, 3a_axe_2h_28226, "Members: Convert 3rd age felling axes");
+				return(61, 3a_axe_2h_28226, null, "Members: Convert 3rd age felling axes");
 			case 10 :
-				return(66, wyvern_shield_21633, "Members: Ancient Wyvern shield");
+				return(66, wyvern_shield_21633, null, "Members: Ancient Wyvern shield");
 			case 11 :
-				return(70, zombie_axe_28810, "Members: Zombie axes and helmets");
+				return(70, zombie_axe_28810, null, "Members: Zombie axes and helmets");
 			case 12 :
-				return(70, confliction_gauntlets_31106, "Members: Confliction gauntlets");
+				return(70, confliction_gauntlets_31106, null, "Members: Confliction gauntlets");
 			case 13 :
-				return(72, noxious_halberd_29796, "Members: Noxious Halberd");
+				return(72, noxious_halberd_29796, null, "Members: Noxious Halberd");
 			case 14 :
-				return(74, emberlight_29589, "Members: Emberlight");
+				return(74, emberlight_29589, null, "Members: Emberlight");
 			case 15 :
-				return(75, dragon_kiteshield_21895, "Members: Dragon kite shield<br>(after Dragon Slayer II)");
+				return(75, dragon_kiteshield_21895, null, "Members: Dragon kite shield<br>(after Dragon Slayer II)");
 			case 16 :
-				return(83, oathplate_helm_30750, "Members: Oathplate");
+				return(83, oathplate_helm_30750, null, "Members: Oathplate");
 			case 17 :
-				return(90, dragon_platebody_21892, "Members: Dragon platebody<br>(after Dragon Slayer II)");
+				return(90, dragon_platebody_21892, null, "Members: Dragon platebody<br>(after Dragon Slayer II)");
 			case 18 :
-				return(92, nails_dragon_31406, "Members: Dragon nails<br>(after Dragon Slayer II)");
+				return(92, nails_dragon_31406, null, "Members: Dragon nails<br>(after Dragon Slayer II)");
 			case 19 :
-				return(94, sailing_boat_keel_part_dragon_32017, "Members: Dragon keel parts<br>(after Dragon Slayer II)");
+				return(94, sailing_boat_keel_part_dragon_32017, null, "Members: Dragon keel parts<br>(after Dragon Slayer II)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

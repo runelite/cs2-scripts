@@ -1,5 +1,5 @@
 // 7892
-[proc,script7892](int $int0, int $int1)(int, namedobj, string)
+[proc,script7892](int $int0, int $int1)(int, namedobj, dbrow, string)
 def_string $string0 = "";
 if (%option_skill_guide = 0) {
 	$string0 = "<col=6f0000>";
@@ -10,248 +10,248 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, raw_cod_341, "Fishing allows you to gather fish at various points across Gielinor. Typically, these will be indicated by moving bubbles on the surface of the water.");
+				return(-1, raw_cod_341, null, "Fishing allows you to gather fish at various points across Gielinor. Typically, these will be indicated by moving bubbles on the surface of the water.");
 			case 1 :
-				return(-1, net_303, "Different fish require different equipment to catch; for instance, you need a fishing net to catch shrimp, but a fishing rod and bait to catch sardines.");
+				return(-1, net_303, null, "Different fish require different equipment to catch; for instance, you need a fishing net to catch shrimp, but a fishing rod and bait to catch sardines.");
 			case 2 :
-				return(-1, raw_lobster_377, "As your Fishing level increases, you'll gain access to more varieties of fish to catch, as well as having a higher chance of successfully catching fish when you try.");
+				return(-1, raw_lobster_377, null, "As your Fishing level increases, you'll gain access to more varieties of fish to catch, as well as having a higher chance of successfully catching fish when you try.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, raw_shrimp_317, "Shrimp - Small fishing net");
+				return(1, raw_shrimp_317, null, "Shrimp - Small fishing net");
 			case 1 :
-				return(5, tbwt_raw_karambwanji_3150, "Members: Karambwanji - Small fishing net");
+				return(5, tbwt_raw_karambwanji_3150, null, "Members: Karambwanji - Small fishing net");
 			case 2 :
-				return(7, raw_guppy_25652, "Guppy - Small fishing net (After Below Ice Mountain)");
+				return(7, raw_guppy_25652, null, "Guppy - Small fishing net (After Below Ice Mountain)");
 			case 3 :
-				return(15, raw_anchovies_321, "Anchovies - Small fishing net");
+				return(15, raw_anchovies_321, null, "Anchovies - Small fishing net");
 			case 4 :
-				return(20, raw_cavefish_25658, "Cavefish - Small fishing net (After Below Ice Mountain)");
+				return(20, raw_cavefish_25658, null, "Cavefish - Small fishing net (After Below Ice Mountain)");
 			case 5 :
-				return(33, giant_frogspawn_5004, "Members: Giant frogspawn - Small fishing net");
+				return(33, giant_frogspawn_5004, null, "Members: Giant frogspawn - Small fishing net");
 			case 6 :
-				return(33, raw_tetra_25664, "Tetra - Small fishing net (After Below Ice Mountain)");
+				return(33, raw_tetra_25664, null, "Tetra - Small fishing net (After Below Ice Mountain)");
 			case 7 :
-				return(62, raw_monkfish_7944, "Members: Monkfish - Small fishing net");
+				return(62, raw_monkfish_7944, null, "Members: Monkfish - Small fishing net");
 			case 8 :
-				return(82, cert_strung_sapphire_amulet_5_10572, "Members: Minnow - Small fishing net<br>(after Fishing Contest)");
+				return(82, cert_strung_sapphire_amulet_5_10572, null, "Members: Minnow - Small fishing net<br>(after Fishing Contest)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(16, raw_mackerel_353, "Members: Mackerel - Big fishing net");
+				return(16, raw_mackerel_353, null, "Members: Mackerel - Big fishing net");
 			case 1 :
-				return(16, oystershell_407, "Members: Oyster - Big fishing net");
+				return(16, oystershell_407, null, "Members: Oyster - Big fishing net");
 			case 2 :
-				return(16, casket_405, "Members: Caskets - Big fishing net");
+				return(16, casket_405, null, "Members: Caskets - Big fishing net");
 			case 3 :
-				return(20, bream_fish_raw_29216, "Members: Bream - Big fishing net");
+				return(20, bream_fish_raw_29216, null, "Members: Bream - Big fishing net");
 			case 4 :
-				return(23, raw_cod_341, "Members: Cod - Big fishing net");
+				return(23, raw_cod_341, null, "Members: Cod - Big fishing net");
 			case 5 :
-				return(46, raw_bass_363, "Members: Bass - Big fishing net");
+				return(46, raw_bass_363, null, "Members: Bass - Big fishing net");
 			case 6 :
-				return(46, raw_catfish_25670, "Members: Catfish - Big fishing net (After Below Ice Mountain)");
+				return(46, raw_catfish_25670, null, "Members: Catfish - Big fishing net (After Below Ice Mountain)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(5, raw_sardine_327, "Sardine - Fishing rod & Fishing bait");
+				return(5, raw_sardine_327, null, "Sardine - Fishing rod & Fishing bait");
 			case 1 :
-				return(10, raw_herring_345, "Herring - Fishing rod & Fishing bait");
+				return(10, raw_herring_345, null, "Herring - Fishing rod & Fishing bait");
 			case 2 :
-				return(20, raw_trout_335, "Trout - Fly fishing rod & Feathers");
+				return(20, raw_trout_335, null, "Trout - Fly fishing rod & Feathers");
 			case 3 :
-				return(25, raw_pike_349, "Pike - Fishing rod & Fishing bait");
+				return(25, raw_pike_349, null, "Pike - Fishing rod & Fishing bait");
 			case 4 :
-				return(28, mort_slimey_eel_3379, "Members: Slimy eel - Fishing rod & Fishing bait");
+				return(28, mort_slimey_eel_3379, null, "Members: Slimy eel - Fishing rod & Fishing bait");
 			case 5 :
-				return(30, raw_salmon_331, "Salmon - Fly fishing rod & feathers");
+				return(30, raw_salmon_331, null, "Salmon - Fly fishing rod & feathers");
 			case 6 :
-				return(38, hunting_raw_fish_special_10138, "Members: Rainbow fish - Fly fishing rod & Stripy feathers");
+				return(38, hunting_raw_fish_special_10138, null, "Members: Rainbow fish - Fly fishing rod & Stripy feathers");
 			case 7 :
-				return(38, raw_cave_eel_5001, "Members: Cave eel - Fishing rod & Fishing bait");
+				return(38, raw_cave_eel_5001, null, "Members: Cave eel - Fishing rod & Fishing bait");
 			case 8 :
-				return(53, raw_lava_eel_2148, "Members: Lava eel - Oily fishing rod & Fishing bait");
+				return(53, raw_lava_eel_2148, null, "Members: Lava eel - Oily fishing rod & Fishing bait");
 			case 9 :
-				return(69, raw_giant_krill_32309, "Members: Shimmering shoal - Fishing rod & fish offcuts");
+				return(69, raw_giant_krill_32309, null, "Members: Shimmering shoal - Fishing rod & fish offcuts");
 			case 10 :
-				return(69, raw_giant_krill_32309, "Members: Giant krill shoal - Fishing rod & fish offcuts");
+				return(69, raw_giant_krill_32309, null, "Members: Giant krill shoal - Fishing rod & fish offcuts");
 			case 11 :
-				return(73, raw_haddock_32317, "Members: Haddock shoal - Fishing rod & fish offcuts");
+				return(73, raw_haddock_32317, null, "Members: Haddock shoal - Fishing rod & fish offcuts");
 			case 12 :
-				return(76, raw_yellowfin_32325, "Members: Glistening shoal - Fishing rod & fine fish offcuts");
+				return(76, raw_yellowfin_32325, null, "Members: Glistening shoal - Fishing rod & fine fish offcuts");
 			case 13 :
-				return(79, raw_yellowfin_32325, "Members: Yellowfin shoal - Fishing rod & fine fish offcuts");
+				return(79, raw_yellowfin_32325, null, "Members: Yellowfin shoal - Fishing rod & fine fish offcuts");
 			case 14 :
-				return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
+				return(80, infernal_eel_21293, null, "Members: Infernal eel - Oily fishing rod & Fishing bait");
 			case 15 :
-				return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
+				return(82, raw_anglerfish_13439, null, "Members: Anglerfish - Fishing rod & Sandworms");
 			case 16 :
-				return(83, raw_halibut_32333, "Members: Halibut shoal - Fishing rod & fine fish offcuts");
+				return(83, raw_halibut_32333, null, "Members: Halibut shoal - Fishing rod & fine fish offcuts");
 			case 17 :
-				return(86, raw_bluefin_32341, "Members: Vibrant shoal - Fishing rod & fine fish offcuts");
+				return(86, raw_bluefin_32341, null, "Members: Vibrant shoal - Fishing rod & fine fish offcuts");
 			case 18 :
-				return(87, raw_bluefin_32341, "Members: Bluefin shoal - Fishing rod & fine fish offcuts");
+				return(87, raw_bluefin_32341, null, "Members: Bluefin shoal - Fishing rod & fine fish offcuts");
 			case 19 :
-				return(87, snakeboss_eel_13339, "Members: Sacred eel - Fishing rod & Fishing bait");
+				return(87, snakeboss_eel_13339, null, "Members: Sacred eel - Fishing rod & Fishing bait");
 			case 20 :
-				return(91, raw_marlin_32349, "Members: Marlin shoal - Fishing rod & fine fish offcuts");
+				return(91, raw_marlin_32349, null, "Members: Marlin shoal - Fishing rod & fine fish offcuts");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(35, raw_tuna_359, "Tuna - Harpoon");
+				return(35, raw_tuna_359, null, "Tuna - Harpoon");
 			case 1 :
-				return(50, raw_swordfish_371, "Swordfish - Harpoon");
+				return(50, raw_swordfish_371, null, "Swordfish - Harpoon");
 			case 2 :
-				return(52, raw_swordtip_squid_31553, "Members: Swordtip squid - Harpoon & Lantern");
+				return(52, raw_swordtip_squid_31553, null, "Members: Swordtip squid - Harpoon & Lantern");
 			case 3 :
-				return(69, raw_jumbo_squid_31561, "Members: Jumbo squid - Harpoon & Lantern");
+				return(69, raw_jumbo_squid_31561, null, "Members: Jumbo squid - Harpoon & Lantern");
 			case 4 :
-				return(76, raw_shark_383, "Members: Shark - Harpoon");
+				return(76, raw_shark_383, null, "Members: Shark - Harpoon");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(43, aerial_fishing_bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
+				return(43, aerial_fishing_bluegill_22826, null, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
 			case 1 :
-				return(56, aerial_fishing_common_tench_22829, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
+				return(56, aerial_fishing_common_tench_22829, null, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
 			case 2 :
-				return(73, aerial_fishing_mottled_eel_22832, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
+				return(73, aerial_fishing_mottled_eel_22832, null, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
 			case 3 :
-				return(91, aerial_fishing_greater_siren_22835, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
+				return(91, aerial_fishing_greater_siren_22835, null, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(40, raw_lobster_377, "Lobster - Lobster pot");
+				return(40, raw_lobster_377, null, "Lobster - Lobster pot");
 			case 1 :
-				return(85, raw_dark_crab_11934, "Members: Dark crab - Lobster pot & Dark fishing bait");
+				return(85, raw_dark_crab_11934, null, "Members: Dark crab - Lobster pot & Dark fishing bait");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 7 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, invis_rod_7620, "Deep Sea Trawling is a Fishing method that takes place out at sea. Because of this, you need to be an experienced sailor with your own boat. For more information, you should speak to Netmaster Kellan in the Rolling Tide pub in Port Roberts.");
+				return(-1, invis_rod_7620, null, "Deep Sea Trawling is a Fishing method that takes place out at sea. Because of this, you need to be an experienced sailor with your own boat. For more information, you should speak to Netmaster Kellan in the Rolling Tide pub in Port Roberts.");
 			case 1 :
-				return(69, raw_giant_krill_32309, "Shimmering shoal - Fish offcuts<br>(Shallow)");
+				return(69, raw_giant_krill_32309, null, "Shimmering shoal - Fish offcuts<br>(Shallow)");
 			case 2 :
-				return(69, raw_giant_krill_32309, "Giant krill shoal - Fish offcuts<br>(Shallow)");
+				return(69, raw_giant_krill_32309, null, "Giant krill shoal - Fish offcuts<br>(Shallow)");
 			case 3 :
-				return(73, raw_haddock_32317, "Haddock shoal - Fish offcuts<br>(Shallow)");
+				return(73, raw_haddock_32317, null, "Haddock shoal - Fish offcuts<br>(Shallow)");
 			case 4 :
-				return(76, raw_yellowfin_32325, "Glistening shoal - Fine fish offcuts<br>(Shallow & moderate)");
+				return(76, raw_yellowfin_32325, null, "Glistening shoal - Fine fish offcuts<br>(Shallow & moderate)");
 			case 5 :
-				return(79, raw_yellowfin_32325, "Yellowfin shoal - Fish offcuts<br>(Shallow & moderate)");
+				return(79, raw_yellowfin_32325, null, "Yellowfin shoal - Fish offcuts<br>(Shallow & moderate)");
 			case 6 :
-				return(83, raw_halibut_32333, "Halibut shoal - Fine fish offcuts<br>(Shallow & moderate)");
+				return(83, raw_halibut_32333, null, "Halibut shoal - Fine fish offcuts<br>(Shallow & moderate)");
 			case 7 :
-				return(86, raw_bluefin_32341, "Bluefin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+				return(86, raw_bluefin_32341, null, "Bluefin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
 			case 8 :
-				return(87, raw_bluefin_32341, "Vibrant shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+				return(87, raw_bluefin_32341, null, "Vibrant shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
 			case 9 :
-				return(91, raw_marlin_32349, "Marlin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
+				return(91, raw_marlin_32349, null, "Marlin shoal - Fine fish offcuts<br>(Shallow, moderate & deep)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 8 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, invis_rod_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+				return(-1, invis_rod_7620, null, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
 			case 1 :
-				return(48, brut_spawning_trout_11328, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
+				return(48, brut_spawning_trout_11328, null, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
 			case 2 :
-				return(55, raw_tuna_359, "Tuna<br> (with 35 Strength)");
+				return(55, raw_tuna_359, null, "Tuna<br> (with 35 Strength)");
 			case 3 :
-				return(55, tempoross_raw_harpoonfish_25564, "Harpoonfish<br> (with 35 Strength)");
+				return(55, tempoross_raw_harpoonfish_25564, null, "Harpoonfish<br> (with 35 Strength)");
 			case 4 :
-				return(58, brut_spawning_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
+				return(58, brut_spawning_salmon_11330, null, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
 			case 5 :
-				return(70, brut_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
+				return(70, brut_sturgeon_11332, null, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
 			case 6 :
-				return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
+				return(70, raw_swordfish_371, null, "Swordfish<br> (with 50 Strength)");
 			case 7 :
-				return(96, raw_shark_383, "Shark<br> (with 76 Strength)");
+				return(96, raw_shark_383, null, "Shark<br> (with 76 Strength)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, net_303, "Small fishing net");
+				return(1, net_303, null, "Small fishing net");
 			case 1 :
-				return(1, fishing_rod_307, "Fishing rod");
+				return(1, fishing_rod_307, null, "Fishing rod");
 			case 2 :
-				return(1, big_net_305, "Members: Big fishing net");
+				return(1, big_net_305, null, "Members: Big fishing net");
 			case 3 :
-				return(1, harpoon_311, "Harpoon");
+				return(1, harpoon_311, null, "Harpoon");
 			case 4 :
-				return(1, fly_fishing_rod_309, "Fly fishing rod");
+				return(1, fly_fishing_rod_309, null, "Fly fishing rod");
 			case 5 :
-				return(1, lobster_pot_301, "Lobster pot");
+				return(1, lobster_pot_301, null, "Lobster pot");
 			case 6 :
-				return(1, tbwt_karambwan_vessel_3157, "Members: Karambwan vessel (after Tai Bwo Wannai Trio)");
+				return(1, tbwt_karambwan_vessel_3157, null, "Members: Karambwan vessel (after Tai Bwo Wannai Trio)");
 			case 7 :
-				return(34, trawler_reward_hat_13258, "Members: Angler's outfit");
+				return(34, trawler_reward_hat_13258, null, "Members: Angler's outfit");
 			case 8 :
-				return(43, aerial_fishing_gloves_no_bird_22816, "Members: Cormorant's glove<br>(with 35 hunter)");
+				return(43, aerial_fishing_gloves_no_bird_22816, null, "Members: Cormorant's glove<br>(with 35 hunter)");
 			case 9 :
-				return(48, brut_fishing_rod_11323, "Members: Barbarian rod<br>(with 15 strength & 15 agility)");
+				return(48, brut_fishing_rod_11323, null, "Members: Barbarian rod<br>(with 15 strength & 15 agility)");
 			case 10 :
-				return(61, dragon_harpoon_21028, "Members: Dragon harpoon");
+				return(61, dragon_harpoon_21028, null, "Members: Dragon harpoon");
 			case 11 :
-				return(71, crystal_harpoon_23762, "Members: Crystal harpoon<br>(after Song of the Elves)");
+				return(71, crystal_harpoon_23762, null, "Members: Crystal harpoon<br>(after Song of the Elves)");
 			case 12 :
-				return(75, infernal_harpoon_21031, "Members: Infernal harpoon<br>(with 85 Cooking)");
+				return(75, infernal_harpoon_21031, null, "Members: Infernal harpoon<br>(with 85 Cooking)");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 10 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, raids_fish0_raw_20855, "Pysk fish");
+				return(1, raids_fish0_raw_20855, null, "Pysk fish");
 			case 1 :
-				return(15, raids_fish1_raw_20857, "Suphi fish");
+				return(15, raids_fish1_raw_20857, null, "Suphi fish");
 			case 2 :
-				return(30, raids_fish2_raw_20859, "Leckish fish");
+				return(30, raids_fish2_raw_20859, null, "Leckish fish");
 			case 3 :
-				return(45, raids_fish3_raw_20861, "Brawk fish");
+				return(45, raids_fish3_raw_20861, null, "Brawk fish");
 			case 4 :
-				return(60, raids_fish4_raw_20863, "Mycil fish");
+				return(60, raids_fish4_raw_20863, null, "Mycil fish");
 			case 5 :
-				return(75, raids_fish5_raw_20865, "Roqed fish");
+				return(75, raids_fish5_raw_20865, null, "Roqed fish");
 			case 6 :
-				return(90, raids_fish6_raw_20867, "Kyren fish");
+				return(90, raids_fish6_raw_20867, null, "Kyren fish");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 11 :
 		switch_int ($int1) {
 			case 0 :
-				return(35, tempoross_harpoonfish_25565, "Members: Fighting Tempoross");
+				return(35, tempoross_harpoonfish_25565, null, "Members: Fighting Tempoross");
 			case 1 :
-				return(47, fossil_puffer_fish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
+				return(47, fossil_puffer_fish_21655, null, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
 			case 2 :
-				return(65, tbwt_raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
+				return(65, tbwt_raw_karambwan_3142, null, "Members: Karambwan - Karambwan vessel");
 			case 3 :
-				return(79, raw_seaturtle_395, "Members: Sea turtle - Trawler & Tempoross");
+				return(79, raw_seaturtle_395, null, "Members: Sea turtle - Trawler & Tempoross");
 			case 4 :
-				return(81, raw_mantaray_389, "Members: Manta ray - Trawler & Tempoross");
+				return(81, raw_mantaray_389, null, "Members: Manta ray - Trawler & Tempoross");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

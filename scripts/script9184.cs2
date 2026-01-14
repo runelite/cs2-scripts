@@ -1,0 +1,34 @@
+java.lang.IllegalArgumentException: INT != OBJ
+
+.id                       9184
+.int_arg_count            2
+.obj_arg_count            1
+   oload                  0
+   8003                  
+   istore                 2
+   iconst                 0
+   istore                 3
+LABEL5:
+   iload                  3
+   iload                  2
+   if_icmplt              LABEL9
+   jump                   LABEL25
+LABEL9:
+   iload                  0
+   iload                  3
+   get_array_int         
+   invoke                 9183
+   iload                  0
+   iconst                 16
+   iload                  1
+   add                   
+   invoke                 9192
+   pop_int               
+   pop_int               
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL5
+LABEL25:
+   return                

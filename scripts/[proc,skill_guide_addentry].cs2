@@ -1,8 +1,8 @@
 // 657
-[proc,skill_guide_addentry](int $int0, obj $obj1, string $string0, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7)(int)
-cc_create($component2, ^iftype_text, calc($int6 * 2), false);
+[proc,skill_guide_addentry](int $int0, obj $obj1, dbrow $dbrow2, string $string0, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8)(int)
+cc_create($component3, ^iftype_text, calc($int7 * 2), false);
 cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $int8, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_right, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(q8_full);
@@ -12,56 +12,62 @@ if ($int0 > 0) {
 } else {
 	cc_settext("");
 }
-cc_create($component3, ^iftype_graphic, $int6, false);
-def_int $int8 = 36;
-def_int $int9 = 32;
-def_int $int10 = 0;
+cc_create($component4, ^iftype_graphic, $int7, false);
+def_int $int9 = 36;
+def_int $int10 = 32;
 def_int $int11 = 0;
-def_int $int12 = 1;
-def_int $colour13 = 0x604e32;
-def_graphic $graphic14 = null;
-if (oc_param($obj1, param_1757) ! null) {
-	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = oc_param($obj1, param_1757), 30, 30, 3, 0, 0, ^black;
+def_int $int12 = 0;
+def_int $int13 = 1;
+def_int $colour14 = 0x604e32;
+def_graphic $graphic15 = null;
+if ($dbrow2 ! null) {
+	$graphic15 = db_getfield($dbrow2, skill_guide_v2_inline_icon:graphic, 0);
+	$int9, $int10 = db_getfield($dbrow2, skill_guide_v2_inline_icon:size, 0);
+	$int11, $int12 = db_getfield($dbrow2, skill_guide_v2_inline_icon:offset, 0);
+	$int11 = calc((36 - $int9) / 2 + $int11);
+	$int13, $colour14 = 0, ^black;
+} else if (oc_param($obj1, param_1757) ! null) {
+	$graphic15, $int9, $int10, $int11, $int12, $int13, $colour14 = oc_param($obj1, param_1757), 30, 30, 3, 0, 0, ^black;
 } else if (%skill_guide_skill = 4) {
-	$graphic14 = oc_param($obj1, spell_graphic1_on);
-	if ($graphic14 ! null) {
-		$int8, $int9, $int10, $int11, $int12, $colour13 = 24, 24, 6, 0, 0, ^black;
+	$graphic15 = oc_param($obj1, spell_graphic1_on);
+	if ($graphic15 ! null) {
+		$int9, $int10, $int11, $int12, $int13, $colour14 = 24, 24, 6, 0, 0, ^black;
 	}
 }
-cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(28 + $int10), calc($int7 + $int11), ^setpos_abs_left, ^setpos_abs_top);
-cc_setoutline($int12);
-cc_setgraphicshadow($colour13);
-if ($graphic14 ! null) {
-	cc_setgraphic($graphic14);
+cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(28 + $int11), calc($int8 + $int12), ^setpos_abs_left, ^setpos_abs_top);
+cc_setoutline($int13);
+cc_setgraphicshadow($colour14);
+if ($graphic15 ! null) {
+	cc_setgraphic($graphic15);
 } else {
 	cc_setobject($obj1, -1);
 }
 switch_int (%skill_guide_skill) {
 	case 4 :
-		if ($int5 >= 1 & $int5 <= 4 & $obj1 ! arceuus_tele_icon_13578 & $obj1 ! lunar_moonclan_liminal_staff_9084 & $obj1 ! staff_of_zaros_4675) {
+		if ($int6 >= 1 & $int6 <= 4 & $obj1 ! arceuus_tele_icon_13578 & $obj1 ! lunar_moonclan_liminal_staff_9084 & $obj1 ! staff_of_zaros_4675) {
 			cc_setop(1, "Check runes");
 			cc_setonop("skill_guide_magic_op($obj1)");
 		}
 	case 22 :
-		if ($int5 >= 1 & $int5 <= 11 | $int5 = 14) {
+		if ($int6 >= 1 & $int6 <= 11 | $int6 = 14) {
 			cc_setop(1, "Check materials");
 		}
 	case 24 :
-		if ($int5 = 8 | $int5 = 9) {
+		if ($int6 = 8 | $int6 = 9) {
 			cc_setop(1, "Check materials");
 		}
 }
-cc_create($component2, ^iftype_text, calc($int6 * 2 + 1), false);
-if ($int0 < 0 & $obj1 = invis_rod_7620) {
-	$int4 = calc($int4 + 36 + 25);
+cc_create($component3, ^iftype_text, calc($int7 * 2 + 1), false);
+if ($int0 < 0 & $obj1 = invis_rod_7620 & $dbrow2 = null) {
+	$int5 = calc($int5 + 36 + 25);
 }
-$int9 = max(max(calc(paraheight($string0, $int4, p12_full) * 12 + 5), $int9), 32);
-cc_setsize($int4, $int9, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(if_getwidth($component2) - $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
+$int10 = max(max(calc(paraheight($string0, $int5, p12_full) * 12 + 5), $int10), 32);
+cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(if_getwidth($component3) - $int5), $int8, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext($string0);
-return(calc($int7 + $int9));
+return(calc($int8 + $int10));

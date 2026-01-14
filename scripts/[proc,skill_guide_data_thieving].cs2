@@ -1,178 +1,178 @@
 // 478
-[proc,skill_guide_data_thieving](int $int0, int $int1)(int, namedobj, string)
+[proc,skill_guide_data_thieving](int $int0, int $int1)(int, namedobj, dbrow, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, coins_10000_1004, "Thieving lets you steal items from various people and stalls. Be careful, as people won't take too kindly to you going through their pockets, and might call the guards on you, or may take matters into their own hands.");
+				return(-1, coins_10000_1004, null, "Thieving lets you steal items from various people and stalls. Be careful, as people won't take too kindly to you going through their pockets, and might call the guards on you, or may take matters into their own hands.");
 			case 1 :
-				return(-1, pickpocket_guide_wealthy_citizen_28821, "As your Thieving level increases, the odds of you successfully stealing from your target will increase. You will also gain access to more lucrative targets with more valuable loot.");
+				return(-1, pickpocket_guide_wealthy_citizen_28821, null, "As your Thieving level increases, the odds of you successfully stealing from your target will increase. You will also gain access to more lucrative targets with more valuable loot.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, pickpocket_guide_man_3241, "Citizen");
+				return(1, pickpocket_guide_man_3241, null, "Citizen");
 			case 1 :
-				return(10, pickpocket_guide_farmer_3243, "Farmer");
+				return(10, pickpocket_guide_farmer_3243, null, "Farmer");
 			case 2 :
-				return(15, pickpocket_guide_fham_4295, "H.A.M. follower");
+				return(15, pickpocket_guide_fham_4295, null, "H.A.M. follower");
 			case 3 :
-				return(25, pickpocket_guide_warrior_3245, "Warrior");
+				return(25, pickpocket_guide_warrior_3245, null, "Warrior");
 			case 4 :
-				return(30, pickpocket_guide_villager_32896, "Villager");
+				return(30, pickpocket_guide_villager_32896, null, "Villager");
 			case 5 :
-				return(32, pickpocket_guide_rogue_3247, "Rogue");
+				return(32, pickpocket_guide_rogue_3247, null, "Rogue");
 			case 6 :
-				return(36, pickpocket_guide_dorgesh_10998, "Cave goblin");
+				return(36, pickpocket_guide_dorgesh_10998, null, "Cave goblin");
 			case 7 :
-				return(38, pickpocket_guide_master_farmer_5068, "Master farmer");
+				return(38, pickpocket_guide_master_farmer_5068, null, "Master farmer");
 			case 8 :
-				return(40, pickpocket_guide_guard_3249, "Guard");
+				return(40, pickpocket_guide_guard_3249, null, "Guard");
 			case 9 :
-				return(45, pickpocket_guide_fremennik_citizen_3686, "Fremennik");
+				return(45, pickpocket_guide_fremennik_citizen_3686, null, "Fremennik");
 			case 10 :
-				return(45, pickpocket_guide_feud_arabian_guard2_6782, "Bearded Pollnivnian bandit");
+				return(45, pickpocket_guide_feud_arabian_guard2_6782, null, "Bearded Pollnivnian bandit");
 			case 11 :
-				return(50, pickpocket_guide_wealthy_citizen_28821, "Wealthy citizen");
+				return(50, pickpocket_guide_wealthy_citizen_28821, null, "Wealthy citizen");
 			case 12 :
-				return(53, pickpocket_guide_desert_bandit_4625, "Desert bandit");
+				return(53, pickpocket_guide_desert_bandit_4625, null, "Desert bandit");
 			case 13 :
-				return(55, pickpocket_guide_knight_3251, "Knight");
+				return(55, pickpocket_guide_knight_3251, null, "Knight");
 			case 14 :
-				return(55, pickpocket_guide_feud_arabian_guard1_6781, "Pollnivnian bandit");
+				return(55, pickpocket_guide_feud_arabian_guard1_6781, null, "Pollnivnian bandit");
 			case 15 :
-				return(60, pickpocket_guide_pirate_32897, "Pirate");
+				return(60, pickpocket_guide_pirate_32897, null, "Pirate");
 			case 16 :
-				return(65, pickpocket_guide_watchman_3253, "Watchman");
+				return(65, pickpocket_guide_watchman_3253, null, "Watchman");
 			case 17 :
-				return(65, pickpocket_guide_feud_egyptian_doorman_6780, "Menaphite thug");
+				return(65, pickpocket_guide_feud_egyptian_doorman_6780, null, "Menaphite thug");
 			case 18 :
-				return(70, pickpocket_guide_paladin_3255, "Paladin");
+				return(70, pickpocket_guide_paladin_3255, null, "Paladin");
 			case 19 :
-				return(75, pickpocket_guide_gnome_3257, "Gnome");
+				return(75, pickpocket_guide_gnome_3257, null, "Gnome");
 			case 20 :
-				return(80, pickpocket_guide_hero_3259, "Hero");
+				return(80, pickpocket_guide_hero_3259, null, "Hero");
 			case 21 :
-				return(82, pickpocket_guide_vyre_24702, "Vyre");
+				return(82, pickpocket_guide_vyre_24702, null, "Vyre");
 			case 22 :
-				return(85, pickpocket_guide_woodelf_6105, "Elf");
+				return(85, pickpocket_guide_woodelf_6105, null, "Elf");
 			case 23 :
-				return(90, pickpocket_guide_tzhaar_21278, "TzHaar");
+				return(90, pickpocket_guide_tzhaar_21278, null, "TzHaar");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(2, cabbage_1965, "Vegetable stall");
+				return(2, cabbage_1965, null, "Vegetable stall");
 			case 1 :
-				return(5, cake_1891, "Cake stall");
+				return(5, cake_1891, null, "Cake stall");
 			case 2 :
-				return(5, cup_of_tea_1978, "Tea stall");
+				return(5, cup_of_tea_1978, null, "Tea stall");
 			case 3 :
-				return(5, chisel_1755, "Crafting stall");
+				return(5, chisel_1755, null, "Crafting stall");
 			case 4 :
-				return(5, banana_1963, "Monkey food stall");
+				return(5, banana_1963, null, "Monkey food stall");
 			case 5 :
-				return(20, silk_950, "Silk stall");
+				return(20, silk_950, null, "Silk stall");
 			case 6 :
-				return(22, rag_bottle_wine_7919, "Wine stall");
+				return(22, rag_bottle_wine_7919, null, "Wine stall");
 			case 7 :
-				return(25, golovanova_top_19653, "Fruit stall");
+				return(25, golovanova_top_19653, null, "Fruit stall");
 			case 8 :
-				return(27, seeds_skillguide_5171, "Seed stall");
+				return(27, seeds_skillguide_5171, null, "Seed stall");
 			case 9 :
-				return(35, fur_948, "Fur stall");
+				return(35, fur_948, null, "Fur stall");
 			case 10 :
-				return(42, raw_salmon_331, "Fish stall");
+				return(42, raw_salmon_331, null, "Fish stall");
 			case 11 :
-				return(49, xbows_crossbow_bronze_9174, "Crossbow stall");
+				return(49, xbows_crossbow_bronze_9174, null, "Crossbow stall");
 			case 12 :
-				return(50, silver_ore_442, "Silver stall");
+				return(50, silver_ore_442, null, "Silver stall");
 			case 13 :
-				return(65, airrune_556, "Magic stall");
+				return(65, airrune_556, null, "Magic stall");
 			case 14 :
-				return(65, iron_scimitar_1323, "Scimitar stall");
+				return(65, iron_scimitar_1323, null, "Scimitar stall");
 			case 15 :
-				return(65, spicespot_2007, "Spices stall");
+				return(65, spicespot_2007, null, "Spices stall");
 			case 16 :
-				return(75, sapphire_1607, "Gems stall");
+				return(75, sapphire_1607, null, "Gems stall");
 			case 17 :
-				return(82, runite_ore_451, "Ore stall");
+				return(82, runite_ore_451, null, "Ore stall");
 			case 18 :
-				return(87, mcannonball_2, "Cannonball stall");
+				return(87, mcannonball_2, null, "Cannonball stall");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(13, coins_995, "Ardougne, Rellekka and the Wilderness");
+				return(13, coins_995, null, "Ardougne, Rellekka and the Wilderness");
 			case 1 :
-				return(28, naturerune_561, "Upstairs in Ardougne and Rellekka");
+				return(28, naturerune_561, null, "Upstairs in Ardougne and Rellekka");
 			case 2 :
-				return(28, sw_dungeon_chest_key_25244, "The Isle of Souls");
+				return(28, sw_dungeon_chest_key_25244, null, "The Isle of Souls");
 			case 3 :
-				return(33, bronze_cannonball_31906, "Rusty Pirate Chests");
+				return(33, bronze_cannonball_31906, null, "Rusty Pirate Chests");
 			case 4 :
-				return(36, eclipse_wine_29415, "Aldarin Villas");
+				return(36, eclipse_wine_29415, null, "Aldarin Villas");
 			case 5 :
-				return(43, coins_995, "Upstairs in Ardougne");
+				return(43, coins_995, null, "Upstairs in Ardougne");
 			case 6 :
-				return(47, steel_arrowheads_41, "Hemenster and Rellekka");
+				return(47, steel_arrowheads_41, null, "Hemenster and Rellekka");
 			case 7 :
-				return(52, oil_lamp_unlit_4522, "Dorgesh-Kaan (average chests)");
+				return(52, oil_lamp_unlit_4522, null, "Dorgesh-Kaan (average chests)");
 			case 8 :
-				return(54, mcannonball_2, "Tarnished Pirate Chests");
+				return(54, mcannonball_2, null, "Tarnished Pirate Chests");
 			case 9 :
-				return(59, bloodrune_565, "Chaos druid tower north of Ardougne");
+				return(59, bloodrune_565, null, "Chaos druid tower north of Ardougne");
 			case 10 :
-				return(64, xeric_fabric_13383, "Lizardman Temple beneath Molch");
+				return(64, xeric_fabric_13383, null, "Lizardman Temple beneath Molch");
 			case 11 :
-				return(72, raw_shark_383, "Ardougne Castle");
+				return(72, raw_shark_383, null, "Ardougne Castle");
 			case 12 :
-				return(76, adamant_cannonball_31912, "Reinforced Pirate Chests");
+				return(76, adamant_cannonball_31912, null, "Reinforced Pirate Chests");
 			case 13 :
-				return(78, uncut_sapphire_1623, "Dorgesh-Kaan (rich chests)");
+				return(78, uncut_sapphire_1623, null, "Dorgesh-Kaan (rich chests)");
 			case 14 :
-				return(84, dragonstone_1615, "Wilderness Rogues' Castle");
+				return(84, dragonstone_1615, null, "Wilderness Rogues' Castle");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, 100_osman_winter_icon_10855, "Sorceress's Garden minigame - Winter<br>Al Kharid region");
+				return(1, 100_osman_winter_icon_10855, null, "Sorceress's Garden minigame - Winter<br>Al Kharid region");
 			case 1 :
-				return(15, peng_cowbell_10593, "Can steal cowbells from dairy cows");
+				return(15, peng_cowbell_10593, null, "Can steal cowbells from dairy cows");
 			case 2 :
-				return(21, ntk_ivory_comb_9026, "Pyramid Plunder minigame - Room 1<br>In the Jalsavrah Pyramid in Sophanem");
+				return(21, ntk_ivory_comb_9026, null, "Pyramid Plunder minigame - Room 1<br>In the Jalsavrah Pyramid in Sophanem");
 			case 3 :
-				return(25, 100_osman_spring_icon_10853, "Sorceress's Garden minigame - Spring<br>Al Kharid region");
+				return(25, 100_osman_spring_icon_10853, null, "Sorceress's Garden minigame - Spring<br>Al Kharid region");
 			case 4 :
-				return(31, ntk_scarab_pottery_9032, "Pyramid Plunder - Room 2");
+				return(31, ntk_scarab_pottery_9032, null, "Pyramid Plunder - Room 2");
 			case 5 :
-				return(41, ntk_statuette_pottery_9036, "Pyramid Plunder - Room 3");
+				return(41, ntk_statuette_pottery_9036, null, "Pyramid Plunder - Room 3");
 			case 6 :
-				return(44, dorgesh_wire_10981, "Can steal wire from the Dorgeshuun wire machine");
+				return(44, dorgesh_wire_10981, null, "Can steal wire from the Dorgeshuun wire machine");
 			case 7 :
-				return(45, 100_osman_autumn_icon_10854, "Sorceress's Garden minigame - Autumn<br>Al Kharid region");
+				return(45, 100_osman_autumn_icon_10854, null, "Sorceress's Garden minigame - Autumn<br>Al Kharid region");
 			case 8 :
-				return(49, piscarilius_stolen_pendant_13434, "Can pick locks in Port Piscarilius.");
+				return(49, piscarilius_stolen_pendant_13434, null, "Can pick locks in Port Piscarilius.");
 			case 9 :
-				return(50, uncut_sapphire_1623, "Can crack the wall safes in Rogues' Den");
+				return(50, uncut_sapphire_1623, null, "Can crack the wall safes in Rogues' Den");
 			case 10 :
-				return(50, varlamore_thieving_house_key_2_29328, "Can rob houses in Civitas illa Fortis");
+				return(50, varlamore_thieving_house_key_2_29328, null, "Can rob houses in Civitas illa Fortis");
 			case 11 :
-				return(51, ntk_seal_stone_9042, "Pyramid Plunder - Room 4");
+				return(51, ntk_seal_stone_9042, null, "Pyramid Plunder - Room 4");
 			case 12 :
-				return(57, hosdun_grubby_key_23499, "Can pick-lock the door to the Grubby Chest in the Forthos Dungeon.");
+				return(57, hosdun_grubby_key_23499, null, "Can pick-lock the door to the Grubby Chest in the Forthos Dungeon.");
 			case 13 :
-				return(61, ntk_statuette_stone_9038, "Pyramid Plunder - Room 5");
+				return(61, ntk_statuette_stone_9038, null, "Pyramid Plunder - Room 5");
 			case 14 :
-				return(65, 100_osman_summer_icon_10852, "Sorceress's Garden minigame - Summer<br>Al Kharid region");
+				return(65, 100_osman_summer_icon_10852, null, "Sorceress's Garden minigame - Summer<br>Al Kharid region");
 			case 15 :
-				return(66, hallowed_token_24719, "Hallowed Sepulchre - Can pick-lock the coffins found on each floor.");
+				return(66, hallowed_token_24719, null, "Hallowed Sepulchre - Can pick-lock the coffins found on each floor.");
 			case 16 :
-				return(71, ntk_seal_gold_9040, "Pyramid Plunder - Room 6");
+				return(71, ntk_seal_gold_9040, null, "Pyramid Plunder - Room 6");
 			case 17 :
-				return(81, ntk_scarab_gold_9028, "Pyramid Plunder - Room 7");
+				return(81, ntk_scarab_gold_9028, null, "Pyramid Plunder - Room 7");
 			case 18 :
-				return(91, ntk_statuette_gold_9034, "Pyramid Plunder - Room 8");
+				return(91, ntk_statuette_gold_9034, null, "Pyramid Plunder - Room 8");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");

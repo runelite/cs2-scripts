@@ -1,0 +1,134 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9187
+.int_arg_count            1
+.obj_arg_count            1
+   oload                  0
+   sconst                 " "
+   8018                  
+   ostore                 1
+   oload                  1
+   8003                  
+   istore                 1
+   sconst                 ""
+   ostore                 2
+   iconst                 0
+   istore                 2
+   iload                  1
+   iconst                 1
+   sub                   
+   istore                 3
+   iconst                 0
+   istore                 4
+LABEL17:
+   iload                  4
+   iload                  1
+   if_icmplt              LABEL21
+   jump                   LABEL118
+LABEL21:
+   iload                  4
+   get_array_int          1
+   ostore                 2
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL29
+   jump                   LABEL98
+LABEL29:
+   oload                  2
+   iload                  0
+   if_getwidth           
+   iconst                 495
+   parawidth             
+   istore                 2
+   iload                  0
+   iconst                 4
+   iload                  0
+   invoke                 8302
+   iconst                 0
+   cc_create             
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 2526
+   iload                  0
+   iconst                 -1
+   2703                  
+   cc_setcolour          
+   oload                  2
+   cc_settext            
+   iload                  2
+   iconst                 16
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  0
+   iconst                 16
+   iload                  2
+   invoke                 9193
+   pop_int               
+   pop_int               
+   iconst                 2525
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 2524
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iload                  4
+   iload                  3
+   if_icmplt              LABEL78
+   jump                   LABEL89
+LABEL78:
+   iconst                 2525
+   cc_getx               
+   cc_getwidth           
+   add                   
+   iconst                 3
+   add                   
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+   jump                   LABEL97
+LABEL89:
+   iconst                 2525
+   cc_getx               
+   cc_getwidth           
+   add                   
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+LABEL97:
+   jump                   LABEL113
+LABEL98:
+   iload                  4
+   iload                  3
+   if_icmplt              LABEL102
+   jump                   LABEL113
+LABEL102:
+   iconst                 2525
+   iconst                 2525
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 3
+   add                   
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+LABEL113:
+   iload                  4
+   iconst                 1
+   add                   
+   istore                 4
+   jump                   LABEL17
+LABEL118:
+   return                

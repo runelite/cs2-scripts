@@ -1,5 +1,5 @@
 // 7884
-[proc,script7884](int $int0, int $int1)(int, namedobj, string)
+[proc,script7884](int $int0, int $int1)(int, namedobj, dbrow, string)
 def_string $string0 = "";
 if (%option_skill_guide = 0) {
 	$string0 = "<col=6f0000>";
@@ -10,286 +10,286 @@ switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, feather_314, "Fletching allows you to create various ranged weapons, as well as ammunition to go with them.");
+				return(-1, feather_314, null, "Fletching allows you to create various ranged weapons, as well as ammunition to go with them.");
 			case 1 :
-				return(-1, bow_string_1777, "Making bows requires bowstring, which can be made from flax at a spinning wheel. You can use a knife on some logs to carve an unfinished bow, then add the bowstring to complete the weapon.");
+				return(-1, bow_string_1777, null, "Making bows requires bowstring, which can be made from flax at a spinning wheel. You can use a knife on some logs to carve an unfinished bow, then add the bowstring to complete the weapon.");
 			case 2 :
-				return(-1, headless_arrow_5_6447, "To create arrows, you'll first need to carve logs into arrow shafts with a knife, then tip the arrow shafts with feathers. Finally, you'll need to add some arrow heads.");
+				return(-1, headless_arrow_5_6447, null, "To create arrows, you'll first need to carve logs into arrow shafts with a knife, then tip the arrow shafts with feathers. Finally, you'll need to add some arrow heads.");
 			case 3 :
-				return(-1, xbows_crossbow_bolts_mithril_unfeathered_3_9400, "To make bolts, you only need to combine unfinished bolts with feathers. You can also chisel gemstones down into bolt tips, with each gemstone being able to top a different bolt.");
+				return(-1, xbows_crossbow_bolts_mithril_unfeathered_3_9400, null, "To make bolts, you only need to combine unfinished bolts with feathers. You can also chisel gemstones down into bolt tips, with each gemstone being able to top a different bolt.");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, arrow_shaft_5_6443, "15 Arrow shafts (Logs)");
+				return(1, arrow_shaft_5_6443, null, "15 Arrow shafts (Logs)");
 			case 1 :
-				return(1, bronze_arrow_882, "Bronze arrows");
+				return(1, bronze_arrow_882, null, "Bronze arrows");
 			case 2 :
-				return(7, zogre_brutal_bronze_4773, "Bronze 'brutal' arrows");
+				return(7, zogre_brutal_bronze_4773, null, "Bronze 'brutal' arrows");
 			case 3 :
-				return(15, arrow_shaft_5_6443, "30 Arrow shafts (Oak logs)");
+				return(15, arrow_shaft_5_6443, null, "30 Arrow shafts (Oak logs)");
 			case 4 :
-				return(15, iron_arrow_884, "Iron arrows");
+				return(15, iron_arrow_884, null, "Iron arrows");
 			case 5 :
-				return(18, zogre_brutal_iron_4778, "Iron 'brutal' arrows");
+				return(18, zogre_brutal_iron_4778, null, "Iron 'brutal' arrows");
 			case 6 :
-				return(30, arrow_shaft_5_6443, "45 Arrow shafts (Willow logs)");
+				return(30, arrow_shaft_5_6443, null, "45 Arrow shafts (Willow logs)");
 			case 7 :
-				return(30, steel_arrow_886, "Steel arrows");
+				return(30, steel_arrow_886, null, "Steel arrows");
 			case 8 :
-				return(33, zogre_brutal_steel_4783, "Steel 'brutal' arrows");
+				return(33, zogre_brutal_steel_4783, null, "Steel 'brutal' arrows");
 			case 9 :
-				return(38, zogre_brutal_black_4788, "Black 'brutal' arrows");
+				return(38, zogre_brutal_black_4788, null, "Black 'brutal' arrows");
 			case 10 :
-				return(45, arrow_shaft_5_6443, "60 Arrow shafts (Maple logs)");
+				return(45, arrow_shaft_5_6443, null, "60 Arrow shafts (Maple logs)");
 			case 11 :
-				return(45, mithril_arrow_888, "Mithril arrows");
+				return(45, mithril_arrow_888, null, "Mithril arrows");
 			case 12 :
-				return(49, zogre_brutal_mithril_4793, "Mithril 'brutal' arrows");
+				return(49, zogre_brutal_mithril_4793, null, "Mithril 'brutal' arrows");
 			case 13 :
-				return(52, slayer_broad_arrows_4160, "Broad arrows");
+				return(52, slayer_broad_arrows_4160, null, "Broad arrows");
 			case 14 :
-				return(60, arrow_shaft_5_6443, "75 Arrow shafts (Yew logs)");
+				return(60, arrow_shaft_5_6443, null, "75 Arrow shafts (Yew logs)");
 			case 15 :
-				return(60, adamant_arrow_890, "Adamant arrows");
+				return(60, adamant_arrow_890, null, "Adamant arrows");
 			case 16 :
-				return(62, zogre_brutal_adamant_4798, "Adamant 'brutal' arrows");
+				return(62, zogre_brutal_adamant_4798, null, "Adamant 'brutal' arrows");
 			case 17 :
-				return(75, arrow_shaft_5_6443, "90 Arrow shafts (Magic logs)");
+				return(75, arrow_shaft_5_6443, null, "90 Arrow shafts (Magic logs)");
 			case 18 :
-				return(75, rune_arrow_892, "Rune arrows");
+				return(75, rune_arrow_892, null, "Rune arrows");
 			case 19 :
-				return(77, zogre_brutal_rune_4803, "Rune 'brutal' arrows");
+				return(77, zogre_brutal_rune_4803, null, "Rune 'brutal' arrows");
 			case 20 :
-				return(82, amethyst_arrow_21326, "Amethyst arrows");
+				return(82, amethyst_arrow_21326, null, "Amethyst arrows");
 			case 21 :
-				return(90, arrow_shaft_5_6443, "105 Arrow shafts (Redwood logs)");
+				return(90, arrow_shaft_5_6443, null, "105 Arrow shafts (Redwood logs)");
 			case 22 :
-				return(90, dragon_arrow_11212, "Dragon arrows");
+				return(90, dragon_arrow_11212, null, "Dragon arrows");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(5, shortbow_841, "Shortbows");
+				return(5, shortbow_841, null, "Shortbows");
 			case 1 :
-				return(10, longbow_839, "Longbows");
+				return(10, longbow_839, null, "Longbows");
 			case 2 :
-				return(20, oak_shortbow_843, "Oak shortbows");
+				return(20, oak_shortbow_843, null, "Oak shortbows");
 			case 3 :
-				return(25, oak_longbow_845, "Oak longbows");
+				return(25, oak_longbow_845, null, "Oak longbows");
 			case 4 :
-				return(30, zogre_bow_4827, "Ogre composite bows");
+				return(30, zogre_bow_4827, null, "Ogre composite bows");
 			case 5 :
-				return(35, rat_bone_bow_28794, "Bone shortbow");
+				return(35, rat_bone_bow_28794, null, "Bone shortbow");
 			case 6 :
-				return(35, willow_shortbow_849, "Willow shortbows");
+				return(35, willow_shortbow_849, null, "Willow shortbows");
 			case 7 :
-				return(40, willow_longbow_847, "Willow longbows");
+				return(40, willow_longbow_847, null, "Willow longbows");
 			case 8 :
-				return(50, maple_shortbow_853, "Maple shortbows");
+				return(50, maple_shortbow_853, null, "Maple shortbows");
 			case 9 :
-				return(55, maple_longbow_851, "Maple longbows");
+				return(55, maple_longbow_851, null, "Maple longbows");
 			case 10 :
-				return(65, yew_shortbow_857, "Yew shortbows");
+				return(65, yew_shortbow_857, null, "Yew shortbows");
 			case 11 :
-				return(70, yew_longbow_855, "Yew longbows");
+				return(70, yew_longbow_855, null, "Yew longbows");
 			case 12 :
-				return(74, scorching_bow_29591, "Scorching bows");
+				return(74, scorching_bow_29591, null, "Scorching bows");
 			case 13 :
-				return(80, magic_shortbow_861, "Magic shortbows");
+				return(80, magic_shortbow_861, null, "Magic shortbows");
 			case 14 :
-				return(85, magic_longbow_859, "Magic longbows");
+				return(85, magic_longbow_859, null, "Magic longbows");
 			case 15 :
-				return(85, wild_cave_webweaver_charged_27655, "Webweaver bow");
+				return(85, wild_cave_webweaver_charged_27655, null, "Webweaver bow");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
 			case 0 :
-				return(9, bolt_877, "Bronze bolts");
+				return(9, bolt_877, null, "Bronze bolts");
 			case 1 :
-				return(11, opal_bolt_879, "Opal-tipped bronze bolts");
+				return(11, opal_bolt_879, null, "Opal-tipped bronze bolts");
 			case 2 :
-				return(24, xbows_crossbow_bolts_blurite_9139, "Blurite bolts<br>(after Knight's Sword quest)");
+				return(24, xbows_crossbow_bolts_blurite_9139, null, "Blurite bolts<br>(after Knight's Sword quest)");
 			case 3 :
-				return(26, xbows_crossbow_bolts_blurite_tipped_jade_9335, "Jade-tipped blurite bolts");
+				return(26, xbows_crossbow_bolts_blurite_tipped_jade_9335, null, "Jade-tipped blurite bolts");
 			case 4 :
-				return(32, huntingbow_bolts_10158, "Kebbit-tipped hunting bolts");
+				return(32, huntingbow_bolts_10158, null, "Kebbit-tipped hunting bolts");
 			case 5 :
-				return(39, xbows_crossbow_bolts_iron_9140, "Iron bolts");
+				return(39, xbows_crossbow_bolts_iron_9140, null, "Iron bolts");
 			case 6 :
-				return(41, pearl_bolt_880, "Pearl-tipped iron bolts");
+				return(41, pearl_bolt_880, null, "Pearl-tipped iron bolts");
 			case 7 :
-				return(42, huntingbow_bigbolts_10159, "Long kebbit-tipped hunting bolts");
+				return(42, huntingbow_bigbolts_10159, null, "Long kebbit-tipped hunting bolts");
 			case 8 :
-				return(43, xbows_crossbow_bolts_silver_9145, "Silver bolts");
+				return(43, xbows_crossbow_bolts_silver_9145, null, "Silver bolts");
 			case 9 :
-				return(46, xbows_crossbow_bolts_steel_9141, "Steel bolts");
+				return(46, xbows_crossbow_bolts_steel_9141, null, "Steel bolts");
 			case 10 :
-				return(48, xbows_crossbow_bolts_steel_tipped_redtopaz_9336, "Red topaz-tipped steel bolts");
+				return(48, xbows_crossbow_bolts_steel_tipped_redtopaz_9336, null, "Red topaz-tipped steel bolts");
 			case 11 :
-				return(51, barbed_bolt_881, "Barbed-tipped bolts");
+				return(51, barbed_bolt_881, null, "Barbed-tipped bolts");
 			case 12 :
-				return(54, xbows_crossbow_bolts_mithril_9142, "Mithril bolts");
+				return(54, xbows_crossbow_bolts_mithril_9142, null, "Mithril bolts");
 			case 13 :
-				return(55, slayer_broad_bolt_11875, "Broad bolts");
+				return(55, slayer_broad_bolt_11875, null, "Broad bolts");
 			case 14 :
-				return(56, xbows_crossbow_bolts_mithril_tipped_sapphire_9337, "Sapphire-tipped mithril bolts");
+				return(56, xbows_crossbow_bolts_mithril_tipped_sapphire_9337, null, "Sapphire-tipped mithril bolts");
 			case 15 :
-				return(58, xbows_crossbow_bolts_mithril_tipped_emerald_9338, "Emerald-tipped mithril bolts");
+				return(58, xbows_crossbow_bolts_mithril_tipped_emerald_9338, null, "Emerald-tipped mithril bolts");
 			case 16 :
-				return(59, xbows_grapple_tip_bolt_mithril_9418, "Mithril grapple-tipped bolts");
+				return(59, xbows_grapple_tip_bolt_mithril_9418, null, "Mithril grapple-tipped bolts");
 			case 17 :
-				return(61, xbows_crossbow_bolts_adamantite_9143, "Adamantite bolts");
+				return(61, xbows_crossbow_bolts_adamantite_9143, null, "Adamantite bolts");
 			case 18 :
-				return(62, sunlight_antelope_bolt_28872, "Sunlight bolts");
+				return(62, sunlight_antelope_bolt_28872, null, "Sunlight bolts");
 			case 19 :
-				return(63, xbows_crossbow_bolts_adamantite_tipped_ruby_9339, "Ruby-tipped adamantite bolts");
+				return(63, xbows_crossbow_bolts_adamantite_tipped_ruby_9339, null, "Ruby-tipped adamantite bolts");
 			case 20 :
-				return(65, xbows_crossbow_bolts_adamantite_tipped_diamond_9340, "Diamond-tipped adamantite bolts");
+				return(65, xbows_crossbow_bolts_adamantite_tipped_diamond_9340, null, "Diamond-tipped adamantite bolts");
 			case 21 :
-				return(69, xbows_crossbow_bolts_runite_9144, "Runite bolts");
+				return(69, xbows_crossbow_bolts_runite_9144, null, "Runite bolts");
 			case 22 :
-				return(71, xbows_crossbow_bolts_runite_tipped_dragonstone_9341, "Dragonstone-tipped runite bolts");
+				return(71, xbows_crossbow_bolts_runite_tipped_dragonstone_9341, null, "Dragonstone-tipped runite bolts");
 			case 23 :
-				return(72, moonlight_antelope_bolt_28878, "Moonlight bolts");
+				return(72, moonlight_antelope_bolt_28878, null, "Moonlight bolts");
 			case 24 :
-				return(73, xbows_crossbow_bolts_runite_tipped_onyx_9342, "Onyx-tipped runite bolts");
+				return(73, xbows_crossbow_bolts_runite_tipped_onyx_9342, null, "Onyx-tipped runite bolts");
 			case 25 :
-				return(76, slayer_broad_bolt_amethyst_21316, "Amethyst broad bolts");
+				return(76, slayer_broad_bolt_amethyst_21316, null, "Amethyst broad bolts");
 			case 26 :
-				return(84, dragon_bolts_21905, "Dragon bolts");
+				return(84, dragon_bolts_21905, null, "Dragon bolts");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(10, bronze_dart_806, "Bronze darts");
+				return(10, bronze_dart_806, null, "Bronze darts");
 			case 1 :
-				return(22, iron_dart_807, "Iron darts");
+				return(22, iron_dart_807, null, "Iron darts");
 			case 2 :
-				return(37, steel_dart_808, "Steel darts");
+				return(37, steel_dart_808, null, "Steel darts");
 			case 3 :
-				return(52, mithril_dart_809, "Mithril darts");
+				return(52, mithril_dart_809, null, "Mithril darts");
 			case 4 :
-				return(58, camphor_blowpipe_31575, "Camphor blowpipe");
+				return(58, camphor_blowpipe_31575, null, "Camphor blowpipe");
 			case 5 :
-				return(67, adamant_dart_810, "Adamant darts");
+				return(67, adamant_dart_810, null, "Adamant darts");
 			case 6 :
-				return(72, ironwood_blowpipe_31579, "Ironwood blowpipe");
+				return(72, ironwood_blowpipe_31579, null, "Ironwood blowpipe");
 			case 7 :
-				return(74, atlatl_dart_28991, "Atlatl darts");
+				return(74, atlatl_dart_28991, null, "Atlatl darts");
 			case 8 :
-				return(78, toxic_blowpipe_loaded_12926, "Toxic blowpipe");
+				return(78, toxic_blowpipe_loaded_12926, null, "Toxic blowpipe");
 			case 9 :
-				return(81, rune_dart_811, "Rune darts");
+				return(81, rune_dart_811, null, "Rune darts");
 			case 10 :
-				return(84, rosewood_blowpipe_31583, "Rosewood blowpipe");
+				return(84, rosewood_blowpipe_31583, null, "Rosewood blowpipe");
 			case 11 :
-				return(90, amethyst_dart_25849, "Amethyst darts");
+				return(90, amethyst_dart_25849, null, "Amethyst darts");
 			case 12 :
-				return(95, dragon_dart_11230, "Dragon darts");
+				return(95, dragon_dart_11230, null, "Dragon darts");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(9, xbows_crossbow_stock_wood_9440, "Bronze/wooden crossbows");
+				return(9, xbows_crossbow_stock_wood_9440, null, "Bronze/wooden crossbows");
 			case 1 :
-				return(24, xbows_crossbow_stock_oak_9442, "Blurite/oak crossbows<br>(after Knight's Sword quest)");
+				return(24, xbows_crossbow_stock_oak_9442, null, "Blurite/oak crossbows<br>(after Knight's Sword quest)");
 			case 2 :
-				return(39, xbows_crossbow_stock_willow_9444, "Iron/willow crossbows");
+				return(39, xbows_crossbow_stock_willow_9444, null, "Iron/willow crossbows");
 			case 3 :
-				return(46, xbows_crossbow_stock_teak_9446, "Steel/teak crossbows");
+				return(46, xbows_crossbow_stock_teak_9446, null, "Steel/teak crossbows");
 			case 4 :
-				return(54, xbows_crossbow_stock_maple_9448, "Mithril/maple crossbows");
+				return(54, xbows_crossbow_stock_maple_9448, null, "Mithril/maple crossbows");
 			case 5 :
-				return(61, xbows_crossbow_stock_mahogany_9450, "Adamantite/mahogany crossbows");
+				return(61, xbows_crossbow_stock_mahogany_9450, null, "Adamantite/mahogany crossbows");
 			case 6 :
-				return(69, xbows_crossbow_stock_yew_9452, "Runite/yew crossbows");
+				return(69, xbows_crossbow_stock_yew_9452, null, "Runite/yew crossbows");
 			case 7 :
-				return(74, hunting_crossbow_sunlight_28869, "Sunlight hunters' crossbow");
+				return(74, hunting_crossbow_sunlight_28869, null, "Sunlight hunters' crossbow");
 			case 8 :
-				return(78, xbows_crossbow_stock_magic_21952, "Dragon/magic crossbows");
+				return(78, xbows_crossbow_stock_magic_21952, null, "Dragon/magic crossbows");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(3, bronze_javelin_825, "Bronze javelins");
+				return(3, bronze_javelin_825, null, "Bronze javelins");
 			case 1 :
-				return(17, iron_javelin_826, "Iron javelins");
+				return(17, iron_javelin_826, null, "Iron javelins");
 			case 2 :
-				return(32, steel_javelin_827, "Steel javelins");
+				return(32, steel_javelin_827, null, "Steel javelins");
 			case 3 :
-				return(47, light_ballista_19478, "Light ballistae");
+				return(47, light_ballista_19478, null, "Light ballistae");
 			case 4 :
-				return(47, mithril_javelin_828, "Mithril javelins");
+				return(47, mithril_javelin_828, null, "Mithril javelins");
 			case 5 :
-				return(62, adamant_javelin_829, "Adamant javelins");
+				return(62, adamant_javelin_829, null, "Adamant javelins");
 			case 6 :
-				return(72, heavy_ballista_19481, "Heavy ballistae");
+				return(72, heavy_ballista_19481, null, "Heavy ballistae");
 			case 7 :
-				return(77, rune_javelin_830, "Rune javelins");
+				return(77, rune_javelin_830, null, "Rune javelins");
 			case 8 :
-				return(84, amethyst_javelin_21318, "Amethyst javelins");
+				return(84, amethyst_javelin_21318, null, "Amethyst javelins");
 			case 9 :
-				return(92, dragon_javelin_19484, "Dragon javelins");
+				return(92, dragon_javelin_19484, null, "Dragon javelins");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 7 :
 		switch_int ($int1) {
 			case 0 :
-				return(27, oak_shield_22251, "Oak shield");
+				return(27, oak_shield_22251, null, "Oak shield");
 			case 1 :
-				return(42, willow_shield_22254, "Willow shield");
+				return(42, willow_shield_22254, null, "Willow shield");
 			case 2 :
-				return(57, maple_shield_22257, "Maple shield");
+				return(57, maple_shield_22257, null, "Maple shield");
 			case 3 :
-				return(72, yew_shield_22260, "Yew shield");
+				return(72, yew_shield_22260, null, "Yew shield");
 			case 4 :
-				return(87, magic_shield_22263, "Magic shield");
+				return(87, magic_shield_22263, null, "Magic shield");
 			case 5 :
-				return(92, redwood_shield_22266, "Redwood shield");
+				return(92, redwood_shield_22266, null, "Redwood shield");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 	case 8 :
 		switch_int ($int1) {
 			case 0 :
-				return(20, oak_logs_1521, "Oak vale totems");
+				return(20, oak_logs_1521, null, "Oak vale totems");
 			case 1 :
-				return(35, willow_logs_1519, "Willow vale totems");
+				return(35, willow_logs_1519, null, "Willow vale totems");
 			case 2 :
-				return(50, maple_logs_1517, "Maple vale totems");
+				return(50, maple_logs_1517, null, "Maple vale totems");
 			case 3 :
-				return(65, yew_logs_1515, "Yew vale totems");
+				return(65, yew_logs_1515, null, "Yew vale totems");
 			case 4 :
-				return(80, magic_logs_1513, "Magic vale totems");
+				return(80, magic_logs_1513, null, "Magic vale totems");
 			case 5 :
-				return(90, redwood_logs_19669, "Redwood vale totems");
+				return(90, redwood_logs_19669, null, "Redwood vale totems");
 		}
 	case 9 :
 		switch_int ($int1) {
 			case 0 :
-				return(40, battlestaff_1391, "Battlestaves");
+				return(40, battlestaff_1391, null, "Battlestaves");
 			case 1 :
-				return(53, greenman_statue_31027, "Greenman statue");
+				return(53, greenman_statue_31027, null, "Greenman statue");
 			case 2 :
-				return(60, hg_hunter_spear_29305, "Hunter's spears");
+				return(60, hg_hunter_spear_29305, null, "Hunter's spears");
 			case 3 :
-				return(79, greenman_wall_decoration_31024, "Greenman carving");
+				return(79, greenman_wall_decoration_31024, null, "Greenman carving");
 			case 4 :
-				return(90, redwood_hiking_staff_31049, "Redwood hiking staff");
+				return(90, redwood_hiking_staff_31049, null, "Redwood hiking staff");
 			case default :
-				return(-1, null, "");
+				return(-1, null, null, "");
 		}
 }
-return(-1, null, "");
+return(-1, null, null, "");
