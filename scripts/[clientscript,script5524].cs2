@@ -1,12 +1,10 @@
 // 5524
-[clientscript,script5524](component $com_settings_side_skull_prevention0, component $com_settings_side_tooltip1, int $int2)
+[clientscript,script5524](component $com_settings_side_skull_prevention0, component $com_settings_side_tooltip1)
 def_string $string0 = "PK Skull Prevention (currently off)<br>When active, prevents you from attacking players if this would cause you to become skulled.";
-if ($int2 = 0) {
-	if (%skull_prevent_enabled = 1) {
-		$string0 = "PK Skull Prevention (currently on)<br>When active, prevents you from attacking players if this would cause you to become skulled.";
-	}
-	if (~on_mobile = false & cc_find($com_settings_side_skull_prevention0, 0) = ^true) {
-		cc_setcolour(^white);
-	}
+if (%skull_prevent_enabled = 1) {
+	$string0 = "PK Skull Prevention (currently on)<br>When active, prevents you from attacking players if this would cause you to become skulled.";
+}
+if (~on_mobile = false & cc_find($com_settings_side_skull_prevention0, 0) = ^true) {
+	cc_setcolour(^white);
 }
 ~tooltip_mouserepeat($com_settings_side_skull_prevention0, -1, $com_settings_side_tooltip1, $string0, 25, 190);

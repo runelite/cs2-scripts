@@ -1,0 +1,31 @@
+// 9207
+[proc,script9207](int $int0, struct $struct1, int $comsubid2, int $comsubid3, int $int4, component $component5, component $component6, int $int7)
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script9208($struct1, $comsubid3, $int4, $component5, $component6, clientclock, $int7)");
+	cc_setonmouseleave("script9209($struct1, $comsubid3, $int4, $component5, $component6, clientclock, $int7)");
+} else {
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+}
+if ($int0 = 1) {
+	if ($int7 = 0) {
+		cc_setop(1, "Activate");
+	} else {
+		cc_setop(1, "Deactivate");
+	}
+	cc_setopbase("<col=ff9040><struct_param($struct1, param_2532)></col>");
+	cc_setonop("script9210(
+		0 = event_op, 
+		1 = $struct1, 
+		2 = $int7, 
+		3 = $int0, 
+		4 = $comsubid2, 
+		5 = $comsubid3, 
+		6 = $int4, 
+		7 = $component5, 
+		8 = $component6
+	)");
+} else {
+	cc_clearops;
+	cc_setonop(null);
+}

@@ -1,0 +1,9 @@
+// 9213
+[proc,script9213](dbrow $dbrow0)(int)
+if (~script8943($dbrow0) = 1) {
+	return(1);
+}
+if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
+	return(1);
+}
+return(0);

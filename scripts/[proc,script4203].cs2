@@ -1,5 +1,5 @@
 // 4203
-[proc,script4203](dbrow $dbrow0)(int)
+[proc,script4203](dbrow $dbrow0, obj $obj1)(int)
 switch_dbrow ($dbrow0) {
 	case tithe_shop_grape_blessing :
 		if (%hosidius_evilgrapes < 2) {
@@ -25,5 +25,17 @@ switch_dbrow ($dbrow0) {
 		if (map_members = false) {
 			return(1);
 		}
+}
+def_int $int2 = -1;
+def_struct $struct3 = null;
+def_int $int4 = oc_param($obj1, param_1371);
+if ($int4 > 0) {
+	$struct3 = enum(int, struct, enum_4038, $int4);
+	if ($struct3 ! null) {
+		$int2 = struct_param($struct3, param_2535);
+	}
+	if ($int2 ! -1 & testbit(%sigil_state_1, $int2) = ^true) {
+		return(1);
+	}
 }
 return(0);

@@ -1,0 +1,25 @@
+// 9197
+[clientscript,script9197](int $com_deadmanskull_interface_infinity0, int $com_deadmanskull_interface_universe1, int $com_deadmanskull_interface_frame2, component $com_deadmanskull_interface_close3, int $com_deadmanskull_interface_resize_preview4)
+~steelborder(deadmanskull_interface:frame, "Deadman Unlocks", 0);
+def_graphic $graphic5 = null;
+def_int $int6 = 0;
+def_boolean $boolean7 = ~on_mobile;
+if ($boolean7 = true) {
+	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_deadmanskull_interface_close3);
+	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_deadmanskull_interface_close3);
+	if_setgraphic("steelborder_close_button,0", $com_deadmanskull_interface_close3);
+	$int6 = calc(165 - (20 + 30));
+} else {
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_deadmanskull_interface_close3);
+	if_setposition(2, 6, ^setpos_abs_right, ^setpos_abs_top, $com_deadmanskull_interface_close3);
+	$graphic5 = "close_buttons,0";
+	if_setgraphic($graphic5, $com_deadmanskull_interface_close3);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic5)", $com_deadmanskull_interface_close3);
+	$graphic5 = "close_buttons,1";
+	if_setonmouseover("graphic_swapper(event_com, $graphic5)", $com_deadmanskull_interface_close3);
+}
+if_setop(1, "Close", $com_deadmanskull_interface_close3);
+if_setonop("opsound(event_op, 2)", $com_deadmanskull_interface_close3);
+if_setopkey(2, ^key_escape, 0, $com_deadmanskull_interface_close3);
+if_setop(2, "", $com_deadmanskull_interface_close3);
+~script9199(%deadman_skull_tab, enum(int, dbrow, enum_2768, %deadman_skull_tab));
