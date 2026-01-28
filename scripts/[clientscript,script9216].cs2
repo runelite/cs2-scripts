@@ -1,0 +1,10 @@
+// 9216
+[clientscript,script9216](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	%bank_hidedepositcontainers = calc(1 - %bank_hidedepositcontainers);
+	~script9218($component1);
+}

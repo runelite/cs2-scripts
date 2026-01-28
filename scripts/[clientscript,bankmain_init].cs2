@@ -1,7 +1,7 @@
 // 274
-[clientscript,bankmain_init](component $com_bankmain_universe0, component $com_bankmain_frame1, component $com_bankmain_menu_button2, component $com_bankmain_wornitems_button3, component $com_bankmain_items_container4, component $com_bankmain_wornitems_container5, component $com_bankmain_menu_container6, component $com_bankmain_items7, component $com_bankmain_scrollbar8, component $com_bankmain_bottom9, component $com_bankmain_swap10, component $com_bankmain_insert11, component $com_bankmain_placeholder12, component $com_bankmain_item13, component $com_bankmain_note14, component $com_bankmain_search15, component $com_bankmain_title16, component $com_bankmain_occupiedslots17, component $com_bankmain_tabs18, component $com_bankmain_incinerator_target19, component $com_bankmain_incinerator_confirm20, component $com_bankmain_tooltip21, component $com_bankmain_quantity122, component $com_bankmain_quantity523, component $com_bankmain_quantity1024, component $com_bankmain_quantityx25, component $com_bankmain_quantityall26, component $com_bankmain_quantity_layer27, component $com_bankmain_depositinv28, component $com_bankmain_depositinv_graphic29, component $com_bankmain_depositworn30, component $com_bankmain_depositworn_graphic31, component $com_bankmain_bank_tut32, component $com_bankmain_gim_storage33)
+[clientscript,bankmain_init](component $com_bankmain_universe0, component $com_bankmain_frame1, component $com_bankmain_menu_button2, component $com_bankmain_wornitems_button3, component $com_bankmain_items_container4, component $com_bankmain_wornitems_container5, component $com_bankmain_menu_container6, component $com_bankmain_items7, component $com_bankmain_scrollbar8, component $com_bankmain_bottom9, component $com_bankmain_swap_insert10, component $com_bankmain_swap_insert_graphic11, component $com_bankmain_placeholder12, component $com_bankmain_note13, component $com_bankmain_search14, component $com_bankmain_title15, component $com_bankmain_occupiedslots16, component $com_bankmain_tabs17, component $com_bankmain_incinerator_target18, component $com_bankmain_incinerator_confirm19, component $com_bankmain_tooltip20, component $com_bankmain_quantity121, component $com_bankmain_quantity522, component $com_bankmain_quantity1023, component $com_bankmain_quantityx24, component $com_bankmain_quantityall25, component $com_bankmain_quantity_layer26, component $com_bankmain_depositinv27, component $com_bankmain_depositinv_graphic28, component $com_bankmain_depositcontainers29, component $com_bankmain_depositcontainers_graphic30, component $com_bankmain_depositworn31, component $com_bankmain_depositworn_graphic32, component $com_bankmain_bank_tut33, component $com_bankmain_gim_storage34)
 ~steelborder($com_bankmain_frame1, "", 0);
-def_int $int34 = %varcint51;
+def_int $int35 = %varcint51;
 if (~bankmain_searching = 1) {
 	~meslayer_close(true, true, true);
 } else if (%varcint5 <= 0) {
@@ -10,120 +10,129 @@ if (~bankmain_searching = 1) {
 ~bankmain_search_setbutton(
 	0 = $com_bankmain_universe0, 
 	1 = $com_bankmain_menu_button2, 
-	2 = $com_bankmain_items7, 
-	3 = $com_bankmain_scrollbar8, 
-	4 = $com_bankmain_bottom9, 
-	5 = $com_bankmain_title16, 
-	6 = $com_bankmain_occupiedslots17, 
-	7 = $com_bankmain_search15, 
-	8 = $com_bankmain_tabs18, 
-	9 = $com_bankmain_incinerator_target19, 
-	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
-	12 = $com_bankmain_depositinv28, 
-	13 = $com_bankmain_depositinv_graphic29, 
-	14 = $com_bankmain_depositworn30, 
-	15 = $com_bankmain_depositworn_graphic31, 
-	16 = $com_bankmain_bank_tut32
+	2 = $com_bankmain_wornitems_button3, 
+	3 = $com_bankmain_items7, 
+	4 = $com_bankmain_scrollbar8, 
+	5 = $com_bankmain_bottom9, 
+	6 = $com_bankmain_title15, 
+	7 = $com_bankmain_occupiedslots16, 
+	8 = $com_bankmain_search14, 
+	9 = $com_bankmain_tabs17, 
+	10 = $com_bankmain_incinerator_target18, 
+	11 = $com_bankmain_incinerator_confirm19, 
+	12 = $com_bankmain_tooltip20, 
+	13 = $com_bankmain_depositinv27, 
+	14 = $com_bankmain_depositinv_graphic28, 
+	15 = $com_bankmain_depositcontainers29, 
+	16 = $com_bankmain_depositcontainers_graphic30, 
+	17 = $com_bankmain_depositworn31, 
+	18 = $com_bankmain_depositworn_graphic32, 
+	19 = $com_bankmain_bank_tut33
 );
 if_setonop("bankmain_search_toggle(
 	0 = event_op, 
 	1 = $com_bankmain_universe0, 
 	2 = $com_bankmain_menu_button2, 
-	3 = $com_bankmain_items7, 
-	4 = $com_bankmain_scrollbar8, 
-	5 = $com_bankmain_bottom9, 
-	6 = $com_bankmain_title16, 
-	7 = $com_bankmain_occupiedslots17, 
-	8 = $com_bankmain_search15, 
-	9 = $com_bankmain_tabs18, 
-	10 = $com_bankmain_incinerator_target19, 
-	11 = $com_bankmain_incinerator_confirm20, 
-	12 = $com_bankmain_tooltip21, 
-	13 = $com_bankmain_depositinv28, 
-	14 = $com_bankmain_depositinv_graphic29, 
-	15 = $com_bankmain_depositworn30, 
-	16 = $com_bankmain_depositworn_graphic31, 
-	17 = $com_bankmain_bank_tut32
-)", $com_bankmain_search15);
+	3 = $com_bankmain_wornitems_button3, 
+	4 = $com_bankmain_items7, 
+	5 = $com_bankmain_scrollbar8, 
+	6 = $com_bankmain_bottom9, 
+	7 = $com_bankmain_title15, 
+	8 = $com_bankmain_occupiedslots16, 
+	9 = $com_bankmain_search14, 
+	10 = $com_bankmain_tabs17, 
+	11 = $com_bankmain_incinerator_target18, 
+	12 = $com_bankmain_incinerator_confirm19, 
+	13 = $com_bankmain_tooltip20, 
+	14 = $com_bankmain_depositinv27, 
+	15 = $com_bankmain_depositinv_graphic28, 
+	16 = $com_bankmain_depositcontainers29, 
+	17 = $com_bankmain_depositcontainers_graphic30, 
+	18 = $com_bankmain_depositworn31, 
+	19 = $com_bankmain_depositworn_graphic32, 
+	20 = $com_bankmain_bank_tut33
+)", $com_bankmain_search14);
 cc_deleteall($com_bankmain_scrollbar8);
 ~scrollbar_vertical($com_bankmain_scrollbar8, $com_bankmain_items7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~bankmain_swapinsert($com_bankmain_swap10, $com_bankmain_insert11);
-if_setonvartransmit("bankmain_swapinsert($com_bankmain_swap10, $com_bankmain_insert11){bankinsert}", $com_bankmain_swap10);
+~bankmain_swapinsert($com_bankmain_swap_insert10, $com_bankmain_swap_insert_graphic11);
+if_setonvartransmit("bankmain_swapinsert($com_bankmain_swap_insert10, $com_bankmain_swap_insert_graphic11){bankinsert}", $com_bankmain_swap_insert10);
 ~bankmain_toggleplaceholders($com_bankmain_placeholder12);
 if_setonvartransmit("bankmain_toggleplaceholders($com_bankmain_placeholder12){prayer25}", $com_bankmain_placeholder12);
-~bankmain_itemnote($com_bankmain_item13, $com_bankmain_note14);
-if_setonvartransmit("bankmain_itemnote($com_bankmain_item13, $com_bankmain_note14){bankcert}", $com_bankmain_item13);
-~bankmain_quantity_buttons($com_bankmain_quantity122, $com_bankmain_quantity523, $com_bankmain_quantity1024, $com_bankmain_quantityx25, $com_bankmain_quantityall26);
-if_setonvartransmit("bankmain_quantity_buttons($com_bankmain_quantity122, $com_bankmain_quantity523, $com_bankmain_quantity1024, $com_bankmain_quantityx25, $com_bankmain_quantityall26){gargboss_perm_transmit, bankinsert}", $com_bankmain_quantity_layer27);
+~bankmain_itemnote($com_bankmain_note13);
+if_setonvartransmit("bankmain_itemnote($com_bankmain_note13){bankcert}", $com_bankmain_note13);
+~bankmain_quantity_buttons($com_bankmain_quantity121, $com_bankmain_quantity522, $com_bankmain_quantity1023, $com_bankmain_quantityx24, $com_bankmain_quantityall25);
+if_setonvartransmit("bankmain_quantity_buttons($com_bankmain_quantity121, $com_bankmain_quantity522, $com_bankmain_quantity1023, $com_bankmain_quantityx24, $com_bankmain_quantityall25){gargboss_perm_transmit, bankinsert}", $com_bankmain_quantity_layer26);
 cc_deleteall($com_bankmain_items7);
-def_int $int35 = 0;
 def_int $int36 = 0;
-while ($int36 < 1410) {
-	cc_create($com_bankmain_items7, ^iftype_graphic, $int35, false);
-	$int35 = calc($int35 + 1);
+def_int $int37 = 0;
+while ($int37 < 1410) {
+	cc_create($com_bankmain_items7, ^iftype_graphic, $int36, false);
+	$int36 = calc($int36 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	$int36 = calc($int36 + 1);
+	$int37 = calc($int37 + 1);
 }
-def_int $int37 = calc(if_getwidth($com_bankmain_items7) - 51 - 35);
-$int36 = 1;
-while ($int36 <= 9) {
-	cc_create($com_bankmain_items7, ^iftype_graphic, $int35, false);
-	$int35 = calc($int35 + 1);
-	cc_setsize($int37, 2, ^setsize_abs, ^setsize_abs);
+def_int $int38 = calc(if_getwidth($com_bankmain_items7) - 51 - 35);
+$int37 = 1;
+while ($int37 <= 9) {
+	cc_create($com_bankmain_items7, ^iftype_graphic, $int36, false);
+	$int36 = calc($int36 + 1);
+	cc_setsize($int38, 2, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic(tradebacking_dark);
 	cc_settiling(true);
-	$int36 = calc($int36 + 1);
+	$int37 = calc($int37 + 1);
 }
-$int36 = 1;
-while ($int36 <= 9) {
-	cc_create($com_bankmain_items7, ^iftype_text, $int35, false);
-	$int35 = calc($int35 + 1);
-	cc_setsize($int37, 15, ^setsize_abs, ^setsize_abs);
+$int37 = 1;
+while ($int37 <= 9) {
+	cc_create($com_bankmain_items7, ^iftype_text, $int36, false);
+	$int36 = calc($int36 + 1);
+	cc_setsize($int38, 15, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 	cc_settextfont(p11_full);
 	cc_setcolour(0xe4d8a2);
 	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xe4d8a2)");
 	cc_settextshadow(true);
-	cc_settext("Tab <tostring($int36)>");
+	cc_settext("Tab <tostring($int37)>");
 	cc_setop(1, "View tab");
-	cc_setopbase("<col=ff9040><tostring($int36)></col>");
+	cc_setopbase("<col=ff9040><tostring($int37)></col>");
 	cc_setonop("bankmain_switchtab(
 		0 = $com_bankmain_universe0, 
 		1 = $com_bankmain_menu_button2, 
-		2 = $com_bankmain_items7, 
-		3 = $com_bankmain_scrollbar8, 
-		4 = $com_bankmain_bottom9, 
-		5 = $com_bankmain_title16, 
-		6 = $com_bankmain_occupiedslots17, 
-		7 = $com_bankmain_search15, 
-		8 = $com_bankmain_tabs18, 
-		9 = $com_bankmain_incinerator_target19, 
-		10 = $com_bankmain_incinerator_confirm20, 
-		11 = $com_bankmain_tooltip21, 
-		12 = event_op, 
-		13 = $int36, 
-		14 = $com_bankmain_depositinv28, 
-		15 = $com_bankmain_depositinv_graphic29, 
-		16 = $com_bankmain_depositworn30, 
-		17 = $com_bankmain_depositworn_graphic31, 
-		18 = $com_bankmain_bank_tut32
+		2 = $com_bankmain_wornitems_button3, 
+		3 = $com_bankmain_items7, 
+		4 = $com_bankmain_scrollbar8, 
+		5 = $com_bankmain_bottom9, 
+		6 = $com_bankmain_title15, 
+		7 = $com_bankmain_occupiedslots16, 
+		8 = $com_bankmain_search14, 
+		9 = $com_bankmain_tabs17, 
+		10 = $com_bankmain_incinerator_target18, 
+		11 = $com_bankmain_incinerator_confirm19, 
+		12 = $com_bankmain_tooltip20, 
+		13 = event_op, 
+		14 = $int37, 
+		15 = $com_bankmain_depositinv27, 
+		16 = $com_bankmain_depositinv_graphic28, 
+		17 = $com_bankmain_depositcontainers29, 
+		18 = $com_bankmain_depositcontainers_graphic30, 
+		19 = $com_bankmain_depositworn31, 
+		20 = $com_bankmain_depositworn_graphic32, 
+		21 = $com_bankmain_bank_tut33
 	)");
-	$int36 = calc($int36 + 1);
+	$int37 = calc($int37 + 1);
 }
-$int36 = 0;
-while ($int36 <= 9) {
-	cc_create($com_bankmain_items7, ^iftype_rectangle, $int35, false);
-	$int35 = calc($int35 + 1);
+$int37 = 0;
+while ($int37 <= 9) {
+	cc_create($com_bankmain_items7, ^iftype_rectangle, $int36, false);
+	$int36 = calc($int36 + 1);
 	cc_setsize(0, 32, ^setsize_abs, ^setsize_abs);
 	cc_setfill(true);
 	cc_settrans(255);
-	$int36 = calc($int36 + 1);
+	$int37 = calc($int37 + 1);
 }
 ~bankmain_viewbuttons(
 	0 = $com_bankmain_items_container4, 
@@ -133,101 +142,109 @@ while ($int36 <= 9) {
 	4 = $com_bankmain_items7, 
 	5 = $com_bankmain_scrollbar8, 
 	6 = $com_bankmain_bottom9, 
-	7 = $com_bankmain_title16, 
-	8 = $com_bankmain_occupiedslots17, 
-	9 = $com_bankmain_search15, 
-	10 = $com_bankmain_tabs18, 
-	11 = $com_bankmain_incinerator_target19, 
-	12 = $com_bankmain_incinerator_confirm20, 
-	13 = $com_bankmain_tooltip21, 
+	7 = $com_bankmain_title15, 
+	8 = $com_bankmain_occupiedslots16, 
+	9 = $com_bankmain_search14, 
+	10 = $com_bankmain_tabs17, 
+	11 = $com_bankmain_incinerator_target18, 
+	12 = $com_bankmain_incinerator_confirm19, 
+	13 = $com_bankmain_tooltip20, 
 	14 = $com_bankmain_items_container4, 
 	15 = $com_bankmain_wornitems_container5, 
 	16 = $com_bankmain_menu_container6, 
-	17 = $com_bankmain_depositinv28, 
-	18 = $com_bankmain_depositinv_graphic29, 
-	19 = $com_bankmain_depositworn30, 
-	20 = $com_bankmain_depositworn_graphic31, 
-	21 = $com_bankmain_bank_tut32
+	17 = $com_bankmain_depositinv27, 
+	18 = $com_bankmain_depositinv_graphic28, 
+	19 = $com_bankmain_depositcontainers29, 
+	20 = $com_bankmain_depositcontainers_graphic30, 
+	21 = $com_bankmain_depositworn31, 
+	22 = $com_bankmain_depositworn_graphic32, 
+	23 = $com_bankmain_bank_tut33
 );
 if_setoninvtransmit("bankmain_build(
 	0 = $com_bankmain_universe0, 
 	1 = $com_bankmain_menu_button2, 
-	2 = $com_bankmain_items7, 
-	3 = $com_bankmain_scrollbar8, 
-	4 = $com_bankmain_bottom9, 
-	5 = $com_bankmain_title16, 
-	6 = $com_bankmain_occupiedslots17, 
-	7 = $com_bankmain_search15, 
-	8 = $com_bankmain_tabs18, 
-	9 = $com_bankmain_incinerator_target19, 
-	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
-	12 = $com_bankmain_depositinv28, 
-	13 = $com_bankmain_depositinv_graphic29, 
-	14 = $com_bankmain_depositworn30, 
-	15 = $com_bankmain_depositworn_graphic31, 
-	16 = $com_bankmain_bank_tut32
+	2 = $com_bankmain_wornitems_button3, 
+	3 = $com_bankmain_items7, 
+	4 = $com_bankmain_scrollbar8, 
+	5 = $com_bankmain_bottom9, 
+	6 = $com_bankmain_title15, 
+	7 = $com_bankmain_occupiedslots16, 
+	8 = $com_bankmain_search14, 
+	9 = $com_bankmain_tabs17, 
+	10 = $com_bankmain_incinerator_target18, 
+	11 = $com_bankmain_incinerator_confirm19, 
+	12 = $com_bankmain_tooltip20, 
+	13 = $com_bankmain_depositinv27, 
+	14 = $com_bankmain_depositinv_graphic28, 
+	15 = $com_bankmain_depositcontainers29, 
+	16 = $com_bankmain_depositcontainers_graphic30, 
+	17 = $com_bankmain_depositworn31, 
+	18 = $com_bankmain_depositworn_graphic32, 
+	19 = $com_bankmain_bank_tut33
 ){bank}", $com_bankmain_items7);
 if_setonvartransmit("bankmain_build(
 	0 = $com_bankmain_universe0, 
 	1 = $com_bankmain_menu_button2, 
-	2 = $com_bankmain_items7, 
-	3 = $com_bankmain_scrollbar8, 
-	4 = $com_bankmain_bottom9, 
-	5 = $com_bankmain_title16, 
-	6 = $com_bankmain_occupiedslots17, 
-	7 = $com_bankmain_search15, 
-	8 = $com_bankmain_tabs18, 
-	9 = $com_bankmain_incinerator_target19, 
-	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
-	12 = $com_bankmain_depositinv28, 
-	13 = $com_bankmain_depositinv_graphic29, 
-	14 = $com_bankmain_depositworn30, 
-	15 = $com_bankmain_depositworn_graphic31, 
-	16 = $com_bankmain_bank_tut32
+	2 = $com_bankmain_wornitems_button3, 
+	3 = $com_bankmain_items7, 
+	4 = $com_bankmain_scrollbar8, 
+	5 = $com_bankmain_bottom9, 
+	6 = $com_bankmain_title15, 
+	7 = $com_bankmain_occupiedslots16, 
+	8 = $com_bankmain_search14, 
+	9 = $com_bankmain_tabs17, 
+	10 = $com_bankmain_incinerator_target18, 
+	11 = $com_bankmain_incinerator_confirm19, 
+	12 = $com_bankmain_tooltip20, 
+	13 = $com_bankmain_depositinv27, 
+	14 = $com_bankmain_depositinv_graphic28, 
+	15 = $com_bankmain_depositcontainers29, 
+	16 = $com_bankmain_depositcontainers_graphic30, 
+	17 = $com_bankmain_depositworn31, 
+	18 = $com_bankmain_depositworn_graphic32, 
+	19 = $com_bankmain_bank_tut33
 ){bankinsert, bankcert, prayer23, prayer25, prayer26, gargboss_perm_transmit, item_redemption}", $com_bankmain_items7);
-%varcint51 = $int34;
-def_component $component38 = if_getlayer($com_bankmain_universe0);
-if ($component38 ! null) {
-	~bankmain_size_check($com_bankmain_universe0, $component38, ^min_32bit_int, ^min_32bit_int, $com_bankmain_scrollbar8, $com_bankmain_items7);
+%varcint51 = $int35;
+def_component $component39 = if_getlayer($com_bankmain_universe0);
+if ($component39 ! null) {
+	~bankmain_size_check($com_bankmain_universe0, $component39, ^min_32bit_int, ^min_32bit_int, $com_bankmain_scrollbar8, $com_bankmain_items7);
 }
-cc_deleteall($com_bankmain_incinerator_target19);
-cc_create($com_bankmain_incinerator_target19, ^iftype_model, 0, false);
-.cc_create($com_bankmain_incinerator_target19, ^iftype_model, 1, false);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setmodel(melting_pot_9037);
-.cc_setmodel(smoke_9056);
-cc_setmodelangle(15, 300, 141, 220, 0, 3500);
-.cc_setmodelangle(15, 300, 141, 220, 0, 3500);
-.cc_setmodelanim(blast_furnace_smoke_2439);
-.cc_sethide(true);
-if_setonmouserepeat("script1312(1, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
-if_setonmouseleave("script1312(0, $com_bankmain_incinerator_target19, $com_bankmain_tooltip21)", $com_bankmain_incinerator_target19);
-~script5300($com_bankmain_gim_storage33);
-if_setonvartransmit("script5299(event_com){magic_carpet_var}", $com_bankmain_gim_storage33);
+cc_deleteall($com_bankmain_incinerator_target18);
+cc_create($com_bankmain_incinerator_target18, ^iftype_graphic, 0, false);
+.cc_create($com_bankmain_incinerator_target18, ^iftype_graphic, 1, false);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+.cc_setsize(28, 28, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+.cc_setgraphic("bank_storage,0");
+if_setonmouserepeat("script1312(1, $com_bankmain_incinerator_target18, $com_bankmain_tooltip20)", $com_bankmain_incinerator_target18);
+if_setonmouseleave("script1312(0, $com_bankmain_incinerator_target18, $com_bankmain_tooltip20)", $com_bankmain_incinerator_target18);
+~script5300($com_bankmain_gim_storage34);
+if_setonvartransmit("script5299(event_com){magic_carpet_var}", $com_bankmain_gim_storage34);
 if_setonop("bankmain_switchtab(
 	0 = $com_bankmain_universe0, 
 	1 = $com_bankmain_menu_button2, 
-	2 = $com_bankmain_items7, 
-	3 = $com_bankmain_scrollbar8, 
-	4 = $com_bankmain_bottom9, 
-	5 = $com_bankmain_title16, 
-	6 = $com_bankmain_occupiedslots17, 
-	7 = $com_bankmain_search15, 
-	8 = $com_bankmain_tabs18, 
-	9 = $com_bankmain_incinerator_target19, 
-	10 = $com_bankmain_incinerator_confirm20, 
-	11 = $com_bankmain_tooltip21, 
-	12 = event_op, 
-	13 = 15, 
-	14 = $com_bankmain_depositinv28, 
-	15 = $com_bankmain_depositinv_graphic29, 
-	16 = $com_bankmain_depositworn30, 
-	17 = $com_bankmain_depositworn_graphic31, 
-	18 = $com_bankmain_bank_tut32
+	2 = $com_bankmain_wornitems_button3, 
+	3 = $com_bankmain_items7, 
+	4 = $com_bankmain_scrollbar8, 
+	5 = $com_bankmain_bottom9, 
+	6 = $com_bankmain_title15, 
+	7 = $com_bankmain_occupiedslots16, 
+	8 = $com_bankmain_search14, 
+	9 = $com_bankmain_tabs17, 
+	10 = $com_bankmain_incinerator_target18, 
+	11 = $com_bankmain_incinerator_confirm19, 
+	12 = $com_bankmain_tooltip20, 
+	13 = event_op, 
+	14 = 15, 
+	15 = $com_bankmain_depositinv27, 
+	16 = $com_bankmain_depositinv_graphic28, 
+	17 = $com_bankmain_depositcontainers29, 
+	18 = $com_bankmain_depositcontainers_graphic30, 
+	19 = $com_bankmain_depositworn31, 
+	20 = $com_bankmain_depositworn_graphic32, 
+	21 = $com_bankmain_bank_tut33
 )", bankmain:potionstore_button);
-~script3369($com_bankmain_bank_tut32);
+~script9219($com_bankmain_incinerator_target18);
+~script3369($com_bankmain_bank_tut33);

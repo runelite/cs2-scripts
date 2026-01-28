@@ -11,6 +11,21 @@ if (%sailing_intro = 28 & $dbrow0 = sailing_boat_facility_cargo_hold_regular_raf
 	return(1);
 }
 def_int $int5 = 0;
+def_int $int6 = 0;
+def_obj $obj7 = null;
+if (db_getrowtable($dbrow0) = sailing_boat_facility) {
+	$int6 = db_getfield($dbrow0, sailing_boat_facility:facility_bottle_id, 0);
+	if ($int6 > 0) {
+		while ($int5 < 28) {
+			$obj7 = inv_getobj(inv, $int5);
+			if ($obj7 = sailing_facility_bottle_full_33077) {
+				return(1);
+			}
+			$int5 = calc($int5 + 1);
+		}
+		$int5 = 0;
+	}
+}
 while ($int5 < $int4) {
 	$namedobj1, $int2 = ~script9063($dbtable3, $dbrow0, $int5);
 	if (inv_total(inv, $namedobj1) < $int2) {

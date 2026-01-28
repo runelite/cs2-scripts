@@ -25,6 +25,16 @@ if_setonop("script2837(event_op, $com_bankmain_depositinv_toggle3, cc_getid)", $
 ~script1431($com_bankmain_depositworn_toggle2);
 if_setonvartransmit("script1430($com_bankmain_depositworn_toggle2, cc_getid){prayer26}", $com_bankmain_depositworn_toggle2);
 if_setonop("script1429(event_op, $com_bankmain_depositworn_toggle2, cc_getid)", $com_bankmain_depositworn_toggle2);
+$component5 = bankmain:depositcontainers_toggle;
+~script7859("'Empty containers' button", $component5, 1);
+~script9218($component5);
+if_setonvartransmit("script9217($component5, cc_getid){bankdeposit}", $component5);
+if_setonop("script9216(event_op, $component5, cc_getid)", $component5);
+$component5 = bankmain:popup_tab_forgetpos;
+~script7859("Forget storage tab status on bank open", $component5, 0);
+~script9225($component5);
+if_setonvartransmit("script9224($component5, cc_getid){bankdeposit}", $component5);
+if_setonop("script9223(event_op, $component5, cc_getid)", $component5);
 $component5 = bankmain:depositpotion_toggle;
 ~script7859("Always deposit to potion storage", $component5, 1);
 ~script7399($component5);

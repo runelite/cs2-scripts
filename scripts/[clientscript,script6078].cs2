@@ -1,23 +1,26 @@
 // 6078
 [clientscript,script6078](component $com_bankmain_potionstore_button0)
-def_int $int1 = 0;
 if (%mm_potion_storage_unlocked = 0) {
 	cc_deleteall($com_bankmain_potionstore_button0);
 	if_setonop(null, $com_bankmain_potionstore_button0);
 	if_setop(1, "", $com_bankmain_potionstore_button0);
 	if_sethide(true, $com_bankmain_potionstore_button0);
-	if (~on_mobile = false) {
-		if_setonmouseleave(null, $com_bankmain_potionstore_button0);
-		if_setonmouserepeat(null, $com_bankmain_potionstore_button0);
-	}
+	if_setonmouseleave(null, $com_bankmain_potionstore_button0);
+	if_setonmouserepeat(null, $com_bankmain_potionstore_button0);
 } else {
-	cc_create($com_bankmain_potionstore_button0, ^iftype_model, $int1, false);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setmodel(potion_storage_54550);
-	cc_setmodelangle(0, 40, 145, 1950, 0, 1000);
-	$int1 = calc($int1 + 1);
-	if_setop(1, "Potion store", $com_bankmain_potionstore_button0);
+	cc_create($com_bankmain_potionstore_button0, ^iftype_graphic, 0, false);
+	.cc_create($com_bankmain_potionstore_button0, ^iftype_graphic, 1, false);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(28, 28, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics,0");
+	.cc_setgraphic("bank_storage,2");
+	if_setop(1, "Potion Storage", $com_bankmain_potionstore_button0);
+	if_setonop("script9226", $com_bankmain_potionstore_button0);
+	if_setonvartransmit("script9226{bankcert}", $com_bankmain_potionstore_button0);
+	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $com_bankmain_potionstore_button0);
+	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $com_bankmain_potionstore_button0);
 	if_sethide(false, $com_bankmain_potionstore_button0);
 }
 if_setonvartransmit("script6079{

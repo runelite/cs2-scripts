@@ -1,9 +1,9 @@
 // 507
-[proc,script507](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, component $component13, component $component14, component $component15, component $component16, component $component17)
+[proc,script507](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $int13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
 cc_setop(1, "View tab");
 cc_setop(6, "Collapse tab");
 cc_setop(7, "Remove placeholders");
-cc_setopbase("<col=ff9040><tostring($int12)></col>");
+cc_setopbase("<col=ff9040><tostring($int13)></col>");
 cc_setonop("bankmain_switchtab(
 	0 = $component0, 
 	1 = $component1, 
@@ -17,13 +17,16 @@ cc_setonop("bankmain_switchtab(
 	9 = $component9, 
 	10 = $component10, 
 	11 = $component11, 
-	12 = event_op, 
-	13 = $int12, 
-	14 = $component13, 
+	12 = $component12, 
+	13 = event_op, 
+	14 = $int13, 
 	15 = $component14, 
 	16 = $component15, 
 	17 = $component16, 
-	18 = $component17
+	18 = $component17, 
+	19 = $component18, 
+	20 = $component19, 
+	21 = $component20
 )");
 cc_setdragdeadzone(5);
 cc_setdragdeadtime(5);
@@ -40,9 +43,12 @@ cc_setondrag("script515(
 	9 = $component9, 
 	10 = $component10, 
 	11 = $component11, 
-	12 = $component13, 
+	12 = $component12, 
 	13 = $component14, 
 	14 = $component15, 
 	15 = $component16, 
-	16 = $component17
+	16 = $component17, 
+	17 = $component18, 
+	18 = $component19, 
+	19 = $component20
 )");

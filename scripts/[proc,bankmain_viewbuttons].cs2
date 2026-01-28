@@ -1,24 +1,17 @@
 // 3276
-[proc,bankmain_viewbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21)
+[proc,bankmain_viewbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
+cc_create($component2, ^iftype_graphic, 0, false);
+cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("menu_buttons,10");
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, "menu_buttons,11", null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, "menu_buttons,10", null)");
 if ($component0 = $component16) {
 	if_sethide(true, $component14);
 	if_sethide(true, $component15);
 	if_sethide(false, $component16);
-	if_sethide(false, $component2);
 	if_sethide(true, $component3);
 	if_setonkey(null, $component15);
-	cc_deleteall($component2);
-	cc_create($component2, ^iftype_graphic, 0, false);
-	.cc_create($component2, ^iftype_graphic, 1, false);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics3,1");
-	.cc_setgraphic("banktab_icons,2");
-	.cc_settiling(true);
-	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component2);
-	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component2);
 	if_setop(1, "Hide menu", $component2);
 	if_setonop("bankmain_viewbuttons(
 		0 = $component14, 
@@ -42,7 +35,9 @@ if ($component0 = $component16) {
 		18 = $component18, 
 		19 = $component19, 
 		20 = $component20, 
-		21 = $component21
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23
 	)", $component2);
 	if (~bankmain_searching = 1) {
 		~meslayer_close(true, true, true);
@@ -53,18 +48,16 @@ if ($component0 = $component16) {
 	if_sethide(true, $component14);
 	if_sethide(false, $component15);
 	if_sethide(true, $component16);
-	if_sethide(true, $component2);
 	if_sethide(false, $component3);
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_graphic, 0, false);
 	.cc_create($component3, ^iftype_graphic, 1, false);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics3,1");
-	.cc_setgraphic("banktab_icons,3");
-	.cc_settiling(true);
+	.cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(28, 28, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics,9");
+	.cc_setgraphic("bank_storage,1");
 	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component3);
 	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
 	if_setop(1, "Hide worn items", $component3);
@@ -90,7 +83,9 @@ if ($component0 = $component16) {
 		18 = $component18, 
 		19 = $component19, 
 		20 = $component20, 
-		21 = $component21
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23
 	)", $component3);
 	if_setonkey("script3326(
 		0 = event_keycode, 
@@ -116,31 +111,10 @@ if ($component0 = $component16) {
 		20 = $component18, 
 		21 = $component19, 
 		22 = $component20, 
-		23 = $component21
+		23 = $component21, 
+		24 = $component22, 
+		25 = $component23
 	)", $component3);
-	if (~bankmain_searching = 1) {
-		~meslayer_close(true, true, true);
-	}
-	if_settext("Equip your character...", $component7);
-	%varcint386 = 1;
-} else {
-	if_sethide(false, $component14);
-	if_sethide(true, $component15);
-	if_sethide(true, $component16);
-	if_sethide(false, $component2);
-	if_sethide(false, $component3);
-	cc_deleteall($component2);
-	cc_create($component2, ^iftype_graphic, 0, false);
-	.cc_create($component2, ^iftype_graphic, 1, false);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics3,0");
-	.cc_setgraphic("banktab_icons,2");
-	.cc_settiling(true);
-	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component2);
-	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component2);
 	if_setop(1, "Show menu", $component2);
 	if_setonop("bankmain_viewbuttons(
 		0 = $component16, 
@@ -164,17 +138,29 @@ if ($component0 = $component16) {
 		18 = $component18, 
 		19 = $component19, 
 		20 = $component20, 
-		21 = $component21
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23
 	)", $component2);
+	if (~bankmain_searching = 1) {
+		~meslayer_close(true, true, true);
+	}
+	if_settext("Equip your character...", $component7);
+	%varcint386 = 1;
+} else {
+	if_sethide(false, $component14);
+	if_sethide(true, $component15);
+	if_sethide(true, $component16);
+	if_sethide(false, $component3);
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_graphic, 0, false);
 	.cc_create($component3, ^iftype_graphic, 1, false);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics3,0");
-	.cc_setgraphic("banktab_icons,3");
+	.cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(28, 28, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics,0");
+	.cc_setgraphic("bank_storage,1");
 	.cc_settiling(true);
 	if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component3);
 	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
@@ -201,7 +187,9 @@ if ($component0 = $component16) {
 		18 = $component18, 
 		19 = $component19, 
 		20 = $component20, 
-		21 = $component21
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23
 	)", $component3);
 	if_setonkey("script3326(
 		0 = event_keycode, 
@@ -227,26 +215,58 @@ if ($component0 = $component16) {
 		20 = $component18, 
 		21 = $component19, 
 		22 = $component20, 
-		23 = $component21
+		23 = $component21, 
+		24 = $component22, 
+		25 = $component23
 	)", $component3);
+	if_setop(1, "Show menu", $component2);
+	if_setonop("bankmain_viewbuttons(
+		0 = $component16, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $component8, 
+		9 = $component9, 
+		10 = $component10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $component17, 
+		18 = $component18, 
+		19 = $component19, 
+		20 = $component20, 
+		21 = $component21, 
+		22 = $component22, 
+		23 = $component23
+	)", $component2);
 	~bankmain_build(
 		0 = $component1, 
 		1 = $component2, 
-		2 = $component4, 
-		3 = $component5, 
-		4 = $component6, 
-		5 = $component7, 
-		6 = $component8, 
-		7 = $component9, 
-		8 = $component10, 
-		9 = $component11, 
-		10 = $component12, 
-		11 = $component13, 
-		12 = $component17, 
-		13 = $component18, 
-		14 = $component19, 
-		15 = $component20, 
-		16 = $component21
+		2 = $component3, 
+		3 = $component4, 
+		4 = $component5, 
+		5 = $component6, 
+		6 = $component7, 
+		7 = $component8, 
+		8 = $component9, 
+		9 = $component10, 
+		10 = $component11, 
+		11 = $component12, 
+		12 = $component13, 
+		13 = $component17, 
+		14 = $component18, 
+		15 = $component19, 
+		16 = $component20, 
+		17 = $component21, 
+		18 = $component22, 
+		19 = $component23
 	);
 	%varcint386 = 0;
 }

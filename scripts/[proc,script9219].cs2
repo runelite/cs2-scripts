@@ -1,0 +1,99 @@
+// 9219
+[proc,script9219](component $component0)
+def_component $component1 = bankmain:gim_storage;
+def_component $component2 = bankmain:storage_popup_tab;
+def_component $component3 = bankmain:storage_popup_tab_frame;
+def_component $component4 = bankmain:popup_button_out;
+def_component $component5 = bankmain:popup_button_in;
+def_component $component6 = bankmain:potionstore_button;
+def_component $component7 = bankmain:horizontal_line;
+def_int $int8 = 0;
+def_component $componentarray0(2);
+def_int $int9 = 0;
+def_int $int10 = 0;
+if (~is_group_iron = 1) {
+	$componentarray0($int8) = $component1;
+	if_sethide(false, $component1);
+	$int10 = 1;
+	$int8 = calc($int8 + 1);
+} else {
+	if_sethide(true, $component1);
+}
+if (%mm_potion_storage_unlocked = 1) {
+	$componentarray0($int8) = $component6;
+	if_sethide(false, $component6);
+	$int8 = calc($int8 + 1);
+} else {
+	if_sethide(true, $component6);
+}
+def_int $int11 = 0;
+if (%bank_showincinerator = 1) {
+	if_setposition(2, 82, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setposition(0, 80, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+	if_sethide(false, $component7);
+} else {
+	if_setposition(2, 45, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setposition(0, 43, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+	if ($int8 = 0) {
+		if_sethide(true, $component7);
+	} else {
+		if_sethide(false, $component7);
+	}
+}
+switch_int ($int8) {
+	case 0 :
+		if_sethide(true, $component2);
+		if_sethide(true, $component4);
+		if_sethide(true, $component5);
+		cc_deleteall($component3);
+	case 1 :
+		if_sethide(false, $component2);
+		if_sethide(true, $component4);
+		if_sethide(true, $component5);
+		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $componentarray0(0));
+		cc_deleteall($component3);
+	case default :
+		if (%bank_setting_forget_popup = 1) {
+			~script9221($component2, $component4, $component5, 0);
+		} else {
+			~script9221($component2, $component4, $component5, %bank_popuptab_open);
+		}
+		~script9222($component3);
+		cc_deleteall($component4);
+		$int11 = ~script9228($component4, $int11);
+		cc_create($component4, ^iftype_graphic, $int11, false);
+		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("sideicons_interface,48");
+		if_setonmouserepeat("cc_settrans(event_com, $int11, 75, null)", $component4);
+		if_setonmouseleave("cc_settrans(event_com, $int11, 0, null)", $component4);
+		if_setonop("script9220($component2, $component4, $component5, 1, event_op)", $component4);
+		if_clearops($component4);
+		if_setop(1, "Open storage tab", $component4);
+		if ($int10 = 1) {
+			if_setop(2, "Group Storage", $component4);
+		} else {
+			if_setop(2, "", $component4);
+		}
+		if (%mm_potion_storage_unlocked = 1) {
+			if_setop(3, "Potion Storage", $component4);
+		} else {
+			if_setop(3, "", $component4);
+		}
+		$int11 = 0;
+		cc_deleteall($component5);
+		$int11 = ~options_button_off($component5, $int11);
+		cc_create($component5, ^iftype_graphic, $int11, false);
+		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("sideicons_interface,49");
+		if_setonmouserepeat("cc_settrans(event_com, $int11, 75, null)", $component5);
+		if_setonmouseleave("cc_settrans(event_com, $int11, 0, null)", $component5);
+		if_setonop("script9220($component2, $component4, $component5, 0, event_op)", $component5);
+		if_setop(1, "Close storage tab", $component5);
+		while ($int9 < $int8) {
+			if_setposition(2, calc(37 * $int9 + 29), ^setpos_abs_left, ^setpos_abs_bottom, $componentarray0($int9));
+			$int9 = calc($int9 + 1);
+		}
+		if_setsize(40, calc(37 * $int8 + 30), ^setsize_abs, ^setsize_abs, $component2);
+}
