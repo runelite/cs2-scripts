@@ -1,8 +1,8 @@
 // 5008
-[proc,script5008](component $com_quetzal_menu_icons0, component $com_quetzal_menu_current1, component $com_quetzal_menu_selected_back2, component $com_quetzal_menu_selected_front3, component $com_quetzal_menu_selected_locked4, component $com_quetzal_menu_selected_current5)
-cc_deleteall($com_quetzal_menu_icons0);
-if_sethide(true, $com_quetzal_menu_current1);
-if_sethide(true, $com_quetzal_menu_selected_back2);
+[proc,script5008](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component0);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
 def_string $string0 = "";
 def_int $int6 = db_listall(quetzal);
 def_int $int7 = 0;
@@ -11,7 +11,7 @@ def_dbrow $dbrow9 = null;
 while ($int7 < $int6) {
 	$dbrow9 = db_find_get($int7);
 	if ($dbrow9 ! null) {
-		$int8 = ~script5009($com_quetzal_menu_icons0, $dbrow9, $int8, $com_quetzal_menu_current1, $com_quetzal_menu_selected_back2, $com_quetzal_menu_selected_front3, $com_quetzal_menu_selected_locked4, $com_quetzal_menu_selected_current5);
+		$int8 = ~script5009($component0, $dbrow9, $int8, $component1, $component2, $component3, $component4, $component5);
 	}
 	$int7 = calc($int7 + 1);
 }
@@ -19,7 +19,7 @@ $int7 = 0;
 while ($int7 < $int6) {
 	$dbrow9 = db_find_get($int7);
 	if ($dbrow9 ! null) {
-		$int8 = ~script5010($com_quetzal_menu_icons0, $dbrow9, $int8);
+		$int8 = ~script5010($component0, $dbrow9, $int8);
 	}
 	$int7 = calc($int7 + 1);
 }

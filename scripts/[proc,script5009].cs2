@@ -1,5 +1,5 @@
 // 5009
-[proc,script5009](component $com_quetzal_menu_icons0, dbrow $dbrow1, int $int2, component $com_quetzal_menu_current3, component $com_quetzal_menu_selected_back4, component $com_quetzal_menu_selected_front5, component $com_quetzal_menu_selected_locked6, component $com_quetzal_menu_selected_current7)(int)
+[proc,script5009](component $component0, dbrow $dbrow1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7)(int)
 def_coord $coord8 = db_getfield($dbrow1, quetzal:coord, 0);
 if ($coord8 = null) {
 	return($int2);
@@ -15,7 +15,7 @@ if (~coord_distance(coord, $coord8) <= 10) {
 }
 def_int $int12 = db_getfield($dbrow1, quetzal:if_x_pos, 0);
 def_int $int13 = db_getfield($dbrow1, quetzal:if_y_pos, 0);
-cc_create($com_quetzal_menu_icons0, ^iftype_model, $int2, false);
+cc_create($component0, ^iftype_model, $int2, false);
 cc_setsize(46, 46, ^setsize_abs, ^setsize_abs);
 cc_setmodel($model9);
 cc_setmodelangle(0, 0, 513, 0, 0, 600);
@@ -29,10 +29,10 @@ cc_setonmouserepeat("script5011(
 	2 = $int12, 
 	3 = $int13, 
 	4 = $int10, 
-	5 = $com_quetzal_menu_selected_back4, 
-	6 = $com_quetzal_menu_selected_front5, 
-	7 = $com_quetzal_menu_selected_locked6, 
-	8 = $com_quetzal_menu_selected_current7, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
 	9 = $model9, 
 	10 = $int11
 )");
@@ -45,10 +45,10 @@ cc_setonmouseleave("script5012(
 	2 = $int12, 
 	3 = $int13, 
 	4 = $int10, 
-	5 = $com_quetzal_menu_selected_back4, 
-	6 = $com_quetzal_menu_selected_front5, 
-	7 = $com_quetzal_menu_selected_locked6, 
-	8 = $com_quetzal_menu_selected_current7, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
 	9 = $model9, 
 	10 = $int11
 )");
@@ -58,15 +58,15 @@ cc_setonop("script5013(
 	2 = $int12, 
 	3 = $int13, 
 	4 = $int10, 
-	5 = $com_quetzal_menu_selected_back4, 
-	6 = $com_quetzal_menu_selected_front5, 
-	7 = $com_quetzal_menu_selected_locked6, 
-	8 = $com_quetzal_menu_selected_current7, 
+	5 = $component4, 
+	6 = $component5, 
+	7 = $component6, 
+	8 = $component7, 
 	9 = $model9, 
 	10 = $int11
 )");
 if ($int11 = 1) {
-	if_setposition(calc(46 + $int12), calc(33 + $int13), ^setpos_abs_left, ^setpos_abs_bottom, $com_quetzal_menu_current3);
-	if_sethide(false, $com_quetzal_menu_current3);
+	if_setposition(calc(46 + $int12), calc(33 + $int13), ^setpos_abs_left, ^setpos_abs_bottom, $component3);
+	if_sethide(false, $component3);
 }
 return(calc($int2 + 1));
