@@ -1,63 +1,28 @@
 // 7099
-[clientscript,script7099](component $com_settings_side_master_icon0, component $com_settings_side_master_bobble_container1, component $com_settings_side_master_slider_bobble2, component $com_settings_side_tooltip3, component $com_settings_side_master_holder4)
+[clientscript,script7099](component $com_settings_side_master_icon0, component $com_settings_side_master_bobble_container1, component $com_settings_side_master_slider_bobble2, component $com_settings_side_tooltip3, int $com_settings_side_master_holder4)
 cc_deleteall($com_settings_side_master_bobble_container1);
-if (~on_enhanced_any = 0) {
-	if_sethide(true, $com_settings_side_master_holder4);
-	return;
-}
-def_int $int5 = struct_param(music_volume_2753, param_1101);
-def_int $int6 = 0;
-def_int $int7 = if_getwidth($com_settings_side_master_bobble_container1);
-def_graphic $graphic8 = "options_icons,58";
-def_int $int9 = ~settings_get_slider(319);
-~settings_set_slider(319, $int9);
-def_string $string0 = "Mute Master";
-def_string $string1 = "Unmute Master";
-~settings_create_icon(
-	0 = $int9, 
+def_int $int5 = if_getwidth($com_settings_side_master_bobble_container1);
+def_graphic $graphic6 = "options_icons,58";
+def_string $string0 = "Mute Master Volume";
+def_string $string1 = "Unmute Master Volume";
+~script9253(
+	0 = %option_master_volume, 
 	1 = 319, 
 	2 = $com_settings_side_master_slider_bobble2, 
 	3 = $com_settings_side_master_bobble_container1, 
-	4 = $int5, 
-	5 = $graphic8, 
+	4 = -1, 
+	5 = $graphic6, 
 	6 = $com_settings_side_master_icon0, 
 	7 = $string0, 
 	8 = $string1, 
 	9 = $com_settings_side_tooltip3
 );
-if_setonvartransmit("script3939(
-	0 = 319, 
-	1 = $com_settings_side_master_slider_bobble2, 
-	2 = $com_settings_side_master_bobble_container1, 
-	3 = $int5, 
-	4 = $graphic8, 
-	5 = $com_settings_side_master_icon0, 
-	6 = $string0, 
-	7 = $string1, 
-	8 = $com_settings_side_tooltip3
-){option_master_volume}", $com_settings_side_master_slider_bobble2);
+if_setdraggable($com_settings_side_master_bobble_container1, -1, $com_settings_side_master_slider_bobble2);
+if_setdragdeadzone(0, $com_settings_side_master_slider_bobble2);
+if_setdragdeadtime(0, $com_settings_side_master_slider_bobble2);
+if_setondrag("script9227($com_settings_side_master_slider_bobble2, event_mousex, $int5)", $com_settings_side_master_slider_bobble2);
+if_setondragcomplete("script9231($com_settings_side_master_slider_bobble2, event_mousex, $int5)", $com_settings_side_master_slider_bobble2);
+if_setonvartransmit("script9233($com_settings_side_master_slider_bobble2, $int5){option_master_volume}", $com_settings_side_master_slider_bobble2);
 if_setnoclickthrough(true, $com_settings_side_master_slider_bobble2);
-if_setonclick("opsound(0, 0)", $com_settings_side_master_slider_bobble2);
-while ($int6 <= $int5) {
-	cc_create($com_settings_side_master_bobble_container1, ^iftype_rectangle, $int6, false);
-	cc_setop(1, "Adjust Master Volume");
-	cc_setposition(scale($int6, $int5, $int7), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(scale(calc(1 + $int6), $int5, $int7) - scale($int6, $int5, $int7)), 0, ^setsize_abs, ^setsize_minus);
-	cc_setfill(true);
-	cc_setcolour(^white);
-	cc_settrans(255);
-	cc_setonop("script3940(
-		0 = 319, 
-		1 = $int6, 
-		2 = $com_settings_side_master_slider_bobble2, 
-		3 = $com_settings_side_master_bobble_container1, 
-		4 = $int5, 
-		5 = $graphic8, 
-		6 = $com_settings_side_master_icon0, 
-		7 = $string0, 
-		8 = $string1, 
-		9 = $com_settings_side_tooltip3
-	)");
-	$int6 = calc($int6 + 1);
-}
-~script3941($int9, $com_settings_side_master_slider_bobble2, $com_settings_side_master_bobble_container1, $int5);
+if_setonclick("script9226($com_settings_side_master_slider_bobble2, event_mousex, $int5, $com_settings_side_master_bobble_container1)", $com_settings_side_master_bobble_container1);
+~script9234($com_settings_side_master_slider_bobble2, $int5);

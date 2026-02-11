@@ -1,7 +1,7 @@
 // 7305
 [proc,script7305](int $int0)(int)
-if ($int0 > 26) {
-	~script2075("Music - ^music_varpcount is set to <tostring(26)>, but there was an attempt to use varp <tostring($int0)>.");
+if ($int0 > 27) {
+	~script2075("Music - ^music_varpcount is set to <tostring(27)>, but there was an attempt to use varp <tostring($int0)>.");
 }
 switch_int ($int0) {
 	case 1 :
@@ -56,6 +56,8 @@ switch_int ($int0) {
 		return(%musicmulti_25);
 	case 26 :
 		return(%musicmulti_26);
+	case 27 :
+		return(%musicmulti_27);
 	case default :
 		~script2075("Music - music varp <tostring($int0)> was not configured correctly.");
 		return(-1);

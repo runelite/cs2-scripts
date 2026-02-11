@@ -15,7 +15,7 @@ def_component $component1 = deadman_sp:duration_box;
 	7 = 0, 
 	8 = 0, 
 	9 = 1, 
-	10 = 0
+	10 = false
 );
 if (.cc_find(deadman_sp:points_clicklayer, 0) = ^true) {
 	.cc_setop(1, "Points Info");
@@ -32,7 +32,7 @@ if (.cc_find(deadman_sp:points_clicklayer, 0) = ^true) {
 	7 = 0, 
 	8 = 0, 
 	9 = 1, 
-	10 = 0
+	10 = false
 );
 if (.cc_find(deadman_sp:info_button_click, 0) = ^true) {
 	.cc_setop(1, "Sigils Info");

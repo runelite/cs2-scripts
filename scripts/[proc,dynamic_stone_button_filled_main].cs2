@@ -1,5 +1,5 @@
 // 5845
-[proc,dynamic_stone_button_filled_main](component $component0, component $component1, string $string0, graphic $graphic2, int $colour3, int $colour4, int $colour5, int $int6, int $int7, int $int8, int $int9, int $int10, int $comsubid11, int $int12, int $int13)(int)
+[proc,dynamic_stone_button_filled_main](component $component0, component $component1, string $string0, graphic $graphic2, int $colour3, int $colour4, int $colour5, int $int6, int $int7, int $int8, int $int9, int $int10, int $comsubid11, int $int12, boolean $boolean13)(int)
 def_int $int14 = calc($int8 - 9);
 def_int $int15 = calc($int9 - 9);
 def_int $int16 = calc($int8 - 18);
@@ -18,7 +18,7 @@ def_int $int17 = calc($int9 - 18);
 	10 = ^setsize_abs, 
 	11 = true
 );
-if ($int13 = 1) {
+if ($boolean13 = true) {
 	~create_graphic(
 		0 = $component0, 
 		1 = calc(1 + $int10), 
@@ -259,7 +259,7 @@ if ($int12 = 1 & $component1 ! null) {
 	} else {
 		cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-		if ($int13 = 0) {
+		if ($boolean13 = false) {
 			cc_setonmouseover("v2_stone_button_in_filled_free($component0, $int10, $colour4)");
 			cc_setonmouseleave("v2_stone_button_filled_free($component0, $int10, $colour3)");
 		}

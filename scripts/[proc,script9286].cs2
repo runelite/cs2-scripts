@@ -1,0 +1,136 @@
+// 9286
+[proc,script9286](component $component0)(int)
+cc_deleteall($component0);
+def_int $int1 = if_getwidth($component0);
+def_int $int2 = if_getheight($component0);
+def_int $int3 = calc($int1 - 5);
+def_int $int4 = calc($int2 - 5);
+def_int $int5 = calc($int1 - 10);
+def_int $int6 = calc($int2 - 10);
+~create_graphic(
+	0 = $component0, 
+	1 = 0, 
+	2 = tradebacking_dark, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 2, 
+	8 = 2, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 1, 
+	2 = "v2_stone_button_small,16", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 2, 
+	2 = "v2_stone_button_small,17", 
+	3 = $int3, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 3, 
+	2 = "v2_stone_button_small,18", 
+	3 = 0, 
+	4 = $int4, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 4, 
+	2 = "v2_stone_button_small,19", 
+	3 = $int3, 
+	4 = $int4, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 5, 
+	2 = "v2_stone_button_small,20", 
+	3 = 0, 
+	4 = 5, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = $int6, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 6, 
+	2 = "v2_stone_button_small,21", 
+	3 = 5, 
+	4 = 0, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $int5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 7, 
+	2 = "v2_stone_button_small,22", 
+	3 = $int3, 
+	4 = 5, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 5, 
+	8 = $int6, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+~create_graphic(
+	0 = $component0, 
+	1 = 8, 
+	2 = "v2_stone_button_small,23", 
+	3 = 5, 
+	4 = $int4, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $int5, 
+	8 = 5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+return(9);

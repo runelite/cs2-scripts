@@ -45,7 +45,7 @@ if (struct_param($struct6, param_1158) = true) {
 	$string3 = ~script2364($int21);
 }
 cc_create($component8, ^iftype_text, $int2, false);
-def_int $int26 = $int2;
+def_int $comsubid26 = $int2;
 cc_setsize(10, $int16, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, calc($int0 + 6), ^setpos_abs_centre, ^setpos_abs_top);
 cc_settext(append($string0, $string3));
@@ -130,14 +130,50 @@ if (struct_param($struct6, param_1107) = false) {
 		cc_setposition(calc($int33 + scale(calc($int36 * 2), calc(($int18 - 1) * 2), calc($int35 - 16))), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	}
 } else {
-	~script3888($int21, $component7, calc($int3 - 1), $int35, $int32, $int33, $int34, $int18);
+	~script3888(
+		0 = $int21, 
+		1 = $component7, 
+		2 = calc($int3 - 1), 
+		3 = $int35, 
+		4 = $int32, 
+		5 = $int33, 
+		6 = $int34, 
+		7 = $int18, 
+		8 = $component8, 
+		9 = $comsubid26, 
+		10 = $string0
+	);
 }
 if ($boolean37 = true) {
 	cc_setdraggable($component10, -1);
 	cc_setdragdeadzone(struct_param($struct6, param_1109));
 	cc_setdragdeadtime(struct_param($struct6, param_1110));
-	~settings_slider_choose_ondrag($int21, $component7, calc($int3 - 1), $int35, $int32, $int33, $int34, $int18);
-	~settings_slider_choose_ondragcomplete($int21, $component7, calc($int3 - 1), $int35, $int32, $int33, $int34, $int18);
+	~settings_slider_choose_ondrag(
+		0 = $int21, 
+		1 = $component7, 
+		2 = calc($int3 - 1), 
+		3 = $int35, 
+		4 = $int32, 
+		5 = $int33, 
+		6 = $int34, 
+		7 = $int18, 
+		8 = $component8, 
+		9 = $comsubid26, 
+		10 = $string0
+	);
+	~settings_slider_choose_ondragcomplete(
+		0 = $int21, 
+		1 = $component7, 
+		2 = calc($int3 - 1), 
+		3 = $int35, 
+		4 = $int32, 
+		5 = $int33, 
+		6 = $int34, 
+		7 = $int18, 
+		8 = $component8, 
+		9 = $comsubid26, 
+		10 = $string0
+	);
 }
 $int29 = 0;
 $int30 = $int33;
@@ -168,7 +204,7 @@ while ($int29 < $int18) {
 			9 = $int34, 
 			10 = $component8, 
 			11 = $comsubid25, 
-			12 = $int26, 
+			12 = $comsubid26, 
 			13 = $string0, 
 			14 = $boolean22
 		)");
@@ -182,10 +218,11 @@ while ($int29 < $int18) {
 			5 = $int33, 
 			6 = $int34, 
 			7 = $component10, 
-			8 = $int26, 
-			9 = $string0, 
-			10 = $int18, 
-			11 = $int29
+			8 = $component8, 
+			9 = $comsubid26, 
+			10 = $string0, 
+			11 = $int18, 
+			12 = $int29
 		);
 	}
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
@@ -233,7 +270,7 @@ if ($boolean22 = true) {
 		8 = $int33, 
 		9 = $int34, 
 		10 = $component8, 
-		11 = $int26, 
+		11 = $comsubid26, 
 		12 = $string0, 
 		13 = $int44, 
 		14 = $enum20, 

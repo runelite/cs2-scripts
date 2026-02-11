@@ -1,21 +1,73 @@
 // 3885
-[proc,settings_slider_choose_onop](int $int0, component $component1, int $comsubid2, int $int3, int $int4, int $int5, int $int6, component $component7, int $int8, string $string0, int $int9, int $int10)
+[proc,settings_slider_choose_onop](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, component $component7, component $component8, int $comsubid9, string $string0, int $int10, int $int11)
 switch_int ($int0) {
 	case 14 :
-		cc_setonclick("settings_camera_zoom_slider_click($component1, $comsubid2, $int3, event_mousex, $int4, $int5, $component7)");
+		cc_setonclick("settings_camera_zoom_slider_click($component1, $int2, $int3, event_mousex, $int4, $int5, $component7)");
 	case 53 :
-		cc_setonclick("script3890($component1, $comsubid2, event_mousex, $int3, $int4, $int5, $component7)");
+		cc_setonclick("script3890($component1, $int2, event_mousex, $int3, $int4, $int5, $component7)");
+	case 319 :
+		cc_setonclick("script9257(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component7, 
+			7 = $component8, 
+			8 = $comsubid9, 
+			9 = $string0
+		)");
+	case 30 :
+		cc_setonclick("script9263(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component7, 
+			7 = $component8, 
+			8 = $comsubid9, 
+			9 = $string0
+		)");
+	case 31 :
+		cc_setonclick("script9269(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component7, 
+			7 = $component8, 
+			8 = $comsubid9, 
+			9 = $string0
+		)");
+	case 32 :
+		cc_setonclick("script9275(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component7, 
+			7 = $component8, 
+			8 = $comsubid9, 
+			9 = $string0
+		)");
 	case 310 :
 		cc_setonclick("settings_minimap_zoom_op(
 			0 = $component1, 
-			1 = $comsubid2, 
-			2 = $int10, 
+			1 = $int2, 
+			2 = $int11, 
 			3 = $int3, 
 			4 = $int4, 
 			5 = $int5, 
 			6 = $int6, 
 			7 = $component7, 
-			8 = $int9
+			8 = $int10
 		)");
-		cc_setontimer("settings_minimap_zoom_position_timer(minimap_getzoom, $component1, $comsubid2, $int3, $int4, $int5, $int6, $int9)");
+		cc_setontimer("settings_minimap_zoom_position_timer(minimap_getzoom, $component1, $int2, $int3, $int4, $int5, $int6, $int10)");
 }

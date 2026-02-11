@@ -1,8 +1,16 @@
 // 315
-[clientscript,music_optionbuttons_setmode](int $int0, int $int1, component $component2, component $component3, component $component4)
-if ($int0 ! 1) {
+[clientscript,music_optionbuttons_setmode](int $opindex0, int $int1, component $com_music_single2, component $com_music_area3, component $com_music_shuffle4, component $com_music_skip5, component $com_music_playlist6, component $com_music_inner7, component $com_music_jukebox8, component $com_music_scrollable9, int $com_music_scrollbar10, int $com_music_count11, int $com_music_overlay12)
+if ($opindex0 ! 1) {
+	return;
+}
+if (%musicplay = $int1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
 %musicplay = $int1;
-~music_optionbuttons($component2, $component3, $component4);
+if ($int1 = 0 & %dont_update_music_on_playlist_change = 0 & %music_current_playlist ! 0) {
+	%music_current_playlist = 0;
+	~script9295($com_music_playlist6);
+	~script9290($com_music_inner7, $com_music_jukebox8, $com_music_scrollable9, $com_music_scrollbar10, $com_music_count11, $com_music_overlay12);
+}
+~music_optionbuttons($com_music_single2, $com_music_area3, $com_music_shuffle4, $com_music_skip5);

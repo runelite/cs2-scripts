@@ -1,66 +1,31 @@
 // 3934
 [clientscript,script3934](component $com_settings_side_sound_icon0, component $com_settings_side_sound_bobble_container1, component $com_settings_side_sound_slider_bobble2, component $com_settings_side_tooltip3, component $com_settings_side_sound_holder4)
 cc_deleteall($com_settings_side_sound_bobble_container1);
-if (~on_enhanced_any = 0) {
-	if_setposition(0, 48, ^setpos_abs_centre, ^setpos_abs_top, $com_settings_side_sound_holder4);
-} else {
-	if_setposition(0, 42, ^setpos_abs_centre, ^setpos_abs_bottom, $com_settings_side_sound_holder4);
-	if_setonvartransmit("script7100($com_settings_side_sound_slider_bobble2){option_master_volume}", $com_settings_side_sound_bobble_container1);
-	~script7101($com_settings_side_sound_slider_bobble2);
-}
-def_int $int5 = struct_param(sound_effect_volume_2754, param_1101);
-def_int $int6 = 0;
-def_int $int7 = if_getwidth($com_settings_side_sound_bobble_container1);
-def_graphic $graphic8 = "options_icons,2";
-def_int $int9 = ~settings_get_slider(31);
-~settings_set_slider(31, $int9);
-def_string $string0 = "Mute Sound Effects";
-def_string $string1 = "Unmute Sound Effects";
-~settings_create_icon(
-	0 = $int9, 
+if_setposition(0, 42, ^setpos_abs_centre, ^setpos_abs_bottom, $com_settings_side_sound_holder4);
+if_setonvartransmit("script7100($com_settings_side_sound_slider_bobble2){option_master_volume}", $com_settings_side_sound_bobble_container1);
+~script7101($com_settings_side_sound_slider_bobble2);
+def_int $int5 = if_getwidth($com_settings_side_sound_bobble_container1);
+def_graphic $graphic6 = "options_icons,2";
+def_string $string0 = "Mute Sound Effects Volume";
+def_string $string1 = "Unmute Sound Effects Volume";
+~script9253(
+	0 = %option_sounds, 
 	1 = 31, 
 	2 = $com_settings_side_sound_slider_bobble2, 
 	3 = $com_settings_side_sound_bobble_container1, 
-	4 = $int5, 
-	5 = $graphic8, 
+	4 = -1, 
+	5 = $graphic6, 
 	6 = $com_settings_side_sound_icon0, 
 	7 = $string0, 
 	8 = $string1, 
 	9 = $com_settings_side_tooltip3
 );
-if_setonvartransmit("script3939(
-	0 = 31, 
-	1 = $com_settings_side_sound_slider_bobble2, 
-	2 = $com_settings_side_sound_bobble_container1, 
-	3 = $int5, 
-	4 = $graphic8, 
-	5 = $com_settings_side_sound_icon0, 
-	6 = $string0, 
-	7 = $string1, 
-	8 = $com_settings_side_tooltip3
-){option_sounds}", $com_settings_side_sound_slider_bobble2);
+if_setdraggable($com_settings_side_sound_bobble_container1, -1, $com_settings_side_sound_slider_bobble2);
+if_setdragdeadzone(0, $com_settings_side_sound_slider_bobble2);
+if_setdragdeadtime(0, $com_settings_side_sound_slider_bobble2);
+if_setondrag("script9242($com_settings_side_sound_slider_bobble2, event_mousex, $int5)", $com_settings_side_sound_slider_bobble2);
+if_setondragcomplete("script9243($com_settings_side_sound_slider_bobble2, event_mousex, $int5)", $com_settings_side_sound_slider_bobble2);
+if_setonvartransmit("script9245($com_settings_side_sound_slider_bobble2, $int5){option_sounds}", $com_settings_side_sound_slider_bobble2);
 if_setnoclickthrough(true, $com_settings_side_sound_slider_bobble2);
-if_setonclick("opsound(0, 0)", $com_settings_side_sound_slider_bobble2);
-while ($int6 <= $int5) {
-	cc_create($com_settings_side_sound_bobble_container1, ^iftype_rectangle, $int6, false);
-	cc_setop(1, "Adjust Sound Effect Volume");
-	cc_setposition(scale($int6, $int5, $int7), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(scale(calc(1 + $int6), $int5, $int7) - scale($int6, $int5, $int7)), 0, ^setsize_abs, ^setsize_minus);
-	cc_setfill(true);
-	cc_setcolour(^white);
-	cc_settrans(255);
-	cc_setonop("script3940(
-		0 = 31, 
-		1 = $int6, 
-		2 = $com_settings_side_sound_slider_bobble2, 
-		3 = $com_settings_side_sound_bobble_container1, 
-		4 = $int5, 
-		5 = $graphic8, 
-		6 = $com_settings_side_sound_icon0, 
-		7 = $string0, 
-		8 = $string1, 
-		9 = $com_settings_side_tooltip3
-	)");
-	$int6 = calc($int6 + 1);
-}
-~script3941($int9, $com_settings_side_sound_slider_bobble2, $com_settings_side_sound_bobble_container1, $int5);
+if_setonclick("script9241($com_settings_side_sound_slider_bobble2, event_mousex, $int5, $com_settings_side_sound_bobble_container1)", $com_settings_side_sound_bobble_container1);
+~script9246($com_settings_side_sound_slider_bobble2, $int5);

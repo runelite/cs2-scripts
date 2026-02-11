@@ -1,0 +1,27 @@
+// 9296
+[clientscript,script9296](component $com_music_dropdown0, component $com_music_dropdown_content1, component $com_music_dropdown_scrollbar2, component $com_music_playlist3, enum $enum4, int $colour5, component $com_music_inner6, component $com_music_jukebox7, component $com_music_scrollable8, int $com_music_scrollbar9, int $com_music_count10, component $com_music_single11, component $com_music_area12, component $com_music_shuffle13, component $com_music_skip14, int $com_music_overlay15)
+sound_synth(interface_select1, 1, 0);
+~script5772($com_music_dropdown0, $com_music_dropdown_content1, $com_music_dropdown_scrollbar2, $com_music_playlist3, $enum4, $colour5);
+def_int $int16 = 0;
+while ($int16 < enum_getoutputcount($enum4)) {
+	if (cc_find($com_music_dropdown_content1, calc(1 + $int16 * 2)) = ^true) {
+		cc_setonop("script9297(
+			0 = $com_music_dropdown0, 
+			1 = $com_music_playlist3, 
+			2 = $int16, 
+			3 = $enum4, 
+			4 = $colour5, 
+			5 = $com_music_inner6, 
+			6 = $com_music_jukebox7, 
+			7 = $com_music_scrollable8, 
+			8 = $com_music_scrollbar9, 
+			9 = $com_music_count10, 
+			10 = $com_music_single11, 
+			11 = $com_music_area12, 
+			12 = $com_music_shuffle13, 
+			13 = $com_music_skip14, 
+			14 = $com_music_overlay15
+		)");
+	}
+	$int16 = calc($int16 + 1);
+}

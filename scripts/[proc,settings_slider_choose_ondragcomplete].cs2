@@ -1,8 +1,56 @@
 // 3887
-[proc,settings_slider_choose_ondragcomplete](int $int0, component $component1, int $comsubid2, int $int3, int $int4, int $int5, int $int6, int $int7)
+[proc,settings_slider_choose_ondragcomplete](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, int $comsubid9, string $string0)
 switch_int ($int0) {
 	case 14 :
-		cc_setondragcomplete("settings_zoom_slider_dragcomplete($component1, $comsubid2, $int3, $int4, $int5)");
+		cc_setondragcomplete("settings_zoom_slider_dragcomplete($component1, $int2, $int3, $int4, $int5)");
 	case 53 :
-		cc_setondragcomplete("script3892($component1, $comsubid2, event_mousex, $int3, $int4, $int5)");
+		cc_setondragcomplete("script3892($component1, $int2, event_mousex, $int3, $int4, $int5)");
+	case 319 :
+		cc_setondragcomplete("script9259(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component8, 
+			7 = $comsubid9, 
+			8 = $string0
+		)");
+	case 30 :
+		cc_setondragcomplete("script9265(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component8, 
+			7 = $comsubid9, 
+			8 = $string0
+		)");
+	case 31 :
+		cc_setondragcomplete("script9271(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component8, 
+			7 = $comsubid9, 
+			8 = $string0
+		)");
+	case 32 :
+		cc_setondragcomplete("script9277(
+			0 = $component1, 
+			1 = $int2, 
+			2 = event_mousex, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $component8, 
+			7 = $comsubid9, 
+			8 = $string0
+		)");
 }

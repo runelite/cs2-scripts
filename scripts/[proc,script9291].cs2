@@ -1,0 +1,23 @@
+// 9291
+[proc,script9291](int $int0, int $int1, int $int2, int $int3, int $int4)(int)
+if ($int4 = 0 & %settings_music_player_hide_tracks = 1) {
+	return(0);
+}
+if ($int4 = 1 & %settings_music_player_hide_tracks = 2) {
+	return(0);
+}
+switch_int (%music_current_playlist) {
+	case 1 :
+		if ($int1 = 0) {
+			return(0);
+		}
+	case 2 :
+		if ($int2 = 0) {
+			return(0);
+		}
+	case 3 :
+		if ($int3 = 0) {
+			return(0);
+		}
+}
+return(1);

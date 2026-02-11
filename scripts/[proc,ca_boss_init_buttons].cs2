@@ -15,7 +15,7 @@ $int2 = ~dynamic_stone_button_filled(
 	7 = $int2, 
 	8 = $int4, 
 	9 = 1, 
-	10 = 0
+	10 = false
 );
 if (cc_find($com_ca_boss_ca_boss_stats_click1, $int4) = ^true) {
 	cc_setop(1, "Boss list");
@@ -34,7 +34,7 @@ if (%if1 > 0) {
 		7 = $int2, 
 		8 = $int4, 
 		9 = 1, 
-		10 = 0
+		10 = false
 	);
 	if (cc_find($com_ca_boss_ca_boss_stats_click1, $int4) = ^true) {
 		cc_setop(1, "Reset time");
@@ -53,6 +53,6 @@ if (%if1 > 0) {
 		7 = $int2, 
 		8 = $int4, 
 		9 = 0, 
-		10 = 0
+		10 = false
 	);
 }

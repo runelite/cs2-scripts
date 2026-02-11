@@ -1,9 +1,12 @@
 // 252
 [proc,music_isunlocked](dbrow $dbrow0)(int)
+if (db_getfield($dbrow0, music:automatic_unlock, 0) = true) {
+	return(1);
+}
 def_int $int1 = -1;
 def_int $int2 = -1;
 $int1, $int2 = ~script7316($dbrow0);
-if ($int1 > 26) {
+if ($int1 > 27) {
 	return(0);
 }
 if ($int1 < 1 | $int2 < 0) {

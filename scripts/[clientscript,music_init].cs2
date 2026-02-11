@@ -1,305 +1,75 @@
-java.lang.IllegalStateException: Check failed.
-
-.id                       250
-.int_arg_count            11
-.obj_arg_count            0
-   iload                  1
-   cc_deleteall          
-   iconst                 0
-   iconst                 0
-   iload                  2
-   if_setscrollpos       
-   iconst                 2257
-   iload                  4
-   sconst                 "i"
-   iload                  4
-   if_setontimer         
-   iload                  1
-   iload                  4
-   invoke                 7321
-   iconst                 180352
-   iconst                 0
-   iconst                 0
-   db_find_with_count    
-   istore                 11
-   iload                  11
-   define_array           105
-   iload                  11
-   define_array           65651
-   iconst                 0
-   istore                 12
-   iconst                 -1
-   istore                 13
-LABEL27:
-   iload                  12
-   iload                  11
-   if_icmplt              LABEL31
-   jump                   LABEL61
-LABEL31:
-   iload                  12
-   iload                  12
-   set_array_int         
-   iload                  1
-   iconst                 4
-   iload                  12
-   iconst                 0
-   cc_create             
-   iconst                 1
-   cc_sethide            
-   iload                  12
-   db_getrow             
-   istore                 13
-   iload                  13
-   iconst                 -1
-   if_icmpne              LABEL48
-   jump                   LABEL53
-LABEL48:
-   iload                  12
-   iload                  13
-   invoke                 7312
-   set_array_int          1
-   jump                   LABEL56
-LABEL53:
-   iload                  12
-   sconst                 ""
-   set_array_int          1
-LABEL56:
-   iload                  12
-   iconst                 1
-   add                   
-   istore                 12
-   jump                   LABEL27
-LABEL61:
-   iconst                 15
-   istore                 14
-   invoke                 1972
-   iconst                 1
-   if_icmpeq              LABEL67
-   jump                   LABEL72
-LABEL67:
-   iconst                 4
-   iconst                 3
-   iload                  14
-   scale                 
-   istore                 14
-LABEL72:
-   iconst                 3
-   iload                  11
-   iload                  14
-   multiply              
-   add                   
-   iconst                 3
-   add                   
-   istore                 15
-   iconst                 0
-   iload                  15
-   iload                  2
-   if_setscrollsize      
-   iload                  11
-   iconst                 1
-   if_icmpgt              LABEL88
-   jump                   LABEL91
-LABEL88:
-   oload                  1
-   oload                  0
-   8000                  
-LABEL91:
-   iconst                 0
-   istore                 12
-   sconst                 ""
-   ostore                 2
-   iconst                 1
-   istore                 16
-LABEL97:
-   iload                  12
-   iload                  11
-   if_icmplt              LABEL101
-   jump                   LABEL209
-LABEL101:
-   iload                  1
-   iload                  12
-   get_array_int         
-   cc_find               
-   iconst                 1
-   if_icmpeq              LABEL108
-   jump                   LABEL204
-LABEL108:
-   iconst                 0
-   cc_sethide            
-   iconst                 0
-   iload                  15
-   iconst                 1
-   iconst                 0
-   cc_setsize            
-   iconst                 0
-   iconst                 0
-   iconst                 1
-   iconst                 0
-   cc_setposition        
-   iload                  12
-   get_array_int         
-   db_getrow             
-   istore                 13
-   iload                  13
-   iconst                 -1
-   if_icmpne              LABEL128
-   jump                   LABEL202
-LABEL128:
-   iload                  13
-   iconst                 180400
-   iconst                 0
-   db_getfield           
-   istore                 16
-   iload                  13
-   invoke                 8943
-   iconst                 1
-   if_icmpeq              LABEL138
-   jump                   LABEL140
-LABEL138:
-   iconst                 0
-   istore                 16
-LABEL140:
-   iconst                 0
-   iload                  14
-   iconst                 1
-   iconst                 0
-   cc_setsize            
-   iconst                 0
-   iconst                 3
-   iload                  12
-   iload                  14
-   multiply              
-   add                   
-   iconst                 1
-   iconst                 0
-   cc_setposition        
-   iconst                 495
-   cc_settextfont        
-   iconst                 1
-   cc_settextshadow      
-   iconst                 0
-   iconst                 1
-   iconst                 0
-   cc_settextalign       
-   iload                  13
-   invoke                 7311
-   ostore                 2
-   oload                  2
-   cc_settext            
-   iconst                 1
-   sconst                 "Play"
-   cc_setop              
-   iconst                 2
-   sconst                 "Unlock hint"
-   cc_setop              
-   sconst                 "<col=ff9040>"
-   oload                  2
-   sconst                 "</col>"
-   join_string            3
-   cc_setopbase          
-   iload                  16
-   iconst                 1
-   if_icmpeq              LABEL182
-   jump                   LABEL193
-LABEL182:
-   iload                  13
-   invoke                 252
-   iconst                 1
-   if_icmpeq              LABEL187
-   jump                   LABEL190
-LABEL187:
-   iconst                 901389
-   invoke                 314
-   jump                   LABEL192
-LABEL190:
-   iconst                 16711680
-   invoke                 314
-LABEL192:
-   jump                   LABEL195
-LABEL193:
-   iconst                 10461087
-   invoke                 314
-LABEL195:
-   iconst                 85
-   iconst                 -2147483645
-   iconst                 -2147483643
-   iconst                 16777215
-   sconst                 "iii"
-   cc_setonmouseover     
-   jump                   LABEL204
-LABEL202:
-   iconst                 1
-   cc_sethide            
-LABEL204:
-   iload                  12
-   iconst                 1
-   add                   
-   istore                 12
-   jump                   LABEL97
-LABEL209:
-   iload                  6
-   iload                  8
-   iload                  10
-   invoke                 318
-   iconst                 317
-   iload                  6
-   iload                  8
-   iload                  10
-   iconst                 18
-   iconst                 19
-   iconst                 2
-   sconst                 "iiiY"
-   iload                  0
-   if_setonvartransmit   
-   iconst                 315
-   iconst                 -2147483644
-   iconst                 0
-   iload                  6
-   iload                  8
-   iload                  10
-   sconst                 "iiiii"
-   iload                  5
-   if_setonop            
-   iconst                 315
-   iconst                 -2147483644
-   iconst                 1
-   iload                  6
-   iload                  8
-   iload                  10
-   sconst                 "iiiii"
-   iload                  7
-   if_setonop            
-   iconst                 315
-   iconst                 -2147483644
-   iconst                 2
-   iload                  6
-   iload                  8
-   iload                  10
-   sconst                 "iiiii"
-   iload                  9
-   if_setonop            
-   iload                  3
-   cc_deleteall          
-   iconst                 0
-   iload                  15
-   iload                  2
-   if_getheight          
-   sub                   
-   get_varc_int           75
-   invoke                 1046
-   invoke                 1045
-   set_varc_int           75
-   iload                  3
-   iload                  2
-   iconst                 792
-   iconst                 789
-   iconst                 790
-   iconst                 791
-   iconst                 773
-   iconst                 788
-   invoke                 31
-   iload                  3
-   iload                  2
-   get_varc_int           75
-   invoke                 72
-   return                
+// 250
+[clientscript,music_init](component $com_music_universe0, component $com_music_inner1, component $com_music_jukebox2, component $com_music_scrollable3, int $com_music_scrollbar4, int $com_music_count5, component $com_music_single6, component $com_music_area7, component $com_music_shuffle8, component $com_music_skip9, component $com_music_playlist10, component $com_music_dropdown11, component $com_music_dropdown_content12, component $com_music_dropdown_scrollbar13, component $com_music_now_playing_text14, int $com_music_overlay15)
+~script9290($com_music_inner1, $com_music_jukebox2, $com_music_scrollable3, $com_music_scrollbar4, $com_music_count5, $com_music_overlay15);
+~script9300($com_music_inner1, $com_music_jukebox2, $com_music_scrollable3, $com_music_scrollbar4, $com_music_count5, $com_music_overlay15);
+~script9301($com_music_inner1, $com_music_jukebox2, $com_music_scrollable3, $com_music_scrollbar4, $com_music_count5, $com_music_overlay15);
+~music_optionbuttons($com_music_single6, $com_music_area7, $com_music_shuffle8, $com_music_skip9);
+if_setonvartransmit("music_optionbuttons_resynch($com_music_single6, $com_music_area7, $com_music_shuffle8, $com_music_skip9){musicplay, musicloop}", $com_music_universe0);
+if_setonop("music_optionbuttons_setmode(
+	0 = event_op, 
+	1 = 2, 
+	2 = $com_music_single6, 
+	3 = $com_music_area7, 
+	4 = $com_music_shuffle8, 
+	5 = $com_music_skip9, 
+	6 = $com_music_playlist10, 
+	7 = $com_music_inner1, 
+	8 = $com_music_jukebox2, 
+	9 = $com_music_scrollable3, 
+	10 = $com_music_scrollbar4, 
+	11 = $com_music_count5, 
+	12 = $com_music_overlay15
+)", $com_music_single6);
+if_setonop("music_optionbuttons_setmode(
+	0 = event_op, 
+	1 = 0, 
+	2 = $com_music_single6, 
+	3 = $com_music_area7, 
+	4 = $com_music_shuffle8, 
+	5 = $com_music_skip9, 
+	6 = $com_music_playlist10, 
+	7 = $com_music_inner1, 
+	8 = $com_music_jukebox2, 
+	9 = $com_music_scrollable3, 
+	10 = $com_music_scrollbar4, 
+	11 = $com_music_count5, 
+	12 = $com_music_overlay15
+)", $com_music_area7);
+if_setonop("music_optionbuttons_setmode(
+	0 = event_op, 
+	1 = 1, 
+	2 = $com_music_single6, 
+	3 = $com_music_area7, 
+	4 = $com_music_shuffle8, 
+	5 = $com_music_skip9, 
+	6 = $com_music_playlist10, 
+	7 = $com_music_inner1, 
+	8 = $com_music_jukebox2, 
+	9 = $com_music_scrollable3, 
+	10 = $com_music_scrollbar4, 
+	11 = $com_music_count5, 
+	12 = $com_music_overlay15
+)", $com_music_shuffle8);
+if_setonop("script9292(event_op)", $com_music_skip9);
+~script5771($com_music_playlist10, enum_2772, %music_current_playlist, 0xff981f);
+if_setonop("script9296(
+	0 = $com_music_dropdown11, 
+	1 = $com_music_dropdown_content12, 
+	2 = $com_music_dropdown_scrollbar13, 
+	3 = $com_music_playlist10, 
+	4 = enum_2772, 
+	5 = 0xff981f, 
+	6 = $com_music_inner1, 
+	7 = $com_music_jukebox2, 
+	8 = $com_music_scrollable3, 
+	9 = $com_music_scrollbar4, 
+	10 = $com_music_count5, 
+	11 = $com_music_single6, 
+	12 = $com_music_area7, 
+	13 = $com_music_shuffle8, 
+	14 = $com_music_skip9, 
+	15 = $com_music_overlay15
+)", $com_music_playlist10);
+if_setonvartransmit("script9294($com_music_playlist10){musicloop}", $com_music_playlist10);
+~script9299($com_music_now_playing_text14);
+if_setonvartransmit("script9298($com_music_now_playing_text14){musicloop, music_player_colour_unlocked}", $com_music_now_playing_text14);

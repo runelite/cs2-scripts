@@ -1,11 +1,10 @@
 // 7101
 [proc,script7101](component $component0)
-if (~on_enhanced_any = 0) {
-	if_setgraphic("settings_slider,6", $component0);
+if ($component0 = settings_side:master_slider_bobble) {
 	return;
 }
 if (%option_master_volume <= 0) {
 	if_setgraphic("settings_slider,12", $component0);
 } else {
-	if_setgraphic("settings_slider,6", $component0);
+	if_setgraphic("settings_slider,8", $component0);
 }

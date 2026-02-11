@@ -1,0 +1,14 @@
+// 9250
+[proc,script9250](component $com_settings_side_areasounds_slider_bobble0, int $mousex1, int $int2, int $int3)
+def_int $int4 = %option_areasounds;
+def_int $int5 = ~minmax(0, 100, scale($mousex1, calc($int2 - 16), 100));
+if (%option_areasounds ! $int5 | $int3 = 1) {
+	%option_areasounds = ~minmax(0, 100, $int5);
+	~script3644;
+	~script9252($com_settings_side_areasounds_slider_bobble0, $int2);
+	~script9254(32);
+	~script9256;
+	if ($int4 <= 0 & %option_areasounds > 0 | $int4 > 0 & %option_areasounds <= 0 | $int3 = 1) {
+		if_runscript(-1801605717, settings_side:areasounds_slider_bobble, -1, %option_areasounds);
+	}
+}

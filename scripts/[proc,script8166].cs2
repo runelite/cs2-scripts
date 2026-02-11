@@ -1,5 +1,5 @@
 // 8166
-[proc,script8166](anyobj $anyobj0, namedobj $namedobj0, int $int1)
+[proc,script8166](anyobj $anyobj0, namedobj $namedobj0, boolean $boolean1)
 def_int $int2 = oc_param($namedobj0, param_0);
 def_int $int3 = oc_param($namedobj0, param_1);
 def_int $int4 = oc_param($namedobj0, param_2);
@@ -58,7 +58,7 @@ if ($int7 ! 0 | $int8 ! 0 | $int9 ! 0 | $int10 ! 0 | $int11 ! 0) {
 		array_push($anyobj0, "Range: <~script7643($int11)>", obj);
 	}
 }
-if ($int12 ! 0 | $int13 ! 0 | $int14 ! 0 | $int15 ! 0 | $int1 = 1) {
+if ($int12 ! 0 | $int13 ! 0 | $int14 ! 0 | $int15 ! 0 | $boolean1 = true) {
 	array_push($anyobj0, "", obj);
 	array_push($anyobj0, "Other Stats", obj);
 	if ($int12 ! 0) {
@@ -73,7 +73,7 @@ if ($int12 ! 0 | $int13 ! 0 | $int14 ! 0 | $int15 ! 0 | $int1 = 1) {
 	if ($int15 ! 0) {
 		array_push($anyobj0, "Prayer: <~script7643($int15)>", obj);
 	}
-	if ($int1 = 1) {
+	if ($boolean1 = true) {
 		array_push($anyobj0, "Attack Speed: <tostring($int16)> ticks (0.6s per)", obj);
 		$string1 = ~text_plural($int17, "tile", "tiles");
 		array_push($anyobj0, "Attack Range: <tostring($int17)> <$string1>", obj);

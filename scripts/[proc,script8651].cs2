@@ -1,12 +1,12 @@
 // 8651
-[proc,script8651](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, string $string0, namedobj $namedobj6, int $colour7, int $colour8, int $int9)(int)
+[proc,script8651](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, string $string0, namedobj $namedobj6, int $colour7, int $colour8, boolean $boolean9)(int)
 def_int $int10 = 0;
 def_int $int11 = calc($int2 - 9 + $int4);
 def_int $int12 = calc($int3 - 9 + $int5);
 def_int $int13 = calc($int2 - 18);
 def_int $int14 = calc($int3 - 18);
 def_int $comsubid15 = 0;
-if ($int9 = 0) {
+if ($boolean9 = false) {
 	~create_graphic(
 		0 = $component0, 
 		1 = $int1, 
@@ -281,7 +281,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour($colour7);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 20);
-if ($int9 = 0 & ~on_mobile = false) {
+if ($boolean9 = false & ~on_mobile = false) {
 	cc_setonmouseover("script8652($component0, $int1, $comsubid15, 1, $colour7, $colour8)");
 	cc_setonmouseleave("script8652($component0, $int1, $comsubid15, 0, $colour7, $colour8)");
 }

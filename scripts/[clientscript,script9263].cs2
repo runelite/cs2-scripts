@@ -1,0 +1,18 @@
+// 9263
+[clientscript,script9263](component $component0, int $int1, int $mousex2, int $int3, int $int4, int $int5, component $component6, component $component7, int $comsubid8, string $string0)
+if_setposition($int5, $int4, ^setpos_abs_left, ^setpos_abs_top, $component6);
+if_setsize($int3, 16, ^setsize_abs, ^setsize_abs, $component6);
+def_int $int9 = calc($int3 - 16);
+~script9266(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ~min($int9, $mousex2), 
+	3 = $int3, 
+	4 = $int4, 
+	5 = $int5, 
+	6 = $component7, 
+	7 = $comsubid8, 
+	8 = $string0, 
+	9 = 1
+);
+~settings_op_sound(1);
