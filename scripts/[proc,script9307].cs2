@@ -1,8 +1,8 @@
 // 9307
-[proc,script9307](dbrow $dbrow0)(int)
+[proc,script9307](int $int0)(int)
 def_int $int1 = 1;
 while ($int1 <= 100) {
-	if (~script9316($int1) = $dbrow0) {
+	if (~script9316($int1) = $int0) {
 		return(1);
 	}
 	$int1 = calc($int1 + 1);

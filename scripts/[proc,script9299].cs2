@@ -1,4 +1,7 @@
 // 9299
 [proc,script9299](component $com_music_now_playing_text0)
-if_setcolour(~settings_get_colour_or_default(486), $com_music_now_playing_text0);
+def_int $colour1 = ~settings_get_colour_or_default(487);
+if_setcolour($colour1, $com_music_now_playing_text0);
 if_settextshadow(~script7983(~int_to_bool(%settings_music_player_disable_text_shadow)), $com_music_now_playing_text0);
+if_setonmouseover("text_colour_swapper($com_music_now_playing_text0, ^white)", $com_music_now_playing_text0);
+if_setonmouseleave("text_colour_swapper($com_music_now_playing_text0, $colour1)", $com_music_now_playing_text0);

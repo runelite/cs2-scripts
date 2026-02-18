@@ -1,0 +1,26 @@
+// 3930
+[proc,script3930](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)(int)
+cc_create($component1, ^iftype_rectangle, $int0, false);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_settrans(255);
+$int0 = calc($int0 + 1);
+.cc_create($component1, ^iftype_model, $int0, false);
+.cc_setposition($int4, $int5, ^setpos_proportion_centre, ^setpos_proportion_centre);
+.cc_setsize(512, 512, ^setsize_abs, ^setsize_abs);
+.cc_setmodel(model_16238);
+cc_setontimer("script3931(
+	0 = event_com, 
+	1 = event_comsubid, 
+	2 = $int0, 
+	3 = calc(clientclock + $int2), 
+	4 = $int3, 
+	5 = $int4, 
+	6 = $int5, 
+	7 = $int6, 
+	8 = $int7, 
+	9 = $int8
+)");
+cc_sethide(false);
+.cc_sethide(false);
+return(calc($int0 + 1));

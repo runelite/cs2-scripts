@@ -1,0 +1,40 @@
+// 3936
+[proc,script3936]
+def_dbrow $dbrowarray0(100);
+def_dbrow $dbrowarray1(100);
+def_dbrow $dbrowarray2(100);
+def_int $int0 = 0;
+while ($int0 < 100) {
+	$dbrowarray0($int0) = ~script9316(calc($int0 + 1));
+	$dbrowarray1($int0) = ~script9318(calc($int0 + 1));
+	$dbrowarray2($int0) = ~script9320(calc($int0 + 1));
+	$int0 = calc($int0 + 1);
+}
+def_component $component1 = music:now_playing_text;
+if (%music_current_track = -1) {
+	if_settext(" ", $component1);
+	if_setop(2, "", $component1);
+	if_setop(3, "", $component1);
+	if_setop(4, "", $component1);
+	if_setop(5, "", $component1);
+	if_setopbase("", $component1);
+} else {
+	if_settext(~script7311(%music_current_track), $component1);
+	if_setop(2, "Unlock hint", $component1);
+	if (array_count($anyobj0, %music_current_track, 0, -1, int) > 0) {
+		if_setop(3, "Remove from playlist 1", $component1);
+	} else {
+		if_setop(3, "Add to playlist 1", $component1);
+	}
+	if (array_count($anyobj1, %music_current_track, 0, -1, int) > 0) {
+		if_setop(4, "Remove from playlist 2", $component1);
+	} else {
+		if_setop(4, "Add to playlist 2", $component1);
+	}
+	if (array_count($anyobj2, %music_current_track, 0, -1, int) > 0) {
+		if_setop(5, "Remove from playlist 3", $component1);
+	} else {
+		if_setop(5, "Add to playlist 3", $component1);
+	}
+	if_setopbase("<col=ff9040><~script7311(%music_current_track)></col>", $component1);
+}

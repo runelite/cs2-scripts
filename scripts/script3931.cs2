@@ -1,0 +1,103 @@
+java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+
+.id                       3931
+.int_arg_count            10
+.obj_arg_count            0
+   clientclock           
+   iload                  3
+   sub                   
+   istore                 10
+   iload                  10
+   iconst                 0
+   if_icmplt              LABEL8
+   jump                   LABEL9
+LABEL8:
+   return                
+LABEL9:
+   iconst                 0
+   istore                 11
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL17
+   jump                   LABEL86
+LABEL17:
+   iload                  0
+   iload                  2
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL23
+   jump                   LABEL86
+LABEL23:
+   iload                  4
+   iload                  10
+   sub                   
+   istore                 11
+   iload                  11
+   iconst                 0
+   if_icmpgt              LABEL31
+   jump                   LABEL77
+LABEL31:
+   iload                  10
+   iload                  4
+   iconst                 3
+   div                   
+   if_icmpeq              LABEL37
+   jump                   LABEL50
+LABEL37:
+   iload                  6
+   iconst                 0
+   if_icmplt              LABEL41
+   jump                   LABEL46
+LABEL41:
+   iconst                 4193
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL50
+LABEL46:
+   iconst                 4147
+   iconst                 1
+   iconst                 0
+   sound_synth           
+LABEL50:
+   iload                  7
+   1214                   1
+   iconst                 0
+   iconst                 0
+   iload                  8
+   iload                  11
+   iconst                 60
+   multiply              
+   iconst                 1024
+   mod                   
+   iconst                 0
+   iload                  11
+   iload                  9
+   multiply              
+   cc_setmodelangle       1
+   iload                  11
+   iload                  4
+   iload                  5
+   scale                 
+   iload                  11
+   iload                  4
+   iload                  6
+   scale                 
+   iconst                 4
+   iconst                 4
+   cc_setposition         1
+   return                
+LABEL77:
+   iconst                 16238
+   cc_setmodel            1
+   iconst                 -1
+   sconst                 ""
+   cc_setontimer         
+   iconst                 1
+   cc_sethide            
+   iconst                 1
+   cc_sethide             1
+LABEL86:
+   return                
