@@ -3,7 +3,7 @@
 cc_deleteall(chatbox:controls_background);
 def_boolean $boolean0 = false;
 def_enum $enum1 = ~toplevel_getcomponents;
-if (%varcint41 = 1337 | %cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | $enum1 = enum_1745 & %varcint1220 = 1) {
+if (%varcint41 = 1337 | %cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | ~script9336($enum1) = 1 & %varcint1220 = 1) {
 	if (~toplevel_chatbox_permittransparent = 1) {
 		$boolean0 = true;
 	} else if (getwindowmode = ^windowmode_fixed) {
@@ -19,7 +19,7 @@ if (%chatbox_scrollbarside = 1 & getwindowmode ! ^windowmode_fixed) {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, chatbox:scrollarea);
 	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, chatbox:chatscrollbar);
 }
-if (~script7616 = 1 & $enum1 = enum_1745) {
+if (~script7616 = 1 & ~script9336($enum1) = 1) {
 	if_setsize(calc(519 - 58), 0, ^setsize_abs, ^setsize_minus, chatbox:chat_background);
 } else {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, chatbox:chat_background);

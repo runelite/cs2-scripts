@@ -1,0 +1,7 @@
+// 7321
+[clientscript,script7321](int $opindex0, component $component1)
+sound_synth(interface_select1, 1, 0);
+if ($opindex0 = 1) {
+	~script6478($component1, 1);
+	if_setontimer("script9325(calc(clientclock + 30), $component1)", $component1);
+}

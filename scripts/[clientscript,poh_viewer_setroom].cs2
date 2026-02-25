@@ -1,62 +1,62 @@
 // 1376
-[clientscript,poh_viewer_setroom](int $int0, dbrow $dbrow1, int $int2, int $int3, int $int4)
-def_component $component5 = enum(int, component, enum_1424, $int0);
-if ($component5 = null) {
+[clientscript,poh_viewer_setroom](int $int0, dbrow $dbrow1, int $int2, int $int3, int $int4, int $int5)
+def_component $component6 = enum(int, component, enum_1424, $int0);
+if ($component6 = null) {
 	return;
 }
 if (testbit($int4, 30) = ^true) {
 	$int3, $int4 = setbit($int3, 31), clearbit($int4, 30);
 }
-if_sethide(true, $component5);
-def_int $int6 = 0;
-if (testbit($int3, 0) = ^true) {
-	$int6 = setbit($int6, 0);
-}
-if (testbit($int3, 1) = ^true) {
-	$int6 = setbit($int6, 1);
-}
-if (testbit($int3, 2) = ^true) {
-	$int6 = setbit($int6, 2);
-}
+if_sethide(true, $component6);
 def_int $int7 = 0;
-if (testbit($int3, 3) = ^true) {
+if (testbit($int3, 0) = ^true) {
 	$int7 = setbit($int7, 0);
 }
-if (testbit($int3, 4) = ^true) {
+if (testbit($int3, 1) = ^true) {
 	$int7 = setbit($int7, 1);
 }
-if (testbit($int3, 5) = ^true) {
+if (testbit($int3, 2) = ^true) {
 	$int7 = setbit($int7, 2);
 }
 def_int $int8 = 0;
-if (testbit($int3, 6) = ^true) {
+if (testbit($int3, 3) = ^true) {
 	$int8 = setbit($int8, 0);
 }
-if (testbit($int3, 7) = ^true) {
+if (testbit($int3, 4) = ^true) {
 	$int8 = setbit($int8, 1);
 }
+if (testbit($int3, 5) = ^true) {
+	$int8 = setbit($int8, 2);
+}
 def_int $int9 = 0;
-if (testbit($int3, 8) = ^true) {
+if (testbit($int3, 6) = ^true) {
 	$int9 = setbit($int9, 0);
 }
-if (testbit($int3, 9) = ^true) {
+if (testbit($int3, 7) = ^true) {
 	$int9 = setbit($int9, 1);
 }
 def_int $int10 = 0;
-if (testbit($int3, 10) = ^true) {
+if (testbit($int3, 8) = ^true) {
 	$int10 = setbit($int10, 0);
 }
-if (testbit($int3, 11) = ^true) {
+if (testbit($int3, 9) = ^true) {
 	$int10 = setbit($int10, 1);
 }
+def_int $int11 = 0;
+if (testbit($int3, 10) = ^true) {
+	$int11 = setbit($int11, 0);
+}
+if (testbit($int3, 11) = ^true) {
+	$int11 = setbit($int11, 1);
+}
 if (testbit($int3, 12) = ^true) {
-	$int10 = setbit($int10, 2);
+	$int11 = setbit($int11, 2);
 }
 if (testbit($int3, 13) = ^true) {
-	$int10 = setbit($int10, 3);
+	$int11 = setbit($int11, 3);
 }
 if (testbit($int3, 14) = ^true) {
-	$int10 = setbit($int10, 4);
+	$int11 = setbit($int11, 4);
 }
 def_int $intarray0(9);
 if (testbit($int3, 15) = ^true) {
@@ -74,6 +74,15 @@ if (testbit($int4, 0) = ^true) {
 if (testbit($int4, 1) = ^true) {
 	$intarray0(0) = setbit($intarray0(0), 4);
 }
+if (testbit($int5, 0) = ^true) {
+	$intarray0(0) = setbit($intarray0(0), 5);
+}
+if (testbit($int5, 1) = ^true) {
+	$intarray0(0) = setbit($intarray0(0), 6);
+}
+if (testbit($int5, 2) = ^true) {
+	$intarray0(0) = setbit($intarray0(0), 7);
+}
 if (testbit($int3, 18) = ^true) {
 	$intarray0(1) = setbit($intarray0(1), 0);
 }
@@ -88,6 +97,15 @@ if (testbit($int4, 2) = ^true) {
 }
 if (testbit($int4, 3) = ^true) {
 	$intarray0(1) = setbit($intarray0(1), 4);
+}
+if (testbit($int5, 3) = ^true) {
+	$intarray0(1) = setbit($intarray0(1), 5);
+}
+if (testbit($int5, 4) = ^true) {
+	$intarray0(1) = setbit($intarray0(1), 6);
+}
+if (testbit($int5, 5) = ^true) {
+	$intarray0(1) = setbit($intarray0(1), 7);
 }
 if (testbit($int3, 21) = ^true) {
 	$intarray0(2) = setbit($intarray0(2), 0);
@@ -104,6 +122,15 @@ if (testbit($int4, 4) = ^true) {
 if (testbit($int4, 5) = ^true) {
 	$intarray0(2) = setbit($intarray0(2), 4);
 }
+if (testbit($int5, 6) = ^true) {
+	$intarray0(2) = setbit($intarray0(2), 5);
+}
+if (testbit($int5, 7) = ^true) {
+	$intarray0(2) = setbit($intarray0(2), 6);
+}
+if (testbit($int5, 8) = ^true) {
+	$intarray0(2) = setbit($intarray0(2), 7);
+}
 if (testbit($int3, 24) = ^true) {
 	$intarray0(3) = setbit($intarray0(3), 0);
 }
@@ -118,6 +145,12 @@ if (testbit($int4, 7) = ^true) {
 }
 if (testbit($int4, 8) = ^true) {
 	$intarray0(3) = setbit($intarray0(3), 4);
+}
+if (testbit($int5, 9) = ^true) {
+	$intarray0(3) = setbit($intarray0(3), 5);
+}
+if (testbit($int5, 10) = ^true) {
+	$intarray0(3) = setbit($intarray0(3), 6);
 }
 if (testbit($int3, 26) = ^true) {
 	$intarray0(4) = setbit($intarray0(4), 0);
@@ -194,40 +227,40 @@ if (testbit($int4, 26) = ^true) {
 if (testbit($int4, 27) = ^true) {
 	$intarray0(8) = setbit($intarray0(8), 4);
 }
-def_dbrow $dbrow11 = ~script7371($int10);
-if_setopbase("<col=ff9040><db_getfield($dbrow11, poh_room:name_uppercase, 0)></col>", $component5);
-~script1385($int0, $int6, $int8, $int7);
-cc_deleteall($component5);
-cc_create($component5, ^iftype_graphic, 0, false);
+def_dbrow $dbrow12 = ~script7371($int11);
+if_setopbase("<col=ff9040><db_getfield($dbrow12, poh_room:name_uppercase, 0)></col>", $component6);
+~script1385($int0, $int7, $int9, $int8);
+cc_deleteall($component6);
+cc_create($component6, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic(enum(int, graphic, enum_1423, $int10));
-cc_set2dangle(calc(16384 * (4 - $int9) % 65536));
-cc_create($component5, ^iftype_graphic, 1, false);
+cc_setgraphic(enum(int, graphic, enum_1423, $int11));
+cc_set2dangle(calc(16384 * (4 - $int10) % 65536));
+cc_create($component6, ^iftype_graphic, 1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(tradebacking_light);
 cc_settiling(true);
 cc_settrans(75);
 cc_sethide(true);
-def_string $string1 = "<db_getfield($dbrow11, poh_room:name_uppercase, 0)>:";
-def_int $int12 = 0;
-def_int $int13 = db_getfieldcount($dbrow11, poh_room:hotspot);
-def_int $int14 = 0;
-while ($int14 < $int13) {
-	$string1, $int12 = ~poh_viewer_roomtooltip($string1, $intarray0($int14), $int14, $dbrow1, $int12);
-	$int14 = calc($int14 + 1);
+def_string $string1 = "<db_getfield($dbrow12, poh_room:name_uppercase, 0)>:";
+def_int $int13 = 0;
+def_int $int14 = db_getfieldcount($dbrow12, poh_room:hotspot);
+def_int $int15 = 0;
+while ($int15 < $int14) {
+	$string1, $int13 = ~poh_viewer_roomtooltip($string1, $intarray0($int15), $int15, $dbrow1, $int13);
+	$int15 = calc($int15 + 1);
 }
-if ($int12 > 0) {
+if ($int13 > 0) {
 	$string1 = append($string1, "</col>");
 } else {
 	$string1 = append($string1, " <~text_client("<col=7f7f7f>", "<col=adadad>")>(empty)</col>");
 }
-cc_create($component5, ^iftype_graphic, 2, false);
+cc_create($component6, ^iftype_graphic, 2, false);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tick);
 ~poh_viewer_room_indicator($int0);
-if_setonvartransmit("poh_viewer_room_indicator(event_com, cc_getid, $int0){poh_debug}", $component5);
-if_setonmouserepeat("poh_viewer_room_hover(1, event_com, cc_getid, $string1)", $component5);
-if_setonmouseleave("poh_viewer_room_hover(0, event_com, cc_getid, $string1)", $component5);
+if_setonvartransmit("poh_viewer_room_indicator(event_com, cc_getid, $int0){poh_debug}", $component6);
+if_setonmouserepeat("poh_viewer_room_hover(1, event_com, cc_getid, $string1)", $component6);
+if_setonmouseleave("poh_viewer_room_hover(0, event_com, cc_getid, $string1)", $component6);

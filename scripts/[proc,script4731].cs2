@@ -49,12 +49,14 @@ if (testbit($int2, 13) = ^true) {
 } else if (testbit($int2, 4) = ^true) {
 	$int43 = 2;
 }
-if ($component0 ! toplevel_osm:safezone) {
+def_component $component44 = enum(component, component, $enum25, toplevel_osm:safezone);
+if ($component0 ! $component44) {
 	if_setposition(0, 0, $setposh27, $setposv4, $component0);
 	if ($enum25 ! enum_1132 | $int2 ! setbit(0, 13)) {
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
 	}
 }
+def_component $component45 = enum(component, component, $enum25, toplevel_osm:safezone_noclick);
 if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 	if ($int43 = 2) {
 		$int42 = min(250, $int42);
@@ -66,50 +68,52 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 	$int16 = ~min(safearea_getmaxx, calc($int11 - $int32));
 	$int17 = safearea_getmaxy;
 	$component39 = null;
-	if ($component0 = toplevel_osm:safezone) {
-		if (.cc_find(toplevel_osm:safezone_noclick, 0) = ^true) {
-			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
-		} else {
-			.cc_create(toplevel_osm:safezone_noclick, ^iftype_text, 0, false);
-			.cc_setnoclickthrough(true);
-			.cc_setonclick("opsound(0, 0)");
-			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+	if ($component0 = $component44) {
+		if ($component45 ! null) {
+			if (.cc_find($component45, 0) = ^true) {
+				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+			} else {
+				.cc_create($component45, ^iftype_text, 0, false);
+				.cc_setnoclickthrough(true);
+				.cc_setonclick("opsound(0, 0)");
+				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+			}
+			if (.cc_find($component45, 1) = ^true) {
+				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
+			} else {
+				.cc_create($component45, ^iftype_text, 1, false);
+				.cc_setnoclickthrough(true);
+				.cc_setonclick("opsound(0, 0)");
+				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
+			}
+			if (.cc_find($component45, 2) = ^true) {
+				.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+				.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
+			} else {
+				.cc_create($component45, ^iftype_text, 2, false);
+				.cc_setnoclickthrough(true);
+				.cc_setonclick("opsound(0, 0)");
+				.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+				.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
+			}
+			if (.cc_find($component45, 3) = ^true) {
+				.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+				.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
+			} else {
+				.cc_create($component45, ^iftype_text, 3, false);
+				.cc_setnoclickthrough(true);
+				.cc_setonclick("opsound(0, 0)");
+				.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+				.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
+			}
 		}
-		if (.cc_find(toplevel_osm:safezone_noclick, 1) = ^true) {
-			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
-		} else {
-			.cc_create(toplevel_osm:safezone_noclick, ^iftype_text, 1, false);
-			.cc_setnoclickthrough(true);
-			.cc_setonclick("opsound(0, 0)");
-			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
-		}
-		if (.cc_find(toplevel_osm:safezone_noclick, 2) = ^true) {
-			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
-		} else {
-			.cc_create(toplevel_osm:safezone_noclick, ^iftype_text, 2, false);
-			.cc_setnoclickthrough(true);
-			.cc_setonclick("opsound(0, 0)");
-			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
-		}
-		if (.cc_find(toplevel_osm:safezone_noclick, 3) = ^true) {
-			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
-			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
-		} else {
-			.cc_create(toplevel_osm:safezone_noclick, ^iftype_text, 3, false);
-			.cc_setnoclickthrough(true);
-			.cc_setonclick("opsound(0, 0)");
-			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
-			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
-		}
-		$component39 = enum(component, component, enum_1745, toplevel_osrs_stretch:multiway_icon);
+		$component39 = enum(component, component, $enum25, toplevel_osrs_stretch:multiway_icon);
 		if ($component39 ! null) {
-			~script3506($component39);
+			~script3506($component39, $enum25);
 		}
 		if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component0);
 		if_setsize(calc($int11 - max(680, calc($int16 - $int18))), calc($int12 - ($int17 - $int19)), ^setsize_minus, ^setsize_minus, $component0);
@@ -176,7 +180,9 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 }
 $int36 = 0;
 $int37 = 0;
-if ($boolean23 = true & $enum25 = enum_1745) {
+def_component $component46 = null;
+if ($boolean23 = true & ~script9336($enum25) = 1) {
+	$component46 = enum(component, component, $enum25, toplevel_osm:side_right_tabs);
 	if (testbit($int2, 1) = ^true) {
 		$int30 = ~script2519;
 	}
@@ -184,18 +190,18 @@ if ($boolean23 = true & $enum25 = enum_1745) {
 		$int28 = 1;
 	}
 	if ($int30 = 2) {
-		$int36 = calc($int36 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) - enum(enum, int, enum_1135, $enum25))));
+		$int36 = calc($int36 + ~max(0, calc(if_getwidth($component46) - enum(enum, int, enum_1135, $enum25))));
 	} else if ($int30 = 3 | $int30 = 4) {
 		if (~script7830 = 1) {
-			$int36 = calc($int36 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) - enum(enum, int, enum_1135, $enum25))));
+			$int36 = calc($int36 + ~max(0, calc(if_getwidth($component46) - enum(enum, int, enum_1135, $enum25))));
 		} else {
-			$int36 = calc($int36 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:side_container)) - enum(enum, int, enum_1135, $enum25))));
+			$int36 = calc($int36 + ~max(0, calc(if_getwidth($component46) + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:side_container)) - enum(enum, int, enum_1135, $enum25))));
 		}
 	} else if ($int5 = 1) {
 		if ($int30 = 2) {
-			$int37 = calc($int37 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) - enum(enum, int, enum_1135, $enum25))));
+			$int37 = calc($int37 + ~max(0, calc(if_getwidth($component46) - enum(enum, int, enum_1135, $enum25))));
 		} else if ($int30 = 3 | $int30 = 4) {
-			$int37 = calc($int37 + ~max(0, calc(if_getwidth(toplevel_osm:side_right_tabs) + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:side_container)) - enum(enum, int, enum_1135, $enum25))));
+			$int37 = calc($int37 + ~max(0, calc(if_getwidth($component46) + if_getwidth(enum(component, component, $enum25, toplevel_pre_eoc:side_container)) - enum(enum, int, enum_1135, $enum25))));
 		}
 	}
 	if ($int28 = 1) {

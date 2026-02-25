@@ -33,7 +33,7 @@ while ($component3 ! null) {
 	if ($component3 ! null) {
 		if_setop(1, enum(int, string, enum_1141, $int2), $component3);
 		if_setonop("toplevel_sidebutton_op(event_op, $enum1, $int2)", $component3);
-		if ($enum1 = enum_1745) {
+		if (~script9336($enum1) = 1) {
 			if_setnoclickthrough(true, $component3);
 		}
 	}
@@ -53,21 +53,21 @@ if ($enum1 = enum_139) {
 	setshowloadingmessages(false);
 	setfeedbacksprite(cross, null);
 	setfeedbackshowpopuptext(false);
-} else if ($enum1 = enum_1745) {
+} else if (~script9336($enum1) = 1) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
 	~script5965;
 	setfeedbackshowpopuptext(true);
-	~script4729(toplevel_osm:safezone_hudcontainer, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
-	~script4729(toplevel_osm:safezone, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
-	~script4729(toplevel_osm:zeah, null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, 0);
-	~script868(toplevel_osm:wifi);
-	~script957(toplevel_osm:battery);
-	~script7608;
-	~script7612;
-	if (if_getheight(toplevel_osm:gameframe) < 503) {
-		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, toplevel_osm:side_right_tabs);
+	~script4729(enum(component, component, $enum1, toplevel_osm:safezone_hudcontainer), null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
+	~script4729(enum(component, component, $enum1, toplevel_osm:safezone), null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
+	~script4729(enum(component, component, $enum1, toplevel_osrs_stretch:zeah), null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, 0);
+	~script868(enum(component, component, $enum1, toplevel_osm:wifi));
+	~script957(enum(component, component, $enum1, toplevel_osm:battery));
+	~script7608($enum1);
+	~script7612($enum1);
+	if (if_getheight(enum(component, component, $enum1, toplevel_osrs_stretch:gameframe)) < 503) {
+		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, toplevel_osm:side_right_tabs));
 	}
 } else {
 	setshowmouseovertext(true);

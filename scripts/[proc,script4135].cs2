@@ -2,8 +2,8 @@
 [proc,script4135](enum $enum0, boolean $boolean1)
 if ($enum0 = enum_1130) {
 	if_sethide($boolean1, toplevel_osrs_stretch:side_menu);
-} else if ($enum0 = enum_1745) {
-	if_sethide($boolean1, toplevel_osm:side_right_tabs);
+} else if (~script9336($enum0) = 1) {
+	if_sethide($boolean1, enum(component, component, $enum0, toplevel_osm:side_right_tabs));
 } else if ($enum0 = enum_1131) {
 	if_sethide($boolean1, toplevel_pre_eoc:side_static_layer);
 	if_sethide($boolean1, toplevel_pre_eoc:side_movable_layer);

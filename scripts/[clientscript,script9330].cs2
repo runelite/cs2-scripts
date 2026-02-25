@@ -1,0 +1,6 @@
+// 9330
+[clientscript,script9330](component $com_bank_depositbox_menu_container0, component $com_bank_depositbox_depositworn_toggle1)
+~script9329("'Deposit worn items' button", $com_bank_depositbox_menu_container0, $com_bank_depositbox_depositworn_toggle1, -1);
+~script9332($com_bank_depositbox_depositworn_toggle1);
+if_setonvartransmit("script9331($com_bank_depositbox_depositworn_toggle1, cc_getid){bank_extratab}", $com_bank_depositbox_depositworn_toggle1);
+if_setonop("script9333(event_op, $com_bank_depositbox_depositworn_toggle1, cc_getid)", $com_bank_depositbox_depositworn_toggle1);

@@ -4,7 +4,7 @@ def_graphic $graphic0 = "report_button,0";
 def_int $int1 = 0;
 def_int $int2 = 0;
 ~toplevel_chatbox_background;
-if (%cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | ~toplevel_getcomponents = enum_1745 & (%varcint1220 = 1 & %settings_mobile_show_filter_stones_enabled = 0 | %varcint1221 = 1)) {
+if (%cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | ~script9336(~toplevel_getcomponents) = 1 & (%varcint1220 = 1 & %settings_mobile_show_filter_stones_enabled = 0 | %varcint1221 = 1)) {
 	if_sethide(true, chatbox:controls);
 } else {
 	if_sethide(false, chatbox:controls);

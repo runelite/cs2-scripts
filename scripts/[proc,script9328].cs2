@@ -1,0 +1,19 @@
+// 9328
+[proc,script9328](component $com_bank_depositbox_menu_button0, component $com_bank_depositbox_menu_container1, component $com_bank_depositbox_frame2, component $com_bank_depositbox_contents3, component $com_bank_depositbox_popup4)
+def_string $string0 = "";
+if (if_gethide($com_bank_depositbox_menu_container1) = true) {
+	if_sethide(false, $com_bank_depositbox_menu_container1);
+	if_sethide(true, $com_bank_depositbox_contents3);
+	if_sethide(true, $com_bank_depositbox_popup4);
+	if_setop(1, "Hide menu", $com_bank_depositbox_menu_button0);
+	$string0 = "Deposit Box settings menu";
+} else {
+	if_sethide(true, $com_bank_depositbox_menu_container1);
+	if_sethide(false, $com_bank_depositbox_contents3);
+	if_sethide(false, $com_bank_depositbox_popup4);
+	if_setop(1, "Show menu", $com_bank_depositbox_menu_button0);
+	$string0 = "The Bank of Gielinor - Deposit Box";
+}
+if (cc_find($com_bank_depositbox_frame2, 1) = ^true) {
+	cc_settext($string0);
+}

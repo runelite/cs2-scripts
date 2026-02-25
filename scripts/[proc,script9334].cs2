@@ -1,0 +1,14 @@
+// 9334
+[proc,script9334]
+def_component $component0 = bank_depositbox:deposit_worn;
+def_component $component1 = bank_depositbox:deposit_lootingbag;
+def_component $component2 = bank_depositbox:deposit_inv;
+if (%depositbox_hidedepositworn = 1) {
+	if_sethide(true, $component0);
+	if_setposition(-27, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+	if_setposition(27, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+} else {
+	if_sethide(false, $component0);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, $component1);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+}

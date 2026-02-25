@@ -117,9 +117,10 @@ if ($boolean27 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
 	$int25 = %varcint1016;
 	$int26 = %varcint1017;
 }
-if ($enum4 = enum_1745) {
-	$int25 = calc($int25 - if_getx(toplevel_osm:safezone));
-	$int26 = calc($int26 - if_gety(toplevel_osm:safezone));
+def_component $component28 = enum(component, component, $enum4, toplevel_osm:safezone);
+if ($component28 ! null) {
+	$int25 = calc($int25 - if_getx($component28));
+	$int26 = calc($int26 - if_gety($component28));
 }
 if ($boolean27 = true) {
 	$int25 = ~max(calc($int25 - 0 - $int24), 0);

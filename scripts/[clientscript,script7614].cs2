@@ -1,11 +1,15 @@
 // 7614
-[clientscript,script7614]
+[clientscript,script7614](enum $enum0)
 if (%varcint1222 = 1) {
 	%varcint1222 = 0;
 } else {
 	%varcint1222 = 1;
 }
-if_setgraphic("tli_button01_square_40x40,0", toplevel_osm:expand_stone);
-if_sethide(false, toplevel_osm:expand_icon);
-~script7615;
-~toplevel_side_customise(enum_1745);
+def_component $component1 = enum(component, component, $enum0, toplevel_osm:expand_stone);
+def_component $component2 = enum(component, component, $enum0, toplevel_osm:expand_icon);
+if_setgraphic("tli_button01_square_40x40,0", $component1);
+if ($component2 ! null) {
+	if_sethide(false, $component2);
+}
+~script7615($enum0);
+~toplevel_side_customise($enum0);

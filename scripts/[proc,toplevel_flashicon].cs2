@@ -13,12 +13,12 @@ if ($int4 = %varcint171) {
 	~toplevel_sidebutton_highlight($component1);
 	return;
 }
-if ($enum3 = enum_1745 & $int2 = 1 & %varcint1222 = 1) {
+if (~script9336($enum3) = 1 & $int2 = 1 & %varcint1222 = 1) {
 	if_sethide(false, $component0);
 	if_setgraphic("tli_button01_square_40x40,0", $component1);
-	$component0 = toplevel_osm:expand_icon;
-	$component5 = toplevel_osm:expand_icon;
-	$component1 = toplevel_osm:expand_stone;
+	$component0 = enum(component, component, $enum3, toplevel_osm:expand_icon);
+	$component5 = enum(component, component, $enum3, toplevel_osm:expand_icon);
+	$component1 = enum(component, component, $enum3, toplevel_osm:expand_stone);
 }
 if_sethide(false, $component0);
 ~script8477(2, $int4, $component5, -1, 7034, 0);

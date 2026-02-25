@@ -1,0 +1,27 @@
+// 9329
+[proc,script9329](string $string0, component $com_bank_depositbox_menu_container0, component $com_bank_depositbox_depositworn_toggle1, int $int2)
+def_int $int3 = if_getwidth($com_bank_depositbox_menu_container0);
+def_int $int4 = min(calc(parawidth($string0, calc($int3 / 2 - 49), p12_full) + 22), calc(parawidth($string0, $int3, p12_full) + 22));
+cc_deleteall($com_bank_depositbox_depositworn_toggle1);
+cc_create($com_bank_depositbox_depositworn_toggle1, ^iftype_graphic, 0, false);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+.cc_create($com_bank_depositbox_depositworn_toggle1, ^iftype_text, 1, false);
+.cc_setsize(22, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settextfont(p12_full);
+.cc_settext($string0);
+.cc_setcolour(0xff981f);
+if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $com_bank_depositbox_depositworn_toggle1);
+if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $com_bank_depositbox_depositworn_toggle1);
+if_setopbase("<col=ff9040><$string0></col>", $com_bank_depositbox_depositworn_toggle1);
+if_setsize($int4, if_getheight($com_bank_depositbox_depositworn_toggle1), ^setsize_abs, ^setsize_abs, $com_bank_depositbox_depositworn_toggle1);
+if ($int2 = 1) {
+	if_setposition(calc($int3 / 2 - 5), if_gety($com_bank_depositbox_depositworn_toggle1), ^setpos_abs_right, ^setpos_abs_top, $com_bank_depositbox_depositworn_toggle1);
+} else if ($int2 = 0) {
+	if_setposition(calc($int3 / 2 - 5), if_gety($com_bank_depositbox_depositworn_toggle1), ^setpos_abs_left, ^setpos_abs_top, $com_bank_depositbox_depositworn_toggle1);
+} else {
+	if_setposition(0, if_gety($com_bank_depositbox_depositworn_toggle1), ^setpos_abs_centre, ^setpos_abs_top, $com_bank_depositbox_depositworn_toggle1);
+}

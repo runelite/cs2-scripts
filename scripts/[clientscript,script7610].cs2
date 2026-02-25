@@ -1,26 +1,34 @@
 // 7610
-[clientscript,script7610](int $opindex0)
+[clientscript,script7610](int $opindex0, enum $enum1)
+def_component $component2 = enum(component, component, $enum1, toplevel_osm:chat_toggle);
+def_component $component3 = enum(component, component, $enum1, toplevel_osm:chatting_button);
+def_component $component4 = enum(component, component, $enum1, toplevel_osm:side_left_chat);
+def_component $component5 = enum(component, component, $enum1, toplevel_osm:chat_filter_toggle);
 switch_int ($opindex0) {
 	case 1 :
 		if (%varcint1220 = 1) {
 			%varcint1220 = 0;
-			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
+			if (cc_find($component2, 0) = ^true) {
 				cc_setgraphic("tli_button01_rectangle_58x40,1");
 			}
-			if_sethide(false, toplevel_osm:chatting_button);
-			if_sethide(false, toplevel_osm:chat_filter_toggle);
-			if_setsize(58, 118, ^setsize_abs, ^setsize_abs, toplevel_osm:side_left_chat);
+			if_sethide(false, $component3);
+			if ($component5 ! null) {
+				if_sethide(false, $component5);
+			}
+			if_setsize(58, 118, ^setsize_abs, ^setsize_abs, $component4);
 			if (%varcint41 = 0) {
 				~chat_alert_set(0, 0);
 			}
 		} else {
 			%varcint1220 = 1;
-			if (cc_find(toplevel_osm:chat_toggle, 0) = ^true) {
+			if (cc_find($component2, 0) = ^true) {
 				cc_setgraphic("tli_button01_rectangle_58x40,0");
 			}
-			if_sethide(true, toplevel_osm:chatting_button);
-			if_sethide(true, toplevel_osm:chat_filter_toggle);
-			if_setsize(58, 79, ^setsize_abs, ^setsize_abs, toplevel_osm:side_left_chat);
+			if_sethide(true, $component3);
+			if ($component5 ! null) {
+				if_sethide(true, $component5);
+			}
+			if_setsize(58, 79, ^setsize_abs, ^setsize_abs, $component4);
 		}
 		~script113;
 }

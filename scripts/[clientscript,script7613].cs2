@@ -1,10 +1,14 @@
 // 7613
-[clientscript,script7613](int $int0)
+[clientscript,script7613](int $int0, enum $enum1)
 if ($int0 = %flashside) {
 	return;
 }
+def_component $component2 = enum(component, component, $enum1, toplevel_osm:expand_stone);
+def_component $component3 = enum(component, component, $enum1, toplevel_osm:expand_icon);
 if (%flashside = 0) {
-	if_setgraphic("tli_button01_square_40x40,0", toplevel_osm:expand_stone);
-	if_sethide(false, toplevel_osm:expand_icon);
+	if_setgraphic("tli_button01_square_40x40,0", $component2);
+	if ($component3 ! null) {
+		if_sethide(false, $component3);
+	}
 }
-if_setonvartransmit("script7613(%flashside){toplevel_temp}", toplevel_osm:expand_stone);
+if_setonvartransmit("script7613(%flashside, $enum1){toplevel_temp}", $component2);

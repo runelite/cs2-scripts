@@ -211,12 +211,16 @@ if (%bookofscrolls_cerberus > 0) {
 if_settext(tostring(%bookofscrolls_revenants), $com_bookofscrolls_text_revenants32);
 if (%bookofscrolls_revenants > 0) {
 	if_setcolour(^yellow, $com_bookofscrolls_text_revenants32);
+	if_setsubop(1, 1, oc_isubop(teleportscroll_revenants_21802, 4, 1), bookofscrolls:teleportscroll_revenants);
+	if_setsubop(1, 2, oc_isubop(teleportscroll_revenants_21802, 4, 2), bookofscrolls:teleportscroll_revenants);
+	if_setsubop(1, 3, oc_isubop(teleportscroll_revenants_21802, 4, 3), bookofscrolls:teleportscroll_revenants);
 	if (~script5157 = 14) {
 		if_setobject_nonum(teleportscroll_revenants_selected_dummy_21790, 0, $com_bookofscrolls_gfx_revenants13);
 	} else {
 		if_setobject_nonum(teleportscroll_revenants_21802, 0, $com_bookofscrolls_gfx_revenants13);
 	}
 } else {
+	if_clearsubops(1, bookofscrolls:teleportscroll_revenants);
 	if_setcolour(0xc80000, $com_bookofscrolls_text_revenants32);
 	if (~script5157 = 14) {
 		if_setobject_nonum(teleportscroll_revenants_selected_dummy_21790, 0, $com_bookofscrolls_gfx_revenants13);

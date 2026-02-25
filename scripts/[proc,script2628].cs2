@@ -6,6 +6,11 @@ if ($npc0 = null) {
 switch_npc ($npc0) {
 	case dom_boss_14707, dom_boss_burrowed_14709, dom_boss_shielded_14708 :
 		return("<$string0> (Level <~tostring_spacer(~script7986(%dom_current_level_temp, 1, ^max_32bit_int), ",")>)");
+	case cowboss_15626, cowboss_unnamed_15625, cowboss_routefind_15627 :
+		if (%cowquest >= 22) {
+			return("Brutus");
+		}
+		return("Bull");
 	case default :
 		return($string0);
 }

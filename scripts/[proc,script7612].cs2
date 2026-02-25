@@ -1,5 +1,8 @@
 // 7612
-[proc,script7612]
-if_setonop("script7614", toplevel_osm:expand_stone);
-if_setonvartransmit("script7613(%flashside){toplevel_temp}", toplevel_osm:expand_stone);
-~script7615;
+[proc,script7612](enum $enum0)
+def_component $component1 = enum(component, component, $enum0, toplevel_osm:expand_stone);
+if ($component1 ! null) {
+	if_setonop("script7614($enum0)", $component1);
+	if_setonvartransmit("script7613(%flashside, $enum0){toplevel_temp}", $component1);
+}
+~script7615($enum0);

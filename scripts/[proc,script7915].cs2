@@ -8,7 +8,7 @@ def_component $component1 = enum(component, component, $enum0, toplevel_osrs_str
 if (%settings_sd_beta_enabled = 1 & %settings_hd_new_renderer_toggle = 1 & deviceoption_get(25) = 0) {
 	cc_deleteall($component1);
 	cc_create($component1, ^iftype_text, 0, false);
-	if ($enum0 = enum_1745) {
+	if (~script9336($enum0) = 1) {
 		cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	} else {

@@ -1,9 +1,11 @@
 // 7609
 [proc,script7609]
-if (~toplevel_getcomponents ! enum_1745) {
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 = null | ~script9336($enum0) = 0) {
 	return;
 }
-if (cc_find(toplevel_osm:chat_filter_toggle, 1) = ^true) {
+def_component $component1 = enum(component, component, $enum0, toplevel_osm:chat_filter_toggle);
+if ($component1 ! null & cc_find($component1, 1) = ^true) {
 	if (%varcint1221 = 1) {
 		cc_settext("<col=a0a0a0>Chat Filter</col><br><col=ffffff>Closed");
 	} else {
