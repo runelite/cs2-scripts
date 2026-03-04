@@ -710,6 +710,23 @@ while ($int10 ! -1 & $component9 ! null) {
 					11 = $colour3, 
 					12 = $boolean4
 				);
+			case 118 :
+				$string22, $string21 = ~script632($string21);
+				$int13 = ~string_to_int($string22);
+				$int7 = ~script199(
+					0 = ~affixtimestamp($string24, $string21, "null"), 
+					1 = $int8, 
+					2 = $component9, 
+					3 = chatbox:scrollarea, 
+					4 = $int1, 
+					5 = 3, 
+					6 = 14, 
+					7 = $int6, 
+					8 = ^setpos_abs_top, 
+					9 = 103, 
+					10 = $colour3, 
+					11 = $boolean4
+				);
 			case ^chattype_10sectimeout :
 				if (calc(clientclock - $int12) > 500) {
 					$int7 = ~script199(
@@ -973,6 +990,18 @@ while ($int10 ! -1 & $component9 ! null) {
 				if_setop(9, "Clear history", $component9);
 				if_setopbase("<col=ff9040>Notification</col>", $component9);
 				if_setonop("chat_broadcast_op(event_op, 9, $string22, $int13)", $component9);
+			case 118 :
+				if (enum(int, component, enum_5918, $int13) ! null) {
+					if_setop(6, "Open", $component9);
+					if_setonmouseover("chat_recol(if_getlayer($component9), $int8, 0x7f7f7f)", $component9);
+					if_setonmouseleave("chat_recol(if_getlayer($component9), $int8, $colour3)", $component9);
+				} else {
+					if_setonmouseover(null, $component9);
+					if_setonmouseleave(null, $component9);
+				}
+				if_setop(9, "Clear all", $component9);
+				if_setopbase("<col=ff9040>Skill guide</col>", $component9);
+				if_setonop("script7780(event_op, 9, $int13)", $component9);
 			case ^chattype_clancreationinvitation :
 				if_setopbase("<col=0xffffff><$string19></col>", $component9);
 				if_setop(2, "Form clan", $component9);

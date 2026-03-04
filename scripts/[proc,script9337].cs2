@@ -1,0 +1,9 @@
+// 9337
+[proc,script9337](stat $stat0)
+if (~script9348($stat0) > 0) {
+	~script9339;
+	cc_setontimer("script9338(event_com, event_comsubid)");
+} else {
+	cc_settrans(0);
+	cc_setontimer(null);
+}

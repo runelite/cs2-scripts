@@ -1,0 +1,8 @@
+// 9339
+[proc,script9339]
+def_int $int0 = calc(clientclock % 120);
+if ($int0 < 60) {
+	cc_settrans(scale($int0, 60, 200));
+} else {
+	cc_settrans(scale(calc(120 - $int0), 60, 200));
+}

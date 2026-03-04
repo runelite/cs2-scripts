@@ -1,0 +1,29 @@
+// 9344
+[proc,script9344](int $int0, dbrow $dbrow1)
+def_obj $obj2 = null;
+switch_int ($int0) {
+	case 4 :
+		$obj2 = db_getfield($dbrow1, skill_features:otherdata_magic, 0);
+		if ($obj2 ! null) {
+			cc_setop(1, "Check runes");
+			cc_setonop("script9346($obj2)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+		}
+	case 22 :
+		$obj2 = db_getfield($dbrow1, skill_features:otherdata_construction, 0);
+		if ($obj2 ! null) {
+			cc_setop(1, "Check materials");
+			cc_setonop("script9345(event_com, 22, $obj2)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+		}
+	case 24 :
+		$obj2 = db_getfield($dbrow1, skill_features:otherdata_sailing, 0);
+		if ($obj2 ! null) {
+			cc_setop(1, "Check materials");
+			cc_setonop("script9345(event_com, 23, $obj2)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 100, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
+		}
+}
