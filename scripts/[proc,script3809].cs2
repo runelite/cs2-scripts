@@ -1,12 +1,13 @@
 // 3809
 [proc,script3809](int $int0, int $int1, stat $stat2, int $int3)(int)
-if (enum(stat, int, enum_81, $stat2) = -1 | testbit($int1, enum(stat, int, enum_81, $stat2)) = ^false) {
+def_int $int4 = enum(stat, int, enum_81, $stat2);
+if ($int4 = -1 | testbit($int1, $int4) = ^false) {
 	if ($int3 = 1) {
 		mes("This skill is not available.");
 	}
 	return(0);
 }
-if (map_members = false & enum(stat, boolean, enum_1497, $stat2) = true) {
+if (map_members = false & enum(int, boolean, enum_5750, $int4) = true) {
 	if ($int3 = 1) {
 		mes("You need to be on a members' world to gain experience in <enum(stat, string, enum_680, $stat2)>.");
 	}
@@ -18,10 +19,10 @@ if (stat_base($stat2) < $int0) {
 	}
 	return(0);
 }
-def_boolean $boolean4 = false;
+def_boolean $boolean5 = false;
 def_string $string0 = "";
-$boolean4, $string0 = ~script8948($stat2);
-if ($boolean4 = true) {
+$boolean5, $string0 = ~script8948($stat2);
+if ($boolean5 = true) {
 	if ($int3 = 1) {
 		mes($string0);
 	}

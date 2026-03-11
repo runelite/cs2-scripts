@@ -85,7 +85,7 @@ def_int $int17 = calc(if_getwidth($component6) - (28 + 36 + 3));
 def_int $int18 = 3;
 $int12 = 0;
 def_int $int19 = 0;
-def_int $int20 = -1;
+def_dbrow $dbrow20 = null;
 def_int $int21 = -1;
 db_find(skill_features:skill, $int0);
 if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
@@ -98,17 +98,18 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 	$int21 = $int2;
 	while ($int21 <= $int3) {
 		db_find_refine(skill_features:skill, $int21);
-		$dbrow14 = ~script9351(db_findnext);
+		$dbrow14 = db_findnext;
 		while ($dbrow14 ! null) {
 			$int19 = db_getfieldcount($dbrow14, skill_features:skill);
 			while ($int19 > 0) {
 				$int19 = calc($int19 - 1);
 				if (~script9350($dbrow14, $int19, $int0, $int21, -1) = 1) {
-					$string0 = ~script9343($dbrow14, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
+					$dbrow20 = ~script2499($dbrow14);
+					$string0 = ~script9343($dbrow20, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
 					$int18 = ~skill_guide_addentry(
 						0 = $int0, 
 						1 = $int21, 
-						2 = $dbrow14, 
+						2 = $dbrow20, 
 						3 = $string0, 
 						4 = $component6, 
 						5 = $component7, 
@@ -119,7 +120,7 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 					$int12, $int19 = calc($int12 + 1), 0;
 				}
 			}
-			$dbrow14 = ~script9351(db_findnext);
+			$dbrow14 = db_findnext;
 		}
 		$int21 = calc($int21 + 1);
 		db_find(skill_features:skill, $int0);
@@ -128,17 +129,18 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 	db_find_refine(skill_features:skill, $int1);
 	while ($int21 <= 100) {
 		db_find_refine(skill_features:skill, $int21);
-		$dbrow14 = ~script9351(db_findnext);
+		$dbrow14 = db_findnext;
 		while ($dbrow14 ! null) {
 			$int19 = db_getfieldcount($dbrow14, skill_features:skill);
 			while ($int19 > 0) {
 				$int19 = calc($int19 - 1);
 				if (~script9350($dbrow14, $int19, $int0, $int21, $int1) = 1) {
-					$string0 = ~script9343($dbrow14, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
+					$dbrow20 = ~script2499($dbrow14);
+					$string0 = ~script9343($dbrow20, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
 					$int18 = ~skill_guide_addentry(
 						0 = $int0, 
 						1 = $int21, 
-						2 = $dbrow14, 
+						2 = $dbrow20, 
 						3 = $string0, 
 						4 = $component6, 
 						5 = $component7, 
@@ -149,7 +151,7 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 					$int12, $int19 = calc($int12 + 1), 0;
 				}
 			}
-			$dbrow14 = ~script9351(db_findnext);
+			$dbrow14 = db_findnext;
 		}
 		$int21 = calc($int21 + 1);
 		db_find(skill_features:skill, $int0);
