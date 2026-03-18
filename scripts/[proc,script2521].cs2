@@ -1,0 +1,14 @@
+// 2521
+[proc,script2521](dbrow $dbrow0, string $string0)(string)
+def_string $string1 = "";
+if ($dbrow0 = null) {
+	return("");
+}
+def_int $int1 = db_getfield($dbrow0, sailing_boat_facility_stats:boat_ammo_save_percentage, 0);
+if ($int1 > 0) {
+	$string1 = "Ammo saving percentage: <$string0><tostring($int1)>";
+}
+if (string_length($string1) > 0) {
+	return($string1);
+}
+return("");

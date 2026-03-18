@@ -40,9 +40,10 @@ def_int $int21 = 1;
 def_int $int22 = 0;
 def_namedobj $namedobj23 = null;
 def_int $int24 = 0;
+def_int $int25 = 0;
 while ($int14 < $int15) {
 	$dbrow16 = db_getfield($dbrow12, sailing_sidepanel_facility:widget, $int14);
-	$int21, $int22, $int24, $namedobj23 = ~script8732($dbrow12, $dbrow16, $int10, $dbrow19);
+	$int21, $int22, $int24, $namedobj23, $int25 = ~script8732($dbrow12, $dbrow16, $int10, $dbrow19);
 	if ($dbrow16 ! null) {
 		switch_dbtable (db_getrowtable($dbrow16)) {
 			case sailing_sidepanel_widget_button :
@@ -55,7 +56,8 @@ while ($int14 < $int15) {
 					5 = $component4, 
 					6 = $component5, 
 					7 = $int21, 
-					8 = $int22
+					8 = $int22, 
+					9 = $int25
 				);
 				if ($int24 = 1) {
 					~script8743($int0, $component4, $dbrow16);
@@ -106,23 +108,23 @@ while ($int14 < $int15) {
 	}
 	$int14 = calc($int14 + 1);
 }
-def_int $int25 = calc(4 - 1 - $int1 % 4);
-while ($int25 > 0) {
+def_int $int26 = calc(4 - 1 - $int1 % 4);
+while ($int26 > 0) {
 	cc_create($component5, ^iftype_rectangle, $int1, false);
 	$int1 = calc($int1 + 1);
-	$int25 = calc($int25 - 1);
+	$int26 = calc($int26 - 1);
 }
 $int21 = 1;
-def_int $int26 = 1;
-def_int $int27 = ~script9042;
-def_int $int28 = 0;
-if (%sailing_sidepanel_boat_type ! null) {
-	$int28 = min(5, db_getfield(%sailing_sidepanel_boat_type, sailing_boat:crew_capacity, 0));
-}
+def_int $int27 = 1;
+def_int $int28 = ~script9042;
 def_int $int29 = 0;
-if ($int28 > 0 & $int27 > 0 & %sailing_sidepanel_player_role = 10 & db_getfield($dbrow12, sailing_sidepanel_facility:facility_can_be_assigned, 0) = true) {
+if (%sailing_sidepanel_boat_type ! null) {
+	$int29 = min(5, db_getfield(%sailing_sidepanel_boat_type, sailing_boat:crew_capacity, 0));
+}
+def_int $int30 = 0;
+if ($int29 > 0 & $int28 > 0 & %sailing_sidepanel_player_role = 10 & db_getfield($dbrow12, sailing_sidepanel_facility:facility_can_be_assigned, 0) = true) {
 	$int21 = 0;
-	$int26 = 0;
+	$int27 = 0;
 }
 if ($int8 = 1) {
 	$int0, $int1 = ~script8748(
@@ -139,7 +141,7 @@ if ($int8 = 1) {
 		10 = 18, 
 		11 = 16750623, 
 		12 = 0xff981f, 
-		13 = $int26, 
+		13 = $int27, 
 		14 = $int21, 
 		15 = 1
 	);
@@ -163,7 +165,7 @@ if ($int8 = 1) {
 		10 = 18, 
 		11 = 16750623, 
 		12 = 0xff981f, 
-		13 = $int26, 
+		13 = $int27, 
 		14 = $int21, 
 		15 = 1
 	);
