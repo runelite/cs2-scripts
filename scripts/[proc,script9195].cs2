@@ -290,7 +290,7 @@ if (~quest_is_complete($dbrow2) = 0 & ($int13 = 0 | $int14 = 0)) {
 	}
 }
 def_int $int26 = calc($int5 + $int11 + 6);
-if (cc_find($component0, $comsubid17) = ^true) {
+if (cc_find($component0, $comsubid17) = true) {
 	cc_setsize(0, $int26, ^setsize_minus, ^setsize_abs);
 }
 if_setparam(param_2524, calc(if_param(param_2524, $component0, -1) + $int26), $component0, -1, int);

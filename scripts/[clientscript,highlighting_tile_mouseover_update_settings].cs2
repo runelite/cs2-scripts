@@ -1,0 +1,8 @@
+// 5199
+[clientscript,highlighting_tile_mouseover_update_settings](int $int0, int $int1)
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%highlighting_tile_mouseover_enabled = $int0;
+%highlighting_tile_mouseover_alwaysontop = $int1;
+~highlighting_tile_mouseover_setup;

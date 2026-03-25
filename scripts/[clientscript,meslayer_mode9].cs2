@@ -22,7 +22,7 @@ if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
 ~meslayer_initlastnames;
 def_string $string2 = "";
 if (%varcint5 = 20) {
-	$string2 = ~script4393;
+	$string2 = ~clan_lastclansearch_get;
 	if (string_length($string2) > 0) {
 		~meslayer_dynamicbutton;
 		cc_settext("<col=000000>Last clan:</col> <$string2>");

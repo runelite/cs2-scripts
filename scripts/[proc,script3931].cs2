@@ -1,0 +1,15 @@
+// 3931
+[proc,script3931]()(int)
+if (~on_enhanced_any = 0) {
+	return(0);
+}
+if (%settings_sd_beta_enabled = 0) {
+	return(0);
+}
+if (%settings_hd_new_renderer_toggle = 0) {
+	return(0);
+}
+if (deviceoption_get(25) = 1) {
+	return(0);
+}
+return(1);

@@ -1,0 +1,22 @@
+// 6858
+[clientscript,item_transmog_op](int $opindex0, int $int1, dbrow $dbrow2, int $int3, int $int4, boolean $boolean5)
+if ($opindex0 ! 1 & $opindex0 ! 10) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+def_string $string0 = "null";
+switch_int ($opindex0) {
+	case 10 :
+		$string0 = db_getfield($dbrow2, item_transmog:ui_examine, 0);
+		if (~string_isnullorempty($string0) = 1) {
+			$string0 = oc_name(db_getfield($dbrow2, item_transmog:namedobj, 0));
+		}
+		mes($string0);
+	case 1 :
+		if ($boolean5 = false | $int3 = $int4) {
+			return;
+		}
+		%varcint1110 = db_getfield($dbrow2, item_transmog:group_id, 0);
+		%item_transmog_active_obj = db_getfield($dbrow2, item_transmog:namedobj, 0);
+		~item_transmog_init($int1);
+}

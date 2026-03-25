@@ -10,21 +10,21 @@ if ($int0 = 1) {
 } else if ($int0 = 2) {
 	$graphic4, $graphic5 = "tabs_modal_short,4", "tabs_modal_short,5";
 }
-if (.cc_find($component1, $int2) = ^true) {
-	.cc_children_find(1);
-	if (.if_children_findnext = true) {
+if (.cc_find($component1, $int2) = true) {
+	.cc_query(1);
+	if (.if_query_next = true) {
 		.cc_setgraphic($graphic4);
 	}
-	if (.if_children_findnext = true) {
+	if (.if_query_next = true) {
 		.cc_setgraphic($graphic5);
 	}
-	if (.if_children_findnext = true) {
+	if (.if_query_next = true) {
 		.cc_setgraphic($graphic4);
 	}
-	if (.if_children_findnext = true) {
+	if (.if_query_next = true) {
 		.cc_setcolour($colour3);
 	}
-	if (.if_children_findnext = true) {
+	if (.if_query_next = true) {
 		if ($int0 = 1 | $int0 = 3) {
 			.cc_clearops;
 			.cc_setonmouserepeat(null);

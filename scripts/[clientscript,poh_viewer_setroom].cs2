@@ -229,7 +229,7 @@ if (testbit($int4, 27) = ^true) {
 }
 def_dbrow $dbrow12 = ~script7371($int11);
 if_setopbase("<col=ff9040><db_getfield($dbrow12, poh_room:name_uppercase, 0)></col>", $component6);
-~script1385($int0, $int7, $int9, $int8);
+~poh_roompos_set($int0, $int7, $int9, $int8);
 cc_deleteall($component6);
 cc_create($component6, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

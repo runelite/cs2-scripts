@@ -41,7 +41,7 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_int $int20 = if_getwidth($component9);
 if (string_length($string0) = 0) {
-	~script7137(
+	~loading_icon_init_extended(
 		0 = $component9, 
 		1 = null, 
 		2 = enum_3787, 
@@ -124,7 +124,7 @@ if (string_length($string0) > 0) {
 	while ($int4 > 0) {
 		$graphic24, $graphic25 = db_getfield($dbrow28, omnishop_currency_data:omnishop_currency_graphic, 0);
 		if ($graphic25 ! null) {
-			$int18 = ~script3749($component9, $graphic25, p11_full, $int4, -20, 4, $int19, $int18);
+			$int18 = ~omnishop_currency_draw_info($component9, $graphic25, p11_full, $int4, -20, 4, $int19, $int18);
 			$int19 = calc($int19 + 24);
 		} else {
 			if ($int4 = 1) {

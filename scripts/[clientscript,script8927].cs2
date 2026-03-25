@@ -12,5 +12,5 @@ if ($dbrow0 = port_task_blank) {
 	sound_synth(synth_8414, 1, 0);
 } else {
 	sound_synth(synth_8415, 1, 0);
-	~script8901(sailing_log:task_window, $dbrow0);
+	~port_task_info_draw(sailing_log:task_window, $dbrow0);
 }

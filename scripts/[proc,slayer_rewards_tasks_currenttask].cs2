@@ -22,16 +22,16 @@ def_int $int12 = 0;
 def_string $string0 = "Creature";
 if (%if2 = 98) {
 	if (%if1 > 0) {
-		$int12, $string0 = 1, ~script8056(98, %if3, 1);
+		$int12, $string0 = 1, ~slayer_taskname(98, %if3, 1);
 		if_settext("<tostring(%if1)> x <$string0>", $com_slayer_rewards_tasks_current2);
 	} else if (%if1 = -1) {
-		$int12, $string0 = 1, ~script8056(98, %if3, 1);
+		$int12, $string0 = 1, ~slayer_taskname(98, %if3, 1);
 		if_settext($string0, $com_slayer_rewards_tasks_current2);
 	} else {
 		if_settext("None", $com_slayer_rewards_tasks_current2);
 	}
 } else if (%if1 > 0 & %if2 ! 0) {
-	$int12, $string0 = 1, ~script8056(%if2, -1, 1);
+	$int12, $string0 = 1, ~slayer_taskname(%if2, -1, 1);
 	if_settext("<tostring(%if1)> x <$string0>", $com_slayer_rewards_tasks_current2);
 } else {
 	if_settext("None", $com_slayer_rewards_tasks_current2);
@@ -40,7 +40,7 @@ def_int $int13 = 0;
 def_string $string1 = "Creature";
 if (%if5 = 98) {
 	if (%if4 > 0) {
-		$int13, $string1 = 1, ~script8056(98, %if6, 1);
+		$int13, $string1 = 1, ~slayer_taskname(98, %if6, 1);
 		if_settext("<tostring(%if4)> x <$string1>", $com_slayer_rewards_tasks_stored8);
 		if_setcolour(^white, $com_slayer_rewards_tasks_stored8);
 	} else if (%if4 = -1) {
@@ -52,7 +52,7 @@ if (%if5 = 98) {
 		if_setcolour(0x9f9f9f, $com_slayer_rewards_tasks_stored8);
 	}
 } else if (%if4 > 0 & %if5 ! 0) {
-	$int13, $string1 = 1, ~script8056(%if5, -1, 1);
+	$int13, $string1 = 1, ~slayer_taskname(%if5, -1, 1);
 	if_settext("<tostring(%if4)> x <$string1>", $com_slayer_rewards_tasks_stored8);
 	if_setcolour(^white, $com_slayer_rewards_tasks_stored8);
 } else {

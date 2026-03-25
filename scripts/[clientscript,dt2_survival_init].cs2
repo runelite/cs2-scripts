@@ -1,0 +1,8 @@
+// 1844
+[clientscript,dt2_survival_init](component $com_dt2_survival_dodger0, component $com_dt2_survival_overlay1)
+def_int $int2 = 54722560;
+~script4729($com_dt2_survival_dodger0, $com_dt2_survival_overlay1, setbit(setbit(52968, 12), 13), ^setpos_abs_left, ^setpos_abs_top, 1);
+if_setonvartransmit("dt2_stranglewood_survival_timer_resynch(dt2_survival:time_text, 54722566){stranglewood}", dt2_survival:time_text);
+if_setonvartransmit("script1851{stranglewood}", dt2_survival:health_bar);
+~dt2_stranglewood_survival_timer_resynch(dt2_survival:time_text, %dt2_stranglewood_survival_time_remaining, clientclock);
+~script1852;

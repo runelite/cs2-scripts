@@ -21,7 +21,7 @@ cc_deleteall(emote:overlay);
 def_int $int11 = 0;
 while ($int3 < $int1) {
 	$comsubid2 = db_getfield(%cluehelper_infobox_clue, cluehelper_clue_emote:emote, $int3);
-	if (cc_find(emote:contents, $comsubid2) = ^true) {
+	if (cc_find(emote:contents, $comsubid2) = true) {
 		$int6 = cc_gety;
 		$int7 = calc($int6 + cc_getheight);
 		if ($int6 < $int4 | $int4 = -1) {

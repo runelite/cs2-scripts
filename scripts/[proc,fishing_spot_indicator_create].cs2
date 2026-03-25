@@ -1,7 +1,7 @@
 // 4553
 [proc,fishing_spot_indicator_create](entityoverlay $entityoverlay0, struct $struct1, npc_uid $npc_uid2, int $int3, loc $loc4, coord $coord5)
 cc_deleteall_entityoverlay($entityoverlay0);
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setonmouseleave(null);
 	cc_setonmouseover(null);
 }
@@ -105,7 +105,7 @@ if ($npc_uid2 ! null & $int3 ! -1) {
 if ($loc4 ! null & $coord5 ! null) {
 	highlight_loc_on($loc4, $coord5, 15, 1);
 }
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if (%fishing_spot_indicator_more_info_disabled = 0 & ~on_mobile = false) {
 		cc_setonmouseleave("fishing_spot_indicator_mouseleave($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5)");

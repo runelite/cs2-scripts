@@ -1,0 +1,11 @@
+// 4938
+[clientscript,colosseum_intermission_2_mod_button_click](int $int0, int $int1, int $int2, int $int3, int $int4)
+if (%colosseum_selected_modifier = $int0) {
+	%colosseum_selected_modifier = 0;
+} else {
+	%colosseum_selected_modifier = $int0;
+}
+sound_synth(interface_select1, 1, 0);
+~colosseum_intermission_2_mod_buttons_draw($int1, $int2, $int3, $int4);
+~script4948(0);
+~script4932($int4);

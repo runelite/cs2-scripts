@@ -13,7 +13,7 @@ def_string $string0 = "";
 def_int $int8 = inv_total(bonds_pouch, $namedobj7);
 def_int $int9 = inv_total(inv, $namedobj7);
 def_int $int10 = max(0, calc($int6 - ($int8 + $int9)));
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	cc_setobject_alwaysnum($namedobj7, $int8);
 	if ($int8 > 0) {
 		cc_settrans(0);
@@ -23,7 +23,7 @@ if (cc_find($component0, $comsubid1) = ^true) {
 	$string0 = "Bond pouch: <~tostring_spacer($int8, ",")> x <oc_name($namedobj7)>";
 	cc_setonclick("mes($string0)");
 }
-if (cc_find($component0, $comsubid2) = ^true) {
+if (cc_find($component0, $comsubid2) = true) {
 	cc_setobject_alwaysnum($namedobj7, $int9);
 	if ($int9 > 0) {
 		cc_settrans(0);
@@ -33,7 +33,7 @@ if (cc_find($component0, $comsubid2) = ^true) {
 	$string0 = "Inventory: <~tostring_spacer($int9, ",")> x <oc_name($namedobj7)>";
 	cc_setonclick("mes($string0)");
 }
-if (cc_find($component0, $comsubid3) = ^true) {
+if (cc_find($component0, $comsubid3) = true) {
 	cc_setobject_alwaysnum($namedobj7, $int10);
 	if ($int10 > 0) {
 		cc_settrans(0);

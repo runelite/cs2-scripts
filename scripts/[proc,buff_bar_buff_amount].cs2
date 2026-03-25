@@ -4,7 +4,7 @@ def_component $component0 = buff_bar:buff_display;
 def_int $int1 = 11;
 def_int $int2 = 0;
 def_int $int3 = 0;
-while (cc_find($component0, $int2) = ^true) {
+while (cc_find($component0, $int2) = true) {
 	$int3 = calc($int3 + 1);
 	$int2 = calc($int2 + $int1);
 }

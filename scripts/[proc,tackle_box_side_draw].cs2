@@ -3,7 +3,7 @@
 def_obj $obj2 = null;
 def_int $comsubid3 = 0;
 while ($comsubid3 < $comsubid0) {
-	if (cc_find($com_tackle_box_side_items1, $comsubid3) = ^true) {
+	if (cc_find($com_tackle_box_side_items1, $comsubid3) = true) {
 		cc_clearops;
 		cc_setontimer(null);
 		cc_setposition(calc($comsubid3 % 4 * 42), calc($comsubid3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);

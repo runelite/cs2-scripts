@@ -1,9 +1,0 @@
-// 6174
-[clientscript,script6174](int $int0)
-sound_synth(interface_select1, 1, 0);
-if (testbit(%dueloptions, $int0) = ^false) {
-	%dueloptions = setbit(%dueloptions, $int0);
-} else {
-	%dueloptions = clearbit(%dueloptions, $int0);
-}
-~script6175;

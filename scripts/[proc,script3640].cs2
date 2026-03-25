@@ -2,7 +2,7 @@
 [proc,script3640](int $int0, component $com_rangingguild_ticketexchange_items1, component $com_rangingguild_ticketexchange_value2, component $com_rangingguild_ticketexchange_13, component $com_rangingguild_ticketexchange_54, component $com_rangingguild_ticketexchange_x5)
 def_int $int6 = 0;
 while ($int6 < $int0) {
-	if (cc_find($com_rangingguild_ticketexchange_items1, $int6) = ^true) {
+	if (cc_find($com_rangingguild_ticketexchange_items1, $int6) = true) {
 		cc_clearops;
 		switch_int (%shop_quantity) {
 			case default :

@@ -24,7 +24,7 @@ if (~on_mobile = true) {
 		%varcint1170 = if_getx($component11);
 		%varcint1171 = if_gety($component11);
 	}
-	if_setontimer("script6110($component4, -1)", $component4);
+	if_setontimer("responsive_interface_scaler($component4, -1)", $component4);
 }
 if_setonresize("skill_guide_v2_rebuild($int2, $int3)", $component4);
 if_sethide(false, $component5);
@@ -59,4 +59,4 @@ while ($int12 < 4) {
 	cc_settrans(calc(100 + $int12 * 10));
 	$int12 = calc($int12 + 1);
 }
-~script1911(-1, -1, $component4, $component5);
+~skill_guide_v2_size_handler(-1, -1, $component4, $component5);

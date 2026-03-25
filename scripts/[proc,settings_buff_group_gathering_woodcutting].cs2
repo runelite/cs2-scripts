@@ -1,0 +1,7 @@
+// 724
+[proc,settings_buff_group_gathering_woodcutting]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%buff_group_gathering_woodcutting_disabled = calc(1 - %buff_group_gathering_woodcutting_disabled);
+~buff_bar_layout_redraw;

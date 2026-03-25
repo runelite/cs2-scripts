@@ -1,65 +1,64 @@
 // 3850
-[proc,settings_create_drop_down](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)(int, int, int, int)
-def_enum $enum15 = ~script7106(struct_param($struct5, param_1077));
-def_boolean $boolean16 = ~on_mobile;
-if ($enum15 = null) {
-	$enum15 = struct_param($struct5, param_1091);
-	if ($boolean16 = true & struct_param($struct5, param_1092) ! null) {
-		$enum15 = struct_param($struct5, param_1092);
+[proc,settings_create_drop_down](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15)(int, int, int, int)
+def_enum $enum16 = ~script7106(struct_param($struct5, param_1077));
+def_boolean $boolean17 = ~on_mobile;
+if ($enum16 = null) {
+	$enum16 = struct_param($struct5, param_1091);
+	if ($boolean17 = true & struct_param($struct5, param_1092) ! null) {
+		$enum16 = struct_param($struct5, param_1092);
 	}
 }
-if ($enum15 = null) {
+if ($enum16 = null) {
 	cc_create($component6, ^iftype_rectangle, $int3, false);
 	cc_sethide(true);
 	$int3 = calc($int3 + 1);
 	return($int0, $int1, $int2, $int3);
 }
-def_int $int17 = calc(parawidth(enum(int, string, $enum15, ^max_32bit_int), 1000, p12_full) + 14);
-def_int $int18 = calc($int17 + 20);
+def_int $int18 = calc(parawidth(enum(int, string, $enum16, ^max_32bit_int), 1000, p12_full) + 14);
+def_int $int19 = calc($int18 + 20);
 def_string $string0 = struct_param($struct5, param_1086);
-if ($boolean16 = true & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean17 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_string $string1 = struct_param($struct5, param_1096);
-def_int $int19 = 0;
-def_int $int20 = %settings_disable_tooltip_in_interface;
-def_boolean $boolean21 = struct_param($struct5, param_1119);
-if ($boolean16 = true & string_length(struct_param($struct5, param_1097)) > 0) {
+def_int $int20 = 0;
+def_int $int21 = %settings_disable_tooltip_in_interface;
+def_boolean $boolean22 = struct_param($struct5, param_1119);
+if ($boolean17 = true & string_length(struct_param($struct5, param_1097)) > 0) {
 	$string1 = struct_param($struct5, param_1097);
 }
 if (string_length($string1) > 0) {
-	$int19 = calc(paraheight($string1, calc(if_getwidth($component7) - ($int18 + 25)), p12_full) * 14);
+	$int20 = calc(paraheight($string1, calc(if_getwidth($component7) - ($int19 + 25)), p12_full) * 14);
 }
-$int1 = calc($int1 + $int19);
-if ($int20 = 1 | $boolean21 = true) {
-	$int19 = 0;
+$int1 = calc($int1 + $int20);
+if ($int21 = 1 | $boolean22 = true) {
+	$int20 = 0;
 }
-def_int $int22 = calc(paraheight($string0, calc(if_getwidth($component7) - ($int18 + 25)), b12_full) * 14);
-if ($boolean16 = true & $int22 < 20) {
-	$int22 = 20;
+def_int $int23 = calc(paraheight($string0, calc(if_getwidth($component7) - ($int19 + 25)), b12_full) * 14);
+if ($boolean17 = true & $int23 < 20) {
+	$int23 = 20;
 }
-def_int $int23 = calc($int22 + 12 + $int19);
-def_boolean $boolean24 = struct_param($struct5, param_1085);
-def_int $int25 = ~script3957($struct5);
+def_int $int24 = calc($int23 + 12 + $int20);
+def_boolean $boolean25 = struct_param($struct5, param_1085);
 cc_create($component7, ^iftype_rectangle, $int2, false);
-cc_setsize(10, $int23, ^setsize_minus, ^setsize_abs);
+cc_setsize(10, $int24, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans($int4);
 $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_text, $int2, false);
-cc_setsize(calc($int18 + 25), $int22, ^setsize_minus, ^setsize_abs);
+cc_setsize(calc($int19 + 25), $int23, ^setsize_minus, ^setsize_abs);
 cc_setposition(10, calc($int0 + 6), ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
-if ($int25 = 1) {
+if ($int15 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean16 = false & $int20 = 1 & string_length($string1) > 0) {
+if ($boolean17 = false & $int21 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component14, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component14)");
 }
@@ -67,36 +66,36 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize($int18, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition(10, calc($int0 + ($int23 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int19, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int24 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_create($component7, ^iftype_rectangle, $int2, false);
 def_int $comsubid26 = $int2;
 $int2 = calc($int2 + 1);
-cc_setsize($int18, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition(10, calc($int0 + ($int23 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int19, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int24 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
 cc_create($component7, ^iftype_rectangle, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize(calc($int18 - 2), 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(11, calc($int0 + ($int23 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc($int19 - 2), 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(11, calc($int0 + ($int24 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x474745);
 cc_create($component7, ^iftype_graphic, $int2, false);
 def_int $comsubid27 = $int2;
 $int2 = calc($int2 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-cc_setposition(12, calc($int0 + ($int23 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setposition(12, calc($int0 + ($int24 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic("scrollbar_v2,1");
 cc_create($component7, ^iftype_text, $int2, false);
 def_int $comsubid28 = $int2;
 $int2 = calc($int2 + 1);
-cc_setsize($int17, 16, ^setsize_abs, ^setsize_abs);
-cc_setposition(28, calc($int0 + ($int23 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int18, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(28, calc($int0 + ($int24 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
 cc_settextfont(p12_full);
-if ($int25 = 1) {
+if ($int15 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -106,13 +105,13 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_int $int29 = struct_param($struct5, param_1077);
 def_string $string2 = "null";
 def_int $int30 = 0;
-$string2, $int30 = ~script9115($enum15, ~settings_get_dropdown($int29), $struct5);
+$string2, $int30 = ~settings_get_dropdown_option($enum16, ~settings_get_dropdown($int29), $struct5);
 cc_settext($string2);
 cc_create($component6, ^iftype_rectangle, $int3, false);
 def_int $comsubid31 = $int3;
 $int3 = calc($int3 + 1);
-cc_setsize($int18, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition(10, calc($int0 + ($int23 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int19, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int24 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
@@ -122,8 +121,8 @@ cc_setonop("setting_show_dropdown(
 	1 = $struct5, 
 	2 = $component7, 
 	3 = $comsubid28, 
-	4 = $enum15, 
-	5 = $int18, 
+	4 = $enum16, 
+	5 = $int19, 
 	6 = 20, 
 	7 = cc_getx, 
 	8 = cc_gety, 
@@ -134,15 +133,16 @@ cc_setonop("setting_show_dropdown(
 	13 = $component12, 
 	14 = $component13, 
 	15 = $comsubid27, 
-	16 = $boolean24
+	16 = $boolean25, 
+	17 = $int15
 )");
 cc_create($component7, ^iftype_rectangle, $int2, false);
-cc_setsize($int18, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition(10, calc($int0 + ($int23 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int19, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int24 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
-if ($boolean24 = true) {
+if ($boolean25 = true) {
 	~settings_dropdown_choose_transmit(
 		0 = 2, 
 		1 = $struct5, 
@@ -150,16 +150,17 @@ if ($boolean24 = true) {
 		3 = calc($int2 - 6), 
 		4 = $int2, 
 		5 = $component7, 
-		6 = $enum15, 
+		6 = $enum16, 
 		7 = $int29, 
 		8 = $component8, 
 		9 = $component9, 
 		10 = $component10, 
 		11 = $component11, 
-		12 = $component13
+		12 = $component13, 
+		13 = $int15
 	);
 }
-if ($int25 = 1 & ~on_mobile = false) {
+if ($int15 = 1 & ~on_mobile = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }
@@ -169,8 +170,8 @@ if (struct_param($struct5, param_2515) = 1) {
 	cc_create($component7, ^iftype_inputfield, $int2, false);
 	$comsubid32 = $int2;
 	$int2 = calc($int2 + 1);
-	cc_setsize($int17, 16, ^setsize_abs, ^setsize_abs);
-	cc_setposition(28, calc($int0 + ($int23 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize($int18, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(28, calc($int0 + ($int24 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
 	cc_input_setlinewrappingwidth(cc_getwidth);
 	cc_input_setlinecountlimit(1);
 	cc_input_setacceptmode(3);
@@ -184,10 +185,10 @@ if (struct_param($struct5, param_2515) = 1) {
 	cc_input_setselectbgcolour(^white);
 	cc_settext("");
 	cc_input_setsubmitmode(1);
-	if (cc_find($component6, $comsubid31) = ^true) {
+	if (cc_find($component6, $comsubid31) = true) {
 		cc_setnoclickthrough(true);
 		cc_setop(2, "Input");
-		cc_setonop("script9109(
+		cc_setonop("setting_dropdown_op(
 			0 = event_op, 
 			1 = $comsubid26, 
 			2 = $comsubid32, 
@@ -197,8 +198,8 @@ if (struct_param($struct5, param_2515) = 1) {
 			6 = $struct5, 
 			7 = $component7, 
 			8 = $comsubid28, 
-			9 = $enum15, 
-			10 = $int18, 
+			9 = $enum16, 
+			10 = $int19, 
 			11 = 20, 
 			12 = cc_getx, 
 			13 = cc_gety, 
@@ -209,14 +210,15 @@ if (struct_param($struct5, param_2515) = 1) {
 			18 = $component12, 
 			19 = $component13, 
 			20 = $comsubid27, 
-			21 = $boolean24
+			21 = $boolean25, 
+			22 = $int15
 		)");
 	}
 }
-if ($boolean21 = false & $int20 = 0 & $int19 > 0) {
+if ($boolean22 = false & $int21 = 0 & $int20 > 0) {
 	cc_create($component7, ^iftype_text, $int2, false);
-	cc_setsize(calc($int18 + 25), $int19, ^setsize_minus, ^setsize_abs);
-	cc_setposition(10, calc($int0 + 6 + $int22), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int19 + 25), $int20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(10, calc($int0 + 6 + $int23), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string1);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
@@ -224,5 +226,5 @@ if ($boolean21 = false & $int20 = 0 & $int19 > 0) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 	$int2 = calc($int2 + 1);
 }
-$int0 = calc($int23 + $int0);
+$int0 = calc($int24 + $int0);
 return($int0, $int1, $int2, $int3);

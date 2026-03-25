@@ -1,0 +1,17 @@
+// 2124
+[clientscript,fossil_underwater_training_init](component $com_fossil_underwater_training_universe0, component $com_fossil_underwater_training_bottom1, component $com_fossil_underwater_training_agility2, component $com_fossil_underwater_training_thieving3, component $com_fossil_underwater_training_both4)
+cc_deleteall($com_fossil_underwater_training_bottom1);
+cc_create($com_fossil_underwater_training_bottom1, ^iftype_graphic, 0, false);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+.cc_create($com_fossil_underwater_training_bottom1, ^iftype_text, 1, false);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~fossil_underwater_training_bottom($com_fossil_underwater_training_bottom1);
+if_setoninvtransmit("fossil_underwater_training_bottom($com_fossil_underwater_training_bottom1, cc_getid, .cc_getid){inv}", $com_fossil_underwater_training_universe0);
+~fossil_underwater_training_button_init($com_fossil_underwater_training_agility2, "Agility XP", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);
+~fossil_underwater_training_button_init($com_fossil_underwater_training_thieving3, "Thieving XP", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);
+~fossil_underwater_training_button_init($com_fossil_underwater_training_both4, "Both skills", $com_fossil_underwater_training_agility2, $com_fossil_underwater_training_thieving3, $com_fossil_underwater_training_both4);

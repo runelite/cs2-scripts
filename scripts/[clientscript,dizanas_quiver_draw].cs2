@@ -1,0 +1,7 @@
+// 4974
+[clientscript,dizanas_quiver_draw](component $com_dizanas_quiver_ammo_obj0, component $com_dizanas_quiver_ammo_slot1, component $com_dizanas_quiver_close2)
+if (~dizanas_quiver_in_inventory(inv) = 0) {
+	if_close;
+	return;
+}
+~dizanas_quiver_draw($com_dizanas_quiver_ammo_obj0, $com_dizanas_quiver_ammo_slot1, $com_dizanas_quiver_close2);

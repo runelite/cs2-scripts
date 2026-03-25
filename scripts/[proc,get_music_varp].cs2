@@ -1,0 +1,64 @@
+// 7305
+[proc,get_music_varp](int $int0)(int)
+if ($int0 > 27) {
+	~script2075("Music - ^music_varpcount is set to <tostring(27)>, but there was an attempt to use varp <tostring($int0)>.");
+}
+switch_int ($int0) {
+	case 1 :
+		return(%musicmulti_1);
+	case 2 :
+		return(%musicmulti_2);
+	case 3 :
+		return(%musicmulti_3);
+	case 4 :
+		return(%musicmulti_4);
+	case 5 :
+		return(%musicmulti_5);
+	case 6 :
+		return(%musicmulti_6);
+	case 7 :
+		return(%musicmulti_7);
+	case 8 :
+		return(%musicmulti_8);
+	case 9 :
+		return(%musicmulti_9);
+	case 10 :
+		return(%musicmulti_10);
+	case 11 :
+		return(%musicmulti_11);
+	case 12 :
+		return(%musicmulti_12);
+	case 13 :
+		return(%musicmulti_13);
+	case 14 :
+		return(%musicmulti_14);
+	case 15 :
+		return(%musicmulti_15);
+	case 16 :
+		return(%musicmulti_16);
+	case 17 :
+		return(%musicmulti_17);
+	case 18 :
+		return(%musicmulti_18);
+	case 19 :
+		return(%musicmulti_19);
+	case 20 :
+		return(%musicmulti_20);
+	case 21 :
+		return(%musicmulti_21);
+	case 22 :
+		return(%musicmulti_22);
+	case 23 :
+		return(%musicmulti_23);
+	case 24 :
+		return(%musicmulti_24);
+	case 25 :
+		return(%musicmulti_25);
+	case 26 :
+		return(%musicmulti_26);
+	case 27 :
+		return(%musicmulti_27);
+	case default :
+		~script2075("Music - music varp <tostring($int0)> was not configured correctly.");
+		return(-1);
+}

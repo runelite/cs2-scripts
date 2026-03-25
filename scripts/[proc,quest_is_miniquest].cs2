@@ -1,0 +1,6 @@
+// 7327
+[proc,quest_is_miniquest](dbrow $dbrow0)(int)
+if (db_getfield($dbrow0, quest:type, 0) = 1) {
+	return(1);
+}
+return(0);

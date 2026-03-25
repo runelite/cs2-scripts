@@ -4,5 +4,5 @@ def_int $int2 = 0;
 if (~music_isunlocked($dbrow1) = 1) {
 	$int2 = 1;
 }
-def_string $string0 = ~script6625(~script7311($dbrow1), $int2);
+def_string $string0 = ~script6625(~get_music_name($dbrow1), $int2);
 ~helper_generic_update_text($int0, $string0);

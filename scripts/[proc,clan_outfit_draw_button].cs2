@@ -38,7 +38,7 @@ if ($int0 = 1 & ~on_mobile = false) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
 }
-$int11 = ~script4205($component10, $int11);
+$int11 = ~v2_stone_button_with_id($component10, $int11);
 cc_create($component10, ^iftype_graphic, $int11, false);
 $int11 = calc($int11 + 1);
 cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);

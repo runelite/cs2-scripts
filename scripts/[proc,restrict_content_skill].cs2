@@ -1,0 +1,8 @@
+// 8950
+[proc,restrict_content_skill](stat $stat0)(boolean)
+switch_stat ($stat0) {
+	case _23 :
+		return(~restrict_content(1));
+	case default :
+		return(false);
+}

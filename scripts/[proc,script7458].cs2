@@ -1,8 +1,0 @@
-// 7458
-[proc,script7458]
-%settings_minimenu_start_index_toggle = calc(1 - %settings_minimenu_start_index_toggle);
-if (%settings_minimenu_start_index_toggle = 1) {
-	gameoption_set(13, calc(%settings_minimenu_start_index + 1));
-} else {
-	gameoption_set(13, 0);
-}

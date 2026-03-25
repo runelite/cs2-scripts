@@ -5,7 +5,7 @@ def_int $int2 = 0;
 def_string $string0 = "";
 def_int $int3 = 0;
 while ($int3 < $int1) {
-	$int2, $string0 = ~script8942(~script9101($dbrow0, $int3));
+	$int2, $string0 = ~restrict_content_dbrow_with_string(~script9101($dbrow0, $int3));
 	if ($int2 = 1) {
 		return(1, $string0);
 	}

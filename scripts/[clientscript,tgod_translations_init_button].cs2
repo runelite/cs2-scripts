@@ -1,0 +1,8 @@
+// 6946
+[clientscript,tgod_translations_init_button](component $com_tgod_translations_translate0, string $string0)
+~tgod_translations_draw_button(0, $string0, $com_tgod_translations_translate0);
+if_setop(1, $string0, $com_tgod_translations_translate0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("tgod_translations_draw_button(1, $string0, $com_tgod_translations_translate0)", $com_tgod_translations_translate0);
+	if_setonmouseleave("tgod_translations_draw_button(0, $string0, $com_tgod_translations_translate0)", $com_tgod_translations_translate0);
+}

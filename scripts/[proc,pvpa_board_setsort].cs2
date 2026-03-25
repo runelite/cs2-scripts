@@ -7,7 +7,7 @@ def_int $intarray0(47);
 def_int $int0 = 0;
 def_int $int1 = 0;
 while ($int1 < 47) {
-	if (cc_find(enum(int, component, enum_4403, $int1), 0) = ^true) {
+	if (cc_find(enum(int, component, enum_4403, $int1), 0) = true) {
 		$intarray0($int0) = $int1;
 		$int0 = calc($int0 + 1);
 	}
@@ -36,7 +36,7 @@ switch_int (%varcint992) {
 			$component4 = enum(int, component, enum_4403, $intarray0($int2));
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-				if (cc_find($component4, 0) = ^true & .cc_find($component4, 1) = ^true) {
+				if (cc_find($component4, 0) = true & .cc_find($component4, 1) = true) {
 					~pvpa_board_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, pvp_arena_board:list);
 				}
 				$int3 = calc($int3 + if_getheight($component4));
@@ -47,7 +47,7 @@ switch_int (%varcint992) {
 			$component4 = enum(int, component, enum_4403, $intarray0($int2));
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-				if (cc_find($component4, 0) = ^true & .cc_find($component4, 1) = ^true) {
+				if (cc_find($component4, 0) = true & .cc_find($component4, 1) = true) {
 					~pvpa_board_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, pvp_arena_board:list);
 				}
 				$int3 = calc($int3 + if_getheight($component4));

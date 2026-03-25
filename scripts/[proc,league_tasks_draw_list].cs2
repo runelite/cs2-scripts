@@ -84,50 +84,50 @@ if ($boolean24 = false) {
 }
 ~script1785(league_tasks:content_outer);
 if ($int23 = 0) {
-	if (cc_find(league_tasks:infinity, 0) = ^true) {
+	if (cc_find(league_tasks:infinity, 0) = true) {
 		cc_setsize(calc($int27 - 6 * 2), calc(if_gety(league_tasks:content_outer) - 2 * 6), ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + 6), calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 1) = ^true) {
+	if (cc_find(league_tasks:infinity, 1) = true) {
 		cc_setsize(calc($int27 - 6 * 2), 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + 6), calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 2) = ^true) {
+	if (cc_find(league_tasks:infinity, 2) = true) {
 		cc_setsize(6, calc($int28 - 6 * 2), ^setsize_abs, ^setsize_abs);
 		cc_setposition($int29, calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 3) = ^true) {
+	if (cc_find(league_tasks:infinity, 3) = true) {
 		cc_setsize(6, calc($int28 - 6 * 2), ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + $int27 - 6), calc($int30 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 4) = ^true) {
+	if (cc_find(league_tasks:infinity, 4) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int29, $int30, ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 5) = ^true) {
+	if (cc_find(league_tasks:infinity, 5) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + $int27 - 6), $int30, ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 6) = ^true) {
+	if (cc_find(league_tasks:infinity, 6) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int29, calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 7) = ^true) {
+	if (cc_find(league_tasks:infinity, 7) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + $int27 - 6), calc($int30 + $int28 - 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
-	if (cc_find(league_tasks:infinity, 8) = ^true) {
+	if (cc_find(league_tasks:infinity, 8) = true) {
 		cc_setsize(calc($int27 - 28 - 6 * 2), 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int29 + 28 + 6), $int30, ^setpos_abs_left, ^setpos_abs_top);
-		~script2438($int21);
+		~league_tasks_reset_handle($int21);
 	}
 }
 def_int $int31 = 0;
@@ -140,7 +140,7 @@ def_enum $enum34 = struct_param($struct32, param_868);
 def_int $int35 = enum_getoutputcount($enum34);
 ~league_points_progress_bar($component15, $component16, 0, 0);
 ~searchbar_create($component17, $component18);
-~script2441(
+~tasks_searchbar_setup_op(
 	0 = $component1, 
 	1 = $component2, 
 	2 = $component3, 
@@ -171,7 +171,7 @@ if ($int23 = 1) {
 } else {
 	~steelborder(league_tasks:frame, "League Tasks <col=ffffff><tostring($int31)>/<tostring($int35)></col>", 3);
 }
-if (cc_find(league_tasks:frame, 1) = ^true) {
+if (cc_find(league_tasks:frame, 1) = true) {
 	cc_setcolour($int33);
 }
 def_int $int36 = 0;
@@ -238,7 +238,7 @@ while ($int36 < $int35) {
 				}
 			}
 			cc_setop(1, "Collapse");
-			cc_setonop("script7700(
+			cc_setonop("league_tasks_click_task(
 				0 = -1, 
 				1 = $component1, 
 				2 = $component2, 
@@ -302,7 +302,7 @@ while ($int36 < $int35) {
 				cc_settrans(245);
 			}
 			cc_setop(1, "Expand");
-			cc_setonop("script7700(
+			cc_setonop("league_tasks_click_task(
 				0 = $int36, 
 				1 = $component1, 
 				2 = $component2, 
@@ -377,6 +377,6 @@ if ($int31 = 0 & %league_tasks_is_searching = 0) {
 } else {
 	if_sethide(true, $component10);
 }
-if (cc_find(league_tasks:frame, 1) = ^true) {
+if (cc_find(league_tasks:frame, 1) = true) {
 	cc_settext("League Tasks <col=ffffff><tostring($int46)>/<tostring($int31)></col>");
 }

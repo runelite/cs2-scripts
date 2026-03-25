@@ -1,0 +1,6 @@
+// 5207
+[proc,highlighting_tile_current_alwaysontop_toggle_client]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%highlighting_tile_current_alwaysontop = calc(1 - %highlighting_tile_current_alwaysontop);

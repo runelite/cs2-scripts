@@ -93,12 +93,12 @@ if_setonvartransmit("script3040(
 	43 = $com_side_journal_tab_line43
 ){fossil_storage11, league_general, fsw_perm_int_1}", $com_side_journal_universe0);
 if (~on_mobile = false) {
-	if_setonmouserepeat("script2803($com_side_journal_tab_1_18, $com_side_journal_tab_1_29, $com_side_journal_tab_1_310, $com_side_journal_tab_1_1_backing28, $com_side_journal_tab_1_2_backing29, $com_side_journal_tab_1_3_backing30, 0)", $com_side_journal_summary_list4);
-	if_setonmouserepeat("script2803($com_side_journal_tab_2_112, $com_side_journal_tab_2_213, $com_side_journal_tab_2_314, $com_side_journal_tab_2_1_backing31, $com_side_journal_tab_2_2_backing32, $com_side_journal_tab_2_3_backing33, 1)", $com_side_journal_quest_list2);
-	if_setonmouserepeat("script2803($com_side_journal_tab_3_116, $com_side_journal_tab_3_217, $com_side_journal_tab_3_318, $com_side_journal_tab_3_1_backing34, $com_side_journal_tab_3_2_backing35, $com_side_journal_tab_3_3_backing36, 2)", $com_side_journal_task_list3);
-	if_setonmouseleave("script2804($com_side_journal_tab_1_18, $com_side_journal_tab_1_29, $com_side_journal_tab_1_310, $com_side_journal_tab_1_1_backing28, $com_side_journal_tab_1_2_backing29, $com_side_journal_tab_1_3_backing30, 0)", $com_side_journal_summary_list4);
-	if_setonmouseleave("script2804($com_side_journal_tab_2_112, $com_side_journal_tab_2_213, $com_side_journal_tab_2_314, $com_side_journal_tab_2_1_backing31, $com_side_journal_tab_2_2_backing32, $com_side_journal_tab_2_3_backing33, 1)", $com_side_journal_quest_list2);
-	if_setonmouseleave("script2804($com_side_journal_tab_3_116, $com_side_journal_tab_3_217, $com_side_journal_tab_3_318, $com_side_journal_tab_3_1_backing34, $com_side_journal_tab_3_2_backing35, $com_side_journal_tab_3_3_backing36, 2)", $com_side_journal_task_list3);
+	if_setonmouserepeat("side_journal_mouseover_tab($com_side_journal_tab_1_18, $com_side_journal_tab_1_29, $com_side_journal_tab_1_310, $com_side_journal_tab_1_1_backing28, $com_side_journal_tab_1_2_backing29, $com_side_journal_tab_1_3_backing30, 0)", $com_side_journal_summary_list4);
+	if_setonmouserepeat("side_journal_mouseover_tab($com_side_journal_tab_2_112, $com_side_journal_tab_2_213, $com_side_journal_tab_2_314, $com_side_journal_tab_2_1_backing31, $com_side_journal_tab_2_2_backing32, $com_side_journal_tab_2_3_backing33, 1)", $com_side_journal_quest_list2);
+	if_setonmouserepeat("side_journal_mouseover_tab($com_side_journal_tab_3_116, $com_side_journal_tab_3_217, $com_side_journal_tab_3_318, $com_side_journal_tab_3_1_backing34, $com_side_journal_tab_3_2_backing35, $com_side_journal_tab_3_3_backing36, 2)", $com_side_journal_task_list3);
+	if_setonmouseleave("side_journal_mouseleave_tab($com_side_journal_tab_1_18, $com_side_journal_tab_1_29, $com_side_journal_tab_1_310, $com_side_journal_tab_1_1_backing28, $com_side_journal_tab_1_2_backing29, $com_side_journal_tab_1_3_backing30, 0)", $com_side_journal_summary_list4);
+	if_setonmouseleave("side_journal_mouseleave_tab($com_side_journal_tab_2_112, $com_side_journal_tab_2_213, $com_side_journal_tab_2_314, $com_side_journal_tab_2_1_backing31, $com_side_journal_tab_2_2_backing32, $com_side_journal_tab_2_3_backing33, 1)", $com_side_journal_quest_list2);
+	if_setonmouseleave("side_journal_mouseleave_tab($com_side_journal_tab_3_116, $com_side_journal_tab_3_217, $com_side_journal_tab_3_318, $com_side_journal_tab_3_1_backing34, $com_side_journal_tab_3_2_backing35, $com_side_journal_tab_3_3_backing36, 2)", $com_side_journal_task_list3);
 }
 if_setonop("side_journal_switchtab_onop(
 	0 = event_op, 

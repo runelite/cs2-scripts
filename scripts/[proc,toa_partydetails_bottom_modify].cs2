@@ -1,0 +1,165 @@
+// 6730
+[proc,toa_partydetails_bottom_modify](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
+def_component $component6 = null;
+def_component $component7 = null;
+def_component $component8 = null;
+def_component $component9 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_component $component12 = null;
+def_string $string5 = "";
+def_component $component13 = null;
+def_string $string6 = "";
+if ($int0 = 2) {
+	if ($int1 = 2) {
+		$component6 = toa_partydetails:refresh;
+		$string0 = "Refresh";
+		$component7 = toa_partydetails:invocations_clear;
+		$string1 = "Clear All";
+		$component8 = toa_partydetails:invocations_presets;
+		$string2 = "Presets";
+		$component12, $string5 = $component8, $string2;
+		$component9 = toa_partydetails:invocations_open_rewards;
+		$string3 = "Rewards";
+		$component13, $string6 = $component9, $string3;
+		$int10 = 4;
+	} else {
+		$component6 = toa_partydetails:refresh;
+		$string0 = "Refresh";
+		$component7 = toa_partydetails:invocations_open_rewards;
+		$string1 = "Rewards";
+		$component13, $string6 = $component7, $string1;
+		$component8, $string2 = null, "";
+		$component9, $string3 = null, "";
+		$int10 = 2;
+	}
+} else {
+	switch_int ($int1) {
+		case 2 :
+			$string4 = "Disband";
+		case 1 :
+			$string4 = "Leave";
+		case 3 :
+			$string4 = "Withdraw";
+		case 4 :
+			$string4 = "<col=7f7f7f><str=9f9f9f>Apply</str></col>";
+		case default :
+			$string4 = "Apply";
+	}
+	if ($int1 = 2) {
+		$component6 = toa_partydetails:refresh;
+		$string0 = "Refresh";
+		$component7 = toa_partydetails:action;
+		$string1 = $string4;
+		$component8 = toa_partydetails:unblock;
+		$string2 = "Unblock";
+		$component9 = toa_partydetails:completions;
+		$string3 = "Completions";
+		$int11 = 1;
+		$int10 = 4;
+	} else {
+		$component6 = toa_partydetails:refresh;
+		$string0 = "Refresh";
+		$component7 = toa_partydetails:action;
+		$string1 = $string4;
+		$component8 = toa_partydetails:completions;
+		$string2 = "Completions";
+		$int11 = 1;
+		$component9 = null;
+		$int10 = 3;
+	}
+}
+if_sethide(true, toa_partydetails:unblock);
+if_sethide(true, toa_partydetails:completions);
+if_sethide(true, toa_partydetails:action);
+if_sethide(true, toa_partydetails:invocations_clear);
+if_sethide(true, toa_partydetails:invocations_presets);
+if_sethide(true, toa_partydetails:invocations_open_rewards);
+if_sethide(true, toa_partydetails:refresh);
+def_int $int14 = 4;
+def_int $int15 = 0;
+def_int $int16 = calc((318 - $int10 * $int14) / $int10);
+if ($int11 = 1) {
+	$int15 = calc(120 - $int16);
+	$int16 = calc((318 - $int15 - $int10 * $int14) / $int10);
+}
+def_int $int17 = 32;
+def_int $int18 = 0;
+def_int $int19 = 2;
+if ($component6 ! null) {
+	if ($component6 = toa_partydetails:completions) {
+		$int16 = calc($int16 + $int15);
+	}
+	if_setsize($int16, $int17, ^setsize_abs, ^setsize_abs, $component6);
+	if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if_sethide(false, $component6);
+	if ($component6 = toa_partydetails:completions) {
+		~script6740($component6, $string0, $int2, $int1);
+	} else if ($component6 = toa_partydetails:invocations_open_rewards) {
+		~script6731($component6, $string0, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component6 = toa_partydetails:invocations_presets) {
+		~script350($component6, $string0, $component13, $string6, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component6, $string0, toa_partydetails:pausebuttons, enum_4792, -1);
+	}
+	$int18 = calc($int18 + $int16 + $int14);
+}
+if ($component7 ! null) {
+	if ($component7 = toa_partydetails:completions) {
+		$int16 = calc($int16 + $int15);
+	}
+	if_setsize($int16, $int17, ^setsize_abs, ^setsize_abs, $component7);
+	if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component7);
+	if_sethide(false, $component7);
+	if ($component7 = toa_partydetails:completions) {
+		~script6740($component7, $string1, $int2, $int1);
+	} else if ($component7 = toa_partydetails:invocations_open_rewards) {
+		~script6731($component7, $string1, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component7 = toa_partydetails:invocations_presets) {
+		~script350($component7, $string1, $component13, $string6, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component7, $string1, toa_partydetails:pausebuttons, enum_4792, -1);
+	}
+	$int18 = calc($int18 + $int16 + $int14);
+}
+if ($component8 ! null) {
+	if ($component8 = toa_partydetails:completions) {
+		$int16 = calc($int16 + $int15);
+	}
+	if_setsize($int16, $int17, ^setsize_abs, ^setsize_abs, $component8);
+	if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component8);
+	if_sethide(false, $component8);
+	if ($component8 = toa_partydetails:completions) {
+		~script6740($component8, $string2, $int2, $int1);
+	} else if ($component8 = toa_partydetails:invocations_open_rewards) {
+		~script6731($component8, $string2, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component8 = toa_partydetails:invocations_presets) {
+		~script350($component8, $string2, $component13, $string6, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component8, $string2, toa_partydetails:pausebuttons, enum_4792, -1);
+	}
+	$int18 = calc($int18 + $int16 + $int14);
+}
+if ($component9 ! null) {
+	if ($component9 = toa_partydetails:completions) {
+		$int16 = calc($int16 + $int15);
+	}
+	if_setsize($int16, $int17, ^setsize_abs, ^setsize_abs, $component9);
+	if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component9);
+	if_sethide(false, $component9);
+	if ($component9 = toa_partydetails:completions) {
+		~script6740($component9, $string3, $int2, $int1);
+	} else if ($component9 = toa_partydetails:invocations_open_rewards) {
+		~script6731($component9, $string3, $component12, $string5, $int3, $int4, $int5, $int1);
+	} else if ($component9 = toa_partydetails:invocations_presets) {
+		~script350($component9, $string3, $component13, $string6, $int3, $int4, $int5, $int1);
+	} else {
+		~script1558($component9, $string3, toa_partydetails:pausebuttons, enum_4792, -1);
+	}
+	$int18 = calc($int18 + $int16 + $int14);
+}

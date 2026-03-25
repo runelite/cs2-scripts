@@ -1,0 +1,6 @@
+// 4863
+[proc,settings_quest_start_highlight_filter_requirements]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%quest_start_highlight_filter_requirements = calc(1 - %quest_start_highlight_filter_requirements);

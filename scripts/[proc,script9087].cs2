@@ -6,6 +6,6 @@ if (db_find(sailing_boat:type_id, %sailing_boarded_boat_type) = 1) {
 }
 def_string $string0 = db_getfield($dbrow0, sailing_boat:displayname, 0);
 if (string_length($string0) <= 0) {
-	return(~script9085(%sailing_boarded_boat_name_1, %sailing_boarded_boat_name_2, %sailing_boarded_boat_name_3));
+	return(~sailing_boat_name_core(%sailing_boarded_boat_name_1, %sailing_boarded_boat_name_2, %sailing_boarded_boat_name_3));
 }
 return($string0);

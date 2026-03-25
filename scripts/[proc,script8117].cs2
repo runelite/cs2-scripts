@@ -2,7 +2,7 @@
 [proc,script8117](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, component $com_bingo_overlay_info6, component $com_bingo_overlay_inner_overlay7, component $com_bingo_overlay_tooltip8, int $int9, int $int10, int $setposh11, int $setposv12, int $int13, int $int14, int $setsize15, int $setsize16, component $component17)(int, int)
 def_dbrow $dbrow18 = null;
 def_int $int19 = 0;
-$dbrow18, $int19 = ~script8277($int2, $int3);
+$dbrow18, $int19 = ~bingo_get_reward_selection($int2, $int3);
 $int19 = min($int19, 3);
 def_int $int20 = ~script8273($int2, $int3);
 if ($int19 <= 0 | $int20 < 0) {
@@ -41,7 +41,7 @@ if ($int20 > 0) {
 	$string3 = "You already claimed this reward.<br><br><$intarray2(calc($int20 - 1))>";
 	$int24 = calc($int20 - 1);
 	cc_setparam(param_2320, db_getfield($dbrow18, reward_selection:reward, $int24), int);
-	cc_setonop("script8122(
+	cc_setonop("bingo_redraw_reward_selection(
 		0 = $int2, 
 		1 = $int3, 
 		2 = $int4, 
@@ -60,9 +60,9 @@ if ($int20 > 0) {
 	} else {
 		$string3 = "Claim the reward!<br><br><$string3>";
 	}
-	~script8194(1);
+	~cc_set_button_highlight_anim(1);
 	~script8195(4320000);
-	cc_setonop("script8122(
+	cc_setonop("bingo_redraw_reward_selection(
 		0 = $int2, 
 		1 = $int3, 
 		2 = $int4, 
@@ -81,7 +81,7 @@ if ($int20 > 0) {
 	} else {
 		$string3 = "Complete the tile to unlock this!<br><br><$string3>";
 	}
-	cc_setonop("script8122(
+	cc_setonop("bingo_redraw_reward_selection(
 		0 = $int2, 
 		1 = $int3, 
 		2 = $int4, 
@@ -95,7 +95,7 @@ if ($int20 > 0) {
 	)");
 	cc_setop(1, "View");
 }
-cc_setonmouserepeat("script8118(
+cc_setonmouserepeat("bingo_reward_mouserepeat(
 	0 = $int2, 
 	1 = $int3, 
 	2 = $int4, 

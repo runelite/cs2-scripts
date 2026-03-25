@@ -1,0 +1,11 @@
+// 7308
+[proc,get_music_varbit](int $int0, int $int1)(int)
+def_int $int2 = ~get_music_varp($int0);
+if ($int2 = -1) {
+	return(1);
+}
+if ($int2 = -1) {
+	return(0);
+}
+def_int $bool3 = testbit($int2, $int1);
+return($bool3);

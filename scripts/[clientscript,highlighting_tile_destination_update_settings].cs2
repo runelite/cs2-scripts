@@ -1,0 +1,8 @@
+// 5211
+[clientscript,highlighting_tile_destination_update_settings](int $int0, int $int1)
+if (~on_enhanced_any = 0) {
+	return;
+}
+%highlighting_tile_destination_enabled = $int0;
+%highlighting_tile_destination_alwaysontop = $int1;
+~highlighting_tile_destination_setup;

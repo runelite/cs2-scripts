@@ -3,7 +3,7 @@
 def_int $comsubid5 = 0;
 if_sethide(true, $com_trek_rewards_title3);
 if_sethide(true, $com_trek_rewards_buybutton_container4);
-while (cc_find($com_trek_rewards_icons0, $comsubid5) = ^true) {
+while (cc_find($com_trek_rewards_icons0, $comsubid5) = true) {
 	if ($comsubid5 = %templetrek_reward_selected) {
 		cc_setoutline(2);
 		if_settext(enum(int, string, enum_1383, %templetrek_reward_selected), $com_trek_rewards_title3);

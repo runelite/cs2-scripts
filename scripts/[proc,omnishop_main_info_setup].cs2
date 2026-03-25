@@ -24,7 +24,7 @@ if (%omnishop_view_expanded = 1) {
 	} else {
 		~steelborder($component11, "Item Info", 16);
 	}
-	if (cc_find($component11, 11) = ^true) {
+	if (cc_find($component11, 11) = true) {
 		cc_setonop("omnishop_main_info_closebutton_click");
 		cc_setonkey("omnishop_main_info_closebutton_key(event_keycode)");
 		if_setonop("omnishop_main_info_closebutton_click", $component12);
@@ -70,7 +70,7 @@ def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = if_getwidth($component8);
 if ($int2 ! -1 & string_length($string0) = 0) {
-	~script7137(
+	~loading_icon_init_extended(
 		0 = $component8, 
 		1 = null, 
 		2 = enum_3787, 
@@ -169,7 +169,7 @@ if (string_length($string0) > 0) {
 	while ($dbrow28 ! null) {
 		$graphic30, $graphic31 = db_getfield($dbrow28, omnishop_currency_data:omnishop_currency_graphic, 0);
 		if ($graphic30 ! null) {
-			$int21 = ~script3749($component8, $graphic30, $graphic13, $int5, -25, 6, $int22, $int21);
+			$int21 = ~omnishop_currency_draw_info($component8, $graphic30, $graphic13, $int5, -25, 6, $int22, $int21);
 			$int22 = calc($int22 + 24);
 		} else {
 			$string3 = ~tostring_spacer($int5, $string4);

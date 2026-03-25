@@ -10,7 +10,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 while ($int8 < $int1) {
 	$int7 = activeclansettings_getsortedaffinedslot($int8);
-	if (.cc_find($component0, $int7) = ^true) {
+	if (.cc_find($component0, $int7) = true) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
 			$string0 = removetags(activeclansettings_getaffineddisplayname($int7));

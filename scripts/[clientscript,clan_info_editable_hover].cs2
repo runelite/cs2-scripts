@@ -1,12 +1,12 @@
 // 4294
 [clientscript,clan_info_editable_hover](int $int0, component $component1, int $comsubid2, int $int3, int $int4)
 if ($int0 = 1) {
-	if (cc_find($component1, $comsubid2) = ^true) {
+	if (cc_find($component1, $comsubid2) = true) {
 		cc_settrans($int3);
 	}
 	if_setontimer("cc_settrans_temporarily_end(event_com, $comsubid2, $int4, calc(clientclock + 2))", $component1);
 } else {
-	if (cc_find($component1, $comsubid2) = ^true) {
+	if (cc_find($component1, $comsubid2) = true) {
 		cc_settrans($int4);
 	}
 	if_setontimer(null, $component1);

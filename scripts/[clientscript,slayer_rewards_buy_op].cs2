@@ -43,7 +43,7 @@ if ($opindex0 <= 1) {
 if ($opindex0 >= 10) {
 	return;
 }
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	cc_settrans(75);
 	sound_synth(interface_select1, 1, 0);
 	cc_setontimer("slayer_rewards_buy_release($component1, $comsubid2, calc(clientclock + 10))");

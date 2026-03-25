@@ -1,0 +1,7 @@
+// 7037
+[proc,mm_lab_overlay_draw](component $com_mm_overlay_content0, component $com_mm_overlay_tooltip1, int $int2)
+cc_deleteall($com_mm_overlay_content0);
+def_int $int3 = 0;
+$int3 = ~mm_lab_overlay_draw_title($com_mm_overlay_content0, $int3);
+$int3 = ~mm_lab_overlay_draw_orders($com_mm_overlay_content0, $int3, $com_mm_overlay_tooltip1, $int2);
+$int3 = ~mm_lab_overlay_draw_reagents($com_mm_overlay_content0, $int3, $com_mm_overlay_tooltip1);

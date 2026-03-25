@@ -1,0 +1,47 @@
+// 7359
+[proc,prepot_device_loadouts_init_loadouts](int $int0)
+def_int $int1 = 0;
+def_component $component2 = null;
+db_listall(prepot_device_loadout_ui);
+def_dbrow $dbrow3 = db_findnext;
+while ($dbrow3 ! null) {
+	~prepot_device_loadouts_init_loadout($dbrow3, $int0);
+	$component2 = db_getfield($dbrow3, prepot_device_loadout_ui:container_com, 0);
+	$int1 = max($int1, calc(if_gety($component2) + if_getheight($component2)));
+	$dbrow3 = db_findnext;
+}
+if_setscrollpos(0, 0, bankside:prepot_device_loadouts);
+if ($int1 > if_getheight(bankside:prepot_device_loadouts)) {
+	if_setscrollsize(0, calc($int1 + 2), bankside:prepot_device_loadouts);
+} else {
+	if_setscrollsize(0, 0, bankside:prepot_device_loadouts);
+}
+~scrollbar_vertical(bankside:prepot_device_loadouts_scrollbar, bankside:prepot_device_loadouts, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonvartransmit("prepot_device_loadouts_draw_loadouts($int0){
+	0 = bankcert, 
+	1 = prepot_device_loadouts_1, 
+	2 = prepot_device_loadouts_2, 
+	3 = prepot_device_loadouts_3, 
+	4 = prepot_device_loadouts_4, 
+	5 = prepot_device_loadouts_5, 
+	6 = prepot_device_loadout_0_slot_0_potion, 
+	7 = prepot_device_loadout_0_slot_1_potion, 
+	8 = prepot_device_loadout_0_slot_2_potion, 
+	9 = prepot_device_loadout_0_slot_3_potion, 
+	10 = prepot_device_loadout_0_slot_4_potion, 
+	11 = prepot_device_loadout_1_slot_0_potion, 
+	12 = prepot_device_loadout_1_slot_1_potion, 
+	13 = prepot_device_loadout_1_slot_2_potion, 
+	14 = prepot_device_loadout_1_slot_3_potion, 
+	15 = prepot_device_loadout_1_slot_4_potion, 
+	16 = prepot_device_loadout_2_slot_0_potion, 
+	17 = prepot_device_loadout_2_slot_1_potion, 
+	18 = prepot_device_loadout_2_slot_2_potion, 
+	19 = prepot_device_loadout_2_slot_3_potion, 
+	20 = prepot_device_loadout_2_slot_4_potion, 
+	21 = prepot_device_loadout_3_slot_0_potion, 
+	22 = prepot_device_loadout_3_slot_1_potion, 
+	23 = prepot_device_loadout_3_slot_2_potion, 
+	24 = prepot_device_loadout_3_slot_3_potion, 
+	25 = prepot_device_loadout_3_slot_4_potion
+}", bankside:prepot_device_loadouts);

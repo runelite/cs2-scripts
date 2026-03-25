@@ -4,14 +4,14 @@ if (clientclock < $int7) {
 	return;
 }
 if_setontimer(null, $component0);
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $int1) = true) {
 	cc_setcolour($int2);
 	cc_settrans($int3);
 }
 if (~on_mobile = false) {
-	if_setonmouserepeat("script1015(event_com, $int1, $int4, $int5)", $component0);
+	if_setonmouserepeat("xpdrops_setup_skilllist_mouseover(event_com, $int1, $int4, $int5)", $component0);
 }
-if_setonmouseleave("script1015(event_com, $int1, $int2, $int3)", $component0);
+if_setonmouseleave("xpdrops_setup_skilllist_mouseover(event_com, $int1, $int2, $int3)", $component0);
 if_setonop("clan_applicants_entry_op(
 	0 = event_op, 
 	1 = event_com, 

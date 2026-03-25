@@ -61,7 +61,7 @@ if ($int8 = 0) {
 } else {
 	cc_setcolour(^white);
 	cc_settextfont(p12_full);
-	cc_settext(~script8056($int8, -1, 1));
+	cc_settext(~slayer_taskname($int8, -1, 1));
 }
 cc_create($component0, ^iftype_graphic, $int10, false);
 $int10 = calc($int10 + 1);

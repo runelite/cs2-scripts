@@ -6,7 +6,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 while ($int5 < $int2) {
-	if (cc_find($com_itemsets_itemlist0, $int5) = ^true) {
+	if (cc_find($com_itemsets_itemlist0, $int5) = true) {
 		if (%itemsets_show_only_craftable = 1 & cc_gettrans = 0 | %itemsets_show_only_craftable = 0) {
 			cc_sethide(false);
 			$int8 = calc($int7 / 8 * 48);

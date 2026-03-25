@@ -52,10 +52,10 @@ while ($int7 < $int1) {
 	if (~questdisplay_hide_quest($dbrow6) = 0) {
 		$int9 = ~script3236($dbrow6);
 		if ($int9 ! $int8) {
-			$int5, $int2 = ~script5998(~script3237($dbrow6), $int5, $int2, $component0);
+			$int5, $int2 = ~questdisplay_add_header(~script3237($dbrow6), $int5, $int2, $component0);
 			$int8 = $int9;
 		}
-		if (cc_find($component0, $intarray1($int7)) = ^true) {
+		if (cc_find($component0, $intarray1($int7)) = true) {
 			cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
 		}
 		$int2 = calc($int2 + 18);

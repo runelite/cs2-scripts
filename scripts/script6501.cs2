@@ -1,0 +1,129 @@
+java.lang.IllegalStateException: Opcode 7204 in script 6501 not implemented
+
+.id                       6501
+.int_arg_count            3
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 3
+   iload                  1
+   6951                  
+   iconst                 1
+   if_icmpeq              LABEL7
+   jump                   LABEL110
+LABEL7:
+   iload                  1
+   iconst                 7
+   7209                  
+   istore                 3
+   iload                  3
+   iconst                 -1
+   if_icmpeq              LABEL15
+   jump                   LABEL24
+LABEL15:
+   iload                  1
+   iconst                 7
+   iconst                 1
+   iconst                 60
+   iconst                 60
+   iconst                 1
+   7204                  
+   istore                 3
+   jump                   LABEL26
+LABEL24:
+   iload                  3
+   104                   
+LABEL26:
+   iload                  3
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL31
+   jump                   LABEL51
+LABEL31:
+   iconst                 6502
+   iload                  0
+   iload                  1
+   iload                  2
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3549
+   get_varp               3550
+   get_varp               3547
+   get_varbit             14182
+   get_varbit             14184
+   iconst                 3546
+   iconst                 3543
+   iconst                 3548
+   iconst                 3549
+   iconst                 3550
+   iconst                 3547
+   iconst                 6
+   sconst                 "iiiiiiiiiiY"
+   cc_setonvartransmit   
+LABEL51:
+   get_varbit             14182
+   iconst                 0
+   if_icmpeq              LABEL58
+   invoke                 6497
+   iconst                 1
+   if_icmpeq              LABEL58
+   jump                   LABEL63
+LABEL58:
+   iload                  1
+   iconst                 9
+   iconst                 1
+   7037                  
+   return                
+LABEL63:
+   get_varbit             14189
+   iconst                 1
+   if_icmpeq              LABEL67
+   jump                   LABEL102
+LABEL67:
+   iload                  3
+   iconst                 5
+   iconst                 0
+   103                   
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 8
+   iconst                 3
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iload                  2
+   iconst                 1
+   cc_setobject_nonum    
+   iconst                 1
+   cc_setoutline         
+   iload                  3
+   iconst                 5
+   iconst                 1
+   103                   
+   iconst                 48
+   iconst                 48
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 -8
+   iconst                 -3
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 1350
+   cc_setgraphic         
+LABEL102:
+   get_varbit             14184
+   iconst                 1
+   if_icmpeq              LABEL106
+   jump                   LABEL110
+LABEL106:
+   iload                  1
+   iconst                 9
+   iconst                 1
+   7036                  
+LABEL110:
+   return                

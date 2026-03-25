@@ -1,0 +1,6 @@
+// 4487
+[proc,loginlogout_setting_get]()(int)
+if (%loginlogout_permanent = 0) {
+	return(%loginlogout_setting);
+}
+return(%loginlogout_permanent);

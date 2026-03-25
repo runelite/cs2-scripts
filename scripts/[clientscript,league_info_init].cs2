@@ -4,7 +4,7 @@
 def_string $string0 = "League Info";
 def_int $comsubid12 = ~steelborder(league_info:frame, $string0, 1);
 def_component $component13 = league_info:infinity;
-if_setontimer("script6110($component13, -1)", $component13);
+if_setontimer("responsive_interface_scaler($component13, -1)", $component13);
 if_setonresize("league_info_draw_interface(
 	0 = $com_league_info_league_general_header0, 
 	1 = $com_league_info_league_specific_header1, 

@@ -10,12 +10,12 @@ def_int $int7 = -1;
 def_string $string1 = "";
 def_string $string2 = "";
 while ($int6 < $int1) {
-	if (cc_find(raids_lobby_partydetails:list, calc($intarray0($int6) * 8 + $int2)) = ^true) {
+	if (cc_find(raids_lobby_partydetails:list, calc($intarray0($int6) * 8 + $int2)) = true) {
 		$string1 = removetags(cc_gettext);
 	} else {
 		$string1 = "";
 	}
-	if (cc_find(raids_lobby_partydetails:list, calc($int4 * 8 + $int2)) = ^true) {
+	if (cc_find(raids_lobby_partydetails:list, calc($int4 * 8 + $int2)) = true) {
 		$string2 = removetags(cc_gettext);
 	} else {
 		$string2 = "";

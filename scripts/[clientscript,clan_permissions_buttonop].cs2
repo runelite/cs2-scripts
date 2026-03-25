@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $int3) = ^true) {
+if (cc_find($component1, $comsubid2) = true & .cc_find($component1, $int3) = true) {
 	.cc_settrans($int4);
 	cc_setontimer("clan_permissions_buttontimeout(calc(clientclock + 20), event_com, event_comsubid, $int3, $int5, $int6)");
 	cc_setonmouserepeat(null);

@@ -1,6 +1,6 @@
 // 5449
 [proc,xptracker_reset_interface]
-if (cc_find(xptracker:tracker_container, 0) = ^false) {
+if (cc_find(xptracker:tracker_container, 0) = false) {
 	return;
 }
 cc_deleteall(xptracker:tracker_container);

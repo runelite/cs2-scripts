@@ -1,12 +1,12 @@
 // 3864
-[proc,settings_create_keybind_entry](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)(int, int, int, int, int)
-def_int $int15 = $int1;
-def_enum $enum16 = struct_param($struct5, param_1091);
-def_boolean $boolean17 = ~on_mobile;
-if ($boolean17 = true & struct_param($struct5, param_1092) ! null) {
-	$enum16 = struct_param($struct5, param_1092);
+[proc,settings_create_keybind_entry](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $int15)(int, int, int, int, int)
+def_int $int16 = $int1;
+def_enum $enum17 = struct_param($struct5, param_1091);
+def_boolean $boolean18 = ~on_mobile;
+if ($boolean18 = true & struct_param($struct5, param_1092) ! null) {
+	$enum17 = struct_param($struct5, param_1092);
 }
-if ($enum16 = null) {
+if ($enum17 = null) {
 	cc_create($component6, ^iftype_rectangle, $int3, false);
 	cc_sethide(true);
 	$int3 = calc($int3 + 1);
@@ -19,39 +19,38 @@ if ($int0 = ^max_32bit_int) {
 } else {
 	$int0 = 2;
 }
-def_int $int18 = ^max_32bit_int;
+def_int $int19 = ^max_32bit_int;
 if (struct_param($struct5, param_1093) ! -1) {
-	$int18 = struct_param($struct5, param_1093);
-	if ($int18 > $int0) {
-		$int0 = $int18;
+	$int19 = struct_param($struct5, param_1093);
+	if ($int19 > $int0) {
+		$int0 = $int19;
 	}
 }
-def_graphic $graphic19 = struct_param($struct5, param_1098);
-if ($graphic19 = null) {
+def_graphic $graphic20 = struct_param($struct5, param_1098);
+if ($graphic20 = null) {
 	cc_create($component6, ^iftype_rectangle, $int3, false);
 	cc_sethide(true);
 	$int3 = calc($int3 + 1);
 	return($int1, $int2, $int3, $int0, $int14);
 }
-def_int $int20 = calc(coordx(struct_param($struct5, param_1099)) % 64);
-def_int $int21 = calc(coordz(struct_param($struct5, param_1099)) % 64);
-def_int $int22 = 0;
-def_int $int23 = if_getwidth($component7);
+def_int $int21 = calc(coordx(struct_param($struct5, param_1099)) % 64);
+def_int $int22 = calc(coordz(struct_param($struct5, param_1099)) % 64);
+def_int $int23 = 0;
+def_int $int24 = if_getwidth($component7);
 if ($int0 = 2) {
-	$int22 = calc($int23 / 3 * 2);
+	$int23 = calc($int24 / 3 * 2);
 } else if ($int0 = 1) {
-	$int22 = calc($int23 / 3);
+	$int23 = calc($int24 / 3);
 }
-def_int $int24 = parawidth(enum(int, string, $enum16, ^max_32bit_int), 1000, p12_full);
-def_int $int25 = calc($int24 + 26);
-def_int $int26 = 44;
-def_int $int27 = calc($int23 / 3 - 10);
-def_int $int28 = calc($int22 + 33 + 20);
-def_boolean $boolean29 = struct_param($struct5, param_1085);
-def_int $int30 = ~script3957($struct5);
+def_int $int25 = parawidth(enum(int, string, $enum17, ^max_32bit_int), 1000, p12_full);
+def_int $int26 = calc($int25 + 26);
+def_int $int27 = 44;
+def_int $int28 = calc($int24 / 3 - 10);
+def_int $int29 = calc($int23 + 33 + 20);
+def_boolean $boolean30 = struct_param($struct5, param_1085);
 cc_create($component7, ^iftype_rectangle, $int2, false);
-cc_setsize($int27, $int26, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int22 + 5), $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int28, $int27, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int23 + 5), $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans($int4);
@@ -59,43 +58,43 @@ $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2, false);
 cc_setgraphic("pre_eoc_stones,0");
 cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int22 + 10), calc($int1 + 4), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int23 + 10), calc($int1 + 4), ^setpos_abs_left, ^setpos_abs_top);
 $int2 = calc($int2 + 1);
 cc_create($component7, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setgraphic($graphic19);
-cc_setsize($int20, $int21, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int22 + 10 + (16 - $int20 / 2)), calc($int1 + 4), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic20);
+cc_setsize($int21, $int22, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int23 + 10 + (16 - $int21 / 2)), calc($int1 + 4), ^setpos_abs_left, ^setpos_abs_top);
 cc_create($component7, ^iftype_graphic, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize($int25, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition($int28, calc($int1 + ($int26 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int26, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition($int29, calc($int1 + ($int27 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(tradebacking);
 cc_settiling(true);
 cc_create($component7, ^iftype_rectangle, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize($int25, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition($int28, calc($int1 + ($int26 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int26, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition($int29, calc($int1 + ($int27 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x0e0e0c);
 cc_create($component7, ^iftype_rectangle, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize(calc($int25 - 2), 18, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int28 + 1), calc($int1 + ($int26 / 2 - 9)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int26 - 2), 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int29 + 1), calc($int1 + ($int27 / 2 - 9)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(false);
 cc_setcolour(0x474745);
 cc_create($component7, ^iftype_graphic, $int2, false);
 def_int $comsubid31 = $int2;
 $int2 = calc($int2 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int28 + $int24 + 8), calc($int1 + ($int26 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int29 + $int25 + 8), calc($int1 + ($int27 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("scrollbar_v2,1");
 cc_create($component7, ^iftype_text, $int2, false);
 $int2 = calc($int2 + 1);
-cc_setsize(calc($int24 + 6), 16, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int28 + 2), calc($int1 + ($int26 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int25 + 6), 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int29 + 2), calc($int1 + ($int27 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
-if ($int30 = 1) {
+if ($int15 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
@@ -103,11 +102,11 @@ if ($int30 = 1) {
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_int $int32 = struct_param($struct5, param_1077);
-cc_settext(enum(int, string, $enum16, ~settings_get_keybind($int32)));
+cc_settext(enum(int, string, $enum17, ~settings_get_keybind($int32)));
 cc_create($component6, ^iftype_rectangle, $int3, false);
 $int3 = calc($int3 + 1);
-cc_setsize($int25, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition($int28, calc($int1 + ($int26 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int26, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition($int29, calc($int1 + ($int27 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
@@ -116,8 +115,8 @@ cc_setonop("setting_show_dropdown(
 	1 = $struct5, 
 	2 = $component7, 
 	3 = calc($int2 - 1), 
-	4 = $enum16, 
-	5 = $int25, 
+	4 = $enum17, 
+	5 = $int26, 
 	6 = 20, 
 	7 = cc_getx, 
 	8 = cc_gety, 
@@ -128,21 +127,22 @@ cc_setonop("setting_show_dropdown(
 	13 = $component12, 
 	14 = $component13, 
 	15 = $comsubid31, 
-	16 = $boolean29
+	16 = $boolean30, 
+	17 = $int15
 )");
 cc_setop(1, "Select");
-if ($int30 = 1) {
+if ($int15 = 1) {
 	cc_sethide(false);
 } else {
 	cc_sethide(true);
 }
 cc_create($component7, ^iftype_rectangle, $int2, false);
-cc_setsize($int25, 20, ^setsize_abs, ^setsize_abs);
-cc_setposition($int28, calc($int1 + ($int26 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int26, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition($int29, calc($int1 + ($int27 / 2 - 10)), ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
-if ($boolean29 = true) {
+if ($boolean30 = true) {
 	~settings_dropdown_choose_transmit(
 		0 = 3, 
 		1 = $struct5, 
@@ -150,21 +150,22 @@ if ($boolean29 = true) {
 		3 = calc($int2 - 6), 
 		4 = $int2, 
 		5 = $component7, 
-		6 = $enum16, 
+		6 = $enum17, 
 		7 = $int32, 
 		8 = $component8, 
 		9 = $component9, 
 		10 = $component10, 
 		11 = $component11, 
-		12 = $component13
+		12 = $component13, 
+		13 = $int15
 	);
 }
-if ($int30 = 1 & $boolean17 = false) {
+if ($int15 = 1 & $boolean18 = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }
 $int2 = calc($int2 + 1);
-$int1 = calc($int1 + $int26);
+$int1 = calc($int1 + $int27);
 if ($int1 < $int14) {
 	$int1 = $int14;
 }
@@ -172,4 +173,4 @@ if ($int0 = 2 | struct_param($struct5, param_1094) = true) {
 	$int0 = ^max_32bit_int;
 	return($int1, $int2, $int3, $int0, 0);
 }
-return($int15, $int2, $int3, $int0, $int1);
+return($int16, $int2, $int3, $int0, $int1);

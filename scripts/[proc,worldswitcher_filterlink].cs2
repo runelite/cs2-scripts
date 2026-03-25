@@ -25,6 +25,10 @@ if (%worldswitcher_filter_country ! 0) {
 			if (testbit(%worldswitcher_filter_country, 4) = ^true) {
 				return(0);
 			}
+		case 8 :
+			if (testbit(%worldswitcher_filter_country, 6) = ^true) {
+				return(0);
+			}
 		case -73 :
 			if (testbit(%worldswitcher_filter_country, 2) = ^true) {
 				return(0);
@@ -40,38 +44,38 @@ if (%worldswitcher_filter_theme ! 0) {
 	if (testbit(%worldswitcher_filter_theme, 0) = ^true & testbit($int1, 7) = ^true) {
 		return(0);
 	}
-	if (testbit(%worldswitcher_filter_theme, 1) = ^true & ~script7323($int1) = 1) {
+	if (testbit(%worldswitcher_filter_theme, 1) = ^true & ~pvp_world_fromflags($int1) = 1) {
 		return(0);
 	}
-	if (testbit(%worldswitcher_filter_theme, 2) = ^true & ~script7324($int1) = 1) {
+	if (testbit(%worldswitcher_filter_theme, 2) = ^true & ~high_risk_world_fromflags($int1) = 1) {
 		return(0);
 	}
-	if (testbit(%worldswitcher_filter_theme, 3) = ^true & ~script6942($int1) ! 0) {
+	if (testbit(%worldswitcher_filter_theme, 3) = ^true & ~deadman_world_fromflags($int1) ! 0) {
 		return(0);
 	}
-	if (testbit(%worldswitcher_filter_theme, 4) = ^true & ~script6810($int1) = 1) {
+	if (testbit(%worldswitcher_filter_theme, 4) = ^true & ~speedrunning_world_fromflags($int1) = 1) {
 		return(0);
 	}
-	if (testbit(%worldswitcher_filter_theme, 5) = ^true & ~script5739($int1) = 1) {
+	if (testbit(%worldswitcher_filter_theme, 5) = ^true & ~pvpa_world_fromflags($int1) = 1) {
 		return(0);
 	}
 	if (testbit(%worldswitcher_filter_theme, 6) = ^true) {
 		if (testbit($int1, 30) = ^true) {
 			return(0);
 		}
-		if (~script206($int1) = 1) {
+		if (~league_world_fromflags($int1) = 1) {
 			return(0);
 		}
-		if (~script8215($int1) = 1) {
+		if (~event_world_fromflags($int1) = 1) {
 			return(0);
 		}
-		$int3 = ~script6942($int1);
+		$int3 = ~deadman_world_fromflags($int1);
 		if ($int3 ! 0 & $int3 ! 1) {
 			return(0);
 		}
 	}
 	if (testbit(%worldswitcher_filter_theme, 7) = ^true) {
-		if (~script7266($int1) = 1) {
+		if (~beta_world_fromflags($int1) = 1) {
 			return(0);
 		} else if (testbit($int1, 25) = ^true) {
 			return(0);

@@ -1,7 +1,7 @@
 // 8419
 [clientscript,script8419](int $comsubid0, int $int1, int $int2)
 def_int $int3 = -1;
-if (cc_find(ballot:voting, $comsubid0) = ^true) {
+if (cc_find(ballot:voting, $comsubid0) = true) {
 	$int3 = cc_param(param_2357);
 	if ($int1 ! -1) {
 		$int3 = setbit_range_toint($int3, $int1, 0, 0);

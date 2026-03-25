@@ -1,0 +1,11 @@
+// 4500
+[proc,colour_pallet_update](component $component0, int $int1, component $component2, int $comsubid3, int $comsubid4, struct $struct5, component $component6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10)
+if ($int1 > 16777215 | $int1 < 0) {
+	mes("The colour input was invalid.");
+	return;
+}
+%varcint459 = $int1;
+if_setonop("script4208(%varcint459, colour_pallet:clamp, colour_pallet:fader, colour_pallet:window, $component0)", colour_pallet:submit);
+~colour_pallet_update_box($component2, $comsubid3, $struct5);
+~colour_pallet_update_text($component2, $comsubid4, $struct5);
+~colour_pallet_update_custom($component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $struct5);

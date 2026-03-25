@@ -15,9 +15,9 @@ if ($obj5 = null) {
 	return;
 }
 def_obj $obj6 = inv_getobj(inv, $dropsubid3);
-if (cc_find($drop0, $dropsubid3) = ^true) {
+if (cc_find($drop0, $dropsubid3) = true) {
 	~bankside_worn_drawitem($obj5, inv_getnum(inv, $comsubid2), $comsubid2);
 }
-if (cc_find($drop0, $comsubid2) = ^true) {
+if (cc_find($drop0, $comsubid2) = true) {
 	~bankside_worn_drawitem($obj6, inv_getnum(inv, $dropsubid3), $dropsubid3);
 }

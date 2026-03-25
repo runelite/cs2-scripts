@@ -26,15 +26,15 @@ cc_setfill(true);
 if ($int21 = 0) {
 	cc_setcolour(^white);
 	cc_settrans($int23);
-	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = ^true) {
+	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = true) {
 		.cc_sethide(false);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setonmouserepeat("script7274(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
-		.cc_setonmouseleave("script7274(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
+		.cc_setonmouserepeat("worldswitcher_entry_mouseeffects(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
+		.cc_setonmouseleave("worldswitcher_entry_mouseeffects(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, $int23)");
 		.cc_setonop("logout_op(event_op, 6, $int5)");
 	} else {
-		if_setonmouserepeat("script7274(1, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
-		if_setonmouseleave("script7274(0, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
+		if_setonmouserepeat("worldswitcher_entry_mouseeffects(1, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
+		if_setonmouseleave("worldswitcher_entry_mouseeffects(0, event_com, -1, $component0, cc_getid, $component20, $string0, $int23)", $component3);
 		if_setonop("logout_op(event_op, 6, $int5)", $component3);
 	}
 } else {
@@ -44,15 +44,15 @@ if ($int21 = 0) {
 		cc_setcolour(^black);
 	}
 	cc_settrans(175);
-	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = ^true) {
+	if ($comsubid4 ! -1 & .cc_find($component3, $comsubid4) = true) {
 		.cc_sethide(false);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setonmouserepeat("script7274(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
-		.cc_setonmouseleave("script7274(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
+		.cc_setonmouserepeat("worldswitcher_entry_mouseeffects(1, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
+		.cc_setonmouseleave("worldswitcher_entry_mouseeffects(0, event_com, event_comsubid, $component0, cc_getid, $component20, $string0, -1)");
 		.cc_setonop(null);
 	} else {
-		if_setonmouserepeat("script7274(1, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
-		if_setonmouseleave("script7274(0, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
+		if_setonmouserepeat("worldswitcher_entry_mouseeffects(1, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
+		if_setonmouseleave("worldswitcher_entry_mouseeffects(0, event_com, -1, $component0, cc_getid, $component20, $string0, -1)", $component3);
 		if_setonop(null, $component3);
 	}
 }
@@ -74,13 +74,13 @@ if ($int5 <= 0) {
 }
 if (testbit($int6, 16) = ^true) {
 	cc_setgraphic("worldswitcher_stars,12");
-} else if (~script7323($int6) = 1) {
+} else if (~pvp_world_fromflags($int6) = 1) {
 	cc_setgraphic("worldswitcher_stars,2");
-} else if (~script6810($int6) = 1) {
+} else if (~speedrunning_world_fromflags($int6) = 1) {
 	cc_setgraphic("worldswitcher_stars,6");
 } else if (~script6812($int6) = 1) {
 	cc_setgraphic("worldswitcher_stars,7");
-} else if (~script6942($int6) ! 0) {
+} else if (~deadman_world_fromflags($int6) ! 0) {
 	cc_setgraphic("worldswitcher_stars,3");
 } else if (testbit($int6, 30) = ^true) {
 	cc_setgraphic("worldswitcher_stars,5");
@@ -139,7 +139,7 @@ cc_setsize($int17, $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int2, ^setpos_abs_right, ^setpos_abs_top);
 if ($int21 = 1) {
 	cc_setcolour(0x7f7f7f);
-} else if (~script7323($int6) = 1 | ~script6942($int6) ! 0 | testbit($int6, 25) = ^true) {
+} else if (~pvp_world_fromflags($int6) = 1 | ~deadman_world_fromflags($int6) ! 0 | testbit($int6, 25) = ^true) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(0xff981f);

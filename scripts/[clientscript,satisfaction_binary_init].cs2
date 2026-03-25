@@ -1,0 +1,8 @@
+// 2166
+[clientscript,satisfaction_binary_init](component $com_logout_satisfaction_binary0, component $com_logout_satisfaction_good1, component $com_logout_satisfaction_bad2)
+if_setop(1, "Thumbs Up", $com_logout_satisfaction_good1);
+if_setop(1, "Thumbs Down", $com_logout_satisfaction_bad2);
+if_setonop("satisfaction_binary_select(event_op, 2, $com_logout_satisfaction_good1, $com_logout_satisfaction_bad2)", $com_logout_satisfaction_good1);
+if_setonop("satisfaction_binary_select(event_op, 1, $com_logout_satisfaction_good1, $com_logout_satisfaction_bad2)", $com_logout_satisfaction_bad2);
+~satisfaction_binary_update($com_logout_satisfaction_good1, $com_logout_satisfaction_bad2);
+if_setonvartransmit("satisfaction_binary_update($com_logout_satisfaction_good1, $com_logout_satisfaction_bad2){csat_temp}", $com_logout_satisfaction_binary0);

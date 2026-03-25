@@ -3,7 +3,7 @@
 if (clientclock < $int0) {
 	return;
 }
-if (cc_find($component2, $comsubid3) = ^true) {
+if (cc_find($component2, $comsubid3) = true) {
 	cc_setontimer(null);
 	cc_settrans($int4);
 	if (~on_mobile = false) {

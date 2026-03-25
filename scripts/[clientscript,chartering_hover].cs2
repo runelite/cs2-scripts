@@ -1,0 +1,17 @@
+// 7337
+[clientscript,chartering_hover](component $component0, int $comsubid1, component $component2, int $comsubid3, int $int4)
+if ($int4 = 1) {
+	if (cc_find($component0, $comsubid1) = true) {
+		cc_setgraphic("map_cross,1");
+	}
+	if (cc_find($component2, $comsubid3) = true) {
+		cc_setcolour(^white);
+	}
+} else {
+	if (cc_find($component0, $comsubid1) = true) {
+		cc_setgraphic("map_cross,0");
+	}
+	if (cc_find($component2, $comsubid3) = true) {
+		cc_setcolour(0xff981f);
+	}
+}

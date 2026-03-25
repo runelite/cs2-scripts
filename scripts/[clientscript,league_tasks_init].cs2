@@ -15,7 +15,7 @@ if (~on_mobile = true) {
 		%varcint1177 = if_getx($component23);
 		%varcint1178 = if_gety($component23);
 	}
-	if_setontimer("script6110($component19, -1)", $component19);
+	if_setontimer("responsive_interface_scaler($component19, -1)", $component19);
 }
 if_setonresize("league_tasks_draw_list(
 	0 = -1, 
@@ -59,7 +59,7 @@ if_setonvartransmit("league_tasks_transmit(
 	17 = $com_league_tasks_searchbar_image17, 
 	18 = $com_league_tasks_search_text18
 ){league_points_completed}", league_tasks:infinity);
-if_setonvartransmit("script2435(
+if_setonvartransmit("league_tasks_change_filter(
 	0 = -1, 
 	1 = $com_league_tasks_tasks_list0, 
 	2 = $com_league_tasks_tasks_background1, 
@@ -134,4 +134,4 @@ while ($int24 < 4) {
 	cc_settrans(calc(100 + $int24 * 10));
 	$int24 = calc($int24 + 1);
 }
-~script2437(-1, -1, $component19, $component20);
+~league_tasks_size_handler(-1, -1, $component19, $component20);

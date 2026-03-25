@@ -1,0 +1,182 @@
+java.lang.IllegalStateException: Opcode 7201 in script 6498 not implemented
+
+.id                       6498
+.int_arg_count            5
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 5
+   iload                  3
+   iload                  1
+   6803                  
+   iconst                 1
+   if_icmpeq              LABEL8
+   jump                   LABEL156
+LABEL8:
+   iconst                 5
+   7206                  
+   istore                 5
+   iload                  5
+   iconst                 -1
+   if_icmpeq              LABEL15
+   jump                   LABEL23
+LABEL15:
+   iconst                 5
+   iconst                 1
+   iconst                 60
+   iconst                 60
+   iconst                 1
+   7201                  
+   istore                 5
+   jump                   LABEL25
+LABEL23:
+   iload                  5
+   104                   
+LABEL25:
+   iload                  5
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL30
+   jump                   LABEL45
+LABEL30:
+   iconst                 6499
+   iload                  5
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   get_varbit             14189
+   get_varbit             14184
+   get_varbit             14182
+   iconst                 3546
+   iconst                 3543
+   iconst                 2
+   sconst                 "iiiiiiiiiY"
+   cc_setonvartransmit   
+LABEL45:
+   get_varbit             14182
+   iconst                 0
+   if_icmpeq              LABEL49
+   jump                   LABEL55
+LABEL49:
+   iload                  1
+   iload                  3
+   iconst                 9
+   iconst                 1
+   7012                  
+   return                
+LABEL55:
+   iconst                 93
+   iload                  2
+   inv_total             
+   iconst                 0
+   if_icmpgt              LABEL61
+   jump                   LABEL129
+LABEL61:
+   get_varbit             14189
+   iconst                 1
+   if_icmpeq              LABEL65
+   jump                   LABEL103
+LABEL65:
+   iload                  5
+   iconst                 5
+   iconst                 0
+   103                   
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 4
+   iconst                 4
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iload                  4
+   iconst                 1
+   cc_setobject_nonum    
+   iconst                 1
+   cc_setoutline         
+   iload                  5
+   iconst                 5
+   iconst                 1
+   103                   
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 -4
+   iconst                 -4
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 7297
+   iconst                 1
+   cc_setobject_nonum    
+   iconst                 1
+   cc_setoutline         
+LABEL103:
+   get_varbit             14184
+   iconst                 1
+   if_icmpeq              LABEL107
+   jump                   LABEL112
+LABEL107:
+   iload                  1
+   iload                  3
+   iconst                 9
+   iconst                 1
+   7011                  
+LABEL112:
+   iload                  5
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL117
+   jump                   LABEL128
+LABEL117:
+   iconst                 6500
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   iconst                 1
+   iconst                 93
+   iconst                 1
+   sconst                 "iiiiiiY"
+   cc_setoninvtransmit   
+LABEL128:
+   jump                   LABEL150
+LABEL129:
+   iload                  1
+   iload                  3
+   iconst                 9
+   iconst                 1
+   7012                  
+   iload                  5
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL139
+   jump                   LABEL150
+LABEL139:
+   iconst                 6500
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   iconst                 0
+   iconst                 93
+   iconst                 1
+   sconst                 "iiiiiiY"
+   cc_setoninvtransmit   
+LABEL150:
+   iconst                 9
+   iconst                 65280
+   iconst                 2
+   iconst                 30
+   iconst                 1
+   7010                  
+LABEL156:
+   return                

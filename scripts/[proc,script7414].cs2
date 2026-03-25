@@ -1,8 +1,0 @@
-// 7414
-[proc,script7414]
-%osm_hotkey_accordion_locked = calc(1 - %osm_hotkey_accordion_locked);
-if (%osm_hotkey_accordion_locked = 1) {
-	if_setop(6, "Unlock", osm_hotkeys:master_toggle);
-} else {
-	if_setop(6, "Lock", osm_hotkeys:master_toggle);
-}

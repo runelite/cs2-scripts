@@ -1,6 +1,6 @@
 // 8973
 [proc,script8973](int $int0, int $int1)(string)
-def_int $int2 = ~script9016($int0);
+def_int $int2 = ~sailing_boat_get_dock($int0);
 def_dbrow $dbrow3 = null;
 def_dbrow $dbrow4 = null;
 def_string $string0 = "";
@@ -19,4 +19,4 @@ if ($int1 = 1) {
 		return($string0);
 	}
 }
-return(~script9092($dbrow3));
+return(~sailing_dock_name($dbrow3));

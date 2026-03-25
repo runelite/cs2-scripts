@@ -80,7 +80,7 @@ if (enum(int, namedobj, $enum3, 3) ! null) {
 if (enum(int, namedobj, $enum3, 4) ! null) {
 	cc_setop(9, "4 Dose");
 }
-cc_setonvartransmit("script6555(event_com, event_comsubid, $enum3){potionstore_base_var_1, potionstore_base_var_2, potionstore_base_var_3, potionstore_base_var_4, potionstore_base_var_5, potionstore_base_var_6}");
+cc_setonvartransmit("potionstore_vile_size_update(event_com, event_comsubid, $enum3){potionstore_base_var_1, potionstore_base_var_2, potionstore_base_var_3, potionstore_base_var_4, potionstore_base_var_5, potionstore_base_var_6}");
 cc_setonscrollwheel("scrollbar_vertical_wheel(bankmain:potionstore_scrollbar, bankmain:potionstore_items, event_mousey)");
 $int0 = calc($int0 + 1);
 cc_create(bankmain:potionstore_items, ^iftype_text, $int0, false);
@@ -145,7 +145,7 @@ if ($int4 = 1) {
 		cc_sethide(true);
 	}
 }
-cc_setonop("script6558(calc($int0 / 5))");
+cc_setonop("potionstore_favourite_button(calc($int0 / 5))");
 cc_setonscrollwheel("scrollbar_vertical_wheel(bankmain:potionstore_scrollbar, bankmain:potionstore_items, event_mousey)");
 cc_setnoclickthrough(true);
 $int0 = calc($int0 + 1);

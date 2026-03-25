@@ -12,13 +12,13 @@ if (string_length(%varcstring370) > 0) {
 	if (%varcint224 = 0) {
 		mes("System unavailable - apologies for the inconvenience.");
 	} else {
-		chat_sendabusereport(%varcstring370, $int2, ~script5102(0));
+		chat_sendabusereport(%varcstring370, $int2, ~reportabuse_toggle_get(0));
 	}
-	if (~script5102(1) = true) {
+	if (~reportabuse_toggle_get(1) = true) {
 		ignore_add(%varcstring370);
 	}
 	if_triggerop(reportabuse:close, -1, 1);
 } else {
-	~script5095(1);
-	~script5089(0);
+	~reportabuse_hint_set(1);
+	~reportabuse_page_set(0);
 }

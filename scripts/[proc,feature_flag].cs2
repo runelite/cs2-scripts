@@ -1,0 +1,6 @@
+// 8216
+[proc,feature_flag](int $int0)(int)
+if (testbit(%feature_flags_cached, $int0) = ^true) {
+	return(1);
+}
+return(0);

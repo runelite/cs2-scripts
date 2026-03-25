@@ -3,7 +3,7 @@
 if (~on_mobile = true) {
 	return;
 }
-if (cc_find($component0, $comsubid2) = ^true) {
+if (cc_find($component0, $comsubid2) = true) {
 	if ($int3 = 0) {
 		cc_sethide(false);
 	} else {
@@ -11,5 +11,5 @@ if (cc_find($component0, $comsubid2) = ^true) {
 	}
 }
 if ($int3 = 0) {
-	~script9127($component0, $comsubid1);
+	~button_default_onop($component0, $comsubid1);
 }

@@ -12,15 +12,15 @@ if ($dbrow0 ! null) {
 	}
 	switch_int ($int2) {
 		case 1 :
-			if (~script8797(1, $dbrow1, -1) < max($int3, 1)) {
+			if (~sailing_crew_get_stat(1, $dbrow1, -1) < max($int3, 1)) {
 				return(0);
 			}
 		case 2 :
-			if (~script8797(2, $dbrow1, -1) < max($int3, 1)) {
+			if (~sailing_crew_get_stat(2, $dbrow1, -1) < max($int3, 1)) {
 				return(0);
 			}
 		case 3 :
-			if (~script8797(3, $dbrow1, -1) < max($int3, 1)) {
+			if (~sailing_crew_get_stat(3, $dbrow1, -1) < max($int3, 1)) {
 				return(0);
 			}
 	}

@@ -14,6 +14,6 @@ if_setscrollsize(0, $int3, journalscroll:textlayer);
 ~scrollbar_vertical(journalscroll:scrollbar, journalscroll:textlayer, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 if ($boolean0 = true) {
 	if_setscrollpos(0, 0, journalscroll:textlayer);
-} else if (cc_find(journalscroll:scrollbar, 1) = ^true) {
+} else if (cc_find(journalscroll:scrollbar, 1) = true) {
 	~scrollbar_vertical_doscroll(journalscroll:scrollbar, journalscroll:textlayer, $int3, 1);
 }

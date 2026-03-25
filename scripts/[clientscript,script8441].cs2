@@ -7,7 +7,7 @@ if ($int2 = 1) {
 if ($int4 = 1) {
 	$int5 = setbit($int5, 3);
 }
-if (if_find_child(ballot:voting, param_2365, 200, param_2368, $int0) = true) {
+if (cc_find_param(ballot:voting, param_2365, 200, param_2368, $int0) = true) {
 	cc_setparam(param_2369, 3, int);
 	cc_setparam(param_2362, $int5, int);
 	cc_setparam(param_2363, $int3, int);

@@ -70,7 +70,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 	$component39 = null;
 	if ($component0 = $component44) {
 		if ($component45 ! null) {
-			if (.cc_find($component45, 0) = ^true) {
+			if (.cc_find($component45, 0) = true) {
 				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 				.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
 			} else {
@@ -80,7 +80,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 				.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
 			}
-			if (.cc_find($component45, 1) = ^true) {
+			if (.cc_find($component45, 1) = true) {
 				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 				.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
 			} else {
@@ -90,7 +90,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 				.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
 			}
-			if (.cc_find($component45, 2) = ^true) {
+			if (.cc_find($component45, 2) = true) {
 				.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 				.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
 			} else {
@@ -100,7 +100,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 				.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 				.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
 			}
-			if (.cc_find($component45, 3) = ^true) {
+			if (.cc_find($component45, 3) = true) {
 				.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 				.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
 			} else {
@@ -266,9 +266,9 @@ $component39 = enum(component, component, $enum25, toplevel_osrs_stretch:hpbar_h
 if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component39 ! null & if_hassub($component39) = true & if_gethide(hpbar_hud:hp) = false) {
 	if ($int24 = 1 & %hpbar_hud_standard_disabled = 0 & %hpbar_hud_boss = 0) {
 		$int40 = setbit($int40, 5);
-		if (~script4732(0) = 0 & $setposh27 = ^setpos_abs_left) {
+		if (~dodger_tracker_check(0) = 0 & $setposh27 = ^setpos_abs_left) {
 			$int14 = calc($int14 + if_getheight(hpbar_hud:hp) + 2);
-		} else if (~script4732(0) = 1) {
+		} else if (~dodger_tracker_check(0) = 1) {
 			if ($setposh27 = ^setpos_abs_right) {
 				$int14 = calc($int14 + if_getheight(hpbar_hud:hp) + 2);
 			} else {
@@ -282,7 +282,7 @@ if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component39 ! nul
 $component39 = enum(component, component, $enum25, toplevel_osrs_stretch:helper_content);
 if (testbit($int2, 6) = ^true & testbit($int2, 16) = ^false & $component39 ! null & if_hassub($component39) = true) {
 	$int40 = setbit($int40, 6);
-	if (~script4732(1) = 0) {
+	if (~dodger_tracker_check(1) = 0) {
 		if ($setposh27 = ^setpos_abs_left) {
 			$int14 = calc($int14 + if_getheight($component39));
 		}
@@ -344,7 +344,7 @@ if (testbit($int2, 14) = ^true) {
 	$int35 = enum_getoutputcount(enum_580);
 	while ($int34 < $int35) {
 		$component39 = enum(int, component, enum_580, $int34);
-		if ($component39 ! null & cc_find(pm_chat:container, calc($int34 * 4)) = ^true & string_length(cc_gettext) > 0) {
+		if ($component39 ! null & cc_find(pm_chat:container, calc($int34 * 4)) = true & string_length(cc_gettext) > 0) {
 			$int36 = calc($int36 + if_getheight($component39));
 		}
 		$int34 = calc($int34 + 1);
@@ -409,7 +409,7 @@ if (testbit($int2, 11) = ^true & $component39 ! null & if_hassub($component39) =
 		}
 	}
 }
-if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = ^true & if_gethide(%varcint490) = false) {
+if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = true & if_gethide(%varcint490) = false) {
 	$int40 = setbit($int40, 17);
 	$int41 = if_getheight(%varcint490);
 	$int37 = ~script8451(%varcint490);

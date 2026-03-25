@@ -2,7 +2,7 @@
 [clientscript,script8187](component $component0, int $comsubid1)
 def_int $int2 = 0;
 def_int $int3 = 400;
-if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid1) = ^true & .cc_findroot = ^true) {
+if (cc_find($component0, $comsubid1) = true & .cc_find($component0, $comsubid1) = true & .cc_findroot = ^true) {
 	if (clientclock <= calc(.cc_param(param_2350) + 1)) {
 		cc_settrans(0);
 	} else {

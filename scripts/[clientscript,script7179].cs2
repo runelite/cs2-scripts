@@ -10,7 +10,7 @@ switch_int (%option_loottracker_display_group_mode) {
 		$int2 = 2;
 		$int3 = 10;
 }
-def_component $component4 = ~script4031($int2, $int1);
+def_component $component4 = ~loottracker_get_component($int2, $int1);
 def_int $intarray0(10);
 def_int $int5 = -1;
 def_component $component6 = null;
@@ -21,14 +21,14 @@ def_int $int8 = 0;
 switch_int ($opindex0) {
 	case 1 :
 		if_setblendcolour(calc(1 - if_getblendcolour($component4)), $component4);
-		~script7133;
+		~loottracker_ui_redraw_display_full;
 	case 2 :
 		$int5 = 0;
 		while ($int5 < $int3) {
 			if ($int5 >= $int1) {
-				$component6 = ~script4031($int2, calc($int5 + 1));
+				$component6 = ~loottracker_get_component($int2, calc($int5 + 1));
 			} else {
-				$component6 = ~script4031($int2, $int5);
+				$component6 = ~loottracker_get_component($int2, $int5);
 			}
 			if ($component6 = null) {
 				$intarray0($int5) = 1;
@@ -49,18 +49,18 @@ switch_int ($opindex0) {
 			}
 			$int5 = calc($int5 + 1);
 		}
-		~script7166;
+		~loottracker_ui_refresh_info_full;
 		$int5 = 0;
 		while ($int5 < $int3) {
-			$component6 = ~script4031($int2, $int5);
+			$component6 = ~loottracker_get_component($int2, $int5);
 			if ($intarray0($int5) = -1) {
 				$intarray0($int5) = 0;
 			}
 			if_setblendcolour($intarray0($int5), $component6);
 			$int5 = calc($int5 + 1);
 		}
-		~script7133;
+		~loottracker_ui_redraw_display_full;
 	case 3 :
 		~script1791($component4, $int1, if_gettext($component4));
-		~script7133;
+		~loottracker_ui_redraw_display_full;
 }

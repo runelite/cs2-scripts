@@ -33,7 +33,7 @@ def_struct $struct14 = null;
 def_string $string0 = "";
 while ($int10 <= enum_getoutputcount(enum_5694)) {
 	$struct14 = enum(int, struct, enum_5694, $int10);
-	if (~script7652($struct14) = 1) {
+	if (~league_combat_mastery_passive_active($struct14) = 1) {
 		$string0 = struct_param($struct14, param_2028);
 		cc_create($component3, ^iftype_rectangle, $int11, false);
 		cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);

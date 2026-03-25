@@ -10,7 +10,7 @@ if ($int0 = 1) {
 	}
 	$string0 = "Player crew capacity: ";
 } else {
-	$int1 = ~script9042;
+	$int1 = ~sailing_sidepanel_crew_count_get;
 	if (%sailing_sidepanel_boat_type ! null) {
 		$int2 = min(5, db_getfield(%sailing_sidepanel_boat_type, sailing_boat:crew_capacity, 0));
 	}

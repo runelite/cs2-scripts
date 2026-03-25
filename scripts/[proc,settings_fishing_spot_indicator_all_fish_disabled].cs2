@@ -1,0 +1,9 @@
+// 4588
+[proc,settings_fishing_spot_indicator_all_fish_disabled]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%fishing_spot_indicator_disabled = 1) {
+	return;
+}
+%fishing_spot_indicator_all_fish_disabled = calc(1 - %fishing_spot_indicator_all_fish_disabled);

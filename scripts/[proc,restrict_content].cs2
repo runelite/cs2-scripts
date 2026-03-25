@@ -1,0 +1,10 @@
+// 8951
+[proc,restrict_content](int $int0)(boolean)
+switch_int ($int0) {
+	case 0 :
+		return(false);
+	case 1 :
+		return(~sailing_blocked);
+	case default :
+		return(false);
+}

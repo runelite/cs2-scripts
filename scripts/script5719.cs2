@@ -1,0 +1,133 @@
+java.lang.IllegalStateException: Opcode 7201 in script 5719 not implemented
+
+.id                       5719
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   iconst                 2
+   iconst                 0
+   iconst                 1
+   iconst                 25
+   iconst                 0
+   7201                  
+   istore                 0
+   iconst                 108
+   iconst                 105
+   iconst                 4077
+   6802                  
+   enum                  
+   istore                 1
+   iload                  1
+   iconst                 0
+   if_icmple              LABEL22
+   jump                   LABEL26
+LABEL22:
+   6802                  
+   iconst                 2291
+   lc_param              
+   istore                 1
+LABEL26:
+   iload                  0
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL31
+   jump                   LABEL109
+LABEL31:
+   iload                  0
+   6802                  
+   6801                  
+   invoke                 5720
+   map_members           
+   iconst                 1
+   if_icmpeq              LABEL39
+   jump                   LABEL109
+LABEL39:
+   iload                  1
+   iconst                 0
+   if_icmpgt              LABEL43
+   jump                   LABEL60
+LABEL43:
+   iconst                 5724
+   iload                  0
+   iconst                 4
+   stat                  
+   iconst                 16
+   stat                  
+   iconst                 2
+   stat                  
+   6802                  
+   6801                  
+   iconst                 4
+   iconst                 16
+   iconst                 2
+   iconst                 3
+   sconst                 "iiiiiiY"
+   cc_setonstattransmit  
+   jump                   LABEL92
+LABEL60:
+   iconst                 108
+   iconst                 105
+   iconst                 4078
+   6802                  
+   enum                  
+   iconst                 1
+   if_icmpeq              LABEL68
+   jump                   LABEL92
+LABEL68:
+   iconst                 99
+   iconst                 105
+   iconst                 4079
+   6801                  
+   enum                  
+   iconst                 0
+   if_icmpgt              LABEL76
+   jump                   LABEL92
+LABEL76:
+   iconst                 5724
+   iload                  0
+   iconst                 4
+   stat                  
+   iconst                 16
+   stat                  
+   iconst                 2
+   stat                  
+   6802                  
+   6801                  
+   iconst                 4
+   iconst                 16
+   iconst                 2
+   iconst                 3
+   sconst                 "iiiiiiY"
+   cc_setonstattransmit  
+LABEL92:
+   iconst                 108
+   iconst                 105
+   iconst                 4081
+   6802                  
+   enum                  
+   iconst                 1
+   if_icmpeq              LABEL100
+   jump                   LABEL109
+LABEL100:
+   iconst                 5723
+   iload                  0
+   6802                  
+   6801                  
+   iconst                 93
+   iconst                 94
+   iconst                 2
+   sconst                 "iiiY"
+   cc_setoninvtransmit   
+LABEL109:
+   iload                  0
+   6802                  
+   6801                  
+   invoke                 5725
+   return                

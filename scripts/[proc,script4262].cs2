@@ -10,7 +10,7 @@ def_int $comsubid7 = 0;
 def_int $int8 = 0;
 while ($int8 < $int1) {
 	$comsubid7 = activeclansettings_getsortedaffinedslot($int8);
-	if (.cc_find($component0, $comsubid7) = ^true) {
+	if (.cc_find($component0, $comsubid7) = true) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
 			cc_create($component0, ^iftype_text, $int3, false);

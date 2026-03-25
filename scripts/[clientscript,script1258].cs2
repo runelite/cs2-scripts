@@ -4,8 +4,8 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($component2, $comsubid1) = ^true) {
-	if (.cc_find($component2, $comsubid3) = ^true) {
+if (cc_find($component2, $comsubid1) = true) {
+	if (.cc_find($component2, $comsubid3) = true) {
 		.cc_settext("---");
 		.cc_setontimer("script1259(calc(clientclock + 60), $component2, $comsubid3, $string0)");
 	}

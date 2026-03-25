@@ -11,10 +11,10 @@ if ($enum2 ! null) {
 if (~on_mobile = true & %varcint1220 = 1 & %settings_mobile_show_filter_stones_enabled = 0) {
 	if ($component4 ! null) {
 		if (calc(~chat_alert_get(73) / 25 % 2) = 1) {
-			if (cc_find($component4, 0) = ^true) {
+			if (cc_find($component4, 0) = true) {
 				cc_setgraphic("tli_button01_rectangle_58x40,2");
 			}
-		} else if (cc_find($component4, 0) = ^true) {
+		} else if (cc_find($component4, 0) = true) {
 			cc_setgraphic("tli_button01_rectangle_58x40,0");
 		}
 	}

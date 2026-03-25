@@ -4,7 +4,7 @@ if ($opindex0 ! 1 & $opindex0 ! 10) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $int2) = true) {
 	cc_setcolour(^white);
 	cc_settrans(200);
 }
@@ -27,6 +27,6 @@ if_setontimer("clan_board_entry_reset(
 if ($opindex0 = 10) {
 	$int7 = calc($int7 + 45);
 }
-if (cc_find($component8, $int7) = ^true) {
+if (cc_find($component8, $int7) = true) {
 	cc_resume_pausebutton;
 }

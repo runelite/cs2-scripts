@@ -28,9 +28,9 @@ if ($int11 = 1 & $int12 = 1) {
 } else {
 	if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $com_questjournal_title2);
 }
-~script7926($com_questjournal_universe1);
-~script6924($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10, 1);
-if_setontimer("script6923($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10)", $com_questjournal_universe1);
+~quest_journal_position($com_questjournal_universe1);
+~quest_journal_size($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10, 1);
+if_setontimer("quest_journal_size($com_questjournal_universe1, $com_questjournal_inner6, $com_questjournal_container7, $com_questjournal_scroll8, $com_questjournal_scrollbar9, $com_questjournal_textlayer10)", $com_questjournal_universe1);
 if (~on_mobile = true) {
 	if_setontimer("script7923($com_questjournal_infinity0, $com_questjournal_universe1, 0)", $com_questjournal_infinity0);
 }

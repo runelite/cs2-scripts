@@ -56,7 +56,7 @@ def_int $int34 = -1;
 def_int $int35 = 0;
 def_int $int36 = -1;
 def_boolean $boolean37 = ~on_mobile;
-if (cc_find($component2, $int13) = ^true) {
+if (cc_find($component2, $int13) = true) {
 	cc_setcolour($colour18);
 }
 while ($int20 < $length19) {
@@ -207,7 +207,7 @@ if ($int16 = 0) {
 } else {
 	if_sethide(true, $component11);
 }
-~script4862($int25, if_getlayer($component1), $component1, $component3, $component12);
+~ca_tasks_applysize($int25, if_getlayer($component1), $component1, $component3, $component12);
 if ($int36 ! -1) {
 	~scrollbar_resize($component12, $component3, $int36);
 }

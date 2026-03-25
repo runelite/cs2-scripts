@@ -7,7 +7,7 @@ cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, 0);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("staticons,7");
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setonmouseleave("helper_agility_mouseleave($entityoverlay0, $loc1, $coord2)");
 	cc_setonmouseover("helper_agility_mouseover($entityoverlay0, $loc1, $coord2, $int3, $int4, $int5, $string0, $int6)");

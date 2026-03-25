@@ -6,7 +6,7 @@ def_int $int3 = ~on_enhanced_any;
 def_int $int4 = ~on_mac;
 def_int $int5 = ~league_world;
 def_int $int6 = ~speedrunning_world;
-def_int $int7 = ~script403;
+def_int $int7 = ~beta_world_maingame;
 def_int $int8 = ~pvpa_world;
 def_int $int9 = ~deadman_world;
 if (%varcint103 = 0 & struct_param($struct0, param_2314) = true) {
@@ -27,7 +27,10 @@ if ($int4 = 1 & struct_param($struct0, param_1408) = true) {
 if ($int3 = 0 & struct_param($struct0, param_1157) = true) {
 	$int1 = 1;
 }
-if (%option_settings_declutter = 1 & ~script4566($struct0) = 1) {
+if (%option_settings_declutter = 1 & ~settings_declutter_check($struct0) = 1) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_1926) = true & ~script3957($struct0) = 0) {
 	$int1 = 1;
 }
 if (struct_param($struct0, param_741) = true & %ironman ! 0) {
@@ -48,7 +51,7 @@ if (struct_param($struct0, param_1565) = true & $int6 = 1) {
 if (struct_param($struct0, param_1608) = true & $int6 = 0) {
 	$int1 = 1;
 }
-if (struct_param($struct0, param_1273) = true & $int3 = 0 & $int5 = 0 & ~script8216(3) = 0) {
+if (struct_param($struct0, param_1273) = true & $int3 = 0 & $int5 = 0 & ~feature_flag(3) = 0) {
 	$int1 = 1;
 }
 if (struct_param($struct0, param_1414) = true & ~is_group_iron = 0) {
@@ -83,6 +86,9 @@ if ($int3 = 1) {
 		$int1 = 1;
 	}
 	if (struct_param($struct0, param_2278) = true & (%settings_sd_beta_enabled = 0 | deviceoption_get(25) = 0)) {
+		$int1 = 1;
+	}
+	if (struct_param($struct0, param_1937) = true & %settings_hd_new_renderer_toggle = 0 & %settings_hd_beta_enabled = 0) {
 		$int1 = 1;
 	}
 }

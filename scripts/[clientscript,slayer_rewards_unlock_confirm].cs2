@@ -13,7 +13,7 @@ def_int $int10 = 0;
 $int10, $string4 = ~script8934($dbrow9, $int1);
 if ($int10 = 1) {
 	sound_synth(pillory_wrong, 1, 0);
-	mes("<~script8955><$string4>");
+	mes("<~mes_highlight_red><$string4>");
 	return;
 }
 sound_synth(interface_select1, 1, 0);

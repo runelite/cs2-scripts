@@ -1,0 +1,7 @@
+// 1884
+[clientscript,pog_coin_machine_init](component $com_pog_coin_machine_universe0, component $com_pog_coin_machine_pog_coin_set_011, component $com_pog_coin_machine_pog_coin_set_022, component $com_pog_coin_machine_pog_coin_set_033, component $com_pog_coin_machine_pog_coin_examine_014, component $com_pog_coin_machine_pog_coin_examine_025, component $com_pog_coin_machine_pog_coin_examine_036)
+~pog_interface_input_update($com_pog_coin_machine_pog_coin_set_011, $com_pog_coin_machine_pog_coin_set_022, $com_pog_coin_machine_pog_coin_set_033);
+if_setonvartransmit("pog_interface_input_update($com_pog_coin_machine_pog_coin_set_011, $com_pog_coin_machine_pog_coin_set_022, $com_pog_coin_machine_pog_coin_set_033){eyeglo_coin_selected, pog_coin_display1_obj, pog_coin_display2_1_obj, pog_coin_display2_2_obj}", $com_pog_coin_machine_universe0);
+if_setop(10, "Examine <col=ff9040><oc_name(%pog_coin_target1_1_obj)></col>", $com_pog_coin_machine_pog_coin_examine_014);
+if_setop(10, "Examine <col=ff9040><oc_name(%pog_coin_target1_2_obj)></col>", $com_pog_coin_machine_pog_coin_examine_025);
+if_setop(10, "Examine <col=ff9040><oc_name(%pog_coin_target2_obj)></col>", $com_pog_coin_machine_pog_coin_examine_036);

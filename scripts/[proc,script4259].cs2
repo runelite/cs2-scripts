@@ -12,7 +12,7 @@ def_string $string1 = "";
 def_int $int5 = 0;
 while ($int5 < $int2) {
 	$string1, $string0 = ~script632($string0);
-	if (.cc_find($component1, $int5) = ^true) {
+	if (.cc_find($component1, $int5) = true) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
 			cc_create($component1, ^iftype_text, $int4, false);

@@ -10,7 +10,7 @@ $int12, $int13 = if_getwidth($component1), if_getheight($component1);
 ~scrollbar_vertical_rebuild($component7, $component6);
 def_int $int14 = ~min(200, calc(($int12 - $int8) / 2 - 54));
 if_setsize($int14, 20, ^setsize_abs, ^setsize_abs, $component10);
-if (.cc_find($component10, $int11) = ^true) {
+if (.cc_find($component10, $int11) = true) {
 	~worldmap_search_setalignment($int14);
 }
 if_setontimer("worldmap_size_handler(

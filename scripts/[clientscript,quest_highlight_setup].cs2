@@ -1,0 +1,9 @@
+// 4871
+[clientscript,quest_highlight_setup](int $int0)
+if (~on_enhanced_any = 0) {
+	return;
+}
+if ($int0 = 1) {
+	~quest_highlight_channel_setup;
+}
+~quest_highlight_entity_setup;

@@ -1,0 +1,12 @@
+// 2487
+[proc,cr_module_ui_init](dbrow $dbrow0)
+switch_dbrow ($dbrow0) {
+	case cr_module_quests :
+		~cr_quests_ui_init;
+	case cr_module_skills :
+		~debug_mes_info("CR", "Skills module not yet implemented.");
+	case cr_module_utility :
+		~debug_mes_info("CR", "Utility module not yet implemented.");
+	case cr_module_misc :
+		~debug_mes_info("CR", "Misc module not yet implemented.");
+}

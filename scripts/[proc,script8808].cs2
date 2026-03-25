@@ -21,7 +21,7 @@ def_int $int10 = db_getfieldcount($dbrow0, sailing_boat_facility:variants);
 def_dbrow $dbrow11 = null;
 def_int $dbfield12 = 0;
 while ($int7 < $int8) {
-	$dbfield12 = calc(~script8805($int6, $int7) - 1);
+	$dbfield12 = calc(~sailing_boat_get_hotspot($int6, $int7) - 1);
 	if ($dbfield12 > -1) {
 		$dbrow11 = db_getfield($dbrow5, sailing_boat:hotspot, $int7);
 		$dbrow4 = db_getfield($dbrow11, sailing_boat_hotspot:option, $dbfield12);
@@ -37,7 +37,7 @@ while ($int7 < $int8) {
 			}
 		}
 		if ($int3 >= $int2) {
-			return(0, "You can only build a maximum of <col=ff981f><~script8952($int2)> <lowercase(db_getfield($dbrow0, sailing_boat_facility:name, 0))></col> or related facility on your boat.");
+			return(0, "You can only build a maximum of <col=ff981f><~num_to_string($int2)> <lowercase(db_getfield($dbrow0, sailing_boat_facility:name, 0))></col> or related facility on your boat.");
 		}
 	}
 	$int7 = calc($int7 + 1);

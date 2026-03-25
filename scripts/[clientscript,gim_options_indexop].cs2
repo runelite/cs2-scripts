@@ -1,6 +1,6 @@
 // 4664
 [clientscript,gim_options_indexop](component $com_gim_options_list_contents0, component $com_gim_options_list_scrollbar1, int $comsubid2, int $int3, int $int4, int $int5)
-if (cc_find($com_gim_options_list_contents0, $comsubid2) = ^true) {
+if (cc_find($com_gim_options_list_contents0, $comsubid2) = true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_setcolour(^red);
 	cc_setontimer("gim_options_titlereset(event_com, event_comsubid, $int4, $int5, clientclock)");

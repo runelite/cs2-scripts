@@ -1,0 +1,150 @@
+java.lang.IllegalStateException: Opcode 7201 in script 6507 not implemented
+
+.id                       6507
+.int_arg_count            5
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 5
+   iload                  3
+   iload                  2
+   6803                  
+   iconst                 1
+   if_icmpeq              LABEL8
+   jump                   LABEL127
+LABEL8:
+   iconst                 5
+   7206                  
+   istore                 5
+   iload                  5
+   iconst                 -1
+   if_icmpeq              LABEL15
+   jump                   LABEL23
+LABEL15:
+   iconst                 5
+   iconst                 1
+   iconst                 60
+   iconst                 60
+   iconst                 1
+   7201                  
+   istore                 5
+   jump                   LABEL25
+LABEL23:
+   iload                  5
+   104                   
+LABEL25:
+   iload                  5
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL30
+   jump                   LABEL47
+LABEL30:
+   iconst                 6508
+   iload                  5
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   get_varbit             14189
+   get_varbit             14164
+   get_varbit             14184
+   get_varbit             14182
+   iconst                 3546
+   iconst                 3543
+   iconst                 2855
+   iconst                 3
+   sconst                 "iiiiiiiiiiY"
+   cc_setonvartransmit   
+LABEL47:
+   get_varbit             14182
+   iconst                 0
+   if_icmpeq              LABEL51
+   jump                   LABEL57
+LABEL51:
+   iload                  2
+   iload                  3
+   iconst                 9
+   iconst                 1
+   7012                  
+   return                
+LABEL57:
+   get_varbit             14189
+   iconst                 1
+   if_icmpeq              LABEL61
+   jump                   LABEL96
+LABEL61:
+   iload                  5
+   iconst                 5
+   iconst                 0
+   103                   
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 5
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iload                  4
+   iconst                 1
+   cc_setobject_nonum    
+   iconst                 1
+   cc_setoutline         
+   iload                  5
+   iconst                 5
+   iconst                 1
+   103                   
+   iconst                 33
+   iconst                 36
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 -5
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iconst                 901
+   cc_setgraphic         
+LABEL96:
+   get_varbit             14164
+   iconst                 1
+   if_icmpeq              LABEL100
+   jump                   LABEL112
+LABEL100:
+   iload                  2
+   invoke                 6472
+   iconst                 1
+   if_icmpeq              LABEL105
+   jump                   LABEL112
+LABEL105:
+   iconst                 9
+   iconst                 65280
+   iconst                 2
+   iconst                 30
+   iconst                 1
+   7010                  
+   jump                   LABEL118
+LABEL112:
+   iconst                 9
+   iconst                 16711680
+   iconst                 2
+   iconst                 30
+   iconst                 1
+   7010                  
+LABEL118:
+   get_varbit             14184
+   iconst                 1
+   if_icmpeq              LABEL122
+   jump                   LABEL127
+LABEL122:
+   iload                  2
+   iload                  3
+   iconst                 9
+   iconst                 1
+   7011                  
+LABEL127:
+   return                

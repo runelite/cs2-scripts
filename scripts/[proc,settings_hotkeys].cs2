@@ -1,0 +1,6 @@
+// 7451
+[proc,settings_hotkeys]
+if (~on_mobile = false) {
+	return;
+}
+%osm_hide_hotkeys = calc(1 - %osm_hide_hotkeys);

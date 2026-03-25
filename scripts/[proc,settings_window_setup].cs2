@@ -9,7 +9,7 @@ if ($boolean23 = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_settings_close3);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
 	if_setgraphic("steelborder_close_button,0", $com_settings_close3);
-	$int22 = calc(165 - (20 + 30));
+	$int22 = calc(165 - 20);
 } else {
 	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $com_settings_close3);
 	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
@@ -114,7 +114,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if_setonop("script7995(
+if_setonop("settings_declutter_op(
 	0 = $com_settings_declutter_button7, 
 	1 = $int20, 
 	2 = $com_settings_settings8, 
@@ -131,7 +131,7 @@ if_setonop("script7995(
 	13 = $com_settings_tooltip19, 
 	14 = $com_settings_declutter_button_clickzone6
 )", $com_settings_declutter_button_clickzone6);
-if_setonvartransmit("script7996(
+if_setonvartransmit("settings_declutter_trans(
 	0 = %settings_disable_tooltip_in_interface, 
 	1 = $com_settings_declutter_button7, 
 	2 = $int20, 

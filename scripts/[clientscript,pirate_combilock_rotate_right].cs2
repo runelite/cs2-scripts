@@ -1,0 +1,19 @@
+// 3772
+[clientscript,pirate_combilock_rotate_right](int $opindex0, int $int1, component $com_pirate_combilock_left_top2, component $com_pirate_combilock_left_middle3, component $com_pirate_combilock_left_bottom4, component $com_pirate_combilock_centre_top5, component $com_pirate_combilock_centre_middle6, component $com_pirate_combilock_centre_bottom7, component $com_pirate_combilock_right_top8, component $com_pirate_combilock_right_middle9, component $com_pirate_combilock_right_bottom10)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(piratechest_turn, 1, 0);
+%pirate_combilock_right = calc((%pirate_combilock_right + $int1) % 4);
+~pirate_combilock_draw(
+	0 = $com_pirate_combilock_left_top2, 
+	1 = $com_pirate_combilock_left_middle3, 
+	2 = $com_pirate_combilock_left_bottom4, 
+	3 = $com_pirate_combilock_centre_top5, 
+	4 = $com_pirate_combilock_centre_middle6, 
+	5 = $com_pirate_combilock_centre_bottom7, 
+	6 = $com_pirate_combilock_right_top8, 
+	7 = $com_pirate_combilock_right_middle9, 
+	8 = $com_pirate_combilock_right_bottom10
+);
+%varcint110 = clientclock;

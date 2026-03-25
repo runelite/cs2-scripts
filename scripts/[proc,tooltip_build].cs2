@@ -15,11 +15,11 @@ if (~on_enhanced_any = 1) {
 	);
 	return;
 }
-if ($component2 ! null & if_find($component2) = ^true & cc_param(param_2355) = clientclock) {
+if ($component2 ! null & if_find($component2) = true & cc_param(param_2355) = clientclock) {
 	cc_setparam(param_2352, $component0, int);
 	cc_setparam(param_2353, $int1, int);
 	cc_setparam(param_2354, $string0, obj);
-	cc_setontimer("script8213(event_com)");
+	cc_setontimer("deltooltip_timer(event_com)");
 }
 def_component $component4 = if_getlayer($component2);
 if ($component4 ! null & $int3 > if_getwidth($component4)) {

@@ -21,15 +21,15 @@ while ($int5 < $int4) {
 		if ($int7 ! -1) {
 			$intarray0($int7) = -1;
 			$booleanarray1($int7) = true;
-			$namedobj1, $int2, $int3 = ~script8469($int7);
-			~script8477(1, $int7, $component8, $int5, $int2, $int3);
+			$namedobj1, $int2, $int3 = ~inv_highlight_get_tracked_item_data($int7);
+			~ui_highlight_update(1, $int7, $component8, $int5, $int2, $int3);
 		}
 	}
 	$int5 = calc($int5 + 1);
 }
 $int7 = 0;
 while ($int7 < 5) {
-	~script8480(1, $int7, ~script7983($booleanarray1($int7)));
+	~ui_highlight_set_hidden(1, $int7, ~flip_bool($booleanarray1($int7)));
 	$int7 = calc($int7 + 1);
 }
 def_component $component9 = ~script8488;
@@ -44,7 +44,7 @@ if ($component9 ! null) {
 			cc_setonsubchange("script8467");
 		}
 	} else if (%varcint1276 >= 0) {
-		if (cc_find($component9, %varcint1276) = ^true) {
+		if (cc_find($component9, %varcint1276) = true) {
 			cc_delete;
 		}
 		%varcint1276 = -1;

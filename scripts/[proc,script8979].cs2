@@ -5,6 +5,6 @@ def_dbrow $dbrow2 = db_findnext;
 if ($dbrow2 = null) {
 	return(-1);
 }
-def_int $int3 = ~script7985(~script9016($int1), 254);
-def_int $int4 = ~script7985(~script9016($int1), 255);
+def_int $int3 = ~is_equal_bool(~sailing_boat_get_dock($int1), 254);
+def_int $int4 = ~is_equal_bool(~sailing_boat_get_dock($int1), 255);
 return(~script9090($dbrow2, $int1, $int3, $int4));

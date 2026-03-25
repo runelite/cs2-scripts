@@ -62,8 +62,8 @@ while ($int7 < $length6) {
 		cc_setonclick("script6428(event_com, event_comsubid, $obj23, $obj3, $obj4)");
 		cc_setontimer("script6430(event_com, event_comsubid, $obj23)");
 	} else {
-		cc_setonmouserepeat("script6431(1, event_com, event_comsubid, $obj23, $obj3, $obj4)");
-		cc_setonmouseleave("script6431(0, event_com, event_comsubid, $obj23, $obj3, $obj4)");
+		cc_setonmouserepeat("pvp_arena_runepouch_hoverspell(1, event_com, event_comsubid, $obj23, $obj3, $obj4)");
+		cc_setonmouseleave("pvp_arena_runepouch_hoverspell(0, event_com, event_comsubid, $obj23, $obj3, $obj4)");
 	}
 	$int7 = calc($int7 + 1);
 }

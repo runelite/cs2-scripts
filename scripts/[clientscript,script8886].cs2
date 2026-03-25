@@ -6,10 +6,10 @@ if ($int3 = 0) {
 	return;
 }
 %cargo_hold_draw_stacked = calc(1 - %cargo_hold_draw_stacked);
-~script8885($component0, $component1, $component2);
+~sailing_boat_cargohold_stack_toggle($component0, $component1, $component2);
 sound_synth(interface_select1, 1, 0);
 def_int $int4 = calc(if_getwidth($component0) - 9 * 36);
 def_int $int5 = calc($int4 / (9 + 1));
 def_int $int6 = calc($int4 - $int5 * (9 - 1));
 $int6 = calc(($int6 + 1) / 2);
-~script8871($component0, $component1, $component2, $int6, $int5);
+~sailing_boat_cargohold_items($component0, $component1, $component2, $int6, $int5);

@@ -1,0 +1,12 @@
+// 2167
+[clientscript,satisfaction_binary_select](int $opindex0, int $int1, component $com_logout_satisfaction_good2, component $com_logout_satisfaction_bad3)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (%csat_vote_temp = $int1) {
+	%csat_vote_temp = 0;
+} else {
+	%csat_vote_temp = $int1;
+}
+~satisfaction_binary_update($com_logout_satisfaction_good2, $com_logout_satisfaction_bad3);

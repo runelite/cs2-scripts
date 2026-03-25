@@ -9,12 +9,12 @@ if_setontimer("skillmulti_itembutton_reset(calc(clientclock + 40), $obj0, $compo
 def_boolean $boolean6 = enum(int, boolean, enum_5178, $int3);
 if ($boolean6 = false) {
 	sound_synth(interface_select1, 1, 0);
-	if (cc_find($component1, 0) = ^true) {
+	if (cc_find($component1, 0) = true) {
 		cc_resume_pausebutton;
 	}
 } else if (%varcint200 >= 1 & %varcint200 <= 28) {
 	sound_synth(interface_select1, 1, 0);
-	if (cc_find($component1, %varcint200) = ^true) {
+	if (cc_find($component1, %varcint200) = true) {
 		cc_resume_pausebutton;
 	}
 } else {

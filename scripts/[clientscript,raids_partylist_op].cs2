@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $int2) = true) {
 	cc_setcolour(^white);
 	cc_settrans(190);
 }
@@ -24,6 +24,6 @@ if_setontimer("raids_partylist_reset(
 	8 = calc(clientclock + 80), 
 	9 = $component8
 )", $component1);
-if (cc_find($component8, $int7) = ^true) {
+if (cc_find($component8, $int7) = true) {
 	cc_resume_pausebutton;
 }

@@ -10,6 +10,6 @@ def_int $dbfield2 = ~script6657(db_getfield($dbrow0, cluehelper_clue_music:targe
 $int1 = ~helper_generic_add_title("Song", 0);
 def_dbrow $dbrow3 = db_getfield($dbrow0, cluehelper_clue_music:music, 0);
 $int1 = ~helper_generic_add_text("...");
-if (cc_find(helper_generic:content, $int1) = ^true) {
-	~script7322($int1, $dbrow3);
+if (cc_find(helper_generic:content, $int1) = true) {
+	~cluehelper_music_vartransmit_setup($int1, $dbrow3);
 }

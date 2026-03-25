@@ -1,0 +1,9 @@
+// 7600
+[proc,combat_interface_glow_toggle](int $int0)
+def_component $component1 = combat_interface:glow;
+if ($int0 = 1) {
+	if_sethide(false, $component1);
+	~combat_interface_glow_setheight;
+} else {
+	if_sethide(true, $component1);
+}

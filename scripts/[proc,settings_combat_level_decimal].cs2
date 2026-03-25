@@ -1,0 +1,6 @@
+// 7027
+[proc,settings_combat_level_decimal]
+if (~on_enhanced_any = 0) {
+	return;
+}
+%combat_level_decimal_enabled = calc(1 - %combat_level_decimal_enabled);

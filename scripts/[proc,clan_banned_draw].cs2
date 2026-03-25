@@ -8,7 +8,7 @@ def_graphic $graphic12 = null;
 def_int $int13 = -1;
 def_int $int14 = 0;
 if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true | %clan_transmit_loadasguest = 0 & %clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true) {
-	if (cc_find($component1, $comsubid2) = ^true) {
+	if (cc_find($component1, $comsubid2) = true) {
 		if (~clan_members_searching = 1) {
 			$string0 = ~bankmain_filterstring;
 			if (string_length($string0) > 0) {
@@ -31,7 +31,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 				if_settext("You may not administer clans from a League world.", $component8);
 			} else if (~speedrunning_world = 1) {
 				if_settext("You may not administer clans from a Speedrunning world.", $component8);
-			} else if (~script8214 = 1) {
+			} else if (~event_world = 1) {
 				if_settext("You may not administer clans from this world.", $component8);
 			} else {
 				if_settext("Only clan members with a rank of <$string1> may unban players.", $component8);
@@ -49,7 +49,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 	}
 } else {
 	$string1 = ~script4287;
-	if (cc_find($component1, $comsubid2) = ^true) {
+	if (cc_find($component1, $comsubid2) = true) {
 		cc_settext($string1);
 	}
 	if_settext("<col=9f9f9f><$string1></col>", $component8);

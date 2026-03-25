@@ -157,10 +157,10 @@ if ($component7 ! $component6) {
 	$int16 = $int2;
 	$int2 = calc($int2 + 1);
 }
-if (cc_find($component7, $int16) = ^false) {
+if (cc_find($component7, $int16) = false) {
 	cc_create($component7, ^iftype_rectangle, $int16, false);
 }
-if (cc_find($component7, $int16) = ^true) {
+if (cc_find($component7, $int16) = true) {
 	cc_setsize(80, 30, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(true);

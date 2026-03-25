@@ -1,6 +1,6 @@
 // 3703
 [clientscript,league_setup_display_dropdown_hover](int $int0, component $component1, int $comsubid2, int $comsubid3, int $colour4)
-if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+if (cc_find($component1, $comsubid2) = true & .cc_find($component1, $comsubid3) = true) {
 	cc_setcolour($colour4);
 	if ($int0 = 1) {
 		.cc_sethide(false);

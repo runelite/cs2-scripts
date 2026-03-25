@@ -5,7 +5,7 @@ def_int $int4 = calc(%flashside - 1);
 def_component $component5 = enum(int, component, enum_1139, $int4);
 $component5 = enum(component, component, $enum3, $component5);
 if ($component5 ! $component0) {
-	~script8483(2, $int4);
+	~ui_highlight_clear(2, $int4);
 	return;
 }
 if ($int4 = %varcint171) {
@@ -21,4 +21,4 @@ if (~script9336($enum3) = 1 & $int2 = 1 & %varcint1222 = 1) {
 	$component1 = enum(component, component, $enum3, toplevel_osm:expand_stone);
 }
 if_sethide(false, $component0);
-~script8477(2, $int4, $component5, -1, 7034, 0);
+~ui_highlight_update(2, $int4, $component5, -1, 7034, 0);

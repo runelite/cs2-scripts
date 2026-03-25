@@ -5,6 +5,6 @@ def_dbrow $dbrow2 = db_findnext;
 if ($dbrow2 = null) {
 	return("Standard");
 }
-def_int $dbfield3 = ~script8799($int1, $dbrow2);
+def_int $dbfield3 = ~sailing_boat_get_hull($int1, $dbrow2);
 def_dbrow $dbrow4 = db_getfield($dbrow2, sailing_boat:hull_option, $dbfield3);
 return(db_getfield($dbrow4, sailing_boat_hull:name, 0));

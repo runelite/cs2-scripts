@@ -14,7 +14,7 @@ cc_settext($string0);
 if_setonmouserepeat(null, $component2);
 if_setonmouseleave(null, $component2);
 if_setonop(null, $component2);
-if_setontimer("script8568(calc(clientclock + 20), $int0, $component1, $component2)", $component1);
-if (cc_find($component1, calc($int0 - 1)) = ^true) {
+if_setontimer("xpreward_reset(calc(clientclock + 20), $int0, $component1, $component2)", $component1);
+if (cc_find($component1, calc($int0 - 1)) = true) {
 	cc_resume_pausebutton;
 }

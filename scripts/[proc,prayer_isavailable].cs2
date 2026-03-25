@@ -20,7 +20,7 @@ def_int $int9 = 0;
 	7 = $int8, 
 	8 = $int9
  = ~prayer_overrides;
-if (~script4547($obj0, $int1) = 0) {
+if (~prayer_isavailable_lvl($obj0, $int1) = 0) {
 	return(0);
 }
 if (~prayer_isavailable_req(

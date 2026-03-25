@@ -15,7 +15,7 @@ def_obj $obj16 = null;
 def_int $int17 = 0;
 def_int $int18 = 0;
 while ($int18 < 120) {
-	if (cc_find($com_death_office_items0, $int18) = ^true) {
+	if (cc_find($com_death_office_items0, $int18) = true) {
 		$obj14 = inv_getobj(death_permanent, $int18);
 		if ($obj14 ! null) {
 			cc_sethide(false);

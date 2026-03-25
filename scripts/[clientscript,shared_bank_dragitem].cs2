@@ -2,7 +2,7 @@
 [clientscript,shared_bank_dragitem](int $int0, int $int1, component $component2, component $component3, int $comsubid4, component $component5)
 def_int $int6 = 0;
 def_int $int7 = 0;
-if (cc_find($component3, $comsubid4) = ^true) {
+if (cc_find($component3, $comsubid4) = true) {
 	$int0, $int6 = calc($int0 - if_getscrolly($component3)), if_getheight($component3);
 	if ($int0 < 5) {
 		$int7 = -5;

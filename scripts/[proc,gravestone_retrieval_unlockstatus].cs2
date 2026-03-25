@@ -1,6 +1,6 @@
 // 1987
 [proc,gravestone_retrieval_unlockstatus](component $com_gravestone_retrieval_frame0, int $comsubid1, component $com_gravestone_retrieval_button2, component $com_gravestone_retrieval_button_gfx3, component $com_gravestone_retrieval_button_bank4, component $com_gravestone_retrieval_button_bank_gfx5, component $com_gravestone_retrieval_info6, component $com_gravestone_retrieval_fee7)
-if (cc_find($com_gravestone_retrieval_frame0, $comsubid1) = ^true) {
+if (cc_find($com_gravestone_retrieval_frame0, $comsubid1) = true) {
 	cc_settext(enum(int, string, enum_1753, %if1));
 }
 if_sethide(false, $com_gravestone_retrieval_info6);

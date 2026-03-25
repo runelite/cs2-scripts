@@ -7,10 +7,10 @@ if_setop(2, "", $component1);
 if_setop(10, "", $component1);
 def_int $int2 = 0;
 def_int $int3 = 100;
-if (~script5027 = 1) {
+if (~dizanas_quiver_equipped = 1) {
 	$int2 = 1;
 	$int3 = 0;
-} else if (~script5028(inv) = 0) {
+} else if (~dizanas_quiver_in_inventory(inv) = 0) {
 	return;
 } else if (%qp_total = 1337 & ~rental_world = 1) {
 	return;

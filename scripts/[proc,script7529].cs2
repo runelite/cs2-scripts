@@ -13,19 +13,19 @@ if (string_length($string0) <= 0) {
 	return;
 }
 %varcint1227 = ~minmax(0, 9, $int0);
-if (~script7487 = 1) {
+if (~hiscores_group_check = 1) {
 	hiscore_setapi(2);
 } else {
 	hiscore_setapi(0);
 }
 hiscore_lookup($string0, %varcint1227);
-if (cc_find(hiscores:hiscores_text_input, 2) = ^true) {
+if (cc_find(hiscores:hiscores_text_input, 2) = true) {
 	cc_settext($string0);
 }
-if (cc_find(hiscores:hiscores_dropdown, 5) = ^true) {
+if (cc_find(hiscores:hiscores_dropdown, 5) = true) {
 	cc_setgraphic(enum(int, graphic, enum_5623, %varcint1227));
 }
-if (cc_find(hiscores:hiscores_dropdown, 4) = ^true) {
+if (cc_find(hiscores:hiscores_dropdown, 4) = true) {
 	cc_settext(enum(int, string, enum_5622, %varcint1227));
 }
 if_sethide(false, hiscores:loading_data);
@@ -43,4 +43,4 @@ cc_deleteall(hiscores:loading_data);
 	9 = 3, 
 	10 = ""
 );
-if_setontimer("script7530($string0, 1)", hiscores:content);
+if_setontimer("hiscores_poll($string0, 1)", hiscores:content);

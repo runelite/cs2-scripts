@@ -57,7 +57,7 @@ if ($int13 = 1) {
 	~script1785($component6);
 }
 def_stat $stat23 = null;
-if (.cc_find($component4, $int22) = ^true) {
+if (.cc_find($component4, $int22) = true) {
 	$stat23 = enum(int, stat, enum_681, %varcint1172);
 	~create_graphic(
 		0 = $component4, 
@@ -84,50 +84,50 @@ def_int $int26 = calc($int16 - 6 * 2);
 def_int $int27 = calc($int18 + $int16 - 6);
 def_int $int28 = calc($int19 + $int17 - 6);
 if ($int13 = 0) {
-	if (cc_find($component2, 0) = ^true) {
+	if (cc_find($component2, 0) = true) {
 		cc_setsize(calc($int26 - 28), calc(if_gety($component6) - 2 * 6), ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int18 + 6), calc($int19 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 1) = ^true) {
+	if (cc_find($component2, 1) = true) {
 		cc_setsize($int26, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int18 + 6), $int28, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 2) = ^true) {
+	if (cc_find($component2, 2) = true) {
 		cc_setsize(6, $int25, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int18, calc($int19 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 3) = ^true) {
+	if (cc_find($component2, 3) = true) {
 		cc_setsize(6, $int25, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int27, calc($int19 + 6), ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 4) = ^true) {
+	if (cc_find($component2, 4) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 5) = ^true) {
+	if (cc_find($component2, 5) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int27, $int19, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 6) = ^true) {
+	if (cc_find($component2, 6) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int18, $int28, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 7) = ^true) {
+	if (cc_find($component2, 7) = true) {
 		cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
-	if (cc_find($component2, 8) = ^true) {
+	if (cc_find($component2, 8) = true) {
 		cc_setsize($int26, 6, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int18 + 6), $int19, ^setpos_abs_left, ^setpos_abs_top);
-		~script1907($int11, $component2, $component3, $component7);
+		~skill_guide_v2_reset_handle($int11, $component2, $component3, $component7);
 	}
 }
 def_graphic $graphic29 = p12_full;
@@ -196,7 +196,7 @@ while ($dbrow20 ! null) {
 		14 = 0, 
 		15 = ~is_equal($int37, %varcint1173)
 	);
-	cc_setonop("script1906($int37)");
+	cc_setonop("skill_guide_v2_tab_select($int37)");
 	$int37 = calc($int37 + 1);
 	db_find(skill_guide_subsections:skill, %varcint1172);
 	db_find_refine(skill_guide_subsections:id, $int37);

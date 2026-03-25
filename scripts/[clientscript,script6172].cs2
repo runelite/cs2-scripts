@@ -13,9 +13,9 @@ if ($opindex0 = 2) {
 		} else {
 			%dueloptions = setbit(%dueloptions, $int1);
 		}
-		~script6175;
+		~pvpa_legacyduel_options_radio_buttons;
 	}
-	if (cc_find($component2, $comsubid3) = ^true) {
+	if (cc_find($component2, $comsubid3) = true) {
 		cc_settrans(220);
 		if_setonmouserepeat(null, $component2);
 		if_setonmouseleave("deltooltip($component4)", $component2);

@@ -1,0 +1,9 @@
+// 5086
+[clientscript,reportabuse_closebutton](component $com_reportabuse_close0)
+def_graphic $graphic1 = "close_buttons,6";
+if_setgraphic($graphic1, $com_reportabuse_close0);
+if_setonmouseleave("script2809(event_com, $graphic1)", $com_reportabuse_close0);
+$graphic1 = "close_buttons,7";
+if_setonmouseover("script2809(event_com, $graphic1)", $com_reportabuse_close0);
+if_setonop("opsound(event_op, 2)", $com_reportabuse_close0);
+if_setonkey("reportabuse_closebutton_onkey(event_keycode, event_keychar, event_com)", $com_reportabuse_close0);

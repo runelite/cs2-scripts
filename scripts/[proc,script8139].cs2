@@ -1,7 +1,7 @@
 // 8139
 [proc,script8139](component $component0, int $int1, int $int2, int $int3, string $string0, string $string1)(int, int)
 def_int $int4 = 0;
-if (cc_find($component0, calc($int1 - 1)) = ^true) {
+if (cc_find($component0, calc($int1 - 1)) = true) {
 	$int4 = cc_getwidth;
 	if (string_length($string0) > 0) {
 		if ($int2 ! 0) {

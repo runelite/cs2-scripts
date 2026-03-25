@@ -2,13 +2,13 @@
 [clientscript,script7681](component $component0, int $int1, int $int2, enum $enum3, int $int4)
 def_graphic $graphic5 = enum(int, graphic, $enum3, $int4);
 def_int $int6 = -1;
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $int1) = true) {
 	$int2 = calc($int2 - 1);
 	if ($int2 <= 0) {
 		cc_setgraphic($graphic5);
 		if ($graphic5 = null) {
 			$int4 = 0;
-			$int2 = calc($int1 + 30 + ~script7775(100, 500));
+			$int2 = calc($int1 + 30 + ~random_range(100, 500));
 			switch_int (randominc(1)) {
 				case 0 :
 					cc_sethflip(false);

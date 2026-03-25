@@ -6,7 +6,7 @@ def_int $int3 = 0;
 def_int $int4 = inv_size(inv);
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);
-	if (cc_find($com_pvp_store_side_items0, $int4) = ^true) {
+	if (cc_find($com_pvp_store_side_items0, $int4) = true) {
 		cc_clearops;
 		cc_setontimer(null);
 		$obj2 = inv_getobj(inv, $int4);

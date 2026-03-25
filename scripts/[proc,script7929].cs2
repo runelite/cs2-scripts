@@ -8,7 +8,7 @@ switch_int ($int0) {
 		if_sethide(false, dom_end_level_ui:loot_claim_options);
 		if_sethide(true, dom_end_level_ui:earned_loot_header_container);
 		if_sethide(false, dom_end_level_ui:loot_claim_header_container);
-		~script7930(dom_end_level_ui:loot_contents, 1, $int0);
+		~dom_end_level_ui_init_loot(dom_end_level_ui:loot_contents, 1, $int0);
 	case default :
 		if_setsize(if_getwidth(dom_end_level_ui:window), 270, ^setsize_abs, ^setsize_abs, dom_end_level_ui:window);
 		if_sethide(false, dom_end_level_ui:section_delve);
@@ -16,5 +16,5 @@ switch_int ($int0) {
 		if_sethide(true, dom_end_level_ui:loot_claim_options);
 		if_sethide(false, dom_end_level_ui:earned_loot_header_container);
 		if_sethide(true, dom_end_level_ui:loot_claim_header_container);
-		~script7930(dom_end_level_ui:loot_contents, 0, $int0);
+		~dom_end_level_ui_init_loot(dom_end_level_ui:loot_contents, 0, $int0);
 }

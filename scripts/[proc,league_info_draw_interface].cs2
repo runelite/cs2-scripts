@@ -2,7 +2,7 @@
 [proc,league_info_draw_interface](component $com_league_info_league_general_header0, component $com_league_info_league_specific_header1, component $com_league_info_league_general2, component $com_league_info_league_specific3, component $com_league_info_league_general_content4, component $com_league_info_league_specific_content5, component $com_league_info_league_general_scrollbar6, component $com_league_info_league_specific_scrollbar7, component $com_league_info_league_btn_menu8, component $com_league_info_league_menu_frame9, component $com_league_info_league_menu_overlay10, int $int11, int $int12, int $comsubid13)
 def_component $component14 = league_info:universe;
 def_component $component15 = league_info:content_outer;
-~script6109($component14, $component15);
+~responsive_interface_resize($component14, $component15);
 cc_deleteall($com_league_info_league_general_header0);
 cc_deleteall($com_league_info_league_specific_header1);
 cc_deleteall($com_league_info_league_general_content4);
@@ -20,7 +20,7 @@ if (%league_type = 3) {
 } else {
 	$colour18 = struct_param($struct16, param_1027);
 }
-if (cc_find(league_info:frame, $comsubid13) = ^true) {
+if (cc_find(league_info:frame, $comsubid13) = true) {
 	cc_setcolour($colour18);
 } else {
 	~debug_mes("Couldn't find the frame.");

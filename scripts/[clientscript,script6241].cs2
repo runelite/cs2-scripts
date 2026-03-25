@@ -8,9 +8,9 @@ if ($int3 = 0) {
 } else if ($int3 = 2) {
 	$int4 = getbit_range(%pvpa_editing, 6, 7);
 }
-if (cc_find($component0, 4) = ^true & $enum1 ! null) {
+if (cc_find($component0, 4) = true & $enum1 ! null) {
 	cc_settext(enum(int, string, $enum1, $int4));
 }
-if (cc_find($component0, 5) = ^true & $enum2 ! null) {
+if (cc_find($component0, 5) = true & $enum2 ! null) {
 	cc_setgraphic(enum(int, graphic, $enum2, $int4));
 }

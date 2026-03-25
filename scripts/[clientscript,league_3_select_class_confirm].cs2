@@ -1,0 +1,65 @@
+// 5805
+[clientscript,league_3_select_class_confirm]
+if (%league_3_class_current_selection < 1) {
+	if_sethide(true, league_3_select_class:confirmation_overlay);
+	return;
+}
+def_int $colour0 = ~league_get_league_colour(3);
+def_graphic $graphic1 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int2 = 0;
+if (%league_3_class_current_selection = 1) {
+	$string0, $string1, $string2, $graphic1 = "Unwavering Warrior", "Unholy Warrior", "Improved Melee Accuracy<br><col=cfcfcf>on 0 Prayer", "icon_stat_50x50,0";
+}
+if (%league_3_class_current_selection = 2) {
+	$string0, $string1, $string2, $graphic1 = "Focused Ranger", "Bottomless Quiver", "Chance to save Ammo and Ranged Weapon Charges.", "icon_stat_50x50,3";
+}
+if (%league_3_class_current_selection = 3) {
+	$string0, $string1, $string2, $graphic1 = "Masterful Wizard", "Arcane Conduit", "Chance to save Runes and Magic Weapon Charges.", "icon_stat_50x50,5";
+}
+if_sethide(false, league_3_select_class:confirmation_overlay);
+cc_deleteall(league_3_select_class:confirmation_message);
+$int2 = ~steelbox(league_3_select_class:confirmation_message, $int2, true);
+cc_create(league_3_select_class:confirmation_message, ^iftype_text, $int2, false);
+cc_setposition(16, 16, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_setcolour($colour0);
+cc_settext("<col=cfcfcf>Are you sure you wish to become a:<br><$string0><br><col=cfcfcf>Other combat skills and Fragments may still be unlocked later.");
+$int2 = calc($int2 + 1);
+~create_graphic(
+	0 = league_3_select_class:confirmation_message, 
+	1 = $int2, 
+	2 = $graphic1, 
+	3 = 0, 
+	4 = -15, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 50, 
+	8 = 50, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+$int2 = calc($int2 + 1);
+cc_create(league_3_select_class:confirmation_message, ^iftype_text, $int2, false);
+cc_setposition(16, 165, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(32, 40, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 20);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_setcolour($colour0);
+cc_settext("<$string1> Fragment:<br><col=cfcfcf><$string2>");
+$int2 = calc($int2 + 1);
+~script5820(league_3_select_class:confirmation_cancel, 0, 0, 0, if_getwidth(league_3_select_class:confirmation_cancel), if_getheight(league_3_select_class:confirmation_cancel), struct_3927);
+~script5820(league_3_select_class:confirmation_accept, 0, 0, 0, if_getwidth(league_3_select_class:confirmation_accept), if_getheight(league_3_select_class:confirmation_accept), struct_3924);
+if (~on_mobile = false) {
+	if_setonmouseover("script5821(league_3_select_class:confirmation_cancel, 0, struct_3929)", league_3_select_class:confirmation_cancel);
+	if_setonmouseover("script5821(league_3_select_class:confirmation_accept, 0, struct_3926)", league_3_select_class:confirmation_accept);
+	if_setonmouseleave("script5821(league_3_select_class:confirmation_cancel, 0, struct_3927)", league_3_select_class:confirmation_cancel);
+	if_setonmouseleave("script5821(league_3_select_class:confirmation_accept, 0, struct_3924)", league_3_select_class:confirmation_accept);
+}

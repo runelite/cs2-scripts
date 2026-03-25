@@ -3,8 +3,8 @@
 def_int $intarray0($length1);
 def_int $length2 = 0;
 def_int $int3 = -1;
-if_children_find(0, $component0, -1);
-def_int $int4 = if_children_findnextid;
+if_query(0, $component0, -1);
+def_int $int4 = if_query_nextid;
 while ($int4 ! -1 & $int4 >= 0) {
 	if (calc($int4 - $int3) > 1) {
 		$int3 = calc($int3 + 1);
@@ -18,7 +18,7 @@ while ($int4 ! -1 & $int4 >= 0) {
 		}
 	}
 	$int3 = $int4;
-	$int4 = if_children_findnextid;
+	$int4 = if_query_nextid;
 }
 while ($length2 < $length1) {
 	$int3 = calc($int3 + 1);

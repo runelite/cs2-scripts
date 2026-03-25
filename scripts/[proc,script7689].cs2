@@ -40,7 +40,7 @@ while ($int10 < enum_getoutputcount(enum_5690)) {
 	if ($enum17 ! null) {
 		while ($int11 <= enum_getoutputcount($enum17)) {
 			$struct15 = enum(int, struct, $enum17, $int11);
-			if (~script7651($struct15) = 1) {
+			if (~league_combat_mastery_active($struct15) = 1) {
 				$string0 = struct_param($struct15, param_2028);
 				cc_create($component3, ^iftype_rectangle, $int12, false);
 				cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);

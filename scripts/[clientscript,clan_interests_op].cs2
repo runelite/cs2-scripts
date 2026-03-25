@@ -4,11 +4,11 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	cc_settrans(200);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 255, calc(clientclock + 20))");
 }
-if (cc_find($component1, $comsubid4) = ^true & .cc_find($component1, $comsubid5) = ^true) {
+if (cc_find($component1, $comsubid4) = true & .cc_find($component1, $comsubid5) = true) {
 	if (testbit(%clan_editing_0, $int3) = ^true) {
 		%clan_editing_0 = clearbit(%clan_editing_0, $int3);
 	} else {

@@ -1,0 +1,10 @@
+// 3342
+[clientscript,adventurepath_disable_notification_op](component $component0, int $comsubid1)
+sound_synth(interface_select1, 1, 0);
+if (%adventurepath_disable_notification = 0) {
+	~script3034($component0, $comsubid1, 1);
+	%adventurepath_disable_notification = 1;
+} else {
+	~script3034($component0, $comsubid1, 0);
+	%adventurepath_disable_notification = 0;
+}

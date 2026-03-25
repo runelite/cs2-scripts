@@ -32,11 +32,11 @@ while ($int6 < $int4) {
 	$int7, $int8 = db_getfield($dbrow0, reward:combat_mastery_tier, $int6);
 	switch_int ($int7) {
 		case 3 :
-			$graphic2 = ~script7683(enum_5691, $int8);
+			$graphic2 = ~league_combat_mastery_tier_icon(enum_5691, $int8);
 		case 4 :
-			$graphic2 = ~script7683(enum_5692, $int8);
+			$graphic2 = ~league_combat_mastery_tier_icon(enum_5692, $int8);
 		case 5 :
-			$graphic2 = ~script7683(enum_5693, $int8);
+			$graphic2 = ~league_combat_mastery_tier_icon(enum_5693, $int8);
 	}
 	if ($graphic2 ! null) {
 		return($graphic2, $obj3, $string0);

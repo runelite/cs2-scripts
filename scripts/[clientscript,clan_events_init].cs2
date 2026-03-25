@@ -19,7 +19,7 @@ if ($int7 = 1) {
 }
 if_setonop("opsound(event_op, 2)", $com_clans_events_create6);
 def_int $comsubid8 = ~steelborder($com_clans_events_frame1, "", 0);
-if (%clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true & cc_find($com_clans_events_frame1, $comsubid8) = ^true) {
+if (%clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true & cc_find($com_clans_events_frame1, $comsubid8) = true) {
 	cc_settext("<activeclansettings_getclanname>: Events");
 }
 def_int $int9 = 16384;

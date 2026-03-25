@@ -1,0 +1,9 @@
+// 6459
+[proc,settings_cluehelper_target_world_arrow]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%option_cluehelper_enabled = 0) {
+	return;
+}
+%option_cluehelper_target_world_arrow_enabled = calc(1 - %option_cluehelper_target_world_arrow_enabled);

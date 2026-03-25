@@ -8,7 +8,7 @@ $coord1 = ~worldmap_findcoordinmap($wma0, $coord1);
 if ($coord1 ! null) {
 	worldmap_jumptosourcecoord_instant($coord1);
 }
-if_setontimer("script1713(
+if_setontimer("worldmap_intermap_listener(
 	0 = $wma0, 
 	1 = $component2, 
 	2 = cc_getid, 

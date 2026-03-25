@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 def_int $comsubid9 = calc(enum_getoutputcount(enum_4792) + 24 + 2 * 8 + $int4 / 3);
-if (cc_find($component7, $comsubid5) = ^true & .cc_find(toa_partydetails:pausebuttons, $comsubid9) = ^true) {
+if (cc_find($component7, $comsubid5) = true & .cc_find(toa_partydetails:pausebuttons, $comsubid9) = true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_settrans(0);
 	cc_setonmouserepeat(null);
@@ -12,7 +12,7 @@ if (cc_find($component7, $comsubid5) = ^true & .cc_find(toa_partydetails:pausebu
 	cc_clearops;
 	cc_setonop(null);
 	.cc_resume_pausebutton;
-	if (cc_find($component7, $int4) = ^true & .cc_find($component7, $comsubid6) = ^true) {
+	if (cc_find($component7, $int4) = true & .cc_find($component7, $comsubid6) = true) {
 		cc_setonmouserepeat(null);
 		cc_setonmouseleave(null);
 		cc_clearops;

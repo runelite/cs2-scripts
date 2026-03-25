@@ -1,32 +1,159 @@
-// 6527
-[proc,cluehelper_uri_overlay](int $int0)
-highlight_npc_off(npc_uid, npc_creationcycle, 9);
-def_entityoverlay $entityoverlay1 = entityoverlay_create_npc(3, 1, calc(36 * 2), calc(32 * 2), 1);
-if (if_find_entityoverlay($entityoverlay1) = ^true) {
-	if ($int0 = 2 | $int0 = 3) {
-		cc_setonvartransmit("script6530(
-			0 = $entityoverlay1, 
-			1 = npc_uid, 
-			2 = npc_creationcycle, 
-			3 = %option_cluehelper_overlay_enabled, 
-			4 = %cluehelper_npc_id, 
-			5 = %cluehelper_npc_current_clue, 
-			6 = %cluehelper_infobox_clue, 
-			7 = %trail_status, 
-			8 = $int0
-		){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_id, cluehelper_npc_current_clue, trail_status}");
-	} else if ($int0 = 4) {
-		cc_setonvartransmit("loadnpc_cluehelper_uri_elite_transmit($entityoverlay1, npc_uid, npc_creationcycle, %option_cluehelper_overlay_enabled, %cluehelper_npc_id, %cluehelper_npc_current_clue, %cluehelper_infobox_clue, %elite_uri_progress){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_id, cluehelper_npc_current_clue, elite_clues_temp}");
-	} else if ($int0 = 5) {
-		cc_setonvartransmit("loadnpc_cluehelper_uri_master_transmit($entityoverlay1, npc_uid, npc_creationcycle, %option_cluehelper_overlay_enabled, %cluehelper_npc_id, %cluehelper_npc_current_clue, %cluehelper_infobox_clue, %master_clue_progress){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_id, cluehelper_npc_current_clue, trail_master}");
-	} else {
-		cc_setonvartransmit("loadnpc_cluehelper_uri_transmit($entityoverlay1, npc_uid, npc_creationcycle, %option_cluehelper_overlay_enabled, %cluehelper_npc_id, %cluehelper_npc_current_clue, %cluehelper_infobox_clue){option_cluehelper, cluehelper_infobox_clue, cluehelper_npc_id, cluehelper_npc_current_clue}");
-	}
-}
-if ($int0 = 3 & testbit(%trail_status, 6) = ^true) {
-	~loadnpc_cluehelper_double_agent_overlay($entityoverlay1, npc_uid, npc_creationcycle);
-} else if ($int0 = 5 & %master_clue_progress = 0) {
-	~loadnpc_cluehelper_double_agent_overlay($entityoverlay1, npc_uid, npc_creationcycle);
-} else {
-	~loadnpc_cluehelper_uri_overlay($entityoverlay1, npc_uid, npc_creationcycle);
-}
+java.lang.IllegalStateException: Opcode 7200 in script 6527 not implemented
+
+.id                       6527
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   6751                  
+   6752                  
+   iconst                 9
+   7002                  
+   iconst                 3
+   iconst                 1
+   iconst                 36
+   iconst                 2
+   multiply              
+   iconst                 32
+   iconst                 2
+   multiply              
+   iconst                 1
+   7200                  
+   istore                 1
+   iload                  1
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL20
+   jump                   LABEL105
+LABEL20:
+   iload                  0
+   iconst                 2
+   if_icmpeq              LABEL27
+   iload                  0
+   iconst                 3
+   if_icmpeq              LABEL27
+   jump                   LABEL46
+LABEL27:
+   iconst                 6530
+   iload                  1
+   6751                  
+   6752                  
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3547
+   get_varp               3546
+   get_varp               292
+   iload                  0
+   iconst                 3543
+   iconst                 3546
+   iconst                 3548
+   iconst                 3547
+   iconst                 292
+   iconst                 5
+   sconst                 "iiiiiiiiiY"
+   cc_setonvartransmit   
+   jump                   LABEL105
+LABEL46:
+   iload                  0
+   iconst                 4
+   if_icmpeq              LABEL50
+   jump                   LABEL68
+LABEL50:
+   iconst                 6529
+   iload                  1
+   6751                  
+   6752                  
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3547
+   get_varp               3546
+   get_varbit             4269
+   iconst                 3543
+   iconst                 3546
+   iconst                 3548
+   iconst                 3547
+   iconst                 1115
+   iconst                 5
+   sconst                 "iiiiiiiiY"
+   cc_setonvartransmit   
+   jump                   LABEL105
+LABEL68:
+   iload                  0
+   iconst                 5
+   if_icmpeq              LABEL72
+   jump                   LABEL90
+LABEL72:
+   iconst                 6531
+   iload                  1
+   6751                  
+   6752                  
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3547
+   get_varp               3546
+   get_varbit             5190
+   iconst                 3543
+   iconst                 3546
+   iconst                 3548
+   iconst                 3547
+   iconst                 1353
+   iconst                 5
+   sconst                 "iiiiiiiiY"
+   cc_setonvartransmit   
+   jump                   LABEL105
+LABEL90:
+   iconst                 6528
+   iload                  1
+   6751                  
+   6752                  
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3547
+   get_varp               3546
+   iconst                 3543
+   iconst                 3546
+   iconst                 3548
+   iconst                 3547
+   iconst                 4
+   sconst                 "iiiiiiiY"
+   cc_setonvartransmit   
+LABEL105:
+   iload                  0
+   iconst                 3
+   if_icmpeq              LABEL109
+   jump                   LABEL120
+LABEL109:
+   get_varp               292
+   iconst                 6
+   testbit               
+   iconst                 1
+   if_icmpeq              LABEL115
+   jump                   LABEL120
+LABEL115:
+   iload                  1
+   6751                  
+   6752                  
+   invoke                 6533
+   jump                   LABEL137
+LABEL120:
+   iload                  0
+   iconst                 5
+   if_icmpeq              LABEL124
+   jump                   LABEL133
+LABEL124:
+   get_varbit             5190
+   iconst                 0
+   if_icmpeq              LABEL128
+   jump                   LABEL133
+LABEL128:
+   iload                  1
+   6751                  
+   6752                  
+   invoke                 6533
+   jump                   LABEL137
+LABEL133:
+   iload                  1
+   6751                  
+   6752                  
+   invoke                 6532
+LABEL137:
+   return                

@@ -11,7 +11,7 @@ if (string_length($string0) <= 0) {
 	return;
 }
 if (%popout_open ! 3) {
-	if (cc_find(popout:buttons, calc(3 - 1)) = ^true | cc_find(popout:osm_buttons, calc(3 * 2 - 2)) = ^true) {
+	if (cc_find(popout:buttons, calc(3 - 1)) = true | cc_find(popout:osm_buttons, calc(3 * 2 - 2)) = true) {
 		%varcstring1233 = $string0;
 		cc_triggerop(1);
 	}

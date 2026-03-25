@@ -24,7 +24,7 @@ if (%varcint386 = 1) {
 	$int12 = inv_size(inv);
 	while ($int12 > 0) {
 		$int12 = calc($int12 - 1);
-		if (cc_find($component3, $int12) = ^true) {
+		if (cc_find($component3, $int12) = true) {
 			cc_clearops;
 			cc_setposition(calc($int9 + $int12 % 4 * 42), calc($int10 + $int12 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 			~bankside_worn_drawitem(inv_getobj(inv, $int12), inv_getnum(inv, $int12), $int12);
@@ -52,9 +52,9 @@ def_int $int18 = 0;
 $int12 = inv_size(inv);
 while ($int12 > 0) {
 	$int12 = calc($int12 - 1);
-	if (cc_find($component1, $int12) = ^true) {
+	if (cc_find($component1, $int12) = true) {
 		$obj11 = inv_getobj(inv, $int12);
-		$int18 = ~script7796($int12);
+		$int18 = ~bank_side_locked_slot($int12);
 		~bankside_drawitem(
 			0 = $obj11, 
 			1 = inv_getnum(inv, $int12), 
@@ -93,7 +93,7 @@ while ($int12 > 0) {
 				.cc_setgraphic("prayerglow,0");
 				.cc_settrans(180);
 			case default :
-				if (~script7349($obj11) = 1) {
+				if (~is_prepot_device($obj11) = 1) {
 					.cc_create($component2, ^iftype_graphic, $int14, false);
 					$int14 = calc($int14 + 1);
 					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);

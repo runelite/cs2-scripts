@@ -15,7 +15,7 @@ if ($inv13 = null) {
 	%ge_selectedslot = 0;
 } else {
 	if (stockmarket_isofferempty($int1) = true) {
-		$obj10, $int11 = ~script5733($int1);
+		$obj10, $int11 = ~ge_itemsink_get($int1);
 		if ($obj10 ! null) {
 			$int2 = 1;
 		} else if (inv_getobj($inv13, 0) ! null | inv_getobj($inv13, 1) ! null) {

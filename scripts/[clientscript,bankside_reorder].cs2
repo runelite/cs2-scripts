@@ -15,7 +15,7 @@ if ($obj12 = null) {
 	return;
 }
 def_obj $obj13 = inv_getobj(inv, $dropsubid3);
-if (cc_find($drop0, $dropsubid3) = ^true) {
+if (cc_find($drop0, $dropsubid3) = true) {
 	~bankside_drawitem(
 		0 = $obj12, 
 		1 = inv_getnum(inv, $comsubid2), 
@@ -29,10 +29,10 @@ if (cc_find($drop0, $dropsubid3) = ^true) {
 		9 = $component8, 
 		10 = $component9, 
 		11 = $component10, 
-		12 = ~script7796($dropsubid3)
+		12 = ~bank_side_locked_slot($dropsubid3)
 	);
 }
-if (cc_find($drop0, $comsubid2) = ^true) {
+if (cc_find($drop0, $comsubid2) = true) {
 	~bankside_drawitem(
 		0 = $obj13, 
 		1 = inv_getnum(inv, $dropsubid3), 
@@ -46,21 +46,21 @@ if (cc_find($drop0, $comsubid2) = ^true) {
 		9 = $component8, 
 		10 = $component9, 
 		11 = $component10, 
-		12 = ~script7796($comsubid2)
+		12 = ~bank_side_locked_slot($comsubid2)
 	);
 }
 switch_obj ($obj12) {
 	case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 		cc_deleteall($component4);
 	case default :
-		if (~script7349($obj12) = 1) {
+		if (~is_prepot_device($obj12) = 1) {
 			cc_deleteall($component4);
 		} else {
 			switch_obj ($obj13) {
 				case looting_bag_11941, looting_bag_open_22586, league_second_inventory_25106, league_second_inventory_open_25108, bh_rune_pouch_12791, bh_rune_pouch_trouver_24416, divine_rune_pouch_27281, divine_rune_pouch_trouver_27509 :
 					cc_deleteall($component4);
 				case default :
-					if (~script7349($obj13) = 1) {
+					if (~is_prepot_device($obj13) = 1) {
 						cc_deleteall($component4);
 					}
 			}

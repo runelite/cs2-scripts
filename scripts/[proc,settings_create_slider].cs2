@@ -1,39 +1,38 @@
 // 3860
-[proc,settings_create_slider](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, struct $struct6, component $component7, component $component8, component $component9, component $component10, component $component11)(int, int, int, int, int)
+[proc,settings_create_slider](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, struct $struct6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12)(int, int, int, int, int)
 def_string $string0 = struct_param($struct6, param_1086);
-def_boolean $boolean12 = ~on_mobile;
-if ($boolean12 = true & string_length(struct_param($struct6, param_1087)) > 0) {
+def_boolean $boolean13 = ~on_mobile;
+if ($boolean13 = true & string_length(struct_param($struct6, param_1087)) > 0) {
 	$string0 = struct_param($struct6, param_1087);
 }
 def_string $string1 = struct_param($struct6, param_1096);
-def_int $int13 = 0;
-def_int $int14 = %settings_disable_tooltip_in_interface;
-def_boolean $boolean15 = struct_param($struct6, param_1119);
-if ($boolean12 = true & string_length(struct_param($struct6, param_1097)) > 0) {
+def_int $int14 = 0;
+def_int $int15 = %settings_disable_tooltip_in_interface;
+def_boolean $boolean16 = struct_param($struct6, param_1119);
+if ($boolean13 = true & string_length(struct_param($struct6, param_1097)) > 0) {
 	$string1 = struct_param($struct6, param_1097);
 }
 if (string_length($string1) > 0) {
-	$int13 = calc(paraheight($string1, calc(if_getwidth($component8) - 20), p12_full) * 14);
+	$int14 = calc(paraheight($string1, calc(if_getwidth($component8) - 20), p12_full) * 14);
 }
-$int1 = calc($int1 + $int13);
-if ($int14 = 1 | $boolean15 = true) {
-	$int13 = 0;
+$int1 = calc($int1 + $int14);
+if ($int15 = 1 | $boolean16 = true) {
+	$int14 = 0;
 }
-def_int $int16 = calc(paraheight($string0, calc(if_getwidth($component8) - 20), b12_full) * 14);
-def_int $int17 = calc($int16 + $int13 + 34);
-def_int $int18 = struct_param($struct6, param_1101);
-def_int $int19 = struct_param($struct6, param_1102);
-def_enum $enum20 = struct_param($struct6, param_1103);
-def_int $intarray2($int19);
-if ($enum20 ! null) {
-	$int17 = calc($int17 + 22);
+def_int $int17 = calc(paraheight($string0, calc(if_getwidth($component8) - 20), b12_full) * 14);
+def_int $int18 = calc($int17 + $int14 + 34);
+def_int $int19 = struct_param($struct6, param_1101);
+def_int $int20 = struct_param($struct6, param_1102);
+def_enum $enum21 = struct_param($struct6, param_1103);
+def_int $intarray2($int20);
+if ($enum21 ! null) {
+	$int18 = calc($int18 + 22);
 }
-def_int $int21 = struct_param($struct6, param_1077);
-def_boolean $boolean22 = struct_param($struct6, param_1085);
-def_int $int23 = ~script3957($struct6);
+def_int $int22 = struct_param($struct6, param_1077);
+def_boolean $boolean23 = struct_param($struct6, param_1085);
 def_int $int24 = 0;
 .cc_create($component8, ^iftype_rectangle, $int2, false);
-.cc_setsize(10, $int17, ^setsize_minus, ^setsize_abs);
+.cc_setsize(10, $int18, ^setsize_minus, ^setsize_abs);
 .cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setfill(true);
 .cc_setcolour(^black);
@@ -42,21 +41,21 @@ def_int $comsubid25 = $int2;
 $int2 = calc($int2 + 1);
 def_string $string3 = "";
 if (struct_param($struct6, param_1158) = true) {
-	$string3 = ~script2364($int21);
+	$string3 = ~script2364($int22);
 }
 cc_create($component8, ^iftype_text, $int2, false);
 def_int $comsubid26 = $int2;
-cc_setsize(10, $int16, ^setsize_minus, ^setsize_abs);
+cc_setsize(10, $int17, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, calc($int0 + 6), ^setpos_abs_centre, ^setpos_abs_top);
 cc_settext(append($string0, $string3));
 cc_settextfont(b12_full);
 cc_settextshadow(true);
-if ($int23 = 1) {
+if ($int12 = 1) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean12 = false & $int14 = 1 & string_length($string1) > 0) {
+if ($boolean13 = false & $int15 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component8, $int2, $component11, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component11)");
 }
@@ -68,7 +67,7 @@ def_int $int29 = 0;
 $int24 = calc(19 * 16);
 def_int $int30 = calc(if_getwidth($component8) / 2 - $int24 / 2);
 def_int $int31 = $int30;
-def_int $int32 = calc($int0 + $int13 + $int16 + 12);
+def_int $int32 = calc($int0 + $int14 + $int17 + 12);
 while ($int29 < 19) {
 	cc_create($component8, ^iftype_graphic, $int2, false);
 	$int2 = calc(1 + $int2);
@@ -79,7 +78,7 @@ while ($int29 < 19) {
 		$intarray2(0) = $int30;
 	} else if ($int29 = 17) {
 		cc_setgraphic("settings_slider,4");
-		$intarray2(calc($int19 - 1)) = $int30;
+		$intarray2(calc($int20 - 1)) = $int30;
 	} else if ($int29 = 18) {
 		cc_setgraphic("settings_slider,5");
 	} else {
@@ -95,50 +94,50 @@ def_int $int34 = calc($int24 + $int31 - 16);
 def_int $int35 = calc($int34 - $int33);
 $int29 = 0;
 $int30 = 0;
-while ($int29 < $int19) {
-	if ($int29 > 0 & $int29 < calc($int19 - 1)) {
+while ($int29 < $int20) {
+	if ($int29 > 0 & $int29 < calc($int20 - 1)) {
 		cc_create($component8, ^iftype_graphic, $int2, false);
 		$int2 = calc($int2 + 1);
 		cc_setgraphic("settings_slider,11");
 		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-		$int30 = calc($int33 + scale($int29, calc($int19 - 1), calc($int35 - 16)));
+		$int30 = calc($int33 + scale($int29, calc($int20 - 1), calc($int35 - 16)));
 		cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
 		$intarray2($int29) = $int30;
 	}
 	$int29 = calc($int29 + 1);
 }
-def_int $int36 = ~settings_get_slider($int21);
+def_int $int36 = ~settings_get_slider($int22);
 def_boolean $boolean37 = struct_param($struct6, param_1108);
 cc_create($component7, ^iftype_graphic, $int3, false);
 $int3 = calc($int3 + 1);
 def_graphic $graphic38 = "settings_slider,7";
-if ($int23 = 1) {
+if ($int12 = 1) {
 	if ($boolean37 = true) {
 		$graphic38 = "settings_slider,8";
 	} else {
 		$graphic38 = "settings_slider,6";
 	}
 }
-~settings_slider_choose_bobble($int21, calc($int3 - 1), $component7, $graphic38);
+~settings_slider_choose_bobble($int22, calc($int3 - 1), $component7, $graphic38);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 if (struct_param($struct6, param_1107) = false) {
 	if ($int36 = 0) {
 		cc_setposition($int33, $int32, ^setpos_abs_left, ^setpos_abs_top);
-	} else if ($int36 = calc($int18 - 1)) {
+	} else if ($int36 = calc($int19 - 1)) {
 		cc_setposition(calc($int34 - 16), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc($int33 + scale(calc($int36 * 2), calc(($int18 - 1) * 2), calc($int35 - 16))), $int32, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int33 + scale(calc($int36 * 2), calc(($int19 - 1) * 2), calc($int35 - 16))), $int32, ^setpos_abs_left, ^setpos_abs_top);
 	}
 } else {
 	~script3888(
-		0 = $int21, 
+		0 = $int22, 
 		1 = $component7, 
 		2 = calc($int3 - 1), 
 		3 = $int35, 
 		4 = $int32, 
 		5 = $int33, 
 		6 = $int34, 
-		7 = $int18, 
+		7 = $int19, 
 		8 = $component8, 
 		9 = $comsubid26, 
 		10 = $string0
@@ -149,27 +148,27 @@ if ($boolean37 = true) {
 	cc_setdragdeadzone(struct_param($struct6, param_1109));
 	cc_setdragdeadtime(struct_param($struct6, param_1110));
 	~settings_slider_choose_ondrag(
-		0 = $int21, 
+		0 = $int22, 
 		1 = $component7, 
 		2 = calc($int3 - 1), 
 		3 = $int35, 
 		4 = $int32, 
 		5 = $int33, 
 		6 = $int34, 
-		7 = $int18, 
+		7 = $int19, 
 		8 = $component8, 
 		9 = $comsubid26, 
 		10 = $string0
 	);
 	~settings_slider_choose_ondragcomplete(
-		0 = $int21, 
+		0 = $int22, 
 		1 = $component7, 
 		2 = calc($int3 - 1), 
 		3 = $int35, 
 		4 = $int32, 
 		5 = $int33, 
 		6 = $int34, 
-		7 = $int18, 
+		7 = $int19, 
 		8 = $component8, 
 		9 = $comsubid26, 
 		10 = $string0
@@ -182,7 +181,7 @@ def_string $string4 = struct_param($struct6, param_1104);
 def_boolean $boolean40 = struct_param($struct6, param_1105);
 def_boolean $boolean41 = struct_param($struct6, param_1106);
 def_int $int42 = 0;
-while ($int29 < $int18) {
+while ($int29 < $int19) {
 	if ($boolean40 = true) {
 		cc_create($component9, ^iftype_rectangle, $int4, false);
 		$int4 = calc($int4 + 1);
@@ -193,9 +192,9 @@ while ($int29 < $int18) {
 	if ($boolean41 = false) {
 		cc_setonop("settings_slider_op(
 			0 = $struct6, 
-			1 = $int21, 
+			1 = $int22, 
 			2 = $int29, 
-			3 = $int18, 
+			3 = $int19, 
 			4 = $int35, 
 			5 = $component7, 
 			6 = calc($int3 - 1), 
@@ -206,11 +205,12 @@ while ($int29 < $int18) {
 			11 = $comsubid25, 
 			12 = $comsubid26, 
 			13 = $string0, 
-			14 = $boolean22
+			14 = $boolean23, 
+			15 = $int12
 		)");
 	} else {
 		~settings_slider_choose_onop(
-			0 = $int21, 
+			0 = $int22, 
 			1 = $component7, 
 			2 = calc($int3 - 1), 
 			3 = $int35, 
@@ -221,13 +221,13 @@ while ($int29 < $int18) {
 			8 = $component8, 
 			9 = $comsubid26, 
 			10 = $string0, 
-			11 = $int18, 
+			11 = $int19, 
 			12 = $int29
 		);
 	}
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
-	if ($int18 > 1) {
-		$int39 = calc(scale(calc(1 + $int42), $int18, $int35) - scale($int42, $int18, $int35));
+	if ($int19 > 1) {
+		$int39 = calc(scale(calc(1 + $int42), $int19, $int35) - scale($int42, $int19, $int35));
 		$int42 = calc($int42 + 1);
 	} else {
 		$int39 = $int35;
@@ -242,14 +242,14 @@ while ($int29 < $int18) {
 }
 def_int $int43 = calc($int32 + 16 + 6);
 def_int $int44 = $int2;
-if ($enum20 ! null) {
+if ($enum21 ! null) {
 	$int29 = 0;
-	while ($int29 < $int19) {
+	while ($int29 < $int20) {
 		cc_create($component8, ^iftype_text, $int2, false);
 		$int2 = calc($int2 + 1);
 		cc_setsize(30, 16, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($intarray2($int29) + 16 / 2 - 15), $int43, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settext(enum(int, string, $enum20, $int29));
+		cc_settext(enum(int, string, $enum21, $int29));
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
@@ -257,12 +257,12 @@ if ($enum20 ! null) {
 		$int29 = calc($int29 + 1);
 	}
 }
-if ($boolean22 = true) {
+if ($boolean23 = true) {
 	~settings_slider_choose_transmit(
 		0 = $struct6, 
-		1 = $int21, 
-		2 = $int18, 
-		3 = $int19, 
+		1 = $int22, 
+		2 = $int19, 
+		3 = $int20, 
 		4 = $int35, 
 		5 = $component7, 
 		6 = calc($int3 - 1), 
@@ -273,14 +273,15 @@ if ($boolean22 = true) {
 		11 = $comsubid26, 
 		12 = $string0, 
 		13 = $int44, 
-		14 = $enum20, 
-		15 = $boolean37
+		14 = $enum21, 
+		15 = $boolean37, 
+		16 = $int12
 	);
 }
-if ($boolean15 = false & $int14 = 0 & $int13 > 0) {
+if ($boolean16 = false & $int15 = 0 & $int14 > 0) {
 	cc_create($component8, ^iftype_text, $int2, false);
-	cc_setsize(10, $int13, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, calc($int0 + $int16 + 6), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(10, $int14, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($int0 + $int17 + 6), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settext($string1);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
@@ -288,5 +289,5 @@ if ($boolean15 = false & $int14 = 0 & $int13 > 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
 	$int2 = calc($int2 + 1);
 }
-$int0 = calc($int17 + $int0);
+$int0 = calc($int18 + $int0);
 return($int0, $int1, $int2, $int3, $int4);

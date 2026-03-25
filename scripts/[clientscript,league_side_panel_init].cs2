@@ -4,7 +4,7 @@ cc_deleteall($com_league_side_panel_mastery_button0);
 cc_deleteall($com_league_side_panel_tasks_button1);
 cc_deleteall($com_league_side_panel_relics_button2);
 cc_deleteall($com_league_side_panel_areas_button3);
-if_settext(~script4901, $com_league_side_panel_header4);
+if_settext(~league_get_league_name_short, $com_league_side_panel_header4);
 ~v2_stone_button_filled($com_league_side_panel_mastery_button0);
 if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_side_panel_mastery_button0, 0)", $com_league_side_panel_mastery_button0);
@@ -44,12 +44,12 @@ if_setcolour($colour7, league_side_panel:total_tasks_text);
 if_setcolour($colour7, league_side_panel:total_points_text);
 def_component $component8 = league_side_panel:tooltip;
 ~league_side_panel_rank($component8, $colour7);
-~script7701($component8, $colour7);
+~league_side_panel_summary($component8, $colour7);
 def_string $string0 = "Open League Info";
 if (~on_mobile = false) {
 	if_setonmouserepeat("tooltip_mouserepeat($com_league_side_panel_info5, 0, $component8, $string0, 25, 190)", $com_league_side_panel_info5);
 	if_setonmouseleave("deltooltip($component8)", $com_league_side_panel_info5);
 }
-if_setonop("script7753", $com_league_side_panel_info5);
+if_setonop("league_interface_op_sound", $com_league_side_panel_info5);
 if_setopbase("<col=ff981f>League Info</col>", $com_league_side_panel_info5);
 ~league_side_panel_update_bar(league_side_panel:fill, %league_points_claimed);

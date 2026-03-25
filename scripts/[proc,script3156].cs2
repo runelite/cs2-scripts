@@ -32,14 +32,14 @@ if ($component0 = $component2) {
 	while ($int10 < enum_getoutputcount($enum14)) {
 		$obj12 = enum(int, obj, $enum14, $int10);
 		$component11 = oc_param($obj12, param_1751);
-		if ($component11 ! null & cc_find($component11, 0) = ^true & .cc_find($component11, 1) = ^true) {
+		if ($component11 ! null & cc_find($component11, 0) = true & .cc_find($component11, 1) = true) {
 			~prayer_updatebutton(1, $obj12, $component11, $component4, $component8);
 		}
 		$int10 = calc($int10 + 1);
 	}
 	$int10 = 0;
 	while ($int9 = 0) {
-		if (cc_find($component5, $int10) = ^true) {
+		if (cc_find($component5, $int10) = true) {
 			cc_settrans(220);
 		} else {
 			$int9 = 1;
@@ -76,11 +76,11 @@ if ($component0 = $component2) {
 		cc_setonop("prayer_filtertoggle_op(event_op, event_com, event_comsubid)");
 		$int10 = calc($int10 + 1);
 	}
-	$int10, $int13 = ~script3158(0, "Show lower tiers of tiered prayers", $component7, $int10, $int13);
-	$int10, $int13 = ~script3158(1, "Show tiered prayers even if multi-skill prayers are available", $component7, $int10, $int13);
-	$int10, $int13 = ~script3158(2, "Show <col=ffffff>Rapid Healing</col> prayers", $component7, $int10, $int13);
-	$int10, $int13 = ~script3158(3, "Show prayers you lack the Prayer level to activate", $component7, $int10, $int13);
-	$int10, $int13 = ~script3158(4, "Show prayers you lack the requirements to activate", $component7, $int10, $int13);
+	$int10, $int13 = ~prayer_filtertoggle_createindicator(0, "Show lower tiers of tiered prayers", $component7, $int10, $int13);
+	$int10, $int13 = ~prayer_filtertoggle_createindicator(1, "Show tiered prayers even if multi-skill prayers are available", $component7, $int10, $int13);
+	$int10, $int13 = ~prayer_filtertoggle_createindicator(2, "Show <col=ffffff>Rapid Healing</col> prayers", $component7, $int10, $int13);
+	$int10, $int13 = ~prayer_filtertoggle_createindicator(3, "Show prayers you lack the Prayer level to activate", $component7, $int10, $int13);
+	$int10, $int13 = ~prayer_filtertoggle_createindicator(4, "Show prayers you lack the requirements to activate", $component7, $int10, $int13);
 	if_setsize(180, calc(28 + $int13), ^setsize_abs, ^setsize_abs, $component6);
 } else {
 	if ($boolean1 = true) {
@@ -125,7 +125,7 @@ if ($component0 = $component2) {
 	while ($int10 <= enum_getoutputcount($enum14)) {
 		$obj12 = enum(int, obj, $enum14, $int10);
 		$component11 = oc_param($obj12, param_1751);
-		if ($component11 ! null & cc_find($component11, 0) = ^true & .cc_find($component11, 1) = ^true) {
+		if ($component11 ! null & cc_find($component11, 0) = true & .cc_find($component11, 1) = true) {
 			~prayer_updatebutton(0, $obj12, $component11, $component4, $component8);
 		}
 		$int10 = calc($int10 + 1);

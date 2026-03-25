@@ -12,9 +12,9 @@ if ($obj5 = null) {
 	return;
 }
 def_obj $obj6 = inv_getobj(inv, $dropsubid3);
-if (cc_find($component0, $dropsubid3) = ^true) {
-	~bank_depositbox_drawslot($component0, $component1, $obj5, inv_getnum(inv, $comsubid2), $comsubid2, ~script7796($dropsubid3));
+if (cc_find($component0, $dropsubid3) = true) {
+	~bank_depositbox_drawslot($component0, $component1, $obj5, inv_getnum(inv, $comsubid2), $comsubid2, ~bank_side_locked_slot($dropsubid3));
 }
-if (cc_find($component0, $comsubid2) = ^true) {
-	~bank_depositbox_drawslot($component0, $component1, $obj6, inv_getnum(inv, $dropsubid3), $dropsubid3, ~script7796($comsubid2));
+if (cc_find($component0, $comsubid2) = true) {
+	~bank_depositbox_drawslot($component0, $component1, $obj6, inv_getnum(inv, $dropsubid3), $dropsubid3, ~bank_side_locked_slot($comsubid2));
 }

@@ -10,7 +10,7 @@ if (~on_mobile = true) {
 		%varcint1168, %varcint1169 = if_getwidth($component5), if_getheight($component5);
 		%varcint1170, %varcint1171 = if_getx($component5), if_gety($component5);
 	}
-	if_setontimer("script6110($com_skill_guide_infinity1, -1)", $com_skill_guide_infinity1);
+	if_setontimer("responsive_interface_scaler($com_skill_guide_infinity1, -1)", $com_skill_guide_infinity1);
 	if_setonresize("skill_guide_rebuild(event_com, $com_skill_guide_window0, $com_skill_guide_move_layer2)", $com_skill_guide_infinity1);
 }
-~script1911(-1, -1, $com_skill_guide_infinity1, $com_skill_guide_window0);
+~skill_guide_v2_size_handler(-1, -1, $com_skill_guide_infinity1, $com_skill_guide_window0);

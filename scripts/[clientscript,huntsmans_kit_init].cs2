@@ -1,0 +1,27 @@
+// 4988
+[clientscript,huntsmans_kit_init](component $com_huntsmans_kit_universe0, component $com_huntsmans_kit_fill1, component $com_huntsmans_kit_empty2, component $com_huntsmans_kit_items3, component $com_huntsmans_kit_scrollbar4, component $com_huntsmans_kit_15, component $com_huntsmans_kit_56, component $com_huntsmans_kit_x7, component $com_huntsmans_kit_all8)
+~script5003($com_huntsmans_kit_fill1, "bankbuttons,0", 0);
+if_setop(1, "Fill", $com_huntsmans_kit_fill1);
+~script5003($com_huntsmans_kit_empty2, "bankbuttons,4", 0);
+if_setop(1, "Empty", $com_huntsmans_kit_empty2);
+cc_deleteall($com_huntsmans_kit_items3);
+cc_deleteall($com_huntsmans_kit_scrollbar4);
+cc_deleteall($com_huntsmans_kit_15);
+cc_deleteall($com_huntsmans_kit_56);
+cc_deleteall($com_huntsmans_kit_x7);
+cc_deleteall($com_huntsmans_kit_all8);
+~scrollbar_vertical($com_huntsmans_kit_scrollbar4, $com_huntsmans_kit_items3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int9 = inv_size(huntsmans_kit);
+def_int $int10 = 0;
+while ($int10 < $int9) {
+	cc_create($com_huntsmans_kit_items3, ^iftype_graphic, $int10, false);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int10 = calc($int10 + 1);
+}
+~huntsmans_kit_draw($int9, $com_huntsmans_kit_items3, $com_huntsmans_kit_scrollbar4, $com_huntsmans_kit_15, $com_huntsmans_kit_56, $com_huntsmans_kit_x7, $com_huntsmans_kit_all8);
+if_setoninvtransmit("huntsmans_kit_draw($int9, $com_huntsmans_kit_items3, $com_huntsmans_kit_scrollbar4, $com_huntsmans_kit_15, $com_huntsmans_kit_56, $com_huntsmans_kit_x7, $com_huntsmans_kit_all8){huntsmans_kit}", $com_huntsmans_kit_universe0);
+if_setonvartransmit("huntsmans_kit_draw($int9, $com_huntsmans_kit_items3, $com_huntsmans_kit_scrollbar4, $com_huntsmans_kit_15, $com_huntsmans_kit_56, $com_huntsmans_kit_x7, $com_huntsmans_kit_all8){ii_player2}", $com_huntsmans_kit_universe0);

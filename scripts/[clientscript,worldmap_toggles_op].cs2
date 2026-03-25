@@ -4,7 +4,7 @@ if ($opindex0 ! 1 | $int2 < 0 | $int2 > 4) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (cc_find($com_worldmap_toggles1, $comsubid3) = ^true & .cc_find($com_worldmap_toggles1, $int2) = ^true) {
+if (cc_find($com_worldmap_toggles1, $comsubid3) = true & .cc_find($com_worldmap_toggles1, $int2) = true) {
 	if (testbit(%worldmap_toggles, $int2) = ^true) {
 		%worldmap_toggles = clearbit(%worldmap_toggles, $int2);
 	} else {

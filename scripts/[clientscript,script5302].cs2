@@ -3,7 +3,7 @@
 if (%ironman ! 4 & %ironman ! 5 & %ironman ! 6) {
 	return;
 }
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	cc_setgraphic(enum(int, graphic, enum_3840, %ironman));
 	if_setop(1, enum(int, string, enum_3839, %ironman), $component2);
 }

@@ -1,0 +1,33 @@
+java.lang.IllegalStateException: Opcode 7201 in script 6671 not implemented
+
+.id                       6671
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 6667
+   iconst                 4
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 1
+   7201                  
+   istore                 0
+   iload                  0
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL13
+   jump                   LABEL24
+LABEL13:
+   iconst                 6666
+   iconst                 543
+   iconst                 1
+   sconst                 "Y"
+   cc_setonvartransmit   
+   iconst                 6666
+   iconst                 93
+   iconst                 94
+   iconst                 2
+   sconst                 "Y"
+   cc_setoninvtransmit   
+LABEL24:
+   return                

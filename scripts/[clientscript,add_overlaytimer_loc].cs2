@@ -1,24 +1,86 @@
-// 5474
-[clientscript,add_overlaytimer_loc](coord $coord0, loc $loc1, locshape $locshape2, int $int3, int $int4, int $colour5, int $int6)
-if (~on_enhanced_any = 0) {
-	return;
-}
-def_entityoverlay $entityoverlay7 = null;
-def_int $int8 = -1;
-switch_locshape ($locshape2) {
-	case wall_straight, wall_diagonalcorner, wall_l, wall_squarecorner, wall_diagonal :
-		$int8 = 2;
-	case walldecor_straight_nooffset, walldecor_straight_offset, walldecor_diagonal_offset, walldecor_diagonal_nooffset, walldecor_diagonal_both :
-		$int8 = 3;
-	case centrepiece_straight, centrepiece_diagonal :
-		$int8 = 5;
-	case grounddecor :
-		$int8 = 4;
-	case default :
-		~debug_mes("Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: <tostring($int3)>");
-		return;
-}
-$entityoverlay7 = entityoverlay_create_coord($coord0, $int8, 0, 1, 1, 0);
-if (if_find_entityoverlay($entityoverlay7) = ^true) {
-	cc_setontimer("overlaytimer_loc_find($coord0, $loc1, $int3, clientclock, calc($int4 * 30), $colour5, $int6, $int8)");
-}
+java.lang.IllegalStateException: Opcode 7204 in script 5474 not implemented
+
+.id                       5474
+.int_arg_count            7
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   iconst                 -1
+   istore                 7
+   iconst                 -1
+   istore                 8
+   iload                  2
+   switch                
+      0: LABEL12
+      1: LABEL12
+      2: LABEL12
+      3: LABEL12
+      9: LABEL12
+      4: LABEL15
+      5: LABEL15
+      6: LABEL15
+      7: LABEL15
+      8: LABEL15
+      10: LABEL18
+      11: LABEL18
+      22: LABEL21
+   jump                   LABEL24
+LABEL12:
+   iconst                 2
+   istore                 8
+   jump                   LABEL30
+LABEL15:
+   iconst                 3
+   istore                 8
+   jump                   LABEL30
+LABEL18:
+   iconst                 5
+   istore                 8
+   jump                   LABEL30
+LABEL21:
+   iconst                 4
+   istore                 8
+   jump                   LABEL30
+LABEL24:
+   sconst                 "Overlay Timers: No locfind overlay ID specified for loc_shape. Timer ID: "
+   iload                  3
+   tostring              
+   join_string            2
+   invoke                 4078
+   return                
+LABEL30:
+   iload                  0
+   iload                  8
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7204                  
+   istore                 7
+   iload                  7
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL43
+   jump                   LABEL56
+LABEL43:
+   iconst                 5475
+   iload                  0
+   iload                  1
+   iload                  3
+   clientclock           
+   iload                  4
+   iconst                 30
+   multiply              
+   iload                  5
+   iload                  6
+   iload                  8
+   sconst                 "iiiiiiii"
+   cc_setontimer         
+LABEL56:
+   return                

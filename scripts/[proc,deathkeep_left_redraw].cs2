@@ -79,7 +79,7 @@ while ($int25 > 0) {
 	$int9, $int10, $int11 = ~deathkeep_left_keepitem(osrs_bond_untradeable_13192, 1, burntfish1_323, $int1, $int2, $int3, $int9, $int11);
 	$int25 = calc($int25 - 1);
 }
-if (~script5027 = 1 | ~script5028(inv) = 1) {
+if (~dizanas_quiver_equipped = 1 | ~dizanas_quiver_in_inventory(inv) = 1) {
 	if ($int0 = 1) {
 		$int14, $int15 = ~script4906(%dizanas_quiver_temp_ammo, %dizanas_quiver_temp_ammo_amount, $int1, $int2, $int3, $int14, "Dizana's quiver");
 	} else {

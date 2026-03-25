@@ -4,7 +4,7 @@ if_setontimer(null, $component0);
 def_string $string0 = "";
 def_int $int5 = 1;
 while ($int5 <= $int1) {
-	if (cc_find($component0, calc($int5 - 1)) = ^true) {
+	if (cc_find($component0, calc($int5 - 1)) = true) {
 		if ($int5 = %sailing_crew_selected_crew_id) {
 			cc_settrans(210);
 			cc_setonmouserepeat(null);
@@ -26,8 +26,8 @@ while ($int5 <= $int1) {
 	} else {
 		$string0 = "Crew";
 	}
-	if (.cc_find($component0, calc($int1 + 2 * ($int5 - 1) + 1)) = ^true) {
-		if (~script9046($int5) = 1) {
+	if (.cc_find($component0, calc($int1 + 2 * ($int5 - 1) + 1)) = true) {
+		if (~sailing_crew_get_unlocked($int5) = 1) {
 			.cc_setcolour(0xff981f);
 			.cc_settext($string0);
 		} else {
@@ -37,4 +37,4 @@ while ($int5 <= $int1) {
 	}
 	$int5 = calc($int5 + 1);
 }
-~script8795($com_sailing_crew_comparison_container2, $comsubid3, $comsubid4);
+~sailing_crew_comparison($com_sailing_crew_comparison_container2, $comsubid3, $comsubid4);

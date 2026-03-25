@@ -12,7 +12,7 @@ if_sethide(true, $component3);
 ~script3723(soul_wars_rewards:imbue_rewards_tab, 0, "Imbues");
 ~script3723(soul_wars_rewards:other_rewards_tab, 0, "Other");
 if ($int0 = 0) {
-	~script536(-1, $component1, $component4, $component5, $component2, $component3);
+	~soul_wars_rewards_drawxp(-1, $component1, $component4, $component5, $component2, $component3);
 	if_sethide(false, soul_wars_rewards:confirm_xp);
 	if_sethide(false, soul_wars_rewards:xp_rewards);
 	~script3723(soul_wars_rewards:xp_rewards_tab, 1, "Experience");

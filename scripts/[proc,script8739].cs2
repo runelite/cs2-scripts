@@ -11,7 +11,7 @@ def_int $int10 = 0;
 def_graphic $graphic11 = null;
 $graphic11, $int10 = db_getfield($dbrow4, sailing_sidepanel_widget_button_target_npc:default_graphic, 0);
 if ($int7 = 2) {
-	$int0, $int1 = ~script8748(
+	$int0, $int1 = ~sailing_sidepanel_stonebutton(
 		0 = $component5, 
 		1 = $component6, 
 		2 = $int0, 
@@ -31,7 +31,7 @@ if ($int7 = 2) {
 	);
 	cc_settargetverb($string1);
 } else if ($int7 = 0) {
-	$int0, $int1 = ~script8748(
+	$int0, $int1 = ~sailing_sidepanel_stonebutton(
 		0 = $component5, 
 		1 = $component6, 
 		2 = $int0, 
@@ -51,7 +51,7 @@ if ($int7 = 2) {
 	);
 	cc_settargetverb($string1);
 } else {
-	$int0, $int1 = ~script8748(
+	$int0, $int1 = ~sailing_sidepanel_stonebutton(
 		0 = $component5, 
 		1 = $component6, 
 		2 = $int0, 

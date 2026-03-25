@@ -7,12 +7,12 @@ if_setscrollpos(0, min(if_getscrolly($component1), $int2), $component1);
 ~scrollbar_vertical(skill_guide_v2:overview_scrollbar, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_vertical_rebuild(skill_guide_v2:overview_scrollbar, $component1);
 %varcint1345 = $component1;
-if_children_find(1, $component0, -1);
-def_anyobj $anyobj0 = if_children_subids;
+if_query(1, $component0, -1);
+def_anyobj $anyobj0 = if_query_ids;
 def_int $int3 = array_size($anyobj0);
 def_int $int4 = 0;
 while ($int4 < $int3) {
-	if (cc_find($component0, $comsubidarray0($int4)) = ^true & cc_param(param_2527) ! null) {
+	if (cc_find($component0, $comsubidarray0($int4)) = true & cc_param(param_2527) ! null) {
 		if (cc_param(param_2527) = $component1) {
 			~script9179(1, $component0, cc_getid);
 		} else {

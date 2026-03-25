@@ -1,0 +1,10 @@
+// 8437
+[proc,ballot_voting_ranked_get_selected](int $int0)(anyobj)
+cc_find_param(ballot:voting, param_2365, 200, param_2368, $int0);
+cc_query(2);
+def_int $length1 = if_query_refine(param_2365, 600, int);
+def_int $intarray0($length1);
+while (.if_query_next = true) {
+	$intarray0(.cc_param(param_2370)) = .cc_param(param_2363);
+}
+return($anyobj0);

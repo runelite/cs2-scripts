@@ -29,7 +29,7 @@ if ($struct4 = leagues_iii_shattered_relics_3771) {
 if ($int12 ! -1 & $int3 = 0) {
 	$int13 = calc($int13 - 15);
 }
-if (cc_find($component0, 0) = ^false) {
+if (cc_find($component0, 0) = false) {
 	cc_create($component0, ^iftype_rectangle, $int9, false);
 	cc_setsize(calc($int13 - 4), 29, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
@@ -186,7 +186,7 @@ if ($int12 ! -1 & $int12 > 0) {
 if ($int19 > $int18) {
 	$int19 = calc($int18 - 1);
 }
-if (cc_find($component0, 2) = ^true) {
+if (cc_find($component0, 2) = true) {
 	if ($int2 = 1) {
 		if (cc_getwidth > $int19) {
 			cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
@@ -197,7 +197,7 @@ if (cc_find($component0, 2) = ^true) {
 	}
 }
 def_int $int20 = -1;
-if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = ^true) {
+if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = true) {
 	if ($int3 = 0 & $int12 ! -1) {
 		if (%league_points_claimed >= $int12) {
 			if (%league_tutorial_completed < 9) {
@@ -227,7 +227,7 @@ if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = ^true) {
 		cc_settext("<tostring(%league_points_claimed)> points earned");
 	}
 }
-if ($int3 = 0 & cc_find($component0, 6) = ^true) {
+if ($int3 = 0 & cc_find($component0, 6) = true) {
 	if (%league_points_claimed >= $int12) {
 		cc_setgraphic($graphic16);
 	} else {

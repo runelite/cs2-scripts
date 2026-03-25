@@ -1,7 +1,33 @@
-// 5470
-[proc,add_overlaytimer_npc](int $int0, int $int1, int $int2, int $colour3, int $int4)
-if (~on_enhanced_any = 0 | ~script5472($int0, $int2) = 0) {
-	return;
-}
-def_entityoverlay $entityoverlay5 = entityoverlay_create_npc(1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int0, $entityoverlay5, $int1, $int2, $colour3, $int4);
+java.lang.IllegalStateException: Opcode 7200 in script 5470 not implemented
+
+.id                       5470
+.int_arg_count            5
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL9
+   iload                  0
+   iload                  2
+   invoke                 5472
+   iconst                 0
+   if_icmpeq              LABEL9
+   jump                   LABEL10
+LABEL9:
+   return                
+LABEL10:
+   iconst                 1
+   iconst                 0
+   iconst                 25
+   iconst                 25
+   iconst                 0
+   7200                  
+   istore                 5
+   iload                  0
+   iload                  5
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   invoke                 5480
+   return                

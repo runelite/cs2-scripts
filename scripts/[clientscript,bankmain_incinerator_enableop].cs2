@@ -1,7 +1,7 @@
 // 1318
 [clientscript,bankmain_incinerator_enableop](int $int0, component $component1, int $comsubid2, int $comsubid3, int $int4)
 if (clientclock >= $int4) {
-	if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+	if (cc_find($component1, $comsubid2) = true & .cc_find($component1, $comsubid3) = true) {
 		cc_setontimer(null);
 		.cc_settext("Destroy");
 		.cc_setcolour(0xff981f);
@@ -17,6 +17,6 @@ if (clientclock >= $int4) {
 	return;
 }
 def_int $int5 = calc(($int4 - clientclock) % 50);
-if ($int5 = 0 & .cc_find($component1, $comsubid3) = ^true) {
+if ($int5 = 0 & .cc_find($component1, $comsubid3) = true) {
 	.cc_settext("Wait <tostring(calc(($int4 - clientclock) / 50))>s");
 }

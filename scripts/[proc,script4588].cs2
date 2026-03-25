@@ -1,9 +1,0 @@
-// 4588
-[proc,script4588]
-if (~on_enhanced_any = 0) {
-	return;
-}
-if (%fishing_spot_indicator_disabled = 1) {
-	return;
-}
-%fishing_spot_indicator_all_fish_disabled = calc(1 - %fishing_spot_indicator_all_fish_disabled);

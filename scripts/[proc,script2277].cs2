@@ -4,7 +4,7 @@ if (~league_world = 0 | %buff_league_relics_hidden = 1) {
 	return(0);
 }
 def_struct $struct1 = enum(int, struct, enum_2670, %league_type);
-if (struct_param($struct1, param_870) ! null & ~script2279($int0) ! 0) {
+if (struct_param($struct1, param_870) ! null & ~league_relic_slot_active($int0) ! 0) {
 	return(1);
 }
 return(0);

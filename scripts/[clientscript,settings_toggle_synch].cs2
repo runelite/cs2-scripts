@@ -1,7 +1,7 @@
 // 3848
 [clientscript,settings_toggle_synch](int $int0, component $component1, int $comsubid2, int $int3, int $int4, int $int5)
 def_int $int6 = 0;
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	$int0 = calc($int0 + 1);
 	if ($int0 < 35) {
 		cc_setontimer("settings_toggle_synch($int0, $component1, $comsubid2, $int3, $int4, $int5)");

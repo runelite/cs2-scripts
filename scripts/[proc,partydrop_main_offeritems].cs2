@@ -5,7 +5,7 @@ def_obj $obj8 = null;
 def_int $int9 = $int0;
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
-	if (cc_find($component1, $int9) = ^true) {
+	if (cc_find($component1, $int9) = true) {
 		cc_clearops;
 		$obj8 = inv_getobj(partyroom_tempinv, $int9);
 		if ($obj8 ! null) {

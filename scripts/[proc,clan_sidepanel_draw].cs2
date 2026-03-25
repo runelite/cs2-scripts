@@ -184,10 +184,10 @@ if ($int0 = 1) {
 				$int18 = activeclansettings_getaffinedcount;
 				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
 				if ($int11 = 0 & $int13 = 0) {
-					if (cc_find($component1, $int19) = ^true) {
+					if (cc_find($component1, $int19) = true) {
 						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
 					}
-					if (cc_find($component1, calc($int19 + 1)) = ^true) {
+					if (cc_find($component1, calc($int19 + 1)) = true) {
 						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
 					}
 				}
@@ -224,7 +224,7 @@ if ($int0 = 1) {
 		cc_settext($string0);
 		~scrollbar_resize($component3, $component2, 0);
 		if ($int13 = 0) {
-			~script4394(activeclansettings_getclanname);
+			~clan_lastclansearch_set(activeclansettings_getclanname);
 		}
 		return;
 	}
@@ -298,10 +298,10 @@ if ($int0 = 1) {
 				$int18 = activeclansettings_getaffinedcount;
 				~script6713($component1, $int19, $int18, $int16, $int17, $graphic20, $int11);
 				if ($int11 = 0 & $int13 = 0) {
-					if (cc_find($component1, $int19) = ^true) {
+					if (cc_find($component1, $int19) = true) {
 						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
 					}
-					if (cc_find($component1, calc($int19 + 1)) = ^true) {
+					if (cc_find($component1, calc($int19 + 1)) = true) {
 						cc_setonop("script6712($component1, $int19, $int18, $int16, $int17, $graphic20)");
 					}
 				}

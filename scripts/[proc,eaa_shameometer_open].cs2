@@ -1,0 +1,14 @@
+// 7032
+[proc,eaa_shameometer_open](component $com_eaa_shameometer_outer_border0, component $com_eaa_shameometer_inner_border1, component $com_eaa_shameometer_title_backing2, component $com_eaa_shameometer_bar_back3, component $com_eaa_shameometer_bar_sliding4, component $com_eaa_shameometer_bar_progress5, component $com_eaa_shameometer_title_text6, component $com_eaa_shameometer_bar_text7)
+~eaa_shameometer_fade_in(
+	0 = $com_eaa_shameometer_outer_border0, 
+	1 = $com_eaa_shameometer_inner_border1, 
+	2 = $com_eaa_shameometer_title_backing2, 
+	3 = $com_eaa_shameometer_bar_back3, 
+	4 = $com_eaa_shameometer_bar_sliding4, 
+	5 = $com_eaa_shameometer_bar_progress5, 
+	6 = $com_eaa_shameometer_title_text6, 
+	7 = $com_eaa_shameometer_bar_text7, 
+	8 = 255
+);
+~eaa_shameometer_update($com_eaa_shameometer_bar_text7, $com_eaa_shameometer_bar_back3, $com_eaa_shameometer_bar_sliding4, $com_eaa_shameometer_bar_progress5, 1);

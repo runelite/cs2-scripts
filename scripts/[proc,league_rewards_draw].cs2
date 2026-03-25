@@ -128,8 +128,8 @@ if ($int0 ! -1) {
 	if_setop(1, $string2, $component12);
 	if_setopbase("<col=ff981f>League reward</col>", $component12);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component12, 0, $string2, ^white)", $component12);
-		if_setonmouseover("script7747($component12, 1, $string2, 0xaaaaaa)", $component12);
+		if_setonmouseleave("league_interface_button_hover($component12, 0, $string2, ^white)", $component12);
+		if_setonmouseover("league_interface_button_hover($component12, 1, $string2, 0xaaaaaa)", $component12);
 	}
 	if_setonop("league_reward_shop_buy", $component12);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -155,8 +155,8 @@ if ($int0 ! -1) {
 	if_setop(1, $string2, $component13);
 	if_setopbase("<col=ff981f>League reward</col>", $component13);
 	if (~on_mobile = false) {
-		if_setonmouseleave("script7747($component13, 0, $string2, ^white)", $component13);
-		if_setonmouseover("script7747($component13, 1, $string2, 0xaaaaaa)", $component13);
+		if_setonmouseleave("league_interface_button_hover($component13, 0, $string2, ^white)", $component13);
+		if_setonmouseover("league_interface_button_hover($component13, 1, $string2, 0xaaaaaa)", $component13);
 	}
 	if_setonop("league_reward_confirm_back(
 		0 = $int0, 

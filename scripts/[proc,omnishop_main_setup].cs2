@@ -3,7 +3,7 @@
 def_component $component3 = omnishop_main:universe;
 def_component $component4 = omnishop_main:frame;
 def_component $component5 = omnishop_main:content;
-~script6109($component3, $component5);
+~responsive_interface_resize($component3, $component5);
 def_string $string0 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_name, 0);
 ~steelborder($component4, $string0, 16);
 def_component $component6 = omnishop_main:control_layer;
@@ -41,8 +41,8 @@ if (%omnishop_view_expanded = 1) {
 def_int $int24 = 1;
 def_int $int25 = 0;
 if_setsize(calc($int23 + 18), 20, ^setsize_minus, ^setsize_abs, $component6);
-$int24, $int25 = ~script7152($dbrow0, $int20);
-~script7153($dbrow0, $inv1);
+$int24, $int25 = ~omnishop_main_currency_setup($dbrow0, $int20);
+~omnishop_main_controls_setup($dbrow0, $inv1);
 if (%omnishop_view_expanded = 1 & $int25 = 1) {
 	if_sethide(false, $component17);
 	if_setsize(200, 20, ^setsize_abs, ^setsize_abs, $component18);

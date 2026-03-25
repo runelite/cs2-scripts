@@ -1,0 +1,76 @@
+// 6040
+[clientscript,bcs_burner_init](component $com_bcs_burner_meter1_up0, component $com_bcs_burner_meter1_down1, component $com_bcs_burner_meter2_up2, component $com_bcs_burner_meter2_down3, component $com_bcs_burner_meter3_up4, component $com_bcs_burner_meter3_down5, component $com_bcs_burner_meter_16, component $com_bcs_burner_meter_27, component $com_bcs_burner_meter_38, component $com_bcs_burner_result_meter9, component $com_bcs_burner_fire10)
+if_setonvartransmit("bcs_burner_update($com_bcs_burner_meter_16, $com_bcs_burner_meter_27, $com_bcs_burner_meter_38, $com_bcs_burner_result_meter9, $com_bcs_burner_fire10){bcs_burner}", $com_bcs_burner_result_meter9);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = 3, 
+	6 = -3, 
+	7 = 0, 
+	8 = 1, 
+	9 = 1
+)", $com_bcs_burner_meter1_up0);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = -3, 
+	6 = 3, 
+	7 = 0, 
+	8 = 1, 
+	9 = 0
+)", $com_bcs_burner_meter1_down1);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = -3, 
+	6 = 3, 
+	7 = -3, 
+	8 = 2, 
+	9 = 1
+)", $com_bcs_burner_meter2_up2);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = 3, 
+	6 = -3, 
+	7 = 3, 
+	8 = 2, 
+	9 = 0
+)", $com_bcs_burner_meter2_down3);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = -3, 
+	6 = 0, 
+	7 = 3, 
+	8 = 3, 
+	9 = 1
+)", $com_bcs_burner_meter3_up4);
+if_setonop("script6041(
+	0 = $com_bcs_burner_meter_16, 
+	1 = $com_bcs_burner_meter_27, 
+	2 = $com_bcs_burner_meter_38, 
+	3 = $com_bcs_burner_result_meter9, 
+	4 = $com_bcs_burner_fire10, 
+	5 = 3, 
+	6 = 0, 
+	7 = -3, 
+	8 = 3, 
+	9 = 0
+)", $com_bcs_burner_meter3_down5);
+~bcs_burner_update($com_bcs_burner_meter_16, $com_bcs_burner_meter_27, $com_bcs_burner_meter_38, $com_bcs_burner_result_meter9, $com_bcs_burner_fire10);

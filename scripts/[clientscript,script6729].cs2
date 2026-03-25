@@ -85,7 +85,7 @@ if_sethide(false, toa_partydetails:back);
 ~toa_partydetails_back_button(toa_partydetails:back, "Back", toa_partydetails:pausebuttons, enum_4792, -1);
 ~script6749(toa_partydetails:invocations_content, toa_partydetails:invocations_scrollbar, $int5, $int6, $int7, $int0, toa_partydetails:tooltip);
 ~toa_partydetails_summary(toa_partydetails:summary_content, toa_partydetails:summary_scrollbar, $int5, $int6, $int7, $int3);
-~script6730($int4, $int0, $int1, $int5, $int6, $int7);
+~toa_partydetails_bottom_modify($int4, $int0, $int1, $int5, $int6, $int7);
 if ($int4 = 0 | $int4 = 1) {
 	if_setontimer("toa_partydetails_autorefresh(toa_partydetails:universe, toa_partydetails:pausebuttons, toa_partydetails:refresh, clientclock)", toa_partydetails:universe);
 }

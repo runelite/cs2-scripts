@@ -15,9 +15,9 @@ if ($obj5 = null) {
 	return;
 }
 def_obj $obj6 = inv_getobj(inv_player_temp, $dropsubid3);
-if (cc_find($drop0, $dropsubid3) = ^true) {
+if (cc_find($drop0, $dropsubid3) = true) {
 	~shared_bank_side_drawitem($obj5, inv_getnum(inv_player_temp, $comsubid2), $drop0);
 }
-if (cc_find($drop0, $comsubid2) = ^true) {
+if (cc_find($drop0, $comsubid2) = true) {
 	~shared_bank_side_drawitem($obj6, inv_getnum(inv_player_temp, $dropsubid3), $drop0);
 }

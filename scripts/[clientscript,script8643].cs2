@@ -14,7 +14,7 @@ def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
-def_int $int14 = ~script8998($int0, ~script9010(~script9015($int0)), %ironman);
+def_int $int14 = ~script8998($int0, ~sailing_boat_from_id(~sailing_boat_get_type($int0)), %ironman);
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_obj $obj17 = null;
@@ -31,7 +31,7 @@ if_sethide(false, $component1);
 if ($inv18 = null) {
 	return;
 }
-~steelborder($component4, "<~script9086($int0)>'s Cargo Hold", 1);
+~steelborder($component4, "<~sailing_boat_get_name($int0)>'s Cargo Hold", 1);
 $int12 = ~thinbox_light($component3, $int12);
 cc_create($component3, ^iftype_rectangle, $int12, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -39,7 +39,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
 cc_settrans(245);
-$int16 = ~script8872($anyobj0, $anyobj1, $inv18, null, 0, $int19);
+$int16 = ~sailing_boat_cargohold_sort_list($anyobj0, $anyobj1, $inv18, null, 0, $int19);
 while ($int20 < $int16) {
 	$obj17 = inv_getobj($inv18, $intarray1($int20));
 	if ($obj17 ! null) {

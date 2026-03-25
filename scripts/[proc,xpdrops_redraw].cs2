@@ -14,7 +14,7 @@ if_settextfont($graphic8, $com_xp_drops_counter3);
 def_int $int11 = 0;
 def_component $component12 = enum(int, component, enum_1163, $int11);
 while ($component12 ! null) {
-	if (cc_find($component12, 0) = ^true) {
+	if (cc_find($component12, 0) = true) {
 		cc_setcolour(enum(int, int, enum_1169, %xpdrops_colour));
 		~xpdrops_setdropsize($component12, $int9, $fontmetrics7, $graphic8, cc_gettext);
 	}

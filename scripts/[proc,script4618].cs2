@@ -17,3 +17,6 @@ gameoption_set(^gameoption_haptic_on_minimenu_entry_hover, %option_haptic_on_min
 gameoption_set(^gameoption_minimenu_long_press_time, %option_minimenu_long_press_time);
 ~settings_chat_timestamps;
 deviceoption_set(22, 0);
+if (~on_mobile = true & ~script7456(27) < ~script3333) {
+	~setdeviceoption(27, 400);
+}

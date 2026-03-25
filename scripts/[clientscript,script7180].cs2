@@ -7,7 +7,7 @@ switch_int (%option_loottracker_display_group_mode) {
 	case 1 :
 		$int3 = 2;
 }
-def_component $component4 = ~script4031($int3, $int1);
+def_component $component4 = ~loottracker_get_component($int3, $int1);
 def_obj $obj5 = null;
 def_int $int6 = -1;
 def_int $int7 = -1;
@@ -33,5 +33,5 @@ switch_int ($opindex0) {
 		mes("<oc_name($obj5)> x <tostring($int6)> <br>GE: <$string1> <br>HA: <$string0>");
 	case 2 :
 		~script7199($obj5);
-		~script7133;
+		~loottracker_ui_redraw_display_full;
 }

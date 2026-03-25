@@ -8,7 +8,7 @@ if ($obj8 = null) {
 	return;
 }
 if (~bankmain_searching = 1) {
-	if (cc_find($drop1, $comsubid2) = ^true) {
+	if (cc_find($drop1, $comsubid2) = true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int6, calc(clientclock + 10))");
 	}
@@ -16,10 +16,10 @@ if (~bankmain_searching = 1) {
 }
 def_obj $obj9 = inv_getobj(inv_group_temp, $dropsubid4);
 if (%bank_insertmode = 0 | $dropsubid4 = calc($comsubid2 + 1) | $dropsubid4 = calc($comsubid2 - 1) | $obj9 = null) {
-	if (cc_find($drop1, $dropsubid4) = ^true) {
+	if (cc_find($drop1, $dropsubid4) = true) {
 		~shared_bank_drawitem($obj8, inv_getnum(inv_group_temp, $comsubid2), $comsubid5, $component0, $drop1, $component7);
 	}
-	if (cc_find($drop1, $comsubid2) = ^true) {
+	if (cc_find($drop1, $comsubid2) = true) {
 		~shared_bank_drawitem($obj9, inv_getnum(inv_group_temp, $dropsubid4), $comsubid5, $component0, $drop1, $component7);
 	}
 	return;
@@ -29,7 +29,7 @@ def_int $int11 = -1;
 if ($dropsubid4 < $comsubid2) {
 	$dropsubid10 = $comsubid2;
 	while ($dropsubid10 > $dropsubid4) {
-		if (cc_find($drop1, $dropsubid10) = ^true) {
+		if (cc_find($drop1, $dropsubid10) = true) {
 			$int11 = calc($dropsubid10 - 1);
 			~shared_bank_drawitem(inv_getobj(inv_group_temp, $int11), inv_getnum(inv_group_temp, $int11), $comsubid5, $component0, $drop1, $component7);
 		}
@@ -38,13 +38,13 @@ if ($dropsubid4 < $comsubid2) {
 } else {
 	$dropsubid10 = $comsubid2;
 	while ($dropsubid10 < $dropsubid4) {
-		if (cc_find($drop1, $dropsubid10) = ^true) {
+		if (cc_find($drop1, $dropsubid10) = true) {
 			$int11 = calc($dropsubid10 + 1);
 			~shared_bank_drawitem(inv_getobj(inv_group_temp, $int11), inv_getnum(inv_group_temp, $int11), $comsubid5, $component0, $drop1, $component7);
 		}
 		$dropsubid10 = calc($dropsubid10 + 1);
 	}
 }
-if (cc_find($drop1, $dropsubid4) = ^true) {
+if (cc_find($drop1, $dropsubid4) = true) {
 	~shared_bank_drawitem($obj8, inv_getnum(inv_group_temp, $comsubid2), $comsubid5, $component0, $drop1, $component7);
 }

@@ -27,9 +27,9 @@ if (%buff_bar_hidden = 1) {
 while ($int6 < $int8 & $int10 < $int9) {
 	$struct3 = enum(int, struct, $enum7, $int6);
 	$comsubid4 = struct_param($struct3, param_1275);
-	if (cc_find($component1, $comsubid4) = ^true) {
+	if (cc_find($component1, $comsubid4) = true) {
 		$int5 = cc_getcolour;
-		if (~script5946($struct3, $int5) = 1) {
+		if (~buff_bar_buff_should_display($struct3, $int5) = 1) {
 			$string0 = cc_gettext;
 			$string1 = cc_getopbase;
 			~script5947($struct3, $string0, $string1, $int10);

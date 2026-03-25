@@ -21,7 +21,7 @@ def_int $int10 = 0;
 	7 = $int9, 
 	8 = $int10
  = ~prayer_overrides;
-if (%prayer_filter_blocklacklevel = 1 & ~script4547($obj0, $int1) = 0) {
+if (%prayer_filter_blocklacklevel = 1 & ~prayer_isavailable_lvl($obj0, $int1) = 0) {
 	return(0);
 }
 if (%prayer_filter_blocklocked = 1 & ~prayer_isavailable_req(
@@ -40,7 +40,7 @@ if (%prayer_filter_blocklocked = 1 & ~prayer_isavailable_req(
 if (%prayer_filter_blockhealing = 1 & oc_param($obj0, param_1758) = 1) {
 	return(0);
 }
-if ($obj8 ! null & %prayer_filter_blocklowtier = 1 & (%prayer_filter_allowcombinedtier = 1 | oc_param($obj8, param_1759) = oc_param($obj0, param_1759)) & ~script4547($obj8, $int1) = 1 & ~prayer_isavailable_req(
+if ($obj8 ! null & %prayer_filter_blocklowtier = 1 & (%prayer_filter_allowcombinedtier = 1 | oc_param($obj8, param_1759) = oc_param($obj0, param_1759)) & ~prayer_isavailable_lvl($obj8, $int1) = 1 & ~prayer_isavailable_req(
 	0 = $obj8, 
 	1 = $boolean6, 
 	2 = $int2, 

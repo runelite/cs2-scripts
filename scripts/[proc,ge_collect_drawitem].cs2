@@ -2,7 +2,7 @@
 [proc,ge_collect_drawitem](int $int0, inv $inv1, component $component2, int $comsubid3, component $com_ge_collect_collect_inv4, component $com_ge_collect_collect_bank5)
 def_graphic $graphic6 = "ge_itembackdrop,0";
 def_graphic $graphic7 = "ge_itembackdrop,1";
-if (.cc_find($component2, $comsubid3) = ^true) {
+if (.cc_find($component2, $comsubid3) = true) {
 	.cc_setgraphic($graphic6);
 }
 def_obj $obj8 = inv_getobj($inv1, $int0);

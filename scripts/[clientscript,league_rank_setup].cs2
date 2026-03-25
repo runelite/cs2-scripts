@@ -1,0 +1,8 @@
+// 727
+[clientscript,league_rank_setup](component $com_league_rank_close_button0, int $com_league_rank_league_btn_menu1, int $com_league_rank_league_menu_frame2, int $com_league_rank_league_menu_overlay3)
+sound_synth(interface_select1, 1, 0);
+~leagues_close_button($com_league_rank_close_button0, 0, 0);
+def_int $int4 = ~steelborder(league_rank:frame, "League Ranks", 1);
+if (cc_find(league_rank:frame, 1) = true) {
+	cc_setcolour(~league_summary_get_colour);
+}

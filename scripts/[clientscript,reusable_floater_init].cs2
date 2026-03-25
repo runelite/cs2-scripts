@@ -1,0 +1,11 @@
+// 9134
+[clientscript,reusable_floater_init](component $com_reusable_floater_universe0)
+def_int $int1 = 0;
+switch_int ($int1) {
+	case 0 :
+		~dynamic_builders_demo($com_reusable_floater_universe0);
+	case default :
+		if (~rental_world = 1) {
+			~create_filler($com_reusable_floater_universe0, ^red, "reusable_floater");
+		}
+}

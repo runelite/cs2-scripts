@@ -1,0 +1,24 @@
+// 1827
+[clientscript,sanity_init](component $com_sanity_dodger0, component $com_sanity_overlay1, int $int2)
+def_component $component3 = sanity:universe;
+if_setontimer("responsive_interface_scaler($component3, -1)", $component3);
+if_setonresize("sanity_init($com_sanity_dodger0, $com_sanity_overlay1, 0)", $component3);
+def_int $int4 = 135;
+switch_int (%varcint988) {
+	case 1 :
+		$int4 = 140;
+	case 2 :
+		$int4 = 180;
+	case 3 :
+		$int4 = 250;
+}
+def_int $int5 = 0;
+if ($int4 ! if_getwidth(sanity:overlay)) {
+	$int5 = 1;
+}
+if_setsize($int4, 50, ^setsize_abs, ^setsize_abs, sanity:overlay);
+~script4729($com_sanity_dodger0, $com_sanity_overlay1, setbit(setbit(52968, 12), 13), ^setpos_abs_left, ^setpos_abs_top, 1);
+if_setonvartransmit("sanity_update{whisperer}", sanity:sanity_bar);
+if ($int2 = 1 | $int5 = 1) {
+	~sanity_update_bar(100, %sanity, sanity:sanity_percentage, sanity:sanity_bar_foreground, sanity:sanity_bar, sanity:sanity_icon, 1);
+}

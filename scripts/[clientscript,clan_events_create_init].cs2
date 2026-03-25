@@ -15,6 +15,6 @@ if (%clans_event_edit_menu_slot > 0) {
 	if_sethide(true, $com_clans_events_create_delete12);
 }
 def_int $comsubid13 = ~steelborder($com_clans_events_create_frame1, "", 0);
-if (%clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true & cc_find($com_clans_events_create_frame1, $comsubid13) = ^true) {
+if (%clan_affinitystatus = 3 & activeclansettings_find_affined(0) = true & cc_find($com_clans_events_create_frame1, $comsubid13) = true) {
 	cc_settext("<activeclansettings_getclanname>: Events");
 }

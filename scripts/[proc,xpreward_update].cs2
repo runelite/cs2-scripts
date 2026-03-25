@@ -7,7 +7,7 @@ if ($stat4 ! null & ~script3809(%if1, %if2, $stat4, 0) = 0) {
 def_string $string0 = "You need to choose which skill you wish to be advanced.";
 if ($stat4 ! null) {
 	$string0 = "Confirm: <enum(stat, string, enum_680, $stat4)>";
-	if (cc_find($component2, $int3) = ^true) {
+	if (cc_find($component2, $int3) = true) {
 		cc_setcolour(0xff981f);
 		cc_settext($string0);
 	}
@@ -15,7 +15,7 @@ if ($stat4 ! null) {
 	if_setonmouseleave("cc_colour_swapper($component2, $int3, 0xff981f)", $component2);
 	if_setonop("xpreward_confirm($int0, $component1, $component2, $string0)", $component2);
 } else {
-	if (cc_find($component2, $int3) = ^true) {
+	if (cc_find($component2, $int3) = true) {
 		cc_setcolour(0x9f9f9f);
 		cc_settext("Confirm");
 	}
@@ -56,7 +56,7 @@ while ($int8 <= 24) {
 				cc_settrans(220);
 				$comsubid9 = 0;
 				while ($comsubid9 < $comsubid5) {
-					if (cc_find($component6, $comsubid9) = ^true) {
+					if (cc_find($component6, $comsubid9) = true) {
 						cc_settrans(220);
 					}
 					$comsubid9 = calc($comsubid9 + 1);

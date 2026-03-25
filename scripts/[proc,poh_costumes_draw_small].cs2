@@ -56,7 +56,7 @@ if ($enum23 ! null) {
 		$int22 = 0;
 	}
 }
-if (cc_find($component11, calc($int13 + 3)) = ^true) {
+if (cc_find($component11, calc($int13 + 3)) = true) {
 	cc_setsize(calc($int3 - 3), 20, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int12, $int0, ^setpos_abs_left, ^setpos_abs_top);
 	if ($int21 = 1) {
@@ -67,7 +67,7 @@ if (cc_find($component11, calc($int13 + 3)) = ^true) {
 	cc_settextfont($graphic8);
 }
 while ($int14 < $int15) {
-	if (cc_find($component11, $int14) = ^true) {
+	if (cc_find($component11, $int14) = true) {
 		cc_sethide(true);
 		cc_clearops;
 		cc_setontimer(null);
@@ -80,14 +80,14 @@ if ($int18 > 0) {
 } else {
 	$int24 = calc($int24 + 37 * $int19);
 }
-if (cc_find($component11, $int13) = ^true) {
+if (cc_find($component11, $int13) = true) {
 	if ($int2 = 1) {
 		cc_setsize($int3, $int24, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, $int0, ^setpos_abs_right, ^setpos_abs_top);
 	} else {
 		cc_setsize($int3, $int24, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top);
-		if (.cc_find($component11, $int1) = ^true) {
+		if (.cc_find($component11, $int1) = true) {
 			~poh_costumes_rightborder($int3, $int24, $int0);
 		} else {
 			.cc_create($component11, ^iftype_graphic, $int1, false);
@@ -103,7 +103,7 @@ if (cc_find($component11, $int13) = ^true) {
 			cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 0, 120)");
 			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 40, null)");
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 120, null)");
-			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
+			if (.cc_find($component11, calc($int13 + 1)) = true) {
 				.cc_sethide(false);
 				if ($int2 = 1) {
 					.cc_setposition(3, calc($int0 + 5), ^setpos_abs_right, ^setpos_abs_top);
@@ -116,7 +116,7 @@ if (cc_find($component11, $int13) = ^true) {
 			cc_setonop(null);
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
-			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
+			if (.cc_find($component11, calc($int13 + 1)) = true) {
 				.cc_sethide(true);
 			}
 		}
@@ -128,7 +128,7 @@ if (cc_find($component11, $int13) = ^true) {
 			cc_setonop("poh_costumes_opgraphic(event_op, event_com, event_comsubid, 120, 0)");
 			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 80, null)");
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
-			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
+			if (.cc_find($component11, calc($int13 + 1)) = true) {
 				.cc_sethide(false);
 				if ($int2 = 1) {
 					.cc_setposition(3, calc($int0 + 5), ^setpos_abs_right, ^setpos_abs_top);
@@ -141,14 +141,14 @@ if (cc_find($component11, $int13) = ^true) {
 			cc_setonop(null);
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
-			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
+			if (.cc_find($component11, calc($int13 + 1)) = true) {
 				.cc_sethide(true);
 			}
 		}
 	}
 	cc_setontimer(null);
 }
-if (cc_find($component11, calc($int13 + 2)) = ^true) {
+if (cc_find($component11, calc($int13 + 2)) = true) {
 	if ($int2 = 1) {
 		if ($int6 < calc($int7 - 1)) {
 			$int0 = calc($int0 + $int24 + 3);

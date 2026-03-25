@@ -3,7 +3,7 @@
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
-if ($comsubid6 ! -1 & cc_find($component5, $comsubid6) = ^true) {
+if ($comsubid6 ! -1 & cc_find($component5, $comsubid6) = true) {
 	$int7 = calc((cc_getmodelangle_x + $int2) % 2048);
 	if ($int7 < 0) {
 		$int7 = calc($int7 + 2048);

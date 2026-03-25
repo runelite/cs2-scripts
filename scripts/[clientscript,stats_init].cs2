@@ -75,7 +75,7 @@ if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .c
 	24 = deadman_xp_smithing
 }", $component0);
 ~stats_setlevels($stat4, $component0, $string0, $com_stats_tooltip1);
-if (~script8950($stat4) = false) {
+if (~restrict_content_skill($stat4) = false) {
 	if (~league_world = 0 & ($boolean6 = false | map_members = true | %varcint103 = 1)) {
 		return;
 	} else if (%league_type ! 3) {

@@ -6,7 +6,7 @@ def_int $int6 = if_getheight(xptracker:tracker_container);
 def_int $int7 = if_getscrollheight(xptracker:tracker_container);
 ~script5447($comsubid1, $int0, $stat3);
 $int0 = calc($int0 - $int5);
-if (cc_find(xptracker:tracker_border, $comsubid1) = ^true) {
+if (cc_find(xptracker:tracker_border, $comsubid1) = true) {
 	if ($int0 < 5) {
 		$int4 = -5;
 	} else if ($int0 < 15) {

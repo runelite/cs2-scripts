@@ -1,7 +1,7 @@
 // 3462
 [clientscript,gravestone_generic_init](component $com_gravestone_generic_universe0, component $com_gravestone_generic_frame1, component $com_gravestone_generic_close2, component $com_gravestone_generic_content3, component $com_gravestone_generic_resize_preview4, component $com_gravestone_generic_free_container5, component $com_gravestone_generic_freeitems6, component $com_gravestone_generic_freescrollbar7, component $com_gravestone_generic_freebutton8, component $com_gravestone_generic_freebutton_gfx9, component $com_gravestone_generic_pay_container10, component $com_gravestone_generic_fee11, component $com_gravestone_generic_payitems12, component $com_gravestone_generic_payscrollbar13, component $com_gravestone_generic_paybutton14, component $com_gravestone_generic_paybutton_gfx15, int $com_gravestone_generic_incinerator16, component $com_gravestone_generic_info17)
 def_int $int18 = ~steelborder($com_gravestone_generic_frame1, ~gravestone_generic_title, 3);
-if (cc_find($com_gravestone_generic_frame1, $int18) = ^true) {
+if (cc_find($com_gravestone_generic_frame1, $int18) = true) {
 	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comsubid){gravestone}");
 }
 def_int $int19 = 0;

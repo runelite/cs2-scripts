@@ -1,8 +1,8 @@
 // 3902
-[proc,settings_button_choose_transmit](int $int0, struct $struct1, component $component2, int $comsubid3, int $int4, int $comsubid5)
+[proc,settings_button_choose_transmit](int $int0, struct $struct1, component $component2, int $comsubid3, int $int4, int $comsubid5, int $int6)
 switch_int ($int0) {
 	case 167 :
-		cc_setonvartransmit("settings_button_on_transmit($struct1, $component2, $comsubid3, $int4, $comsubid5){settings_varp_ehc_1}");
+		cc_setonvartransmit("settings_button_on_transmit($struct1, $component2, $comsubid3, $int4, $comsubid5, $int6){settings_varp_ehc_1}");
 	case default :
-		cc_setonvartransmit("settings_button_on_transmit($struct1, $component2, $comsubid3, $int4, $comsubid5){settings_tracking, chat_filter_assist}");
+		cc_setonvartransmit("settings_button_on_transmit($struct1, $component2, $comsubid3, $int4, $comsubid5, $int6){settings_tracking, chat_filter_assist}");
 }

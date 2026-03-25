@@ -6,7 +6,7 @@ def_int $int3 = 0;
 def_int $int4 = inv_size(inv);
 def_string $string0 = db_getfield($dbrow0, omnishop_shop_data:omnishop_shop_side_op_text, 0);
 while ($int3 < $int4) {
-	if (cc_find($component1, $int3) = ^true) {
+	if (cc_find($component1, $int3) = true) {
 		cc_clearops;
 		cc_setontimer(null);
 		cc_setposition(calc($int3 % 4 * 42), calc($int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);

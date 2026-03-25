@@ -7,13 +7,13 @@ def_int $colour6 = 0xbb0000;
 if ($int4 > 0) {
 	$colour6 = 0x20df20;
 }
-if (cc_find($component0, $int3) = ^true & .cc_find($component0, calc($int3 + 1)) = ^true) {
+if (cc_find($component0, $int3) = true & .cc_find($component0, calc($int3 + 1)) = true) {
 	cc_settext($string0);
 	cc_setcolour($colour6);
 	.cc_setcolour($colour6);
 	.cc_settext("<tostring($int4)>/<tostring($int2)>");
 }
-if (cc_find($component0, calc($int3 + 2)) = ^true) {
+if (cc_find($component0, calc($int3 + 2)) = true) {
 	cc_setobject_nonum($namedobj5, $int4);
 }
 if_setopbase("<col=ff9040><oc_name($namedobj5)></col>", $component0);

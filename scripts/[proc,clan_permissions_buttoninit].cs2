@@ -14,7 +14,7 @@ def_int $int13 = -1;
 def_int $comsubid14 = -1;
 def_int $comsubid15 = -1;
 def_int $comsubid16 = -1;
-if (.cc_find($com_clans_permissions_list_contents8, $comsubid5) = ^true) {
+if (.cc_find($com_clans_permissions_list_contents8, $comsubid5) = true) {
 	.cc_setsize($int3, $int12, ^setsize_abs, ^setsize_abs);
 	.cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setop(1, removetags(~string_findandreplace($string0, "<br>", " ")));

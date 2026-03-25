@@ -1,0 +1,14 @@
+// 2095
+[clientscript,hotkey_settings_new_init]
+if (%varcint1209 < 0) {
+	%varcint1209 = 0;
+}
+%varcint1208 = -1;
+%osm_hotkey_settings_loadout_viewed = 0;
+def_component $component0 = hotkey_settings_new:infinity;
+def_int $int1 = 58392577;
+def_int $int2 = 58392578;
+def_int $int3 = 58392579;
+if_setontimer("responsive_interface_scaler($component0, -1)", $component0);
+if_setonresize("hotkey_settings_new_resize", $component0);
+~hotkey_settings_new_setup;

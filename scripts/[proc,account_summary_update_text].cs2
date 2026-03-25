@@ -5,9 +5,9 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	cc_settext($string0);
-	if ($comsubid2 ! -1 & .cc_find($component0, $comsubid2) = ^true) {
+	if ($comsubid2 ! -1 & .cc_find($component0, $comsubid2) = true) {
 		$int5 = .cc_getwidth;
 		$int6 = parawidth(cc_gettext, if_getwidth($component0), $fontmetrics4);
 		$int7 = calc(if_getwidth($component0) / 2);

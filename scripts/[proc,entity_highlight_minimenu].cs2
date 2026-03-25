@@ -1,38 +1,120 @@
-// 5955
-[proc,entity_highlight_minimenu](int $int0)
-def_int $int1 = ~max(minimenu_hovered_index, 0);
-def_entityoverlay $entityoverlay2 = null;
-switch_int (minimenu_typeat($int1)) {
-	case 2 :
-		if (minimenu_findnpcat($int1) = true) {
-			~entity_highlight_active_npc($int0);
-			if ($int0 = 4) {
-				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~interact_entity_highlight_pulse_start($entityoverlay2);
-			}
-		}
-	case 3 :
-		if (minimenu_findlocat($int1) = true) {
-			~entity_highlight_active_loc($int0);
-			if ($int0 = 4) {
-				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~interact_entity_highlight_pulse_start($entityoverlay2);
-			}
-		}
-	case 4 :
-		if (minimenu_findobjat($int1) = true) {
-			~entity_highlight_active_obj($int0);
-			if ($int0 = 4) {
-				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~interact_entity_highlight_pulse_start($entityoverlay2);
-			}
-		}
-	case 6 :
-		if (minimenu_findplayerat($int1) = true) {
-			~entity_highlight_active_player($int0);
-			if ($int0 = 4) {
-				$entityoverlay2 = entityoverlay_create_player(0, 0, 1, 1, 0);
-				~interact_entity_highlight_pulse_start($entityoverlay2);
-			}
-		}
-}
+java.lang.IllegalStateException: Opcode 7203 in script 5955 not implemented
+
+.id                       5955
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   7460                  
+   iconst                 0
+   invoke                 1045
+   istore                 1
+   iconst                 -1
+   istore                 2
+   iload                  1
+   7451                  
+   switch                
+      2: LABEL10
+      3: LABEL31
+      4: LABEL52
+      6: LABEL73
+   jump                   LABEL93
+LABEL10:
+   iload                  1
+   7453                  
+   iconst                 1
+   if_icmpeq              LABEL15
+   jump                   LABEL30
+LABEL15:
+   iload                  0
+   invoke                 5951
+   iload                  0
+   iconst                 4
+   if_icmpeq              LABEL21
+   jump                   LABEL30
+LABEL21:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7203                  
+   istore                 2
+   iload                  2
+   invoke                 5961
+LABEL30:
+   jump                   LABEL93
+LABEL31:
+   iload                  1
+   7454                  
+   iconst                 1
+   if_icmpeq              LABEL36
+   jump                   LABEL51
+LABEL36:
+   iload                  0
+   invoke                 5952
+   iload                  0
+   iconst                 4
+   if_icmpeq              LABEL42
+   jump                   LABEL51
+LABEL42:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7203                  
+   istore                 2
+   iload                  2
+   invoke                 5961
+LABEL51:
+   jump                   LABEL93
+LABEL52:
+   iload                  1
+   7455                  
+   iconst                 1
+   if_icmpeq              LABEL57
+   jump                   LABEL72
+LABEL57:
+   iload                  0
+   invoke                 5953
+   iload                  0
+   iconst                 4
+   if_icmpeq              LABEL63
+   jump                   LABEL72
+LABEL63:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7203                  
+   istore                 2
+   iload                  2
+   invoke                 5961
+LABEL72:
+   jump                   LABEL93
+LABEL73:
+   iload                  1
+   7456                  
+   iconst                 1
+   if_icmpeq              LABEL78
+   jump                   LABEL93
+LABEL78:
+   iload                  0
+   invoke                 5954
+   iload                  0
+   iconst                 4
+   if_icmpeq              LABEL84
+   jump                   LABEL93
+LABEL84:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7203                  
+   istore                 2
+   iload                  2
+   invoke                 5961
+LABEL93:
+   return                

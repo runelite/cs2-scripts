@@ -4,7 +4,7 @@ def_obj $obj3 = null;
 def_int $int4 = $int0;
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);
-	if (cc_find($component1, $int4) = ^true) {
+	if (cc_find($component1, $int4) = true) {
 		$obj3 = inv_getobj($inv2, $int4);
 		if ($obj3 ! null) {
 			cc_sethide(false);

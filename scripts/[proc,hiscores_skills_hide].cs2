@@ -1,0 +1,5 @@
+// 7476
+[proc,hiscores_skills_hide]
+cc_deleteall(hiscores:hiscores_skills);
+if_setsize(0, 0, ^setsize_minus, ^setsize_abs, hiscores:hiscores_skills);
+~hiscores_content_position;

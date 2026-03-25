@@ -12,7 +12,7 @@ if ($obj3 = null) {
 cc_sethide(false);
 .cc_sethide(true);
 cc_setobject($obj3, inv_getnum(worn, $int1));
-if_setopbase("<col=ff9040><~script1787($obj3)></col>", $component0);
+if_setopbase("<col=ff9040><~inventory_name_override($obj3)></col>", $component0);
 if (%colosseum_sol_grapple_pending = 1) {
 	if_setop(1, "Defend", $component0);
 	if_setoutline(2, $component0);

@@ -1,0 +1,7 @@
+// 4562
+[clientscript,bcs_pillar_init](component $com_bcs_pillar_rotate_clockwise0, component $com_bcs_pillar_rotate_anticlockwise1, component $com_bcs_pillar_confirm2, component $com_bcs_pillar_emblem3)
+~bcs_pillar_initbutton_rotate($com_bcs_pillar_rotate_clockwise0, "arrows_curved,0", "Rotate Clockwise", 1, $com_bcs_pillar_emblem3);
+~bcs_pillar_initbutton_rotate($com_bcs_pillar_rotate_anticlockwise1, "arrows_curved,3", "Rotate Anticlockwise", -1, $com_bcs_pillar_emblem3);
+~bcs_pillar_initbutton_confirm($com_bcs_pillar_confirm2, null, "Confirm");
+if_setonvartransmit("script6031($com_bcs_pillar_emblem3){bcs_primary}", $com_bcs_pillar_emblem3);
+~script6032($com_bcs_pillar_emblem3);

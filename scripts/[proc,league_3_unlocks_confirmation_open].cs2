@@ -15,7 +15,7 @@ if (%league_3_unlocks_current_tab = 0) {
 def_string $string0 = struct_param($struct2, param_1437);
 if (%league_3_unlocks_current_tab = 2) {
 	$graphic3 = "side_icons,2";
-	$int4 = ~script5832(struct_param($struct2, param_1444));
+	$int4 = ~league_3_quest_get_cost(struct_param($struct2, param_1444));
 } else {
 	$graphic3 = struct_param($struct2, param_1441);
 	$int4 = struct_param($struct2, param_1442);

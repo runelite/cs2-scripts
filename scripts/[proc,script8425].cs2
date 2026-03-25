@@ -1,12 +1,12 @@
 // 8425
 [proc,script8425](int $int0)(int)
 def_component $component1 = cc_getlayer;
-def_int $int2 = cc_getid;
+def_int $comsubid2 = cc_getid;
 def_int $int3 = cc_param(param_2368);
 def_int $int4 = cc_param(param_2363);
 def_int $int5 = scale($int0, 100, calc(100 - 35));
-if_children_find(2, $component1, $int2);
-def_int $int6 = if_children_filter(param_2365, 500, int);
+if_query(2, $component1, $comsubid2);
+def_int $int6 = if_query_refine(param_2365, 500, int);
 def_int $int7 = $int6;
 def_int $int8 = 0;
 def_int $int9 = 0;
@@ -24,15 +24,15 @@ def_int $int13 = calc($int12 - 2 * 2);
 def_int $int14 = calc($int0 - $int11 * $int7 - $int10);
 def_int $int15 = calc($int14 - 2 * 2);
 def_int $int16 = 1;
-while (if_children_findnext = true) {
+while (if_query_next = true) {
 	$int16 = max($int16, paraheight(~script8355, $int13, p11_full));
 }
 def_int $int17 = calc($int16 * 13);
 def_int $int18 = calc($int17 + 2 * 2);
 def_int $int19 = calc($int14 + 1);
-if_children_find(2, $component1, $int2);
-if_children_filter(param_2365, 500, int);
-while (if_children_findnext = true) {
+if_query(2, $component1, $comsubid2);
+if_query_refine(param_2365, 500, int);
+while (if_query_next = true) {
 	cc_setposition($int19, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int12, $int18, ^setsize_abs, ^setsize_abs);
 	$int19 = calc($int19 + $int11);
@@ -40,9 +40,9 @@ while (if_children_findnext = true) {
 if ($int4 ! 0) {
 	cc_setsize($int9, $int18, ^setsize_abs, ^setsize_abs);
 }
-if_children_find(2, $component1, $int2);
-if_children_filter(param_2365, 502, int);
-def_anyobj $anyobj0 = if_children_subids;
+if_query(2, $component1, $comsubid2);
+if_query_refine(param_2365, 502, int);
+def_anyobj $anyobj0 = if_query_ids;
 def_int $int20 = -1;
 def_int $int21 = -1;
 def_int $int22 = $int18;
@@ -57,11 +57,11 @@ while ($int23 < $int24) {
 	$int18 = calc($int17 + 2 * 2);
 	cc_setposition(0, $int22, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int14, $int18, ^setsize_abs, ^setsize_abs);
-	if_children_find(2, $component1, $int2);
-	if_children_filter(param_2365, 504, int);
-	if_children_filter(param_2363, $int23, int);
+	if_query(2, $component1, $comsubid2);
+	if_query_refine(param_2365, 504, int);
+	if_query_refine(param_2363, $int23, int);
 	$int19 = calc($int14 + 1);
-	while (if_children_findnext = true) {
+	while (if_query_next = true) {
 		cc_setposition($int19, $int22, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize($int12, $int18, ^setsize_abs, ^setsize_abs);
 		$int19 = calc($int19 + $int11);
@@ -71,7 +71,7 @@ while ($int23 < $int24) {
 	}
 	$int22, $int23 = calc($int22 + $int18), calc($int23 + 1);
 }
-if (if_find_child($component1, param_2365, 201, param_2368, $int3) = true) {
+if (cc_find_param($component1, param_2365, 201, param_2368, $int3) = true) {
 	$int22 = calc($int22 + 4);
 	$int18 = ~script8416($int0);
 	cc_setposition(0, $int22, ^setpos_abs_left, ^setpos_abs_top);

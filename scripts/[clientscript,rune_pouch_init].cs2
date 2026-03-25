@@ -23,9 +23,9 @@ while ($int9 < $int10) {
 	$int9 = calc($int9 + 1);
 }
 $int9 = ~thinstonebox($com_rune_pouch_inventory4, $int9);
-~script7873($com_rune_pouch_inventory4, $int10);
-if_setoninvtransmit("script7872($com_rune_pouch_inventory4, $int10){inv}", $com_rune_pouch_inventory4);
-if_setonvartransmit("script7872($com_rune_pouch_inventory4, $int10){millcheck_multi, roving_update_ilfeen_chant}", $com_rune_pouch_inventory4);
+~rune_pouch_drawinventory_all($com_rune_pouch_inventory4, $int10);
+if_setoninvtransmit("rune_pouch_drawinventory_all($com_rune_pouch_inventory4, $int10){inv}", $com_rune_pouch_inventory4);
+if_setonvartransmit("rune_pouch_drawinventory_all($com_rune_pouch_inventory4, $int10){millcheck_multi, roving_update_ilfeen_chant}", $com_rune_pouch_inventory4);
 cc_deleteall($com_rune_pouch_pouch3);
 $int9 = 0;
 while ($int9 < 6) {
@@ -60,8 +60,8 @@ $int9 = calc($int9 + 1);
 cc_create($com_rune_pouch_top2, ^iftype_model, $int9, false);
 def_int $comsubid22 = $int9;
 $int9 = calc($int9 + 1);
-~script7871($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3);
-if_setonvartransmit("script7870($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3){if1, league_general, league_relics}", $com_rune_pouch_frame1);
+~rune_pouch_toplayout($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3);
+if_setonvartransmit("rune_pouch_toplayout($com_rune_pouch_frame1, $comsubid20, $com_rune_pouch_top2, $comsubid21, $comsubid22, $com_rune_pouch_pouch3){if1, league_general, league_relics}", $com_rune_pouch_frame1);
 ~rune_pouch_drawpouch($com_rune_pouch_pouch3);
 if_setonvartransmit("rune_pouch_drawpouch($com_rune_pouch_pouch3){
 	0 = if1, 

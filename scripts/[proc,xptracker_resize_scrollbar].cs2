@@ -1,0 +1,15 @@
+// 4201
+[proc,xptracker_resize_scrollbar]
+if (%varcint562 > if_getheight(xptracker:tracker_container)) {
+	if_setscrollsize(0, %varcint562, xptracker:tracker_container);
+} else {
+	if_setscrollsize(0, 0, xptracker:tracker_container);
+}
+if_setscrollpos(0, max(0, %varcint1255), xptracker:tracker_container);
+def_int $int0 = 0;
+if (%varcint1255 > 0) {
+	$int0 = %varcint1255;
+} else {
+	$int0 = if_getscrolly(xptracker:tracker_container);
+}
+~scrollbar_resize(xptracker:tracker_scrollbar, xptracker:tracker_container, $int0);

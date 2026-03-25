@@ -4,7 +4,7 @@ if ($int2 = %fishing_spot_indicator_disabled & $int3 = %fishing_spot_indicator_a
 	return;
 }
 ~fishing_spot_indicator_create($entityoverlay0, $struct1, $npc_uid5, $int6, $loc7, $coord8);
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setonvartransmit("fishing_spot_indicator_vartransmit(
 		0 = $entityoverlay0, 
 		1 = $struct1, 

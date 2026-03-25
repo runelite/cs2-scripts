@@ -1,7 +1,7 @@
 // 8774
 [proc,script8774](int $int0, int $int1, component $component2, int $int3, int $colour4)(int, int)
 def_int $int5 = 6;
-def_int $int6 = ~script9040($int3);
+def_int $int6 = ~sailing_sidepanel_crew_get_slot($int3);
 def_int $int7 = 0;
 def_dbrow $dbrow8 = null;
 def_dbrow $dbrow9 = null;
@@ -19,7 +19,7 @@ cc_setcolour($colour4);
 $int0 = calc($int0 + 1);
 if ($int6 ! 0) {
 	if ($int3 ! -1) {
-		$int7 = ~script9041($int3);
+		$int7 = ~sailing_sidepanel_crew_get_ordered_position($int3);
 	}
 	$dbrow8 = ~script9050($int6);
 	if ($dbrow8 ! null) {
@@ -31,7 +31,7 @@ if ($int6 ! 0) {
 		}
 	}
 	$dbrow9 = ~script8765($int7);
-	$dbrow11 = ~script8763($dbrow9);
+	$dbrow11 = ~sailing_sidepanel_get_sidepanel_data($dbrow9);
 	$graphic12 = ~script8764($dbrow11);
 	$colour13 = ^white;
 	cc_create($component2, ^iftype_graphic, $int0, false);

@@ -3,7 +3,7 @@
 if (clientclock = $int5) {
 	return;
 }
-if (cc_find($component3, $comsubid1) = ^true & .cc_find($component3, $int2) = ^true) {
+if (cc_find($component3, $comsubid1) = true & .cc_find($component3, $int2) = true) {
 	cc_settrans(0);
 	cc_setgraphic(struct_param($struct0, param_1384));
 	.cc_setcolour(^white);

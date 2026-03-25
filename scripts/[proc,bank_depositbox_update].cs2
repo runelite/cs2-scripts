@@ -11,11 +11,11 @@ def_int $int8 = 0;
 def_int $int9 = inv_size(inv);
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
-	if (cc_find($com_bank_depositbox_inventory0, $int9) = ^true) {
+	if (cc_find($com_bank_depositbox_inventory0, $int9) = true) {
 		cc_clearops;
 		$int6, $int7 = calc($int3 + $int9 % 4 * 42), calc($int4 + $int9 / 4 * 36);
 		cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-		$int8 = ~script7796($int9);
+		$int8 = ~bank_side_locked_slot($int9);
 		~bank_depositbox_drawslot($com_bank_depositbox_inventory0, $com_bank_depositbox_item_background1, inv_getobj(inv, $int9), inv_getnum(inv, $int9), $int9, $int8);
 		if ($int5 = 1) {
 			$int2 = ~script7783($com_bank_depositbox_item_background1, $int6, $int7, $int8, $int2);

@@ -52,7 +52,7 @@ if (%varcint52 = 126) {
 	);
 }
 $int10 = $int4;
-if (cc_find($component0, $comsubid8) = ^true) {
+if (cc_find($component0, $comsubid8) = true) {
 	cc_setonstattransmit("account_summary_update_combatlevel(event_com, event_comsubid, $comsubid9, $int7, 0, $int11, p11_full){attack, strength, defence, hitpoints, prayer, magic, ranged}");
 }
 if ($int12 = 2277) {
@@ -88,7 +88,7 @@ if ($int12 = 2277) {
 		12 = 1
 	);
 }
-if (cc_find($component0, $comsubid8) = ^true) {
+if (cc_find($component0, $comsubid8) = true) {
 	cc_setonstattransmit("account_summary_update_totallevel(event_com, event_comsubid, $comsubid9, $int7, $int10, $int11, p11_full)");
 }
 $int4 = 0;
@@ -124,7 +124,7 @@ if ($int13 = 4 & $int14 = 600000000) {
 		11 = p11_full
 	);
 }
-if (cc_find($component0, $comsubid8) = ^true) {
+if (cc_find($component0, $comsubid8) = true) {
 	cc_setonstattransmit("account_summary_update_xp(event_com, event_comsubid, $comsubid9, $int7, p11_full)");
 }
 $int7 = 52;
@@ -226,7 +226,7 @@ $int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 	11 = $int3, 
 	12 = 0
 );
-if (cc_find($component1, calc($int3 - 1)) = ^true) {
+if (cc_find($component1, calc($int3 - 1)) = true) {
 	cc_setop(2, "Bosses");
 	cc_setop(3, "Tasks");
 	cc_setop(4, "Rewards");
@@ -246,12 +246,12 @@ $int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 	11 = $int3, 
 	12 = 1
 );
-if (cc_find($component1, calc($int3 - 1)) = ^true) {
+if (cc_find($component1, calc($int3 - 1)) = true) {
 	cc_setop(2, "Collection Overview");
 }
 $int7 = 24;
 def_string $string1 = "Time Played:";
-if (~league_world = 1 | ~script8214 = 1) {
+if (~league_world = 1 | ~event_world = 1) {
 	$string1 = "Account Age:";
 }
 if (%account_summary_display_playtime = 1) {

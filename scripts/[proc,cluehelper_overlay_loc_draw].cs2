@@ -1,42 +1,122 @@
-// 6505
-[proc,cluehelper_overlay_loc_draw](dbrow $dbrow0, loc $loc1, coord $coord2, obj $obj3)
-def_entityoverlay $entityoverlay4 = null;
-if (loc_find($coord2, $loc1) = true) {
-	$entityoverlay4 = entityoverlay_get_loc(5);
-	if ($entityoverlay4 = null) {
-		$entityoverlay4 = entityoverlay_create_loc(5, 1, 36, 32, 1);
-	} else {
-		cc_deleteall_entityoverlay($entityoverlay4);
-	}
-	if (if_find_entityoverlay($entityoverlay4) = ^true) {
-		cc_setonvartransmit("cluehelper_overlay_loc_transmit(
-			0 = $entityoverlay4, 
-			1 = $dbrow0, 
-			2 = $loc1, 
-			3 = $coord2, 
-			4 = $obj3, 
-			5 = %option_cluehelper_overlay_enabled, 
-			6 = %cluehelper_npc_id, 
-			7 = %cluehelper_npc_id2, 
-			8 = %cluehelper_npc_id3, 
-			9 = %cluehelper_npc_current_clue, 
-			10 = %option_cluehelper_target_highlight_enabled, 
-			11 = %option_cluehelper_enabled
-		){cluehelper_infobox_clue, option_cluehelper, cluehelper_npc_id, cluehelper_npc_id2, cluehelper_npc_id3, cluehelper_npc_current_clue}");
-	}
-	if (%option_cluehelper_enabled = 0 | ~cluehelper_overlay_npc_active = 1) {
-		highlight_loc_off($loc1, $coord2, 9, 1);
-		return;
-	}
-	if (%option_cluehelper_overlay_enabled = 1) {
-		cc_create_entityoverlay($entityoverlay4, ^iftype_graphic, 0);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setobject_nonum($obj3, 1);
-		cc_setoutline(1);
-	}
-	highlight_loc_setup(9, ^green, 2, 30, 1);
-	if (%option_cluehelper_target_highlight_enabled = 1) {
-		highlight_loc_on($loc1, $coord2, 9, 1);
-	}
-}
+java.lang.IllegalStateException: Opcode 7201 in script 6505 not implemented
+
+.id                       6505
+.int_arg_count            4
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 4
+   iload                  2
+   iload                  1
+   6803                  
+   iconst                 1
+   if_icmpeq              LABEL8
+   jump                   LABEL103
+LABEL8:
+   iconst                 5
+   7206                  
+   istore                 4
+   iload                  4
+   iconst                 -1
+   if_icmpeq              LABEL15
+   jump                   LABEL23
+LABEL15:
+   iconst                 5
+   iconst                 1
+   iconst                 36
+   iconst                 32
+   iconst                 1
+   7201                  
+   istore                 4
+   jump                   LABEL25
+LABEL23:
+   iload                  4
+   104                   
+LABEL25:
+   iload                  4
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL30
+   jump                   LABEL52
+LABEL30:
+   iconst                 6506
+   iload                  4
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   get_varbit             14189
+   get_varp               3548
+   get_varp               3549
+   get_varp               3550
+   get_varp               3547
+   get_varbit             14184
+   get_varbit             14182
+   iconst                 3546
+   iconst                 3543
+   iconst                 3548
+   iconst                 3549
+   iconst                 3550
+   iconst                 3547
+   iconst                 6
+   sconst                 "iiiiiiiiiiiiY"
+   cc_setonvartransmit   
+LABEL52:
+   get_varbit             14182
+   iconst                 0
+   if_icmpeq              LABEL59
+   invoke                 6497
+   iconst                 1
+   if_icmpeq              LABEL59
+   jump                   LABEL65
+LABEL59:
+   iload                  1
+   iload                  2
+   iconst                 9
+   iconst                 1
+   7012                  
+   return                
+LABEL65:
+   get_varbit             14189
+   iconst                 1
+   if_icmpeq              LABEL69
+   jump                   LABEL88
+LABEL69:
+   iload                  4
+   iconst                 5
+   iconst                 0
+   103                   
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setposition        
+   iload                  3
+   iconst                 1
+   cc_setobject_nonum    
+   iconst                 1
+   cc_setoutline         
+LABEL88:
+   iconst                 9
+   iconst                 65280
+   iconst                 2
+   iconst                 30
+   iconst                 1
+   7010                  
+   get_varbit             14184
+   iconst                 1
+   if_icmpeq              LABEL98
+   jump                   LABEL103
+LABEL98:
+   iload                  1
+   iload                  2
+   iconst                 9
+   iconst                 1
+   7011                  
+LABEL103:
+   return                

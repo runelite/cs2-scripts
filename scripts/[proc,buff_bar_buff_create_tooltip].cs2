@@ -18,7 +18,7 @@ if ($boolean6 = false & string_length(struct_param($struct0, param_1279)) <= 0 |
 }
 if (~on_mobile = true) {
 	if ($boolean6 = true) {
-		cc_setonclick("script1782($struct0, $component1, $int2, $component3, 512)");
+		cc_setonclick("buff_bar_show_dynamic_tooltip($struct0, $component1, $int2, $component3, 512)");
 	} else {
 		cc_setonclick("buff_bar_mobile_tooltip($component1, $int2, $component3, struct_param($struct0, param_1279), 512)");
 	}
@@ -29,7 +29,7 @@ if (~on_mobile = true) {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
 	if ($boolean6 = true) {
-		cc_setonmouserepeat("script1782($struct0, $component1, $int2, $component3, 512)");
+		cc_setonmouserepeat("buff_bar_show_dynamic_tooltip($struct0, $component1, $int2, $component3, 512)");
 	} else {
 		cc_setonmouserepeat("tooltip_mouserepeat($component1, $int2, $component3, struct_param($struct0, param_1279), 0, 512)");
 	}

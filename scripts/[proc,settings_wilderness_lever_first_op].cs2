@@ -1,0 +1,5 @@
+// 99
+[proc,settings_wilderness_lever_first_op]
+if (%wilderness_diary_any_complete ! 0) {
+	%wilderness_lever_first_op = calc(1 - %wilderness_lever_first_op);
+}

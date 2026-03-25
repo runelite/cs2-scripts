@@ -17,7 +17,7 @@ $int1 = ~helper_generic_add_title("Locations", 0);
 if ($dbrow0 = cluehelper_hotcold_cluequest_3) {
 	$int3 = enum_getoutputcount(enum_4816);
 	while ($int4 < $int3 & $int8 < $int9) {
-		if (cc_find(helper_generic:listeners, $int4) = ^true & cc_getcolour = ^black) {
+		if (cc_find(helper_generic:listeners, $int4) = true & cc_getcolour = ^black) {
 			$dbrow5 = enum(int, dbrow, enum_4816, $int4);
 			$dbrow7 = ~cluehelper_clue_target($dbrow5);
 			$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
@@ -30,7 +30,7 @@ if ($dbrow0 = cluehelper_hotcold_cluequest_3) {
 		case 0 :
 			$int3 = db_getfieldcount(cluehelper_cluetype_hotcold, cluehelper_cluetype:beginner_clues);
 			while ($int4 < $int3 & $int8 < $int9) {
-				if (cc_find(helper_generic:listeners, $int4) = ^true & cc_getcolour = ^black) {
+				if (cc_find(helper_generic:listeners, $int4) = true & cc_getcolour = ^black) {
 					$dbrow5 = db_getfield(cluehelper_cluetype_hotcold, cluehelper_cluetype:beginner_clues, $int4);
 					$dbrow7 = ~cluehelper_clue_target($dbrow5);
 					$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
@@ -41,7 +41,7 @@ if ($dbrow0 = cluehelper_hotcold_cluequest_3) {
 		case 5 :
 			$int3 = db_getfieldcount(cluehelper_cluetype_hotcold, cluehelper_cluetype:master_clues);
 			while ($int4 < $int3 & $int8 < $int9) {
-				if (cc_find(helper_generic:listeners, $int4) = ^true & cc_getcolour = ^black) {
+				if (cc_find(helper_generic:listeners, $int4) = true & cc_getcolour = ^black) {
 					$dbrow5 = db_getfield(cluehelper_cluetype_hotcold, cluehelper_cluetype:master_clues, $int4);
 					$dbrow7 = ~cluehelper_clue_target($dbrow5);
 					$int1 = ~helper_generic_add_text(~cluehelper_get_target_description_short($dbrow7));
@@ -54,7 +54,7 @@ if ($dbrow0 = cluehelper_hotcold_cluequest_3) {
 if ($int8 >= $int9) {
 	$int4 = 0;
 	while ($int4 < $int3) {
-		if (cc_find(helper_generic:listeners, $int4) = ^true & cc_getcolour = ^black) {
+		if (cc_find(helper_generic:listeners, $int4) = true & cc_getcolour = ^black) {
 			$int6 = calc($int6 + 1);
 		}
 		$int4 = calc($int4 + 1);
@@ -66,7 +66,7 @@ if ($int8 >= $int9) {
 }
 if (~cluehelper_is_dig($dbrow0, $dbrow7) = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(helper_generic:content, $int1) = ^true) {
+	if (cc_find(helper_generic:content, $int1) = true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

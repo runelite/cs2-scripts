@@ -6,7 +6,7 @@ if ($opindex0 = 1) {
 } else {
 	mes($string1);
 }
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	cc_settrans($int3);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int4, calc(clientclock + 10))");
 }

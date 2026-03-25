@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (cc_find($com_bankmain_banktut_toggle1, $comsubid2) = ^true) {
+if (cc_find($com_bankmain_banktut_toggle1, $comsubid2) = true) {
 	sound_synth(interface_select1, 1, 0);
 	%bank_hidebanktut = calc(1 - %bank_hidebanktut);
 	~script3422($com_bankmain_banktut_toggle1);

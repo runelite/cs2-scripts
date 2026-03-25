@@ -1,9 +1,0 @@
-// 4589
-[proc,script4589]
-if (~on_enhanced_desktop = 0) {
-	return;
-}
-if (%fishing_spot_indicator_disabled = 1) {
-	return;
-}
-%fishing_spot_indicator_more_info_disabled = calc(1 - %fishing_spot_indicator_more_info_disabled);

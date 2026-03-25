@@ -1,6 +1,6 @@
 // 6309
 [clientscript,script6309](int $int0, int $opindex1, component $component2, int $comsubid3, int $comsubid4, int $colour5, int $int6, int $colour7, int $int8, component $component9, component $component10, component $drop11, component $component12, enum $enum13)
-if (cc_find($component2, $comsubid3) = ^true & .cc_find($component2, $comsubid4) = ^true) {
+if (cc_find($component2, $comsubid3) = true & .cc_find($component2, $comsubid4) = true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);

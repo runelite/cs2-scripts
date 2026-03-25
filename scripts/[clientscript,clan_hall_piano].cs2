@@ -10,10 +10,10 @@ def_int $int4 = 0;
 def_struct $struct5 = null;
 while ($int4 < $int2) {
 	$struct5 = enum(int, struct, $enum1, $int4);
-	if_setonop("script4324($int4)", struct_param($struct5, param_1236));
+	if_setonop("clan_piano_play_note($int4)", struct_param($struct5, param_1236));
 	$string0 = struct_param($struct5, param_1240);
 	$key3 = struct_param($struct5, param_1241);
-	~script4322($component0, $int4, $string0, $key3);
+	~clan_piano_set_onkey($component0, $int4, $string0, $key3);
 	$int4 = calc($int4 + 1);
 }
-~script4322($component0, $int4, "ø", 0);
+~clan_piano_set_onkey($component0, $int4, "ø", 0);

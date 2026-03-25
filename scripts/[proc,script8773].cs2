@@ -17,7 +17,7 @@ if ($int1 = 0) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);
-	if (~script9022 = 1) {
+	if (~sailing_unlocked = 1) {
 		cc_settext("No crewmates available.<br><br>You can manage your crewmates with the Crew Registrar.");
 	} else {
 		cc_settext("You are not yet an experienced enough sailor to manage a crew.");
@@ -29,7 +29,7 @@ if ($int1 = 0) {
 }
 def_int $int11 = 0;
 while ($int10 < $int2 & $int11 < 5) {
-	if (~script9040($int11) ! 0) {
+	if (~sailing_sidepanel_crew_get_slot($int11) ! 0) {
 		if (calc($int10 % 2) = 0) {
 			$int6, $int8 = ~script8774($int6, $int8, $component0, $int11, 0x4e453a);
 		} else {

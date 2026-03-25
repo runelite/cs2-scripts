@@ -1,7 +1,35 @@
-// 5477
-[proc,add_overlaytimer_coord](coord $coord0, int $int1, int $int2, int $int3, int $colour4, int $int5)
-if (~on_enhanced_any = 0 | ~script5479($coord0, $int1, $int3) = 0) {
-	return;
-}
-def_entityoverlay $entityoverlay6 = entityoverlay_create_coord($coord0, 1, 0, 25, 25, 0);
-~add_overlaytimer_inner($int1, $entityoverlay6, $int2, $int3, $colour4, $int5);
+java.lang.IllegalStateException: Opcode 7204 in script 5477 not implemented
+
+.id                       5477
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL10
+   iload                  0
+   iload                  1
+   iload                  3
+   invoke                 5479
+   iconst                 0
+   if_icmpeq              LABEL10
+   jump                   LABEL11
+LABEL10:
+   return                
+LABEL11:
+   iload                  0
+   iconst                 1
+   iconst                 0
+   iconst                 25
+   iconst                 25
+   iconst                 0
+   7204                  
+   istore                 6
+   iload                  1
+   iload                  6
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   invoke                 5480
+   return                

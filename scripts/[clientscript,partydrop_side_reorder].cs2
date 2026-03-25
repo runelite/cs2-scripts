@@ -14,9 +14,9 @@ if ($obj5 = null) {
 	return;
 }
 def_obj $obj6 = inv_getobj(inv, $dropsubid3);
-if (cc_find($drop0, $dropsubid3) = ^true) {
+if (cc_find($drop0, $dropsubid3) = true) {
 	~partydrop_side_drawitem($obj5, inv_getnum(inv, $comsubid2), $drop0, $comsubid4);
 }
-if (cc_find($drop0, $comsubid2) = ^true) {
+if (cc_find($drop0, $comsubid2) = true) {
 	~partydrop_side_drawitem($obj6, inv_getnum(inv, $dropsubid3), $drop0, $comsubid4);
 }

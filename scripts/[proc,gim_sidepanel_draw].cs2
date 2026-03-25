@@ -33,7 +33,7 @@ def_int $int23 = 0;
 def_string $string0 = "";
 def_int $int24 = 0;
 if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
-	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
+	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = true) {
 		$string0 = activeclansettings_getclanname;
 		cc_settext($string0);
 		$int24 = parawidth($string0, 190, b12_full);
@@ -48,7 +48,7 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 		}
 	}
 	$int12 = ~min(5, %varclansetting37);
-	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = true) {
 		if ($int12 > 0) {
 			$string0 = "<col=ffb83f><tostring(%varclansetting37)></col>";
 		} else {
@@ -63,7 +63,7 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 			$int20 = calc(($int19 / 2 - $int24) / 2);
 			.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setposition(calc($int20 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
-			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
+			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = true) {
 				$string0 = "<col=ffb83f><tostring(%varclansetting41)></col>";
 				$int24 = parawidth($string0, 190, p11_full);
 				cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
@@ -78,7 +78,7 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 			$int20 = calc(($int19 - $int24) / 2);
 			.cc_setposition($int20, -1, ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setposition(calc($int20 + 13 + 3), 0, ^setpos_abs_left, ^setpos_abs_centre);
-			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
+			if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = true) {
 				cc_settext("");
 				.cc_setgraphic(null);
 			}
@@ -104,7 +104,7 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 	$int21 = map_world;
 	while ($int16 < $int15) {
 		$int14 = activeclansettings_getsortedaffinedslot($int16);
-		if (.cc_find($com_gim_sidepanel_members8, $int14) = ^true) {
+		if (.cc_find($com_gim_sidepanel_members8, $int14) = true) {
 			.cc_clearops;
 			if ($int14 = $int13) {
 				$int17, $int18 = 0, $int16;
@@ -202,19 +202,19 @@ if (%gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
 		$int16 = calc($int16 + 1);
 	}
 } else {
-	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = ^true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = ^true) {
+	if (cc_find($com_gim_sidepanel_title0, $comsubid1) = true & .cc_find($com_gim_sidepanel_title0, $comsubid2) = true) {
 		cc_settext("<col=808080><enum(int, string, enum_3839, %side_channels_tab_selected)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		.cc_setgraphic(null);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	}
-	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid4) = true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid5) = true) {
 		cc_settext("<col=808080><~script2357(%gim_affinitystatus)></col>");
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		.cc_setgraphic(null);
 	}
-	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = ^true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = ^true) {
+	if (cc_find($com_gim_sidepanel_subtitle3, $comsubid6) = true & .cc_find($com_gim_sidepanel_subtitle3, $comsubid7) = true) {
 		cc_settext("");
 		.cc_setgraphic(null);
 	}

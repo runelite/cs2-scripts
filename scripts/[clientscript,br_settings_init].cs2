@@ -41,27 +41,27 @@ while ($int5 > 0) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	$string0 = enum(int, string, enum_4414, $int5);
 	cc_settext($string0);
-	if (.cc_find($com_br_settings_stats3, $int5) = ^true) {
+	if (.cc_find($com_br_settings_stats3, $int5) = true) {
 		.cc_setop(1, $string0);
 	}
 }
 def_int $int7 = 120;
-$int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 1, attack, 99, 75, 75);
+$int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 1, attack, 99, 80, 75);
 $int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 0, strength, 99, 99, 99);
-$int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 1, defence, 75, 50, 1);
+$int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 1, defence, 85, 50, 1);
 $int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 0, magic, 99, 99, 99);
 $int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 1, ranged, 99, 99, 99);
 $int4, $int7 = ~script6537($int4, $int7, $com_br_settings_stats3, 0, hitpoints, 99, 99, 99);
 def_int $int8 = calc(25 * (3 + 1) + 4);
 if_setsize(calc($int7 + 4), $int8, ^setsize_abs, ^setsize_abs, $com_br_settings_stats_container2);
 ~br_settings_indicators($com_br_settings_stats3, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2));
-if (cc_find($com_br_settings_stats3, 0) = ^true) {
+if (cc_find($com_br_settings_stats3, 0) = true) {
 	cc_setonop("br_settings_op(event_op, 0, $com_br_settings_stats3, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
 }
-if (cc_find($com_br_settings_stats3, 1) = ^true) {
+if (cc_find($com_br_settings_stats3, 1) = true) {
 	cc_setonop("br_settings_op(event_op, 1, $com_br_settings_stats3, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
 }
-if (cc_find($com_br_settings_stats3, 2) = ^true) {
+if (cc_find($com_br_settings_stats3, 2) = true) {
 	cc_setonop("br_settings_op(event_op, 2, $com_br_settings_stats3, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2))");
 }
 if_setonvartransmit("br_settings_indicators($com_br_settings_stats3, $comsubidarray1(0), $comsubidarray1(1), $comsubidarray1(2)){br_main_1}", $com_br_settings_stats3);

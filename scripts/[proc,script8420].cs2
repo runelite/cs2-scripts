@@ -34,7 +34,7 @@ switch_int (cc_param(param_2365)) {
 		}
 }
 def_int $int3 = cc_param(param_2357);
-if (.cc_find(cc_getlayer, calc(cc_getid - 1)) = ^true) {
+if (.cc_find(cc_getlayer, calc(cc_getid - 1)) = true) {
 	if (testbit($int3, 1) = ^true) {
 		if (testbit($int3, 2) = ^true) {
 			.cc_setgraphic("checkbox,5");
@@ -57,12 +57,12 @@ if (.cc_find(cc_getlayer, calc(cc_getid - 1)) = ^true) {
 	}
 }
 def_int $comsubid4 = cc_param(param_2359);
-if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = ^true) {
+if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = true) {
 	.cc_setcolour($int1);
 	.cc_setparam(param_2361, $int1, int);
 }
 $comsubid4 = cc_param(param_2360);
-if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = ^true) {
+if ($comsubid4 ! -1 & .cc_find(cc_getlayer, $comsubid4) = true) {
 	.cc_setcolour($int2);
 	.cc_setparam(param_2361, $int2, int);
 }

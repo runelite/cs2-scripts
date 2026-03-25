@@ -16,7 +16,7 @@ def_string $string3 = "";
 if (db_getfield($dbrow0, quest:release_type, 0) ! 2) {
 	$string2 = "This <$string1> is coming soon...<br>When it releases, I can start it by ";
 } else {
-	$int10, $string3 = ~script8942($dbrow0);
+	$int10, $string3 = ~restrict_content_dbrow_with_string($dbrow0);
 	if ($int10 = 1) {
 		$string2 = "<$string3>...<br>If this <$string1> becomes available, I can start it by ";
 	}
@@ -253,5 +253,5 @@ cc_settextshadow(false);
 cc_settext($string11);
 $int16 = calc($int16 + $int17);
 if_setsize(10, $int16, ^setsize_minus, ^setsize_abs, $component2);
-~script6910($component4, $component3, $int16, 0);
-if_setontimer("script6831($component1, $component5, $component6, $component7, $component4, $component3, $int16)", $component1);
+~quest_journal_overview_scrollbar($component4, $component3, $int16, 0);
+if_setontimer("quest_journal_overview_size($component1, $component5, $component6, $component7, $component4, $component3, $int16)", $component1);

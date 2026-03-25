@@ -1,0 +1,9 @@
+// 6462
+[proc,settings_cluehelper_infobox_show_clue_text]
+if (~on_enhanced_any = 0) {
+	return;
+}
+if (%option_cluehelper_enabled = 0) {
+	return;
+}
+%option_cluehelper_infobox_show_clue_text = calc(1 - %option_cluehelper_infobox_show_clue_text);

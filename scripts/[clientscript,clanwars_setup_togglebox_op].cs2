@@ -9,6 +9,6 @@ if (testbit(%prayer9, $int3) = ^true) {
 } else {
 	%prayer9 = setbit(%prayer9, $int3);
 }
-if (cc_find($com_clanwars_setup_other1, calc($comsubid2 + 1)) = ^true & .cc_find($com_clanwars_setup_other1, calc($comsubid2 + 2)) = ^true) {
+if (cc_find($com_clanwars_setup_other1, calc($comsubid2 + 1)) = true & .cc_find($com_clanwars_setup_other1, calc($comsubid2 + 2)) = true) {
 	~clanwars_setup_togglebox_update($com_clanwars_setup_other1, $int3);
 }

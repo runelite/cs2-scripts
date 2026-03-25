@@ -42,7 +42,7 @@ def_int $int32 = 500000;
 $int32 = ~script1797($int32);
 def_int $int33 = 0;
 while ($int33 < 120) {
-	if (cc_find($component10, $int33) = ^true) {
+	if (cc_find($component10, $int33) = true) {
 		if ($int33 >= $int28) {
 			$obj23 = inv_getobj(gravestone, $int33);
 			if ($obj23 ! null) {
@@ -59,7 +59,7 @@ while ($int33 < 120) {
 			cc_sethide(true);
 		}
 	}
-	if (cc_find($component12, $int33) = ^true & .cc_find($component12, calc($int33 + 120)) = ^true) {
+	if (cc_find($component12, $int33) = true & .cc_find($component12, calc($int33 + 120)) = true) {
 		if ($int33 < $int28) {
 			$obj23 = inv_getobj(gravestone, $int33);
 			if ($obj23 ! null) {
@@ -131,7 +131,7 @@ def_int $int35 = calc(%varcint396 - 6 * 2);
 def_int $int36 = calc(%varcint397 + %varcint395 - 6);
 def_int $int37 = calc(%varcint398 + %varcint396 - 6);
 def_int $int38 = 0;
-if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
+if (cc_find($component0, 0) = true & .cc_find($component0, 1) = true) {
 	cc_setsize($int34, 29, ^setsize_abs, ^setsize_abs);
 	.cc_setsize($int34, 6, ^setsize_abs, ^setsize_abs);
 	$int38 = calc(%varcint397 + 6);
@@ -154,7 +154,7 @@ if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
 		13 = $component13
 	);
 }
-if (cc_find($component0, 2) = ^true & .cc_find($component0, 3) = ^true) {
+if (cc_find($component0, 2) = true & .cc_find($component0, 3) = true) {
 	cc_setsize(6, $int35, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, $int35, ^setsize_abs, ^setsize_abs);
 	$int38 = calc(%varcint398 + 6);
@@ -177,7 +177,7 @@ if (cc_find($component0, 2) = ^true & .cc_find($component0, 3) = ^true) {
 		13 = $component13
 	);
 }
-if (cc_find($component0, 4) = ^true & .cc_find($component0, 5) = ^true) {
+if (cc_find($component0, 4) = true & .cc_find($component0, 5) = true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(%varcint397, %varcint398, ^setpos_abs_left, ^setpos_abs_top);
@@ -199,7 +199,7 @@ if (cc_find($component0, 4) = ^true & .cc_find($component0, 5) = ^true) {
 		13 = $component13
 	);
 }
-if (cc_find($component0, 6) = ^true & .cc_find($component0, 7) = ^true) {
+if (cc_find($component0, 6) = true & .cc_find($component0, 7) = true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(%varcint397, $int37, ^setpos_abs_left, ^setpos_abs_top);

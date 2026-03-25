@@ -6,7 +6,7 @@ def_int $intarray0(enum_getoutputcount(enum_4411));
 def_int $int0 = 0;
 def_int $int1 = 0;
 while ($int1 < enum_getoutputcount(enum_4411)) {
-	if (cc_find(enum(int, component, enum_4411, $int1), 0) = ^true) {
+	if (cc_find(enum(int, component, enum_4411, $int1), 0) = true) {
 		$intarray0($int0) = $int1;
 		$int0 = calc($int0 + 1);
 	}
@@ -33,7 +33,7 @@ switch_int (%varcint993) {
 			$component4 = enum(int, component, enum_4411, $intarray0($int2));
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-				if (cc_find($component4, 2) = ^true) {
+				if (cc_find($component4, 2) = true) {
 					~pvpa_applicants_entry_init($int2);
 				}
 				$int3 = calc($int3 + if_getheight($component4));
@@ -44,7 +44,7 @@ switch_int (%varcint993) {
 			$component4 = enum(int, component, enum_4411, $intarray0($int2));
 			if ($component4 ! null) {
 				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-				if (cc_find($component4, 2) = ^true) {
+				if (cc_find($component4, 2) = true) {
 					~pvpa_applicants_entry_init($int2);
 				}
 				$int3 = calc($int3 + if_getheight($component4));

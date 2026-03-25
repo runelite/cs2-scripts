@@ -1,0 +1,28 @@
+// 4913
+[proc,stonebutton_icon_draw](int $int0, component $component1, int $int2, graphic $graphic3, int $int4, int $int5)
+def_int $int6 = 0;
+if (testbit($int2, 0) = ^true) {
+	if ($int0 = 1) {
+		$int6 = ~v2_stone_button_in_filled($component1);
+	} else {
+		$int6 = ~v2_stone_button_filled($component1);
+	}
+} else if ($int0 = 1) {
+	$int6 = ~v2_stone_button_in($component1);
+} else {
+	$int6 = ~v2_stone_button($component1);
+}
+~create_graphic(
+	0 = $component1, 
+	1 = $int6, 
+	2 = $graphic3, 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = $int4, 
+	8 = $int5, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);

@@ -1,7 +1,41 @@
-// 6719
-[proc,loadnpc_cluehelper_generic_setup]
-def_entityoverlay $entityoverlay0 = entityoverlay_create_npc(3, 1, calc(36 * 2), calc(32 * 2), 1);
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
-	cc_setonvartransmit("loadnpc_cluehelper_generic_transmit($entityoverlay0, %cluehelper_infobox_clue, npc_uid, npc_creationcycle, %option_cluehelper_overlay_enabled){cluehelper_infobox_clue, option_cluehelper}");
-}
-~loadnpc_cluehelper_generic($entityoverlay0, %cluehelper_infobox_clue, npc_uid, npc_creationcycle);
+java.lang.IllegalStateException: Opcode 7200 in script 6719 not implemented
+
+.id                       6719
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 3
+   iconst                 1
+   iconst                 36
+   iconst                 2
+   multiply              
+   iconst                 32
+   iconst                 2
+   multiply              
+   iconst                 1
+   7200                  
+   istore                 0
+   iload                  0
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL16
+   jump                   LABEL27
+LABEL16:
+   iconst                 6720
+   iload                  0
+   get_varp               3546
+   6751                  
+   6752                  
+   get_varbit             14189
+   iconst                 3546
+   iconst                 3543
+   iconst                 2
+   sconst                 "iiiiiY"
+   cc_setonvartransmit   
+LABEL27:
+   iload                  0
+   get_varp               3546
+   6751                  
+   6752                  
+   invoke                 6721
+   return                

@@ -3,9 +3,9 @@
 if (clientclock < $int0) {
 	return;
 }
-if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
-	cc_setonmouserepeat("script1015(event_com, $comsubid3, $colour4, $int5)");
-	cc_setonmouseleave("script1015(event_com, $comsubid3, $colour6, $int7)");
+if (cc_find($component1, $comsubid2) = true & .cc_find($component1, $comsubid3) = true) {
+	cc_setonmouserepeat("xpdrops_setup_skilllist_mouseover(event_com, $comsubid3, $colour4, $int5)");
+	cc_setonmouseleave("xpdrops_setup_skilllist_mouseover(event_com, $comsubid3, $colour6, $int7)");
 	.cc_setcolour($colour6);
 	.cc_settrans($int7);
 	.cc_setontimer(null);

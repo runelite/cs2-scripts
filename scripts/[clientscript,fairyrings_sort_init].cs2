@@ -1,0 +1,9 @@
+// 8156
+[clientscript,fairyrings_sort_init](component $com_fairyrings_log_contents0, component $com_fairyrings_log_scrollbar1, int $int2, component $com_fairyrings_log_divider3, component $com_fairyrings_log_faves4, component $com_fairyrings_log_search5)
+~fairyrings_sort_update($com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, $int2, 1, $com_fairyrings_log_divider3, $com_fairyrings_log_faves4);
+%varcstring1344 = "";
+if (%settings_fairyring_mobile_keyboard_autoopen_disabled = 0) {
+	~fairyrings_search_toggle(1, $com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, $com_fairyrings_log_divider3, $com_fairyrings_log_faves4, $com_fairyrings_log_search5, 0, 1);
+} else {
+	~fairyrings_search_toggle(1, $com_fairyrings_log_contents0, $com_fairyrings_log_scrollbar1, $com_fairyrings_log_divider3, $com_fairyrings_log_faves4, $com_fairyrings_log_search5, 0, 0);
+}

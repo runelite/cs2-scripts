@@ -7,7 +7,7 @@ if (%varcint454 = 1) {
 }
 ~stonebutton_draw($int0, $string0, $graphic2, 0, $component1);
 if ($int0 = 1) {
-	if_setontimer("script2427(calc(clientclock + 2), $string0, event_com, $graphic2, 0)", $component1);
+	if_setontimer("stonebutton_hoverreset(calc(clientclock + 2), $string0, event_com, $graphic2, 0)", $component1);
 } else {
 	if_setontimer(null, $component1);
 }

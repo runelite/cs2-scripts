@@ -120,7 +120,7 @@ while ($int8 < $int11) {
 			$string4 = oc_name($namedobj14);
 			if (string_indexof_string(lowercase($string4), lowercase($string0), 0) ! -1 | string_indexof_string(lowercase($string5), lowercase($string0), 0) ! -1) {
 				if ($int17 = 0) {
-					if (.cc_find($component4, $int8) = ^true) {
+					if (.cc_find($component4, $int8) = true) {
 						.cc_sethide(false);
 						.cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
 						.cc_setcolour(^white);
@@ -133,7 +133,7 @@ while ($int8 < $int11) {
 						.cc_settrans($int23);
 						.cc_setop(1, "Check");
 						.cc_setopbase("<col=ff9040><$string5></col>");
-						.cc_setonop("script4900($intarray2($int8), $structarray1($int8), $int6)");
+						.cc_setonop("collection_tab_link($intarray2($int8), $structarray1($int8), $int6)");
 						if (~on_mobile = false) {
 							.cc_setonmouseover("cc_settrans(event_com, event_comsubid, calc($int23 - 40), null)");
 							.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int23, null)");
@@ -144,7 +144,7 @@ while ($int8 < $int11) {
 					}
 					if ($int16 ! 0) {
 						$int16 = calc($int16 + 36 + 4);
-						if (.cc_find($component4, $int8) = ^true) {
+						if (.cc_find($component4, $int8) = true) {
 							.cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
 						}
 						$int16 = calc($int16 + 6);
@@ -172,7 +172,7 @@ while ($int8 < $int11) {
 		}
 		$int6 = calc($int6 + 1);
 	}
-	if (.cc_find($component4, $int8) = ^true) {
+	if (.cc_find($component4, $int8) = true) {
 		.cc_setsize(0, calc($int16 - .cc_gety + 36 + 4), ^setsize_minus, ^setsize_abs);
 	}
 	$int17 = 0;

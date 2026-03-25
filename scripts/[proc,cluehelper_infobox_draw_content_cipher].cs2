@@ -12,7 +12,7 @@ def_int $dbfield4 = ~script6656($dbrow0);
 ~cluehelper_infobox_challenge_display(db_getfield($dbrow0, cluehelper_clue_cipher:challenge, 0), $dbfield4);
 if (~cluehelper_is_dig($dbrow0, $dbrow3) = 1) {
 	$int1 = ~helper_generic_add_text("...");
-	if (cc_find(helper_generic:content, $int1) = ^true) {
+	if (cc_find(helper_generic:content, $int1) = true) {
 		cc_setoninvtransmit("script6623($int1){inv}");
 	}
 }

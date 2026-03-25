@@ -4,7 +4,7 @@ if ($int4 = %settings_varp_ehc_2 & $int5 = %settings_varp_ehc_3 & %option_npc_in
 	return;
 }
 ~npc_name_create($entityoverlay0, $npc_uid1, $int2, $string0, $npc3);
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setonvartransmit("npc_name_vartransmit(
 		0 = $entityoverlay0, 
 		1 = $npc_uid1, 

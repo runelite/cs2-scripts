@@ -1,0 +1,6 @@
+// 4760
+[proc,highlighting_player_tile_toggle_client]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%tile_highlighting_disabled = calc(1 - %tile_highlighting_disabled);

@@ -44,9 +44,9 @@ $int1 = ~dynamic_stone_button_filled(
 	7 = $int1, 
 	8 = $int3, 
 	9 = 1, 
-	10 = ~script7983($boolean22)
+	10 = ~flip_bool($boolean22)
 );
-if (cc_find($com_sailing_bt_selection_click_layer2, $int3) = ^true) {
+if (cc_find($com_sailing_bt_selection_click_layer2, $int3) = true) {
 	cc_setop(1, "Select-trial");
 	cc_setopbase("<col=ff9040><$string0></col>");
 	cc_setonop("script8619($boolean22, $int17)");
@@ -280,7 +280,7 @@ if ($boolean22 = false) {
 }
 if ($namedobj15 ! null) {
 	$int1 = ~thinbox_specific($com_sailing_bt_selection_content_right0, $int1, 281, calc($int5 + 6), calc(36 + 4), calc(32 + 4), ^setpos_abs_left, ^setpos_abs_top);
-	$int1 = ~script617(
+	$int1 = ~create_object(
 		0 = $com_sailing_bt_selection_content_right0, 
 		1 = $int1, 
 		2 = $namedobj15, 

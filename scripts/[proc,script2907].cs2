@@ -3,10 +3,10 @@
 $int6 = 0;
 $int7 = calc($int7 + 2);
 $int6 = ~thinbox_specific($component0, $int6, 0, $int7, if_getwidth($component0), 33, ^setpos_abs_left, ^setpos_abs_top);
-if (cc_find($component0, calc($int6 - 2)) = ^true) {
+if (cc_find($component0, calc($int6 - 2)) = true) {
 	cc_setsize(0, cc_getheight, ^setsize_minus, ^setsize_abs);
 }
-if (cc_find($component0, calc($int6 - 1)) = ^true) {
+if (cc_find($component0, calc($int6 - 1)) = true) {
 	cc_setsize(2, cc_getheight, ^setsize_minus, ^setsize_abs);
 }
 cc_create($component0, ^iftype_graphic, $int6, false);

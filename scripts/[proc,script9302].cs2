@@ -5,10 +5,10 @@ if ($dbrow0 = null) {
 }
 def_int $int1 = -1;
 def_int $int2 = -1;
-$int1, $int2 = ~script7316($dbrow0);
+$int1, $int2 = ~get_music_variable($dbrow0);
 def_int $int3 = calc($int1 * 100 + $int2);
 if ($int3 <= 0) {
 	$int3 = 0;
-	~script2075("Music - <~script7311($dbrow0)> has an invalid ID (<tostring($int3)>).");
+	~script2075("Music - <~get_music_name($dbrow0)> has an invalid ID (<tostring($int3)>).");
 }
 return($int3);

@@ -3,12 +3,12 @@
 if (clientclock < $int2) {
 	return;
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $int1) = true) {
 	cc_setontimer(null);
 }
-if (cc_find($component0, calc($int1 + 1)) = ^true) {
+if (cc_find($component0, calc($int1 + 1)) = true) {
 	cc_setcolour(0xff981f);
 }
-if (cc_find($component0, calc($int1 + 12)) = ^true) {
+if (cc_find($component0, calc($int1 + 12)) = true) {
 	cc_setcolour(^white);
 }

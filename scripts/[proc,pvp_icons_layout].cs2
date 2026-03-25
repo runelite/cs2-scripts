@@ -151,8 +151,8 @@ if (~pvp_world = 1) {
 		}
 		if_sethide(false, pvp_icons:deadman_fog);
 		if_setblendmode(2, pvp_icons:deadman_fog);
-		~script6247(pvp_icons:deadman_fog);
-		if_setontimer("script6246(event_com)", pvp_icons:deadman_fog);
+		~pvpa_battlearea_resynch(pvp_icons:deadman_fog);
+		if_setontimer("pvpa_battlearea_resynch(event_com)", pvp_icons:deadman_fog);
 	} else {
 		if_setgraphic(overlay_duel, pvp_icons:pvp);
 		if_setontimer(null, pvp_icons:deadman_fog);

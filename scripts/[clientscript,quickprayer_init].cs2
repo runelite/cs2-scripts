@@ -35,7 +35,7 @@ def_int $int10 = 0;
 def_int $int11 = 0;
 while ($int11 < $int4) {
 	$int9, $int10 = calc($int11 % 5 * 37), calc($int11 / 5 * 37);
-	if (cc_find($com_quickprayer_buttons1, $intarray0($int11)) = ^true) {
+	if (cc_find($com_quickprayer_buttons1, $intarray0($int11)) = true) {
 		$obj7 = enum(int, obj, $enum3, $intarray0($int11));
 		cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setop(1, "Toggle");

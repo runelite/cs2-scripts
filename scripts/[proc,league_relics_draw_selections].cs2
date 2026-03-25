@@ -1,6 +1,6 @@
 // 3189
 [proc,league_relics_draw_selections](component $com_league_relics_header0, component $com_league_relics_relic_available_header1, component $com_league_relics_backgrounds2, component $com_league_relics_icons3, component $com_league_relics_outlines4, component $com_league_relics_names5, component $com_league_relics_clickzones6, component $com_league_relics_view_all7, component $com_league_relics_view_all_scrollbar8, component $com_league_relics_view_one9, component $com_league_relics_confirm10, component $com_league_relics_loading11, component $com_league_relics_league_btn_menu12, component $com_league_relics_league_menu_frame13, component $com_league_relics_league_menu_overlay14, int $comsubid15, int $int16, component $com_league_relics_progress_bar17, component $com_league_relics_tooltip18)
-~script7744(league_relics:universe, league_relics:content_outer);
+~league_interface_resize(league_relics:universe, league_relics:content_outer);
 ~league_points_progress_bar($com_league_relics_progress_bar17, $com_league_relics_tooltip18, 0, 1);
 cc_deleteall($com_league_relics_backgrounds2);
 cc_deleteall($com_league_relics_icons3);
@@ -43,7 +43,7 @@ if (~in_league_tutorial = 0) {
 }
 $int25 = 0;
 ~league_create_dropdown($com_league_relics_league_btn_menu12, $com_league_relics_league_menu_frame13, $com_league_relics_league_menu_overlay14, $int25, 2);
-if (cc_find(league_relics:frame, $comsubid15) = ^true) {
+if (cc_find(league_relics:frame, $comsubid15) = true) {
 	cc_setcolour($colour20);
 }
 def_int $int26 = 0;

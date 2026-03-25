@@ -12,7 +12,7 @@ def_int $int6 = 0;
 $int5, $int6 = ~script7868;
 def_int $int7 = 1;
 while ($int7 <= $int5) {
-	$namedobj3, $int4 = ~script4891($int7);
+	$namedobj3, $int4 = ~rune_pouch_getslot($int7);
 	if ($namedobj3 = $namedobj0) {
 		if (calc(^max_32bit_int - $int4) < $int2) {
 			$int2 = ^max_32bit_int;
@@ -23,7 +23,7 @@ while ($int7 <= $int5) {
 	$int7 = calc($int7 + 1);
 }
 if ($int6 = 1) {
-	$namedobj3, $int4 = ~script4891(5);
+	$namedobj3, $int4 = ~rune_pouch_getslot(5);
 	if ($namedobj3 = $namedobj0) {
 		if (calc(^max_32bit_int - $int4) < $int2) {
 			$int2 = ^max_32bit_int;
@@ -31,7 +31,7 @@ if ($int6 = 1) {
 			$int2 = calc($int4 + $int2);
 		}
 	}
-	$namedobj3, $int4 = ~script4891(6);
+	$namedobj3, $int4 = ~rune_pouch_getslot(6);
 	if ($namedobj3 = $namedobj0) {
 		if (calc(^max_32bit_int - $int4) < $int2) {
 			$int2 = ^max_32bit_int;

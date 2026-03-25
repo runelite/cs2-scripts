@@ -9,5 +9,5 @@ if (~on_mobile = true) {
 	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top, $component1);
 }
 def_component $component2 = giants_foundry_hud:infinity;
-if_setontimer("script6110($component2, -1)", $component2);
+if_setontimer("responsive_interface_scaler($component2, -1)", $component2);
 if_setonresize("giants_foundry_hud_rescale", $component2);

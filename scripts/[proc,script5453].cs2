@@ -4,9 +4,9 @@ if (~xptracker_get_timetrained($stat0) >= 0 & ~xptracker_get_paused($stat0) = 0)
 	~xptracker_set_timetrained($stat0, calc(~xptracker_get_timetrained($stat0) + 60));
 	if (~xptracker_get_updated($stat0) = 0) {
 		if ($stat0 ! null) {
-			~script5374($stat0);
+			~xptracker_update_text_left($stat0);
 		} else {
-			~script5376;
+			~xptracker_update_overall_text;
 		}
 	} else {
 		~xptracker_set_updated($stat0, 0);

@@ -22,7 +22,7 @@ if ($int4 >= 300) {
 	$graphic13 = "toa_difficulty_icons,1";
 }
 if_setgraphic($graphic13, $component2);
-if (cc_find($component0, 0) = ^false) {
+if (cc_find($component0, 0) = false) {
 	cc_create($component0, ^iftype_rectangle, $int7, false);
 	cc_setsize(calc($int8 - 2), 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
@@ -74,7 +74,7 @@ def_int $int14 = scale($int4, $int11, $int9);
 if ($int14 > $int9) {
 	$int14 = calc($int9 - 1);
 }
-if (cc_find($component0, 3) = ^true) {
+if (cc_find($component0, 3) = true) {
 	cc_setsize($int14, cc_getheight, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic($graphic12);
 }
@@ -132,7 +132,7 @@ while ($int18 < $int19) {
 	cc_setoutline(1);
 	cc_settrans($int23);
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script3092(oc_name($namedobj20), $int7, $component1, $component6, clientclock)");
+		cc_setonmouserepeat("toa_partydetails_reward_mouserepeat(oc_name($namedobj20), $int7, $component1, $component6, clientclock)");
 		cc_setonmouseleave("script6064($component6, clientclock)");
 	}
 	$int7 = calc($int7 + 1);

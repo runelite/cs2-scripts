@@ -3,7 +3,7 @@
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:overlay_atmosphere)) = false) {
 	return;
 }
-if (cc_find(tob_hud:atmospheric, 0) = ^true) {
+if (cc_find(tob_hud:atmospheric, 0) = true) {
 	if ($int3 = 1) {
 		~tob_hud_setportal;
 	} else {
@@ -19,7 +19,7 @@ if (cc_find(tob_hud:atmospheric, 0) = ^true) {
 		cc_sethide(true);
 	}
 }
-if (cc_find(tob_hud:atmospheric, 1) = ^true & .cc_find(tob_hud:atmospheric, 2) = ^true) {
+if (cc_find(tob_hud:atmospheric, 1) = true & .cc_find(tob_hud:atmospheric, 2) = true) {
 	~script2310(cc_getcolour, $int0, cc_gettrans, $int1, $int2, $string0);
 } else {
 	cc_create(tob_hud:atmospheric, ^iftype_rectangle, 1, false);

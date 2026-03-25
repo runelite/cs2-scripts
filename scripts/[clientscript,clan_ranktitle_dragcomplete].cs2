@@ -9,18 +9,18 @@ if ($component0 = $component9 | $component0 = $component7) {
 	if ($int4 ! 0 & $drop2 = $component7 & $dropsubid3 >= 0 & $dropsubid3 < $int12 & enum(int, boolean, enum_3796, $dropsubid3) = false) {
 		sound_synth(interface_select1, 1, 0);
 		if ($component0 = $component7) {
-			$int14 = ~script4306(~script4304(enum(int, int, enum_3795, $dropsubid3)));
+			$int14 = ~script4306(~clan_ranktitles_editing_get(enum(int, int, enum_3795, $dropsubid3)));
 		}
 		while ($int12 > 0) {
 			$int12 = calc($int12 - 1);
 			$int13 = enum(int, int, enum_3795, $int12);
 			if ($int12 = $dropsubid3) {
-				~script4305($int13, $int4);
-			} else if (~script4304($int13) = $int4) {
+				~clan_ranktitles_editing_set($int13, $int4);
+			} else if (~clan_ranktitles_editing_get($int13) = $int4) {
 				if ($int12 = $comsubid1 & $int14 ! 0) {
-					~script4305($int13, $int14);
+					~clan_ranktitles_editing_set($int13, $int14);
 				} else {
-					~script4305($int13, 0);
+					~clan_ranktitles_editing_set($int13, 0);
 				}
 			}
 		}

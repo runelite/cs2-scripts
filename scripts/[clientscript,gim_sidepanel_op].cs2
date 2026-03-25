@@ -1,6 +1,6 @@
 // 5259
 [clientscript,gim_sidepanel_op](int $opindex0, component $component1, int $comsubid2, string $string0, int $int3)
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	sound_synth(interface_select1, 1, 0);
 	cc_settrans(200);
 	cc_setonmouserepeat(null);

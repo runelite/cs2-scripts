@@ -1,10 +1,10 @@
 // 5504
 [proc,gim_settings_draw](component $com_gim_settings_frame0, int $comsubid1, component $com_gim_settings_contents2, int $comsubid3, component $com_gim_settings_info_container4, component $com_gim_settings_button_container5, component $com_gim_settings_hiscores6, component $com_gim_settings_storage_unlocks7, component $com_gim_settings_options8, component $com_gim_settings_raffle9, component $com_gim_settings_quit10)
 if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclansettings_find_listened = true | %clan_transmit_loadasguest = 0 & %gim_affinitystatus = 3 & activeclansettings_find_affined(1) = true) {
-	if (cc_find($com_gim_settings_contents2, $comsubid3) = ^true) {
+	if (cc_find($com_gim_settings_contents2, $comsubid3) = true) {
 		cc_sethide(true);
 	}
-	if (cc_find($com_gim_settings_frame0, $comsubid1) = ^true) {
+	if (cc_find($com_gim_settings_frame0, $comsubid1) = true) {
 		cc_settext(activeclansettings_getclanname);
 	}
 	if_sethide(false, $com_gim_settings_info_container4);
@@ -30,10 +30,10 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 	}
 	return;
 }
-if (cc_find($com_gim_settings_contents2, $comsubid3) = ^true) {
+if (cc_find($com_gim_settings_contents2, $comsubid3) = true) {
 	cc_sethide(false);
 }
-if (cc_find($com_gim_settings_frame0, $comsubid1) = ^true) {
+if (cc_find($com_gim_settings_frame0, $comsubid1) = true) {
 	cc_settext(~script5507);
 }
 if_sethide(true, $com_gim_settings_info_container4);

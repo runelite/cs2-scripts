@@ -152,7 +152,7 @@ switch_int (%worldswitcher_sort) {
 }
 def_int $int20 = 0;
 while ($int20 <= 900) {
-	if (cc_find($component4, $int20) = ^true) {
+	if (cc_find($component4, $int20) = true) {
 		cc_sethide(true);
 	}
 	$int20 = calc($int20 + 1);

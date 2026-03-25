@@ -58,7 +58,7 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 while ($int16 < $int0) {
-	if (cc_find($com_trademain_your_offer2, $int16) = ^true & .cc_find($com_trademain_your_offer2, calc($int0 + $int16)) = ^true) {
+	if (cc_find($com_trademain_your_offer2, $int16) = true & .cc_find($com_trademain_your_offer2, calc($int0 + $int16)) = true) {
 		$obj10 = inv_getobj(tradeoffer, $int16);
 		if ($obj10 ! null) {
 			$int11 = inv_getnum(tradeoffer, $int16);
@@ -121,7 +121,7 @@ $intarray1(26) = %varcint136;
 $intarray1(27) = %varcint137;
 $int16 = 0;
 while ($int16 < $int0) {
-	if (cc_find($com_trademain_other_offer4, $int16) = ^true & .cc_find($com_trademain_other_offer4, calc($int0 + $int16)) = ^true) {
+	if (cc_find($com_trademain_other_offer4, $int16) = true & .cc_find($com_trademain_other_offer4, calc($int0 + $int16)) = true) {
 		$obj10 = invother_getobj(tradeoffer, $int16);
 		if ($obj10 ! null) {
 			$int11 = invother_getnum(tradeoffer, $int16);

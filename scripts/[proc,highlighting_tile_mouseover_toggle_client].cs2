@@ -1,0 +1,6 @@
+// 5200
+[proc,highlighting_tile_mouseover_toggle_client]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
+%highlighting_tile_mouseover_enabled = calc(1 - %highlighting_tile_mouseover_enabled);

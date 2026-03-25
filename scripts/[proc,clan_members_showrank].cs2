@@ -12,7 +12,7 @@ def_int $int8 = 0;
 def_int $int9 = 0;
 while ($int9 < $int1) {
 	$int8 = activeclansettings_getsortedaffinedslot($int9);
-	if (.cc_find($component0, $int8) = ^true) {
+	if (.cc_find($component0, $int8) = true) {
 		if (.cc_gety ! -1) {
 			.cc_sethide(false);
 			cc_create($component0, ^iftype_text, $int3, false);

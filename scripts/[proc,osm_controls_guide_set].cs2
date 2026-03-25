@@ -1,0 +1,35 @@
+// 2371
+[proc,osm_controls_guide_set](component $com_osm_controls_guide_next0, component $com_osm_controls_guide_previous1, component $com_osm_controls_guide_12, component $com_osm_controls_guide_23, component $com_osm_controls_guide_34, component $com_osm_controls_guide_45, component $com_osm_controls_guide_56, component $com_osm_controls_guide_67)
+if_sethide(true, $com_osm_controls_guide_next0);
+if_sethide(true, $com_osm_controls_guide_previous1);
+if_sethide(true, $com_osm_controls_guide_12);
+if_sethide(true, $com_osm_controls_guide_23);
+if_sethide(true, $com_osm_controls_guide_34);
+if_sethide(true, $com_osm_controls_guide_45);
+if_sethide(true, $com_osm_controls_guide_56);
+if_sethide(true, $com_osm_controls_guide_67);
+switch_int (%if1) {
+	case 1 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_12);
+	case 2 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_previous1);
+		if_sethide(false, $com_osm_controls_guide_23);
+	case 3 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_previous1);
+		if_sethide(false, $com_osm_controls_guide_34);
+	case 4 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_previous1);
+		if_sethide(false, $com_osm_controls_guide_45);
+	case 5 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_previous1);
+		if_sethide(false, $com_osm_controls_guide_56);
+	case 6 :
+		if_sethide(false, $com_osm_controls_guide_next0);
+		if_sethide(false, $com_osm_controls_guide_previous1);
+		if_sethide(false, $com_osm_controls_guide_67);
+}

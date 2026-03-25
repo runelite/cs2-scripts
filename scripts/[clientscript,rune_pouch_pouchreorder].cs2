@@ -10,12 +10,12 @@ if (~script7869($int5) = 0) {
 }
 def_namedobj $namedobj6 = null;
 def_int $int7 = 0;
-$namedobj6, $int7 = ~script4891($int4);
+$namedobj6, $int7 = ~rune_pouch_getslot($int4);
 if ($namedobj6 = null) {
 	return;
 }
 if ($drop1 ! $drop0) {
-	if (cc_find($drop0, $comsubid2) = ^true) {
+	if (cc_find($drop0, $comsubid2) = true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 30))");
 	}
@@ -24,6 +24,6 @@ if ($drop1 ! $drop0) {
 if ($int4 = $int5) {
 	return;
 }
-~script4893($int4, ~script4891($int5));
-~script4893($int5, $namedobj6, $int7);
+~rune_pouch_setslot($int4, ~rune_pouch_getslot($int5));
+~rune_pouch_setslot($int5, $namedobj6, $int7);
 ~rune_pouch_drawpouch($drop0);

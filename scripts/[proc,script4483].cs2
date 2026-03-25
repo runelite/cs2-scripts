@@ -34,7 +34,7 @@ if ($setposv10 = ^setpos_abs_top & $int11 = 103) {
 }
 if_setsize($int14, $int21, ^setsize_abs, ^setsize_abs, $component4);
 if_setposition($int7, $int9, ^setpos_abs_left, $setposv10, $component4);
-if (cc_find($component5, calc($int3 * 4 + 2)) = ^true) {
+if (cc_find($component5, calc($int3 * 4 + 2)) = true) {
 	if ($int15 > 0) {
 		cc_sethide(false);
 		cc_setsize($int15, $int8, ^setsize_abs, ^setsize_abs);
@@ -46,7 +46,7 @@ if (cc_find($component5, calc($int3 * 4 + 2)) = ^true) {
 		cc_sethide(true);
 	}
 }
-if (cc_find($component5, calc($int3 * 4 + 3)) = ^true) {
+if (cc_find($component5, calc($int3 * 4 + 3)) = true) {
 	if ($graphic0 ! null) {
 		cc_sethide(false);
 		cc_settrans(0);
@@ -57,7 +57,7 @@ if (cc_find($component5, calc($int3 * 4 + 3)) = ^true) {
 		cc_sethide(true);
 	}
 }
-if (cc_find($component5, calc($int3 * 4)) = ^true) {
+if (cc_find($component5, calc($int3 * 4)) = true) {
 	if ($int16 > 0) {
 		cc_sethide(false);
 		cc_setsize($int16, $int8, ^setsize_abs, ^setsize_abs);
@@ -69,7 +69,7 @@ if (cc_find($component5, calc($int3 * 4)) = ^true) {
 		cc_sethide(true);
 	}
 }
-if (cc_find($component5, calc($int3 * 4 + 1)) = ^true) {
+if (cc_find($component5, calc($int3 * 4 + 1)) = true) {
 	cc_sethide(false);
 	cc_setsize($int20, $int21, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int7 + $int17), $int9, ^setpos_abs_left, $setposv10);

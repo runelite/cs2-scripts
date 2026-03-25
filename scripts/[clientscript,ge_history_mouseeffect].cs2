@@ -1,9 +1,9 @@
 // 1308
 [clientscript,ge_history_mouseeffect](component $component0, int $comsubid1, int $int2, int $comsubid3, int $int4, obj $obj5, int $int6)
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	cc_settrans($int2);
 }
-if (.cc_find($component0, $comsubid3) = ^true) {
+if (.cc_find($component0, $comsubid3) = true) {
 	if ($int6 >= 2) {
 		if ($int4 = 1) {
 			.cc_settext("<col=ffffff><oc_name($obj5)></col><br>x <~tostring_spacer($int6, ",")>");

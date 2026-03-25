@@ -175,7 +175,7 @@ while ($int16 <= $int15) {
 			9 = 1, 
 			10 = false
 		);
-		if (cc_find($component6, $int13) = ^true) {
+		if (cc_find($component6, $int13) = true) {
 			cc_setop(1, "View");
 			cc_setopbase("<col=ff9040><$string0></col>");
 			cc_setonop("ca_boss_select($component12, $int16)");
@@ -185,7 +185,7 @@ while ($int16 <= $int15) {
 	$int16 = calc($int16 + 1);
 }
 $int17 = calc($int17 + $int19 + $int23);
-~script4858($int17, if_getlayer($component0), $component0, $component1, $component11);
+~ca_bosses_applysize($int17, if_getlayer($component0), $component0, $component1, $component11);
 if ($int13 = 0) {
 	if_sethide(false, $component10);
 } else {

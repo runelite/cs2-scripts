@@ -1,0 +1,11 @@
+// 6422
+[clientscript,pvp_arena_runepouch_op](int $opindex0, int $int1)
+if ($opindex0 = 1 & enum(int, namedobj, enum_982, $int1) ! null) {
+	sound_synth(interface_select1, 1, 0);
+	if (testbit(%pvpa_editing, $int1) = ^true) {
+		%pvpa_editing = clearbit(%pvpa_editing, $int1);
+	} else {
+		%pvpa_editing = setbit(%pvpa_editing, $int1);
+	}
+	~pvp_arena_runepouch_drawrunes;
+}

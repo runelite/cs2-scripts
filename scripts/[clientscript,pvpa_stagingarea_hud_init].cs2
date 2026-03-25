@@ -1,0 +1,7 @@
+// 6256
+[clientscript,pvpa_stagingarea_hud_init](int $com_pvp_arena_stagingarea_hud_universe0, component $com_pvp_arena_stagingarea_hud_dodger1, component $com_pvp_arena_stagingarea_hud_contents2, component $com_pvp_arena_stagingarea_hud_timer3, component $com_pvp_arena_stagingarea_hud_hint4)
+~script4729($com_pvp_arena_stagingarea_hud_dodger1, $com_pvp_arena_stagingarea_hud_contents2, 52968, ^setpos_abs_centre, ^setpos_abs_top, 0);
+~pvpa_stagingarea_hud_drawtimer($com_pvp_arena_stagingarea_hud_timer3);
+if_setonvartransmit("pvpa_stagingarea_hud_drawtimer(event_com){pvpa_temp_transmit_0}", $com_pvp_arena_stagingarea_hud_timer3);
+~script6258($com_pvp_arena_stagingarea_hud_hint4);
+if_setonvartransmit("script6257(event_com){pvpa_temp_transmit_0}", $com_pvp_arena_stagingarea_hud_hint4);

@@ -1,188 +1,607 @@
-// 7227
-[proc,ground_items_setup](coord $coord0)
-def_int $int1 = ~ground_items_edit_mode;
-def_int $int2 = ~script7242;
-def_int $int3 = ~script7243;
-def_int $int4 = objstack_size($coord0);
-def_int $int5 = %ground_items_max_lines;
-def_int $int6 = $int5;
-def_entityoverlay $entityoverlay7 = entityoverlay_get_coord($coord0, 0);
-if ($entityoverlay7 = null) {
-	if ($int4 <= 0) {
-		return;
-	}
-	$entityoverlay7 = entityoverlay_create_coord($coord0, 0, 1, calc(350 + 108), calc($int5 * 17), 1);
-}
-if ($int4 <= 0) {
-	entityoverlay_delete_coord($coord0, 0);
-	return;
-}
-def_obj $objarray0($int4);
-def_int $intarray1($int4);
-def_int $intarray2($int4);
-def_int $intarray3($int4);
-def_int $intarray4($int4);
-def_int $int8 = 0;
-def_int $int9 = 0;
-def_int $int10 = $int4;
-def_obj $obj11 = null;
-def_obj $obj12 = null;
-def_int $int13 = -1;
-def_int $int14 = -1;
-def_int $int15 = 0;
-def_int $int16 = 0;
-def_int $int17 = 0;
-def_int $int18 = 1;
-def_int $int19 = 0;
-if (%ground_items_enabled = 1) {
-	while ($int10 > 0) {
-		$int10 = calc($int10 - 1);
-		$obj11 = $obj12;
-		$obj12 = objstack_obj($coord0, $int10);
-		if (~ground_items_custom_highlight($obj12) = 1) {
-			$int8 = 2;
-		} else if (~ground_items_display($obj12) = 0) {
-			$int8 = 0;
-		} else {
-			$int8 = 1;
-		}
-		$int9 = objstack_count($coord0, $int10);
-		$int13, $int18 = ~ground_items_price($obj12);
-		if (oc_stackable($obj12) = true) {
-			$int14 = ~min(^max_32bit_int, calc($int13 * $int9));
-		} else {
-			$int14 = $int13;
-		}
-		if ($int18 = 0) {
-			$int19 = 1;
-		}
-		if (obj_findbyindex($coord0, $int10) = true & ~script7240($obj12) = 1 & (~script7228($int14) = 1 & $int8 > 0 | ($int1 = 1 | $int8 = 2))) {
-			if ($obj12 = $obj11) {
-				$int17 = calc($int17 - 1);
-				$intarray1($int17) = calc($intarray1($int17) + $int9);
-				$intarray4($int17) = ~min(^max_32bit_int, calc($intarray4($int17) + $int14));
-				if ($int15 > obj_despawntime) {
-					$intarray2($int17) = $int10;
-					$int15 = obj_despawntime;
-				}
-			} else {
-				$objarray0($int17) = $obj12;
-				$intarray1($int17) = $int9;
-				$intarray3($int17) = $int8;
-				$intarray4($int17) = $int14;
-				$intarray2($int17) = $int10;
-				$int15 = obj_despawntime;
-			}
-			$int17 = calc($int17 + 1);
-		}
-	}
-}
-def_int $int20 = 0;
-def_int $int21 = 0;
-cc_deleteall_entityoverlay($entityoverlay7);
-def_int $int22 = 0;
-if ($int1 = 1) {
-	$int6 = $int17;
-	$int5 = $int17;
-	$int22 = 0;
-} else if ($int17 > $int5) {
-	$int6 = calc($int5 - 1);
-	$int22 = calc($int17 - $int6);
-} else {
-	$int5 = $int17;
-}
-if (if_find_entityoverlay($entityoverlay7) = ^true) {
-	cc_setsize(calc(350 + 108), calc($int5 * 17), ^setsize_abs, ^setsize_abs);
-}
-def_int $int23 = 6;
-def_int $colour24 = null;
-def_int $int25 = -1;
-if (%ground_items_enabled = 1) {
-	while ($int23 >= 0) {
-		$int10 = 0;
-		switch_int ($int23) {
-			case 6 :
-				$colour24, $int25 = ~settings_get_colour_or_default(327), -1;
-			case 5 :
-				$colour24, $int25 = ~settings_get_colour_or_default(322), %ground_items_t5_threshold;
-			case 4 :
-				$colour24, $int25 = ~settings_get_colour_or_default(323), %ground_items_t4_threshold;
-			case 3 :
-				$colour24, $int25 = ~settings_get_colour_or_default(324), %ground_items_t3_threshold;
-			case 2 :
-				$colour24, $int25 = ~settings_get_colour_or_default(325), %ground_items_t2_threshold;
-			case 1 :
-				$colour24, $int25 = ~settings_get_colour_or_default(326), %ground_items_t1_threshold;
-			case 0 :
-				$colour24, $int25 = ^white, 0;
-		}
-		while ($int10 < $int17 & $int20 < $int6) {
-			$obj12 = $objarray0($int10);
-			if ($obj12 ! null & ($int25 ! -1 & $intarray4($int10) >= $int25 | $intarray3($int10) = 2)) {
-				if (oc_stackable($obj12) = true) {
-					$int13 = $intarray4($int10);
-				} else if (calc(^max_32bit_int / $intarray1($int10)) < $intarray4($int10)) {
-					$int13 = ^max_32bit_int;
-				} else {
-					$int13 = calc($intarray4($int10) * $intarray1($int10));
-				}
-				if ($int1 = 1 & $intarray3($int10) = 0 & $int23 ! 6) {
-					$colour24 = 0xa0a0a0;
-				}
-				$int21 = ~script7232(
-					0 = $entityoverlay7, 
-					1 = $coord0, 
-					2 = $int20, 
-					3 = $int21, 
-					4 = $int5, 
-					5 = $obj12, 
-					6 = $intarray1($int10), 
-					7 = $intarray4($int10), 
-					8 = $colour24, 
-					9 = $intarray2($int10), 
-					10 = $int1, 
-					11 = $int2, 
-					12 = $int3
-				);
-				$objarray0($int10) = null;
-				$int20 = calc($int20 + 1);
-			}
-			$int10 = calc($int10 + 1);
-		}
-		$int23 = calc($int23 - 1);
-	}
-	if ($int22 ! 0) {
-		cc_create_entityoverlay($entityoverlay7, ^iftype_text, $int21);
-		cc_setsize(108, 17, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-		cc_settextfont(p12_full);
-		cc_setcolour($colour24);
-		cc_settextshadow(true);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settext("and <tostring($int22)> more");
-	}
-}
-if (if_find_entityoverlay($entityoverlay7) = ^true) {
-	if ($int19 = 1) {
-		cc_setontimer("ground_items_polling($entityoverlay7, $coord0, clientclock, 1)");
-	} else {
-		cc_setontimer("ground_items_polling($entityoverlay7, $coord0, -1, -1)");
-	}
-	cc_setonkeydown("ground_items_key(event_keycode, $coord0)");
-	cc_setonkeyup("ground_items_key(event_keycode, $coord0)");
-	cc_setonvartransmit("ground_items_transmit($coord0){
-		0 = settings_varp_ehc_4, 
-		1 = settings_varp_ehc_5, 
-		2 = ground_items_t5_threshold, 
-		3 = ground_items_t4_threshold, 
-		4 = ground_items_t3_threshold, 
-		5 = ground_items_t2_threshold, 
-		6 = ground_items_t1_threshold, 
-		7 = ground_items_t5_colour, 
-		8 = ground_items_t4_colour, 
-		9 = ground_items_t3_colour, 
-		10 = ground_items_t2_colour, 
-		11 = ground_items_t1_colour, 
-		12 = ground_items_custom_colour
-	}");
-}
+java.lang.IllegalStateException: Opcode 7204 in script 7227 not implemented
+
+.id                       7227
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 7241
+   istore                 1
+   invoke                 7242
+   istore                 2
+   invoke                 7243
+   istore                 3
+   iload                  0
+   7120                  
+   istore                 4
+   get_varbit             15021
+   istore                 5
+   iload                  5
+   istore                 6
+   iload                  0
+   iconst                 0
+   7209                  
+   istore                 7
+   iload                  7
+   iconst                 -1
+   if_icmpeq              LABEL21
+   jump                   LABEL38
+LABEL21:
+   iload                  4
+   iconst                 0
+   if_icmple              LABEL25
+   jump                   LABEL26
+LABEL25:
+   return                
+LABEL26:
+   iload                  0
+   iconst                 0
+   iconst                 1
+   iconst                 350
+   iconst                 108
+   add                   
+   iload                  5
+   iconst                 17
+   multiply              
+   iconst                 1
+   7204                  
+   istore                 7
+LABEL38:
+   iload                  4
+   iconst                 0
+   if_icmple              LABEL42
+   jump                   LABEL46
+LABEL42:
+   iload                  0
+   iconst                 0
+   7214                  
+   return                
+LABEL46:
+   iload                  4
+   define_array           111
+   iload                  4
+   define_array           65641
+   iload                  4
+   define_array           131177
+   iload                  4
+   define_array           196713
+   iload                  4
+   define_array           262249
+   iconst                 0
+   istore                 8
+   iconst                 0
+   istore                 9
+   iload                  4
+   istore                 10
+   iconst                 -1
+   istore                 11
+   iconst                 -1
+   istore                 12
+   iconst                 -1
+   istore                 13
+   iconst                 -1
+   istore                 14
+   iconst                 0
+   istore                 15
+   iconst                 0
+   istore                 16
+   iconst                 0
+   istore                 17
+   iconst                 1
+   istore                 18
+   iconst                 0
+   istore                 19
+   get_varbit             14869
+   iconst                 1
+   if_icmpeq              LABEL84
+   jump                   LABEL224
+LABEL84:
+   iload                  10
+   iconst                 0
+   if_icmpgt              LABEL88
+   jump                   LABEL224
+LABEL88:
+   iload                  10
+   iconst                 1
+   sub                   
+   istore                 10
+   iload                  12
+   istore                 11
+   iload                  0
+   iload                  10
+   7121                  
+   istore                 12
+   iload                  12
+   invoke                 7238
+   iconst                 1
+   if_icmpeq              LABEL103
+   jump                   LABEL106
+LABEL103:
+   iconst                 2
+   istore                 8
+   jump                   LABEL116
+LABEL106:
+   iload                  12
+   invoke                 7239
+   iconst                 0
+   if_icmpeq              LABEL111
+   jump                   LABEL114
+LABEL111:
+   iconst                 0
+   istore                 8
+   jump                   LABEL116
+LABEL114:
+   iconst                 1
+   istore                 8
+LABEL116:
+   iload                  0
+   iload                  10
+   7122                  
+   istore                 9
+   iload                  12
+   invoke                 7236
+   istore                 18
+   istore                 13
+   iload                  12
+   oc_stackable          
+   iconst                 1
+   if_icmpeq              LABEL129
+   jump                   LABEL136
+LABEL129:
+   iconst                 2147483647
+   iload                  13
+   iload                  9
+   multiply              
+   invoke                 1046
+   istore                 14
+   jump                   LABEL138
+LABEL136:
+   iload                  13
+   istore                 14
+LABEL138:
+   iload                  18
+   iconst                 0
+   if_icmpeq              LABEL142
+   jump                   LABEL144
+LABEL142:
+   iconst                 1
+   istore                 19
+LABEL144:
+   iload                  0
+   iload                  10
+   6859                  
+   iconst                 1
+   if_icmpeq              LABEL150
+   jump                   LABEL223
+LABEL150:
+   iload                  12
+   invoke                 7240
+   iconst                 1
+   if_icmpeq              LABEL155
+   jump                   LABEL223
+LABEL155:
+   iload                  14
+   invoke                 7228
+   iconst                 1
+   if_icmpeq              LABEL160
+   jump                   LABEL163
+LABEL160:
+   iload                  8
+   iconst                 0
+   if_icmpgt              LABEL170
+LABEL163:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL170
+   iload                  8
+   iconst                 2
+   if_icmpeq              LABEL170
+   jump                   LABEL223
+LABEL170:
+   iload                  12
+   iload                  11
+   if_icmpeq              LABEL174
+   jump                   LABEL202
+LABEL174:
+   iload                  17
+   iconst                 1
+   sub                   
+   istore                 17
+   iload                  17
+   iload                  17
+   get_array_int          1
+   iload                  9
+   add                   
+   set_array_int          1
+   iload                  17
+   iconst                 2147483647
+   iload                  17
+   get_array_int          4
+   iload                  14
+   add                   
+   invoke                 1046
+   set_array_int          4
+   iload                  15
+   6860                  
+   if_icmpgt              LABEL196
+   jump                   LABEL201
+LABEL196:
+   iload                  17
+   iload                  10
+   set_array_int          2
+   6860                  
+   istore                 15
+LABEL201:
+   jump                   LABEL219
+LABEL202:
+   iload                  17
+   iload                  12
+   set_array_int         
+   iload                  17
+   iload                  9
+   set_array_int          1
+   iload                  17
+   iload                  8
+   set_array_int          3
+   iload                  17
+   iload                  14
+   set_array_int          4
+   iload                  17
+   iload                  10
+   set_array_int          2
+   6860                  
+   istore                 15
+LABEL219:
+   iload                  17
+   iconst                 1
+   add                   
+   istore                 17
+LABEL223:
+   jump                   LABEL84
+LABEL224:
+   iconst                 0
+   istore                 20
+   iconst                 0
+   istore                 21
+   iload                  7
+   104                   
+   iconst                 0
+   istore                 22
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL236
+   jump                   LABEL243
+LABEL236:
+   iload                  17
+   istore                 6
+   iload                  17
+   istore                 5
+   iconst                 0
+   istore                 22
+   jump                   LABEL258
+LABEL243:
+   iload                  17
+   iload                  5
+   if_icmpgt              LABEL247
+   jump                   LABEL256
+LABEL247:
+   iload                  5
+   iconst                 1
+   sub                   
+   istore                 6
+   iload                  17
+   iload                  6
+   sub                   
+   istore                 22
+   jump                   LABEL258
+LABEL256:
+   iload                  17
+   istore                 5
+LABEL258:
+   iload                  7
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL263
+   jump                   LABEL272
+LABEL263:
+   iconst                 350
+   iconst                 108
+   add                   
+   iload                  5
+   iconst                 17
+   multiply              
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+LABEL272:
+   iconst                 6
+   istore                 23
+   iconst                 -1
+   istore                 24
+   iconst                 -1
+   istore                 25
+   get_varbit             14869
+   iconst                 1
+   if_icmpeq              LABEL282
+   jump                   LABEL469
+LABEL282:
+   iload                  23
+   iconst                 0
+   if_icmpge              LABEL286
+   jump                   LABEL435
+LABEL286:
+   iconst                 0
+   istore                 10
+   iload                  23
+   switch                
+      6: LABEL291
+      5: LABEL297
+      4: LABEL303
+      3: LABEL309
+      2: LABEL315
+      1: LABEL321
+      0: LABEL327
+   jump                   LABEL331
+LABEL291:
+   iconst                 327
+   invoke                 5329
+   iconst                 -1
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL297:
+   iconst                 322
+   invoke                 5329
+   get_varp               3800
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL303:
+   iconst                 323
+   invoke                 5329
+   get_varp               3801
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL309:
+   iconst                 324
+   invoke                 5329
+   get_varp               3802
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL315:
+   iconst                 325
+   invoke                 5329
+   get_varp               3803
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL321:
+   iconst                 326
+   invoke                 5329
+   get_varp               3804
+   istore                 25
+   istore                 24
+   jump                   LABEL331
+LABEL327:
+   iconst                 16777215
+   iconst                 0
+   istore                 25
+   istore                 24
+LABEL331:
+   iload                  10
+   iload                  17
+   if_icmplt              LABEL335
+   jump                   LABEL430
+LABEL335:
+   iload                  20
+   iload                  6
+   if_icmplt              LABEL339
+   jump                   LABEL430
+LABEL339:
+   iload                  10
+   get_array_int         
+   istore                 12
+   iload                  12
+   iconst                 -1
+   if_icmpne              LABEL346
+   jump                   LABEL425
+LABEL346:
+   iload                  25
+   iconst                 -1
+   if_icmpne              LABEL350
+   jump                   LABEL354
+LABEL350:
+   iload                  10
+   get_array_int          4
+   iload                  25
+   if_icmpge              LABEL359
+LABEL354:
+   iload                  10
+   get_array_int          3
+   iconst                 2
+   if_icmpeq              LABEL359
+   jump                   LABEL425
+LABEL359:
+   iload                  12
+   oc_stackable          
+   iconst                 1
+   if_icmpeq              LABEL364
+   jump                   LABEL368
+LABEL364:
+   iload                  10
+   get_array_int          4
+   istore                 13
+   jump                   LABEL385
+LABEL368:
+   iconst                 2147483647
+   iload                  10
+   get_array_int          1
+   div                   
+   iload                  10
+   get_array_int          4
+   if_icmplt              LABEL376
+   jump                   LABEL379
+LABEL376:
+   iconst                 2147483647
+   istore                 13
+   jump                   LABEL385
+LABEL379:
+   iload                  10
+   get_array_int          4
+   iload                  10
+   get_array_int          1
+   multiply              
+   istore                 13
+LABEL385:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL389
+   jump                   LABEL400
+LABEL389:
+   iload                  10
+   get_array_int          3
+   iconst                 0
+   if_icmpeq              LABEL394
+   jump                   LABEL400
+LABEL394:
+   iload                  23
+   iconst                 6
+   if_icmpne              LABEL398
+   jump                   LABEL400
+LABEL398:
+   iconst                 10526880
+   istore                 24
+LABEL400:
+   iload                  7
+   iload                  0
+   iload                  20
+   iload                  21
+   iload                  5
+   iload                  12
+   iload                  10
+   get_array_int          1
+   iload                  10
+   get_array_int          4
+   iload                  24
+   iload                  10
+   get_array_int          2
+   iload                  1
+   iload                  2
+   iload                  3
+   invoke                 7232
+   istore                 21
+   iload                  10
+   iconst                 -1
+   set_array_int         
+   iload                  20
+   iconst                 1
+   add                   
+   istore                 20
+LABEL425:
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL331
+LABEL430:
+   iload                  23
+   iconst                 1
+   sub                   
+   istore                 23
+   jump                   LABEL282
+LABEL435:
+   iload                  22
+   iconst                 0
+   if_icmpne              LABEL439
+   jump                   LABEL469
+LABEL439:
+   iload                  7
+   iconst                 4
+   iload                  21
+   103                   
+   iconst                 108
+   iconst                 17
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 2
+   cc_setposition        
+   iconst                 495
+   cc_settextfont        
+   iload                  24
+   cc_setcolour          
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   sconst                 "and "
+   iload                  22
+   tostring              
+   sconst                 " more"
+   join_string            3
+   cc_settext            
+LABEL469:
+   iload                  7
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL474
+   jump                   LABEL521
+LABEL474:
+   iload                  19
+   iconst                 1
+   if_icmpeq              LABEL478
+   jump                   LABEL486
+LABEL478:
+   iconst                 7231
+   iload                  7
+   iload                  0
+   clientclock           
+   iconst                 1
+   sconst                 "iiii"
+   cc_setontimer         
+   jump                   LABEL493
+LABEL486:
+   iconst                 7231
+   iload                  7
+   iload                  0
+   iconst                 -1
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setontimer         
+LABEL493:
+   iconst                 7230
+   iconst                 -2147483640
+   iload                  0
+   sconst                 "ii"
+   1430                  
+   iconst                 7230
+   iconst                 -2147483640
+   iload                  0
+   sconst                 "ii"
+   1431                  
+   iconst                 7229
+   iload                  0
+   iconst                 3539
+   iconst                 3795
+   iconst                 3800
+   iconst                 3801
+   iconst                 3802
+   iconst                 3803
+   iconst                 3804
+   iconst                 3805
+   iconst                 3806
+   iconst                 3807
+   iconst                 3808
+   iconst                 3809
+   iconst                 3810
+   iconst                 13
+   sconst                 "iY"
+   cc_setonvartransmit   
+LABEL521:
+   return                

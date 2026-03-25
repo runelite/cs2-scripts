@@ -5,7 +5,7 @@ if ($opindex0 ! 1) {
 }
 sound_synth(interface_select1, 1, 0);
 ~worldmap_maplist_close($com_worldmap_maplist_display2, $com_worldmap_maplist_container3);
-if (worldmap_getcurrentmap ! $wma1 & cc_find($com_worldmap_maplist_display2, 4) = ^true) {
+if (worldmap_getcurrentmap ! $wma1 & cc_find($com_worldmap_maplist_display2, 4) = true) {
 	if (~worldmap_findcoordinmap($wma1, %varcint188) ! null) {
 		~worldmap_loadmap(
 			0 = $wma1, 

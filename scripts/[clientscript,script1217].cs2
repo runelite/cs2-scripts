@@ -60,7 +60,7 @@ $intarray0(26) = $int26;
 $intarray0(27) = $int27;
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find(trademain:other_offer, $int28) = ^true) {
+	if (cc_find(trademain:other_offer, $int28) = true) {
 		~trade_tooltip(invother_getnum(tradeoffer, $int28), $intarray0($int28), trademain:tooltip);
 	}
 }

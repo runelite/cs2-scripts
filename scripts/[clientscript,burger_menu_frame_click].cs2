@@ -1,0 +1,11 @@
+// 4771
+[clientscript,burger_menu_frame_click](component $component0, component $component1, component $component2)
+if (%ca_bosses_is_searching = 1) {
+	~ca_boss_disable_search;
+}
+sound_synth(interface_select1, 1, 0);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if (cc_find($component0, 0) = true) {
+	cc_setgraphic("menu_buttons,0");
+}

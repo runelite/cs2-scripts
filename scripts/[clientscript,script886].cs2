@@ -3,7 +3,7 @@
 sound_synth(interface_select1, 1, 0);
 ~league_setup_display_hoverdisable($com_league_firsts_league_filter1, $int5);
 if_sethide(false, $com_league_firsts_dropdown_container3);
-if_setonclick("script1108(1, -1, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)", $com_league_firsts_dropdown_container3);
+if_setonclick("league_firsts_dropdown_close(1, -1, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)", $com_league_firsts_dropdown_container3);
 def_int $int6 = if_getx($com_league_firsts_league_filter1);
 def_int $int7 = if_gety($com_league_firsts_league_filter1);
 def_component $component8 = if_getlayer($com_league_firsts_league_filter1);
@@ -53,7 +53,7 @@ while ($int14 <= $int9) {
 		cc_setonmouserepeat("league_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $int5)");
 		cc_setonmouseleave("league_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $int5)");
 	}
-	cc_setonop("script1108(event_op, $int14, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)");
+	cc_setonop("league_firsts_dropdown_close(event_op, $int14, $com_league_firsts_league_filter1, $int2, $com_league_firsts_dropdown_container3, $int5)");
 	cc_settext(struct_param(enum(int, struct, enum_2670, $int14), param_858));
 	$int14, $int13 = calc($int14 + 1), calc($int13 + 1);
 }

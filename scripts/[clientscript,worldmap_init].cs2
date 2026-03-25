@@ -96,7 +96,7 @@ def_int $int36 = 0;
 def_int $int37 = 0;
 $int26 = 0;
 while ($int36 < $int28) {
-	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 3)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 3)) = true) {
 		$string2, $string1 = ~script632(cc_gettext);
 		$int32 = string_length($string2);
 		if ($int32 > 0 & compare($string2, tostring($int31)) ! 0) {
@@ -130,7 +130,7 @@ while ($int36 < $int28) {
 			$int31, $int26 = $int35, calc($int26 + 20);
 		}
 	}
-	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4)) = true) {
 		cc_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	if (~on_mobile = true) {
@@ -138,10 +138,10 @@ while ($int36 < $int28) {
 	} else {
 		$int37 = $int26;
 	}
-	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 1)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 1)) = true) {
 		cc_setposition(1, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 2)) = ^true) {
+	if (cc_find($com_worldmap_key_entries21, calc($intarray0($int36) * 4 + 2)) = true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
 	$int26, $int36 = calc($int26 + $int27), calc($int36 + 1);
@@ -242,7 +242,7 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(4, $com_worldmap_toggles10, $int
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $com_worldmap_side5);
 ~worldmap_key_toggle(%worldmap_disable_key, $int29, $com_worldmap_map_container3, $com_worldmap_side5, $com_worldmap_key_toggle9);
-if (if_find(worldmap:resize_indicator) = ^true & ~on_mobile = true) {
+if (if_find(worldmap:resize_indicator) = true & ~on_mobile = true) {
 	cc_sethide(true);
 }
 cc_deleteall($com_worldmap_search11);
@@ -395,7 +395,7 @@ if (~on_mobile = false) {
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find($com_worldmap_maplist_list16, $intarray0($int28)) = ^true & cc_gethide = false) {
+	if (cc_find($com_worldmap_maplist_list16, $intarray0($int28)) = true & cc_gethide = false) {
 		$int36 = calc($int36 - 1);
 		cc_setposition(0, calc($int36 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
 	}

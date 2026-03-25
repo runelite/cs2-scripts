@@ -1,0 +1,9 @@
+// 1906
+[clientscript,skill_guide_v2_tab_select](int $int0)
+if ($int0 = %varcint1173) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+%varcint1173 = $int0;
+if_callonresize(skill_guide_v2:infinity);
+if_setscrollpos(0, 0, skill_guide_v2:list);

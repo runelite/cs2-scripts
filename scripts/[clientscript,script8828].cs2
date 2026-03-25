@@ -7,7 +7,7 @@ if (%sailing_show_customisation_material_messages = 1) {
 		mes("<$string0> materials: <$string2></col>.");
 	}
 }
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	cc_setcolour(0x0e0e0c);
 }
 sound_synth(interface_select1, 1, 0);
@@ -16,4 +16,4 @@ if (%sailing_intro = 28 & $dbrow3 = sailing_boat_facility_cargo_hold_regular_raf
 } else {
 	$string1 = "Materials needed: <br><br><$string1>";
 }
-~script8837($string0, $string1);
+~sailing_customisation_popup($string0, $string1);

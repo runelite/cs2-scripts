@@ -261,20 +261,20 @@ if ($int3 = 2) {
 		$int27 = calc($int27 + 1);
 	}
 	if ($int28 > 0) {
-		if (cc_find($component9, calc($int7 - 1)) = ^true) {
+		if (cc_find($component9, calc($int7 - 1)) = true) {
 			$int13 = parawidth("+<tostring($int28)> more", if_getwidth($component9), p11_full);
 			if (calc(~cr_ui_list_entry_description_width($component9) - $int15) < $int13) {
 				$int28 = calc($int28 + 1);
 				$int7 = calc($int7 - 1);
-				if (.cc_find($component9, $int7) = ^true) {
+				if (.cc_find($component9, $int7) = true) {
 					.cc_delete;
 				}
 				$int7 = calc($int7 - 1);
-				if (.cc_find($component9, $int7) = ^true) {
+				if (.cc_find($component9, $int7) = true) {
 					.cc_delete;
 				}
 				$int7 = calc($int7 - 1);
-				if (.cc_find($component9, $int7) = ^true) {
+				if (.cc_find($component9, $int7) = true) {
 					$int15 = ~script6402(.cc_getx);
 					.cc_delete;
 				}
@@ -368,14 +368,14 @@ $int7, $int31, $comsubid32, $int33, $int34 = ~script6410(
 	13 = $component11, 
 	14 = $component12
 );
-if (cc_find($component9, $comsubid32) = ^true) {
+if (cc_find($component9, $comsubid32) = true) {
 	if ($int6 = 1) {
 		cc_setonop("script6376($int2, $int0, false)");
 	} else {
 		cc_setonop("script6376($int2, $int0, true)");
 	}
 }
-if (cc_find($component10, $int33) = ^true) {
+if (cc_find($component10, $int33) = true) {
 	if ($int6 = 1) {
 		cc_sethide(false);
 		cc_setop(1, "View journal <col=ff981f><~get_quest_name($dbrow4)></col>");

@@ -92,12 +92,12 @@ if (obj_findbyindex($coord1, $int9) = true) {
 		$int3 = calc($int3 + 1);
 		if ($int18 > 0) {
 			cc_settext("[<~buff_bar_time_string($int18)>]");
-			cc_setcolour(~script7244($int18, $colour8));
+			cc_setcolour(~ground_items_display_time_colour($int18, $colour8));
 			.cc_setgraphic("ground_items_visibility,1");
 		} else {
 			if ($int17 > 0) {
 				cc_settext("[<~buff_bar_time_string($int17)>]");
-				cc_setcolour(~script7244($int17, $colour8));
+				cc_setcolour(~ground_items_display_time_colour($int17, $colour8));
 			} else {
 				.cc_setposition(calc(0 - $int14 / 2 - 10), $int13, ^setpos_abs_centre, ^setpos_abs_bottom);
 			}

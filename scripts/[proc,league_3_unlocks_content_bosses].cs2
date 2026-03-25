@@ -23,7 +23,7 @@ while ($struct12 ! null) {
 	} else {
 		$int13 = 0;
 	}
-	$int14 = ~script5831(struct_param($struct12, param_1436));
+	$int14 = ~league_3_boss_is_unlocked(struct_param($struct12, param_1436));
 	$int10 = ~league_3_unlocks_content_bosses_button(
 		0 = $component0, 
 		1 = struct_param($struct12, param_1440), 
@@ -43,7 +43,7 @@ if ($int9 ! if_getscrollheight($component0) | %league_3_unlocks_current_selectio
 	if_setscrollpos(0, 0, $component0);
 }
 ~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if (cc_find($component1, 1) = ^true) {
+if (cc_find($component1, 1) = true) {
 	~scrollbar_vertical_setdragger($component1, $component0);
 }
 $struct12 = enum(int, struct, enum_4130, calc(%league_3_unlocks_current_selection - 1));
@@ -63,7 +63,7 @@ if (%league_3_unlocks_current_selection ! 0) {
 	if_setonop("ca_boss_lookup(struct_param($struct12, param_1443), $string0)", $component5);
 	if_setop(1, "View", $component6);
 	if_setopbase("<col=ff9040>Map Location</col>", $component6);
-	if (~script5831(struct_param($struct12, param_1436)) = 1) {
+	if (~league_3_boss_is_unlocked(struct_param($struct12, param_1436)) = 1) {
 		~league_3_unlocks_buy_button($component4, 4, $int8, 0);
 		$string0 = "<struct_param($struct12, param_1437)> - Unlocked";
 	} else if ($int15 > %league_unlock_points) {

@@ -45,7 +45,7 @@ if (%varcint171 <= 0 & enum(enum, boolean, enum_1134, $enum1) = false) {
 }
 %varcint172, %varcint173 = null, -1;
 $component3 = enum(component, component, $enum1, toplevel_osrs_stretch:compassclick);
-~script7560($component3, $enum1);
+~toplevel_compass($component3, $enum1);
 ~script1044;
 if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
@@ -62,10 +62,10 @@ if ($enum1 = enum_139) {
 	~script4729(enum(component, component, $enum1, toplevel_osm:safezone_hudcontainer), null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
 	~script4729(enum(component, component, $enum1, toplevel_osm:safezone), null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, 0);
 	~script4729(enum(component, component, $enum1, toplevel_osrs_stretch:zeah), null, setbit(0, 3), ^setpos_abs_left, ^setpos_abs_top, 0);
-	~script868(enum(component, component, $enum1, toplevel_osm:wifi));
-	~script957(enum(component, component, $enum1, toplevel_osm:battery));
+	~osm_wifi_init(enum(component, component, $enum1, toplevel_osm:wifi));
+	~osm_battery_init(enum(component, component, $enum1, toplevel_osm:battery));
 	~script7608($enum1);
-	~script7612($enum1);
+	~osm_expand_tabs_init($enum1);
 	if (if_getheight(enum(component, component, $enum1, toplevel_osrs_stretch:gameframe)) < 503) {
 		if_setposition(0, 4, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, toplevel_osm:side_right_tabs));
 	}

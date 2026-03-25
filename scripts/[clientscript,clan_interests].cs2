@@ -41,7 +41,7 @@ def_int $int11 = 0;
 $int1 = 0;
 def_int $int12 = 0;
 while ($int12 <= 15) {
-	if ($booleanarray3($int12) = true & cc_find(clans_interests:list, $int12) = ^true) {
+	if ($booleanarray3($int12) = true & cc_find(clans_interests:list, $int12) = true) {
 		cc_sethide(false);
 		$int11 = calc($int1 / 2 * $int8);
 		if (calc($int1 % 2) = 0) {

@@ -5,7 +5,7 @@ if (%sailing_last_personal_boat_boarded < 1) {
 }
 def_component $component4 = sailing_boat_selection:boats_container_recent;
 cc_deleteall($component4);
-def_int $int5 = ~script9015(%sailing_last_personal_boat_boarded);
+def_int $int5 = ~sailing_boat_get_type(%sailing_last_personal_boat_boarded);
 def_int $int6 = 0;
 def_int $comsubid7 = $int6;
 if ($int5 = -1) {
@@ -27,7 +27,7 @@ cc_setcolour(0xff981f);
 $int1 = calc($int1 + 17);
 $int6 = calc($int6 + 1);
 def_int $int10 = $int1;
-$int6, $int1 = ~script8628(
+$int6, $int1 = ~sailing_boat_selection_draw_boat(
 	0 = $component4, 
 	1 = $component0, 
 	2 = $int6, 
@@ -40,7 +40,7 @@ $int6, $int1 = ~script8628(
 	9 = $int3
 );
 def_int $int11 = calc($int1 - $int10);
-$int6 = ~script7770(
+$int6 = ~thinbox_specific_col(
 	0 = $component4, 
 	1 = $int6, 
 	2 = 0, 

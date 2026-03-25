@@ -4,49 +4,49 @@ if (calc(clientclock - $int1) < 10) {
 	return;
 }
 def_int $int9 = 0;
-if (cc_find($component0, $comsubid3) = ^true) {
+if (cc_find($component0, $comsubid3) = true) {
 	$int9 = calc(cc_getwidth - $int8);
 	if ($int9 <= 0) {
 		$int9 = cc_getwidth;
-		if (cc_find($component0, $comsubid2) = ^true) {
+		if (cc_find($component0, $comsubid2) = true) {
 			cc_delete;
 		}
-		if (cc_find($component0, $comsubid3) = ^true) {
+		if (cc_find($component0, $comsubid3) = true) {
 			cc_delete;
 		}
-		if (cc_find($component0, $comsubid4) = ^true) {
+		if (cc_find($component0, $comsubid4) = true) {
 			cc_delete;
 		}
-		if (cc_find($component0, $comsubid5) = ^true) {
+		if (cc_find($component0, $comsubid5) = true) {
 			cc_setsize(calc(cc_getwidth + $int9), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if (cc_find($component0, $comsubid6) = ^true) {
+		if (cc_find($component0, $comsubid6) = true) {
 			cc_setsize(calc(cc_getwidth + $int9), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if (cc_find($component0, $comsubid7) = ^true) {
+		if (cc_find($component0, $comsubid7) = true) {
 			cc_setsize(calc(cc_getwidth + $int9), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
 		if_setontimer(null, $component0);
 	} else {
-		if (cc_find($component0, $comsubid2) = ^true) {
+		if (cc_find($component0, $comsubid2) = true) {
 			cc_setsize($int9, cc_getheight, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(cc_getx + $int8), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find($component0, $comsubid3) = ^true) {
+		if (cc_find($component0, $comsubid3) = true) {
 			cc_setsize($int9, cc_getheight, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(cc_getx + $int8), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find($component0, $comsubid4) = ^true) {
+		if (cc_find($component0, $comsubid4) = true) {
 			cc_setsize($int9, cc_getheight, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(cc_getx + $int8), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find($component0, $comsubid5) = ^true) {
+		if (cc_find($component0, $comsubid5) = true) {
 			cc_setsize(calc(cc_getwidth + $int8), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if (cc_find($component0, $comsubid6) = ^true) {
+		if (cc_find($component0, $comsubid6) = true) {
 			cc_setsize(calc(cc_getwidth + $int8), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if (cc_find($component0, $comsubid7) = ^true) {
+		if (cc_find($component0, $comsubid7) = true) {
 			cc_setsize(calc(cc_getwidth + $int8), cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
 	}

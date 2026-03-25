@@ -88,12 +88,12 @@ if (calc($int17 - $int18) <= 0) {
 }
 $int26 = $int23;
 .cc_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top);
-if (cc_find($component0, calc(.cc_getid + 1)) = ^true) {
+if (cc_find($component0, calc(.cc_getid + 1)) = true) {
 	cc_setposition(0, $int26, ^setpos_abs_left, ^setpos_abs_top);
 }
 $int23 = calc($int23 + $int21);
 if ($int18 <= 0) {
-	if (cc_find($component0, calc(.cc_getid + 2)) = ^true) {
+	if (cc_find($component0, calc(.cc_getid + 2)) = true) {
 		cc_setposition($int25, $int23, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_setcolour(0x9f9f9f);

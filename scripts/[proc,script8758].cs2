@@ -31,10 +31,10 @@ if (string_length($string1) = 0 & $dbrow9 ! null & db_getrowtable($dbrow9) = sai
 	$string1 = db_getfield($dbrow9, sailing_boat_facility:name, 0);
 }
 $string1 = "<$string1><~script8759($dbrow9)>";
-if (cc_find($component8, 0) = ^true) {
+if (cc_find($component8, 0) = true) {
 	cc_settext($string1);
 }
-~script8748(
+~sailing_sidepanel_stonebutton(
 	0 = $component6, 
 	1 = null, 
 	2 = 0, 
@@ -53,7 +53,7 @@ if (cc_find($component8, 0) = ^true) {
 	15 = 1
 );
 cc_setop(1, "Back");
-def_int $int10 = ~script9042;
+def_int $int10 = ~sailing_sidepanel_crew_count_get;
 def_int $int11 = 0;
 if (%sailing_sidepanel_boat_type ! null) {
 	$int11 = min(5, db_getfield(%sailing_sidepanel_boat_type, sailing_boat:crew_capacity, 0));
@@ -84,7 +84,7 @@ if ($int10 = 0) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);
-	if (~script9022 = 1) {
+	if (~sailing_unlocked = 1) {
 		cc_settext("No crewmates available.<br><br>You can manage your crewmates with the Crew Registrar.");
 	} else {
 		cc_settext("You are not yet an experienced enough sailor to manage a crew.");
@@ -105,7 +105,7 @@ if ($int10 = 0) {
 		8 = 0
 	);
 	while ($int16 < $int10 & $int17 < 5) {
-		if (~script9040($int17) ! 0) {
+		if (~sailing_sidepanel_crew_get_slot($int17) ! 0) {
 			if (calc($int16 % 2) = 0) {
 				$int12, $int13, $int14 = ~script8762(
 					0 = $int12, 

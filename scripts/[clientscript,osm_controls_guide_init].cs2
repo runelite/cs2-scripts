@@ -1,0 +1,30 @@
+// 2368
+[clientscript,osm_controls_guide_init](component $com_osm_controls_guide_universe0, component $com_osm_controls_guide_next1, component $com_osm_controls_guide_previous2, component $com_osm_controls_guide_13, component $com_osm_controls_guide_24, component $com_osm_controls_guide_35, component $com_osm_controls_guide_46, component $com_osm_controls_guide_57, component $com_osm_controls_guide_68)
+cc_deleteall($com_osm_controls_guide_universe0);
+~steelbox($com_osm_controls_guide_universe0, 0, false);
+~osm_controls_guide_set($com_osm_controls_guide_next1, $com_osm_controls_guide_previous2, $com_osm_controls_guide_13, $com_osm_controls_guide_24, $com_osm_controls_guide_35, $com_osm_controls_guide_46, $com_osm_controls_guide_57, $com_osm_controls_guide_68);
+if_setonvartransmit("osm_controls_guide_set($com_osm_controls_guide_next1, $com_osm_controls_guide_previous2, $com_osm_controls_guide_13, $com_osm_controls_guide_24, $com_osm_controls_guide_35, $com_osm_controls_guide_46, $com_osm_controls_guide_57, $com_osm_controls_guide_68){if1}", $com_osm_controls_guide_universe0);
+if_setonop("osm_controls_guide_op(
+	0 = 1, 
+	1 = event_op, 
+	2 = $com_osm_controls_guide_next1, 
+	3 = $com_osm_controls_guide_previous2, 
+	4 = $com_osm_controls_guide_13, 
+	5 = $com_osm_controls_guide_24, 
+	6 = $com_osm_controls_guide_35, 
+	7 = $com_osm_controls_guide_46, 
+	8 = $com_osm_controls_guide_57, 
+	9 = $com_osm_controls_guide_68
+)", $com_osm_controls_guide_next1);
+if_setonop("osm_controls_guide_op(
+	0 = -1, 
+	1 = event_op, 
+	2 = $com_osm_controls_guide_next1, 
+	3 = $com_osm_controls_guide_previous2, 
+	4 = $com_osm_controls_guide_13, 
+	5 = $com_osm_controls_guide_24, 
+	6 = $com_osm_controls_guide_35, 
+	7 = $com_osm_controls_guide_46, 
+	8 = $com_osm_controls_guide_57, 
+	9 = $com_osm_controls_guide_68
+)", $com_osm_controls_guide_previous2);

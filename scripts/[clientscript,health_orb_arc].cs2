@@ -2,14 +2,14 @@
 [clientscript,health_orb_arc](component $component0, int $int1, int $int2, int $int3, int $int4)
 $int2 = calc($int2 + 1);
 $int4 = calc($int4 + 1);
-if (cc_find($component0, 0) = ^true) {
+if (cc_find($component0, 0) = true) {
 	if ($int3 > 0) {
 		cc_setarc(0, calc(scale($int4, $int3, 65536) % 65536));
 	} else {
 		cc_setarc(0, 0);
 	}
 }
-if (cc_find($component0, 1) = ^true) {
+if (cc_find($component0, 1) = true) {
 	if ($int1 > 0) {
 		cc_setarc(0, calc(scale($int2, $int1, 65536) % 65536));
 	} else {

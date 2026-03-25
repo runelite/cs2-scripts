@@ -1,0 +1,17 @@
+// 5000
+[clientscript,huntsmans_kit_side_init](component $com_huntsmans_kit_side_items0)
+cc_deleteall($com_huntsmans_kit_side_items0);
+def_int $comsubid1 = inv_size(inv);
+def_int $comsubid2 = 0;
+while ($comsubid2 < $comsubid1) {
+	cc_create($com_huntsmans_kit_side_items0, ^iftype_graphic, $comsubid2, false);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$comsubid2 = calc($comsubid2 + 1);
+}
+~huntsmans_kit_side_draw($comsubid1, $com_huntsmans_kit_side_items0);
+if_setoninvtransmit("huntsmans_kit_side_draw($comsubid1, $com_huntsmans_kit_side_items0){inv}", $com_huntsmans_kit_side_items0);
+if_setonvartransmit("huntsmans_kit_side_draw($comsubid1, $com_huntsmans_kit_side_items0){ii_player2}", $com_huntsmans_kit_side_items0);

@@ -4,6 +4,6 @@ if (calc(clientclock % 50) = 0) {
 	return;
 }
 def_int $int4 = calc((clientclock - $int3) / 50);
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	~raids_partylist_age_write(calc($int2 + $int4), $int2, $int3);
 }

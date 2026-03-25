@@ -940,7 +940,7 @@ while ($int10 ! -1 & $component9 ! null) {
 						if_setop(6, "View", $component9);
 						if_setop(7, "Open", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
-						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonop("chat_op_extended(event_op, event_opbase, $chattype11, $int22)", $component9);
 						if_setonmouseover(null, $component9);
 						if_setonmouseleave(null, $component9);
 					}
@@ -1047,7 +1047,7 @@ while ($int10 ! -1 & $component9 ! null) {
 						if_setop(6, "View", $component9);
 						if_setop(7, "Open", $component9);
 						if_setopbase("<col=ffffff>Task</col>", $component9);
-						if_setonop("script7821(event_op, event_opbase, $chattype11, $int22)", $component9);
+						if_setonop("chat_op_extended(event_op, event_opbase, $chattype11, $int22)", $component9);
 						if_setonmouseover(null, $component9);
 						if_setonmouseleave(null, $component9);
 					}
@@ -1070,19 +1070,19 @@ while ($component9 ! null) {
 	if_setonmouseover(null, $component9);
 	if_setonmouseleave(null, $component9);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component9);
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4)) = true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 1)) = true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 2)) = true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 3)) = true) {
 		cc_sethide(true);
 	}
 	$int8 = calc($int8 + 1);
@@ -1100,16 +1100,16 @@ while ($int8 > 0) {
 	$component9 = enum(int, component, enum_579, $int8);
 	$int6 = calc(if_gety($component9) + $int24 - 2);
 	if_setposition(if_getx($component9), $int6, ^setpos_abs_left, ^setpos_abs_top, $component9);
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4)) = true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 1)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 1)) = true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 2)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 2)) = true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 3)) = ^true) {
+	if (cc_find(chatbox:scrollarea, calc($int8 * 4 + 3)) = true) {
 		cc_setposition(cc_getx, $int6, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }

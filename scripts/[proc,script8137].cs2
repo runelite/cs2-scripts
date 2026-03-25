@@ -22,9 +22,9 @@ $int1 = ~cc_add_button(
 );
 cc_setop(1, "Previous Tile");
 if ($int6 ! $int3) {
-	cc_setonop("script8133($int2, $int6, $component5, $component0, $component4)");
+	cc_setonop("bingo_redraw_tile_details($int2, $int6, $component5, $component0, $component4)");
 } else {
-	~script8190(true, 1);
+	~cc_set_button_states(true, 1);
 }
 cc_createchild(^iftype_text, $int1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -53,9 +53,9 @@ $int1 = ~cc_add_button(
 );
 cc_setop(1, "Next Tile");
 if ($int6 ! $int3) {
-	cc_setonop("script8133($int2, $int6, $component5, $component0, $component4)");
+	cc_setonop("bingo_redraw_tile_details($int2, $int6, $component5, $component0, $component4)");
 } else {
-	~script8190(true, 1);
+	~cc_set_button_states(true, 1);
 }
 cc_createchild(^iftype_text, $int1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

@@ -1,0 +1,13 @@
+// 4966
+[clientscript,colosseum_modifier_op](int $opindex0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
+if ($opindex0 ! 1) {
+	return;
+}
+if ($int2 = %varcint1194) {
+	%varcint1194 = 0;
+} else {
+	%varcint1194 = $int2;
+	sound_synth(interface_select1, 1, 0);
+}
+~colosseum_intermission_draw_modifiers($int7);
+~colosseum_intermission_draw_buttons(colosseum_intermission:button_continue, colosseum_intermission:button_claim, $int7);

@@ -1,0 +1,32 @@
+java.lang.IllegalStateException: Opcode 7203 in script 5958 not implemented
+
+.id                       5958
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 2476
+   iconst                 0
+   if_icmpeq              LABEL7
+   get_varbit             13666
+   iconst                 1
+   if_icmpeq              LABEL7
+   jump                   LABEL8
+LABEL7:
+   return                
+LABEL8:
+   iconst                 4
+   invoke                 5950
+   iconst                 -1
+   istore                 0
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   7203                  
+   istore                 0
+   iconst                 4
+   invoke                 5953
+   iload                  0
+   invoke                 5961
+   return                

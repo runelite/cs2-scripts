@@ -8,7 +8,7 @@ cc_deleteall($com_ca_overview_ca_buttons7);
 cc_deleteall($com_ca_overview_ca_buttons_click8);
 cc_deleteall($com_ca_overview_ca_tier_name5);
 def_int $colour10 = 0xff981f;
-if (cc_find(ca_overview:frame, $comsubid4) = ^true) {
+if (cc_find(ca_overview:frame, $comsubid4) = true) {
 	cc_setcolour($colour10);
 } else {
 	mes("Couldn't find the frame.");

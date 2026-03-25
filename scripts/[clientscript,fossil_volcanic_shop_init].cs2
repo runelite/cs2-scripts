@@ -97,7 +97,7 @@ def_int $int13 = calc($int4 - $int12);
 def_int $int14 = 0;
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
-	if (cc_find($com_fossil_volcanic_shop_items1, $int9) = ^true) {
+	if (cc_find($com_fossil_volcanic_shop_items1, $int9) = true) {
 		$namedobj10 = enum(int, namedobj, enum_1779, $int9);
 		.cc_create($com_fossil_volcanic_shop_items1, ^iftype_graphic, $int5, false);
 		$int5 = calc($int5 + 1);

@@ -3,7 +3,7 @@
 if (clientclock < $int3) {
 	return;
 }
-if (cc_find($component0, $comsubid2) = ^true) {
+if (cc_find($component0, $comsubid2) = true) {
 	cc_setcolour(0xff981f);
 	if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
 	if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component0);

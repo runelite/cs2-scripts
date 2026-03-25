@@ -1,0 +1,5 @@
+// 7531
+[proc,hiscores_poll_stop]
+if_sethide(true, hiscores:loading_data);
+if_setontimer(null, hiscores:content);
+cc_deleteall(hiscores:loading_data);

@@ -1,0 +1,5 @@
+// 4621
+[clientscript,ehc_rating_toggle_prompt](component $component0)
+%ehc_rating_dont_prompt = calc(1 - %ehc_rating_dont_prompt);
+sound_synth(interface_select1, 1, 0);
+~ehc_rating_toggle_box($component0);

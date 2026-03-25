@@ -1,0 +1,33 @@
+// 2743
+[proc,script2743]
+def_component $component0 = settings:settings_clickzone;
+def_component $component1 = settings:settings_content;
+def_component $component2 = settings:scrollbar;
+def_component $component3 = settings:settings;
+def_component $component4 = settings:dropdown_panel;
+def_component $component5 = settings:dropdown_close;
+def_component $component6 = settings:dropdown_buttons;
+def_component $component7 = settings:dropdown_scrollbar;
+def_component $component8 = settings:dropdown_container;
+def_component $component9 = settings:settings_sliderclickzone;
+def_component $component10 = settings:settings_sliderzone;
+def_component $component11 = settings:tooltip;
+~settings_populate_settings(
+	0 = 1, 
+	1 = 0, 
+	2 = if_getscrolly($component3), 
+	3 = 0, 
+	4 = $component0, 
+	5 = $component1, 
+	6 = $component2, 
+	7 = %settings_category, 
+	8 = $component3, 
+	9 = $component4, 
+	10 = $component5, 
+	11 = $component6, 
+	12 = $component7, 
+	13 = $component8, 
+	14 = $component9, 
+	15 = $component10, 
+	16 = $component11
+);

@@ -5,7 +5,7 @@ def_obj $obj2 = null;
 def_int $int3 = 0;
 def_int $int4 = 4;
 while ($int1 < 28) {
-	if (cc_find($com_tai_bwo_wannai_post_items0, $int1) = ^true) {
+	if (cc_find($com_tai_bwo_wannai_post_items0, $int1) = true) {
 		$obj2 = inv_getobj(inv, $int1);
 		cc_clearops;
 		cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);

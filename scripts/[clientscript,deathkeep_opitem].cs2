@@ -1,6 +1,6 @@
 // 3452
 [clientscript,deathkeep_opitem](component $component0, int $comsubid1, string $string0)
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	sound_synth(interface_select1, 1, 0);
 	mes($string0);
 	cc_settrans(100);

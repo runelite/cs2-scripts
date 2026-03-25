@@ -21,7 +21,7 @@ def_int $int17 = 0;
 def_int $int18 = %osm_hotkey_settings_loadout_viewed;
 def_struct $struct19 = null;
 while ($int16 < $int15) {
-	$int17 = ~script7445($int18, $int16);
+	$int17 = ~osm_hotkeys_get_slot($int18, $int16);
 	if ($int17 >= 0) {
 		$struct19 = enum(int, struct, enum_5607, $int17);
 		~script2119($int16, $struct19);

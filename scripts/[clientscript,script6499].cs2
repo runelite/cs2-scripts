@@ -1,5 +1,5 @@
 // 6499
-[clientscript,script6499](entityoverlay $entityoverlay0, dbrow $dbrow1, loc $loc2, obj $obj3, coord $coord4, obj $obj5, int $int6, int $int7, int $int8)
+[clientscript,script6499](int $int0, dbrow $dbrow1, loc $loc2, obj $obj3, coord $coord4, obj $obj5, int $int6, int $int7, int $int8)
 if (loc_find($coord4, $loc2) = true) {
 	if ($int6 = %option_cluehelper_overlay_enabled & $dbrow1 = %cluehelper_infobox_clue & %option_cluehelper_target_highlight_enabled = $int7 & %option_cluehelper_enabled = $int8) {
 		return;

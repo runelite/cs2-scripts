@@ -1,9 +1,9 @@
 // 4743
 [proc,highlighting_channel_setup]
 if (~on_enhanced_desktop = 1) {
-	~script6681;
+	~highlighting_player_tile_setup;
 } else {
-	~script7584;
+	~osm_tile_highlight_setup;
 }
 ~entity_highlight_setup(5, 2, 0, true, true, true, true);
 ~entity_highlight_setup(9, 2, 0, true, true, true, true);
@@ -11,14 +11,14 @@ if (~on_enhanced_desktop = 1) {
 ~entity_highlight_setup(11, 2, 0, true, true, true, true);
 ~entity_highlight_setup(12, 2, 0, true, true, true, true);
 ~entity_highlight_setup(4, 2, 0, true, true, true, true);
-~script5198;
-~script5204;
-~script5210;
+~highlighting_tile_mouseover_setup;
+~highlighting_tile_current_setup;
+~highlighting_tile_destination_setup;
 ~helper_agility_highlight_obstacles;
 ~herbiboar_helper_highlight_enable(%herbiboar_helper_disabled);
 ~script6684;
 ~blast_furnace_highlights;
 ~cluehelper_highlight_channel_setup(%option_cluehelper_target_highlight_enabled);
-~script4872;
-~script8319;
-~script8492;
+~quest_highlight_channel_setup;
+~poll_booth_highlight_setup;
+~tutorial_highlight_channel_setup;

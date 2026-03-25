@@ -46,7 +46,7 @@ if (~instance_check(coord) = 1) {
 		} else {
 			if_setsize($int20, if_getheight($com_tob_hud_progress_container4), ^setsize_minus, ^setsize_abs, $com_tob_hud_progress_container4);
 		}
-		if (cc_find($com_tob_hud_progress_bar5, 0) = ^true & .cc_find($com_tob_hud_progress_bar5, 1) = ^true) {
+		if (cc_find($com_tob_hud_progress_bar5, 0) = true & .cc_find($com_tob_hud_progress_bar5, 1) = true) {
 			if (%tob_client_waveprogress_type = 1) {
 				cc_setcolour(^red);
 				.cc_setcolour(0x0dc10d);

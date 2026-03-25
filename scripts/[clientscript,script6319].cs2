@@ -41,7 +41,7 @@ while ($int13 > 0) {
 	if ($obj1 = enum(int, namedobj, enum_4390, $int13)) {
 		if (oc_param($obj1, param_434) ! null & oc_param($obj1, param_436) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_434))) | oc_param($obj1, param_435) ! null & oc_param($obj1, param_437) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_435))) | oc_param($obj1, param_191) ! null & oc_param($obj1, param_613) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_191))) | oc_param($obj1, param_579) ! null & oc_param($obj1, param_614) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_579))) | oc_param($obj1, param_610) ! null & oc_param($obj1, param_615) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_610))) | oc_param($obj1, param_611) ! null & oc_param($obj1, param_616) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_611))) | oc_param($obj1, param_612) ! null & oc_param($obj1, param_617) > $intarray0(enum(stat, int, enum_81, oc_param($obj1, param_612)))) {
 			mes("<oc_name($obj1)>: This build's stats will not permit you to equip that item.");
-		} else if (cc_find($component2, $int13) = ^true) {
+		} else if (cc_find($component2, $int13) = true) {
 			~scrollbar_resize($component3, $component2, cc_gety);
 		} else {
 			mes("<oc_name($obj1)>: Unable to scroll to that item.");

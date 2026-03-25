@@ -1,0 +1,22 @@
+// 7728
+[proc,league_summary_draw_relic](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
+$int1 = ~create_graphic(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ~league_relic_return_graphic($int2, $int3), 
+	3 = $int4, 
+	4 = $int5, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 30, 
+	8 = 30, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+if ($int3 = 0) {
+	cc_settrans(200);
+} else {
+	~league_summary_add_tooltip(~script7704($int2, $int3));
+}
+return($int1);

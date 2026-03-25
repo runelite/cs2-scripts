@@ -89,7 +89,7 @@ cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
 $int8 = calc($int8 + 1);
 $int14 = calc($int14 + $int19);
 cc_create($component1, ^iftype_text, $int8, false);
-cc_settext(~script1127($int3, $int4, $int5, $int6, $int7));
+cc_settext(~league_rank_achieved_highest($int3, $int4, $int5, $int6, $int7));
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour($colour16);
@@ -158,7 +158,7 @@ while ($int12 <= $int11) {
 		$int8 = calc($int8 + 1);
 		$int14 = calc($int14 + $int19);
 		cc_create($component1, ^iftype_text, $int8, false);
-		cc_settext(~script1126($struct9, $int3, $int4, $int5, $int6, $int7));
+		cc_settext(~league_rank_achieved($struct9, $int3, $int4, $int5, $int6, $int7));
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_setcolour($colour16);

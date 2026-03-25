@@ -1,11 +1,45 @@
-// 5473
-[proc,add_overlaytimer_loc](loc $loc0, int $int1, int $int2, int $int3, int $colour4, int $int5)
-if (~on_enhanced_any = 0 | ~script5476($int1, $int3) = 0) {
-	return;
-}
-def_int $int6 = 0;
-if (lc_param($loc0, param_1545) = true) {
-	$int6 = 2;
-}
-def_entityoverlay $entityoverlay7 = entityoverlay_create_loc(1, $int6, 25, 25, 0);
-~add_overlaytimer_inner($int1, $entityoverlay7, $int2, $int3, $colour4, $int5);
+java.lang.IllegalStateException: Opcode 7201 in script 5473 not implemented
+
+.id                       5473
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL9
+   iload                  1
+   iload                  3
+   invoke                 5476
+   iconst                 0
+   if_icmpeq              LABEL9
+   jump                   LABEL10
+LABEL9:
+   return                
+LABEL10:
+   iconst                 0
+   istore                 6
+   iload                  0
+   iconst                 1545
+   lc_param              
+   iconst                 1
+   if_icmpeq              LABEL18
+   jump                   LABEL20
+LABEL18:
+   iconst                 2
+   istore                 6
+LABEL20:
+   iconst                 1
+   iload                  6
+   iconst                 25
+   iconst                 25
+   iconst                 0
+   7201                  
+   istore                 7
+   iload                  1
+   iload                  7
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   invoke                 5480
+   return                

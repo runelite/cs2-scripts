@@ -1,0 +1,36 @@
+// 7595
+[proc,combat_interface_info_toggle](int $int0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 38862854;
+def_int $int4 = 38862858;
+def_int $int5 = 38862862;
+def_int $int6 = 38862866;
+def_component $component7 = combat_interface:infobutton;
+def_int $int8 = 38862876;
+def_int $int9 = 38862871;
+cc_deleteall($component7);
+if ($int0 = 1) {
+	$int1 = ~options_button_on($component7, $int1);
+} else {
+	$int1 = ~options_button_off($component7, $int1);
+}
+def_int $int10 = 0;
+if ($int0 = 0) {
+	$int10 = 1;
+}
+if_setonclick("combat_interface_info_toggle($int10)", $component7);
+if_sethide(false, $component7);
+cc_create($component7, ^iftype_text, $int1, false);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Info");
+~combat_interface_glow_toggle($int0);
+~script7596($int0);
+if ($int0 = 0) {
+	cc_deleteall(combat_interface:info_layer);
+}

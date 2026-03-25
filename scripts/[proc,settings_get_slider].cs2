@@ -5,8 +5,6 @@ switch_int ($int0) {
 		return(calc(minimap_getzoom - 2));
 	case 15 :
 		return(calc(deviceoption_get(^deviceoption_brightness) / 5));
-	case 79 :
-		return(%option_interface_scaling);
 	case 168 :
 		if (%varcint1292 < 25 | %varcint1292 > 90) {
 			%varcint1292 = ~minmax(25, 90, deviceoption_get(^deviceoption_draw_distance));

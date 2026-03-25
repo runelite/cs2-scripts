@@ -1,0 +1,9 @@
+// 8110
+[clientscript,bingo_show_rewards_op](component $component0, int $comsubid1, boolean $boolean2, component $com_bingo_overlay_grid_tiles3)
+def_boolean $boolean4 = ~flip_bool($boolean2);
+if (cc_find($component0, $comsubid1) = true) {
+	cc_setonop("bingo_show_rewards_op(event_com, event_comsubid, $boolean4, $com_bingo_overlay_grid_tiles3)");
+	~cc_set_button_states($boolean2, 0);
+}
+%varcint1265 = $boolean2;
+~script8114($com_bingo_overlay_grid_tiles3);

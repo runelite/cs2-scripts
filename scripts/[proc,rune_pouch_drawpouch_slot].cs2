@@ -6,7 +6,7 @@ def_namedobj $namedobj1 = null;
 def_int $int2 = 0;
 if (~script7869($int0) = 1) {
 	cc_sethide(false);
-	$namedobj1, $int2 = ~script4891($int0);
+	$namedobj1, $int2 = ~rune_pouch_getslot($int0);
 	if ($namedobj1 ! null & $int2 > 0) {
 		cc_settrans(0);
 		cc_setobject($namedobj1, $int2);

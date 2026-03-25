@@ -1,0 +1,6 @@
+// 6923
+[clientscript,quest_journal_size](component $com_questjournal_universe0, component $com_questjournal_inner1, component $com_questjournal_container2, component $com_questjournal_scroll3, component $com_questjournal_scrollbar4, component $com_questjournal_textlayer5)
+def_int $int6 = ~quest_journal_size($com_questjournal_universe0, $com_questjournal_inner1, $com_questjournal_container2, $com_questjournal_scroll3, $com_questjournal_scrollbar4, $com_questjournal_textlayer5, 0);
+if ($int6 = 1) {
+	~quest_journal_scrollbar($com_questjournal_scrollbar4, $com_questjournal_textlayer5, %qj_lines, if_getscrolly($com_questjournal_textlayer5));
+}

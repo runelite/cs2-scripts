@@ -5,14 +5,14 @@ if (db_getfield($dbrow0, music:automatic_unlock, 0) = true) {
 }
 def_int $int1 = -1;
 def_int $int2 = -1;
-$int1, $int2 = ~script7316($dbrow0);
+$int1, $int2 = ~get_music_variable($dbrow0);
 if ($int1 > 27) {
 	return(0);
 }
 if ($int1 < 1 | $int2 < 0) {
 	return(1);
 }
-def_int $int3 = ~script7308($int1, $int2);
+def_int $int3 = ~get_music_varbit($int1, $int2);
 if ($int3 = 1) {
 	return(1);
 }

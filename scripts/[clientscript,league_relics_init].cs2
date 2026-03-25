@@ -3,7 +3,7 @@
 ~leagues_close_button($com_league_relics_close_button17, 0, 0);
 def_int $comsubid18 = ~steelborder(league_relics:frame, "Relics", 1);
 def_component $component19 = league_relics:infinity;
-if_setontimer("script6110($component19, -1)", $component19);
+if_setontimer("responsive_interface_scaler($component19, -1)", $component19);
 if_setonresize("league_relics_draw_selections(
 	0 = $com_league_relics_header0, 
 	1 = $com_league_relics_relic_available_header1, 

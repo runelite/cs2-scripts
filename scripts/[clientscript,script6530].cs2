@@ -3,7 +3,7 @@
 if (%trail_status = $int7 & %option_cluehelper_overlay_enabled = $int3 & %cluehelper_npc_id = $npc_uid4 & %cluehelper_npc_current_clue = $dbrow5 & %cluehelper_infobox_clue = $dbrow6) {
 	return;
 }
-if (if_find_entityoverlay($entityoverlay0) = ^true) {
+if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setonvartransmit("script6530(
 		0 = $entityoverlay0, 
 		1 = $npc_uid1, 

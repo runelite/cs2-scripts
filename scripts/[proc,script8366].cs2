@@ -4,12 +4,12 @@ def_int $int4 = -1;
 def_int $int5 = -1;
 def_int $int6 = -1;
 def_int $int7 = -1;
-if (if_find($component0) = ^true) {
+if (if_find($component0) = true) {
 	$int5 = if_getscrolly($component1);
 	$int4 = ~script8367($component0);
 	if_setscrollsize(0, $int4, $component1);
 	if ($int3 ! -1) {
-		if (if_find_child($component0, param_2365, 100, param_2368, $int3) = true) {
+		if (cc_find_param($component0, param_2365, 100, param_2368, $int3) = true) {
 			$int6, $int7 = cc_gety, cc_getheight;
 		}
 		if ($int6 ! -1) {

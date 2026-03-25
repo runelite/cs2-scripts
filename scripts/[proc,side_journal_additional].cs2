@@ -56,8 +56,8 @@ switch_int ($int45) {
 			if_setop(1, "Deadman", $com_side_journal_league_list6);
 		}
 		if (~on_mobile = false) {
-			if_setonmouserepeat("script2803($com_side_journal_tab_5_124, $com_side_journal_tab_5_225, $com_side_journal_tab_5_326, $com_side_journal_tab_5_1_backing40, $com_side_journal_tab_5_2_backing41, $com_side_journal_tab_5_3_backing42, 4)", $com_side_journal_league_list6);
-			if_setonmouseleave("script2804($com_side_journal_tab_5_124, $com_side_journal_tab_5_225, $com_side_journal_tab_5_326, $com_side_journal_tab_5_1_backing40, $com_side_journal_tab_5_2_backing41, $com_side_journal_tab_5_3_backing42, 4)", $com_side_journal_league_list6);
+			if_setonmouserepeat("side_journal_mouseover_tab($com_side_journal_tab_5_124, $com_side_journal_tab_5_225, $com_side_journal_tab_5_326, $com_side_journal_tab_5_1_backing40, $com_side_journal_tab_5_2_backing41, $com_side_journal_tab_5_3_backing42, 4)", $com_side_journal_league_list6);
+			if_setonmouseleave("side_journal_mouseleave_tab($com_side_journal_tab_5_124, $com_side_journal_tab_5_225, $com_side_journal_tab_5_326, $com_side_journal_tab_5_1_backing40, $com_side_journal_tab_5_2_backing41, $com_side_journal_tab_5_3_backing42, 4)", $com_side_journal_league_list6);
 		}
 		if_setonop("side_journal_switchtab_onop(
 			0 = event_op, 
@@ -154,8 +154,8 @@ switch_int ($int45) {
 		if_setop(1, "Adventure Paths", $com_side_journal_adventurepath_list5);
 		if_setop(2, "Disable Adventure Paths", $com_side_journal_adventurepath_list5);
 		if (~on_mobile = false) {
-			if_setonmouserepeat("script2803($com_side_journal_tab_4_120, $com_side_journal_tab_4_221, $com_side_journal_tab_4_322, $com_side_journal_tab_4_1_backing37, $com_side_journal_tab_4_2_backing38, $com_side_journal_tab_4_3_backing39, 3)", $com_side_journal_adventurepath_list5);
-			if_setonmouseleave("script2804($com_side_journal_tab_4_120, $com_side_journal_tab_4_221, $com_side_journal_tab_4_322, $com_side_journal_tab_4_1_backing37, $com_side_journal_tab_4_2_backing38, $com_side_journal_tab_4_3_backing39, 3)", $com_side_journal_adventurepath_list5);
+			if_setonmouserepeat("side_journal_mouseover_tab($com_side_journal_tab_4_120, $com_side_journal_tab_4_221, $com_side_journal_tab_4_322, $com_side_journal_tab_4_1_backing37, $com_side_journal_tab_4_2_backing38, $com_side_journal_tab_4_3_backing39, 3)", $com_side_journal_adventurepath_list5);
+			if_setonmouseleave("side_journal_mouseleave_tab($com_side_journal_tab_4_120, $com_side_journal_tab_4_221, $com_side_journal_tab_4_322, $com_side_journal_tab_4_1_backing37, $com_side_journal_tab_4_2_backing38, $com_side_journal_tab_4_3_backing39, 3)", $com_side_journal_adventurepath_list5);
 		}
 		if_setonop("side_journal_switchtab_onop(
 			0 = event_op, 

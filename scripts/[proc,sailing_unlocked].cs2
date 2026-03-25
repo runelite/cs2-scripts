@@ -1,0 +1,12 @@
+// 9022
+[proc,sailing_unlocked]()(int)
+if (map_members = false) {
+	return(0);
+}
+if (%sailing_intro < 50) {
+	return(0);
+}
+if (~restrict_content_skill(_23) = true) {
+	return(0);
+}
+return(1);

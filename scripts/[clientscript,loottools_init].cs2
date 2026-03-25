@@ -1,7 +1,7 @@
 // 7128
 [clientscript,loottools_init]
-~script7166;
-~script7133;
+~loottracker_ui_refresh_info_full;
+~loottracker_ui_redraw_display_full;
 ~loottools_size;
 if_setonresize("loottools_size", loottools:universe);
 ~questlist_settings_button_init(loottools:settings_button);
@@ -10,4 +10,4 @@ def_component $component1 = loottools:dropdown_content;
 def_component $component2 = loottools:dropdown_scroller;
 def_component $component3 = loottools:category_button;
 ~script5771($component3, enum_4980, %loottools_category_current, 0xff981f);
-if_setonop("script7129($component0, $component1, $component2, $component3, enum_4980, 0xff981f)", $component3);
+if_setonop("loottools_category_draw_list($component0, $component1, $component2, $component3, enum_4980, 0xff981f)", $component3);

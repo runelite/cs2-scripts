@@ -1,8 +1,8 @@
 // 363
 [proc,soul_wars_game_hud_update](component $com_soul_wars_game_graveyard_west0, component $com_soul_wars_game_graveyard_west_fill1, component $com_soul_wars_game_graveyard_west_bar2, component $com_soul_wars_game_obelisk3, component $com_soul_wars_game_obelisk_fill4, component $com_soul_wars_game_obelisk_bar5, component $com_soul_wars_game_graveyard_east6, component $com_soul_wars_game_graveyard_east_fill7, component $com_soul_wars_game_graveyard_east_bar8, component $com_soul_wars_game_activity_bar_fill9)
-~script373($com_soul_wars_game_activity_bar_fill9, %soul_wars_activity_value);
+~soul_wars_activity_bar_update($com_soul_wars_game_activity_bar_fill9, %soul_wars_activity_value);
 ~script365($com_soul_wars_game_obelisk3, %soul_wars_obelisk_contested);
-~script366($com_soul_wars_game_obelisk_bar5, %soul_wars_obelisk_alignment);
+~soul_wars_game_hud_update_alignment($com_soul_wars_game_obelisk_bar5, %soul_wars_obelisk_alignment);
 switch_int (%soul_wars_obelisk_holder) {
 	case 1 :
 		if_setcolour(0x3366ff, $com_soul_wars_game_obelisk_fill4);
@@ -12,7 +12,7 @@ switch_int (%soul_wars_obelisk_holder) {
 		if_setcolour(0xa5a5a5, $com_soul_wars_game_obelisk_fill4);
 }
 ~script365($com_soul_wars_game_graveyard_west0, %soul_wars_west_gy_contested);
-~script366($com_soul_wars_game_graveyard_west_bar2, %soul_wars_west_gy_alignment);
+~soul_wars_game_hud_update_alignment($com_soul_wars_game_graveyard_west_bar2, %soul_wars_west_gy_alignment);
 switch_int (%soul_wars_west_gy_holder) {
 	case 1 :
 		if_setcolour(0x3366ff, $com_soul_wars_game_graveyard_west_fill1);
@@ -22,7 +22,7 @@ switch_int (%soul_wars_west_gy_holder) {
 		if_setcolour(0xa5a5a5, $com_soul_wars_game_graveyard_west_fill1);
 }
 ~script365($com_soul_wars_game_graveyard_east6, %soul_wars_east_gy_contested);
-~script366($com_soul_wars_game_graveyard_east_bar8, %soul_wars_east_gy_alignment);
+~soul_wars_game_hud_update_alignment($com_soul_wars_game_graveyard_east_bar8, %soul_wars_east_gy_alignment);
 switch_int (%soul_wars_east_gy_holder) {
 	case 1 :
 		if_setcolour(0x3366ff, $com_soul_wars_game_graveyard_east_fill7);

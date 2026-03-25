@@ -1,7 +1,7 @@
 // 1893
 [proc,pog_interface_inv_draw_slot](inv $inv0, int $int1, component $component2)
 def_obj $obj3 = null;
-if (cc_find($component2, $int1) = ^true) {
+if (cc_find($component2, $int1) = true) {
 	$obj3 = inv_getobj($inv0, $int1);
 	if ($obj3 ! null) {
 		cc_setobject($obj3, inv_getnum($inv0, $int1));
@@ -18,7 +18,7 @@ if (cc_find($component2, $int1) = ^true) {
 		} else {
 			cc_setoutline(1);
 		}
-		cc_setonop("script1894(event_com, event_comsubid, event_op, $inv0, $component2)");
+		cc_setonop("pog_interface_inv_op(event_com, event_comsubid, event_op, $inv0, $component2)");
 	} else {
 		cc_setobject(null, 0);
 		cc_setopbase("");

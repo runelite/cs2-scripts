@@ -22,7 +22,7 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
 cc_deleteall($component6);
-~script1586;
+~kill_log_hide_confirm;
 while ($int9 <= $int0 & $int10 ! -1 & $int11 ! -1 & $int12 ! -1) {
 	$string4 = substring($string0, 0, $int10);
 	$string5 = substring($string1, 0, $int11);
@@ -66,7 +66,7 @@ while ($int9 <= $int0 & $int10 ! -1 & $int11 ! -1 & $int12 ! -1) {
 	if ($boolean1 = true) {
 		cc_setonmouseover("cc_graphic_swapper($component6, $int9, $graphic14, null)");
 		cc_setonmouseleave("cc_graphic_swapper($component6, $int9, $graphic13, null)");
-		cc_setonop("script1587($component6, $int9)");
+		cc_setonop("kill_log_show_confirm($component6, $int9)");
 		cc_setop(1, "Reset Streak");
 		cc_setopbase("<col=ff9040><$string4></col>");
 	} else {

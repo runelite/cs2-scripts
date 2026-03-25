@@ -1,0 +1,15 @@
+// 2601
+[proc,collection_reset_handle](int $int0)
+cc_setgraphic(tradebacking_light);
+cc_setontimer(null);
+cc_setondrag("collection_drag_preview(
+	0 = event_comsubid, 
+	1 = event_mousex, 
+	2 = event_mousey, 
+	3 = cc_getx, 
+	4 = cc_gety, 
+	5 = $int0, 
+	6 = collection:infinity, 
+	7 = collection:universe, 
+	8 = collection:resize_preview
+)");

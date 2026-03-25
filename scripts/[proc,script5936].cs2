@@ -18,18 +18,18 @@ def_int $int15 = 0;
 def_int $int16 = 10;
 if (calc($int4 % $int16) = 0) {
 	$comsubid12 = struct_param($struct0, param_1275);
-	if (cc_find($component2, $comsubid12) = ^true) {
+	if (cc_find($component2, $comsubid12) = true) {
 		$int13 = struct_param($struct0, param_1277);
 		$int10 = cc_getcolour;
 		$int11 = cc_getmodelzoom;
-		$int9 = ~script4666($int13, $int10);
+		$int9 = ~buff_bar_time_to_cycles($int13, $int10);
 		$int5 = calc($int9 - $int4);
 		$int8 = cc_getblendcolour;
 		$int6 = cc_getscrollwidth;
 		$int7 = cc_getscrollheight;
 		if (%busy = 1 & struct_param($struct0, param_1290) = true) {
 			$int6 = calc($int6 + $int16);
-			$int15 = calc(~script5925($struct0) * 30 - $int4);
+			$int15 = calc(~buff_bar_get_server_transmit_rate($struct0) * 30 - $int4);
 			if ($int15 < 0) {
 				$int7 = calc($int7 + $int16);
 			}

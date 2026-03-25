@@ -92,14 +92,14 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 	if ($int7 ! -1) {
 		$int9 = 1;
 	}
-	if (cc_find($component0, $comsubid3) = ^true) {
+	if (cc_find($component0, $comsubid3) = true) {
 		cc_settext($string0);
 	}
 	if ($int9 = 1) {
-		if (cc_find($component0, $comsubid2) = ^true) {
+		if (cc_find($component0, $comsubid2) = true) {
 			cc_setgraphic(tradebacking);
 		}
-		if (cc_find($component0, $int1) = ^true) {
+		if (cc_find($component0, $int1) = true) {
 			cc_settrans(245);
 		}
 		if (~on_mobile = false) {
@@ -111,13 +111,13 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 		return;
 	}
 }
-if (cc_find($component0, $comsubid3) = ^true) {
+if (cc_find($component0, $comsubid3) = true) {
 	cc_settext($string0);
 }
-if (cc_find($component0, $comsubid2) = ^true) {
+if (cc_find($component0, $comsubid2) = true) {
 	cc_setgraphic(tradebacking_dark);
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $int1) = true) {
 	cc_settrans(255);
 }
 .cc_setonmouserepeat(null);

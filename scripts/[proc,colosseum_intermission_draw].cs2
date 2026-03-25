@@ -1,0 +1,90 @@
+// 4955
+[proc,colosseum_intermission_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, int $int9, int $int10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, int $int17, int $int18, int $int19, component $component20, component $component21, component $component22, component $component23)
+if ($int17 > 0) {
+	~steelborder($component1, "Wave <tostring($int17)> Completed!", 0);
+} else {
+	~steelborder($component1, "Colosseum", 0);
+}
+cc_deleteall($component6);
+cc_deleteall($component7);
+if_sethide(true, colosseum_intermission:progression);
+if_sethide(true, colosseum_intermission:summary);
+~script3723(colosseum_intermission:summary_tab, 0, "Summary");
+~script3723(colosseum_intermission:modifiers_tab, 0, "Proceed");
+if ($int0 = 0) {
+	~colosseum_intermission_draw_summary($component4, $component3, $component15, $component16, $int17, $int19);
+	if_sethide(false, colosseum_intermission:summary);
+	~script3723(colosseum_intermission:summary_tab, 1, "Summary");
+	if_setonop("colosseum_intermission_init(
+		0 = 1, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $int10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17, 
+		18 = $int18, 
+		19 = $int19, 
+		20 = 0, 
+		21 = $component20, 
+		22 = $component21, 
+		23 = $component22, 
+		24 = $component23
+	)", colosseum_intermission:modifiers_tab);
+} else if ($int0 = 1) {
+	~colosseum_intermission_draw_proceed(
+		0 = $component2, 
+		1 = $component5, 
+		2 = $component6, 
+		3 = $component7, 
+		4 = $int8, 
+		5 = $int9, 
+		6 = $int10, 
+		7 = $component11, 
+		8 = $component12, 
+		9 = $component13, 
+		10 = $component14, 
+		11 = $int17, 
+		12 = $int18
+	);
+	if_sethide(false, colosseum_intermission:progression);
+	~script3723(colosseum_intermission:modifiers_tab, 1, "Proceed");
+	if_setonop("colosseum_intermission_init(
+		0 = 0, 
+		1 = $component1, 
+		2 = $component2, 
+		3 = $component3, 
+		4 = $component4, 
+		5 = $component5, 
+		6 = $component6, 
+		7 = $component7, 
+		8 = $int8, 
+		9 = $int9, 
+		10 = $int10, 
+		11 = $component11, 
+		12 = $component12, 
+		13 = $component13, 
+		14 = $component14, 
+		15 = $component15, 
+		16 = $component16, 
+		17 = $int17, 
+		18 = $int18, 
+		19 = $int19, 
+		20 = 0, 
+		21 = $component20, 
+		22 = $component21, 
+		23 = $component22, 
+		24 = $component23
+	)", colosseum_intermission:summary_tab);
+}

@@ -63,7 +63,7 @@ def_string $string1 = "";
 def_int $int18 = 0;
 def_int $int19 = stat($stat2);
 if (%last_stand_fakelevel > 0) {
-	$int19 = ~script7769($stat2);
+	$int19 = ~last_stand_get_level($stat2);
 }
 if (%stat_boosts_hud_display_relative = 1) {
 	$int18 = calc($int19 - stat_base($stat2));

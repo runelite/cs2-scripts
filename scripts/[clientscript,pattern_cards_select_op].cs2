@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (cc_find($component1, $comsubid2) = ^true) {
+if (cc_find($component1, $comsubid2) = true) {
 	sound_synth(patterns_turncard, 1, 0);
 	if (testbit(%pattern_card_overview, $int3) = ^true) {
 		%pattern_card_overview = clearbit(%pattern_card_overview, $int3);

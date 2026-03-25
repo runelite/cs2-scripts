@@ -1,6 +1,6 @@
 // 6015
 [clientscript,inventory_antidrag_update](component $component0, int $comsubid1)
-if (cc_find($component0, $comsubid1) = ^true) {
+if (cc_find($component0, $comsubid1) = true) {
 	if (~inventory_antidrag_active = 1) {
 		cc_setdragdeadtime(%antidrag_delay);
 	} else {

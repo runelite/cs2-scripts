@@ -1,7 +1,7 @@
 // 3490
 [clientscript,death_office_init](component $com_death_office_universe0, component $com_death_office_frame1, component $com_death_office_items2, component $com_death_office_scrollbar3, component $com_death_office_14, component $com_death_office_55, component $com_death_office_x6, component $com_death_office_all7, component $com_death_office_takeall8, component $com_death_office_info9)
 def_int $int10 = ~steelborder($com_death_office_frame1, ~death_office_title, 0);
-if (cc_find($com_death_office_frame1, $int10) = ^true) {
+if (cc_find($com_death_office_frame1, $int10) = true) {
 	cc_setoninvtransmit("death_office_title(event_com, event_comsubid){death_permanent}");
 }
 ~scrollbar_vertical($com_death_office_scrollbar3, $com_death_office_items2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

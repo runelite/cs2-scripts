@@ -7,7 +7,7 @@ if_sethide(true, $com_wornitems_extra_ammo_link1);
 if (inv_total(inv, xbows_bolt_pouch_9433) <= 0) {
 	return;
 }
-if (~script5027 = 1 | ~script5028(inv) = 1) {
+if (~dizanas_quiver_equipped = 1 | ~dizanas_quiver_in_inventory(inv) = 1) {
 	return;
 }
 if_sethide(false, $com_wornitems_extra_ammo_link1);

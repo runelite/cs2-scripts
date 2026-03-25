@@ -41,7 +41,7 @@ while ($int0 <= 24) {
 			if (~xptracker_get_updated(null) = 0) {
 				~xptracker_set_updated(null, 1);
 			}
-			~script5368($stat2);
+			~xptracker_update_stat_display($stat2);
 		}
 		if (~xptracker_get_paused(null) = 1) {
 			~xptracker_pause_overall(0, 0);
@@ -51,7 +51,7 @@ while ($int0 <= 24) {
 		}
 	} else if (%varcint569 ! %com_mode & ~xptracker_iscombat($stat2) = 1) {
 		$int4 = 1;
-		~script5368($stat2);
+		~xptracker_update_stat_display($stat2);
 	}
 	$int0 = calc($int0 + 1);
 }
@@ -59,6 +59,6 @@ if ($int4 = 1) {
 	%varcint569 = %com_mode;
 	$int4 = 0;
 }
-~script5369;
+~xptracker_update_overall_display;
 %varcint562 = calc(%varcint561 * (48 + 2));
-~script4201;
+~xptracker_resize_scrollbar;
