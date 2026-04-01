@@ -1,0 +1,8 @@
+// 7885
+[clientscript,script7885](char $keychar0, component $component1, string $string0, interface $interface2)
+if (~keypress_permit($interface2, null) = 0) {
+	return;
+}
+if ($keychar0 ! null & string_indexof_char($string0, $keychar0) ! -1) {
+	if_triggerop($component1, -1, 1);
+}

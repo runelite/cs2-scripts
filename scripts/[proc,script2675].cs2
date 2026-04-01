@@ -19,12 +19,14 @@ cc_setonmouseleave("cc_colour_swapper($component1, event_comsubid, 0xff981f)");
 cc_create($component2, ^iftype_graphic, $int4, false);
 cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, $int6, ^setpos_abs_left, ^setpos_abs_top);
-if ($int3 = 40) {
-	cc_setgraphic(struct_param($struct7, param_676));
-} else {
-	cc_setgraphic(struct_param($struct7, param_675));
+def_obj $obj12 = struct_param($struct7, param_2549);
+if ($obj12 ! null) {
+	if ($int3 >= 40) {
+		cc_setgraphic(oc_param($obj12, spell_graphic2_on));
+	} else {
+		cc_setgraphic(oc_param($obj12, spell_graphic1_on));
+	}
 }
-def_string $string0 = "None set";
 cc_create($component1, ^iftype_text, $int4, false);
 cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
 cc_setposition(calc($int3 + 10), $int6, ^setpos_abs_left, ^setpos_abs_top);
@@ -32,7 +34,7 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
-$string0 = struct_param($struct7, param_660);
+def_string $string0 = struct_param($struct7, param_660);
 $int6 = calc(cc_getheight + cc_gety);
 def_string $string1 = "";
 def_string $string2 = "";

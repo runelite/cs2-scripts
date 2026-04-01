@@ -2,6 +2,9 @@
 [proc,combat_interface_title](component $com_combat_interface_title0, component $com_combat_interface_level1)
 def_string $string0 = "Unarmed";
 def_obj $obj2 = inv_getobj(worn, 3);
+if (%sailing_boat_facility_lockedin = 4) {
+	$obj2 = ~script7889;
+}
 if ($obj2 ! null & (oc_members($obj2) = 0 | map_members = true)) {
 	$string0 = oc_name($obj2);
 }
