@@ -99,6 +99,14 @@ switch_obj ($obj1) {
 		if ($obj7 = tome_of_water_25574 & map_members = true) {
 			$string1 = ~string_findandreplace($string1, "10%", "<col=ffffff><tostring(addpercent(10, 50))>%</col>");
 		}
+	case transmute_upgrade_33375 :
+		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			$string1 = oc_param(55_high_alchemy_3303, spell_desc);
+		}
+	case transmute_downgrade_33376 :
+		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			$string1 = oc_param(21_low_alchemy_3284, spell_desc);
+		}
 }
 if (compare($string2, "") ! 0) {
 	$string1 = "<$string1><br><col=ff0000><$string2></col>";

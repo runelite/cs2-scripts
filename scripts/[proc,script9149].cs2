@@ -1,0 +1,35 @@
+// 9149
+[proc,script9149](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)(int, int, int)
+def_int $int6 = 0;
+def_anyobj $anyobj0 = array_create(int, 0, 30);
+def_anyobj $anyobj1 = array_create(int, 0, 30);
+def_anyobj $anyobj2 = array_create(string, 0, 30);
+def_int $int7 = 0;
+def_int $int8 = 0;
+db_listall(talent_tree);
+def_dbrow $dbrow9 = db_findnext;
+while ($dbrow9 ! null) {
+	if (db_getfield($dbrow9, talent_tree:node_type, 0) = $int4) {
+		$int7, $int8 = db_getfield($dbrow9, talent_tree:effect, 0);
+		$int8 = ~script9458($int7);
+		if ($int8 > 0 & array_indexof($anyobj0, $int7, 0, -1, int) = -1) {
+			array_push($anyobj0, $int7, int);
+			array_push($anyobj1, $int8, int);
+			array_push($anyobj2, ~script9402($dbrow9), obj);
+		}
+	}
+	$dbrow9 = db_findnext;
+}
+def_int $int10 = array_size($anyobj0);
+def_int $int11 = 0;
+if ($int10 > 0) {
+	$int2, $int3, $int5 = ~script9175("Active <~script8567($int4)> effects", 1, $component0, $int1, $int2, $int3, $int5);
+}
+def_string $string3 = "";
+while ($int11 < $int10) {
+	$string3 = "<col=ffffff>-</col> <$intarray2($int11)>";
+	$string3 = ~script9389($string3, tostring($intarray1($int11)));
+	$int2, $int3, $int5 = ~script9175($string3, 0, $component0, $int1, $int2, $int3, $int5);
+	$int11 = calc($int11 + 1);
+}
+return($int2, $int3, $int5);

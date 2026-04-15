@@ -1,0 +1,28 @@
+// 9436
+[proc,script9436]
+def_int $int0 = db_listall(region_data);
+def_dbrow $dbrow1 = db_findnext;
+def_int $int2 = 0;
+def_component $component3 = null;
+def_component $component4 = null;
+while ($dbrow1 ! null) {
+	$int2 = db_getfield($dbrow1, region_data:region_id, 0);
+	$component3 = db_getfield($dbrow1, region_data:name_component, 0);
+	$component4 = db_getfield($dbrow1, region_data:shield_component, 0);
+	if (~script3101($int2) = 1) {
+		if ($component3 ! null) {
+			if_sethide(true, $component3);
+		}
+		if ($component4 ! null) {
+			if_sethide(true, $component4);
+		}
+	} else {
+		if ($component3 ! null) {
+			if_sethide(false, $component3);
+		}
+		if ($component4 ! null) {
+			if_sethide(false, $component4);
+		}
+	}
+	$dbrow1 = db_findnext;
+}

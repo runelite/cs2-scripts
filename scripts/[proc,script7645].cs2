@@ -1,7 +1,7 @@
 // 7645
 [proc,script7645](int $int0, int $int1)
 def_component $component2 = trailblazer_areas:select_button;
-def_int $int3 = 33554492;
+def_int $int3 = 33554494;
 def_component $component4 = trailblazer_areas:echo_boss_map_button;
 def_int $int5 = 0;
 def_string $string0 = ~script5484($int1);
@@ -18,7 +18,7 @@ if ($int0 = 1) {
 if_sethide(true, $component2);
 if_sethide(false, $component4);
 if_setop(1, "Locate", $component4);
-if_setopbase("<col=ff9040>Raging Echo</col>", $component4);
+if_setopbase("<col=ff9040>Echo</col>", $component4);
 def_int $int6 = ~v2_stone_button($component4);
 if (~in_league_tutorial = 1) {
 	if_setonmouseleave(null, $component4);

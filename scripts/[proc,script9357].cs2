@@ -1,0 +1,7 @@
+// 9357
+[proc,script9357](component $component0, int $int1, int $setposh2, int $setposv3, int $int4, graphic $graphic5)(int)
+cc_create($component0, ^iftype_graphic, $int1, false);
+cc_setsize($int4, $int4, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, $setposh2, $setposv3);
+cc_setgraphic($graphic5);
+return(calc($int1 + 1));

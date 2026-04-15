@@ -1,9 +1,16 @@
 // 6655
 [proc,cluehelper_clue_target](dbrow $dbrow0)(dbrow)
 def_int $dbfield1 = 0;
+def_dbrow $dbrow2 = null;
 switch_dbtable (db_getrowtable($dbrow0)) {
 	case cluehelper_clue_cryptic :
 		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_cryptic:target, 0));
+		if (~league_world = 1 & %league_type = 6) {
+			$dbrow2 = db_getfield($dbrow0, cluehelper_clue_cryptic:league_target, 0);
+			if ($dbrow2 ! null) {
+				return($dbrow2);
+			}
+		}
 		return(db_getfield($dbrow0, cluehelper_clue_cryptic:target, $dbfield1));
 	case cluehelper_clue_anagram :
 		$dbfield1 = ~script6657(db_getfield($dbrow0, cluehelper_clue_anagram:target, 0));

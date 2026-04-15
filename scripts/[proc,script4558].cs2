@@ -5,6 +5,9 @@ if (map_members = true) {
 	if (inv_total(worn, league_trailblazer_harpoon_25114) > 0 | inv_total(inv, league_trailblazer_harpoon_25114) > 0) {
 		return(1);
 	}
+	if (~league_relic_active(struct_6441) = 1) {
+		return(1);
+	}
 	if ($int0 >= 71) {
 		if (inv_total(worn, crystal_harpoon_23762) > 0 | inv_total(inv, crystal_harpoon_23762) > 0) {
 			return(1);

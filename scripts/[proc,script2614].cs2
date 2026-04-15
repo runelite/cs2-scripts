@@ -11,7 +11,7 @@ if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	return(0, null);
 }
 switch_component ($component1) {
-	case magic_spellbook:teleport_home_standard, magic_spellbook:league_3_home_teleport, magic_spellbook:league_twisted_home_teleport, magic_spellbook:teleport_home_zaros, magic_spellbook:teleport_home_lunar, magic_spellbook:teleport_home_arceuus :
+	case magic_spellbook:teleport_home_standard, magic_spellbook:teleport_home_zaros, magic_spellbook:teleport_home_lunar, magic_spellbook:teleport_home_arceuus, magic_spellbook:league_home_teleport :
 		if (calc(%date_minutes - %aide_tele_timer) < 30) {
 			if_settrans(150, $component1);
 		} else {

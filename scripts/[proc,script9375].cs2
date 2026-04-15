@@ -1,0 +1,69 @@
+// 9375
+[proc,script9375](string $string0, int $colour0, string $string1, string $string2)(int, int)
+def_component $component1 = talent_tree:floating_panel_background;
+def_component $component2 = talent_tree:floating_panel_content;
+def_int $comsubid3 = 0;
+def_int $comsubid4 = 0;
+if_setnoclickthrough(true, $component1);
+cc_deleteall($component1);
+def_int $int5 = 0;
+$int5 = ~create_graphic(
+	0 = $component1, 
+	1 = $int5, 
+	2 = tradebacking, 
+	3 = 1, 
+	4 = 1, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 0, 
+	8 = 0, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus, 
+	11 = true
+);
+~stonebox($component1, 1, $int5);
+$int5 = 0;
+cc_deleteall($component2);
+cc_create($component2, ^iftype_text, $int5, false);
+cc_setsize(0, 28, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour($colour0);
+cc_settext($string0);
+$int5 = calc($int5 + 1);
+$comsubid3 = $int5;
+$int5 = ~cc_add_button(
+	0 = $component2, 
+	1 = $int5, 
+	2 = 55, 
+	3 = 4, 
+	4 = ^setpos_abs_centre, 
+	5 = ^setpos_abs_bottom, 
+	6 = 100, 
+	7 = 31, 
+	8 = ^setsize_abs, 
+	9 = ^setsize_abs, 
+	10 = struct_6265, 
+	11 = $string1
+);
+cc_setop(1, $string1);
+$comsubid4 = $int5;
+$int5 = ~cc_add_button(
+	0 = $component2, 
+	1 = $int5, 
+	2 = -55, 
+	3 = 4, 
+	4 = ^setpos_abs_centre, 
+	5 = ^setpos_abs_bottom, 
+	6 = 100, 
+	7 = 31, 
+	8 = ^setsize_abs, 
+	9 = ^setsize_abs, 
+	10 = struct_6265, 
+	11 = $string2
+);
+cc_setop(1, $string2);
+if_sethide(false, talent_tree:floating_panel);
+return($comsubid3, $comsubid4);

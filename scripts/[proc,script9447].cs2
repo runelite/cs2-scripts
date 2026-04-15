@@ -1,0 +1,29 @@
+// 9447
+[proc,script9447](obj $obj0, component $com_magic_spellbook_spelllayer1, component $com_magic_spellbook_infolayer2, component $com_magic_spellbook_tooltip3, component $com_magic_spellbook_top4, component $com_magic_spellbook_bottom5, component $com_magic_spellbook_infobutton6, component $com_magic_spellbook_filterbutton7, component $com_magic_spellbook_glow8, component $com_magic_spellbook_filtermenu_container9, component $com_magic_spellbook_filtermenu10, string $string0, string $string1, boolean $boolean11)
+def_component $component12 = oc_param($obj0, spell_button);
+if ($obj0 = placeholder_blighted_sack_bind_24610) {
+	if_setopbase("", $component12);
+} else {
+	if_setopbase("<col=00ff00><oc_param($obj0, spell_name)></col>", $component12);
+}
+if (if_gettargetmask($component12) ! 0) {
+	if_setontargetenter("magic_spellbook_targetmode(1, event_com, $obj0)", $component12);
+	if_setontargetleave("magic_spellbook_targetmode(0, event_com, $obj0)", $component12);
+} else {
+	if_setonop("magic_spellbook_op(
+		0 = $obj0, 
+		1 = $com_magic_spellbook_spelllayer1, 
+		2 = $com_magic_spellbook_infolayer2, 
+		3 = $com_magic_spellbook_tooltip3, 
+		4 = $com_magic_spellbook_top4, 
+		5 = $com_magic_spellbook_bottom5, 
+		6 = $com_magic_spellbook_infobutton6, 
+		7 = $com_magic_spellbook_filterbutton7, 
+		8 = $com_magic_spellbook_glow8, 
+		9 = $com_magic_spellbook_filtermenu_container9, 
+		10 = $com_magic_spellbook_filtermenu10, 
+		11 = $string0, 
+		12 = $string1, 
+		13 = $boolean11
+	)", $component12);
+}

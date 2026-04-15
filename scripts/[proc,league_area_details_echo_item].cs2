@@ -101,7 +101,8 @@ $int8, $int9 = ~script7642(
 	9 = "", 
 	10 = "", 
 	11 = "", 
-	12 = ""
+	12 = "", 
+	13 = 1
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -116,7 +117,8 @@ $int8, $int9 = ~script7642(
 	9 = "Slash", 
 	10 = "Crush", 
 	11 = "Magic", 
-	12 = "Range"
+	12 = "Range", 
+	13 = 0
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -131,7 +133,8 @@ $int8, $int9 = ~script7642(
 	9 = $string2, 
 	10 = $string3, 
 	11 = $string4, 
-	12 = $string5
+	12 = $string5, 
+	13 = 0
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -146,7 +149,8 @@ $int8, $int9 = ~script7642(
 	9 = "", 
 	10 = "", 
 	11 = "", 
-	12 = ""
+	12 = "", 
+	13 = 1
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -161,7 +165,8 @@ $int8, $int9 = ~script7642(
 	9 = "Slash", 
 	10 = "Crush", 
 	11 = "Magic", 
-	12 = "Range"
+	12 = "Range", 
+	13 = 0
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -176,7 +181,8 @@ $int8, $int9 = ~script7642(
 	9 = $string7, 
 	10 = $string8, 
 	11 = $string9, 
-	12 = $string10
+	12 = $string10, 
+	13 = 0
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -191,7 +197,8 @@ $int8, $int9 = ~script7642(
 	9 = "", 
 	10 = "", 
 	11 = "", 
-	12 = ""
+	12 = "", 
+	13 = 1
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -206,7 +213,8 @@ $int8, $int9 = ~script7642(
 	9 = "Range Str", 
 	10 = "Magic Str", 
 	11 = "Prayer", 
-	12 = ""
+	12 = "", 
+	13 = 0
 );
 $int8, $int9 = ~script7642(
 	0 = $component4, 
@@ -221,7 +229,8 @@ $int8, $int9 = ~script7642(
 	9 = $string12, 
 	10 = $string13, 
 	11 = $string14, 
-	12 = "0"
+	12 = "0", 
+	13 = 0
 );
 if (oc_param($namedobj0, param_2061) = false) {
 	$int8, $int9 = ~script7642(
@@ -237,7 +246,8 @@ if (oc_param($namedobj0, param_2061) = false) {
 		9 = "Attack range", 
 		10 = "", 
 		11 = "", 
-		12 = ""
+		12 = "", 
+		13 = 0
 	);
 	$int8, $int9 = ~script7642(
 		0 = $component4, 
@@ -252,7 +262,45 @@ if (oc_param($namedobj0, param_2061) = false) {
 		9 = $string16, 
 		10 = "0", 
 		11 = "0", 
-		12 = "0"
+		12 = "0", 
+		13 = 0
+	);
+}
+def_int $int16 = oc_param($namedobj0, param_2581);
+def_string $string17 = "";
+if ($int16 ! -1) {
+	$string17 = "<tostring(calc($int16 / 1000))>.<tostring(calc($int16 % 1000))>kg";
+	$int8, $int9 = ~script7642(
+		0 = $component4, 
+		1 = $int8, 
+		2 = $int9, 
+		3 = $int12, 
+		4 = $int13, 
+		5 = $colour7, 
+		6 = $graphic5, 
+		7 = 1, 
+		8 = "Weight", 
+		9 = "0", 
+		10 = "0", 
+		11 = "0", 
+		12 = "0", 
+		13 = 1
+	);
+	$int8, $int9 = ~script7642(
+		0 = $component4, 
+		1 = $int8, 
+		2 = $int9, 
+		3 = $int12, 
+		4 = $int13, 
+		5 = $colour7, 
+		6 = $graphic5, 
+		7 = 1, 
+		8 = $string17, 
+		9 = "0", 
+		10 = "0", 
+		11 = "0", 
+		12 = "0", 
+		13 = 0
 	);
 }
 return($int8, $int9);

@@ -16,25 +16,19 @@ while ($dbrow1 ! null) {
 	$int4 = max(db_getfield($dbrow1, slayer_task:leagues_min_comlevel, 0), db_getfield($dbrow1, slayer_task:min_comlevel, 0));
 	$int4 = max($int4, 3);
 	$int5 = db_getfield($dbrow1, slayer_task:leagues_max_comlevel, 0);
-	if ($int0 ! 1 & $int0 ! 2) {
+	if ($int0 ! 21) {
 		$int6 = calc(db_getfieldcount($dbrow1, slayer_task:regions) - 1);
 		while ($int6 >= 0 & $int7 = 1) {
-			if (db_getfield($dbrow1, slayer_task:regions, $int6) = 1) {
+			if (db_getfield($dbrow1, slayer_task:regions, $int6) = 21) {
 				$int7 = 0;
 			}
 			$int6 = calc($int6 - 1);
 		}
 		$int6 = calc(db_getfieldcount($dbrow1, slayer_task:regions) - 1);
-		while ($int6 >= 0 & $int7 = 1) {
-			if (db_getfield($dbrow1, slayer_task:regions, $int6) = 2) {
-				$int7 = 0;
-			}
-			$int6 = calc($int6 - 1);
-		}
 	}
 	if ($int7 = 1) {
 		$string0 = "<$string0>- <$string1> (<tostring($int4)> - <tostring($int5)>)<br>";
 	}
 	$dbrow1 = db_findnext;
 }
-return("");
+return($string0);

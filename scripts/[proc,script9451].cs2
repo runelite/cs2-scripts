@@ -1,0 +1,8 @@
+// 9451
+[proc,script9451](int $int0)(int)
+def_struct $struct1 = enum(int, struct, enum_3987, $int0);
+if ($struct1 = null) {
+	~script2075("Invalid boss struct for boss ID <tostring($int0)>");
+	return(0);
+}
+return(struct_param($struct1, param_675));

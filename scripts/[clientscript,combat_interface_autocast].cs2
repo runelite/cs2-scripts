@@ -7,13 +7,12 @@ def_graphic $graphic6 = "sideicons_interface,6";
 def_obj $obj7 = enum(int, obj, enum_1986, %autocast_spell);
 def_obj $obj8 = inv_getobj(worn, 3);
 def_obj $obj9 = inv_getobj(worn, 5);
+def_int $int10 = 0;
 if ($obj7 ! null) {
-	$graphic6 = oc_param($obj7, spell_graphic1_on);
 	if (~magic_spellbook_hasrunes($obj7, $obj8, $obj9) = 1 & stat(magic) >= oc_param($obj7, spell_levelreq)) {
-		$graphic6 = oc_param($obj7, spell_graphic1_on);
-	} else {
-		$graphic6 = oc_param($obj7, spell_graphic1_off);
+		$int10 = 1;
 	}
+	$graphic6 = ~script9448($obj7, 24, $int10);
 	if ($graphic6 ! null) {
 		$int3, $int4 = 24, 24;
 	} else {

@@ -1,0 +1,10 @@
+// 9374
+[proc,script9374](int $int0, dbrow $dbrow1, int $comsubid2, int $comsubid3)
+def_component $component4 = talent_tree:tree_node_draw_layer;
+.cc_setparam(param_2551, $int0, int);
+if (.cc_find($component4, $comsubid2) = true) {
+	.cc_setgraphic(~script9384($dbrow1, $int0));
+}
+if (.cc_find($component4, $comsubid3) = true) {
+	.cc_setgraphic(~script9385($dbrow1, $int0));
+}

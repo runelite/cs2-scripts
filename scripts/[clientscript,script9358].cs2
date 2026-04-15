@@ -1,0 +1,21 @@
+// 9358
+[clientscript,script9358](int $opindex0, int $int1, dbrow $dbrow2, component $component3, component $component4, string $string0, int $int5, int $int6)
+switch_int ($opindex0) {
+	case 1 :
+		if (%varcint1358 = 1) {
+			~script9370($int1, $dbrow2);
+		} else {
+			~script9359($component3, $int1, $component4, $string0, $int6);
+		}
+	case 2 :
+		if (%varcint1358 = 1) {
+			~script9359($component3, $int1, $component4, $string0, $int6);
+		} else {
+			~script9370($int1, $dbrow2);
+		}
+	case 3 :
+		~script9369($int1, $dbrow2);
+}
+if (%varcint1359 = 1) {
+	~script8566;
+}

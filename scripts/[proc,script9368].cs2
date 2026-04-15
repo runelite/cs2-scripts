@@ -1,0 +1,23 @@
+// 9368
+[proc,script9368](component $component0, int $int1)(int)
+def_int $int2 = 0;
+def_int $int3 = 0;
+if (cc_find(talent_tree:data_layer, %varcint1352) = true) {
+	$int3 = cc_param(param_2554);
+	cc_delete;
+	if ($int3 = -1) {
+		mes("Error, unable to use selected node ID data.");
+	}
+	if ($int3 = $int1) {
+		$int2 = 1;
+	}
+	if (cc_find($component0, $int3) = true) {
+		~script9372(0);
+	} else {
+		~error("Unable to find selected node <tostring($int3)> in the node layer to deselect");
+	}
+} else {
+	~error("Unable to find data layer component <tostring(%varcint1352)>");
+}
+%varcint1352 = calc(%varcint1352 - 1);
+return($int2);

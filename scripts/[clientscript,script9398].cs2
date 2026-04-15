@@ -1,0 +1,9 @@
+// 9398
+[clientscript,script9398](int $int0, anyobj $anyobj0)
+if (cc_find_param(talent_tree:hotfix, param_2569, $int0) = true) {
+	~debug_mes_warn("Hotfix", "Duplicate $effect name change in hotfix layer, for $effect = <tostring($int0)>. Ensure you arent hotfixing this effect more than once.");
+	return;
+}
+cc_create(talent_tree:hotfix, 0, ~script8302(talent_tree:hotfix), false);
+cc_setparam(param_2569, $int0, int);
+cc_setparam(param_2570, $anyobj0, obj);

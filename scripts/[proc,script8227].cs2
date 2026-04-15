@@ -7,4 +7,9 @@ switch_int ($int0) {
 		return(~cr_ui_min_width, ~cr_ui_min_height, ~cr_ui_default_width, ~cr_ui_default_height);
 	case 1 :
 		return(326, 331, 512, 334);
+	case 3 :
+		if (~on_mobile = true) {
+			return(max(%varcint1272, 200), max(%varcint1273, 200), max(%varcint1274, 200), max(%varcint1275, 200));
+		}
+		return(512, 334, 512, 334);
 }

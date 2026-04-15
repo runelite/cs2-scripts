@@ -1,0 +1,66 @@
+// 9355
+[proc,script9355](component $component0, string $string0)
+def_int $int1 = 0;
+cc_create($component0, ^iftype_graphic, $int1, false);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(tradebacking_light);
+cc_settiling(true);
+$int1 = calc($int1 + 1);
+$int1 = ~script9357($component0, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, "highlight_border,0");
+$int1 = ~script9357($component0, $int1, ^setpos_abs_right, ^setpos_abs_top, 9, "highlight_border,1");
+$int1 = ~script9357($component0, $int1, ^setpos_abs_left, ^setpos_abs_bottom, 9, "highlight_border,2");
+$int1 = ~script9357($component0, $int1, ^setpos_abs_right, ^setpos_abs_bottom, 9, "highlight_border,3");
+$int1 = ~script9356(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ^setpos_abs_left, 
+	3 = ^setpos_abs_centre, 
+	4 = 9, 
+	5 = 18, 
+	6 = ^setsize_abs, 
+	7 = ^setsize_minus, 
+	8 = "highlight_border,4"
+);
+$int1 = ~script9356(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ^setpos_abs_centre, 
+	3 = ^setpos_abs_top, 
+	4 = 18, 
+	5 = 9, 
+	6 = ^setsize_minus, 
+	7 = ^setsize_abs, 
+	8 = "highlight_border,5"
+);
+$int1 = ~script9356(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ^setpos_abs_right, 
+	3 = ^setpos_abs_centre, 
+	4 = 9, 
+	5 = 18, 
+	6 = ^setsize_abs, 
+	7 = ^setsize_minus, 
+	8 = "highlight_border,6"
+);
+$int1 = ~script9356(
+	0 = $component0, 
+	1 = $int1, 
+	2 = ^setpos_abs_centre, 
+	3 = ^setpos_abs_bottom, 
+	4 = 18, 
+	5 = 9, 
+	6 = ^setsize_minus, 
+	7 = ^setsize_abs, 
+	8 = "highlight_border,7"
+);
+cc_create($component0, ^iftype_text, $int1, false);
+cc_setsize(14, 8, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 16);
+cc_settext($string0);
+cc_settextfont(p12_full);
+cc_setcolour(^white);
+cc_settextshadow(true);
+$int1 = calc($int1 + 1);

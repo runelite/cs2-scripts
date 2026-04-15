@@ -1,0 +1,15 @@
+// 7894
+[clientscript,script7894](int $mousex0, int $mousey1)
+%varcint1357 = max(0, calc(%varcint1357 - 2));
+if (%varcint1357 > 2) {
+	return;
+}
+def_int $int2 = calc(%varcint1355 - $mousex0);
+def_int $int3 = calc(%varcint1356 - $mousey1);
+def_int $int4 = calc(if_getscrollx(talent_tree:tree_draw_layers) + $int2);
+def_int $int5 = calc(if_getscrolly(talent_tree:tree_draw_layers) + $int3);
+if_setscrollpos($int4, $int5, talent_tree:tree_draw_layers);
+%varcint1353 = $int5;
+%varcint1354 = $int4;
+%varcint1355 = $mousex0;
+%varcint1356 = $mousey1;

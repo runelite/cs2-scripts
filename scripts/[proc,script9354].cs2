@@ -1,0 +1,52 @@
+// 9354
+[proc,script9354](int $int0)
+cc_deleteall(talent_tree:tooltip);
+def_component $component1 = talent_tree:tree_draw_layers;
+def_int $int2 = scale(1500, 100, %varcint1351);
+%varcint1351 = $int0;
+def_int $int3 = scale(1500, 100, %varcint1351);
+%varcint1354 = max(0, calc(%varcint1354 + ($int3 - $int2) / 2));
+%varcint1353 = max(0, calc(%varcint1353 + ($int3 - $int2) / 2));
+if_setscrollsize($int3, $int3, $component1);
+if_setscrollpos(%varcint1354, %varcint1353, $component1);
+if (%talent_debug_mode = 1) {
+	~debug_mes("Zoom is <tostring($int0)>");
+}
+def_int $int4 = 0;
+def_anyobj $anyobj0 = enum_getoutputs(dbrow, enum_5942);
+def_int $int5 = array_size($anyobj0);
+def_component $component6 = talent_tree:tree_node_draw_layer;
+def_component $component7 = talent_tree:tree_connection_draw_layer;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_dbrow $dbrow11 = null;
+while ($int4 < $int5) {
+	if (cc_find($component6, $int4) = true) {
+		$dbrow11 = $dbrowarray0($int4);
+		$int10 = ~script9386($dbrow11);
+		cc_setsize($int10, $int10, ^setsize_abs, ^setsize_abs);
+		$int8, $int9 = ~script9387($dbrow11);
+		cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
+		~script9373($dbrow11);
+	}
+	$int4 = calc($int4 + 1);
+}
+if_query(1, $component7, -1);
+def_dbrow $dbrow12 = null;
+def_dbrow $dbrow13 = null;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+while (if_query_next = true) {
+	cc_setlinewid(~script9364);
+	$dbrow12 = cc_param(param_2555);
+	$dbrow13 = cc_param(param_2556);
+	if ($dbrow12 ! null & $dbrow13 ! null) {
+		$int14, $int16 = ~script9387($dbrow12);
+		$int15, $int17 = ~script9387($dbrow13);
+		cc_setsize(abs(calc($int14 - $int15)), abs(calc($int16 - $int17)), ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(($int14 + $int15) / 2), calc(($int16 + $int17) / 2), ^setpos_abs_centre, ^setpos_abs_centre);
+	}
+}

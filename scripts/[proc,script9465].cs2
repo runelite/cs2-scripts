@@ -1,0 +1,7 @@
+// 9465
+[proc,script9465](dbrow $dbrow0)
+if (~script9466($dbrow0) = 0) {
+	return;
+}
+def_int $int1 = db_getfield($dbrow0, league_relic_effect_toggle:toggle_bit, 0);
+%league_relic_effect_toggle_1 = togglebit(%league_relic_effect_toggle_1, $int1);

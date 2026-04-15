@@ -43,6 +43,7 @@ if ($boolean10 = true) {
 cc_deleteall($com_magic_spellbook_spelllayer0);
 cc_deleteall($com_magic_spellbook_infolayer1);
 cc_deleteall($com_magic_spellbook_tooltip2);
+~script9409;
 def_enum $enum14 = enum(int, enum, enum_1981, %spellbook);
 def_enum $enum15 = enum(int, enum, enum_5280, %spellbook);
 if (%spellbook_sublist >= 0) {
@@ -77,39 +78,40 @@ def_int $length21 = enum_getoutputcount($enum14);
 def_int $intarray2($length21);
 def_int $int22 = 0;
 def_obj $obj23 = null;
-def_int $int24 = 0;
+def_int $int24 = -1;
+def_int $int25 = 0;
 if ($boolean10 = false & %magic_spellbook_hidefilterbutton = 1) {
-	while ($int24 < $length21) {
-		$obj23 = enum(int, obj, $enum14, $int24);
+	while ($int25 < $length21) {
+		$obj23 = enum(int, obj, $enum14, $int25);
 		if (~league_world = 1) {
 			$obj23 = ~script3159($obj23);
 		}
 		if_sethide(false, oc_param($obj23, spell_button));
-		$intarray2($int22) = $int24;
+		$intarray2($int22) = $int25;
 		$int22 = calc($int22 + 1);
-		$int24 = calc($int24 + 1);
+		$int25 = calc($int25 + 1);
 	}
 } else {
-	while ($int24 < $length21) {
-		$obj23 = enum(int, obj, $enum14, $int24);
+	while ($int25 < $length21) {
+		$obj23 = enum(int, obj, $enum14, $int25);
 		if (~league_world = 1) {
 			$obj23 = ~script3159($obj23);
 		}
 		if (~magic_spellbook_passfilter($obj23) = 1) {
 			if_sethide(false, oc_param($obj23, spell_button));
-			$intarray2($int22) = $int24;
+			$intarray2($int22) = $int25;
 			$int22 = calc($int22 + 1);
 		} else {
 			if_sethide(true, oc_param($obj23, spell_button));
 		}
-		$int24 = calc($int24 + 1);
+		$int25 = calc($int25 + 1);
 	}
 }
-def_int $int25 = 0;
+def_int $int26 = 0;
 if ($int22 >= 2) {
 	~magic_spellbook_sort($anyobj2, 0, calc($int22 - 1), $enum14);
 } else if ($int22 <= 0) {
-	cc_create($com_magic_spellbook_spelllayer0, ^iftype_text, $int25, false);
+	cc_create($com_magic_spellbook_spelllayer0, ^iftype_text, $int26, false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);
@@ -117,17 +119,17 @@ if ($int22 >= 2) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("No spells match your selected filters.");
-	$int25 = calc($int25 + 1);
+	$int26 = calc($int26 + 1);
 	return;
 }
-def_int $int26 = 24;
-def_int $int27 = 0;
+def_int $int27 = 24;
 def_int $int28 = 0;
 def_int $int29 = 0;
 def_int $int30 = 0;
-def_int $int31 = $int12;
+def_int $int31 = 0;
+def_int $int32 = $int12;
 if ($boolean10 = false & %magic_spellbook_hidefilterbutton = 1) {
-	$int27, $int28, $int30, $int29 = ~script6419(%spellbook);
+	$int28, $int29, $int31, $int30 = ~script6419(%spellbook);
 	switch_int (%spellbook) {
 		case default :
 			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
@@ -138,86 +140,74 @@ if ($boolean10 = false & %magic_spellbook_hidefilterbutton = 1) {
 		case 3 :
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 	}
-	$int31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
+	$int32 = calc($int29 * $int27 + ($int29 - 1) * $int30);
 } else if (%magic_spellbook_blockresizing = 1 | $boolean10 = false & ~deadman_world = 0 & (%pvp_area_client = 1 | %pvp_adjacent_area_client = 1)) {
 	if ($int22 <= 28) {
-		$int27 = 4;
+		$int28 = 4;
 	} else {
-		$int27 = ~max(4, ~min(7, calc(($int22 + 8) / 9)));
+		$int28 = ~max(4, ~min(7, calc(($int22 + 8) / 9)));
 	}
-	$int30 = ~max(0, ~min($int26, calc(($int11 - $int26 * $int27) / ($int27 - 1))));
-	$int28 = ~max(1, calc(($int22 + ($int27 - 1)) / $int27));
-	if ($int28 >= 2) {
-		$int29 = ~max(0, ~min($int30, calc(($int12 - $int26 * $int28) / ($int28 - 1))));
+	$int31 = ~max(0, ~min($int27, calc(($int11 - $int27 * $int28) / ($int28 - 1))));
+	$int29 = ~max(1, calc(($int22 + ($int28 - 1)) / $int28));
+	if ($int29 >= 2) {
+		$int30 = ~max(0, ~min($int31, calc(($int12 - $int27 * $int29) / ($int29 - 1))));
 	}
-	$int31 = ~max(calc($int28 * $int26 + ($int28 - 1) * $int29), calc($int12 - 30));
+	$int32 = ~max(calc($int29 * $int27 + ($int29 - 1) * $int30), calc($int12 - 30));
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_spelllayer0);
 } else {
 	if ($int22 <= 15) {
-		$int26, $int27 = 40, 3;
+		$int27, $int28 = 40, 3;
 	} else if ($int22 <= 20) {
-		$int26, $int27 = 40, 4;
+		$int27, $int28 = 40, 4;
 	} else {
-		$int27 = ~max(4, ~min(7, calc(($int22 + 8) / 9)));
+		$int28 = ~max(4, ~min(7, calc(($int22 + 8) / 9)));
 	}
-	$int30 = ~max(0, ~min(scale(5, 7, $int26), calc(($int11 - $int26 * $int27) / ($int27 - 1))));
-	$int28 = ~max(1, calc(($int22 + ($int27 - 1)) / $int27));
-	if ($int28 >= 2) {
-		$int29 = ~max(0, ~min($int30, calc(($int12 - $int26 * $int28) / ($int28 - 1))));
+	$int31 = ~max(0, ~min(scale(5, 7, $int27), calc(($int11 - $int27 * $int28) / ($int28 - 1))));
+	$int29 = ~max(1, calc(($int22 + ($int28 - 1)) / $int28));
+	if ($int29 >= 2) {
+		$int30 = ~max(0, ~min($int31, calc(($int12 - $int27 * $int29) / ($int29 - 1))));
 	}
-	$int31 = calc($int28 * $int26 + ($int28 - 1) * $int29);
+	$int32 = calc($int29 * $int27 + ($int29 - 1) * $int30);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_magic_spellbook_spelllayer0);
 }
-if_setsize(calc($int27 * $int26 + ($int27 - 1) * $int30), $int31, ^setsize_abs, ^setsize_abs, $com_magic_spellbook_spelllayer0);
-def_int $int32 = 0;
-def_component $component33 = null;
-def_int $int34 = calc($int26 + $int30);
-def_int $int35 = calc($int26 + $int29);
-def_graphic $graphic36 = null;
-def_int $int37 = 0;
+if_setsize(calc($int28 * $int27 + ($int28 - 1) * $int31), $int32, ^setsize_abs, ^setsize_abs, $com_magic_spellbook_spelllayer0);
+def_int $int33 = 0;
+def_component $component34 = null;
+def_int $int35 = calc($int27 + $int31);
+def_int $int36 = calc($int27 + $int30);
+def_graphic $graphic37 = null;
 def_int $int38 = 0;
-$int24 = 0;
-while ($int24 < $int22) {
-	$obj23 = enum(int, obj, $enum14, $intarray2($int24));
+def_int $int39 = 0;
+$int25 = 0;
+while ($int25 < $int22) {
+	$obj23 = enum(int, obj, $enum14, $intarray2($int25));
 	if (~league_world = 1) {
 		$obj23 = ~script3159($obj23);
 	}
-	$component33 = oc_param($obj23, spell_button);
-	if_setsize($int26, $int26, ^setsize_abs, ^setsize_abs, $component33);
-	$int37, $int38 = calc($int24 % $int27 * $int34), calc($int24 / $int27 * $int35);
-	if_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top, $component33);
-	$int32, $graphic36 = ~script2614($obj23, $component33, $int26);
-	if ($int32 = 1) {
-		if ($int26 >= 40) {
-			if_setgraphic(oc_param($obj23, spell_graphic2_on), $component33);
-		} else {
-			if_setgraphic(oc_param($obj23, spell_graphic1_on), $component33);
-		}
-	} else {
-		if ($int26 >= 40) {
-			if_setgraphic(oc_param($obj23, spell_graphic2_off), $component33);
-		} else {
-			if_setgraphic(oc_param($obj23, spell_graphic1_off), $component33);
-		}
-		if ($graphic36 ! null) {
-			cc_create($com_magic_spellbook_spelllayer0, ^iftype_graphic, $int25, false);
-			cc_setsize($int26, $int26, ^setsize_abs, ^setsize_abs);
-			cc_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic($graphic36);
-			$int25 = calc($int25 + 1);
-		}
+	$component34 = oc_param($obj23, spell_button);
+	if_setsize($int27, $int27, ^setsize_abs, ^setsize_abs, $component34);
+	$int38, $int39 = calc($int25 % $int28 * $int35), calc($int25 / $int28 * $int36);
+	if_setposition($int38, $int39, ^setpos_abs_left, ^setpos_abs_top, $component34);
+	$int33, $graphic37 = ~script2614($obj23, $component34, $int27);
+	if_setgraphic(~script9448($obj23, $int27, $int33), $component34);
+	if ($int33 = 0 & $graphic37 ! null) {
+		cc_create($com_magic_spellbook_spelllayer0, ^iftype_graphic, $int26, false);
+		cc_setsize($int27, $int27, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int38, $int39, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic($graphic37);
+		$int26 = calc($int26 + 1);
 	}
-	~magic_spellbook_modifyops($component33);
+	~magic_spellbook_modifyops($component34);
 	if ($boolean10 = true) {
-		cc_create($com_magic_spellbook_infolayer1, ^iftype_graphic, $int24, false);
-		cc_setsize($int26, $int26, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int37, $int38, ^setpos_abs_left, ^setpos_abs_top);
+		cc_create($com_magic_spellbook_infolayer1, ^iftype_graphic, $int25, false);
+		cc_setsize($int27, $int27, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int38, $int39, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject($obj23, 1);
 		cc_settrans(255);
 		cc_setonclick("script2612($obj23, $com_magic_spellbook_infolayer1, $com_magic_spellbook_tooltip2, $int12)");
 	} else {
-		if_setonmouserepeat("magic_spellbook_settooltip(1, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
-		if_setonmouseleave("magic_spellbook_settooltip(0, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component33);
+		if_setonmouserepeat("magic_spellbook_settooltip(1, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component34);
+		if_setonmouseleave("magic_spellbook_settooltip(0, $obj23, event_com, -1, $com_magic_spellbook_tooltip2, $int12, inv_getobj(worn, 3), inv_getobj(worn, 5))", $component34);
 	}
-	$int24 = calc($int24 + 1);
+	$int25 = calc($int25 + 1);
 }

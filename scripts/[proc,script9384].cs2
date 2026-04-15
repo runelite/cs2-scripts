@@ -1,0 +1,6 @@
+// 9384
+[proc,script9384](dbrow $dbrow0, int $int1)(graphic)
+if ($dbrow0 ! null & db_getfield($dbrow0, talent_tree:node_size, 0) = 3) {
+	return(~script9394($int1));
+}
+return(~script9393($int1));

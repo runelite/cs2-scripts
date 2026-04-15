@@ -1,0 +1,5 @@
+// 9360
+[proc,script9360](component $component0, int $int1)
+%varcint1354 = calc(($int1 - if_getwidth($component0)) / 2);
+%varcint1353 = calc(($int1 - if_getheight($component0)) / 2);
+if_setscrollpos(%varcint1354, %varcint1353, $component0);

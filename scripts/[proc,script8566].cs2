@@ -1,0 +1,91 @@
+// 8566
+[proc,script8566]
+cc_deleteall(talent_tree:tooltip);
+%varcint1359 = 1;
+def_component $component0 = talent_tree:perm_floating_panel_content;
+def_component $component1 = talent_tree:perm_floating_panel_background;
+def_component $component2 = talent_tree:perm_floating_panel;
+def_component $component3 = talent_tree:perm_floating_panel_scroll;
+cc_deleteall($component1);
+cc_deleteall($component0);
+cc_deleteall($component3);
+cc_deleteall(talent_tree:perm_floating_panel_content_2);
+def_int $int4 = 0;
+$int4 = ~create_graphic(
+	0 = $component1, 
+	1 = $int4, 
+	2 = tradebacking, 
+	3 = 1, 
+	4 = 1, 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 0, 
+	8 = 0, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus, 
+	11 = true
+);
+~stonebox($component1, 1, $int4);
+$int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 234;
+def_int $int7 = 0;
+$int4 = ~cc_add_button(
+	0 = $component0, 
+	1 = $int4, 
+	2 = 0, 
+	3 = $int5, 
+	4 = ^setpos_abs_right, 
+	5 = ^setpos_abs_top, 
+	6 = 60, 
+	7 = 30, 
+	8 = ^setsize_abs, 
+	9 = ^setsize_abs, 
+	10 = struct_6265, 
+	11 = "Hide Info"
+);
+~cc_set_button_states(false, 0);
+cc_setop(1, "Hide Information Panel");
+cc_setonop("script7899");
+cc_create($component0, ^iftype_text, $int4, false);
+cc_setsize(60, 30, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settext("Active Pact Info");
+$int4 = calc($int4 + 1);
+$int5 = calc($int5 + 30);
+cc_create($component0, ^iftype_line, $int4, false);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
+cc_setlinewid(1);
+cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+$int4 = calc($int4 + 1);
+if_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top, talent_tree:perm_floating_panel_content_2);
+if_setsize(16, $int5, ^setsize_minus, ^setsize_minus, talent_tree:perm_floating_panel_content_2);
+$component0 = talent_tree:perm_floating_panel_content_2;
+if_setposition(10, calc(15 + $int5), ^setpos_abs_right, ^setpos_abs_top, $component3);
+if_setsize(16, calc(25 + $int5), ^setsize_abs, ^setsize_minus, $component3);
+def_int $int8 = 2;
+def_int $int9 = 1;
+if (%varcint1352 > 0 | %talent_points_spent > 0) {
+	$int8, $int4, $int9 = ~script9054($component0, $int6, $int8, $int4, $int9);
+	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 3, $int9);
+	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 4, $int9);
+	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 5, $int9);
+	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, -2, $int9);
+} else {
+	$int8, $int4, $int9 = ~script9175("No Active Pacts", 1, $component0, $int6, $int8, $int4, $int9);
+	$int8 = calc($int8 + 20);
+}
+$int8 = calc($int8 + 22);
+$int7 = min(calc($int8 + $int5), calc(if_getheight(talent_tree:tree_content) - 100));
+if (if_getwidth(talent_tree:tree_content) >= 800) {
+	$int7 = min(calc($int8 + $int5), calc($int7 + 80));
+}
+$int7 = max($int7, 165);
+if_setscrollsize(0, calc($int8 - 20), $component0);
+~scrollbar_default($component3, $component0);
+if_setsize(calc($int6 + 16), $int7, ^setsize_abs, ^setsize_abs, $component2);
+~scrollbar_vertical_rebuild($component3, $component0);

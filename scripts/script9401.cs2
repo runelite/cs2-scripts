@@ -1,0 +1,120 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9401
+.int_arg_count            4
+.long_arg_count           0
+.obj_arg_count            2
+   iload                  0
+   iconst                 884768
+   iconst                 0
+   db_getfield           
+   ostore                 2
+   iload                  0
+   iconst                 884786
+   iconst                 0
+   db_getfield           
+   istore                 4
+   iload                  1
+   get_array_int          1
+   istore                 5
+   iload                  1
+   get_array_int         
+   ostore                 3
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   iload                  0
+   invoke                 9387
+   istore                 7
+   istore                 6
+   iload                  5
+   iconst                 0
+   if_icmpgt              LABEL28
+   jump                   LABEL30
+LABEL28:
+   iload                  5
+   istore                 4
+LABEL30:
+   oload                  3
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL35
+   jump                   LABEL41
+LABEL35:
+   oload                  3
+   iload                  4
+   tostring              
+   invoke                 9389
+   ostore                 2
+   jump                   LABEL46
+LABEL41:
+   oload                  2
+   iload                  4
+   tostring              
+   invoke                 9389
+   ostore                 2
+LABEL46:
+   get_varbit             3988
+   iconst                 1
+   if_icmpeq              LABEL50
+   jump                   LABEL77
+LABEL50:
+   sconst                 "ID - "
+   cc_getid              
+   iconst                 1
+   add                   
+   tostring              
+   sconst                 " ["
+   iload                  0
+   iconst                 884848
+   iconst                 0
+   db_getfield           
+   sconst                 "]"
+   sconst                 "<br>"
+   join_string            6
+   oload                  2
+   append                
+   ostore                 2
+   oload                  2
+   sconst                 "<br>"
+   sconst                 "X: "
+   iload                  6
+   tostring              
+   sconst                 ", Y: "
+   iload                  7
+   tostring              
+   join_string            5
+   append                
+   ostore                 2
+LABEL77:
+   iload                  3
+   iconst                 1
+   if_icmpeq              LABEL81
+   jump                   LABEL93
+LABEL81:
+   iconst                 9358
+   iconst                 -2147483644
+   cc_getid              
+   iload                  0
+   iload                  2
+   iconst                 42401796
+   oload                  2
+   iconst                 25
+   iconst                 512
+   sconst                 "iiiiisii"
+   cc_setonop            
+   jump                   LABEL103
+LABEL93:
+   iconst                 9442
+   iload                  2
+   cc_getid              
+   iconst                 42401796
+   oload                  2
+   iconst                 25
+   iconst                 512
+   iconst                 1
+   sconst                 "iiisiii"
+   cc_setonmouserepeat   
+LABEL103:
+   return                

@@ -1,0 +1,11 @@
+// 9452
+[proc,script9452]()(int)
+db_listall(quetzal);
+def_dbrow $dbrow0 = db_findnext;
+while ($dbrow0 ! null) {
+	if (~script5015($dbrow0) = false) {
+		return(0);
+	}
+	$dbrow0 = db_findnext;
+}
+return(1);

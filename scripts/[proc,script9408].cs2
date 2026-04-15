@@ -1,0 +1,58 @@
+// 9408
+[proc,script9408](component $com_magic_spellbook_spelllayer0, component $com_magic_spellbook_infolayer1, component $com_magic_spellbook_tooltip2, component $com_magic_spellbook_top3, component $com_magic_spellbook_bottom4, component $com_magic_spellbook_infobutton5, component $com_magic_spellbook_filterbutton6, component $com_magic_spellbook_glow7, component $com_magic_spellbook_filtermenu_container8, component $com_magic_spellbook_filtermenu9, string $string0, string $string1, boolean $boolean10)
+def_dbrow $dbrow11 = ~script9463;
+if ($dbrow11 = null) {
+	return;
+}
+def_int $int12 = db_getfieldcount($dbrow11, spell_override_list:override);
+def_int $int13 = 0;
+def_dbrow $dbrow14 = null;
+if ($int12 < 1) {
+	return;
+}
+def_obj $obj15 = null;
+def_obj $obj16 = null;
+while ($int13 < $int12) {
+	$dbrow14 = db_getfield($dbrow11, spell_override_list:override, $int13);
+	if ($dbrow14 ! null) {
+		$obj15 = db_getfield($dbrow14, spell_override:base_spell, 0);
+		$obj16 = db_getfield($dbrow14, spell_override:override_spell, 0);
+		if ($obj15 ! null) {
+			~script9447(
+				0 = $obj15, 
+				1 = $com_magic_spellbook_spelllayer0, 
+				2 = $com_magic_spellbook_infolayer1, 
+				3 = $com_magic_spellbook_tooltip2, 
+				4 = $com_magic_spellbook_top3, 
+				5 = $com_magic_spellbook_bottom4, 
+				6 = $com_magic_spellbook_infobutton5, 
+				7 = $com_magic_spellbook_filterbutton6, 
+				8 = $com_magic_spellbook_glow7, 
+				9 = $com_magic_spellbook_filtermenu_container8, 
+				10 = $com_magic_spellbook_filtermenu9, 
+				11 = $string0, 
+				12 = $string1, 
+				13 = $boolean10
+			);
+		}
+		if ($obj16 ! null) {
+			~script9447(
+				0 = $obj16, 
+				1 = $com_magic_spellbook_spelllayer0, 
+				2 = $com_magic_spellbook_infolayer1, 
+				3 = $com_magic_spellbook_tooltip2, 
+				4 = $com_magic_spellbook_top3, 
+				5 = $com_magic_spellbook_bottom4, 
+				6 = $com_magic_spellbook_infobutton5, 
+				7 = $com_magic_spellbook_filterbutton6, 
+				8 = $com_magic_spellbook_glow7, 
+				9 = $com_magic_spellbook_filtermenu_container8, 
+				10 = $com_magic_spellbook_filtermenu9, 
+				11 = $string0, 
+				12 = $string1, 
+				13 = $boolean10
+			);
+		}
+	}
+	$int13 = calc($int13 + 1);
+}

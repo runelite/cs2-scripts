@@ -1,0 +1,11 @@
+// 9469
+[proc,script9469](int $int0)(int)
+if ($int0 = -1) {
+	return(0);
+}
+def_anyobj $anyobj0 = enum_getoutputs(dbrow, enum_5950);
+def_int $int1 = array_indexof($anyobj0, $int0, 0, -1, int);
+if ($int1 ! -1 & ~script9470($int1) = 1) {
+	return(1);
+}
+return(0);

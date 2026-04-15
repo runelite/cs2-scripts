@@ -1,0 +1,17 @@
+// 9467
+[clientscript,script9467]
+db_listall(league_relic_effect_toggle);
+def_dbrow $dbrow0 = db_findnext;
+def_anyobj $anyobj0 = array_create(int, 0, -1);
+def_int $int1 = -1;
+while ($dbrow0 ! null) {
+	$int1 = db_getfield($dbrow0, league_relic_effect_toggle:toggle_bit, 0);
+	if ($int1 ! -1) {
+		if (array_indexof($anyobj0, $int1, 0, -1, int) ! -1) {
+			~script2075("League toggles - Bit <tostring($int1)> is used more than once in the toggle system for relics, field - league_relic_effect_toggle:toggle_bit . Likely will cause other toggles to overwrite it.");
+		} else {
+			array_push($anyobj0, $int1, int);
+		}
+	}
+	$dbrow0 = db_findnext;
+}

@@ -7,8 +7,50 @@ if ($struct37 = null) {
 ~leagues_close_button($com_trailblazer_areas_close_button3, 1, 0);
 def_int $comsubid38 = ~steelborder(trailblazer_areas:frame, "League Areas", 1);
 def_component $component39 = trailblazer_areas:infinity;
-if_setontimer("responsive_interface_scaler($component39, -1)", $component39);
-if_setonresize("league_areas_draw_interface(
+if (~in_league_tutorial = 0) {
+	if_setontimer("responsive_interface_scaler($component39, -1)", $component39);
+	if_setonresize("league_areas_draw_interface(
+		0 = $com_trailblazer_areas_league_btn_menu0, 
+		1 = $com_trailblazer_areas_league_menu_frame1, 
+		2 = $com_trailblazer_areas_league_menu_overlay2, 
+		3 = $com_trailblazer_areas_close_button3, 
+		4 = $comsubid38, 
+		5 = $com_trailblazer_areas_league_shield_misthalin4, 
+		6 = $com_trailblazer_areas_league_shield_karamja5, 
+		7 = $com_trailblazer_areas_league_shield_desert6, 
+		8 = $com_trailblazer_areas_league_shield_morytania7, 
+		9 = $com_trailblazer_areas_league_shield_asgarnia8, 
+		10 = $com_trailblazer_areas_league_shield_kandarin9, 
+		11 = $com_trailblazer_areas_league_shield_fremennik10, 
+		12 = $com_trailblazer_areas_league_shield_tirannwn11, 
+		13 = $com_trailblazer_areas_league_shield_wilderness12, 
+		14 = $com_trailblazer_areas_league_shield_kebos_kourend13, 
+		15 = $com_trailblazer_areas_league_shield_varlamore14, 
+		16 = $com_trailblazer_areas_league_name_misthalin15, 
+		17 = $com_trailblazer_areas_league_name_karamja16, 
+		18 = $com_trailblazer_areas_league_name_desert17, 
+		19 = $com_trailblazer_areas_league_name_morytania18, 
+		20 = $com_trailblazer_areas_league_name_asgarnia19, 
+		21 = $com_trailblazer_areas_league_name_kandarin20, 
+		22 = $com_trailblazer_areas_league_name_fremennik21, 
+		23 = $com_trailblazer_areas_league_name_tirannwn22, 
+		24 = $com_trailblazer_areas_league_name_wilderness23, 
+		25 = $com_trailblazer_areas_league_name_kebos_kourend24, 
+		26 = $com_trailblazer_areas_league_name_varlamore25, 
+		27 = $com_trailblazer_areas_league_area_details26, 
+		28 = $com_trailblazer_areas_name_shield27, 
+		29 = $com_trailblazer_areas_name_header28, 
+		30 = $com_trailblazer_areas_description29, 
+		31 = $com_trailblazer_areas_select_button30, 
+		32 = $com_trailblazer_areas_select_back31, 
+		33 = $com_trailblazer_areas_league_area_icon32, 
+		34 = $com_trailblazer_areas_loading33, 
+		35 = $com_trailblazer_areas_header34, 
+		36 = $com_trailblazer_areas_progress_bar35, 
+		37 = $com_trailblazer_areas_tooltip36
+	)", $component39);
+}
+~league_areas_draw_interface(
 	0 = $com_trailblazer_areas_league_btn_menu0, 
 	1 = $com_trailblazer_areas_league_menu_frame1, 
 	2 = $com_trailblazer_areas_league_menu_overlay2, 
@@ -47,7 +89,7 @@ if_setonresize("league_areas_draw_interface(
 	35 = $com_trailblazer_areas_header34, 
 	36 = $com_trailblazer_areas_progress_bar35, 
 	37 = $com_trailblazer_areas_tooltip36
-)", $component39);
+);
 if (~in_league_tutorial = 0) {
 	~leagues_menu_button($com_trailblazer_areas_league_btn_menu0, 0, $com_trailblazer_areas_league_menu_frame1, $com_trailblazer_areas_league_menu_overlay2);
 }

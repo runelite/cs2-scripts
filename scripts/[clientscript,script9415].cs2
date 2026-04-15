@@ -1,0 +1,12 @@
+// 9415
+[clientscript,script9415](component $component0, int $comsubid1, dbrow $dbrow2, int $int3, struct $struct4, int $int5)
+if (cc_find($component0, $comsubid1) = true) {
+	if ($int5 ! 1) {
+		sound_synth(pillory_wrong, 1, 0);
+		mes("<~mes_highlight_red>You need to have that relic unlocked in order to toggle its effects.");
+		return;
+	}
+	sound_synth(interface_select1, 1, 0);
+	~script9465($dbrow2);
+	if_script_trigger(1060096294, league_relics:toggles, -1, $dbrow2);
+}

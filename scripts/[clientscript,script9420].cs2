@@ -1,0 +1,17 @@
+// 9420
+[clientscript,script9420](int $int0, int $int1, dbrow $dbrow2, int $int3)
+if (%varcint1374 = 1) {
+	return;
+}
+%varcint1374 = 1;
+sound_synth(interface_select1, 1, 0);
+if_setontimer(null, league_tasks:tasks_list);
+if (%varcint1366 ! null) {
+	if (%varcint1366 = $dbrow2) {
+		~script9424($int3, $int0, $int1, $dbrow2, 0);
+	} else {
+		~script9424($int3, $int0, $int1, $dbrow2, 1);
+	}
+} else {
+	~script9423($int3, $int0, $int1, $dbrow2);
+}

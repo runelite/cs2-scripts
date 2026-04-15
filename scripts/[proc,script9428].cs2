@@ -1,0 +1,131 @@
+// 9428
+[proc,script9428](int $int0)
+if (%varcint1370 < 0) {
+	if_setontimer(null, league_tasks:tasks_list);
+	return;
+}
+def_struct $struct1 = enum(int, struct, enum_2670, %league_type);
+if ($struct1 = null) {
+	return;
+}
+def_anyobj $anyobj0 = enum_getoutputs(dbrow, enum_5950);
+def_int $int2 = array_size($anyobj0);
+if (%varcint1369 < 0) {
+	%varcint1369 = 0;
+}
+def_int $int3 = min($int2, %varcint1369);
+def_int $int4 = min($int2, calc(%varcint1369 + $int0));
+if (%varcint1369 >= $int4) {
+	~script9430;
+	if (%varcint1373 = 0 & %league_tasks_is_searching = 0) {
+		if_sethide(false, league_tasks:tasks_none);
+	} else {
+		if_sethide(true, league_tasks:tasks_none);
+	}
+	if (cc_find(league_tasks:frame, 1) = true) {
+		cc_settext("League Tasks <col=ffffff><tostring(%varcint1372)>/<tostring(%varcint1373)></col>");
+	}
+	%varcint1374 = 0;
+	if_setontimer(null, league_tasks:tasks_list);
+	return;
+}
+def_component $component5 = league_tasks:tasks_background;
+def_component $component6 = league_tasks:tasks_expand;
+def_int $int7 = 43057168;
+def_component $component8 = league_tasks:tasks_name;
+def_component $component9 = league_tasks:tasks_points;
+def_component $component10 = league_tasks:tasks_type;
+def_component $component11 = league_tasks:tasks_area;
+def_component $component12 = league_tasks:tasks_description;
+def_component $component13 = league_tasks:tasks_tier;
+def_int $int14 = 43057167;
+def_int $int15 = 43057156;
+def_int $int16 = 43057158;
+def_int $int17 = 43057165;
+def_int $int18 = 43057159;
+def_int $int19 = 43057195;
+def_int $int20 = 43057197;
+def_int $int21 = 43057198;
+def_boolean $boolean22 = ~on_mobile;
+def_int $colour23 = struct_param($struct1, param_1027);
+def_int $int24 = -1;
+def_int $int25 = -1;
+def_int $int26 = -1;
+def_int $int27 = -1;
+def_int $int28 = -1;
+def_int $int29 = -1;
+def_int $int30 = 0;
+def_int $int31 = %varcint1370;
+def_int $int32 = %varcint1371;
+def_int $int33 = %varcint1179;
+def_string $string1 = "null";
+def_string $string2 = "null";
+def_string $string3 = %varcstring1180;
+def_int $int34 = string_length(~script7124($string3));
+def_int $int35 = 1;
+def_int $int36 = 1;
+if (%league_task_filter_tier = 0 & %league_task_filter_type = 0 & %league_task_filter_area = 0 & %league_task_filter_mastery_point = 0 & $int34 <= 1) {
+	$int35 = 0;
+}
+def_dbrow $dbrow37 = null;
+while ($int3 < $int4) {
+	$dbrow37 = $dbrowarray0($int3);
+	if ($dbrow37 = null) {
+		mes("Sorry, something went wrong. Please try again later.");
+		return;
+	}
+	$int24 = ~script9470($int3);
+	$int25 = db_getfield($dbrow37, action:action_difficulty, 0);
+	$string1 = ~script9406($dbrow37);
+	$string2 = ~script9407($dbrow37);
+	$int26 = enum(int, int, enum_2671, $int25);
+	$int27 = db_getfield($dbrow37, action:category, 0);
+	$int28 = db_getfield($dbrow37, action:task_area, 0);
+	if ($int35 = 1) {
+		$int36 = ~league_task_display(
+			0 = $dbrow37, 
+			1 = $int25, 
+			2 = $int24, 
+			3 = $int27, 
+			4 = $int28, 
+			5 = $string1, 
+			6 = $string2, 
+			7 = $string3, 
+			8 = $int34
+		);
+	} else if (%league_task_filter_completed ! 0 & calc(%league_task_filter_completed - 1) ! $int24) {
+		$int36 = 0;
+	} else {
+		$int36 = 1;
+	}
+	if ($int36 = 1) {
+		%varcint1373 = calc(%varcint1373 + 1);
+		$int31 = %varcint1370;
+		$int32 = %varcint1371;
+		~script9429(
+			0 = $int3, 
+			1 = $int31, 
+			2 = $int32, 
+			3 = $int27, 
+			4 = $int28, 
+			5 = $int25, 
+			6 = $int26, 
+			7 = $int24, 
+			8 = $colour23, 
+			9 = $string1, 
+			10 = $string2, 
+			11 = $boolean22, 
+			12 = $dbrow37, 
+			13 = $component5, 
+			14 = $component6, 
+			15 = $component10, 
+			16 = $component11, 
+			17 = $component12, 
+			18 = $component13, 
+			19 = $component8, 
+			20 = $component9
+		);
+	}
+	$int3 = calc($int3 + 1);
+}
+%varcint1369 = $int4;

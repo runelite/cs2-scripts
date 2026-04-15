@@ -1,0 +1,31 @@
+// 9476
+[proc,script9476](dbrow $dbrow0)(dbrow, int)
+switch_dbrow ($dbrow0) {
+	case skill_feature_magic_standard_48_home_teleport :
+		if (%league_type = 6) {
+			return(skill_feature_magic_standard_leagues_6_home_teleport, 1);
+		} else if (%league_type = 1) {
+			return(skill_feature_magic_standard_league_twisted_home_teleport, 1);
+		} else if (%league_type = 3) {
+			return(skill_feature_magic_standard_league_3_home_teleport, 1);
+		}
+	case skill_feature_magic_ancient_01_zaros_home_tele :
+		if (%league_type = 6) {
+			return(skill_feature_magic_ancient_leagues_6_home_teleport, 1);
+		} else if (%league_type = 3) {
+			return(skill_feature_magic_ancient_league_3_home_teleport_2, 1);
+		}
+	case skill_feature_magic_lunar_01_lunar_home_tele :
+		if (%league_type = 6) {
+			return(skill_feature_magic_lunar_leagues_6_home_teleport, 1);
+		} else if (%league_type = 3) {
+			return(skill_feature_magic_lunar_league_3_home_teleport_3, 1);
+		}
+	case skill_feature_magic_arceuus_01_arceuus_home_teleport :
+		if (%league_type = 6) {
+			return(skill_feature_magic_arceuus_leagues_6_home_teleport, 1);
+		} else if (%league_type = 3) {
+			return(skill_feature_magic_arceuus_league_3_home_teleport_4, 1);
+		}
+}
+return($dbrow0, 0);

@@ -4,7 +4,7 @@ switch_int (%ore_respawn_timer) {
 	case 0 :
 		return(1);
 	case 1 :
-		if (~pickaxe_checker ! -1) {
+		if (~pickaxe_checker ! null) {
 			return(1);
 		}
 		return(0);

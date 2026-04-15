@@ -1,27 +1,27 @@
 // 7715
 [proc,league_current_tier]()(int)
-if (%league_relic_selection_7 ! 0) {
+if (%league_points_completed >= 28000) {
 	return(8);
 }
-if (%league_relic_selection_6 ! 0) {
+if (%league_points_completed >= 16500) {
 	return(7);
 }
-if (%league_relic_selection_5 ! 0) {
+if (%league_points_completed >= 8500) {
 	return(6);
 }
-if (%league_relic_selection_4 ! 0) {
+if (%league_points_completed >= 5200) {
 	return(5);
 }
-if (%league_relic_selection_3 ! 0) {
+if (%league_points_completed >= 2600) {
 	return(4);
 }
-if (%league_relic_selection_2 ! 0) {
+if (%league_points_completed >= 1200) {
 	return(3);
 }
-if (%league_relic_selection_1 ! 0) {
+if (%league_points_completed >= 600) {
 	return(2);
 }
-if (%league_relic_selection_0 ! 0) {
+if (%league_points_completed >= 0) {
 	return(1);
 }
 return(0);

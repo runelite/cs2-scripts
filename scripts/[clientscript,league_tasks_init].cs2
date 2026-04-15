@@ -1,6 +1,9 @@
 // 3202
-[clientscript,league_tasks_init](component $com_league_tasks_tasks_list0, component $com_league_tasks_tasks_background1, component $com_league_tasks_tasks_name2, component $com_league_tasks_tasks_points3, component $com_league_tasks_tasks_type4, component $com_league_tasks_tasks_area5, component $com_league_tasks_tasks_description6, component $com_league_tasks_tasks_expand7, component $com_league_tasks_tasks_tier8, component $com_league_tasks_tasks_none9, component $com_league_tasks_tasks_scrollbar10, component $com_league_tasks_league_btn_menu11, component $com_league_tasks_league_menu_frame12, component $com_league_tasks_league_menu_overlay13, component $com_league_tasks_close_button14, component $com_league_tasks_progress_bar15, component $com_league_tasks_tooltip16, component $com_league_tasks_searchbar_image17, component $com_league_tasks_search_text18)
+[clientscript,league_tasks_init](int $com_league_tasks_tasks_list0, component $com_league_tasks_tasks_background1, component $com_league_tasks_tasks_name2, component $com_league_tasks_tasks_points3, component $com_league_tasks_tasks_type4, component $com_league_tasks_tasks_area5, component $com_league_tasks_tasks_description6, component $com_league_tasks_tasks_expand7, component $com_league_tasks_tasks_tier8, int $com_league_tasks_tasks_none9, int $com_league_tasks_tasks_scrollbar10, component $com_league_tasks_league_btn_menu11, component $com_league_tasks_league_menu_frame12, component $com_league_tasks_league_menu_overlay13, component $com_league_tasks_close_button14, component $com_league_tasks_progress_bar15, component $com_league_tasks_tooltip16, component $com_league_tasks_searchbar_image17, component $com_league_tasks_search_text18)
 ~leagues_close_button($com_league_tasks_close_button14, 0, 1);
+if_setontimer(null, league_tasks:tasks_list);
+%varcint1374 = 0;
+%varcint1373 = 0;
 def_component $component19 = league_tasks:infinity;
 def_component $component20 = league_tasks:universe;
 def_component $component21 = league_tasks:resize_preview;
@@ -36,7 +39,8 @@ if_setonresize("league_tasks_draw_list(
 	15 = $com_league_tasks_progress_bar15, 
 	16 = $com_league_tasks_tooltip16, 
 	17 = $com_league_tasks_searchbar_image17, 
-	18 = $com_league_tasks_search_text18
+	18 = $com_league_tasks_search_text18, 
+	19 = 0
 )", league_tasks:infinity);
 if_setonvartransmit("league_tasks_transmit(
 	0 = -1, 
@@ -57,7 +61,8 @@ if_setonvartransmit("league_tasks_transmit(
 	15 = $com_league_tasks_progress_bar15, 
 	16 = $com_league_tasks_tooltip16, 
 	17 = $com_league_tasks_searchbar_image17, 
-	18 = $com_league_tasks_search_text18
+	18 = $com_league_tasks_search_text18, 
+	19 = %league_points_completed
 ){league_points_completed}", league_tasks:infinity);
 if_setonvartransmit("league_tasks_change_filter(
 	0 = -1, 
@@ -106,7 +111,8 @@ if ($enum22 = enum_1132) {
 		15 = $com_league_tasks_progress_bar15, 
 		16 = $com_league_tasks_tooltip16, 
 		17 = $com_league_tasks_searchbar_image17, 
-		18 = $com_league_tasks_search_text18
+		18 = $com_league_tasks_search_text18, 
+		19 = 0
 	);
 	return;
 }

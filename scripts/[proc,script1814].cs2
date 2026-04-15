@@ -6,4 +6,7 @@ if ($wma0 = ghorrock_prison & %dt2_ghorrock < 6) {
 if ($wma0 = lassar_undercity & %dt2_lassar < 8) {
 	return(0);
 }
+if (~league_world = 0 & $wma0 = karamja_underground) {
+	return(0);
+}
 return(1);

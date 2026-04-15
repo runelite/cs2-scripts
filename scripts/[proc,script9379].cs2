@@ -1,0 +1,12 @@
+// 9379
+[proc,script9379]
+def_component $component0 = talent_tree:floating_panel_content;
+def_int $comsubid1 = 0;
+def_int $comsubid2 = 0;
+$comsubid1, $comsubid2 = ~script9375("<col=e00a19>It's strongly reccomended you pick a Melee, Ranged or Magic style node</col>", 0xd97500, "Apply Changes", "Undo Changes");
+if (cc_find($component0, $comsubid1) = true) {
+	cc_setonop("script9380");
+}
+if (cc_find($component0, $comsubid2) = true) {
+	cc_setonop("script9381");
+}

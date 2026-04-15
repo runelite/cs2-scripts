@@ -1,0 +1,16 @@
+// 9422
+[proc,script9422](int $int0, int $int1)
+cc_deleteall(league_tasks:tasks_type);
+cc_deleteall(league_tasks:tasks_area);
+cc_deleteall(league_tasks:tasks_description);
+if (cc_find(league_tasks:tasks_expand, $int0) = true) {
+	cc_delete;
+}
+def_int $int2 = %varcint1371;
+if (cc_find(league_tasks:tasks_background, $int0) = true) {
+	%varcint1371 = cc_gety;
+}
+%varcint1369 = $int1;
+%varcint1370 = $int0;
+~script9428(1);
+%varcint1371 = $int2;

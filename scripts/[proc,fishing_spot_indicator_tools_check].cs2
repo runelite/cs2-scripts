@@ -2,6 +2,9 @@
 [proc,fishing_spot_indicator_tools_check](namedobj $namedobj0)(int)
 def_int $int1 = 0;
 def_boolean $boolean2 = map_members;
+if (~league_relic_active(struct_6441) = 1) {
+	return(1);
+}
 switch_namedobj ($namedobj0) {
 	case net_303 :
 		if (inv_total(inv, net_303) > 0) {

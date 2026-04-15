@@ -1,0 +1,12 @@
+// 9424
+[proc,script9424](int $int0, int $int1, int $int2, dbrow $dbrow3, int $int4)
+def_component $component5 = league_tasks:tasks_background;
+def_string $string0 = db_getfield(%varcint1366, action:action_desc, 0);
+def_int $int6 = paraheight("Description: <$string0>.", calc(if_getwidth($component5) - 10), p11_full);
+def_int $int7 = calc(10 * $int6 + 25);
+%varcint1366 = null;
+def_int $int8 = calc($int7 * -1);
+%varcint1371 = calc(%varcint1371 - $int7);
+%varcint1366 = null;
+~script9422(%varcint1368, %varcint1367);
+~script9426($int8, calc(%varcint1368 + 1), 300, $int4, $int0, $int1, $int2, $dbrow3);

@@ -1,0 +1,117 @@
+// 9369
+[proc,script9369](int $int0, dbrow $dbrow1)
+sound_synth(synth_11435, 1, 0);
+cc_deleteall(talent_tree:tooltip);
+if (%varcint1352 <= 0) {
+	return;
+}
+def_component $component2 = talent_tree:tree_node_draw_layer;
+if (cc_find_param(talent_tree:data_layer, param_2554, $int0) = false) {
+	~error("Unable to find selected node <tostring($int0)> within the data layer");
+	return;
+}
+def_int $int3 = 0;
+while (%varcint1352 > 0 & $int3 = 0) {
+	$int3 = ~script9368($component2, $int0);
+}
+def_anyobj $anyobj0 = enum_getoutputs(dbrow, enum_5942);
+if_query(1, $component2, -1);
+if_query_refine(param_2551, 3, int);
+while (if_query_next = true) {
+	~script9372(0);
+}
+if_query(1, $component2, -1);
+if_query_refine(param_2551, 1, int);
+def_int $index4 = if_query_nextid;
+def_int $comsubid5 = 0;
+def_int $int6 = 0;
+while ($index4 ! -1 & $index4 >= 0) {
+	$dbrow1 = $dbrowarray0($index4);
+	$int6 = 0;
+	while ($int6 < db_getfieldcount($dbrow1, talent_tree:linked_nodes)) {
+		$comsubid5 = array_indexof($anyobj0, db_getfield($dbrow1, talent_tree:linked_nodes, $int6), 0, -1, int);
+		if (cc_find($component2, $comsubid5) = true & cc_param(param_2551) = 0) {
+			~script9372(3);
+		}
+		$int6 = calc($int6 + 1);
+	}
+	$index4 = if_query_nextid;
+}
+if_query(1, $component2, -1);
+if_query_refine(param_2551, 2, int);
+$index4 = if_query_nextid;
+while ($index4 ! -1 & $index4 >= 0) {
+	$dbrow1 = $dbrowarray0($index4);
+	$int6 = 0;
+	while ($int6 < db_getfieldcount($dbrow1, talent_tree:linked_nodes)) {
+		$comsubid5 = array_indexof($anyobj0, db_getfield($dbrow1, talent_tree:linked_nodes, $int6), 0, -1, int);
+		if (cc_find($component2, $comsubid5) = true & cc_param(param_2551) = 0) {
+			~script9372(3);
+		}
+		$int6 = calc($int6 + 1);
+	}
+	$index4 = if_query_nextid;
+}
+def_component $component7 = talent_tree:tree_connection_draw_layer;
+if_query(1, $component7, -1);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+while (if_query_next = true) {
+	if (.cc_find($component2, array_indexof($anyobj0, cc_param(param_2555), 0, -1, int)) = true) {
+		$int9 = .cc_param(param_2551);
+	}
+	if (.cc_find($component2, array_indexof($anyobj0, cc_param(param_2556), 0, -1, int)) = true) {
+		$int10 = .cc_param(param_2551);
+	}
+	switch_int ($int9) {
+		case 0 :
+			$int8 = 0;
+		case 1 :
+			switch_int ($int10) {
+				case 0 :
+					$int8 = 0;
+				case 2 :
+					$int8 = 2;
+				case 3 :
+					$int8 = 3;
+				case 1 :
+					$int8 = 1;
+			}
+		case 2 :
+			switch_int ($int10) {
+				case 0 :
+					$int8 = 0;
+				case 1 :
+					$int8 = 2;
+				case 3 :
+					$int8 = 3;
+				case 2 :
+					$int8 = 2;
+			}
+		case 3 :
+			switch_int ($int10) {
+				case 0 :
+					$int8 = 0;
+				case 1 :
+					$int8 = 3;
+				case 3 :
+					$int8 = 0;
+				case 2 :
+					$int8 = 3;
+			}
+	}
+	cc_setcolour(~script9395($int8));
+	cc_setparam(param_2551, $int8, int);
+}
+def_component $component11 = talent_tree:floating_panel_background;
+def_component $component12 = talent_tree:floating_panel_content;
+if (%varcint1352 > 0) {
+	if (cc_find($component12, 0) = true) {
+		cc_settext("<tostring(%varcint1352)> pending pact changes");
+	}
+} else {
+	if_sethide(true, talent_tree:floating_panel);
+	cc_deleteall($component12);
+	cc_deleteall($component11);
+}
