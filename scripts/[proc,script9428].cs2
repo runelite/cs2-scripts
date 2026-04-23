@@ -81,50 +81,52 @@ while ($int3 < $int4) {
 	$int26 = enum(int, int, enum_2671, $int25);
 	$int27 = db_getfield($dbrow37, action:category, 0);
 	$int28 = db_getfield($dbrow37, action:task_area, 0);
-	if ($int35 = 1) {
-		$int36 = ~league_task_display(
-			0 = $dbrow37, 
-			1 = $int25, 
-			2 = $int24, 
-			3 = $int27, 
-			4 = $int28, 
-			5 = $string1, 
-			6 = $string2, 
-			7 = $string3, 
-			8 = $int34
-		);
-	} else if (%league_task_filter_completed ! 0 & calc(%league_task_filter_completed - 1) ! $int24) {
-		$int36 = 0;
-	} else {
-		$int36 = 1;
-	}
-	if ($int36 = 1) {
-		%varcint1373 = calc(%varcint1373 + 1);
-		$int31 = %varcint1370;
-		$int32 = %varcint1371;
-		~script9429(
-			0 = $int3, 
-			1 = $int31, 
-			2 = $int32, 
-			3 = $int27, 
-			4 = $int28, 
-			5 = $int25, 
-			6 = $int26, 
-			7 = $int24, 
-			8 = $colour23, 
-			9 = $string1, 
-			10 = $string2, 
-			11 = $boolean22, 
-			12 = $dbrow37, 
-			13 = $component5, 
-			14 = $component6, 
-			15 = $component10, 
-			16 = $component11, 
-			17 = $component12, 
-			18 = $component13, 
-			19 = $component8, 
-			20 = $component9
-		);
+	if (db_getfield($dbrow37, action:in_current_league, 0) = true) {
+		if ($int35 = 1) {
+			$int36 = ~league_task_display(
+				0 = $dbrow37, 
+				1 = $int25, 
+				2 = $int24, 
+				3 = $int27, 
+				4 = $int28, 
+				5 = $string1, 
+				6 = $string2, 
+				7 = $string3, 
+				8 = $int34
+			);
+		} else if (%league_task_filter_completed ! 0 & calc(%league_task_filter_completed - 1) ! $int24) {
+			$int36 = 0;
+		} else {
+			$int36 = 1;
+		}
+		if ($int36 = 1) {
+			%varcint1373 = calc(%varcint1373 + 1);
+			$int31 = %varcint1370;
+			$int32 = %varcint1371;
+			~script9429(
+				0 = $int3, 
+				1 = $int31, 
+				2 = $int32, 
+				3 = $int27, 
+				4 = $int28, 
+				5 = $int25, 
+				6 = $int26, 
+				7 = $int24, 
+				8 = $colour23, 
+				9 = $string1, 
+				10 = $string2, 
+				11 = $boolean22, 
+				12 = $dbrow37, 
+				13 = $component5, 
+				14 = $component6, 
+				15 = $component10, 
+				16 = $component11, 
+				17 = $component12, 
+				18 = $component13, 
+				19 = $component8, 
+				20 = $component9
+			);
+		}
 	}
 	$int3 = calc($int3 + 1);
 }

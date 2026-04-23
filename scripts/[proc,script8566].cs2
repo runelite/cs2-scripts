@@ -69,12 +69,13 @@ if_setposition(10, calc(15 + $int5), ^setpos_abs_right, ^setpos_abs_top, $compon
 if_setsize(16, calc(25 + $int5), ^setsize_abs, ^setsize_minus, $component3);
 def_int $int8 = 2;
 def_int $int9 = 1;
+def_int $int10 = 0;
 if (%varcint1352 > 0 | %talent_points_spent > 0) {
 	$int8, $int4, $int9 = ~script9054($component0, $int6, $int8, $int4, $int9);
-	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 3, $int9);
-	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 4, $int9);
-	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, 5, $int9);
-	$int8, $int4, $int9 = ~script9149($component0, $int6, $int8, $int4, -2, $int9);
+	$int8, $int4, $int9, $int10 = ~script9149($component0, $int6, $int8, $int4, 3, $int9, $int10);
+	$int8, $int4, $int9, $int10 = ~script9149($component0, $int6, $int8, $int4, 4, $int9, $int10);
+	$int8, $int4, $int9, $int10 = ~script9149($component0, $int6, $int8, $int4, 5, $int9, $int10);
+	$int8, $int4, $int9, $int10 = ~script9149($component0, $int6, $int8, $int4, -2, $int9, $int10);
 } else {
 	$int8, $int4, $int9 = ~script9175("No Active Pacts", 1, $component0, $int6, $int8, $int4, $int9);
 	$int8 = calc($int8 + 20);
