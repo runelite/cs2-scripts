@@ -101,11 +101,15 @@ switch_obj ($obj1) {
 		}
 	case transmute_upgrade_33375 :
 		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			$obj10, $int11 = naturerune_561, 1;
 			$string1 = oc_param(55_high_alchemy_3303, spell_desc);
+			$string0 = oc_param(55_high_alchemy_3303, spell_name);
 		}
 	case transmute_downgrade_33376 :
 		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			$obj10, $int11 = naturerune_561, 1;
 			$string1 = oc_param(21_low_alchemy_3284, spell_desc);
+			$string0 = oc_param(21_low_alchemy_3284, spell_name);
 		}
 }
 if (compare($string2, "") ! 0) {

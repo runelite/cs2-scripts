@@ -1,0 +1,19 @@
+// 2448
+[proc,script2448](obj $obj0, int $int1)(obj, int)
+switch_obj ($obj0) {
+	case transmute_upgrade_33375 :
+		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			if (~magic_runecount(naturerune_561, inv_getobj(worn, 3), inv_getobj(worn, 5)) < 1) {
+				$int1 = 0;
+			}
+			$obj0 = 55_high_alchemy_3303;
+		}
+	case transmute_downgrade_33376 :
+		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
+			if (~magic_runecount(naturerune_561, inv_getobj(worn, 3), inv_getobj(worn, 5)) < 1) {
+				$int1 = 0;
+			}
+			$obj0 = 21_low_alchemy_3284;
+		}
+}
+return($obj0, $int1);

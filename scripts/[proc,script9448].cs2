@@ -1,16 +1,7 @@
 // 9448
 [proc,script9448](obj $obj0, int $int1, int $int2)(graphic)
 def_int $int3 = -1;
-switch_obj ($obj0) {
-	case transmute_upgrade_33375 :
-		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
-			$obj0 = 55_high_alchemy_3303;
-		}
-	case transmute_downgrade_33376 :
-		if (~script9464(league_relic_transmutation_alchemy_toggle) = false) {
-			$obj0 = 21_low_alchemy_3284;
-		}
-}
+$obj0, $int2 = ~script2448($obj0, $int2);
 if ($int2 = 1) {
 	if ($int1 >= 40) {
 		return(oc_param($obj0, spell_graphic2_on));
