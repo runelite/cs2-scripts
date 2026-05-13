@@ -1,0 +1,11 @@
+// 9484
+[clientscript,script9484](int $opindex0, component $component1)
+if ($opindex0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	if (%sailing_sidepanel_boat_wind_charges > 0) {
+		if_setgraphic("orb_filler,10", $component1);
+		if_setontimer("script9485(calc(clientclock + 10), $component1)", $component1);
+	} else {
+		~script9483($component1);
+	}
+}
