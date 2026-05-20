@@ -1,18 +1,16 @@
 // 8741
-[proc,script8741](int $int0, int $int1, component $component2, int $int3, int $int4, dbrow $dbrow5, component $component6, int $int7, int $int8, namedobj $namedobj9)(int, int, int)
-def_namedobj $namedobj10 = $namedobj9;
-if ($namedobj10 = null) {
-	$namedobj10 = db_getfield($dbrow5, sailing_sidepanel_widget_object:object, 0);
+[proc,script8741](int $int0, int $int1, component $component2, int $int3, int $int4, dbrow $dbrow5, component $component6, int $int7, int $int8, namedobj $namedobj9, int $int10)(int, int, int)
+if ($namedobj9 = null) {
+	$namedobj9 = db_getfield($dbrow5, sailing_sidepanel_widget_object:object, 0);
 }
-def_int $int11 = $int8;
-if ($int8 = -1) {
-	$int11 = db_getfield($dbrow5, sailing_sidepanel_widget_object:amount, 0);
+if ($int10 = -1) {
+	$int10 = db_getfield($dbrow5, sailing_sidepanel_widget_object:amount, 0);
 }
 $int0 = ~create_object(
 	0 = $component6, 
 	1 = $int0, 
-	2 = $namedobj10, 
-	3 = $int11, 
+	2 = $namedobj9, 
+	3 = $int10, 
 	4 = $int3, 
 	5 = $int4, 
 	6 = ^setpos_abs_left, 
