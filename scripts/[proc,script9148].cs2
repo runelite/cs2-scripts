@@ -6,7 +6,7 @@ if (~fsw_player = 1) {
 if (~league_world = 1 & %league_tutorial_completed >= 3) {
 	return(1);
 }
-if (~deadman_world = 3) {
+if (~deadman_world = 3 | ~deadman_world = 3) {
 	return(3);
 }
 if (%adventurepath_player_participating = 1 & ~league_world = 0) {

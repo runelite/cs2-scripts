@@ -118,10 +118,10 @@ while ($int6 < $int7) {
 		cc_setparam(param_678, $dbrow10, int);
 		cc_setparam(param_2569, db_getfield($dbrow10, talent_tree:effect, 0), int);
 		$comsubid23 = $int8;
-		cc_createchild(^iftype_graphic, $int8);
+		cc_create_child(^iftype_graphic, $int8);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		$int8 = calc($int8 + 1);
-		cc_createsibling(^iftype_graphic, $int8);
+		cc_create_sibling(^iftype_graphic, $int8);
 		if (.cc_find($component3, $int6) = true) {
 			.cc_setparam(param_2553, $int8, int);
 		}

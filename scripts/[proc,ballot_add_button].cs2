@@ -2,7 +2,7 @@
 [proc,ballot_add_button](int $int0, int $int1, string $string0, string $string1)
 def_int $int2 = ~script8368($int0, $int1);
 cc_setparam(param_2364, $string0, obj);
-cc_createchild(0, ~script8363);
+cc_create_child(0, ~script8363);
 cc_setparam(param_2365, 301, int);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 def_int $int3 = %varcint43;
@@ -112,12 +112,12 @@ def_int $comsubid4 = cc_getid;
 	8 = ^setsize_abs
 );
 if ($int1 = 104) {
-	cc_createsibling(^iftype_graphic, ~script8363);
+	cc_create_sibling(^iftype_graphic, ~script8363);
 	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
 	cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setgraphic(mapfunction_infoicon);
 }
-cc_createsibling(^iftype_text, ~script8363);
+cc_create_sibling(^iftype_text, ~script8363);
 if ($int1 = 104) {
 	cc_setsize(calc(10 * 2 + 15 + 4), 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(10, 0, ^setpos_abs_right, ^setpos_abs_centre);

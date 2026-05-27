@@ -1,0 +1,35 @@
+// 9517
+[proc,script9517](component $component0)
+cc_deleteall($component0);
+def_int $int1 = 0;
+~script9132(
+	0 = $component0, 
+	1 = $int1, 
+	2 = 0, 
+	3 = 0, 
+	4 = ^setpos_abs_left, 
+	5 = ^setpos_abs_top, 
+	6 = 0, 
+	7 = 0, 
+	8 = ^setsize_minus, 
+	9 = ^setsize_minus, 
+	10 = ""
+);
+cc_input_setplaceholdertext("Search...");
+cc_input_setplaceholdertextcolour(0x9f9f9f);
+cc_input_setonsubmit("script9518(event_com, event_comsubid, 0, 0)");
+cc_input_setonchange("script9518(event_com, event_comsubid, 1, 35)");
+cc_setparam(param_893, 1, int);
+$int1 = calc($int1 + 1);
+def_string $string0 = "Clear";
+cc_create($component0, ^iftype_text, $int1, false);
+cc_setposition(2, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(parawidth($string0, if_getwidth($component0), p11_full), 0, ^setsize_abs, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settext($string0);
+cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)");
+cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)");
+cc_setop(1, "Clear search");
+cc_setonop("script9520");

@@ -15,6 +15,8 @@ switch_int (%deadman_bracket_transmit) {
 		return(81, calc(96 - 1));
 	case 1 :
 		return(61, calc(81 - 1));
+	case 11 :
+		return(3, 126);
 	case default :
 		return(3, calc(61 - 1));
 }

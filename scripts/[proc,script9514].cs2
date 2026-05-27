@@ -1,0 +1,33 @@
+// 9514
+[proc,script9514](component $component0)
+cc_deleteall($component0);
+def_int $comsubid1 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $comsubid1, false);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff891f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+switch_component ($component0) {
+	case allstar_tournament_sidepanel:refresh :
+		cc_settext("Refresh");
+		if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
+		if_setsize(scale(45, 100, 16384), 26, ^setsize_proportion, ^setsize_abs, $component0);
+	case allstar_tournament_sidepanel:clear_ui :
+		cc_settext("Clear Stat");
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component0);
+		if_setsize(scale(45, 100, 16384), 26, ^setsize_proportion, ^setsize_abs, $component0);
+	case allstar_tournament_sidepanel:show_target :
+		cc_settext("Show Target");
+		if_setposition(0, 26, ^setpos_abs_left, ^setpos_abs_bottom, $component0);
+		if_setsize(scale(45, 100, 16384), 26, ^setsize_proportion, ^setsize_abs, $component0);
+	case allstar_tournament_sidepanel:freecam :
+		cc_settext("Free Cam");
+		if_setposition(0, 26, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
+		if_setsize(scale(45, 100, 16384), 26, ^setsize_proportion, ^setsize_abs, $component0);
+}
+if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff891f)", $component0);
+if_setonop("script9515(event_op, event_com)", $component0);
+if_setontimer(null, $component0);

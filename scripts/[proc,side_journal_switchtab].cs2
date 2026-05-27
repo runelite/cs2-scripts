@@ -6,7 +6,7 @@
 if (%adventurepath_player_participating ! 0) {
 	~script2596($com_side_journal_tab_4_114, $com_side_journal_tab_4_215, $com_side_journal_tab_4_316, $com_side_journal_tab_4_1_backing30, $com_side_journal_tab_4_2_backing31, $com_side_journal_tab_4_3_backing32);
 }
-if (~deadman_world = 3) {
+if (~deadman_world = 3 | ~script9529(%map_flags_cached) = 1) {
 	~script2596($com_side_journal_tab_5_118, $com_side_journal_tab_5_219, $com_side_journal_tab_5_320, $com_side_journal_tab_5_1_backing33, $com_side_journal_tab_5_2_backing34, $com_side_journal_tab_5_3_backing35);
 } else if (~league_world = 1 & %league_tutorial_completed >= 3) {
 	~script2596($com_side_journal_tab_5_118, $com_side_journal_tab_5_219, $com_side_journal_tab_5_320, $com_side_journal_tab_5_1_backing33, $com_side_journal_tab_5_2_backing34, $com_side_journal_tab_5_3_backing35);

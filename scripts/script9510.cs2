@@ -1,0 +1,207 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       9510
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 62652423
+   invoke                 9514
+   iconst                 62652424
+   invoke                 9514
+   iconst                 62652425
+   invoke                 9514
+   iconst                 62652426
+   invoke                 9514
+   iconst                 62652428
+   invoke                 9517
+   iconst                 0
+   iconst                 50
+   iconst                 1
+   iconst                 0
+   iconst                 62652419
+   if_setposition        
+   iconst                 8
+   iconst                 104
+   iconst                 1
+   iconst                 1
+   iconst                 62652419
+   if_setsize            
+   iconst                 62652421
+   cc_deleteall          
+   iconst                 0
+   istore                 0
+   oload                  0
+   8003                  
+   istore                 1
+LABEL29:
+   iload                  0
+   iload                  1
+   if_icmplt              LABEL33
+   jump                   LABEL45
+LABEL33:
+   iconst                 62652421
+   iconst                 3
+   iload                  0
+   iconst                 0
+   cc_create             
+   iconst                 1
+   cc_sethide            
+   iload                  0
+   iconst                 1
+   add                   
+   istore                 0
+   jump                   LABEL29
+LABEL45:
+   iconst                 62652421
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL50
+   jump                   LABEL54
+LABEL50:
+   iconst                 892
+   iload                  1
+   iconst                 0
+   1704                  
+LABEL54:
+   iload                  1
+   define_array           65641
+   iconst                 0
+   istore                 2
+   sconst                 ""
+   ostore                 2
+   iload                  1
+   iconst                 0
+   if_icmpgt              LABEL64
+   jump                   LABEL67
+LABEL64:
+   iload                  2
+   get_array_int         
+   ostore                 2
+LABEL67:
+   iload                  2
+   iload                  1
+   if_icmplt              LABEL71
+   jump                   LABEL150
+LABEL71:
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL76
+   jump                   LABEL150
+LABEL76:
+   iconst                 62652421
+   iconst                 4
+   iload                  0
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 22
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 16746783
+   cc_setcolour          
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   oload                  2
+   cc_settext            
+   iconst                 62652421
+   iload                  0
+   iload                  1
+   sub                   
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL106
+   jump                   LABEL134
+LABEL106:
+   sconst                 "<col=ff9040>"
+   oload                  2
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase           1
+   iconst                 1
+   sconst                 "Teleport & Show"
+   cc_setop               1
+   iconst                 2
+   sconst                 "Teleport"
+   cc_setop               1
+   iconst                 3
+   sconst                 "Show Left"
+   cc_setop               1
+   iconst                 4
+   sconst                 "Show Right"
+   cc_setop               1
+   iconst                 0
+   cc_sethide             1
+   iconst                 0
+   iconst                 22
+   iconst                 1
+   iconst                 0
+   cc_setsize             1
+   iconst                 1
+   cc_setfill             1
+   iconst                 16777215
+   cc_setcolour           1
+LABEL134:
+   iload                  0
+   iconst                 1
+   add                   
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   istore                 0
+   iload                  2
+   iload                  1
+   if_icmplt              LABEL146
+   jump                   LABEL149
+LABEL146:
+   iload                  2
+   get_array_int         
+   ostore                 2
+LABEL149:
+   jump                   LABEL67
+LABEL150:
+   iload                  2
+   iconst                 0
+   if_icmple              LABEL154
+   jump                   LABEL181
+LABEL154:
+   iconst                 62652421
+   iconst                 4
+   iload                  0
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 16746783
+   cc_setcolour          
+   iconst                 496
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   sconst                 "No eligible players were found."
+   cc_settext            
+LABEL181:
+   sconst                 ""
+   set_varc_string        1376
+   invoke                 9511
+   return                

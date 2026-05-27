@@ -98,7 +98,7 @@ def_obj $obj25 = null;
 def_string $string2 = "";
 def_component $component26 = null;
 if ($int16 = 1) {
-	if (if_find($component7) = true & cc_findroot = ^true) {
+	if (if_find($component7) = true & cc_find_parent = true) {
 		$component26 = cc_param(param_2321);
 	}
 	if ($component26 = null) {
@@ -159,7 +159,7 @@ if ($int11 > 1) {
 			~cc_set_button_states(true, 1);
 		}
 		$graphic24, $obj25, $string2 = ~script8162($dbrow21);
-		cc_createchild(^iftype_graphic, $int12);
+		cc_create_child(^iftype_graphic, $int12);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		~script8115($int23, $graphic24, $obj25, -1);
 		if ($int28 = 1) {
@@ -185,7 +185,7 @@ cc_setsize(calc(($int14 + $int13) * 2 + $int19 + $int13), $int23, ^setsize_minus
 $int17 = calc(cc_gety + cc_getheight + $int13);
 def_int $int29 = cc_getwidth;
 $int12 = calc($int12 + 1);
-cc_createchild(^iftype_text, $int12);
+cc_create_child(^iftype_text, $int12);
 cc_setposition(calc($int23 + $int13), 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc(($int23 + $int13) * 2), 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
@@ -201,11 +201,11 @@ if ($int4 = 1) {
 cc_setcolour($colour30);
 def_int $int31 = calc(($int29 - parawidth(cc_gettext, cc_getwidth, p12_full) - ($int13 + $int23) * 2) / 2);
 $int12 = calc($int12 + 1);
-cc_createsibling(^iftype_graphic, $int12);
+cc_create_sibling(^iftype_graphic, $int12);
 cc_setposition($int31, 0, ^setpos_abs_left, ^setpos_abs_centre);
 ~script8115($int23, $graphic24, $obj25, -1);
 $int12 = calc($int12 + 1);
-cc_createsibling(^iftype_graphic, $int12);
+cc_create_sibling(^iftype_graphic, $int12);
 $graphic24, $obj25, $string2 = ~script8163($dbrow21, 1);
 cc_setposition($int31, 0, ^setpos_abs_right, ^setpos_abs_centre);
 ~script8115($int23, $graphic24, $obj25, -1);
@@ -232,7 +232,7 @@ if ($int5 = %varcint1263) {
 	$int37 = 1;
 }
 def_string $string3 = ~script8165($dbrow21, $int37);
-cc_createchild(^iftype_text, $int12);
+cc_create_child(^iftype_text, $int12);
 cc_setsize(2, calc(paraheight($string3, calc($int35 - 2), p12_full) * 12 + 5), ^setsize_minus, ^setsize_abs);
 cc_setposition(1, $int34, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
@@ -278,7 +278,7 @@ if ($int4 = 1) {
 		~cc_set_button_states(false, 1);
 	}
 }
-cc_createchild(^iftype_text, $int12);
+cc_create_child(^iftype_text, $int12);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);

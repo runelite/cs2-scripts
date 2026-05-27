@@ -21,7 +21,7 @@ def_int $int4 = 0;
 def_int $int5 = 0;
 while ($int4 < 4) {
 	if (cc_find($component1, 8) = true) {
-		cc_createchild(^iftype_rectangle, $int3);
+		cc_create_child(^iftype_rectangle, $int3);
 		$int5 = calc($int4 * 2);
 		cc_setsize($int5, $int5, ^setsize_minus, ^setsize_minus);
 		cc_setposition($int4, $int4, ^setpos_abs_left, ^setpos_abs_top);

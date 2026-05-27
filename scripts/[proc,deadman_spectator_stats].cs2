@@ -1,45 +1,76 @@
 // 2182
-[proc,deadman_spectator_stats](string $string0, string $string1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
-~script539($int8);
-def_enum $enum9 = enum_140;
-if ($int8 = 1) {
-	$enum9 = enum_142;
+[proc,deadman_spectator_stats](string $string0, string $string1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11)
+~script539($int10);
+def_enum $enum12 = enum_140;
+if ($int10 = 1) {
+	$enum12 = enum_142;
 }
-~script176($string0, enum(component, component, $enum9, deadman_spectator:stats_left_name));
-if_settext($string1, enum(component, component, $enum9, deadman_spectator:stats_left_level));
+~script176($string0, enum(component, component, $enum12, deadman_spectator:stats_left_name));
+if_settext($string1, enum(component, component, $enum12, deadman_spectator:stats_left_level));
 def_string $string2 = "<tostring($int0)> / <tostring($int1)>";
-if_settext($string2, enum(component, component, $enum9, deadman_spectator:stats_left_health_text));
-~script419($int0, $int1, $enum9, deadman_spectator:stats_left_health_remaining, deadman_spectator:stats_left_health_gone);
+if_settext($string2, enum(component, component, $enum12, deadman_spectator:stats_left_health_text));
+~script419(
+	0 = $int0, 
+	1 = $int1, 
+	2 = $enum12, 
+	3 = deadman_spectator:stats_left_health_remaining, 
+	4 = deadman_spectator:stats_left_health_gone, 
+	5 = $int5, 
+	6 = $int6, 
+	7 = $int11, 
+	8 = 1
+);
 def_string $string3 = "<tostring($int2)> / <tostring($int3)>";
-if_settext($string3, enum(component, component, $enum9, deadman_spectator:stats_left_prayer_text));
-~script419($int2, $int3, $enum9, deadman_spectator:stats_left_prayer_remaining, deadman_spectator:stats_left_prayer_gone);
+if_settext($string3, enum(component, component, $enum12, deadman_spectator:stats_left_prayer_text));
+~script419(
+	0 = $int2, 
+	1 = $int3, 
+	2 = $enum12, 
+	3 = deadman_spectator:stats_left_prayer_remaining, 
+	4 = deadman_spectator:stats_left_prayer_gone, 
+	5 = $int5, 
+	6 = $int6, 
+	7 = $int11, 
+	8 = 0
+);
 $int4 = calc($int4 / 10);
 if ($int4 > 100) {
 	$int4 = 100;
 }
 def_string $string4 = "<tostring($int4)>%";
-if_settext($string4, enum(component, component, $enum9, deadman_spectator:stats_left_special_text));
-~script419($int4, 100, $enum9, deadman_spectator:stats_left_special_remaining, deadman_spectator:stats_left_special_gone);
-def_component $component10 = enum(component, component, $enum9, deadman_spectator:middle_left);
-cc_deleteall($component10);
-def_int $int11 = 0;
-cc_create($component10, ^iftype_graphic, $int11, false);
-$int11 = calc($int11 + 1);
+if_settext($string4, enum(component, component, $enum12, deadman_spectator:stats_left_special_text));
+~script419(
+	0 = $int4, 
+	1 = 100, 
+	2 = $enum12, 
+	3 = deadman_spectator:stats_left_special_remaining, 
+	4 = deadman_spectator:stats_left_special_gone, 
+	5 = $int5, 
+	6 = $int6, 
+	7 = $int11, 
+	8 = 0
+);
+def_component $component13 = enum(component, component, $enum12, deadman_spectator:middle_left);
+cc_deleteall($component13);
+def_int $int14 = 0;
+cc_create($component13, ^iftype_graphic, $int14, false);
+$int14 = calc($int14 + 1);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_settiling(true);
 cc_setgraphic(tradebacking_dark);
-def_int $int12 = 8;
-def_int $int13 = 0;
-def_int $int14 = 0;
-$int11, $int12, $int13, $int14 = ~script5226($int5, $component10, $enum9, $int11, $int12, $int13, $int14);
-$int11, $int12, $int13, $int14 = ~script5226($int6, $component10, $enum9, $int11, $int12, $int13, $int14);
-$int11, $int12, $int13, $int14 = ~script5226($int7, $component10, $enum9, $int11, $int12, $int13, $int14);
-if ($int13 <= 0) {
-	if_sethide(true, $component10);
-	cc_deleteall($component10);
+def_int $int15 = 8;
+def_int $int16 = 0;
+def_int $int17 = 0;
+$int14, $int15, $int16, $int17 = ~script5226($int7, $component13, $enum12, $int14, $int15, $int16, $int17);
+$int14, $int15, $int16, $int17 = ~script5226($int8, $component13, $enum12, $int14, $int15, $int16, $int17);
+$int14, $int15, $int16, $int17 = ~script5226($int9, $component13, $enum12, $int14, $int15, $int16, $int17);
+if ($int16 <= 0) {
+	if_sethide(true, $component13);
+	cc_deleteall($component13);
 	return;
 }
-if_sethide(false, $component10);
-if_setsize(calc(8 + 36 + 4 + $int14 + 4 + 8), calc($int12 + 8), ^setsize_abs, ^setsize_abs, $component10);
-$int11 = ~stonebox($component10, 1, $int11);
+if_sethide(false, $component13);
+def_component $component18 = ~script655(enum(component, component, $enum12, deadman_spectator:inv_left_content));
+if_setsize(if_getwidth($component18), calc($int15 + 8), ^setsize_abs, ^setsize_abs, $component13);
+$int14 = ~stonebox($component13, 1, $int14);

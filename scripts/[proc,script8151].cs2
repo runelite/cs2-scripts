@@ -3,7 +3,7 @@
 def_component $component5 = null;
 def_int $int6 = -1;
 if (string_length($string0) > 0) {
-	cc_createsibling(^iftype_rectangle, $int0);
+	cc_create_sibling(^iftype_rectangle, $int0);
 	cc_setsize(0, 23, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^black);
@@ -23,7 +23,7 @@ if (string_length($string0) > 0) {
 		cc_setonmouseleave("deltooltip($component3)");
 	}
 	$int0 = calc($int0 + 1);
-	cc_createsibling(^iftype_text, $int0);
+	cc_create_sibling(^iftype_text, $int0);
 	cc_setsize(calc(5 * 2), 23, ^setsize_minus, ^setsize_abs);
 	cc_setposition(5, $int1, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextshadow(true);
@@ -33,7 +33,7 @@ if (string_length($string0) > 0) {
 		cc_settextfont(p12_full);
 		cc_setcolour(0xff981f);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_createsibling(^iftype_text, $int0);
+		cc_create_sibling(^iftype_text, $int0);
 		cc_setsize(calc(5 * 2), 23, ^setsize_minus, ^setsize_abs);
 		cc_setposition(5, $int1, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);

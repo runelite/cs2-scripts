@@ -1,0 +1,24 @@
+// 9499
+[clientscript,script9499](component $com_allstar_oculus_universe0, component $com_allstar_oculus_frame1, component $com_allstar_oculus_infopanel2, component $com_allstar_oculus_flasher13, component $com_allstar_oculus_flasher24, component $com_allstar_oculus_flasher35)
+if (%varcint204 > 15 | %varcint204 < 3) {
+	%varcint204 = 9;
+}
+setfreecamspeed(%varcint204, 2);
+if_setonscrollwheel("camera_zoom(event_mousey)", $com_allstar_oculus_universe0);
+if_setnoclickthrough(true, $com_allstar_oculus_universe0);
+renderself(false);
+~steelborder($com_allstar_oculus_frame1, "Camera Controls", 1);
+cc_deleteall($com_allstar_oculus_universe0);
+cc_create($com_allstar_oculus_universe0, ^iftype_text, 0, false);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+cc_settext("");
+%varcint1375 = true;
+~script9500(%varcint1375, $com_allstar_oculus_universe0, $com_allstar_oculus_infopanel2, $com_allstar_oculus_flasher13, $com_allstar_oculus_flasher24, $com_allstar_oculus_flasher35);
+cc_create($com_allstar_oculus_universe0, ^iftype_text, 1, false);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+cc_settext("");
+cc_setonkey("script9509(event_keycode)");
