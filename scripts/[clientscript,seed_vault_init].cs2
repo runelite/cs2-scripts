@@ -1,12 +1,22 @@
 // 2818
-[clientscript,seed_vault_init](component $com_seed_vault_obj_list0, component $com_seed_vault_text_list1, component $com_seed_vault_category_headers2, component $com_seed_vault_category_lines3, component $com_seed_vault_list4, component $com_seed_vault_right_scroll5, component $com_seed_vault_faves6, component $com_seed_vault_search7)
-def_int $int8 = %varcint376;
+[clientscript,seed_vault_init](component $com_seed_vault_obj_list0, component $com_seed_vault_text_list1, component $com_seed_vault_category_headers2, component $com_seed_vault_category_lines3, component $com_seed_vault_list4, component $com_seed_vault_right_scroll5, component $com_seed_vault_faves6, component $com_seed_vault_contract_seeds7, component $com_seed_vault_search8)
+def_int $int9 = %varcint376;
 if (~seed_vault_searching = 1) {
 	~meslayer_close(true, true, true);
 }
 ~scrollbar_vertical($com_seed_vault_right_scroll5, $com_seed_vault_list4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6);
-if_setonop("seed_vault_search_toggle($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6, $com_seed_vault_search7)", $com_seed_vault_search7);
-if_setoninvtransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6){seed_vault}", $com_seed_vault_list4);
-if_setonvartransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6){seed_vault_selected_qty, seed_vault_favourites1, seed_vault_favourites2}", $com_seed_vault_list4);
-%varcint376 = $int8;
+~seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6, $com_seed_vault_contract_seeds7);
+if_setonop("seed_vault_search_toggle(
+	0 = $com_seed_vault_obj_list0, 
+	1 = $com_seed_vault_text_list1, 
+	2 = $com_seed_vault_category_headers2, 
+	3 = $com_seed_vault_category_lines3, 
+	4 = $com_seed_vault_list4, 
+	5 = $com_seed_vault_right_scroll5, 
+	6 = $com_seed_vault_faves6, 
+	7 = $com_seed_vault_contract_seeds7, 
+	8 = $com_seed_vault_search8
+)", $com_seed_vault_search8);
+if_setoninvtransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6, $com_seed_vault_contract_seeds7){seed_vault}", $com_seed_vault_list4);
+if_setonvartransmit("seed_vault_build($com_seed_vault_obj_list0, $com_seed_vault_text_list1, $com_seed_vault_category_headers2, $com_seed_vault_category_lines3, $com_seed_vault_list4, $com_seed_vault_right_scroll5, $com_seed_vault_faves6, $com_seed_vault_contract_seeds7){seed_vault_selected_qty, seed_vault_favourites1, seed_vault_favourites2}", $com_seed_vault_list4);
+%varcint376 = $int9;

@@ -1,7 +1,7 @@
 // 2815
-[clientscript,seed_vault_catop](component $com_seed_vault_category_headers0, int $comsubid1, component $com_seed_vault_list2, component $com_seed_vault_right_scroll3)
+[clientscript,seed_vault_catop](component $com_seed_vault_category_headers0, int $comsubid1, component $com_seed_vault_list2, component $com_seed_vault_right_scroll3, component $com_seed_vault_contract_seeds4)
 if (~seed_vault_searching = 1) {
 	~meslayer_close(true, true, true);
 }
 %seed_vault_category = $comsubid1;
-~seed_vault_catselect($com_seed_vault_category_headers0, $com_seed_vault_list2, $com_seed_vault_right_scroll3);
+~seed_vault_catselect($com_seed_vault_category_headers0, $com_seed_vault_list2, $com_seed_vault_right_scroll3, $com_seed_vault_contract_seeds4);

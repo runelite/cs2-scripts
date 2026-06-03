@@ -1,5 +1,9 @@
 // 2817
-[proc,seed_vault_catselect](component $com_seed_vault_category_headers0, component $com_seed_vault_list1, component $com_seed_vault_right_scroll2)
+[proc,seed_vault_catselect](component $com_seed_vault_category_headers0, component $com_seed_vault_list1, component $com_seed_vault_right_scroll2, component $com_seed_vault_contract_seeds3)
+if (%seed_vault_category = 12 & cc_find($com_seed_vault_right_scroll2, 1) = true) {
+	~scrollbar_vertical_doscroll($com_seed_vault_right_scroll2, $com_seed_vault_list1, 0, 1);
+	return;
+}
 if (.cc_find($com_seed_vault_category_headers0, %seed_vault_category) = true & cc_find($com_seed_vault_right_scroll2, 1) = true) {
-	~scrollbar_vertical_doscroll($com_seed_vault_right_scroll2, $com_seed_vault_list1, .cc_gety, 1);
+	~scrollbar_vertical_doscroll($com_seed_vault_right_scroll2, $com_seed_vault_list1, calc(.cc_gety + if_getheight($com_seed_vault_contract_seeds3)), 1);
 }

@@ -1,62 +1,87 @@
 // 2814
-[clientscript,seed_vault_build_category_list](component $com_seed_vault_category_list0, component $com_seed_vault_category_backgrounds1, component $com_seed_vault_category_headers2, component $com_seed_vault_list3, component $com_seed_vault_right_scroll4, component $com_seed_vault_left_list5, component $com_seed_vault_left_scroll6, component $com_seed_vault_frame7, component $com_seed_vault_universe8, component $com_seed_vault_infinity9)
+[clientscript,seed_vault_build_category_list](component $com_seed_vault_category_list0, component $com_seed_vault_category_backgrounds1, component $com_seed_vault_category_headers2, component $com_seed_vault_list3, component $com_seed_vault_contract_seeds4, component $com_seed_vault_right_scroll5, component $com_seed_vault_left_list6, component $com_seed_vault_left_scroll7, component $com_seed_vault_frame8, component $com_seed_vault_universe9, component $com_seed_vault_infinity10)
 cc_deleteall($com_seed_vault_category_list0);
 cc_deleteall($com_seed_vault_category_backgrounds1);
-cc_deleteall($com_seed_vault_left_scroll6);
+cc_deleteall($com_seed_vault_left_scroll7);
 ~seed_vault_size_check(
-	0 = $com_seed_vault_universe8, 
-	1 = $com_seed_vault_infinity9, 
+	0 = $com_seed_vault_universe9, 
+	1 = $com_seed_vault_infinity10, 
 	2 = ^min_32bit_int, 
 	3 = ^min_32bit_int, 
 	4 = $com_seed_vault_list3, 
-	5 = $com_seed_vault_right_scroll4, 
-	6 = $com_seed_vault_left_list5, 
-	7 = $com_seed_vault_left_scroll6, 
-	8 = $com_seed_vault_frame7
+	5 = $com_seed_vault_right_scroll5, 
+	6 = $com_seed_vault_left_list6, 
+	7 = $com_seed_vault_left_scroll7, 
+	8 = $com_seed_vault_frame8
 );
-def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
 if (~on_mobile = true) {
-	$int12 = 20;
+	$int13 = 20;
 }
-while ($int11 <= enum_getoutputcount(enum_2304)) {
-	$int10 = enum(int, int, enum_2304, $int11);
-	cc_create($com_seed_vault_category_list0, ^iftype_text, $int11, false);
-	cc_setsize(5, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
-	cc_setposition(5, $int13, ^setpos_abs_left, ^setpos_abs_top);
+if (%farmguild_contract_type > 0 & %farmguild_contract_complete = 0) {
+	cc_create($com_seed_vault_category_list0, ^iftype_text, $int15, false);
+	cc_setsize(5, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
-	cc_settext(enum(int, string, enum_2305, $int10));
+	cc_settext("Farming contract");
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_setonmouseover("cc_colour_swapper($com_seed_vault_category_list0, $int11, ^white)");
-	cc_setonmouseleave("cc_colour_swapper($com_seed_vault_category_list0, $int11, 0xff981f)");
-	cc_setonop("seed_vault_catop($com_seed_vault_category_headers2, $int10, $com_seed_vault_list3, $com_seed_vault_right_scroll4)");
-	cc_setonvartransmit("seed_vault_catvar($com_seed_vault_category_headers2, $com_seed_vault_list3, $com_seed_vault_right_scroll4){seed_vault_temp}");
+	cc_setonmouseover("cc_colour_swapper($com_seed_vault_category_list0, $int15, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($com_seed_vault_category_list0, $int15, 0xff981f)");
+	cc_setonop("seed_vault_catop($com_seed_vault_category_headers2, 12, $com_seed_vault_list3, $com_seed_vault_right_scroll5, $com_seed_vault_contract_seeds4)");
+	cc_setonvartransmit("seed_vault_catvar($com_seed_vault_category_headers2, $com_seed_vault_list3, $com_seed_vault_right_scroll5, $com_seed_vault_contract_seeds4){seed_vault_temp}");
 	cc_setop(1, "Select");
-	.cc_create($com_seed_vault_category_backgrounds1, ^iftype_rectangle, $int11, false);
-	.cc_setsize(0, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
-	.cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($com_seed_vault_category_backgrounds1, ^iftype_rectangle, $int15, false);
+	.cc_setsize(0, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setfill(true);
-	if (calc($int11 % 2) = 0) {
+	.cc_setcolour(^black);
+	.cc_settrans(225);
+	$int14 = calc(cc_gety + cc_getheight);
+	$int15 = calc($int15 + 1);
+}
+while ($int12 <= enum_getoutputcount(enum_2304)) {
+	$int11 = enum(int, int, enum_2304, $int12);
+	cc_create($com_seed_vault_category_list0, ^iftype_text, $int15, false);
+	cc_setsize(5, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settext(enum(int, string, enum_2305, $int11));
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_setonmouseover("cc_colour_swapper($com_seed_vault_category_list0, $int15, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($com_seed_vault_category_list0, $int15, 0xff981f)");
+	cc_setonop("seed_vault_catop($com_seed_vault_category_headers2, $int11, $com_seed_vault_list3, $com_seed_vault_right_scroll5, $com_seed_vault_contract_seeds4)");
+	cc_setonvartransmit("seed_vault_catvar($com_seed_vault_category_headers2, $com_seed_vault_list3, $com_seed_vault_right_scroll5, $com_seed_vault_contract_seeds4){seed_vault_temp}");
+	cc_setop(1, "Select");
+	.cc_create($com_seed_vault_category_backgrounds1, ^iftype_rectangle, $int15, false);
+	.cc_setsize(0, calc(20 + $int13), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setfill(true);
+	if (calc($int12 % 2) = 0) {
 		.cc_setcolour(^white);
 		.cc_settrans(255);
 	} else {
 		.cc_setcolour(^black);
 		.cc_settrans(225);
 	}
-	$int13 = calc(cc_gety + cc_getheight);
-	$int11 = calc($int11 + 1);
+	$int15 = calc($int15 + 1);
+	$int14 = calc(cc_gety + cc_getheight);
+	$int12 = calc($int12 + 1);
 }
-def_int $int14 = 0;
-if ($int13 > if_getheight($com_seed_vault_left_list5)) {
-	$int14 = if_getscrolly($com_seed_vault_left_list5);
-	if_setscrollsize(0, $int13, $com_seed_vault_left_list5);
+def_int $int16 = 0;
+if ($int14 > if_getheight($com_seed_vault_left_list6)) {
+	$int16 = if_getscrolly($com_seed_vault_left_list6);
+	if_setscrollsize(0, $int14, $com_seed_vault_left_list6);
 } else {
-	if_setscrollsize(0, 0, $com_seed_vault_left_list5);
-	$int14 = 0;
+	if_setscrollsize(0, 0, $com_seed_vault_left_list6);
+	$int16 = 0;
 }
-~scrollbar_vertical($com_seed_vault_left_scroll6, $com_seed_vault_left_list5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($com_seed_vault_left_scroll6, $com_seed_vault_left_list5, $int14);
+~scrollbar_vertical($com_seed_vault_left_scroll7, $com_seed_vault_left_list6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($com_seed_vault_left_scroll7, $com_seed_vault_left_list6, $int16);

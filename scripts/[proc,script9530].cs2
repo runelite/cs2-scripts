@@ -1,0 +1,15 @@
+// 9530
+[proc,script9530](component $component0, int $int1)
+cc_create($component0, ^iftype_text, $int1, false);
+cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settext("Farming Contract");
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component0, ^iftype_graphic, calc($int1 + 1), false);
+cc_setgraphic(tradebacking_dark);
+cc_settiling(true);
+cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
+cc_setposition(2, 27, ^setpos_abs_left, ^setpos_abs_top);
