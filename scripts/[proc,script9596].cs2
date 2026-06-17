@@ -1,0 +1,39 @@
+// 9596
+[proc,script9596](int $int0, obj $obj1, int $int2, int $int3)
+def_int $int4 = inv_total(bank, $obj1);
+~create_object(
+	0 = bankmain:banktags_display_items, 
+	1 = $int0, 
+	2 = $obj1, 
+	3 = $int4, 
+	4 = ~script9577($int2, $int3), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = 36, 
+	8 = 32, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs
+);
+cc_setgraphicshadow(0x333333);
+cc_setonop("script9601(event_com, event_comsubid, event_op, $obj1, $int0)");
+cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
+cc_setop(1, "Withdraw-<~script2579>");
+if (%bank_quantity_type ! 0) {
+	cc_setop(2, "Withdraw-1");
+}
+cc_setop(3, "Withdraw-5");
+cc_setop(4, "Withdraw-10");
+if (%bank_requestedquantity > 0) {
+	cc_setop(5, "Withdraw-<tostring(%bank_requestedquantity)>");
+}
+cc_setop(6, "Withdraw-X");
+cc_setop(7, "Withdraw-All");
+cc_setop(8, "Withdraw-All-but-1");
+cc_setop(9, "Remove from tag");
+cc_setdragdeadzone(5);
+cc_setdragdeadtime(6);
+cc_setondrag("script9602(event_com, event_comsubid, cc_getx, cc_gety, event_mousex, event_mousey)");
+cc_setondragcomplete("script9603(event_com, event_comsubid, event_com2, event_comsubid2, event_mousex, event_mousey, $obj1)");
+cc_setonvartransmit("script9604(bankmain:banktags_display_items, $int0){gargboss_perm_transmit}");
+cc_setparam(param_1849, $int2, int);
+cc_setparam(param_1850, $int3, int);

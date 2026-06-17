@@ -1,0 +1,18 @@
+// 9614
+[proc,script9614](boolean $boolean0, string $string0)(int, obj)
+def_int $int1 = oc_find($string0, $boolean0);
+if ($int1 = 0) {
+	return(0, null);
+}
+def_obj $obj2 = null;
+def_obj $obj3 = null;
+$obj2 = oc_findnext;
+while ($obj2 ! null) {
+	if (compare(oc_name($obj2), $string0) = 0) {
+		$obj3 = $obj2;
+		$obj2 = null;
+	} else {
+		$obj2 = oc_findnext;
+	}
+}
+return($int1, $obj3);

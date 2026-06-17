@@ -208,8 +208,8 @@ $int22, $int37 = 0, 0;
 def_int $int40 = 0;
 def_int $int41 = calc(if_getwidth(skill_guide_v2:list) - 66 - $int31 * 2);
 def_int $int42 = 0;
-def_int $int43 = -1;
-def_int $int44 = 0;
+def_dbrow $dbrow43 = null;
+def_int $int44 = -1;
 if (%varcint1173 = 0) {
 	if_sethide(true, skill_guide_v2:guide_data);
 	if_sethide(false, skill_guide_v2:overview);
@@ -219,67 +219,71 @@ if (%varcint1173 = 0) {
 	if_sethide(true, skill_guide_v2:overview);
 	db_find(skill_features:skill, %varcint1172);
 	if (%varcint1173 = 31 & $int0 > 0 & $int0 <= $int1) {
-		$int43 = $int0;
-		while ($int43 <= $int1) {
-			db_find_refine(skill_features:skill, $int43);
-			$dbrow20, $int44 = ~script9476(db_findnext);
+		$int44 = $int0;
+		while ($int44 <= $int1) {
+			db_find_refine(skill_features:skill, $int44);
+			$dbrow20 = db_findnext;
 			while ($dbrow20 ! null) {
-				$int42 = db_getfieldcount($dbrow20, skill_features:skill);
-				while ($int42 > 0) {
-					$int42 = calc($int42 - 1);
-					if (~script9350($dbrow20, $int42, %varcint1172, $int43, -1, $int44) = 1) {
-						$int22, $int36 = ~script9347(
-							0 = ~script2499($dbrow20), 
-							1 = $boolean21, 
-							2 = $int43, 
-							3 = $int41, 
-							4 = $int37, 
-							5 = $graphic29, 
-							6 = $fontmetrics30, 
-							7 = $int31, 
-							8 = $int32, 
-							9 = $int33, 
-							10 = $int40, 
-							11 = $int22
-						);
-						$int37, $int42, $int40 = calc($int37 + 1), 0, calc($int40 + $int36);
+				if ($dbrow20 ! $dbrow43) {
+					$int42 = db_getfieldcount($dbrow20, skill_features:skill);
+					while ($int42 > 0) {
+						$int42 = calc($int42 - 1);
+						if (~script9350($dbrow20, $int42, %varcint1172, $int44, -1) = 1) {
+							$int22, $int36 = ~script9347(
+								0 = ~script2499($dbrow20), 
+								1 = $boolean21, 
+								2 = $int44, 
+								3 = $int41, 
+								4 = $int37, 
+								5 = $graphic29, 
+								6 = $fontmetrics30, 
+								7 = $int31, 
+								8 = $int32, 
+								9 = $int33, 
+								10 = $int40, 
+								11 = $int22
+							);
+							$int37, $int42, $int40 = calc($int37 + 1), 0, calc($int40 + $int36);
+						}
 					}
 				}
-				$dbrow20, $int44 = ~script9476(db_findnext);
+				$dbrow43, $dbrow20 = $dbrow20, db_findnext;
 			}
-			$int43 = calc($int43 + 1);
+			$int44 = calc($int44 + 1);
 			db_find(skill_features:skill, %varcint1172);
 		}
 	} else {
 		db_find_refine(skill_features:skill, %varcint1173);
-		while ($int43 <= 100) {
-			db_find_refine(skill_features:skill, $int43);
-			$dbrow20, $int44 = ~script9476(db_findnext);
+		while ($int44 <= 100) {
+			db_find_refine(skill_features:skill, $int44);
+			$dbrow20 = db_findnext;
 			while ($dbrow20 ! null) {
-				$int42 = db_getfieldcount($dbrow20, skill_features:skill);
-				while ($int42 > 0) {
-					$int42 = calc($int42 - 1);
-					if (~script9350($dbrow20, $int42, %varcint1172, $int43, %varcint1173, $int44) = 1) {
-						$int22, $int36 = ~script9347(
-							0 = ~script2499($dbrow20), 
-							1 = $boolean21, 
-							2 = $int43, 
-							3 = $int41, 
-							4 = $int37, 
-							5 = $graphic29, 
-							6 = $fontmetrics30, 
-							7 = $int31, 
-							8 = $int32, 
-							9 = $int33, 
-							10 = $int40, 
-							11 = $int22
-						);
-						$int37, $int42, $int40 = calc($int37 + 1), 0, calc($int40 + $int36);
+				if ($dbrow20 ! $dbrow43) {
+					$int42 = db_getfieldcount($dbrow20, skill_features:skill);
+					while ($int42 > 0) {
+						$int42 = calc($int42 - 1);
+						if (~script9350($dbrow20, $int42, %varcint1172, $int44, %varcint1173) = 1) {
+							$int22, $int36 = ~script9347(
+								0 = ~script2499($dbrow20), 
+								1 = $boolean21, 
+								2 = $int44, 
+								3 = $int41, 
+								4 = $int37, 
+								5 = $graphic29, 
+								6 = $fontmetrics30, 
+								7 = $int31, 
+								8 = $int32, 
+								9 = $int33, 
+								10 = $int40, 
+								11 = $int22
+							);
+							$int37, $int42, $int40 = calc($int37 + 1), 0, calc($int40 + $int36);
+						}
 					}
 				}
-				$dbrow20, $int44 = ~script9476(db_findnext);
+				$dbrow43, $dbrow20 = $dbrow20, db_findnext;
 			}
-			$int43 = calc($int43 + 1);
+			$int44 = calc($int44 + 1);
 			db_find(skill_features:skill, %varcint1172);
 			db_find_refine(skill_features:skill, %varcint1173);
 		}

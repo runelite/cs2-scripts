@@ -1,0 +1,70 @@
+// 9603
+[clientscript,script9603](component $component0, int $comsubid1, component $drop2, int $dropsubid3, int $mousex4, int $mousey5, obj $obj6)
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = -1;
+def_int $int12 = if_param(param_1849, bankmain:banktags_display_items, $comsubid1);
+def_int $int13 = if_param(param_1850, bankmain:banktags_display_items, $comsubid1);
+def_int $int14 = calc($dropsubid3 % 8);
+def_int $int15 = calc($dropsubid3 / 8);
+def_int $int16 = calc($int13 * 8 + $int12);
+def_int $int17 = -1;
+if ($drop2 = null) {
+	return;
+}
+switch_component ($drop2) {
+	case bankmain:banktags_display_items :
+		return;
+	case bankmain:banktags_display_draglayer :
+		$int10 = if_param(param_1851, bankmain:banktags_display_draglayer, $int16);
+		$int9 = if_param(param_1851, bankmain:banktags_display_draglayer, $dropsubid3);
+		if ($int9 = -1) {
+			$int14 = calc($dropsubid3 % 8);
+			$int15 = calc($dropsubid3 / 8);
+			if (keyheld(^key_shift_left) = true | %bank_insertmode = 1) {
+				$int11 = ~script9564(%varcint1380, $obj6, $int14, $int15);
+				~script9596($int11, $obj6, $int14, $int15);
+				if_setparam(param_1851, $int11, bankmain:banktags_display_draglayer, $dropsubid3, int);
+			} else {
+				~script9563(%varcint1380, $comsubid1, $int14, $int15);
+				if_setparam(param_1851, -1, bankmain:banktags_display_draglayer, $int16, int);
+				if_setparam(param_1851, $int10, bankmain:banktags_display_draglayer, $dropsubid3, int);
+				if (cc_find(bankmain:banktags_display_items, $comsubid1) = true) {
+					cc_setposition(~script9577($int14, $int15), ^setpos_abs_left, ^setpos_abs_top);
+					cc_setparam(param_1849, $int14, int);
+					cc_setparam(param_1850, $int15, int);
+				}
+			}
+		} else {
+			~script9562(%varcint1380, $int10, $int9);
+			if_setparam(param_1851, $int9, bankmain:banktags_display_draglayer, $int16, int);
+			if_setparam(param_1851, $int10, bankmain:banktags_display_draglayer, $dropsubid3, int);
+			if (cc_find(bankmain:banktags_display_items, $comsubid1) = true) {
+				cc_setposition(~script9577($int14, $int15), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setparam(param_1849, $int14, int);
+				cc_setparam(param_1850, $int15, int);
+			}
+			if (cc_find(bankmain:banktags_display_items, $int9) = true) {
+				cc_setposition(~script9577($int12, $int13), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setparam(param_1849, $int12, int);
+				cc_setparam(param_1850, $int13, int);
+			}
+		}
+		%varcint1377 = 1;
+		~script9595;
+	case bankmain:banktags_headers :
+		$int17 = ~script9569(calc(($dropsubid3 - 10) / 3 + %varcint1401));
+		if ($int17 = %varcint1380) {
+			~script9617(0);
+			return;
+		}
+		~script9606($obj6, $dropsubid3);
+	case bankmain:items :
+	case bankmain:incinerator_target :
+		if_script_trigger(1655085900, bankmain:banktags_display_draglayer, $int16, $obj6);
+	case bankmain:storage_popup_tab :
+	case default :
+		return;
+}

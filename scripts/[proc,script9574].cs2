@@ -1,0 +1,24 @@
+// 9574
+[proc,script9574](component $component0, int $comsubid1, component $drop2, int $dropsubid3, int $int4, int $int5)
+if ($int4 < 0 | $int4 >= 20 | $int5 < 0 | $int5 >= 20) {
+	return;
+}
+def_int $int6 = ~script9569($int4);
+def_int $int7 = ~script9569($int5);
+~script9570($int4, $int7);
+~script9570($int5, $int6);
+def_int $int8 = if_param(param_896, $drop2, $dropsubid3);
+def_int $int9 = if_param(league_task_category, $drop2, $dropsubid3);
+def_string $anyobj0 = if_param(league_task_area, $drop2, $dropsubid3);
+def_obj $obj10 = if_param(league_task_skill, $drop2, $dropsubid3);
+def_int $int11 = if_param(param_1848, $drop2, $dropsubid3);
+if_setparam(param_896, if_param(param_896, $component0, $comsubid1), $drop2, $dropsubid3, int);
+if_setparam(league_task_category, if_param(league_task_category, $component0, $comsubid1), $drop2, $dropsubid3, int);
+if_setparam(league_task_area, if_param(league_task_area, $component0, $comsubid1), $drop2, $dropsubid3, obj);
+if_setparam(league_task_skill, if_param(league_task_skill, $component0, $comsubid1), $drop2, $dropsubid3, int);
+if_setparam(param_1848, if_param(param_1848, $component0, $comsubid1), $drop2, $dropsubid3, int);
+if_setparam(param_896, $int8, $component0, $comsubid1, int);
+if_setparam(league_task_category, $int9, $component0, $comsubid1, int);
+if_setparam(league_task_area, $anyobj0, $component0, $comsubid1, obj);
+if_setparam(league_task_skill, $obj10, $component0, $comsubid1, int);
+if_setparam(param_1848, $int11, $component0, $comsubid1, int);

@@ -1,0 +1,18 @@
+// 9591
+[clientscript,script9591](component $component0, int $comsubid1, component $drop2, int $dropsubid3, int $int4, int $int5, string $string0, int $int6)
+if (cc_find($component0, $comsubid1) = true) {
+	cc_setdragrenderbehaviour(1);
+}
+if ($drop2 ! bankmain:banktags_headers) {
+	return;
+}
+if ($dropsubid3 < 10) {
+	return;
+}
+def_int $int7 = if_param(param_896, $drop2, $dropsubid3);
+def_int $int8 = if_param(league_task_category, $drop2, $dropsubid3);
+def_string $string1 = if_param(league_task_area, $drop2, $dropsubid3);
+def_obj $obj9 = if_param(league_task_skill, $drop2, $dropsubid3);
+def_int $int10 = if_param(param_1848, $drop2, $dropsubid3);
+~script9574($component0, $comsubid1, $drop2, $dropsubid3, $int4, $int8);
+~script9580;

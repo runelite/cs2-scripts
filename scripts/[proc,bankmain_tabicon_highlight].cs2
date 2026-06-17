@@ -1,7 +1,9 @@
 // 508
 [proc,bankmain_tabicon_highlight](int $int0)
-if (%bank_currenttab = $int0) {
+if (%bank_currenttab = $int0 & %varcint1380 = -1) {
 	.cc_setgraphic("banktabs,2");
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
 	return;
 }
 .cc_setgraphic("banktabs,0");

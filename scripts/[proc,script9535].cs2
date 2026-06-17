@@ -1,0 +1,9 @@
+// 9535
+[proc,script9535]()(int)
+if (%mm_potion_storage_unlocked = 1) {
+	return(1);
+}
+if (~is_group_iron = 1) {
+	return(1);
+}
+return(0);

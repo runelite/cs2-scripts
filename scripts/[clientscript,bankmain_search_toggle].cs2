@@ -3,6 +3,11 @@
 if ($opindex0 ! 1) {
 	return;
 }
+if (%varcint1380 ! -1) {
+	sound_synth(pillory_wrong, 1, 0);
+	mes("You can't search within bank tags.");
+	return;
+}
 %bank_currenttab = 0;
 if (~bankmain_searching = 1) {
 	~meslayer_close(true, true, true);

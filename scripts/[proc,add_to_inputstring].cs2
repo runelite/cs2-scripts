@@ -29,6 +29,8 @@ switch_int ($int0) {
 		}
 	case 12 :
 		$int4 = 8;
+	case 14 :
+		$int4 = 25;
 }
 if (char_isprintable($keychar2) = false) {
 	if ($int0 = 5 & $key1 = ^key_return) {
@@ -58,6 +60,11 @@ switch_int ($int0) {
 		return($string0);
 	case 12 :
 		if ((char_isalphanumeric($keychar2) = true | string_indexof_char("0123456789abcdefghijklmnopqrstuvwxyz _-", $keychar2) ! -1) & $int3 < $int4) {
+			return(append_char($string0, $keychar2));
+		}
+		return($string0);
+	case 14 :
+		if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" ", $keychar2) ! -1) & $int3 < $int4) {
 			return(append_char($string0, $keychar2));
 		}
 		return($string0);

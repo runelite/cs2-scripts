@@ -1,0 +1,9 @@
+// 9601
+[clientscript,script9601](component $component0, int $comsubid1, int $opindex2, obj $obj3, int $int4)
+%varcint1377 = 1;
+if ($opindex2 = 9) {
+	~script9565(%varcint1380, $int4);
+	~script9595;
+	return;
+}
+if_script_trigger(297151847, bankmain:banktags_display_items, $comsubid1, $opindex2, $obj3);

@@ -52,6 +52,7 @@ switch_int ($int8) {
 		if_sethide(true, $component5);
 		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $componentarray0(0));
 		cc_deleteall($component3);
+		if_setsize(40, 37, ^setsize_abs, ^setsize_abs, $component2);
 	case default :
 		if (%bank_setting_forget_popup = 1) {
 			~script9221($component2, $component4, $component5, 0);

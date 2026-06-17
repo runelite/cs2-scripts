@@ -105,10 +105,13 @@ if ($int1 > 0) {
 			return;
 		case 16 :
 			~skillmulti_quantitybutton_x_receive(%varcstring359);
+		case 29 :
+			resume_stringdialog(%varcstring359);
+			%varcint5 = 0;
 	}
 } else {
 	switch_int (%varcint5) {
-		case 7, 8, 9, 15, 20, 21 :
+		case 7, 8, 9, 15, 20, 21, 29 :
 			return;
 		case 16 :
 			return;

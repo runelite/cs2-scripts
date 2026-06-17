@@ -1,0 +1,17 @@
+// 9536
+[proc,script9536](component $component0)
+if (%varcint1380 ! -1) {
+	if_settext(~script9552(%varcint1380), $component0);
+} else if (%bank_currenttab = 15) {
+	if_settext("Potion storage", $component0);
+} else if (%bank_currenttab ! 0) {
+	if (%bank_tab_display = 2) {
+		if_settext("Tab <enum(int, string, enum_207, %bank_currenttab)>", $component0);
+	} else if (%bank_tab_display = 3) {
+		if_settext("The Bank of Gielinor", $component0);
+	} else {
+		if_settext("Tab <tostring(%bank_currenttab)>", $component0);
+	}
+} else {
+	if_settext("The Bank of Gielinor", $component0);
+}

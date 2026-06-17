@@ -1,0 +1,25 @@
+// 9588
+[clientscript,script9588](component $component0, int $comsubid1, int $opindex2, int $int3, int $int4, int $int5)
+def_int $int6 = ~script9569($int3);
+switch_int ($opindex2) {
+	case 1 :
+		if (%varcint1380 ! if_param(param_896, $component0, $comsubid1)) {
+			%varcint1380 = if_param(param_896, $component0, $comsubid1);
+			if_script_trigger(891361452, bankmain:banktags_headers, $comsubid1, 0, $int6, $int3, $int4, $int5);
+			if (%bank_currenttab = 15) {
+				%bank_currenttab = 0;
+				~script9612(bankmain:potionstore_button);
+			}
+			~script9593;
+		} else {
+			~script9600;
+		}
+	case 2 :
+		if_script_trigger(891361452, bankmain:banktags_headers, $comsubid1, 1, $int6, $int3, $int4, $int5);
+	case 3 :
+		if_script_trigger(891361452, bankmain:banktags_headers, $comsubid1, 2, $int6, $int3, $int4, $int5);
+	case 4 :
+	case 5 :
+	case default :
+		return;
+}
