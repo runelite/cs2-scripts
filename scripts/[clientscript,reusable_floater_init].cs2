@@ -1,11 +1,7 @@
 // 9134
 [clientscript,reusable_floater_init](component $com_reusable_floater_universe0)
-def_int $int1 = 0;
-switch_int ($int1) {
-	case 0 :
-		~dynamic_builders_demo($com_reusable_floater_universe0);
-	case default :
-		if (~rental_world = 1) {
-			~create_filler($com_reusable_floater_universe0, ^red, "reusable_floater");
-		}
+%varcint1502 = -1;
+if (if_find($com_reusable_floater_universe0) = true) {
+	cc_setparam(param_2018, -1, int);
+	cc_setontimer("script9476(event_com)");
 }

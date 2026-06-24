@@ -1,0 +1,14 @@
+// 9621
+[proc,script9621](component $component0, int $int1)
+if (if_find($component0) = true) {
+	cc_setparam(param_2018, $int1, int);
+}
+cc_deleteall($component0);
+switch_int ($int1) {
+	case 0 :
+		~dynamic_builders_demo($component0);
+	case default :
+		if (~rental_world = 1) {
+			~create_filler($component0, ^red, "reusable floater <tostring($int1)>");
+		}
+}
