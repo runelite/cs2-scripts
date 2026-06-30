@@ -1,0 +1,8 @@
+// 9649
+[clientscript,script9649](component $com_castle_drakan_clock_big_rotate_clockwise0, component $com_castle_drakan_clock_big_rotate_anticlockwise1, component $com_castle_drakan_clock_small_rotate_clockwise2, component $com_castle_drakan_clock_small_rotate_anticlockwise3, component $com_castle_drakan_clock_big_hand4, component $com_castle_drakan_clock_small_hand5)
+~script9650($com_castle_drakan_clock_big_rotate_clockwise0, "miscgraphics3,2", "Rotate Clockwise", 1, $com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5, 1);
+~script9650($com_castle_drakan_clock_big_rotate_anticlockwise1, "miscgraphics3,3", "Rotate Anticlockwise", -1, $com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5, 1);
+~script9650($com_castle_drakan_clock_small_rotate_clockwise2, "miscgraphics3,2", "Rotate Clockwise", 1, $com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5, 0);
+~script9650($com_castle_drakan_clock_small_rotate_anticlockwise3, "miscgraphics3,3", "Rotate Anticlockwise", -1, $com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5, 0);
+if_setonvartransmit("script9654($com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5){castle_drakan_general_2}", $com_castle_drakan_clock_big_hand4);
+~script9655($com_castle_drakan_clock_big_hand4, $com_castle_drakan_clock_small_hand5);

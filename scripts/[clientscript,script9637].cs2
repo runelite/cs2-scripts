@@ -1,0 +1,48 @@
+// 9637
+[clientscript,script9637](string $string0, string $string1, string $string2, string $string3)
+def_component $component0 = warning_interface:frame;
+def_component $component1 = warning_interface:text;
+def_component $component2 = warning_interface:text_layer;
+def_component $component3 = warning_interface:scrollbar;
+def_component $component4 = warning_interface:button_1;
+def_component $component5 = warning_interface:button_2;
+def_component $component6 = warning_interface:pausebutton_1;
+def_component $component7 = warning_interface:pausebutton_2;
+if (string_length($string0) <= 0) {
+	$string0 = "Warning";
+}
+~steelborder($component0, $string0, 0);
+def_int $int8 = calc(paraheight($string1, if_getwidth($component1), p12_full) * 16 + 10);
+if ($int8 < 218) {
+	$int8 = 218;
+	if_sethide(true, $component3);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component2);
+} else {
+	if_sethide(false, $component3);
+	if_setposition(4, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
+}
+if_settext($string1, $component1);
+if_setscrollsize(0, $int8, $component2);
+if_setsize(if_getwidth($component1), $int8, ^setsize_abs, ^setsize_abs, $component1);
+if_setscrollpos(0, 0, $component2);
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (string_length($string2) <= 0) {
+	$string2 = "Acknowledge";
+}
+~script9639($component4, $string2, 0, 0);
+if_setop(1, removetags($string2), $component4);
+if_setonop("script9640($component4, $string2, 1, 1, $component6)", $component4);
+if_setonmouserepeat("script9638($component4, $string2, 1, 0)", $component4);
+if_setonmouseleave("script9638($component4, $string2, 0, 0)", $component4);
+if (string_length($string3) > 0) {
+	if_sethide(false, $component5);
+	if_setposition(-104, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component4);
+	~script9639($component5, $string3, 0, 0);
+	if_setop(1, removetags($string3), $component5);
+	if_setonop("script9640($component5, $string3, 1, 1, $component7)", $component5);
+	if_setonmouserepeat("script9638($component5, $string3, 1, 0)", $component5);
+	if_setonmouseleave("script9638($component5, $string3, 0, 0)", $component5);
+} else {
+	if_sethide(true, $component5);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component4);
+}

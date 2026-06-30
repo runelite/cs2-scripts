@@ -1,0 +1,16 @@
+// 9625
+[clientscript,script9625]
+if (%varcint1503 < 0) {
+	%varcint1503 = 0;
+}
+if (%varcint1504 < 0) {
+	%varcint1504 = 0;
+}
+if (%varcint1504 <= 0) {
+	return;
+}
+if (clientclock < calc(%varcint1503 + %varcint1504)) {
+	return;
+}
+%varcint1503 = clientclock;
+~script9631;

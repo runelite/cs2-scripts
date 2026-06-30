@@ -1,0 +1,10 @@
+// 9635
+[proc,inv_find](inv $inv0, obj $obj1, int $int2)(int)
+def_int $int3 = inv_size($inv0);
+while ($int2 < $int3) {
+	if (inv_getobj($inv0, $int2) = $obj1) {
+		return($int2);
+	}
+	$int2 = calc($int2 + 1);
+}
+return(-1);

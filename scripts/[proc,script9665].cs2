@@ -1,0 +1,75 @@
+// 9665
+[proc,script9665](component $component0, component $component1)
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_dbrow $dbrow5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+db_find(castle_drakan_room:map_details, %castle_drakan_world_map_floor);
+$dbrow5 = db_findnext;
+while ($dbrow5 ! null) {
+	$int4 = ~script9687($dbrow5);
+	if ($int4 ! 0) {
+		$int6 = db_getfieldcount($dbrow5, castle_drakan_room:map_details);
+		while ($int6 > 0) {
+			$int6 = calc($int6 - 1);
+			if (db_getfield($dbrow5, castle_drakan_room:map_details, $int6) = %castle_drakan_world_map_floor & ~script9666($dbrow5, $int6) = 1) {
+				cc_create($component0, ^iftype_graphic, $int2, false);
+				cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+				cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+				cc_setgraphic(db_getfield($dbrow5, castle_drakan_room:map_details, $int6));
+				$int2 = calc($int2 + 1);
+				if (%castle_drakan_last_room = db_getfield($dbrow5, castle_drakan_room:id, 0) & %castle_drakan_last_floor = %castle_drakan_world_map_floor) {
+					$int7 = 1;
+				} else {
+					$int7 = 0;
+				}
+				if ($int4 = 1 & $int6 <= 0 | $int7 = 1) {
+					cc_create($component1, ^iftype_graphic, $int3, false);
+					cc_setposition(db_getfield($dbrow5, castle_drakan_room:map_details, $int6), db_getfield($dbrow5, castle_drakan_room:map_details, $int6), ^setpos_abs_left, ^setpos_abs_top);
+					cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+					if ($int4 = 1 & $int6 <= 0 & $int7 = 1) {
+						cc_setgraphic("castle_drakan_room_icons,2");
+					} else if ($int7 = 1) {
+						cc_setgraphic("castle_drakan_room_icons,0");
+					} else {
+						cc_setgraphic("castle_drakan_room_icons,1");
+					}
+					$int3 = calc($int3 + 1);
+				}
+				$int2 = ~script9667($component0, $dbrow5, $int2);
+			}
+		}
+	}
+	$dbrow5 = db_findnext;
+}
+def_int $int8 = -1;
+db_find(castle_drakan_door:map_details, %castle_drakan_world_map_floor);
+$dbrow5 = db_findnext;
+while ($dbrow5 ! null) {
+	$int4 = ~script9691($dbrow5);
+	if ($int4 ! 0) {
+		$int8 = db_getfield($dbrow5, castle_drakan_door:emblem, 0);
+		if ($int8 > 0) {
+			if (~script9703($int8) <= 0) {
+				$int4 = 1;
+			} else {
+				$int4 = 2;
+			}
+		}
+		cc_create($component0, ^iftype_rectangle, $int2, false);
+		cc_setposition(db_getfield($dbrow5, castle_drakan_door:map_details, $int6), db_getfield($dbrow5, castle_drakan_door:map_details, $int6), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(db_getfield($dbrow5, castle_drakan_door:map_details, $int6), db_getfield($dbrow5, castle_drakan_door:map_details, $int6), ^setsize_abs, ^setsize_abs);
+		cc_setfill(true);
+		if ($int4 = 2) {
+			cc_setcolour(0x0dc10d);
+		} else {
+			cc_setcolour(^red);
+		}
+		$int2 = calc($int2 + 1);
+	}
+	$dbrow5 = db_findnext;
+}

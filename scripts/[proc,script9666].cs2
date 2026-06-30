@@ -1,0 +1,12 @@
+// 9666
+[proc,script9666](dbrow $dbrow0, int $int1)(int)
+if ($int1 <= 0) {
+	return(1);
+}
+if ($dbrow0 = castle_drakan_throne_room & %castle_drakan_throne_room_upper_floor = 0) {
+	return(0);
+}
+if ($dbrow0 = castle_drakan_dining_room & %castle_drakan_dining_room_upper_floor = 0) {
+	return(0);
+}
+return(1);

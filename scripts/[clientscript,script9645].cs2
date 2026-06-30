@@ -1,0 +1,11 @@
+// 9645
+[clientscript,script9645](component $drop0, int $comsubid1, component $drop2, int $dropsubid3)
+if ($drop2 ! $drop0) {
+	return;
+}
+def_int $int4 = ~script9710($comsubid1);
+def_int $int5 = ~script9710($dropsubid3);
+~script9711($dropsubid3, $int4);
+~script9711($comsubid1, $int5);
+sound_synth(paper_turn, 1, 0);
+~script9647($drop0);

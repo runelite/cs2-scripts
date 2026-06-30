@@ -1,0 +1,30 @@
+// 9643
+[clientscript,script9643](component $component0, component $component1, component $component2, component $component3)
+if_settext(tostring(calc(%pagepos + 1)), $component2);
+if_settext(tostring(calc(%pagepos + 2)), $component3);
+switch_int (%pagepos) {
+	case 0, 1 :
+		if_settext("Alzeph", $component0);
+		if_setgraphic("vampyre_symbols,0", $component1);
+	case 2, 3 :
+		if_settext("Drakan", $component0);
+		if_setgraphic("vampyre_symbols,1", $component1);
+	case 4, 5 :
+		if_settext("Ghrazi", $component0);
+		if_setgraphic("vampyre_symbols,2", $component1);
+	case 6, 7 :
+		if_settext("Jovkai", $component0);
+		if_setgraphic("vampyre_symbols,3", $component1);
+	case 8, 9 :
+		if_settext("Myrmel", $component0);
+		if_setgraphic("vampyre_symbols,4", $component1);
+	case 10, 11 :
+		if_settext("Pyrah", $component0);
+		if_setgraphic("vampyre_symbols,5", $component1);
+	case 12, 13 :
+		if_settext("Shadum", $component0);
+		if_setgraphic("vampyre_symbols,6", $component1);
+	case 14, 15 :
+		if_settext("Vitur", $component0);
+		if_setgraphic("vampyre_symbols,7", $component1);
+}
