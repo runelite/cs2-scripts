@@ -11,15 +11,15 @@ if_setonresize("omnishop_main_setup($dbrow0, $inv1, 1)", $component2);
 if ($inv1 ! null) {
 	if_setoninvtransmit("omnishop_main_setup($dbrow0, $inv1, 1){$inv1}", $component2);
 }
-if_setonvartransmit("omnishop_main_setup($dbrow0, $inv1, 0){omnishop_redraw, omnishop_selected_id, omnishop_selected_side_id}", $component2);
+if_setonvartransmit("omnishop_main_setup($dbrow0, $inv1, 0){omnishop_redraw}", $component2);
 ~omnishop_main_info_setup(
 	0 = $dbrow0, 
 	1 = $inv1, 
-	2 = 0, 
+	2 = %omnishop_selected_id, 
 	3 = 0, 
 	4 = 0, 
-	5 = -1, 
-	6 = "", 
-	7 = 1, 
-	8 = -1
+	5 = 0, 
+	6 = -1, 
+	7 = "", 
+	8 = 1
 );

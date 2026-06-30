@@ -5,6 +5,6 @@ if ($opindex0 ! 1) {
 }
 sound_synth(interface_select1, 1, 0);
 if (cc_find($component1, $comsubid2) = true) {
-	cc_setgraphic("radio_buttons,0");
+	cc_setgraphic("options_radio_buttons,0");
 }
 if_setontimer("poh_menagerie_setroaming(event_com, $comsubid2, calc(clientclock + 35))", $component1);

@@ -6,19 +6,6 @@ if (%hotkey_cannot_close_sidepanel = 1) {
 	if_setonkey("toplevel_keypress(event_keycode, $enum1, 1)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-if ($enum1 = enum_139 | %cutscene_status = 1) {
-	setshowmouseovertext(false);
-	if ($enum1 = enum_139) {
-		setshowmousecross(false);
-	} else {
-		setshowmousecross(true);
-	}
-	setshowloadingmessages(false);
-} else {
-	setshowmouseovertext(true);
-	setshowmousecross(true);
-	setshowloadingmessages(true);
-}
 def_component $component2 = enum(component, component, $enum1, toplevel_osrs_stretch:map_container);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%cutscene_status), $component2);
@@ -340,7 +327,7 @@ if (%varcint967 ! 1) {
 	~script3644;
 }
 ~logout_timer_notifier;
-~script9679($enum1);
+~ehc_listeners($enum1);
 ~toplevel_setup_popout($enum1);
 $component2 = enum(component, component, $enum1, toplevel_osm:side_left_chat);
 if ($component2 ! null) {

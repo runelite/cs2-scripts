@@ -13,7 +13,7 @@ if (~script8048($int0) = 1) {
 			~script6068(%slayer_toggleoff_longerrevenants, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
 			return;
 		case default :
-			cc_setgraphic("radio_buttons,6");
+			cc_setgraphic("options_radio_buttons,6");
 			if (db_getfield($dbrow6, slayer_unlock:refundable, 0) = true) {
 				.cc_setop(1, "Disable");
 				.cc_setonop("slayer_rewards_unlock_confirm(
@@ -33,7 +33,7 @@ if (~script8048($int0) = 1) {
 			}
 	}
 } else {
-	cc_setgraphic("radio_buttons,4");
+	cc_setgraphic("options_radio_buttons,4");
 	.cc_setop(1, "Unlock");
 	.cc_setonop("slayer_rewards_unlock_confirm(
 		0 = 1, 

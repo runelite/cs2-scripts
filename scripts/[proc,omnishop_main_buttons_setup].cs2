@@ -17,13 +17,6 @@ switch_int (%varcint988) {
 		$graphic8 = verdana_13pt_regular;
 }
 cc_deleteall($component6);
-if (%omnishop_selected_id = -1) {
-	if_sethide(true, $component1);
-	if_sethide(true, $component2);
-	if_sethide(true, $component3);
-	if_sethide(true, $component4);
-	return;
-}
 if ($int0 >= 1 | $int0 = -1) {
 	cc_create($component6, ^iftype_text, 0, false);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);

@@ -4,10 +4,7 @@ def_int $int3 = 0;
 def_int $int4 = 120;
 cc_settrans($int3);
 cc_setobject($obj0, $int1);
-def_obj $obj5 = oc_uncert($obj0);
-def_inv $inv6 = db_getfield($dbrow2, omnishop_shop_data:omnishop_shop_inv, 0);
-def_int $dbfield7 = ~script9713($obj5, $dbrow2, $inv6);
-if (db_getfield($dbrow2, omnishop_shop_data:omnishop_shop_allow_selling, 0) = 1 & ~script9714($obj5, $dbrow2, $inv6, $dbfield7, 0) = 0) {
+if (db_getfield($dbrow2, omnishop_shop_data:omnishop_shop_allow_selling, 0) = 1) {
 	cc_setop(1, "Select");
 	cc_setop(2, "<$string0>-1");
 	cc_setop(3, "<$string0>-5");
