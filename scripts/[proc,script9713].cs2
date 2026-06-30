@@ -1,0 +1,17 @@
+// 9713
+[proc,script9713](obj $obj0, dbrow $dbrow1, inv $inv2)(int)
+def_int $int3 = db_getfieldcount($dbrow1, omnishop_shop_data:omnishop_shop_stock);
+if ($int3 > 0) {
+	$int3 = calc($int3 - 1);
+	while ($int3 >= 0) {
+		if ($obj0 = db_getfield(db_getfield($dbrow1, omnishop_shop_data:omnishop_shop_stock, $int3), omnishop_stock_data:omnishop_stock_obj, 0)) {
+			return($int3);
+		}
+		if ($obj0 = db_getfield(db_getfield($dbrow1, omnishop_shop_data:omnishop_shop_stock, $int3), omnishop_stock_data:omnishop_stock_alternateobj, 0)) {
+			return($int3);
+		}
+		$int3 = calc($int3 - 1);
+	}
+	return(-1);
+}
+return(~inv_find($inv2, $obj0, 0));

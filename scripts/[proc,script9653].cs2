@@ -1,0 +1,14 @@
+// 9653
+[proc,script9653](int $int0, component $com_castle_drakan_clock_big_hand1, component $com_castle_drakan_clock_small_hand2, int $int3)
+sound_synth(clock_tick_single, 1, 0);
+def_int $int4 = ~script9708($int3);
+def_int $int5 = calc($int4 + $int0);
+if ($int5 >= 12) {
+	$int4 = 0;
+} else if ($int5 < 0) {
+	$int4 = 11;
+} else {
+	$int4 = $int5;
+}
+~script9709($int4, $int3);
+~script9655($com_castle_drakan_clock_big_hand1, $com_castle_drakan_clock_small_hand2);

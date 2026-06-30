@@ -1,9 +1,9 @@
 // 1077
 [clientscript,poh_options_tele](component $com_poh_options_tele_on0, component $com_poh_options_tele_off1)
 if (%poh_tele_toggle = 1) {
-	if_setgraphic("options_radio_buttons,0", $com_poh_options_tele_on0);
-	if_setgraphic("options_radio_buttons,2", $com_poh_options_tele_off1);
+	if_setgraphic("radio_buttons,0", $com_poh_options_tele_on0);
+	if_setgraphic("radio_buttons,2", $com_poh_options_tele_off1);
 } else {
-	if_setgraphic("options_radio_buttons,2", $com_poh_options_tele_on0);
-	if_setgraphic("options_radio_buttons,0", $com_poh_options_tele_off1);
+	if_setgraphic("radio_buttons,2", $com_poh_options_tele_on0);
+	if_setgraphic("radio_buttons,0", $com_poh_options_tele_off1);
 }
