@@ -1,0 +1,13 @@
+// 8589
+[clientscript,script8589](component $com_sangvesti_world_map_universe0, component $com_sangvesti_world_map_contents1, component $com_sangvesti_world_map_map_back2, component $com_sangvesti_world_map_map_front3, component $com_sangvesti_world_map_drag4, component $com_sangvesti_world_map_close5, component $com_sangvesti_world_map_tooltip6)
+if (%varcint1505 < 0) {
+	%varcint1505 = 0;
+}
+if (%varcint1506 < 0) {
+	%varcint1506 = 0;
+}
+~script8591($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_map_back2, $com_sangvesti_world_map_map_front3, $com_sangvesti_world_map_drag4, $com_sangvesti_world_map_tooltip6);
+if_setopkey(1, ^key_escape, 0, $com_sangvesti_world_map_close5);
+if_setnoclickthrough(true, $com_sangvesti_world_map_close5);
+if_setonvartransmit("script8590($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_map_back2, $com_sangvesti_world_map_map_front3, $com_sangvesti_world_map_drag4, $com_sangvesti_world_map_tooltip6){sangvesti_general, sangvesti_general_2, sangvesti_general_3, sangvesti_player_pos, sangvesti_player_last_death_pos}", $com_sangvesti_world_map_universe0);
+if_setoninvtransmit("script8590($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_map_back2, $com_sangvesti_world_map_map_front3, $com_sangvesti_world_map_drag4, $com_sangvesti_world_map_tooltip6){inv}", $com_sangvesti_world_map_universe0);

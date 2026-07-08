@@ -1,0 +1,8 @@
+// 8593
+[clientscript,script8593](component $com_sangvesti_world_map_universe0, component $com_sangvesti_world_map_contents1, component $com_sangvesti_world_map_drag2, int $int3, int $int4, int $int5)
+if (clientclock < $int5) {
+	return;
+}
+%varcint1505 = calc($int3 + 1);
+%varcint1506 = calc($int4 + 1);
+if_setontimer("script8594($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_drag2, if_getwidth($com_sangvesti_world_map_universe0), if_getheight($com_sangvesti_world_map_universe0))", $com_sangvesti_world_map_drag2);

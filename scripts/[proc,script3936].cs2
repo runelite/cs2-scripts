@@ -18,8 +18,10 @@ if (%music_current_track = -1) {
 	if_setop(4, "", $component1);
 	if_setop(5, "", $component1);
 	if_setopbase("", $component1);
-} else {
-	if_settext(~get_music_name(%music_current_track), $component1);
+	return;
+}
+if_settext(~get_music_name(%music_current_track), $component1);
+if (~is_music_hidden(%music_current_track) = false | ~script8602(%music_current_track) ! null) {
 	if_setop(2, "Unlock hint", $component1);
 	if (array_count($anyobj0, %music_current_track, 0, -1, int) > 0) {
 		if_setop(3, "Remove from playlist 1", $component1);
@@ -37,4 +39,10 @@ if (%music_current_track = -1) {
 		if_setop(5, "Add to playlist 3", $component1);
 	}
 	if_setopbase("<col=ff9040><~get_music_name(%music_current_track)></col>", $component1);
+} else {
+	if_setop(2, "", $component1);
+	if_setop(3, "", $component1);
+	if_setop(4, "", $component1);
+	if_setop(5, "", $component1);
+	if_setopbase("", $component1);
 }

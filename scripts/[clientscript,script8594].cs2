@@ -1,0 +1,9 @@
+// 8594
+[clientscript,script8594](component $com_sangvesti_world_map_universe0, component $com_sangvesti_world_map_contents1, component $com_sangvesti_world_map_drag2, int $int3, int $int4)
+def_int $int5 = if_getwidth($com_sangvesti_world_map_universe0);
+def_int $int6 = if_getheight($com_sangvesti_world_map_universe0);
+if ($int5 = $int3 & $int6 = $int4) {
+	return;
+}
+~script8595($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, calc(%varcint1505 - 1), calc(%varcint1506 - 1));
+if_setontimer("script8594($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_drag2, $int5, $int6)", $com_sangvesti_world_map_drag2);

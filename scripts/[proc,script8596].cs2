@@ -1,0 +1,442 @@
+// 8596
+[proc,script8596](component $com_sangvesti_world_map_map_back0, component $com_sangvesti_world_map_map_front1, component $com_sangvesti_world_map_tooltip2)
+cc_deleteall($com_sangvesti_world_map_map_back0);
+cc_deleteall($com_sangvesti_world_map_map_front1);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+if (%sangvesti_player_last_death_pos ! null) {
+	$int5 = ~minmax(6, 422, calc((coordx(%sangvesti_player_last_death_pos) - coordx(0_39_121_48_53)) * 4 - 8));
+	$int6 = ~minmax(6, 292, calc((coordz(%sangvesti_player_last_death_pos) - coordz(0_39_121_48_53)) * 4 - 9));
+	cc_create($com_sangvesti_world_map_map_front1, ^iftype_graphic, $int4, false);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("castle_drakan_room_icons,4");
+	cc_setnoclickthrough(true);
+	~script8600("", "Last death location", $com_sangvesti_world_map_tooltip2);
+	$int4 = calc($int4 + 1);
+}
+if (%sangvesti_player_pos ! null) {
+	$int5 = ~minmax(6, 422, calc((coordx(%sangvesti_player_pos) - coordx(0_39_121_48_53)) * 4 - 8));
+	$int6 = ~minmax(6, 292, calc((coordz(%sangvesti_player_pos) - coordz(0_39_121_48_53)) * 4 - 9));
+	cc_create($com_sangvesti_world_map_map_front1, ^iftype_graphic, $int4, false);
+	cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("castle_drakan_room_icons,0");
+	$int4 = calc($int4 + 1);
+}
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_fancy_house_3, 164, 51);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_vitur_manor, 271, 79);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_chapel, 140, 103);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_food_shop, 208, 105);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_basic_house_3, 236, 109);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_pub, 212, 169);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_clothes_shop, 177, 229);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_fancy_house_1, 284, 233);
+$int4 = ~script8598($com_sangvesti_world_map_map_front1, $int4, %sangvesti_hint_blacksmith, 136, 230);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_blacksmith_door_found, 
+	5 = %sangvesti_blacksmith_door, 
+	6 = 140, 
+	7 = 248, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Jovkai Door: Locked", 
+	12 = sangvesti_jovkai_key_33780
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_basic_house_door_found, 
+	5 = %sangvesti_basic_house_door, 
+	6 = 192, 
+	7 = 269, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Jovkai Door: Locked", 
+	12 = sangvesti_jovkai_key_33780
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_pub_door_found, 
+	5 = %sangvesti_pub_door, 
+	6 = 216, 
+	7 = 192, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Myrmel Door: Locked", 
+	12 = sangvesti_myrmel_key_33783
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_pub_back_door_found, 
+	5 = %sangvesti_pub_back_door, 
+	6 = 196, 
+	7 = 157, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_myrmel_manor_door_found, 
+	5 = %sangvesti_myrmel_manor_door, 
+	6 = 280, 
+	7 = 141, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Myrmel Door: Locked", 
+	12 = sangvesti_myrmel_key_33783
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_myrmel_manor_back_door_found, 
+	5 = %sangvesti_myrmel_manor_back_door, 
+	6 = 340, 
+	7 = 129, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_bank_door_found, 
+	5 = %sangvesti_bank_door, 
+	6 = 140, 
+	7 = 153, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Myrmel Door: Locked", 
+	12 = sangvesti_myrmel_key_33783
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_shadum_manor_door_found, 
+	5 = %sangvesti_shadum_manor_door, 
+	6 = 228, 
+	7 = 64, 
+	8 = 12, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Shadum Door: Locked", 
+	12 = sangvesti_shadum_key_33784
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_1_door_found, 
+	5 = %sangvesti_fancy_house_1_door, 
+	6 = 276, 
+	7 = 237, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Shadum Door: Locked", 
+	12 = sangvesti_shadum_key_33784
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_1_back_door_found, 
+	5 = %sangvesti_fancy_house_1_back_door, 
+	6 = 296, 
+	7 = 229, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_vitur_manor_door_found, 
+	5 = %sangvesti_vitur_manor_door, 
+	6 = 268, 
+	7 = 81, 
+	8 = 5, 
+	9 = 12, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Vitur Door: Locked", 
+	12 = sangvesti_vitur_key_33785
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_2_door_found, 
+	5 = %sangvesti_fancy_house_2_door, 
+	6 = 235, 
+	7 = 225, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Vitur Door: Locked", 
+	12 = sangvesti_vitur_key_33785
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_2_back_door_found, 
+	5 = %sangvesti_fancy_house_2_back_door, 
+	6 = 224, 
+	7 = 236, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_food_shop_door_found, 
+	5 = %sangvesti_food_shop_door, 
+	6 = 212, 
+	7 = 124, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Vitur Door: Locked", 
+	12 = sangvesti_vitur_key_33785
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_food_shop_back_door_found, 
+	5 = %sangvesti_food_shop_back_door, 
+	6 = 223, 
+	7 = 105, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_trapdoor_found, 
+	5 = %sangvesti_trapdoor, 
+	6 = 136, 
+	7 = 174, 
+	8 = 7, 
+	9 = 7, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Trapdoor: Locked", 
+	12 = sangvesti_trapdoor_key_33786
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_trapdoor, 
+	5 = %sangvesti_trapdoor, 
+	6 = 149, 
+	7 = 117, 
+	8 = 7, 
+	9 = 7, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Trapdoor: Locked", 
+	12 = sangvesti_trapdoor_key_33786
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_clothes_shop_door_found, 
+	5 = %sangvesti_clothes_shop_door, 
+	6 = 180, 
+	7 = 221, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Chained shut", 
+	12 = sangvesti_bolt_cutters_33787
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_clothes_shop_back_door_found, 
+	5 = %sangvesti_clothes_shop_back_door, 
+	6 = 184, 
+	7 = 248, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_3_door_found, 
+	5 = %sangvesti_fancy_house_3_door, 
+	6 = 168, 
+	7 = 68, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked by device", 
+	12 = sangvesti_crank_wheel_33788
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_fancy_house_3_back_door_found, 
+	5 = %sangvesti_fancy_house_3_back_door, 
+	6 = 160, 
+	7 = 53, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_interior_bank_door_found, 
+	5 = %sangvesti_interior_bank_door, 
+	6 = 140, 
+	7 = 168, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Gate: Locked by device", 
+	12 = sangvesti_crank_wheel_33788
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_chapel_back_door_1_found, 
+	5 = %sangvesti_chapel_back_door_1, 
+	6 = 176, 
+	7 = 93, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_chapel_back_door_2_found, 
+	5 = %sangvesti_chapel_back_door_2, 
+	6 = 144, 
+	7 = 128, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "Door: Locked from the inside", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_general_store_door_found, 
+	5 = 1, 
+	6 = 292, 
+	7 = 196, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_basic_house_2_door_found, 
+	5 = 1, 
+	6 = 159, 
+	7 = 201, 
+	8 = 5, 
+	9 = 8, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "", 
+	12 = null
+);
+$int3, $int4 = ~script8597(
+	0 = $com_sangvesti_world_map_map_back0, 
+	1 = $int3, 
+	2 = $com_sangvesti_world_map_map_front1, 
+	3 = $int4, 
+	4 = %sangvesti_basic_house_3_door_found, 
+	5 = 1, 
+	6 = 240, 
+	7 = 124, 
+	8 = 8, 
+	9 = 5, 
+	10 = $com_sangvesti_world_map_tooltip2, 
+	11 = "", 
+	12 = null
+);

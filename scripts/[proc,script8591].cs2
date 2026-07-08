@@ -1,0 +1,13 @@
+// 8591
+[proc,script8591](component $com_sangvesti_world_map_universe0, component $com_sangvesti_world_map_contents1, component $com_sangvesti_world_map_map_back2, component $com_sangvesti_world_map_map_front3, component $com_sangvesti_world_map_drag4, component $com_sangvesti_world_map_tooltip5)
+~script8596($com_sangvesti_world_map_map_back2, $com_sangvesti_world_map_map_front3, $com_sangvesti_world_map_tooltip5);
+def_int $int6 = calc(%varcint1505 - 1);
+def_int $int7 = calc(%varcint1506 - 1);
+if (~script7925 = 1) {
+	~script8595($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $int6, $int7);
+	if_setop(1, "Move", $com_sangvesti_world_map_drag4);
+	if_setondrag("script8592($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_drag4, event_mousex, event_mousey)", $com_sangvesti_world_map_drag4);
+	if_setontimer("script8594($com_sangvesti_world_map_universe0, $com_sangvesti_world_map_contents1, $com_sangvesti_world_map_drag4, if_getwidth($com_sangvesti_world_map_universe0), if_getheight($com_sangvesti_world_map_universe0))", $com_sangvesti_world_map_drag4);
+} else {
+	if_setop(1, "", $com_sangvesti_world_map_drag4);
+}

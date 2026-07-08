@@ -1,0 +1,17 @@
+// 6173
+[proc,script6173](dbrow $dbrow0, int $int1)(int)
+if ($dbrow0 = null) {
+	return(0);
+}
+def_namedobj $namedobj2 = db_getfield($dbrow0, castle_drakan_door:key, 0);
+if ($namedobj2 ! null & inv_total(inv, $namedobj2) > 0) {
+	return(1);
+}
+if ($int1 > 0) {
+	if (%castle_drakan_emblem_holder_used = 0) {
+		return(0);
+	} else if (inv_total(inv, castle_drakan_drakan_emblem_1_33731) > 0 | inv_total(inv, castle_drakan_drakan_emblem_2_33732) > 0 | inv_total(inv, castle_drakan_drakan_emblem_3_33733) > 0) {
+		return(1);
+	}
+}
+return(0);
