@@ -256,8 +256,8 @@ LABEL177:
    iconst                 0
    iconst                 0
    invoke                 8199
-   istore                 27
    istore                 28
+   istore                 27
    istore                 1
    iconst                 0
    istore                 29
@@ -459,13 +459,9 @@ LABEL409:
 LABEL424:
    iload                  0
    iload                  27
-   iload                  28
-   iload                  23
-   iload                  26
-   sub                   
    iload                  29
    iconst                 -1
-   invoke                 8138
+   invoke                 9717
    iload                  0
    iconst                 4
    iload                  1
@@ -543,9 +539,9 @@ LABEL424:
    istore                 36
    iload                  18
    iconst                 0
-   if_icmpge              LABEL512
-   jump                   LABEL547
-LABEL512:
+   if_icmpge              LABEL508
+   jump                   LABEL543
+LABEL508:
    iload                  0
    iload                  1
    iload                  4
@@ -581,7 +577,7 @@ LABEL512:
    invoke                 8117
    istore                 36
    istore                 1
-LABEL547:
+LABEL543:
    iload                  1
    return                
    iconst                 0

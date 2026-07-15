@@ -18,6 +18,8 @@ if (%gravestone_has_merged = 0) {
 		$int0 = scale(1, 4, $int0);
 	} else if (~script7937(%gravestone_creation_death_coord) = 1 & %total_dom_levels < 20) {
 		$int0 = scale(1, 4, $int0);
+	} else if (~inzone(0_45_125_0_0, 3_45_125_63_63, %gravestone_creation_death_coord) = 1 & %maggot_king_reduced_death_fee_kills < 5) {
+		$int0 = scale(1, 4, $int0);
 	}
 }
 return($int0);

@@ -29,22 +29,33 @@ java.lang.IllegalStateException: Check failed.
    iconst                 2
    get_array_int          4
    ostore                 3
-   oload                  1
-   iconst                 0
-   oc_find               
+   iconst                 1
    istore                 3
+   iconst                 -1
+   istore                 4
+   oload                  1
+   4127                  
+   istore                 3
+   istore                 4
    iload                  3
-   iconst                 0
-   if_icmpeq              LABEL33
-   jump                   LABEL37
-LABEL33:
+   iconst                 1
+   if_icmpeq              LABEL37
+   jump                   LABEL40
+LABEL37:
+   iload                  4
+   4224                  
+   istore                 0
+LABEL40:
+   iload                  0
+   iconst                 -1
+   if_icmpeq              LABEL44
+   jump                   LABEL48
+LABEL44:
    iconst                 -1
    iconst                 -1
    iconst                 -1
    return                
-LABEL37:
-   oc_findnext           
-   istore                 0
+LABEL48:
    oload                  2
    invoke                 9619
    istore                 1

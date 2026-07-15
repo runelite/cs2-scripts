@@ -1,0 +1,10 @@
+// 9725
+[clientscript,script9725](component $component0, int $comsubid1)
+if ($comsubid1 ! -1) {
+	if (cc_find($component0, $comsubid1) = true & cc_input_getfocus = true) {
+		return;
+	}
+} else if (if_input_getfocus($component0) = true) {
+	return;
+}
+~keyboard_hide;

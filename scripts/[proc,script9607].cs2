@@ -1,5 +1,5 @@
 // 9607
-[clientscript,script9607](int $int0)
+[proc,script9607](int $int0)
 ~deltooltip_action(bankmain:tooltip);
 if_sethide(false, bankmain:banktags_popup_stringexport_container);
 def_component $component1 = bankmain:banktags_popup_stringexport_window;
@@ -44,8 +44,8 @@ $int2 = ~cc_add_button(
 	5 = ^setpos_abs_top, 
 	6 = 24, 
 	7 = 24, 
-	8 = ^setsize_abs, 
-	9 = ^setsize_abs, 
+	8 = 0, 
+	9 = 0, 
 	10 = struct_6272, 
 	11 = ""
 );
@@ -57,6 +57,25 @@ $int2 = calc($int2 + 1);
 cc_setsize(26, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,14");
+if (~on_mobile = true) {
+	$int2 = ~cc_add_button(
+		0 = $component1, 
+		1 = $int2, 
+		2 = 5, 
+		3 = 5, 
+		4 = ^setpos_abs_left, 
+		5 = ^setpos_abs_bottom, 
+		6 = 72, 
+		7 = 24, 
+		8 = 0, 
+		9 = 0, 
+		10 = struct_6272, 
+		11 = "Keyboard"
+	);
+	~cc_set_button_states(false, 0);
+	cc_setop(1, "Open Keyboard");
+	cc_setonop("keyboard_show(0, 2500)");
+}
 def_component $component4 = bankmain:banktags_popup_stringexport_inputfield;
 cc_deleteall($component4);
 $int2 = 0;
@@ -72,13 +91,15 @@ $int2 = ~script9132(
 	1 = $int2, 
 	2 = 0, 
 	3 = 0, 
-	4 = ^setpos_abs_centre, 
-	5 = ^setpos_abs_centre, 
+	4 = 1, 
+	5 = 1, 
 	6 = 4, 
 	7 = 4, 
-	8 = ^setsize_minus, 
-	9 = ^setsize_minus, 
+	8 = 1, 
+	9 = 1, 
 	10 = $string1
 );
 cc_input_setfocus(true);
 cc_input_setselection(0, string_length($string1));
+cc_input_setlinewidthlimit(2500);
+cc_input_setonfocuschanged("script9725(event_com, event_comsubid)");
