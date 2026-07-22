@@ -32,7 +32,7 @@ cc_setparam(league_task_category, $int0, int);
 cc_setparam(league_task_area, $string0, obj);
 cc_setparam(league_task_skill, $obj6, int);
 cc_setparam(param_1848, $int7, int);
-cc_create_child(^iftype_graphic, $int2);
+cc_createchild(^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -48,7 +48,7 @@ if (%varcint1380 = $int5) {
 		.cc_setonmouseleave("cc_graphic_swapper(event_com, calc($int2 - 1), $graphic9, null)");
 	}
 }
-cc_create_sibling(^iftype_graphic, $int2);
+cc_createsibling(^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

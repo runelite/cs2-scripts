@@ -2,19 +2,22 @@
 [proc,script3522](component $component0, int $int1, component $component2)
 def_string $string0 = enum(int, string, enum_3047, %worn_items_set_text);
 def_int $int3 = 1;
-if (%worn_items_inquisitors_armour > 0 & %worn_items_inquisitors_armour < 3) {
+def_string $string1 = "";
+if (%worn_items_inquisitors_armour > 0 & %worn_items_inquisitors_armour <= 5) {
 	$int3 = 0;
-	if (%worn_items_inquisitors_mace = 0) {
-		if (%worn_items_inquisitors_armour = 1) {
-			$string0 = append($string0, "<col=ffffff>Inquisitor's armour:<br><br>Each individual piece of Inquisitor's armour boosts damage and accuracy by 0.5% when using the crush attack style. This is boosted to 2.5% if an Inquisitor's mace is equipped.<br><br>Current bonus: 0.5%<br>");
-		} else {
-			$string0 = append($string0, "<col=ffffff>Inquisitor's armour:<br><br>Each individual piece of Inquisitor's armour boosts damage and accuracy by 0.5% when using the crush attack style. This is boosted to 2.5% if an Inquisitor's mace is equipped.<br><br>Current bonus: 1%<br>");
-		}
-	} else if (%worn_items_inquisitors_armour = 1) {
-		$string0 = append($string0, "<col=ffffff>Inquisitor's armour:<br><br>Each individual piece of Inquisitor's armour boosts damage and accuracy by 2.5% when using the crush attack style since an Inquisitor's mace is equipped.<br><br>Current bonus: 2.5%<br>");
-	} else {
-		$string0 = append($string0, "<col=ffffff>Inquisitor's armour:<br><br>Each individual piece of Inquisitor's armour boosts damage and accuracy by 2.5% when using the crush attack style, since an Inquisitor's mace is equipped.<br><br>Current bonus: 5%<br>");
+	switch_int (%worn_items_inquisitors_armour) {
+		case 1 :
+			$string1 = "0.5";
+		case 2 :
+			$string1 = "1";
+		case 3 :
+			$string1 = "1.5";
+		case 4 :
+			$string1 = "2";
+		case 5 :
+			$string1 = "2.5";
 	}
+	$string0 = append($string0, "<col=ffffff>Inquisitor's armour:<br><br>Each individual piece of Inquisitor's armour boosts damage and accuracy when using the crush attack style. <br><br>Current bonus: <$string1>%<br>");
 	$string0 = append($string0, "<br>");
 }
 if (%worn_items_swampbark_set > 0 & %worn_items_swampbark_set < 5) {

@@ -52,7 +52,7 @@ $int2 = ~cc_add_button(
 ~cc_set_button_states(false, 0);
 cc_setop(1, "Close");
 cc_setonop("script9608");
-cc_create_child(^iftype_graphic, $int2);
+cc_createchild(^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(26, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
