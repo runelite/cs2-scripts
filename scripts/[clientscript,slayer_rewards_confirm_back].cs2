@@ -1,16 +1,16 @@
 // 319
-[clientscript,slayer_rewards_confirm_back](int $int0, int $opindex1, component $com_slayer_rewards_main2, component $com_slayer_rewards_confirm3, component $com_slayer_rewards_confirm_info4, component $com_slayer_rewards_confirm_button5, component $com_slayer_rewards_back_button6)
+[clientscript,slayer_rewards_confirm_back](int $int0, int $opindex1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if ($opindex1 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-cc_deleteall($com_slayer_rewards_confirm_button5);
-if_setonop(null, $com_slayer_rewards_back_button6);
+cc_deleteall($component5);
+if_setonop(null, $component6);
 if ($int0 = 1) {
-	if_settext("Requesting...", $com_slayer_rewards_confirm_info4);
-	if_setontimer("slayer_rewards_confirm_backlater(calc(clientclock + 45), $com_slayer_rewards_main2, $com_slayer_rewards_confirm3, $com_slayer_rewards_confirm_button5, $com_slayer_rewards_back_button6)", $com_slayer_rewards_confirm_button5);
+	if_settext("Requesting...", $component4);
+	if_setontimer("slayer_rewards_confirm_backlater(calc(clientclock + 45), $component2, $component3, $component5, $component6)", $component5);
 	return;
 }
-if_settext("", $com_slayer_rewards_confirm_info4);
-if_sethide(false, $com_slayer_rewards_main2);
-if_sethide(true, $com_slayer_rewards_confirm3);
+if_settext("", $component4);
+if_sethide(false, $component2);
+if_sethide(true, $component3);
