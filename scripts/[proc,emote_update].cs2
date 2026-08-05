@@ -8,6 +8,7 @@ while ($int2 <= 55) {
 		~emote_op1_configure($int2);
 		~emote_op2_configure($int2);
 		~script7303($int2);
+		~script421($int2);
 		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_emote_tooltip1, ~emote_get_name($int2), 25, 120)");
 		if (cc_find($com_emote_contents0, calc(55 + $int2 + 1)) = true) {
 			if (~emote_checkunlocked($int2) = true) {

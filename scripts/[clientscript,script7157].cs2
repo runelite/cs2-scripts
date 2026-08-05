@@ -1,8 +1,9 @@
 // 7157
-[clientscript,script7157](component $component0, component $component1, int $int2, enum $enum3, int $colour4)
-def_component $component5 = omnishop_main:infinity;
+[clientscript,script7157](dbrow $dbrow0, inv $inv1, component $component2, component $component3, int $int4, enum $enum5, int $colour6)
+def_component $component7 = omnishop_main:infinity;
 sound_synth(interface_select1, 1, 0);
-%omnishop_filter = $int2;
+%omnishop_filter = $int4;
 %omnishop_selected_id = -1;
-~script5770($component0, $component1, $int2, $enum3, $colour4);
-if_callonresize($component5);
+~omnishop_main_info_setup($dbrow0, $inv1, -1, "", 1, 0);
+~script5770($component2, $component3, $int4, $enum5, $colour6);
+if_callonresize($component7);

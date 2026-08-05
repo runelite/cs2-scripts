@@ -1,0 +1,10 @@
+// 9772
+[clientscript,script9772](dbrow $dbrow0, inv $inv1, int $int2, int $int3, int $int4, int $int5, string $string0)
+def_component $component6 = omnishop_main:info;
+if (if_param(param_2643, $component6, -1) ! $dbrow0 | if_param(param_2642, $component6, -1) ! $int2) {
+	return;
+}
+if ($int3 = 0) {
+	$int2 = -1;
+}
+~omnishop_main_info_setup($dbrow0, $inv1, $int2, $string0, $int4, $int5);

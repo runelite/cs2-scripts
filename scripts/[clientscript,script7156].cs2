@@ -1,11 +1,11 @@
 // 7156
-[clientscript,script7156](component $component0, component $component1, component $component2, component $component3, enum $enum4, int $colour5)
+[clientscript,script7156](dbrow $dbrow0, inv $inv1, component $component2, component $component3, component $component4, component $component5, enum $enum6, int $colour7)
 sound_synth(interface_select1, 1, 0);
-~script5772($component0, $component1, $component2, $component3, $enum4, $colour5);
-def_int $int6 = 0;
-while ($int6 < enum_getoutputcount($enum4)) {
-	if (cc_find($component1, calc(1 + $int6 * 2)) = true) {
-		cc_setonop("script7157($component0, $component3, $int6, $enum4, $colour5)");
+~script5772($component2, $component3, $component4, $component5, $enum6, $colour7);
+def_int $int8 = 0;
+while ($int8 < enum_getoutputcount($enum6)) {
+	if (cc_find($component3, calc(1 + $int8 * 2)) = true) {
+		cc_setonop("script7157($dbrow0, $inv1, $component2, $component5, $int8, $enum6, $colour7)");
 	}
-	$int6 = calc($int6 + 1);
+	$int8 = calc($int8 + 1);
 }

@@ -75,20 +75,17 @@ if (struct_param($struct0, param_622) = true & $int8 = 1) {
 if (struct_param($struct0, param_1820) = true & ~script7043 ! 0) {
 	$int1 = 1;
 }
-if (struct_param($struct0, param_474) = true & %setting_hd_beta_flag = 0) {
-	$int1 = 1;
-}
 if (struct_param($struct0, param_1995) = true & %tutorial < 1000 & %tutorial_2 < 1000) {
 	$int1 = 1;
 }
 if ($int3 = 1) {
-	if (struct_param($struct0, param_2277) = true & (%settings_sd_beta_enabled = 0 | deviceoption_get(25) = 1)) {
+	if (struct_param($struct0, param_2640) = true & ~script9753 = 1) {
 		$int1 = 1;
 	}
-	if (struct_param($struct0, param_2278) = true & (%settings_sd_beta_enabled = 0 | deviceoption_get(25) = 0)) {
+	if (struct_param($struct0, param_2638) = true & ~script9753 = 0) {
 		$int1 = 1;
 	}
-	if (struct_param($struct0, param_1937) = true & %settings_hd_new_renderer_toggle = 0 & %settings_hd_beta_enabled = 0) {
+	if (struct_param($struct0, param_2639) = true & (~script9753 = 0 | ~script9752 ! 2)) {
 		$int1 = 1;
 	}
 }

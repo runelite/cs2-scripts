@@ -1,0 +1,15 @@
+// 422
+[proc,script422](enum $enum0, struct $struct1)(int)
+def_int $int2 = enum_getoutputcount($enum0);
+def_int $int3 = 1;
+def_string $string0 = "";
+if ($int2 > 0 & struct_param($struct1, param_2637) = true) {
+	while ($int2 > 0 & $int3 = 1) {
+		$int2 = calc($int2 - 1);
+		$string0, $int3 = ~settings_get_dropdown_option($enum0, $int2, $struct1);
+	}
+	if ($int3 = 0) {
+		$int2 = calc($int2 + 1);
+	}
+}
+return($int2);

@@ -42,6 +42,24 @@ switch_int ($int6) {
 			$string0 = enum(int, string, $enum0, $int1);
 			$string0 = ~script3302($string0, "XXX", tostring(~script3930));
 		}
+	case 502 :
+		if ($int1 = -1) {
+			$int1 = ~script9752;
+			$int4 = 0;
+			$string0 = enum(int, string, $enum0, $int1);
+			if ($int1 ! ~script9754) {
+				$string0 = "<$string0> [FORCED]";
+			}
+		} else {
+			$int4 = 0;
+			$string0 = enum(int, string, $enum0, $int1);
+			if ($int1 = ~script9754 & $int1 ! ~script9752) {
+				$string0 = "<$string0> [*]";
+			}
+			if (~script9749($int1) = 0) {
+				$int3 = 1;
+			}
+		}
 }
 if ($int4 = 1) {
 	$string0 = enum(int, string, $enum0, $int1);

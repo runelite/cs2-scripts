@@ -9,7 +9,9 @@ if (cc_find($component3, $comsubid1) = true) {
 		} else {
 			~settings_set_keybind($int10, $int2);
 		}
-		cc_setontimer("setting_dropdown_synch(0, $comsubid1, $component3, $enum9, $int10, $int0, $struct13)");
+		if (cc_find($component3, $comsubid1) = true) {
+			cc_setontimer("setting_dropdown_synch(0, $comsubid1, $component3, $enum9, $int10, $int0, $struct13)");
+		}
 	}
 }
 if (cc_find($component3, $comsubid11) = true) {

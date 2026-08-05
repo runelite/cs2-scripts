@@ -4,25 +4,25 @@
 ~script8086($com_slayer_rewards_tasks_contents_scrollable1);
 def_int $int9 = ~script823(%slayer_master_in_focus);
 def_int $int10 = ~script9741(%slayer_master);
-def_anyobj $anyobj0 = "<col=ff0000>(<tostring($int9)> points)</col>";
-def_anyobj $anyobj1 = "<col=ff0000>(<tostring($int10)> points)</col>";
+def_string $string0 = "<col=ff0000>(<tostring($int9)> points)</col>";
+def_string $string1 = "<col=ff0000>(<tostring($int10)> points)</col>";
 def_int $int11 = 0;
 def_string $string2 = "Creature";
 def_int $int12 = 0;
 def_string $string3 = "Creature";
 if ($int9 = 0) {
-	$anyobj0 = "<col=00ff00>(Free)</col>";
+	$string0 = "<col=00ff00>(Free)</col>";
 }
 if ($int10 = 0) {
-	$anyobj1 = "<col=00ff00>(Free)</col>";
+	$string1 = "<col=00ff00>(Free)</col>";
 }
-def_string $string4 = "You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <$anyobj1><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <$anyobj0><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.";
+def_string $string4 = "You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <$string1><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <$string0><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.";
 def_string $string5 = "None";
 def_string $string6 = "";
 def_int $colour13 = ^white;
 def_int $int14 = 0;
 if (%slayer_unlock_storage = 1) {
-	$string4 = "You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <$anyobj1><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <$anyobj0><br>You may also <col=ffffff>store</col> your current task for later.";
+	$string4 = "You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <$string1><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <$string0><br>You may also <col=ffffff>store</col> your current task for later.";
 }
 if (%if2 = 98) {
 	if (%if1 > 0) {

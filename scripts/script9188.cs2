@@ -366,7 +366,7 @@ LABEL307:
    iload                  1
    iconst                 -1
    if_icmpne              LABEL335
-   jump                   LABEL444
+   jump                   LABEL442
 LABEL335:
    iload                  0
    iconst                 3
@@ -394,33 +394,31 @@ LABEL335:
    compare               
    iconst                 0
    if_icmpeq              LABEL362
-   jump                   LABEL379
+   jump                   LABEL377
 LABEL362:
    iconst                 1
-   sconst                 "View "
-   sconst                 "<col=ff9040>"
+   sconst                 "View <col=ff9040>"
    iconst                 105
    iconst                 115
    iconst                 108
    iload                  1
    enum                  
-   sconst                 "</col>"
-   sconst                 " guide"
-   join_string            5
+   sconst                 "</col> guide"
+   join_string            3
    cc_setop              
    iconst                 9190
    iload                  1
    sconst                 "i"
    cc_setonop            
-   jump                   LABEL444
-LABEL379:
+   jump                   LABEL442
+LABEL377:
    oload                  4
    sconst                 "quest"
    compare               
    iconst                 0
-   if_icmpeq              LABEL385
-   jump                   LABEL398
-LABEL385:
+   if_icmpeq              LABEL383
+   jump                   LABEL396
+LABEL383:
    sconst                 "<col=ff9040>"
    oload                  2
    sconst                 "</col>"
@@ -433,15 +431,15 @@ LABEL385:
    iload                  1
    sconst                 "i"
    cc_setonop            
-   jump                   LABEL444
-LABEL398:
+   jump                   LABEL442
+LABEL396:
    oload                  4
    sconst                 "tab"
    compare               
    iconst                 0
-   if_icmpeq              LABEL404
-   jump                   LABEL417
-LABEL404:
+   if_icmpeq              LABEL402
+   jump                   LABEL415
+LABEL402:
    sconst                 "<col=ff9040>"
    oload                  2
    sconst                 "</col>"
@@ -454,15 +452,15 @@ LABEL404:
    iload                  1
    sconst                 "i"
    cc_setonop            
-   jump                   LABEL444
-LABEL417:
+   jump                   LABEL442
+LABEL415:
    oload                  4
    sconst                 "side_panel"
    compare               
    iconst                 0
-   if_icmpeq              LABEL423
-   jump                   LABEL436
-LABEL423:
+   if_icmpeq              LABEL421
+   jump                   LABEL434
+LABEL421:
    sconst                 "<col=ff9040>"
    oload                  2
    sconst                 "</col>"
@@ -475,8 +473,8 @@ LABEL423:
    iload                  1
    sconst                 "i"
    cc_setonop            
-   jump                   LABEL444
-LABEL436:
+   jump                   LABEL442
+LABEL434:
    sconst                 "SG"
    sconst                 "Invalid link type '"
    oload                  4
@@ -485,5 +483,5 @@ LABEL436:
    sconst                 "'"
    join_string            5
    invoke                 6151
-LABEL444:
+LABEL442:
    return                

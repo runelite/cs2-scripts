@@ -1,115 +1,101 @@
 // 7245
-[proc,omnishop_main_buttons_setup](int $int0, string $string0)
-def_component $component1 = omnishop_main:button_1;
-def_component $component2 = omnishop_main:button_2;
-def_component $component3 = omnishop_main:button_3;
-def_component $component4 = omnishop_main:button_4;
-def_component $component5 = omnishop_main:note_button_layer;
-def_component $component6 = omnishop_main:buttons_info;
-def_component $component7 = omnishop_main:button_info_holder;
-def_graphic $graphic8 = p11_full;
+[proc,omnishop_main_buttons_setup](dbrow $dbrow0, int $int1, int $int2, string $string0, int $int3)
+def_component $component4 = omnishop_main:button_1;
+def_component $component5 = omnishop_main:button_2;
+def_component $component6 = omnishop_main:button_3;
+def_component $component7 = omnishop_main:button_4;
+def_component $component8 = omnishop_main:note_button_layer;
+def_component $component9 = omnishop_main:buttons_info;
+def_component $component10 = omnishop_main:button_info_holder;
+def_graphic $graphic11 = p11_full;
 switch_int (%varcint988) {
 	case 1 :
-		$graphic8 = verdana_11pt_regular;
+		$graphic11 = verdana_11pt_regular;
 	case 2 :
-		$graphic8 = verdana_11pt_regular;
+		$graphic11 = verdana_11pt_regular;
 	case 3 :
-		$graphic8 = verdana_13pt_regular;
+		$graphic11 = verdana_13pt_regular;
 }
-cc_deleteall($component6);
-if (%omnishop_selected_id = -1) {
-	if_sethide(true, $component1);
-	if_sethide(true, $component2);
-	if_sethide(true, $component3);
-	if_sethide(true, $component4);
-	return;
-}
-if ($int0 >= 1 | $int0 = -1) {
-	cc_create($component6, ^iftype_text, 0, false);
+cc_deleteall($component9);
+if ($int2 >= 1 | $int2 = -1) {
+	cc_create($component9, ^iftype_text, 0, false);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 18, ^setsize_minus, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_settextshadow(true);
-	cc_settextfont($graphic8);
+	cc_settextfont($graphic11);
 	cc_setcolour(0xff981f);
 	cc_settext($string0);
 }
-def_int $int9 = calc((if_getwidth($component6) - 18) / 4);
-def_int $int10 = calc(18 / 4);
-def_int $int11 = ~script2288;
-if ($int11 = 1) {
-	$int9 = calc((if_getwidth($component6) - 18) / 5);
-	$int10 = calc(18 / 5);
+def_int $int12 = calc((if_getwidth($component9) - 18) / 4);
+def_int $int13 = calc(18 / 4);
+def_int $int14 = ~script2288;
+if ($int14 = 1) {
+	$int12 = calc((if_getwidth($component9) - 18) / 5);
+	$int13 = calc(18 / 5);
 }
-if_setsize($int9, 18, ^setsize_abs, ^setsize_minus, $component1);
-if_setsize($int9, 18, ^setsize_abs, ^setsize_minus, $component2);
-if_setsize($int9, 18, ^setsize_abs, ^setsize_minus, $component3);
-if_setsize($int9, 18, ^setsize_abs, ^setsize_minus, $component4);
-def_int $int12 = 1;
-def_int $int13 = 0;
-if_sethide(false, $component1);
-if_sethide(false, $component2);
-if_sethide(false, $component3);
+if_setsize($int12, 18, ^setsize_abs, ^setsize_minus, $component4);
+if_setsize($int12, 18, ^setsize_abs, ^setsize_minus, $component5);
+if_setsize($int12, 18, ^setsize_abs, ^setsize_minus, $component6);
+if_setsize($int12, 18, ^setsize_abs, ^setsize_minus, $component7);
+def_string $string1 = "";
+def_int $int15 = 0;
 if_sethide(false, $component4);
-if ($int0 > 0 | $int0 = -1) {
-	if ($int0 = 1) {
-		if_setop(1, $string0, $component1);
+if_sethide(false, $component5);
+if_sethide(false, $component6);
+if_sethide(false, $component7);
+if ($int2 > 0 | $int2 = -1) {
+	if ($int2 = 1) {
+		$string1 = $string0;
 	} else {
-		if_setop(1, "<$string0>-1", $component1);
+		$string1 = "<$string0>-1";
 	}
+	~script9774($int3, $dbrow0, $int1, 1, $string1, "1", $component4);
 } else {
-	if_clearops($component1);
-	if_sethide(true, $component1);
-	$int13 = 4;
+	~script9773($component4);
+	$int15 = 4;
 }
-~script7139($component1, "1", $int12, 0);
-if ($int0 >= 5 | $int0 = -1) {
-	if_setop(1, "<$string0>-5", $component2);
+if ($int2 >= 5 | $int2 = -1) {
+	~script9774($int3, $dbrow0, $int1, 2, "<$string0>-5", "5", $component5);
 } else {
-	if_clearops($component2);
-	if_sethide(true, $component2);
-	if ($int13 = 0) {
-		$int13 = 1;
+	~script9773($component5);
+	if ($int15 = 0) {
+		$int15 = 1;
 	}
 }
-~script7139($component2, "5", $int12, 0);
-if ($int0 >= 10 | $int0 = -1) {
-	if_setop(1, "<$string0>-10", $component3);
+if ($int2 >= 10 | $int2 = -1) {
+	~script9774($int3, $dbrow0, $int1, 3, "<$string0>-10", "10", $component6);
 } else {
-	if_clearops($component3);
-	if_sethide(true, $component3);
-	if ($int13 = 0) {
-		$int13 = 2;
+	~script9773($component6);
+	if ($int15 = 0) {
+		$int15 = 2;
 	}
 }
-~script7139($component3, "10", $int12, 0);
-if ($int0 >= 50 | $int0 = -1) {
-	if_setop(1, "<$string0>-50", $component4);
+if ($int2 >= 50 | $int2 = -1) {
+	~script9774($int3, $dbrow0, $int1, 4, "<$string0>-50", "50", $component7);
 } else {
-	if_clearops($component4);
-	if_sethide(true, $component4);
-	if ($int13 = 0) {
-		$int13 = 3;
+	~script9773($component7);
+	if ($int15 = 0) {
+		$int15 = 3;
 	}
 }
-~script7139($component4, "50", $int12, 0);
-if ($int13 = 0) {
-	$int13 = 4;
+if ($int15 = 0) {
+	$int15 = 4;
 }
-if ($int11 = 1) {
-	$int13 = calc($int13 + 1);
-	if_setsize($int9, 18, ^setsize_abs, ^setsize_minus, $component5);
-	if_setsize(calc($int13 * $int9 + $int13 * $int10 + $int10), 0, ^setsize_abs, ^setsize_minus, $component7);
-	if_setposition($int10, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
-	if_setposition(calc($int9 * 1 + $int10 * 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
-	if_setposition(calc($int9 * 2 + $int10 * 3), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component3);
-	if_setposition(calc($int9 * 3 + $int10 * 4), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
-	if_setposition(calc($int9 * 4 + $int10 * 5), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component5);
-	~script2461($component5, 0);
+if ($int14 = 1) {
+	$int15 = calc($int15 + 1);
+	if_setsize($int12, 18, ^setsize_abs, ^setsize_minus, $component8);
+	if_setsize(calc($int15 * $int12 + $int15 * $int13 + $int13), 0, ^setsize_abs, ^setsize_minus, $component10);
+	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setposition(calc($int12 * 1 + $int13 * 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component5);
+	if_setposition(calc($int12 * 2 + $int13 * 3), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component6);
+	if_setposition(calc($int12 * 3 + $int13 * 4), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component7);
+	if_setposition(calc($int12 * 4 + $int13 * 5), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component8);
+	~script2461($component8, 0);
 } else {
-	if_setsize(calc($int13 * $int9 + $int13 * $int10 + $int10), 0, ^setsize_abs, ^setsize_minus, $component7);
-	if_setposition($int10, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
-	if_setposition(calc($int9 * 1 + $int10 * 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
-	if_setposition(calc($int9 * 2 + $int10 * 3), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component3);
-	if_setposition(calc($int9 * 3 + $int10 * 4), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setsize(calc($int15 * $int12 + $int15 * $int13 + $int13), 0, ^setsize_abs, ^setsize_minus, $component10);
+	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setposition(calc($int12 * 1 + $int13 * 2), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component5);
+	if_setposition(calc($int12 * 2 + $int13 * 3), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component6);
+	if_setposition(calc($int12 * 3 + $int13 * 4), 0, ^setpos_abs_left, ^setpos_abs_bottom, $component7);
 }

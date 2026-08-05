@@ -1,0 +1,20 @@
+// 9760
+[proc,script9760](component $component0, int $comsubid1, int $int2, enum $enum3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12)(int)
+if ($comsubid1 ! -1 & cc_find($component0, $comsubid1) = true | $comsubid1 = -1 & if_find($component0) = true) {
+	return(~script9761(
+		0 = $component0, 
+		1 = $int2, 
+		2 = $enum3, 
+		3 = $int4, 
+		4 = $int5, 
+		5 = $int6, 
+		6 = $int7, 
+		7 = $int8, 
+		8 = $int9, 
+		9 = $int10, 
+		10 = $int11, 
+		11 = $int12
+	));
+}
+~debug_mes_warn("Loading Icon", "Failed to find $build_layer");
+return($int2);

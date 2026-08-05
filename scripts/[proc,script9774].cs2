@@ -1,0 +1,12 @@
+// 9774
+[proc,script9774](int $int0, dbrow $dbrow1, int $int2, int $int3, string $string0, string $string1, component $component4)
+if_sethide(false, $component4);
+~script7139($component4, $string1, $int0, 0);
+if_setontimer(null, $component4);
+if ($int0 = 1) {
+	if_setop(1, $string0, $component4);
+	if_setonop("script9776($dbrow1, $int2, $int3, $string0, $string1, $component4)", $component4);
+} else {
+	if_clearops($component4);
+	if_setonop(null, $component4);
+}

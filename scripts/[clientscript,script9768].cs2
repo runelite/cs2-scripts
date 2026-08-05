@@ -1,0 +1,20 @@
+// 9768
+[clientscript,script9768](dbrow $dbrow0, inv $inv1, int $int2, obj $obj3, int $int4, int $opindex5)
+switch_int ($opindex5) {
+	case 1 :
+		if ($int4 = 1) {
+			~script9771($dbrow0, $inv1, -1);
+		} else {
+			~script9771($dbrow0, $inv1, $int2);
+		}
+	case 2 :
+		~script9769($dbrow0, $int2, 1);
+	case 3 :
+		~script9769($dbrow0, $int2, 2);
+	case 4 :
+		~script9769($dbrow0, $int2, 3);
+	case 5 :
+		~script9769($dbrow0, $int2, 4);
+	case 10 :
+		~script9770($obj3);
+}

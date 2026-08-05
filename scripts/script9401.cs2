@@ -58,7 +58,7 @@ LABEL46:
    get_varbit             3988
    iconst                 1
    if_icmpeq              LABEL50
-   jump                   LABEL77
+   jump                   LABEL75
 LABEL50:
    sconst                 "ID - "
    cc_getid              
@@ -70,29 +70,27 @@ LABEL50:
    iconst                 884848
    iconst                 0
    db_getfield           
-   sconst                 "]"
-   sconst                 "<br>"
-   join_string            6
+   sconst                 "]<br>"
+   join_string            5
    oload                  2
    append                
    ostore                 2
    oload                  2
-   sconst                 "<br>"
-   sconst                 "X: "
+   sconst                 "<br>X: "
    iload                  6
    tostring              
    sconst                 ", Y: "
    iload                  7
    tostring              
-   join_string            5
+   join_string            4
    append                
    ostore                 2
-LABEL77:
+LABEL75:
    iload                  3
    iconst                 1
-   if_icmpeq              LABEL81
-   jump                   LABEL93
-LABEL81:
+   if_icmpeq              LABEL79
+   jump                   LABEL91
+LABEL79:
    iconst                 9358
    iconst                 -2147483644
    cc_getid              
@@ -104,8 +102,8 @@ LABEL81:
    iconst                 512
    sconst                 "iiiiisii"
    cc_setonop            
-   jump                   LABEL103
-LABEL93:
+   jump                   LABEL101
+LABEL91:
    iconst                 9442
    iload                  2
    cc_getid              
@@ -116,5 +114,5 @@ LABEL93:
    iconst                 1
    sconst                 "iiisiii"
    cc_setonmouserepeat   
-LABEL103:
+LABEL101:
    return                

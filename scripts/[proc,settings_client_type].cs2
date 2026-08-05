@@ -4,6 +4,7 @@ if (~on_mobile = true) {
 	if_sethide(true, $component0);
 	return;
 }
+def_struct $struct7 = game_client_layout_2732;
 ~settings_side_dropdown_create(
 	0 = $component0, 
 	1 = $component1, 
@@ -12,6 +13,6 @@ if (~on_mobile = true) {
 	4 = $component4, 
 	5 = $component5, 
 	6 = $component6, 
-	7 = "Game client layout", 
-	8 = game_client_layout_2732
+	7 = struct_param($struct7, param_1086), 
+	8 = $struct7
 );

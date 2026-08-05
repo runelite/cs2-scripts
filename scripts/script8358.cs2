@@ -291,26 +291,25 @@ LABEL233:
    iload                  1
    iconst                 1
    if_icmpeq              LABEL267
-   jump                   LABEL508
+   jump                   LABEL507
 LABEL267:
    iload                  5
    iconst                 0
    if_icmpeq              LABEL271
-   jump                   LABEL508
+   jump                   LABEL507
 LABEL271:
    sconst                 "Voters' rankings for "
    sconst                 "<col=ef1020>"
    oload                  0
-   sconst                 "</col>"
-   sconst                 ":"
-   join_string            5
+   sconst                 "</col>:"
+   join_string            4
    ostore                 3
-LABEL278:
+LABEL277:
    iload                  14
    iload                  4
-   if_icmplt              LABEL282
-   jump                   LABEL348
-LABEL282:
+   if_icmplt              LABEL281
+   jump                   LABEL347
+LABEL281:
    iload                  0
    iload                  4
    multiply              
@@ -325,9 +324,9 @@ LABEL282:
    iload                  8
    get_array_int          1
    iconst                 0
-   if_icmpgt              LABEL298
-   jump                   LABEL332
-LABEL298:
+   if_icmpgt              LABEL297
+   jump                   LABEL331
+LABEL297:
    oload                  3
    sconst                 "<br>"
    iload                  14
@@ -356,14 +355,14 @@ LABEL298:
    ostore                 3
    iload                  6
    iload                  14
-   if_icmpeq              LABEL328
-   jump                   LABEL332
-LABEL328:
+   if_icmpeq              LABEL327
+   jump                   LABEL331
+LABEL327:
    oload                  3
    sconst                 " - your selection"
    append                
    ostore                 3
-LABEL332:
+LABEL331:
    iconst                 3
    invoke                 8363
    107                   
@@ -371,28 +370,28 @@ LABEL332:
    cc_sethide            
    iload                  10
    iconst                 -1
-   if_icmpeq              LABEL341
-   jump                   LABEL343
-LABEL341:
+   if_icmpeq              LABEL340
+   jump                   LABEL342
+LABEL340:
    cc_getid              
    istore                 10
-LABEL343:
+LABEL342:
    iload                  14
    iconst                 1
    add                   
    istore                 14
-   jump                   LABEL278
-LABEL348:
+   jump                   LABEL277
+LABEL347:
    iload                  9
    iconst                 0
-   if_icmpgt              LABEL352
-   jump                   LABEL508
-LABEL352:
+   if_icmpgt              LABEL351
+   jump                   LABEL507
+LABEL351:
    iload                  14
    iconst                 0
-   if_icmpgt              LABEL356
-   jump                   LABEL448
-LABEL356:
+   if_icmpgt              LABEL355
+   jump                   LABEL447
+LABEL355:
    iload                  14
    iconst                 1
    sub                   
@@ -406,18 +405,18 @@ LABEL356:
    istore                 13
    iload                  13
    iconst                 0
-   if_icmpgt              LABEL371
-   jump                   LABEL447
-LABEL371:
+   if_icmpgt              LABEL370
+   jump                   LABEL446
+LABEL370:
    cc_getlayer           
    iload                  10
    iload                  14
    add                   
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL379
-   jump                   LABEL447
-LABEL379:
+   if_icmpeq              LABEL378
+   jump                   LABEL446
+LABEL378:
    iconst                 0
    cc_sethide            
    iconst                 255
@@ -455,9 +454,9 @@ LABEL379:
    cc_setsize            
    iload                  6
    iload                  14
-   if_icmpeq              LABEL418
-   jump                   LABEL447
-LABEL418:
+   if_icmpeq              LABEL417
+   jump                   LABEL446
+LABEL417:
    iconst                 5
    invoke                 8363
    107                   
@@ -487,9 +486,9 @@ LABEL418:
    iconst                 4
    iconst                 1
    cc_setposition        
+LABEL446:
+   jump                   LABEL351
 LABEL447:
-   jump                   LABEL352
-LABEL448:
    iconst                 5
    invoke                 8363
    107                   
@@ -508,9 +507,9 @@ LABEL448:
    iload                  7
    cc_find                1
    iconst                 1
-   if_icmpeq              LABEL468
-   jump                   LABEL508
-LABEL468:
+   if_icmpeq              LABEL467
+   jump                   LABEL507
+LABEL467:
    iconst                 244
    iconst                 -2147483645
    iconst                 -2147483643
@@ -522,9 +521,9 @@ LABEL468:
    iconst                 2
    mod                   
    iconst                 0
-   if_icmpeq              LABEL481
-   jump                   LABEL489
-LABEL481:
+   if_icmpeq              LABEL480
+   jump                   LABEL488
+LABEL480:
    iconst                 244
    iconst                 -2147483645
    iconst                 -2147483643
@@ -532,8 +531,8 @@ LABEL481:
    iconst                 -1
    sconst                 "iiii"
    cc_setonmouseleave     1
-   jump                   LABEL496
-LABEL489:
+   jump                   LABEL495
+LABEL488:
    iconst                 244
    iconst                 -2147483645
    iconst                 -2147483643
@@ -541,7 +540,7 @@ LABEL489:
    iconst                 -1
    sconst                 "iiii"
    cc_setonmouseleave     1
-LABEL496:
+LABEL495:
    iconst                 1
    sconst                 "Details for"
    cc_setop               1
@@ -554,7 +553,7 @@ LABEL496:
    oload                  3
    sconst                 "s"
    cc_setonop             1
-LABEL508:
+LABEL507:
    204                   
    pop_int               
    204                   

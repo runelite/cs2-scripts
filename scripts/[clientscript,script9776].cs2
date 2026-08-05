@@ -1,0 +1,7 @@
+// 9776
+[clientscript,script9776](dbrow $dbrow0, int $int1, int $int2, string $string0, string $string1, component $component3)
+sound_synth(interface_select1, 1, 0);
+~script9774(0, $dbrow0, $int1, $int2, $string0, $string1, $component3);
+def_int $int4 = calc(50 / 3);
+if_setontimer("script9775(calc(clientclock + $int4), 1, $dbrow0, $int1, $int2, $string0, $string1, $component3)", $component3);
+~script9769($dbrow0, $int1, $int2);

@@ -1,25 +1,15 @@
 // 7140
-[clientscript,omnishop_main_init](dbrow $dbrow0, inv $inv1)
-if (%omnishop_lastshop ! $dbrow0) {
+[clientscript,omnishop_main_init](dbrow $dbrow0, inv $inv1, dbrow $dbrow2)
+if ($dbrow2 ! $dbrow0) {
 	%omnishop_selected_id = -1;
 	%omnishop_selected_side_id = -1;
 	%omnishop_filter = 0;
 }
-def_component $component2 = omnishop_main:infinity;
-if_setontimer("responsive_interface_scaler($component2, -1)", $component2);
-if_setonresize("omnishop_main_setup($dbrow0, $inv1, 1)", $component2);
+def_component $component3 = omnishop_main:infinity;
+if_setontimer("responsive_interface_scaler($component3, -1)", $component3);
+if_setonresize("omnishop_main_setup($dbrow0, $inv1, 1)", $component3);
 if ($inv1 ! null) {
-	if_setoninvtransmit("omnishop_main_setup($dbrow0, $inv1, 1){$inv1}", $component2);
+	if_setoninvtransmit("omnishop_main_setup($dbrow0, $inv1, 1){$inv1}", $component3);
 }
-if_setonvartransmit("omnishop_main_setup($dbrow0, $inv1, 0){omnishop_redraw, omnishop_selected_id, omnishop_selected_side_id}", $component2);
-~omnishop_main_info_setup(
-	0 = $dbrow0, 
-	1 = $inv1, 
-	2 = 0, 
-	3 = 0, 
-	4 = 0, 
-	5 = -1, 
-	6 = "", 
-	7 = 1, 
-	8 = -1
-);
+if_setonvartransmit("omnishop_main_setup($dbrow0, $inv1, 0){omnishop_redraw, omnishop_selected_id, omnishop_selected_side_id}", $component3);
+~omnishop_main_info_setup($dbrow0, $inv1, %omnishop_selected_id, "", 1, 0);

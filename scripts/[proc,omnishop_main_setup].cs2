@@ -16,7 +16,7 @@ def_component $component12 = omnishop_main:points_layer;
 def_component $component13 = omnishop_main:info_layer;
 def_component $component14 = omnishop_main:buttons_info;
 def_component $component15 = omnishop_main:info;
-def_int $int16 = 53674016;
+def_int $int16 = 53674020;
 def_component $component17 = omnishop_main:points_layer_1;
 def_component $component18 = omnishop_main:filter_layer;
 def_component $component19 = omnishop_main:help_button_layer;
@@ -93,3 +93,6 @@ if_setposition(0, calc($int26 + $int27), ^setpos_abs_centre, ^setpos_abs_top, $c
 if_setsize(calc(2 * $int26), $int21, ^setsize_minus, ^setsize_abs, $component14);
 if_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_bottom, $component14);
 if_callonresize($component15);
+if (%omnishop_selected_id >= 0) {
+	~omnishop_main_info_setup($dbrow0, $inv1, %omnishop_selected_id, "", 1, 0);
+}

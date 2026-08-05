@@ -53,10 +53,7 @@ LABEL7:
    iload                  4
    iload                  5
    iload                  5
-   sconst                 "Toggled"
-   sconst                 "<br>"
-   sconst                 " "
-   join_string            3
+   sconst                 "Toggled<br> "
    invoke                 9131
    istore                 1
    iload                  0
@@ -71,10 +68,7 @@ LABEL7:
    iload                  4
    iload                  5
    iload                  5
-   sconst                 " "
-   sconst                 "<br>"
-   sconst                 "Disabled"
-   join_string            3
+   sconst                 " <br>Disabled"
    invoke                 9131
    istore                 1
    iload                  0
@@ -89,10 +83,7 @@ LABEL7:
    iload                  4
    iload                  5
    iload                  5
-   sconst                 "Toggled"
-   sconst                 "<br>"
-   sconst                 "Disabled"
-   join_string            3
+   sconst                 "Toggled<br>Disabled"
    invoke                 9131
    istore                 1
    iload                  4
@@ -155,12 +146,12 @@ LABEL7:
    istore                 16
    sconst                 ""
    ostore                 1
-LABEL149:
+LABEL140:
    iload                  9
    iload                  11
-   if_icmplt              LABEL153
-   jump                   LABEL334
-LABEL153:
+   if_icmplt              LABEL144
+   jump                   LABEL322
+LABEL144:
    iconst                 0
    istore                 3
    iconst                 0
@@ -176,9 +167,9 @@ LABEL153:
    istore                 8
    iload                  8
    iconst                 6374
-   if_icmpeq              LABEL170
-   jump                   LABEL195
-LABEL170:
+   if_icmpeq              LABEL161
+   jump                   LABEL186
+LABEL161:
    iconst                 4
    iload                  1
    106                   
@@ -203,79 +194,79 @@ LABEL170:
    istore                 4
    204                   
    pop_int               
-   jump                   LABEL329
-LABEL195:
+   jump                   LABEL317
+LABEL186:
    iload                  12
    iconst                 4
-   if_icmplt              LABEL199
-   jump                   LABEL298
-LABEL199:
+   if_icmplt              LABEL190
+   jump                   LABEL289
+LABEL190:
    iconst                 0
    istore                 13
    iload                  12
    switch                
-      0: LABEL204
-      1: LABEL211
-      2: LABEL228
-      3: LABEL235
-   jump                   LABEL247
-LABEL204:
+      0: LABEL195
+      1: LABEL202
+      2: LABEL219
+      3: LABEL226
+   jump                   LABEL238
+LABEL195:
    iconst                 1
    iconst                 0
    iconst                 0
    istore                 15
    istore                 14
    istore                 13
-   jump                   LABEL247
-LABEL211:
+   jump                   LABEL238
+LABEL202:
    iload                  16
    iconst                 0
-   if_icmpeq              LABEL215
-   jump                   LABEL227
-LABEL215:
+   if_icmpeq              LABEL206
+   jump                   LABEL218
+LABEL206:
    iload                  8
    iconst                 2328
    struct_param          
    iconst                 -1
-   if_icmpne              LABEL221
-   jump                   LABEL227
-LABEL221:
+   if_icmpne              LABEL212
+   jump                   LABEL218
+LABEL212:
    iconst                 1
    iconst                 1
    iconst                 0
    istore                 15
    istore                 14
    istore                 13
-LABEL227:
-   jump                   LABEL247
-LABEL228:
+LABEL218:
+   jump                   LABEL238
+LABEL219:
    iconst                 1
    iconst                 0
    iconst                 1
    istore                 15
    istore                 14
    istore                 13
-   jump                   LABEL247
-LABEL235:
+   jump                   LABEL238
+LABEL226:
    iload                  8
    iconst                 2328
    struct_param          
    iconst                 -1
-   if_icmpne              LABEL241
-   jump                   LABEL247
-LABEL241:
+   if_icmpne              LABEL232
+   jump                   LABEL238
+LABEL232:
    iconst                 1
    iconst                 1
    iconst                 1
    istore                 15
    istore                 14
    istore                 13
-LABEL247:
+LABEL238:
    iload                  13
    iconst                 1
-   if_icmpeq              LABEL251
-   jump                   LABEL287
-LABEL251:
+   if_icmpeq              LABEL242
+   jump                   LABEL278
+LABEL242:
    iconst                 -1
    iload                  1
    iload                  3
@@ -295,14 +286,14 @@ LABEL251:
    invoke                 8190
    iload                  14
    iconst                 1
-   if_icmpeq              LABEL272
-   jump                   LABEL285
-LABEL272:
+   if_icmpeq              LABEL263
+   jump                   LABEL276
+LABEL263:
    iload                  15
    iconst                 0
-   if_icmpeq              LABEL276
-   jump                   LABEL285
-LABEL276:
+   if_icmpeq              LABEL267
+   jump                   LABEL276
+LABEL267:
    iconst                 1
    sconst                 "Toggle"
    cc_setop              
@@ -312,10 +303,10 @@ LABEL276:
    iconst                 0
    sconst                 "iii"
    cc_setonop            
-LABEL285:
+LABEL276:
    204                   
    pop_int               
-LABEL287:
+LABEL278:
    iload                  3
    iload                  5
    add                   
@@ -326,17 +317,14 @@ LABEL287:
    iconst                 1
    add                   
    istore                 12
-   jump                   LABEL195
-LABEL298:
+   jump                   LABEL186
+LABEL289:
    sconst                 "~cc_add_button($com,$id,$x,$y,^setpos_abs_left,^setpos_abs_top,$width,$height,^setsize_abs,^setsize_abs,"
    iload                  8
    iconst                 2516
    struct_param          
-   sconst                 ",$text);"
-   sconst                 "<br>"
-   sconst                 "~cc_set_button_states($toggled,$disabled);"
-   sconst                 "<br>"
-   join_string            6
+   sconst                 ",$text);<br>~cc_set_button_states($toggled,$disabled);<br>"
+   join_string            3
    ostore                 1
    iconst                 -1
    iload                  1
@@ -359,13 +347,13 @@ LABEL298:
    iload                  2
    add                   
    istore                 4
-LABEL329:
+LABEL317:
    iload                  9
    iconst                 1
    add                   
    istore                 9
-   jump                   LABEL149
-LABEL334:
+   jump                   LABEL140
+LABEL322:
    iconst                 0
    istore                 3
    iconst                 48
@@ -395,32 +383,16 @@ LABEL334:
    8022                  
    ostore                 2
    iconst                 0
-   sconst                 "Option:"
-   sconst                 "<br>"
-   sconst                 "<col=ff0000>"
-   sconst                 "First"
-   join_string            4
+   sconst                 "Option:<br><col=ff0000>First"
    set_array_int          2
    iconst                 1
-   sconst                 "Option:"
-   sconst                 "<br>"
-   sconst                 "<col=ffff00>"
-   sconst                 "Second"
-   join_string            4
+   sconst                 "Option:<br><col=ffff00>Second"
    set_array_int          2
    iconst                 2
-   sconst                 "Option:"
-   sconst                 "<br>"
-   sconst                 "<col=00ff00>"
-   sconst                 "Third"
-   join_string            4
+   sconst                 "Option:<br><col=00ff00>Third"
    set_array_int          2
    iconst                 3
-   sconst                 "Option:"
-   sconst                 "<br>"
-   sconst                 "<col=0000ff>"
-   sconst                 "Fourth"
-   join_string            4
+   sconst                 "Option:<br><col=0000ff>Fourth"
    set_array_int          2
    iconst                 0
    oload                  2

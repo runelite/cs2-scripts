@@ -1,0 +1,19 @@
+// 9759
+[proc,script9759](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~settings_side_dropdown_close($component2, $component5, $component0, $component1);
+if (~script9751 < 2) {
+	if_sethide(true, $component0);
+	return;
+}
+def_struct $struct7 = struct_1205;
+~settings_side_dropdown_create(
+	0 = $component0, 
+	1 = $component1, 
+	2 = $component2, 
+	3 = $component3, 
+	4 = $component4, 
+	5 = $component5, 
+	6 = $component6, 
+	7 = struct_param($struct7, param_1086), 
+	8 = $struct7
+);
