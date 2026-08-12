@@ -55,7 +55,7 @@ $int10 = $int4;
 if (cc_find($component0, $comsubid8) = true) {
 	cc_setonstattransmit("account_summary_update_combatlevel(event_com, event_comsubid, $comsubid9, $int7, 0, $int11, p11_full){attack, strength, defence, hitpoints, prayer, magic, ranged}");
 }
-if ($int12 = 2277) {
+if ($int12 = calc(24 * 99)) {
 	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950(
 		0 = $component0, 
 		1 = $component1, 
@@ -93,7 +93,10 @@ if (cc_find($component0, $comsubid8) = true) {
 }
 $int4 = 0;
 $int7 = 26;
-if ($int13 = 4 & $int14 = 600000000) {
+def_int $int17 = 0;
+def_int $int18 = 0;
+$int17, $int18 = ~script3931;
+if ($int13 = $int17 & $int14 = $int18) {
 	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949(
 		0 = $component0, 
 		1 = $component1, 
