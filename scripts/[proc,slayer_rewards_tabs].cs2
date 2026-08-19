@@ -1,105 +1,191 @@
 // 407
-[proc,slayer_rewards_tabs](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-cc_deleteall($component0);
-def_int $int7 = 0;
+[proc,slayer_rewards_tabs](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+cc_deleteall($component1);
 def_int $int8 = 0;
-$int7, $int8 = ~slayer_rewards_tab(
+def_int $int9 = 0;
+$int8, $int9 = ~slayer_rewards_tab(
 	0 = $component0, 
 	1 = $component1, 
-	2 = "Unlock", 
-	3 = $int7, 
+	2 = $component2, 
+	3 = "Unlock", 
 	4 = $int8, 
-	5 = $component1, 
+	5 = $int9, 
 	6 = $component2, 
 	7 = $component3, 
 	8 = $component4, 
 	9 = $component5, 
-	10 = $component6
+	10 = $component6, 
+	11 = $component7
 );
-$int7, $int8 = ~slayer_rewards_tab(
+$int8, $int9 = ~slayer_rewards_tab(
 	0 = $component0, 
-	1 = $component2, 
-	2 = "Extend", 
-	3 = $int7, 
+	1 = $component1, 
+	2 = $component3, 
+	3 = "Extend", 
 	4 = $int8, 
-	5 = $component1, 
+	5 = $int9, 
 	6 = $component2, 
 	7 = $component3, 
 	8 = $component4, 
 	9 = $component5, 
-	10 = $component6
+	10 = $component6, 
+	11 = $component7
 );
-$int7, $int8 = ~slayer_rewards_tab(
+$int8, $int9 = ~slayer_rewards_tab(
 	0 = $component0, 
-	1 = $component3, 
-	2 = "Buy", 
-	3 = $int7, 
+	1 = $component1, 
+	2 = $component4, 
+	3 = "Buy", 
 	4 = $int8, 
-	5 = $component1, 
+	5 = $int9, 
 	6 = $component2, 
 	7 = $component3, 
 	8 = $component4, 
 	9 = $component5, 
-	10 = $component6
+	10 = $component6, 
+	11 = $component7
 );
-$int7, $int8 = ~slayer_rewards_tab(
+$int8, $int9 = ~slayer_rewards_tab(
 	0 = $component0, 
-	1 = $component4, 
-	2 = "Tasks", 
-	3 = $int7, 
+	1 = $component1, 
+	2 = $component5, 
+	3 = "Tasks", 
 	4 = $int8, 
-	5 = $component1, 
+	5 = $int9, 
 	6 = $component2, 
 	7 = $component3, 
 	8 = $component4, 
 	9 = $component5, 
-	10 = $component6
+	10 = $component6, 
+	11 = $component7
 );
-$int7, $int8 = ~slayer_rewards_tab(
+$int8, $int9 = ~slayer_rewards_tab(
 	0 = $component0, 
-	1 = $component5, 
-	2 = "Cosmetics", 
-	3 = $int7, 
+	1 = $component1, 
+	2 = $component6, 
+	3 = "Cosmetics", 
 	4 = $int8, 
-	5 = $component1, 
+	5 = $int9, 
 	6 = $component2, 
 	7 = $component3, 
 	8 = $component4, 
 	9 = $component5, 
-	10 = $component6
+	10 = $component6, 
+	11 = $component7
 );
-cc_create($component0, ^iftype_text, $int7, false);
+cc_create($component1, ^iftype_text, $int8, false);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
-cc_setsize($int8, 0, ^setsize_minus, ^setsize_minus);
+cc_setsize($int9, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 ~slayer_rewards_setpoints;
 cc_setonvartransmit("slayer_rewards_setpoints(event_com, event_comsubid){slayer_killerwatt_var}");
-if_sethide(false, $component6);
-if ($component6 ! $component1) {
-	if_sethide(true, $component1);
+if_sethide(false, $component7);
+if ($component7 ! $component2) {
+	if_sethide(true, $component2);
 } else {
 	%varcint1260 = 0;
 }
-if ($component6 ! $component2) {
-	if_sethide(true, $component2);
+if ($component7 ! $component3) {
+	if_sethide(true, $component3);
 } else {
 	%varcint1260 = 1;
 }
-if ($component6 ! $component3) {
-	if_sethide(true, $component3);
+if ($component7 ! $component4) {
+	if_sethide(true, $component4);
 } else {
 	%varcint1260 = 2;
 }
-if ($component6 ! $component4) {
-	if_sethide(true, $component4);
+if ($component7 ! $component5) {
+	if_sethide(true, $component5);
 } else {
 	%varcint1260 = 3;
 }
-if ($component6 ! $component5) {
-	if_sethide(true, $component5);
+if ($component7 ! $component6) {
+	if_sethide(true, $component6);
 } else {
 	%varcint1260 = 4;
+}
+def_component $component10 = null;
+def_component $component11 = null;
+def_component $component12 = slayer_rewards:main;
+def_component $component13 = slayer_rewards:confirm;
+def_component $component14 = slayer_rewards:confirm_info;
+def_component $component15 = slayer_rewards:confirm_button;
+def_component $component16 = slayer_rewards:back_button;
+switch_int (%varcint1260) {
+	case 0 :
+		$component10 = slayer_rewards:unlock_contents;
+		$component11 = slayer_rewards:unlock_scrollbar;
+		~slayer_rewards_unlock_draw(
+			0 = $component0, 
+			1 = 0, 
+			2 = $component10, 
+			3 = $component11, 
+			4 = $component12, 
+			5 = $component13, 
+			6 = $component14, 
+			7 = $component15, 
+			8 = $component16
+		);
+	case 1 :
+		$component10 = slayer_rewards:extend_contents;
+		$component11 = slayer_rewards:extend_scrollbar;
+		~slayer_rewards_unlock_draw(
+			0 = $component0, 
+			1 = 1, 
+			2 = $component10, 
+			3 = $component11, 
+			4 = $component12, 
+			5 = $component13, 
+			6 = $component14, 
+			7 = $component15, 
+			8 = $component16
+		);
+	case 2 :
+		$component10 = slayer_rewards:buy_contents;
+		$component11 = slayer_rewards:buy_scrollbar;
+		~script9789(
+			0 = $component0, 
+			1 = $component10, 
+			2 = slayer_rewards:buy_items, 
+			3 = slayer_rewards:buy_prices, 
+			4 = $component11, 
+			5 = $component12, 
+			6 = $component13, 
+			7 = $component14, 
+			8 = $component15, 
+			9 = $component16
+		);
+	case 3 :
+		$component10 = slayer_rewards:tasks_content_upper;
+		$component11 = slayer_rewards:tasks_scrollbar;
+		~script9736(
+			0 = $component0, 
+			1 = $component10, 
+			2 = slayer_rewards:tasks_content_scrollable, 
+			3 = $component11, 
+			4 = slayer_rewards:view_tasks, 
+			5 = $component12, 
+			6 = $component13, 
+			7 = $component14, 
+			8 = $component15, 
+			9 = $component16
+		);
+	case 4 :
+		$component10 = slayer_rewards:rewards_contents;
+		$component11 = slayer_rewards:rewards_scrollbar;
+		~slayer_rewards_unlock_draw(
+			0 = $component0, 
+			1 = 2, 
+			2 = $component10, 
+			3 = $component11, 
+			4 = $component12, 
+			5 = $component13, 
+			6 = $component14, 
+			7 = $component15, 
+			8 = $component16
+		);
 }

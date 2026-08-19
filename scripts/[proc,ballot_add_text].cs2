@@ -6,7 +6,7 @@ def_int $int7 = 0;
 if ($int1 > 0) {
 	$int7 = calc($int1 + 12);
 }
-cc_createchild(^iftype_text, ~script8363);
+cc_create_child(^iftype_text, ~script8363);
 cc_setsize($int7, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0xff981f);
@@ -16,7 +16,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 def_int $int8 = -1;
 if ($int1 > 0 & $int2 > 0 & string_length($string1) > 0) {
-	cc_createsibling(^iftype_graphic, ~script8363);
+	cc_create_sibling(^iftype_graphic, ~script8363);
 	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);
 	cc_sethttpsprite($string1);

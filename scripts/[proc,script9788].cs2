@@ -1,0 +1,100 @@
+// 9788
+[proc,script9788](component $com_slayer_rewards_universe0, component $com_slayer_rewards_tabs1, component $com_slayer_rewards_unlock2, component $com_slayer_rewards_extend3, component $com_slayer_rewards_buy4, component $com_slayer_rewards_tasks5, component $com_slayer_rewards_rewards6, component $com_slayer_rewards_main7, component $com_slayer_rewards_confirm8)
+def_component $component9 = null;
+def_component $component10 = null;
+def_component $component11 = slayer_rewards:confirm_info;
+def_component $component12 = slayer_rewards:confirm_button;
+def_component $component13 = slayer_rewards:back_button;
+if (%varcint1260 ! 0) {
+	$component9 = slayer_rewards:unlock_contents;
+	$component10 = slayer_rewards:unlock_scrollbar;
+	~slayer_rewards_unlock_draw(
+		0 = $com_slayer_rewards_universe0, 
+		1 = 0, 
+		2 = $component9, 
+		3 = $component10, 
+		4 = $com_slayer_rewards_main7, 
+		5 = $com_slayer_rewards_confirm8, 
+		6 = $component11, 
+		7 = $component12, 
+		8 = $component13
+	);
+}
+if (%varcint1260 ! 1) {
+	$component9 = slayer_rewards:extend_contents;
+	$component10 = slayer_rewards:extend_scrollbar;
+	~slayer_rewards_unlock_draw(
+		0 = $com_slayer_rewards_universe0, 
+		1 = 1, 
+		2 = $component9, 
+		3 = $component10, 
+		4 = $com_slayer_rewards_main7, 
+		5 = $com_slayer_rewards_confirm8, 
+		6 = $component11, 
+		7 = $component12, 
+		8 = $component13
+	);
+}
+if (%varcint1260 ! 2) {
+	$component9 = slayer_rewards:buy_contents;
+	$component10 = slayer_rewards:buy_scrollbar;
+	~script9789(
+		0 = $com_slayer_rewards_universe0, 
+		1 = $component9, 
+		2 = slayer_rewards:buy_items, 
+		3 = slayer_rewards:buy_prices, 
+		4 = $component10, 
+		5 = $com_slayer_rewards_main7, 
+		6 = $com_slayer_rewards_confirm8, 
+		7 = $component11, 
+		8 = $component12, 
+		9 = $component13
+	);
+}
+if (%varcint1260 ! 3) {
+	$component9 = slayer_rewards:tasks_content_upper;
+	$component10 = slayer_rewards:tasks_scrollbar;
+	~script9736(
+		0 = $com_slayer_rewards_universe0, 
+		1 = $component9, 
+		2 = slayer_rewards:tasks_content_scrollable, 
+		3 = $component10, 
+		4 = slayer_rewards:view_tasks, 
+		5 = $com_slayer_rewards_main7, 
+		6 = $com_slayer_rewards_confirm8, 
+		7 = $component11, 
+		8 = $component12, 
+		9 = $component13
+	);
+}
+if (%varcint1260 ! 4) {
+	$component9 = slayer_rewards:rewards_contents;
+	$component10 = slayer_rewards:rewards_scrollbar;
+	~slayer_rewards_unlock_draw(
+		0 = $com_slayer_rewards_universe0, 
+		1 = 2, 
+		2 = $component9, 
+		3 = $component10, 
+		4 = $com_slayer_rewards_main7, 
+		5 = $com_slayer_rewards_confirm8, 
+		6 = $component11, 
+		7 = $component12, 
+		8 = $component13
+	);
+}
+switch_int (%varcint1260) {
+	case 0 :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_unlock2);
+	case 1 :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_extend3);
+	case 2 :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_buy4);
+	case 3 :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_tasks5);
+	case 4 :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_rewards6);
+	case default :
+		~slayer_rewards_tabs($com_slayer_rewards_universe0, $com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_unlock2);
+}
+if_sethide(false, $com_slayer_rewards_main7);
+if_sethide(true, $com_slayer_rewards_confirm8);

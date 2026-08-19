@@ -1,16 +1,16 @@
 // 413
-[proc,script413](int $int0, string $string0, component $com_slayer_rewards_main1, component $com_slayer_rewards_confirm2, component $com_slayer_rewards_confirm_info3, component $com_slayer_rewards_confirm_button4, component $com_slayer_rewards_back_button5)
+[proc,script413](int $int0, string $string0, component $component1, component $component2, component $component3, component $component4, component $component5)
 def_dbrow $dbrow6 = ~script8051($int0);
 if (~script8048($int0) = 1) {
 	switch_int ($int0) {
 		case 35 :
-			~script6068(%slayer_toggleoff_superiormobs, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
+			~script6068(%slayer_toggleoff_superiormobs, $int0, $string0, $component1, $component2, $component3, $component4, $component5);
 			return;
 		case 43 :
-			~script6068(%slayer_toggleoff_fossilwyvernblock, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
+			~script6068(%slayer_toggleoff_fossilwyvernblock, $int0, $string0, $component1, $component2, $component3, $component4, $component5);
 			return;
 		case 53 :
-			~script6068(%slayer_toggleoff_longerrevenants, $int0, $string0, $com_slayer_rewards_main1, $com_slayer_rewards_confirm2, $com_slayer_rewards_confirm_info3, $com_slayer_rewards_confirm_button4, $com_slayer_rewards_back_button5);
+			~script6068(%slayer_toggleoff_longerrevenants, $int0, $string0, $component1, $component2, $component3, $component4, $component5);
 			return;
 		case default :
 			cc_setgraphic("radio_buttons,6");
@@ -20,11 +20,11 @@ if (~script8048($int0) = 1) {
 					0 = 0, 
 					1 = $int0, 
 					2 = $string0, 
-					3 = $com_slayer_rewards_main1, 
-					4 = $com_slayer_rewards_confirm2, 
-					5 = $com_slayer_rewards_confirm_info3, 
-					6 = $com_slayer_rewards_confirm_button4, 
-					7 = $com_slayer_rewards_back_button5, 
+					3 = $component1, 
+					4 = $component2, 
+					5 = $component3, 
+					6 = $component4, 
+					7 = $component5, 
 					8 = -1
 				)");
 			} else {
@@ -39,11 +39,11 @@ if (~script8048($int0) = 1) {
 		0 = 1, 
 		1 = $int0, 
 		2 = $string0, 
-		3 = $com_slayer_rewards_main1, 
-		4 = $com_slayer_rewards_confirm2, 
-		5 = $com_slayer_rewards_confirm_info3, 
-		6 = $com_slayer_rewards_confirm_button4, 
-		7 = $com_slayer_rewards_back_button5, 
+		3 = $component1, 
+		4 = $component2, 
+		5 = $component3, 
+		6 = $component4, 
+		7 = $component5, 
 		8 = -1
 	)");
 }

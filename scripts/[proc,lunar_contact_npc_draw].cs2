@@ -26,13 +26,13 @@ while ($dbrow3 ! null) {
 	cc_setonop("script9732($int13, event_op)");
 	~script9734($int13);
 	$int12 = calc($int12 + 1);
-	cc_createchild(^iftype_model, $int12);
+	cc_create_child(^iftype_model, $int12);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setmodel($model4);
 	cc_setmodelangle(0, 0, 0, $int6, 0, $int5);
 	$int12 = calc($int12 + 1);
-	cc_createsibling(^iftype_text, $int12);
+	cc_create_sibling(^iftype_text, $int12);
 	cc_setsize($int7, $int9, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_settext($string0);

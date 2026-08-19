@@ -23,7 +23,7 @@ if (cc_find($component6, $comsubid8) = false) {
 	cc_setontimer("ui_highlight_lifetime($int0, $int1, $component6, $comsubid8)");
 	if ($int3 ! -1 & $int3 >= 0 & .cc_find($component2, $int3) = true | .if_find($component2) = true) {
 		cc_setparam(param_2374, ~script8490($component6), int);
-		cc_createchild(0, cc_param(param_2374));
+		cc_create_child(0, cc_param(param_2374));
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		~ui_highlight_init_style($int4, cc_getlayer, cc_getid, $component6, $comsubid8, $component2, $int3);

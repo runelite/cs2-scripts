@@ -1,5 +1,5 @@
 // 414
-[clientscript,slayer_rewards_unlock_confirm](int $int0, int $int1, string $string0, component $com_slayer_rewards_main2, component $com_slayer_rewards_confirm3, component $com_slayer_rewards_confirm_info4, component $com_slayer_rewards_confirm_button5, component $com_slayer_rewards_back_button6, int $int7)
+[clientscript,slayer_rewards_unlock_confirm](int $int0, int $int1, string $string0, component $component2, component $component3, component $component4, component $component5, component $component6, int $int7)
 def_string $string1 = "Extend everything";
 def_string $string2 = "Confirm";
 def_string $string3 = "";
@@ -17,11 +17,11 @@ if ($int10 = 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if_sethide(true, $com_slayer_rewards_main2);
-if_sethide(false, $com_slayer_rewards_confirm3);
-cc_deleteall($com_slayer_rewards_confirm_button5);
-if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $com_slayer_rewards_back_button6);
-if_sethide(false, $com_slayer_rewards_confirm_button5);
+if_sethide(true, $component2);
+if_sethide(false, $component3);
+cc_deleteall($component5);
+if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $component6);
+if_sethide(false, $component5);
 if ($int1 = calc(66 + 9)) {
 	$string3 = "<u=ff981f><$string1></u><br><br>All task extensions will be unlocked. You can re-lock them individually later, but will not receive a refund.<br><br><col=ff0000>Pay <tostring($int7)> points?</col>";
 } else if ($int1 = 35 & $int0 = 0) {
@@ -52,20 +52,20 @@ if ($int1 = calc(66 + 9)) {
 		$string3 = "<$string3><br><br><col=ff0000>You will not get your points back.</col>";
 	}
 }
-if_settext($string3, $com_slayer_rewards_confirm_info4);
+if_settext($string3, $component4);
 def_int $int11 = 0;
 while ($int11 < $int1) {
-	cc_create($com_slayer_rewards_confirm_button5, ^iftype_rectangle, $int11, false);
+	cc_create($component5, ^iftype_rectangle, $int11, false);
 	cc_sethide(true);
 	$int11 = calc($int11 + 1);
 }
-cc_create($com_slayer_rewards_confirm_button5, ^iftype_rectangle, $int1, false);
+cc_create($component5, ^iftype_rectangle, $int1, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_settrans(255);
 cc_setop(1, $string2);
 cc_setopbase("<col=ff9040><$string1>");
-cc_setonop("slayer_rewards_confirm_back(1, event_op, $com_slayer_rewards_main2, $com_slayer_rewards_confirm3, $com_slayer_rewards_confirm_info4, $com_slayer_rewards_confirm_button5, $com_slayer_rewards_back_button6)");
-if_setop(1, "Back", $com_slayer_rewards_back_button6);
-if_setonop("slayer_rewards_confirm_back(0, event_op, $com_slayer_rewards_main2, $com_slayer_rewards_confirm3, $com_slayer_rewards_confirm_info4, $com_slayer_rewards_confirm_button5, $com_slayer_rewards_back_button6)", $com_slayer_rewards_back_button6);
+cc_setonop("slayer_rewards_confirm_back(1, event_op, $component2, $component3, $component4, $component5, $component6)");
+if_setop(1, "Back", $component6);
+if_setonop("slayer_rewards_confirm_back(0, event_op, $component2, $component3, $component4, $component5, $component6)", $component6);

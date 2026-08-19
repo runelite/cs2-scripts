@@ -23,7 +23,7 @@ cc_create($component0, 0, ~script8302($component0), false);
 cc_setposition(0, if_param(param_2524, $component0, -1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
 def_int $comsubid17 = cc_getid;
-cc_createchild(^iftype_rectangle, ~script8302($component0));
+cc_create_child(^iftype_rectangle, ~script8302($component0));
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
@@ -33,13 +33,13 @@ if (calc($int4 % 2) = 0) {
 } else {
 	cc_settrans(220);
 }
-cc_createsibling(^iftype_graphic, ~script8302($component0));
+cc_create_sibling(^iftype_graphic, ~script8302($component0));
 cc_setgraphic("achievement_diary_icons,0");
 cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition($int6, calc($int5 + ($int10 - cc_getheight) / 2), ^setpos_abs_left, ^setpos_abs_top);
 $int6 = calc($int6 + cc_getwidth + 3);
 def_string $string0 = ~get_quest_name($dbrow2);
-cc_createsibling(^iftype_text, ~script8302($component0));
+cc_create_sibling(^iftype_text, ~script8302($component0));
 $int8 = parawidth($string0, if_getwidth($component0), b12_full);
 cc_setsize($int8, $int10, ^setsize_abs, ^setsize_abs);
 cc_setposition($int6, $int5, ^setpos_abs_left, ^setpos_abs_top);
@@ -54,7 +54,7 @@ cc_setop(1, "View-journal");
 cc_setonop("script9189(db_getfield($dbrow2, quest:id, 0))");
 $int6 = calc(cc_getx + cc_getwidth + 2);
 if (%varcint103 = 0 & db_getfield($dbrow2, quest:members, 0) = false) {
-	cc_createsibling(^iftype_graphic, ~script8302($component0));
+	cc_create_sibling(^iftype_graphic, ~script8302($component0));
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int6, calc($int5 - 1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("worldswitcher_stars,0");
@@ -62,12 +62,12 @@ if (%varcint103 = 0 & db_getfield($dbrow2, quest:members, 0) = false) {
 }
 $int6 = $int9;
 $int5 = calc($int5 + $int10 + 3);
-cc_createsibling(^iftype_graphic, ~script8302($component0));
+cc_create_sibling(^iftype_graphic, ~script8302($component0));
 cc_setgraphic(enum(stat, graphic, enum_1505, $stat1));
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 cc_setposition($int6, calc($int5 + ($int11 - cc_getheight) / 2), ^setpos_abs_left, ^setpos_abs_top);
 $int6 = calc($int6 + cc_getwidth + 2);
-cc_createsibling(^iftype_text, ~script8302($component0));
+cc_create_sibling(^iftype_text, ~script8302($component0));
 def_string $string1 = "<~tostring_commas($int3)> XP";
 $int8 = parawidth($string1, if_getwidth($component0), p12_full);
 cc_setsize($int8, $int11, ^setsize_abs, ^setsize_abs);

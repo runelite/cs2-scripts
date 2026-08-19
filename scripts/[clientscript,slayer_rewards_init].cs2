@@ -1,18 +1,17 @@
 // 405
-[clientscript,slayer_rewards_init](int $com_slayer_rewards_universe0, component $com_slayer_rewards_tabs1, component $com_slayer_rewards_unlock2, component $com_slayer_rewards_extend3, component $com_slayer_rewards_buy4, component $com_slayer_rewards_tasks5, component $com_slayer_rewards_rewards6, component $com_slayer_rewards_main7, component $com_slayer_rewards_confirm8)
-switch_int (%varcint1260) {
-	case 0 :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_unlock2);
-	case 1 :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_extend3);
-	case 2 :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_buy4);
-	case 3 :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_tasks5);
-	case 4 :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_rewards6);
-	case default :
-		~slayer_rewards_tabs($com_slayer_rewards_tabs1, $com_slayer_rewards_unlock2, $com_slayer_rewards_extend3, $com_slayer_rewards_buy4, $com_slayer_rewards_tasks5, $com_slayer_rewards_rewards6, $com_slayer_rewards_unlock2);
-}
-if_sethide(false, $com_slayer_rewards_main7);
-if_sethide(true, $com_slayer_rewards_confirm8);
+[clientscript,slayer_rewards_init](component $com_slayer_rewards_universe0, component $com_slayer_rewards_tabs1, component $com_slayer_rewards_unlock2, component $com_slayer_rewards_extend3, component $com_slayer_rewards_buy4, component $com_slayer_rewards_tasks5, component $com_slayer_rewards_rewards6, component $com_slayer_rewards_main7, component $com_slayer_rewards_confirm8)
+def_component $component9 = if_getlayer($com_slayer_rewards_universe0);
+if_setparam(param_2278, if_getheight($com_slayer_rewards_universe0), $com_slayer_rewards_universe0, -1, int);
+if_setontimer("script9784($component9)", $component9);
+if_setonresize("script9787(
+	0 = $com_slayer_rewards_universe0, 
+	1 = $com_slayer_rewards_tabs1, 
+	2 = $com_slayer_rewards_unlock2, 
+	3 = $com_slayer_rewards_extend3, 
+	4 = $com_slayer_rewards_buy4, 
+	5 = $com_slayer_rewards_tasks5, 
+	6 = $com_slayer_rewards_rewards6, 
+	7 = $com_slayer_rewards_main7, 
+	8 = $com_slayer_rewards_confirm8
+)", $component9);
+sound_synth(jar_open, 1, 0);
