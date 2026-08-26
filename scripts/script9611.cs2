@@ -20,16 +20,14 @@ LABEL10:
    string_length         
    iconst                 3
    if_icmplt              LABEL15
-   jump                   LABEL22
+   jump                   LABEL20
 LABEL15:
-   invoke                 8955
-   sconst                 "Tag import too short.</col>"
-   join_string            2
+   sconst                 "@mes_hl_red@Tag import too short.</col>"
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL22:
+LABEL20:
    oload                  0
    sconst                 ","
    8018                  
@@ -40,56 +38,50 @@ LABEL22:
    oload                  1
    8003                  
    iconst                 2
-   if_icmplt              LABEL34
-   jump                   LABEL42
-LABEL34:
-   sconst                 "|"
-   invoke                 8955
-   sconst                 "Tag import must contain at least version number and the objcount. Each piece of information must be separated by a , character.</col>"
+   if_icmplt              LABEL32
+   jump                   LABEL37
+LABEL32:
+   sconst                 "|@mes_hl_red@Tag import must contain at least version number and the objcount. Each piece of information must be separated by a , character.</col>"
+   mes                   
+   iconst                 0
+   invoke                 9617
+   return                
+LABEL37:
+   iconst                 -1
+   istore                 5
+   iconst                 -1
+   istore                 6
+   iconst                 0
+   get_array_int          1
+   4127                  
+   istore                 6
+   istore                 5
+   iload                  6
+   iconst                 0
+   if_icmpeq              LABEL50
+   jump                   LABEL55
+LABEL50:
+   sconst                 "@mes_hl_red@The version number must be made up of at least one numeric character, and only contain numeric characters.</col>"
+   mes                   
+   iconst                 0
+   invoke                 9617
+   return                
+LABEL55:
+   iload                  5
+   iconst                 1
+   if_icmpne              LABEL59
+   jump                   LABEL68
+LABEL59:
+   sconst                 "@mes_hl_red@The version number doesn't match the current version "
+   iconst                 1
+   tostring              
+   sconst                 ".</col>"
    join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL42:
-   iconst                 -1
-   istore                 5
-   iconst                 -1
-   istore                 6
-   iconst                 0
-   get_array_int          1
-   4127                  
-   istore                 6
-   istore                 5
-   iload                  6
-   iconst                 0
-   if_icmpeq              LABEL55
-   jump                   LABEL62
-LABEL55:
-   invoke                 8955
-   sconst                 "The version number must be made up of at least one numeric character, and only contain numeric characters.</col>"
-   join_string            2
-   mes                   
-   iconst                 0
-   invoke                 9617
-   return                
-LABEL62:
-   iload                  5
-   iconst                 1
-   if_icmpne              LABEL66
-   jump                   LABEL76
-LABEL66:
-   invoke                 8955
-   sconst                 "The version number doesn't match the current version "
-   iconst                 1
-   tostring              
-   sconst                 ".</col>"
-   join_string            4
-   mes                   
-   iconst                 0
-   invoke                 9617
-   return                
-LABEL76:
+LABEL68:
    iconst                 -1
    istore                 7
    iconst                 1
@@ -99,79 +91,70 @@ LABEL76:
    istore                 7
    iload                  6
    iconst                 0
-   if_icmpeq              LABEL87
-   jump                   LABEL94
-LABEL87:
-   invoke                 8955
-   sconst                 "The object count must be made up of at least one numeric character, and only contain numeric characters.</col>"
-   join_string            2
+   if_icmpeq              LABEL79
+   jump                   LABEL84
+LABEL79:
+   sconst                 "@mes_hl_red@The object count must be made up of at least one numeric character, and only contain numeric characters.</col>"
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL94:
+LABEL84:
    iload                  7
    iconst                 0
-   if_icmplt              LABEL98
-   jump                   LABEL105
-LABEL98:
-   invoke                 8955
-   sconst                 "The object count cannot be negative.</col>"
-   join_string            2
+   if_icmplt              LABEL88
+   jump                   LABEL93
+LABEL88:
+   sconst                 "@mes_hl_red@The object count cannot be negative.</col>"
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL105:
+LABEL93:
    iload                  7
    iconst                 80
-   if_icmpgt              LABEL109
-   jump                   LABEL119
-LABEL109:
-   invoke                 8955
-   sconst                 "The object count must be less than the maximum number of allowed objects ("
+   if_icmpgt              LABEL97
+   jump                   LABEL106
+LABEL97:
+   sconst                 "@mes_hl_red@The object count must be less than the maximum number of allowed objects ("
    iconst                 80
    tostring              
    sconst                 ").</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL119:
+LABEL106:
    iload                  4
    iconst                 2
    sub                   
    iconst                 3
    mod                   
    iconst                 0
-   if_icmpne              LABEL127
-   jump                   LABEL138
-LABEL127:
-   sconst                 "|"
-   invoke                 8955
-   sconst                 "Incorrect number of entries for "
+   if_icmpne              LABEL114
+   jump                   LABEL123
+LABEL114:
+   sconst                 "|@mes_hl_red@Incorrect number of entries for "
    iload                  7
    tostring              
    sconst                 " objects. Each object requires a name, X, and Y coordinate. These should be separated by a , character e.g. '403,2,3,537,4,5,537,5,5'</col>"
-   join_string            5
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL138:
+LABEL123:
    iload                  7
    iload                  4
    iconst                 2
    sub                   
    iconst                 3
    div                   
-   if_icmpne              LABEL146
-   jump                   LABEL164
-LABEL146:
-   sconst                 "|"
-   invoke                 8955
-   sconst                 "The object count must be equal to the actual number of defined objects. "
+   if_icmpne              LABEL131
+   jump                   LABEL147
+LABEL131:
+   sconst                 "|@mes_hl_red@The object count must be equal to the actual number of defined objects. "
    iload                  7
    tostring              
    sconst                 " was written in the string, but "
@@ -182,12 +165,12 @@ LABEL146:
    div                   
    tostring              
    sconst                 " objects were defined.</col>"
-   join_string            7
+   join_string            5
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL164:
+LABEL147:
    iconst                 2
    istore                 8
    iconst                 0
@@ -232,12 +215,12 @@ LABEL164:
    ostore                 8
    iconst                 -1
    istore                 16
-LABEL208:
+LABEL191:
    iload                  9
    iload                  7
-   if_icmplt              LABEL212
-   jump                   LABEL457
-LABEL212:
+   if_icmplt              LABEL195
+   jump                   LABEL430
+LABEL195:
    iload                  8
    iconst                 1
    add                   
@@ -248,36 +231,34 @@ LABEL212:
    istore                 16
    iload                  16
    iconst                 1
-   if_icmplt              LABEL224
-   jump                   LABEL234
-LABEL224:
-   invoke                 8955
-   sconst                 "X coordinates for object #"
+   if_icmplt              LABEL207
+   jump                   LABEL216
+LABEL207:
+   sconst                 "@mes_hl_red@X coordinates for object #"
    iload                  9
    tostring              
    sconst                 " has no digits.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL234:
+LABEL216:
    iload                  16
    iconst                 2
-   if_icmpgt              LABEL238
-   jump                   LABEL248
-LABEL238:
-   invoke                 8955
-   sconst                 "X coordinates for object #"
+   if_icmpgt              LABEL220
+   jump                   LABEL229
+LABEL220:
+   sconst                 "@mes_hl_red@X coordinates for object #"
    iload                  9
    tostring              
    sconst                 " has too many digits, the maximum is 2.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL248:
+LABEL229:
    oload                  2
    iconst                 2
    iconst                 1
@@ -285,30 +266,28 @@ LABEL248:
    istore                 10
    iload                  10
    iconst                 -1
-   if_icmpeq              LABEL257
-   jump                   LABEL267
-LABEL257:
-   invoke                 8955
-   sconst                 "X coordinates for object #"
+   if_icmpeq              LABEL238
+   jump                   LABEL247
+LABEL238:
+   sconst                 "@mes_hl_red@X coordinates for object #"
    iload                  9
    tostring              
    sconst                 " contained non numeric characters.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL267:
+LABEL247:
    iload                  10
    iconst                 0
-   if_icmplt              LABEL274
+   if_icmplt              LABEL254
    iload                  10
    iconst                 8
-   if_icmpge              LABEL274
-   jump                   LABEL289
-LABEL274:
-   invoke                 8955
-   sconst                 "X coordinates for object #"
+   if_icmpge              LABEL254
+   jump                   LABEL268
+LABEL254:
+   sconst                 "@mes_hl_red@X coordinates for object #"
    iload                  9
    tostring              
    sconst                 " are not in the valid range between 0 and "
@@ -317,12 +296,12 @@ LABEL274:
    sub                   
    tostring              
    sconst                 ".</col>"
-   join_string            6
+   join_string            5
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL289:
+LABEL268:
    iload                  8
    iconst                 2
    add                   
@@ -333,36 +312,34 @@ LABEL289:
    istore                 16
    iload                  16
    iconst                 1
-   if_icmplt              LABEL301
-   jump                   LABEL311
-LABEL301:
-   invoke                 8955
-   sconst                 "Y coordinates for object #"
+   if_icmplt              LABEL280
+   jump                   LABEL289
+LABEL280:
+   sconst                 "@mes_hl_red@Y coordinates for object #"
    iload                  9
    tostring              
    sconst                 " has no digits.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL311:
+LABEL289:
    iload                  16
    iconst                 2
-   if_icmpgt              LABEL315
-   jump                   LABEL325
-LABEL315:
-   invoke                 8955
-   sconst                 "Y coordinates for object #"
+   if_icmpgt              LABEL293
+   jump                   LABEL302
+LABEL293:
+   sconst                 "@mes_hl_red@Y coordinates for object #"
    iload                  9
    tostring              
    sconst                 " has too many digits, the maximum is 2.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL325:
+LABEL302:
    oload                  3
    iconst                 2
    iconst                 1
@@ -370,30 +347,28 @@ LABEL325:
    istore                 11
    iload                  11
    iconst                 -1
-   if_icmpeq              LABEL334
-   jump                   LABEL344
-LABEL334:
-   invoke                 8955
-   sconst                 "Y coordinates for object #"
+   if_icmpeq              LABEL311
+   jump                   LABEL320
+LABEL311:
+   sconst                 "@mes_hl_red@Y coordinates for object #"
    iload                  9
    tostring              
    sconst                 " contained non numeric characters.</col>"
-   join_string            4
+   join_string            3
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL344:
+LABEL320:
    iload                  11
    iconst                 0
-   if_icmplt              LABEL351
+   if_icmplt              LABEL327
    iload                  11
    iconst                 10
-   if_icmpge              LABEL351
-   jump                   LABEL366
-LABEL351:
-   invoke                 8955
-   sconst                 "Y coordinates for object #"
+   if_icmpge              LABEL327
+   jump                   LABEL341
+LABEL327:
+   sconst                 "@mes_hl_red@Y coordinates for object #"
    iload                  9
    tostring              
    sconst                 " are not in the valid range between 0 and "
@@ -402,12 +377,12 @@ LABEL351:
    sub                   
    tostring              
    sconst                 ".</col>"
-   join_string            6
+   join_string            5
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL366:
+LABEL341:
    iconst                 0
    iload                  10
    iconst                 0
@@ -423,11 +398,10 @@ LABEL366:
    istore                 13
    iload                  13
    iconst                 -1
-   if_icmpne              LABEL383
-   jump                   LABEL402
-LABEL383:
-   invoke                 8955
-   sconst                 "Object xy coordinates must be unique. Objects #"
+   if_icmpne              LABEL358
+   jump                   LABEL376
+LABEL358:
+   sconst                 "@mes_hl_red@Object xy coordinates must be unique. Objects #"
    iload                  9
    tostring              
    sconst                 " and #"
@@ -440,12 +414,12 @@ LABEL383:
    iload                  11
    tostring              
    sconst                 ").</col>"
-   join_string            10
+   join_string            9
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL402:
+LABEL376:
    iload                  9
    iload                  12
    set_array_int          8
@@ -459,26 +433,25 @@ LABEL402:
    istore                 14
    iload                  6
    iconst                 0
-   if_icmpeq              LABEL420
+   if_icmpeq              LABEL394
    iload                  14
    iconst                 -1
-   if_icmpeq              LABEL420
-   jump                   LABEL433
-LABEL420:
-   invoke                 8955
-   sconst                 "Couldn't find an exact match for object #"
+   if_icmpeq              LABEL394
+   jump                   LABEL406
+LABEL394:
+   sconst                 "@mes_hl_red@Couldn't find an exact match for object #"
    iload                  9
    tostring              
    sconst                 " '"
    iload                  15
    tostring              
    sconst                 "'.</col>"
-   join_string            6
+   join_string            5
    mes                   
    iconst                 0
    invoke                 9617
    return                
-LABEL433:
+LABEL406:
    iload                  14
    oc_uncert             
    istore                 14
@@ -502,8 +475,8 @@ LABEL433:
    iconst                 1
    add                   
    istore                 9
-   jump                   LABEL208
-LABEL457:
+   jump                   LABEL191
+LABEL430:
    iconst                 1
    invoke                 9617
    iload                  2

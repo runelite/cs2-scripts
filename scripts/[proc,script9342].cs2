@@ -106,7 +106,7 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 				while ($int19 > 0) {
 					$int19 = calc($int19 - 1);
 					if (~script9350($dbrow14, $int19, $int0, $int22, -1) = 1) {
-						$dbrow21 = ~script2499($dbrow14);
+						$dbrow21 = ~script2499($dbrow14, -1);
 						$string0 = ~script9343($dbrow21, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
 						$int18 = ~skill_guide_addentry(
 							0 = $int0, 
@@ -139,7 +139,7 @@ if ($int1 = 31 & $int2 > 0 & $int2 <= $int3) {
 				while ($int19 > 0) {
 					$int19 = calc($int19 - 1);
 					if (~script9350($dbrow14, $int19, $int0, $int22, $int1) = 1) {
-						$dbrow21 = ~script2499($dbrow14);
+						$dbrow21 = ~script2499($dbrow14, $int1);
 						$string0 = ~script9343($dbrow21, $int0, $boolean11, "<col=3f3f3f>", "<col=7f0000>");
 						$int18 = ~skill_guide_addentry(
 							0 = $int0, 
