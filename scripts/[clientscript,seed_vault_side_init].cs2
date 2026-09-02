@@ -2,3 +2,8 @@
 [clientscript,seed_vault_side_init](component $com_seed_vault_deposit_inv0)
 if_setoninvtransmit("seed_vault_side_draw($com_seed_vault_deposit_inv0){inv}", $com_seed_vault_deposit_inv0);
 if_setonvartransmit("seed_vault_side_draw($com_seed_vault_deposit_inv0){seed_vault_selected_qty}", $com_seed_vault_deposit_inv0);
+def_component $component1 = seed_vault:lock_menu;
+~script6478($component1, 0);
+if_setop(1, "Deposit Lock Settings", $component1);
+~script4081(2, $component1);
+if_setonvartransmit("script4080(2, event_com){bank_locked_slots}", $component1);

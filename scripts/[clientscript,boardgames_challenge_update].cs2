@@ -1,3 +1,10 @@
 // 3425
-[clientscript,boardgames_challenge_update](int $int0)
-~boardgames_challenge_update($int0);
+[clientscript,boardgames_challenge_update](int $int0, int $int1, int $comsubid2, component $com_boardgames_challenge_draughts3, component $com_boardgames_challenge_runelink4, component $com_boardgames_challenge_runesquares5, component $com_boardgames_challenge_runeversi6)
+if ($int1 ! -1) {
+	if ($int0 ! 1) {
+		return;
+	}
+	sound_synth(interface_select1, 1, 0);
+	%boardgames_game = $int1;
+}
+~boardgames_challenge_update($comsubid2, $com_boardgames_challenge_draughts3, $com_boardgames_challenge_runelink4, $com_boardgames_challenge_runesquares5, $com_boardgames_challenge_runeversi6);

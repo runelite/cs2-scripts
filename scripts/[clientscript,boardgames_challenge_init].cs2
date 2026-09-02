@@ -1,4 +1,13 @@
 // 3424
-[clientscript,boardgames_challenge_init](component $com_boardgames_challenge_universe0)
-if_setonvartransmit("boardgames_challenge_update(-1){boardgames_varbit}", $com_boardgames_challenge_universe0);
-~boardgames_challenge_update(-1);
+[clientscript,boardgames_challenge_init](component $com_boardgames_challenge_universe0, component $com_boardgames_challenge_draughts1, component $com_boardgames_challenge_runelink2, component $com_boardgames_challenge_runesquares3, component $com_boardgames_challenge_runeversi4)
+def_boolean $boolean5 = ~on_mobile;
+~script7820($com_boardgames_challenge_draughts1, "Draughts", 0, $boolean5);
+~script7820($com_boardgames_challenge_runelink2, "Runelink", 1, $boolean5);
+~script7820($com_boardgames_challenge_runesquares3, "Runesquares", 2, $boolean5);
+def_int $comsubid6 = ~script7820($com_boardgames_challenge_runeversi4, "Runeversi", 3, $boolean5);
+if_setonop("boardgames_challenge_update(event_op, 0, $comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4)", $com_boardgames_challenge_draughts1);
+if_setonop("boardgames_challenge_update(event_op, 1, $comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4)", $com_boardgames_challenge_runelink2);
+if_setonop("boardgames_challenge_update(event_op, 2, $comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4)", $com_boardgames_challenge_runesquares3);
+if_setonop("boardgames_challenge_update(event_op, 3, $comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4)", $com_boardgames_challenge_runeversi4);
+~boardgames_challenge_update($comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4);
+if_setonvartransmit("boardgames_challenge_update(-1, -1, $comsubid6, $com_boardgames_challenge_draughts1, $com_boardgames_challenge_runelink2, $com_boardgames_challenge_runesquares3, $com_boardgames_challenge_runeversi4){boardgames_varbit}", $com_boardgames_challenge_universe0);

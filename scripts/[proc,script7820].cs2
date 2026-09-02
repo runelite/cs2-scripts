@@ -1,0 +1,26 @@
+// 7820
+[proc,script7820](component $component0, string $string0, int $int1, boolean $boolean2)(int)
+cc_deleteall($component0);
+if_setop(1, "Select", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+def_int $int3 = 0;
+cc_create($component0, ^iftype_graphic, $int3, false);
+$int3 = calc($int3 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setoutline(0);
+cc_settrans(0);
+if ($boolean2 = false) {
+	if_setonmouserepeat("cc_settrans(event_com, cc_getid, 127, null)", $component0);
+	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
+}
+.cc_create($component0, ^iftype_text, $int3, false);
+$int3 = calc($int3 + 1);
+.cc_setsize(80, 0, ^setsize_abs, ^setsize_minus);
+.cc_setposition(calc(cc_getx + cc_getwidth + 6), 0, ^setpos_abs_left, ^setpos_abs_centre);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext($string0);
+return(cc_getid);
