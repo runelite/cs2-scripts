@@ -1,0 +1,8 @@
+// 8959
+[proc,script8959](component $com_dog_selection_content0, component $com_dog_selection_item_area1, component $com_dog_selection_model_view2, component $com_dog_selection_colours3, component $com_dog_selection_select_container4, component $com_dog_selection_select_and_close5, component $com_dog_selection_scroll_bar6, component $com_dog_selection_thinbox7, enum $enum8)
+~script8960($com_dog_selection_item_area1, $com_dog_selection_thinbox7, $enum8);
+~script9799($com_dog_selection_item_area1, $com_dog_selection_scroll_bar6, $enum8);
+~script9024($com_dog_selection_model_view2, $enum8);
+def_int $int9 = ~script9791($com_dog_selection_colours3, $enum8);
+if_setposition(if_getx($com_dog_selection_select_container4), $int9, ^setpos_abs_left, ^setpos_abs_centre, $com_dog_selection_select_container4);
+~script9792($com_dog_selection_select_and_close5, "Confirm", 0);

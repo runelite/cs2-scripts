@@ -1,0 +1,16 @@
+// 9796
+[clientscript,script9796](component $component0, int $comsubid1, int $int2)
+if (cc_find($component0, $comsubid1) = true) {
+	cc_settrans(125);
+	cc_setontimer("cc_settrans_temporarily_end($component0, $comsubid1, 0, calc(clientclock + 10))");
+	if ($int2 = 0) {
+		sound_synth(pillory_wrong, 1, 0);
+		mes("@mes_hl_red@You have not rescued this breed yet.");
+	} else {
+		sound_synth(interface_select1, 1, 0);
+		if (%varcint1508 ! $comsubid1) {
+			%varcint1508 = $comsubid1;
+			%varcint1509 = 0;
+		}
+	}
+}

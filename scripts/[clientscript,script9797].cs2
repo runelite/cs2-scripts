@@ -1,0 +1,5 @@
+// 9797
+[clientscript,script9797](component $component0, int $comsubid1, int $int2)
+def_dbrow $dbrow3 = enum(int, dbrow, enum_5845, calc($comsubid1 / 5));
+def_string $string0 = db_getfield($dbrow3, puppy_colours:location_hint, 0);
+mes("The report mentions this breed can be found <col=ef1020><$string0>.");

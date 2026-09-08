@@ -1,0 +1,87 @@
+// 8961
+[proc,script8961](component $com_dog_selection_item_area0, dbrow $dbrow1, int $int2, int $int3, int $int4)(int)
+def_int $int5 = 91;
+def_int $int6 = 84;
+def_string $string0 = db_getfield($dbrow1, puppy_colours:name, 0);
+def_int $int7 = db_getfield($dbrow1, puppy_colours:unlock_bit, 0);
+def_int $int8 = 0;
+if (db_getfield($dbrow1, puppy_colours:free_unlock, 0) = true | testbit(%dog_unlocks, $int7) = ^true) {
+	$int8 = 1;
+}
+if (%varcint1508 = $int2) {
+	~create_graphic(
+		0 = $com_dog_selection_item_area0, 
+		1 = $int2, 
+		2 = tradebacking_light, 
+		3 = $int3, 
+		4 = $int4, 
+		5 = ^setpos_abs_centre, 
+		6 = ^setpos_abs_top, 
+		7 = $int5, 
+		8 = $int6, 
+		9 = ^setsize_abs, 
+		10 = ^setsize_abs, 
+		11 = true
+	);
+} else {
+	~create_graphic(
+		0 = $com_dog_selection_item_area0, 
+		1 = $int2, 
+		2 = tradebacking_dark, 
+		3 = $int3, 
+		4 = $int4, 
+		5 = ^setpos_abs_centre, 
+		6 = ^setpos_abs_top, 
+		7 = $int5, 
+		8 = $int6, 
+		9 = ^setsize_abs, 
+		10 = ^setsize_abs, 
+		11 = true
+	);
+}
+if (~on_mobile = false) {
+	cc_setonmouserepeat("script9793(event_com, event_comsubid, 1)");
+	cc_setonmouseleave("script9793(event_com, event_comsubid, 0)");
+}
+if ($int8 = 0) {
+	cc_setop(1, "Location Clue");
+	cc_setonop("script9797(event_com, event_comsubid, $int8)");
+} else {
+	cc_setop(1, "Preview");
+	cc_setopbase("<col=ff9040><$string0>");
+	cc_setonop("script9796(event_com, event_comsubid, $int8)");
+}
+$int2 = calc($int2 + 1);
+cc_create($com_dog_selection_item_area0, ^iftype_rectangle, $int2, false);
+cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(false);
+if (%varcint1508 = calc($int2 - 1)) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x0e0e0c);
+}
+$int2 = calc($int2 + 1);
+$int2 = ~script8962($com_dog_selection_item_area0, $int2, $int3, $int4, $dbrow1);
+cc_create($com_dog_selection_item_area0, ^iftype_text, $int2, false);
+$int2 = calc($int2 + 1);
+cc_setsize(calc($int5 - 10), 30, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, calc($int4 + 2), ^setpos_abs_centre, ^setpos_abs_top);
+if ($int8 = 1) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
+cc_settext($string0);
+if ($int8 = 0) {
+	cc_create($com_dog_selection_item_area0, ^iftype_rectangle, $int2, false);
+	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(0x9f9f9f);
+	cc_settrans(225);
+}
+return(calc($int2 + 1));

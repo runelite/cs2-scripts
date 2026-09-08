@@ -1,0 +1,33 @@
+// 4149
+[clientscript,script4149](component $com_dog_selection_border0, component $com_dog_selection_content1, component $com_dog_selection_item_area2, component $com_dog_selection_model_view3, component $com_dog_selection_colours4, component $com_dog_selection_select_container5, component $com_dog_selection_select_and_close6, component $com_dog_selection_scroll_bar7, component $com_dog_selection_thinbox8)
+def_component $component9 = dog_selection:universe;
+def_component $component10 = dog_selection:infinity;
+def_enum $enum11 = enum_5845;
+if ($component10 ! null) {
+	~script9801($component9, $component10, ^min_32bit_int, ^min_32bit_int, $com_dog_selection_scroll_bar7, $com_dog_selection_item_area2, $enum11);
+}
+~steelborder($com_dog_selection_border0, "Puppy Adoption", 0);
+%varcint1510 = 0;
+%varcint1508 = calc(%dog_selection_breed * 5);
+~script8959(
+	0 = $com_dog_selection_content1, 
+	1 = $com_dog_selection_item_area2, 
+	2 = $com_dog_selection_model_view3, 
+	3 = $com_dog_selection_colours4, 
+	4 = $com_dog_selection_select_container5, 
+	5 = $com_dog_selection_select_and_close6, 
+	6 = $com_dog_selection_scroll_bar7, 
+	7 = $com_dog_selection_thinbox8, 
+	8 = $enum11
+);
+if_setonvartransmit("script8958(
+	0 = $com_dog_selection_content1, 
+	1 = $com_dog_selection_item_area2, 
+	2 = $com_dog_selection_model_view3, 
+	3 = $com_dog_selection_colours4, 
+	4 = $com_dog_selection_select_container5, 
+	5 = $com_dog_selection_select_and_close6, 
+	6 = $com_dog_selection_scroll_bar7, 
+	7 = $com_dog_selection_thinbox8, 
+	8 = $enum11
+){dog_selection_breed, dog_selection_colour, dog_unlocks}", $com_dog_selection_content1);

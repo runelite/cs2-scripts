@@ -1,0 +1,52 @@
+java.lang.IllegalStateException: Opcode 4219 in script 6623 not implemented
+
+.id                       6623
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   istore                 1
+   iconst                 93
+   iconst                 952
+   inv_total             
+   iconst                 0
+   if_icmpgt              LABEL8
+   jump                   LABEL11
+LABEL8:
+   iconst                 1
+   istore                 1
+   jump                   LABEL31
+LABEL11:
+   iconst                 93
+   iconst                 27873
+   inv_total             
+   iconst                 0
+   if_icmpgt              LABEL17
+   jump                   LABEL20
+LABEL17:
+   iconst                 1
+   istore                 1
+   jump                   LABEL31
+LABEL20:
+   get_varp               448
+   4219                  
+   iconst                 2519
+   if_icmpeq              LABEL25
+   jump                   LABEL31
+LABEL25:
+   map_members           
+   iconst                 1
+   if_icmpeq              LABEL29
+   jump                   LABEL31
+LABEL29:
+   iconst                 1
+   istore                 1
+LABEL31:
+   sconst                 "A spade is required!"
+   iload                  1
+   invoke                 6625
+   ostore                 0
+   iload                  0
+   oload                  0
+   invoke                 4699
+   return                
