@@ -1,21 +1,29 @@
 // 2813
-[proc,seed_vault_side_draw](component $com_seed_vault_deposit_inv0)
+[proc,seed_vault_side_draw](component $com_seed_vault_deposit_inv0, component $com_seed_vault_deposit_locked_slot1)
 cc_deleteall($com_seed_vault_deposit_inv0);
-def_int $int1 = calc((42 - 36) * 3 - 2);
-def_int $int2 = calc((36 - 32) * 2);
-def_int $int3 = 0;
-def_obj $obj4 = null;
-while ($int3 < inv_size(inv)) {
-	cc_create($com_seed_vault_deposit_inv0, ^iftype_graphic, $int3, false);
+cc_deleteall($com_seed_vault_deposit_locked_slot1);
+def_int $int2 = calc((42 - 36) * 3 - 2);
+def_int $int3 = calc((36 - 32) * 2);
+def_int $int4 = 0;
+def_obj $obj5 = null;
+def_int $int6 = 0;
+def_int $int7 = ~script7794(93);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+while ($int4 < inv_size(inv)) {
+	cc_create($com_seed_vault_deposit_inv0, ^iftype_graphic, $int4, false);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int1 + $int3 % 4 * 42), calc($int2 + $int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	$int9 = calc($int2 + $int4 % 4 * 42);
+	$int10 = calc($int3 + $int4 / 4 * 36);
+	cc_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$obj4 = inv_getobj(inv, $int3);
-	if ($obj4 ! null) {
+	$obj5 = inv_getobj(inv, $int4);
+	if ($obj5 ! null) {
 		cc_sethide(false);
-		cc_setobject($obj4, inv_getnum(inv, $int3));
-		cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
+		cc_setobject($obj5, inv_getnum(inv, $int4));
+		cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
 		cc_setop(10, "Examine");
 		if (%seed_vault_selected_qty = ^max_32bit_int) {
 			cc_setop(1, "Deposit-All");
@@ -34,5 +42,17 @@ while ($int3 < inv_size(inv)) {
 		cc_sethide(true);
 		cc_setobject(blankobject_6512, 1);
 	}
-	$int3 = calc($int3 + 1);
+	$int8 = ~bank_side_locked_slot($int4);
+	if (~script7795 = 1) {
+		if ($int8 = 1) {
+			cc_setop(9, "Unlock-slot");
+			cc_sethide(false);
+		} else {
+			cc_setop(9, "Lock-slot");
+		}
+	}
+	if ($int7 = 1) {
+		$int6 = ~script7783($com_seed_vault_deposit_locked_slot1, $int9, $int10, $int8, $int6);
+	}
+	$int4 = calc($int4 + 1);
 }
