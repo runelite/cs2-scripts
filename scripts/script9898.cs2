@@ -1,0 +1,55 @@
+java.lang.IllegalStateException: Opcode 7201 in script 9898 not implemented
+
+.id                       9898
+.int_arg_count            2
+.long_arg_count           0
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL7
+   map_members           
+   iconst                 0
+   if_icmpeq              LABEL7
+   jump                   LABEL8
+LABEL7:
+   return                
+LABEL8:
+   iload                  1
+   iconst                 -1
+   if_icmpne              LABEL12
+   jump                   LABEL17
+LABEL12:
+   6801                  
+   iload                  1
+   if_icmpne              LABEL16
+   jump                   LABEL17
+LABEL16:
+   return                
+LABEL17:
+   iconst                 6
+   iconst                 0
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   7201                  
+   istore                 2
+   iload                  2
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL29
+   jump                   LABEL36
+LABEL29:
+   6802                  
+   6801                  
+   iload                  2
+   6802                  
+   invoke                 9902
+   iload                  0
+   invoke                 9901
+LABEL36:
+   iload                  2
+   6802                  
+   6801                  
+   iload                  0
+   invoke                 9899
+   return                

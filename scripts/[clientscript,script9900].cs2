@@ -1,0 +1,10 @@
+// 9900
+[clientscript,script9900](int $int0, int $int1, entityoverlay $entityoverlay2, int $int3, int $int4, int $int5, obj $obj6)
+def_int $int7 = ~script9902($int0);
+if ($int7 = $int3 & $int4 = %farming_patch_overlay_enabled & $int5 = %settings_farming_patch_overlay_colour) {
+	return;
+}
+~script9899($entityoverlay2, $int0, $int1, $obj6);
+if (if_find_entityoverlay($entityoverlay2) = true) {
+	~script9901($int0, $int1, $entityoverlay2, $int7, $obj6);
+}
