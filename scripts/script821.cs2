@@ -1,0 +1,1030 @@
+java.lang.IllegalStateException: Opcode 61 in script 821 not implemented
+
+.id                       821
+.int_arg_count            14
+.long_arg_count           0
+.obj_arg_count            0
+   get_varbit             4439
+   iconst                 1
+   sub                   
+   istore                 14
+   iconst                 105
+   iconst                 118
+   iconst                 150
+   iload                  14
+   enum                  
+   istore                 15
+   iload                  15
+   iconst                 -1
+   if_icmpeq              LABEL14
+   jump                   LABEL108
+LABEL14:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL20
+   jump                   LABEL22
+LABEL20:
+   sconst                 "No offer"
+   cc_settext            
+LABEL22:
+   iload                  0
+   iload                  2
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL28
+   jump                   LABEL30
+LABEL28:
+   iconst                 1
+   cc_sethide            
+LABEL30:
+   iload                  0
+   iload                  3
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL36
+   jump                   LABEL39
+LABEL36:
+   iconst                 6512
+   iconst                 1
+   cc_setobject_nonum    
+LABEL39:
+   iload                  0
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL45
+   jump                   LABEL47
+LABEL45:
+   sconst                 "No offer"
+   cc_settext            
+LABEL47:
+   iload                  0
+   iload                  5
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL53
+   jump                   LABEL55
+LABEL53:
+   sconst                 ""
+   cc_settext            
+LABEL55:
+   iload                  0
+   iload                  6
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL61
+   jump                   LABEL63
+LABEL61:
+   sconst                 ""
+   cc_settext            
+LABEL63:
+   iload                  0
+   iload                  7
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL69
+   jump                   LABEL71
+LABEL69:
+   sconst                 ""
+   cc_settext            
+LABEL71:
+   iload                  8
+   iload                  9
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL77
+   jump                   LABEL79
+LABEL77:
+   iconst                 1
+   cc_sethide            
+LABEL79:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL85
+   jump                   LABEL87
+LABEL85:
+   iconst                 1
+   cc_sethide            
+LABEL87:
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL93
+   jump                   LABEL95
+LABEL93:
+   sconst                 "No offer found for this slot."
+   cc_settext            
+LABEL95:
+   iload                  8
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL101
+   jump                   LABEL107
+LABEL101:
+   iconst                 -1
+   iconst                 -1
+   iconst                 -1
+   iconst                 9371648
+   iload                  13
+   invoke                 812
+LABEL107:
+   return                
+LABEL108:
+   iconst                 -1
+   istore                 16
+   lconst                 0
+   lstore                
+   iconst                 -1
+   istore                 17
+   iconst                 -1
+   istore                 18
+   iconst                 0
+   istore                 19
+   iconst                 0
+   istore                 20
+   lconst                 0
+   lstore                 1
+   lconst                 0
+   lstore                 2
+   iconst                 0
+   istore                 21
+   iload                  14
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL131
+   jump                   LABEL248
+LABEL131:
+   iload                  14
+   invoke                 5733
+   lstore                
+   istore                 16
+   iload                  16
+   iconst                 -1
+   if_icmpeq              LABEL139
+   jump                   LABEL233
+LABEL139:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL145
+   jump                   LABEL147
+LABEL145:
+   sconst                 "No offer"
+   cc_settext            
+LABEL147:
+   iload                  0
+   iload                  2
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL153
+   jump                   LABEL155
+LABEL153:
+   iconst                 1
+   cc_sethide            
+LABEL155:
+   iload                  0
+   iload                  3
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL161
+   jump                   LABEL164
+LABEL161:
+   iconst                 6512
+   iconst                 1
+   cc_setobject_nonum    
+LABEL164:
+   iload                  0
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL170
+   jump                   LABEL172
+LABEL170:
+   sconst                 "No offer"
+   cc_settext            
+LABEL172:
+   iload                  0
+   iload                  5
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL178
+   jump                   LABEL180
+LABEL178:
+   sconst                 ""
+   cc_settext            
+LABEL180:
+   iload                  0
+   iload                  6
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL186
+   jump                   LABEL188
+LABEL186:
+   sconst                 ""
+   cc_settext            
+LABEL188:
+   iload                  0
+   iload                  7
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL194
+   jump                   LABEL196
+LABEL194:
+   sconst                 ""
+   cc_settext            
+LABEL196:
+   iload                  8
+   iload                  9
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL202
+   jump                   LABEL204
+LABEL202:
+   iconst                 1
+   cc_sethide            
+LABEL204:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL210
+   jump                   LABEL212
+LABEL210:
+   iconst                 1
+   cc_sethide            
+LABEL212:
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL218
+   jump                   LABEL220
+LABEL218:
+   sconst                 "No offer found for this slot."
+   cc_settext            
+LABEL220:
+   iload                  8
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL226
+   jump                   LABEL232
+LABEL226:
+   iconst                 -1
+   iconst                 -1
+   iconst                 -1
+   iconst                 9371648
+   iload                  13
+   invoke                 812
+LABEL232:
+   return                
+LABEL233:
+   iconst                 1
+   iload                  16
+   iconst                 1
+   iconst                 1
+   lload                 
+   lload                 
+   iconst                 1
+   istore                 21
+   lstore                 2
+   lstore                 1
+   istore                 20
+   istore                 19
+   istore                 18
+   istore                 17
+   jump                   LABEL281
+LABEL248:
+   iload                  14
+   stockmarket_getoffertype
+   istore                 17
+   iload                  14
+   stockmarket_getofferitem
+   istore                 18
+   iload                  18
+   iconst                 -1
+   if_icmpeq              LABEL258
+   jump                   LABEL260
+LABEL258:
+   iconst                 6512
+   istore                 18
+LABEL260:
+   iload                  14
+   stockmarket_getoffercount
+   istore                 19
+   iload                  19
+   iconst                 0
+   if_icmple              LABEL267
+   jump                   LABEL269
+LABEL267:
+   iconst                 1
+   istore                 19
+LABEL269:
+   iload                  14
+   stockmarket_getoffercompletedcount
+   istore                 20
+   iload                  14
+   stockmarket_getofferprice
+   lstore                 1
+   iload                  14
+   stockmarket_getoffercompletedgold
+   lstore                 2
+   iload                  14
+   stockmarket_isofferfinished
+   istore                 21
+LABEL281:
+   sconst                 ","
+   ostore                 0
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL289
+   jump                   LABEL310
+LABEL289:
+   iload                  0
+   iload                  2
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL295
+   jump                   LABEL310
+LABEL295:
+   iconst                 0
+   cc_sethide             1
+   iload                  17
+   iconst                 1
+   if_icmpeq              LABEL301
+   jump                   LABEL306
+LABEL301:
+   sconst                 "Sell offer"
+   cc_settext            
+   iconst                 1119
+   cc_setgraphic          1
+   jump                   LABEL310
+LABEL306:
+   sconst                 "Buy offer"
+   cc_settext            
+   iconst                 1118
+   cc_setgraphic          1
+LABEL310:
+   iload                  0
+   iload                  3
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL316
+   jump                   LABEL319
+LABEL316:
+   iload                  18
+   iload                  19
+   cc_setobject_nonum    
+LABEL319:
+   iload                  0
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL325
+   jump                   LABEL328
+LABEL325:
+   iload                  18
+   oc_name               
+   cc_settext            
+LABEL328:
+   iload                  0
+   iload                  5
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL334
+   jump                   LABEL338
+LABEL334:
+   iload                  19
+   oload                  0
+   invoke                 46
+   cc_settext            
+LABEL338:
+   iload                  0
+   iload                  6
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL344
+   jump                   LABEL357
+LABEL344:
+   lload                  1
+   lconst                 1
+   if_lcmpeq              LABEL348
+   jump                   LABEL351
+LABEL348:
+   sconst                 "1 coin"
+   cc_settext            
+   jump                   LABEL357
+LABEL351:
+   lload                  1
+   oload                  0
+   4126                  
+   sconst                 " coins"
+   join_string            2
+   cc_settext            
+LABEL357:
+   lconst                 0
+   lstore                 3
+   lconst                 0
+   lstore                 4
+   lconst                 0
+   lstore                 5
+   iload                  0
+   iload                  7
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL369
+   jump                   LABEL516
+LABEL369:
+   lconst                 9223372036854775807
+   iload                  19
+   4044                  
+   4040                  
+   lload                  1
+   if_lcmplt              LABEL376
+   jump                   LABEL381
+LABEL376:
+   iconst                 496
+   cc_settextfont        
+   sconst                 "Lots of money"
+   cc_settext            
+   jump                   LABEL516
+LABEL381:
+   iload                  19
+   4044                  
+   lload                  1
+   4039                  
+   lstore                 4
+   iload                  17
+   iconst                 1
+   if_icmpeq              LABEL390
+   jump                   LABEL402
+LABEL390:
+   get_varbit             13139
+   iconst                 0
+   if_icmpgt              LABEL394
+   jump                   LABEL402
+LABEL394:
+   lconst                 5000000
+   get_varbit             13139
+   4044                  
+   lconst                 1000
+   lload                  1
+   4043                  
+   4041                  
+   lstore                 3
+LABEL402:
+   lload                  3
+   lconst                 0
+   if_lcmpgt              LABEL406
+   jump                   LABEL481
+LABEL406:
+   lconst                 0
+   lload                  4
+   iload                  19
+   4044                  
+   lload                  3
+   4039                  
+   4038                  
+   4042                  
+   lstore                 5
+   lload                  3
+   lconst                 5000000
+   if_lcmplt              LABEL419
+   jump                   LABEL448
+LABEL419:
+   iconst                 496
+   cc_settextfont        
+   lload                  5
+   lconst                 1
+   if_lcmpeq              LABEL425
+   jump                   LABEL435
+LABEL425:
+   sconst                 "1 coin <col=9f9f9f>("
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " - "
+   invoke                 5731
+   sconst                 ")</col>"
+   join_string            5
+   cc_settext            
+   jump                   LABEL447
+LABEL435:
+   lload                  5
+   oload                  0
+   4126                  
+   sconst                 " coins <col=9f9f9f>("
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " - "
+   invoke                 5731
+   sconst                 ")</col>"
+   join_string            6
+   cc_settext            
+LABEL447:
+   jump                   LABEL480
+LABEL448:
+   iconst                 495
+   cc_settextfont        
+   lload                  5
+   lconst                 1
+   if_lcmpeq              LABEL454
+   jump                   LABEL466
+LABEL454:
+   sconst                 "1 coin <col=9f9f9f>("
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " - "
+   iconst                 5000000
+   oload                  0
+   invoke                 46
+   sconst                 " per item)</col>"
+   join_string            5
+   cc_settext            
+   jump                   LABEL480
+LABEL466:
+   lload                  5
+   oload                  0
+   4126                  
+   sconst                 " coins <col=9f9f9f>("
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " - "
+   iconst                 5000000
+   oload                  0
+   invoke                 46
+   sconst                 " per item)</col>"
+   join_string            6
+   cc_settext            
+LABEL480:
+   jump                   LABEL516
+LABEL481:
+   iload                  17
+   iconst                 1
+   if_icmpeq              LABEL485
+   jump                   LABEL501
+LABEL485:
+   iconst                 496
+   cc_settextfont        
+   lload                  4
+   lconst                 1
+   if_lcmpeq              LABEL491
+   jump                   LABEL494
+LABEL491:
+   sconst                 "1 coin <col=9f9f9f>(no fee expected)</col>"
+   cc_settext            
+   jump                   LABEL500
+LABEL494:
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " coins <col=9f9f9f>(no fee expected)</col>"
+   join_string            2
+   cc_settext            
+LABEL500:
+   jump                   LABEL516
+LABEL501:
+   iconst                 496
+   cc_settextfont        
+   lload                  4
+   lconst                 1
+   if_lcmpeq              LABEL507
+   jump                   LABEL510
+LABEL507:
+   sconst                 "1 coin"
+   cc_settext            
+   jump                   LABEL516
+LABEL510:
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 " coins"
+   join_string            2
+   cc_settext            
+LABEL516:
+   iconst                 1126
+   istore                 22
+   iconst                 1127
+   istore                 23
+   iconst                 6409
+   istore                 24
+   iconst                 6410
+   istore                 25
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL530
+   jump                   LABEL859
+LABEL530:
+   iload                  21
+   iconst                 1
+   if_icmpeq              LABEL534
+   jump                   LABEL655
+LABEL534:
+   iload                  17
+   iconst                 1
+   if_icmpeq              LABEL538
+   jump                   LABEL615
+LABEL538:
+   iload                  14
+   invoke                 5732
+   lstore                 3
+   lload                  3
+   lconst                 0
+   if_lcmpgt              LABEL545
+   jump                   LABEL591
+LABEL545:
+   lconst                 0
+   lload                  2
+   lload                  3
+   4038                  
+   4042                  
+   lstore                 5
+   lload                  5
+   lconst                 1
+   if_lcmpeq              LABEL555
+   jump                   LABEL571
+LABEL555:
+   sconst                 "You sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> - <col=ffb83f>"
+   lload                  3
+   oload                  0
+   4126                  
+   sconst                 "</col>)."
+   join_string            7
+   cc_settext            
+   jump                   LABEL590
+LABEL571:
+   sconst                 "You sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for <col=ffb83f>"
+   lload                  5
+   oload                  0
+   4126                  
+   sconst                 "</col> coins (<col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> - <col=ffb83f>"
+   lload                  3
+   oload                  0
+   4126                  
+   sconst                 "</col></col>)."
+   join_string            9
+   cc_settext            
+LABEL590:
+   jump                   LABEL614
+LABEL591:
+   lload                  2
+   lconst                 1
+   if_lcmpeq              LABEL595
+   jump                   LABEL603
+LABEL595:
+   sconst                 "You sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for <col=ffb83f>one</col> coin (no fee charged)."
+   join_string            3
+   cc_settext            
+   jump                   LABEL614
+LABEL603:
+   sconst                 "You sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for <col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> coins (no fee charged)."
+   join_string            5
+   cc_settext            
+LABEL614:
+   jump                   LABEL638
+LABEL615:
+   lload                  2
+   lconst                 1
+   if_lcmpeq              LABEL619
+   jump                   LABEL627
+LABEL619:
+   sconst                 "You bought a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for a total price of <col=ffb83f>one</col> coin."
+   join_string            3
+   cc_settext            
+   jump                   LABEL638
+LABEL627:
+   sconst                 "You bought a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col><br>for a total price of <col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> coins."
+   join_string            5
+   cc_settext            
+LABEL638:
+   iload                  8
+   iload                  9
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL644
+   jump                   LABEL646
+LABEL644:
+   iconst                 1
+   cc_sethide            
+LABEL646:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL652
+   jump                   LABEL654
+LABEL652:
+   iconst                 1
+   cc_sethide            
+LABEL654:
+   jump                   LABEL859
+LABEL655:
+   iload                  17
+   iconst                 1
+   if_icmpeq              LABEL659
+   jump                   LABEL736
+LABEL659:
+   iload                  14
+   invoke                 5732
+   lstore                 3
+   lload                  3
+   lconst                 0
+   if_lcmpgt              LABEL666
+   jump                   LABEL712
+LABEL666:
+   lconst                 0
+   lload                  2
+   lload                  3
+   4038                  
+   4042                  
+   lstore                 5
+   lload                  5
+   lconst                 1
+   if_lcmpeq              LABEL676
+   jump                   LABEL692
+LABEL676:
+   sconst                 "You have sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> - <col=ffb83f>"
+   lload                  3
+   oload                  0
+   4126                  
+   sconst                 "</col></col>)."
+   join_string            7
+   cc_settext            
+   jump                   LABEL711
+LABEL692:
+   sconst                 "You have sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for <col=ffb83f>"
+   lload                  5
+   oload                  0
+   4126                  
+   sconst                 "</col> coins (<col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> - <col=ffb83f>"
+   lload                  3
+   oload                  0
+   4126                  
+   sconst                 "</col></col>)."
+   join_string            9
+   cc_settext            
+LABEL711:
+   jump                   LABEL735
+LABEL712:
+   lload                  2
+   lconst                 1
+   if_lcmpeq              LABEL716
+   jump                   LABEL724
+LABEL716:
+   sconst                 "You have sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for <col=ffb83f>one</col> coin (no fee charged)."
+   join_string            3
+   cc_settext            
+   jump                   LABEL735
+LABEL724:
+   sconst                 "You have sold a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for <col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> coins (no fee charged)."
+   join_string            5
+   cc_settext            
+LABEL735:
+   jump                   LABEL759
+LABEL736:
+   lload                  2
+   lconst                 1
+   if_lcmpeq              LABEL740
+   jump                   LABEL748
+LABEL740:
+   sconst                 "You have bought a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for a total price of <col=ffb83f>one</col> coin."
+   join_string            3
+   cc_settext            
+   jump                   LABEL759
+LABEL748:
+   sconst                 "You have bought a total of <col=ffb83f>"
+   iload                  20
+   oload                  0
+   invoke                 46
+   sconst                 "</col> so far<br>for a total price of <col=ffb83f>"
+   lload                  2
+   oload                  0
+   4126                  
+   sconst                 "</col> coins."
+   join_string            5
+   cc_settext            
+LABEL759:
+   iload                  8
+   iload                  9
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL765
+   jump                   LABEL809
+LABEL765:
+   iconst                 0
+   cc_sethide            
+   iload                  14
+   stockmarket_isofferstable
+   iconst                 1
+   if_icmpeq              LABEL772
+   jump                   LABEL796
+LABEL772:
+   iconst                 0
+   cc_settrans           
+   iload                  22
+   cc_setgraphic         
+   iconst                 229
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  23
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouserepeat   
+   iconst                 229
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  22
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseleave    
+   iconst                 489
+   iconst                 -2147483644
+   iconst                 2
+   sconst                 "ii"
+   cc_setonop            
+   jump                   LABEL809
+LABEL796:
+   iconst                 120
+   cc_settrans           
+   iload                  23
+   cc_setgraphic         
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   iconst                 -1
+   sconst                 ""
+   cc_setonop            
+LABEL809:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL815
+   jump                   LABEL859
+LABEL815:
+   iconst                 0
+   cc_sethide            
+   iload                  14
+   stockmarket_isofferstable
+   iconst                 1
+   if_icmpeq              LABEL822
+   jump                   LABEL846
+LABEL822:
+   iconst                 0
+   cc_settrans           
+   iload                  24
+   cc_setgraphic         
+   iconst                 229
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  25
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouserepeat   
+   iconst                 229
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  24
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseleave    
+   iconst                 489
+   iconst                 -2147483644
+   iconst                 2
+   sconst                 "ii"
+   cc_setonop            
+   jump                   LABEL859
+LABEL846:
+   iconst                 120
+   cc_settrans           
+   iload                  25
+   cc_setgraphic         
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   iconst                 -1
+   sconst                 ""
+   cc_setonop            
+LABEL859:
+   iload                  8
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL865
+   jump                   LABEL884
+LABEL865:
+   iconst                 0
+   cc_sethide            
+   iload                  16
+   iconst                 -1
+   if_icmpne              LABEL871
+   jump                   LABEL878
+LABEL871:
+   iload                  14
+   iload                  19
+   iload                  20
+   iconst                 24320
+   iload                  13
+   invoke                 812
+   jump                   LABEL884
+LABEL878:
+   iload                  14
+   iload                  19
+   iload                  20
+   iconst                 -1
+   iload                  13
+   invoke                 812
+LABEL884:
+   return                

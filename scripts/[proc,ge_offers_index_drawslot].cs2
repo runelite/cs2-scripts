@@ -1,345 +1,1208 @@
-// 798
-[proc,ge_offers_index_drawslot](inv $inv0, int $int1, component $com_ge_offers_frame2, int $comsubid3, component $com_ge_offers_back4, component $com_ge_offers_index5, component $com_ge_offers_details6, component $com_ge_offers_setup7, component $component8, int $int9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, int $comsubid16, int $comsubid17, int $comsubid18, int $comsubid19, int $comsubid20, int $comsubid21, int $comsubid22, int $comsubid23, int $comsubid24, int $comsubid25, int $comsubid26, component $com_ge_offers_tooltip27)
-def_obj $obj28 = null;
-def_int $int29 = 0;
-def_int $int30 = 0;
-def_int $int31 = 0;
-def_string $string0 = "Cancelled";
-def_graphic $graphic32 = "ge_icons,2";
-def_graphic $graphic33 = "ge_icons,3";
-def_graphic $graphic34 = "ge_icons,0";
-def_graphic $graphic35 = "ge_icons,1";
-def_string $string1 = "Offer to BUY items.";
-def_int $int36 = 0;
-def_obj $obj37 = null;
-def_int $int38 = 0;
-def_int $int39 = 0;
-def_int $int40 = 0;
-def_int $int41 = 0;
-if (~deadman_world ! 0) {
-	if ($int9 < 8) {
-		$int40 = 1;
-	}
-} else if ($int9 < 3 | %varcint103 = 1) {
-	$int40 = 1;
-}
-if (stockmarket_isofferempty($int9) = true) {
-	$obj28 = inv_getobj($inv0, 0);
-	if ($obj28 = null) {
-		$obj28 = inv_getobj($inv0, 1);
-	}
-	if ($obj28 = null) {
-		if (cc_find($component8, $comsubid15) = true) {
-			cc_settext("Empty");
-		}
-		if (cc_find($component8, $comsubid12) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid16) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid17) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid18) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid19) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid20) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid21) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid22) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid23) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component8, $comsubid24) = true) {
-			cc_sethide(true);
-		}
-		if (~script5305 = 1) {
-			$int41 = calc(25 + (if_getheight($component8) - 91) / 2);
-			if (cc_find($component8, $comsubid11) = true) {
-				cc_sethide(true);
-			}
-			if (cc_find($component8, $comsubid14) = true) {
-				cc_sethide(true);
-			}
-			if (cc_find($component8, $comsubid10) = true) {
-				cc_sethide(false);
-				cc_setsize(63, 63, ^setsize_abs, ^setsize_abs);
-				cc_setposition(1, calc($int41 + 1), ^setpos_abs_centre, ^setpos_abs_top);
-			}
-			if (cc_find($component8, $comsubid13) = true) {
-				cc_sethide(false);
-				cc_setsize(63, 63, ^setsize_abs, ^setsize_abs);
-				cc_setposition(0, $int41, ^setpos_abs_centre, ^setpos_abs_top);
-				if ($int40 = 1) {
-					cc_setop(1, "Create <col=ff9040>Buy</col> offer");
-					cc_setonop("script805(
-						0 = event_op, 
-						1 = $int9, 
-						2 = 0, 
-						3 = $com_ge_offers_frame2, 
-						4 = $comsubid3, 
-						5 = $com_ge_offers_back4, 
-						6 = $com_ge_offers_index5, 
-						7 = $com_ge_offers_details6, 
-						8 = $com_ge_offers_setup7, 
-						9 = $com_ge_offers_tooltip27
-					)");
-					cc_setonmouseover("cc_graphic_swapper($component8, $comsubid25, $graphic33, null)");
-					cc_setonmouseleave("cc_graphic_swapper($component8, $comsubid25, $graphic32, $com_ge_offers_tooltip27)");
-					$string1 = "Offer to buy a bond.";
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_ge_offers_tooltip27, $string1, 25, 512)");
-					if (cc_find($component8, $comsubid25) = true) {
-						cc_sethide(false);
-						cc_setposition(0, calc($int41 + 14), ^setpos_abs_centre, ^setpos_abs_top);
-						cc_setgraphic($graphic32);
-					}
-				} else {
-					cc_clearops;
-					cc_setonop(null);
-					cc_setonmouseover(null);
-					cc_setonmouseleave(null);
-					cc_setonmouserepeat(null);
-					if (cc_find($component8, $comsubid25) = true) {
-						cc_sethide(false);
-						cc_setposition(0, calc($int41 + 14), ^setpos_abs_centre, ^setpos_abs_top);
-						cc_setgraphic($graphic33);
-					}
-				}
-			}
-			if (cc_find($component8, $comsubid26) = true) {
-				cc_sethide(true);
-			}
-		} else {
-			$int41 = calc(25 + (if_getheight($component8) - 73) / 2);
-			if (cc_find($component8, $comsubid10) = true) {
-				cc_sethide(false);
-				cc_setsize(46, 45, ^setsize_abs, ^setsize_abs);
-				cc_setposition(7, calc($int41 + 1), ^setpos_abs_left, ^setpos_abs_top);
-			}
-			if (cc_find($component8, $comsubid11) = true) {
-				cc_sethide(false);
-				cc_setposition(calc(if_getwidth($component8) - 53 + 1), calc($int41 + 1), ^setpos_abs_left, ^setpos_abs_top);
-			}
-			if (cc_find($component8, $comsubid13) = true & .cc_find($component8, $comsubid14) = true) {
-				cc_sethide(false);
-				.cc_sethide(false);
-				cc_setsize(46, 45, ^setsize_abs, ^setsize_abs);
-				.cc_setsize(46, 45, ^setsize_abs, ^setsize_abs);
-				cc_setposition(6, $int41, ^setpos_abs_left, ^setpos_abs_top);
-				.cc_setposition(7, $int41, ^setpos_abs_right, ^setpos_abs_top);
-				if ($int40 = 1) {
-					cc_setop(1, "Create <col=ff9040>Buy</col> offer");
-					.cc_setop(1, "Create <col=ff9040>Sell</col> offer");
-					cc_setonop("script805(
-						0 = event_op, 
-						1 = $int9, 
-						2 = 0, 
-						3 = $com_ge_offers_frame2, 
-						4 = $comsubid3, 
-						5 = $com_ge_offers_back4, 
-						6 = $com_ge_offers_index5, 
-						7 = $com_ge_offers_details6, 
-						8 = $com_ge_offers_setup7, 
-						9 = $com_ge_offers_tooltip27
-					)");
-					.cc_setonop("script805(
-						0 = event_op, 
-						1 = $int9, 
-						2 = 1, 
-						3 = $com_ge_offers_frame2, 
-						4 = $comsubid3, 
-						5 = $com_ge_offers_back4, 
-						6 = $com_ge_offers_index5, 
-						7 = $com_ge_offers_details6, 
-						8 = $com_ge_offers_setup7, 
-						9 = $com_ge_offers_tooltip27
-					)");
-					cc_setonmouseover("cc_graphic_swapper($component8, $comsubid25, $graphic33, null)");
-					.cc_setonmouseover("cc_graphic_swapper($component8, $comsubid26, $graphic35, null)");
-					cc_setonmouseleave("cc_graphic_swapper($component8, $comsubid25, $graphic32, $com_ge_offers_tooltip27)");
-					.cc_setonmouseleave("cc_graphic_swapper($component8, $comsubid26, $graphic34, $com_ge_offers_tooltip27)");
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_ge_offers_tooltip27, $string1, 25, 512)");
-					$string1 = "Offer to SELL items.";
-					.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_ge_offers_tooltip27, $string1, 25, 512)");
-					if (cc_find($component8, $comsubid25) = true & .cc_find($component8, $comsubid26) = true) {
-						cc_sethide(false);
-						.cc_sethide(false);
-						cc_setposition(13, calc($int41 + 5), ^setpos_abs_left, ^setpos_abs_top);
-						.cc_setposition(11, calc($int41 + 5), ^setpos_abs_right, ^setpos_abs_top);
-						cc_setgraphic($graphic32);
-						.cc_setgraphic($graphic34);
-					}
-				} else {
-					cc_clearops;
-					.cc_clearops;
-					cc_setonop(null);
-					.cc_setonop(null);
-					cc_setonmouseover(null);
-					.cc_setonmouseover(null);
-					cc_setonmouseleave(null);
-					.cc_setonmouseleave(null);
-					cc_setonmouserepeat(null);
-					.cc_setonmouserepeat(null);
-					if (cc_find($component8, $comsubid25) = true & .cc_find($component8, $comsubid26) = true) {
-						cc_sethide(false);
-						.cc_sethide(false);
-						cc_setposition(13, calc($int41 + 5), ^setpos_abs_left, ^setpos_abs_top);
-						.cc_setposition(11, calc($int41 + 5), ^setpos_abs_right, ^setpos_abs_top);
-						cc_setgraphic($graphic33);
-						.cc_setgraphic($graphic35);
-					}
-				}
-			}
-		}
-		return;
-	}
-	$int36, $obj37, $int38, $int39 = 1, ~ge_itemsink_get($int9), ~script5732($int9);
-	if ($obj37 ! null) {
-		$obj28, $int31, $int29, $int30, $string0 = $obj37, $int38, 1, 1, "Sell";
-	} else {
-		$int29 = inv_total($inv0, $obj28);
-	}
-} else {
-	$obj28, $int29 = stockmarket_getofferitem($int9), stockmarket_getoffercount($int9);
-	$int30, $int31 = stockmarket_getoffercompletedcount($int9), stockmarket_getofferprice($int9);
-	if (stockmarket_getoffertype($int9) = 1) {
-		$string0 = "Sell";
-	} else {
-		$string0 = "Buy";
-	}
-}
-if (cc_find($component8, $comsubid15) = true) {
-	cc_settext($string0);
-}
-if (cc_find($component8, $comsubid10) = true) {
-	cc_sethide(true);
-}
-if (cc_find($component8, $comsubid11) = true) {
-	cc_sethide(true);
-}
-if (cc_find($component8, $comsubid13) = true) {
-	cc_sethide(true);
-}
-if (cc_find($component8, $comsubid14) = true) {
-	cc_sethide(true);
-}
-if (cc_find($component8, $comsubid25) = true) {
-	cc_sethide(true);
-}
-if (cc_find($component8, $comsubid26) = true) {
-	cc_sethide(true);
-}
-def_string $string2 = ",";
-if (cc_find($component8, $comsubid12) = true) {
-	cc_sethide(false);
-	cc_settrans(255);
-	cc_setonmouseover("cc_settrans($component8, $comsubid12, 245, null)");
-	cc_setonmouseleave("cc_settrans($component8, $comsubid12, 255, $com_ge_offers_tooltip27)");
-	cc_clearops;
-	cc_setop(1, "View offer");
-	if ($int36 = 1) {
-		if ($obj28 ! null) {
-			if ($int39 >= ^max_32bit_int) {
-				$string1 = "Selling: <oc_name($obj28)><br>1 / 1";
-				cc_setop(2, "Abort offer");
-			} else {
-				$string1 = "Sold: <oc_name($obj28)><br>1 / 1";
-			}
-		} else if ($int29 = 1) {
-			$string1 = "Collect your item.";
-		} else {
-			$string1 = "Collect your items.";
-		}
-	} else if (stockmarket_getoffertype($int9) = 1) {
-		if (stockmarket_isofferfinished($int9) = true) {
-			$string1 = "Sold: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
-		} else {
-			$string1 = "Selling: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
-			cc_setop(2, "Abort offer");
-			cc_setop(3, "Modify offer");
-		}
-	} else if (stockmarket_isofferfinished($int9) = true) {
-		$string1 = "Bought: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
-	} else {
-		$string1 = "Buying: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
-		cc_setop(2, "Abort offer");
-		cc_setop(3, "Modify offer");
-	}
-	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $com_ge_offers_tooltip27, $string1, 25, 512)");
-}
-if (cc_find($component8, $comsubid16) = true) {
-	cc_sethide(false);
-}
-if (cc_find($component8, $comsubid17) = true) {
-	cc_sethide(false);
-	cc_setobject($obj28, $int29);
-}
-def_int $int42 = 0;
-def_string $string3 = "";
-def_int $int43 = 0;
-def_int $int44 = 0;
-def_string $string4 = "";
-if (cc_find($component8, $comsubid18) = true) {
-	cc_sethide(false);
-	$int42, $string3 = cc_getwidth, oc_name($obj28);
-	$int43 = string_length($string3);
-	if ($int43 > 0 & parawidth($string3, $int42, p11_full) > $int42) {
-		while ($int43 > 1 & $int44 = 0) {
-			$int43 = calc($int43 - 1);
-			$string4 = append(substring($string3, 0, $int43), "...");
-			if (parawidth($string4, $int42, p11_full) <= $int42) {
-				$string3, $int44 = $string4, 1;
-			}
-		}
-	}
-	cc_settext($string3);
-}
-if (cc_find($component8, $comsubid19) = true) {
-	if ($int31 > 0) {
-		cc_sethide(false);
-		if ($int31 = 1) {
-			cc_settext("1 coin");
-		} else {
-			cc_settext("<~tostring_spacer($int31, ",")> coins");
-		}
-	} else {
-		cc_sethide(true);
-	}
-}
-if (cc_find($component8, $comsubid20) = true) {
-	cc_sethide(false);
-}
-if (cc_find($component8, $comsubid21) = true) {
-	cc_sethide(false);
-}
-if (cc_find($component8, $comsubid23) = true) {
-	cc_sethide(false);
-}
-if (cc_find($component8, $comsubid24) = true) {
-	cc_sethide(false);
-}
-if (cc_find($component8, $comsubid22) = true) {
-	cc_sethide(false);
-	if ($int36 = 1) {
-		if ($obj37 ! null) {
-			if ($int39 >= ^max_32bit_int) {
-				~script812($int9, $int29, $int30, 0xd88020, $int1);
-			} else {
-				~script812($int9, $int29, $int30, 0x005f00, $int1);
-			}
-		} else {
-			~script812($int9, $int29, $int30, 0x8f0000, $int1);
-		}
-	} else {
-		~script812($int9, $int29, $int30, null, $int1);
-	}
-}
+java.lang.IllegalStateException: Opcode 61 in script 798 not implemented
+
+.id                       798
+.int_arg_count            28
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 28
+   iconst                 0
+   istore                 29
+   iconst                 0
+   istore                 30
+   lconst                 0
+   lstore                
+   sconst                 "Cancelled"
+   ostore                 0
+   iconst                 1108
+   istore                 31
+   iconst                 1109
+   istore                 32
+   iconst                 1106
+   istore                 33
+   iconst                 1107
+   istore                 34
+   sconst                 "Offer to BUY items."
+   ostore                 1
+   iconst                 0
+   istore                 35
+   iconst                 -1
+   istore                 36
+   lconst                 0
+   lstore                 1
+   lconst                 0
+   lstore                 2
+   iconst                 0
+   istore                 37
+   iconst                 0
+   istore                 38
+   invoke                 1138
+   iconst                 0
+   if_icmpne              LABEL36
+   jump                   LABEL43
+LABEL36:
+   iload                  9
+   iconst                 8
+   if_icmplt              LABEL40
+   jump                   LABEL42
+LABEL40:
+   iconst                 1
+   istore                 37
+LABEL42:
+   jump                   LABEL52
+LABEL43:
+   iload                  9
+   iconst                 3
+   if_icmplt              LABEL50
+   get_varc_int           103
+   iconst                 1
+   if_icmpeq              LABEL50
+   jump                   LABEL52
+LABEL50:
+   iconst                 1
+   istore                 37
+LABEL52:
+   iload                  9
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL57
+   jump                   LABEL624
+LABEL57:
+   iload                  0
+   iconst                 0
+   inv_getobj            
+   istore                 28
+   iload                  28
+   iconst                 -1
+   if_icmpeq              LABEL65
+   jump                   LABEL69
+LABEL65:
+   iload                  0
+   iconst                 1
+   inv_getobj            
+   istore                 28
+LABEL69:
+   iload                  28
+   iconst                 -1
+   if_icmpeq              LABEL73
+   jump                   LABEL595
+LABEL73:
+   iload                  8
+   iload                  15
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL79
+   jump                   LABEL81
+LABEL79:
+   sconst                 "Empty"
+   cc_settext            
+LABEL81:
+   iload                  8
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL87
+   jump                   LABEL89
+LABEL87:
+   iconst                 1
+   cc_sethide            
+LABEL89:
+   iload                  8
+   iload                  16
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL95
+   jump                   LABEL97
+LABEL95:
+   iconst                 1
+   cc_sethide            
+LABEL97:
+   iload                  8
+   iload                  17
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL103
+   jump                   LABEL105
+LABEL103:
+   iconst                 1
+   cc_sethide            
+LABEL105:
+   iload                  8
+   iload                  18
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL111
+   jump                   LABEL113
+LABEL111:
+   iconst                 1
+   cc_sethide            
+LABEL113:
+   iload                  8
+   iload                  19
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL119
+   jump                   LABEL121
+LABEL119:
+   iconst                 1
+   cc_sethide            
+LABEL121:
+   iload                  8
+   iload                  20
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL127
+   jump                   LABEL129
+LABEL127:
+   iconst                 1
+   cc_sethide            
+LABEL129:
+   iload                  8
+   iload                  21
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL135
+   jump                   LABEL137
+LABEL135:
+   iconst                 1
+   cc_sethide            
+LABEL137:
+   iload                  8
+   iload                  22
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL143
+   jump                   LABEL145
+LABEL143:
+   iconst                 1
+   cc_sethide            
+LABEL145:
+   iload                  8
+   iload                  23
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL151
+   jump                   LABEL153
+LABEL151:
+   iconst                 1
+   cc_sethide            
+LABEL153:
+   iload                  8
+   iload                  24
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL159
+   jump                   LABEL161
+LABEL159:
+   iconst                 1
+   cc_sethide            
+LABEL161:
+   invoke                 5305
+   iconst                 1
+   if_icmpeq              LABEL165
+   jump                   LABEL330
+LABEL165:
+   iconst                 25
+   iload                  8
+   if_getheight          
+   iconst                 91
+   sub                   
+   iconst                 2
+   div                   
+   add                   
+   istore                 38
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL180
+   jump                   LABEL182
+LABEL180:
+   iconst                 1
+   cc_sethide            
+LABEL182:
+   iload                  8
+   iload                  14
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL188
+   jump                   LABEL190
+LABEL188:
+   iconst                 1
+   cc_sethide            
+LABEL190:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL196
+   jump                   LABEL210
+LABEL196:
+   iconst                 0
+   cc_sethide            
+   iconst                 63
+   iconst                 63
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 1
+   iload                  38
+   iconst                 1
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+LABEL210:
+   iload                  8
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL216
+   jump                   LABEL321
+LABEL216:
+   iconst                 0
+   cc_sethide            
+   iconst                 63
+   iconst                 63
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 0
+   iload                  38
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iload                  37
+   iconst                 1
+   if_icmpeq              LABEL232
+   jump                   LABEL291
+LABEL232:
+   iconst                 1
+   sconst                 "Create <col=ff9040>Buy</col> offer"
+   cc_setop              
+   iconst                 805
+   iconst                 -2147483644
+   iload                  9
+   iconst                 0
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  27
+   sconst                 "iiiiiiiiii"
+   cc_setonop            
+   iconst                 229
+   iload                  8
+   iload                  25
+   iload                  32
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseover     
+   iconst                 229
+   iload                  8
+   iload                  25
+   iload                  31
+   iload                  27
+   sconst                 "iiii"
+   cc_setonmouseleave    
+   sconst                 "Offer to buy a bond."
+   ostore                 1
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  27
+   oload                  1
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+   iload                  8
+   iload                  25
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL279
+   jump                   LABEL290
+LABEL279:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   iload                  38
+   iconst                 14
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iload                  31
+   cc_setgraphic         
+LABEL290:
+   jump                   LABEL321
+LABEL291:
+   cc_clearops           
+   iconst                 -1
+   sconst                 ""
+   cc_setonop            
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseover     
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iload                  8
+   iload                  25
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL310
+   jump                   LABEL321
+LABEL310:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   iload                  38
+   iconst                 14
+   add                   
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iload                  32
+   cc_setgraphic         
+LABEL321:
+   iload                  8
+   iload                  26
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL327
+   jump                   LABEL329
+LABEL327:
+   iconst                 1
+   cc_sethide            
+LABEL329:
+   jump                   LABEL594
+LABEL330:
+   iconst                 25
+   iload                  8
+   if_getheight          
+   iconst                 73
+   sub                   
+   iconst                 2
+   div                   
+   add                   
+   istore                 38
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL345
+   jump                   LABEL359
+LABEL345:
+   iconst                 0
+   cc_sethide            
+   iconst                 46
+   iconst                 45
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 7
+   iload                  38
+   iconst                 1
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+LABEL359:
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL365
+   jump                   LABEL379
+LABEL365:
+   iconst                 0
+   cc_sethide            
+   iload                  8
+   if_getwidth           
+   iconst                 53
+   sub                   
+   iconst                 1
+   add                   
+   iload                  38
+   iconst                 1
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+LABEL379:
+   iload                  8
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL385
+   jump                   LABEL594
+LABEL385:
+   iload                  8
+   iload                  14
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL391
+   jump                   LABEL594
+LABEL391:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   cc_sethide             1
+   iconst                 46
+   iconst                 45
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 46
+   iconst                 45
+   iconst                 0
+   iconst                 0
+   cc_setsize             1
+   iconst                 6
+   iload                  38
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 7
+   iload                  38
+   iconst                 2
+   iconst                 0
+   cc_setposition         1
+   iload                  37
+   iconst                 1
+   if_icmpeq              LABEL419
+   jump                   LABEL534
+LABEL419:
+   iconst                 1
+   sconst                 "Create <col=ff9040>Buy</col> offer"
+   cc_setop              
+   iconst                 1
+   sconst                 "Create <col=ff9040>Sell</col> offer"
+   cc_setop               1
+   iconst                 805
+   iconst                 -2147483644
+   iload                  9
+   iconst                 0
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  27
+   sconst                 "iiiiiiiiii"
+   cc_setonop            
+   iconst                 805
+   iconst                 -2147483644
+   iload                  9
+   iconst                 1
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  27
+   sconst                 "iiiiiiiiii"
+   cc_setonop             1
+   iconst                 229
+   iload                  8
+   iload                  25
+   iload                  32
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseover     
+   iconst                 229
+   iload                  8
+   iload                  26
+   iload                  34
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseover      1
+   iconst                 229
+   iload                  8
+   iload                  25
+   iload                  31
+   iload                  27
+   sconst                 "iiii"
+   cc_setonmouseleave    
+   iconst                 229
+   iload                  8
+   iload                  26
+   iload                  33
+   iload                  27
+   sconst                 "iiii"
+   cc_setonmouseleave     1
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  27
+   oload                  1
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+   sconst                 "Offer to SELL items."
+   ostore                 1
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  27
+   oload                  1
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat    1
+   iload                  8
+   iload                  25
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL505
+   jump                   LABEL533
+LABEL505:
+   iload                  8
+   iload                  26
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL511
+   jump                   LABEL533
+LABEL511:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   cc_sethide             1
+   iconst                 13
+   iload                  38
+   iconst                 5
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 11
+   iload                  38
+   iconst                 5
+   add                   
+   iconst                 2
+   iconst                 0
+   cc_setposition         1
+   iload                  31
+   cc_setgraphic         
+   iload                  33
+   cc_setgraphic          1
+LABEL533:
+   jump                   LABEL594
+LABEL534:
+   cc_clearops           
+   cc_clearops            1
+   iconst                 -1
+   sconst                 ""
+   cc_setonop            
+   iconst                 -1
+   sconst                 ""
+   cc_setonop             1
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseover     
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseover      1
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave     1
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat    1
+   iload                  8
+   iload                  25
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL566
+   jump                   LABEL594
+LABEL566:
+   iload                  8
+   iload                  26
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL572
+   jump                   LABEL594
+LABEL572:
+   iconst                 0
+   cc_sethide            
+   iconst                 0
+   cc_sethide             1
+   iconst                 13
+   iload                  38
+   iconst                 5
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 11
+   iload                  38
+   iconst                 5
+   add                   
+   iconst                 2
+   iconst                 0
+   cc_setposition         1
+   iload                  32
+   cc_setgraphic         
+   iload                  34
+   cc_setgraphic          1
+LABEL594:
+   return                
+LABEL595:
+   iconst                 1
+   iload                  9
+   invoke                 5733
+   iload                  9
+   invoke                 5732
+   lstore                 2
+   lstore                 1
+   istore                 36
+   istore                 35
+   iload                  36
+   iconst                 -1
+   if_icmpne              LABEL608
+   jump                   LABEL619
+LABEL608:
+   iload                  36
+   lload                  1
+   iconst                 1
+   iconst                 1
+   sconst                 "Sell"
+   ostore                 0
+   istore                 30
+   istore                 29
+   lstore                
+   istore                 28
+   jump                   LABEL623
+LABEL619:
+   iload                  0
+   iload                  28
+   inv_total             
+   istore                 29
+LABEL623:
+   jump                   LABEL646
+LABEL624:
+   iload                  9
+   stockmarket_getofferitem
+   iload                  9
+   stockmarket_getoffercount
+   istore                 29
+   istore                 28
+   iload                  9
+   stockmarket_getoffercompletedcount
+   iload                  9
+   stockmarket_getofferprice
+   lstore                
+   istore                 30
+   iload                  9
+   stockmarket_getoffertype
+   iconst                 1
+   if_icmpeq              LABEL641
+   jump                   LABEL644
+LABEL641:
+   sconst                 "Sell"
+   ostore                 0
+   jump                   LABEL646
+LABEL644:
+   sconst                 "Buy"
+   ostore                 0
+LABEL646:
+   iload                  8
+   iload                  15
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL652
+   jump                   LABEL654
+LABEL652:
+   oload                  0
+   cc_settext            
+LABEL654:
+   iload                  8
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL660
+   jump                   LABEL662
+LABEL660:
+   iconst                 1
+   cc_sethide            
+LABEL662:
+   iload                  8
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL668
+   jump                   LABEL670
+LABEL668:
+   iconst                 1
+   cc_sethide            
+LABEL670:
+   iload                  8
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL676
+   jump                   LABEL678
+LABEL676:
+   iconst                 1
+   cc_sethide            
+LABEL678:
+   iload                  8
+   iload                  14
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL684
+   jump                   LABEL686
+LABEL684:
+   iconst                 1
+   cc_sethide            
+LABEL686:
+   iload                  8
+   iload                  25
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL692
+   jump                   LABEL694
+LABEL692:
+   iconst                 1
+   cc_sethide            
+LABEL694:
+   iload                  8
+   iload                  26
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL700
+   jump                   LABEL702
+LABEL700:
+   iconst                 1
+   cc_sethide            
+LABEL702:
+   sconst                 ","
+   ostore                 2
+   iload                  8
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL710
+   jump                   LABEL862
+LABEL710:
+   iconst                 0
+   cc_sethide            
+   iconst                 255
+   cc_settrans           
+   iconst                 244
+   iload                  8
+   iload                  12
+   iconst                 245
+   iconst                 -1
+   sconst                 "iiii"
+   cc_setonmouseover     
+   iconst                 244
+   iload                  8
+   iload                  12
+   iconst                 255
+   iload                  27
+   sconst                 "iiii"
+   cc_setonmouseleave    
+   cc_clearops           
+   iconst                 1
+   sconst                 "View offer"
+   cc_setop              
+   iload                  35
+   iconst                 1
+   if_icmpeq              LABEL736
+   jump                   LABEL771
+LABEL736:
+   iload                  28
+   iconst                 -1
+   if_icmpne              LABEL740
+   jump                   LABEL761
+LABEL740:
+   lload                  2
+   lconst                 2147483647
+   if_lcmpge              LABEL744
+   jump                   LABEL754
+LABEL744:
+   sconst                 "Selling: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>1 / 1"
+   join_string            3
+   ostore                 1
+   iconst                 2
+   sconst                 "Abort offer"
+   cc_setop              
+   jump                   LABEL760
+LABEL754:
+   sconst                 "Sold: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>1 / 1"
+   join_string            3
+   ostore                 1
+LABEL760:
+   jump                   LABEL770
+LABEL761:
+   iload                  29
+   iconst                 1
+   if_icmpeq              LABEL765
+   jump                   LABEL768
+LABEL765:
+   sconst                 "Collect your item."
+   ostore                 1
+   jump                   LABEL770
+LABEL768:
+   sconst                 "Collect your items."
+   ostore                 1
+LABEL770:
+   jump                   LABEL853
+LABEL771:
+   iload                  9
+   stockmarket_getoffertype
+   iconst                 1
+   if_icmpeq              LABEL776
+   jump                   LABEL815
+LABEL776:
+   iload                  9
+   stockmarket_isofferfinished
+   iconst                 1
+   if_icmpeq              LABEL781
+   jump                   LABEL795
+LABEL781:
+   sconst                 "Sold: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>"
+   iload                  30
+   oload                  2
+   invoke                 46
+   sconst                 " / "
+   iload                  29
+   oload                  2
+   invoke                 46
+   join_string            6
+   ostore                 1
+   jump                   LABEL814
+LABEL795:
+   sconst                 "Selling: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>"
+   iload                  30
+   oload                  2
+   invoke                 46
+   sconst                 " / "
+   iload                  29
+   oload                  2
+   invoke                 46
+   join_string            6
+   ostore                 1
+   iconst                 2
+   sconst                 "Abort offer"
+   cc_setop              
+   iconst                 3
+   sconst                 "Modify offer"
+   cc_setop              
+LABEL814:
+   jump                   LABEL853
+LABEL815:
+   iload                  9
+   stockmarket_isofferfinished
+   iconst                 1
+   if_icmpeq              LABEL820
+   jump                   LABEL834
+LABEL820:
+   sconst                 "Bought: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>"
+   iload                  30
+   oload                  2
+   invoke                 46
+   sconst                 " / "
+   iload                  29
+   oload                  2
+   invoke                 46
+   join_string            6
+   ostore                 1
+   jump                   LABEL853
+LABEL834:
+   sconst                 "Buying: "
+   iload                  28
+   oc_name               
+   sconst                 "<br>"
+   iload                  30
+   oload                  2
+   invoke                 46
+   sconst                 " / "
+   iload                  29
+   oload                  2
+   invoke                 46
+   join_string            6
+   ostore                 1
+   iconst                 2
+   sconst                 "Abort offer"
+   cc_setop              
+   iconst                 3
+   sconst                 "Modify offer"
+   cc_setop              
+LABEL853:
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  27
+   oload                  1
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+LABEL862:
+   iload                  8
+   iload                  16
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL868
+   jump                   LABEL870
+LABEL868:
+   iconst                 0
+   cc_sethide            
+LABEL870:
+   iload                  8
+   iload                  17
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL876
+   jump                   LABEL881
+LABEL876:
+   iconst                 0
+   cc_sethide            
+   iload                  28
+   iload                  29
+   cc_setobject          
+LABEL881:
+   iconst                 0
+   istore                 39
+   sconst                 ""
+   ostore                 3
+   iconst                 0
+   istore                 40
+   iconst                 0
+   istore                 41
+   sconst                 ""
+   ostore                 4
+   iload                  8
+   iload                  18
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL897
+   jump                   LABEL951
+LABEL897:
+   iconst                 0
+   cc_sethide            
+   cc_getwidth           
+   iload                  28
+   oc_name               
+   ostore                 3
+   istore                 39
+   oload                  3
+   string_length         
+   istore                 40
+   iload                  40
+   iconst                 0
+   if_icmpgt              LABEL911
+   jump                   LABEL949
+LABEL911:
+   oload                  3
+   iload                  39
+   iconst                 494
+   parawidth             
+   iload                  39
+   if_icmpgt              LABEL918
+   jump                   LABEL949
+LABEL918:
+   iload                  40
+   iconst                 1
+   if_icmpgt              LABEL922
+   jump                   LABEL949
+LABEL922:
+   iload                  41
+   iconst                 0
+   if_icmpeq              LABEL926
+   jump                   LABEL949
+LABEL926:
+   iload                  40
+   iconst                 1
+   sub                   
+   istore                 40
+   oload                  3
+   iconst                 0
+   iload                  40
+   substring             
+   sconst                 "..."
+   append                
+   ostore                 4
+   oload                  4
+   iload                  39
+   iconst                 494
+   parawidth             
+   iload                  39
+   if_icmple              LABEL944
+   jump                   LABEL948
+LABEL944:
+   oload                  4
+   iconst                 1
+   istore                 41
+   ostore                 3
+LABEL948:
+   jump                   LABEL918
+LABEL949:
+   oload                  3
+   cc_settext            
+LABEL951:
+   iload                  8
+   iload                  19
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL957
+   jump                   LABEL979
+LABEL957:
+   lload                 
+   lconst                 0
+   if_lcmpgt              LABEL961
+   jump                   LABEL977
+LABEL961:
+   iconst                 0
+   cc_sethide            
+   lload                 
+   lconst                 1
+   if_lcmpeq              LABEL967
+   jump                   LABEL970
+LABEL967:
+   sconst                 "1 coin"
+   cc_settext            
+   jump                   LABEL976
+LABEL970:
+   lload                 
+   sconst                 ","
+   invoke                 9907
+   sconst                 " coins"
+   join_string            2
+   cc_settext            
+LABEL976:
+   jump                   LABEL979
+LABEL977:
+   iconst                 1
+   cc_sethide            
+LABEL979:
+   iload                  8
+   iload                  20
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL985
+   jump                   LABEL987
+LABEL985:
+   iconst                 0
+   cc_sethide            
+LABEL987:
+   iload                  8
+   iload                  21
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL993
+   jump                   LABEL995
+LABEL993:
+   iconst                 0
+   cc_sethide            
+LABEL995:
+   iload                  8
+   iload                  23
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL1001
+   jump                   LABEL1003
+LABEL1001:
+   iconst                 0
+   cc_sethide            
+LABEL1003:
+   iload                  8
+   iload                  24
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL1009
+   jump                   LABEL1011
+LABEL1009:
+   iconst                 0
+   cc_sethide            
+LABEL1011:
+   iload                  8
+   iload                  22
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL1017
+   jump                   LABEL1058
+LABEL1017:
+   iconst                 0
+   cc_sethide            
+   iload                  35
+   iconst                 1
+   if_icmpeq              LABEL1023
+   jump                   LABEL1052
+LABEL1023:
+   iload                  36
+   iconst                 -1
+   if_icmpne              LABEL1027
+   jump                   LABEL1045
+LABEL1027:
+   lload                  2
+   lconst                 2147483647
+   if_lcmpge              LABEL1031
+   jump                   LABEL1038
+LABEL1031:
+   iload                  9
+   iload                  29
+   iload                  30
+   iconst                 14188576
+   iload                  1
+   invoke                 812
+   jump                   LABEL1044
+LABEL1038:
+   iload                  9
+   iload                  29
+   iload                  30
+   iconst                 24320
+   iload                  1
+   invoke                 812
+LABEL1044:
+   jump                   LABEL1051
+LABEL1045:
+   iload                  9
+   iload                  29
+   iload                  30
+   iconst                 9371648
+   iload                  1
+   invoke                 812
+LABEL1051:
+   jump                   LABEL1058
+LABEL1052:
+   iload                  9
+   iload                  29
+   iload                  30
+   iconst                 -1
+   iload                  1
+   invoke                 812
+LABEL1058:
+   return                

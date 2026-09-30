@@ -1,0 +1,375 @@
+java.lang.IllegalStateException: Opcode 61 in script 9903 not implemented
+
+.id                       9903
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 2147483647
+   tostring              
+   ostore                 1
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL7
+   jump                   LABEL10
+LABEL7:
+   lconst                 9223372036854775807
+   4125                  
+   ostore                 1
+LABEL10:
+   oload                  1
+   string_length         
+   istore                 1
+   oload                  0
+   string_length         
+   istore                 2
+   iload                  2
+   iconst                 0
+   if_icmple              LABEL20
+   jump                   LABEL22
+LABEL20:
+   sconst                 "0"
+   return                
+LABEL22:
+   iload                  2
+   iload                  1
+   if_icmpgt              LABEL26
+   jump                   LABEL28
+LABEL26:
+   oload                  1
+   return                
+LABEL28:
+   oload                  0
+   lowercase             
+   ostore                 0
+   iconst                 0
+   istore                 3
+   sconst                 ""
+   ostore                 2
+   sconst                 ""
+   ostore                 3
+   sconst                 ""
+   ostore                 4
+LABEL39:
+   iload                  3
+   iload                  2
+   if_icmplt              LABEL43
+   jump                   LABEL270
+LABEL43:
+   oload                  0
+   iload                  3
+   iload                  3
+   iconst                 1
+   add                   
+   substring             
+   ostore                 2
+   iload                  3
+   iconst                 0
+   if_icmpeq              LABEL54
+   jump                   LABEL74
+LABEL54:
+   oload                  2
+   sconst                 "0"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL60
+   jump                   LABEL74
+LABEL60:
+   oload                  0
+   iconst                 1
+   iload                  2
+   substring             
+   ostore                 0
+   iload                  3
+   iconst                 1
+   sub                   
+   iload                  2
+   iconst                 1
+   sub                   
+   istore                 2
+   istore                 3
+   jump                   LABEL265
+LABEL74:
+   oload                  2
+   sconst                 "k"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL80
+   jump                   LABEL122
+LABEL80:
+   iload                  2
+   iload                  1
+   iconst                 2
+   sub                   
+   if_icmpgt              LABEL86
+   jump                   LABEL88
+LABEL86:
+   oload                  1
+   return                
+LABEL88:
+   oload                  0
+   iconst                 0
+   iload                  3
+   substring             
+   ostore                 3
+   iload                  2
+   iload                  3
+   iconst                 1
+   add                   
+   if_icmpgt              LABEL99
+   jump                   LABEL107
+LABEL99:
+   oload                  0
+   iload                  3
+   iconst                 1
+   add                   
+   iload                  2
+   substring             
+   ostore                 4
+   jump                   LABEL109
+LABEL107:
+   sconst                 ""
+   ostore                 4
+LABEL109:
+   oload                  3
+   sconst                 "000"
+   append                
+   oload                  4
+   append                
+   ostore                 0
+   iload                  2
+   iconst                 2
+   add                   
+   istore                 2
+   sconst                 "0"
+   ostore                 2
+   jump                   LABEL265
+LABEL122:
+   oload                  2
+   sconst                 "m"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL128
+   jump                   LABEL170
+LABEL128:
+   iload                  2
+   iload                  1
+   iconst                 5
+   sub                   
+   if_icmpgt              LABEL134
+   jump                   LABEL136
+LABEL134:
+   oload                  1
+   return                
+LABEL136:
+   oload                  0
+   iconst                 0
+   iload                  3
+   substring             
+   ostore                 3
+   iload                  2
+   iload                  3
+   iconst                 1
+   add                   
+   if_icmpgt              LABEL147
+   jump                   LABEL155
+LABEL147:
+   oload                  0
+   iload                  3
+   iconst                 1
+   add                   
+   iload                  2
+   substring             
+   ostore                 4
+   jump                   LABEL157
+LABEL155:
+   sconst                 ""
+   ostore                 4
+LABEL157:
+   oload                  3
+   sconst                 "000000"
+   append                
+   oload                  4
+   append                
+   ostore                 0
+   iload                  2
+   iconst                 5
+   add                   
+   istore                 2
+   sconst                 "0"
+   ostore                 2
+   jump                   LABEL265
+LABEL170:
+   oload                  2
+   sconst                 "b"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL176
+   jump                   LABEL218
+LABEL176:
+   iload                  2
+   iload                  1
+   iconst                 8
+   sub                   
+   if_icmpgt              LABEL182
+   jump                   LABEL184
+LABEL182:
+   oload                  1
+   return                
+LABEL184:
+   oload                  0
+   iconst                 0
+   iload                  3
+   substring             
+   ostore                 3
+   iload                  2
+   iload                  3
+   iconst                 1
+   add                   
+   if_icmpgt              LABEL195
+   jump                   LABEL203
+LABEL195:
+   oload                  0
+   iload                  3
+   iconst                 1
+   add                   
+   iload                  2
+   substring             
+   ostore                 4
+   jump                   LABEL205
+LABEL203:
+   sconst                 ""
+   ostore                 4
+LABEL205:
+   oload                  3
+   sconst                 "000000000"
+   append                
+   oload                  4
+   append                
+   ostore                 0
+   iload                  2
+   iconst                 8
+   add                   
+   istore                 2
+   sconst                 "0"
+   ostore                 2
+   jump                   LABEL265
+LABEL218:
+   oload                  2
+   sconst                 "t"
+   compare               
+   iconst                 0
+   if_icmpeq              LABEL224
+   jump                   LABEL265
+LABEL224:
+   iload                  2
+   iload                  1
+   iconst                 11
+   sub                   
+   if_icmpgt              LABEL230
+   jump                   LABEL232
+LABEL230:
+   oload                  1
+   return                
+LABEL232:
+   oload                  0
+   iconst                 0
+   iload                  3
+   substring             
+   ostore                 3
+   iload                  2
+   iload                  3
+   iconst                 1
+   add                   
+   if_icmpgt              LABEL243
+   jump                   LABEL251
+LABEL243:
+   oload                  0
+   iload                  3
+   iconst                 1
+   add                   
+   iload                  2
+   substring             
+   ostore                 4
+   jump                   LABEL253
+LABEL251:
+   sconst                 ""
+   ostore                 4
+LABEL253:
+   oload                  3
+   sconst                 "000000000000"
+   append                
+   oload                  4
+   append                
+   ostore                 0
+   iload                  2
+   iconst                 11
+   add                   
+   istore                 2
+   sconst                 "0"
+   ostore                 2
+LABEL265:
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL39
+LABEL270:
+   iload                  2
+   iload                  1
+   if_icmplt              LABEL274
+   jump                   LABEL276
+LABEL274:
+   oload                  0
+   return                
+LABEL276:
+   iconst                 0
+   istore                 4
+   iconst                 0
+   istore                 3
+LABEL280:
+   iload                  3
+   iload                  2
+   if_icmplt              LABEL284
+   jump                   LABEL316
+LABEL284:
+   oload                  0
+   iload                  3
+   iload                  3
+   iconst                 1
+   add                   
+   substring             
+   oload                  1
+   iload                  3
+   iload                  3
+   iconst                 1
+   add                   
+   substring             
+   compare               
+   istore                 4
+   iload                  4
+   iconst                 0
+   if_icmpgt              LABEL302
+   jump                   LABEL305
+LABEL302:
+   oload                  1
+   return                
+   jump                   LABEL311
+LABEL305:
+   iload                  4
+   iconst                 0
+   if_icmplt              LABEL309
+   jump                   LABEL311
+LABEL309:
+   oload                  0
+   return                
+LABEL311:
+   iload                  3
+   iconst                 1
+   add                   
+   istore                 3
+   jump                   LABEL280
+LABEL316:
+   oload                  0
+   return                
+   sconst                 ""
+   return                

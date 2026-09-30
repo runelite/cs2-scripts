@@ -1,0 +1,142 @@
+java.lang.IllegalStateException: Opcode 61 in script 805 not implemented
+
+.id                       805
+.int_arg_count            10
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  0
+   iconst                 1
+   if_icmpne              LABEL4
+   jump                   LABEL9
+LABEL4:
+   iload                  0
+   iconst                 2
+   if_icmpne              LABEL8
+   jump                   LABEL9
+LABEL8:
+   return                
+LABEL9:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   iload                  0
+   iconst                 1
+   if_icmpne              LABEL17
+   jump                   LABEL18
+LABEL17:
+   return                
+LABEL18:
+   iconst                 -1
+   istore                 10
+   lconst                 0
+   lstore                
+   iconst                 0
+   istore                 11
+   iconst                 105
+   iconst                 118
+   iconst                 150
+   iload                  1
+   enum                  
+   istore                 12
+   iload                  12
+   iconst                 -1
+   if_icmpeq              LABEL34
+   jump                   LABEL37
+LABEL34:
+   iconst                 0
+   set_varbit             4439
+   jump                   LABEL107
+LABEL37:
+   iload                  1
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL42
+   jump                   LABEL65
+LABEL42:
+   iload                  1
+   invoke                 5733
+   lstore                
+   istore                 10
+   iload                  10
+   iconst                 -1
+   if_icmpne              LABEL50
+   jump                   LABEL53
+LABEL50:
+   iconst                 1
+   istore                 2
+   jump                   LABEL65
+LABEL53:
+   iload                  12
+   iconst                 0
+   inv_getobj            
+   iconst                 -1
+   if_icmpne              LABEL64
+   iload                  12
+   iconst                 1
+   inv_getobj            
+   iconst                 -1
+   if_icmpne              LABEL64
+   jump                   LABEL65
+LABEL64:
+   return                
+LABEL65:
+   iconst                 105
+   iconst                 118
+   iconst                 150
+   iload                  11
+   enum                  
+   istore                 12
+LABEL71:
+   iload                  12
+   iconst                 -1
+   if_icmpne              LABEL75
+   jump                   LABEL92
+LABEL75:
+   iload                  11
+   invoke                 5732
+   lconst                 9223372036854775807
+   if_lcmpge              LABEL80
+   jump                   LABEL81
+LABEL80:
+   return                
+LABEL81:
+   iload                  11
+   iconst                 1
+   add                   
+   istore                 11
+   iconst                 105
+   iconst                 118
+   iconst                 150
+   iload                  11
+   enum                  
+   istore                 12
+   jump                   LABEL71
+LABEL92:
+   iload                  1
+   iconst                 1
+   add                   
+   set_varbit             4439
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL100
+   jump                   LABEL107
+LABEL100:
+   iload                  1
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL105
+   jump                   LABEL107
+LABEL105:
+   iload                  2
+   set_varbit             4397
+LABEL107:
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   invoke                 806
+   return                

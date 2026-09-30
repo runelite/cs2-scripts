@@ -1,6 +1,19 @@
-// 4929
-[clientscript,colosseum_reward_chest_2_rewards_update](int $int0)
-def_component $component1 = colosseum_reward_chest_2:tab_content_2_content_value;
-def_string $string0 = ",";
-if_settext("<~tostring_spacer($int0, $string0)> GP", $component1);
-~colosseum_reward_chest_2_loot_draw;
+java.lang.IllegalStateException: Opcode 66 in script 4929 not implemented
+
+.id                       4929
+.int_arg_count            0
+.long_arg_count           1
+.obj_arg_count            0
+   iconst                 56623122
+   istore                 0
+   sconst                 ","
+   ostore                 0
+   lload                 
+   oload                  0
+   4126                  
+   sconst                 " GP"
+   join_string            2
+   iload                  0
+   if_settext            
+   invoke                 4928
+   return                

@@ -1,89 +1,295 @@
-// 4931
-[clientscript,colosseum_intermission_2_init](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
-def_int $int8 = 56688641;
-def_component $component9 = colosseum_intermission_2:frame;
-def_int $int10 = 56688643;
-def_string $string0 = "Wave <tostring($int0)> Completed!";
-if ($int0 = 0) {
-	$string0 = "Fortis Colosseum";
-}
-~steelborder($component9, $string0, 0);
-def_component $component11 = colosseum_intermission_2:confirm_frame;
-def_component $component12 = colosseum_intermission_2:confirm_cancel;
-def_component $component13 = colosseum_intermission_2:confirm_confirm;
-~steelbox($component11, 0, true);
-~stonebutton_init("Cancel", $component12, p12_full, 0);
-if_setonop("colosseum_intermission_2_confirm_close", $component12);
-~stonebutton_init("Confirm", $component13, p12_full, 0);
-~colosseum_intermission_2_confirm_close;
-def_int $int14 = 0;
-def_component $component15 = colosseum_intermission_2:left_loot_back;
-def_component $component16 = colosseum_intermission_2:left_loot;
-def_component $component17 = colosseum_intermission_2:left_loot_value;
-cc_deleteall($component15);
-cc_deleteall($component16);
-cc_create($component15, ^iftype_rectangle, $int14, false);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setcolour(^black);
-cc_settrans(200);
-cc_setfill(true);
-$int14 = calc($int14 + 1);
-$int14 = ~thinbox($component15, $int14);
-$int14 = 0;
-def_obj $obj18 = null;
-def_int $int19 = 0;
-def_int $int20 = 0;
-while ($int19 < inv_size(colosseum_rewards_previous)) {
-	$obj18 = inv_getobj(colosseum_rewards_previous, $int19);
-	if ($obj18 ! null) {
-		$int14 = ~colosseum_intermission_2_item_draw($component16, $int14, $obj18, inv_getnum(colosseum_rewards_previous, $int19), $int20, 2);
-		$int20 = calc($int20 + 1);
-	}
-	$int19 = calc($int19 + 1);
-}
-def_string $string1 = ",";
-if_settext("<~tostring_spacer($int4, $string1)> GP", $component17);
-$int14 = 0;
-def_component $component21 = colosseum_intermission_2:right_loot_back;
-def_component $component22 = colosseum_intermission_2:right_loot;
-def_component $component23 = colosseum_intermission_2:right_loot_value;
-cc_deleteall($component21);
-cc_deleteall($component22);
-cc_create($component21, ^iftype_rectangle, $int14, false);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setcolour(^black);
-cc_settrans(200);
-cc_setfill(true);
-$int14 = calc($int14 + 1);
-$int14 = ~thinbox($component21, $int14);
-$int14 = 0;
-$int19 = 0;
-$int20 = 0;
-while ($int19 < inv_size(colosseum_rewards_future)) {
-	$obj18 = inv_getobj(colosseum_rewards_future, $int19);
-	if ($obj18 ! null) {
-		$int14 = ~colosseum_intermission_2_item_draw($component22, $int14, $obj18, inv_getnum(colosseum_rewards_future, $int19), $int20, 2);
-		$int20 = calc($int20 + 1);
-	}
-	$int19 = calc($int19 + 1);
-}
-if_settext("<~tostring_spacer($int5, $string1)> GP", $component23);
-~script4932($int0);
-~colosseum_intermission_2_mod_buttons_draw($int1, $int2, $int3, $int0);
-%varcint1196 = 0;
-def_component $component24 = colosseum_intermission_2:tab_back;
-~script5288($component24, 0, 0, 0, if_getwidth($component24), if_getheight($component24), struct_3712, 0x726451);
-~colosseum_intermission_2_tabs_draw;
-~script4940;
-~colosseum_intermission_2_mod_info_draw(0, $int1);
-~colosseum_intermission_2_mod_info_draw(1, $int2);
-~colosseum_intermission_2_mod_info_draw(2, $int3);
-~colosseum_intermission_2_loot_draw($int6);
-~colosseum_intermission_2_summary_draw($int0, $int7);
-~script4949;
-def_component $component25 = colosseum_intermission_2:tab_content_1_mod_list_back;
-def_component $component26 = colosseum_intermission_2:tab_content_1_mod_list_scrollbar;
-def_component $component27 = colosseum_intermission_2:tab_content_1_mod_list_content;
-~colosseum_intermission_2_mod_list_draw($int7, $component25, $component26, $component27);
+java.lang.IllegalStateException: Opcode 66 in script 4931 not implemented
+
+.id                       4931
+.int_arg_count            5
+.long_arg_count           3
+.obj_arg_count            0
+   iconst                 56688641
+   istore                 5
+   iconst                 56688642
+   istore                 6
+   iconst                 56688643
+   istore                 7
+   sconst                 "Wave "
+   iload                  0
+   tostring              
+   sconst                 " Completed!"
+   join_string            3
+   ostore                 0
+   iload                  0
+   iconst                 0
+   if_icmpeq              LABEL16
+   jump                   LABEL18
+LABEL16:
+   sconst                 "Fortis Colosseum"
+   ostore                 0
+LABEL18:
+   iload                  6
+   oload                  0
+   iconst                 0
+   invoke                 228
+   pop_int               
+   iconst                 56688660
+   istore                 8
+   iconst                 56688663
+   istore                 9
+   iconst                 56688662
+   istore                 10
+   iload                  8
+   iconst                 0
+   iconst                 1
+   invoke                 249
+   pop_int               
+   sconst                 "Cancel"
+   iload                  9
+   iconst                 495
+   iconst                 0
+   invoke                 2425
+   iconst                 4951
+   sconst                 ""
+   iload                  9
+   if_setonop            
+   sconst                 "Confirm"
+   iload                  10
+   iconst                 495
+   iconst                 0
+   invoke                 2425
+   invoke                 4952
+   iconst                 0
+   istore                 11
+   iconst                 56688647
+   istore                 12
+   iconst                 56688648
+   istore                 13
+   iconst                 56688649
+   istore                 14
+   iload                  12
+   cc_deleteall          
+   iload                  13
+   cc_deleteall          
+   iload                  12
+   iconst                 3
+   iload                  11
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   cc_setcolour          
+   iconst                 200
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   iload                  11
+   iconst                 1
+   add                   
+   istore                 11
+   iload                  12
+   iload                  11
+   invoke                 715
+   istore                 11
+   iconst                 0
+   istore                 11
+   iconst                 -1
+   istore                 15
+   iconst                 0
+   istore                 16
+   iconst                 0
+   istore                 17
+LABEL98:
+   iload                  16
+   iconst                 845
+   inv_size              
+   if_icmplt              LABEL103
+   jump                   LABEL130
+LABEL103:
+   iconst                 845
+   iload                  16
+   inv_getobj            
+   istore                 15
+   iload                  15
+   iconst                 -1
+   if_icmpne              LABEL111
+   jump                   LABEL125
+LABEL111:
+   iload                  13
+   iload                  11
+   iload                  15
+   iconst                 845
+   iload                  16
+   inv_getnum            
+   iload                  17
+   iconst                 2
+   invoke                 4953
+   istore                 11
+   iload                  17
+   iconst                 1
+   add                   
+   istore                 17
+LABEL125:
+   iload                  16
+   iconst                 1
+   add                   
+   istore                 16
+   jump                   LABEL98
+LABEL130:
+   sconst                 ","
+   ostore                 1
+   lload                 
+   oload                  1
+   4126                  
+   sconst                 " GP"
+   join_string            2
+   iload                  14
+   if_settext            
+   iconst                 0
+   istore                 11
+   iconst                 56688653
+   istore                 18
+   iconst                 56688679
+   istore                 19
+   iconst                 56688680
+   istore                 20
+   iload                  18
+   cc_deleteall          
+   iload                  19
+   cc_deleteall          
+   iload                  18
+   iconst                 3
+   iload                  11
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setposition        
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   cc_setsize            
+   iconst                 0
+   cc_setcolour          
+   iconst                 200
+   cc_settrans           
+   iconst                 1
+   cc_setfill            
+   iload                  11
+   iconst                 1
+   add                   
+   istore                 11
+   iload                  18
+   iload                  11
+   invoke                 715
+   istore                 11
+   iconst                 0
+   istore                 11
+   iconst                 0
+   istore                 16
+   iconst                 0
+   istore                 17
+LABEL186:
+   iload                  16
+   iconst                 844
+   inv_size              
+   if_icmplt              LABEL191
+   jump                   LABEL218
+LABEL191:
+   iconst                 844
+   iload                  16
+   inv_getobj            
+   istore                 15
+   iload                  15
+   iconst                 -1
+   if_icmpne              LABEL199
+   jump                   LABEL213
+LABEL199:
+   iload                  19
+   iload                  11
+   iload                  15
+   iconst                 844
+   iload                  16
+   inv_getnum            
+   iload                  17
+   iconst                 2
+   invoke                 4953
+   istore                 11
+   iload                  17
+   iconst                 1
+   add                   
+   istore                 17
+LABEL213:
+   iload                  16
+   iconst                 1
+   add                   
+   istore                 16
+   jump                   LABEL186
+LABEL218:
+   lload                  1
+   oload                  1
+   4126                  
+   sconst                 " GP"
+   join_string            2
+   iload                  20
+   if_settext            
+   iload                  0
+   invoke                 4932
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  0
+   invoke                 4934
+   iconst                 0
+   set_varc_int           1196
+   iconst                 56688664
+   istore                 21
+   iload                  21
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iload                  21
+   if_getwidth           
+   iload                  21
+   if_getheight          
+   iconst                 3712
+   iconst                 7496785
+   invoke                 5288
+   pop_int               
+   invoke                 4939
+   invoke                 4940
+   iconst                 0
+   iload                  1
+   invoke                 4941
+   iconst                 1
+   iload                  2
+   invoke                 4941
+   iconst                 2
+   iload                  3
+   invoke                 4941
+   lload                  2
+   invoke                 4942
+   iload                  0
+   iload                  4
+   invoke                 4943
+   invoke                 4949
+   iconst                 56688672
+   istore                 22
+   iconst                 56688673
+   istore                 23
+   iconst                 56688674
+   istore                 24
+   iload                  4
+   iload                  22
+   iload                  23
+   iload                  24
+   invoke                 4944
+   return                

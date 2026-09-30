@@ -7,7 +7,7 @@ def_int $int8 = calc($int5 - ($int7 + $int7));
 $int1 = ~script771($component2, $int1, $int7, 0, 150, 91);
 $int1 = ~script771($component2, $int1, $int7, 25, 150, 66);
 cc_create($component2, ^iftype_text, $int1, false);
-def_int $comsubid9 = $int1;
+def_int $int9 = $int1;
 $int1 = calc($int1 + 1);
 cc_setposition($int7, 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(150, 23, ^setsize_abs, ^setsize_abs);
@@ -16,7 +16,7 @@ cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_create($component2, ^iftype_graphic, $int1, false);
-def_int $comsubid10 = $int1;
+def_int $int10 = $int1;
 $int1 = calc($int1 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int7 + 150 - 25), 5, ^setpos_abs_left, ^setpos_abs_top);
@@ -28,7 +28,7 @@ cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int7 + 55), 31, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("ge_itembackdrop,0");
 cc_create($component2, ^iftype_graphic, $int1, false);
-def_int $comsubid12 = $int1;
+def_int $int12 = $int1;
 $int1 = calc($int1 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int7 + (150 - 36) / 2), 33, ^setpos_abs_left, ^setpos_abs_top);
@@ -42,7 +42,7 @@ cc_setgraphic("ge_smallicons,0");
 cc_setontimer("ge_offers_priceicon(event_com, event_comsubid, $component3)");
 $int1 = ~script771($component2, $int1, calc($int7 + 149), 0, calc($int8 - 149), 91);
 cc_create($component2, ^iftype_text, $int1, false);
-def_int $comsubid13 = $int1;
+def_int $int13 = $int1;
 $int1 = calc($int1 + 1);
 cc_setposition(calc($int7 + 149 + 10), 2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($int8 - 149 - 20), 23, ^setsize_abs, ^setsize_abs);
@@ -54,7 +54,7 @@ def_int $int14 = calc($int8 / 2);
 def_int $int15 = 212;
 def_int $int16 = calc($int8 - $int15);
 def_int $int17 = calc($int8 / 4);
-def_int $comsubid18 = -1;
+def_int $int18 = -1;
 if ($int0 = 1) {
 	$int1 = ~script771($component2, $int1, calc($int7 + $int15 / 2), 106, $int16, 76);
 } else {
@@ -70,7 +70,7 @@ if ($int0 = 1) {
 	cc_settext("Quantity:");
 	$int1 = ~ge_textbox($component2, $int1, calc($int7 + 30), 118, calc($int15 + 1 - 60));
 	cc_create($component2, ^iftype_text, $int1, false);
-	$comsubid18 = $int1;
+	$int18 = $int1;
 	$int1 = calc($int1 + 1);
 	cc_setposition($int7, 118, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int15 + 1), 20, ^setsize_abs, ^setsize_abs);
@@ -100,7 +100,7 @@ if ($int0 = 1) {
 	$int1 = ~ge_textbox($component2, $int1, calc($int7 + $int15 + 30), 118, calc($int16 - 60));
 }
 cc_create($component2, ^iftype_text, $int1, false);
-def_int $comsubid19 = $int1;
+def_int $int19 = $int1;
 $int1 = calc($int1 + 1);
 if ($int0 = 1) {
 	cc_setposition(calc($int7 + $int15 / 2), 131, ^setpos_abs_left, ^setpos_abs_top);
@@ -112,11 +112,11 @@ cc_setcolour(0xffb83f);
 cc_settextfont($graphic4);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-def_int $comsubid20 = -1;
+def_int $int20 = -1;
 if ($int0 = 0) {
 	$int1 = ~ge_textbox($component2, $int1, 30, 172, calc($int5 - 60));
 	cc_create($component2, ^iftype_text, $int1, false);
-	$comsubid20 = $int1;
+	$int20 = $int1;
 	$int1 = calc($int1 + 1);
 	cc_setposition(0, 172, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int5, 20, ^setsize_abs, ^setsize_abs);
@@ -127,12 +127,12 @@ if ($int0 = 0) {
 }
 return(
 	0 = $int1, 
-	1 = $comsubid9, 
-	2 = $comsubid10, 
+	1 = $int9, 
+	2 = $int10, 
 	3 = $int11, 
-	4 = $comsubid12, 
-	5 = $comsubid13, 
-	6 = $comsubid18, 
-	7 = $comsubid19, 
-	8 = $comsubid20
+	4 = $int12, 
+	5 = $int13, 
+	6 = $int18, 
+	7 = $int19, 
+	8 = $int20
 );

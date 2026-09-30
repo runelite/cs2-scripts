@@ -1,0 +1,84 @@
+java.lang.IllegalStateException: Opcode 61 in script 6006 not implemented
+
+.id                       6006
+.int_arg_count            0
+.long_arg_count           2
+.obj_arg_count            2
+   oload                  0
+   ostore                 2
+   sconst                 ""
+   ostore                 3
+   oload                  0
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL9
+   jump                   LABEL11
+LABEL9:
+   sconst                 "  "
+   ostore                 3
+LABEL11:
+   sconst                 ""
+   ostore                 4
+   lconst                 9223372036854775807
+   lload                  1
+   4040                  
+   lload                 
+   if_lcmpgt              LABEL19
+   jump                   LABEL26
+LABEL19:
+   lload                 
+   lload                  1
+   4039                  
+   sconst                 ","
+   4126                  
+   ostore                 4
+   jump                   LABEL28
+LABEL26:
+   sconst                 "Lots!"
+   ostore                 4
+LABEL28:
+   oload                  0
+   oload                  3
+   oload                  1
+   sconst                 " "
+   sconst                 "<col=ef1020>"
+   oload                  4
+   sconst                 "</col>"
+   join_string            7
+   ostore                 0
+   lload                  1
+   lconst                 1
+   if_lcmpgt              LABEL41
+   jump                   LABEL54
+LABEL41:
+   lload                 
+   lconst                 0
+   if_lcmpgt              LABEL45
+   jump                   LABEL54
+LABEL45:
+   oload                  0
+   sconst                 " ("
+   sconst                 "<col=ef1020>"
+   lload                 
+   sconst                 ","
+   4126                  
+   sconst                 "</col>ea)"
+   join_string            5
+   ostore                 0
+LABEL54:
+   oload                  0
+   removetags            
+   string_length         
+   iconst                 80
+   if_icmplt              LABEL60
+   jump                   LABEL63
+LABEL60:
+   oload                  0
+   return                
+   jump                   LABEL65
+LABEL63:
+   oload                  2
+   return                
+LABEL65:
+   sconst                 ""
+   return                

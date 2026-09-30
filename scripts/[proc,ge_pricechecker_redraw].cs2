@@ -1,117 +1,522 @@
-// 787
-[proc,ge_pricechecker_redraw]
-def_int $int0 = if_getwidth(ge_pricechecker:items);
-def_int $int1 = calc($int0 / 5);
-def_int $int2 = calc(($int0 - 5 * $int1) / 4 + $int1);
-def_int $int3 = calc(32 + 35);
-def_int $int4 = calc(($int1 - 36) / 2);
-cc_deleteall(ge_pricechecker:items);
-def_int $int5 = -1;
-def_int $int6 = 0;
-def_int $int7 = 0;
-def_obj $obj8 = null;
-def_int $length9 = inv_size(tradeoffer);
-def_int $intarray0($length9);
-$intarray0(0) = %varcint81;
-$intarray0(1) = %varcint82;
-$intarray0(2) = %varcint83;
-$intarray0(3) = %varcint84;
-$intarray0(4) = %varcint85;
-$intarray0(5) = %varcint86;
-$intarray0(6) = %varcint87;
-$intarray0(7) = %varcint88;
-$intarray0(8) = %varcint89;
-$intarray0(9) = %varcint90;
-$intarray0(10) = %varcint91;
-$intarray0(11) = %varcint92;
-$intarray0(12) = %varcint93;
-$intarray0(13) = %varcint94;
-$intarray0(14) = %varcint95;
-$intarray0(15) = %varcint96;
-$intarray0(16) = %varcint97;
-$intarray0(17) = %varcint98;
-$intarray0(18) = %varcint99;
-$intarray0(19) = %varcint100;
-$intarray0(20) = %varcint101;
-$intarray0(21) = %varcint102;
-$intarray0(22) = %varcint104;
-$intarray0(23) = %varcint105;
-$intarray0(24) = %varcint106;
-$intarray0(25) = %varcint107;
-$intarray0(26) = %varcint108;
-$intarray0(27) = %varcint109;
-def_int $length10 = 0;
-while ($length10 < $length9) {
-	cc_create(ge_pricechecker:items, ^iftype_graphic, $length10, false);
-	$obj8 = inv_getobj(tradeoffer, $length10);
-	if ($obj8 ! null) {
-		$int6, $int7 = calc($length10 % 5 * $int2), calc($length10 / 5 * $int3);
-		$int5 = $int7;
-		cc_sethide(false);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int6 + $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphicshadow(0x333333);
-		cc_setoutline(1);
-		cc_setobject($obj8, inv_getnum(tradeoffer, $length10));
-		cc_setop(1, "Remove");
-		cc_setop(2, "Remove-5");
-		cc_setop(3, "Remove-10");
-		cc_setop(4, "Remove-All");
-		cc_setop(5, "Remove-X");
-		cc_setop(10, "Examine");
-		cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
-		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-	} else {
-		cc_sethide(true);
-	}
-	$length10 = calc($length10 + 1);
-}
-def_int $int11 = 0;
-def_int $int12 = 0;
-def_string $string1 = ",";
-def_int $int13 = $length10;
-$length10 = 0;
-while ($length10 < $length9) {
-	$obj8, $int11 = inv_getobj(tradeoffer, $length10), inv_getnum(tradeoffer, $length10);
-	if ($obj8 ! null & $int11 > 0) {
-		$int6, $int7 = calc($length10 % 5 * $int2), calc($length10 / 5 * $int3);
-		cc_create(ge_pricechecker:items, ^iftype_text, $int13, false);
-		$int13 = calc($int13 + 1);
-		cc_sethide(false);
-		cc_setsize($int1, 35, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int6, calc($int7 + 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setcolour(^white);
-		cc_settextfont(p11_full);
-		cc_settextshadow(true);
-		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		if (calc(^max_32bit_int / $int11) < $intarray0($length10)) {
-			$int12 = ^max_32bit_int;
-		} else {
-			$int12 = calc($int11 * $intarray0($length10));
-		}
-		if ($int11 > 1) {
-			if ($int12 >= 0 & $int12 < ^max_32bit_int) {
-				cc_settext("<~tostring_spacer($int11, $string1)> x <~tostring_spacer($intarray0($length10), $string1)><br>= <~tostring_spacer($int12, $string1)>");
-			} else {
-				cc_settext("<~tostring_spacer($int11, $string1)> x <~tostring_spacer($intarray0($length10), $string1)>");
-			}
-		} else {
-			cc_settext(~tostring_spacer($intarray0($length10), $string1));
-		}
-	}
-	$length10 = calc($length10 + 1);
-}
-def_int $int14 = 0;
-if ($int5 >= 0) {
-	$int14 = calc($int5 + $int3);
-}
-def_int $int15 = if_getscrolly(ge_pricechecker:items);
-if ($int15 > $int5) {
-	$int15 = $int5;
-}
-if ($int14 > if_getheight(ge_pricechecker:items)) {
-	if_setscrollsize(0, $int14, ge_pricechecker:items);
-} else {
-	if_setscrollsize(0, 0, ge_pricechecker:items);
-}
-~scrollbar_resize(ge_pricechecker:scrollbar, ge_pricechecker:items, $int15);
+java.lang.IllegalStateException: Opcode 61 in script 787 not implemented
+
+.id                       787
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 30408706
+   if_getwidth           
+   istore                 0
+   iload                  0
+   iconst                 5
+   div                   
+   istore                 1
+   iload                  0
+   iconst                 5
+   iload                  1
+   multiply              
+   sub                   
+   iconst                 4
+   div                   
+   iload                  1
+   add                   
+   istore                 2
+   iconst                 32
+   iconst                 35
+   add                   
+   istore                 3
+   iload                  1
+   iconst                 36
+   sub                   
+   iconst                 2
+   div                   
+   istore                 4
+   iconst                 30408706
+   cc_deleteall          
+   iconst                 -1
+   istore                 5
+   iconst                 0
+   istore                 6
+   iconst                 0
+   istore                 7
+   iconst                 -1
+   istore                 8
+   iconst                 90
+   inv_size              
+   istore                 9
+   iload                  9
+   define_array           105
+   iload                  9
+   define_array           65641
+   iconst                 0
+   get_varc_int           81
+   set_array_int         
+   iconst                 1
+   get_varc_int           82
+   set_array_int         
+   iconst                 2
+   get_varc_int           83
+   set_array_int         
+   iconst                 3
+   get_varc_int           84
+   set_array_int         
+   iconst                 4
+   get_varc_int           85
+   set_array_int         
+   iconst                 5
+   get_varc_int           86
+   set_array_int         
+   iconst                 6
+   get_varc_int           87
+   set_array_int         
+   iconst                 7
+   get_varc_int           88
+   set_array_int         
+   iconst                 8
+   get_varc_int           89
+   set_array_int         
+   iconst                 9
+   get_varc_int           90
+   set_array_int         
+   iconst                 10
+   get_varc_int           91
+   set_array_int         
+   iconst                 11
+   get_varc_int           92
+   set_array_int         
+   iconst                 12
+   get_varc_int           93
+   set_array_int         
+   iconst                 13
+   get_varc_int           94
+   set_array_int         
+   iconst                 14
+   get_varc_int           95
+   set_array_int         
+   iconst                 15
+   get_varc_int           96
+   set_array_int         
+   iconst                 16
+   get_varc_int           97
+   set_array_int         
+   iconst                 17
+   get_varc_int           98
+   set_array_int         
+   iconst                 18
+   get_varc_int           99
+   set_array_int         
+   iconst                 19
+   get_varc_int           100
+   set_array_int         
+   iconst                 20
+   get_varc_int           101
+   set_array_int         
+   iconst                 21
+   get_varc_int           102
+   set_array_int         
+   iconst                 22
+   get_varc_int           104
+   set_array_int         
+   iconst                 23
+   get_varc_int           105
+   set_array_int         
+   iconst                 24
+   get_varc_int           106
+   set_array_int         
+   iconst                 25
+   get_varc_int           107
+   set_array_int         
+   iconst                 26
+   get_varc_int           108
+   set_array_int         
+   iconst                 27
+   get_varc_int           109
+   set_array_int         
+   iconst                 0
+   get_varc_int           110
+   set_array_int          1
+   iconst                 1
+   get_varc_int           111
+   set_array_int          1
+   iconst                 2
+   get_varc_int           112
+   set_array_int          1
+   iconst                 3
+   get_varc_int           113
+   set_array_int          1
+   iconst                 4
+   get_varc_int           114
+   set_array_int          1
+   iconst                 5
+   get_varc_int           115
+   set_array_int          1
+   iconst                 6
+   get_varc_int           116
+   set_array_int          1
+   iconst                 7
+   get_varc_int           117
+   set_array_int          1
+   iconst                 8
+   get_varc_int           118
+   set_array_int          1
+   iconst                 9
+   get_varc_int           119
+   set_array_int          1
+   iconst                 10
+   get_varc_int           120
+   set_array_int          1
+   iconst                 11
+   get_varc_int           121
+   set_array_int          1
+   iconst                 12
+   get_varc_int           122
+   set_array_int          1
+   iconst                 13
+   get_varc_int           123
+   set_array_int          1
+   iconst                 14
+   get_varc_int           124
+   set_array_int          1
+   iconst                 15
+   get_varc_int           125
+   set_array_int          1
+   iconst                 16
+   get_varc_int           126
+   set_array_int          1
+   iconst                 17
+   get_varc_int           127
+   set_array_int          1
+   iconst                 18
+   get_varc_int           128
+   set_array_int          1
+   iconst                 19
+   get_varc_int           129
+   set_array_int          1
+   iconst                 20
+   get_varc_int           130
+   set_array_int          1
+   iconst                 21
+   get_varc_int           131
+   set_array_int          1
+   iconst                 22
+   get_varc_int           132
+   set_array_int          1
+   iconst                 23
+   get_varc_int           133
+   set_array_int          1
+   iconst                 24
+   get_varc_int           134
+   set_array_int          1
+   iconst                 25
+   get_varc_int           135
+   set_array_int          1
+   iconst                 26
+   get_varc_int           136
+   set_array_int          1
+   iconst                 27
+   get_varc_int           137
+   set_array_int          1
+   iconst                 0
+   istore                 10
+LABEL214:
+   iload                  10
+   iload                  9
+   if_icmplt              LABEL218
+   jump                   LABEL307
+LABEL218:
+   iconst                 30408706
+   iconst                 5
+   iload                  10
+   iconst                 0
+   cc_create             
+   iconst                 90
+   iload                  10
+   inv_getobj            
+   istore                 8
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL231
+   jump                   LABEL300
+LABEL231:
+   iload                  10
+   iconst                 5
+   mod                   
+   iload                  2
+   multiply              
+   iload                  10
+   iconst                 5
+   div                   
+   iload                  3
+   multiply              
+   istore                 7
+   istore                 6
+   iload                  7
+   istore                 5
+   iconst                 0
+   cc_sethide            
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  6
+   iload                  4
+   add                   
+   iload                  7
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 3355443
+   cc_setgraphicshadow   
+   iconst                 1
+   cc_setoutline         
+   iload                  8
+   iconst                 90
+   iload                  10
+   inv_getnum            
+   cc_setobject          
+   iconst                 1
+   sconst                 "Remove"
+   cc_setop              
+   iconst                 2
+   sconst                 "Remove-5"
+   cc_setop              
+   iconst                 3
+   sconst                 "Remove-10"
+   cc_setop              
+   iconst                 4
+   sconst                 "Remove-All"
+   cc_setop              
+   iconst                 5
+   sconst                 "Remove-X"
+   cc_setop              
+   iconst                 10
+   sconst                 "Examine"
+   cc_setop              
+   sconst                 "<col=ff9040>"
+   iload                  8
+   oc_name               
+   sconst                 "</col>"
+   join_string            3
+   cc_setopbase          
+   iconst                 487
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 100
+   iconst                 0
+   sconst                 "iiii"
+   cc_setonop            
+   jump                   LABEL302
+LABEL300:
+   iconst                 1
+   cc_sethide            
+LABEL302:
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL214
+LABEL307:
+   iconst                 0
+   istore                 11
+   lconst                 0
+   lstore                
+   lconst                 0
+   lstore                 1
+   sconst                 ","
+   ostore                 2
+   iload                  10
+   istore                 12
+   iconst                 0
+   istore                 10
+LABEL319:
+   iload                  10
+   iload                  9
+   if_icmplt              LABEL323
+   jump                   LABEL450
+LABEL323:
+   iconst                 90
+   iload                  10
+   inv_getobj            
+   iconst                 90
+   iload                  10
+   inv_getnum            
+   istore                 11
+   istore                 8
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL335
+   jump                   LABEL445
+LABEL335:
+   iload                  11
+   iconst                 0
+   if_icmpgt              LABEL339
+   jump                   LABEL445
+LABEL339:
+   iload                  10
+   iconst                 5
+   mod                   
+   iload                  2
+   multiply              
+   iload                  10
+   iconst                 5
+   div                   
+   iload                  3
+   multiply              
+   istore                 7
+   istore                 6
+   iconst                 30408706
+   iconst                 4
+   iload                  12
+   iconst                 0
+   cc_create             
+   iload                  12
+   iconst                 1
+   add                   
+   istore                 12
+   iconst                 0
+   cc_sethide            
+   iload                  1
+   iconst                 35
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  6
+   iload                  7
+   iconst                 32
+   add                   
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 16777215
+   cc_setcolour          
+   iconst                 494
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 1
+   iconst                 0
+   iconst                 0
+   cc_settextalign       
+   iload                  10
+   get_array_int         
+   iload                  10
+   get_array_int          1
+   4060                  
+   lstore                
+   iload                  11
+   iconst                 1
+   if_icmpgt              LABEL394
+   jump                   LABEL441
+LABEL394:
+   lconst                 9223372036854775807
+   iload                  11
+   4044                  
+   4040                  
+   lload                 
+   if_lcmplt              LABEL401
+   jump                   LABEL404
+LABEL401:
+   lconst                 9223372036854775807
+   lstore                 1
+   jump                   LABEL409
+LABEL404:
+   iload                  11
+   4044                  
+   lload                 
+   4039                  
+   lstore                 1
+LABEL409:
+   lload                  1
+   lconst                 0
+   if_lcmpge              LABEL413
+   jump                   LABEL431
+LABEL413:
+   lload                  1
+   lconst                 9223372036854775807
+   if_lcmplt              LABEL417
+   jump                   LABEL431
+LABEL417:
+   iload                  11
+   oload                  2
+   invoke                 46
+   sconst                 " x "
+   lload                 
+   oload                  2
+   4126                  
+   sconst                 "<br>= "
+   lload                  1
+   oload                  2
+   4126                  
+   join_string            5
+   cc_settext            
+   jump                   LABEL440
+LABEL431:
+   iload                  11
+   oload                  2
+   invoke                 46
+   sconst                 " x "
+   lload                 
+   oload                  2
+   4126                  
+   join_string            3
+   cc_settext            
+LABEL440:
+   jump                   LABEL445
+LABEL441:
+   lload                 
+   oload                  2
+   4126                  
+   cc_settext            
+LABEL445:
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL319
+LABEL450:
+   iconst                 0
+   istore                 13
+   iload                  5
+   iconst                 0
+   if_icmpge              LABEL456
+   jump                   LABEL460
+LABEL456:
+   iload                  5
+   iload                  3
+   add                   
+   istore                 13
+LABEL460:
+   iconst                 30408706
+   if_getscrolly         
+   istore                 14
+   iload                  14
+   iload                  5
+   if_icmpgt              LABEL467
+   jump                   LABEL469
+LABEL467:
+   iload                  5
+   istore                 14
+LABEL469:
+   iload                  13
+   iconst                 30408706
+   if_getheight          
+   if_icmpgt              LABEL474
+   jump                   LABEL479
+LABEL474:
+   iconst                 0
+   iload                  13
+   iconst                 30408706
+   if_setscrollsize      
+   jump                   LABEL483
+LABEL479:
+   iconst                 0
+   iconst                 0
+   iconst                 30408706
+   if_setscrollsize      
+LABEL483:
+   iconst                 30408707
+   iconst                 30408706
+   iload                  14
+   invoke                 72
+   return                

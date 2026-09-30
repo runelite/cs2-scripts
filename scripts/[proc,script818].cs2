@@ -8,48 +8,22 @@ if ($inv1 = null) {
 	.cc_sethide(true);
 	return;
 }
-def_obj $obj2 = inv_getobj($inv1, 0);
-def_int $int3 = 0;
-if ($obj2 ! null) {
-	$int3 = inv_getnum($inv1, 0);
-	cc_sethide(false);
-	if (oc_cert($obj2) ! $obj2) {
-		if ($int3 = 1) {
-			cc_setop(1, "Collect-item");
-			cc_setop(2, "Collect-note");
-		} else {
-			cc_setop(1, "Collect-notes");
-			cc_setop(2, "Collect-items");
-		}
-	} else {
-		cc_setop(2, "Collect");
-	}
-	cc_setop(3, "Bank");
-	cc_setop(10, "Examine");
-	cc_setobject($obj2, $int3);
-	cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
-} else {
-	cc_sethide(true);
+def_int $int2 = 0;
+def_obj $obj3 = inv_getobj($inv1, $int2);
+def_int $int4 = 0;
+~script9909($com_ge_offers_details_collect0, $inv1, $int2, $obj3);
+if (~script9916($obj3) = 1) {
+	$int4 = 1;
 }
-$obj2 = inv_getobj($inv1, 1);
-if ($obj2 ! null) {
-	$int3 = inv_getnum($inv1, 1);
-	.cc_sethide(false);
-	if (oc_cert($obj2) ! $obj2) {
-		if ($int3 = 1) {
-			.cc_setop(1, "Collect-item");
-			.cc_setop(2, "Collect-note");
-		} else {
-			.cc_setop(1, "Collect-notes");
-			.cc_setop(2, "Collect-items");
-		}
-	} else {
-		.cc_setop(2, "Collect");
-	}
-	.cc_setop(3, "Bank");
-	.cc_setop(10, "Examine");
-	.cc_setobject($obj2, $int3);
-	.cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
-} else {
-	.cc_sethide(true);
+$int2 = 1;
+$obj3 = inv_getobj($inv1, $int2);
+if ($obj3 = null | $int4 = 1 & ~script9916($obj3) = 1) {
+	$int2 = 2;
+	$obj3 = inv_getobj($inv1, $int2);
+}
+if ($int4 = 1 & ~script9916($obj3) = 1) {
+	$obj3 = null;
+}
+if (cc_find($com_ge_offers_details_collect0, .cc_getid) = true) {
+	~script9909($com_ge_offers_details_collect0, $inv1, $int2, $obj3);
 }

@@ -1,0 +1,27 @@
+java.lang.IllegalStateException: Opcode 66 in script 9914 not implemented
+
+.id                       9914
+.int_arg_count            0
+.long_arg_count           1
+.obj_arg_count            0
+   lload                 
+   lconst                 0
+   if_lcmplt              LABEL4
+   jump                   LABEL9
+LABEL4:
+   lload                 
+   lconst                 -2147483648
+   4042                  
+   lstore                
+   jump                   LABEL13
+LABEL9:
+   lload                 
+   lconst                 2147483647
+   4041                  
+   lstore                
+LABEL13:
+   lload                 
+   4062                  
+   return                
+   iconst                 0
+   return                

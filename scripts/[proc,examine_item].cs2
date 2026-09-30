@@ -1,9 +1,44 @@
-// 6004
-[proc,examine_item](obj $obj0, int $int1, string $mes0, boolean $boolean2, int $int3, boolean $boolean4, int $int5, int $int6)
-if ($int1 >= 100000) {
-	mes("<~tostring_spacer($int1, ",")> x <oc_name($obj0)>.");
-	~examine_price_info($obj0, $int1, 0, $boolean2, $int3, $boolean4, $int5, $int6);
-} else {
-	mes($mes0);
-	~examine_price_info($obj0, $int1, 1, $boolean2, $int3, $boolean4, $int5, $int6);
-}
+java.lang.IllegalStateException: Opcode 66 in script 6004 not implemented
+
+.id                       6004
+.int_arg_count            3
+.long_arg_count           4
+.obj_arg_count            1
+   lload                 
+   lconst                 100000
+   if_lcmpge              LABEL4
+   jump                   LABEL23
+LABEL4:
+   lload                 
+   sconst                 ","
+   4126                  
+   sconst                 " x "
+   iload                  0
+   oc_name               
+   sconst                 "."
+   join_string            4
+   mes                   
+   iload                  0
+   lload                 
+   iconst                 0
+   iload                  1
+   lload                  1
+   iload                  2
+   lload                  2
+   lload                  3
+   invoke                 6005
+   jump                   LABEL34
+LABEL23:
+   oload                  0
+   mes                   
+   iload                  0
+   lload                 
+   iconst                 1
+   iload                  1
+   lload                  1
+   iload                  2
+   lload                  2
+   lload                  3
+   invoke                 6005
+LABEL34:
+   return                

@@ -1,58 +1,154 @@
-// 778
-[clientscript,ge_offers_setup_changeprice](int $int0, int $int1, int $opindex2, component $com_ge_offers_setup3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13, int $comsubid14, int $comsubid15, component $com_ge_offers_setup_confirm16, int $comsubid17, int $comsubid18)
-if ($opindex2 ! 1 | %tradingpost_search = null) {
-	return;
-}
-def_int $int19 = 0;
-if ($int1 = 1) {
-	if (%ge_newoffer_price < ^max_32bit_int) {
-		%ge_newoffer_price = calc(%ge_newoffer_price + 1);
-	}
-	sound_synth(ge_up_amount, 1, 0);
-} else if ($int1 = -1) {
-	if (%ge_newoffer_price > 1) {
-		%ge_newoffer_price = calc(%ge_newoffer_price - 1);
-	}
-	sound_synth(ge_down_amount, 1, 0);
-} else if ($int1 = 5) {
-	$int19 = calc(%ge_newoffer_price / 20);
-	if ($int19 <= 0) {
-		$int19 = 1;
-	}
-	if (calc(^max_32bit_int - $int19) < %ge_newoffer_price) {
-		%ge_newoffer_price = ^max_32bit_int;
-	} else {
-		%ge_newoffer_price = calc(%ge_newoffer_price + $int19);
-	}
-	sound_synth(ge_up_amount, 1, 0);
-} else if ($int1 = -5) {
-	$int19 = calc(%ge_newoffer_price / 20);
-	if ($int19 <= 0) {
-		$int19 = 1;
-	}
-	if ($int19 >= %ge_newoffer_price) {
-		%ge_newoffer_price = 1;
-	} else {
-		%ge_newoffer_price = calc(%ge_newoffer_price - $int19);
-	}
-	sound_synth(ge_down_amount, 1, 0);
-}
-~ge_offers_setup_draw(
-	0 = $int0, 
-	1 = $com_ge_offers_setup3, 
-	2 = $comsubid4, 
-	3 = $comsubid5, 
-	4 = $comsubid6, 
-	5 = $comsubid7, 
-	6 = $comsubid8, 
-	7 = $comsubid9, 
-	8 = $comsubid10, 
-	9 = $comsubid11, 
-	10 = $comsubid12, 
-	11 = $comsubid13, 
-	12 = $comsubid14, 
-	13 = $comsubid15, 
-	14 = $com_ge_offers_setup_confirm16, 
-	15 = $comsubid17, 
-	16 = $comsubid18
-);
+java.lang.IllegalStateException: Opcode 61 in script 778 not implemented
+
+.id                       778
+.int_arg_count            19
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  2
+   iconst                 1
+   if_icmpne              LABEL7
+   get_varp               1151
+   iconst                 -1
+   if_icmpeq              LABEL7
+   jump                   LABEL8
+LABEL7:
+   return                
+LABEL8:
+   lconst                 0
+   lstore                
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL14
+   jump                   LABEL27
+LABEL14:
+   064                    5753
+   lconst                 2149631130647
+   if_lcmplt              LABEL18
+   jump                   LABEL22
+LABEL18:
+   064                    5753
+   lconst                 1
+   4037                  
+   065                    5753
+LABEL22:
+   iconst                 3929
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL105
+LABEL27:
+   iload                  1
+   iconst                 -1
+   if_icmpeq              LABEL31
+   jump                   LABEL44
+LABEL31:
+   064                    5753
+   lconst                 1
+   if_lcmpgt              LABEL35
+   jump                   LABEL39
+LABEL35:
+   064                    5753
+   lconst                 1
+   4038                  
+   065                    5753
+LABEL39:
+   iconst                 3930
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL105
+LABEL44:
+   iload                  1
+   iconst                 5
+   if_icmpeq              LABEL48
+   jump                   LABEL76
+LABEL48:
+   064                    5753
+   lconst                 20
+   4040                  
+   lstore                
+   lload                 
+   lconst                 0
+   if_lcmple              LABEL56
+   jump                   LABEL58
+LABEL56:
+   lconst                 1
+   lstore                
+LABEL58:
+   lconst                 2149631130647
+   lload                 
+   4038                  
+   064                    5753
+   if_lcmplt              LABEL64
+   jump                   LABEL67
+LABEL64:
+   lconst                 2149631130647
+   065                    5753
+   jump                   LABEL71
+LABEL67:
+   064                    5753
+   lload                 
+   4037                  
+   065                    5753
+LABEL71:
+   iconst                 3929
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL105
+LABEL76:
+   iload                  1
+   iconst                 -5
+   if_icmpeq              LABEL80
+   jump                   LABEL105
+LABEL80:
+   064                    5753
+   lconst                 20
+   4040                  
+   lstore                
+   lload                 
+   lconst                 0
+   if_lcmple              LABEL88
+   jump                   LABEL90
+LABEL88:
+   lconst                 1
+   lstore                
+LABEL90:
+   lload                 
+   064                    5753
+   if_lcmpge              LABEL94
+   jump                   LABEL97
+LABEL94:
+   lconst                 1
+   065                    5753
+   jump                   LABEL101
+LABEL97:
+   064                    5753
+   lload                 
+   4038                  
+   065                    5753
+LABEL101:
+   iconst                 3930
+   iconst                 1
+   iconst                 0
+   sound_synth           
+LABEL105:
+   iload                  0
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   iload                  10
+   iload                  11
+   iload                  12
+   iload                  13
+   iload                  14
+   iload                  15
+   iload                  16
+   iload                  17
+   iload                  18
+   invoke                 779
+   return                

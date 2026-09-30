@@ -1,0 +1,74 @@
+java.lang.IllegalStateException: Opcode 61 in script 9910 not implemented
+
+.id                       9910
+.int_arg_count            3
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  1
+   iload                  2
+   inv_getnum            
+   istore                 3
+   lconst                 0
+   lstore                
+   iload                  0
+   iconst                 995
+   if_icmpeq              LABEL10
+   jump                   LABEL22
+LABEL10:
+   iload                  1
+   iconst                 13204
+   inv_total             
+   iconst                 0
+   if_icmpgt              LABEL16
+   jump                   LABEL21
+LABEL16:
+   iconst                 34604
+   iload                  1
+   invoke                 9915
+   lstore                
+   istore                 0
+LABEL21:
+   jump                   LABEL37
+LABEL22:
+   iload                  0
+   iconst                 13204
+   if_icmpeq              LABEL26
+   jump                   LABEL37
+LABEL26:
+   iload                  1
+   iconst                 995
+   inv_total             
+   iconst                 0
+   if_icmpgt              LABEL32
+   jump                   LABEL37
+LABEL32:
+   iconst                 34604
+   iload                  1
+   invoke                 9915
+   lstore                
+   istore                 0
+LABEL37:
+   lload                 
+   lconst                 0
+   if_lcmpne              LABEL41
+   jump                   LABEL51
+LABEL41:
+   lload                 
+   lconst                 2147483647
+   if_lcmple              LABEL45
+   jump                   LABEL49
+LABEL45:
+   lload                 
+   invoke                 9914
+   istore                 3
+   jump                   LABEL51
+LABEL49:
+   iconst                 -1
+   istore                 3
+LABEL51:
+   iload                  0
+   iload                  3
+   return                
+   iconst                 -1
+   iconst                 0
+   return                

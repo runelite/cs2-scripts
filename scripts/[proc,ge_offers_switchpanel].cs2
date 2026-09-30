@@ -1,35 +1,113 @@
-// 806
-[proc,ge_offers_switchpanel](component $com_ge_offers_frame0, int $comsubid1, component $com_ge_offers_back2, component $com_ge_offers_index3, component $com_ge_offers_details4, component $com_ge_offers_setup5, component $com_ge_offers_tooltip6)
-~deltooltip_action($com_ge_offers_tooltip6);
-def_int $int7 = calc(%ge_selectedslot - 1);
-def_inv $inv8 = enum(int, inv, enum_150, $int7);
-if ($inv8 = null) {
-	if_sethide(true, $com_ge_offers_back2);
-	if_sethide(false, $com_ge_offers_index3);
-	if_sethide(true, $com_ge_offers_details4);
-	if_sethide(true, $com_ge_offers_setup5);
-	if (cc_find($com_ge_offers_frame0, $comsubid1) = true) {
-		cc_settext("Grand Exchange");
-	}
-	return;
-}
-if_sethide(false, $com_ge_offers_back2);
-if_settrans(0, $com_ge_offers_back2);
-def_obj $obj9 = null;
-def_int $int10 = 0;
-$obj9, $int10 = ~ge_itemsink_get($int7);
-if (stockmarket_isofferempty($int7) = true & $obj9 = null) {
-	if_sethide(true, $com_ge_offers_index3);
-	if_sethide(true, $com_ge_offers_details4);
-	if_sethide(false, $com_ge_offers_setup5);
-	if (cc_find($com_ge_offers_frame0, $comsubid1) = true) {
-		cc_settext("Grand Exchange: Set up offer");
-	}
-	return;
-}
-if_sethide(true, $com_ge_offers_index3);
-if_sethide(false, $com_ge_offers_details4);
-if_sethide(true, $com_ge_offers_setup5);
-if (cc_find($com_ge_offers_frame0, $comsubid1) = true) {
-	cc_settext("Grand Exchange: Offer status");
-}
+java.lang.IllegalStateException: Opcode 61 in script 806 not implemented
+
+.id                       806
+.int_arg_count            7
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  6
+   invoke                 41
+   get_varbit             4439
+   iconst                 1
+   sub                   
+   istore                 7
+   iconst                 105
+   iconst                 118
+   iconst                 150
+   iload                  7
+   enum                  
+   istore                 8
+   iload                  8
+   iconst                 -1
+   if_icmpeq              LABEL16
+   jump                   LABEL37
+LABEL16:
+   iconst                 1
+   iload                  2
+   if_sethide            
+   iconst                 0
+   iload                  3
+   if_sethide            
+   iconst                 1
+   iload                  4
+   if_sethide            
+   iconst                 1
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL34
+   jump                   LABEL36
+LABEL34:
+   sconst                 "Grand Exchange"
+   cc_settext            
+LABEL36:
+   return                
+LABEL37:
+   iconst                 0
+   iload                  2
+   if_sethide            
+   iconst                 0
+   iload                  2
+   if_settrans           
+   iconst                 -1
+   istore                 9
+   lconst                 0
+   lstore                
+   iload                  7
+   invoke                 5733
+   lstore                
+   istore                 9
+   iload                  7
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL56
+   jump                   LABEL78
+LABEL56:
+   iload                  9
+   iconst                 -1
+   if_icmpeq              LABEL60
+   jump                   LABEL78
+LABEL60:
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 1
+   iload                  4
+   if_sethide            
+   iconst                 0
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL75
+   jump                   LABEL77
+LABEL75:
+   sconst                 "Grand Exchange: Set up offer"
+   cc_settext            
+LABEL77:
+   return                
+LABEL78:
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iload                  4
+   if_sethide            
+   iconst                 1
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL93
+   jump                   LABEL95
+LABEL93:
+   sconst                 "Grand Exchange: Offer status"
+   cc_settext            
+LABEL95:
+   return                

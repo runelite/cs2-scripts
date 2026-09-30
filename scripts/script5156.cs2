@@ -1,0 +1,88 @@
+java.lang.IllegalStateException: Opcode 67 in script 5156 not implemented
+
+.id                       5156
+.int_arg_count            19
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL4
+   jump                   LABEL8
+LABEL4:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+LABEL8:
+   iload                  2
+   iconst                 2
+   if_icmpne              LABEL12
+   jump                   LABEL13
+LABEL12:
+   return                
+LABEL13:
+   iconst                 93
+   invoke                 9915
+   lstore                
+   get_varbit             4397
+   iconst                 0
+   if_icmpeq              LABEL20
+   jump                   LABEL47
+LABEL20:
+   064                    5753
+   lconst                 0
+   if_lcmpgt              LABEL24
+   jump                   LABEL47
+LABEL24:
+   lload                 
+   lconst                 0
+   if_lcmple              LABEL28
+   jump                   LABEL31
+LABEL28:
+   iconst                 1
+   set_varbit             4396
+   jump                   LABEL42
+LABEL31:
+   lload                 
+   064                    5753
+   4040                  
+   invoke                 9914
+   set_varbit             4396
+   get_varbit             4396
+   iconst                 1
+   if_icmplt              LABEL40
+   jump                   LABEL42
+LABEL40:
+   iconst                 1
+   set_varbit             4396
+LABEL42:
+   iconst                 3929
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   jump                   LABEL51
+LABEL47:
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+LABEL51:
+   iload                  0
+   iload                  3
+   iload                  4
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   iload                  10
+   iload                  11
+   iload                  12
+   iload                  13
+   iload                  14
+   iload                  15
+   iload                  16
+   iload                  17
+   iload                  18
+   invoke                 779
+   return                

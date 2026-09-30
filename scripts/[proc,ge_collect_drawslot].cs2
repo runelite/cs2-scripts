@@ -1,88 +1,407 @@
-// 791
-[proc,ge_collect_drawslot](component $component0, int $int1, component $component2, component $com_ge_collect_collect_inv3, component $com_ge_collect_collect_bank4, int $int5, inv $inv6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13)
-if (cc_find($component0, $comsubid9) = true) {
-	~ge_collect_drawitem(0, $inv6, $component0, $comsubid7, $com_ge_collect_collect_inv3, $com_ge_collect_collect_bank4);
-}
-if (cc_find($component0, $comsubid10) = true) {
-	~ge_collect_drawitem(1, $inv6, $component0, $comsubid8, $com_ge_collect_collect_inv3, $com_ge_collect_collect_bank4);
-}
-def_int $int14 = 0;
-def_int $int15 = 0;
-def_obj $obj16 = null;
-def_int $int17 = 0;
-def_int $int18 = 0;
-def_string $string0 = "";
-def_string $string1 = ",";
-if (stockmarket_isofferempty($int1) = true) {
-	$obj16, $int14, $int15 = ~ge_itemsink_get($int1), ~script5732($int1);
-	if ($obj16 ! null) {
-		if (cc_find($component0, $comsubid12) = true) {
-			cc_sethide(false);
-			cc_setgraphic("ge_smallicons,7");
-		}
-		if ($int15 < ^max_32bit_int) {
-			$string0 = "Sold: <oc_name($obj16)><br>1 / 1";
-		} else {
-			$string0 = "Selling: <oc_name($obj16)><br>1 / 1";
-		}
-		if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component2, $string0, 25, 512)", $component0);
-		if (cc_find($component0, $comsubid13) = true) {
-			cc_sethide(false);
-			cc_setobject($obj16, 1);
-		}
-		if (cc_find($component0, $comsubid11) = true) {
-			cc_sethide(false);
-			if ($int15 < ^max_32bit_int) {
-				~script812($int1, 1, 1, 0x005f00, $int5);
-			} else {
-				~script812($int1, 1, 1, 0xd88020, $int5);
-			}
-		}
-	} else {
-		if (cc_find($component0, $comsubid12) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component0, $comsubid13) = true) {
-			cc_sethide(true);
-		}
-		if (cc_find($component0, $comsubid11) = true) {
-			cc_sethide(true);
-			cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
-		}
-		if_setonmouserepeat(null, $component0);
-	}
-} else {
-	$obj16, $int17 = stockmarket_getofferitem($int1), stockmarket_getoffercount($int1);
-	$int18 = stockmarket_getoffercompletedcount($int1);
-	if (stockmarket_getoffertype($int1) = 1) {
-		if (cc_find($component0, $comsubid12) = true) {
-			cc_sethide(false);
-			cc_setgraphic("ge_smallicons,7");
-		}
-		if (stockmarket_isofferfinished($int1) = true) {
-			$string0 = "Sold: <oc_name($obj16)><br><~tostring_spacer($int18, $string1)> / <~tostring_spacer($int17, $string1)>";
-		} else {
-			$string0 = "Selling: <oc_name($obj16)><br><~tostring_spacer($int18, $string1)> / <~tostring_spacer($int17, $string1)>";
-		}
-	} else {
-		if (cc_find($component0, $comsubid12) = true) {
-			cc_sethide(false);
-			cc_setgraphic("ge_smallicons,6");
-		}
-		if (stockmarket_isofferfinished($int1) = true) {
-			$string0 = "Bought: <oc_name($obj16)><br><~tostring_spacer($int18, $string1)> / <~tostring_spacer($int17, $string1)>";
-		} else {
-			$string0 = "Buying: <oc_name($obj16)><br><~tostring_spacer($int18, $string1)> / <~tostring_spacer($int17, $string1)>";
-		}
-	}
-	if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component2, $string0, 25, 512)", $component0);
-	if (cc_find($component0, $comsubid13) = true) {
-		cc_sethide(false);
-		cc_setobject($obj16, $int17);
-	}
-	if (cc_find($component0, $comsubid11) = true) {
-		cc_sethide(false);
-		~script812($int1, $int17, $int18, null, $int5);
-	}
-}
-~deltooltip_action($component2);
+java.lang.IllegalStateException: Opcode 61 in script 791 not implemented
+
+.id                       791
+.int_arg_count            14
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   istore                 14
+   iload                  6
+   iload                  14
+   inv_getobj            
+   istore                 15
+   iconst                 0
+   istore                 16
+   iload                  0
+   iload                  9
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL14
+   jump                   LABEL21
+LABEL14:
+   iload                  14
+   iload                  6
+   iload                  0
+   iload                  7
+   iload                  3
+   iload                  4
+   invoke                 792
+LABEL21:
+   iload                  15
+   invoke                 9916
+   iconst                 1
+   if_icmpeq              LABEL26
+   jump                   LABEL28
+LABEL26:
+   iconst                 1
+   istore                 16
+LABEL28:
+   iconst                 1
+   istore                 14
+   iload                  6
+   iload                  14
+   inv_getobj            
+   istore                 15
+   iload                  15
+   iconst                 -1
+   if_icmpeq              LABEL46
+   iload                  16
+   iconst                 1
+   if_icmpeq              LABEL41
+   jump                   LABEL52
+LABEL41:
+   iload                  15
+   invoke                 9916
+   iconst                 1
+   if_icmpeq              LABEL46
+   jump                   LABEL52
+LABEL46:
+   iconst                 2
+   istore                 14
+   iload                  6
+   iload                  14
+   inv_getobj            
+   istore                 15
+LABEL52:
+   iload                  16
+   iconst                 1
+   if_icmpeq              LABEL56
+   jump                   LABEL63
+LABEL56:
+   iload                  15
+   invoke                 9916
+   iconst                 1
+   if_icmpeq              LABEL61
+   jump                   LABEL63
+LABEL61:
+   iconst                 -1
+   istore                 15
+LABEL63:
+   iload                  0
+   iload                  10
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL69
+   jump                   LABEL76
+LABEL69:
+   iload                  14
+   iload                  6
+   iload                  0
+   iload                  8
+   iload                  3
+   iload                  4
+   invoke                 792
+LABEL76:
+   lconst                 0
+   lstore                
+   lconst                 0
+   lstore                 1
+   iconst                 -1
+   istore                 17
+   iconst                 0
+   istore                 18
+   iconst                 0
+   istore                 19
+   sconst                 ""
+   ostore                 0
+   sconst                 ","
+   ostore                 1
+   iload                  1
+   stockmarket_isofferempty
+   iconst                 1
+   if_icmpeq              LABEL95
+   jump                   LABEL214
+LABEL95:
+   iload                  1
+   invoke                 5733
+   iload                  1
+   invoke                 5732
+   lstore                 1
+   lstore                
+   istore                 17
+   iload                  17
+   iconst                 -1
+   if_icmpne              LABEL106
+   jump                   LABEL180
+LABEL106:
+   iload                  0
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL112
+   jump                   LABEL116
+LABEL112:
+   iconst                 0
+   cc_sethide            
+   iconst                 1119
+   cc_setgraphic         
+LABEL116:
+   lload                  1
+   lconst                 2147483647
+   if_lcmplt              LABEL120
+   jump                   LABEL127
+LABEL120:
+   sconst                 "Sold: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>1 / 1"
+   join_string            3
+   ostore                 0
+   jump                   LABEL133
+LABEL127:
+   sconst                 "Selling: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>1 / 1"
+   join_string            3
+   ostore                 0
+LABEL133:
+   iconst                 526
+   iload                  0
+   iconst                 -1
+   iload                  2
+   oload                  0
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   iload                  0
+   if_setonmouserepeat   
+   iload                  0
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL149
+   jump                   LABEL154
+LABEL149:
+   iconst                 0
+   cc_sethide            
+   iload                  17
+   iconst                 1
+   cc_setobject          
+LABEL154:
+   iload                  0
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL160
+   jump                   LABEL179
+LABEL160:
+   iconst                 0
+   cc_sethide            
+   lload                  1
+   lconst                 2147483647
+   if_lcmplt              LABEL166
+   jump                   LABEL173
+LABEL166:
+   iload                  1
+   iconst                 1
+   iconst                 1
+   iconst                 24320
+   iload                  5
+   invoke                 812
+   jump                   LABEL179
+LABEL173:
+   iload                  1
+   iconst                 1
+   iconst                 1
+   iconst                 14188576
+   iload                  5
+   invoke                 812
+LABEL179:
+   jump                   LABEL213
+LABEL180:
+   iload                  0
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL186
+   jump                   LABEL188
+LABEL186:
+   iconst                 1
+   cc_sethide            
+LABEL188:
+   iload                  0
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL194
+   jump                   LABEL196
+LABEL194:
+   iconst                 1
+   cc_sethide            
+LABEL196:
+   iload                  0
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL202
+   jump                   LABEL209
+LABEL202:
+   iconst                 1
+   cc_sethide            
+   iconst                 0
+   cc_getheight          
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+LABEL209:
+   iconst                 -1
+   sconst                 ""
+   iload                  0
+   if_setonmouserepeat   
+LABEL213:
+   jump                   LABEL348
+LABEL214:
+   iload                  1
+   stockmarket_getofferitem
+   iload                  1
+   stockmarket_getoffercount
+   istore                 18
+   istore                 17
+   iload                  1
+   stockmarket_getoffercompletedcount
+   istore                 19
+   iload                  1
+   stockmarket_getoffertype
+   iconst                 1
+   if_icmpeq              LABEL228
+   jump                   LABEL271
+LABEL228:
+   iload                  0
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL234
+   jump                   LABEL238
+LABEL234:
+   iconst                 0
+   cc_sethide            
+   iconst                 1119
+   cc_setgraphic         
+LABEL238:
+   iload                  1
+   stockmarket_isofferfinished
+   iconst                 1
+   if_icmpeq              LABEL243
+   jump                   LABEL257
+LABEL243:
+   sconst                 "Sold: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>"
+   iload                  19
+   oload                  1
+   invoke                 46
+   sconst                 " / "
+   iload                  18
+   oload                  1
+   invoke                 46
+   join_string            6
+   ostore                 0
+   jump                   LABEL270
+LABEL257:
+   sconst                 "Selling: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>"
+   iload                  19
+   oload                  1
+   invoke                 46
+   sconst                 " / "
+   iload                  18
+   oload                  1
+   invoke                 46
+   join_string            6
+   ostore                 0
+LABEL270:
+   jump                   LABEL313
+LABEL271:
+   iload                  0
+   iload                  12
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL277
+   jump                   LABEL281
+LABEL277:
+   iconst                 0
+   cc_sethide            
+   iconst                 1118
+   cc_setgraphic         
+LABEL281:
+   iload                  1
+   stockmarket_isofferfinished
+   iconst                 1
+   if_icmpeq              LABEL286
+   jump                   LABEL300
+LABEL286:
+   sconst                 "Bought: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>"
+   iload                  19
+   oload                  1
+   invoke                 46
+   sconst                 " / "
+   iload                  18
+   oload                  1
+   invoke                 46
+   join_string            6
+   ostore                 0
+   jump                   LABEL313
+LABEL300:
+   sconst                 "Buying: "
+   iload                  17
+   oc_name               
+   sconst                 "<br>"
+   iload                  19
+   oload                  1
+   invoke                 46
+   sconst                 " / "
+   iload                  18
+   oload                  1
+   invoke                 46
+   join_string            6
+   ostore                 0
+LABEL313:
+   iconst                 526
+   iload                  0
+   iconst                 -1
+   iload                  2
+   oload                  0
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   iload                  0
+   if_setonmouserepeat   
+   iload                  0
+   iload                  13
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL329
+   jump                   LABEL334
+LABEL329:
+   iconst                 0
+   cc_sethide            
+   iload                  17
+   iload                  18
+   cc_setobject          
+LABEL334:
+   iload                  0
+   iload                  11
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL340
+   jump                   LABEL348
+LABEL340:
+   iconst                 0
+   cc_sethide            
+   iload                  1
+   iload                  18
+   iload                  19
+   iconst                 -1
+   iload                  5
+   invoke                 812
+LABEL348:
+   iload                  2
+   invoke                 41
+   return                

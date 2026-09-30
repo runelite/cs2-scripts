@@ -1,6 +1,24 @@
-// 7237
-[clientscript,cabbage_lookup]
-def_int $int0 = 0;
-def_int $int1 = 0;
-$int0, $int1 = oc_stockmarketvalue(cabbage_1965);
-mes("Status: <tostring($int0)>, Value: <tostring($int1)>.");
+java.lang.IllegalStateException: Opcode 61 in script 7237 not implemented
+
+.id                       7237
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   istore                 0
+   lconst                 0
+   lstore                
+   iconst                 1965
+   3932                  
+   lstore                
+   istore                 0
+   sconst                 "Status: "
+   iload                  0
+   tostring              
+   sconst                 ", Value: "
+   lload                 
+   4125                  
+   sconst                 "."
+   join_string            5
+   mes                   
+   return                

@@ -1,90 +1,225 @@
-// 497
-[proc,wilderness_lootingbag_draw](inv $inv0)
-cc_deleteall(wilderness_lootingbag:items);
-def_int $length1 = inv_size($inv0);
-def_int $intarray0($length1);
-$intarray0(0) = %varcint81;
-$intarray0(1) = %varcint82;
-$intarray0(2) = %varcint83;
-$intarray0(3) = %varcint84;
-$intarray0(4) = %varcint85;
-$intarray0(5) = %varcint86;
-$intarray0(6) = %varcint87;
-$intarray0(7) = %varcint88;
-$intarray0(8) = %varcint89;
-$intarray0(9) = %varcint90;
-$intarray0(10) = %varcint91;
-$intarray0(11) = %varcint92;
-$intarray0(12) = %varcint93;
-$intarray0(13) = %varcint94;
-$intarray0(14) = %varcint95;
-$intarray0(15) = %varcint96;
-$intarray0(16) = %varcint97;
-$intarray0(17) = %varcint98;
-$intarray0(18) = %varcint99;
-$intarray0(19) = %varcint100;
-$intarray0(20) = %varcint101;
-$intarray0(21) = %varcint102;
-$intarray0(22) = %varcint104;
-$intarray0(23) = %varcint105;
-$intarray0(24) = %varcint106;
-$intarray0(25) = %varcint107;
-$intarray0(26) = %varcint108;
-$intarray0(27) = %varcint109;
-def_obj $obj2 = null;
-def_int $int3 = 0;
-def_int $int4 = 0;
-def_string $string1 = "Invalid item.";
-def_int $length5 = 0;
-while ($length5 < $length1) {
-	cc_create(wilderness_lootingbag:items, ^iftype_graphic, $length5, false);
-	$obj2 = inv_getobj($inv0, $length5);
-	if ($obj2 ! null) {
-		$int3, $int4 = inv_getnum($inv0, $length5), calc($int4 + 1);
-		cc_sethide(false);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($length5 % 4 * (36 + 8)), calc($length5 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setoutline(1);
-		cc_setgraphicshadow(0x333333);
-		cc_setobject($obj2, $int3);
-		if ($inv0 = inv) {
-			if ($obj2 = looting_bag_11941 | $obj2 = looting_bag_open_22586) {
-				cc_settrans(150);
-				cc_setonmouserepeat(null);
-				cc_setonmouseleave(null);
-			} else {
-				cc_settrans(0);
-				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
-				if ($intarray0($length5) <= -1) {
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, wilderness_lootingbag:tooltip, $string1, 25, 512)");
-					cc_setonmouseleave("deltooltip(wilderness_lootingbag:tooltip)");
-				} else {
-					~trade_tooltip($int3, $intarray0($length5), wilderness_lootingbag:tooltip);
-				}
-			}
-			cc_setop(1, "Store-1");
-			cc_setop(2, "Store-5");
-			cc_setop(3, "Store-All");
-			cc_setop(4, "Store-X");
-			cc_setop(9, "Examine");
-		} else {
-			cc_settrans(0);
-			cc_setop(10, "Examine");
-			~trade_tooltip($int3, $intarray0($length5), wilderness_lootingbag:tooltip);
-		}
-		cc_setopbase("<col=ff9040><oc_name($obj2)>");
-	} else {
-		cc_sethide(true);
-	}
-	$length5 = calc($length5 + 1);
-}
-if ($inv0 = looting_bag & $int4 <= 0) {
-	cc_create(wilderness_lootingbag:items, ^iftype_text, $length5, false);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(if_getwidth(wilderness_lootingbag:items), if_getheight(wilderness_lootingbag:items), ^setsize_abs, ^setsize_abs);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextfont(p12_full);
-	cc_settextshadow(true);
-	cc_setcolour(0xff981f);
-	cc_settext("The bag is empty.");
-}
+java.lang.IllegalStateException: Opcode 61 in script 497 not implemented
+
+.id                       497
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 5308421
+   cc_deleteall          
+   iload                  0
+   inv_size              
+   istore                 1
+   lconst                 0
+   lstore                
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   sconst                 "Invalid item."
+   ostore                 0
+   iconst                 0
+   istore                 5
+LABEL17:
+   iload                  5
+   iload                  1
+   if_icmplt              LABEL21
+   jump                   LABEL164
+LABEL21:
+   iconst                 5308421
+   iconst                 5
+   iload                  5
+   iconst                 0
+   cc_create             
+   iload                  0
+   iload                  5
+   inv_getobj            
+   istore                 2
+   iload                  2
+   iconst                 -1
+   if_icmpne              LABEL34
+   jump                   LABEL157
+LABEL34:
+   iload                  5
+   iconst                 0
+   invoke                 9913
+   lstore                
+   iload                  0
+   iload                  5
+   inv_getnum            
+   iload                  4
+   iconst                 1
+   add                   
+   istore                 4
+   istore                 3
+   iconst                 0
+   cc_sethide            
+   iconst                 36
+   iconst                 32
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iload                  5
+   iconst                 4
+   mod                   
+   iconst                 36
+   iconst                 8
+   add                   
+   multiply              
+   iload                  5
+   iconst                 4
+   div                   
+   iconst                 32
+   multiply              
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 1
+   cc_setoutline         
+   iconst                 3355443
+   cc_setgraphicshadow   
+   iload                  2
+   iload                  3
+   cc_setobject          
+   iload                  0
+   iconst                 93
+   if_icmpeq              LABEL79
+   jump                   LABEL142
+LABEL79:
+   iload                  2
+   iconst                 11941
+   if_icmpeq              LABEL86
+   iload                  2
+   iconst                 22586
+   if_icmpeq              LABEL86
+   jump                   LABEL95
+LABEL86:
+   iconst                 150
+   cc_settrans           
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+   jump                   LABEL126
+LABEL95:
+   iconst                 0
+   cc_settrans           
+   iconst                 487
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 150
+   iconst                 0
+   sconst                 "iiii"
+   cc_setonop            
+   lload                 
+   lconst                 -1
+   if_lcmple              LABEL108
+   jump                   LABEL122
+LABEL108:
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iconst                 5308423
+   oload                  0
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+   iconst                 40
+   iconst                 5308423
+   sconst                 "i"
+   cc_setonmouseleave    
+   jump                   LABEL126
+LABEL122:
+   iload                  3
+   lload                 
+   iconst                 5308423
+   invoke                 1234
+LABEL126:
+   iconst                 1
+   sconst                 "Store-1"
+   cc_setop              
+   iconst                 2
+   sconst                 "Store-5"
+   cc_setop              
+   iconst                 3
+   sconst                 "Store-All"
+   cc_setop              
+   iconst                 4
+   sconst                 "Store-X"
+   cc_setop              
+   iconst                 9
+   sconst                 "Examine"
+   cc_setop              
+   jump                   LABEL151
+LABEL142:
+   iconst                 0
+   cc_settrans           
+   iconst                 10
+   sconst                 "Examine"
+   cc_setop              
+   iload                  3
+   lload                 
+   iconst                 5308423
+   invoke                 1234
+LABEL151:
+   sconst                 "<col=ff9040>"
+   iload                  2
+   oc_name               
+   join_string            2
+   cc_setopbase          
+   jump                   LABEL159
+LABEL157:
+   iconst                 1
+   cc_sethide            
+LABEL159:
+   iload                  5
+   iconst                 1
+   add                   
+   istore                 5
+   jump                   LABEL17
+LABEL164:
+   iload                  0
+   iconst                 516
+   if_icmpeq              LABEL168
+   jump                   LABEL201
+LABEL168:
+   iload                  4
+   iconst                 0
+   if_icmple              LABEL172
+   jump                   LABEL201
+LABEL172:
+   iconst                 5308421
+   iconst                 4
+   iload                  5
+   iconst                 0
+   cc_create             
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   cc_setposition        
+   iconst                 5308421
+   if_getwidth           
+   iconst                 5308421
+   if_getheight          
+   iconst                 0
+   iconst                 0
+   cc_setsize            
+   iconst                 1
+   iconst                 1
+   iconst                 0
+   cc_settextalign       
+   iconst                 495
+   cc_settextfont        
+   iconst                 1
+   cc_settextshadow      
+   iconst                 16750623
+   cc_setcolour          
+   sconst                 "The bag is empty."
+   cc_settext            
+LABEL201:
+   return                

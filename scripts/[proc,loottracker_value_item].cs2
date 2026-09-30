@@ -1,17 +1,62 @@
-// 7178
-[proc,loottracker_value_item](obj $obj0)(int, int, int)
-def_int $colour1 = ^black;
-def_int $int2 = 0;
-def_int $int3 = 0;
-if (oc_param($obj0, no_alchemy) = 0) {
-	$colour1 = ~script7127(oc_cost($obj0));
-}
-if (oc_stockmarket($obj0) = true) {
-	$int3, $int2 = oc_stockmarketvalue($obj0);
-	$int2 = max($int2, 0);
-}
-if ($obj0 = coins_995) {
-	$colour1 = 0x000001;
-	$int2 = 1;
-}
-return($colour1, $int2, $int3);
+java.lang.IllegalStateException: Opcode 61 in script 7178 not implemented
+
+.id                       7178
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   istore                 1
+   iconst                 0
+   istore                 2
+   lconst                 0
+   lstore                
+   iconst                 0
+   istore                 3
+   iload                  0
+   iconst                 295
+   oc_param              
+   iconst                 0
+   if_icmpeq              LABEL14
+   jump                   LABEL18
+LABEL14:
+   iload                  0
+   oc_cost               
+   invoke                 7127
+   istore                 1
+LABEL18:
+   iload                  0
+   3931                  
+   iconst                 1
+   if_icmpeq              LABEL23
+   jump                   LABEL34
+LABEL23:
+   iload                  0
+   3932                  
+   lstore                
+   istore                 3
+   lload                 
+   invoke                 9914
+   istore                 2
+   iload                  2
+   iconst                 0
+   4017                  
+   istore                 2
+LABEL34:
+   iload                  0
+   iconst                 995
+   if_icmpeq              LABEL38
+   jump                   LABEL42
+LABEL38:
+   iconst                 1
+   istore                 1
+   iconst                 1
+   istore                 2
+LABEL42:
+   iload                  1
+   iload                  2
+   iload                  3
+   return                
+   iconst                 0
+   iconst                 0
+   iconst                 0
+   return                

@@ -1,28 +1,123 @@
-// 1234
-[proc,trade_tooltip](int $int0, int $int1, component $component2)
-def_string $string0 = "";
-def_string $string1 = ",";
-def_int $int3 = 0;
-if ($int1 >= 0 & $int0 > 0) {
-	if (calc(^max_32bit_int / $int0) < $int1) {
-		$int3 = ^max_32bit_int;
-	} else {
-		$int3 = calc($int0 * $int1);
-	}
-	if ($int0 > 1) {
-		if ($int3 >= 0 & $int3 < ^max_32bit_int) {
-			$string0 = "<~tostring_spacer($int0, $string1)> x <~tostring_spacer($int1, $string1)><br>= <~tostring_spacer($int3, $string1)>";
-		} else {
-			$string0 = "<~tostring_spacer($int0, $string1)> x <~tostring_spacer($int1, $string1)>";
-		}
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component2, $string0, 25, 512)");
-		cc_setonmouseleave("deltooltip($component2)");
-	} else {
-		$string0 = ~tostring_spacer($int1, $string1);
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component2, $string0, 25, 512)");
-		cc_setonmouseleave("deltooltip($component2)");
-	}
-} else {
-	cc_setonmouserepeat(null);
-	cc_setonmouseleave(null);
-}
+java.lang.IllegalStateException: Opcode 61 in script 1234 not implemented
+
+.id                       1234
+.int_arg_count            2
+.long_arg_count           1
+.obj_arg_count            0
+   sconst                 ""
+   ostore                 0
+   sconst                 ","
+   ostore                 1
+   lconst                 0
+   lstore                 1
+   lload                 
+   lconst                 0
+   if_lcmpge              LABEL10
+   jump                   LABEL96
+LABEL10:
+   iload                  0
+   iconst                 0
+   if_icmpgt              LABEL14
+   jump                   LABEL96
+LABEL14:
+   lconst                 9223372036854775807
+   iload                  0
+   4044                  
+   4040                  
+   lload                 
+   if_lcmplt              LABEL21
+   jump                   LABEL24
+LABEL21:
+   lconst                 9223372036854775807
+   lstore                 1
+   jump                   LABEL29
+LABEL24:
+   iload                  0
+   4044                  
+   lload                 
+   4039                  
+   lstore                 1
+LABEL29:
+   iload                  0
+   iconst                 1
+   if_icmpgt              LABEL33
+   jump                   LABEL78
+LABEL33:
+   lload                  1
+   lconst                 0
+   if_lcmpge              LABEL37
+   jump                   LABEL55
+LABEL37:
+   lload                  1
+   lconst                 9223372036854775807
+   if_lcmplt              LABEL41
+   jump                   LABEL55
+LABEL41:
+   iload                  0
+   oload                  1
+   invoke                 46
+   sconst                 " x "
+   lload                 
+   oload                  1
+   4126                  
+   sconst                 "<br>= "
+   lload                  1
+   oload                  1
+   4126                  
+   join_string            5
+   ostore                 0
+   jump                   LABEL64
+LABEL55:
+   iload                  0
+   oload                  1
+   invoke                 46
+   sconst                 " x "
+   lload                 
+   oload                  1
+   4126                  
+   join_string            3
+   ostore                 0
+LABEL64:
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  1
+   oload                  0
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+   iconst                 40
+   iload                  1
+   sconst                 "i"
+   cc_setonmouseleave    
+   jump                   LABEL95
+LABEL78:
+   lload                 
+   oload                  1
+   4126                  
+   ostore                 0
+   iconst                 526
+   iconst                 -2147483645
+   iconst                 -2147483643
+   iload                  1
+   oload                  0
+   iconst                 25
+   iconst                 512
+   sconst                 "iiisii"
+   cc_setonmouserepeat   
+   iconst                 40
+   iload                  1
+   sconst                 "i"
+   cc_setonmouseleave    
+LABEL95:
+   jump                   LABEL102
+LABEL96:
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouserepeat   
+   iconst                 -1
+   sconst                 ""
+   cc_setonmouseleave    
+LABEL102:
+   return                

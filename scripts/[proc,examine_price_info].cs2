@@ -1,37 +1,139 @@
-// 6005
-[proc,examine_price_info](obj $obj0, int $int1, int $int2, boolean $boolean3, int $int4, boolean $boolean5, int $int6, int $int7)
-if (~on_enhanced_any = 0) {
-	return;
-}
-if (%examine_price_ge_enabled = 0 & %examine_price_alch_enabled = 0) {
-	return;
-}
-if ($obj0 = null) {
-	return;
-}
-$int1 = max($int1, 1);
-$obj0 = oc_uncert($obj0);
-def_string $string0 = "";
-if (%examine_price_ge_enabled = 1 & $boolean3 = true) {
-	$string0 = ~script6006($string0, "GE", $int4, $int1);
-}
-if (%examine_price_alch_enabled = 1 & $boolean5 = false) {
-	if ($int6 > 0) {
-		$string0 = ~script6006($string0, "HA", $int6, $int1);
-	}
-	if ($int7 > 0) {
-		$string0 = ~script6006($string0, "LA", $int7, $int1);
-	}
-}
-if (string_length($string0) <= 0) {
-	return;
-}
-if ($int2 = 1) {
-	if ($int1 > 1) {
-		mes("Price of <tostring($int1)> x <oc_name($obj0)>: <$string0>");
-	} else {
-		mes("Price of <oc_name($obj0)>: <$string0>");
-	}
-} else {
-	mes("Price: <$string0>");
-}
+java.lang.IllegalStateException: Opcode 66 in script 6005 not implemented
+
+.id                       6005
+.int_arg_count            4
+.long_arg_count           4
+.obj_arg_count            0
+   invoke                 100
+   iconst                 0
+   if_icmpeq              LABEL4
+   jump                   LABEL5
+LABEL4:
+   return                
+LABEL5:
+   get_varbit             13826
+   iconst                 0
+   if_icmpeq              LABEL9
+   jump                   LABEL14
+LABEL9:
+   get_varbit             13827
+   iconst                 0
+   if_icmpeq              LABEL13
+   jump                   LABEL14
+LABEL13:
+   return                
+LABEL14:
+   iload                  0
+   iconst                 -1
+   if_icmpeq              LABEL18
+   jump                   LABEL19
+LABEL18:
+   return                
+LABEL19:
+   lload                 
+   lconst                 1
+   4042                  
+   lstore                
+   iload                  0
+   oc_uncert             
+   istore                 0
+   sconst                 ""
+   ostore                 0
+   get_varbit             13826
+   iconst                 1
+   if_icmpeq              LABEL32
+   jump                   LABEL42
+LABEL32:
+   iload                  2
+   iconst                 1
+   if_icmpeq              LABEL36
+   jump                   LABEL42
+LABEL36:
+   oload                  0
+   sconst                 "GE"
+   lload                  1
+   lload                 
+   invoke                 6006
+   ostore                 0
+LABEL42:
+   get_varbit             13827
+   iconst                 1
+   if_icmpeq              LABEL46
+   jump                   LABEL70
+LABEL46:
+   iload                  3
+   iconst                 0
+   if_icmpeq              LABEL50
+   jump                   LABEL70
+LABEL50:
+   lload                  2
+   lconst                 0
+   if_lcmpgt              LABEL54
+   jump                   LABEL60
+LABEL54:
+   oload                  0
+   sconst                 "HA"
+   lload                  2
+   lload                 
+   invoke                 6006
+   ostore                 0
+LABEL60:
+   lload                  3
+   lconst                 0
+   if_lcmpgt              LABEL64
+   jump                   LABEL70
+LABEL64:
+   oload                  0
+   sconst                 "LA"
+   lload                  3
+   lload                 
+   invoke                 6006
+   ostore                 0
+LABEL70:
+   oload                  0
+   string_length         
+   iconst                 0
+   if_icmple              LABEL75
+   jump                   LABEL76
+LABEL75:
+   return                
+LABEL76:
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL80
+   jump                   LABEL104
+LABEL80:
+   lload                 
+   lconst                 1
+   if_lcmpgt              LABEL84
+   jump                   LABEL96
+LABEL84:
+   sconst                 "Price of "
+   lload                 
+   sconst                 ","
+   4126                  
+   sconst                 " x "
+   iload                  0
+   oc_name               
+   sconst                 ": "
+   oload                  0
+   join_string            6
+   mes                   
+   jump                   LABEL103
+LABEL96:
+   sconst                 "Price of "
+   iload                  0
+   oc_name               
+   sconst                 ": "
+   oload                  0
+   join_string            4
+   mes                   
+LABEL103:
+   jump                   LABEL108
+LABEL104:
+   sconst                 "Price: "
+   oload                  0
+   join_string            2
+   mes                   
+LABEL108:
+   return                

@@ -1,20 +1,77 @@
-// 7236
-[proc,ground_items_price](obj $obj0)(int, int)
-if ($obj0 = coins_995) {
-	return(1, 1);
-}
-$obj0 = oc_uncert($obj0);
-def_int $int1 = 0;
-def_int $int2 = 0;
-def_int $int3 = 1;
-if (%ground_items_price_type = 0 & oc_stockmarket($obj0) = true) {
-	$int2, $int1 = oc_stockmarketvalue($obj0);
-	if ($int2 = 2) {
-		return(max($int1, 0), 1);
-	}
-	$int3 = 0;
-}
-if (oc_param($obj0, no_alchemy) = 0) {
-	$int1 = ~script7127(oc_cost($obj0));
-}
-return($int1, $int3);
+java.lang.IllegalStateException: Opcode 61 in script 7236 not implemented
+
+.id                       7236
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  0
+   iconst                 995
+   if_icmpeq              LABEL4
+   jump                   LABEL7
+LABEL4:
+   iconst                 1
+   iconst                 1
+   return                
+LABEL7:
+   iload                  0
+   oc_uncert             
+   istore                 0
+   lconst                 0
+   lstore                
+   iconst                 0
+   istore                 1
+   iconst                 0
+   istore                 2
+   iconst                 1
+   istore                 3
+   get_varbit             14870
+   iconst                 0
+   if_icmpeq              LABEL22
+   jump                   LABEL46
+LABEL22:
+   iload                  0
+   3931                  
+   iconst                 1
+   if_icmpeq              LABEL27
+   jump                   LABEL46
+LABEL27:
+   iload                  0
+   3932                  
+   lstore                
+   istore                 2
+   lload                 
+   invoke                 9914
+   istore                 1
+   iload                  2
+   iconst                 2
+   if_icmpeq              LABEL38
+   jump                   LABEL44
+LABEL38:
+   iload                  1
+   iconst                 0
+   4017                  
+   iconst                 1
+   return                
+   jump                   LABEL46
+LABEL44:
+   iconst                 0
+   istore                 3
+LABEL46:
+   iload                  0
+   iconst                 295
+   oc_param              
+   iconst                 0
+   if_icmpeq              LABEL52
+   jump                   LABEL56
+LABEL52:
+   iload                  0
+   oc_cost               
+   invoke                 7127
+   istore                 1
+LABEL56:
+   iload                  1
+   iload                  3
+   return                
+   iconst                 0
+   iconst                 -1
+   return                

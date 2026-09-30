@@ -1,26 +1,88 @@
-// 7231
-[clientscript,ground_items_polling](entityoverlay $entityoverlay0, coord $coord1, int $int2, int $int3)
-def_int $int4 = 0;
-def_int $int5 = clientclock;
-if (%varcint1154 >= $int5) {
-	$int4, $int3 = 1, -1;
-}
-if ($int3 ! -1 & $int5 >= calc($int2 + $int3)) {
-	$int4, $int3 = 1, ~min(calc($int3 * 2), 512);
-}
-if ($int4 = 0) {
-	return;
-}
-def_int $int6 = 0;
-def_int $int7 = 0;
-if (if_find_entityoverlay($entityoverlay0) = true) {
-	cc_setontimer(null);
-	if ($int3 ! -1) {
-		$int6, $int7 = oc_stockmarketvalue(cabbage_1965);
-		if ($int6 ! 2) {
-			cc_setontimer("ground_items_polling($entityoverlay0, $coord1, $int5, $int3)");
-			return;
-		}
-	}
-	~ground_items_setup($coord1);
-}
+java.lang.IllegalStateException: Opcode 61 in script 7231 not implemented
+
+.id                       7231
+.int_arg_count            4
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   istore                 4
+   clientclock           
+   istore                 5
+   get_varc_int           1154
+   iload                  5
+   if_icmpge              LABEL8
+   jump                   LABEL12
+LABEL8:
+   iconst                 1
+   iconst                 -1
+   istore                 3
+   istore                 4
+LABEL12:
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL16
+   jump                   LABEL30
+LABEL16:
+   iload                  5
+   iload                  2
+   iload                  3
+   add                   
+   if_icmpge              LABEL22
+   jump                   LABEL30
+LABEL22:
+   iconst                 1
+   iload                  3
+   iconst                 2
+   multiply              
+   iconst                 512
+   invoke                 1046
+   istore                 3
+   istore                 4
+LABEL30:
+   iload                  4
+   iconst                 0
+   if_icmpeq              LABEL34
+   jump                   LABEL35
+LABEL34:
+   return                
+LABEL35:
+   iconst                 0
+   istore                 6
+   lconst                 0
+   lstore                
+   iload                  0
+   202                   
+   iconst                 1
+   if_icmpeq              LABEL44
+   jump                   LABEL69
+LABEL44:
+   iconst                 -1
+   sconst                 ""
+   cc_setontimer         
+   iload                  3
+   iconst                 -1
+   if_icmpne              LABEL51
+   jump                   LABEL67
+LABEL51:
+   iconst                 1965
+   3932                  
+   lstore                
+   istore                 6
+   iload                  6
+   iconst                 2
+   if_icmpne              LABEL59
+   jump                   LABEL67
+LABEL59:
+   iconst                 7231
+   iload                  0
+   iload                  1
+   iload                  5
+   iload                  3
+   sconst                 "iiii"
+   cc_setontimer         
+   return                
+LABEL67:
+   iload                  1
+   invoke                 7227
+LABEL69:
+   return                

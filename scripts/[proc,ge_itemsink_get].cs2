@@ -1,22 +1,79 @@
-// 5733
-[proc,ge_itemsink_get](int $int0)(obj, int)
-switch_int ($int0) {
-	case 0 :
-		return(%ge_itemsink_obj_0, ~max(0, %ge_itemsink_price_0));
-	case 1 :
-		return(%ge_itemsink_obj_1, ~max(0, %ge_itemsink_price_1));
-	case 2 :
-		return(%ge_itemsink_obj_2, ~max(0, %ge_itemsink_price_2));
-	case 3 :
-		return(%ge_itemsink_obj_3, ~max(0, %ge_itemsink_price_3));
-	case 4 :
-		return(%ge_itemsink_obj_4, ~max(0, %ge_itemsink_price_4));
-	case 5 :
-		return(%ge_itemsink_obj_5, ~max(0, %ge_itemsink_price_5));
-	case 6 :
-		return(%ge_itemsink_obj_6, ~max(0, %ge_itemsink_price_6));
-	case 7 :
-		return(%ge_itemsink_obj_7, ~max(0, %ge_itemsink_price_7));
-	case default :
-		return(null, 0);
-}
+java.lang.IllegalStateException: Opcode 61 in script 5733 not implemented
+
+.id                       5733
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  0
+   switch                
+      0: LABEL3
+      1: LABEL9
+      2: LABEL15
+      3: LABEL21
+      4: LABEL27
+      5: LABEL33
+      6: LABEL39
+      7: LABEL45
+   jump                   LABEL50
+LABEL3:
+   get_varp               3204
+   lconst                 0
+   064                    5762
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL9:
+   get_varp               3206
+   lconst                 0
+   064                    5763
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL15:
+   get_varp               3208
+   lconst                 0
+   064                    5764
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL21:
+   get_varp               3210
+   lconst                 0
+   064                    5765
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL27:
+   get_varp               3212
+   lconst                 0
+   064                    5766
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL33:
+   get_varp               3214
+   lconst                 0
+   064                    5767
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL39:
+   get_varp               3216
+   lconst                 0
+   064                    5768
+   4042                  
+   return                
+   jump                   LABEL50
+LABEL45:
+   get_varp               3218
+   lconst                 0
+   064                    5769
+   4042                  
+   return                
+LABEL50:
+   iconst                 -1
+   lconst                 0
+   return                
+   iconst                 -1
+   lconst                 -1
+   return                

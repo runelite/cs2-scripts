@@ -1,0 +1,140 @@
+java.lang.IllegalStateException: Opcode 61 in script 9908 not implemented
+
+.id                       9908
+.int_arg_count            0
+.long_arg_count           4
+.obj_arg_count            1
+   lconst                 0
+   lstore                 4
+   lconst                 0
+   lstore                 5
+   sconst                 ""
+   ostore                 1
+   iconst                 0
+   istore                 0
+   lload                 
+   lconst                 1000000000000
+   if_lcmpge              LABEL12
+   jump                   LABEL27
+LABEL12:
+   lload                 
+   lconst                 1000000000000
+   4040                  
+   lstore                 4
+   lload                 
+   lconst                 100000000000
+   4040                  
+   lconst                 10
+   4055                  
+   lstore                 5
+   sconst                 "t"
+   ostore                 1
+   iconst                 1
+   istore                 0
+   jump                   LABEL89
+LABEL27:
+   lload                 
+   lconst                 1000000000
+   lload                  3
+   4042                  
+   if_lcmpge              LABEL33
+   jump                   LABEL48
+LABEL33:
+   lload                 
+   lconst                 1000000000
+   4040                  
+   lstore                 4
+   lload                 
+   lconst                 100000000
+   4040                  
+   lconst                 10
+   4055                  
+   lstore                 5
+   sconst                 "b"
+   ostore                 1
+   iconst                 1
+   istore                 0
+   jump                   LABEL89
+LABEL48:
+   lload                 
+   lconst                 1000000
+   lload                  2
+   4042                  
+   if_lcmpge              LABEL54
+   jump                   LABEL69
+LABEL54:
+   lload                 
+   lconst                 1000000
+   4040                  
+   lstore                 4
+   lload                 
+   lconst                 100000
+   4040                  
+   lconst                 10
+   4055                  
+   lstore                 5
+   sconst                 "m"
+   ostore                 1
+   iconst                 1
+   istore                 0
+   jump                   LABEL89
+LABEL69:
+   lload                 
+   lconst                 1000
+   lload                  1
+   4042                  
+   if_lcmpge              LABEL75
+   jump                   LABEL89
+LABEL75:
+   lload                 
+   lconst                 1000
+   4040                  
+   lstore                 4
+   lload                 
+   lconst                 100
+   4040                  
+   lconst                 10
+   4055                  
+   lstore                 5
+   sconst                 "k"
+   ostore                 1
+   iconst                 1
+   istore                 0
+LABEL89:
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL93
+   jump                   LABEL116
+LABEL93:
+   lload                  4
+   lconst                 100
+   if_lcmpge              LABEL100
+   lload                  5
+   lconst                 0
+   if_lcmpeq              LABEL100
+   jump                   LABEL106
+LABEL100:
+   lload                  4
+   oload                  0
+   4126                  
+   oload                  1
+   join_string            2
+   return                
+LABEL106:
+   lload                  4
+   oload                  0
+   4126                  
+   sconst                 "."
+   lload                  5
+   oload                  0
+   4126                  
+   oload                  1
+   join_string            4
+   return                
+LABEL116:
+   lload                 
+   oload                  0
+   4126                  
+   return                
+   sconst                 ""
+   return                
