@@ -4,6 +4,8 @@ def_dbrow $dbrow1 = oc_param($obj0, param_1189);
 if ($dbrow1 ! null) {
 	if (oc_param($obj0, param_1228) = true & %br_ingame = 1) {
 		return(1);
+	} else if (oc_param($obj0, spell_spellbook) = 1 & %pvptut_active_tutorial ! null & ~instance_check(coord) = 1) {
+		return(1);
 	} else if (~league_relic_active(struct_1132) = 1) {
 		return(1);
 	} else if (~quest_is_complete($dbrow1) = 0) {

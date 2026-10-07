@@ -1,0 +1,34 @@
+// 9951
+[proc,script9951](anyobj $anyobj0, enum $enum0, int $int1, int $int2)
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
+$intarray0($int2) = $int4;
+def_int $int5 = $int1;
+def_int $int6 = $int1;
+def_int $int7 = 0;
+def_namedobj $namedobj8 = null;
+def_int $int9 = 0;
+def_namedobj $namedobj10 = enum(int, namedobj, $enum0, $int4);
+def_int $int11 = oc_param($namedobj10, loadout_iteminfo);
+def_string $string1 = oc_name($namedobj10);
+def_int $int12 = 0;
+while ($int6 < $int2) {
+	$namedobj8 = enum(int, namedobj, $enum0, $intarray0($int6));
+	$int9 = oc_param($namedobj8, loadout_iteminfo);
+	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($namedobj8), $string1) <= 0) {
+		$int12 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int12;
+		$int5 = calc($int5 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
+if ($int1 < calc($int5 - 1)) {
+	~script9951($anyobj0, $enum0, $int1, calc($int5 - 1));
+}
+if (calc($int5 + 1) < $int2) {
+	~script9951($anyobj0, $enum0, calc($int5 + 1), $int2);
+}

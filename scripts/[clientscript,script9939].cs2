@@ -1,0 +1,24 @@
+// 9939
+[clientscript,script9939](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $colour4, int $int5, int $colour6, int $int7, int $int8, enum $enum9, enum $enum10, component $component11, component $component12, component $drop13, component $component14)
+if (cc_find($component1, $comsubid2) = true & .cc_find($component1, $comsubid3) = true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	.cc_setcolour($colour4);
+	.cc_settrans($int5);
+	.cc_setontimer("script9940(calc(clientclock + 20), $component1, $comsubid2, $comsubid3, $colour4, $int5, $colour6, $int7)");
+}
+if ($opindex0 = 1) {
+	~script9948(
+		0 = $comsubid2, 
+		1 = enum(int, namedobj, $enum9, $comsubid2), 
+		2 = 0, 
+		3 = $int8, 
+		4 = $enum9, 
+		5 = $enum10, 
+		6 = $component11, 
+		7 = $component12, 
+		8 = $drop13, 
+		9 = $component14
+	);
+}

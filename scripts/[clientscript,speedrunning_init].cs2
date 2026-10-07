@@ -3,7 +3,7 @@
 ~questlist_draw($com_speedrunning_panel_list_layer0, $com_speedrunning_panel_list_container1, $com_speedrunning_panel_list_text_container2, $com_speedrunning_panel_list_scrollbar3, $com_speedrunning_panel_list4, 1);
 if (%latest_speedrun_panel ! null) {
 	if (~speedrunning_beta_quest(%latest_speedrun_panel) = 1) {
-		if_settext("<~get_quest_name(%latest_speedrun_panel)> (Beta)", $com_speedrunning_panel_title9);
+		if_settext("<str_quest_name_0=<~get_quest_name(%latest_speedrun_panel)>><str_quest_name_0> (Beta)", $com_speedrunning_panel_title9);
 	} else {
 		if_settext(~get_quest_name(%latest_speedrun_panel), $com_speedrunning_panel_title9);
 	}

@@ -1,0 +1,97 @@
+// 9967
+[proc,script9967](dbrow $dbrow0, component $component1, graphic $graphic2, int $int3, int $int4, int $int5, int $int6, graphic $graphic7, fontmetrics $fontmetrics8, int $int9)(int)
+switch_dbrow ($dbrow0) {
+	case pvptut_prayer :
+		return(~script9961(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_freeze :
+		return(~script9959(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_special_attack :
+		return(~script9970(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_gear_switch :
+		return(~script9960(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_combo_eating :
+		return(~script9958(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_boss_medium :
+		return(~script9956(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case pvptut_boss_expert :
+		return(~script9957(
+			0 = $dbrow0, 
+			1 = $component1, 
+			2 = $graphic2, 
+			3 = $int3, 
+			4 = $int4, 
+			5 = $int5, 
+			6 = $int6, 
+			7 = $graphic7, 
+			8 = $fontmetrics8, 
+			9 = $int9
+		));
+	case default :
+		return(0);
+}

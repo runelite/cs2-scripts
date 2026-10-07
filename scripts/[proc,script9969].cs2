@@ -1,0 +1,14 @@
+// 9969
+[proc,script9969](string $string0, int $int0, component $component1, int $int2, graphic $graphic3, fontmetrics $fontmetrics4, int $int5)(int, int)
+cc_create($component1, ^iftype_text, $int0, false);
+$int0 = calc($int0 + 1);
+cc_setsize(0, calc(paraheight($string0, if_getwidth($component1), $fontmetrics4) * $int5), ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+$int2 = calc(cc_gety + cc_getheight);
+cc_settextalign(^settextalign_left, ^settextalign_top, $int5);
+cc_settext($string0);
+cc_input_setwrapmode(1);
+cc_settextfont($graphic3);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+return($int0, $int2);

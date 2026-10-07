@@ -1,0 +1,27 @@
+// 9929
+[clientscript,script9929](int $com_pvp_tut_2026_setup_interface_universe0, component $com_pvp_tut_2026_setup_interface_atab1, component $com_pvp_tut_2026_setup_interface_adisplay2, component $com_pvp_tut_2026_setup_interface_btab3, component $com_pvp_tut_2026_setup_interface_bdisplay4, component $com_pvp_tut_2026_setup_interface_ctab5, component $com_pvp_tut_2026_setup_interface_cdisplay6)
+switch_int (%pvptut_loadout_default_tab) {
+	case 0 :
+		if_sethide(false, $com_pvp_tut_2026_setup_interface_adisplay2);
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_bdisplay4);
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_cdisplay6);
+	case 1 :
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_adisplay2);
+		if_sethide(false, $com_pvp_tut_2026_setup_interface_bdisplay4);
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_cdisplay6);
+	case 2 :
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_adisplay2);
+		if_sethide(true, $com_pvp_tut_2026_setup_interface_bdisplay4);
+		if_sethide(false, $com_pvp_tut_2026_setup_interface_cdisplay6);
+}
+~script9931(
+	0 = "Expert kit", 
+	1 = $com_pvp_tut_2026_setup_interface_atab1, 
+	2 = $com_pvp_tut_2026_setup_interface_adisplay2, 
+	3 = "Intermediate kit", 
+	4 = $com_pvp_tut_2026_setup_interface_btab3, 
+	5 = $com_pvp_tut_2026_setup_interface_bdisplay4, 
+	6 = "Combo eating kit", 
+	7 = $com_pvp_tut_2026_setup_interface_ctab5, 
+	8 = $com_pvp_tut_2026_setup_interface_cdisplay6
+);

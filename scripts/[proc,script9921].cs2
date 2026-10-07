@@ -1,0 +1,28 @@
+// 9921
+[proc,script9921]
+def_int $int0 = 35;
+switch_int (%varcint988) {
+	case 1 :
+		$int0 = 37;
+		if_setsize(500, 400, ^setsize_abs, ^setsize_abs, pvptut_ui:window);
+	case 2 :
+		$int0 = 37;
+		if_setsize(500, 500, ^setsize_abs, ^setsize_abs, pvptut_ui:window);
+	case 3 :
+		$int0 = 39;
+		if_setsize(500, 600, ^setsize_abs, ^setsize_abs, pvptut_ui:window);
+	case default :
+		$int0 = 35;
+		if_setsize(420, 300, ^setsize_abs, ^setsize_abs, pvptut_ui:window);
+}
+~script1785(pvptut_ui:content);
+def_string $string0 = "PvP Challenges";
+if (%varcint1568 ! null) {
+	$string0 = db_getfield(%varcint1568, pvp_tutorial:title, 0);
+}
+~steelborder(pvptut_ui:frame, $string0, 17);
+if (%varcint1568 ! null) {
+	~script9927(%varcint1568);
+} else {
+	~script9922;
+}
