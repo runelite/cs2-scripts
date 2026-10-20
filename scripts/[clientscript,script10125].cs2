@@ -1,0 +1,126 @@
+// 10125
+[clientscript,script10125](dbrow $dbrow0, dbrow $dbrow1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = ~script10122($dbrow0);
+$int9, $int10 = ~script9992(tfa_stats:all_stats_tables, $int11, 1, 0);
+def_int $int12 = db_getfield($dbrow1, tfa_stats_row:global_max, 0);
+def_int $int13 = db_getfield($dbrow1, tfa_stats_row:personal_max, 0);
+def_int $int14 = db_getfield($dbrow1, tfa_stats_row:current_max, 0);
+def_string $string0 = db_getfield($dbrow1, tfa_stats_row:title, 0);
+def_int $int15 = 4;
+switch_int (%varcint988) {
+	case 1 :
+		$int15 = 6;
+	case 2 :
+		$int15 = 8;
+	case 3 :
+		$int15 = 8;
+}
+if (db_getfield($dbrow1, tfa_stats_row:row_per_party_size, 0) = true) {
+	if ($int2 = 1) {
+		~script9996(
+			0 = tfa_stats:all_stats_tables, 
+			1 = $int11, 
+			2 = $int9, 
+			3 = -1, 
+			4 = p12_full, 
+			5 = ^black, 
+			6 = ^settextalign_left, 
+			7 = $int15, 
+			8 = $string0, 
+			9 = false
+		);
+		$int9, $int10 = ~script9992(tfa_stats:all_stats_tables, $int11, 1, 0);
+	}
+	$string0 = "<tostring($int2)> Player";
+}
+~script9996(
+	0 = tfa_stats:all_stats_tables, 
+	1 = $int11, 
+	2 = $int9, 
+	3 = -1, 
+	4 = p12_full, 
+	5 = ^black, 
+	6 = ^settextalign_left, 
+	7 = $int15, 
+	8 = $string0, 
+	9 = false
+);
+def_int $comsubid16 = 0;
+def_int $int17 = 0;
+if (%varcint1581 = 1) {
+	$comsubid16 = ~script9996(
+		0 = tfa_stats:all_stats_tables, 
+		1 = $int11, 
+		2 = $int9, 
+		3 = 0, 
+		4 = p12_full, 
+		5 = ^black, 
+		6 = ^settextalign_centre, 
+		7 = 2, 
+		8 = ~script10127($dbrow0, $dbrow1, $int3, $int14), 
+		9 = false
+	);
+	if ($int3 > -1 & db_getfield($dbrow1, tfa_stats_row:is_time, 0) = true & $int4 = 0 & cc_find(tfa_stats:all_stats_tables, $comsubid16) = true) {
+		cc_setontimer("script10147(calc($int3 * 30), clientclock, calc($int14 * 30), cc_getlayer, cc_getid)");
+	}
+	$int17 = 1;
+}
+~script9996(
+	0 = tfa_stats:all_stats_tables, 
+	1 = $int11, 
+	2 = $int9, 
+	3 = $int17, 
+	4 = p12_full, 
+	5 = ^black, 
+	6 = ^settextalign_centre, 
+	7 = 2, 
+	8 = ~script10127($dbrow0, $dbrow1, $int5, $int13), 
+	9 = false
+);
+~script9996(
+	0 = tfa_stats:all_stats_tables, 
+	1 = $int11, 
+	2 = $int9, 
+	3 = calc($int17 + 1), 
+	4 = p12_full, 
+	5 = ^black, 
+	6 = ^settextalign_centre, 
+	7 = 2, 
+	8 = ~script10127($dbrow0, $dbrow1, $int6, $int12), 
+	9 = false
+);
+~script9996(
+	0 = tfa_stats:all_stats_tables, 
+	1 = $int11, 
+	2 = $int9, 
+	3 = calc($int17 + 2), 
+	4 = p12_full, 
+	5 = ^black, 
+	6 = ^settextalign_centre, 
+	7 = 2, 
+	8 = ~script10127($dbrow0, $dbrow1, $int7, $int12), 
+	9 = false
+);
+~script9996(
+	0 = tfa_stats:all_stats_tables, 
+	1 = $int11, 
+	2 = $int9, 
+	3 = calc($int17 + 3), 
+	4 = p12_full, 
+	5 = ^black, 
+	6 = ^settextalign_centre, 
+	7 = 2, 
+	8 = ~script10127($dbrow0, $dbrow1, $int8, $int12), 
+	9 = false
+);
+if (~rental_world = 1 & cc_find(tfa_stats:all_stats_tables, ~script10001(tfa_stats:all_stats_tables, $int11, $int9, -1)) = true) {
+	if ($int2 > 0) {
+		cc_setopbase("<db_getfield($dbrow1, tfa_stats_row:title, 0)> (<tostring($int2)>)");
+	} else {
+		cc_setopbase(db_getfield($dbrow1, tfa_stats_row:title, 0));
+	}
+	cc_setop(1, "DEBUG: Set values");
+	cc_setonop("script10126($dbrow0, $dbrow1, $int2)");
+}

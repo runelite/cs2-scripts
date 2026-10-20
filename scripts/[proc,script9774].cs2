@@ -1,12 +1,18 @@
 // 9774
-[proc,script9774](int $int0, dbrow $dbrow1, int $int2, int $int3, string $string0, string $string1, component $component4)
-if_sethide(false, $component4);
-~script7139($component4, $string1, $int0, 0);
-if_setontimer(null, $component4);
-if ($int0 = 1) {
-	if_setop(1, $string0, $component4);
-	if_setonop("script9776($dbrow1, $int2, $int3, $string0, $string1, $component4)", $component4);
-} else {
-	if_clearops($component4);
-	if_setonop(null, $component4);
+[proc,script9774](dbrow $dbrow0, int $int1, int $int2, int $int3, string $string0, int $int4, component $component5)(int)
+def_int $int6 = enum(int, int, enum_5844, $int2);
+def_string $string1 = "";
+if ($int2 ! -1 & ($int3 >= $int6 | $int3 = -1)) {
+	if ($int6 = 1 & $int3 = 1) {
+		$string1 = $string0;
+	} else {
+		$string1 = "<$string0>-<tostring($int6)>";
+	}
+	~script10164(1, $dbrow0, $int1, $int2, $string1, tostring($int6), $component5);
+	return(calc($int4 + 1));
 }
+if_clearops($component5);
+if_setonop(null, $component5);
+if_setontimer(null, $component5);
+if_sethide(true, $component5);
+return($int4);

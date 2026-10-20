@@ -1,0 +1,230 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       10123
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  0
+   invoke                 10122
+   iconst                 -1
+   if_icmpne              LABEL5
+   jump                   LABEL15
+LABEL5:
+   sconst                 "TFA All Stats"
+   sconst                 "Attempted to init a table for existing category "
+   iload                  0
+   iconst                 1081344
+   iconst                 0
+   db_getfield           
+   sconst                 ". Skipping."
+   join_string            3
+   invoke                 638
+   return                
+LABEL15:
+   iconst                 64159778
+   istore                 1
+   iconst                 0
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 115
+   iconst                 4
+   iconst                 5
+   8022                  
+   ostore                 0
+   iconst                 0
+   sconst                 "Personal"
+   set_array_int         
+   iconst                 1
+   sconst                 "Global"
+   set_array_int         
+   iconst                 2
+   sconst                 "Global Today"
+   set_array_int         
+   iconst                 3
+   sconst                 "World Today"
+   set_array_int         
+   get_varc_int           1581
+   iconst                 1
+   if_icmpeq              LABEL42
+   jump                   LABEL47
+LABEL42:
+   oload                  0
+   sconst                 "Current"
+   iconst                 0
+   iconst                 2
+   8025                  
+LABEL47:
+   iconst                 -1
+   istore                 4
+   iconst                 0
+   istore                 5
+   iconst                 20
+   istore                 6
+   iconst                 88
+   istore                 7
+   iconst                 131
+   istore                 8
+   iconst                 20
+   istore                 9
+   get_varc_int           988
+   switch                
+      1: LABEL62
+      2: LABEL71
+      3: LABEL80
+   jump                   LABEL88
+LABEL62:
+   iconst                 28
+   istore                 6
+   iconst                 96
+   istore                 7
+   iconst                 141
+   istore                 8
+   iconst                 28
+   istore                 9
+   jump                   LABEL88
+LABEL71:
+   iconst                 32
+   istore                 6
+   iconst                 100
+   istore                 7
+   iconst                 141
+   istore                 8
+   iconst                 32
+   istore                 9
+   jump                   LABEL88
+LABEL80:
+   iconst                 32
+   istore                 6
+   iconst                 100
+   istore                 7
+   iconst                 141
+   istore                 8
+   iconst                 32
+   istore                 9
+LABEL88:
+   iload                  1
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL93
+   jump                   LABEL138
+LABEL93:
+   iload                  1
+   iconst                 17012
+   oload                  0
+   8003                  
+   iload                  5
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   iconst                 0
+   invoke                 9990
+   istore                 3
+   istore                 2
+   istore                 4
+   iload                  1
+   iload                  4
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL113
+   jump                   LABEL138
+LABEL113:
+   iconst                 2735
+   iload                  0
+   iconst                 0
+   1704                  
+   iconst                 9
+   iload                  1
+   invoke                 8302
+   106                   
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   iconst                 2
+   cc_setposition        
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   cc_setsize            
+   iconst                 1
+   cc_setlinewid         
+   iconst                 17012
+   iconst                 548864
+   iconst                 0
+   db_getfield           
+   cc_setcolour          
+LABEL138:
+   iload                  0
+   iconst                 1081360
+   iconst                 0
+   db_getfield           
+   ostore                 1
+   get_varbit             16384
+   iconst                 0
+   if_icmpeq              LABEL147
+   jump                   LABEL153
+LABEL147:
+   iload                  0
+   iconst                 17139
+   if_icmpeq              LABEL151
+   jump                   LABEL153
+LABEL151:
+   sconst                 "???"
+   ostore                 1
+LABEL153:
+   iload                  1
+   iload                  4
+   iconst                 -1
+   iconst                 -1
+   iconst                 496
+   iconst                 15260877
+   iconst                 1
+   iconst                 2
+   oload                  1
+   iconst                 1
+   invoke                 9996
+   pop_int               
+   iconst                 0
+   istore                 10
+LABEL167:
+   iload                  10
+   oload                  0
+   8003                  
+   if_icmplt              LABEL172
+   jump                   LABEL193
+LABEL172:
+   iload                  1
+   iload                  4
+   iconst                 -1
+   iload                  10
+   iconst                 495
+   iconst                 0
+   iconst                 1
+   iconst                 2
+   sconst                 "<u=000000>"
+   iload                  10
+   get_array_int         
+   sconst                 "</u>"
+   join_string            3
+   iconst                 0
+   invoke                 9996
+   pop_int               
+   iload                  10
+   iconst                 1
+   add                   
+   istore                 10
+   jump                   LABEL167
+LABEL193:
+   iconst                 64159745
+   iconst                 64159748
+   invoke                 10117
+   invoke                 10120
+   iconst                 -1935749631
+   iconst                 64159778
+   iconst                 -1
+   iload                  0
+   sconst                 "i"
+   2929                  
+   return                

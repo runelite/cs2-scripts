@@ -1,0 +1,71 @@
+// 10049
+[clientscript,script10049](component $com_tfa_partydetails_universe0, component $com_tfa_partydetails_pausebuttons1, component $com_tfa_partydetails_main2, component $com_tfa_partydetails_members3, component $com_tfa_partydetails_members_header4, component $com_tfa_partydetails_members_list5, component $com_tfa_partydetails_applicants6, component $com_tfa_partydetails_applicants_header7, component $com_tfa_partydetails_applicants_list8, component $com_tfa_partydetails_back9, component $com_tfa_partydetails_refresh10, component $com_tfa_partydetails_unblock11, component $com_tfa_partydetails_preferred_completions12, component $com_tfa_partydetails_preferred_size13, component $com_tfa_partydetails_preferred_mode14, component $com_tfa_partydetails_external_spectate_toggle15, component $com_tfa_partydetails_action16, component $com_tfa_partydetails_members_tab17, component $com_tfa_partydetails_applicants_tab18)
+%varcint178 = 0;
+%varcint1087 = 0;
+cc_deleteall($com_tfa_partydetails_members_list5);
+cc_deleteall($com_tfa_partydetails_applicants_list8);
+if_sethide(true, $com_tfa_partydetails_members_header4);
+if_sethide(true, $com_tfa_partydetails_applicants_header7);
+if_sethide(true, $com_tfa_partydetails_members3);
+if_sethide(true, $com_tfa_partydetails_applicants6);
+cc_deleteall($com_tfa_partydetails_main2);
+cc_create($com_tfa_partydetails_main2, ^iftype_text, 0, false);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x7f7f7f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+cc_deleteall($com_tfa_partydetails_pausebuttons1);
+if_sethide(true, $com_tfa_partydetails_back9);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_back9), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_refresh10);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_refresh10), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_unblock11);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_unblock11), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_preferred_completions12);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_preferred_completions12), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_preferred_size13);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_preferred_size13), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_preferred_mode14);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_preferred_mode14), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_external_spectate_toggle15);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_external_spectate_toggle15), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_action16);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_action16), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_members_tab17);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_members_tab17), false);
+cc_sethide(true);
+if_sethide(true, $com_tfa_partydetails_applicants_tab18);
+cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, enum(component, int, enum_6057, $com_tfa_partydetails_applicants_tab18), false);
+cc_sethide(true);
+def_int $int19 = enum_getoutputcount(enum_6057);
+def_int $int20 = 24;
+while ($int20 > 0) {
+	cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, $int19, false);
+	cc_sethide(true);
+	$int20, $int19 = calc($int20 - 1), calc($int19 + 1);
+}
+$int20 = 7;
+while ($int20 > 0) {
+	cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, $int19, false);
+	cc_sethide(true);
+	$int20, $int19 = calc($int20 - 1), calc($int19 + 1);
+}
+$int20 = 7;
+while ($int20 > 0) {
+	cc_create($com_tfa_partydetails_pausebuttons1, ^iftype_rectangle, $int19, false);
+	cc_sethide(true);
+	$int20, $int19 = calc($int20 - 1), calc($int19 + 1);
+}
+if_setontimer(null, $com_tfa_partydetails_universe0);
+~script10050(tfa_partydetails:contents, ^max_32bit_int);

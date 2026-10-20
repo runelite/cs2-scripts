@@ -1,0 +1,132 @@
+// 10133
+[proc,script10133](int $int0)
+def_component $component1 = tfa_stats:party_panel_stats;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 4;
+def_int $int5 = 4;
+def_int $int6 = calc(8 + 1);
+def_int $int7 = 26;
+def_int $int8 = 42;
+def_int $int9 = 115;
+def_int $int10 = 21;
+def_int $int11 = 4;
+switch_int (%varcint988) {
+	case 1 :
+		$int9 = 115;
+		$int8 = 65;
+		$int10 = 28;
+	case 2, 3 :
+		$int7 = calc($int7 + 6);
+		$int9 = 115;
+		$int8 = 77;
+		$int10 = 36;
+}
+if (cc_find($component1, 0) = true) {
+	~script10142($component1, %varcint1585, $int7, $int8, $int9, $int10, $int11, calc(8 + 1));
+	return;
+}
+def_string $string0 = "-";
+def_int $int12 = 0;
+if (if_find($component1) = true) {
+	%varcint1585, $int2, $int3 = ~script9990(
+		0 = $component1, 
+		1 = tfa_stats_table_theme_dark, 
+		2 = $int5, 
+		3 = $int6, 
+		4 = $int7, 
+		5 = $int8, 
+		6 = $int9, 
+		7 = $int10, 
+		8 = 2
+	);
+	~script10135($component1, %varcint1585, -1, -1, "tfa_grouping_icons,1", 19, 19, "Party member name");
+	~script10135($component1, %varcint1585, -1, 0, "tfa_grouping_icons,7", 19, 18, "Damage Done");
+	~script10135($component1, %varcint1585, -1, 1, "tfa_grouping_icons,11", 19, 18, "Damage Taken");
+	~script10135($component1, %varcint1585, -1, 2, "tfa_grouping_icons,14", 19, 18, "Deaths");
+	~script10135($component1, %varcint1585, -1, 3, "tfa_grouping_icons,17", 19, 18, "Number of Bosses as MVP");
+	while ($int12 < $int6) {
+		if ($int12 < $int0) {
+			$string0 = "-";
+		} else {
+			$string0 = "";
+		}
+		if ($int12 = calc($int6 - 1)) {
+			~script9996(
+				0 = $component1, 
+				1 = %varcint1585, 
+				2 = $int12, 
+				3 = -1, 
+				4 = p12_full, 
+				5 = 0xd0b088, 
+				6 = ^settextalign_left, 
+				7 = $int11, 
+				8 = "Total", 
+				9 = true
+			);
+		} else {
+			~script9996(
+				0 = $component1, 
+				1 = %varcint1585, 
+				2 = $int12, 
+				3 = -1, 
+				4 = p12_full, 
+				5 = 0xd0b088, 
+				6 = ^settextalign_left, 
+				7 = $int11, 
+				8 = $string0, 
+				9 = true
+			);
+		}
+		~script9996(
+			0 = $component1, 
+			1 = %varcint1585, 
+			2 = $int12, 
+			3 = 0, 
+			4 = p12_full, 
+			5 = 0xd0b088, 
+			6 = ^settextalign_right, 
+			7 = $int11, 
+			8 = $string0, 
+			9 = true
+		);
+		~script9996(
+			0 = $component1, 
+			1 = %varcint1585, 
+			2 = $int12, 
+			3 = 1, 
+			4 = p12_full, 
+			5 = 0xd0b088, 
+			6 = ^settextalign_right, 
+			7 = $int11, 
+			8 = $string0, 
+			9 = true
+		);
+		~script9996(
+			0 = $component1, 
+			1 = %varcint1585, 
+			2 = $int12, 
+			3 = 2, 
+			4 = p12_full, 
+			5 = 0xd0b088, 
+			6 = ^settextalign_right, 
+			7 = $int11, 
+			8 = $string0, 
+			9 = true
+		);
+		~script9996(
+			0 = $component1, 
+			1 = %varcint1585, 
+			2 = $int12, 
+			3 = 3, 
+			4 = p12_full, 
+			5 = 0xd0b088, 
+			6 = ^settextalign_right, 
+			7 = $int11, 
+			8 = $string0, 
+			9 = true
+		);
+		$int12 = calc($int12 + 1);
+	}
+}
+~script10134;

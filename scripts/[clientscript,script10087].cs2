@@ -1,0 +1,39 @@
+// 10087
+[clientscript,script10087](component $com_tfa_partylist_list0, component $com_tfa_partylist_scrollbar1)
+def_int $int2 = 0;
+def_component $component3 = enum(int, component, enum_6058, $int2);
+while ($component3 ! null) {
+	cc_deleteall($component3);
+	if_sethide(true, $component3);
+	$int2 = calc($int2 + 1);
+	$component3 = enum(int, component, enum_6058, $int2);
+}
+if_setscrollsize(0, 0, $com_tfa_partylist_list0);
+if_setscrollpos(0, 0, $com_tfa_partylist_list0);
+~scrollbar_vertical($com_tfa_partylist_scrollbar1, $com_tfa_partylist_list0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+%varcint178, %varcint59 = 0, clientclock;
+cc_deleteall($com_tfa_partylist_list0);
+cc_create($com_tfa_partylist_list0, ^iftype_text, 0, false);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x808080);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+cc_deleteall(tfa_partylist:contents);
+if_sethide(true, tfa_partylist:refresh);
+cc_create(tfa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_6059, tfa_partylist:refresh), false);
+cc_sethide(true);
+if_sethide(true, tfa_partylist:myparty);
+cc_create(tfa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_6059, tfa_partylist:myparty), false);
+cc_sethide(true);
+if_sethide(true, tfa_partylist:filter);
+cc_create(tfa_partylist:contents, ^iftype_rectangle, enum(component, int, enum_6059, tfa_partylist:filter), false);
+cc_sethide(true);
+~script1558(tfa_partylist:refresh, "Refresh", tfa_partylist:contents, enum_6059, -1);
+~script10091;
+~script10093;
+if_setonvartransmit("script10090{tfa_mycontroller}", tfa_partylist:myparty);
+if_setonvartransmit("script10092{tfa_perm_transmit_1}", tfa_partylist:filter);
+~script10088(tfa_partylist:contents, ^max_32bit_int, $com_tfa_partylist_list0, $com_tfa_partylist_scrollbar1);

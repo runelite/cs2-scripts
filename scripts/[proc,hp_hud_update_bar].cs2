@@ -7,10 +7,10 @@ def_int $int3 = if_getwidth($component0);
 if ($int3 = $int1) {
 	if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 	if_setontimer(null, $component0);
-	%varcint984 = 0;
+	if_setparam(param_2770, 0, $component0, -1, int);
 	return;
 }
-%varcint984 = 1;
+if_setparam(param_2770, 1, $component0, -1, int);
 if ($int3 < $int1) {
 	if_setsize(calc($int3 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 } else if ($int3 > $int1) {

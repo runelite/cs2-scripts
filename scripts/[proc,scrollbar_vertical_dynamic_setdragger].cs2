@@ -12,7 +12,7 @@ if (($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsu
 	$int7 = .cc_getscrollheight;
 	$int8 = .cc_getheight;
 	$int9 = .cc_getscrolly;
-	def_int $int10 = ~max(calc($int7 - $int8), 1);
+	def_int $int10 = max(calc($int7 - $int8), 1);
 	def_int $int11 = calc($int6 - 32 - $int4);
 	if (cc_find($component0, calc($int5 + 1)) = true) {
 		cc_setposition(0, calc(16 + $int11 * $int9 / $int10), ^setpos_abs_centre, ^setpos_abs_top);

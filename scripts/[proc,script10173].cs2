@@ -1,0 +1,11 @@
+// 10173
+[proc,script10173](obj $obj0, int $int1)(int)
+def_string $string0 = "";
+def_int $int2 = 0;
+if (%total_completed_thefracturedarchive < oc_param($obj0, param_2722)) {
+	if ($int1 = 1) {
+		mes("You need <~tostring_commas(oc_param($obj0, param_2722))> completions of the Fractured Archive to gain that Record. Current completions: <~tostring_commas(%total_completed_thefracturedarchive)>");
+	}
+	return(0);
+}
+return(1);

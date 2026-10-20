@@ -1,0 +1,18 @@
+// 10154
+[proc,script10154](obj $obj0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_boolean $boolean5 = false;
+$int1, $int2, $int3, $int4, $boolean5 = ~prayer_overrides($obj0);
+if (~script10155($obj0, $int1) = 0) {
+	return(0);
+}
+if (~script10194($obj0, ~script10157) ! 1) {
+	return(0);
+}
+if (~script10156($obj0, $boolean5, $int2, $int3, $int4) = 0) {
+	return(0);
+}
+return(1);

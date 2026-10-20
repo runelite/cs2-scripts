@@ -1,0 +1,6 @@
+// 10122
+[proc,script10122](dbrow $dbrow0)(int)
+if (cc_find_param(tfa_stats:all_stats_tables, param_2735, $dbrow0) = true) {
+	return(cc_param(param_2666));
+}
+return(-1);

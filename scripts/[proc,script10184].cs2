@@ -1,0 +1,9 @@
+// 10184
+[proc,script10184](obj $obj0, int $int1)
+if (~script10189($obj0) = true) {
+	%prayer_allactive_alternate_0 = $int1;
+} else if (%prayerbook = 0) {
+	%prayer_allactive = $int1;
+} else if (%prayerbook = 1) {
+	%prayer_allactive_ruinous = $int1;
+}

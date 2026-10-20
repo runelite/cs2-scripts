@@ -1,0 +1,9 @@
+// 10186
+[proc,script10186](obj $obj0)(int)
+if (%prayerbook = 0) {
+	return(%quickprayer_selected);
+}
+if (%prayerbook = 1) {
+	return(%quickprayer_selected_ruinous);
+}
+return(0);

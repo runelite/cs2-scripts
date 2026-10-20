@@ -5,15 +5,16 @@ if (map_members = false) {
 }
 def_string $string0 = "null";
 if ($int3 = 1) {
-	$string0 = "Set Bonus";
+	$string0 = "Equipment Effects";
 } else if ($int3 = 0) {
-	$string0 = "Stat Bonus";
+	$string0 = "Equipment Stats";
 }
 ~script3519($component0, $component1, $component2, $int3, $string0, 0, $int4, $int5);
 if (~on_mobile = false) {
 	if_setonmouseover("script3518($component0, $component1, $component2, $int3, $string0, 1, $int4, $int5)", $component0);
 	if_setonmouseleave("script3518($component0, $component1, $component2, $int3, $string0, 0, $int4, $int5)", $component0);
 }
-if_setop(1, $string0, $component0);
+if_setop(1, "View", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
 if_setonop("script3520($component0, $component1, $component2, $int3)", $component0);
 if_setoninvtransmit("script3518($component0, $component1, $component2, $int3, $string0, 0, $int4, $int5){worn}", $component0);

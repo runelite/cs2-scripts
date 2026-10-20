@@ -1,0 +1,13 @@
+// 9996
+[proc,script9996](component $component0, int $int1, int $int2, int $int3, graphic $graphic4, int $colour5, int $settextalignh6, int $int7, string $string0, boolean $boolean8)(int)
+if (cc_find($component0, ~script9995($component0, $int1, $int2, $int3, ^iftype_text)) = true) {
+	cc_setposition($int7, 1, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize(calc($int7 * 2), 1, ^setsize_minus, ^setsize_minus);
+	cc_settextalign($settextalignh6, ^settextalign_centre, 0);
+	cc_settextfont($graphic4);
+	cc_setcolour($colour5);
+	cc_settextshadow($boolean8);
+	cc_settext($string0);
+	return(cc_getid);
+}
+return(-1);

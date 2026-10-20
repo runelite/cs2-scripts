@@ -1,0 +1,15 @@
+// 10000
+[proc,script10000](component $component0, int $int1, int $int2, int $int3, graphic $graphic4, int $int5, int $int6)(int)
+if (cc_find($component0, $int1) = true) {
+	cc_query(2);
+	if_query_refine(param_2677, $int3, int);
+	if_query_refine(param_2676, $int2, int);
+	if_query_refine(param_2658, 5, int);
+	if (if_query_next = true) {
+		cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic($graphic4);
+		return(1);
+	}
+	~debug_mes_warn("Table <tostring($int1)>", "Failed to find graphic cell at <tostring($int2)>,<tostring($int3)>");
+}
+return(0);

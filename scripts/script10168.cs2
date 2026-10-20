@@ -1,0 +1,63 @@
+java.lang.IllegalArgumentException: INT != OBJ
+
+.id                       10168
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            3
+   oload                  0
+   8002                  
+   iconst                 1
+   if_icmpeq              LABEL5
+   jump                   LABEL7
+LABEL5:
+   sconst                 ""
+   return                
+LABEL7:
+   oload                  0
+   8003                  
+   istore                 0
+   iload                  0
+   iconst                 0
+   if_icmple              LABEL14
+   jump                   LABEL16
+LABEL14:
+   sconst                 ""
+   return                
+LABEL16:
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL20
+   jump                   LABEL23
+LABEL20:
+   iconst                 0
+   get_array_int         
+   return                
+LABEL23:
+   iload                  0
+   iconst                 1
+   sub                   
+   get_array_int         
+   ostore                 3
+   oload                  0
+   iload                  0
+   iconst                 1
+   sub                   
+   8026                  
+   pop_object            
+   oload                  0
+   oload                  1
+   8019                  
+   sconst                 " "
+   oload                  2
+   sconst                 " "
+   oload                  3
+   join_string            5
+   ostore                 4
+   oload                  0
+   oload                  3
+   iconst                 2
+   8024                  
+   oload                  4
+   return                
+   sconst                 ""
+   return                

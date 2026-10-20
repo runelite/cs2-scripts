@@ -1,0 +1,39 @@
+// 10107
+[proc,script10107](component $component0, int $int1, int $int2, dbrow $dbrow3)
+if ($dbrow3 = null) {
+	return;
+}
+def_boolean $boolean4 = false;
+if (%varcint1583 = $dbrow3) {
+	$boolean4 = true;
+} else {
+	$boolean4 = false;
+}
+def_graphic $graphic5 = db_getfield($dbrow3, tfa_stats_category:sprite_25x25, 0);
+def_string $string0 = db_getfield($dbrow3, tfa_stats_category:title, 0);
+if (%tfa_ocellus_met = 0 & $dbrow3 = tfa_stats_category_ocellus) {
+	$string0 = "???";
+}
+def_int $int6 = calc(if_getwidth($component0) / 2);
+$int6 = calc($int6 - 13 - 2);
+~script10118(
+	0 = $component0, 
+	1 = $int2, 
+	2 = $int1, 
+	3 = 0, 
+	4 = 0x726451, 
+	5 = "", 
+	6 = p12_full, 
+	7 = 0xff981f, 
+	8 = 0, 
+	9 = $graphic5, 
+	10 = 25, 
+	11 = 25, 
+	12 = $int6, 
+	13 = 0, 
+	14 = ~bool_to_int($boolean4)
+);
+if ($boolean4 = false) {
+	cc_setonop("script10109($dbrow3)");
+	cc_setopbase("<col=ff9040><$string0> stats</col>");
+}

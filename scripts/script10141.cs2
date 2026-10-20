@@ -1,0 +1,232 @@
+java.lang.IllegalArgumentException: INT != OBJ
+
+.id                       10141
+.int_arg_count            2
+.long_arg_count           0
+.obj_arg_count            3
+   iconst                 64159790
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   iconst                 4
+   istore                 5
+   iconst                 1
+   istore                 6
+   oload                  0
+   8003                  
+   iconst                 1
+   add                   
+   istore                 7
+   iconst                 0
+   istore                 8
+   iconst                 70
+   istore                 9
+   iconst                 100
+   istore                 10
+   iconst                 44
+   istore                 11
+   iconst                 4
+   istore                 12
+   get_varc_int           988
+   switch                
+      1: LABEL28
+      2: LABEL37
+      3: LABEL37
+   jump                   LABEL47
+LABEL28:
+   iload                  9
+   istore                 9
+   iload                  9
+   iconst                 65
+   add                   
+   istore                 10
+   iconst                 56
+   istore                 11
+   jump                   LABEL47
+LABEL37:
+   iload                  9
+   iconst                 30
+   add                   
+   istore                 9
+   iload                  9
+   iconst                 75
+   add                   
+   istore                 10
+   iconst                 71
+   istore                 11
+LABEL47:
+   iload                  2
+   invoke                 8086
+   iconst                 17148
+   iconst                 1085456
+   iconst                 0
+   db_getfield           
+   istore                 13
+   sconst                 "-"
+   ostore                 3
+   iconst                 0
+   istore                 14
+   iload                  2
+   if_find               
+   iconst                 1
+   if_icmpeq              LABEL63
+   jump                   LABEL204
+LABEL63:
+   iload                  2
+   iconst                 17012
+   iload                  6
+   iload                  7
+   iload                  8
+   iload                  9
+   iload                  10
+   iload                  11
+   iconst                 2
+   invoke                 9990
+   istore                 4
+   istore                 3
+   set_varc_int           1584
+LABEL76:
+   iload                  14
+   oload                  0
+   8003                  
+   if_icmplt              LABEL81
+   jump                   LABEL148
+LABEL81:
+   iload                  14
+   get_array_int          2
+   iconst                 -1
+   if_icmpne              LABEL86
+   jump                   LABEL104
+LABEL86:
+   iload                  2
+   get_varc_int           1584
+   iload                  14
+   iconst                 -1
+   iload                  14
+   get_array_int          2
+   iconst                 25
+   iconst                 25
+   iconst                 495
+   iconst                 0
+   iconst                 0
+   iload                  12
+   iload                  14
+   get_array_int         
+   iconst                 0
+   invoke                 9998
+   pop_int               
+   jump                   LABEL117
+LABEL104:
+   iload                  2
+   get_varc_int           1584
+   iload                  14
+   iconst                 -1
+   iconst                 495
+   iconst                 0
+   iconst                 0
+   iload                  12
+   iload                  14
+   get_array_int         
+   iconst                 0
+   invoke                 9996
+   pop_int               
+LABEL117:
+   iload                  14
+   get_array_int          1
+   iconst                 0
+   if_icmpgt              LABEL122
+   jump                   LABEL129
+LABEL122:
+   iload                  14
+   get_array_int          1
+   iload                  13
+   iconst                 0
+   invoke                 10143
+   ostore                 3
+   jump                   LABEL131
+LABEL129:
+   sconst                 "-"
+   ostore                 3
+LABEL131:
+   iload                  2
+   get_varc_int           1584
+   iload                  14
+   iconst                 0
+   iconst                 495
+   iconst                 0
+   iconst                 2
+   iload                  12
+   oload                  3
+   iconst                 0
+   invoke                 9996
+   pop_int               
+   iload                  14
+   iconst                 1
+   add                   
+   istore                 14
+   jump                   LABEL76
+LABEL148:
+   iload                  2
+   get_varc_int           1584
+   iload                  14
+   iconst                 -1
+   iconst                 495
+   iconst                 0
+   iconst                 0
+   iload                  12
+   sconst                 "Overall"
+   iconst                 0
+   invoke                 9996
+   pop_int               
+   iload                  1
+   iconst                 0
+   if_icmpeq              LABEL167
+   iload                  1
+   iconst                 1
+   if_icmpeq              LABEL167
+   jump                   LABEL169
+LABEL167:
+   iconst                 0
+   istore                 0
+LABEL169:
+   iload                  2
+   get_varc_int           1584
+   iload                  14
+   iconst                 0
+   iconst                 495
+   iconst                 0
+   iconst                 2
+   iload                  12
+   iload                  0
+   iconst                 30000
+   iconst                 0
+   invoke                 10143
+   iconst                 0
+   invoke                 9996
+   pop_int               
+   iload                  0
+   iconst                 0
+   if_icmpgt              LABEL188
+   jump                   LABEL204
+LABEL188:
+   iload                  1
+   iconst                 4
+   if_icmpne              LABEL192
+   jump                   LABEL204
+LABEL192:
+   iconst                 10147
+   iload                  0
+   iconst                 30
+   multiply              
+   clientclock           
+   iload                  13
+   iconst                 30
+   multiply              
+   cc_getlayer           
+   cc_getid              
+   sconst                 "iiiii"
+   cc_setontimer         
+LABEL204:
+   return                

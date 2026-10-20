@@ -1,0 +1,76 @@
+// 10061
+[proc,script10061](int $int0, int $int1)
+def_component $component2 = null;
+def_component $component3 = null;
+def_component $component4 = null;
+def_component $component5 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_int $int6 = 0;
+switch_int ($int1) {
+	case 2 :
+		$string4 = "Disband";
+	case 1 :
+		$string4 = "Leave";
+	case 3 :
+		$string4 = "Withdraw";
+	case 4 :
+		$string4 = "<col=7f7f7f><str=9f9f9f>Apply</str></col>";
+	case default :
+		$string4 = "Apply";
+}
+if ($int1 = 2) {
+	$component2 = tfa_partydetails:refresh;
+	$string0 = "Refresh";
+	$component3 = tfa_partydetails:action;
+	$string1 = $string4;
+	$component4 = tfa_partydetails:unblock;
+	$string2 = "Unblock";
+	$int6 = 3;
+} else {
+	$component2 = tfa_partydetails:refresh;
+	$string0 = "Refresh";
+	$component3 = tfa_partydetails:action;
+	$string1 = $string4;
+	$int6 = 2;
+}
+if_sethide(true, tfa_partydetails:unblock);
+if_sethide(true, tfa_partydetails:action);
+if_sethide(true, tfa_partydetails:refresh);
+def_int $int7 = 4;
+def_int $int8 = 0;
+def_int $int9 = calc((223 - $int6 * $int7) / $int6);
+def_int $int10 = 32;
+def_int $int11 = 0;
+def_int $int12 = 2;
+if ($component2 ! null) {
+	if_setsize($int9, $int10, ^setsize_abs, ^setsize_abs, $component2);
+	if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	if_sethide(false, $component2);
+	~script1558($component2, $string0, tfa_partydetails:pausebuttons, enum_6057, -1);
+	$int11 = calc($int11 + $int9 + $int7);
+}
+if ($component3 ! null) {
+	if_setsize($int9, $int10, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $component3);
+	if_sethide(false, $component3);
+	~script1558($component3, $string1, tfa_partydetails:pausebuttons, enum_6057, -1);
+	$int11 = calc($int11 + $int9 + $int7);
+}
+if ($component4 ! null) {
+	if_setsize($int9, $int10, ^setsize_abs, ^setsize_abs, $component4);
+	if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_sethide(false, $component4);
+	~script1558($component4, $string2, tfa_partydetails:pausebuttons, enum_6057, -1);
+	$int11 = calc($int11 + $int9 + $int7);
+}
+if ($component5 ! null) {
+	if_setsize($int9, $int10, ^setsize_abs, ^setsize_abs, $component5);
+	if_setposition($int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $component5);
+	if_sethide(false, $component5);
+	~script1558($component5, $string3, tfa_partydetails:pausebuttons, enum_6057, -1);
+	$int11 = calc($int11 + $int9 + $int7);
+}

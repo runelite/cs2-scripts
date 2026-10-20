@@ -1,0 +1,12 @@
+// 10166
+[proc,script10166](int $int0)(anyobj)
+if ($int0 <= 0) {
+	return("null");
+}
+def_anyobj $anyobj0 = array_create(dbrow, 0, $int0);
+def_dbrow $dbrow1 = db_findnext;
+while ($dbrow1 ! null) {
+	array_push($anyobj0, $dbrow1, int);
+	$dbrow1 = db_findnext;
+}
+return($anyobj0);

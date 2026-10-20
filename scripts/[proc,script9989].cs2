@@ -1,0 +1,27 @@
+// 9989
+[proc,script9989](component $component0, int $comsubid1, component $component2, int $comsubid3)
+def_int $int4 = cc_getwidth;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+if (($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsubid1) = true) & ($comsubid3 = -1 & .if_find($component2) = true | .cc_find($component2, $comsubid3) = true)) {
+	$int5 = cc_param(param_2663);
+	$int6 = cc_getwidth;
+	$int7 = .cc_getscrollwidth;
+	$int8 = .cc_getwidth;
+	$int9 = .cc_getscrollx;
+	def_int $int10 = max(calc($int7 - $int8), 1);
+	def_int $int11 = calc($int6 - 32 - $int4);
+	if (cc_find($component0, calc($int5 + 1)) = true) {
+		cc_setposition(calc(16 + $int11 * $int9 / $int10), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	}
+	if (.cc_find($component0, calc($int5 + 2)) = true) {
+		.cc_setposition(cc_getx, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	}
+	if (.cc_find($component0, calc($int5 + 3)) = true) {
+		.cc_setposition(calc(cc_getx + cc_getwidth - 5), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	}
+	return;
+}

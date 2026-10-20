@@ -1,0 +1,10 @@
+// 9993
+[clientscript,script9993](component $component0)
+if_query(1, $component0, -1);
+if_query_refine(param_2678, 1, int);
+def_anyobj $anyobj0 = if_query_ids;
+def_int $int1 = 0;
+while ($int1 < array_size($anyobj0)) {
+	~script9994($component0, $intarray0($int1));
+	$int1 = calc($int1 + 1);
+}

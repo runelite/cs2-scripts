@@ -1,0 +1,11 @@
+// 10191
+[proc,script10191](obj $obj0)(obj)
+def_int $int1 = db_find(alternate_prayers:prayer, $obj0);
+if ($int1 > 1) {
+	~error("[Alternate prayer] $prayer_obj: <oc_param($obj0, param_1752)> had more than 1 dbrow with it included.");
+}
+def_dbrow $dbrow2 = db_findnext;
+if ($dbrow2 ! null) {
+	return(db_getfield($dbrow2, alternate_prayers:default, 0));
+}
+return($obj0);

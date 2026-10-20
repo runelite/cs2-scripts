@@ -1,0 +1,32 @@
+// 10174
+[proc,script10174](namedobj $namedobj0, int $int1)(boolean)
+def_string $string0 = "";
+def_boolean $boolean2 = false;
+if (%total_completed_thefracturedarchive >= oc_param($namedobj0, param_2722)) {
+	switch_namedobj ($namedobj0) {
+		case tfa_cape_t1_34659 :
+			if (%collection_item_tfa_cape_t1 = 1) {
+				$boolean2 = true;
+			}
+		case tfa_cape_t2_34661 :
+			if (%collection_item_tfa_cape_t2 = 1) {
+				$boolean2 = true;
+			}
+		case tfa_cape_t3_34663 :
+			if (%collection_item_tfa_cape_t3 = 1) {
+				$boolean2 = true;
+			}
+		case tfa_cape_t4_34665 :
+			if (%collection_item_tfa_cape_t4 = 1) {
+				$boolean2 = true;
+			}
+		case tfa_cape_t5_34667 :
+			if (%collection_item_tfa_cape_t5 = 1) {
+				$boolean2 = true;
+			}
+	}
+}
+if ($boolean2 = false & $int1 = 1) {
+	mes("To obtain that record, you must claim it from the Records Room after <~tostring_commas(oc_param($namedobj0, param_2722))> completions of the Fractured Archive. Current completions: <~tostring_commas(%total_completed_thefracturedarchive)>");
+}
+return($boolean2);

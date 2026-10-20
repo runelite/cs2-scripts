@@ -24,7 +24,7 @@ def_obj $obj14 = null;
 	9 = $string1
 );
 while ($int13 < enum_getoutputcount($enum10)) {
-	$obj14 = enum(int, obj, $enum10, $int13);
+	$obj14 = ~script10190(enum(int, obj, $enum10, $int13));
 	$component12 = oc_param($obj14, param_1751);
 	if ($component12 ! null) {
 		$intarray2($int11) = $int13;
@@ -55,7 +55,7 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 if ($boolean0 = false & %prayer_hidefilterbutton = 1) {
 	while ($int18 < $int11) {
-		$obj14 = enum(int, obj, $enum10, $intarray2($int18));
+		$obj14 = ~script10190(enum(int, obj, $enum10, $intarray2($int18)));
 		$int17 = calc($int18 / 5 * $int16);
 		if_setposition(calc($int18 % 5 * $int16), $int17, ^setpos_abs_left, ^setpos_abs_top, oc_param($obj14, param_1751));
 		if_sethide(false, oc_param($obj14, param_1751));
@@ -63,7 +63,7 @@ if ($boolean0 = false & %prayer_hidefilterbutton = 1) {
 	}
 } else {
 	while ($int18 < $int11) {
-		$obj14 = enum(int, obj, $enum10, $intarray2($int18));
+		$obj14 = ~script10190(enum(int, obj, $enum10, $intarray2($int18)));
 		if (~prayer_passfilter($obj14) = 1) {
 			if_sethide(false, oc_param($obj14, param_1751));
 			$int17 = calc($int19 / 5 * $int16);

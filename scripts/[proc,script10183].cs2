@@ -1,0 +1,12 @@
+// 10183
+[proc,script10183](obj $obj0)(int)
+if (~script10189($obj0) = true) {
+	return(%prayer_allactive_alternate_0);
+}
+if (%prayerbook = 0) {
+	return(%prayer_allactive);
+}
+if (%prayerbook = 1) {
+	return(%prayer_allactive_ruinous);
+}
+return(0);

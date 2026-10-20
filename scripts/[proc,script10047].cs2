@@ -1,0 +1,15 @@
+// 10047
+[proc,script10047](component $com_tfa_lobby_names_header0)
+if (%tfa_client_partystatus = 2) {
+	if_settext("Step Inside Now!", $com_tfa_lobby_names_header0);
+	if_setcolour(~tob_hud_nameflasher, $com_tfa_lobby_names_header0);
+	if_setontimer("script10048($com_tfa_lobby_names_header0)", $com_tfa_lobby_names_header0);
+} else if (%tfa_client_partystatus = 0) {
+	if_settext("No Party", $com_tfa_lobby_names_header0);
+	if_setcolour(0xff981f, $com_tfa_lobby_names_header0);
+	if_setontimer(null, $com_tfa_lobby_names_header0);
+} else {
+	if_settext("Party", $com_tfa_lobby_names_header0);
+	if_setcolour(0xff981f, $com_tfa_lobby_names_header0);
+	if_setontimer(null, $com_tfa_lobby_names_header0);
+}

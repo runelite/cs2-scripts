@@ -1,0 +1,106 @@
+// 10031
+[clientscript,script10031](component $com_tfa_hud_universe0, component $com_tfa_hud_content1, component $com_tfa_hud_dodger2, component $com_tfa_hud_content_names3, component $com_tfa_hud_0_container4, component $com_tfa_hud_0_filler5, component $com_tfa_hud_1_container6, component $com_tfa_hud_1_filler7, component $com_tfa_hud_2_container8, component $com_tfa_hud_2_filler9, component $com_tfa_hud_3_container10, component $com_tfa_hud_3_filler11, component $com_tfa_hud_4_container12, component $com_tfa_hud_4_filler13, component $com_tfa_hud_5_container14, component $com_tfa_hud_5_filler15, component $com_tfa_hud_6_container16, component $com_tfa_hud_6_filler17, component $com_tfa_hud_7_container18, component $com_tfa_hud_7_filler19, component $com_tfa_hud_tooltip20, component $com_tfa_hud_content_details21, component $com_tfa_hud_content_spectators22)
+~script4729($com_tfa_hud_dodger2, $com_tfa_hud_content1, 65256, ^setpos_abs_left, ^setpos_abs_top, 0);
+~script10032($com_tfa_hud_0_container4, $com_tfa_hud_0_filler5);
+~script10032($com_tfa_hud_1_container6, $com_tfa_hud_1_filler7);
+~script10032($com_tfa_hud_2_container8, $com_tfa_hud_2_filler9);
+~script10032($com_tfa_hud_3_container10, $com_tfa_hud_3_filler11);
+~script10032($com_tfa_hud_4_container12, $com_tfa_hud_4_filler13);
+~script10032($com_tfa_hud_5_container14, $com_tfa_hud_5_filler15);
+~script10032($com_tfa_hud_6_container16, $com_tfa_hud_6_filler17);
+~script10032($com_tfa_hud_7_container18, $com_tfa_hud_7_filler19);
+~script10034(
+	0 = $com_tfa_hud_content1, 
+	1 = $com_tfa_hud_content_names3, 
+	2 = $com_tfa_hud_0_container4, 
+	3 = $com_tfa_hud_0_filler5, 
+	4 = $com_tfa_hud_1_container6, 
+	5 = $com_tfa_hud_1_filler7, 
+	6 = $com_tfa_hud_2_container8, 
+	7 = $com_tfa_hud_2_filler9, 
+	8 = $com_tfa_hud_3_container10, 
+	9 = $com_tfa_hud_3_filler11, 
+	10 = $com_tfa_hud_4_container12, 
+	11 = $com_tfa_hud_4_filler13, 
+	12 = $com_tfa_hud_5_container14, 
+	13 = $com_tfa_hud_5_filler15, 
+	14 = $com_tfa_hud_6_container16, 
+	15 = $com_tfa_hud_6_filler17, 
+	16 = $com_tfa_hud_7_container18, 
+	17 = $com_tfa_hud_7_filler19, 
+	18 = $com_tfa_hud_tooltip20, 
+	19 = $com_tfa_hud_content_details21, 
+	20 = $com_tfa_hud_content_spectators22
+);
+if_setontimer("script10033(
+	0 = 0, 
+	1 = $com_tfa_hud_content1, 
+	2 = $com_tfa_hud_content_names3, 
+	3 = $com_tfa_hud_0_container4, 
+	4 = $com_tfa_hud_0_filler5, 
+	5 = $com_tfa_hud_1_container6, 
+	6 = $com_tfa_hud_1_filler7, 
+	7 = $com_tfa_hud_2_container8, 
+	8 = $com_tfa_hud_2_filler9, 
+	9 = $com_tfa_hud_3_container10, 
+	10 = $com_tfa_hud_3_filler11, 
+	11 = $com_tfa_hud_4_container12, 
+	12 = $com_tfa_hud_4_filler13, 
+	13 = $com_tfa_hud_5_container14, 
+	14 = $com_tfa_hud_5_filler15, 
+	15 = $com_tfa_hud_6_container16, 
+	16 = $com_tfa_hud_6_filler17, 
+	17 = $com_tfa_hud_7_container18, 
+	18 = $com_tfa_hud_7_filler19, 
+	19 = $com_tfa_hud_tooltip20, 
+	20 = $com_tfa_hud_content_details21, 
+	21 = $com_tfa_hud_content_spectators22
+)", $com_tfa_hud_universe0);
+if_setonvartransmit("script10033(
+	0 = 1, 
+	1 = $com_tfa_hud_content1, 
+	2 = $com_tfa_hud_content_names3, 
+	3 = $com_tfa_hud_0_container4, 
+	4 = $com_tfa_hud_0_filler5, 
+	5 = $com_tfa_hud_1_container6, 
+	6 = $com_tfa_hud_1_filler7, 
+	7 = $com_tfa_hud_2_container8, 
+	8 = $com_tfa_hud_2_filler9, 
+	9 = $com_tfa_hud_3_container10, 
+	10 = $com_tfa_hud_3_filler11, 
+	11 = $com_tfa_hud_4_container12, 
+	12 = $com_tfa_hud_4_filler13, 
+	13 = $com_tfa_hud_5_container14, 
+	14 = $com_tfa_hud_5_filler15, 
+	15 = $com_tfa_hud_6_container16, 
+	16 = $com_tfa_hud_6_filler17, 
+	17 = $com_tfa_hud_7_container18, 
+	18 = $com_tfa_hud_7_filler19, 
+	19 = $com_tfa_hud_tooltip20, 
+	20 = $com_tfa_hud_content_details21, 
+	21 = $com_tfa_hud_content_spectators22
+){tfa_temp_transmit_1, tfa_temp_transmit_2, tfa_temp_transmit_3}", $com_tfa_hud_universe0);
+if_setonstattransmit("script10033(
+	0 = 1, 
+	1 = $com_tfa_hud_content1, 
+	2 = $com_tfa_hud_content_names3, 
+	3 = $com_tfa_hud_0_container4, 
+	4 = $com_tfa_hud_0_filler5, 
+	5 = $com_tfa_hud_1_container6, 
+	6 = $com_tfa_hud_1_filler7, 
+	7 = $com_tfa_hud_2_container8, 
+	8 = $com_tfa_hud_2_filler9, 
+	9 = $com_tfa_hud_3_container10, 
+	10 = $com_tfa_hud_3_filler11, 
+	11 = $com_tfa_hud_4_container12, 
+	12 = $com_tfa_hud_4_filler13, 
+	13 = $com_tfa_hud_5_container14, 
+	14 = $com_tfa_hud_5_filler15, 
+	15 = $com_tfa_hud_6_container16, 
+	16 = $com_tfa_hud_6_filler17, 
+	17 = $com_tfa_hud_7_container18, 
+	18 = $com_tfa_hud_7_filler19, 
+	19 = $com_tfa_hud_tooltip20, 
+	20 = $com_tfa_hud_content_details21, 
+	21 = $com_tfa_hud_content_spectators22
+){hitpoints}", $com_tfa_hud_universe0);

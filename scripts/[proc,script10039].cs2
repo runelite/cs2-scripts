@@ -1,0 +1,60 @@
+// 10039
+[proc,script10039](int $int0, int $int1, string $string0, component $component2, component $component3, component $com_tfa_hud_tooltip4)(int)
+%varcint1569 = calc(clientclock + 30);
+def_int $int5 = 0;
+if ($int1 ! 0 & cc_find($component2, 0) = true) {
+	if_clearops($component2);
+	if_sethide(false, $component2);
+	if (string_length($string0) <= 0 | compare($string0, "null") = 0) {
+		$string0 = "-";
+	}
+	if (%tfa_client_spectate_mode ! 2 & $int0 = calc(%tfa_client_partyslot - 1)) {
+		cc_settext("Me");
+		$int5 = 1;
+	} else {
+		cc_settext(substring($string0, 0, 1));
+	}
+	if (~on_mobile = false) {
+		if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $com_tfa_hud_tooltip4, $string0, 25, 256)", $component2);
+		if_setonmouseleave("deltooltip($com_tfa_hud_tooltip4)", $component2);
+	}
+	if ($int1 = 31) {
+		if (.cc_find($component3, 0) = true) {
+			.cc_setgraphic("orb_filler,16");
+		}
+		cc_setcolour(^white);
+		if_setsize(26, 26, ^setsize_abs, ^setsize_abs, $component3);
+		if (%tfa_client_spectate_mode = 2) {
+			if_setopbase("<col=ff9040><$string0></col>", $component2);
+			if_setop(1, "Spectate", $component2);
+			if_setonop("script10040($int0, 1)", $component2);
+		}
+	} else {
+		if (.cc_find($component3, 0) = true) {
+			.cc_setgraphic("orb_filler,19");
+		}
+		if ($int1 = 30) {
+			cc_setcolour(^red);
+			if_setsize(26, 0, ^setsize_abs, ^setsize_abs, $component3);
+		} else {
+			cc_setcolour(^white);
+			if ($int5 = 1) {
+				~script10041($component3);
+			} else {
+				if_setsize(26, ~min(26, calc($int1 - 1)), ^setsize_abs, ^setsize_abs, $component3);
+				if (%tfa_client_spectate_mode ! 0) {
+					if_setopbase("<col=ff9040><$string0></col>", $component2);
+					if_setop(1, "Spectate", $component2);
+					if_setonop("script10040($int0, 1)", $component2);
+				}
+			}
+		}
+	}
+	return(1);
+}
+if_sethide(true, $component2);
+if_setonstattransmit(null, $component2);
+if_setonmouserepeat(null, $component2);
+if_setonmouseleave(null, $component2);
+~deltooltip_action($com_tfa_hud_tooltip4);
+return(0);

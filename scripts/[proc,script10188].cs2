@@ -1,0 +1,9 @@
+// 10188
+[proc,script10188]()(int)
+def_int $int0 = 0;
+if (%prayerbook = 0) {
+	$int0 = calc($int0 + bitcount(%quickprayer_selected));
+} else if (%prayerbook = 1) {
+	$int0 = calc($int0 + bitcount(%quickprayer_selected_ruinous));
+}
+return($int0);

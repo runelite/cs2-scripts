@@ -1,0 +1,33 @@
+// 10120
+[clientscript,script10120]
+cc_deleteall(tfa_stats:all_stats_loading_spinner);
+if_sethide(false, tfa_stats:all_stats_loading_spinner);
+def_int $int0 = ~create_graphic(
+	0 = tfa_stats:all_stats_loading_spinner, 
+	1 = $int0, 
+	2 = "tfa_tabs_book_tfa01,7", 
+	3 = 0, 
+	4 = 0, 
+	5 = ^setpos_abs_centre, 
+	6 = ^setpos_abs_centre, 
+	7 = 2, 
+	8 = 2, 
+	9 = ^setsize_minus, 
+	10 = ^setsize_minus, 
+	11 = true
+);
+~script9760(
+	0 = tfa_stats:all_stats_loading_spinner, 
+	1 = -1, 
+	2 = $int0, 
+	3 = enum_3787, 
+	4 = 10, 
+	5 = 1000, 
+	6 = 3000, 
+	7 = 512, 
+	8 = 1024, 
+	9 = 0, 
+	10 = 3, 
+	11 = 0, 
+	12 = 0
+);

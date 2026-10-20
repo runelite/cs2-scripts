@@ -1,0 +1,47 @@
+// 10194
+[proc,script10194](obj $obj0, int $int1)(int)
+def_int $int2 = ~script10195($obj0, $int1);
+if ($int2 = 1) {
+	return(2);
+}
+if ($int2 = 2) {
+	return(1);
+}
+if (~script6551 = 1) {
+	return(1);
+}
+switch_obj ($obj0) {
+	case xmas16_blue_partyhat_20828, placeholder_xmas16_blue_partyhat_20829 :
+		if ($obj0 = xmas16_blue_partyhat_20828 & ~script10196 = 1) {
+			return(1);
+		} else if (~script10172 = 1) {
+			return(1);
+		}
+	case placeholder_xmas16_green_partyhat_20827 :
+		if (%prayer_rigour_unlocked = 1) {
+			return(1);
+		}
+	case xmas16_teddy_20830 :
+		if (%prayer_augury_unlocked = 1) {
+			return(1);
+		}
+	case placeholder_xmas16_teddy_20831 :
+		if (%prayer_preserve_unlocked = 1) {
+			return(1);
+		}
+	case cert_ca_teleport_anim_offhand_easy_25939 :
+		if (%prayer_deadeye_unlocked = 1) {
+			return(1);
+		}
+	case placeholder_giants_foundry_tester_27034 :
+		if (%prayer_mystic_vigour_unlocked = 1) {
+			return(1);
+		}
+	case easter18_kindling_22350 :
+		if (%prayer_zeal_unlocked = 1 & ~script10172 = 1) {
+			return(1);
+		}
+	case default :
+		return(1);
+}
+return(0);
