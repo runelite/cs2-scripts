@@ -12,7 +12,11 @@ if_setonop("opsound(event_op, 2)", $com_cr_ui_btn_close3);
 if_setop(2, "", $com_cr_ui_btn_close3);
 if_setopkey(2, ^key_escape, 0, $com_cr_ui_btn_close3);
 def_int $int7 = calc((if_gety(if_getlayer($com_cr_ui_module_content_container5)) - if_getheight($com_cr_ui_btn_close3)) / 2);
-if_setposition($int7, $int7, ^setpos_abs_right, ^setpos_abs_top, $com_cr_ui_btn_close3);
+if (~on_mobile = true) {
+	if_setposition(calc($int7 - 1), calc($int7 - 1), ^setpos_abs_right, ^setpos_abs_top, $com_cr_ui_btn_close3);
+} else {
+	if_setposition(calc($int7 - 4), calc($int7 - 1), ^setpos_abs_right, ^setpos_abs_top, $com_cr_ui_btn_close3);
+}
 if (%varcint1008 = null) {
 	%varcint1008 = enum(int, dbrow, enum_4593, 0);
 }

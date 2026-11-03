@@ -9,6 +9,8 @@ if (if_hassub(enum(component, component, $enum2, toplevel_osrs_stretch:floater))
 		return(0);
 	} else if (%floater_search_listen_for_keyboard = 1 & %floater_is_searching = 1 & $overlayinterface1 ! settings & $overlayinterface1 ! collection) {
 		return(0);
+	} else if (%varcint435 = true & $overlayinterface1 ! displayname_menu) {
+		return(0);
 	}
 }
 if (if_hassub(enum(component, component, $enum2, toplevel_osrs_stretch:mainmodal)) = true) {

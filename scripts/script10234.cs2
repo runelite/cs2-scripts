@@ -1,0 +1,80 @@
+java.lang.IllegalStateException: Opcode 5105 in script 10234 not implemented
+
+.id                       10234
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 1
+   iconst                 -1
+   istore                 2
+   5105                  
+   istore                 2
+   ostore                 1
+   istore                 1
+   istore                 0
+   iload                  1
+   iconst                 7
+   if_icmpeq              LABEL17
+   jump                   LABEL20
+LABEL17:
+   invoke                 10197
+   removetags            
+   return                
+LABEL20:
+   iconst                 105
+   iconst                 115
+   iconst                 1654
+   iload                  1
+   enum                  
+   ostore                 2
+   oload                  1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL31
+   jump                   LABEL47
+LABEL31:
+   oload                  0
+   oload                  1
+   append                
+   ostore                 0
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL40
+   jump                   LABEL46
+LABEL40:
+   oload                  0
+   sconst                 " - "
+   oload                  2
+   join_string            2
+   append                
+   ostore                 0
+LABEL46:
+   jump                   LABEL61
+LABEL47:
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL52
+   jump                   LABEL57
+LABEL52:
+   oload                  0
+   oload                  2
+   append                
+   ostore                 0
+   jump                   LABEL61
+LABEL57:
+   oload                  0
+   sconst                 "Malformed system response."
+   append                
+   ostore                 0
+LABEL61:
+   oload                  0
+   return                
+   sconst                 ""
+   return                

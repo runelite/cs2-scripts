@@ -95,6 +95,8 @@ if (%worldswitcher_filter_theme ! 0) {
 	}
 	if (testbit(%worldswitcher_filter_theme, 8) = ^true & ~script6812($int1) = 1) {
 		return(0);
+	} else if (testbit(%worldswitcher_filter_theme, 9) = ^true & ~script10304($int1) = 1) {
+		return(0);
 	}
 }
 def_string $string1 = ~worldswitcher_search_get;

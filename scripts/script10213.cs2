@@ -1,0 +1,270 @@
+java.lang.IllegalStateException: Opcode 5100 in script 10213 not implemented
+
+.id                       10213
+.int_arg_count            7
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 7
+   get_varc_int           1595
+   iconst                 1
+   if_icmpeq              LABEL9
+   invoke                 10235
+   iconst                 1
+   if_icmpeq              LABEL9
+   jump                   LABEL54
+LABEL9:
+   sconst                 ""
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   iconst                 0
+   set_varc_int           1594
+   set_varc_int           1593
+   set_varc_int           1592
+   set_varc_int           435
+   set_varc_string        1588
+   iconst                 2357
+   iconst                 0
+   iload                  6
+   iconst                 -1
+   iconst                 0
+   2704                  
+   iconst                 1
+   iload                  2
+   if_sethide            
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 1
+   iload                  4
+   if_sethide            
+   iconst                 0
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL43
+   jump                   LABEL47
+LABEL43:
+   sconst                 "Display Names"
+   cc_settext             1
+   iconst                 16750623
+   cc_setcolour           1
+LABEL47:
+   iconst                 2357
+   iconst                 -1337
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+   jump                   LABEL223
+LABEL54:
+   invoke                 10224
+   istore                 7
+   iload                  7
+   switch                
+      1: LABEL131
+      2: LABEL131
+      200: LABEL186
+   sconst                 ""
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   iconst                 0
+   set_varc_int           1594
+   set_varc_int           1593
+   set_varc_int           1592
+   set_varc_int           435
+   set_varc_string        1588
+   iconst                 2357
+   iconst                 0
+   iload                  6
+   iconst                 -1
+   iconst                 0
+   2704                  
+   iconst                 0
+   iload                  2
+   if_sethide            
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 1
+   iload                  4
+   if_sethide            
+   iconst                 1
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL92
+   jump                   LABEL96
+LABEL92:
+   sconst                 "Display Names"
+   cc_settext             1
+   iconst                 16750623
+   cc_setcolour           1
+LABEL96:
+   iconst                 2357
+   iload                  0
+   iconst                 -1
+   2703                  
+   iload                  7
+   if_icmpne              LABEL103
+   jump                   LABEL130
+LABEL103:
+   iload                  7
+   switch                
+      0: LABEL106
+      1: LABEL106
+      2: LABEL106
+      200: LABEL106
+      400: LABEL115
+      401: LABEL119
+      429: LABEL123
+   jump                   LABEL127
+LABEL106:
+   iconst                 2357
+   iload                  0
+   iconst                 -1
+   2703                  
+   switch                
+      1: LABEL112
+      2: LABEL112
+   jump                   LABEL114
+LABEL112:
+   sconst                 "No sessions are available. Please try again later."
+   mes                   
+LABEL114:
+   jump                   LABEL130
+LABEL115:
+   sconst                 "Validation failure: "
+   invoke                 10226
+   mes                   
+   jump                   LABEL130
+LABEL119:
+   sconst                 "Authentication failure: "
+   invoke                 10226
+   mes                   
+   jump                   LABEL130
+LABEL123:
+   sconst                 "Session limit: "
+   invoke                 10226
+   mes                   
+   jump                   LABEL130
+LABEL127:
+   sconst                 "Unable to connect: "
+   invoke                 10226
+   mes                   
+LABEL130:
+   jump                   LABEL217
+LABEL131:
+   sconst                 ""
+   iconst                 0
+   iconst                 -1
+   iconst                 0
+   iconst                 0
+   set_varc_int           1594
+   set_varc_int           1593
+   set_varc_int           1592
+   set_varc_int           435
+   set_varc_string        1588
+   iconst                 2357
+   iconst                 0
+   iload                  6
+   iconst                 -1
+   iconst                 0
+   2704                  
+   iconst                 1
+   iload                  2
+   if_sethide            
+   iconst                 0
+   iload                  3
+   if_sethide            
+   iconst                 1
+   iload                  4
+   if_sethide            
+   iconst                 1
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL165
+   jump                   LABEL169
+LABEL165:
+   sconst                 "Connecting..."
+   cc_settext             1
+   invoke                 2303
+   cc_setcolour           1
+LABEL169:
+   iconst                 2357
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 -1337
+   if_icmpeq              LABEL176
+   jump                   LABEL178
+LABEL176:
+   sconst                 "Your request to cancel the session was unsuccessful."
+   mes                   
+LABEL178:
+   clientclock           
+   iconst                 50
+   mod                   
+   iconst                 0
+   if_icmpeq              LABEL184
+   jump                   LABEL185
+LABEL184:
+   5100                  
+LABEL185:
+   jump                   LABEL217
+LABEL186:
+   iconst                 1
+   iload                  2
+   if_sethide            
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iload                  4
+   if_sethide            
+   iconst                 1
+   iload                  5
+   if_sethide            
+   iload                  0
+   iload                  1
+   cc_find                1
+   iconst                 1
+   if_icmpeq              LABEL204
+   jump                   LABEL208
+LABEL204:
+   sconst                 "Check Names"
+   cc_settext             1
+   iconst                 16750623
+   cc_setcolour           1
+LABEL208:
+   iconst                 2357
+   iload                  0
+   iconst                 -1
+   2703                  
+   iconst                 -1337
+   if_icmpeq              LABEL215
+   jump                   LABEL217
+LABEL215:
+   sconst                 "Your request to end the session was unsuccessful."
+   mes                   
+LABEL217:
+   iconst                 2357
+   iload                  7
+   iload                  0
+   iconst                 -1
+   iconst                 0
+   2704                  
+LABEL223:
+   return                

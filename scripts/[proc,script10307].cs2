@@ -1,0 +1,7 @@
+// 10307
+[proc,script10307](component $component0, int $int1)
+def_string $string0 = tostring($int1);
+if_setop(1, $string0, $component0);
+if_setonop("closebutton_click_sound", $component0);
+def_int $colour2 = ~scale_colour(8323072, 255, $int1, 5);
+~beige_stone_button_init($component0, "<~script3739($colour2, "col")><$string0></col>", b12_full, 0);

@@ -1,0 +1,14 @@
+// 10220
+[clientscript,script10220](int $opindex0, component $component1, string $string0, graphic $graphic2, namedobj $namedobj3, int $int4, component $component5, int $comsubid6)
+if ($int4 ! -1 & if_param(param_2357, $component1, -1) ! $int4) {
+	return;
+}
+if ($opindex0 = 1) {
+	~script10218($component1, $string0, $graphic2, $namedobj3, $int4);
+	switch_int ($int4) {
+		case 1, 2 :
+			~script10221($component5, $comsubid6);
+		case 6 :
+			~script10222;
+	}
+}

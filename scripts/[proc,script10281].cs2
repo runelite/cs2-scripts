@@ -1,0 +1,9 @@
+// 10281
+[proc,script10281](string $string0)
+if (~on_mobile = true) {
+	cc_setop(1, $string0);
+	cc_setonop("script10282($string0)");
+	return;
+}
+cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, hc_summary:tooltip, $string0, 25, 512)");
+cc_setonmouseleave("deltooltip(hc_summary:tooltip)");

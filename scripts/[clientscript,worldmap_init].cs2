@@ -1,5 +1,6 @@
 // 1707
 [clientscript,worldmap_init](component $com_worldmap_content0, component $com_worldmap_safezone1, component $com_worldmap_window2, component $com_worldmap_map_container3, component $com_worldmap_map_overlay4, component $com_worldmap_side5, component $com_worldmap_overview_container6, component $com_worldmap_overview_overlay7, component $com_worldmap_overview_toggle8, component $com_worldmap_key_toggle9, component $com_worldmap_toggles10, component $com_worldmap_search11, component $com_worldmap_maplist_display12, component $com_worldmap_maplist_container13, component $com_worldmap_maplist_close14, component $com_worldmap_maplist_box15, component $com_worldmap_maplist_list16, component $com_worldmap_maplist_scrollbar17, component $com_worldmap_zoom_out18, component $com_worldmap_zoom_in19, component $com_worldmap_key_container20, component $com_worldmap_key_entries21, component $com_worldmap_key_scrollbar22, component $com_worldmap_tooltip23, component $com_worldmap_resize_preview24)
+~script10239(595);
 ~script4729($com_worldmap_safezone1, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, 0);
 if_setonscrollwheel("worldmap_zoom_scroll(event_mousey, $com_worldmap_zoom_out18, $com_worldmap_zoom_in19)", $com_worldmap_map_overlay4);
 if_setpinch(true, $com_worldmap_map_overlay4);

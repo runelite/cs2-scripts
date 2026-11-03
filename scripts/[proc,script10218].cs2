@@ -1,0 +1,7 @@
+// 10218
+[proc,script10218](component $component0, string $string0, graphic $graphic1, namedobj $namedobj2, int $int3)
+sound_synth(interface_select1, 1, 0);
+~script10215(1, $string0, $graphic1, $namedobj2, $component0);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setontimer("script10219(calc(clientclock + 30), $string0, event_com, $graphic1, $namedobj2, $int3)", $component0);

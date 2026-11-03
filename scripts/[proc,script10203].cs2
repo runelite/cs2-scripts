@@ -1,0 +1,19 @@
+// 10203
+[proc,script10203](component $component0, int $comsubid1, int $comsubid2)
+%varcint435 = false;
+if (cc_find($component0, $comsubid2) = true & .cc_find($component0, $comsubid1) = true) {
+	cc_setcolour(0x9f9f9f);
+	cc_settextfont(b12_full);
+	if (string_length(%varcstring1588) > 0) {
+		cc_settext(%varcstring1588);
+	} else {
+		cc_settext("---");
+	}
+	.cc_setonmouserepeat(null);
+	.cc_setonmouseleave(null);
+	.cc_setcolour(0x372e22);
+	.cc_settrans(255);
+	.cc_setonclick(null);
+	.cc_setontimer(null);
+	.cc_setonkey(null);
+}

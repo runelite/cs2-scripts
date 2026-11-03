@@ -1,0 +1,94 @@
+java.lang.IllegalStateException: Opcode 5103 in script 10229 not implemented
+
+.id                       10229
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 1
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 -1
+   istore                 4
+   iconst                 -1
+   istore                 5
+   5103                  
+   istore                 5
+   istore                 4
+   istore                 3
+   istore                 2
+   ostore                 1
+   istore                 1
+   istore                 0
+   iload                  0
+   iconst                 0
+   if_icmpne              LABEL26
+   jump                   LABEL33
+LABEL26:
+   iload                  0
+   iconst                 1
+   if_icmpne              LABEL30
+   jump                   LABEL33
+LABEL30:
+   iload                  4
+   iload                  5
+   invoke                 10231
+LABEL33:
+   iconst                 105
+   iconst                 115
+   iconst                 1654
+   iload                  1
+   enum                  
+   ostore                 2
+   oload                  1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL44
+   jump                   LABEL60
+LABEL44:
+   oload                  0
+   oload                  1
+   append                
+   ostore                 0
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL53
+   jump                   LABEL59
+LABEL53:
+   oload                  0
+   sconst                 " - "
+   oload                  2
+   join_string            2
+   append                
+   ostore                 0
+LABEL59:
+   jump                   LABEL74
+LABEL60:
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL65
+   jump                   LABEL70
+LABEL65:
+   oload                  0
+   oload                  2
+   append                
+   ostore                 0
+   jump                   LABEL74
+LABEL70:
+   oload                  0
+   sconst                 "Malformed system response."
+   append                
+   ostore                 0
+LABEL74:
+   oload                  0
+   return                
+   sconst                 ""
+   return                

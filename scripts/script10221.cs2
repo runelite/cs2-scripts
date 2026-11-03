@@ -1,0 +1,134 @@
+java.lang.IllegalStateException: Opcode 5102 in script 10221 not implemented
+
+.id                       10221
+.int_arg_count            2
+.long_arg_count           0
+.obj_arg_count            0
+   get_varc_string        1588
+   string_length         
+   istore                 2
+LABEL3:
+   iload                  2
+   iconst                 0
+   if_icmpgt              LABEL7
+   jump                   LABEL27
+LABEL7:
+   sconst                 " _-"
+   get_varc_string        1588
+   iconst                 0
+   iconst                 1
+   substring             
+   iconst                 0
+   string_indexof_string 
+   iconst                 -1
+   if_icmpne              LABEL17
+   jump                   LABEL27
+LABEL17:
+   get_varc_string        1588
+   iconst                 1
+   iload                  2
+   substring             
+   set_varc_string        1588
+   iload                  2
+   iconst                 1
+   sub                   
+   istore                 2
+   jump                   LABEL3
+LABEL27:
+   iload                  2
+   iconst                 1
+   sub                   
+   istore                 3
+LABEL31:
+   iload                  2
+   iconst                 0
+   if_icmpgt              LABEL35
+   jump                   LABEL57
+LABEL35:
+   sconst                 " _-"
+   get_varc_string        1588
+   iload                  3
+   iload                  2
+   substring             
+   iconst                 0
+   string_indexof_string 
+   iconst                 -1
+   if_icmpne              LABEL45
+   jump                   LABEL57
+LABEL45:
+   get_varc_string        1588
+   iconst                 0
+   iload                  3
+   substring             
+   set_varc_string        1588
+   iload                  3
+   iload                  3
+   iconst                 1
+   sub                   
+   istore                 3
+   istore                 2
+   jump                   LABEL31
+LABEL57:
+   iload                  0
+   iload                  1
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL63
+   jump                   LABEL64
+LABEL63:
+   invoke                 10205
+LABEL64:
+   iload                  2
+   iconst                 0
+   if_icmpgt              LABEL68
+   jump                   LABEL103
+LABEL68:
+   iload                  2
+   iconst                 12
+   if_icmpgt              LABEL72
+   jump                   LABEL77
+LABEL72:
+   get_varc_string        1588
+   iconst                 0
+   iconst                 12
+   substring             
+   set_varc_string        1588
+LABEL77:
+   chat_playername       
+   removetags            
+   invoke                 10223
+   get_varc_string        1588
+   removetags            
+   invoke                 10223
+   compare               
+   iconst                 0
+   if_icmpne              LABEL87
+   jump                   LABEL96
+LABEL87:
+   get_varc_string        1588
+   5102                  
+   clientclock           
+   get_varc_int           1593
+   iconst                 1
+   add                   
+   set_varc_int           1593
+   set_varc_int           1590
+   jump                   LABEL102
+LABEL96:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   sconst                 "That's your name already."
+   mes                   
+LABEL102:
+   jump                   LABEL109
+LABEL103:
+   iconst                 2277
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   sconst                 "Please enter the name you wish to check."
+   mes                   
+LABEL109:
+   return                

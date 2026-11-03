@@ -1,0 +1,206 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       10289
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 681
+   enum_getoutputcount   
+   istore                 6
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 0
+   iconst                 100
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 1
+   iconst                 115
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 2
+   iconst                 0
+   istore                 7
+   iconst                 -1
+   istore                 8
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 3
+   oload                  3
+   iconst                 1
+   iconst                 0
+   iconst                 -1
+   8011                  
+   oload                  3
+   iconst                 0
+   iconst                 0
+   8001                  
+LABEL36:
+   iload                  7
+   iload                  6
+   if_icmplt              LABEL40
+   jump                   LABEL70
+LABEL40:
+   iconst                 105
+   iconst                 83
+   iconst                 681
+   iload                  7
+   get_array_int          3
+   enum                  
+   istore                 8
+   iload                  7
+   iload                  8
+   stat_base             
+   set_array_int         
+   iload                  7
+   iconst                 83
+   iconst                 100
+   iconst                 1505
+   iload                  8
+   enum                  
+   set_array_int          1
+   iload                  7
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  8
+   enum                  
+   set_array_int          2
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL36
+LABEL70:
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 4
+   oload                  0
+   oload                  4
+   iconst                 0
+   iconst                 0
+   iconst                 -1
+   8015                  
+   oload                  0
+   oload                  1
+   8000                  
+   oload                  4
+   oload                  2
+   8000                  
+   oload                  0
+   8012                  
+   oload                  2
+   8012                  
+   oload                  1
+   8012                  
+   iload                  3
+   iconst                 0
+   invoke                 5295
+   pop_int               
+   iconst                 0
+   istore                 9
+   iconst                 0
+   istore                 10
+   iload                  4
+   iload                  10
+   sconst                 "Skill Levels"
+   invoke                 10277
+   istore                 10
+   iconst                 1
+   sconst                 "Randomise"
+   cc_setop              
+   sconst                 "<col=ff9040>Skill List</col>"
+   cc_setopbase          
+   iconst                 10288
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   iload                  4
+   iload                  5
+   sconst                 "iiiiii"
+   cc_setonop            
+   iconst                 20
+   istore                 11
+   iconst                 23
+   istore                 12
+LABEL124:
+   iload                  9
+   iload                  6
+   iload                  0
+   4016                  
+   if_icmplt              LABEL130
+   jump                   LABEL157
+LABEL130:
+   iload                  4
+   iload                  9
+   get_array_int          2
+   iload                  2
+   iload                  9
+   get_array_int          1
+   iconst                 13
+   iconst                 13
+   iload                  9
+   get_array_int         
+   iload                  1
+   iconst                 1000000
+   sconst                 ","
+   invoke                 7396
+   iconst                 0
+   iload                  11
+   iload                  10
+   iload                  9
+   iload                  12
+   invoke                 10266
+   istore                 11
+   istore                 10
+   iload                  9
+   iconst                 1
+   add                   
+   istore                 9
+   jump                   LABEL124
+LABEL157:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollpos       
+   iload                  11
+   iload                  4
+   if_getheight          
+   if_icmpgt              LABEL166
+   jump                   LABEL171
+LABEL166:
+   iconst                 0
+   iload                  11
+   iload                  4
+   if_setscrollsize      
+   jump                   LABEL175
+LABEL171:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollsize      
+LABEL175:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL179
+   jump                   LABEL188
+LABEL179:
+   iload                  5
+   iload                  4
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+LABEL188:
+   return                

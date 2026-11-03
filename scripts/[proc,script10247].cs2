@@ -1,0 +1,9 @@
+// 10247
+[proc,script10247](string $string0, int $int0)(int, string)
+def_int $colour1 = 0xff2020;
+def_string $string1 = "<$string0> character";
+if (%hc_death_option = $int0) {
+	$colour1 = 0x66ff00;
+	$string1 = "Confirm";
+}
+return($colour1, $string1);

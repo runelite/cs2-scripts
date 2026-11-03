@@ -15,13 +15,13 @@ if ($int4 = 1 & %questlist_hide_unavailable = 1) {
 if ($int6 = 1) {
 	return(1);
 }
-if ($int1 = 0 & %questlist_hide_in_progress = 1) {
+if ($int1 = 0 & %questlist_hide_in_progress = 2) {
 	return(1);
 }
 if ($int1 = 1 & %questlist_hide_not_started = 1) {
 	return(1);
 }
-if ($int1 = 2 & %questlist_hide_completed = 1) {
+if ($int1 = 2 & %questlist_hide_completed = 2) {
 	return(1);
 }
 if ($int1 = 1 & %questlist_hide_lackreqs = 2 & $int2 = 0) {

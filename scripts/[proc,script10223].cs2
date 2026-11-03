@@ -1,0 +1,13 @@
+// 10223
+[proc,script10223](string $string0)(string)
+def_string $string1 = " ";
+def_string $string2 = "";
+def_int $int0 = string_length(" _-");
+while ($int0 > 0) {
+	$int0 = calc($int0 - 1);
+	$string2 = substring(" _-", $int0, calc($int0 + 1));
+	if (compare($string2, $string1) ! 0) {
+		$string0 = ~string_findandreplace($string0, $string2, $string1);
+	}
+}
+return($string0);

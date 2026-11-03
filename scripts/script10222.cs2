@@ -1,0 +1,31 @@
+java.lang.IllegalStateException: Opcode 5104 in script 10222 not implemented
+
+.id                       10222
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   get_varc_string        1588
+   string_length         
+   istore                 0
+   iload                  0
+   iconst                 0
+   if_icmpgt              LABEL7
+   jump                   LABEL20
+LABEL7:
+   iload                  0
+   iconst                 12
+   if_icmpgt              LABEL11
+   jump                   LABEL16
+LABEL11:
+   get_varc_string        1588
+   iconst                 0
+   iconst                 12
+   substring             
+   set_varc_string        1588
+LABEL16:
+   get_varc_string        1588
+   5104                  
+   clientclock           
+   set_varc_int           1591
+LABEL20:
+   return                

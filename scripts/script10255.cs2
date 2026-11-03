@@ -1,0 +1,553 @@
+java.lang.IllegalStateException: Opcode 64 in script 10255 not implemented
+
+.id                       10255
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 64290832
+   istore                 0
+   iconst                 64290833
+   istore                 1
+   iload                  0
+   iconst                 0
+   invoke                 5295
+   pop_int               
+   iconst                 0
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 0
+   istore                 4
+   iconst                 23
+   istore                 5
+   iconst                 -1
+   istore                 6
+   iconst                 -1
+   istore                 7
+   sconst                 "null"
+   ostore                 0
+   iconst                 -1
+   istore                 8
+   iconst                 25
+   istore                 9
+   invoke                 1972
+   iconst                 1
+   if_icmpeq              LABEL30
+   jump                   LABEL32
+LABEL30:
+   iconst                 27
+   istore                 5
+LABEL32:
+   iload                  2
+   iconst                 19
+   if_icmple              LABEL36
+   jump                   LABEL459
+LABEL36:
+   iload                  2
+   switch                
+      0: LABEL39
+      1: LABEL65
+      2: LABEL88
+      3: LABEL103
+      4: LABEL127
+      5: LABEL151
+      6: LABEL215
+      7: LABEL239
+      8: LABEL265
+      9: LABEL289
+      10: LABEL304
+      11: LABEL322
+      12: LABEL350
+      13: LABEL365
+      14: LABEL380
+      15: LABEL395
+      16: LABEL410
+      17: LABEL425
+      18: LABEL440
+   jump                   LABEL454
+LABEL39:
+   iload                  3
+   istore                 6
+   sconst                 "-"
+   ostore                 0
+   get_varbit             12933
+   iconst                 1
+   if_icmpeq              LABEL47
+   jump                   LABEL51
+LABEL47:
+   invoke                 10252
+   iconst                 1
+   invoke                 494
+   ostore                 0
+LABEL51:
+   iload                  1
+   sconst                 "Time Played"
+   oload                  0
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   invoke                 10259
+   jump                   LABEL454
+LABEL65:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Total level"
+   iload                  9
+   iconst                 3387
+   iconst                 18
+   iconst                 18
+   get_varbit             16720
+   tostring              
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Skill Levels</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL88:
+   iload                  1
+   sconst                 "Total XP"
+   get_varbit             16719
+   get_varbit             16727
+   invoke                 1009
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL103:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Quest points"
+   iload                  9
+   iconst                 835
+   iconst                 18
+   iconst                 18
+   get_varp               101
+   sconst                 ","
+   invoke                 46
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Quests Completed</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL127:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Achievements completed"
+   iload                  9
+   iconst                 836
+   iconst                 18
+   iconst                 18
+   get_varbit             16725
+   sconst                 ","
+   invoke                 46
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Diary Completion</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL151:
+   iconst                 1
+   istore                 6
+   get_varbit             12864
+   iconst                 0
+   if_icmpgt              LABEL157
+   jump                   LABEL159
+LABEL157:
+   iconst                 2
+   istore                 6
+LABEL159:
+   get_varbit             12865
+   iconst                 0
+   if_icmpgt              LABEL163
+   jump                   LABEL165
+LABEL163:
+   iconst                 3
+   istore                 6
+LABEL165:
+   get_varbit             12866
+   iconst                 0
+   if_icmpgt              LABEL169
+   jump                   LABEL171
+LABEL169:
+   iconst                 4
+   istore                 6
+LABEL171:
+   get_varbit             12867
+   iconst                 0
+   if_icmpgt              LABEL175
+   jump                   LABEL177
+LABEL175:
+   iconst                 5
+   istore                 6
+LABEL177:
+   get_varbit             12868
+   iconst                 0
+   if_icmpgt              LABEL181
+   jump                   LABEL183
+LABEL181:
+   iconst                 6
+   istore                 6
+LABEL183:
+   iconst                 3389
+   istore                 7
+   iload                  6
+   iconst                 6
+   if_icmpeq              LABEL189
+   jump                   LABEL191
+LABEL189:
+   iconst                 8817
+   istore                 7
+LABEL191:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Combat Achievement pts."
+   iload                  9
+   iload                  7
+   iconst                 18
+   iconst                 18
+   get_varbit             14815
+   sconst                 ","
+   invoke                 46
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Combat Achievements</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL215:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Collections logged"
+   iload                  9
+   iconst                 3390
+   iconst                 18
+   iconst                 18
+   get_varbit             16733
+   sconst                 ","
+   invoke                 46
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Collection Log Completion</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL239:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Clues completed"
+   iload                  9
+   iconst                 8814
+   iconst                 18
+   iconst                 18
+   get_varp               4515
+   iconst                 10000
+   iconst                 10000000
+   sconst                 ","
+   invoke                 7396
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Clues completed</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL265:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Bosses killed"
+   iload                  9
+   iconst                 3386
+   iconst                 18
+   iconst                 18
+   get_varp               4510
+   sconst                 ","
+   invoke                 46
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10266
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Bosses Killed</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL289:
+   iload                  1
+   sconst                 "Players killed"
+   get_varp               4522
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL304:
+   iload                  1
+   sconst                 "Highest value player kill"
+   064                    6219
+   lconst                 100000
+   lconst                 10000000
+   lconst                 1000000000
+   sconst                 ","
+   invoke                 9908
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL322:
+   iload                  3
+   istore                 6
+   iload                  1
+   sconst                 "Highest value item"
+   iload                  9
+   iconst                 995
+   064                    6115
+   iconst                 21
+   iconst                 21
+   064                    6115
+   lconst                 100000
+   lconst                 10000000
+   lconst                 1000000000
+   sconst                 ","
+   invoke                 9908
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10271
+   istore                 4
+   istore                 3
+   sconst                 "<col=ff9040>Highest Value Items</col>"
+   iload                  2
+   iload                  6
+   invoke                 10256
+   jump                   LABEL454
+LABEL350:
+   iload                  1
+   sconst                 "Highest hit (PvM)"
+   get_varbit             11561
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL365:
+   iload                  1
+   sconst                 "Damage dealt (PvM)"
+   get_varp               4514
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL380:
+   iload                  1
+   sconst                 "Damage taken (PvM)"
+   get_varp               4516
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL395:
+   iload                  1
+   sconst                 "Most damage survived (4t)"
+   get_varp               6002
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL410:
+   iload                  1
+   sconst                 "NPCs killed"
+   get_varp               4521
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL425:
+   iload                  1
+   sconst                 "Potions sipped"
+   get_varp               4519
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+   jump                   LABEL454
+LABEL440:
+   iload                  1
+   sconst                 "Food eaten"
+   get_varp               4518
+   sconst                 ","
+   invoke                 46
+   iload                  9
+   iconst                 0
+   iload                  4
+   iload                  3
+   iload                  2
+   iload                  5
+   invoke                 10263
+   istore                 4
+   istore                 3
+LABEL454:
+   iload                  2
+   iconst                 1
+   add                   
+   istore                 2
+   jump                   LABEL32
+LABEL459:
+   iconst                 0
+   iconst                 0
+   iload                  1
+   if_setscrollpos       
+   iload                  4
+   iload                  1
+   if_getheight          
+   if_icmpgt              LABEL468
+   jump                   LABEL473
+LABEL468:
+   iconst                 0
+   iload                  4
+   iload                  1
+   if_setscrollsize      
+   jump                   LABEL477
+LABEL473:
+   iconst                 0
+   iconst                 0
+   iload                  1
+   if_setscrollsize      
+LABEL477:
+   iconst                 64290834
+   iload                  1
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+   return                

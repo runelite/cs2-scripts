@@ -1,0 +1,77 @@
+java.lang.IllegalStateException: Opcode 5101 in script 10226 not implemented
+
+.id                       10226
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 1
+   iconst                 0
+   istore                 2
+   iconst                 -1
+   istore                 3
+   iconst                 -1
+   istore                 4
+   5101                  
+   istore                 4
+   istore                 3
+   istore                 2
+   ostore                 1
+   istore                 1
+   istore                 0
+   iconst                 105
+   iconst                 115
+   iconst                 1654
+   iload                  1
+   enum                  
+   ostore                 2
+   oload                  1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL30
+   jump                   LABEL46
+LABEL30:
+   oload                  0
+   oload                  1
+   append                
+   ostore                 0
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL39
+   jump                   LABEL45
+LABEL39:
+   oload                  0
+   sconst                 " - "
+   oload                  2
+   join_string            2
+   append                
+   ostore                 0
+LABEL45:
+   jump                   LABEL60
+LABEL46:
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL51
+   jump                   LABEL56
+LABEL51:
+   oload                  0
+   oload                  2
+   append                
+   ostore                 0
+   jump                   LABEL60
+LABEL56:
+   oload                  0
+   sconst                 "Malformed system response."
+   append                
+   ostore                 0
+LABEL60:
+   oload                  0
+   return                
+   sconst                 ""
+   return                

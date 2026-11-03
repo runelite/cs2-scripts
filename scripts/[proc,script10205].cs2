@@ -1,0 +1,9 @@
+// 10205
+[proc,script10205]
+cc_setcolour(^white);
+cc_settextfont(b12_full);
+if (string_length(%varcstring1588) >= 12) {
+	cc_settext(append(substring(%varcstring1588, 0, 12), "<col=9f9f9f>*</col>"));
+} else {
+	cc_settext(append(%varcstring1588, "*"));
+}

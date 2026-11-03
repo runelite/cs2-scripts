@@ -1,0 +1,9 @@
+// 10242
+[proc,script10242](component $com_hc_death_choice_reset_button0, component $com_hc_death_choice_transfer_button1, int $com_hc_death_choice_option_reset2, int $com_hc_death_choice_option_transfer3, component $com_hc_death_choice_text4, component $com_hc_death_choice_text_container5, component $com_hc_death_choice_scrollbar6)
+cc_deleteall($com_hc_death_choice_scrollbar6);
+~scrollbar_vertical($com_hc_death_choice_scrollbar6, $com_hc_death_choice_text4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script10244($com_hc_death_choice_text_container5, $com_hc_death_choice_reset_button0, $com_hc_death_choice_transfer_button1);
+if_setonop("script10243($com_hc_death_choice_text_container5, $com_hc_death_choice_reset_button0, $com_hc_death_choice_transfer_button1, 1)", $com_hc_death_choice_reset_button0);
+if_setop(1, "Select", $com_hc_death_choice_reset_button0);
+if_setonop("script10243($com_hc_death_choice_text_container5, $com_hc_death_choice_reset_button0, $com_hc_death_choice_transfer_button1, 2)", $com_hc_death_choice_transfer_button1);
+if_setop(1, "Select", $com_hc_death_choice_transfer_button1);

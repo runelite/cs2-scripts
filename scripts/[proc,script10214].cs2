@@ -1,0 +1,9 @@
+// 10214
+[proc,script10214](string $string0, graphic $graphic0, namedobj $namedobj1, component $component2, int $int3)
+~script10215(0, $string0, $graphic0, $namedobj1, $component2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("script10216(1, $string0, event_com, $graphic0, $namedobj1, $int3)", $component2);
+}
+if_setonmouseleave("script10216(0, $string0, event_com, $graphic0, $namedobj1, $int3)", $component2);
+if_setop(1, removetags(~string_findandreplace($string0, "<br>", " ")), $component2);
+if_setontimer(null, $component2);

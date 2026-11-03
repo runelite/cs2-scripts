@@ -1,0 +1,67 @@
+java.lang.IllegalStateException: Opcode 5103 in script 10230 not implemented
+
+.id                       10230
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 0
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 -1
+   istore                 4
+   iconst                 -1
+   istore                 5
+   5103                  
+   istore                 5
+   istore                 4
+   istore                 3
+   istore                 2
+   ostore                 0
+   istore                 1
+   istore                 0
+   iload                  0
+   iconst                 0
+   if_icmpne              LABEL26
+   jump                   LABEL33
+LABEL26:
+   iload                  0
+   iconst                 1
+   if_icmpne              LABEL30
+   jump                   LABEL33
+LABEL30:
+   iload                  4
+   iload                  5
+   invoke                 10231
+LABEL33:
+   iconst                 105
+   iconst                 115
+   iconst                 1654
+   iload                  1
+   enum                  
+   ostore                 1
+   oload                  1
+   string_length         
+   iconst                 0
+   if_icmpgt              LABEL44
+   jump                   LABEL49
+LABEL44:
+   sconst                 "Although the name is available, you are not eligible to take it: "
+   oload                  1
+   append                
+   ostore                 1
+   jump                   LABEL51
+LABEL49:
+   sconst                 "Although the name is available, you are not eligible to take it."
+   ostore                 1
+LABEL51:
+   oload                  1
+   return                
+   sconst                 ""
+   return                

@@ -1,0 +1,78 @@
+java.util.NoSuchElementException: Key 88 is missing in the map.
+
+.id                       7053
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            1
+   oload                  0
+   8002                  
+   iconst                 1
+   if_icmpeq              LABEL5
+   jump                   LABEL10
+LABEL5:
+   iconst                 115
+   iconst                 0
+   iconst                 1
+   8022                  
+   ostore                 0
+LABEL10:
+   oload                  0
+   chat_playername       
+   iconst                 0
+   iconst                 2
+   8025                  
+   iload                  0
+   iconst                 1
+   add                   
+   istore                 0
+   oload                  0
+   8003                  
+   iconst                 1
+   if_icmple              LABEL24
+   jump                   LABEL35
+LABEL24:
+   iconst                 56426507
+   if_clearops           
+   iconst                 1
+   sconst                 "Select"
+   iconst                 56426507
+   if_setop              
+   iconst                 4547
+   sconst                 ""
+   iconst                 56426507
+   if_setonop            
+   return                
+LABEL35:
+   iconst                 56426507
+   istore                 1
+   iconst                 56426527
+   iconst                 56426507
+   iload                  0
+   oload                  0
+   iconst                 16777215
+   sconst                 "[No name set]"
+   invoke                 8321
+   iconst                 56426507
+   if_clearops           
+   iconst                 1
+   sconst                 "Select"
+   iconst                 56426507
+   if_setop              
+   invoke                 7054
+   iconst                 0
+   if_icmpeq              LABEL54
+   jump                   LABEL55
+LABEL54:
+   return                
+LABEL55:
+   iconst                 4561
+   iconst                 56426527
+   iconst                 56426528
+   iconst                 56426529
+   iconst                 56426507
+   oload                  0
+   iconst                 16777215
+   sconst                 "iiiiXi"
+   iconst                 56426507
+   if_setonop            
+   return                

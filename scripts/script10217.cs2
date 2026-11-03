@@ -1,0 +1,36 @@
+java.lang.IllegalStateException: Opcode 5100 in script 10217 not implemented
+
+.id                       10217
+.int_arg_count            8
+.long_arg_count           0
+.obj_arg_count            1
+   iload                  0
+   iconst                 1
+   if_icmpeq              LABEL4
+   jump                   LABEL24
+LABEL4:
+   iload                  1
+   oload                  0
+   iload                  2
+   iload                  3
+   iconst                 -1
+   invoke                 10218
+   iload                  1
+   iload                  6
+   if_icmpeq              LABEL17
+   iload                  1
+   iload                  7
+   if_icmpeq              LABEL17
+   jump                   LABEL19
+LABEL17:
+   invoke                 10236
+   jump                   LABEL24
+LABEL19:
+   iload                  1
+   iload                  5
+   if_icmpeq              LABEL23
+   jump                   LABEL24
+LABEL23:
+   5100                  
+LABEL24:
+   return                

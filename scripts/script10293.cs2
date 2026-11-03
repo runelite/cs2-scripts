@@ -1,0 +1,184 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       10293
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 64
+   iconst                 0
+   iconst                 0
+   db_find_with_count    
+   istore                 6
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 0
+   iconst                 115
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 1
+   iconst                 0
+   istore                 7
+   db_findnext           
+   istore                 8
+LABEL19:
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL23
+   jump                   LABEL54
+LABEL23:
+   iload                  8
+   invoke                 4136
+   iconst                 1
+   if_icmpeq              LABEL28
+   jump                   LABEL51
+LABEL28:
+   iload                  8
+   iconst                 96
+   iconst                 0
+   db_getfield           
+   iconst                 5
+   if_icmpne              LABEL35
+   jump                   LABEL51
+LABEL35:
+   iload                  7
+   iload                  8
+   iconst                 96
+   iconst                 0
+   db_getfield           
+   set_array_int         
+   iload                  7
+   iload                  8
+   iconst                 32
+   iconst                 0
+   db_getfield           
+   set_array_int          1
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+LABEL51:
+   db_findnext           
+   istore                 8
+   jump                   LABEL19
+LABEL54:
+   oload                  0
+   iload                  7
+   8023                  
+   oload                  1
+   iload                  7
+   8023                  
+   oload                  0
+   oload                  1
+   8000                  
+   oload                  0
+   8012                  
+   oload                  1
+   8012                  
+   iload                  3
+   iconst                 0
+   invoke                 5295
+   pop_int               
+   iload                  4
+   cc_deleteall          
+   iconst                 0
+   istore                 9
+   iconst                 0
+   istore                 10
+   iload                  4
+   iload                  10
+   sconst                 "Quests Completed"
+   invoke                 10277
+   istore                 10
+   iconst                 20
+   istore                 11
+   iconst                 23
+   istore                 12
+   iconst                 115
+   iconst                 5
+   iconst                 5
+   8022                  
+   ostore                 2
+   iconst                 0
+   sconst                 "Nov."
+   set_array_int          2
+   iconst                 1
+   sconst                 "Inter."
+   set_array_int          2
+   iconst                 2
+   sconst                 "Exp."
+   set_array_int          2
+   iconst                 3
+   sconst                 "Master"
+   set_array_int          2
+   iconst                 4
+   sconst                 "G.M."
+   set_array_int          2
+LABEL106:
+   iload                  9
+   iload                  7
+   iload                  0
+   4016                  
+   if_icmplt              LABEL112
+   jump                   LABEL132
+LABEL112:
+   iload                  4
+   iload                  9
+   get_array_int          1
+   iload                  9
+   get_array_int         
+   get_array_int          2
+   iload                  2
+   iconst                 0
+   iload                  11
+   iload                  10
+   iload                  9
+   iload                  12
+   invoke                 10263
+   istore                 11
+   istore                 10
+   iload                  9
+   iconst                 1
+   add                   
+   istore                 9
+   jump                   LABEL106
+LABEL132:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollpos       
+   iload                  11
+   iload                  4
+   if_getheight          
+   if_icmpgt              LABEL141
+   jump                   LABEL146
+LABEL141:
+   iconst                 0
+   iload                  11
+   iload                  4
+   if_setscrollsize      
+   jump                   LABEL150
+LABEL146:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollsize      
+LABEL150:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL154
+   jump                   LABEL163
+LABEL154:
+   iload                  5
+   iload                  4
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+LABEL163:
+   return                

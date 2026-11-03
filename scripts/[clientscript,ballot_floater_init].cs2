@@ -15,7 +15,7 @@ if_setopkey(1, ^key_escape, 0, $com_ballot_close4);
 if ($int5 = 1) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_ballot_content2);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_ballot_content2);
-	~script8229(2, $com_ballot_content2);
+	~script8229(1, 2, $com_ballot_content2);
 	if_setontimer("script9141(event_com, if_getwidth($com_ballot_content2), if_getheight($com_ballot_content2), $com_ballot_dodger1, if_getwidth($com_ballot_dodger1), if_getheight($com_ballot_dodger1), $com_ballot_content2)", $com_ballot_universe0);
 	return;
 }

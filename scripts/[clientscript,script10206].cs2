@@ -1,0 +1,27 @@
+// 10206
+[clientscript,script10206](component $component0, int $comsubid1, int $int2, component $component3)
+if (%varcint435 = true) {
+	return;
+}
+if (%varcint1592 > 0 & enum(int, boolean, enum_2730, if_param(param_2357, $component3, -1)) = true) {
+	sound_synth(interface_select1, 1, 0);
+	if (cc_find($component0, $int2) = true & .cc_find($component0, $comsubid1) = true) {
+		cc_setcolour(0x9f9f9f);
+		if (string_length(%varcstring1588) > 0) {
+			cc_settextfont(b12_full);
+			cc_settext(%varcstring1588);
+		} else {
+			cc_settextfont(p11_full);
+			cc_settext("<~text_device("Click", "Tap")> here to type");
+		}
+		.cc_setcolour(^white);
+		.cc_settrans(255);
+		if (~on_mobile = false) {
+			.cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 235, null)");
+			.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+		}
+		.cc_setonclick("script10207(event_com, event_comsubid, $int2, $component3)");
+		.cc_setontimer(null);
+		.cc_setonkey(null);
+	}
+}

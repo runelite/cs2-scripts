@@ -1,0 +1,26 @@
+// 10275
+[proc,script10275](component $component0, graphic $graphic1, string $string0, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int)
+cc_create($component0, ^iftype_text, $int5, false);
+cc_setposition(calc(8 + $int2), calc($int4 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext($string0);
+$int5 = calc($int5 + 1);
+~create_graphic(
+	0 = $component0, 
+	1 = $int5, 
+	2 = $graphic1, 
+	3 = 4, 
+	4 = calc($int4 + ($int6 - $int3) / 2), 
+	5 = ^setpos_abs_left, 
+	6 = ^setpos_abs_top, 
+	7 = $int2, 
+	8 = $int3, 
+	9 = ^setsize_abs, 
+	10 = ^setsize_abs, 
+	11 = true
+);
+return(calc($int5 + 1), calc($int4 + $int6));

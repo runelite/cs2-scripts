@@ -3,10 +3,19 @@ java.lang.IllegalStateException: Check failed.
 .id                       8322
 .int_arg_count            3
 .long_arg_count           0
-.obj_arg_count            1
+.obj_arg_count            2
    iload                  1
    get_array_int         
-   ostore                 1
+   ostore                 2
+   oload                  2
+   string_length         
+   iconst                 0
+   if_icmpeq              LABEL8
+   jump                   LABEL10
+LABEL8:
+   oload                  1
+   ostore                 2
+LABEL10:
    oload                  0
    8003                  
    istore                 3
@@ -62,14 +71,14 @@ java.lang.IllegalStateException: Check failed.
    pop_int               
    iload                  3
    iconst                 0
-   if_icmpgt              LABEL60
-   jump                   LABEL85
-LABEL60:
+   if_icmpgt              LABEL67
+   jump                   LABEL92
+LABEL67:
    invoke                 1972
    iconst                 0
-   if_icmpeq              LABEL64
-   jump                   LABEL80
-LABEL64:
+   if_icmpeq              LABEL71
+   jump                   LABEL87
+LABEL71:
    iconst                 244
    iload                  0
    iload                  4
@@ -86,16 +95,16 @@ LABEL64:
    sconst                 "iiii"
    iload                  0
    if_setonmouseleave    
-LABEL80:
+LABEL87:
    iconst                 1
    sconst                 "Expand"
    iload                  0
    if_setop              
-   jump                   LABEL87
-LABEL85:
+   jump                   LABEL94
+LABEL92:
    iconst                 125
    cc_settrans           
-LABEL87:
+LABEL94:
    iload                  4
    iconst                 1
    add                   
@@ -126,6 +135,6 @@ LABEL87:
    iconst                 1
    iconst                 0
    cc_settextalign       
-   oload                  1
+   oload                  2
    cc_settext            
    return                

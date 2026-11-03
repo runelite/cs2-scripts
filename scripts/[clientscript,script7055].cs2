@@ -1,0 +1,291 @@
+// 7055
+[clientscript,script7055](component $com_displayname_menu_universe0, component $com_displayname_menu_frame1, component $com_displayname_menu_close2, component $com_displayname_menu_13, component $com_displayname_menu_bg_freechange4, component $com_displayname_menu_freechange5, component $com_displayname_menu_bg_extrachanges6, component $com_displayname_menu_extrachanges7, component $com_displayname_menu_startsession8, component $com_displayname_menu_bonds9, component $com_displayname_menu_210, component $com_displayname_menu_swirly211, component $com_displayname_menu_exitqueue12, component $com_displayname_menu_313, component $com_displayname_menu_entername14, component $com_displayname_menu_action15, component $com_displayname_menu_exitsession16, component $com_displayname_menu_417, component $com_displayname_menu_swirly418)
+~script10239(980);
+def_int $comsubid19 = ~steelborder($com_displayname_menu_frame1, "", 9);
+~script4215($com_displayname_menu_close2, "Close");
+if_setonop("opsound(event_op, 2)", $com_displayname_menu_close2);
+%varcint1589, %varcint1590, %varcint1591, %varcint1594, %varcint1595 = 0, 0, 0, 0, 0;
+cc_deleteall($com_displayname_menu_13);
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_string $string0 = ~script10197;
+def_int $int22 = if_getwidth(if_getlayer($com_displayname_menu_13));
+def_int $int23 = calc($int22 - 2);
+def_int $int24 = calc(paraheight($string0, $int23, p12_full) * 14 + 5);
+.cc_create($com_displayname_menu_13, ^iftype_rectangle, $int20, false);
+$int20 = calc($int20 + 1);
+cc_create($com_displayname_menu_13, ^iftype_text, $int20, false);
+$int20 = calc($int20 + 1);
+.cc_setsize(0, $int24, ^setsize_minus, ^setsize_abs);
+cc_setsize($int23, $int24, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_settrans(180);
+.cc_setfill(true);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext($string0);
+$int21 = calc($int21 + $int24 + 2);
+$int20, $int21 = ~script7824($int20, $int21, $com_displayname_menu_13, "Next free change:", $com_displayname_menu_bg_freechange4, $com_displayname_menu_freechange5);
+$int20, $int21 = ~script7824($int20, $int21, $com_displayname_menu_13, "Extra changes:", $com_displayname_menu_bg_extrachanges6, $com_displayname_menu_extrachanges7);
+$int21 = calc($int21 + 3);
+$string0 = "<col=ff0000>Redeem bonds</col>";
+~script10214($string0, p12_full, osrs_bond_13190, $com_displayname_menu_bonds9, -1);
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_displayname_menu_bonds9);
+if_setonop("script10217(
+	0 = event_op, 
+	1 = event_com, 
+	2 = $string0, 
+	3 = p12_full, 
+	4 = osrs_bond_13190, 
+	5 = $com_displayname_menu_bonds9, 
+	6 = $com_displayname_menu_startsession8, 
+	7 = $com_displayname_menu_exitqueue12, 
+	8 = $com_displayname_menu_exitsession16
+)", $com_displayname_menu_bonds9);
+def_int $int25 = if_getheight($com_displayname_menu_bonds9);
+$int24 = calc($int21 + 2 + $int25);
+if_setsize(0, $int24, ^setsize_minus, ^setsize_minus, $com_displayname_menu_startsession8);
+$string0 = "<col=0dc10d>Look up names</col>";
+~script10214($string0, b12_full, null, $com_displayname_menu_startsession8, -1);
+if_setposition(0, calc($int25 + 2), ^setpos_abs_centre, ^setpos_abs_bottom, $com_displayname_menu_startsession8);
+if_setonop("script10217(
+	0 = event_op, 
+	1 = event_com, 
+	2 = $string0, 
+	3 = b12_full, 
+	4 = null, 
+	5 = $com_displayname_menu_bonds9, 
+	6 = $com_displayname_menu_startsession8, 
+	7 = $com_displayname_menu_exitqueue12, 
+	8 = $com_displayname_menu_exitsession16
+)", $com_displayname_menu_startsession8);
+def_int $int26 = calc($int25 + $int24);
+cc_deleteall($com_displayname_menu_210);
+$int20, $int21 = 0, 0;
+.cc_create($com_displayname_menu_210, ^iftype_rectangle, $int20, false);
+$int20 = calc($int20 + 1);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_settrans(180);
+.cc_setfill(true);
+$string0 = "There may be a long <col=ffffff>queue</col> at busy times. Once you have connected, you may look up the <col=ffffff>availability of names</col> until:";
+$int24 = calc(paraheight($string0, $int23, p12_full) * 14 + 3);
+cc_create($com_displayname_menu_210, ^iftype_text, $int20, false);
+$int20 = calc($int20 + 1);
+cc_setsize($int23, $int24, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext($string0);
+$int21 = calc($int21 + $int24);
+def_int $int27 = calc($int22 - (13 + 1));
+$int20, $int21 = ~script10198($int20, $int21, $com_displayname_menu_210, $int27, "You agree to <col=ffffff>change your name</col>.");
+$int20, $int21 = ~script10198($int20, $int21, $com_displayname_menu_210, $int27, "You have looked up <col=ffffff>too many names</col>.");
+$int20, $int21 = ~script10198($int20, $int21, $com_displayname_menu_210, $int27, "You have been connected for <col=ffffff>too long</col>.");
+$string0 = "You may <col=ffffff>rejoin the queue</col> afterwards, to connect again and <col=ffffff>look up more names</col>.";
+$int24 = calc(paraheight($string0, $int23, p12_full) * 14 + 5);
+cc_create($com_displayname_menu_210, ^iftype_text, $int20, false);
+$int20 = calc($int20 + 1);
+cc_setsize($int23, $int24, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext($string0);
+$int21 = calc($int21 + $int24);
+.cc_setsize(0, $int21, ^setsize_minus, ^setsize_abs);
+$int21 = calc($int21 + 2);
+$int25 = if_getheight($com_displayname_menu_exitqueue12);
+if_setsize($int25, $int25, ^setsize_abs, ^setsize_abs, $com_displayname_menu_swirly211);
+$int24 = calc($int26 - ($int21 + $int25));
+if ($int24 < 0) {
+	$int26, $int24 = calc($int26 - $int24), 0;
+}
+$int25 = calc($int24 / 2);
+$string0 = "<col=ff0000>Cancel</col>";
+~script10214($string0, p12_full, pattern_lime_dummy_11526, $com_displayname_menu_exitqueue12, -1);
+if_setposition(0, $int25, ^setpos_abs_right, ^setpos_abs_bottom, $com_displayname_menu_exitqueue12);
+if_setonop("script10217(
+	0 = event_op, 
+	1 = event_com, 
+	2 = $string0, 
+	3 = p12_full, 
+	4 = pattern_lime_dummy_11526, 
+	5 = $com_displayname_menu_bonds9, 
+	6 = $com_displayname_menu_startsession8, 
+	7 = $com_displayname_menu_exitqueue12, 
+	8 = $com_displayname_menu_exitsession16
+)", $com_displayname_menu_exitqueue12);
+if_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_bottom, $com_displayname_menu_swirly211);
+cc_deleteall($com_displayname_menu_swirly211);
+if (if_find($com_displayname_menu_swirly211) = true) {
+	~script9761(
+		0 = $com_displayname_menu_swirly211, 
+		1 = 0, 
+		2 = enum_3789, 
+		3 = 4, 
+		4 = 1200, 
+		5 = 3500, 
+		6 = 512, 
+		7 = 1024, 
+		8 = 0, 
+		9 = 1, 
+		10 = 0, 
+		11 = 0
+	);
+}
+%varcstring1588, %varcint435 = "", false;
+if_setparam(param_2357, 0, $com_displayname_menu_action15, -1, int);
+cc_deleteall($com_displayname_menu_entername14);
+cc_deleteall($com_displayname_menu_313);
+$int20, $int21 = 0, 0;
+cc_create($com_displayname_menu_313, ^iftype_text, $int20, false);
+def_int $comsubid28 = $int20;
+cc_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top);
+$int20, $int21 = calc($int20 + 1), calc($int21 + 15);
+cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0x9f9f9f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+$string0 = "Name:";
+def_int $int29 = parawidth($string0, 512, p12_full);
+if_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top, $com_displayname_menu_entername14);
+def_int $int30 = ~script10302($com_displayname_menu_entername14, 0);
+cc_create($com_displayname_menu_entername14, ^iftype_text, $int30, false);
+$int30 = calc($int30 + 1);
+cc_setsize($int29, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(3, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settext($string0);
+$int29 = calc($int29 + 3 * 3);
+cc_create($com_displayname_menu_entername14, ^iftype_rectangle, $int30, false);
+def_int $comsubid31 = $int30;
+$int30 = calc($int30 + 1);
+cc_setsize($int29, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_create($com_displayname_menu_entername14, ^iftype_text, $int30, false);
+def_int $int32 = $int30;
+$int30 = calc($int30 + 1);
+cc_setsize($int29, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+$int21 = calc($int21 + if_getheight($com_displayname_menu_entername14) + 2);
+~script10202(1, $com_displayname_menu_entername14, $comsubid31, $int32, $com_displayname_menu_313, $comsubid28, $com_displayname_menu_action15);
+if_setontimer("script10201(event_com, $comsubid31, $int32, $com_displayname_menu_313, $comsubid28, $com_displayname_menu_action15)", $com_displayname_menu_entername14);
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_displayname_menu_exitsession16);
+$int25, $string0 = calc(if_getheight($com_displayname_menu_exitsession16) + 2), "<col=ff0000>End session</col>";
+~script10214($string0, p12_full, pattern_lime_dummy_11526, $com_displayname_menu_exitsession16, -1);
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $com_displayname_menu_exitsession16);
+if_setonop("script10217(
+	0 = event_op, 
+	1 = event_com, 
+	2 = $string0, 
+	3 = p12_full, 
+	4 = pattern_lime_dummy_11526, 
+	5 = $com_displayname_menu_bonds9, 
+	6 = $com_displayname_menu_startsession8, 
+	7 = $com_displayname_menu_exitqueue12, 
+	8 = $com_displayname_menu_exitsession16
+)", $com_displayname_menu_exitsession16);
+.cc_create($com_displayname_menu_313, ^iftype_rectangle, $int20, false);
+$int20 = calc($int20 + 1);
+.cc_setposition(0, $int25, ^setpos_abs_centre, ^setpos_abs_bottom);
+.cc_setcolour(^black);
+.cc_settrans(180);
+.cc_setfill(true);
+$int29 = parawidth(append("Name checks:", " ***"), 512, p12_full);
+$int29 = scale($int29, calc($int29 + 45 + 25), $int22);
+cc_create($com_displayname_menu_313, ^iftype_text, $int20, false);
+def_int $comsubid33 = $int20;
+$int20 = calc($int20 + 1);
+cc_setsize($int29, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+def_int $int34 = calc($int22 - $int29);
+cc_create($com_displayname_menu_313, ^iftype_text, $int20, false);
+def_int $comsubid35 = $int20;
+$int20 = calc($int20 + 1);
+cc_setsize(45, 21, ^setsize_abs, ^setsize_abs);
+$int34 = calc(($int34 - (45 + 25)) / 2);
+cc_setposition($int34, $int25, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_setcolour(^white);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_create($com_displayname_menu_313, ^iftype_model, $int20, false);
+$int20 = calc($int20 + 1);
+cc_setsize(25, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int34 + 45), $int25, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_setobject_nonum(trail_watch_2575, 1);
+$string0 = "After this session ends, you may <col=ffffff>request another session</col> to check more names.";
+$int24 = calc(paraheight($string0, $int23, p12_full) * 14 + 3);
+cc_create($com_displayname_menu_313, ^iftype_text, $int20, false);
+$int20 = calc($int20 + 1);
+cc_setsize($int23, $int24, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc($int25 + 21), ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext($string0);
+$int24 = calc($int24 + 21);
+.cc_setsize(0, $int24, ^setsize_minus, ^setsize_abs);
+if_setsize(0, calc($int21 + $int25 + $int24 + 2), ^setsize_minus, ^setsize_minus, $com_displayname_menu_action15);
+if_setposition(0, $int21, ^setpos_abs_centre, ^setpos_abs_top, $com_displayname_menu_action15);
+~script10200($com_displayname_menu_313, $comsubid33, $comsubid35);
+if_setontimer("script10199(event_com, $comsubid33, $comsubid35)", $com_displayname_menu_313);
+cc_deleteall($com_displayname_menu_417);
+$int20 = 0;
+if (if_find($com_displayname_menu_swirly418) = true) {
+	~script9761(
+		0 = $com_displayname_menu_swirly418, 
+		1 = 0, 
+		2 = enum_3787, 
+		3 = 10, 
+		4 = 1000, 
+		5 = 3000, 
+		6 = 512, 
+		7 = 1024, 
+		8 = 0, 
+		9 = 3, 
+		10 = 0, 
+		11 = 0
+	);
+}
+cc_create($com_displayname_menu_417, ^iftype_text, $int20, false);
+$int20 = calc($int20 + 1);
+cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setcolour(0x9f9f9f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settextshadow(true);
+cc_settext("Disconnecting...");
+$int22, $int24 = calc($int22 + 20), calc($int26 + 50);
+if_setsize($int22, $int24, ^setsize_abs, ^setsize_abs, $com_displayname_menu_universe0);
+def_component $component36 = if_getlayer($com_displayname_menu_universe0);
+if ($component36 ! null) {
+	~script8228($int22, $int24, $int22, $int24);
+	~toplevel_floater_drag_init(4, $component36, $com_displayname_menu_universe0);
+} else {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_displayname_menu_universe0);
+}
+~script10213($com_displayname_menu_frame1, $comsubid19, $com_displayname_menu_13, $com_displayname_menu_210, $com_displayname_menu_313, $com_displayname_menu_417, $com_displayname_menu_action15);
+if_setontimer("script10212($com_displayname_menu_frame1, $comsubid19, $com_displayname_menu_13, $com_displayname_menu_210, $com_displayname_menu_313, $com_displayname_menu_417, $com_displayname_menu_action15)", $com_displayname_menu_frame1);

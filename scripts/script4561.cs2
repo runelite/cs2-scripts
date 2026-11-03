@@ -1,0 +1,62 @@
+java.util.NoSuchElementException: Key 88 is missing in the map.
+
+.id                       4561
+.int_arg_count            5
+.long_arg_count           0
+.obj_arg_count            1
+   iconst                 2266
+   iconst                 1
+   iconst                 0
+   sound_synth           
+   invoke                 7054
+   iconst                 0
+   if_icmpeq              LABEL8
+   jump                   LABEL9
+LABEL8:
+   return                
+LABEL9:
+   iload                  0
+   iload                  1
+   iload                  2
+   iload                  3
+   oload                  0
+   iload                  4
+   iconst                 0
+   sconst                 "[No name set]"
+   invoke                 8323
+   iconst                 0
+   istore                 5
+LABEL20:
+   iload                  5
+   oload                  0
+   8003                  
+   if_icmplt              LABEL25
+   jump                   LABEL48
+LABEL25:
+   iload                  1
+   iconst                 1
+   iload                  5
+   iconst                 2
+   multiply              
+   add                   
+   cc_find               
+   iconst                 1
+   if_icmpeq              LABEL35
+   jump                   LABEL43
+LABEL35:
+   iconst                 6723
+   iload                  0
+   iload                  3
+   iload                  5
+   oload                  0
+   iload                  4
+   sconst                 "iiiXi"
+   cc_setonop            
+LABEL43:
+   iload                  5
+   iconst                 1
+   add                   
+   istore                 5
+   jump                   LABEL20
+LABEL48:
+   return                

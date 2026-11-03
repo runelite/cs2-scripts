@@ -1,0 +1,52 @@
+java.lang.IllegalStateException: Opcode 5101 in script 10224 not implemented
+
+.id                       10224
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 0
+   iconst                 0
+   istore                 2
+   iconst                 -1
+   istore                 3
+   iconst                 -1
+   istore                 4
+   5101                  
+   istore                 4
+   istore                 3
+   istore                 2
+   ostore                 0
+   istore                 1
+   istore                 0
+   iload                  0
+   iconst                 200
+   if_icmpeq              LABEL23
+   jump                   LABEL37
+LABEL23:
+   get_varc_int           1592
+   iconst                 0
+   if_icmplt              LABEL27
+   jump                   LABEL37
+LABEL27:
+   iload                  3
+   iconst                 -1
+   if_icmpeq              LABEL31
+   jump                   LABEL33
+LABEL31:
+   iconst                 250
+   istore                 3
+LABEL33:
+   iload                  3
+   iconst                 0
+   set_varc_int           1593
+   set_varc_int           1592
+LABEL37:
+   iload                  0
+   return                
+   iconst                 0
+   return                

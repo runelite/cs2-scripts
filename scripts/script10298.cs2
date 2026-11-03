@@ -1,0 +1,226 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       10298
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 6
+   istore                 6
+   iconst                 115
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 0
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 1
+   iconst                 111
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 2
+   iconst                 0
+   istore                 7
+   iconst                 -1
+   istore                 8
+LABEL21:
+   iload                  7
+   iload                  6
+   if_icmplt              LABEL25
+   jump                   LABEL93
+LABEL25:
+   iconst                 105
+   iconst                 74
+   iconst                 2105
+   iload                  7
+   enum                  
+   istore                 8
+   iload                  7
+   iload                  8
+   iconst                 689
+   struct_param          
+   set_array_int         
+   iload                  8
+   switch                
+      593: LABEL39
+      508: LABEL46
+      509: LABEL53
+      510: LABEL60
+      511: LABEL67
+      512: LABEL74
+   jump                   LABEL80
+LABEL39:
+   iload                  7
+   get_varp               2201
+   set_array_int          1
+   iload                  7
+   iconst                 23182
+   set_array_int          2
+   jump                   LABEL80
+LABEL46:
+   iload                  7
+   get_varp               1111
+   set_array_int          1
+   iload                  7
+   iconst                 23149
+   set_array_int          2
+   jump                   LABEL80
+LABEL53:
+   iload                  7
+   get_varp               1112
+   set_array_int          1
+   iload                  7
+   iconst                 23135
+   set_array_int          2
+   jump                   LABEL80
+LABEL60:
+   iload                  7
+   get_varp               1354
+   set_array_int          1
+   iload                  7
+   iconst                 2722
+   set_array_int          2
+   jump                   LABEL80
+LABEL67:
+   iload                  7
+   get_varp               1533
+   set_array_int          1
+   iload                  7
+   iconst                 12130
+   set_array_int          2
+   jump                   LABEL80
+LABEL74:
+   iload                  7
+   get_varp               1534
+   set_array_int          1
+   iload                  7
+   iconst                 19835
+   set_array_int          2
+LABEL80:
+   iload                  7
+   get_array_int          1
+   iconst                 -1
+   if_icmpeq              LABEL85
+   jump                   LABEL88
+LABEL85:
+   iload                  7
+   iconst                 0
+   set_array_int          1
+LABEL88:
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL21
+LABEL93:
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 3
+   oload                  1
+   oload                  3
+   iconst                 0
+   iconst                 0
+   iconst                 -1
+   8015                  
+   oload                  1
+   oload                  0
+   8000                  
+   oload                  3
+   oload                  2
+   8000                  
+   oload                  1
+   8012                  
+   oload                  0
+   8012                  
+   oload                  2
+   8012                  
+   iconst                 0
+   istore                 9
+   iconst                 20
+   istore                 10
+   iconst                 23
+   istore                 11
+   iload                  4
+   iload                  9
+   sconst                 "Clues completed"
+   invoke                 10277
+   istore                 9
+   iconst                 0
+   istore                 7
+LABEL129:
+   iload                  7
+   iload                  6
+   iload                  0
+   4016                  
+   if_icmplt              LABEL135
+   jump                   LABEL162
+LABEL135:
+   iload                  4
+   iload                  7
+   get_array_int         
+   iload                  2
+   iload                  7
+   get_array_int          2
+   iconst                 21
+   iconst                 21
+   iload                  7
+   get_array_int          1
+   iconst                 10000
+   iconst                 10000000
+   sconst                 ","
+   invoke                 7396
+   iconst                 0
+   iload                  10
+   iload                  9
+   iload                  7
+   iload                  11
+   invoke                 10269
+   istore                 10
+   istore                 9
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL129
+LABEL162:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollpos       
+   iload                  10
+   iload                  4
+   if_getheight          
+   if_icmpgt              LABEL171
+   jump                   LABEL176
+LABEL171:
+   iconst                 0
+   iload                  10
+   iload                  4
+   if_setscrollsize      
+   jump                   LABEL180
+LABEL176:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollsize      
+LABEL180:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL184
+   jump                   LABEL193
+LABEL184:
+   iload                  5
+   iload                  4
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+LABEL193:
+   return                

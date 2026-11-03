@@ -1,0 +1,182 @@
+java.lang.IllegalStateException: Check failed.
+
+.id                       10294
+.int_arg_count            6
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 2102
+   enum_getoutputcount   
+   istore                 6
+   iconst                 115
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 0
+   iconst                 105
+   iload                  6
+   iload                  6
+   8022                  
+   ostore                 1
+   iconst                 0
+   istore                 7
+   iconst                 -1
+   istore                 8
+LABEL17:
+   iload                  7
+   iload                  6
+   if_icmplt              LABEL21
+   jump                   LABEL74
+LABEL21:
+   iconst                 105
+   iconst                 74
+   iconst                 2102
+   iload                  7
+   enum                  
+   istore                 8
+   iload                  7
+   iload                  8
+   iconst                 682
+   struct_param          
+   set_array_int         
+   iload                  8
+   switch                
+      471: LABEL35
+      472: LABEL42
+      473: LABEL49
+      474: LABEL56
+      475: LABEL63
+   jump                   LABEL69
+LABEL35:
+   iload                  7
+   get_varp               4613
+   get_varp               4614
+   iconst                 100
+   scale                 
+   set_array_int          1
+   jump                   LABEL69
+LABEL42:
+   iload                  7
+   get_varp               4615
+   get_varp               4616
+   iconst                 100
+   scale                 
+   set_array_int          1
+   jump                   LABEL69
+LABEL49:
+   iload                  7
+   get_varp               4617
+   get_varp               4618
+   iconst                 100
+   scale                 
+   set_array_int          1
+   jump                   LABEL69
+LABEL56:
+   iload                  7
+   get_varp               4619
+   get_varp               4620
+   iconst                 100
+   scale                 
+   set_array_int          1
+   jump                   LABEL69
+LABEL63:
+   iload                  7
+   get_varp               4621
+   get_varp               4622
+   iconst                 100
+   scale                 
+   set_array_int          1
+LABEL69:
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL17
+LABEL74:
+   oload                  1
+   oload                  0
+   8000                  
+   oload                  1
+   8012                  
+   oload                  0
+   8012                  
+   iconst                 0
+   istore                 9
+   iconst                 20
+   istore                 10
+   iconst                 23
+   istore                 11
+   iload                  4
+   iload                  9
+   sconst                 "Col. Log Completion"
+   invoke                 10277
+   istore                 9
+   iconst                 0
+   istore                 7
+LABEL94:
+   iload                  7
+   iload                  6
+   iload                  0
+   4016                  
+   if_icmplt              LABEL100
+   jump                   LABEL122
+LABEL100:
+   iload                  4
+   iload                  7
+   get_array_int         
+   iload                  7
+   get_array_int          1
+   tostring              
+   sconst                 "%"
+   join_string            2
+   iload                  2
+   iconst                 0
+   iload                  10
+   iload                  9
+   iload                  7
+   iload                  11
+   invoke                 10263
+   istore                 10
+   istore                 9
+   iload                  7
+   iconst                 1
+   add                   
+   istore                 7
+   jump                   LABEL94
+LABEL122:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollpos       
+   iload                  10
+   iload                  4
+   if_getheight          
+   if_icmpgt              LABEL131
+   jump                   LABEL136
+LABEL131:
+   iconst                 0
+   iload                  10
+   iload                  4
+   if_setscrollsize      
+   jump                   LABEL140
+LABEL136:
+   iconst                 0
+   iconst                 0
+   iload                  4
+   if_setscrollsize      
+LABEL140:
+   iload                  5
+   iconst                 -1
+   if_icmpne              LABEL144
+   jump                   LABEL153
+LABEL144:
+   iload                  5
+   iload                  4
+   iconst                 792
+   iconst                 789
+   iconst                 790
+   iconst                 791
+   iconst                 773
+   iconst                 788
+   invoke                 31
+LABEL153:
+   return                

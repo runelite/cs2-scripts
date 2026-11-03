@@ -1,0 +1,22 @@
+// 10208
+[clientscript,script10208](int $key0, char $keychar1, component $component2, int $comsubid3, int $comsubid4, component $component5)
+def_string $string0 = "";
+if (%varcint1592 > 0 & enum(int, boolean, enum_2730, if_param(param_2357, $component5, -1)) = true & %varcint435 = true & ~keypress_permit(null, displayname_menu) = 1) {
+	if ($key0 = ^key_return) {
+		if (%varcint1589 > %varcint1590) {
+			sound_synth(interface_select1, 1, 0);
+			~keyboard_hide;
+			~script10221($component2, $comsubid4);
+		}
+	} else if ($key0 = ^key_escape) {
+		~script10210;
+	} else {
+		$string0 = ~add_to_inputstring(%varcstring1588, 2, $key0, $keychar1);
+		if (compare($string0, %varcstring1588) ! 0) {
+			%varcstring1588, %varcint1589 = $string0, clientclock;
+		}
+		if (cc_find($component2, $comsubid4) = true) {
+			~script10205;
+		}
+	}
+}

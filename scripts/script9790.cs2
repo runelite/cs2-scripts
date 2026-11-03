@@ -65,6 +65,9 @@ java.lang.IllegalStateException: Opcode 3229 in script 9790 not implemented
    sconst                 "or3"
    sconst                 "<col=ff3000>"
    3228                  
+   sconst                 "or4"
+   sconst                 "<col=ff981f>"
+   3228                  
    sconst                 "gr1"
    sconst                 "<col=c0ff00>"
    3228                  
@@ -85,9 +88,9 @@ java.lang.IllegalStateException: Opcode 3229 in script 9790 not implemented
    istore                 1
    invoke                 100
    iconst                 0
-   if_icmpeq              LABEL83
-   jump                   LABEL99
-LABEL83:
+   if_icmpeq              LABEL86
+   jump                   LABEL102
+LABEL86:
    sconst                 "ttip_list"
    sconst                 "<col=7f7f7f>"
    3228                  
@@ -103,8 +106,8 @@ LABEL83:
    sconst                 "farm_diseased"
    sconst                 "<col=003f00>"
    3228                  
-   jump                   LABEL114
-LABEL99:
+   jump                   LABEL117
+LABEL102:
    sconst                 "ttip_list"
    sconst                 "<col=adadad>"
    3228                  
@@ -120,12 +123,12 @@ LABEL99:
    sconst                 "farm_diseased"
    sconst                 "<col=ef1020>"
    3228                  
-LABEL114:
+LABEL117:
    invoke                 9335
    iconst                 1
-   if_icmpeq              LABEL118
-   jump                   LABEL187
-LABEL118:
+   if_icmpeq              LABEL121
+   jump                   LABEL193
+LABEL121:
    sconst                 "mes_hl_red"
    sconst                 "<col=ff3045>"
    3228                  
@@ -194,8 +197,11 @@ LABEL118:
    sconst                 "ach_comp"
    sconst                 "<col=0cc919>"
    3228                  
-   jump                   LABEL255
-LABEL187:
+   sconst                 "hcm_wf"
+   sconst                 "<col=a67c00>"
+   3228                  
+   jump                   LABEL264
+LABEL193:
    sconst                 "mes_hl_red"
    sconst                 "<col=e00a19>"
    3228                  
@@ -264,5 +270,8 @@ LABEL187:
    sconst                 "ach_comp"
    sconst                 "<col=06600c>"
    3228                  
-LABEL255:
+   sconst                 "hcm_wf"
+   sconst                 "<col=7a5b00>"
+   3228                  
+LABEL264:
    return                

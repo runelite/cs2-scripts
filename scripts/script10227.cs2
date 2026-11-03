@@ -1,0 +1,46 @@
+java.lang.IllegalStateException: Opcode 5103 in script 10227 not implemented
+
+.id                       10227
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 -1
+   istore                 0
+   iconst                 -1
+   istore                 1
+   sconst                 ""
+   ostore                 0
+   iconst                 -1
+   istore                 2
+   iconst                 0
+   istore                 3
+   iconst                 -1
+   istore                 4
+   iconst                 -1
+   istore                 5
+   5103                  
+   istore                 5
+   istore                 4
+   istore                 3
+   istore                 2
+   ostore                 0
+   istore                 1
+   istore                 0
+   iload                  0
+   iconst                 0
+   if_icmpne              LABEL26
+   jump                   LABEL33
+LABEL26:
+   iload                  0
+   iconst                 1
+   if_icmpne              LABEL30
+   jump                   LABEL33
+LABEL30:
+   iload                  4
+   iload                  5
+   invoke                 10231
+LABEL33:
+   iload                  0
+   return                
+   iconst                 0
+   return                
