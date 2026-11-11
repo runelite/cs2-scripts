@@ -13,7 +13,7 @@ def_int $int5 = 0;
 if ($graphic2 ! null) {
 	$int5 = calc(30 + 12);
 }
-cc_createchild(^iftype_text, ~script8363);
+cc_create_child(^iftype_text, ~script8363);
 cc_setsize($int5, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0xff981f);
@@ -26,7 +26,7 @@ def_string $string1 = "";
 def_string $string2 = "<col=0dc10d>Close</col>";
 def_string $string3 = "";
 if ($graphic2 ! null) {
-	cc_createsibling(^iftype_graphic, ~script8363);
+	cc_create_sibling(^iftype_graphic, ~script8363);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(30, 35, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic($graphic2);
@@ -34,7 +34,7 @@ if ($graphic2 ! null) {
 	if_setparam(param_2362, $int6, $component4, $int3, int);
 	$string1 = db_getfield($dbrow1, poll_filters:desc, 0);
 	if (string_length($string1) > 0) {
-		cc_createsibling(^iftype_rectangle, ~script8363);
+		cc_create_sibling(^iftype_rectangle, ~script8363);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(30, 35, ^setsize_abs, ^setsize_abs);
 		cc_setcolour(^white);

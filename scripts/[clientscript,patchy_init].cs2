@@ -101,14 +101,14 @@ while ($dbrow16 ! null) {
 		cc_setparam(param_2358, db_getfield($dbrow16, patchy_data:id, 0), int);
 		cc_setparam(param_2359, $int6, int);
 		cc_setparam(param_2360, calc($int6 + 1), int);
-		cc_createchild(^iftype_rectangle, $int6);
+		cc_create_child(^iftype_rectangle, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(255);
-		cc_createsibling(^iftype_text, $int6);
+		cc_create_sibling(^iftype_text, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(calc(70 + 10), 0, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
@@ -116,7 +116,7 @@ while ($dbrow16 ! null) {
 		cc_settextfont(q8_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		cc_createsibling(^iftype_model, $int6);
+		cc_create_sibling(^iftype_model, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(calc(70 - 10), calc(70 - 10), ^setsize_abs, ^setsize_abs);
 		cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);

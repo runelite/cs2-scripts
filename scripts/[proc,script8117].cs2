@@ -115,10 +115,10 @@ while ($int25 > 0) {
 	$int25 = calc($int25 - 1);
 	$int26 = 0;
 	if ($int27 = 1) {
-		cc_createchild(^iftype_graphic, $int1);
+		cc_create_child(^iftype_graphic, $int1);
 		$int27 = 0;
 	} else {
-		cc_createsibling(^iftype_graphic, $int1);
+		cc_create_sibling(^iftype_graphic, $int1);
 	}
 	if ($graphicarray0($int25) ! null) {
 		cc_setgraphic($graphicarray0($int25));

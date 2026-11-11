@@ -8,9 +8,9 @@ cc_setsize(calc($int2 * ($int3 + $int4)), $int3, ^setsize_abs, ^setsize_abs);
 def_int $int5 = 0;
 while ($int5 < $int2) {
 	if ($int5 = 0) {
-		cc_createchild(^iftype_graphic, ~script8302($component0));
+		cc_create_child(^iftype_graphic, ~script8302($component0));
 	} else {
-		cc_createsibling(^iftype_graphic, ~script8302($component0));
+		cc_create_sibling(^iftype_graphic, ~script8302($component0));
 	}
 	cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int5 * ($int3 + $int4)), 0, ^setpos_abs_left, ^setpos_abs_top);

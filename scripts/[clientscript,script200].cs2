@@ -1,0 +1,8 @@
+// 200
+[clientscript,script200](component $component0, component $component1)
+if (%misc_points_fish <= 0) {
+	return;
+}
+%misc_points_fish = calc(%misc_points_fish - 1);
+%if1 = calc(%if1 + 1);
+~script10317(%misc_points_fish, $component0, $component1);

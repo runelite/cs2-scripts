@@ -20,7 +20,7 @@ def_int $int25 = 0;
 if (cc_getid < 0) {
 	cc_create($component0, 0, $int1, false);
 } else {
-	cc_createchild(0, $int1);
+	cc_create_child(0, $int1);
 }
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -35,9 +35,9 @@ while ($int21 < $int12) {
 	$int20 = calc($int18 + scale(~sin_deg($int23), 100000, $int9));
 	$int25 = max(calc($int5 - $int21 * $int24), $int4);
 	if ($int21 = 0) {
-		cc_createchild(^iftype_model, $int1);
+		cc_create_child(^iftype_model, $int1);
 	} else {
-		cc_createsibling(^iftype_model, $int1);
+		cc_create_sibling(^iftype_model, $int1);
 	}
 	$int1 = calc($int1 + 1);
 	cc_setsize($int14, $int14, ^setsize_abs, ^setsize_abs);

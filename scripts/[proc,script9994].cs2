@@ -7,7 +7,7 @@ def_int $int5 = 0;
 if (cc_find($component0, $int1) = true) {
 	$int2 = cc_param(param_2668);
 	$int3 = cc_param(param_2667);
-	if (cc_findroot = ^true) {
+	if (cc_find_parent = true) {
 		$int4 = calc($int3 - cc_getheight);
 		$int5 = calc($int2 - cc_getwidth);
 	}
@@ -39,7 +39,7 @@ if (cc_find($component0, $int1) = true) {
 		cc_setsize(calc(cc_getx + $int8), calc(cc_gety + $int9), ^setsize_minus, ^setsize_minus);
 		.cc_setsize(calc(.cc_getx + $int8), calc(.cc_gety + $int9), ^setsize_minus, ^setsize_minus);
 	}
-	if (cc_find($component0, $int1) = true & .cc_find(cc_getlayer, cc_getid) = true & .cc_findroot = ^true) {
+	if (cc_find($component0, $int1) = true & .cc_find(cc_getlayer, cc_getid) = true & .cc_find_parent = true) {
 		cc_setsize(min(calc($int2 + $int8), .cc_getwidth), min(calc($int3 + $int9), .cc_getheight), ^setsize_abs, ^setsize_abs);
 	}
 	if (cc_find($component0, $comsubid6) = true & .cc_find(cc_getlayer, cc_parentid) = true) {

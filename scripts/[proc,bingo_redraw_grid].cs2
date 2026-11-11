@@ -98,22 +98,22 @@ while ($int18 < $int7) {
 	}
 	cc_setparam(param_2354, $string0, obj);
 	~script8131($int35, %varcint1261, $int18, $com_bingo_overlay_info5, $com_bingo_overlay_inner_overlay4, $com_bingo_overlay_tooltip3);
-	cc_createchild(^iftype_graphic, $int19);
+	cc_create_child(^iftype_graphic, $int19);
 	cc_setposition(calc(3 + ($int14 - 6 - $int38) / 2), calc(3 + ($int15 - 12 - $int38) / 2), ^setpos_abs_left, ^setpos_abs_top);
 	~script8115($int38, $graphic29, $obj30, $int24);
 	$int19 = calc($int19 + 1);
-	cc_createsibling(^iftype_rectangle, $int19);
+	cc_create_sibling(^iftype_rectangle, $int19);
 	cc_setsize(6, 7, ^setsize_minus, ^setsize_abs);
 	cc_setposition(3, 1, ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setcolour($colour34);
 	$int19 = calc($int19 + 1);
-	cc_createsibling(^iftype_rectangle, $int19);
+	cc_create_sibling(^iftype_rectangle, $int19);
 	cc_setsize(8, 5, ^setsize_minus, ^setsize_abs);
 	cc_setposition(4, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setcolour(^black);
 	cc_setfill(true);
 	$int19 = calc($int19 + 1);
-	cc_createsibling(^iftype_rectangle, $int19);
+	cc_create_sibling(^iftype_rectangle, $int19);
 	cc_setposition(5, 3, ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setsize(calc($int14 - 10), 3, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^black);
@@ -127,7 +127,7 @@ while ($int18 < $int7) {
 		cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
 	}
 	$int19 = calc($int19 + 1);
-	cc_createsibling(^iftype_text, $int19);
+	cc_create_sibling(^iftype_text, $int19);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
@@ -138,7 +138,7 @@ while ($int18 < $int7) {
 		cc_settext(tostring($int22));
 	}
 	$int19 = calc($int19 + 1);
-	cc_createsibling(^iftype_text, $int19);
+	cc_create_sibling(^iftype_text, $int19);
 	cc_setsize(6, 11, ^setsize_minus, ^setsize_minus);
 	cc_setposition(3, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
@@ -169,7 +169,7 @@ while ($int18 < $int7) {
 			17 = null
 		);
 		if ($int36 = 1 & cc_find($com_bingo_overlay_grid_tiles0, $comsubid37) = true) {
-			cc_createchild(^iftype_rectangle, $int19);
+			cc_create_child(^iftype_rectangle, $int19);
 			cc_setposition(4, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 			cc_setsize(calc($int14 - 8), 5, ^setsize_abs, ^setsize_abs);
 			cc_setfill(true);
@@ -236,7 +236,7 @@ cc_setop(1, "Toggle");
 def_boolean $boolean44 = ~flip_bool(%varcint1265);
 cc_setonop("bingo_show_rewards_op(event_com, event_comsubid, $boolean44, $com_bingo_overlay_grid_tiles0)");
 $int41 = calc(cc_gety + cc_getheight);
-cc_createchild(^iftype_text, $int19);
+cc_create_child(^iftype_text, $int19);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(b12_full);
@@ -265,7 +265,7 @@ if (%varcint1266 = 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($com_bingo_overlay_grid_buttons2, cc_getid, $com_bingo_overlay_tooltip3, $string0, 25, 512)");
 	cc_setop(1, "Press");
 	cc_setonop("script8146($com_bingo_overlay_inner_overlay4, $dbrow6, $com_bingo_overlay_tooltip3, $com_bingo_overlay_info5)");
-	cc_createchild(^iftype_text, $int19);
+	cc_create_child(^iftype_text, $int19);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);

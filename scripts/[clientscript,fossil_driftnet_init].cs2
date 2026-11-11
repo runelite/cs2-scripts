@@ -1,9 +1,49 @@
 // 2132
-[clientscript,fossil_driftnet_init](int $com_fossil_driftnet_universe0, component $com_fossil_driftnet_confirmation1, component $com_fossil_driftnet_message2, component $com_fossil_driftnet_bin3, component $com_fossil_driftnet_bank4, component $com_fossil_driftnet_inv5, component $com_fossil_driftnet_cancel6, component $com_fossil_driftnet_confirm_destroy7, component $com_fossil_driftnet_confirm_bank8)
+[clientscript,fossil_driftnet_init](int $com_fossil_driftnet_universe0, component $com_fossil_driftnet_confirmation1, component $com_fossil_driftnet_message2, component $com_fossil_driftnet_bin3, component $com_fossil_driftnet_bank4, component $com_fossil_driftnet_inv5, component $com_fossil_driftnet_cancel6, component $com_fossil_driftnet_confirm_destroy7, component $com_fossil_driftnet_confirm_bank8, component $com_fossil_driftnet_confirm_bank_dont_ask9)
 if_sethide(true, $com_fossil_driftnet_confirmation1);
 ~script2136($com_fossil_driftnet_cancel6, "Cancel", $com_fossil_driftnet_confirmation1);
 ~script2136($com_fossil_driftnet_confirm_destroy7, "Discard all", $com_fossil_driftnet_confirmation1);
 ~script2136($com_fossil_driftnet_confirm_bank8, "Bank all", $com_fossil_driftnet_confirmation1);
-~script2133($com_fossil_driftnet_bin3, "Discard all", "bankbuttons,6", "Are you sure you want to <col=ff0000>destroy</col><br>everything you've caught?", $com_fossil_driftnet_confirmation1, $com_fossil_driftnet_message2, $com_fossil_driftnet_confirm_destroy7, $com_fossil_driftnet_confirm_bank8);
-~script2133($com_fossil_driftnet_bank4, "Bank all", "bankbuttons,5", "Pay <tostring(5)> numulites to <col=ffffff>bank</col><br>everything you've caught?", $com_fossil_driftnet_confirmation1, $com_fossil_driftnet_message2, $com_fossil_driftnet_confirm_bank8, $com_fossil_driftnet_confirm_destroy7);
-~script2133($com_fossil_driftnet_inv5, "Take all", "bankbuttons,0", "", null, null, null, null);
+~script2136($com_fossil_driftnet_confirm_bank_dont_ask9, "Bank all, don't ask again", $com_fossil_driftnet_confirmation1);
+~script2133(
+	0 = $com_fossil_driftnet_bin3, 
+	1 = 0, 
+	2 = "Discard all", 
+	3 = "bankbuttons,6", 
+	4 = "Are you sure you want to <col=ff0000>destroy</col><br>everything you've caught?", 
+	5 = $com_fossil_driftnet_cancel6, 
+	6 = $com_fossil_driftnet_confirmation1, 
+	7 = $com_fossil_driftnet_message2, 
+	8 = $com_fossil_driftnet_confirm_destroy7, 
+	9 = null, 
+	10 = $com_fossil_driftnet_confirm_bank8, 
+	11 = $com_fossil_driftnet_confirm_bank_dont_ask9
+);
+~script2133(
+	0 = $com_fossil_driftnet_bank4, 
+	1 = 1, 
+	2 = "Bank all", 
+	3 = "bankbuttons,5", 
+	4 = "Pay <tostring(5)> numulites to <col=ffffff>bank</col><br>everything you've caught?", 
+	5 = $com_fossil_driftnet_cancel6, 
+	6 = $com_fossil_driftnet_confirmation1, 
+	7 = $com_fossil_driftnet_message2, 
+	8 = $com_fossil_driftnet_confirm_bank8, 
+	9 = $com_fossil_driftnet_confirm_bank_dont_ask9, 
+	10 = $com_fossil_driftnet_confirm_destroy7, 
+	11 = null
+);
+~script2133(
+	0 = $com_fossil_driftnet_inv5, 
+	1 = 0, 
+	2 = "Take all", 
+	3 = "bankbuttons,0", 
+	4 = "", 
+	5 = $com_fossil_driftnet_cancel6, 
+	6 = null, 
+	7 = null, 
+	8 = null, 
+	9 = null, 
+	10 = null, 
+	11 = null
+);

@@ -1,34 +1,74 @@
 // 2134
-[clientscript,script2134](int $opindex0, component $component1, string $string0, graphic $graphic2, string $string1, component $component3, component $component4, component $component5, component $component6)
-def_int $comsubid7 = 0;
+[clientscript,script2134](int $opindex0, component $component1, int $int2, string $string0, graphic $graphic3, string $string1, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+def_int $comsubid11 = 0;
 if ($opindex0 = 1) {
 	sound_synth(interface_select1, 1, 0);
 	cc_deleteall($component1);
-	$comsubid7 = ~options_button_on($component1, 0);
-	.cc_create($component1, ^iftype_graphic, $comsubid7, false);
+	$comsubid11 = ~options_button_on($component1, 0);
+	.cc_create($component1, ^iftype_graphic, $comsubid11, false);
 	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	.cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
-	.cc_setgraphic($graphic2);
+	.cc_setgraphic($graphic3);
 	.cc_settrans(0);
+	if ($int2 = 1 & %fossil_driftnet_confirm_skip = 1) {
+		if_triggerop($component7, -1, 1);
+		if_setontimer("script2135(
+			0 = calc(clientclock + 20), 
+			1 = $component1, 
+			2 = $int2, 
+			3 = $string0, 
+			4 = $graphic3, 
+			5 = $string1, 
+			6 = $component4, 
+			7 = $component5, 
+			8 = $component6, 
+			9 = $component7, 
+			10 = $component8, 
+			11 = $component9, 
+			12 = $component9
+		)", $component1);
+		return;
+	}
 	if_clearops($component1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
 	if_setonop(null, $component1);
-	if ($component3 ! null & $component4 ! null & $component5 ! null & $component6 ! null) {
-		if_sethide(false, $component3);
-		if_settext($string1, $component4);
+	if ($component5 ! null & $component6 ! null) {
 		if_sethide(false, $component5);
-		if_sethide(true, $component6);
+		if_settext($string1, $component6);
+		if ($component7 ! null) {
+			if_sethide(false, $component7);
+		}
+		if ($component8 ! null) {
+			if_sethide(false, $component8);
+		}
+		if ($component9 ! null) {
+			if_sethide(true, $component9);
+		}
+		if ($component10 ! null) {
+			if_sethide(true, $component10);
+		}
+	}
+	if ($component4 ! null) {
+		if ($int2 = 1) {
+			if_setposition(130, 130, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+		} else {
+			if_setposition(80, 130, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+		}
 	}
 	if_setontimer("script2135(
 		0 = calc(clientclock + 20), 
 		1 = $component1, 
-		2 = $string0, 
-		3 = $graphic2, 
-		4 = $string1, 
-		5 = $component3, 
+		2 = $int2, 
+		3 = $string0, 
+		4 = $graphic3, 
+		5 = $string1, 
 		6 = $component4, 
 		7 = $component5, 
-		8 = $component6
+		8 = $component6, 
+		9 = $component7, 
+		10 = $component8, 
+		11 = $component9, 
+		12 = $component9
 	)", $component1);
 }

@@ -17,9 +17,48 @@ while ($int17 < $int18) {
 ~bank_depositbox_update($com_bank_depositbox_inventory4, $com_bank_depositbox_item_background5);
 if_setoninvtransmit("bank_depositbox_update($com_bank_depositbox_inventory4, $com_bank_depositbox_item_background5){inv}", $com_bank_depositbox_inventory4);
 if_setonvartransmit("bank_depositbox_update($com_bank_depositbox_inventory4, $com_bank_depositbox_item_background5){if1, if2, if3, if4, prayer23, depositbox_requestedquantity, item_redemption, bank_locked_slots}", $com_bank_depositbox_inventory4);
-~script2133($com_bank_depositbox_deposit_inv6, "Deposit inventory", "bankbuttons,0", "", null, null, null, null);
-~script2133($com_bank_depositbox_deposit_worn7, "Deposit worn items", "bankbuttons,1", "", null, null, null, null);
-~script2133($com_bank_depositbox_deposit_lootingbag8, "Empty containers", "bankbuttons,3", "", null, null, null, null);
+~script2133(
+	0 = $com_bank_depositbox_deposit_inv6, 
+	1 = 0, 
+	2 = "Deposit inventory", 
+	3 = "bankbuttons,0", 
+	4 = "", 
+	5 = null, 
+	6 = null, 
+	7 = null, 
+	8 = null, 
+	9 = null, 
+	10 = null, 
+	11 = null
+);
+~script2133(
+	0 = $com_bank_depositbox_deposit_worn7, 
+	1 = 0, 
+	2 = "Deposit worn items", 
+	3 = "bankbuttons,1", 
+	4 = "", 
+	5 = null, 
+	6 = null, 
+	7 = null, 
+	8 = null, 
+	9 = null, 
+	10 = null, 
+	11 = null
+);
+~script2133(
+	0 = $com_bank_depositbox_deposit_lootingbag8, 
+	1 = 0, 
+	2 = "Empty containers", 
+	3 = "bankbuttons,3", 
+	4 = "", 
+	5 = null, 
+	6 = null, 
+	7 = null, 
+	8 = null, 
+	9 = null, 
+	10 = null, 
+	11 = null
+);
 ~script9334;
 ~script6478($com_bank_depositbox_lock_menu9, 0);
 if_setop(1, "Deposit Lock Settings", $com_bank_depositbox_lock_menu9);

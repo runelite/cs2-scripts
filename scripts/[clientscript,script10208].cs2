@@ -1,7 +1,7 @@
 // 10208
 [clientscript,script10208](int $key0, char $keychar1, component $component2, int $comsubid3, int $comsubid4, component $component5)
 def_string $string0 = "";
-if (%varcint1592 > 0 & enum(int, boolean, enum_2730, if_param(param_2357, $component5, -1)) = true & %varcint435 = true & ~keypress_permit(null, displayname_menu) = 1) {
+if (%varcint1592 > 0 & enum(int, boolean, enum_2730, if_param(param_2357, $component5, -1)) = true & %varcint435 = 1 & ~keypress_permit(null, displayname_menu) = 1) {
 	if ($key0 = ^key_return) {
 		if (%varcint1589 > %varcint1590) {
 			sound_synth(interface_select1, 1, 0);

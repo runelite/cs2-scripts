@@ -1,0 +1,11 @@
+// 1681
+[clientscript,script1681](component $component0, component $component1)
+if (~script10318 = 0) {
+	return;
+}
+if (%misc_points_rarewood <= 0) {
+	return;
+}
+%misc_points_rarewood = calc(%misc_points_rarewood - 1);
+%if1 = calc(%if1 + 1);
+~script10317(%misc_points_rarewood, $component0, $component1);

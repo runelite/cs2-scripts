@@ -7,7 +7,7 @@ if (db_getrowtable($dbrow0) ! ui_highlighting_style_border) {
 def_int $int7 = max(1, db_getfield($dbrow0, ui_highlighting_style_border:width, 0));
 def_int $int8 = db_getfield($dbrow0, ui_highlighting_style_border:padding, 0);
 def_anyobj $anyobj0 = ~script8491($component1, calc(1 + $int7));
-cc_createchild(0, $comsubidarray0(0));
+cc_create_child(0, $comsubidarray0(0));
 def_int $int9 = calc($int7 * 2 + $int8 * 2);
 ~ui_highlight_set_size_pos_to_target($int9, $int9, 0, 0);
 cc_setontimer("ui_highlight_set_size_pos_to_target(cc_getlayer, cc_getid, $component3, $comsubid4, $int9, $int9, 0, 0)");
@@ -17,9 +17,9 @@ def_int $int12 = db_getfieldcount($dbrow0, ui_highlighting_style_border:fx);
 def_int $int13 = 0;
 while ($int13 < $int7) {
 	if ($int13 = 0) {
-		cc_createchild(^iftype_rectangle, $comsubidarray0(calc($int13 + 1)));
+		cc_create_child(^iftype_rectangle, $comsubidarray0(calc($int13 + 1)));
 	} else {
-		cc_createsibling(^iftype_rectangle, $comsubidarray0(calc($int13 + 1)));
+		cc_create_sibling(^iftype_rectangle, $comsubidarray0(calc($int13 + 1)));
 	}
 	cc_setsize(calc($int13 * 2), calc($int13 * 2), ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

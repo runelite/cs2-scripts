@@ -22,7 +22,7 @@ if (cc_find($component0, $int1) = true) {
 	$int6 = cc_param(param_2668);
 	$int7 = calc(cc_param(param_2667) + $int8 * $int2);
 	cc_setparam(param_2667, $int7, int);
-	if ((calc($int3 & 2)) ! 0 & cc_findroot = ^true) {
+	if ((calc($int3 & 2)) ! 0 & cc_find_parent = true) {
 		cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
 	}
 	if (cc_find_param($component0, param_2666, $int1, param_2678, 8) = true & cc_find_param($component0, param_2666, $int1, param_2678, 9) = true) {
@@ -32,9 +32,9 @@ if (cc_find($component0, $int1) = true) {
 		while ($int13 < $int2) {
 			$int12 = calc($int10 + $int13);
 			if ($int13 = 0) {
-				cc_createchild(0, ~script8302($component0));
+				cc_create_child(0, ~script8302($component0));
 			} else {
-				cc_createsibling(0, ~script8302($component0));
+				cc_create_sibling(0, ~script8302($component0));
 			}
 			cc_setparam(param_2666, $int1, int);
 			cc_setparam(param_2676, $int12, int);
@@ -44,9 +44,9 @@ if (cc_find($component0, $int1) = true) {
 			$int14 = 0;
 			while ($int14 < $int11) {
 				if ($int13 = 0 & $int14 = 0) {
-					.cc_createchild(0, ~script8302($component0));
+					.cc_create_child(0, ~script8302($component0));
 				} else {
-					.cc_createsibling(0, ~script8302($component0));
+					.cc_create_sibling(0, ~script8302($component0));
 				}
 				.cc_setparam(param_2676, $int12, int);
 				.cc_setparam(param_2677, $int14, int);
@@ -67,9 +67,9 @@ if (cc_find($component0, $int1) = true) {
 		while ($int13 < $int2) {
 			$int12 = calc($int10 + $int13);
 			if ($int13 = 0) {
-				cc_createchild(^iftype_rectangle, ~script8302($component0));
+				cc_create_child(^iftype_rectangle, ~script8302($component0));
 			} else {
-				cc_createsibling(^iftype_rectangle, ~script8302($component0));
+				cc_create_sibling(^iftype_rectangle, ~script8302($component0));
 			}
 			cc_setparam(param_2666, $int1, int);
 			cc_setparam(param_2676, $int12, int);

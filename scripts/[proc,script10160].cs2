@@ -13,17 +13,17 @@ if (~on_mobile = true) {
 } else {
 	cc_setposition(0, 1, ^setpos_abs_left, ^setpos_abs_bottom);
 }
-cc_createchild(^iftype_rectangle, ~script8302($component0));
+cc_create_child(^iftype_rectangle, ~script8302($component0));
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(false);
 cc_setcolour($colour11);
-cc_createsibling(^iftype_rectangle, ~script8302($component0));
+cc_create_sibling(^iftype_rectangle, ~script8302($component0));
 cc_setsize(calc($int8 * 2), calc($int8 * 2), ^setsize_minus, ^setsize_minus);
 cc_setposition($int8, $int8, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(0x4c4338);
-cc_createsibling(^iftype_rectangle, ~script8302($component0));
+cc_create_sibling(^iftype_rectangle, ~script8302($component0));
 cc_setsize(calc($int8 * 2), calc($int8 * 2), ^setsize_minus, ^setsize_minus);
 cc_setsize(interpolate(0, cc_getwidth, 0, $int2, $int1), cc_getheight, ^setsize_abs, ^setsize_abs);
 cc_setposition($int8, $int8, ^setpos_abs_left, ^setpos_abs_top);
@@ -44,7 +44,7 @@ cc_setcolour($colour12);
 def_int $int13 = calc(($int9 - $int4 + 1) / $int4);
 def_int $int14 = 1;
 while ($int14 <= $int4) {
-	cc_createsibling(^iftype_rectangle, ~script8302($component0));
+	cc_create_sibling(^iftype_rectangle, ~script8302($component0));
 	cc_setposition(calc($int14 * $int13 + $int14), 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
 	cc_setfill(true);
