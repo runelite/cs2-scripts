@@ -13,7 +13,7 @@ def_int $comsubid7 = ~v2_stone_button($component1);
 cc_create($component1, ^iftype_text, $comsubid7, false);
 if_setop(1, $string1, $component1);
 if_setopbase("<col=ff981f>Claim</col>", $component1);
-if ($boolean6 = 0) {
+if ($boolean6 = false) {
 	if_setonmouseleave("colosseum_button_hover($component1, 0, $string1, $colour5)", $component1);
 	if_setonmouserepeat("colosseum_button_hover($component1, 1, $string1, $colour5)", $component1);
 }
@@ -37,7 +37,7 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string1, $component2);
 if_setopbase("<col=ff981f>Claim</col>", $component2);
-if ($boolean6 = 0) {
+if ($boolean6 = false) {
 	if_setonmouseleave("colosseum_button_hover($component2, 0, $string1, $colour5)", $component2);
 	if_setonmouserepeat("colosseum_button_hover($component2, 1, $string1, $colour5)", $component2);
 }

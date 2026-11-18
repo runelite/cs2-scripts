@@ -1,6 +1,6 @@
 // 2264
 [proc,worldmap_mobile_layout]
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	return;
 }
 if_setposition(6, 6, ^setpos_abs_right, ^setpos_abs_bottom, worldmap:map_container);

@@ -10,7 +10,7 @@ $int7 = ~script3952($component1, 0, $int2, if_getwidth($component0), $int4, $str
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settext($string0);
-if (string_length($string1) > 0 & ~on_mobile = 0) {
+if (string_length($string1) > 0 & ~on_mobile = false) {
 	cc_setonmouseover("cc_colour_swapper($component0, $int6, ^white)");
 	cc_setonmouseleave("cc_colour_swapper($component0, $int6, 0xff9933)");
 }

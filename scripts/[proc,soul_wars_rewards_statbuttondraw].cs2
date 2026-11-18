@@ -45,7 +45,7 @@ if ($int9 = $int4) {
 	cc_setonmouseleave(null);
 } else {
 	cc_setcolour(0xff981f);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0xfffc00)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xff981f)");
 	}

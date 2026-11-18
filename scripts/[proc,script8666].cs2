@@ -28,7 +28,7 @@ if ($int8 = 0) {
 	$int15 = max($int6, min(%varcint1309, calc($int6 + $int7 - $int13)));
 	if_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top, $component1);
 	if_setsize($int12, $int13, ^setsize_abs, ^setsize_abs, $component1);
-} else if ($boolean9 = 0) {
+} else if ($boolean9 = false) {
 	$int13 = calc(if_getheight($component0) - 12);
 	if (calc($int13 % 2) ! 0) {
 		$int13 = calc($int13 - 1);

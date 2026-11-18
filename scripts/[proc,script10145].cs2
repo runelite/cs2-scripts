@@ -1,6 +1,6 @@
 // 10145
 [proc,script10145](string $string0)
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	cc_setop(1, $string0);
 	cc_setonop("script10146(event_com, event_comsubid, tfa_stats:tooltip, $string0, 512)");
 } else {

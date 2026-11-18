@@ -67,7 +67,7 @@ def_int $int25 = calc(1 + ($int24 - %current_runeday));
 def_graphic $graphic26 = p12_full;
 def_fontmetrics $fontmetrics27 = p12_full;
 def_int $int28 = ~on_ios;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$graphic26, $fontmetrics27 = p12_full, p12_full;
 }
 if ($int25 < 1) {
@@ -116,7 +116,7 @@ while ($int29 < enum_getoutputcount($enum20)) {
 		cc_settextshadow(true);
 		cc_setcolour($colour18);
 		cc_setsize(calc($int35 - 10), $int39, ^setsize_abs, ^setsize_abs);
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			cc_setonmouseover("league_info_mouseover($com_league_info_league_general_content4, $int30)");
 			cc_setonmouseleave("league_info_mouseleave($com_league_info_league_general_content4, $int30, $colour18)");
 		}
@@ -185,7 +185,7 @@ while ($int29 < enum_getoutputcount($enum22)) {
 		cc_setcolour($colour18);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setsize(calc($int36 - 10), $int39, ^setsize_abs, ^setsize_abs);
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			cc_setonmouseover("league_info_mouseover($com_league_info_league_specific_content5, $int30)");
 			cc_setonmouseleave("league_info_mouseleave($com_league_info_league_specific_content5, $int30, $colour18)");
 		}

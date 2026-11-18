@@ -1,6 +1,6 @@
 // 4240
 [proc,script4240](component $component0, int $int1, int $int2, int $int3, int $int4)
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("clan_members_filter_hover(1, event_com, $int1, $int2, $int3)", $component0);
 }
 if_setonmouseleave("clan_members_filter_hover(0, event_com, $int1, $int2, $int3)", $component0);

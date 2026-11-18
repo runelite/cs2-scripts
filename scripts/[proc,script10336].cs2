@@ -3,7 +3,7 @@
 if_setonvartransmit("script10338($com_quest_rating_toggle0, $com_quest_rating_toggle_text1, $com_quest_rating_toggle_icon2, 0){questlist}", $com_quest_rating_toggle0);
 if_setonop("script10337($com_quest_rating_toggle0, $com_quest_rating_toggle_text1, $com_quest_rating_toggle_icon2)", $com_quest_rating_toggle0);
 ~script10339($com_quest_rating_toggle0, $com_quest_rating_toggle_text1, $com_quest_rating_toggle_icon2, 0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("script10338($com_quest_rating_toggle0, $com_quest_rating_toggle_text1, $com_quest_rating_toggle_icon2, 1)", $com_quest_rating_toggle0);
 	if_setonmouseleave("script10338($com_quest_rating_toggle0, $com_quest_rating_toggle_text1, $com_quest_rating_toggle_icon2, 0)", $com_quest_rating_toggle0);
 }

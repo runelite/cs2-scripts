@@ -8,7 +8,7 @@ if (cc_find($component0, $int1) = true) {
 	cc_setcolour($int2);
 	cc_settrans($int3);
 }
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("xpdrops_setup_skilllist_mouseover(event_com, $int1, $int4, $int5)", $component0);
 }
 if_setonmouseleave("xpdrops_setup_skilllist_mouseover(event_com, $int1, $int2, $int3)", $component0);

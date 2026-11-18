@@ -1,6 +1,6 @@
 // 4963
 [proc,script4963](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("colosseum_modifier_hover(1, event_com, $int1, $int2, $int3, $int4)", $component0);
 }
 if_setonmouseleave("colosseum_modifier_hover(0, event_com, $int1, $int2, $int3, $int4)", $component0);

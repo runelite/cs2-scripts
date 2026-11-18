@@ -6,7 +6,7 @@ if_setop(1, "Useful Links", account:links_tab);
 if_setonop("account_switch_tab(0)", account:account_tab);
 if_setonop("account_switch_tab(1)", account:community_tab);
 if_setonop("account_switch_tab(2)", account:links_tab);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	return;
 }
 if_setonmouserepeat("account_tab_highlight(account:tab_1_1, account:tab_1_2, account:tab_1_3, account:tab_1_1_backing, account:tab_1_2_backing, account:tab_1_3_backing, 0)", account:account_tab);

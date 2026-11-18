@@ -102,7 +102,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 		if (cc_find($component0, $int1) = true) {
 			cc_settrans(245);
 		}
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			.cc_setonmouserepeat("gim_options_buttonhover(1, event_com, event_comsubid, $int1, 245, 225)");
 		}
 		.cc_setonmouseleave("gim_options_buttonhover(0, event_com, event_comsubid, $int1, 245, 225)");

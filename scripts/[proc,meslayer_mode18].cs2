@@ -9,6 +9,6 @@ if_settext("Show players whose names contain the following text:", chatbox:mes_t
 def_string $string0 = "";
 if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string0)", chatbox:mes_text2);
 if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 10);
 }

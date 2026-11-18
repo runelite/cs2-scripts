@@ -28,7 +28,7 @@ if (%player_design_bodytype = $int2) {
 } else {
 	if_setop(1, removetags($string0), $component0);
 }
-if (~on_mobile = 0 & %player_design_bodytype ! $int2) {
+if (~on_mobile = false & %player_design_bodytype ! $int2) {
 	if_setonmouseleave("player_design_button_hover($component0, 0, $string0, false)", $component0);
 	if_setonmouserepeat("player_design_button_hover($component0, 1, $string0, false)", $component0);
 } else {

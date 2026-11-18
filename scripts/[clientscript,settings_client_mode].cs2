@@ -1,6 +1,6 @@
 // 3998
 [clientscript,settings_client_mode](int $int0)
-if (~on_mobile = 1 & $int0 = 0) {
+if (~on_mobile = true & $int0 = 0) {
 	return;
 }
 def_int $windowmode1 = getwindowmode;

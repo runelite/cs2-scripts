@@ -14,7 +14,7 @@ if_setgraphic($graphic1, boardgames_runelink_options:lawrune_radio);
 if_setgraphic($graphic1, boardgames_runelink_options:cosmicrune_radio);
 if_setgraphic($graphic1, boardgames_runelink_options:bloodrune_radio);
 if_setgraphic($graphic1, boardgames_runelink_options:soulrune_radio);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("settrans(boardgames_runelink_options:firerune_radio, 127)", boardgames_runelink_options:firerune);
 	if_setonmouseleave("settrans(boardgames_runelink_options:firerune_radio, 0)", boardgames_runelink_options:firerune);
 	if_setonmouserepeat("settrans(boardgames_runelink_options:waterrune_radio, 127)", boardgames_runelink_options:waterrune);

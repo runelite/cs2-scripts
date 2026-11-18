@@ -54,7 +54,7 @@ while ($int11 < $int12) {
 	$int6 = calc($int6 + 1);
 	cc_setop(1, "Select <col=ff9040><struct_param($struct15, param_1055)>");
 	cc_setonop("gnome_show_ingredients($com_aluft_cooking_ingredients2, $struct15, $com_aluft_cooking_aluft_balck_rect3)");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper($com_aluft_cooking_cuisine0, calc($int5 - 1), ^white)");
 		if ($int16 = 1) {
 			cc_setonmouseleave("cc_colour_swapper($com_aluft_cooking_cuisine0, calc($int5 - 1), ^green)");

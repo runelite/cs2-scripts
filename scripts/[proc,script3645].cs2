@@ -1,6 +1,6 @@
 // 3645
 [proc,script3645]()(int)
-if (~on_mobile = 0 & ~on_enhanced_desktop = 0) {
+if (~on_mobile = false & ~on_enhanced_desktop = 0) {
 	return(4);
 }
 def_int $int0 = deviceoption_get(^deviceoption_fps_limit);

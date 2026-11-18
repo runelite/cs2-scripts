@@ -86,7 +86,7 @@ def_int $int12 = calc($int11 / $int3);
 def_int $int13 = calc($int11 - $int12 * $int3);
 def_int $int14 = 0;
 if ($int2 = 0) {
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		while ($int14 < $int3) {
 			cc_create(chatbox:chat_background, ^iftype_rectangle, $int14, false);
 			if ($int14 = calc($int3 - 1)) {
@@ -137,7 +137,7 @@ if ($int2 = 0) {
 }
 def_int $int15 = 235;
 def_int $int16 = 180;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int15 = 200;
 	$int16 = 130;
 }
@@ -155,7 +155,7 @@ if (~on_mobile = 1) {
 );
 if ($boolean0 = true) {
 	if_settrans(255, chatbox:controls_background_graphic);
-} else if (~on_mobile = 0) {
+} else if (~on_mobile = false) {
 	if_settrans(155, chatbox:controls_background_graphic);
 } else {
 	if_settrans(255, chatbox:controls_background_graphic);

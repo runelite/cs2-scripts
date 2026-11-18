@@ -15,7 +15,7 @@ cc_deleteall($component1);
 if (%giants_foundry_mould_selected_ricasso ! 0 | %giants_foundry_mould_selected_blade ! 0 | %giants_foundry_mould_selected_tip ! 0) {
 	~v2_stone_button($component0);
 	if_setcolour(0xff981f, $component2);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseover("v2_stone_button_in(event_com)", $component0);
 		if_setonmouseleave("v2_stone_button(event_com)", $component0);
 	}
@@ -34,7 +34,7 @@ if (%giants_foundry_mould_selected_ricasso ! 0 | %giants_foundry_mould_selected_
 if (%giants_foundry_mould_selected_ricasso ! 0 & %giants_foundry_mould_selected_blade ! 0 & %giants_foundry_mould_selected_tip ! 0) {
 	~v2_stone_button($component1);
 	if_setcolour(0xff981f, $component3);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseover("v2_stone_button_in(event_com)", $component1);
 		if_setonmouseleave("v2_stone_button(event_com)", $component1);
 	}

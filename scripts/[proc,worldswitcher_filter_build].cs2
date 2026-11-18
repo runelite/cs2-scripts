@@ -6,7 +6,7 @@ if ($enum7 = null) {
 	return;
 }
 def_int $int8 = 21;
-if ($boolean5 = 1) {
+if ($boolean5 = true) {
 	$int8 = 29;
 }
 def_int $int9 = enum_getoutputcount($enum7);
@@ -22,7 +22,7 @@ while ($int10 < $int9) {
 		cc_setontimer("worldswitcher_filter_endhighlight(calc(clientclock + 50), event_com, event_comsubid, 255, 225, $boolean5)");
 	} else {
 		cc_settrans(255);
-		if ($boolean5 = 0) {
+		if ($boolean5 = false) {
 			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 		}

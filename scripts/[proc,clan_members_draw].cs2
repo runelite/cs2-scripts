@@ -44,7 +44,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 	$int10 = 0;
 	$int11 = activeclansettings_getaffinedcount;
 	if ($int11 > 0) {
-		if (~on_mobile = 1) {
+		if (~on_mobile = true) {
 			$int12 = 35;
 		}
 		$int13 = calc(($int12 - 13) / 2);

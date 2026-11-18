@@ -7,7 +7,7 @@ if (%account_messages = 1) {
 } else {
 	if_settext("You have<br>0 unread<br>messages in<br>your inbox.", $com_welcome_screen_messages1);
 }
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("comp_sethide(false, $com_welcome_screen_messages_highlight2)", $com_welcome_screen_messages_area0);
 	if_setonmouseleave("comp_sethide(true, $com_welcome_screen_messages_highlight2)", $com_welcome_screen_messages_area0);
 }

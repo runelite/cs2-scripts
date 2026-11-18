@@ -9,7 +9,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("settings_button_repeat($com_settings_side_settings_open0, $com_settings_side_tooltip1)", $com_settings_side_settings_open0);
 	if_setonmouseleave("settings_button_leave($com_settings_side_settings_open0, $com_settings_side_tooltip1)", $com_settings_side_settings_open0);
 }

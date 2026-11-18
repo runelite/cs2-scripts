@@ -2,7 +2,7 @@
 [proc,poh_bookcase_indicate](boolean $boolean0, component $component1)
 if (~poh_bookcase_getbit(cc_getid) = 1) {
 	cc_settrans(70);
-	if ($boolean0 = 1) {
+	if ($boolean0 = true) {
 		cc_setonmouserepeat(null);
 		cc_setonmouseleave(null);
 	} else {

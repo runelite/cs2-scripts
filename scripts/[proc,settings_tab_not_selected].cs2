@@ -3,7 +3,7 @@
 def_string $string0 = struct_param($struct5, param_744);
 def_int $int21 = paraheight($string0, calc(if_getwidth($component3) - 8), p12_full);
 def_int $int22 = calc($int21 * 14 + 4);
-if (~on_mobile = 1 & $int22 < 22) {
+if (~on_mobile = true & $int22 < 22) {
 	$int22 = 22;
 }
 def_int $int23 = calc($int22 + 4 + $int2);
@@ -88,7 +88,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	.cc_setonmouseover("cc_colour_swapper($component3, $int0, ^white)");
 	.cc_setonmouseleave("cc_colour_swapper($component3, $int0, 0xff981f)");
 }

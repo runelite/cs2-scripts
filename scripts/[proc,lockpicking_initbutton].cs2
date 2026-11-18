@@ -1,7 +1,7 @@
 // 6997
 [proc,lockpicking_initbutton](component $component0, graphic $graphic1, string $string0)
 ~lockpicking_setbutton($component0, $graphic1, $string0, 0, 0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("lockpicking_setbutton(event_com, $graphic1, $string0, 1)", $component0);
 }
 if_setonmouseleave("lockpicking_setbutton(event_com, $graphic1, $string0, 0)", $component0);

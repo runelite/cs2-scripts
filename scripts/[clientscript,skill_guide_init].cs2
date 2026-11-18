@@ -3,7 +3,7 @@
 if_setopkey(1, ^key_escape, 0, $com_skill_guide_close3);
 def_enum $enum4 = ~toplevel_getcomponents;
 def_component $component5 = enum(component, component, $enum4, toplevel_osrs_stretch:mainmodal);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setontimer("script7923($com_skill_guide_infinity1, $com_skill_guide_window0, 0)", $com_skill_guide_infinity1);
 } else {
 	if (%varcint1170 < 0 | %varcint1171 < 0 | %varcint1168 <= 0 | %varcint1169 <= 0) {

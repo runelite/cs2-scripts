@@ -42,7 +42,7 @@ cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
 if_setop(1, "Show<col=ff9040> Paths", $com_adventurepath_side_path_name0);
 if_setonop("button_select_sound", $com_adventurepath_side_path_name0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($com_adventurepath_side_path_name0, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($com_adventurepath_side_path_name0, cc_getid, 0xff981f)");
 }
@@ -61,7 +61,7 @@ cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
 if_setop(1, "Show<col=ff9040> Task information", $com_adventurepath_side_task_name2);
 if_setonop("button_select_sound", $com_adventurepath_side_task_name2);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($com_adventurepath_side_task_name2, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($com_adventurepath_side_task_name2, cc_getid, 0xff981f)");
 }
@@ -80,7 +80,7 @@ cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 if_setop(1, "Show<col=ff9040> Task information", $com_adventurepath_side_task_description3);
 if_setonop("button_select_sound", $com_adventurepath_side_task_description3);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($com_adventurepath_side_task_description3, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($com_adventurepath_side_task_description3, cc_getid, 0xff981f)");
 }

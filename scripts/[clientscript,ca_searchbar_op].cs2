@@ -4,7 +4,7 @@ if (%ca_bosses_is_searching = 1) {
 	return;
 }
 ~ca_boss_enable_search;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 50);
 }
 ~ca_searchbar_setup_op($component0, $component1, $component2, 1);

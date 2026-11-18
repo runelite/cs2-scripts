@@ -28,7 +28,7 @@ if ($int1 = 1) {
 } else {
 	cc_setop(1, "Expand");
 }
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouserepeat("cr_ui_list_entry_set_hovered(1, $int1, $int0, $comsubid5, $comsubid6, $component7)");
 	cc_setonmouseleave("cr_ui_list_entry_set_hovered(0, $int1, $int0, $comsubid5, $comsubid6, $component7)");
 }

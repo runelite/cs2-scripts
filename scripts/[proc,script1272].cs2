@@ -36,14 +36,14 @@ cc_settextfont(p12_full);
 cc_settext($string0);
 if ($int3 > 0) {
 	cc_setcolour(0xff981f);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseover("cc_colour_swapper(event_com, $int5, ^white)", $component0);
 		if_setonmouseleave("cc_colour_swapper(event_com, $int5, 0xff981f)", $component0);
 	}
 	if_setonop("script1273(event_op, $component0, $component1)", $component0);
 } else {
 	cc_setcolour(0x8f8f8f);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseover(null, $component0);
 		if_setonmouseleave(null, $component0);
 	}
@@ -73,7 +73,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p12_full);
 cc_settext($string0);
 cc_setcolour(0xff981f);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("cc_colour_swapper(event_com, $int5, ^white)", $component1);
 	if_setonmouseleave("cc_colour_swapper(event_com, $int5, 0xff981f)", $component1);
 }

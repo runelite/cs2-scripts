@@ -20,7 +20,7 @@ switch_int (%varclansetting33) {
 		$int7, $int8 = ~clan_permission_get(kick_from_chat_2955), ~clan_permission_get(ban_from_chat_2956);
 }
 def_int $int13 = 15;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int13 = scale(8, 5, $int13);
 }
 def_int $int14 = calc(($int13 - 13) / 2);

@@ -124,7 +124,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour($colour1);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("cc_colour_swapper($component0, 9, $colour1)", $component0);
 	if_setonmouserepeat("cc_colour_swapper($component0, 9, $colour2)", $component0);
 }

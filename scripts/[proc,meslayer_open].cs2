@@ -3,7 +3,7 @@
 ~meslayer_close(true, false, false);
 %varcint5 = $int0;
 if_sethide(false, chatbox:mes_layer);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 	if_sethide(false, chatbox:mes_layer_close);
 	switch_int ($int0) {

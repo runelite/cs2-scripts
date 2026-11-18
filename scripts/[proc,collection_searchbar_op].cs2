@@ -7,7 +7,7 @@ if (%floater_is_searching = 1) {
 ~chatdefault_stopinput;
 %floater_is_searching = 1;
 %floater_search_listen_for_keyboard = 1;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 50);
 }
 ~collection_searchbar_setup_op(1, $int0, $int1);

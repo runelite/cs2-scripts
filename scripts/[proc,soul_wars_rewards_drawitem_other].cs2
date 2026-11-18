@@ -128,7 +128,7 @@ if ($int12 = $int0 & $int1 = 0) {
 	.cc_setonmouseleave(null);
 } else {
 	cc_setcolour($colour18);
-	if (%soul_wars_zeal_tokens >= $int20 | string_length(~soul_wars_rewards_metrequirements($namedobj15)) > 0 & ~on_mobile = 0) {
+	if (%soul_wars_zeal_tokens >= $int20 | string_length(~soul_wars_rewards_metrequirements($namedobj15)) > 0 & ~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour18)");
 		.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
@@ -182,7 +182,7 @@ if ($int12 = $int0 & $int1 = 1) {
 	cc_setonmouseleave(null);
 } else {
 	cc_setcolour($colour18);
-	if (%soul_wars_zeal_tokens >= $int20 | string_length(~soul_wars_rewards_metrequirements($namedobj15)) > 0 & ~on_mobile = 0) {
+	if (%soul_wars_zeal_tokens >= $int20 | string_length(~soul_wars_rewards_metrequirements($namedobj15)) > 0 & ~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour19)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour18)");
 	}

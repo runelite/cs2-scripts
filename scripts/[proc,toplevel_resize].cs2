@@ -91,7 +91,7 @@ if (%fov_clamp ! 0) {
 }
 def_component $component20 = enum(component, component, $enum1, toplevel_osrs_stretch:mainmodal);
 if ($component20 ! null) {
-	if (~on_mobile = 0 & if_hassub($component20) = true) {
+	if (~on_mobile = false & if_hassub($component20) = true) {
 		if (%varcint173 = -2) {
 			if_setsize(512, 0, ^setsize_abs, ^setsize_minus, $component20);
 		} else if (%varcint173 = -3) {
@@ -114,7 +114,7 @@ if ($component20 ! null) {
 			$int22 = 38;
 		}
 	}
-	if (~on_mobile = 1 & %cutscene_status = 0) {
+	if (~on_mobile = true & %cutscene_status = 0) {
 		if (%osm_minimap_toggle = 0) {
 			$int21 = calc(181 + 4);
 		} else {
@@ -128,7 +128,7 @@ if ($component20 ! null) {
 $component20 = enum(component, component, $enum1, toplevel_osrs_stretch:xp_drops);
 $int21 = 0;
 if ($component20 ! null) {
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		if (%osm_minimap_toggle = 0) {
 			$int21 = 181;
 		} else {

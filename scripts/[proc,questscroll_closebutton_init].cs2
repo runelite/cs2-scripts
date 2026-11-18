@@ -2,7 +2,7 @@
 [proc,questscroll_closebutton_init](component $component0, component $component1)
 def_graphic $graphic2 = "close_buttons,2";
 def_graphic $graphic3 = "close_buttons,3";
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("graphic_swapper($component1, $graphic3)", $component0);
 	if_setonmouseleave("graphic_swapper($component1, $graphic2)", $component0);
 	if_setposition(67, 59, ^setpos_abs_right, ^setpos_abs_top, $component0);

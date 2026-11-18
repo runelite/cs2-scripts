@@ -59,7 +59,7 @@ if (string_length($string0) > 0) {
 		} else {
 			cc_settrans(245);
 		}
-		if (%clan_editing_permitted = 1 & ~on_mobile = 0) {
+		if (%clan_editing_permitted = 1 & ~on_mobile = false) {
 			cc_setonmouserepeat("clan_members_hover(1, event_com, event_comsubid, cc_gettrans)");
 			cc_setonmouseleave("clan_members_hover(0, event_com, event_comsubid, cc_gettrans)");
 		}

@@ -43,7 +43,7 @@ $int16 = calc(6 + 13 + 3 + $int16 + 3 + 13 + 6);
 cc_deleteall($com_clans_permissions_index_contents4);
 def_int $int18 = 0;
 def_int $int19 = 20;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int19 = scale(5, 3, $int19);
 }
 cc_deleteall($com_clans_permissions_list_contents7);

@@ -2,7 +2,7 @@
 [proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $int2, int $int3, enum $enum4)(int)
 def_int $int5 = 1;
 def_int $int6 = 1;
-if (%mouseover_tooltips_disabled = 1 | enum(int, boolean, enum_3903, $int2) = false | ~on_mobile = 1) {
+if (%mouseover_tooltips_disabled = 1 | enum(int, boolean, enum_3903, $int2) = false | ~on_mobile = true) {
 	$int5 = 0;
 } else if ($int2 = 7 & minimenu_findcomponent = true) {
 	switch_component (cc_getlayer) {
@@ -113,7 +113,7 @@ $int24 = ~max($int24, $int9);
 def_int $int25 = mouse_getx;
 def_int $int26 = mouse_gety;
 def_boolean $boolean27 = ~on_mobile;
-if ($boolean27 = 1 & %varcint1016 >= 0 & %varcint1017 >= 0) {
+if ($boolean27 = true & %varcint1016 >= 0 & %varcint1017 >= 0) {
 	$int25 = %varcint1016;
 	$int26 = %varcint1017;
 }
@@ -122,7 +122,7 @@ if ($component28 ! null) {
 	$int25 = calc($int25 - if_getx($component28));
 	$int26 = calc($int26 - if_gety($component28));
 }
-if ($boolean27 = 1) {
+if ($boolean27 = true) {
 	$int25 = ~max(calc($int25 - 0 - $int24), 0);
 } else {
 	$int25 = ~min(calc($int25 + 0), calc(if_getwidth($component1) - $int24));

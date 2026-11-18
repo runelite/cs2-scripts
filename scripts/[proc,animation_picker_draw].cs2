@@ -24,7 +24,7 @@ def_int $int10 = db_getfieldcount($dbrow2, toggle_list_interface:info);
 def_int $index11 = -1;
 def_int $int12 = -1;
 def_int $int13 = 32;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int13 = 64;
 }
 while ($int9 < $int10) {

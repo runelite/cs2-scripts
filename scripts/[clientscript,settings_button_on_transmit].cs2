@@ -5,7 +5,7 @@ if ($int5 = 1) {
 		cc_setcolour(0xff981f);
 	}
 	~v2_stone_button_change_out($component1, $int3);
-	if (~on_mobile = 0 & cc_find($component1, $comsubid4) = true) {
+	if (~on_mobile = false & cc_find($component1, $comsubid4) = true) {
 		cc_setonmouseover("v2_stone_button_change_in($component1, $int3)");
 		cc_setonmouseleave("v2_stone_button_change_out($component1, $int3)");
 	}

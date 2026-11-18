@@ -110,7 +110,7 @@ if ($int0 ! -1) {
 		cc_setop(1, "Confirm");
 	}
 	cc_setopbase("<col=ff981f><$string0></col>");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("league_rewards_confirmdraw(1, $string0, $component8)");
 		cc_setonmouseleave("league_rewards_confirmdraw(0, $string0, $component8)");
 	}
@@ -127,7 +127,7 @@ if ($int0 ! -1) {
 	$string2 = "Confirm";
 	if_setop(1, $string2, $component12);
 	if_setopbase("<col=ff981f>League reward</col>", $component12);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseleave("league_interface_button_hover($component12, 0, $string2, ^white)", $component12);
 		if_setonmouseover("league_interface_button_hover($component12, 1, $string2, 0xaaaaaa)", $component12);
 	}
@@ -154,7 +154,7 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if_setop(1, $string2, $component13);
 	if_setopbase("<col=ff981f>League reward</col>", $component13);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseleave("league_interface_button_hover($component13, 0, $string2, ^white)", $component13);
 		if_setonmouseover("league_interface_button_hover($component13, 1, $string2, 0xaaaaaa)", $component13);
 	}

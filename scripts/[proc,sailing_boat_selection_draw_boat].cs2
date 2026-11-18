@@ -22,7 +22,7 @@ def_graphic $graphic22 = "open_buttons_tiny_11x11,0";
 def_graphic $graphic23 = $graphic22;
 $boolean18, $string4, $string5 = ~sailing_boat_selection_available($int5, $int3, lowercase($string0));
 def_int $colour24 = ~sailing_boat_selection_available_colour($boolean18);
-if ($boolean19 = 0 & $int9 < 36 & $boolean20 = true) {
+if ($boolean19 = false & $int9 < 36 & $boolean20 = true) {
 	$string2 = tostring($int9);
 	$string3 = $string2;
 	if ($int8 = 1) {
@@ -33,7 +33,7 @@ if ($boolean19 = 0 & $int9 < 36 & $boolean20 = true) {
 		$string3 = enum(int, string, enum_1402, calc($int9 - 9));
 	}
 }
-if ($boolean19 = 1 | $boolean20 = false) {
+if ($boolean19 = true | $boolean20 = false) {
 	$string2, $string3 = "", "";
 }
 cc_create($component0, ^iftype_rectangle, $int2, false);
@@ -53,7 +53,7 @@ if ($int11 = 1) {
 }
 cc_setonop("script8640($int3)");
 cc_setopbase("<col=ff981f><$string1></col>");
-if ($boolean19 = 0) {
+if ($boolean19 = false) {
 	cc_setonmouseover("sailing_boat_selection_hover(event_comsubid, $component0, 210, "open_buttons_small,3")");
 	if (calc($int9 % 2) = 1) {
 		cc_setonmouseleave("sailing_boat_selection_hover(event_comsubid, $component0, 230, $graphic21)");
@@ -150,7 +150,7 @@ if ($boolean20 = true) {
 		cc_setcolour($colour24);
 		if ($boolean18 = true) {
 			cc_setonop("sailing_boat_selection_button_press($component1, $component0, $int3, $comsubid15)");
-			if ($boolean19 = 0) {
+			if ($boolean19 = false) {
 				cc_setonkey("sailing_boat_selection_keypress(
 					0 = event_keychar, 
 					1 = event_keycode, 
@@ -165,7 +165,7 @@ if ($boolean20 = true) {
 			}
 		} else {
 			cc_setonop("script8635($string4, $string5)");
-			if ($boolean19 = 0) {
+			if ($boolean19 = false) {
 				cc_setonkey("sailing_boat_selection_keypress_unavailable(
 					0 = event_keychar, 
 					1 = event_keycode, 

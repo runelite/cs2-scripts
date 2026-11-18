@@ -29,7 +29,7 @@ if ($int13 = 0) {
 	$int18 = max(0, min(%varcint1170, calc($int10 - %varcint1168)));
 	$int19 = max($int11, min(%varcint1171, calc($int11 + $int12 - %varcint1169)));
 }
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component3);
 	if_setsize($int16, $int17, ^setsize_abs, ^setsize_abs, $component3);
 }

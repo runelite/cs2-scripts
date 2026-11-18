@@ -2,7 +2,7 @@
 [proc,eventscroll_closebutton_init](component $com_eventscroll_close_button0, component $com_eventscroll_close_graphic1)
 def_graphic $graphic2 = "close_buttons,2";
 def_graphic $graphic3 = "close_buttons,3";
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("graphic_swapper($com_eventscroll_close_graphic1, $graphic3)", $com_eventscroll_close_button0);
 	if_setonmouseleave("graphic_swapper($com_eventscroll_close_graphic1, $graphic2)", $com_eventscroll_close_button0);
 } else {

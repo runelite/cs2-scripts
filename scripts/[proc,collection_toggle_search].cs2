@@ -12,7 +12,7 @@ if (if_gethide($component2) = false | $int0 = 1) {
 	%floater_search_listen_for_keyboard = 0;
 	%league_tasks_is_searching = 0;
 	%league_tasks_search_listen_for_keyboard = 0;
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		~keyboard_hide;
 	}
 	~collection_search_button(1);

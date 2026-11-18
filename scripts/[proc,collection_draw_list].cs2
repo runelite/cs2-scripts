@@ -9,7 +9,7 @@ def_int $int12 = 0;
 def_int $int13 = 255;
 def_string $string0 = "";
 def_struct $struct14 = null;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int11 = scale(8, 5, $int11);
 }
 while ($int9 < $int10) {
@@ -47,7 +47,7 @@ while ($int9 < $int10) {
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);
 		~collection_draw_log($struct14, $enum8, $int9);
-	} else if (~on_mobile = 0) {
+	} else if (~on_mobile = false) {
 		cc_setonmouseover("cc_settrans(event_com, event_comsubid, calc($int13 - 40), null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int13, null)");
 	} else {

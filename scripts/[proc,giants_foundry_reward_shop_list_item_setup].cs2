@@ -82,7 +82,7 @@ if ($obj6 ! null) {
 	cc_setopbase("<col=ff9040><struct_param($struct7, param_1621)></col>");
 	cc_setop(2, "Unlock");
 }
-if (~on_mobile = 0 & $int4 = 0) {
+if (~on_mobile = false & $int4 = 0) {
 	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xb8a182)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour21)");
 }

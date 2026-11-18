@@ -7,7 +7,7 @@ if (%bh_target_minimised = 1) {
 	if_sethide(false, $com_pvp_icons_target_visible2);
 	if_sethide(true, $com_pvp_icons_target_hidden1);
 }
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~script4729(pvp_icons:target_system_dodger, $com_pvp_icons_target_system0, clearbit(clearbit(36580, 13), 12), ^setpos_abs_right, ^setpos_abs_top, 0);
 } else if (%bh_target_dock = 2) {
 	if (%kd_toggle = 1) {

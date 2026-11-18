@@ -1,6 +1,6 @@
 // 2581
 [proc,mobile_chatbox_resize]
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	return;
 }
 def_int $int0 = if_getheight(chatbox:chatarea);

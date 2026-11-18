@@ -72,7 +72,7 @@ def_string $string1 = "";
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 15;
-def_boolean $boolean14 = -1;
+def_boolean $boolean14 = null;
 def_int $int15 = ~on_enhanced_any;
 def_int $int16 = map_world;
 def_int $int17 = friend_count;
@@ -95,7 +95,7 @@ if ($int17 <= -2) {
 	if_sethide(true, $component0);
 } else {
 	$boolean14 = ~on_mobile;
-	if ($boolean14 = 1) {
+	if ($boolean14 = true) {
 		$int13 = scale(8, 5, $int13);
 	}
 	if_settext("", $component7);
@@ -179,7 +179,7 @@ if ($int17 <= -2) {
 		.cc_setgraphic(friends_changed_name);
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {
-			if ($boolean14 = 1) {
+			if ($boolean14 = true) {
 				cc_setop(10, "Reveal previous name");
 				cc_setonop("friend_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0, $int11)");
 			} else {

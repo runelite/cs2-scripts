@@ -15,7 +15,7 @@ cc_setmodelangle(5, 5, 501, 234, 0, 3000);
 cc_setopbase("<col=ff9040>Noted items");
 cc_setop(1, "Toggle");
 cc_setonop("script2462");
-if (~on_mobile = 0 & %league_shop_noted_items_disabled = 1) {
+if (~on_mobile = false & %league_shop_noted_items_disabled = 1) {
 	if_setonmouseover("shop_noted_button_redraw($component0, 1)", $component0);
 	if_setonmouseleave("shop_noted_button_redraw($component0, 0)", $component0);
 } else {

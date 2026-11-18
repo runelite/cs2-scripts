@@ -2,7 +2,7 @@
 [clientscript,script7802](component $com_collection_overview_close0, component $com_collection_overview_subsection_general_content1, component $com_collection_overview_subsection_buttons2, component $com_collection_overview_subsection_buttons_click3, component $com_collection_overview_subsection_progress4, component $com_collection_overview_progress_bar5, component $com_collection_overview_progress_bar_rank_left6, component $com_collection_overview_progress_bar_rank_right7, component $com_collection_overview_progress_left_text8, component $com_collection_overview_progress_right_text9, component $com_collection_overview_latest_items_data10, component $com_collection_overview_burger_btn_menu11, component $com_collection_overview_burger_menu_frame12, component $com_collection_overview_burger_menu_overlay13)
 def_graphic $graphic14 = null;
 def_int $int15 = 0;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_collection_overview_close0);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_collection_overview_close0);
 	if_setgraphic("steelborder_close_button,0", $com_collection_overview_close0);
@@ -34,7 +34,7 @@ if (%varcint1245 ! 1) {
 	%varcint1244 = if_gety($component20);
 	%varcint1245 = 1;
 }
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setontimer("script7923($component16, $component17, 0)", $component16);
 } else {
 	if (%varcint1247 < 0 | %varcint1248 < 0) {

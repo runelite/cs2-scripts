@@ -5,7 +5,7 @@ cc_create($component0, ^iftype_rectangle, 0, false);
 cc_setfill(true);
 cc_setop(1, "Show Fragment <tostring($int1)>");
 cc_setonop("script4156($component0, $int1, $namedobj4, 1)");
-if ($boolean5 = 1) {
+if ($boolean5 = true) {
 	cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(32, 0, ^setsize_abs, ^setsize_minus);
 } else {
@@ -25,7 +25,7 @@ cc_create($component0, ^iftype_rectangle, 2, false);
 cc_setfill(true);
 cc_setop(1, "Select Fragment <tostring($int1)>");
 cc_setonop("script4156($component0, $int1, $namedobj4, 0)");
-if ($boolean5 = 1) {
+if ($boolean5 = true) {
 	cc_setposition(42, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(32, 0, ^setsize_abs, ^setsize_minus);
 } else {

@@ -3,9 +3,9 @@
 def_fontmetrics $fontmetrics7 = p11_full;
 def_graphic $graphic8 = p11_full;
 def_int $int9 = 16;
-if (%xpdrops_size = 1 & ~on_mobile = 0) {
+if (%xpdrops_size = 1 & ~on_mobile = false) {
 	$fontmetrics7, $graphic8, $int9 = p12_full, p12_full, 25;
-} else if (%xpdrops_size = 2 & ~on_mobile = 0) {
+} else if (%xpdrops_size = 2 & ~on_mobile = false) {
 	$fontmetrics7, $graphic8, $int9 = b12_full, b12_full, 25;
 }
 def_int $int10 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics7) + 2);

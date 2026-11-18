@@ -9,7 +9,7 @@ if (%cutscene_status = 1 & getwindowmode ! ^windowmode_fixed | ~script9336(~topl
 } else {
 	if_sethide(false, chatbox:controls);
 }
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int2, %varcint42 = 1, -1;
 	if_setsize(519, calc(165 - 20), ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:chat_container));
 	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, chatbox:controls);
@@ -58,7 +58,7 @@ def_int $int6 = 6;
 while ($int6 >= 0) {
 	$int1, $component5 = calc($int1 + $int3), enum(int, component, enum_3842, $int6);
 	if_setposition($int1, 0, ^setpos_abs_right, ^setpos_abs_centre, $component5);
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		if_setsize(58, 0, ^setsize_abs, ^setsize_minus, $component5);
 	} else {
 		if_setsize(56, 0, ^setsize_abs, ^setsize_minus, $component5);

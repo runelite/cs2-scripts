@@ -3,7 +3,7 @@
 def_int $int2 = 512;
 def_int $int3 = 0;
 ~popout_tooltip_clear;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~tooltip_build($component0, $int1, popout:tooltip, $string0, $int2);
 	if_setontimer("popout_tooltip_remove_delayed(calc(clientclock + 240))", popout:tooltip);
 } else {

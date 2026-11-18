@@ -4,7 +4,7 @@ def_component $component0 = jigsaw:preview_button;
 def_component $component1 = jigsaw:pieces_preview;
 cc_deleteall($component0);
 def_int $int2 = ~v2_stone_button_filled($component0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("jigsaw_preview_button($component0, 0, true, $component1)", $component0);
 	if_setonmouseleave("jigsaw_preview_button($component0, 0, false, $component1)", $component0);
 } else {

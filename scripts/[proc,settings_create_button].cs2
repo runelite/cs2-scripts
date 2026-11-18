@@ -2,7 +2,7 @@
 [proc,settings_create_button](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, int $int8, boolean $boolean9, int $int10)(int, int, int, int, int)
 def_int $int11 = $int1;
 def_string $string0 = struct_param($struct5, param_1086);
-if ($boolean9 = 1 & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean9 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_int $int12 = calc(if_getwidth($component7) / 3);
@@ -327,7 +327,7 @@ cc_setposition($int16, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
-if ($int10 = 1 & ~on_mobile = 0) {
+if ($int10 = 1 & ~on_mobile = false) {
 	cc_setonmouseover("v2_stone_button_change_in($component7, calc($int2 - 10))");
 	cc_setonmouseleave("v2_stone_button_change_out($component7, calc($int2 - 10))");
 }

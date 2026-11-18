@@ -112,7 +112,7 @@ if (cc_find($component0, $comsubid15) = true) {
 		cc_setop(1, "Check");
 		cc_setopbase("<col=ff981f>Materials</col>");
 		cc_setonop("script8828(event_com, event_comsubid, event_op, ~sailing_customisation_return_name($dbrow3), $string1, $string2, $dbrow3, $int5)");
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0xd97500)");
 			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x0e0e0c)");
 		}

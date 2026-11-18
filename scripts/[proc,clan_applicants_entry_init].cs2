@@ -7,7 +7,7 @@ if (calc($int0 % 2) = 0) {
 }
 cc_setcolour($int4);
 cc_settrans($int5);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("xpdrops_setup_skilllist_mouseover(event_com, cc_getid, ^white, 220)", $component1);
 }
 if_setonmouseleave("xpdrops_setup_skilllist_mouseover(event_com, cc_getid, $int4, $int5)", $component1);

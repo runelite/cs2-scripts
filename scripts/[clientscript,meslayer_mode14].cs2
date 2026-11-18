@@ -10,6 +10,6 @@ if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string0)", chatbox:me
 ~meslayer_mode14_update($boolean0, $enum1, $boolean2);
 if_setontimer("meslayer_mode14_update($boolean0, $enum1, $boolean2)", chatbox:mes_layer);
 if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 25);
 }

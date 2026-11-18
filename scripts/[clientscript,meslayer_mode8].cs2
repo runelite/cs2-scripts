@@ -12,6 +12,6 @@ if (string_length(%varcstring361) > 0) {
 	cc_settext("<col=000000>Last name:</col> <%varcstring361>");
 	cc_setonclick("meslayer_lastname_click(8, %varcstring361)");
 }
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 12);
 }

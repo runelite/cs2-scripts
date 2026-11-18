@@ -6,7 +6,7 @@ if ($int4 ! -1 & if_param(param_2357, $component1, -1) ! $int4) {
 if (clientclock >= $int0) {
 	if_setontimer(null, $component1);
 	~script10215(0, $string0, $graphic2, $obj3, $component1);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouserepeat("script10216(1, $string0, event_com, $graphic2, $obj3, $int4)", $component1);
 	}
 	if_setonmouseleave("script10216(0, $string0, event_com, $graphic2, $obj3, $int4)", $component1);

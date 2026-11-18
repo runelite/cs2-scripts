@@ -4,14 +4,14 @@ def_int $int10 = parawidth(struct_param($struct5, param_1114), 1000, p12_full);
 def_int $int11 = calc($int10 + 10);
 def_string $string0 = struct_param($struct5, param_1086);
 def_boolean $boolean12 = ~on_mobile;
-if ($boolean12 = 1 & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean12 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_string $string1 = struct_param($struct5, param_1096);
 def_int $int13 = 0;
 def_int $int14 = %settings_disable_tooltip_in_interface;
 def_boolean $boolean15 = struct_param($struct5, param_1119);
-if ($boolean12 = 1 & string_length(struct_param($struct5, param_1097)) > 0) {
+if ($boolean12 = true & string_length(struct_param($struct5, param_1097)) > 0) {
 	$string1 = struct_param($struct5, param_1097);
 }
 if (string_length($string1) > 0) {
@@ -22,7 +22,7 @@ if ($int14 = 1 | $boolean15 = true) {
 	$int13 = 0;
 }
 def_int $int16 = calc(paraheight($string0, calc(if_getwidth($component7) - ($int11 + 25)), b12_full) * 14);
-if ($boolean12 = 1 & $int16 < 20) {
+if ($boolean12 = true & $int16 < 20) {
 	$int16 = 20;
 }
 def_int $int17 = calc($int16 + $int13 + 12);
@@ -45,7 +45,7 @@ if ($int9 = 1) {
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean12 = 0 & $int14 = 1 & string_length($string1) > 0) {
+if ($boolean12 = false & $int14 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component8, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component8)");
 }
@@ -109,7 +109,7 @@ cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
 ~settings_input_setting_set_transmit($struct5, $int18, calc($int2 - 1), $int2, calc($int2 - 5), $component7, $comsubid19, $int9);
-if ($boolean12 = 0 & $int9 = 1) {
+if ($boolean12 = false & $int9 = 1) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 } else {

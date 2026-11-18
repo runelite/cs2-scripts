@@ -1,6 +1,6 @@
 // 7452
 [proc,settings_osm_hotkeys_open_sidepanels_on_left]
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	return;
 }
 %settings_osm_hotkeys_open_sidepanels_on_left = calc(1 - %settings_osm_hotkeys_open_sidepanels_on_left);

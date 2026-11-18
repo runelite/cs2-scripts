@@ -7,7 +7,7 @@ def_int $int3 = 3;
 def_int $int4 = 6;
 def_int $int5 = 26;
 def_int $int6 = 23;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$graphic0 = "steelborder_close_button,0";
 	$graphic1 = "steelborder_close_button,0";
 	$int3 = 1;
@@ -43,7 +43,7 @@ def_component $component8 = sailing_log:universe;
 def_component $component9 = sailing_log:resize_preview;
 def_enum $enum10 = ~toplevel_getcomponents;
 def_component $component11 = enum(component, component, $enum10, toplevel_osrs_stretch:mainmodal);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setontimer("script7923($component7, $component8, 0)", $component7);
 } else {
 	if (%varcint1308 < 0 | %varcint1309 < 0 | %varcint1306 <= 0 | %varcint1307 <= 0) {

@@ -15,7 +15,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
 cc_settext("Power-on");
 if ($int1 = 0) {
 	cc_setcolour(0xff981f);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
 		if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);
 	}

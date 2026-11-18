@@ -74,7 +74,7 @@ if (cc_find(league_3_unlocks:quest_scroller, 1) = true) {
 }
 if_settext(struct_param($struct1, param_1446), league_3_unlocks:content_panel_text);
 ~script5820(league_3_unlocks:info_overlay_close, 0, 0, 0, if_getwidth(league_3_unlocks:info_overlay_close), if_getheight(league_3_unlocks:info_overlay_close), struct_3927);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("script5821(league_3_unlocks:info_overlay_close, 0, struct_3929)", league_3_unlocks:info_overlay_close);
 	if_setonmouseleave("script5821(league_3_unlocks:info_overlay_close, 0, struct_3927)", league_3_unlocks:info_overlay_close);
 }

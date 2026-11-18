@@ -18,7 +18,7 @@ if ($int5 ! 0) {
 	$int7 = 220;
 }
 cc_settrans($int7);
-if (%clan_editing_permitted = 1 & ~on_mobile = 0) {
+if (%clan_editing_permitted = 1 & ~on_mobile = false) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int7, null)");
 }

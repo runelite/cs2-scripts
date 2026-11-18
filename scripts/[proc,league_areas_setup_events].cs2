@@ -28,7 +28,7 @@ if_setonop("league_areas_onclick(
 	9 = $com_trailblazer_areas_league_area_icon9, 
 	10 = $com_trailblazer_areas_loading10
 )", $component1);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("league_areas_mouseover($int0, $component1, $component2)", $component1);
 	if_setonmouseleave("league_areas_mouseleave($int0, $component1, $component2)", $component1);
 }
@@ -47,7 +47,7 @@ if_setonop("league_areas_onclick(
 	9 = $com_trailblazer_areas_league_area_icon9, 
 	10 = $com_trailblazer_areas_loading10
 )", $component2);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("league_areas_mouseover($int0, $component1, $component2)", $component2);
 	if_setonmouseleave("league_areas_mouseleave($int0, $component1, $component2)", $component2);
 }

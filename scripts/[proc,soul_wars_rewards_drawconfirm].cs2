@@ -24,7 +24,7 @@ if ($int0 ! -1) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setop(1, "Confirm");
 	cc_setopbase("<col=ff9040><$string1></col>");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("script848(1, $string1, $string0, $component4)");
 		cc_setonmouseleave("script848(0, $string1, $string0, $component4)");
 	}

@@ -26,7 +26,7 @@ if (%varcint5 <= 0 | %varcint5 = 1) {
 	if_setposition(0, 96, ^setpos_abs_centre, ^setpos_abs_top, chatbox:mes_text2);
 	if_setsize(479, 17, ^setsize_abs, ^setsize_abs, chatbox:mes_text2);
 	if_settextalign(^settextalign_centre, ^settextalign_top, 0, chatbox:mes_text2);
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		if_setonclick("meslayer_close(1)", chatbox:mes_layer);
 	} else {
 		if_setonclick("meslayer_close(1)", chatbox:mes_text2);

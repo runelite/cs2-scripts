@@ -13,7 +13,7 @@ while ($component9 ! null) {
 	$component9 = if_getlayer($component9);
 }
 def_int $int10 = 14;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int10 = 18;
 }
 cc_deleteall($com_league_tasks_dropdown_box5);
@@ -48,7 +48,7 @@ while ($int12 < $int16) {
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setop(1, "Select");
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			cc_setonmouserepeat("league_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $int6)");
 			cc_setonmouseleave("league_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $int6)");
 		}

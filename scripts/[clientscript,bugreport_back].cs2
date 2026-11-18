@@ -4,6 +4,6 @@ sound_synth(interface_select1, 1, 0);
 if_sethide(false, $com_bugreport_form0);
 if_sethide(true, $com_bugreport_form_repro1);
 ~bugreport_switch_textinput($com_bugreport_description_text2, $com_bugreport_description_scrollbar3, $com_bugreport_reproduction_text4, $com_bugreport_reproduction_scrollbar5, $com_bugreport_form6, $com_bugreport_description_text7, $com_bugreport_reproduction_text8, $com_bugreport_submit9);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show_string(0, 500, %varcstring372);
 }

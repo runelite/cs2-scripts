@@ -1,7 +1,7 @@
 // 1033
 [proc,script1033](component $component0, int $int1, int $colour2, component $com_xpdrops_setup_dropdown_container3, component $com_xpdrops_setup_tooltip4, component $com_xpdrops_setup_position_display5, component $com_xpdrops_setup_position_options6, component $com_xpdrops_setup_size_display7, component $com_xpdrops_setup_size_options8, component $com_xpdrops_setup_duration_display9, component $com_xpdrops_setup_duration_options10, component $com_xpdrops_setup_counter_display11, component $com_xpdrops_setup_counter_options12, component $com_xpdrops_setup_progress_display13, component $com_xpdrops_setup_progress_options14, component $com_xpdrops_setup_colour_display15, component $com_xpdrops_setup_colour_options16, component $com_xpdrops_setup_grouping_display17, component $com_xpdrops_setup_grouping_options18, component $com_xpdrops_setup_speed_display19, component $com_xpdrops_setup_speed_options20, component $com_xpdrops_setup_fakes_display21, component $com_xpdrops_setup_fakes_options22)
 def_int $int23 = 15;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int23 = scale(8, 5, $int23);
 }
 cc_setsize(0, $int23, ^setsize_minus, ^setsize_abs);
@@ -10,7 +10,7 @@ cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setop(1, "Select");
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $colour2)");
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $colour2)");
 }

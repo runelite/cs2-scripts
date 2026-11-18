@@ -12,6 +12,6 @@ if_setonkey("chatbox_keyinput_listener(
 	8 = $int3, 
 	9 = 0
 )", $component0);
-if ($component1 ! null & ~on_mobile = 1) {
+if ($component1 ! null & ~on_mobile = true) {
 	if_setonclick("chatbox_keyinput_clicklistener($component0, -1, event_com, $int2, $string0, $string1, $int3, 0)", $component1);
 }

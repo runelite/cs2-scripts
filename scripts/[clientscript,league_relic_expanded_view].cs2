@@ -121,7 +121,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string5, $component8);
 if ($int18 = 2 | $int18 = 5) {
 	cc_setcolour(0x53d93c);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseleave("league_interface_button_hover($component8, 0, $string5, 0x53d93c)", $component8);
 		if_setonmouserepeat("league_interface_button_hover($component8, 1, $string5, 0xaaaaaa)", $component8);
 	}
@@ -143,7 +143,7 @@ cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string5, $component9);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_interface_button_hover($component9, 0, $string5, ^white)", $component9);
 	if_setonmouserepeat("league_interface_button_hover($component9, 1, $string5, 0xaaaaaa)", $component9);
 }
@@ -169,7 +169,7 @@ cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string5, $component13);
 if_setopbase("<col=ff981f>Selection</col>", $component13);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_interface_button_hover($component13, 0, $string5, ^white)", $component13);
 	if_setonmouserepeat("league_interface_button_hover($component13, 1, $string5, 0xaaaaaa)", $component13);
 }
@@ -185,7 +185,7 @@ cc_settextshadow(true);
 cc_setcolour(^white);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if_setop(1, $string5, $component14);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_interface_button_hover($component14, 0, $string5, ^white)", $component14);
 	if_setonmouserepeat("league_interface_button_hover($component14, 1, $string5, 0xaaaaaa)", $component14);
 }

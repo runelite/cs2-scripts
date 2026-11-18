@@ -6,7 +6,7 @@ if_settext($string0, chatbox:mes_text);
 def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string1)", chatbox:mes_text2);
 if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(1, 19);
 	if_setposition(0, -18, ^setpos_abs_centre, ^setpos_abs_centre, chatbox:mes_text);
 	if_setsize(0, 36, ^setsize_minus, ^setsize_abs, chatbox:mes_text);

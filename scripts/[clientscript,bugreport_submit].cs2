@@ -5,7 +5,7 @@ if (string_length(%varcstring372) > 0) {
 	if (%bugreport_cap < 10 & string_length(%varcstring372) >= 15) {
 		bug_report(0, ~bugreport_parse(%varcstring372, 0), ~bugreport_parse(%varcstring373, 0));
 	}
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		~keyboard_hide;
 	}
 	if_close;

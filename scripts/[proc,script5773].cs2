@@ -6,7 +6,7 @@ cc_setsize($int4, $int6, ^setsize_abs, ^setsize_abs);
 cc_setcolour(^white);
 cc_setfill(true);
 cc_settrans(255);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouseover("cc_settrans($component0, $int1, 220, null)");
 	cc_setonmouseleave("cc_settrans($component0, $int1, 255, null)");
 }

@@ -32,7 +32,7 @@ if (.cc_find($component1, $int2) = true) {
 		} else {
 			.cc_setop(1, "View");
 			.cc_setonop("script9180($component1, $int2)");
-			if (~on_mobile = 0) {
+			if (~on_mobile = false) {
 				.cc_setonmouserepeat("script9178(2, $component1, $int2)");
 				.cc_setonmouseleave("script9178(0, $component1, $int2)");
 			}

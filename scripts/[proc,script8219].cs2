@@ -30,7 +30,7 @@ if ($enum5 ! null) {
 		if ($int0 = 1) {
 			if_setposition($int1, $int2, $setposh3, $setposv4, orbs:orb_contentrecom);
 		}
-	} else if (~on_mobile = 0 & %minimap_toggle = 1) {
+	} else if (~on_mobile = false & %minimap_toggle = 1) {
 		$int1, $int2, $setposh3, $setposv4 = -3, 103, ^setpos_abs_right, ^setpos_abs_top;
 		if ($int0 = 1) {
 			if_setposition($int1, $int2, $setposh3, $setposv4, orbs_nomap:orb_contentrecom);

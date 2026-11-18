@@ -181,9 +181,9 @@ def_int $int47 = 0;
 def_component $component48 = null;
 def_string $string2 = "";
 if ($int36 > 0 & $int16 > 0 & ~script6065 = 1) {
-	if (%xpdrops_size = 1 & ~on_mobile = 0) {
+	if (%xpdrops_size = 1 & ~on_mobile = false) {
 		$fontmetrics40, $graphic41, $int42 = p12_full, p12_full, 25;
-	} else if (%xpdrops_size = 2 & ~on_mobile = 0) {
+	} else if (%xpdrops_size = 2 & ~on_mobile = false) {
 		$fontmetrics40, $graphic41, $int42 = b12_full, b12_full, 25;
 	}
 	$int43 = if_getheight($component8);

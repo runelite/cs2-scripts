@@ -3,7 +3,7 @@
 def_int $colour5 = 0xff981f;
 def_int $int6 = 60;
 def_int $int7 = 85;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int6 = 75;
 	$int7 = 115;
 }
@@ -39,7 +39,7 @@ if ($int4 = 0) {
 	cc_settrans(200);
 } else {
 	cc_setcolour($colour5);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouseover("collection_burger_mouseover($component1, $int3)");
 		cc_setonmouseleave("collection_burger_mouseleave($component1, $int3, $colour5)");
 	}
@@ -71,7 +71,7 @@ if ($int4 = 1) {
 	cc_settrans(200);
 } else {
 	cc_setcolour($colour5);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouseover("collection_burger_mouseover($component1, $int3)");
 		cc_setonmouseleave("collection_burger_mouseleave($component1, $int3, $colour5)");
 	}

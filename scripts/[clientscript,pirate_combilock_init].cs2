@@ -2,7 +2,7 @@
 [clientscript,pirate_combilock_init](component $com_pirate_combilock_universe0, component $com_pirate_combilock_left_up1, component $com_pirate_combilock_left_down2, component $com_pirate_combilock_left_arrows3, component $com_pirate_combilock_left_top4, component $com_pirate_combilock_left_middle5, component $com_pirate_combilock_left_bottom6, component $com_pirate_combilock_centre_up7, component $com_pirate_combilock_centre_down8, component $com_pirate_combilock_centre_arrows9, component $com_pirate_combilock_centre_top10, component $com_pirate_combilock_centre_middle11, component $com_pirate_combilock_centre_bottom12, component $com_pirate_combilock_right_up13, component $com_pirate_combilock_right_down14, component $com_pirate_combilock_right_arrows15, component $com_pirate_combilock_right_top16, component $com_pirate_combilock_right_middle17, component $com_pirate_combilock_right_bottom18, component $com_pirate_combilock_confirm19)
 if_setop(1, "Unlock", $com_pirate_combilock_confirm19);
 if_setonop("pirate_combilock_confirm(event_op)", $com_pirate_combilock_confirm19);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("settrans(event_com, 240)", $com_pirate_combilock_confirm19);
 	if_setonmouseleave("settrans(event_com, 255)", $com_pirate_combilock_confirm19);
 	if_setonmouseover("model_swapper($com_pirate_combilock_left_arrows3, model_38985)", $com_pirate_combilock_left_up1);

@@ -41,7 +41,7 @@ if_setsize($int4, if_getheight($component1), ^setsize_minus, ^setsize_abs, $comp
 if_setsize($int4, if_getheight($component2), ^setsize_minus, ^setsize_abs, $component2);
 ~script2416(0, 0, $component1);
 ~script2416(0, 1, $component2);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("script1933(1, 0, event_com)", $component1);
 	if_setonmouserepeat("script1933(1, 1, event_com)", $component2);
 }

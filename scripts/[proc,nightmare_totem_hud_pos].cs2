@@ -1,7 +1,7 @@
 // 3314
 [proc,nightmare_totem_hud_pos](int $int0, int $com_nightmare_totems_universe1, component $com_nightmare_totems_totems2, component $com_nightmare_totems_totems_border3, component $com_nightmare_totems_totems_backing4, int $com_nightmare_totems_totem_sw5, component $com_nightmare_totems_totem_sw_text6, int $com_nightmare_totems_totem_sw_bar7, component $com_nightmare_totems_totem_sw_inner_border8, component $com_nightmare_totems_totem_sw_bar_back9, component $com_nightmare_totems_totem_sw_bar_remaining10, int $com_nightmare_totems_totem_se11, component $com_nightmare_totems_totem_se_text12, int $com_nightmare_totems_totem_se_bar13, component $com_nightmare_totems_totem_se_inner_border14, component $com_nightmare_totems_totem_se_bar_back15, component $com_nightmare_totems_totem_se_bar_remaining16, int $com_nightmare_totems_totem_nw17, component $com_nightmare_totems_totem_nw_text18, int $com_nightmare_totems_totem_nw_bar19, component $com_nightmare_totems_totem_nw_inner_border20, component $com_nightmare_totems_totem_nw_bar_back21, component $com_nightmare_totems_totem_nw_bar_remaining22, int $com_nightmare_totems_totem_ne23, component $com_nightmare_totems_totem_ne_text24, int $com_nightmare_totems_totem_ne_bar25, component $com_nightmare_totems_totem_ne_inner_border26, component $com_nightmare_totems_totem_ne_bar_back27, component $com_nightmare_totems_totem_ne_bar_remaining28)
 def_int $int29 = 0;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int29 = calc($int29 + 0);
 }
 if_setposition(if_getx($com_nightmare_totems_totems2), $int29, ^setpos_abs_left, ^setpos_abs_top, $com_nightmare_totems_totems2);

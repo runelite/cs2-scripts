@@ -11,7 +11,7 @@ if ($com_worldswitcher_title1 ! null) {
 def_int $int19 = 16;
 def_int $int20 = 11;
 def_int $int21 = 32;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int19, $int20, $int21 = 24, 21, 48;
 }
 if_setsize(calc($int18 * 2), $int21, ^setsize_minus, ^setsize_abs, $component13);

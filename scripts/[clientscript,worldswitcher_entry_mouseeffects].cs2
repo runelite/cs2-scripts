@@ -9,7 +9,7 @@ if ($component5 ! null) {
 }
 if ($int6 ! -1) {
 	if ($int2 ! -1 & .cc_find($component1, $int2) = true) {
-		if ($int0 = 1 & ~on_mobile = 0) {
+		if ($int0 = 1 & ~on_mobile = false) {
 			if (cc_find($component3, $comsubid4) = true) {
 				cc_settrans(200);
 			}
@@ -20,7 +20,7 @@ if ($int6 ! -1) {
 			}
 			.cc_setontimer(null);
 		}
-	} else if ($int0 = 1 & ~on_mobile = 0) {
+	} else if ($int0 = 1 & ~on_mobile = false) {
 		if (cc_find($component3, $comsubid4) = true) {
 			cc_settrans(200);
 		}

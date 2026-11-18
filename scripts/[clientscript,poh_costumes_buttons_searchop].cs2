@@ -18,7 +18,7 @@ if_sethide(true, chatbox:mes_layer_toggle);
 ~script3560($enum1);
 if_setontimer("script3559($enum1)", chatbox:mes_layer);
 if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	~keyboard_show(0, 25);
 }
 if_clearops($component2);

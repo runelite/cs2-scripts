@@ -6,7 +6,7 @@ def_graphic $graphic11 = "zeah_book,0";
 def_graphic $graphic12 = "zeah_book,1";
 cc_deleteall($com_pvp_icons_target_hidden1);
 def_int $comsubid13 = 0;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $com_pvp_icons_target_hidden1);
 	$comsubid13 = ~v2_stone_button_filled($com_pvp_icons_target_hidden1);
 } else {
@@ -56,7 +56,7 @@ if_setonop("target_system_hideop(
 	8 = $com_pvp_icons_target_skip6, 
 	9 = $com_pvp_icons_target_hide10
 )", $com_pvp_icons_target_hide10);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setop(2, "", $com_pvp_icons_target_hide10);
 	if_setop(3, "", $com_pvp_icons_target_hide10);
 	if_setop(4, "", $com_pvp_icons_target_hide10);

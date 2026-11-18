@@ -22,7 +22,7 @@ if ($int1 < 0) {
 }
 if ($int2 < $int7) {
 	$int2 = max($int7, calc((if_getheight($component6) - $int4) / 2));
-	if (~on_mobile = 1) {
+	if (~on_mobile = true) {
 		$int2 = calc(if_getheight($component6) - $int4);
 	}
 }

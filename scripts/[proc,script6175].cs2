@@ -2,7 +2,7 @@
 [proc,script6175](int $int0, component $component1, dbrow $dbrow2, int $int3, component $component4, int $int5, int $int6, int $int7, int $int8)(int)
 cc_create($component1, ^iftype_rectangle, $int0, false);
 def_int $int9 = 6;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int9 = 10;
 }
 cc_setposition(calc($int5 - $int9 / 2), calc($int6 - $int9 / 2), ^setpos_abs_left, ^setpos_abs_top);

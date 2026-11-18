@@ -1,7 +1,7 @@
 // 7773
 [proc,sailing_intro_hint_dodger](component $com_sailing_intro_hud_universe0, component $com_sailing_intro_hud_dodger_hints1, component $com_sailing_intro_hud_hint_layer2)
-if (getwindowmode = ^windowmode_fixed | ~on_mobile = 1) {
-	if (~on_mobile = 1) {
+if (getwindowmode = ^windowmode_fixed | ~on_mobile = true) {
+	if (~on_mobile = true) {
 		if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_bottom, $com_sailing_intro_hud_hint_layer2);
 	} else {
 		if_setposition(0, 4, ^setpos_abs_centre, ^setpos_abs_bottom, $com_sailing_intro_hud_hint_layer2);

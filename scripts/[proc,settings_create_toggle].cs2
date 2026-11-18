@@ -2,14 +2,14 @@
 [proc,settings_create_toggle](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, int $int18)(int, int, int, int)
 def_boolean $boolean19 = ~on_mobile;
 def_string $string0 = struct_param($struct5, param_1086);
-if ($boolean19 = 1 & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean19 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_string $string1 = struct_param($struct5, param_1096);
 def_int $int20 = 0;
 def_int $int21 = %settings_disable_tooltip_in_interface;
 def_boolean $boolean22 = struct_param($struct5, param_1119);
-if ($boolean19 = 1 & string_length(struct_param($struct5, param_1097)) > 0) {
+if ($boolean19 = true & string_length(struct_param($struct5, param_1097)) > 0) {
 	$string1 = struct_param($struct5, param_1097);
 }
 if (string_length($string1) > 0) {
@@ -23,7 +23,7 @@ def_int $int23 = struct_param($struct5, param_1077);
 def_boolean $boolean24 = struct_param($struct5, param_1085);
 def_boolean $boolean25 = struct_param($struct5, param_1084);
 def_int $int26 = calc(paraheight($string0, calc(if_getwidth($component7) - 45), b12_full) * 14);
-if ($boolean19 = 1 & $int26 < 20) {
+if ($boolean19 = true & $int26 < 20) {
 	$int26 = 20;
 }
 def_int $int27 = calc($int26 + 12 + $int20);
@@ -54,7 +54,7 @@ cc_setonop("settings_toggle_op(
 )");
 cc_setcolour(^white);
 cc_settrans(255);
-if ($boolean19 = 0 & $int21 = 1 & string_length($string1) > 0) {
+if ($boolean19 = false & $int21 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component17, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component17)");
 }
@@ -68,7 +68,7 @@ cc_settrans($int4);
 if ($boolean24 = true) {
 	~settings_toggle_choose_transmit($component7, calc($int2 + 2), $boolean25, $int23, $struct5, $int4, $int18);
 }
-if ($boolean19 = 0 & $int18 = 1) {
+if ($boolean19 = false & $int18 = 1) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 240, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, $int4, null)");
 }

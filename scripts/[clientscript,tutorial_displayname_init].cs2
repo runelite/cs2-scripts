@@ -1,6 +1,6 @@
 // 2573
 [clientscript,tutorial_displayname_init](component $com_tutorial_displayname_universe0, component $com_tutorial_displayname_look_up_name1, component $com_tutorial_displayname_set_name2, component $com_tutorial_displayname_name_text3, component $com_tutorial_displayname_main4, component $com_tutorial_displayname_name_highlight5, component $com_tutorial_displayname_name6)
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top, $com_tutorial_displayname_main4);
 }
 ~chatdefault_stopinput;

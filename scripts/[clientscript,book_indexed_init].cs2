@@ -6,7 +6,7 @@ def_graphic $graphic9 = leftarrow;
 def_graphic $graphic10 = leftarrow_highlight;
 def_graphic $graphic11 = rightarrow;
 def_graphic $graphic12 = rightarrow_highlight;
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseover("graphic_swapper($com_indexed_book_close_graphic1, $graphic8)", $com_indexed_book_close_button0);
 	if_setonmouseleave("graphic_swapper($com_indexed_book_close_graphic1, $graphic7)", $com_indexed_book_close_button0);
 	if_setonmouseover("graphic_swapper($com_indexed_book_page_left_graphic3, $graphic10)", $com_indexed_book_page_left_button2);

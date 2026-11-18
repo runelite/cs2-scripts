@@ -138,7 +138,7 @@ if (cc_find($component0, 0) = false) {
 			} else {
 				$string1 = "<enum(int, string, enum_3967, calc($int9 + 1))> Tier rewards unlocked at <tostring($int20)> points.";
 			}
-			if (~on_mobile = 1) {
+			if (~on_mobile = true) {
 				cc_setop(1, "Show Threshold");
 				cc_setonop("league_progress_bar_mobile_tooltip(event_com, event_comsubid, $com_ca_rewards_tooltip1, $string1, 512)");
 				$int24 = 1;
@@ -160,7 +160,7 @@ if (cc_find($component0, 0) = false) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string2);
 	if ($int24 = 1) {
-		if (~on_mobile = 0) {
+		if (~on_mobile = false) {
 			cc_setonmouseover("cc_colour_swapper(event_com, $int10, 0xff981f)");
 		}
 		cc_setonmouseleave("cc_colour_swapper($component0, $int10, ^white)");

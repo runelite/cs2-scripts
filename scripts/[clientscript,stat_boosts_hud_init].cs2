@@ -3,7 +3,7 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $com_stat_boosts_hud_content1);
 	~script4729($com_stat_boosts_hud_dodger0, $com_stat_boosts_hud_content1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, 0);
 } else {

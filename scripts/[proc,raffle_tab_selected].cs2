@@ -2,7 +2,7 @@
 [proc,raffle_tab_selected](int $int0, int $int1, int $int2, component $component3, component $component4, string $string0, component $component5)(int, int, int)
 def_int $int6 = paraheight($string0, calc(if_getwidth($component3) - 8), p12_full);
 def_int $int7 = calc($int6 * 14 + 4);
-if (~on_mobile = 1 & $int7 < 24) {
+if (~on_mobile = true & $int7 < 24) {
 	$int7 = 24;
 }
 def_int $int8 = calc($int7 + 4 + $int2);

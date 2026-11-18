@@ -272,7 +272,7 @@ if ($int10 = 0) {
 		cc_setonop("button_select_sound");
 	}
 	cc_setop(4, $string0);
-	if (~on_mobile = 1 & $int12 = 0) {
+	if (~on_mobile = true & $int12 = 0) {
 		cc_setonmouseover("script2988($com_adventurepath_paths0, $int1, $graphic6)");
 	} else {
 		cc_setonmouseover("script2988($com_adventurepath_paths0, $int1, $graphic7)");

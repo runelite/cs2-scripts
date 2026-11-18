@@ -1,7 +1,7 @@
 // 4096
 [proc,collection_populate_search_results](int $int0)
 def_string $string0 = %varcstring417;
-if (~on_mobile = 1 & compare($string0, "") ! 0 & $int0 = 0) {
+if (~on_mobile = true & compare($string0, "") ! 0 & $int0 = 0) {
 	return;
 }
 def_component $component1 = collection:search_results_container;
@@ -134,7 +134,7 @@ while ($int8 < $int11) {
 						.cc_setop(1, "Check");
 						.cc_setopbase("<col=ff9040><$string5></col>");
 						.cc_setonop("collection_tab_link($intarray2($int8), $structarray1($int8), $int6)");
-						if (~on_mobile = 0) {
+						if (~on_mobile = false) {
 							.cc_setonmouseover("cc_settrans(event_com, event_comsubid, calc($int23 - 40), null)");
 							.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int23, null)");
 						} else {

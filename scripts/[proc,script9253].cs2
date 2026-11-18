@@ -5,7 +5,7 @@ cc_create($component6, ^iftype_graphic, 0, false);
 cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic($graphic5);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouseover("cc_settrans(event_com, cc_getid, 100, null)");
 	cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
 }
@@ -29,7 +29,7 @@ cc_create($component6, ^iftype_graphic, 1, false);
 cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(stop_outlined);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	cc_setonmouseover("cc_settrans(event_com, cc_getid, 100, null)");
 	cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
 }

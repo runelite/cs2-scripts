@@ -1,6 +1,6 @@
 // 5726
 [proc,script5726](entityoverlay $entityoverlay0, loc $loc1, coord $coord2, int $int3, int $int4, int $int5, string $string0, int $int6)
-if (~on_mobile = 1 | %agility_helper_highlight_shortcuts_overlay_disabled = 1 | enum(coord, int, enum_4080, $coord2) = 1) {
+if (~on_mobile = true | %agility_helper_highlight_shortcuts_overlay_disabled = 1 | enum(coord, int, enum_4080, $coord2) = 1) {
 	return;
 }
 cc_create_entityoverlay($entityoverlay0, ^iftype_graphic, 0);

@@ -4,7 +4,7 @@ def_int $int9 = 0;
 def_boolean $boolean10 = ~on_mobile;
 def_string $string0 = "Info";
 def_string $string1 = "Filters";
-if ($boolean10 = 1) {
+if ($boolean10 = true) {
 	while ($int9 < 4) {
 		cc_create($com_prayerbook_infoglow4, ^iftype_rectangle, $int9, false);
 		cc_sethide(false);

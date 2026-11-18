@@ -6,25 +6,25 @@ cc_deleteall($com_league_side_panel_relics_button2);
 cc_deleteall($com_league_side_panel_areas_button3);
 if_settext(~league_get_league_name_short, $com_league_side_panel_header4);
 ~v2_stone_button_filled($com_league_side_panel_mastery_button0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_side_panel_mastery_button0, 0)", $com_league_side_panel_mastery_button0);
 	if_setonmouseover("league_side_panel_button_hover($com_league_side_panel_mastery_button0, 1)", $com_league_side_panel_mastery_button0);
 }
 if_setonop("button_select_sound", $com_league_side_panel_mastery_button0);
 ~v2_stone_button_filled($com_league_side_panel_tasks_button1);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_side_panel_tasks_button1, 0)", $com_league_side_panel_tasks_button1);
 	if_setonmouseover("league_side_panel_button_hover($com_league_side_panel_tasks_button1, 1)", $com_league_side_panel_tasks_button1);
 }
 if_setonop("button_select_sound", $com_league_side_panel_tasks_button1);
 ~v2_stone_button_filled($com_league_side_panel_relics_button2);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_side_panel_relics_button2, 0)", $com_league_side_panel_relics_button2);
 	if_setonmouseover("league_side_panel_button_hover($com_league_side_panel_relics_button2, 1)", $com_league_side_panel_relics_button2);
 }
 if_setonop("button_select_sound", $com_league_side_panel_relics_button2);
 ~v2_stone_button_filled($com_league_side_panel_areas_button3);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_side_panel_areas_button3, 0)", $com_league_side_panel_areas_button3);
 	if_setonmouseover("league_side_panel_button_hover($com_league_side_panel_areas_button3, 1)", $com_league_side_panel_areas_button3);
 }
@@ -46,7 +46,7 @@ def_component $component8 = league_side_panel:tooltip;
 ~league_side_panel_rank($component8, $colour7);
 ~league_side_panel_summary($component8, $colour7);
 def_string $string0 = "Open League Info";
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("tooltip_mouserepeat($com_league_side_panel_info5, 0, $component8, $string0, 25, 190)", $com_league_side_panel_info5);
 	if_setonmouseleave("deltooltip($component8)", $com_league_side_panel_info5);
 }

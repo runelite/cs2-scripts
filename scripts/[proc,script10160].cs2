@@ -8,7 +8,7 @@ def_int $int10 = calc($int7 - $int8 * 2);
 def_int $colour11 = 0x322b19;
 cc_create($component0, 0, ~script8302($component0), false);
 cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	cc_setposition(6, 2, ^setpos_abs_left, ^setpos_abs_bottom);
 } else {
 	cc_setposition(0, 1, ^setpos_abs_left, ^setpos_abs_bottom);

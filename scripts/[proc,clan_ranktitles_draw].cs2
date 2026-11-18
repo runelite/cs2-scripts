@@ -103,7 +103,7 @@ while ($int10 <= 265) {
 			.cc_settrans(225);
 			cc_setgraphic(tradebacking);
 			if (%clan_editing_permitted = 1) {
-				if ($boolean9 = 0) {
+				if ($boolean9 = false) {
 					cc_setonmouserepeat("cc_settrans(event_com, $int8, 200, null)");
 				}
 				cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");
@@ -178,7 +178,7 @@ while ($int10 < $int0) {
 				cc_setgraphic(tradebacking);
 				.cc_settrans(225);
 				if (%clan_editing_permitted = 1) {
-					if ($boolean9 = 0) {
+					if ($boolean9 = false) {
 						cc_setonmouserepeat("cc_settrans(event_com, $int8, 200, null)");
 					}
 					cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");

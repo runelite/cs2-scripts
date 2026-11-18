@@ -11,14 +11,14 @@ if ($obj1 ! null) {
 if (~bank_side_locked_slot($int0) = 1) {
 	.cc_setcolour(^red);
 	cc_setop(1, "Unlock");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, 0xff7070)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, ^red)");
 	}
 } else {
 	.cc_setcolour(0x9f9f9f);
 	cc_setop(1, "Lock");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0x9f9f9f)");
 	}

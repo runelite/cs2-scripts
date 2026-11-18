@@ -4,7 +4,7 @@ def_enum $enum16 = ~script7106(struct_param($struct5, param_1077));
 def_boolean $boolean17 = ~on_mobile;
 if ($enum16 = null) {
 	$enum16 = struct_param($struct5, param_1091);
-	if ($boolean17 = 1 & struct_param($struct5, param_1092) ! null) {
+	if ($boolean17 = true & struct_param($struct5, param_1092) ! null) {
 		$enum16 = struct_param($struct5, param_1092);
 	}
 }
@@ -17,14 +17,14 @@ if ($enum16 = null) {
 def_int $int18 = calc(parawidth(enum(int, string, $enum16, ^max_32bit_int), 1000, p12_full) + 14);
 def_int $int19 = calc($int18 + 20);
 def_string $string0 = struct_param($struct5, param_1086);
-if ($boolean17 = 1 & string_length(struct_param($struct5, param_1087)) > 0) {
+if ($boolean17 = true & string_length(struct_param($struct5, param_1087)) > 0) {
 	$string0 = struct_param($struct5, param_1087);
 }
 def_string $string1 = struct_param($struct5, param_1096);
 def_int $int20 = 0;
 def_int $int21 = %settings_disable_tooltip_in_interface;
 def_boolean $boolean22 = struct_param($struct5, param_1119);
-if ($boolean17 = 1 & string_length(struct_param($struct5, param_1097)) > 0) {
+if ($boolean17 = true & string_length(struct_param($struct5, param_1097)) > 0) {
 	$string1 = struct_param($struct5, param_1097);
 }
 if (string_length($string1) > 0) {
@@ -35,7 +35,7 @@ if ($int21 = 1 | $boolean22 = true) {
 	$int20 = 0;
 }
 def_int $int23 = calc(paraheight($string0, calc(if_getwidth($component7) - ($int19 + 25)), b12_full) * 14);
-if ($boolean17 = 1 & $int23 < 20) {
+if ($boolean17 = true & $int23 < 20) {
 	$int23 = 20;
 }
 def_int $int24 = calc($int23 + 12 + $int20);
@@ -58,7 +58,7 @@ if ($int15 = 1) {
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean17 = 0 & $int21 = 1 & string_length($string1) > 0) {
+if ($boolean17 = false & $int21 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component14, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component14)");
 }
@@ -160,7 +160,7 @@ if ($boolean25 = true) {
 		13 = $int15
 	);
 }
-if ($int15 = 1 & ~on_mobile = 0) {
+if ($int15 = 1 & ~on_mobile = false) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }

@@ -6,7 +6,7 @@ if_sethide(false, $com_clans_events_create_dropdown_container4);
 if_setonclick("clans_events_selection_close(1, -1, $enum0, $component2, $comsubid3, $com_clans_events_create_dropdown_container4, $com_clans_events_create_dropdown_box5, $int6)", $com_clans_events_create_dropdown_container4);
 def_int $int7 = calc(enum_getoutputcount($enum0) - 1);
 def_int $int8 = 14;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int8 = 18;
 }
 def_int $int9 = calc($int7 * $int8);
@@ -36,7 +36,7 @@ while ($int12 < $int7) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("league_setup_display_dropdown_hover(1, event_com, event_comsubid, .cc_getid, $int6)");
 		cc_setonmouseleave("league_setup_display_dropdown_hover(0, event_com, event_comsubid, .cc_getid, $int6)");
 	}

@@ -2,7 +2,7 @@
 [proc,xpdrops_setup_display_hoveroff](component $component0)
 if (cc_find($component0, 0) = true) {
 	cc_settrans(0);
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouseover("xpdrops_setup_display_hover(1, $component0)");
 		cc_setonmouseleave("xpdrops_setup_display_hover(0, $component0)");
 	}

@@ -31,7 +31,7 @@ if (cc_find($component2, $comsubid3) = true) {
 		if ($component11 ! null) {
 			if_sethide(false, $component11);
 			if_settrans(255, $component11);
-			if (~on_mobile = 0) {
+			if (~on_mobile = false) {
 				cc_setonmouserepeat("settrans($component11, 230)");
 				cc_setonmouseleave("settrans($component11, 255)");
 			}

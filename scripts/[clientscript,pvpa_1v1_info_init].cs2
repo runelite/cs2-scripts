@@ -1,7 +1,7 @@
 // 6345
 [clientscript,pvpa_1v1_info_init](component $com_pvp_arena_1v1_info_universe0, component $com_pvp_arena_1v1_info_dodger1, component $com_pvp_arena_1v1_info_content2, component $com_pvp_arena_1v1_info_frame3, component $com_pvp_arena_1v1_info_close4, component $com_pvp_arena_1v1_info_resize_preview5, component $com_pvp_arena_1v1_info_display6, component $com_pvp_arena_1v1_info_lines7, component $com_pvp_arena_1v1_info_scrolling8, component $com_pvp_arena_1v1_info_scrollbar_vertical9, component $com_pvp_arena_1v1_info_scrollbar_horizontal10)
 def_int $int11 = 0;
-if (~on_mobile = 1) {
+if (~on_mobile = true) {
 	$int11 = calc(165 - (20 + 30));
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $com_pvp_arena_1v1_info_dodger1);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $com_pvp_arena_1v1_info_dodger1);

@@ -13,7 +13,7 @@ if ($int1 ! 0 & cc_find($component3, 0) = true) {
 	} else {
 		cc_settext(substring($string0, 0, 1));
 	}
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouserepeat("tooltip_mouserepeat($component3, -1, $com_toa_hud_tooltip5, $string0, 25, 256)", $component3);
 		if_setonmouseleave("deltooltip($com_toa_hud_tooltip5)", $component3);
 	}

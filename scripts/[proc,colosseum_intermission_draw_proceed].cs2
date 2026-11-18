@@ -69,7 +69,7 @@ if (%if3 > %if1) {
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic("options_icons,28");
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		if_setonmouseleave("colosseum_loot_hover(41025565, 0, $int13)", colosseum_intermission:total_loot);
 		if_setonmouserepeat("colosseum_loot_hover(41025565, 1, $int13)", colosseum_intermission:total_loot);
 	} else {

@@ -10,7 +10,7 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 if_setontimer(null, $component0);
-if (~on_mobile = 0) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
 }
 if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component0);

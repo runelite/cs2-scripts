@@ -3,7 +3,7 @@
 def_int $int11 = 190;
 def_int $int12 = 261;
 def_int $int13 = 0;
-if ($boolean10 = 1) {
+if ($boolean10 = true) {
 	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $com_magic_spellbook_top3);
 	$int11, $int12 = calc(190 - 6), 240;
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_top3);
@@ -80,7 +80,7 @@ def_int $int22 = 0;
 def_obj $obj23 = null;
 def_int $int24 = -1;
 def_int $int25 = 0;
-if ($boolean10 = 0 & %magic_spellbook_hidefilterbutton = 1) {
+if ($boolean10 = false & %magic_spellbook_hidefilterbutton = 1) {
 	while ($int25 < $length21) {
 		$obj23 = enum(int, obj, $enum14, $int25);
 		if (~league_world = 1) {
@@ -128,7 +128,7 @@ def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
 def_int $int32 = $int12;
-if ($boolean10 = 0 & %magic_spellbook_hidefilterbutton = 1) {
+if ($boolean10 = false & %magic_spellbook_hidefilterbutton = 1) {
 	$int28, $int29, $int31, $int30 = ~script6419(%spellbook);
 	switch_int (%spellbook) {
 		case default :
@@ -141,7 +141,7 @@ if ($boolean10 = 0 & %magic_spellbook_hidefilterbutton = 1) {
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $com_magic_spellbook_spelllayer0);
 	}
 	$int32 = calc($int29 * $int27 + ($int29 - 1) * $int30);
-} else if (%magic_spellbook_blockresizing = 1 | ~script9529(%map_flags_cached) = 1 | $boolean10 = 0 & ~deadman_world = 0 & (%pvp_area_client = 1 | %pvp_adjacent_area_client = 1)) {
+} else if (%magic_spellbook_blockresizing = 1 | ~script9529(%map_flags_cached) = 1 | $boolean10 = false & ~deadman_world = 0 & (%pvp_area_client = 1 | %pvp_adjacent_area_client = 1)) {
 	if ($int22 <= 28) {
 		$int28 = 4;
 	} else {
@@ -198,7 +198,7 @@ while ($int25 < $int22) {
 		$int26 = calc($int26 + 1);
 	}
 	~magic_spellbook_modifyops($component34);
-	if ($boolean10 = 1) {
+	if ($boolean10 = true) {
 		cc_create($com_magic_spellbook_infolayer1, ^iftype_graphic, $int25, false);
 		cc_setsize($int27, $int27, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int38, $int39, ^setpos_abs_left, ^setpos_abs_top);

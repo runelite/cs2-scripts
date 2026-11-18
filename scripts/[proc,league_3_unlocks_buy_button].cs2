@@ -39,7 +39,7 @@ if ($int1 = 0 | $int1 = 3 | $int1 = 4) {
 }
 cc_settext($string0);
 $int4 = calc($int4 + 1);
-if (~on_mobile = 0 & ($int1 = 1 | $int1 = 2)) {
+if (~on_mobile = false & ($int1 = 1 | $int1 = 2)) {
 	if_setonmouseover("league_3_unlocks_buy_button($component0, 2, $int2, $int3)", $component0);
 	if_setonmouseleave("league_3_unlocks_buy_button($component0, 1, $int2, $int3)", $component0);
 } else {

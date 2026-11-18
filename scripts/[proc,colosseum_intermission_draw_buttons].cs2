@@ -20,7 +20,7 @@ if (%varcint1194 = 0) {
 	if_settrans(190, $component0);
 }
 cc_sethide(false);
-if ($boolean4 = 0 & %varcint1194 ! 0) {
+if ($boolean4 = false & %varcint1194 ! 0) {
 	if_setonmouseleave("colosseum_button_hover($component0, 0, $string0, $colour5)", $component0);
 	if_setonmouserepeat("colosseum_button_hover($component0, 1, $string0, $colour5)", $component0);
 } else {
@@ -30,7 +30,7 @@ if ($boolean4 = 0 & %varcint1194 ! 0) {
 if ($int2 = 1) {
 	$string0 = "Claim";
 	$colour5 = 0xff981f;
-	if ($boolean4 = 0) {
+	if ($boolean4 = false) {
 		if_setonmouseleave("colosseum_button_hover($component1, 0, $string0, $colour5)", $component1);
 		if_setonmouserepeat("colosseum_button_hover($component1, 1, $string0, $colour5)", $component1);
 	}

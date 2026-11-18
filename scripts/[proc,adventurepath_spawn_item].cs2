@@ -19,7 +19,7 @@ cc_setobject(oc_uncert($namedobj2), $int3);
 cc_setoutline(1);
 cc_setonop("adventurepath_say_item($namedobj2, $int3, $int8)");
 if ($int9 = 0) {
-	if (~on_mobile = 0) {
+	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_settrans($component0, cc_getid, 80, null)");
 		cc_setonmouseleave("cc_settrans($component0, cc_getid, 0, null)");
 	} else {
