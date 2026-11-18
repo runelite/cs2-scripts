@@ -1,6 +1,6 @@
 // 3974
 [proc,settings_wiki_lookup]
-if (~on_mobile = false & %orbs_disabled = 1) {
+if (~on_mobile = 0 & %orbs_disabled = 1) {
 	return;
 }
 %wiki_icon_disabled = calc(1 - %wiki_icon_disabled);

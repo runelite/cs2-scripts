@@ -110,7 +110,7 @@ if ($int0 ! -1) {
 		cc_setop(1, "Confirm");
 	}
 	cc_setopbase("<col=ff981f><$string0></col>");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("league_rewards_confirmdraw(1, $string0, $component8)");
 		cc_setonmouseleave("league_rewards_confirmdraw(0, $string0, $component8)");
 	}
@@ -118,16 +118,16 @@ if ($int0 ! -1) {
 	~script2285;
 	~steelborder($component10, $string0, 1);
 	if ($boolean29 = true) {
-		if_settext("<br><col=ffffff><$string0></col><br><$string1><br>It will cost <col=ffffff><~tostring_spacer($int30, $string3)></col> points.", $component11);
+		if_settext("<int_0=<tostring($int30)>><br><col=ffffff><$string0></col><br><$string1><br>It will cost <col=ffffff><int_0:spacer></col> points.", $component11);
 	} else {
-		if_settext("<col=ffffff><$string0></col><br><br><$string1><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int30, $string3)></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
+		if_settext("<int_0=<tostring($int30)>><col=ffffff><$string0></col><br><br><$string1><br>Are you sure that you wish to buy this item for <col=ffffff><int_0:spacer></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
 	}
 	$int27 = ~v2_stone_button($component12);
 	cc_create($component12, ^iftype_text, $int27, false);
 	$string2 = "Confirm";
 	if_setop(1, $string2, $component12);
 	if_setopbase("<col=ff981f>League reward</col>", $component12);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseleave("league_interface_button_hover($component12, 0, $string2, ^white)", $component12);
 		if_setonmouseover("league_interface_button_hover($component12, 1, $string2, 0xaaaaaa)", $component12);
 	}
@@ -154,7 +154,7 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if_setop(1, $string2, $component13);
 	if_setopbase("<col=ff981f>League reward</col>", $component13);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseleave("league_interface_button_hover($component13, 0, $string2, ^white)", $component13);
 		if_setonmouseover("league_interface_button_hover($component13, 1, $string2, 0xaaaaaa)", $component13);
 	}

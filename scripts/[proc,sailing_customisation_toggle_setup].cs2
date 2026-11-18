@@ -9,7 +9,7 @@ if (%sailing_boat_customisation_hide_more_detail = 0) {
 if_setop(1, "Toggle", $component0);
 if_setopbase("<col=ff981f>Detailed descriptions</col>", $component0);
 if_setonop("script8846", $component0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("text_colour_swapper(sailing_customisation:detail_toggle_text, ^white)", $component0);
 	if_setonmouseleave("text_colour_swapper(sailing_customisation:detail_toggle_text, 0xff981f)", $component0);
 }

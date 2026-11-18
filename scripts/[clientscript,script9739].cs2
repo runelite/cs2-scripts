@@ -7,7 +7,7 @@ def_int $int3 = 3;
 def_int $int4 = 6;
 def_int $int5 = 26;
 def_int $int6 = 23;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$graphic0 = "steelborder_close_button,0";
 	$graphic1 = "steelborder_close_button,0";
 	$int3 = 1;
@@ -84,17 +84,17 @@ while ($int7 < 3) {
 		cc_setposition(0, $int12, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour($colour10);
 		cc_setfill(true);
-		if ($boolean15 = false) {
+		if ($boolean15 = 0) {
 			cc_setonmouserepeat("script9740(event_comsubid, slayer_task_choice:content, 170)");
 		}
 		if ($int14 = 245) {
 			$int14 = 230;
-			if ($boolean15 = false) {
+			if ($boolean15 = 0) {
 				cc_setonmouseleave("script9740(event_comsubid, slayer_task_choice:content, 230)");
 			}
 		} else {
 			$int14 = 245;
-			if ($boolean15 = false) {
+			if ($boolean15 = 0) {
 				cc_setonmouseleave("script9740(event_comsubid, slayer_task_choice:content, 245)");
 			}
 		}

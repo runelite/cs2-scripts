@@ -5,7 +5,7 @@ def_graphic $graphic0 = null;
 def_int $int1 = 0;
 def_boolean $boolean2 = ~on_mobile;
 def_component $component3 = collection:close;
-if ($boolean2 = true) {
+if ($boolean2 = 1) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component3);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $component3);
 	if_setgraphic("steelborder_close_button,0", $component3);
@@ -37,7 +37,7 @@ if (%varcint1245 ! 1) {
 	%varcint1244 = if_gety($component8);
 	%varcint1245 = 1;
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setontimer("script7923($component4, $component5, 0)", $component4);
 } else {
 	if (%varcint1243 < 0 | %varcint1244 < 0 | %varcint1241 <= 0 | %varcint1242 <= 0) {

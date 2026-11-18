@@ -15,7 +15,7 @@ while ($com_xpdrops_setup_contents27 ! $com_xpdrops_setup_contents2) {
 $int26 = calc($int26 + if_getheight($component0) - 1);
 if_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top, $com_xpdrops_setup_dropdown_panel4);
 def_int $int28 = 15;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int28 = scale(8, 5, $int28);
 }
 .cc_create($component1, ^iftype_rectangle, 0, false);

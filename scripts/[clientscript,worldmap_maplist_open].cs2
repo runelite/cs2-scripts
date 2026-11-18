@@ -12,21 +12,21 @@ while ($int9 <= 50) {
 	$wma10 = enum(int, wma, enum_1697, $int9);
 	if ($wma10 ! null & cc_find($com_worldmap_maplist_list2, calc($int9 + 1)) = true) {
 		if (~worldmap_findcoordinmap($wma10, %varcint188) ! null & cc_gethide = false) {
-			if (~on_mobile = false) {
+			if (~on_mobile = 0) {
 				$int6 = calc(cc_gety - 1);
 			} else {
 				$int6 = calc(cc_gety + 3);
 			}
 		}
 		if (~worldmap_findcoordinmap($wma10, %varcint1078) ! null & cc_gethide = false) {
-			if (~on_mobile = false) {
+			if (~on_mobile = 0) {
 				$int7 = calc(cc_gety - 1);
 			} else {
 				$int7 = calc(cc_gety + 3);
 			}
 		}
 		if (~worldmap_findcoordinmap($wma10, %varcint401) ! null & cc_gethide = false) {
-			if (~on_mobile = false) {
+			if (~on_mobile = 0) {
 				$int8 = calc(cc_gety - 1);
 			} else {
 				$int8 = calc(cc_gety + 3);

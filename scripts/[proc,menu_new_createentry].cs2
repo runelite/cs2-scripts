@@ -10,7 +10,7 @@ if (string_length($string0) <= 0) {
 	return($int6, $int7, $int8, $int10, $int11, $int12, $int14, $int15);
 }
 def_int $int16 = 0;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int16 = calc(paraheight($string0, $int5, p12_full) * 24 + 2);
 } else {
 	$int16 = calc(paraheight(append("W: ", $string0), $int5, p12_full) * 18 + 2);
@@ -37,7 +37,7 @@ if ($int14 = 220) {
 	$int14 = 220;
 }
 cc_settrans($int14);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouseover("cc_settrans($component2, $int6, 240, null)");
 	cc_setonmouseleave("cc_settrans($component2, $int6, $int14, null)");
 }

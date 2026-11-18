@@ -13,27 +13,27 @@ if ($obj6 ! null) {
 		$int7 = ~min(%if3, inv_total(inv, $obj6));
 		if (%if4 >= 10000) {
 			if ($int7 > 1) {
-				.cc_settext("<~tostring_spacer($int7, $string0)> x <~tostring_spacer(%if4, $string0)> coins");
+				.cc_settext("<int_0=<tostring($int7)>><int_1=<tostring(%if4)>><int_0:spacer> x <int_1:spacer> coins");
 			} else {
-				.cc_settext("<~tostring_spacer(%if4, $string0)> coins");
+				.cc_settext("<int_0=<tostring(%if4)>><int_0:spacer> coins");
 			}
 			if (calc(^max_32bit_int / %if4) < $int7) {
 				~death_coffer_activebutton($com_death_coffer_confirm5, "Many coins", $com_death_coffer_confirm5);
 			} else {
-				~death_coffer_activebutton($com_death_coffer_confirm5, "<~tostring_spacer(calc($int7 * %if4), $string0)> coins", $com_death_coffer_confirm5);
+				~death_coffer_activebutton($com_death_coffer_confirm5, "<int_0=<tostring(calc($int7 * %if4))>><int_0:spacer> coins", $com_death_coffer_confirm5);
 			}
 		} else if (%if4 = 1) {
 			if ($int7 > 1) {
-				.cc_settext("<~tostring_spacer($int7, $string0)> x <col=ff0000>1 coin</col>");
+				.cc_settext("<int_0=<tostring($int7)>><int_0:spacer> x <col=ff0000>1 coin</col>");
 			} else {
 				.cc_settext("<col=ff0000>1 coin</col>");
 			}
 			~death_coffer_activebutton($com_death_coffer_confirm5, "Unacceptable item", $com_death_coffer_confirm5);
 		} else {
 			if ($int7 > 1) {
-				.cc_settext("<~tostring_spacer($int7, $string0)> x <col=ff0000><~tostring_spacer(%if4, $string0)> coins</col>");
+				.cc_settext("<int_0=<tostring($int7)>><int_1=<tostring(%if4)>><int_0:spacer> x <col=ff0000><int_1:spacer> coins</col>");
 			} else {
-				.cc_settext("<col=ff0000><~tostring_spacer(%if4, $string0)> coins</col>");
+				.cc_settext("<int_0=<tostring(%if4)>><col=ff0000><int_0:spacer> coins</col>");
 			}
 			~death_coffer_activebutton($com_death_coffer_confirm5, "Unacceptable item", $com_death_coffer_confirm5);
 		}

@@ -1,7 +1,7 @@
 // 4215
 [proc,script4215](component $component0, string $string0)
 def_graphic $graphic1 = null;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component0);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	$graphic1 = "steelborder_close_button,0";

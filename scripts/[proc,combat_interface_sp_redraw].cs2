@@ -12,7 +12,7 @@ if (map_members = false & %br_ingame = 0 | $int3 <= 0 & $int4 <= 0) {
 	~script7602;
 	return;
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, combat_interface:category);
 }
 def_int $int7 = 0;

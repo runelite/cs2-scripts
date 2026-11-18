@@ -442,7 +442,7 @@ LABEL357:
    cc_find               
    iconst                 1
    if_icmpeq              LABEL369
-   jump                   LABEL516
+   jump                   LABEL515
 LABEL369:
    lconst                 9223372036854775807
    iload                  19
@@ -456,7 +456,7 @@ LABEL376:
    cc_settextfont        
    sconst                 "Lots of money"
    cc_settext            
-   jump                   LABEL516
+   jump                   LABEL515
 LABEL381:
    iload                  19
    4044                  
@@ -485,7 +485,7 @@ LABEL402:
    lload                  3
    lconst                 0
    if_lcmpgt              LABEL406
-   jump                   LABEL481
+   jump                   LABEL480
 LABEL406:
    lconst                 0
    lload                  4
@@ -532,28 +532,31 @@ LABEL435:
    join_string            6
    cc_settext            
 LABEL447:
-   jump                   LABEL480
+   jump                   LABEL479
 LABEL448:
    iconst                 495
    cc_settextfont        
    lload                  5
    lconst                 1
    if_lcmpeq              LABEL454
-   jump                   LABEL466
+   jump                   LABEL465
 LABEL454:
-   sconst                 "1 coin <col=9f9f9f>("
+   sconst                 "<int_0="
+   iconst                 5000000
+   tostring              
+   sconst                 ">1 coin <col=9f9f9f>("
    lload                  4
    oload                  0
    4126                  
-   sconst                 " - "
-   iconst                 5000000
-   oload                  0
-   invoke                 46
-   sconst                 " per item)</col>"
+   sconst                 " - <int_0:spacer> per item)</col>"
    join_string            5
    cc_settext            
-   jump                   LABEL480
-LABEL466:
+   jump                   LABEL479
+LABEL465:
+   sconst                 "<int_0="
+   iconst                 5000000
+   tostring              
+   sconst                 ">"
    lload                  5
    oload                  0
    4126                  
@@ -561,59 +564,55 @@ LABEL466:
    lload                  4
    oload                  0
    4126                  
-   sconst                 " - "
-   iconst                 5000000
-   oload                  0
-   invoke                 46
-   sconst                 " per item)</col>"
-   join_string            6
+   sconst                 " - <int_0:spacer> per item)</col>"
+   join_string            7
    cc_settext            
+LABEL479:
+   jump                   LABEL515
 LABEL480:
-   jump                   LABEL516
-LABEL481:
    iload                  17
    iconst                 1
-   if_icmpeq              LABEL485
-   jump                   LABEL501
-LABEL485:
+   if_icmpeq              LABEL484
+   jump                   LABEL500
+LABEL484:
    iconst                 496
    cc_settextfont        
    lload                  4
    lconst                 1
-   if_lcmpeq              LABEL491
-   jump                   LABEL494
-LABEL491:
+   if_lcmpeq              LABEL490
+   jump                   LABEL493
+LABEL490:
    sconst                 "1 coin <col=9f9f9f>(no fee expected)</col>"
    cc_settext            
-   jump                   LABEL500
-LABEL494:
+   jump                   LABEL499
+LABEL493:
    lload                  4
    oload                  0
    4126                  
    sconst                 " coins <col=9f9f9f>(no fee expected)</col>"
    join_string            2
    cc_settext            
+LABEL499:
+   jump                   LABEL515
 LABEL500:
-   jump                   LABEL516
-LABEL501:
    iconst                 496
    cc_settextfont        
    lload                  4
    lconst                 1
-   if_lcmpeq              LABEL507
-   jump                   LABEL510
-LABEL507:
+   if_lcmpeq              LABEL506
+   jump                   LABEL509
+LABEL506:
    sconst                 "1 coin"
    cc_settext            
-   jump                   LABEL516
-LABEL510:
+   jump                   LABEL515
+LABEL509:
    lload                  4
    oload                  0
    4126                  
    sconst                 " coins"
    join_string            2
    cc_settext            
-LABEL516:
+LABEL515:
    iconst                 1126
    istore                 22
    iconst                 1127
@@ -626,27 +625,27 @@ LABEL516:
    iload                  11
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL530
-   jump                   LABEL859
-LABEL530:
+   if_icmpeq              LABEL529
+   jump                   LABEL846
+LABEL529:
    iload                  21
    iconst                 1
-   if_icmpeq              LABEL534
-   jump                   LABEL655
-LABEL534:
+   if_icmpeq              LABEL533
+   jump                   LABEL648
+LABEL533:
    iload                  17
    iconst                 1
-   if_icmpeq              LABEL538
-   jump                   LABEL615
-LABEL538:
+   if_icmpeq              LABEL537
+   jump                   LABEL610
+LABEL537:
    iload                  14
    invoke                 5732
    lstore                 3
    lload                  3
    lconst                 0
-   if_lcmpgt              LABEL545
-   jump                   LABEL591
-LABEL545:
+   if_lcmpgt              LABEL544
+   jump                   LABEL588
+LABEL544:
    lconst                 0
    lload                  2
    lload                  3
@@ -655,14 +654,13 @@ LABEL545:
    lstore                 5
    lload                  5
    lconst                 1
-   if_lcmpeq              LABEL555
-   jump                   LABEL571
-LABEL555:
-   sconst                 "You sold a total of <col=ffb83f>"
+   if_lcmpeq              LABEL554
+   jump                   LABEL569
+LABEL554:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
+   tostring              
+   sconst                 ">You sold a total of <col=ffb83f><int_0:spacer></col><br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
@@ -673,13 +671,12 @@ LABEL555:
    sconst                 "</col>)."
    join_string            7
    cc_settext            
-   jump                   LABEL590
-LABEL571:
-   sconst                 "You sold a total of <col=ffb83f>"
+   jump                   LABEL587
+LABEL569:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for <col=ffb83f>"
+   tostring              
+   sconst                 ">You sold a total of <col=ffb83f><int_0:spacer></col><br>for <col=ffb83f>"
    lload                  5
    oload                  0
    4126                  
@@ -694,98 +691,94 @@ LABEL571:
    sconst                 "</col></col>)."
    join_string            9
    cc_settext            
-LABEL590:
-   jump                   LABEL614
-LABEL591:
+LABEL587:
+   jump                   LABEL609
+LABEL588:
    lload                  2
    lconst                 1
-   if_lcmpeq              LABEL595
-   jump                   LABEL603
-LABEL595:
-   sconst                 "You sold a total of <col=ffb83f>"
+   if_lcmpeq              LABEL592
+   jump                   LABEL599
+LABEL592:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for <col=ffb83f>one</col> coin (no fee charged)."
+   tostring              
+   sconst                 ">You sold a total of <col=ffb83f><int_0:spacer></col><br>for <col=ffb83f>one</col> coin (no fee charged)."
    join_string            3
    cc_settext            
-   jump                   LABEL614
-LABEL603:
-   sconst                 "You sold a total of <col=ffb83f>"
+   jump                   LABEL609
+LABEL599:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for <col=ffb83f>"
+   tostring              
+   sconst                 ">You sold a total of <col=ffb83f><int_0:spacer></col><br>for <col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
    sconst                 "</col> coins (no fee charged)."
    join_string            5
    cc_settext            
-LABEL614:
-   jump                   LABEL638
-LABEL615:
+LABEL609:
+   jump                   LABEL631
+LABEL610:
    lload                  2
    lconst                 1
-   if_lcmpeq              LABEL619
-   jump                   LABEL627
-LABEL619:
-   sconst                 "You bought a total of <col=ffb83f>"
+   if_lcmpeq              LABEL614
+   jump                   LABEL621
+LABEL614:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for a total price of <col=ffb83f>one</col> coin."
+   tostring              
+   sconst                 ">You bought a total of <col=ffb83f><int_0:spacer></col><br>for a total price of <col=ffb83f>one</col> coin."
    join_string            3
    cc_settext            
-   jump                   LABEL638
-LABEL627:
-   sconst                 "You bought a total of <col=ffb83f>"
+   jump                   LABEL631
+LABEL621:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col><br>for a total price of <col=ffb83f>"
+   tostring              
+   sconst                 ">You bought a total of <col=ffb83f><int_0:spacer></col><br>for a total price of <col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
    sconst                 "</col> coins."
    join_string            5
    cc_settext            
-LABEL638:
+LABEL631:
    iload                  8
    iload                  9
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL644
-   jump                   LABEL646
-LABEL644:
+   if_icmpeq              LABEL637
+   jump                   LABEL639
+LABEL637:
    iconst                 1
    cc_sethide            
-LABEL646:
+LABEL639:
    iload                  8
    iload                  10
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL652
-   jump                   LABEL654
-LABEL652:
+   if_icmpeq              LABEL645
+   jump                   LABEL647
+LABEL645:
    iconst                 1
    cc_sethide            
-LABEL654:
-   jump                   LABEL859
-LABEL655:
+LABEL647:
+   jump                   LABEL846
+LABEL648:
    iload                  17
    iconst                 1
-   if_icmpeq              LABEL659
-   jump                   LABEL736
-LABEL659:
+   if_icmpeq              LABEL652
+   jump                   LABEL725
+LABEL652:
    iload                  14
    invoke                 5732
    lstore                 3
    lload                  3
    lconst                 0
-   if_lcmpgt              LABEL666
-   jump                   LABEL712
-LABEL666:
+   if_lcmpgt              LABEL659
+   jump                   LABEL703
+LABEL659:
    lconst                 0
    lload                  2
    lload                  3
@@ -794,14 +787,13 @@ LABEL666:
    lstore                 5
    lload                  5
    lconst                 1
-   if_lcmpeq              LABEL676
-   jump                   LABEL692
-LABEL676:
-   sconst                 "You have sold a total of <col=ffb83f>"
+   if_lcmpeq              LABEL669
+   jump                   LABEL684
+LABEL669:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
+   tostring              
+   sconst                 ">You have sold a total of <col=ffb83f><int_0:spacer></col> so far<br>for <col=ffb83f>one</col> coin (<col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
@@ -812,13 +804,12 @@ LABEL676:
    sconst                 "</col></col>)."
    join_string            7
    cc_settext            
-   jump                   LABEL711
-LABEL692:
-   sconst                 "You have sold a total of <col=ffb83f>"
+   jump                   LABEL702
+LABEL684:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for <col=ffb83f>"
+   tostring              
+   sconst                 ">You have sold a total of <col=ffb83f><int_0:spacer></col> so far<br>for <col=ffb83f>"
    lload                  5
    oload                  0
    4126                  
@@ -833,78 +824,74 @@ LABEL692:
    sconst                 "</col></col>)."
    join_string            9
    cc_settext            
-LABEL711:
-   jump                   LABEL735
-LABEL712:
+LABEL702:
+   jump                   LABEL724
+LABEL703:
    lload                  2
    lconst                 1
-   if_lcmpeq              LABEL716
-   jump                   LABEL724
-LABEL716:
-   sconst                 "You have sold a total of <col=ffb83f>"
+   if_lcmpeq              LABEL707
+   jump                   LABEL714
+LABEL707:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for <col=ffb83f>one</col> coin (no fee charged)."
+   tostring              
+   sconst                 ">You have sold a total of <col=ffb83f><int_0:spacer></col> so far<br>for <col=ffb83f>one</col> coin (no fee charged)."
    join_string            3
    cc_settext            
-   jump                   LABEL735
-LABEL724:
-   sconst                 "You have sold a total of <col=ffb83f>"
+   jump                   LABEL724
+LABEL714:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for <col=ffb83f>"
+   tostring              
+   sconst                 ">You have sold a total of <col=ffb83f><int_0:spacer></col> so far<br>for <col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
    sconst                 "</col> coins (no fee charged)."
    join_string            5
    cc_settext            
-LABEL735:
-   jump                   LABEL759
-LABEL736:
+LABEL724:
+   jump                   LABEL746
+LABEL725:
    lload                  2
    lconst                 1
-   if_lcmpeq              LABEL740
-   jump                   LABEL748
-LABEL740:
-   sconst                 "You have bought a total of <col=ffb83f>"
+   if_lcmpeq              LABEL729
+   jump                   LABEL736
+LABEL729:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for a total price of <col=ffb83f>one</col> coin."
+   tostring              
+   sconst                 ">You have bought a total of <col=ffb83f><int_0:spacer></col> so far<br>for a total price of <col=ffb83f>one</col> coin."
    join_string            3
    cc_settext            
-   jump                   LABEL759
-LABEL748:
-   sconst                 "You have bought a total of <col=ffb83f>"
+   jump                   LABEL746
+LABEL736:
+   sconst                 "<int_0="
    iload                  20
-   oload                  0
-   invoke                 46
-   sconst                 "</col> so far<br>for a total price of <col=ffb83f>"
+   tostring              
+   sconst                 ">You have bought a total of <col=ffb83f><int_0:spacer></col> so far<br>for a total price of <col=ffb83f>"
    lload                  2
    oload                  0
    4126                  
    sconst                 "</col> coins."
    join_string            5
    cc_settext            
-LABEL759:
+LABEL746:
    iload                  8
    iload                  9
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL765
-   jump                   LABEL809
-LABEL765:
+   if_icmpeq              LABEL752
+   jump                   LABEL796
+LABEL752:
    iconst                 0
    cc_sethide            
    iload                  14
    stockmarket_isofferstable
    iconst                 1
-   if_icmpeq              LABEL772
-   jump                   LABEL796
-LABEL772:
+   if_icmpeq              LABEL759
+   jump                   LABEL783
+LABEL759:
    iconst                 0
    cc_settrans           
    iload                  22
@@ -928,8 +915,8 @@ LABEL772:
    iconst                 2
    sconst                 "ii"
    cc_setonop            
-   jump                   LABEL809
-LABEL796:
+   jump                   LABEL796
+LABEL783:
    iconst                 120
    cc_settrans           
    iload                  23
@@ -943,22 +930,22 @@ LABEL796:
    iconst                 -1
    sconst                 ""
    cc_setonop            
-LABEL809:
+LABEL796:
    iload                  8
    iload                  10
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL815
-   jump                   LABEL859
-LABEL815:
+   if_icmpeq              LABEL802
+   jump                   LABEL846
+LABEL802:
    iconst                 0
    cc_sethide            
    iload                  14
    stockmarket_isofferstable
    iconst                 1
-   if_icmpeq              LABEL822
-   jump                   LABEL846
-LABEL822:
+   if_icmpeq              LABEL809
+   jump                   LABEL833
+LABEL809:
    iconst                 0
    cc_settrans           
    iload                  24
@@ -982,8 +969,8 @@ LABEL822:
    iconst                 2
    sconst                 "ii"
    cc_setonop            
-   jump                   LABEL859
-LABEL846:
+   jump                   LABEL846
+LABEL833:
    iconst                 120
    cc_settrans           
    iload                  25
@@ -997,34 +984,34 @@ LABEL846:
    iconst                 -1
    sconst                 ""
    cc_setonop            
-LABEL859:
+LABEL846:
    iload                  8
    iload                  12
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL865
-   jump                   LABEL884
-LABEL865:
+   if_icmpeq              LABEL852
+   jump                   LABEL871
+LABEL852:
    iconst                 0
    cc_sethide            
    iload                  16
    iconst                 -1
-   if_icmpne              LABEL871
-   jump                   LABEL878
-LABEL871:
+   if_icmpne              LABEL858
+   jump                   LABEL865
+LABEL858:
    iload                  14
    iload                  19
    iload                  20
    iconst                 24320
    iload                  13
    invoke                 812
-   jump                   LABEL884
-LABEL878:
+   jump                   LABEL871
+LABEL865:
    iload                  14
    iload                  19
    iload                  20
    iconst                 -1
    iload                  13
    invoke                 812
-LABEL884:
+LABEL871:
    return                

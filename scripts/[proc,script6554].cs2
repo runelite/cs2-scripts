@@ -2,7 +2,7 @@
 [proc,script6554]
 def_int $int0 = 120;
 def_int $int1 = 30;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int0, $int1 = 60, 60;
 }
 if (deviceoption_get(^deviceoption_fps_limit) = 0) {

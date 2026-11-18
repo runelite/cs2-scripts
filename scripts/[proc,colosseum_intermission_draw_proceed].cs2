@@ -4,7 +4,7 @@ def_int $int13 = 0;
 ~thinbox(colosseum_intermission:modifier_information, 0);
 def_int $int14 = %if1;
 def_string $string0 = ",";
-if_settext("<~tostring_spacer($int14, $string0)> GP", $component9);
+if_settext("<int_0=<tostring($int14)>><int_0:spacer> GP", $component9);
 def_int $int15 = 0;
 def_int $int16 = inv_size(colosseum_rewards_previous);
 def_int $int17 = calc((42 - 36) * 3 - 2);
@@ -37,7 +37,7 @@ while ($int15 < $int16 & $int22 = 1) {
 }
 $int15 = 0;
 $int14 = %if2;
-if_settext("<~tostring_spacer($int14, $string0)> GP", $component10);
+if_settext("<int_0=<tostring($int14)>><int_0:spacer> GP", $component10);
 $int16 = inv_size(colosseum_rewards_future);
 $int13 = 0;
 cc_create($component1, ^iftype_graphic, $int13, false);
@@ -69,7 +69,7 @@ if (%if3 > %if1) {
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic("options_icons,28");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseleave("colosseum_loot_hover(41025565, 0, $int13)", colosseum_intermission:total_loot);
 		if_setonmouserepeat("colosseum_loot_hover(41025565, 1, $int13)", colosseum_intermission:total_loot);
 	} else {

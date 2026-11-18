@@ -85,7 +85,7 @@ if (%tfa_client_num_external_spectators > 0) {
 	if_setsize(0, 17, ^setsize_minus, ^setsize_abs, $com_tfa_hud_content_spectators20);
 	if_setposition(0, $int22, ^setpos_abs_left, ^setpos_abs_top, $com_tfa_hud_content_spectators20);
 	$int22 = calc($int22 + if_getheight($com_tfa_hud_content_spectators20) + 2);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("tooltip_mouserepeat($com_tfa_hud_content_spectators20, -1, $com_tfa_hud_tooltip18, "Spectators", 25, 256)", $com_tfa_hud_content_spectators20);
 		if_setonmouseleave("deltooltip($com_tfa_hud_tooltip18)", $com_tfa_hud_content_spectators20);
 	}

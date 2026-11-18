@@ -95,7 +95,7 @@ if ($int9 = 1) {
 	cc_setop(1, "Select");
 	cc_setopbase("<col=ff9040><struct_param($struct1, param_1621)></col>");
 	cc_setonclick("giants_foundry_mould_setup_mould_select($int4)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, ^black)");
 	}

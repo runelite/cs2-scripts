@@ -91,7 +91,7 @@ def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 1;
 def_int $int11 = 13;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int11 = scale(8, 5, $int11);
 }
 if (if_gethide(grouping:dropdown) = true) {
@@ -208,7 +208,7 @@ if_sethide(true, grouping:playerlist_container);
 $int5 = calc(if_getwidth(grouping:dropdown_contents) - 12);
 $int10 = 3;
 $int11 = 16;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int11 = scale(8, 5, $int11);
 }
 cc_create(grouping:dropdown_contents, ^iftype_rectangle, $int1, false);

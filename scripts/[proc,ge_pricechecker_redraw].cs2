@@ -437,10 +437,10 @@ LABEL413:
    if_lcmplt              LABEL417
    jump                   LABEL431
 LABEL417:
+   sconst                 "<int_0="
    iload                  11
-   oload                  2
-   invoke                 46
-   sconst                 " x "
+   tostring              
+   sconst                 "><int_0:spacer> x "
    lload                 
    oload                  2
    4126                  
@@ -448,18 +448,18 @@ LABEL417:
    lload                  1
    oload                  2
    4126                  
-   join_string            5
+   join_string            6
    cc_settext            
    jump                   LABEL440
 LABEL431:
+   sconst                 "<int_0="
    iload                  11
-   oload                  2
-   invoke                 46
-   sconst                 " x "
+   tostring              
+   sconst                 "><int_0:spacer> x "
    lload                 
    oload                  2
    4126                  
-   join_string            3
+   join_string            4
    cc_settext            
 LABEL440:
    jump                   LABEL445

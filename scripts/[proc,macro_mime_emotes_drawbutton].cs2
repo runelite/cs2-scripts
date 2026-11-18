@@ -8,7 +8,7 @@ if ($int1 = 1) {
 	$comsubid2 = ~beige_stone_button_out($component0, 0);
 }
 ~macro_mime_emotes_buttontext($component0, $string0, $comsubid2);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("macro_mime_emotes_drawbutton(event_com, $string0, 1)", $component0);
 	if_setonmouseleave("macro_mime_emotes_drawbutton(event_com, $string0, 0)", $component0);
 }

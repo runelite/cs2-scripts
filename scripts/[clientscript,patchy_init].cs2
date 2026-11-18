@@ -2,7 +2,7 @@
 [clientscript,patchy_init](int $com_patchy_universe0, component $com_patchy_list1, component $com_patchy_scrollbar2, component $com_patchy_info_container3, component $com_patchy_info_contents4, component $com_patchy_confirm5)
 cc_deleteall($com_patchy_info_contents4);
 def_int $int6 = 0;
-def_string $string0 = "For <col=ffffff><~tostring_spacer(500, ",")> coins</col>, Patchy will make costume pieces by sewing together the component parts.<br><br>He charges <col=ffffff><~tostring_spacer(600, ",")> coins</col> to separate them again.";
+def_string $string0 = "<int_0=<tostring(500)>><int_1=<tostring(600)>>For <col=ffffff><int_0:spacer> coins</col>, Patchy will make costume pieces by sewing together the component parts.<br><br>He charges <col=ffffff><int_1:spacer> coins</col> to separate them again.";
 cc_create($com_patchy_info_contents4, ^iftype_text, $int6, false);
 $int6 = calc($int6 + 1);
 def_int $int7 = calc(paraheight($string0, if_getwidth($com_patchy_info_contents4), p12_full) * 12 + 5);

@@ -1,6 +1,6 @@
 // 3693
 [proc,leagues_menu_button](component $component0, int $comsubid1, component $component2, component $component3)
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component0);
 	if_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top, $component0);
 } else {
@@ -13,7 +13,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("menu_buttons,0");
 def_graphic $graphic4 = "menu_buttons,1";
 def_graphic $graphic5 = "menu_buttons,0";
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic4, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic5, null)");
 }

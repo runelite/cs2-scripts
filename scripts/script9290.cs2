@@ -553,15 +553,16 @@ LABEL475:
    iconst                 1
    invoke                 37
 LABEL480:
-   sconst                 "Unlocked: "
+   sconst                 "<int_0="
    iload                  9
    iload                  8
    invoke                 1046
-   invoke                 7019
-   sconst                 " / "
+   tostring              
+   sconst                 "><int_1="
    iload                  8
-   invoke                 7019
-   join_string            4
+   tostring              
+   sconst                 ">Unlocked: <int_0:spacer> / <int_1:spacer>"
+   join_string            5
    iload                  4
    if_settext            
    iconst                 0

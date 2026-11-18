@@ -163,7 +163,7 @@ cc_settrans(255);
 cc_setopbase("<col=ff981f><db_getfield($dbrow5, pvp_tutorial:title, 0)></col>");
 cc_setop(1, "View");
 cc_setonop("script9926($dbrow5)");
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouserepeat("script9924(1, $int1, $comsubid28, $comsubid32, $component2, $graphic9, $graphic10)");
 	cc_setonmouseleave("script9924(0, $int1, $comsubid28, $comsubid32, $component2, $graphic9, $graphic10)");
 }

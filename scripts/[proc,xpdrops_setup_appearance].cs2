@@ -1,6 +1,6 @@
 // 2514
 [proc,xpdrops_setup_appearance](component $com_xpdrops_setup_position_display0, component $com_xpdrops_setup_size_display1, component $com_xpdrops_setup_speed_display2, component $com_xpdrops_setup_duration_display3, component $com_xpdrops_setup_counter_display4, component $com_xpdrops_setup_progress_display5, component $com_xpdrops_setup_colour_display6, component $com_xpdrops_setup_grouping_display7, component $com_xpdrops_setup_fakes_display8)
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_sethide(true, $com_xpdrops_setup_position_display0);
 	if_sethide(true, $com_xpdrops_setup_size_display1);
 	if_setposition(8, 8, ^setpos_abs_left, ^setpos_abs_top, $com_xpdrops_setup_counter_display4);

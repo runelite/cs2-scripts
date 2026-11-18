@@ -52,7 +52,7 @@ def_int $int15 = struct_param($struct12, param_1442);
 if (%league_3_unlocks_current_selection ! 0) {
 	~v2_stone_button($component5);
 	~v2_stone_button($component6);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseover("v2_stone_button_in($component5)", $component5);
 		if_setonmouseover("v2_stone_button_in($component6)", $component6);
 		if_setonmouseleave("v2_stone_button($component5)", $component5);

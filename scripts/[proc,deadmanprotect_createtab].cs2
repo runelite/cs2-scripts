@@ -44,7 +44,7 @@ cc_setfill(true);
 cc_settrans(255);
 cc_setop(1, $string0);
 cc_setonop("deadmanprotect_draw(1, $int0, $component5, $component6, $component7)");
-if ($int0 = $int4 | ~on_mobile = true) {
+if ($int0 = $int4 | ~on_mobile = 1) {
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 } else {

@@ -5,7 +5,7 @@ if (cc_find($com_gravestone_generic_frame1, $int18) = true) {
 	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comsubid){gravestone}");
 }
 def_int $int19 = 0;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int19 = calc(165 - (20 + 30));
 }
 ~script4215($com_gravestone_generic_close2, "Close");

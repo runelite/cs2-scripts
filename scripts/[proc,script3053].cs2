@@ -22,7 +22,7 @@ if (%trawler_activity >= 50) {
 if ($int3 <= 0) {
 	if_settext("Catch: <$string2>Nothing", $com_trawler_overlay_catch1);
 } else if ($int3 < 4000) {
-	if_settext("Catch: <$string2><~tostring_spacer($int3, $string1)> fish", $com_trawler_overlay_catch1);
+	if_settext("<int_0=<tostring($int3)>>Catch: <$string2><int_0:spacer> fish", $com_trawler_overlay_catch1);
 } else {
 	if_settext("Catch: Lots!", $com_trawler_overlay_catch1);
 }

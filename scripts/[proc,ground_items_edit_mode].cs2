@@ -1,7 +1,7 @@
 // 7241
 [proc,ground_items_edit_mode]()(int)
 def_int $int0 = %ground_items_edit_mode_enabled_desktop;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int0 = %ground_items_edit_mode_enabled_mobile;
 }
 if ($int0 = 0) {

@@ -36,7 +36,7 @@ if ($graphic1 ! null) {
 		if (string_length($string0) > 0) {
 			if_setop(1, $string0, $component4);
 			if_setonop("opsound(event_op, 2)", $component4);
-			if ($component6 ! null & ~on_mobile = false) {
+			if ($component6 ! null & ~on_mobile = 0) {
 				if_setonmouserepeat("settrans($component6, 230)", $component4);
 				if_setonmouseleave("settrans($component6, 255)", $component4);
 				if_sethide(false, $component6);

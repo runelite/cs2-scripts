@@ -3,7 +3,7 @@
 def_int $int16 = $int1;
 def_enum $enum17 = struct_param($struct5, param_1091);
 def_boolean $boolean18 = ~on_mobile;
-if ($boolean18 = true & struct_param($struct5, param_1092) ! null) {
+if ($boolean18 = 1 & struct_param($struct5, param_1092) ! null) {
 	$enum17 = struct_param($struct5, param_1092);
 }
 if ($enum17 = null) {
@@ -160,7 +160,7 @@ if ($boolean30 = true) {
 		13 = $int15
 	);
 }
-if ($int15 = 1 & $boolean18 = false) {
+if ($int15 = 1 & $boolean18 = 0) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
 }

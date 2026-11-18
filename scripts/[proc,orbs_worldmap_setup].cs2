@@ -20,7 +20,7 @@ if (~script9336($enum5) = 1) {
 	if_setsize(26, 26, ^setsize_abs, ^setsize_abs, $component2);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
-} else if (~on_mobile = false & $enum5 ! enum_1129) {
+} else if (~on_mobile = 0 & $enum5 ! enum_1129) {
 	if (%minimap_toggle = 0) {
 		if_setposition(0, 115, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	} else {
@@ -30,7 +30,7 @@ if (~script9336($enum5) = 1) {
 	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
-	if ($component4 ! null & ~on_mobile = false & %settings_world_map_hotkey_disabled = 0) {
+	if ($component4 ! null & ~on_mobile = 0 & %settings_world_map_hotkey_disabled = 0) {
 		if (~on_enhanced_any = 0 & %minimap_toggle = 0) {
 			$string0 = "World Map<br><col=ff0000>Ctrl + M</col><br>to open.";
 		}
@@ -44,7 +44,7 @@ if (~script9336($enum5) = 1) {
 	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
-	if ($component4 ! null & ~on_mobile = false & %settings_world_map_hotkey_disabled = 0) {
+	if ($component4 ! null & ~on_mobile = 0 & %settings_world_map_hotkey_disabled = 0) {
 		if (~on_enhanced_any = 0) {
 			$string0 = "World Map<br><col=ff0000>Ctrl + M</col> to open.";
 		}
@@ -58,7 +58,7 @@ if (~script9336($enum5) = 1) {
 	if_setgraphic(ring_30, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
-	if ($component4 ! null & ~on_mobile = false & %settings_world_map_hotkey_disabled = 0) {
+	if ($component4 ! null & ~on_mobile = 0 & %settings_world_map_hotkey_disabled = 0) {
 		if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component4);
 		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component3, $string0, 25, 512)", $component1);
 		if_setonmouseleave("deltooltip($component3)", $component1);
@@ -86,7 +86,7 @@ if (if_hassub(enum(component, component, $enum5, toplevel_osrs_stretch:floater))
 		} else {
 			if_setop(4, "Restore <col=ff9040>Minimap</col>", $component2);
 		}
-	} else if (~on_mobile = false & $enum5 ! enum_1129) {
+	} else if (~on_mobile = 0 & $enum5 ! enum_1129) {
 		~orbs_worldmap_op1($component2);
 		if_setop(2, "Floating <col=ff9040>World Map</col>", $component2);
 		if_setop(3, "Fullscreen <col=ff9040>World Map</col>", $component2);

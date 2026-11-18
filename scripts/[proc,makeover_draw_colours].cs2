@@ -33,7 +33,7 @@ while ($int6 < enum_getoutputcount($enum1)) {
 	cc_setop(1, "Colour");
 	cc_setopbase("<col=ff9040><enum(int, string, $enum2, $int6)>");
 	cc_setonop("makeover_op_colour(event_com, event_comsubid)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("makeover_hover_colour(event_com, event_comsubid, 1)");
 		cc_setonmouseleave("makeover_hover_colour(event_com, event_comsubid, 0)");
 	}

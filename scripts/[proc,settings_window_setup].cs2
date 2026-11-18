@@ -5,7 +5,7 @@ def_int $int20 = ~steelborder($com_settings_frame2, "Settings", 1);
 def_graphic $graphic21 = null;
 def_int $int22 = 0;
 def_boolean $boolean23 = ~on_mobile;
-if ($boolean23 = true) {
+if ($boolean23 = 1) {
 	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $com_settings_close3);
 	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $com_settings_close3);
 	if_setgraphic("steelborder_close_button,0", $com_settings_close3);
@@ -26,7 +26,7 @@ if_setop(2, "", $com_settings_close3);
 cc_deleteall($com_settings_tooltip_inside_if5);
 cc_deleteall($com_settings_tooltip_inside_if_clickzone4);
 if_setop(1, "Toggle", $com_settings_tooltip_inside_if_clickzone4);
-if ($boolean23 = true) {
+if ($boolean23 = 1) {
 	if_setsize(80, 35, ^setsize_abs, ^setsize_abs, $com_settings_tooltip_inside_if_clickzone4);
 	if_setposition(7, 0, ^setpos_abs_left, ^setpos_abs_top, $com_settings_tooltip_inside_if_clickzone4);
 	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_tooltip_inside_if5);
@@ -45,7 +45,7 @@ if ($boolean23 = true) {
 	if_setsize(0, 21, ^setsize_minus, ^setsize_abs, $com_settings_declutter_button7);
 }
 $int20 = ~v2_stone_button_filled($com_settings_tooltip_inside_if5);
-if ($boolean23 = false) {
+if ($boolean23 = 0) {
 	if_setonmouseover("v2_stone_button_change_in($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
 	if_setonmouseleave("v2_stone_button_change_out($com_settings_tooltip_inside_if5, 0)", $com_settings_tooltip_inside_if5);
 	if_setonmouseover("v2_stone_button_change_in($com_settings_declutter_button7, 0)", $com_settings_declutter_button7);

@@ -250,7 +250,7 @@ LABEL209:
    iload                  0
    if_setonmouserepeat   
 LABEL213:
-   jump                   LABEL348
+   jump                   LABEL344
 LABEL214:
    iload                  1
    stockmarket_getofferitem
@@ -265,7 +265,7 @@ LABEL214:
    stockmarket_getoffertype
    iconst                 1
    if_icmpeq              LABEL228
-   jump                   LABEL271
+   jump                   LABEL269
 LABEL228:
    iload                  0
    iload                  12
@@ -283,86 +283,82 @@ LABEL238:
    stockmarket_isofferfinished
    iconst                 1
    if_icmpeq              LABEL243
-   jump                   LABEL257
+   jump                   LABEL256
 LABEL243:
-   sconst                 "Sold: "
+   sconst                 "<int_0="
+   iload                  19
+   tostring              
+   sconst                 "><int_1="
+   iload                  18
+   tostring              
+   sconst                 ">Sold: "
    iload                  17
    oc_name               
-   sconst                 "<br>"
-   iload                  19
-   oload                  1
-   invoke                 46
-   sconst                 " / "
-   iload                  18
-   oload                  1
-   invoke                 46
-   join_string            6
+   sconst                 "<br><int_0:spacer> / <int_1:spacer>"
+   join_string            7
    ostore                 0
-   jump                   LABEL270
-LABEL257:
-   sconst                 "Selling: "
+   jump                   LABEL268
+LABEL256:
+   sconst                 "<int_0="
+   iload                  19
+   tostring              
+   sconst                 "><int_1="
+   iload                  18
+   tostring              
+   sconst                 ">Selling: "
    iload                  17
    oc_name               
-   sconst                 "<br>"
-   iload                  19
-   oload                  1
-   invoke                 46
-   sconst                 " / "
-   iload                  18
-   oload                  1
-   invoke                 46
-   join_string            6
+   sconst                 "<br><int_0:spacer> / <int_1:spacer>"
+   join_string            7
    ostore                 0
-LABEL270:
-   jump                   LABEL313
-LABEL271:
+LABEL268:
+   jump                   LABEL309
+LABEL269:
    iload                  0
    iload                  12
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL277
-   jump                   LABEL281
-LABEL277:
+   if_icmpeq              LABEL275
+   jump                   LABEL279
+LABEL275:
    iconst                 0
    cc_sethide            
    iconst                 1118
    cc_setgraphic         
-LABEL281:
+LABEL279:
    iload                  1
    stockmarket_isofferfinished
    iconst                 1
-   if_icmpeq              LABEL286
-   jump                   LABEL300
-LABEL286:
-   sconst                 "Bought: "
+   if_icmpeq              LABEL284
+   jump                   LABEL297
+LABEL284:
+   sconst                 "<int_0="
+   iload                  19
+   tostring              
+   sconst                 "><int_1="
+   iload                  18
+   tostring              
+   sconst                 ">Bought: "
    iload                  17
    oc_name               
-   sconst                 "<br>"
-   iload                  19
-   oload                  1
-   invoke                 46
-   sconst                 " / "
-   iload                  18
-   oload                  1
-   invoke                 46
-   join_string            6
+   sconst                 "<br><int_0:spacer> / <int_1:spacer>"
+   join_string            7
    ostore                 0
-   jump                   LABEL313
-LABEL300:
-   sconst                 "Buying: "
+   jump                   LABEL309
+LABEL297:
+   sconst                 "<int_0="
+   iload                  19
+   tostring              
+   sconst                 "><int_1="
+   iload                  18
+   tostring              
+   sconst                 ">Buying: "
    iload                  17
    oc_name               
-   sconst                 "<br>"
-   iload                  19
-   oload                  1
-   invoke                 46
-   sconst                 " / "
-   iload                  18
-   oload                  1
-   invoke                 46
-   join_string            6
+   sconst                 "<br><int_0:spacer> / <int_1:spacer>"
+   join_string            7
    ostore                 0
-LABEL313:
+LABEL309:
    iconst                 526
    iload                  0
    iconst                 -1
@@ -377,22 +373,22 @@ LABEL313:
    iload                  13
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL329
-   jump                   LABEL334
-LABEL329:
+   if_icmpeq              LABEL325
+   jump                   LABEL330
+LABEL325:
    iconst                 0
    cc_sethide            
    iload                  17
    iload                  18
    cc_setobject          
-LABEL334:
+LABEL330:
    iload                  0
    iload                  11
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL340
-   jump                   LABEL348
-LABEL340:
+   if_icmpeq              LABEL336
+   jump                   LABEL344
+LABEL336:
    iconst                 0
    cc_sethide            
    iload                  1
@@ -401,7 +397,7 @@ LABEL340:
    iconst                 -1
    iload                  5
    invoke                 812
-LABEL348:
+LABEL344:
    iload                  2
    invoke                 41
    return                

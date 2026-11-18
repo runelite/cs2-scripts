@@ -15,13 +15,13 @@ while ($int10 <= 4) {
 			cc_setonmouseleave(null);
 		} else if (calc($int10 % 2) = 0) {
 			cc_settrans(255);
-			if (~on_mobile = false) {
+			if (~on_mobile = 0) {
 				cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
 			}
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 		} else {
 			cc_settrans(240);
-			if (~on_mobile = false) {
+			if (~on_mobile = 0) {
 				cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
 			}
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 240, null)");

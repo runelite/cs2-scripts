@@ -64,7 +64,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 			case loot_broadcast_value_3109 :
 				if (~clan_permission_get(loot_broadcasts_4243) ! 128) {
 					if (%varclansetting31 > 1) {
-						$string0 = "<~tostring_spacer(%varclansetting31, ",")> coins";
+						$string0 = "<int_0=<tostring(%varclansetting31)>><int_0:spacer> coins";
 					} else if (%varclansetting31 = 1) {
 						$string0 = "1 coin";
 					} else {
@@ -86,7 +86,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 			case pk_broadcast_value_4247 :
 				if (~clan_permission_get(pk_broadcasts_4246) ! 128) {
 					if (%varclansetting65 > 1) {
-						$string0 = "<~tostring_spacer(%varclansetting65, ",")> coins";
+						$string0 = "<int_0=<tostring(%varclansetting65)>><int_0:spacer> coins";
 					} else if (%varclansetting65 = 1) {
 						$string0 = "1 coin";
 					} else {
@@ -98,7 +98,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 			case loot_key_broadcast_value_4678 :
 				if (~clan_permission_get(loot_key_broadcasts_4677) ! 128) {
 					if (%varclansetting98 > 1) {
-						$string0 = "<~tostring_spacer(%varclansetting98, ",")> coins";
+						$string0 = "<int_0=<tostring(%varclansetting98)>><int_0:spacer> coins";
 					} else if (%varclansetting98 = 1) {
 						$string0 = "1 coin";
 					} else {
@@ -204,7 +204,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 		if (cc_find($component0, $int1) = true) {
 			cc_settrans(245);
 		}
-		if (~on_mobile = false) {
+		if (~on_mobile = 0) {
 			.cc_setonmouserepeat("clan_permissions_buttonhover(1, event_com, event_comsubid, $int1, 245, 225)");
 		}
 		.cc_setonmouseleave("clan_permissions_buttonhover(0, event_com, event_comsubid, $int1, 245, 225)");

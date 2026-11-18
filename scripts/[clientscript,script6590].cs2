@@ -5,7 +5,7 @@ def_int $int9 = if_getwidth(toa_raid_summary:name_column);
 def_string $string1 = "null";
 def_component $component10 = toa_raid_summary:tooltip;
 def_int $int11 = calc(176 / $int6);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$string1 = "Damage taken";
 	if_setop(1, "Damage taken", toa_raid_summary:damage_taken_graphic);
 	if_setonop("toa_raid_summary_mobile_tooltip(event_com, -1, $component10, $string1, 512)", toa_raid_summary:damage_taken_graphic);
@@ -99,7 +99,7 @@ if ($struct3 = null) {
 	cc_settext("-");
 } else {
 	$string1 = struct_param($struct3, param_1526);
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		cc_setop(1, "Show Description");
 		cc_setonop("toa_raid_summary_mobile_tooltip(event_com, event_comsubid, $component10, $string1, 512)");
 	} else {

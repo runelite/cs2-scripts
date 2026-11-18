@@ -2,7 +2,7 @@
 [proc,script8599](int $int0, component $com_sangvesti_world_map_map_front1, string $string0, component $com_sangvesti_world_map_tooltip2, int $int3, int $int4, int $int5, int $int6)(int)
 cc_create($com_sangvesti_world_map_map_front1, ^iftype_rectangle, $int0, false);
 def_int $int7 = 6;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int7 = 10;
 }
 cc_setposition(calc($int3 - $int7 / 2), calc($int4 - $int7 / 2), ^setpos_abs_left, ^setpos_abs_top);

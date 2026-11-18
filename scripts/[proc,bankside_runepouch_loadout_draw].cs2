@@ -39,14 +39,14 @@ while ($int17 <= $int6) {
 			}
 			if ($int16 = 1 | inv_total(bank, $namedobj10) > 0 | inv_total(inv, $namedobj10) > 0) {
 				cc_settrans(0);
-				if ($boolean12 = false) {
+				if ($boolean12 = 0) {
 					cc_setonmouserepeat("script4878(1, event_com, event_comsubid, 80, 0)");
 				}
 				cc_setonmouseleave("script4878(0, event_com, event_comsubid, 80, 0)");
 				.cc_sethide(true);
 			} else {
 				cc_settrans(120);
-				if ($boolean12 = false) {
+				if ($boolean12 = 0) {
 					cc_setonmouserepeat("script4878(1, event_com, event_comsubid, 160, 120)");
 				}
 				cc_setonmouseleave("script4878(0, event_com, event_comsubid, 160, 120)");
@@ -57,7 +57,7 @@ while ($int17 <= $int6) {
 		} else {
 			cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 			cc_settrans(120);
-			if ($boolean12 = false) {
+			if ($boolean12 = 0) {
 				cc_setonmouserepeat("script4878(1, event_com, event_comsubid, 160, 120)");
 			}
 			cc_setonmouseleave("script4878(0, event_com, event_comsubid, 160, 120)");

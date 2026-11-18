@@ -1,9 +1,9 @@
 // 1001
-[proc,xpdrops_percentage_tostring](int $int0)(string)
+[proc,xpdrops_percentage_tostring](int $int0)(anyobj)
+def_int $int1 = 0;
 if ($int0 < 0) {
-	return("");
+	$int1 = -1;
+} else if ($int0 >= 1000) {
+	$int1 = 1;
 }
-if ($int0 >= 1000) {
-	return("- <col=ff0000>COMPLETE!</col>");
-}
-return("<tostring(calc($int0 / 10))>.<tostring(calc($int0 % 10))>%");
+return("<int_xpp_sw=<tostring($int1)>><int_xpp=<tostring($int0)>><switch,int_xpp_sw,<int_xpp:percent_1_z>,- <col=ff0000>COMPLETE!</col>,>");

@@ -31,7 +31,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 def_int $int26 = 25;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int26 = 35;
 }
 if_setsize(0, $int26, ^setsize_minus, ^setsize_abs, $com_poh_board_top_bar5);

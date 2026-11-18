@@ -274,7 +274,7 @@ LABEL213:
    get_varp               1151
    iconst                 -1
    if_icmpne              LABEL225
-   jump                   LABEL470
+   jump                   LABEL469
 LABEL225:
    iload                  1
    iload                  8
@@ -362,7 +362,7 @@ LABEL293:
    iload                  15
    iload                  14
    invoke                 780
-   jump                   LABEL469
+   jump                   LABEL468
 LABEL298:
    get_varbit             4396
    4044                  
@@ -374,17 +374,17 @@ LABEL298:
    cc_find               
    iconst                 1
    if_icmpeq              LABEL309
-   jump                   LABEL433
+   jump                   LABEL432
 LABEL309:
    get_varbit             4397
    iconst                 1
    if_icmpeq              LABEL313
-   jump                   LABEL418
+   jump                   LABEL417
 LABEL313:
    get_varbit             13139
    iconst                 0
    if_icmpgt              LABEL317
-   jump                   LABEL418
+   jump                   LABEL417
 LABEL317:
    lconst                 5000000
    get_varbit             13139
@@ -397,7 +397,7 @@ LABEL317:
    lload                  1
    lconst                 0
    if_lcmpgt              LABEL329
-   jump                   LABEL402
+   jump                   LABEL401
 LABEL329:
    lload                 
    get_varbit             4396
@@ -442,28 +442,31 @@ LABEL356:
    join_string            6
    cc_settext            
 LABEL368:
-   jump                   LABEL401
+   jump                   LABEL400
 LABEL369:
    iconst                 495
    cc_settextfont        
    lload                  2
    lconst                 1
    if_lcmpeq              LABEL375
-   jump                   LABEL387
+   jump                   LABEL386
 LABEL375:
-   sconst                 "1 coin <col=9f9f9f>("
+   sconst                 "<int_0="
+   iconst                 5000000
+   tostring              
+   sconst                 ">1 coin <col=9f9f9f>("
    lload                 
    oload                  0
    4126                  
-   sconst                 " - "
-   iconst                 5000000
-   oload                  0
-   invoke                 46
-   sconst                 " per item)</col>"
+   sconst                 " - <int_0:spacer> per item)</col>"
    join_string            5
    cc_settext            
-   jump                   LABEL401
-LABEL387:
+   jump                   LABEL400
+LABEL386:
+   sconst                 "<int_0="
+   iconst                 5000000
+   tostring              
+   sconst                 ">"
    lload                  2
    oload                  0
    4126                  
@@ -471,59 +474,55 @@ LABEL387:
    lload                 
    oload                  0
    4126                  
-   sconst                 " - "
-   iconst                 5000000
-   oload                  0
-   invoke                 46
-   sconst                 " per item)</col>"
-   join_string            6
+   sconst                 " - <int_0:spacer> per item)</col>"
+   join_string            7
    cc_settext            
+LABEL400:
+   jump                   LABEL416
 LABEL401:
-   jump                   LABEL417
-LABEL402:
    iconst                 496
    cc_settextfont        
    lload                 
    lconst                 1
-   if_lcmpeq              LABEL408
-   jump                   LABEL411
-LABEL408:
+   if_lcmpeq              LABEL407
+   jump                   LABEL410
+LABEL407:
    sconst                 "1 coin <col=9f9f9f>(no fee expected)</col>"
    cc_settext            
-   jump                   LABEL417
-LABEL411:
+   jump                   LABEL416
+LABEL410:
    lload                 
    oload                  0
    4126                  
    sconst                 " coins <col=9f9f9f>(no fee expected)</col>"
    join_string            2
    cc_settext            
+LABEL416:
+   jump                   LABEL432
 LABEL417:
-   jump                   LABEL433
-LABEL418:
    iconst                 496
    cc_settextfont        
    lload                 
    lconst                 1
-   if_lcmpeq              LABEL424
-   jump                   LABEL427
-LABEL424:
+   if_lcmpeq              LABEL423
+   jump                   LABEL426
+LABEL423:
    sconst                 "1 coin"
    cc_settext            
-   jump                   LABEL433
-LABEL427:
+   jump                   LABEL432
+LABEL426:
    lload                 
    oload                  0
    4126                  
    sconst                 " coins"
    join_string            2
    cc_settext            
-LABEL433:
+LABEL432:
    lload                 
    lconst                 0
-   if_lcmpgt              LABEL437
-   jump                   LABEL465
-LABEL437:
+   if_lcmpgt              LABEL436
+   jump                   LABEL464
+LABEL436:
    iload                  14
    invoke                 208
    pop_int               
@@ -547,75 +546,75 @@ LABEL437:
    iload                  15
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL462
-   jump                   LABEL464
-LABEL462:
+   if_icmpeq              LABEL461
+   jump                   LABEL463
+LABEL461:
    sconst                 "<col=ffffff>Confirm</col>"
    cc_settext            
+LABEL463:
+   jump                   LABEL468
 LABEL464:
-   jump                   LABEL469
-LABEL465:
    iload                  1
    iload                  15
    iload                  14
    invoke                 780
+LABEL468:
+   jump                   LABEL514
 LABEL469:
-   jump                   LABEL515
-LABEL470:
    iload                  1
    iload                  8
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL476
-   jump                   LABEL479
-LABEL476:
+   if_icmpeq              LABEL475
+   jump                   LABEL478
+LABEL475:
    iconst                 6512
    iconst                 1
    cc_setobject_nonum    
-LABEL479:
+LABEL478:
    iload                  1
    iload                  9
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL485
-   jump                   LABEL487
-LABEL485:
+   if_icmpeq              LABEL484
+   jump                   LABEL486
+LABEL484:
    sconst                 "Choose an item..."
    cc_settext            
-LABEL487:
+LABEL486:
    iload                  1
    iload                  10
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL493
-   jump                   LABEL495
-LABEL493:
+   if_icmpeq              LABEL492
+   jump                   LABEL494
+LABEL492:
    sconst                 ""
    cc_settext            
-LABEL495:
+LABEL494:
    iload                  1
    iload                  11
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL501
-   jump                   LABEL503
-LABEL501:
+   if_icmpeq              LABEL500
+   jump                   LABEL502
+LABEL500:
    sconst                 ""
    cc_settext            
-LABEL503:
+LABEL502:
    iload                  1
    iload                  12
    cc_find               
    iconst                 1
-   if_icmpeq              LABEL509
-   jump                   LABEL511
-LABEL509:
+   if_icmpeq              LABEL508
+   jump                   LABEL510
+LABEL508:
    sconst                 ""
    cc_settext            
-LABEL511:
+LABEL510:
    iload                  1
    iload                  15
    iload                  14
    invoke                 780
-LABEL515:
+LABEL514:
    return                

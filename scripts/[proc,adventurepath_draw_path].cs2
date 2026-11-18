@@ -34,7 +34,7 @@ cc_setonop("adventurepath_task_init(
 	24 = $com_adventurepath_extra_link30, 
 	25 = $com_adventurepath_task_focus31
 )");
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouserepeat("cc_settrans($com_adventurepath_paths1, cc_getid, 50, null)");
 	cc_setonmouseleave("cc_settrans($com_adventurepath_paths1, cc_getid, 0, null)");
 }

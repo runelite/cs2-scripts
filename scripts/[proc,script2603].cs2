@@ -76,14 +76,14 @@ if ($component0 = $component2) {
 	$int11 = ~magic_spellbook_filtertoggle_createindicator(3, "Show spells you lack the Magic level to cast", $component8, $int11);
 	$int11 = ~magic_spellbook_filtertoggle_createindicator(4, "Show spells you lack the runes to cast", $component8, $int11);
 	$int11 = ~magic_spellbook_filtertoggle_createindicator(5, "Show spells you lack the requirements to cast", $component8, $int11);
-	if ($boolean1 = true) {
+	if ($boolean1 = 1) {
 		$int11 = ~magic_spellbook_filtertoggle_createindicator(6, "Enable icon resizing", $component8, $int11);
 	} else {
 		$int11 = ~magic_spellbook_filtertoggle_createindicator(6, "Enable icon resizing (outside PvP areas)", $component8, $int11);
 	}
 	if_setsize(180, calc(28 + 25 * (1 + 6)), ^setsize_abs, ^setsize_abs, $component7);
 } else {
-	if ($boolean1 = true) {
+	if ($boolean1 = 1) {
 		if_sethide(false, $component2);
 		if_setonclick("script2602(
 			0 = $component2, 
@@ -124,7 +124,7 @@ if ($component0 = $component2) {
 	if_sethide(true, $component7);
 }
 cc_deleteall($component2);
-if ($boolean1 = true & ($component0 = null | $component0 = $component2)) {
+if ($boolean1 = 1 & ($component0 = null | $component0 = $component2)) {
 	if ($component0 = $component2) {
 		$int11 = ~options_button_on($component2, 0);
 	} else {

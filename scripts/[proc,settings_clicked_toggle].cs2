@@ -562,10 +562,8 @@ switch_int ($int0) {
 		~settings_minimenu_filter_set(8);
 	case 405 :
 		~settings_minimenu_filter_set(9);
-	case 406 :
-		~settings_minimenu_reordering_set;
 	case 447 :
-		if (~on_mobile = true) {
+		if (~on_mobile = 1) {
 			%settings_mobile_minimenu_icon_enabled = calc(1 - %settings_mobile_minimenu_icon_enabled);
 		}
 	case 417 :

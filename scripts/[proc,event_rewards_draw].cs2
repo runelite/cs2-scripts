@@ -100,7 +100,7 @@ if ($int0 ! -1) {
 		cc_setop(1, "Confirm");
 	}
 	cc_setopbase("<col=ff981f><$string0></col>");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("event_rewards_confirmdraw(1, $string0, $component8)");
 		cc_setonmouseleave("event_rewards_confirmdraw(0, $string0, $component8)");
 	}
@@ -108,16 +108,16 @@ if ($int0 ! -1) {
 	~script8178;
 	~steelborder($component10, $string0, 1);
 	if ($int22 = 1) {
-		if_settext("<br><col=ffffff><$string0></col><br><br>It will cost <col=ffffff><~tostring_spacer($int25, $string2)></col> points.", $component11);
+		if_settext("<int_0=<tostring($int25)>><br><col=ffffff><$string0></col><br><br>It will cost <col=ffffff><int_0:spacer></col> points.", $component11);
 	} else {
-		if_settext("<col=ffffff><$string0></col><br><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int25, $string2)></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
+		if_settext("<int_0=<tostring($int25)>><col=ffffff><$string0></col><br><br><br>Are you sure that you wish to buy this item for <col=ffffff><int_0:spacer></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component11);
 	}
 	$int20 = ~v2_stone_button($component12);
 	cc_create($component12, ^iftype_text, $int20, false);
 	$string1 = "Confirm";
 	if_setop(1, $string1, $component12);
 	if_setopbase("<col=ff981f>Event reward</col>", $component12);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseleave("league_interface_button_hover($component12, 0, $string1, ^white)", $component12);
 		if_setonmouseover("league_interface_button_hover($component12, 1, $string1, 0xaaaaaa)", $component12);
 	}
@@ -144,7 +144,7 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	if_setop(1, $string1, $component13);
 	if_setopbase("<col=ff981f>Event reward</col>", $component13);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseleave("league_interface_button_hover($component13, 0, $string1, ^white)", $component13);
 		if_setonmouseover("league_interface_button_hover($component13, 1, $string1, 0xaaaaaa)", $component13);
 	}

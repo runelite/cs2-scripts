@@ -20,7 +20,7 @@ if_setonkey("script4504(
 	12 = $comsubid10
 )", chatbox:mes_text2);
 if_setondialogabort("meslayer_ondialogabort", chatbox:mes_text2);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if ($int0 ! 22) {
 		~keyboard_show(1, 3);
 	} else {

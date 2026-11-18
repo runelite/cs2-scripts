@@ -6,7 +6,7 @@ if ($int4 = 1) {
 	if_setonmouseleave(null, $component0);
 } else {
 	if_setgraphic($graphic1, $component0);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("graphic_swapper($component0, $graphic3)", $component0);
 		if_setonmouseleave("graphic_swapper($component0, $graphic1)", $component0);
 	}

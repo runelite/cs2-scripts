@@ -86,11 +86,20 @@ java.lang.IllegalStateException: Opcode 3229 in script 9790 not implemented
    invoke                 5738
    enum                  
    istore                 1
+   sconst                 "qj_normal"
+   sconst                 "<col=000080>"
+   3228                  
+   sconst                 "qj_highlight"
+   sconst                 "<col=800000>"
+   3228                  
+   sconst                 "qj_done"
+   sconst                 "<col=ff0000>"
+   3228                  
    invoke                 100
    iconst                 0
-   if_icmpeq              LABEL86
-   jump                   LABEL102
-LABEL86:
+   if_icmpeq              LABEL95
+   jump                   LABEL111
+LABEL95:
    sconst                 "ttip_list"
    sconst                 "<col=7f7f7f>"
    3228                  
@@ -106,8 +115,8 @@ LABEL86:
    sconst                 "farm_diseased"
    sconst                 "<col=003f00>"
    3228                  
-   jump                   LABEL117
-LABEL102:
+   jump                   LABEL126
+LABEL111:
    sconst                 "ttip_list"
    sconst                 "<col=adadad>"
    3228                  
@@ -123,12 +132,12 @@ LABEL102:
    sconst                 "farm_diseased"
    sconst                 "<col=ef1020>"
    3228                  
-LABEL117:
+LABEL126:
    invoke                 9335
    iconst                 1
-   if_icmpeq              LABEL121
-   jump                   LABEL193
-LABEL121:
+   if_icmpeq              LABEL130
+   jump                   LABEL202
+LABEL130:
    sconst                 "mes_hl_red"
    sconst                 "<col=ff3045>"
    3228                  
@@ -200,8 +209,8 @@ LABEL121:
    sconst                 "hcm_wf"
    sconst                 "<col=a67c00>"
    3228                  
-   jump                   LABEL264
-LABEL193:
+   jump                   LABEL273
+LABEL202:
    sconst                 "mes_hl_red"
    sconst                 "<col=e00a19>"
    3228                  
@@ -273,5 +282,5 @@ LABEL193:
    sconst                 "hcm_wf"
    sconst                 "<col=7a5b00>"
    3228                  
-LABEL264:
+LABEL273:
    return                

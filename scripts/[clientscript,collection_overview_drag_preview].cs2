@@ -5,7 +5,7 @@ def_int $int10 = %varcint1248;
 def_int $int11 = if_getwidth($component6);
 def_int $int12 = calc(if_getheight($component6) - $int5);
 def_int $int13 = 0;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	return;
 }
 if (cc_find($component6, 0) = true) {

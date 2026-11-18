@@ -38,7 +38,7 @@ if (%league_tasks_is_searching = 0) {
 		if_settext(%varcstring1180, $component17);
 	}
 } else {
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		if_setop(1, "Show keyboard", $component16);
 		if_setonop("tasks_show_keyboard", $component16);
 	}

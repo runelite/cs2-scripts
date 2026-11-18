@@ -22,7 +22,7 @@ if ($int13 = 0) {
 	$int16 = max(0, min(%varcint1247, calc($int18 - $int14)));
 	$int17 = max($int19, min(%varcint1248, calc($int19 + $int20 - $int15)));
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top, collection_overview:universe);
 }
 if_setsize($int14, $int15, ^setsize_abs, ^setsize_abs, collection_overview:universe);
@@ -30,7 +30,7 @@ def_int $int21 = calc(if_gety(collection_overview:content) - 2 * 6);
 def_int $int22 = calc($int14 - 6 * 2);
 def_int $int23 = calc($int16 + $int14 - 6);
 def_int $int24 = calc($int17 + $int15 - 6);
-if ($int13 = 0 & ~on_mobile = false & cc_find(collection_overview:infinity, 0) = true) {
+if ($int13 = 0 & ~on_mobile = 0 & cc_find(collection_overview:infinity, 0) = true) {
 	cc_setsize(calc($int22 - 44), $int21, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int16 + 6 + 22), calc($int17 + 6), ^setpos_abs_left, ^setpos_abs_top);
 	~collection_overview_reset_handle($int19);

@@ -11,7 +11,7 @@ if (%league_tasks_is_searching = 1 & %league_tasks_search_listen_for_keyboard = 
 ~chatdefault_stopinput;
 %league_tasks_is_searching = 1;
 %league_tasks_search_listen_for_keyboard = 1;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	~keyboard_show(0, 25);
 }
 ~tasks_searchbar_setup_op(

@@ -4,24 +4,24 @@ cc_deleteall($com_league_3_side_panel_info_button0);
 cc_deleteall($com_league_3_side_panel_tasks_button1);
 cc_deleteall($com_league_3_side_panel_relics_button2);
 ~v2_stone_button_filled($com_league_3_side_panel_info_button0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_info_button0, 0)", $com_league_3_side_panel_info_button0);
 	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_info_button0, 1)", $com_league_3_side_panel_info_button0);
 }
 if_setonop("button_select_sound", $com_league_3_side_panel_info_button0);
 ~v2_stone_button_filled($com_league_3_side_panel_tasks_button1);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_tasks_button1, 0)", $com_league_3_side_panel_tasks_button1);
 	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_tasks_button1, 1)", $com_league_3_side_panel_tasks_button1);
 }
 if_setonop("button_select_sound", $com_league_3_side_panel_tasks_button1);
 ~v2_stone_button_filled($com_league_3_side_panel_relics_button2);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_relics_button2, 0)", $com_league_3_side_panel_relics_button2);
 	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_relics_button2, 1)", $com_league_3_side_panel_relics_button2);
 }
 ~v2_stone_button_filled($com_league_3_side_panel_unlocks_button3);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("league_side_panel_button_hover($com_league_3_side_panel_unlocks_button3, 0)", $com_league_3_side_panel_unlocks_button3);
 	if_setonmouseover("league_side_panel_button_hover($com_league_3_side_panel_unlocks_button3, 1)", $com_league_3_side_panel_unlocks_button3);
 }
@@ -54,7 +54,7 @@ cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 .cc_settext($string0);
 .cc_setonmouseleave("deltooltip($component7)");
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component8);
 	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, $colour6)", $component8);
 }

@@ -33,7 +33,7 @@ def_string $string0 = "";
 def_string $string1 = "";
 def_int $int9 = 0;
 def_int $int10 = 15;
-def_boolean $boolean11 = null;
+def_boolean $boolean11 = -1;
 def_int $int12 = ignore_count;
 if ($int12 < 0) {
 	if (%has_displayname_transmitter = 1) {
@@ -47,7 +47,7 @@ if ($int12 < 0) {
 	if_sethide(true, $component0);
 } else {
 	$boolean11 = ~on_mobile;
-	if ($boolean11 = true) {
+	if ($boolean11 = 1) {
 		$int10 = scale(8, 5, $int10);
 	}
 	if_settext("", $component5);
@@ -82,7 +82,7 @@ if ($int12 < 0) {
 		.cc_setgraphic(friends_changed_name);
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {
-			if ($boolean11 = true) {
+			if ($boolean11 = 1) {
 				cc_setop(10, "Reveal previous name");
 				cc_setonop("ignore_op(event_op, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
 			} else {

@@ -12,15 +12,12 @@ if (calc(^max_32bit_int - %if1) < %if2) {
 } else {
 	$int11 = calc(%if1 + %if2);
 }
-def_string $string1 = "";
 if ($int11 > 1) {
-	$string1 = ~tostring_spacer($int11, ",");
-	$string0 = append($string0, "<str0=<$string1>><br><br>You have <col=ffffff><str0>@or4@ bonds in your <col=ffffff>inventory@or4@, <col=ffffff>bank@or4@ & <col=ffffff>bond pouch@or4@.<br>You can <col=ffffff>redeem@or4@ them below.");
+	$string0 = append($string0, "<int_0=<tostring($int11)>><br><br>You have <col=ffffff><int_0:spacer>@or4@ bonds in your <col=ffffff>inventory@or4@, <col=ffffff>bank@or4@ & <col=ffffff>bond pouch@or4@.<br>You can <col=ffffff>redeem@or4@ them below.");
 } else if ($int11 = 1) {
 	$string0 = append($string0, "<br><br>You have <col=ffffff>one@or4@ bond in your <col=ffffff>inventory@or4@, <col=ffffff>bank@or4@ & <col=ffffff>bond pouch@or4@.<br>You can <col=ffffff>redeem@or4@ it below.");
 } else {
-	$string1 = ~tostring_spacer(0, ",");
-	$string0 = append($string0, "<str0=<$string1>><br><br>You have <col=ffffff><str0>@or4@ bonds in your <col=ffffff>inventory@or4@, <col=ffffff>bank@or4@ & <col=ffffff>bond pouch@or4@. Visit the <col=ffffff>store@or4@ or buy bonds from <col=ffffff>other players@or4@.");
+	$string0 = append($string0, "<int_0=<tostring(0)>><br><br>You have <col=ffffff><int_0:spacer>@or4@ bonds in your <col=ffffff>inventory@or4@, <col=ffffff>bank@or4@ & <col=ffffff>bond pouch@or4@. Visit the <col=ffffff>store@or4@ or buy bonds from <col=ffffff>other players@or4@.");
 }
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -56,9 +53,9 @@ cc_settextfont(p12_full);
 cc_settext("Redeem to character:");
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 $int12 = calc($int12 + 1);
-def_anyobj $anyobj2 = array_create(string, 0, 1);
-array_push($anyobj2, chat_playername, obj);
-~script8321(bond_main:dropdown, 56426507, 0, $anyobj2, 16777215, "[No name set]");
+def_anyobj $anyobj1 = array_create(string, 0, 1);
+array_push($anyobj1, chat_playername, obj);
+~script8321(bond_main:dropdown, 56426507, 0, $anyobj1, 16777215, "[No name set]");
 if_setop(1, "Select", bond_main:name_selection_holder);
 if_setonop("script464", bond_main:name_selection_holder);
 def_component $component14 = if_getlayer($com_bond_main_universe0);

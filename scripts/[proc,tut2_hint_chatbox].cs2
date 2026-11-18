@@ -1,7 +1,7 @@
 // 3377
 [proc,tut2_hint_chatbox]
 def_string $string0 = "bottom";
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$string0 = "top";
 }
 if_settext("Follow the instructions in the <col=ffffff>chatbox<col=ff981f>", tut2_overlay:hint_text_1);

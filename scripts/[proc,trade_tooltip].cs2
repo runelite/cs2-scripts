@@ -53,10 +53,10 @@ LABEL37:
    if_lcmplt              LABEL41
    jump                   LABEL55
 LABEL41:
+   sconst                 "<int_0="
    iload                  0
-   oload                  1
-   invoke                 46
-   sconst                 " x "
+   tostring              
+   sconst                 "><int_0:spacer> x "
    lload                 
    oload                  1
    4126                  
@@ -64,18 +64,18 @@ LABEL41:
    lload                  1
    oload                  1
    4126                  
-   join_string            5
+   join_string            6
    ostore                 0
    jump                   LABEL64
 LABEL55:
+   sconst                 "<int_0="
    iload                  0
-   oload                  1
-   invoke                 46
-   sconst                 " x "
+   tostring              
+   sconst                 "><int_0:spacer> x "
    lload                 
    oload                  1
    4126                  
-   join_string            3
+   join_string            4
    ostore                 0
 LABEL64:
    iconst                 526

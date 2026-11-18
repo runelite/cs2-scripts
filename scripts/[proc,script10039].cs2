@@ -14,7 +14,7 @@ if ($int1 ! 0 & cc_find($component2, 0) = true) {
 	} else {
 		cc_settext(substring($string0, 0, 1));
 	}
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $com_tfa_hud_tooltip4, $string0, 25, 256)", $component2);
 		if_setonmouseleave("deltooltip($com_tfa_hud_tooltip4)", $component2);
 	}

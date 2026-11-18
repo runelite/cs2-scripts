@@ -22,19 +22,19 @@ if ($namedobj8 ! null & $int9 > 0) {
 	if_setop(1, "Unlock", $com_gravestone_retrieval_button2);
 	if ($namedobj8 = coins_995) {
 		if (%if2 > 1) {
-			$string0 = "Death's Coffer: <col=ffffff><~tostring_spacer(%if2, ",")> x <oc_name($namedobj8)></col>";
+			$string0 = "<int_0=<tostring(%if2)>>Death's Coffer: <col=ffffff><int_0:spacer> x <oc_name($namedobj8)></col>";
 		} else if (%if2 = 1) {
 			$string0 = "Death's Coffer: <col=ffffff>One Coin</col>";
 		} else {
 			$string0 = "Death's Coffer: <col=ffffff>Empty</col>";
 		}
 		if ($int9 > 1) {
-			if_settext("Fee to unlock: <col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_fee7);
+			if_settext("<int_0=<tostring($int9)>>Fee to unlock: <col=ffffff><int_0:spacer> x <oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_fee7);
 		} else {
 			if_settext("Fee to unlock: <col=ffffff><oc_name($namedobj8)></col><br><$string0>", $com_gravestone_retrieval_fee7);
 		}
 	} else if ($int9 > 1) {
-		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int9, ",")> x <oc_name($namedobj8)></col>", $com_gravestone_retrieval_fee7);
+		if_settext("<int_0=<tostring($int9)>>Fee to unlock:<br><col=ffffff><int_0:spacer> x <oc_name($namedobj8)></col>", $com_gravestone_retrieval_fee7);
 	} else {
 		if_settext("Fee to unlock:<br><col=ffffff><oc_name($namedobj8)></col>", $com_gravestone_retrieval_fee7);
 	}

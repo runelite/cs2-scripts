@@ -2,7 +2,7 @@
 [clientscript,sailing_sidepanel_button_press](component $component0, component $component1, int $int2, int $int3, int $int4, int $opindex5)
 sound_synth(interface_select1, 1, 0);
 if (cc_find($component0, $int2) = true) {
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover(null);
 	}
 	cc_setonmouseleave(null);

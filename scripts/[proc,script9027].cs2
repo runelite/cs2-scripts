@@ -28,7 +28,7 @@ switch_int ($int0) {
 			$dbrow1 = ~script9029($int0, ~sailing_sidepanel_get_hotspot($int0));
 		}
 }
-if (string_length($string0) <= 0) {
+if (~script3741($string0) = 1) {
 	if ($dbrow1 ! null) {
 		$string0 = db_getfield($dbrow1, sailing_boat_facility:name, 0);
 	} else {

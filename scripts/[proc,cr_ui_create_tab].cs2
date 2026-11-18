@@ -1,7 +1,7 @@
 // 6393
 [proc,cr_ui_create_tab](dbrow $dbrow0, int $int1, int $int2, int $int3, component $component4)(int, int)
 def_int $int5 = 26;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int5 = 32;
 }
 def_int $int6 = 4;
@@ -117,7 +117,7 @@ if ($int3 = 0) {
 	cc_settrans(255);
 	cc_setop(1, "View <col=ff981f><$string0></col>");
 	cc_setonop("cr_ui_tab_op($dbrow0, $component4)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover("cc_colour_swapper($component4, $comsubid16, ^white)");
 		cc_setonmouseleave("cc_colour_swapper($component4, $comsubid16, 0xff981f)");
 	}

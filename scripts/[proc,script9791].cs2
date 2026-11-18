@@ -26,7 +26,7 @@ while ($int5 < db_getfieldcount($dbrow9, puppy_colours:colour_option)) {
 	cc_setop(1, "Colour");
 	cc_setopbase("<col=ff9040><db_getfield($dbrow9, puppy_colours:colour_names, $int5)>");
 	cc_setonop("script9798(event_com, event_comsubid)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("script9794(event_com, event_comsubid, 1)");
 		cc_setonmouseleave("script9794(event_com, event_comsubid, 0)");
 	}

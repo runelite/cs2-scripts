@@ -136,7 +136,7 @@ LABEL105:
    invoke                 8986
    iconst                 1
    if_icmpeq              LABEL109
-   jump                   LABEL145
+   jump                   LABEL144
 LABEL109:
    iload                  5
    iconst                 -1
@@ -167,18 +167,17 @@ LABEL121:
    invoke                 7986
    iload                  4
    if_icmplt              LABEL136
-   jump                   LABEL145
+   jump                   LABEL144
 LABEL136:
    iconst                 0
    sconst                 "Boat Unavailable"
-   sconst                 "<col=ff981f>You need <col=ffffff>"
+   sconst                 "<int_0="
    iload                  4
-   sconst                 ","
-   invoke                 46
-   sconst                 " coins<col=ff981f> to do that."
+   tostring              
+   sconst                 "><col=ff981f>You need <col=ffffff><int_0:spacer> coins<col=ff981f> to do that."
    join_string            3
    return                
-LABEL145:
+LABEL144:
    iload                  1
    invoke                 9081
    istore                 6
@@ -188,19 +187,19 @@ LABEL145:
    istore                 8
    get_varp               5006
    iconst                 -1
-   if_icmpne              LABEL156
-   jump                   LABEL173
-LABEL156:
+   if_icmpne              LABEL155
+   jump                   LABEL172
+LABEL155:
    iload                  5
    iconst                 -1
-   if_icmpne              LABEL160
-   jump                   LABEL173
-LABEL160:
+   if_icmpne              LABEL159
+   jump                   LABEL172
+LABEL159:
    get_varp               5006
    iload                  5
-   if_icmpeq              LABEL164
-   jump                   LABEL173
-LABEL164:
+   if_icmpeq              LABEL163
+   jump                   LABEL172
+LABEL163:
    iconst                 0
    sconst                 "Boat Unavailable"
    sconst                 "<col=ff981f>That boat is already docked at <col=ffffff>"
@@ -210,17 +209,17 @@ LABEL164:
    sconst                 "<col=ff981f>."
    join_string            3
    return                
-LABEL173:
+LABEL172:
    iload                  7
    iconst                 1
-   if_icmpeq              LABEL177
-   jump                   LABEL190
-LABEL177:
+   if_icmpeq              LABEL176
+   jump                   LABEL189
+LABEL176:
    iload                  6
    iconst                 0
-   if_icmpeq              LABEL181
-   jump                   LABEL190
-LABEL181:
+   if_icmpeq              LABEL180
+   jump                   LABEL189
+LABEL180:
    iconst                 0
    sconst                 "Boat Unavailable"
    sconst                 "<col=ff981f>You need to build a <col=ffffff>"
@@ -230,17 +229,17 @@ LABEL181:
    sconst                 "<col=ff981f> on that boat to be able to teleport it."
    join_string            3
    return                
-LABEL190:
+LABEL189:
    iload                  8
    iconst                 1
-   if_icmpeq              LABEL194
-   jump                   LABEL207
-LABEL194:
+   if_icmpeq              LABEL193
+   jump                   LABEL206
+LABEL193:
    iload                  6
    iconst                 2
-   if_icmplt              LABEL198
-   jump                   LABEL207
-LABEL198:
+   if_icmplt              LABEL197
+   jump                   LABEL206
+LABEL197:
    iconst                 0
    sconst                 "Boat Unavailable"
    sconst                 "<col=ff981f>You need to build a <col=ffffff>"
@@ -250,7 +249,7 @@ LABEL198:
    sconst                 "<col=ff981f> on that boat to be able to teleport there."
    join_string            3
    return                
-LABEL207:
+LABEL206:
    invoke                 8995
    istore                 9
    iload                  1
@@ -258,23 +257,23 @@ LABEL207:
    istore                 10
    iload                  9
    iconst                 1
-   if_icmpeq              LABEL216
-   jump                   LABEL235
-LABEL216:
+   if_icmpeq              LABEL215
+   jump                   LABEL234
+LABEL215:
    iload                  10
    iconst                 -1
-   if_icmpne              LABEL220
-   jump                   LABEL235
-LABEL220:
+   if_icmpne              LABEL219
+   jump                   LABEL234
+LABEL219:
    iload                  10
    inv_size              
    iload                  10
    iload                  10
    inv_size              
    invoke                 3505
-   if_icmpne              LABEL228
-   jump                   LABEL235
-LABEL228:
+   if_icmpne              LABEL227
+   jump                   LABEL234
+LABEL227:
    iconst                 0
    sconst                 "Boat Unavailable"
    sconst                 "<col=ff981f>You can't "
@@ -282,7 +281,7 @@ LABEL228:
    sconst                 " that boat as it has items in the <col=ffffff>cargo hold<col=ff981f>. You'll need to empty it first."
    join_string            3
    return                
-LABEL235:
+LABEL234:
    iconst                 1
    sconst                 ""
    sconst                 ""

@@ -67,7 +67,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
 cc_setcolour(^white);
 cc_settrans(255);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseover("cc_settrans(event_com, cc_getid, 230, null)", bank_side_locks:ignorelocks);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)", bank_side_locks:ignorelocks);
 }
@@ -112,7 +112,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setfill(true);
 cc_setcolour(^white);
 cc_settrans(255);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseover("cc_settrans(event_com, cc_getid, 230, null)", bank_side_locks:extraoptions);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)", bank_side_locks:extraoptions);
 }

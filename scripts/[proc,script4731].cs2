@@ -20,7 +20,7 @@ def_int $int20 = 0;
 def_int $int21 = 0;
 def_int $int22 = 0;
 def_boolean $boolean23 = ~on_mobile;
-if ($boolean23 = true) {
+if ($boolean23 = 1) {
 	$int14 = calc($int14 + 2);
 	$int20 = calc($int20 + 2);
 }
@@ -57,7 +57,7 @@ if ($component0 ! $component44) {
 	}
 }
 def_component $component45 = enum(component, component, $enum25, toplevel_osm:safezone_noclick);
-if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
+if ($boolean23 = 1 & $int43 > 0 & $component13 ! null) {
 	if ($int43 = 2) {
 		$int42 = min(250, $int42);
 	}
@@ -181,7 +181,7 @@ if ($boolean23 = true & $int43 > 0 & $component13 ! null) {
 $int36 = 0;
 $int37 = 0;
 def_component $component46 = null;
-if ($boolean23 = true & ~script9336($enum25) = 1) {
+if ($boolean23 = 1 & ~script9336($enum25) = 1) {
 	$component46 = enum(component, component, $enum25, toplevel_osm:side_right_tabs);
 	if (testbit($int2, 1) = ^true) {
 		$int30 = ~script2519;
@@ -239,7 +239,7 @@ if (testbit($int2, 12) = ^true & $component13 ! null & $enum25 ! null) {
 	$int17 = calc($int17 + enum(enum, int, enum_1136, $enum25));
 	$int21 = calc($int21 + enum(enum, int, enum_1136, $enum25));
 }
-if (testbit($int2, 10) = ^true & $boolean23 = false & ($setposh27 = ^setpos_abs_left | $setposh27 = ^setpos_abs_centre)) {
+if (testbit($int2, 10) = ^true & $boolean23 = 0 & ($setposh27 = ^setpos_abs_left | $setposh27 = ^setpos_abs_centre)) {
 	if ($int24 = 0 | %mouseover_text_disabled = 0) {
 		$int14 = calc($int14 + 23);
 	} else {
@@ -275,7 +275,7 @@ if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component39 ! nul
 				$int20 = calc($int20 + if_getheight(hpbar_hud:hp));
 			}
 		}
-	} else if (%hpbar_hud_boss = 1 & ($setposh27 = ^setpos_abs_centre & $boolean23 = false | $setposh27 = ^setpos_abs_left & $boolean23 = true)) {
+	} else if (%hpbar_hud_boss = 1 & ($setposh27 = ^setpos_abs_centre & $boolean23 = 0 | $setposh27 = ^setpos_abs_left & $boolean23 = 1)) {
 		$int14 = calc($int14 + if_getheight(hpbar_hud:hp) + 2);
 	}
 }
@@ -352,7 +352,7 @@ if (testbit($int2, 14) = ^true) {
 	if ($int36 > 0) {
 		$int36 = calc($int36 + 4);
 	}
-	if ($boolean23 = true) {
+	if ($boolean23 = 1) {
 		$int14 = calc($int14 + $int36);
 	} else {
 		$int17 = calc($int17 + $int36);
@@ -362,7 +362,7 @@ if (testbit($int2, 14) = ^true) {
 $component39 = enum(component, component, $enum25, toplevel_osrs_stretch:stat_boosts_hud);
 $int31 = 0;
 if (testbit($int2, 15) = ^true & $int24 = 1 & $component39 ! null & if_hassub($component39) = true & if_gethide(stat_boosts_hud:content) = false & ~script6263 = 1) {
-	if ($boolean23 = false & $setposh27 = ^setpos_abs_left | $boolean23 = true & $setposh27 = ^setpos_abs_right) {
+	if ($boolean23 = 0 & $setposh27 = ^setpos_abs_left | $boolean23 = 1 & $setposh27 = ^setpos_abs_right) {
 		$int17 = calc($int17 + 35);
 	} else if ($setposh27 = ^setpos_abs_centre) {
 		if ($setposv4 = ^setpos_abs_bottom) {
@@ -374,7 +374,7 @@ if (testbit($int2, 15) = ^true & $int24 = 1 & $component39 ! null & if_hassub($c
 			$int17 = calc($int17 + 35);
 		}
 	}
-	if ($boolean23 = true) {
+	if ($boolean23 = 1) {
 		$int21 = calc($int21 + 35);
 	}
 }
@@ -385,7 +385,7 @@ if (testbit($int2, 11) = ^true & $component39 ! null & if_hassub($component39) =
 	if ($int36 > 0 & $int37 > 0) {
 		$int33 = ~buff_bar_buff_amount;
 		if ($int33 > 0) {
-			if ($boolean23 = false) {
+			if ($boolean23 = 0) {
 				if ($setposh27 = ^setpos_abs_left | $setposh27 = ^setpos_abs_centre) {
 					if (%buff_bar_location = 0) {
 						$int38 = calc($int33 / $int36);

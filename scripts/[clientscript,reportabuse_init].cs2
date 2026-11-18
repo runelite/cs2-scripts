@@ -44,7 +44,7 @@ if (playermod = 1 | staffmodlevel > 0) {
 	if_setontimer(null, reportabuse:mute);
 }
 def_int $int2 = 19;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int2 = 25;
 }
 cc_deleteall(reportabuse:rules);

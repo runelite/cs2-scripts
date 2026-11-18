@@ -9,7 +9,7 @@ cc_deleteall(popupoverlay:list);
 def_int $int5 = 0;
 def_int $int6 = 25;
 def_int $int7 = 0;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int6, $int7 = 40, 1;
 }
 def_int $int8 = calc(($int6 - 13) / 2);

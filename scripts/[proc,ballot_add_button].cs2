@@ -6,7 +6,7 @@ cc_create_child(0, ~script8363);
 cc_setparam(param_2365, 301, int);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 def_int $int3 = %varcint43;
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouseover("v2_stone_button_change_in(event_com, $int3)");
 	cc_setonmouseleave("v2_stone_button_change_out(event_com, $int3)");
 }

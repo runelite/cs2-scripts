@@ -7,7 +7,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(192);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 192, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 225, null)");
 }

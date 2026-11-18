@@ -15,7 +15,7 @@ if (string_length($string0) > 0) {
 	if_setonop("closebutton_click_sound", $com_cr_tutorial_button0);
 	if_setonkey("closebutton_key(event_keycode)", $com_cr_tutorial_button0);
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("cr_tutorial_button_hover($com_cr_tutorial_button0, 0, $string0)", $com_cr_tutorial_button0);
 	if_setonmouserepeat("cr_tutorial_button_hover($com_cr_tutorial_button0, 1, $string0)", $com_cr_tutorial_button0);
 }

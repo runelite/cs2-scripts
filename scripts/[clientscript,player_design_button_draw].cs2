@@ -20,7 +20,7 @@ if (string_length($string0) > 0) {
 	cc_sethflip($boolean1);
 	if_setop(1, "Select", $component0);
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseleave("player_design_button_hover($component0, 0, $string0, $boolean1)", $component0);
 	if_setonmouserepeat("player_design_button_hover($component0, 1, $string0, $boolean1)", $component0);
 }

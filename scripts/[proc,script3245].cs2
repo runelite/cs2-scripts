@@ -52,13 +52,13 @@ while ($int5 < $int7) {
 	$int10 = calc(1 - $int10);
 	if ($int10 = 1) {
 		cc_settrans(240);
-		if (~on_mobile = false) {
+		if (~on_mobile = 0) {
 			cc_setonmouseleave("cc_settrans(event_com, cc_getid, 240, null)");
 			cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 180, null)");
 		}
 	} else {
 		cc_settrans(220);
-		if (~on_mobile = false) {
+		if (~on_mobile = 0) {
 			cc_setonmouseleave("cc_settrans(event_com, cc_getid, 220, null)");
 			cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 180, null)");
 		}

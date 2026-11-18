@@ -10,7 +10,7 @@ stringvector_clear(stringvector_2);
 while ($int2 <= $int1) {
 	$string0 = loottracker_ignorelootget($int2);
 	stringvector_addunique(stringvector_2, $string0, false);
-	~debug_mes("ignore (<~script47($int2)>) = <$string0>");
+	~debug_mes("<int_0=<tostring($int2)>>ignore (<int_0:zeropad_3>) = <$string0>");
 	if (stringvector_contains(stringvector_2, $string0, true, false) = false) {
 		~debug_mes("ERROR! didnt find <$string0> in ignorelist");
 	}

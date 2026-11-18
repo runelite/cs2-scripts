@@ -5,7 +5,7 @@ sound_synth(interface_select1, 1, 0);
 if_sethide(false, $component2);
 cc_deleteall($component1);
 def_int $int8 = 20;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int8 = scale(8, 5, $int8);
 }
 def_int $int9 = 0;
@@ -47,7 +47,7 @@ while ($int9 < $int12) {
 	cc_setop(1, $string0);
 	cc_setop(1, "Select");
 	cc_setonop("script6243(event_op, event_com, $int9, $component2, $component0, $enum6, $enum7)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 190, null)");
 		cc_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)");
 	}
@@ -69,14 +69,14 @@ while ($component18 ! $component5) {
 	$int15, $int16 = calc($int15 + if_getx($component18) - if_getscrollx($component18)), calc($int16 + if_gety($component18) - if_getscrolly($component18));
 	$component18 = if_getlayer($component18);
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int17 = ~max(0, calc($int16 + 20 - $int14));
 } else {
 	$int17 = calc($int16 + if_getheight($component0) - 1);
 }
 if_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top, $component3);
 def_int $int19 = calc(if_getheight($component5) - $int17);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int19 = calc($int16 + 20 - $int17);
 }
 if ($int14 > $int19) {

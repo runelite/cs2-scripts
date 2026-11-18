@@ -15,7 +15,7 @@ if ($int12 = 1) {
 	$int18 = 0;
 	$int19 = 2;
 }
-if (~on_mobile = true & $int16 < 24) {
+if (~on_mobile = 1 & $int16 < 24) {
 	$int16 = 24;
 }
 if ($int17 > $int16) {
@@ -126,7 +126,7 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour($colour14);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if (~on_mobile = false & $int12 = 0) {
+if (~on_mobile = 0 & $int12 = 0) {
 	.cc_setonmouseover("cc_colour_swapper($component2, $int8, ^white)");
 	.cc_setonmouseleave("cc_colour_swapper($component2, $int8, $colour14)");
 }

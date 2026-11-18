@@ -2,10 +2,12 @@
 [proc,welcome_screen_credit](component $component0, component $component1, component $component2)
 def_string $string0 = "";
 def_int $int3 = 0;
-if (%account_credit > 1) {
-	$string0 = "You have <col=00ff00><~tostring_spacer(%account_credit, ",")></col> days of membership left.";
+if (%varcint226 = 1) {
+	$string0 = "<bool_m=<tostring(~on_mobile)>>Your membership is <col=00ff00>active</col>.<br><cond,bool_m,Tap,Click> <col=00ff00>here</col> for more detail and to manage your membership.";
+} else if (%account_credit > 1) {
+	$string0 = "<int_0=<tostring(%account_credit)>>You have <col=00ff00><int_0:spacer></col> days of membership left.";
 } else if (%account_credit = 1) {
-	$string0 = "You have <col=00ff00><~tostring_spacer(%account_credit, ",")></col> day of membership left.";
+	$string0 = "<int_0=<tostring(%account_credit)>>You have <col=00ff00><int_0:spacer></col> day of membership left.";
 } else if (%varcint103 = 1) {
 	$string0 = "You have no membership credit left.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
 } else if (%varcint103 = 0) {
@@ -13,10 +15,10 @@ if (%account_credit > 1) {
 } else {
 	$int3 = 1;
 }
-if (%varcint226 = false & %account_credit <= 3 & %varcint103 = 1) {
+if (%varcint226 = 0 & %account_credit <= 3 & %varcint103 = 1) {
 	$string0 = "<$string0><br><col=ff9040>Renew now to avoid losing your</col><br><col=ff9040>membership status!</col>";
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("comp_sethide(false, $component2)", $component0);
 	if_setonmouseleave("comp_sethide(true, $component2)", $component0);
 }

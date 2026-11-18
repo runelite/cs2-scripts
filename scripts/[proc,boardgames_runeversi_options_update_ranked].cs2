@@ -7,7 +7,7 @@ if ($int0 = 1) {
 } else {
 	if_setgraphic($graphic1, boardgames_runeversi_options:ranked_radio);
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("settrans(boardgames_runeversi_options:ranked_radio, 127)", boardgames_runeversi_options:ranked);
 	if_setonmouseleave("settrans(boardgames_runeversi_options:ranked_radio, 0)", boardgames_runeversi_options:ranked);
 }

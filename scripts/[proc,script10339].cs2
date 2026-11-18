@@ -1,0 +1,22 @@
+// 10339
+[proc,script10339](component $com_quest_rating_toggle0, component $com_quest_rating_toggle_text1, component $com_quest_rating_toggle_icon2, int $int3)
+if (%settings_disable_quest_rating_prompts = 1) {
+	if_setop(1, "Enable", $com_quest_rating_toggle0);
+	if ($int3 = 1) {
+		if_setgraphic("checkbox,19", $com_quest_rating_toggle_icon2);
+	} else {
+		if_setgraphic("checkbox,16", $com_quest_rating_toggle_icon2);
+	}
+} else {
+	if_setop(1, "Disable", $com_quest_rating_toggle0);
+	if ($int3 = 1) {
+		if_setgraphic("checkbox,18", $com_quest_rating_toggle_icon2);
+	} else {
+		if_setgraphic("checkbox,15", $com_quest_rating_toggle_icon2);
+	}
+}
+if ($int3 = 1) {
+	if_setcolour(0x5b442d, $com_quest_rating_toggle_text1);
+} else {
+	if_setcolour(0x403020, $com_quest_rating_toggle_text1);
+}

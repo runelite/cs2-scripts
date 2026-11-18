@@ -83,7 +83,7 @@ if ($component0 = $component2) {
 	$int10, $int13 = ~prayer_filtertoggle_createindicator(4, "Show prayers you lack the requirements to activate", $component7, $int10, $int13);
 	if_setsize(180, calc(28 + $int13), ^setsize_abs, ^setsize_abs, $component6);
 } else {
-	if ($boolean1 = true) {
+	if ($boolean1 = 1) {
 		if_sethide(false, $component2);
 		if_setonclick("script3155(
 			0 = $component2, 
@@ -131,7 +131,7 @@ if ($component0 = $component2) {
 		$int10 = calc($int10 + 1);
 	}
 }
-if ($boolean1 = true & ($component0 = null | $component0 = $component2)) {
+if ($boolean1 = 1 & ($component0 = null | $component0 = $component2)) {
 	~button_setup($component0, $component2, $string0);
 }
 if ($component0 = null | $component0 = $component3) {

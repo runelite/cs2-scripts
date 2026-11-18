@@ -5,12 +5,12 @@ def_component $component3 = league_side_panel:summary_text;
 def_component $component4 = league_side_panel:summary_backing;
 if_setcolour($colour1, $component3);
 if_setop(1, "Show <col=ff9040>Summary</col>", $component2);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("league_side_panel_misc_hover(1, $component3, $colour1)", $component2);
 	if_setonmouseleave("league_side_panel_misc_hover(0, $component3, $colour1)", $component2);
 }
 def_string $string0 = "Open your league summary";
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("tooltip_mouserepeat($component2, 0, $component0, $string0, 25, 190)", $component4);
 	if_setonmouseleave("deltooltip($component0)", $component4);
 }

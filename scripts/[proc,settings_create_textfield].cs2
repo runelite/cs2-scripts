@@ -9,14 +9,14 @@ if ($struct0 = null) {
 }
 def_string $string0 = struct_param($struct0, param_1086);
 def_int $int11 = 150;
-if ($boolean10 = true & string_length(struct_param($struct0, param_1087)) > 0) {
+if ($boolean10 = 1 & string_length(struct_param($struct0, param_1087)) > 0) {
 	$string0 = struct_param($struct0, param_1087);
 }
 def_string $string1 = struct_param($struct0, param_1096);
 def_int $int12 = 0;
 def_int $int13 = %settings_disable_tooltip_in_interface;
 def_boolean $boolean14 = struct_param($struct0, param_1119);
-if ($boolean10 = true & string_length(struct_param($struct0, param_1097)) > 0) {
+if ($boolean10 = 1 & string_length(struct_param($struct0, param_1097)) > 0) {
 	$string1 = struct_param($struct0, param_1097);
 }
 if (string_length($string1) > 0) {
@@ -27,7 +27,7 @@ if ($int13 = 1 | $boolean14 = true) {
 	$int12 = 0;
 }
 def_int $int15 = calc(paraheight($string0, calc(if_getwidth($component1) - ($int11 + 25)), b12_full) * 14);
-if ($boolean10 = true & $int15 < 20) {
+if ($boolean10 = 1 & $int15 < 20) {
 	$int15 = 20;
 }
 def_int $int16 = calc($int15 + 12 + $int12);
@@ -50,7 +50,7 @@ if ($int9 = 1) {
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean10 = false & $int13 = 1 & string_length($string1) > 0) {
+if ($boolean10 = 0 & $int13 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component1, $int6, $component3, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component3)");
 }
@@ -71,7 +71,7 @@ cc_setsize($int11, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int4 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setop(1, "Select");
 cc_setonop("settings_textfield_input_click($struct0, $int9)");
-if ($boolean10 = false) {
+if ($boolean10 = 0) {
 	cc_create($component1, ^iftype_rectangle, $int6, false);
 	$int6 = calc($int6 + 1);
 	cc_setfill(true);

@@ -70,7 +70,7 @@ if ($int0 = 2) {
 	if_setonop("script10070(event_op, $component9, -1, if_getop(1, $component9), "", -1, $int0)", $component9);
 } else {
 	if_clearops($component9);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		$string2 = "Spectating <text_switch($boolean4, "disabled", "enabled")>";
 		if_setonmouserepeat("tooltip_mouserepeat($component9, -1, tfa_partydetails:tooltip, $string2, 25, 256)", $component9);
 		if_setonmouseleave("deltooltip(tfa_partydetails:tooltip)", $component9);

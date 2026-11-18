@@ -129,7 +129,7 @@ LABEL108:
    iload                  7
    iload                  4
    if_icmplt              LABEL112
-   jump                   LABEL272
+   jump                   LABEL265
 LABEL112:
    iconst                 502
    iconst                 150
@@ -156,30 +156,23 @@ LABEL133:
    iload                  9
    iload                  5
    if_icmplt              LABEL137
-   jump                   LABEL219
+   jump                   LABEL212
 LABEL137:
    iload                  1
    iconst                 1
    if_icmpeq              LABEL141
-   jump                   LABEL168
+   jump                   LABEL161
 LABEL141:
-   iload                  10
-   get_array_int          3
-   iconst                 10
-   div                   
-   tostring              
-   sconst                 "."
-   iload                  10
-   get_array_int          3
-   iconst                 10
-   mod                   
-   tostring              
-   sconst                 "%<br>("
+   sconst                 "<int_0="
    iload                  10
    get_array_int          2
-   invoke                 7019
-   sconst                 ")"
-   join_string            6
+   tostring              
+   sconst                 "><int_p="
+   iload                  10
+   get_array_int          3
+   tostring              
+   sconst                 "><int_p:percent_1_z><br>(<int_0:spacer>)"
+   join_string            5
    ostore                 5
    iconst                 255
    iconst                 80
@@ -189,11 +182,11 @@ LABEL141:
    get_array_int          3
    interpolate           
    istore                 11
-   jump                   LABEL170
-LABEL168:
+   jump                   LABEL163
+LABEL161:
    iconst                 215
    istore                 11
-LABEL170:
+LABEL163:
    iconst                 504
    iload                  11
    invoke                 8352
@@ -204,18 +197,18 @@ LABEL170:
    iload                  7
    get_array_int          4
    iload                  9
-   if_icmpeq              LABEL182
-   jump                   LABEL185
-LABEL182:
+   if_icmpeq              LABEL175
+   jump                   LABEL178
+LABEL175:
    iconst                 16777215
    istore                 12
-   jump                   LABEL199
-LABEL185:
+   jump                   LABEL192
+LABEL178:
    iload                  1
    iconst                 1
-   if_icmpeq              LABEL189
-   jump                   LABEL197
-LABEL189:
+   if_icmpeq              LABEL182
+   jump                   LABEL190
+LABEL182:
    iconst                 16711680
    iconst                 16758847
    iload                  10
@@ -223,11 +216,11 @@ LABEL189:
    iload                  13
    invoke                 2195
    istore                 12
-   jump                   LABEL199
-LABEL197:
+   jump                   LABEL192
+LABEL190:
    iconst                 16750623
    istore                 12
-LABEL199:
+LABEL192:
    oload                  5
    iconst                 1
    iconst                 1
@@ -248,30 +241,30 @@ LABEL199:
    istore                 10
    istore                 9
    jump                   LABEL133
-LABEL219:
+LABEL212:
    iload                  6
    iload                  7
    add                   
    get_array_int          2
    iconst                 -1
-   if_icmpne              LABEL226
-   jump                   LABEL267
-LABEL226:
+   if_icmpne              LABEL219
+   jump                   LABEL260
+LABEL219:
    iload                  1
    iconst                 1
-   if_icmpeq              LABEL230
-   jump                   LABEL239
-LABEL230:
-   sconst                 "("
+   if_icmpeq              LABEL223
+   jump                   LABEL232
+LABEL223:
+   sconst                 "<int_0="
    iload                  6
    iload                  7
    add                   
    get_array_int          2
-   invoke                 7019
-   sconst                 ")"
+   tostring              
+   sconst                 ">(<int_0:spacer>)"
    join_string            3
    ostore                 5
-LABEL239:
+LABEL232:
    iconst                 504
    iconst                 215
    invoke                 8352
@@ -282,16 +275,16 @@ LABEL239:
    iload                  7
    get_array_int          4
    iconst                 -1
-   if_icmpeq              LABEL251
-   jump                   LABEL254
-LABEL251:
+   if_icmpeq              LABEL244
+   jump                   LABEL247
+LABEL244:
    iconst                 16777215
    istore                 12
-   jump                   LABEL256
-LABEL254:
+   jump                   LABEL249
+LABEL247:
    iconst                 11513775
    istore                 12
-LABEL256:
+LABEL249:
    oload                  5
    iconst                 1
    iconst                 1
@@ -303,35 +296,35 @@ LABEL256:
    pop_int               
    204                   
    pop_int               
-LABEL267:
+LABEL260:
    iload                  7
    iconst                 1
    add                   
    istore                 7
    jump                   LABEL108
-LABEL272:
+LABEL265:
    iload                  2
    iconst                 -1
-   if_icmpne              LABEL276
-   jump                   LABEL291
-LABEL276:
+   if_icmpne              LABEL269
+   jump                   LABEL284
+LABEL269:
    iload                  3
    iconst                 1
-   if_icmpeq              LABEL280
-   jump                   LABEL283
-LABEL280:
+   if_icmpeq              LABEL273
+   jump                   LABEL276
+LABEL273:
    iconst                 16777215
    istore                 12
-   jump                   LABEL285
-LABEL283:
+   jump                   LABEL278
+LABEL276:
    iconst                 11513775
    istore                 12
-LABEL285:
+LABEL278:
    iload                  1
    sconst                 "Skip question"
    iload                  2
    iconst                 -1
    iload                  12
    invoke                 8345
-LABEL291:
+LABEL284:
    return                

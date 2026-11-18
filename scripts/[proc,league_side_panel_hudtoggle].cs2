@@ -16,7 +16,7 @@ if (%buff_league_relics_hidden = 1) {
 	cc_setgraphic("radio_buttons,2");
 	if_setop(1, "Disable", $component0);
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, $string0, 25, 190)");
 }
 %varcint2 = 0;

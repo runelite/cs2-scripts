@@ -149,7 +149,7 @@ if ($int22 > 1) {
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(false);
-		if ($int34 = %skillmulti_previousselection & ~on_mobile = false & $boolean35 = true) {
+		if ($int34 = %skillmulti_previousselection & ~on_mobile = 0 & $boolean35 = true) {
 			cc_settext(enum(int, string, enum_1812, 36));
 		} else {
 			cc_settext(enum(int, string, enum_1812, $int34));

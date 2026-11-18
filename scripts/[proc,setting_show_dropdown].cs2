@@ -13,7 +13,7 @@ def_int $int18 = 0;
 def_int $int19 = ~script422($enum4, $struct1);
 def_int $int20 = 0;
 def_int $int21 = 20;
-if (~on_mobile = true | $int19 = 2) {
+if (~on_mobile = 1 | $int19 = 2) {
 	$int21 = 24;
 }
 def_int $int22 = 0;
@@ -29,7 +29,7 @@ while ($int18 < $int19) {
 	cc_setfill(true);
 	cc_setcolour(^black);
 	cc_settrans($int23);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover("cc_settrans($component11, $int20, 240, null)");
 		cc_setonmouseleave("cc_settrans($component11, $int20, $int23, null)");
 	}

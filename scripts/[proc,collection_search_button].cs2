@@ -10,7 +10,7 @@ $int1 = 0;
 if_setsize(71, 22, ^setsize_abs, ^setsize_abs, $component3);
 if_setposition(33, 7, ^setpos_abs_left, ^setpos_abs_top, $component3);
 $int1 = ~v2_stone_button_filled($component3);
-if ($boolean2 = false) {
+if ($boolean2 = 0) {
 	if_setonmouseover("v2_stone_button_change_in($component3, 0)", $component3);
 	if_setonmouseleave("v2_stone_button_change_out($component3, 0)", $component3);
 } else {
@@ -31,7 +31,7 @@ if ($int0 = 1) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextfont(p11_full);
 	cc_settext("<col=d6d6d6>Search");
-	if ($boolean2 = true) {
+	if ($boolean2 = 1) {
 		if_setop(1, "Search", $component4);
 		if_setonop("collection_toggle_search(0)", $component4);
 	}
@@ -44,7 +44,7 @@ if ($int0 = 1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p11_full);
 	cc_settext("<col=d6d6d6>Back");
-	if ($boolean2 = true) {
+	if ($boolean2 = 1) {
 		if_setop(1, "Back", $component4);
 		if_setonop("collection_toggle_search(0)", $component4);
 	}

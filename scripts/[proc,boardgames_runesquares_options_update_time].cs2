@@ -6,7 +6,7 @@ if_setgraphic($graphic1, boardgames_runesquares_options:15seconds_radio);
 if_setgraphic($graphic1, boardgames_runesquares_options:30seconds_radio);
 if_setgraphic($graphic1, boardgames_runesquares_options:1minute_radio);
 if_setgraphic($graphic1, boardgames_runesquares_options:2minutes_radio);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("settrans(boardgames_runesquares_options:15seconds_radio, 127)", boardgames_runesquares_options:15seconds);
 	if_setonmouseleave("settrans(boardgames_runesquares_options:15seconds_radio, 0)", boardgames_runesquares_options:15seconds);
 	if_setonmouserepeat("settrans(boardgames_runesquares_options:30seconds_radio, 127)", boardgames_runesquares_options:30seconds);

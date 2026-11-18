@@ -1,21 +1,100 @@
-// 2874
-[proc,kdr_update]
-def_string $string0 = ",";
-def_int $int0 = 0;
-def_int $int1 = 0;
-def_int $int2 = 0;
-if (%kd_toggle = 0 | %inside_wilderness = 0 & ~script2871 = 0) {
-	cc_settext("");
-} else if (~deadman_world ! 0 & %deadman_protection_left > 0) {
-	cc_settext("");
-} else if (%kdr_transmit_deaths = 0) {
-	cc_settext("Kills: <~tostring_spacer(%kdr_transmit_kills, $string0)><br>Deaths: 0<br>K/D Ratio: 0.0");
-} else {
-	if (%kdr_transmit_kills < calc(^max_32bit_int / 10)) {
-		$int0 = scale(%kdr_transmit_kills, %kdr_transmit_deaths, 10);
-		$int1, $int2 = calc($int0 / 10), calc($int0 % 10);
-	} else {
-		$int1, $int2 = calc(%kdr_transmit_kills / %kdr_transmit_deaths), 0;
-	}
-	cc_settext("Kills: <~tostring_spacer(%kdr_transmit_kills, $string0)><br>Deaths: <~tostring_spacer(%kdr_transmit_deaths, $string0)><br>K/D Ratio: <~tostring_spacer($int1, $string0)>.<tostring($int2)>");
-}
+java.lang.IllegalStateException: Opcode 4044 in script 2874 not implemented
+
+.id                       2874
+.int_arg_count            0
+.long_arg_count           0
+.obj_arg_count            0
+   sconst                 ","
+   ostore                 0
+   iconst                 0
+   istore                 0
+   iconst                 0
+   istore                 1
+   iconst                 0
+   istore                 2
+   get_varbit             4143
+   iconst                 0
+   if_icmpeq              LABEL19
+   get_varbit             5963
+   iconst                 0
+   if_icmpeq              LABEL15
+   jump                   LABEL22
+LABEL15:
+   invoke                 2871
+   iconst                 0
+   if_icmpeq              LABEL19
+   jump                   LABEL22
+LABEL19:
+   sconst                 ""
+   cc_settext            
+   jump                   LABEL81
+LABEL22:
+   invoke                 1138
+   iconst                 0
+   if_icmpne              LABEL26
+   jump                   LABEL33
+LABEL26:
+   get_varbit             4965
+   iconst                 0
+   if_icmpgt              LABEL30
+   jump                   LABEL33
+LABEL30:
+   sconst                 ""
+   cc_settext            
+   jump                   LABEL81
+LABEL33:
+   get_varbit             8375
+   iconst                 0
+   if_icmpeq              LABEL37
+   jump                   LABEL47
+LABEL37:
+   sconst                 "<int_0="
+   get_varbit             8376
+   tostring              
+   sconst                 "><int_kd="
+   iconst                 0
+   tostring              
+   sconst                 ">Kills: <int_0:spacer><br>Deaths: 0<br>K/D Ratio: <int_kd:spacer_1_z>"
+   join_string            5
+   cc_settext            
+   jump                   LABEL81
+LABEL47:
+   get_varbit             8376
+   get_varbit             8375
+   div                   
+   iconst                 2147483647
+   iconst                 10
+   div                   
+   if_icmplt              LABEL55
+   jump                   LABEL61
+LABEL55:
+   get_varbit             8376
+   get_varbit             8375
+   iconst                 10
+   scale                 
+   istore                 0
+   jump                   LABEL69
+LABEL61:
+   get_varbit             8376
+   4044                  
+   get_varbit             8375
+   4044                  
+   lconst                 10
+   4043                  
+   invoke                 9914
+   istore                 0
+LABEL69:
+   sconst                 "<int_0="
+   get_varbit             8376
+   tostring              
+   sconst                 "><int_1="
+   get_varbit             8375
+   tostring              
+   sconst                 "><int_kd="
+   iload                  0
+   tostring              
+   sconst                 ">Kills: <int_0:spacer><br>Deaths: <int_1:spacer><br>K/D Ratio: <int_kd:spacer_1_z>"
+   join_string            7
+   cc_settext            
+LABEL81:
+   return                

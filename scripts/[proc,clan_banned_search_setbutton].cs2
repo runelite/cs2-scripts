@@ -3,7 +3,7 @@
 def_int $comsubid11 = -1;
 if (~clan_members_searching = 1) {
 	$comsubid11 = ~clan_members_search_drawbutton(1, $component3);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("cc_settrans($component3, $comsubid11, 120, null)", $component3);
 	}
 	if_setonmouseleave("cc_settrans($component3, $comsubid11, 0, null)", $component3);
@@ -26,7 +26,7 @@ if (~clan_members_searching = 1) {
 	}
 } else {
 	~clan_members_search_drawbutton(0, $component3);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("clan_members_search_drawbutton(1, $component3)", $component3);
 	}
 	if_setonmouseleave("clan_members_search_drawbutton(0, $component3)", $component3);

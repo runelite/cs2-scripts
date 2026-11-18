@@ -1,7 +1,7 @@
 // 4199
 [proc,audio_menu_createentry_indexed](string $string0, component $component0, int $int1, int $int2, int $int3, dbrow $dbrow4, string $string1)(int, int)
 def_int $int5 = calc(paraheight($string0, $int1, p12_full) * 14 + 2);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int5 = scale(4, 3, $int5);
 }
 cc_create($component0, ^iftype_text, $int2, false);

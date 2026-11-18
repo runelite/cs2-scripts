@@ -8,7 +8,7 @@ def_graphic $graphic5 = ~graphic_device("wiki_icon,0", "orb_icon,14");
 def_graphic $graphic6 = ~graphic_device("wiki_icon,1", "orb_icon,12");
 if (%wiki_icon_disabled = 0) {
 	if_sethide(false, $component1);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("graphic_swapper($component2, $graphic6)", $component1);
 		if_setonmouseleave("graphic_swapper($component2, $graphic5)", $component1);
 		if_setsize(40, 24, ^setsize_abs, ^setsize_abs, $component1);

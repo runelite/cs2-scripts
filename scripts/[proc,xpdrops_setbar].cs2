@@ -1,218 +1,956 @@
-// 999
-[proc,xpdrops_setbar](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-%varcint2 = 0;
-def_stat $stat7 = null;
-if (%xpdrops_counter_type = 31) {
-	$stat7 = %varcint72;
-} else if (%xpdrops_counter_type = 30) {
-	$stat7 = null;
-} else {
-	$stat7 = enum(int, stat, enum_681, %xpdrops_counter_type);
-}
-def_stat $stat8 = null;
-if (%xpdrops_progress_type = 31) {
-	$stat8 = %varcint72;
-} else if (%xpdrops_progress_type = 30) {
-	$stat8 = null;
-} else {
-	$stat8 = enum(int, stat, enum_681, %xpdrops_progress_type);
-}
-def_boolean $boolean9 = false;
-def_string $string0 = ",";
-def_string $string1 = "";
-def_string $string2 = "";
-def_string $string3 = "";
-def_int $int10 = 0;
-def_int $int11 = 0;
-def_int $int12 = 0;
-def_int $int13 = 0;
-def_int $int14 = 0;
-def_int $int15 = 0;
-def_int $int16 = 0;
-def_int $int17 = 0;
-def_int $int18 = 0;
-if ($stat7 ! null) {
-	$boolean9 = true;
-	if_setgraphic(enum(stat, graphic, enum_255, $stat7), $component1);
-	$int10, $int11 = ~xpdrops_data_get($stat7);
-	$int12 = stat_visible_xp($stat7);
-	if ($int11 = -1) {
-		$int15 = calc($int12 - $int10);
-		if ($int15 >= 0) {
-			$string3 = ~tostring_spacer($int15, $string0);
-			if_settext("+<$string3>", $component2);
-			$string1 = "<enum(stat, string, enum_680, $stat7)> tracker:|Tracking from:|Total XP:";
-			$string2 = "<$string3>|<~tostring_spacer($int10, $string0)>|<~tostring_spacer($int12, $string0)>";
-		} else {
-			if_settext("N/A", $component2);
-			$string1 = "Your <enum(stat, string, enum_680, $stat7)> tracker is invalid.<br>Set a lower starting point.";
-		}
-	} else {
-		$string3 = ~tostring_spacer($int12, $string0);
-		if_settext($string3, $component2);
-		$int13 = stat_base($stat7);
-		if ($int13 < 99) {
-			$int14 = enum(int, int, enum_256, calc($int13 + 1));
-			$string1 = "<enum(stat, string, enum_680, $stat7)> XP:|@ttip_list@Next level:</col>|Remaining:";
-			$string2 = "<$string3>|@ttip_list@<~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
-		} else {
-			$string1 = "<enum(stat, string, enum_680, $stat7)> XP:";
-			$string2 = $string3;
-		}
-	}
-} else if (%xpdrops_counter_type = 30) {
-	if_setgraphic(null, $component1);
-	if_settext("", $component2);
-	$string1, $string2 = "", "";
-	~deltooltip_action($component6);
-} else {
-	$boolean9 = true;
-	if_setgraphic("staticons2,7", $component1);
-	$int17, $int16 = ~stats_totalxp;
-	if (%xpdrops_total_end = -1) {
-		$int15 = calc($int16 % 1000);
-		$int18 = calc($int17 * pow(10, 6) + $int16 / 1000);
-		if ($int18 > %xpdrops_total_start) {
-			$string3 = "<~tostring_spacer(calc($int18 - %xpdrops_total_start), $string0)><$string0><~script47($int15)>";
-			if_settext("+<$string3>", $component2);
-			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
-			if (%xpdrops_total_start > 0) {
-				$string2 = "<$string3>|<~tostring_spacer(%xpdrops_total_start, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
-			} else {
-				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
-			}
-		} else if ($int18 = %xpdrops_total_start & $int15 >= 0) {
-			$string3 = tostring($int15);
-			if_settext("+<$string3>", $component2);
-			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
-			if (%xpdrops_total_start > 0) {
-				$string2 = "<$string3>|<~tostring_spacer(%xpdrops_total_start, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
-			} else {
-				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
-			}
-		} else {
-			if_settext("N/A", $component2);
-			$string1 = "Your Total XP tracker is invalid.<br>Set a lower starting point.";
-		}
-	} else {
-		$string3 = ~stats_tostring_totalxp($int17, $int16);
-		if_settext($string3, $component2);
-		$string1 = "Total XP:";
-		$string2 = $string3;
-	}
-}
-def_component $component19 = if_getlayer($component2);
-~xp_drops_tooltip_setup($string2, $string1, $component6, $component19, $component0);
-if (~on_mobile = true) {
-	if_setnoclickthrough($boolean9, $component19);
-} else {
-	if_setnoclickthrough(false, $component19);
-}
-def_boolean $boolean20 = false;
-def_int $int21 = 0;
-def_int $int22 = 0;
-def_int $int23 = 0;
-def_int $int24 = 0;
-def_int $int25 = 0;
-def_int $int26 = 0;
-if ($stat8 ! null) {
-	$boolean20 = true;
-	$int12 = stat_visible_xp($stat8);
-	$int10, $int11 = ~xpdrops_data_get($stat8);
-	if ($int11 ! -1 & $int11 > $int10) {
-		$int21 = ~xpdrops_setbar_progress($component4, $int10, $int12, $int11, 1);
-		$string1 = "<enum(stat, string, enum_680, $stat8)> goal|@ttip_list@Start:</col>|Current:|@ttip_list@End:</col>";
-		$string2 = "<~xpdrops_percentage_tostring($int21)>|@ttip_list@<~tostring_spacer($int10, $string0)></col>|<~tostring_spacer($int12, $string0)>|@ttip_list@<~tostring_spacer($int11, $string0)></col>";
-		if ($int12 < $int11) {
-			$string1 = append($string1, "|Remaining:");
-			$string2 = append($string2, "|<~tostring_spacer(calc($int11 - $int12), $string0)>");
-		}
-	} else {
-		$int13 = stat_base($stat8);
-		$int22 = calc($int13 + 1);
-		if ($int22 > 99) {
-			$int22 = 99;
-		}
-		$int14 = enum(int, int, enum_256, $int22);
-		$int21 = ~xpdrops_setbar_progress($component4, enum(int, int, enum_256, $int13), $int12, $int14, 0);
-		if ($int13 < 99) {
-			$string1 = "<enum(stat, string, enum_680, $stat8)>|Current XP:|@ttip_list@Next level:</col>|Remaining:";
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|<~tostring_spacer($int12, $string0)>|@ttip_list@<~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
-		} else {
-			$string1 = "<enum(stat, string, enum_680, $stat8)> XP:";
-			$string2 = ~tostring_spacer($int12, $string0);
-		}
-	}
-} else if (%xpdrops_progress_type = 30) {
-	$boolean20 = true;
-	$int17, $int16 = ~stats_totalxp;
-	if (%xpdrops_total_end ! -1 & %xpdrops_total_end > %xpdrops_total_start) {
-		if ($int17 < 2 & %xpdrops_total_end <= calc(^max_32bit_int / 1000)) {
-			$int21 = ~xpdrops_setbar_progress($component4, calc(%xpdrops_total_start * 1000), calc($int17 * pow(10, 9) + $int16), calc(%xpdrops_total_end * 1000), 1);
-			$int24 = calc(%xpdrops_total_end * 1000 - ($int17 * pow(10, 9) + $int16));
-		} else {
-			$int25 = calc($int17 * pow(10, 6) + $int16 / 1000);
-			$int21 = ~xpdrops_setbar_progress($component4, %xpdrops_total_start, $int25, %xpdrops_total_end, 1);
-			if ($int25 < %xpdrops_total_end) {
-				$int24 = calc(%xpdrops_total_end - $int25);
-				$int26 = calc($int16 % 1000);
-				if ($int26 > 0) {
-					$int24 = calc($int24 - 1);
-					$int23 = calc($int24 / pow(10, 6));
-					$int24 = calc($int24 % pow(10, 6) * 1000);
-					$int24 = calc($int24 + (1000 - $int26));
-				} else {
-					$int23 = calc($int24 / pow(10, 6));
-					$int24 = calc($int24 % pow(10, 6) * 1000);
-				}
-			}
-		}
-		$string1 = "Total XP goal|@ttip_list@Start:</col>|Current:|@ttip_list@End:</col>";
-		if (%xpdrops_total_start > 0) {
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|@ttip_list@<~tostring_spacer(%xpdrops_total_start, $string0)><$string0>000</col>|<~stats_tostring_totalxp($int17, $int16)>|@ttip_list@<~tostring_spacer(%xpdrops_total_end, $string0)><$string0>000</col>";
-		} else {
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|@ttip_list@0</col>|<~stats_tostring_totalxp($int17, $int16)>|@ttip_list@<~tostring_spacer(%xpdrops_total_end, $string0)><$string0>000</col>";
-		}
-		if ($int23 > 0 | $int24 > 0) {
-			$string1 = append($string1, "|Remaining:");
-			$string2 = append($string2, "|<~stats_tostring_totalxp($int23, $int24)>");
-		}
-	} else {
-		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component4);
-		if_setcolour(0x606060, $component4);
-		$string1, $string2 = "Use the setup menu to set a Total XP goal.", "";
-	}
-} else {
-	$string1, $string2 = "", "";
-	~deltooltip_action($component6);
-}
-~xp_drops_tooltip_setup($string2, $string1, $component6, $component3, $component0);
-if (~on_mobile = true) {
-	if_setnoclickthrough($boolean20, $component3);
-} else {
-	if_setnoclickthrough(false, $component3);
-}
-if ($boolean9 = true) {
-	if_sethide(false, $component19);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component19);
-	if_setsize(0, 29, ^setsize_minus, ^setsize_abs, $component19);
-	if ($boolean20 = true) {
-		if_sethide(false, $component3);
-		if_setposition(0, 28, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-		if_setposition(0, 38, ^setpos_abs_centre, ^setpos_abs_top, $component5);
-	} else {
-		if_sethide(true, $component3);
-		if_setposition(0, 29, ^setpos_abs_centre, ^setpos_abs_top, $component5);
-	}
-} else if ($boolean20 = true) {
-	if_sethide(false, $component19);
-	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top, $component19);
-	if_setsize(0, 4, ^setsize_minus, ^setsize_abs, $component19);
-	if_sethide(false, $component3);
-	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-	if_setposition(0, 17, ^setpos_abs_centre, ^setpos_abs_top, $component5);
-} else {
-	if_sethide(true, $component19);
-	if_sethide(true, $component3);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component5);
-}
+java.lang.IllegalStateException: Opcode 4044 in script 999 not implemented
+
+.id                       999
+.int_arg_count            7
+.long_arg_count           0
+.obj_arg_count            0
+   iconst                 0
+   set_varc_int           2
+   iconst                 -1
+   istore                 7
+   get_varbit             4697
+   iconst                 31
+   if_icmpeq              LABEL8
+   jump                   LABEL11
+LABEL8:
+   get_varc_int           72
+   istore                 7
+   jump                   LABEL24
+LABEL11:
+   get_varbit             4697
+   iconst                 30
+   if_icmpeq              LABEL15
+   jump                   LABEL18
+LABEL15:
+   iconst                 -1
+   istore                 7
+   jump                   LABEL24
+LABEL18:
+   iconst                 105
+   iconst                 83
+   iconst                 681
+   get_varbit             4697
+   enum                  
+   istore                 7
+LABEL24:
+   iconst                 -1
+   istore                 8
+   get_varbit             4698
+   iconst                 31
+   if_icmpeq              LABEL30
+   jump                   LABEL33
+LABEL30:
+   get_varc_int           72
+   istore                 8
+   jump                   LABEL46
+LABEL33:
+   get_varbit             4698
+   iconst                 30
+   if_icmpeq              LABEL37
+   jump                   LABEL40
+LABEL37:
+   iconst                 -1
+   istore                 8
+   jump                   LABEL46
+LABEL40:
+   iconst                 105
+   iconst                 83
+   iconst                 681
+   get_varbit             4698
+   enum                  
+   istore                 8
+LABEL46:
+   iconst                 0
+   istore                 9
+   sconst                 ","
+   ostore                 0
+   sconst                 ""
+   ostore                 1
+   sconst                 ""
+   ostore                 2
+   sconst                 ""
+   ostore                 3
+   iconst                 0
+   istore                 10
+   iconst                 0
+   istore                 11
+   iconst                 0
+   istore                 12
+   iconst                 0
+   istore                 13
+   iconst                 0
+   istore                 14
+   iconst                 0
+   istore                 15
+   iconst                 0
+   istore                 16
+   iconst                 0
+   istore                 17
+   iconst                 0
+   istore                 18
+   iload                  7
+   iconst                 -1
+   if_icmpne              LABEL78
+   jump                   LABEL205
+LABEL78:
+   iconst                 1
+   istore                 9
+   iconst                 83
+   iconst                 100
+   iconst                 255
+   iload                  7
+   enum                  
+   iload                  1
+   if_setgraphic         
+   iload                  7
+   invoke                 1002
+   istore                 11
+   istore                 10
+   iload                  7
+   stat_xp               
+   istore                 12
+   iload                  11
+   iconst                 -1
+   if_icmpeq              LABEL98
+   jump                   LABEL149
+LABEL98:
+   iload                  12
+   iload                  10
+   sub                   
+   istore                 15
+   iload                  15
+   iconst                 0
+   if_icmpge              LABEL106
+   jump                   LABEL136
+LABEL106:
+   sconst                 "<int_0="
+   iload                  15
+   tostring              
+   sconst                 "><int_0:spacer>"
+   join_string            3
+   ostore                 3
+   sconst                 "+"
+   oload                  3
+   join_string            2
+   iload                  2
+   if_settext            
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  7
+   enum                  
+   sconst                 " tracker:|Tracking from:|Total XP:"
+   join_string            2
+   ostore                 1
+   oload                  3
+   sconst                 "<int_0="
+   iload                  10
+   tostring              
+   sconst                 "><int_1="
+   iload                  12
+   tostring              
+   sconst                 ">|<int_0:spacer>|<int_1:spacer>"
+   join_string            6
+   ostore                 2
+   jump                   LABEL148
+LABEL136:
+   sconst                 "N/A"
+   iload                  2
+   if_settext            
+   sconst                 "Your "
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  7
+   enum                  
+   sconst                 " tracker is invalid.<br>Set a lower starting point."
+   join_string            3
+   ostore                 1
+LABEL148:
+   jump                   LABEL204
+LABEL149:
+   sconst                 "<int_0="
+   iload                  12
+   tostring              
+   sconst                 "><int_0:spacer>"
+   join_string            3
+   ostore                 3
+   oload                  3
+   iload                  2
+   if_settext            
+   iload                  7
+   stat_base             
+   istore                 13
+   iload                  13
+   iconst                 99
+   if_icmplt              LABEL165
+   jump                   LABEL194
+LABEL165:
+   iconst                 105
+   iconst                 105
+   iconst                 256
+   iload                  13
+   iconst                 1
+   add                   
+   enum                  
+   istore                 14
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  7
+   enum                  
+   sconst                 " XP:|@ttip_list@Next level:</col>|Remaining:"
+   join_string            2
+   ostore                 1
+   oload                  3
+   sconst                 "<int_0="
+   iload                  14
+   tostring              
+   sconst                 "><int_1="
+   iload                  14
+   iload                  12
+   sub                   
+   tostring              
+   sconst                 ">|@ttip_list@<int_0:spacer></col>|<int_1:spacer>"
+   join_string            6
+   ostore                 2
+   jump                   LABEL204
+LABEL194:
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  7
+   enum                  
+   sconst                 " XP:"
+   join_string            2
+   ostore                 1
+   oload                  3
+   ostore                 2
+LABEL204:
+   jump                   LABEL361
+LABEL205:
+   get_varbit             4697
+   iconst                 30
+   if_icmpeq              LABEL209
+   jump                   LABEL222
+LABEL209:
+   iconst                 -1
+   iload                  1
+   if_setgraphic         
+   sconst                 ""
+   iload                  2
+   if_settext            
+   sconst                 ""
+   sconst                 ""
+   ostore                 2
+   ostore                 1
+   iload                  6
+   invoke                 41
+   jump                   LABEL361
+LABEL222:
+   iconst                 1
+   istore                 9
+   iconst                 222
+   iload                  1
+   if_setgraphic         
+   invoke                 1008
+   istore                 16
+   istore                 17
+   get_varp               1252
+   iconst                 -1
+   if_icmpeq              LABEL234
+   jump                   LABEL350
+LABEL234:
+   iload                  16
+   iconst                 1000
+   mod                   
+   istore                 15
+   iload                  17
+   iconst                 10
+   iconst                 6
+   pow                   
+   multiply              
+   iload                  16
+   iconst                 1000
+   div                   
+   add                   
+   istore                 18
+   iload                  18
+   get_varp               1228
+   if_icmpgt              LABEL252
+   jump                   LABEL300
+LABEL252:
+   sconst                 "<long_0="
+   iload                  18
+   4044                  
+   get_varp               1228
+   4044                  
+   4038                  
+   lconst                 1000
+   4039                  
+   iload                  15
+   4044                  
+   4037                  
+   4125                  
+   sconst                 "><long_0:spacer>"
+   join_string            3
+   ostore                 3
+   sconst                 "+"
+   oload                  3
+   join_string            2
+   iload                  2
+   if_settext            
+   sconst                 "Total XP tracker:|Tracking from:|Total XP:"
+   ostore                 1
+   get_varp               1228
+   iconst                 0
+   if_icmpgt              LABEL278
+   jump                   LABEL292
+LABEL278:
+   oload                  3
+   sconst                 "<long_0="
+   get_varp               1228
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 ">|<long_0:spacer>|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   join_string            5
+   ostore                 2
+   jump                   LABEL299
+LABEL292:
+   oload                  3
+   sconst                 "|0|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   join_string            3
+   ostore                 2
+LABEL299:
+   jump                   LABEL349
+LABEL300:
+   iload                  18
+   get_varp               1228
+   if_icmpeq              LABEL304
+   jump                   LABEL344
+LABEL304:
+   iload                  15
+   iconst                 0
+   if_icmpge              LABEL308
+   jump                   LABEL344
+LABEL308:
+   iload                  15
+   tostring              
+   ostore                 3
+   sconst                 "+"
+   oload                  3
+   join_string            2
+   iload                  2
+   if_settext            
+   sconst                 "Total XP tracker:|Tracking from:|Total XP:"
+   ostore                 1
+   get_varp               1228
+   iconst                 0
+   if_icmpgt              LABEL322
+   jump                   LABEL336
+LABEL322:
+   oload                  3
+   sconst                 "<long_0="
+   get_varp               1228
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 ">|<long_0:spacer>|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   join_string            5
+   ostore                 2
+   jump                   LABEL343
+LABEL336:
+   oload                  3
+   sconst                 "|0|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   join_string            3
+   ostore                 2
+LABEL343:
+   jump                   LABEL349
+LABEL344:
+   sconst                 "N/A"
+   iload                  2
+   if_settext            
+   sconst                 "Your Total XP tracker is invalid.<br>Set a lower starting point."
+   ostore                 1
+LABEL349:
+   jump                   LABEL361
+LABEL350:
+   iload                  17
+   iload                  16
+   invoke                 1009
+   ostore                 3
+   oload                  3
+   iload                  2
+   if_settext            
+   sconst                 "Total XP:"
+   ostore                 1
+   oload                  3
+   ostore                 2
+LABEL361:
+   iload                  2
+   if_getlayer           
+   istore                 19
+   oload                  2
+   oload                  1
+   iload                  6
+   iload                  19
+   iload                  0
+   invoke                 2504
+   invoke                 1972
+   iconst                 1
+   if_icmpeq              LABEL374
+   jump                   LABEL378
+LABEL374:
+   iload                  9
+   iload                  19
+   if_setnoclickthrough  
+   jump                   LABEL381
+LABEL378:
+   iconst                 0
+   iload                  19
+   if_setnoclickthrough  
+LABEL381:
+   iconst                 0
+   istore                 20
+   iconst                 0
+   istore                 21
+   iconst                 0
+   istore                 22
+   iconst                 0
+   istore                 23
+   iconst                 0
+   istore                 24
+   iconst                 0
+   istore                 25
+   iconst                 0
+   istore                 26
+   iload                  8
+   iconst                 -1
+   if_icmpne              LABEL399
+   jump                   LABEL540
+LABEL399:
+   iconst                 1
+   istore                 20
+   iload                  8
+   stat_xp               
+   istore                 12
+   iload                  8
+   invoke                 1002
+   istore                 11
+   istore                 10
+   iload                  11
+   iconst                 -1
+   if_icmpne              LABEL412
+   jump                   LABEL465
+LABEL412:
+   iload                  11
+   iload                  10
+   if_icmpgt              LABEL416
+   jump                   LABEL465
+LABEL416:
+   iload                  4
+   iload                  10
+   iload                  12
+   iload                  11
+   iconst                 1
+   invoke                 1000
+   istore                 21
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  8
+   enum                  
+   sconst                 " goal|@ttip_list@Start:</col>|Current:|@ttip_list@End:</col>"
+   join_string            2
+   ostore                 1
+   sconst                 "<int_0="
+   iload                  10
+   tostring              
+   sconst                 "><int_1="
+   iload                  12
+   tostring              
+   sconst                 "><int_2="
+   iload                  11
+   tostring              
+   sconst                 ">"
+   iload                  21
+   invoke                 1001
+   sconst                 "|@ttip_list@<int_0:spacer></col>|<int_1:spacer>|@ttip_list@<int_2:spacer></col>"
+   join_string            9
+   ostore                 2
+   iload                  12
+   iload                  11
+   if_icmplt              LABEL450
+   jump                   LABEL464
+LABEL450:
+   oload                  1
+   sconst                 "|Remaining:"
+   append                
+   ostore                 1
+   oload                  2
+   sconst                 "<int_0="
+   iload                  11
+   iload                  12
+   sub                   
+   tostring              
+   sconst                 ">|<int_0:spacer>"
+   join_string            3
+   append                
+   ostore                 2
+LABEL464:
+   jump                   LABEL539
+LABEL465:
+   iload                  8
+   stat_base             
+   istore                 13
+   iload                  13
+   iconst                 1
+   add                   
+   istore                 22
+   iload                  22
+   iconst                 99
+   if_icmpgt              LABEL476
+   jump                   LABEL478
+LABEL476:
+   iconst                 99
+   istore                 22
+LABEL478:
+   iconst                 105
+   iconst                 105
+   iconst                 256
+   iload                  22
+   enum                  
+   istore                 14
+   iload                  4
+   iconst                 105
+   iconst                 105
+   iconst                 256
+   iload                  13
+   enum                  
+   iload                  12
+   iload                  14
+   iconst                 0
+   invoke                 1000
+   istore                 21
+   iload                  13
+   iconst                 99
+   if_icmplt              LABEL499
+   jump                   LABEL525
+LABEL499:
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  8
+   enum                  
+   sconst                 "|Current XP:|@ttip_list@Next level:</col>|Remaining:"
+   join_string            2
+   ostore                 1
+   sconst                 "<int_0="
+   iload                  12
+   tostring              
+   sconst                 "><int_1="
+   iload                  14
+   tostring              
+   sconst                 "><int_2="
+   iload                  14
+   iload                  12
+   sub                   
+   tostring              
+   sconst                 ">"
+   iload                  21
+   invoke                 1001
+   sconst                 "|<int_0:spacer>|@ttip_list@<int_1:spacer></col>|<int_2:spacer>"
+   join_string            9
+   ostore                 2
+   jump                   LABEL539
+LABEL525:
+   iconst                 83
+   iconst                 115
+   iconst                 680
+   iload                  8
+   enum                  
+   sconst                 " XP:"
+   join_string            2
+   ostore                 1
+   sconst                 "<int_0="
+   iload                  12
+   tostring              
+   sconst                 "><int_0:spacer>"
+   join_string            3
+   ostore                 2
+LABEL539:
+   jump                   LABEL754
+LABEL540:
+   get_varbit             4698
+   iconst                 30
+   if_icmpeq              LABEL544
+   jump                   LABEL748
+LABEL544:
+   iconst                 1
+   istore                 20
+   invoke                 1008
+   istore                 16
+   istore                 17
+   get_varp               1252
+   iconst                 -1
+   if_icmpne              LABEL553
+   jump                   LABEL734
+LABEL553:
+   get_varp               1252
+   get_varp               1228
+   if_icmpgt              LABEL557
+   jump                   LABEL734
+LABEL557:
+   iload                  17
+   iconst                 2
+   if_icmplt              LABEL561
+   jump                   LABEL597
+LABEL561:
+   get_varp               1252
+   iconst                 2147483647
+   iconst                 1000
+   div                   
+   if_icmple              LABEL567
+   jump                   LABEL597
+LABEL567:
+   iload                  4
+   get_varp               1228
+   iconst                 1000
+   multiply              
+   iload                  17
+   iconst                 10
+   iconst                 9
+   pow                   
+   multiply              
+   iload                  16
+   add                   
+   get_varp               1252
+   iconst                 1000
+   multiply              
+   iconst                 1
+   invoke                 1000
+   istore                 21
+   get_varp               1252
+   iconst                 1000
+   multiply              
+   iload                  17
+   iconst                 10
+   iconst                 9
+   pow                   
+   multiply              
+   iload                  16
+   add                   
+   sub                   
+   istore                 24
+   jump                   LABEL669
+LABEL597:
+   iload                  17
+   iconst                 10
+   iconst                 6
+   pow                   
+   multiply              
+   iload                  16
+   iconst                 1000
+   div                   
+   add                   
+   istore                 25
+   iload                  4
+   get_varp               1228
+   iload                  25
+   get_varp               1252
+   iconst                 1
+   invoke                 1000
+   istore                 21
+   iload                  25
+   get_varp               1252
+   if_icmplt              LABEL618
+   jump                   LABEL669
+LABEL618:
+   get_varp               1252
+   iload                  25
+   sub                   
+   istore                 24
+   iload                  16
+   iconst                 1000
+   mod                   
+   istore                 26
+   iload                  26
+   iconst                 0
+   if_icmpgt              LABEL630
+   jump                   LABEL655
+LABEL630:
+   iload                  24
+   iconst                 1
+   sub                   
+   istore                 24
+   iload                  24
+   iconst                 10
+   iconst                 6
+   pow                   
+   div                   
+   istore                 23
+   iload                  24
+   iconst                 10
+   iconst                 6
+   pow                   
+   mod                   
+   iconst                 1000
+   multiply              
+   istore                 24
+   iload                  24
+   iconst                 1000
+   iload                  26
+   sub                   
+   add                   
+   istore                 24
+   jump                   LABEL669
+LABEL655:
+   iload                  24
+   iconst                 10
+   iconst                 6
+   pow                   
+   div                   
+   istore                 23
+   iload                  24
+   iconst                 10
+   iconst                 6
+   pow                   
+   mod                   
+   iconst                 1000
+   multiply              
+   istore                 24
+LABEL669:
+   sconst                 "Total XP goal|@ttip_list@Start:</col>|Current:|@ttip_list@End:</col>"
+   ostore                 1
+   get_varp               1228
+   iconst                 0
+   if_icmpgt              LABEL675
+   jump                   LABEL698
+LABEL675:
+   sconst                 "<long_0="
+   get_varp               1228
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 "><long_1="
+   get_varp               1252
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 ">"
+   iload                  21
+   invoke                 1001
+   sconst                 "|@ttip_list@<long_0:spacer></col>|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   sconst                 "|@ttip_list@<long_1:spacer></col>"
+   join_string            9
+   ostore                 2
+   jump                   LABEL714
+LABEL698:
+   sconst                 "<long_0="
+   get_varp               1252
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 ">"
+   iload                  21
+   invoke                 1001
+   sconst                 "|@ttip_list@0</col>|"
+   iload                  17
+   iload                  16
+   invoke                 1009
+   sconst                 "|@ttip_list@<long_0:spacer></col>"
+   join_string            7
+   ostore                 2
+LABEL714:
+   iload                  23
+   iconst                 0
+   if_icmpgt              LABEL721
+   iload                  24
+   iconst                 0
+   if_icmpgt              LABEL721
+   jump                   LABEL733
+LABEL721:
+   oload                  1
+   sconst                 "|Remaining:"
+   append                
+   ostore                 1
+   oload                  2
+   sconst                 "|"
+   iload                  23
+   iload                  24
+   invoke                 1009
+   join_string            2
+   append                
+   ostore                 2
+LABEL733:
+   jump                   LABEL747
+LABEL734:
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 1
+   iload                  4
+   if_setsize            
+   iconst                 6316128
+   iload                  4
+   if_setcolour          
+   sconst                 "Use the setup menu to set a Total XP goal."
+   sconst                 ""
+   ostore                 2
+   ostore                 1
+LABEL747:
+   jump                   LABEL754
+LABEL748:
+   sconst                 ""
+   sconst                 ""
+   ostore                 2
+   ostore                 1
+   iload                  6
+   invoke                 41
+LABEL754:
+   oload                  2
+   oload                  1
+   iload                  6
+   iload                  3
+   iload                  0
+   invoke                 2504
+   invoke                 1972
+   iconst                 1
+   if_icmpeq              LABEL764
+   jump                   LABEL768
+LABEL764:
+   iload                  20
+   iload                  3
+   if_setnoclickthrough  
+   jump                   LABEL771
+LABEL768:
+   iconst                 0
+   iload                  3
+   if_setnoclickthrough  
+LABEL771:
+   iload                  9
+   iconst                 1
+   if_icmpeq              LABEL775
+   jump                   LABEL820
+LABEL775:
+   iconst                 0
+   iload                  19
+   if_sethide            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   iload                  19
+   if_setposition        
+   iconst                 0
+   iconst                 29
+   iconst                 1
+   iconst                 0
+   iload                  19
+   if_setsize            
+   iload                  20
+   iconst                 1
+   if_icmpeq              LABEL794
+   jump                   LABEL810
+LABEL794:
+   iconst                 0
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iconst                 28
+   iconst                 1
+   iconst                 0
+   iload                  3
+   if_setposition        
+   iconst                 0
+   iconst                 38
+   iconst                 1
+   iconst                 0
+   iload                  5
+   if_setposition        
+   jump                   LABEL819
+LABEL810:
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iconst                 29
+   iconst                 1
+   iconst                 0
+   iload                  5
+   if_setposition        
+LABEL819:
+   jump                   LABEL867
+LABEL820:
+   iload                  20
+   iconst                 1
+   if_icmpeq              LABEL824
+   jump                   LABEL855
+LABEL824:
+   iconst                 0
+   iload                  19
+   if_sethide            
+   iconst                 0
+   iconst                 5
+   iconst                 1
+   iconst                 0
+   iload                  19
+   if_setposition        
+   iconst                 0
+   iconst                 4
+   iconst                 1
+   iconst                 0
+   iload                  19
+   if_setsize            
+   iconst                 0
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iconst                 7
+   iconst                 1
+   iconst                 0
+   iload                  3
+   if_setposition        
+   iconst                 0
+   iconst                 17
+   iconst                 1
+   iconst                 0
+   iload                  5
+   if_setposition        
+   jump                   LABEL867
+LABEL855:
+   iconst                 1
+   iload                  19
+   if_sethide            
+   iconst                 1
+   iload                  3
+   if_sethide            
+   iconst                 0
+   iconst                 0
+   iconst                 1
+   iconst                 0
+   iload                  5
+   if_setposition        
+LABEL867:
+   return                

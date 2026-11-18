@@ -1,7 +1,7 @@
 // 379
 [proc,menu_createentry_indexed](string $string0, component $component0, component $component1, int $int2, int $int3, int $int4)(int, int)
 def_int $int5 = calc(paraheight($string0, $int2, p12_full) * 14 + 2);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int5 = scale(4, 3, $int5);
 }
 cc_create($component0, ^iftype_text, $int3, false);

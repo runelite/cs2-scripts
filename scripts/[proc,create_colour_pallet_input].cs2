@@ -47,7 +47,7 @@ cc_setcolour(^white);
 cc_settrans(255);
 cc_setop(1, "Select");
 $int3 = calc($int3 + 1);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	cc_setonmouseover("cc_settrans($component0, $int1, 220, null)");
 	cc_setonmouseleave("cc_settrans($component0, $int1, 255, null)");
 } else {

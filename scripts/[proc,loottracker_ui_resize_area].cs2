@@ -15,7 +15,7 @@ def_component $component9 = loottools:ground_items_bottom;
 def_component $component10 = loottools:ground_items_lists;
 def_int $int11 = 0;
 if_setsize(0, 20, ^setsize_minus, ^setsize_abs, loottools:ground_items_top);
-if (~on_mobile = true & %varcint1223 = 2) {
+if (~on_mobile = 1 & %varcint1223 = 2) {
 	if_sethide(true, loottools:header_container);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, loottools:categories_container);
 	if_sethide(true, loottools:dropdown_container);

@@ -12,6 +12,6 @@ if (string_length(chat_getmessagefilter) > 0) {
 ~meslayer_mode12_setprompt;
 def_string $string0 = "";
 if_setonkey("meslayer_onkey(event_keycode, event_keychar, $string0)", chatbox:mes_text2);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	~keyboard_show(0, 10);
 }

@@ -2,11 +2,11 @@
 [proc,clancup_hud_update](component $com_clan_cup_hud_header0, component $com_clan_cup_hud_results1)
 def_string $string0 = "";
 if (%clancup_score_me > %clancup_score_them) {
-	$string0 = "<col=ffffff><~tostring_spacer(%clancup_score_me, ",")></col><br><~tostring_spacer(%clancup_score_them, ",")>";
+	$string0 = "<int_0=<tostring(%clancup_score_me)>><int_1=<tostring(%clancup_score_them)>><col=ffffff><int_0:spacer></col><br><int_1:spacer>";
 } else if (%clancup_score_me < %clancup_score_them) {
-	$string0 = "<~tostring_spacer(%clancup_score_me, ",")><br><col=ffffff><~tostring_spacer(%clancup_score_them, ",")></col>";
+	$string0 = "<int_0=<tostring(%clancup_score_me)>><int_1=<tostring(%clancup_score_them)>><int_0:spacer><br><col=ffffff><int_1:spacer></col>";
 } else {
-	$string0 = "<~tostring_spacer(%clancup_score_me, ",")><br><~tostring_spacer(%clancup_score_them, ",")>";
+	$string0 = "<int_0=<tostring(%clancup_score_me)>><int_1=<tostring(%clancup_score_them)>><int_0:spacer><br><int_1:spacer>";
 }
 if (%clancup_time_remaining >= ^max_32bit_int) {
 	if_settext("Your team:<br>Opponents:<br>Starting soon...", $com_clan_cup_hud_header0);

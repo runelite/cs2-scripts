@@ -5,7 +5,7 @@ cc_deleteall($com_itemsets_scrollbar1);
 def_int $int4 = ~script8020($com_itemsets_itemlist0, $com_itemsets_scrollbar1, $com_itemsets_itemlist_no_items3);
 if_setop(1, "Filter", $com_itemsets_filter_button2);
 def_int $comsubid5 = ~v2_stone_button_filled($com_itemsets_filter_button2);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouseover("v2_stone_button_change_in($com_itemsets_filter_button2, 0)", $com_itemsets_filter_button2);
 	if_setonmouseleave("v2_stone_button_change_out($com_itemsets_filter_button2, 0)", $com_itemsets_filter_button2);
 }

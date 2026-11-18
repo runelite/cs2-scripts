@@ -107,7 +107,7 @@ if ($loc4 ! null & $coord5 ! null) {
 }
 if (if_find_entityoverlay($entityoverlay0) = true) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	if (%fishing_spot_indicator_more_info_disabled = 0 & ~on_mobile = false) {
+	if (%fishing_spot_indicator_more_info_disabled = 0 & ~on_mobile = 0) {
 		cc_setonmouseleave("fishing_spot_indicator_mouseleave($entityoverlay0, $struct1, $npc_uid2, $int3, $loc4, $coord5)");
 		cc_setonmouseover("fishing_spot_indicator_mouseover($entityoverlay0, $struct1)");
 	}

@@ -1,5 +1,5 @@
 // 1003
-[proc,xpdrops_setstatlistener](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9)
+[proc,xpdrops_setstatlistener](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, component $component7, component $component8, int $int9)
 if_setonstattransmit("xpdrops_stattransmit(
 	0 = 0, 
 	1 = $component0, 
@@ -7,8 +7,8 @@ if_setonstattransmit("xpdrops_stattransmit(
 	3 = $component2, 
 	4 = $component3, 
 	5 = $component4, 
-	6 = $component5, 
-	7 = $component6, 
+	6 = $int5, 
+	7 = $int6, 
 	8 = $component7, 
 	9 = $component8, 
 	10 = $int9, 
@@ -44,8 +44,8 @@ if_setontimer("xpdrops_stattransmit(
 	3 = $component2, 
 	4 = $component3, 
 	5 = $component4, 
-	6 = $component5, 
-	7 = $component6, 
+	6 = $int5, 
+	7 = $int6, 
 	8 = $component7, 
 	9 = $component8, 
 	10 = $int9, 

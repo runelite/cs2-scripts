@@ -29,7 +29,7 @@ if (%varcint1262 < 0 | %varcint1262 >= $int18) {
 	}
 }
 def_string $string0 = db_getfield($dbrow17, bingo_events:event_name, 0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	~steelborder($com_bingo_overlay_frame2, $string0, 2);
 	if (cc_find($com_bingo_overlay_frame2, 11) = true) {
 		cc_setonclick("opsound(1, -1)");
@@ -44,7 +44,7 @@ if (~on_mobile = false) {
 if (~script8248 > 1) {
 	~bingo_redraw_grid_selection($com_bingo_overlay_grid_selection8, $com_bingo_overlay_grid_tiles11, $com_bingo_overlay_grid_rewards10, $com_bingo_overlay_grid_buttons12, $com_bingo_overlay_tooltip15, $com_bingo_overlay_inner_overlay14, $com_bingo_overlay_info13);
 }
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	~toplevel_floater_drag_init(1, $com_bingo_overlay_universe0, $com_bingo_overlay_window1);
 } else {
 	~script8230(1, 16, 16, 326, 331);

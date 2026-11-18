@@ -142,7 +142,7 @@ if (~speedrunning_world = 1) {
 		6 = "Speedrun Points:", 
 		7 = "Quest List", 
 		8 = "achievement_diary_icons,0", 
-		9 = "<col=0dc10d><~tostring_spacer(~min(%speedrun_points, 800000), $string0)></col>", 
+		9 = "<int_0=<tostring(~min(%speedrun_points, 800000))>><col=0dc10d><int_0:spacer></col>", 
 		10 = $int2, 
 		11 = $int3, 
 		12 = 0
@@ -269,7 +269,7 @@ if (%account_summary_display_playtime = 1) {
 		10 = p11_full, 
 		11 = p11_full
 	);
-} else if (~on_mobile = true) {
+} else if (~on_mobile = 1) {
 	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949(
 		0 = $component0, 
 		1 = $component1, 

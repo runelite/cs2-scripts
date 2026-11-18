@@ -7,7 +7,7 @@ if (struct_param($struct0, param_1118) = true & %settings_disable_tooltip_in_int
 	return($int3, $int4, $int5);
 }
 def_string $string0 = struct_param($struct0, param_1086);
-if (~on_mobile = true & string_length(struct_param($struct0, param_1087)) > 0) {
+if (~on_mobile = 1 & string_length(struct_param($struct0, param_1087)) > 0) {
 	$string0 = struct_param($struct0, param_1087);
 }
 if (string_length($string0) <= 0) {

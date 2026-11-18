@@ -27,7 +27,7 @@ while ($int8 < 4) {
 }
 def_int $int9 = calc((32 + 1 - 13) / 2);
 ~bankside_runepouch_loadout_button_draw(0, $component2);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("script4888(1, event_com)", $component2);
 }
 if_setonmouseleave("script4888(0, event_com)", $component2);
@@ -41,7 +41,7 @@ if (%settings_runepouch_loadout_names_disabled = 0) {
 	~bankside_runepouch_name_init($component5, $int0);
 }
 ~script9146(bankside:runepouch_loadout_container, bankside:runepouch_loadout_j, bankside:runepouch_loadout_scrollbar);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("cc_colour_swapper($component5, 1, ^white)", $component5);
 }
 if_setonmouseleave("cc_colour_swapper($component5, 1, 0xff981f)", $component5);

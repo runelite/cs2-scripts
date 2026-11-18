@@ -12,7 +12,7 @@ cc_settrans(255);
 if_setop(1, "Change", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
 if_setonop("reportabuse_toggle_op(event_com, $string0, $int1)", $component0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("reportabuse_toggle_hover(1, event_com, $int2)", $component0);
 	if_setonmouseleave("reportabuse_toggle_hover(0, event_com, $int2)", $component0);
 }

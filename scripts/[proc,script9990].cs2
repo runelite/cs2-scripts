@@ -176,7 +176,7 @@ if (cc_find($component0, $int13) = true) {
 	~script9976($component24, $comsubid25, $component0, $int21);
 	$int23 = ~script9981($component24, $comsubid25, ~script8302($component0), $component24, $comsubid15, db_getfield($dbrow1, dynamic_table_theme:scrollbar_horizontal_sprites, 0), ~on_mobile);
 	~script8303($component0, $int23);
-	if (~on_mobile = true & cc_find($component0, $comsubid15) = true | ~on_mobile = false & cc_find($component0, $comsubid16) = true) {
+	if (~on_mobile = 1 & cc_find($component0, $comsubid15) = true | ~on_mobile = 0 & cc_find($component0, $comsubid16) = true) {
 		cc_setonscrollwheel("script9987($component24, $comsubid25, $component24, $comsubid15, event_mousey)");
 	}
 }

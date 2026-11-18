@@ -15,7 +15,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settext($string0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid2, ^white)", $component0);
 }
 if_setonmouseleave("cc_colour_swapper(event_com, $comsubid2, 0xff981f)", $component0);

@@ -242,14 +242,14 @@ LABEL190:
    if_icmpge              LABEL227
    jump                   LABEL237
 LABEL227:
-   sconst                 "<col=ffb83f>"
+   sconst                 "<int_0="
+   iload                  3
+   tostring              
+   sconst                 "><col=ffb83f>"
    iload                  1
    oc_name               
-   sconst                 "</col><br>x "
-   iload                  3
-   sconst                 ","
-   invoke                 46
-   join_string            4
+   sconst                 "</col><br>x <int_0:spacer>"
+   join_string            5
    cc_settext            
    jump                   LABEL243
 LABEL237:

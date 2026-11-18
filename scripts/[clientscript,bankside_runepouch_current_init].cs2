@@ -68,7 +68,7 @@ while ($int18 <= 23) {
 		cc_setoutline(1);
 		cc_setobject_nonum($namedobj16, 1);
 		cc_settrans(110);
-		if ($boolean17 = false) {
+		if ($boolean17 = 0) {
 			cc_setonmouserepeat("script4878(1, event_com, event_comsubid, 80, 0)");
 		}
 		cc_setonmouseleave("script4878(0, event_com, event_comsubid, 80, 0)");
@@ -89,7 +89,7 @@ cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 cc_setobject_nonum(pattern_lime_dummy_11526, 1);
 cc_settrans(120);
-if ($boolean17 = false) {
+if ($boolean17 = 0) {
 	cc_setonmouserepeat("script4878(1, event_com, event_comsubid, 160, 120)");
 }
 cc_setonmouseleave("script4878(0, event_com, event_comsubid, 160, 120)");
@@ -117,7 +117,7 @@ while ($int19 < $int20) {
 	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(^black);
 	cc_setfill(true);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover("cc_colour_swapper($com_bankside_runepouch_name_select_list5, $int7, ^white)");
 	}
 	cc_setonmouseleave("cc_colour_swapper($com_bankside_runepouch_name_select_list5, $int7, ^black)");

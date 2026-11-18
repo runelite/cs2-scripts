@@ -21,25 +21,25 @@ while ($int3 < $int1) {
 		switch_dbrow ($dbrow2) {
 			case hiscores_activity_clue :
 				if ($int5 > 0) {
-					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>All: <~tostring_spacer(~min($int4, ^max_32bit_int), ",")> Rank: <~tostring_spacer($int5, ",")>";
+					$string0 = "<int_0=<tostring(~min($int4, ^max_32bit_int))>><int_1=<tostring($int5)>><db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>All: <int_0:spacer> Rank: <int_1:spacer>";
 					$int7 = calc(hiscore_getbossrank(varp2201) + 1);
-					$string0 = append($string0, "<br>Beginner: <~tostring_spacer(~max(0, hiscore_getbosskills(varp2201)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp2201)))>><int_1=<tostring(~max(0, $int7))>><br>Beginner: <int_0:spacer> Rank: <int_1:spacer>");
 					$int7 = calc(hiscore_getbossrank(varp1111) + 1);
-					$string0 = append($string0, "<br>Easy: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1111)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp1111)))>><int_1=<tostring(~max(0, $int7))>><br>Easy: <int_0:spacer> Rank: <int_1:spacer>");
 					$int7 = calc(hiscore_getbossrank(varp1112) + 1);
-					$string0 = append($string0, "<br>Medium: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1112)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp1112)))>><int_1=<tostring(~max(0, $int7))>><br>Medium: <int_0:spacer> Rank: <int_1:spacer>");
 					$int7 = calc(hiscore_getbossrank(varp1354) + 1);
-					$string0 = append($string0, "<br>Hard: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1354)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp1354)))>><int_1=<tostring(~max(0, $int7))>><br>Hard: <int_0:spacer> Rank: <int_1:spacer>");
 					$int7 = calc(hiscore_getbossrank(varp1533) + 1);
-					$string0 = append($string0, "<br>Elite: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1533)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp1533)))>><int_1=<tostring(~max(0, $int7))>><br>Elite: <int_0:spacer> Rank: <int_1:spacer>");
 					$int7 = calc(hiscore_getbossrank(varp1534) + 1);
-					$string0 = append($string0, "<br>Master: <~tostring_spacer(~max(0, hiscore_getbosskills(varp1534)), ",")> Rank: <~tostring_spacer(~max(0, $int7), ",")>");
+					$string0 = append($string0, "<int_0=<tostring(~max(0, hiscore_getbosskills(varp1534)))>><int_1=<tostring(~max(0, $int7))>><br>Master: <int_0:spacer> Rank: <int_1:spacer>");
 				} else {
 					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: Unranked";
 				}
 			case default :
 				if ($int5 > 0) {
-					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: <~tostring_spacer($int5, ",")><br>Score: <~tostring_spacer($int4, ",")>";
+					$string0 = "<int_0=<tostring($int5)>><int_1=<tostring($int4)>><db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: <int_0:spacer><br>Score: <int_1:spacer>";
 				} else {
 					$string0 = "<db_getfield($dbrow2, hiscores_activity_info:activityname, 0)><br>Rank: Unranked";
 				}

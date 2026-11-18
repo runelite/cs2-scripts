@@ -83,7 +83,7 @@ switch_int (%forestry_kit_selectedquantity) {
 }
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($namedobj3)></col>");
-if (~on_mobile = false & $int5 = 0) {
+if (~on_mobile = 0 & $int5 = 0) {
 	cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xb8a182)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour20)");
 }

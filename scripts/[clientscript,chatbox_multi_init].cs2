@@ -30,7 +30,7 @@ if ($int0 <= 2) {
 	~chatbox_multi_addoption(1, $string2, ~int_device(34, 29), ~int_device(20, 28), ^settextalign_centre);
 	~chatbox_multi_addoption(2, $string3, ~int_device(58, 57), ~int_device(20, 28), ^settextalign_centre);
 	~chatbox_multi_addoption(3, $string4, ~int_device(82, 85), ~int_device(20, 28), ^settextalign_centre);
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		$int1 = 7;
 	}
 } else if ($int0 = 4) {
@@ -38,7 +38,7 @@ if ($int0 <= 2) {
 	~chatbox_multi_addoption(2, $string3, ~int_device(47, 48), ~int_device(20, 23), ^settextalign_centre);
 	~chatbox_multi_addoption(3, $string4, ~int_device(67, 71), ~int_device(20, 23), ^settextalign_centre);
 	~chatbox_multi_addoption(4, $string5, ~int_device(87, 94), ~int_device(20, 23), ^settextalign_centre);
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		$int1 = 6;
 	}
 } else {
@@ -47,7 +47,7 @@ if ($int0 <= 2) {
 	~chatbox_multi_addoption(3, $string4, ~int_device(60, 61), ~int_device(16, 18), ^settextalign_centre);
 	~chatbox_multi_addoption(4, $string5, ~int_device(76, 79), ~int_device(16, 18), ^settextalign_centre);
 	~chatbox_multi_addoption(5, $string6, ~int_device(92, 97), ~int_device(16, 18), ^settextalign_centre);
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		$int1 = 5;
 	}
 	$int0 = 5;

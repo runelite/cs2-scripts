@@ -35,7 +35,7 @@ if (~instance_check(coord) = 1) {
 		if_sethide(false, $com_tob_hud_status_container7);
 		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $com_tob_hud_status_container7);
 		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $com_tob_hud_progress_container4);
-		if (~on_mobile = true) {
+		if (~on_mobile = 1) {
 			$int20 = 400;
 		}
 		$int21 = if_getwidth($com_tob_hud_hud1);

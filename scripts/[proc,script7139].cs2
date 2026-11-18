@@ -29,7 +29,7 @@ if ($int1 = 1) {
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext($string0);
 $int3 = calc($int3 + 1);
-if (~on_mobile = false & $int1 = 1) {
+if (~on_mobile = 0 & $int1 = 1) {
 	if_setonmouseover("script7138($component0, $string0, $int1, 1)", $component0);
 	if_setonmouseleave("script7138($component0, $string0, $int1, 0)", $component0);
 } else {

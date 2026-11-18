@@ -3,7 +3,7 @@
 def_int $int1 = %varcint57;
 def_boolean $boolean2 = ~on_mobile;
 %varcint57 = clientclock;
-if (%varcint41 = 0 & ($boolean2 = false | %varcint1220 = 0)) {
+if (%varcint41 = 0 & ($boolean2 = 0 | %varcint1220 = 0)) {
 	return;
 }
 def_int $int3 = 0;
@@ -30,7 +30,7 @@ while ($int0 ! -1) {
 			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
 				~chat_alert_enable(3);
 			case ^chattype_loginlogoutnotification :
-				if ($boolean2 = false) {
+				if ($boolean2 = 0) {
 					~chat_alert_enable(3);
 				}
 			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade, 113 :

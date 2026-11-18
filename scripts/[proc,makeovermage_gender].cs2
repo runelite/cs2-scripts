@@ -5,14 +5,14 @@ cc_deleteall($component1);
 if (%if1 = $int3) {
 	$int4 = ~v2_stone_button_in_filled($component1);
 	if_setcolour(^white, $component2);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat(null, $component1);
 		if_setonmouseleave(null, $component1);
 	}
 } else {
 	$int4 = ~v2_stone_button_filled($component1);
 	if_setcolour(0xff981f, $component2);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component1);
 		if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component1);
 	}

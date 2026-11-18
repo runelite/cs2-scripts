@@ -6,7 +6,7 @@ if_setop(1, "Shuffle", $component1);
 if_setopbase("<col=ff9040>Pieces", $component1);
 if_setonop("jigsaw_reshuffle($dbrow0)", $component1);
 def_int $int2 = ~v2_stone_button_filled($component1);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("v2_stone_button_change_in($component1, 0)", $component1);
 	if_setonmouseleave("v2_stone_button_change_out($component1, 0)", $component1);
 }

@@ -17,7 +17,7 @@ def_int $int12 = 0;
 def_int $int13 = calc(3 * $int5 + 2 * $int9);
 def_int $int14 = 50;
 def_int $int15 = 44;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int2 = 43;
 	$int8 = 4;
 	$int3 = 88;
@@ -118,7 +118,7 @@ if (%combat_weapon_category = 18 | %combat_weapon_category = 21 | %combat_weapon
 }
 if_setsize(calc($int8 + 2 * $int3), $int15, ^setsize_abs, ^setsize_abs, combat_interface:retaliate);
 if_setposition(0, $int12, ^setpos_abs_centre, ^setpos_abs_top, combat_interface:retaliate);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setsize(calc($int8 + 2 * $int3), $int6, ^setsize_abs, ^setsize_abs, combat_interface:sp_attackbars_container);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, combat_interface:sp_attackbar);
 } else {

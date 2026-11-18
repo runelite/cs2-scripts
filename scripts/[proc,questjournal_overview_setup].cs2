@@ -80,7 +80,7 @@ if ($coord18 ! null & $coord18 ! 0_0_0_0_0) {
 	cc_settext($string12);
 	cc_setop(1, $string12);
 	cc_setonop("questjournal_overview_button_op(event_com, event_comsubid, event_op, 4145151, 200, $string12)");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0x3f3fff)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x0000c8)");
 	}

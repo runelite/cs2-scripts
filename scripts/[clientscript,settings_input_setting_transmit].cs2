@@ -10,7 +10,7 @@ if (cc_find($component5, $comsubid2) = true) {
 	}
 	$int8 = ~script4398($int1);
 	if ($int8 > 1) {
-		cc_settext("<~tostring_spacer($int8, $string0)><struct_param($struct0, param_1112)>");
+		cc_settext("<int_0=<tostring($int8)>><int_0:spacer><struct_param($struct0, param_1112)>");
 	} else if ($int8 = 0) {
 		cc_settext(struct_param($struct0, param_1113));
 	} else {
@@ -25,7 +25,7 @@ if (cc_find($component5, $comsubid4) = true) {
 	}
 }
 if (cc_find($component5, $comsubid3) = true) {
-	if (~on_mobile = false & $int7 = 1) {
+	if (~on_mobile = 0 & $int7 = 1) {
 		cc_setonmouseover("cc_settrans($component5, $comsubid3, 220, null)");
 		cc_setonmouseleave("cc_settrans($component5, $comsubid3, 255, null)");
 	} else {

@@ -6,7 +6,7 @@ cc_create($component0, ^iftype_graphic, 0, false);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,4");
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("close_mouse_interact($component0, 1, 0)", $component0);
 	if_setonmouseleave("close_mouse_interact($component0, 0, 0)", $component0);
 }

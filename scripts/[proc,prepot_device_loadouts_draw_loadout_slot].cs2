@@ -34,7 +34,7 @@ if (~script7347($obj1, $int2, 1) = 1) {
 		cc_settrans(0);
 	} else {
 		cc_settrans(120);
-		if (~on_mobile = false) {
+		if (~on_mobile = 0) {
 			cc_setonmouserepeat("script7348(1, event_com, event_comsubid, 120)");
 		}
 		cc_setonmouseleave("script7348(0, event_com, event_comsubid, 120)");

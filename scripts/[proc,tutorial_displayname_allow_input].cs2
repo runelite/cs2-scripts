@@ -5,7 +5,7 @@ if ($boolean5 = true) {
 	if_setonkey("tutorial_displayname_onkey($component0, $component1, $component2, $component3, $component4, event_keycode, event_keychar)", $component2);
 	if_setondialogabort("tutorial_displayname_allow_input($component0, $component1, $component2, $component3, $component4, false)", $component2);
 	if_sethide(false, $component3);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat(null, $component4);
 		if_setonmouseleave(null, $component4);
 	} else {
@@ -15,7 +15,7 @@ if ($boolean5 = true) {
 	if_setonkey(null, $component2);
 	if_setondialogabort(null, $component2);
 	if_sethide(true, $component3);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouserepeat("tutorial_displayname_input_mouseover($component3, 1)", $component4);
 		if_setonmouseleave("tutorial_displayname_input_mouseover($component3, 0)", $component4);
 	} else {

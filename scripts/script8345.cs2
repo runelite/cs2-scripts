@@ -66,51 +66,45 @@ java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 1
 LABEL59:
    sconst                 "-"
    cc_settext            
-   jump                   LABEL88
+   jump                   LABEL82
 LABEL62:
    iload                  2
    iconst                 -1
    if_icmpne              LABEL66
-   jump                   LABEL82
+   jump                   LABEL76
 LABEL66:
-   iload                  2
-   iconst                 10
-   div                   
-   tostring              
-   sconst                 "."
-   iload                  2
-   iconst                 10
-   mod                   
-   tostring              
-   sconst                 "% ("
+   sconst                 "<int_0="
    iload                  1
-   invoke                 7019
-   sconst                 ")"
-   join_string            6
+   tostring              
+   sconst                 "><int_p="
+   iload                  2
+   tostring              
+   sconst                 "><int_p:percent_1_z> (<int_0:spacer>)"
+   join_string            5
    cc_settext            
-   jump                   LABEL88
-LABEL82:
-   sconst                 "("
+   jump                   LABEL82
+LABEL76:
+   sconst                 "<int_0="
    iload                  1
-   invoke                 7019
-   sconst                 ")"
+   tostring              
+   sconst                 ">(<int_0:spacer>)"
    join_string            3
    cc_settext            
-LABEL88:
+LABEL82:
    iload                  2
    iconst                 -1
-   if_icmpeq              LABEL95
+   if_icmpeq              LABEL89
    iload                  0
    iconst                 0
-   if_icmpeq              LABEL95
-   jump                   LABEL100
-LABEL95:
+   if_icmpeq              LABEL89
+   jump                   LABEL94
+LABEL89:
    204                   
    pop_int               
    204                   
    pop_int               
    return                
-LABEL100:
+LABEL94:
    iconst                 0
    invoke                 8363
    107                   

@@ -8,7 +8,7 @@ if_setonop("opsound(event_op, 2)", $com_clans_banned_exit8);
 def_int $int9 = ~steelborder($com_clans_banned_frame1, "", 0);
 def_int $int10 = calc(16384 / 3);
 def_int $int11 = 25;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int11 = scale(25, 20, $int11);
 }
 cc_deleteall($com_clans_banned_list_contents2);

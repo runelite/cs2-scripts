@@ -14,7 +14,7 @@ if ($dbrow10 = %varcint1366) {
 	$int20 = calc(10 * $int19 + 25);
 	cc_setsize(0, calc(40 + $int20), ^setsize_minus, ^setsize_abs);
 	cc_settrans(210);
-	if ($boolean9 = false) {
+	if ($boolean9 = 0) {
 		cc_setonmouserepeat("league_task_hover(event_comsubid, $component11, $component12, 210, "open_buttons_small,3")");
 		if (calc($int1 % 2) = 1) {
 			cc_setonmouseleave("league_task_hover(event_comsubid, $component11, $component12, 230, "open_buttons_small,2")");
@@ -65,7 +65,7 @@ if ($dbrow10 = %varcint1366) {
 	cc_setgraphic("open_buttons_small,2");
 } else {
 	cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
-	if ($boolean9 = false) {
+	if ($boolean9 = 0) {
 		cc_setonmouserepeat("league_task_hover(event_comsubid, $component11, $component12, 210, "open_buttons_small,1")");
 		if (calc($int1 % 2) = 1) {
 			cc_setonmouseleave("league_task_hover(event_comsubid, $component11, $component12, 230, "open_buttons_small,0")");

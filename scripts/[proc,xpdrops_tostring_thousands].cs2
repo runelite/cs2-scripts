@@ -1,10 +1,34 @@
-// 1029
-[proc,xpdrops_tostring_thousands](int $int0)(string)
-if ($int0 < 0) {
-	return("");
-}
-if ($int0 <= 0) {
-	return(tostring(0));
-}
-def_string $string0 = ",";
-return("<~tostring_spacer($int0, $string0)><$string0>000");
+java.lang.IllegalStateException: Opcode 4044 in script 1029 not implemented
+
+.id                       1029
+.int_arg_count            1
+.long_arg_count           0
+.obj_arg_count            0
+   iload                  0
+   iconst                 0
+   if_icmplt              LABEL4
+   jump                   LABEL6
+LABEL4:
+   sconst                 ""
+   return                
+LABEL6:
+   iload                  0
+   iconst                 0
+   if_icmple              LABEL10
+   jump                   LABEL13
+LABEL10:
+   iconst                 0
+   tostring              
+   return                
+LABEL13:
+   sconst                 "<long_0="
+   iload                  0
+   4044                  
+   lconst                 1000
+   4039                  
+   4125                  
+   sconst                 "><long_0:spacer>"
+   join_string            3
+   return                
+   sconst                 ""
+   return                

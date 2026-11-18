@@ -1,7 +1,7 @@
 // 4086
 [proc,collection_searchbar_create](component $component0, int $int1)
 def_boolean $boolean2 = ~on_mobile;
-if ($boolean2 = true) {
+if ($boolean2 = 1) {
 	if_setsize(95, 35, ^setsize_minus, ^setsize_abs, collection:searchbar_container);
 	if_setsize(101, 6, ^setsize_minus, ^setsize_minus, collection:searchbar_image);
 }
@@ -23,7 +23,7 @@ cc_setsize(4, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic("ge_textbackdrop,2");
 $int3 = calc($int3 + 1);
-if ($boolean2 = true) {
+if ($boolean2 = 1) {
 	if_setsize(70, 31, ^setsize_abs, ^setsize_abs, collection:search_button);
 	if_setposition(38, 37, ^setpos_abs_right, ^setpos_abs_top, collection:search_button);
 	$int3 = ~v2_stone_button_filled(collection:search_button);

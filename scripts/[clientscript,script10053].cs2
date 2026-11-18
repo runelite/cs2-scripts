@@ -33,7 +33,7 @@ cc_settrans($int5);
 def_int $int6 = 0;
 if ($int0 = 2 & string_length($string1) > 0) {
 	$int6 = 1;
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 210, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int5, null)");
 	}
@@ -69,7 +69,7 @@ if ($int6 = 1) {
 	.cc_setposition(3, $int4, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setgraphic("scrollbar_trans_arrows,0");
 	.cc_setgraphic("scrollbar_trans_arrows,1");
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		cc_setonmouseover("cc_settrans(event_com, event_comsubid, 150, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 		.cc_setonmouseover("cc_settrans(event_com, event_comsubid, 150, null)");

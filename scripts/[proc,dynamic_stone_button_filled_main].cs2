@@ -249,11 +249,11 @@ def_int $int18 = ~max($int8, 26);
 def_int $int19 = ~max($int9, 26);
 def_int $int20 = calc($int6 - ($int18 - $int8) / 2);
 def_int $int21 = calc($int7 - ($int19 - $int9) / 2);
-def_boolean $boolean22 = false;
+def_boolean $boolean22 = 0;
 if ($int12 = 1 & $component1 ! null) {
 	$boolean22 = ~on_mobile;
 	cc_create($component1, ^iftype_rectangle, $comsubid11, false);
-	if ($boolean22 = true) {
+	if ($boolean22 = 1) {
 		cc_setsize($int18, $int19, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int20, $int21, ^setpos_abs_left, ^setpos_abs_top);
 	} else {

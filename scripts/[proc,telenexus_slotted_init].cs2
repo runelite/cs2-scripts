@@ -18,7 +18,7 @@ if (%poh_nexus_id = 2) {
 } else if (%poh_nexus_id = 3) {
 	$int16 = 41;
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int9 = 20;
 }
 cc_create($component5, ^iftype_rectangle, $int8, false);

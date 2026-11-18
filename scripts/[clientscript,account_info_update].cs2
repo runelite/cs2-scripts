@@ -1,6 +1,8 @@
 // 2498
-[clientscript,account_info_update](int $int0, boolean $boolean1, boolean $boolean2)
+[clientscript,account_info_update](int $int0, int $int1, int $int2, int $int3)
 ~playermember($int0);
-~recurring_membership($boolean1);
-~social_network_account($boolean2);
-~account_update_display;
+~recurring_membership($int1);
+~social_network_account($int2);
+if ($int3 = 1) {
+	~account_update_display;
+}

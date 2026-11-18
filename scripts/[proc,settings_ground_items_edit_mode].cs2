@@ -3,7 +3,7 @@
 if (~on_enhanced_any = 0) {
 	return;
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	%ground_items_edit_mode_enabled_mobile = ~minmax(0, 1, $int0);
 } else {
 	%ground_items_edit_mode_enabled_desktop = ~minmax(0, 2, $int0);

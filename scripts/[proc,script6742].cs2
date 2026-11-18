@@ -1,7 +1,7 @@
 // 6742
 [proc,script6742](component $component0, int $int1, string $string0, int $int2, int $int3)
 if_setontimer(null, $component0);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	if_setonmouserepeat("cc_colour_swapper(event_com, $int1, 0xffb35b)", $component0);
 	if_setonmouseleave("cc_colour_swapper(event_com, $int1, 0xff981f)", $component0);
 }

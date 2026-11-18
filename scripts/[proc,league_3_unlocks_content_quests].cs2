@@ -55,7 +55,7 @@ def_string $string0 = struct_param($struct12, param_1437);
 def_int $int15 = ~league_3_quest_get_cost(struct_param($struct12, param_1444));
 if (%league_3_unlocks_current_selection ! 0) {
 	~v2_stone_button($component7);
-	if (~on_mobile = false) {
+	if (~on_mobile = 0) {
 		if_setonmouseover("v2_stone_button_in($component7)", $component7);
 		if_setonmouseleave("v2_stone_button($component7)", $component7);
 	}

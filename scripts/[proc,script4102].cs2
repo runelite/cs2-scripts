@@ -1,7 +1,7 @@
 // 4102
 [proc,script4102]()(string, namedobj, int)
 def_string $string0 = lowercase(%varcstring417);
-if (compare($string0, "") = 0 & ~on_mobile = true) {
+if (compare($string0, "") = 0 & ~on_mobile = 1) {
 	return("To search for an item, type the item or category of items you are looking for<br><br>and tap the search button.", null, -1);
 }
 if (compare($string0, "") = 0) {

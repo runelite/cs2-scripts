@@ -12,7 +12,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 			case struct_4223 :
 				if (~gim_option_get(struct_4222) = 1) {
 					if (%varclansetting52 > 1) {
-						$string0 = "<~tostring_spacer(%varclansetting52, ",")> coins";
+						$string0 = "<int_0=<tostring(%varclansetting52)>><int_0:spacer> coins";
 					} else if (%varclansetting52 = 1) {
 						$string0 = "1 coin";
 					} else {
@@ -34,7 +34,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 			case struct_4227 :
 				if (~gim_option_get(struct_4226) = 1) {
 					if (%varclansetting53 > 1) {
-						$string0 = "<~tostring_spacer(%varclansetting53, ",")> coins";
+						$string0 = "<int_0=<tostring(%varclansetting53)>><int_0:spacer> coins";
 					} else if (%varclansetting53 = 1) {
 						$string0 = "1 coin";
 					} else {
@@ -102,7 +102,7 @@ if (%clan_transmit_loadasguest = 1 & %clan_guest_affinitystatus = 3 & activeclan
 		if (cc_find($component0, $int1) = true) {
 			cc_settrans(245);
 		}
-		if (~on_mobile = false) {
+		if (~on_mobile = 0) {
 			.cc_setonmouserepeat("gim_options_buttonhover(1, event_com, event_comsubid, $int1, 245, 225)");
 		}
 		.cc_setonmouseleave("gim_options_buttonhover(0, event_com, event_comsubid, $int1, 245, 225)");

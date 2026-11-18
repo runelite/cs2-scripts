@@ -68,7 +68,7 @@ switch_int (%varcint181) {
 				.cc_setposition(.cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 				cc_settrans($int7);
 				if ($int0 = 2) {
-					if (~on_mobile = false) {
+					if (~on_mobile = 0) {
 						cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 210, null)");
 						cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int7, null)");
 					}
@@ -122,7 +122,7 @@ switch_int (%varcint181) {
 				.cc_setposition(.cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 				cc_settrans($int7);
 				if ($int0 = 2) {
-					if (~on_mobile = false) {
+					if (~on_mobile = 0) {
 						cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 210, null)");
 						cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int7, null)");
 					}

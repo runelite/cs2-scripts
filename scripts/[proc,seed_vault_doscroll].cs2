@@ -5,7 +5,7 @@ def_int $int4 = if_getscrolly($component0);
 def_int $int5 = if_getheight($component0);
 def_int $int6 = if_getscrollheight($component0);
 def_int $int7 = 15;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int7 = 30;
 }
 if ($mousey2 < calc($int7 + $int4)) {

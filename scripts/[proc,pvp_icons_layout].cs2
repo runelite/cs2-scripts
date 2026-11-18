@@ -269,7 +269,7 @@ if (~on_enhanced_any = 1) {
 }
 if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, pvp_icons:icon_container);
 def_int $int8 = enum(enum, int, enum_1135, $enum4);
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	if_setposition(40, 0, ^setpos_abs_right, ^setpos_abs_bottom, pvp_icons:icons);
 } else if ($int8 > 0) {
 	if_setposition(29, calc(170 - $int5), ^setpos_abs_right, ^setpos_abs_top, pvp_icons:icons);

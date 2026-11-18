@@ -10,7 +10,7 @@ def_int $lengtharray0($length0);
 def_int $int1 = 0;
 def_int $length2 = 0;
 def_int $int3 = 20;
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	$int3 = 28;
 }
 while ($length2 < $length0) {
@@ -26,13 +26,13 @@ if ($int1 >= 2) {
 		case 4, 5 :
 			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 2, enum_6058);
 		case 16, 17 :
-			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 9, enum_6058);
+			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 7, enum_6058);
 		case 22, 23 :
-			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 6, enum_6058);
+			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 4, enum_6058);
 		case 12, 13 :
-			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 12, enum_6058);
-		case default :
 			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 8, enum_6058);
+		case default :
+			~raids_partylist_sort($anyobj0, 0, calc($int1 - 1), 6, enum_6058);
 	}
 }
 def_int $int4 = 0;
@@ -47,7 +47,7 @@ switch_int (%varcint180) {
 			$component6 = enum(int, component, enum_6058, $lengtharray0($int4));
 			if ($component6 ! null) {
 				if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, $component6);
-				if (cc_find($component6, 0) = true & .cc_find($component6, 3) = true) {
+				if (cc_find($component6, 0) = true & .cc_find($component6, 2) = true) {
 					~script10096($int4, $component6, $lengtharray0($int4), .cc_gettext, tfa_partylist:list);
 				}
 			}
@@ -58,7 +58,7 @@ switch_int (%varcint180) {
 			$component6 = enum(int, component, enum_6058, $lengtharray0($int4));
 			if ($component6 ! null) {
 				if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, $component6);
-				if (cc_find($component6, 0) = true & .cc_find($component6, 3) = true) {
+				if (cc_find($component6, 0) = true & .cc_find($component6, 2) = true) {
 					~script10096($int4, $component6, $lengtharray0($int4), .cc_gettext, tfa_partylist:list);
 				}
 			}

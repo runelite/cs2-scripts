@@ -2,14 +2,14 @@
 [proc,settings_create_slider](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, struct $struct6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12)(int, int, int, int, int)
 def_string $string0 = struct_param($struct6, param_1086);
 def_boolean $boolean13 = ~on_mobile;
-if ($boolean13 = true & string_length(struct_param($struct6, param_1087)) > 0) {
+if ($boolean13 = 1 & string_length(struct_param($struct6, param_1087)) > 0) {
 	$string0 = struct_param($struct6, param_1087);
 }
 def_string $string1 = struct_param($struct6, param_1096);
 def_int $int14 = 0;
 def_int $int15 = %settings_disable_tooltip_in_interface;
 def_boolean $boolean16 = struct_param($struct6, param_1119);
-if ($boolean13 = true & string_length(struct_param($struct6, param_1097)) > 0) {
+if ($boolean13 = 1 & string_length(struct_param($struct6, param_1097)) > 0) {
 	$string1 = struct_param($struct6, param_1097);
 }
 if (string_length($string1) > 0) {
@@ -55,7 +55,7 @@ if ($int12 = 1) {
 } else {
 	cc_setcolour(0x9f9f9f);
 }
-if ($boolean13 = false & $int15 = 1 & string_length($string1) > 0) {
+if ($boolean13 = 0 & $int15 = 1 & string_length($string1) > 0) {
 	cc_setonmouserepeat("tooltip_mouserepeat($component8, $int2, $component11, $string1, 25, 190)");
 	cc_setonmouseleave("deltooltip($component11)");
 }

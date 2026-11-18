@@ -3,13 +3,13 @@
 if (%varcint1351 <= 0) {
 	%varcint1351 = 100;
 }
-if (~on_mobile = true) {
+if (~on_mobile = 1) {
 	%varcint1357 = 10;
 	if_setontimer("script7893", talent_tree:frame);
 }
 if_sethide(true, talent_tree:floating_panel);
 if_setonvartransmit("script7892(0){talent_points_earned, combat_mastery_perm_0, combat_mastery_perm_1, combat_mastery_perm_2, combat_mastery_perm_3, combat_mastery_perm_4, combat_mastery_perm_5}", talent_tree:universe);
-if (~on_mobile = false) {
+if (~on_mobile = 0) {
 	~toplevel_floater_drag_init(3, talent_tree:universe, talent_tree:window);
 } else {
 	~script8230(3, 16, 16, 684, 418);
@@ -71,7 +71,7 @@ while ($int6 < $int7) {
 		$string1 = append("ID - <tostring(calc($int6 + 1))> [<db_getfield($dbrow10, talent_tree:debug_name, 0)>]<br>", $string1);
 		$string1 = append($string1, "<br>X: <tostring($int11)>, Y: <tostring($int12)>");
 	}
-	if (~on_mobile = true) {
+	if (~on_mobile = 1) {
 		cc_setopbase("<col=ff9040>Pact</col>");
 		if (%varcint1358 = 1) {
 			cc_setop(1, "Select");
